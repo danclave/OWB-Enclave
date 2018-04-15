@@ -1,0 +1,124 @@
+﻿capital = 159
+set_cosmetic_tag = ENC
+set_war_support = 0.20
+set_stability = 0.35
+
+###############################
+# TECHNOLOGY
+###############################
+
+add_research_slot = 1
+set_technology = {
+    standard_weaponry_tech = 1
+	blunt_weaponry = 1
+    tribal_civilization = 1
+    settled_civilization = 1
+    scientific_civilization = 1
+	destroyer_tech = 1
+	cruiser_tech = 1
+	battleship_tech = 1 
+	heavy_cruiser_tech = 1
+	basic_laser_weaponry = 1
+	improved_laser_weaponry  = 1
+	power_armour = 1
+	power_armour_t45d = 1 # scavanging reasons
+	power_armour_t51b = 1 # scavanging reasons
+	power_armour_enclave1 = 1
+	tesla_weaponry = 1
+	vertiberd_gunship = 1 
+	vertiberd_transport1 = 1 
+	support_weaponry = 1
+	light_robots = 1 
+}
+
+###############################
+# POLITICS
+###############################
+set_party_name = { ideology = intellectuals long_name = "Reformer Faction" name = "Reformer Faction"}
+set_party_name = { ideology = elites long_name = "Purist Faction" name = "Purist Faction"}
+set_party_name = { ideology = ruler long_name = "Dornan Loyalists" name = "Dornan Loyalists"}
+set_party_name = { ideology = people long_name = "Neutral Personnel" name = "Neutral Personnel"}
+
+set_politics = {
+	parties = {
+		people = { popularity = 20 } # Undecided
+		elites = { popularity = 40 } # Purists
+		intellectuals = { popularity = 30 } # Reformers
+		ruler = { popularity = 10 } # Sergeant Dornan
+	}
+	ruling_party = ruler
+	elections_allowed = no
+}
+
+###############################
+# RULES
+###############################
+set_rule = { can_declare_war_on_same_ideology = yes }
+set_rule = { can_force_government = no }
+set_rule = { can_send_volunteers = no }
+set_rule = { can_puppet = no }
+set_rule = { can_lower_tension = yes }
+set_rule = { can_only_justify_war_on_threat_country = no }
+set_rule = { can_guarantee_other_ideologies = no }
+set_rule = { can_join_factions = no }
+
+###############################
+# LEADERS
+###############################
+create_country_leader  = {
+	name = "Franklin Anderson"
+	desc = "Anderson_desc" 
+	picture = "gfx/leaders/portrait_Anderson.dds"
+	expire = "3000.1.1"
+	ideology = militarist_technocracy
+	traits = {}
+}		
+create_country_leader  = {
+	name = "Douglas Granite"
+	desc = "Granite_desc"
+	picture = "gfx/leaders/portrait_b.dds"
+	expire = "3000.1.1"
+	ideology = technocracy
+	traits = {}
+}		
+
+create_country_leader = {
+	name = "Sergeant Dornan"
+	desc = "Dornan_DESC"
+	picture = "gfx/leaders/NEW/Portrait_New_Reno_Arch_Dornan.dds"
+	expire = "3000.1.1"
+	ideology = benevolent_dictatorship			
+	traits = {}
+}		
+create_country_leader = {
+	name = "Chief Engineer R. Bishop"
+	desc = "Dornan_DESC"
+	picture = "gfx/leaders/ENC/Portrait_Enclave_Generic.dds"
+	expire = "3000.1.1"
+	ideology = town_hall_democracy			
+	traits = {}
+}
+
+###############################
+# RELATIONS
+###############################
+add_opinion_modifier = { target = NCR modifier = bitterEnemies }
+add_opinion_modifier = { target = BOS modifier = bitterEnemies }
+add_opinion_modifier = { target = ARR modifier = bitterEnemies }
+NCR = {add_opinion_modifier = { target = ERB modifier = bitterEnemies }}
+BOS = {add_opinion_modifier = { target = ERB modifier = bitterEnemies }}
+ARR = {add_opinion_modifier = { target = ERB modifier = bitterEnemies }}
+
+# TEST
+every_country = {
+	add_opinion_modifier = { target = ERB modifier = genocidal_maniacs }
+	ERB = { add_opinion_modifier = { target = PREV modifier = dirty_muties }}
+}
+			
+# IDEAS
+add_ideas = enc_scientists
+add_ideas = enc_remnant_officers
+add_ideas = closed_economy
+add_ideas = ENC_infighting
+
+#DOM protection - do not remove

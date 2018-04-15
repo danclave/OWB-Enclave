@@ -1,0 +1,70 @@
+ideas = {
+	political_advisor = {
+		sargeant_dornan = {			
+			cost = 200
+			allowed = {
+				original_tag = "ERB"
+			}		
+			traits = {
+				drill_sargeant
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		benjamin_curling = {		
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = "ERB"
+			}		
+			traits = { 
+				respectedByScientists
+				purist
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_reformer = {		
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = "ERB"
+			}		
+			traits = { 
+				reformer
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_reformer_2 = {		
+			picture = generic_political_advisor_europe_2
+			
+			allowed = {
+				original_tag = "ERB"
+			}		
+			traits = { 
+				reformer_2
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_purist_2 = {		
+			picture = generic_political_advisor_europe_4
+			
+			allowed = {
+				original_tag = "ERB"
+			}		
+			traits = {
+				suppressor
+				purist_2
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

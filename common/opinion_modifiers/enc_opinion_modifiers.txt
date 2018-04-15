@@ -1,0 +1,10 @@
+opinion_modifiers = {
+	bitterEnemies = { value = -100 }
+	intriguedDistrust = { value = -50 }
+	goodBusiness = { value = 50 }
+	potentialPartner = { value = 20 }
+	ourEnemiesFriend = { value = -50 }
+	wontShootOnsight = { value = -80 }
+	genocidal_maniacs = { value = -80 }
+	dirty_muties = { value = -80 }
+}

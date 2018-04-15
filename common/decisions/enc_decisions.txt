@@ -1,0 +1,1146 @@
+ENC_call_remnants = {
+	ENC_calling_the_remnants = {
+		icon = generic_propaganda
+		allowed = { 
+			tag = ERB
+		}
+		cost = 50
+		days_remove = 20
+		visible = {
+			has_completed_focus = enc_remnants
+			check_variable = { var = enc_remnants_reward value = 100 compare = not_equals }
+		}
+		remove_effect = {
+		   add_manpower = enc_remnants_reward?1000
+		   
+			if = {
+				limit = {
+					check_variable = { var = enc_remnants_reward value = 0 compare = equals }
+				}
+				set_variable = { var = enc_remnants_reward value = 1000 }
+			}
+			subtract_from_variable = { enc_remnants_reward = uses value = 300}
+		}
+		days_re_enable = 30
+	}
+	ENC_field_veterans = {
+		icon = generic_propaganda
+		allowed = { tag = ERB }
+		cost = 50
+		days_remove = 5
+		visible = {
+			has_completed_focus = enc_call_veterans
+			check_variable = { # enc_veterans_var < 3
+				var = enc_veterans_var 
+				value = 3 
+				compare = not_equals
+			}
+		}
+		complete_effect = {
+			add_manpower = -200
+		}
+		remove_effect = {
+			load_oob = enc_10w_vets
+			add_to_variable = {
+				var = enc_veterans_var
+				value = 1
+			}
+		}
+	}
+}
+ENC_shifts = {
+	extend_production_shifts = {	#increased production for reduced war support
+		icon = generic_industry
+		cost = 25
+		days_remove = 56 # 8 weeks
+		days_re_enable = 2
+		available = {
+			has_war_support > 0.4
+			NOT = { has_decision = reduce_production_shifts }
+		}
+		modifier = {
+			war_support_weekly = -0.01125#total = 10%
+			industrial_capacity_factory = 0.3
+			production_factory_efficiency_gain_factor = -0.10
+		}
+	}
+	extend_construction_shifts = {	#increased construction + repair for reduced war support
+		icon = generic_construction
+		cost = 25
+		days_remove = 56 # 8 weeks
+		days_re_enable = 2
+		available = {
+			has_war_support > 0.4
+			NOT = { has_decision = reduce_construction_shifts }
+		}
+		modifier = {
+			war_support_weekly = -0.01125 #1,125% per week
+			production_speed_buildings_factor = 0.3
+			industry_repair_factor = 0.5
+		}
+	}
+	extend_research_shifts = {		#increased research for reduced war support
+		icon = generic_research
+		cost = 25
+		days_remove = 56 # 8 weeks
+		days_re_enable = 2
+		available = {
+			has_war_support > 0.4
+			NOT = { has_decision = reduce_research_shifts }
+		}
+		modifier = {
+			war_support_weekly = -0.01125#total = 5%
+			research_time_factor = -0.3
+		}
+	}
+
+	reduce_production_shifts = {	#reduced production for increased war support
+		icon = generic_industry
+		cost = 25
+		days_remove = 56 # 8 weeks
+		
+		available = {
+			num_of_military_factories > 10
+			NOT = { has_decision = extend_production_shifts }
+		}
+		
+		days_re_enable = 30
+		modifier = {
+			war_support_weekly = 0.01125#total = 10%
+			industrial_capacity_factory = -0.15
+		}
+	}
+	reduce_construction_shifts = {	#reduced construction + repair for increased war support
+		icon = generic_construction
+		cost = 25
+		days_remove = 56 # 8 weeks
+		days_re_enable = 30
+		
+		available = {
+			num_of_civilian_factories > 5
+			NOT = { has_decision = extend_construction_shifts }
+		}
+
+		modifier = {
+			war_support_weekly = 0.01125#total = 10%
+			production_speed_buildings_factor = -0.15
+			industry_repair_factor = -0.25
+		}
+	}
+	reduce_research_shifts = {      #reduced research for increased war support
+		icon = generic_research
+		cost = 25
+		days_remove = 56 # 8 weeks
+		days_re_enable = 30
+		
+		available = {
+			amount_research_slots > 2
+			NOT = { has_decision = extend_research_shifts }
+		}
+
+		modifier = {
+			war_support_weekly = 0.01125#total = 5%
+			research_time_factor = 0.2
+		}
+	}
+}
+ENC_reno = {
+	ENC_shock_and_awe = {
+		cost = 50
+		visible = {
+			country_exists = NEW
+		}
+		allowed = {
+			original_tag = ERB
+			has_war_support > 0.4
+		}
+		complete_effect = {
+		   	declare_war_on = { target = NEW type = annex_everything }
+		}
+	}
+	ENC_coup_reno = {
+		cost = 200
+		allowed = {
+			original_tag = ERB
+		}
+		visible = {
+			country_exists = NEW
+		}
+		complete_effect = {
+		   	annex_country = { target = NEW }
+		}
+	}
+	purify_city = {
+		icon = generic_scorched_earth
+		cost = 50
+		fire_only_once = YES
+		visible = {
+			has_completed_focus = purity
+			has_full_control_of_state = 285 #NEW RENO
+		}
+		available = {
+			has_war_support > 0.6
+			elites > 0.7
+		}
+		complete_effect = {
+			add_war_support = 0.10
+		   	285 = {
+				add_manpower = -10000
+			}
+		}
+	}
+	kill_graffs = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		visible = {
+			not = {
+				has_country_flag = enc_graffs_completed
+			}
+			has_full_control_of_state = 285 #NEW RENO
+		}
+		available = {
+		}
+		complete_effect = {		
+		   	add_equipment_to_stockpile = { type = energy_equipment_2 amount = 500 producer = ERB }
+			add_manpower = -200
+			285 = { add_manpower = -1000 }
+			set_country_flag = enc_graffs_completed
+		}
+	}
+	spare_graffs = {
+		icon = generic_political_discourse
+		cost = 50
+		visible = {
+			not = {
+				has_country_flag = enc_graffs_completed
+			}
+			has_full_control_of_state = 285 #NEW RENO
+		}
+		available = {
+		}
+		complete_effect = {
+		   add_equipment_to_stockpile = { type = energy_equipment_2 amount = 300 producer = ERB }
+		   set_country_flag = enc_graffs_completed
+		   add_war_support = -0.10
+		   add_stability = -0.05
+		}
+	}
+}
+ENC_radio_broadcasts = {
+	ENC_raise_war_support = {
+		cost = 75		
+		visible = {	
+			has_war_support < 0.5
+		}
+		available = {
+			has_completed_focus = purity
+			NOT = { has_decision = ENC_raise_stability }
+		}
+		modifier = {
+			war_support_weekly = 0.0350
+			stability_weekly = -0.0175
+		}
+		days_remove = 20
+		days_re_enable = 30
+	}
+	ENC_raise_stability = {
+		cost = 75
+		visible = {	
+			has_stability < 0.5
+			NOT = { has_decision = ENC_raise_war_support }
+		}
+		available = {
+		}
+		modifier = {
+			stability_weekly = 0.0350
+			war_support_weekly = -0.0175
+		}
+		days_remove = 20
+		days_re_enable = 30
+	}
+	anti_ncr_propaganda = { #increased war support and damage against NCR
+		cost = 75
+		days_remove = 28 # 4 weeks
+		days_re_enable = 90
+		available = {
+			has_opinion = {  # NCR disliked
+				target = NCR
+				value < -79
+			}
+			has_war_with = NCR          # At war with NICR
+		}
+		modifier = {
+			war_support_weekly = 0.0225 # total = 10%
+		}
+	}
+	remember_rig = { #increased war support and damage against NCR
+		cost = 75
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = enc_remember_rig
+		}
+		available = {
+			has_opinion = {  # NCR disliked
+				target = NCR
+				value < -79
+			} #or?
+			has_war_with = NCR          # At war with NICR
+		}
+		complete_effect = {
+			add_timed_idea = { idea = ENC_vengeance days = 50 }
+		}
+	}
+	remember_navarro = { #increased war support and damage against NCR
+		cost = 75
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = enc_remember_navarro
+		}
+		available = {
+			has_opinion = {  # NCR disliked
+				target = NCR
+				value < -79
+			}
+			has_war_with = NCR          # At war with NICR
+		}
+		complete_effect = {
+			add_timed_idea = { idea = ENC_vengeance days = 50 }
+		}
+	}
+	anti_bos_propaganda = { #increased war support and damage against NCR
+		cost = 75
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = enc_anti_bos_propaganda
+		}
+		available = {
+			has_war_with = BOS          # At war with NICR
+		}
+		complete_effect = {
+			add_timed_idea = { idea = ENC_vengeance_bos days = 50 }
+		}
+	}
+
+}
+ENC_war_with_NCR = {
+	dump_fev_ranch = {
+		cost = 10
+		visible = {
+			has_country_flag = enc_dirty_FEV_flag
+		}
+		
+		available = {
+			has_war_with = NCR
+			controls_state  = 543 # Marysville ranch
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			NCR = { add_timed_idea  = { idea = ENC_water_contaminated days = 50 }}
+			clr_country_flag = enc_dirty_FEV_flag
+		}
+	}
+	recover_beale_air_force_base  = {
+		cost = 10
+		visible = {
+			has_completed_focus = enc_reclaim_cashes
+		}
+		highlight_states = { state = 543 }
+		available = {
+			controls_state  = 543 # Marysville ranch
+			divisions_in_state = { size > 0 state = 543 }
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 300 producer = ERB }
+			add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 300 producer = ERB }
+		}
+	}
+	recover_edwards_air_force_base  = {
+		cost = 10
+		visible = {
+			has_completed_focus = enc_reclaim_cashes
+		}
+		highlight_states = { state = 19 }
+		available = {
+			controls_state  = 19 # Saint Gabrielle 
+			divisions_in_state = { 
+				state = 19
+				size > 0
+			}
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 300 producer = ERB }
+			add_equipment_to_stockpile = { type = power_armor_equipment_3 amount = 500 producer = ERB }
+		}
+	}
+	recover_los_angeles_air_force_base  = {
+		cost = 10
+		visible = {
+			has_completed_focus = enc_reclaim_cashes
+		}
+		highlight_states = { state = 350 }
+		available = {
+			controls_state  = 350 # The boneyard
+			divisions_in_state = { size > 0  state = 350}
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 200 producer = ERB }
+			add_equipment_to_stockpile = { type = fighter_equipment_3 amount = 300 producer = ERB }
+			add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 400 producer = ERB }
+		}
+	}
+	recover_march_air_reserve_base  = {
+		cost = 10
+		visible = {
+			has_completed_focus = enc_reclaim_cashes
+		}
+		highlight_states = { state = 591 }
+		available = {
+			controls_state  = 591 # Diana Point
+			divisions_in_state = { size > 0 state = 591 }
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 500 producer = ERB }
+			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 300 producer = ERB }
+		}
+	}
+	recover_travis_air_force_base_ = {
+		cost = 10
+		visible = {
+			has_completed_focus = enc_reclaim_cashes
+		}
+		highlight_states = { state = 511 }
+		available = {
+			controls_state  = 511 # Point Green
+			divisions_in_state = { size > 0 state = 511 }
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			add_equipment_to_stockpile = { type = energy_equipment_1 amount = 600 producer = ERB }
+			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 600 producer = ERB }
+		}
+	}
+	recover_vandenberg_air_force_base = {
+		cost = 10
+		highlight_states = { state = 64 }
+		visible = {
+			has_completed_focus = enc_reclaim_cashes
+		}
+		
+		available = {
+			controls_state  = 64 # Santa Maria
+			divisions_in_state = { size > 0 state = 64 }
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 100 producer = ERB }
+			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 600 producer = ERB }
+			add_equipment_to_stockpile = { type = power_armor_equipment_3 amount = 200 producer = ERB }
+		}
+	}
+}
+operations = {
+	convert_command_power = {      #reduced research for increased war support
+		allowed = {
+			original_tag = ERB
+		}
+		days_remove = 20
+		days_re_enable = 30
+		custom_cost_trigger = {
+			command_power > 99
+		}
+		custom_cost_text = command_power_max
+		
+		complete_effect = {
+			hidden_effect = {add_command_power = -100}
+		}		
+		modifier = {
+			experience_gain_army = 0.5
+		}
+	}
+	clear_state = {
+		icon = generic_scorched_earth
+		allowed = { 
+			tag = ERB # could be made generic
+		}
+		cost = 50
+		visible = {	
+			#at war?
+		}
+		available = {
+			has_war_support > 0.7
+			elites > 0.8
+			any_owned_state = {
+				is_core_of = ERB
+				any_neighbor_state = { 
+					NOT = { is_core_of = ROOT }
+					is_fully_controlled_by = ERB
+					state_population < 10000 #less than 10k pop
+				}
+			}
+		}
+		modifier = {
+			# something?
+		}
+		days_remove = 30
+		remove_effect = {
+			random_owned_state = {
+				limit = {
+					NOT = { is_core_of = ERB }
+					is_fully_controlled_by = ERB
+					state_population < 10000 #less than 10k pop
+					any_neighbor_state = { is_core_of = ROOT }					
+				}
+				add_manpower = -10000
+				add_core_of = ROOT
+			}
+		}
+		days_re_enable = 30
+	}
+	dump_fev_ranch = {
+		cost = 10
+		visible = {
+			has_country_flag = enc_dirty_FEV_flag
+		}
+		
+		available = {
+			has_war_with = NCR
+			controls_state  = 543 # Marysville ranch
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			NCR = add_timed_idea  = { idea = ENC_water_contaminated days = 50 }
+			clr_country_flag = enc_dirty_FEV_flag
+		}
+	}
+	ENC_annex_puppet = { 							# Enclave Purity faction is not allowed to have puppets because it would give them manpower, this mission bullies them into not releasing puppets
+		is_good = no									# being bullied is not good
+		cost = 100										# give me your lunch pp, nerd
+		allowed = { 
+			tag = ERB 									# if the Enclave
+		}
+		activation = {
+			and = {
+				has_completed_focus = purity 			#  went purity
+				any_other_country = {
+					is_subject_of = ERB
+				}					
+			}	
+		}
+		days_mission_timeout = 30
+		timeout_effect = { 								# of Enclave
+			every_other_country = { 						# take all allied countries (limits scope for performance)
+				limit = {
+					is_subject_of = ERB					# that are puppets of Enclave
+				}
+				ERB = {
+					end_puppet = PREV					# end their puppetry
+					declare_war_on = { 					# Enclave declares war on them
+						target = PREV 
+						type = annex_everything
+					}
+				}
+			}
+		}
+		complete_effect = {	
+			every_other_country = {                     # take all allied countries (limits scope for performance)
+				limit = {
+					is_puppet_of = ERB                		# that are puppets of Enclave
+				}
+				ERB = {
+					annex_country = { 
+						target = ROOT  
+					}
+				}
+			}
+		}
+	}
+}
+ENC_production = {
+	retool_machinery = {
+		icon = generic_industry
+		allowed = { 
+			tag = ERB
+		}
+		cost = 50
+		visible = {	
+		}
+		available = {
+			has_stability > 0.5
+		}
+		modifier = {
+			industrial_capacity_factory = -0.30
+			production_factory_efficiency_gain_factor = 0.30
+			consumer_goods_factor = 0.10
+		}
+		days_remove = 30
+		days_re_enable = 30
+	}
+	plunder_military_machinery = {
+		icon = generic_industry
+		allowed = { 
+			tag = ERB # could be made generic
+		}
+		cost = 50
+		available = {
+			num_of_available_civilian_factories > 5
+			any_owned_state = { #we occupy a non core state which has 3+ mil factories
+				NOT = { is_core_of = ERB }
+				has_ROOT_at_least_1_div_in_current_state_scope = YES
+				is_fully_controlled_by = ERB
+				arms_factory > 2
+				divisions_in_state = { size > 0 }
+			}
+			any_owned_state = { # we have a core ready to receive 2 factories
+				is_fully_controlled_by = ERB
+				is_core_of = ERB
+				free_building_slots = {
+					building = arms_factory
+					size > 2 
+					include_locked = YES 
+				}
+			}
+		}
+		modifier = { #moving cost (maybe use civ factories)
+			civilian_factory_use = 3
+		}
+		days_remove = 30
+		remove_effect = { #remove 3 military factories from a non core occupied state
+			random_owned_state = {
+				limit = {
+					has_ROOT_at_least_1_div_in_current_state_scope = YES
+					NOT = { is_core_of = ERB }
+					arms_factory > 2
+					divisions_in_state = { size > 0 }
+				}
+				remove_building = { 
+					type = arms_factory 
+					level = 3 
+				}
+			}
+			random_owned_state = { #add 2 military factories to a core state
+				limit = {
+					is_core_of = ERB
+					free_building_slots = {
+						building = arms_factory
+						size > 1 
+						include_locked = yes 
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					inst ant_build = yes
+				}
+			}
+		}
+		days_re_enable = 30
+	}
+}
+political_actions = {
+	ENC_setting_examples_purity = {
+		allowed = { tag = ERB }
+		cost = 50
+		days_remove = 5
+		available = {
+			intellectuals > 0.2
+			has_completed_focus = purity
+		}
+		visible = {
+			intellectuals > 0.2
+			has_completed_focus = purity
+		}		
+		complete_effect = {
+		   add_manpower = -100
+		   add_stability = -0.05
+		   add_popularity = { ideology = intellectuals popularity = -0.05 }
+		   add_popularity = { ideology = elites popularity = 0.10 } 
+		}
+		days_re_enable = 10
+	}
+	ENC_setting_examples_reform = {
+		cost = 30
+		days_remove = 5
+		allowed = { tag = ERB }
+		available = {
+			elites > 0.2
+		}
+		
+		visible = {
+			elites > 0.2
+			has_completed_focus = reform
+		}
+		
+		remove_effect = {
+		   add_manpower = -100
+		   add_stability = -0.05
+		   add_popularity = { ideology = elites popularity = -0.05 } 
+		   add_popularity = { ideology = intellectuals popularity = 0.10 }
+		}
+		days_re_enable = 30
+	}
+}
+war_measures = {
+	less_rations = {
+		icon = generic_industry
+		cost = 25
+		days_remove = 56 # 8 weeks
+		days_re_enable = 2
+		available = {
+			has_war_support > 0.2
+			NOT = { has_decision = more_rations }
+		}
+		modifier = {
+			war_support_weekly = -0.01125#total = 5%
+			consumer_goods_factor = -0.10
+		}
+	}
+	more_rations = {
+		icon = generic_industry
+		cost = 25
+		days_remove = 56 # 8 weeks
+		days_re_enable = 2
+		available = {
+			has_war_support > 0.2
+			NOT = { has_decision = less_rations }
+		}
+		modifier = {
+			war_support_weekly = 0.01125#total = 5%
+			consumer_goods_factor = +0.05
+		}
+	
+	}
+}
+
+ENC_rangers = {
+	sabotage_infrastructure = {
+		icon = generic_scorched_earth
+		cost = 25
+		fire_only_once = YES
+		visible = {
+			has_completed_focus = enc_rangers_defense_sabotage
+		}
+		available = {
+			has_war_with = DES
+		}
+		complete_effect = {
+			DES = {
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							is_controlled_by = ROOT
+						}					
+					}
+					damage_building = { type = infrastructure damage = 0.5 }
+				}
+			}
+		}
+	}
+	attack_plan = {
+		icon = generic_operation
+		cost = 25
+		fire_only_once = YES
+		visible = {
+			has_completed_focus = enc_rangers_offense_plan
+		}
+		complete_effect = {
+			add_timed_idea = { idea = ENC_rangers_plan_attack days = 50 }	
+		}
+	}
+	defense_plan = {
+		icon = generic_operation
+		cost = 25
+		fire_only_once = YES
+		visible = {
+			has_completed_focus = enc_rangers_defense_plan
+		}
+		complete_effect = {
+			add_timed_idea = { idea = ENC_rangers_plan_defense days = 50 }	
+		}
+	}
+}
+
+ENC_NCR_hiding = {
+# MISSION
+	ENC_hide_activity = {
+		icon = infiltration
+		is_good = NO
+		priority = 10
+		#--------------------------		
+		activation  = {
+			has_country_flag = ncr_suspicious	# when ncr is suspicious
+			NOT = { 
+				has_war_with = NCR 
+				has_country_flag = NCR_crisis_flag
+				exists = NCR
+				# any of the crisis solutions are active
+				has_decision = NCR_crisis_construction
+				has_decision = NCR_crisis_laylow
+				has_decision = NCR_crisis_resources
+			}
+		}
+		#--------------------------
+		cost = ENC_hiding_cost?10
+		selectable_mission = YES
+		fire_only_once = NO
+		#--------------------------
+		cancel_trigger = {
+			NCR = {
+				OR = {
+					exists = NO
+					has_civil_war = YES
+					has_war_with = ERB #Enclave
+				}
+			}
+		}
+		remove_effect = {
+			#what happens after the safe time is over?
+		}
+		days_remove = ENC_hide_days
+		complete_effect = {
+			# tooltips
+			custom_effect_tooltip = ENC_hide_activity_days_tt
+			custom_effect_tooltip = ENC_hide_activity_bonus_tt
+			# set or increase hiding cost
+			if = {
+				limit = {
+					check_variable = { var = ENC_hiding_cost value = 15 compare = less_than }
+				}
+				set_variable = { var = ENC_hiding_cost value = 10 }
+			}
+			add_to_variable = { var = ENC_hiding_cost value = 10}
+			# set duration of safety
+			set_variable = { ENC_hide_days = days_mission_timeout@ENC_hide_activity }
+			add_to_variable = { var = ENC_hide_days value = 90}
+		}
+		#--------------------------
+		days_mission_timeout = 30
+		timeout_effect = {
+			custom_effect_tooltip = ENC_hide_activity_crisis
+			set_country_flag = NCR_crisis_flag
+		}
+		#--------------------------
+		ai_will_do = {
+			factor = 200 #do or die
+		}
+	}
+# CRISIS
+	NCR_crisis = {
+		icon = generic_crisis
+		priority = 30
+		activation = {
+			has_country_flag = NCR_crisis_flag
+			NOT = {
+				NCR = {
+					OR = {
+						exists = NO
+						has_civil_war = YES
+						has_war_with = ERB #Enclave
+					}
+				}
+			}
+		}
+		available = {
+			OR = {
+				NOT = { has_country_flag = NCR_crisis_flag }
+				has_decision = NCR_crisis_construction
+				has_decision = NCR_crisis_laylow
+				has_decision = NCR_crisis_resources
+			}
+		}
+		cancel_trigger = {
+			NCR = {
+				OR = {
+					exists = NO
+					has_civil_war = YES
+					has_war_with = ERB #Enclave
+				}
+			}
+		}
+		is_good = NO
+		days_mission_timeout = 100
+		timeout_effect = {
+			NCR = {
+				declare_war_on = { target = ERB type = annex_everything }
+			}
+			add_war_support = -0.30
+		}
+		complete_effect = {
+			clr_country_flag = NCR_crisis_flag
+		}
+	}
+# SOLUTIONS	
+	NCR_crisis_resources = {
+		icon = generic_prospect_for_resources
+		fire_only_once = YES
+		visible = {
+			has_active_mission = NCR_crisis
+		}
+		remove_effect = {
+			clr_country_flag = NCR_crisis_flag
+		}
+		days_remove = 90
+		modifier = {
+			local_resources_factor = -0.50
+		}
+		cancel_trigger  = {
+			has_war_with = NCR
+		}
+	}	
+	NCR_crisis_laylow = {
+		icon = generic_prepare_civil_war
+		fire_only_once = YES
+		visible = {
+			has_active_mission = NCR_crisis
+		}
+		remove_effect = {
+			clr_country_flag = NCR_crisis_flag
+		}
+		days_remove = 90
+		modifier = {
+			army_attack_factor = -0.50
+		}
+		cancel_trigger  = {
+			has_war_with = NCR
+		}
+	}
+	NCR_crisis_construction = {
+		icon = generic_construction
+		fire_only_once = YES
+		visible = {
+			has_active_mission = NCR_crisis
+		}
+		remove_effect = {
+			clr_country_flag = NCR_crisis_flag
+		}
+		days_remove = 90
+		modifier = {
+			production_speed_buildings_factor = -0.75
+		}
+		cancel_trigger  = {
+			has_war_with = NCR
+		}
+	}
+}
+ENC_cloning = {
+	cloning_project = {
+		icon = generic_research
+		cost = 50
+		
+		visible = {
+			has_country_flag = enc_cloning_available_flag
+		}
+		
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = has_cloning_facility_flag
+				}
+				set_state_flag = has_cloning_facility_occupied_flag
+			}			
+		}
+		
+		available = {
+			any_owned_state = {
+				has_state_flag = has_cloning_facility_flag
+				NOT = { has_state_flag = has_cloning_facility_occupied_flag }
+			}
+		}
+		
+		days_remove = 100
+		remove_effect = {
+			add_manpower = amount_cloned
+			
+			random_owned_state = {
+				limit = {
+					has_state_flag = has_cloning_facility_occupied_flag
+				}
+				clr_state_flag = has_cloning_facility_occupied_flag
+			}			
+		}
+	}
+	cloning_experiment = {
+		icon = generic_research
+		cost = 50
+		
+		visible = {
+			NOT = { has_country_flag = enc_cloning_available_flag }
+		}
+		
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = has_cloning_facility_flag
+				}
+				set_state_flag = has_cloning_facility_occupied_flag
+			}			
+		}
+		
+		available = {
+			any_owned_state = {
+				has_state_flag = has_cloning_facility_flag
+				NOT = { has_state_flag = has_cloning_facility_occupied_flag }
+			}
+		}
+		
+		days_remove = 100
+		remove_effect = {
+			random_list = { 
+				70 = { country_event = { id = enc.27 } } 
+				30 = { country_event = { id = enc.26 } } 
+			}				
+			random_owned_state = {
+				limit = {
+					has_state_flag = has_cloning_facility_occupied_flag
+				}
+				clr_state_flag = has_cloning_facility_occupied_flag
+			}			
+		}
+	}	
+	build_cloning_facility = {
+		icon = generic_industry
+		cost = 200
+		
+		available = {
+			num_of_available_civilian_factories > 5
+			any_owned_state = {
+				has_resources_amount = { 
+					resource = electricity
+					amount > 29 
+				}
+				NOT = { has_state_flag = has_cloning_facility_flag } 
+			}
+		}
+		
+		modifier = {
+			civilian_factory_use = 5
+		}
+		
+		days_remove = 100
+		complete_effect = {
+			# add building
+			add_to_variable = { var = num_cloning_facilities value = 1 }
+			add_to_variable = { var = amount_cloned value = 1000 }
+			random_owned_state = {
+				limit = {
+					has_resources_amount = { 
+						resource = electricity
+						amount > 29
+					}
+				}
+				set_state_flag = has_cloning_facility_flag
+			}
+		}
+	}
+}
+
+# 543 	- Marysville ranch 	- Beale Air Force Base 
+# 19 	- Saint Gabrielle   - Edwards Air Force Base
+# 350 	- The boneyard		- Los Angeles Air Force Base
+# 591	- Diana Point		- March Air Reserve Base
+# 511 	- Point Green 		- Travis Air Force Base
+# 64 	- Santa Maria		- Vandenberg Air Force Base
+# 525 	- Dog city			- Buckley Air Force Base
+
+
+	
+###############################
+# ICONS
+###############################
+
+# aluminium
+# border_war
+# cat_generic_arabia
+# cat_generic_austria_hungary
+# cat_generic_baltic_federation
+# cat_generic_byzantine_empire
+# cat_generic_commonwealth
+# cat_generic_european_union
+# cat_generic_gran_colombia
+# cat_generic_hre
+# cat_generic_majapahit_empire
+# cat_generic_mefo_bills
+# cat_generic_mutapa
+# cat_generic_nordic_league
+# cat_generic_ottoman_empire
+# cat_generic_persian_empire
+# cat_generic_rattanakosin_kingdom
+# cat_generic_roman_empire
+# cat_generic_scandinavia
+# cat_generic_united_central_america
+# cat_generic_united_netherlands
+# cat_picture_chi_infiltration
+# cat_picture_chi_political_support
+# cat_picture_generic_border_conflicts
+# cat_picture_ger_case_anton
+# army_reform
+# border_conflicts
+# border_war
+# generic
+# generic_communism
+# generic_crisis
+# generic_democracy
+# generic_economy
+# generic_fascism
+# generic_formable_nations
+# generic_independence
+# generic_industry
+# generic_monarchism
+# generic_political_actions
+# generic_propaganda
+# generic_prospect_for_resources
+# ger_mefo_bills
+# ger_military_buildup
+# ger_reichskommissariats
+# infiltration
+# jap_intervene_in_china
+# jap_pacific_guardian
+# jap_southern_expansion
+# military_operation
+# power_struggle
+# saf_anti_colonialist_crusade
+# sov_great_patriotic_war
+# chromium
+# generic_air
+# generic_army_support
+# generic_break_treaty
+# generic_civil_support
+# generic_construction
+# generic_decision
+# generic_form_nation
+# generic_ignite_civil_war
+# generic_independence
+# generic_industry
+# generic_nationalism
+# generic_naval
+# generic_operation
+# generic_political_discourse
+# generic_prepare_civil_war
+# generic_research
+# generic_scorched_earth
+# generic_tank
+# ger_mefo_bills
+# ger_military_buildup
+# ger_reichskommissariats
+# infiltrate_state
+# jap_conquer_china
+# jap_pacific_guardian
+# oil
+# oppression
+# revolt
+# rubber
+# steel
+# tungsten
+# unknown

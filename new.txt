@@ -1,0 +1,700 @@
+annex_puppet = {          # Enclave Purity faction is not allowed to have puppets because it would give them manpower, this mission bullies them into not releasing puppets
+is_good = no                                                                                                                                      # being bullied is not good
+
+cost = 100                                                                                                                                                            # give me your lunch pp, nerd
+
+allowed = {
+
+tag = ERB                                                                                                                                             # if the Enclave
+
+has_completed_focus = purity                                                  #  went purity
+
+}
+
+activation = {
+
+ERB = {num_of_subjects > 0}                                                     # and has more than 0 puppets
+
+}
+
+days_mission_timeout = 30
+
+timeout_effect = {                                                                                                                          # if you don't
+
+ERB  = {                                                                                                                                                 # of Enclave
+
+all_allied_country = {                                                                      # take all allied countries (limits scope for performance)
+
+limit = {
+
+is_puppet_of = ERB                                                        # that are puppets of Enclave
+
+}
+
+ERB = {
+
+end_puppet = ROOT                                                      # end their puppetry
+
+declare_war_on = {                                                        # Enclave declares war on them
+
+			target = ROOT
+
+			type = annex_everything
+
+}
+
+}
+
+}
+
+}
+
+}
+
+complete_effect = {
+
+ERB  = {                                                                                                                                                 # of Enclave
+
+all_allied_country = {                                                                      # take all allied countries (limits scope for performance)
+
+limit = {
+
+is_puppet_of = ERB                                                        # that are puppets of Enclave
+
+}
+
+ERB = {
+
+annex_country = {
+
+			target = ROOT                                                   # annex them
+
+}
+
+}
+
+}
+
+}
+
+}
+
+}
+
+
+
+field_robot_division = { # wip
+
+cost = 50
+
+allowed = {
+
+has_completed_focus = enc_AI
+
+}
+
+available = {
+
+has_equipment = { robot_TODO > 200 }
+
+}
+
+complete_effect = {
+
+add_equipment_to_stockpile = { type = robot_TODO amount = 200 producer = ERB }
+
+load_oob = enc_robots_ai
+
+}
+
+}
+
+
+
+special_research_TODO = { # wip
+
+cost = 200                                                                                                                                                            # cost
+
+allowed = {
+
+has_completed_focus = enc_AI                                                                # must have completed this focus
+
+NOT = { has_tech = basic_medium_tank }                            # cant already have the tech, of course
+
+}
+
+available = {
+
+amount_research_slots < 0                                                                         # must have at least 1 research slot
+
+}
+
+complete_effect = {
+
+set_technology = { basic_medium_tank = 1 }      # Unlock the technology
+
+add_research_slot = 1                                                                                   # free the research slot
+
+}
+
+}
+
+
+
+// EVENT
+
+
+
+country_event = { # douglas flees
+
+id = enc.999
+
+title = enc.999.t
+
+desc = enc.999.d
+
+picture = GFX_report_event_election_vote
+
+
+
+fire_only_once = yes
+
+
+
+immediate = {
+
+hidden_effect = {
+
+# fire event for AI country to give refuge
+
+}
+
+}
+
+
+
+trigger = {
+
+has_completed_focus = purity
+
+or = {
+
+focus_progress = {
+
+focus = enc_purge_opposition_TODO_checkme
+
+progress > 0.3
+
+}
+
+intellectuals > 0.1
+
+}
+
+}
+
+
+
+
+
+option = { # good riddance!
+
+name = enc.999.a
+
+}
+
+option = { # hunt him down!
+
+name = enc.999.b
+
+}
+
+}
+
+
+
+ENC_shifts = {
+
+allowed = {TAG = ERB}
+
+}
+
+ENC_shifts = {
+
+extend_production_shifts = {    #increased production for reduced war support
+
+	cost = 25
+
+	days_remove = 28 # 4 weeks
+
+	days_re_enable = 2
+
+
+
+	available = {
+
+		has_war_support > 0.4
+
+	}
+
+
+
+	modifier = {
+
+		weekly_war_support = -0.0225 #total = 10%
+
+		industrial_capacity_factory = 0.3
+	
+	}
+
+}
+
+extend_construction_shifts = { #increased construction + repair for reduced war support
+
+cost = 25
+
+days_remove = 28 # 4 weeks
+
+days_re_enable = 2
+
+
+
+available = {
+
+has_war_support > 0.4
+
+}
+
+
+
+modifier = {
+
+weekly_war_support = -0.0225 #total = 10%
+
+production_speed_buildings_factor = 0.3
+
+industry_repair_factor = 0.5
+
+}
+
+}
+
+extend_research_shifts = {                         #increased research for reduced war support
+
+cost = 25
+
+days_remove = 28 # 4 weeks
+
+days_re_enable = 2
+
+
+
+available = {
+
+has_war_support > 0.4
+
+}
+
+
+
+modifier = {
+
+weekly_war_support = -0.0225 #total = 5%
+
+research_time_factor = 0.3
+
+}
+
+}
+
+
+
+reduce_production_shifts = {     #reduced production for increased war support
+
+cost = 25
+
+days_remove = 28 # 4 weeks
+
+days_re_enable = 2
+
+
+
+modifier = {
+
+weekly_war_support = 0.0225 #total = 10%
+
+industrial_capacity_factory = -0.15
+
+}
+
+}
+
+reduce_construction_shifts = {  #reduced construction + repair for increased war support
+
+cost = 25
+
+days_remove = 28 # 4 weeks
+
+days_re_enable = 2
+
+
+
+modifier = {
+
+weekly_war_support = 0.0225 #total = 10%
+
+production_speed_buildings_factor = -0.15
+
+industry_repair_factor = -0.25
+
+}
+
+}
+
+reduce_research_shifts = {                         #reduced research for increased war support
+
+cost = 25
+
+days_remove = 28 # 4 weeks
+
+days_re_enable = 2
+
+
+
+modifier = {
+
+weekly_war_support = 0.0225 #total = 5%
+
+research_time_factor = -0.2
+
+}
+
+}
+
+}
+
+
+
+anti_ncr_propaganda = { #increased war support and damage against NCR
+
+cost = 75
+
+
+
+days_remove = 28 # 4 weeks
+
+days_re_enable = 90
+
+
+
+available = {
+
+has_opinion = {             # NCR disliked
+
+target = NCR
+
+value < -79
+
+}
+
+has_war_with = NCR          # At war with NICR
+
+}
+
+
+
+modifier = {
+
+weekly_war_support = +0.0225 # total = 10%
+
+targeted_country = {
+
+tag = NCR
+
+attack_bonus_against = 0.2
+
+}
+
+}
+
+}
+
+
+
+
+
+state_of_nation = {
+
+cost = 50
+
+# yearly event?
+
+}
+
+
+
+############################################
+
+# VIRUS
+
+############################################
+
+produce_virus = {
+
+allowed = {TAG = ERB}
+
+cost = 200
+
+
+
+days_remove = 30
+
+complete_effect = {
+
+# increase country variable var_virus_amount by 1
+
+}
+
+}
+
+prepare_virus_release = {
+
+# set flag prepared_virus_flag
+
+}
+
+cancel_virus_release = {
+
+# remove flag prepared_virus_flag
+
+}
+
+deploy_virus_release = {
+
+#target only neighbours?
+
+#timed mission?
+
+complete_effect = {
+
+# remove flag prepared_virus_flag
+
+# reduce country variable var_virus_amount by 1
+
+# add FEV_virus idea to target
+
+}
+
+}
+
+
+
+############################################
+
+# CLONING
+
+############################################
+
+cloning_experiment = {
+
+cost = 150
+
+
+
+days_re_enable = 30
+
+days_remove = 30
+
+remove_effect = {
+
+# 30% at success, maybe through event
+
+}
+
+}
+
+
+
+cloning_project = {
+
+cost = 100
+
+
+
+days_remove = 30
+
+remove_effect = {
+
+add_manpower = 1000
+
+}
+
+}
+
+
+
+############################################
+
+# BEACON
+
+############################################
+
+focus_attack = {
+
+cost = 25             
+
+days_remove = 14
+
+days_re_enable = 50
+
+modifier = {
+
+army_attack_factor = 0.2
+
+army_defense_factor = -0.2
+
+army_speed_factor = 0.2
+
+}             
+
+}
+
+
+
+focus_defense = {
+
+cost = 25             
+
+days_remove = 14
+
+modifier = {
+
+army_attack_factor = -0.3
+
+army_defense_factor = 0.2
+
+army_org_factor = 0.2
+
+}             
+
+}
+
+
+
+###########
+
+# MISC
+
+###########
+
+# add Curling's son as a rabid purist scientist
+
+# add Dr. Schreber's son
+
+
+
+
+
+
+
+
+
+
+
+coring = {
+	prepare_core = {
+		visible = {
+			NOT = {
+				has_flag = not_allowed_to_core 	# Exception flag
+				# is_major 						# uncomment if majors cannot core at all
+			}
+		}
+		available = {
+			# ??? block if finish_core is running ???
+			any_owned_state = { # Do any of our states..
+				NOT = { 
+					is_core_of = ROOT # .. that is NOT a CORE ..
+					has_state_flag = prepared_to_core_flag # ..and has NOT been FLAGGED..
+				}
+				any_neighbour_state = { # ..border a CORE?
+					is_core_of = ROOT
+				}
+			}
+		}
+		complete_effect = {
+			random_owned_state = { # take a random owned state that..
+				limit = {
+					NOT = { 
+						has_state_flag = prepared_to_core_flag # ..and has NOT been FLAGGED..
+						is_core_of = ROOT				# .. is NOT a core..
+					}
+					any_neighbour_state = {			# .. neighbours a core state
+						is_core_of = ROOT
+					}
+				}
+				# --------------------------------------------------------------------------------------------------------
+				# MATHS 
+				# --------------------------------------------------------------------------------------------------------
+				set_variable = { var = state_pop value = state_population }
+				# ROOT = {
+					# set_variable = { var = test4 value = PREV.state_pop } # Set cost variable = state population
+					# set_variable = { var = test value = PREV.max_available_manpower}
+					# set_variable = { var = test2 value = PREV.manpower }
+					# set_variable = { var = test3 value = PREV.max_manpower }
+					# divide_variable = { var = core_cost_var value = 300} # divide by 300 (1PP per 300 population gained)
+					# # Other calculations can happen here
+					# IF = {
+						# LIMIT = {is_major = yes} 								#if we are a major..
+						# multiply_variable = { var = core_cost_var value = 2 } 	# .. double the cost
+					# }
+				# }
+				# distance to capital?
+				# amount of owned states?
+				# Ideas that reduce coring cost?
+				# Ministers that reduce coring cost?
+				# --------------------------------------------------------------------------------------------------------------
+				}
+			}
+			
+			# REMOVE FLAG FROM PREVIOUSLY FLAGGED STATE
+			random_owned_state = {
+				limit = {
+					has_state_flag = prepared_to_core_flag
+				}
+				remove_state_flag = prepared_to_core_flag
+			}
+		}
+
+	finish_core = {
+		cost = core_cost_var # cost = core cost
+		visible = {
+			any_owned_state = { # Do we have a state prepared to be cored?
+				has_state_flag = prepared_to_core_flag
+			}
+		}
+
+		available = {
+			NOT = { has_war = yes } # Not at war
+			has_stability > 0.6 	# reasonable stability
+		}
+
+		modifier = {
+			# other time based costs can come here such as
+				# loss of stability
+				# daily political power gain of -1 can be an alternative for a flat cost
+				# increase in consumer goods
+				# ...
+		}
+
+		days_remove = core_cost_var # 1 day per PP cost. SO a population of 30 000 would take 100 days
+		remove_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = prepared_to_core_flag
+				}
+				add_core_of = ROOT
+				remove_state_flag = prepared_to_core_flag
+			}		
+		}
+	}
+}

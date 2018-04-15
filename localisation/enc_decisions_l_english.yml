@@ -1,0 +1,232 @@
+﻿l_english:
+
+# CATEGORIES
+ENC_reno: "New Reno"
+ENC_call_remnants: "Reaching Remnants"
+ENC_shifts: "Work Shift Policies"
+ENC_production: "Production Policies"
+operations: "Operations"
+# DECISIONS
+
+ENC_calling_the_remnants:0 "Call the Remnants"
+#################################
+# HIDING FROM THE NCR
+#################################
+ENC_NCR_hiding: "In The Lair of the Bear (£pol_power [?Root.ENC_hiding_cost|H0])"
+ENC_hide_activity:0 "Hide Activities from NCR"
+ENC_hide_activity_days_tt:0 "Hide from the §YNCR§! for §Y90 days§!"
+ENC_hide_activity_bonus_tt:0 " + [?Root.days_mission_timeout@ENC_hide_activity|H0] §Gbonus§! days"
+ENC_hide_activity_crisis:0 "§RWe will have a crisis on our hands!§!\n"
+# CRISIS
+NCR_crisis: "§RTHE NCR IS ONTO US§!"
+NCR_crisis_flag: "§RThe NCR is unto us!§!"
+NCR_crisis_resources: "Cease resource extraction"
+NCR_crisis_laylow: "Cease aggressive tactics"
+NCR_crisis_construction: "Cease construction efforts"
+
+ENC_shock_and_awe:0 "Shock and Awe"
+ENC_coup_reno:0 "Coup New Reno"
+
+calling_the_remnants_tt: "Unlocks the §YCall Remnants§! decision.\nThis allows you to spend £pol_power §YPolitical Power§! to call home stray Enclave remnants as £manpower_texticon §YManpower§!."
+
+enc_cloning_tt: "Unlocks the §YCloning Experiment§! decision."
+has_cloning_facility_occupied_flag: "- that is not in use"
+has_cloning_facility_flag: "Has cloning facility"
+
+ENC_setting_examples_purity:0 "Set some examples"
+ENC_setting_examples_reform:0 "Set some examples"
+
+ENC_field_veterans: "Field the Veterans ([?Root.enc_veterans_var]/3)"
+enc_call_veterans_tt: "Two divisions of §YEnclave Veterans§! return to the Enclave.\n\nUnlocks 3 §YField Veterans§! decision uses.\nThis allows you to field §YEnclave Veterans§! at the cost of £manpower_texticon §YManpower§!\n§RThey still have to be equipped afterwards!§!"
+
+clear_state: "Liberate State"
+
+enc_rangers_defense_sabotage_tt: "Unlocks the §YSabotage Infrastructure§! decision.\nThis allows you to damage the §YInfrastructure§! in nearby states owned by the §YDesert Ranger§!."
+##############################
+# WAR MEASURES 
+##############################
+less_rations: "Reduce Rations"
+more_rations: "Increase Rations"
+
+##############################
+# War with the NCR
+##############################
+ENC_war_with_NCR: "War with the NCR"
+
+dump_fev_ranch: "Dump the Dirty FEV"
+recover_beale_air_force_base: "Secure the Beale Air Force Base"
+recover_edwards_air_force_base: "Secure the Edwards Air Force Base"
+recover_los_angeles_air_force_base: "Secure the Los Angeles Air Force Base"
+recover_march_air_reserve_base: "Secure the March Air Reserve Base"
+recover_travis_air_force_base_: "Secure the Travis Air Force Base"
+recover_vandenberg_air_force_base: "Secure the Vandenberg Air Force Base"
+
+##############################
+# RANGERS 
+##############################
+ENC_rangers: "The Rangers Front"
+sabotage_infrastructure: "Sabotage Infrastructure"
+attack_plan: "Anti-Ranger Attack Plan"
+defense_plan: "Anti-Ranger Defense Plan"
+ENC_rangers_plan_attack: "Anti-Ranger Attack Plan"
+ENC_rangers_plan_defense: "Anti-Ranger Defense Plan"
+enc_rangers_defense_plan_tt: "Unlocks the §YAnti-Ranger Defense Plan§! decision."
+enc_rangers_attack_plan_tt: "Unlocks the §YAnti-Ranger attack Plan§! decision."
+
+##############################
+# RENO 
+##############################
+kill_graffs: "Deal with the Van Graffs"
+spare_graffs: "Make a deal with the Van Graffs"
+purify_city: "Purify the city"
+
+##############################
+# PROPAGANDA 
+##############################
+ENC_radio_broadcasts: "Enclave Radio Broadcasts"
+ENC_radio_broadcasts__tt: "Unlocks the §YEnclave Radio Broadcasts§! decisions."
+anti_ncr_propaganda: "Anti NCR propaganda"
+ENC_raise_war_support: "Rousing Speech"
+ENC_raise_stability: "Call for Order"
+remember_rig: "Remember The Rig"
+remember_navarro: "Remember Navarro"
+anti_bos_propaganda: "Anti Brotherhood propaganda"
+########### SHIFTS ########################
+extend_production_shifts: "Extend Production Shifts"
+extend_construction_shifts: "Extend Construction Shifts"
+extend_research_shifts: "Extend Research Shifts"
+reduce_production_shifts: "Reduce Production Shifts"
+reduce_construction_shifts: "Reduce Construction Shifts"
+reduce_research_shifts: "Reduce Research Shifts"
+
+convert_command_power: "Hold Military Theory Commitee"
+command_power_max: "£command_power 100"
+command_power_max_blocked: "£command_power §R100§!"
+
+########### PRODUCTION ########################
+economy_decisions: "Economy Decisions"
+retool_machinery: "Retool Machinery"
+plunder_military_machinery: "Plunder Military Machinery"
+
+########### CLONING ########################
+build_cloning_facility: "Build cloning facility"
+cloning_experiment: "Cloning experiment"
+cloning_project: "Cloning project"
+
+################ special codes for special people ################################################################################################################
+
+# §Yyellow§!
+# £air_experience_20x20
+# £army_experience_20x20
+# £autonomy_texticon
+# £civ_factory
+# £civ_factory_output
+# £command_power_20x20
+# £convoy_texticon
+# £daynight_text
+# £decision_icon_small
+# £decrease_reversed_texticon
+# £decrease_texticon
+# £divisions
+# £efficiency_cap_texticon
+# £efficiency_texticon
+# £increase_reversed_texticon
+# £increase_texticon
+# £infinity_icon
+# £infrastructure_texticon
+# £location_pointer
+# £locked
+# £manpower_texticon
+# £mapicon_port_strike_result_text
+# £mission_efficiency_strip
+# £national_unity_texticon
+# £nato_unit_anti_air_icon_small
+# £nato_unit_anti_tank_icon_small
+# £nato_unit_artillery_icon_small
+# £nato_unit_cavalry_icon_small
+# £nato_unit_engineer_icon_small
+# £nato_unit_heavy_armor_icon_small
+# £nato_unit_infantry_icon_small
+# £nato_unit_light_armor_icon_small
+# £nato_unit_marine_icon_small
+# £nato_unit_mechanized_icon_small
+# £nato_unit_medium_armor_icon_small
+# £nato_unit_modern_armor_icon_small
+# £nato_unit_motorized_artillery_icon_small
+# £nato_unit_motorized_icon_small
+# £nato_unit_mountaineers_icon_small
+# £nato_unit_paratrooper_icon_small
+# £nato_unit_recon_icon_small
+# £nato_unit_rocket_artillery_icon_small
+# £nato_unit_super_heavy_armor_icon_small
+# £navy_experience_20x20
+# £organization_texticon
+# £pol_idea_texticon
+# £pol_power_20x20
+# £production_cost
+# £production_naval_cost
+# £right_arrow_texticon
+# £ship_battlecruiser_icon_small
+# £ship_battleship_icon_small
+# £ship_carrier_icon_small
+# £ship_destroyer_icon_small
+# £ship_heavy_cruiser_icon_small
+# £ship_light_cruiser_icon_small
+# £ship_sh_battleship_icon_small
+# £ship_submarine_icon_small
+# £ship_transport_icon_small
+# £stability_texticon
+# £strenght_texticon
+# £supply_texticon
+# £support_AA_small
+# £support_art_small
+# £support_AT_small
+# £support_engineer_small
+# £support_field_hospital_small
+# £support_logistics_small
+# £support_maintenance_small
+# £support_Army_police_small
+# £support_rocket_art_small
+# £support_signal_small
+# £technology_texticon
+# £temperature_text
+# £trigger_no
+# £trigger_yes
+# £unit_anti_air_icon_small
+# £unit_anti_tank_icon_small
+# £unit_artillery_icon_small
+# £unit_bicycle_infantry_icon_small
+# £unit_cavalry_icon_small
+# £unit_engineer_icon_small
+# £unit_heavy_armor_icon_AA_small
+# £unit_heavy_armor_icon_art_small
+# £unit_heavy_armor_icon_AT_small
+# £unit_heavy_armor_icon_small
+# £unit_infantry_icon_small
+# £unit_light_armor_icon_art_AA_small
+# £unit_light_armor_icon_art_AT_small
+# £unit_light_armor_icon_art_small
+# £unit_light_armor_icon_small
+# £unit_marine_icon_small
+# £unit_mechanized_icon_small
+# £unit_medium_armor_icon_AA_small
+# £unit_medium_armor_icon_art_small
+# £unit_medium_armor_icon_AT_small
+# £unit_medium_armor_icon_small
+# £unit_modern_armor_icon_AA_small
+# £unit_modern_armor_icon_art_small
+# £unit_modern_armor_icon_AT_small
+# £unit_modern_armor_icon_small
+# £unit_motorized_artillery_icon_small
+# £unit_motorized_icon_small
+# £unit_mountaineers_icon_small
+# £unit_paratrooper_icon_small
+# £unit_recon_icon_small
+# £unit_rocket_artillery_icon_small
+# £unit_super_heavy_armor_icon_AA_small
+# £unit_super_heavy_armor_icon_art_small
+# £unit_super_heavy_armor_icon_AT_small
+# £unit_super_heavy_armor_icon_small
+# £victory_point_texticon
+# £weather_text
+# £wing_rebase_status_texticon

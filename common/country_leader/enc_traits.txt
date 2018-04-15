@@ -1,0 +1,66 @@
+leader_traits = {
+	ruthless = {
+		random = no
+		justify_war_goal_time = -0.10
+	}
+	charismatic = {
+		random = no
+		opinion_gain_monthly_factor = 0.2
+	}
+	unbreakable_will = {
+		random = no
+		stability_factor = 0.1
+	}
+	
+	respectedBySoldiers = {
+		random = no
+		army_morale_Factor = 0.1
+	}	
+	respectedByScientists = {
+		random = no
+		research_time_factor = -0.05
+	}	
+	resourceful = {
+		supply_consumption_factor = -0.20
+	}	
+	inspiring = {
+		random = no
+		conscription = 0.05
+	}	
+	hates_NCR = {
+		random = no
+		targeted_country = { tag = NCR attack_bonus_against = 0.20 }
+	}
+	purist = {
+		random = no
+		elites_drift = 0.1
+		war_support_factor = 0.05
+	}	
+	purist_2 = {
+		random = no
+		elites_drift = 0.30
+		stability_weekly = -0.0025
+		war_support_factor = 0.15
+	}	
+	reformer = {
+		random = no
+		intellectuals_drift = 0.1
+		war_support_factor = -0.05
+	}
+	reformer_2 = {
+		random = no
+		intellectuals_drift = 0.30
+		war_support_weekly = -0.005
+	}
+	drill_sargeant = {
+		random = no
+		training_time_factor = -0.3
+		stability_factor = 0.10
+		war_support_factor = 0.05
+	}
+	suppressor = {
+		random = no
+		enemy_partisan_effect = -0.50
+		conscription_factor = -0.05
+	}
+}

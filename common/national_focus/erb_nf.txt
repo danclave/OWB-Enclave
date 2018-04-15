@@ -1,0 +1,2259 @@
+focus_tree = {
+	id = 'erb_nf'
+	country = {
+		factor= 0
+		modifier = {
+			add = 100
+			tag = ERB
+		}
+	}
+	default = no
+###############################################################
+# INTRO
+###############################################################
+
+	focus = {#Our escape
+		id = enc_ourescape 
+		icon = GFX_goal_enc_verti
+		ai_will_do = { factor = 1 } 
+		x = 20
+		y = 0
+		cost = 1  
+		completion_reward = {
+			# Our Escape event with 3 choices
+			country_event = { id = enc.1 } 
+
+		} 
+	}
+	focus = {#Our Choice  
+		id = enc_ourchoice 
+		icon = GFX_goal_enc_election 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_ourescape
+		x = 0
+		y = 1
+		mutually_exclusive = { } 
+		prerequisite = { focus=enc_ourescape } 
+		cost = 1
+		available_if_capitulated = yes  
+		completion_reward = {   
+			custom_effect_tooltip = enc_ourchoice.tt
+			hidden_effect = {
+				country_event = { id = enc.3 } 
+			}
+		}
+	} 	
+	focus = {#Our President
+		id = enc_ourpresident 
+		icon = GFX_goal_enc_president 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_ourchoice
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_ourchoice} 
+		cost = 1   
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes
+						name = "Franklin Anderson"
+					}
+				}
+				country_event = { id = enc.9 }	
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes
+						name = "Douglas Granite"
+					}
+				}
+				country_event = { id = enc.12 }	
+			}
+		}	 		 
+	}
+
+###############################################################
+# enc_purity TREE
+###############################################################
+
+	focus = {##---------------- enc_purity -------------------------- 
+		id = enc_purity 
+		icon = GFX_goal_enc_purge
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_ourpresident
+		x = -4
+		y = 1
+		mutually_exclusive = { focus = enc_reform} 
+		prerequisite = { focus = enc_ourpresident}
+		available = {
+			has_country_leader = {
+					ruling_only = yes
+					name = "Franklin Anderson"
+				}
+			}
+		cost = 5.8
+		completion_reward = {   
+			add_ideas = ENC_purist
+		} 
+		
+ }
+	focus = {#Purity - Radio
+		id = enc_radio_purity 
+		icon = GFX_goal_enc_radio
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_purity
+		x = -5
+		y = 1
+		prerequisite = { focus = enc_purity } 
+		cost = 5.8
+		completion_reward = {
+			add_ideas = ENC_radio
+			159 = {
+				add_building_construction = {
+					type = radar_station
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = ENC_radio_broadcasts__tt
+		}
+		
+}
+	focus = {#Purity - Contact the remants 
+		id = enc_remnants 
+		icon = GFX_goal_enc_troop_call
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_radio_purity
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_radio_purity} 
+		cost = 5.8
+		completion_reward = { 
+			custom_effect_tooltip = calling_the_remnants_tt
+			}
+		}
+	focus = {#Purity - Contact the Veterans	
+		id = enc_call_veterans 
+		icon = GFX_goal_enc_veterans_call
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_remnants} 
+		relative_position_id = enc_remnants
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = { 
+			army_experience = 100
+			custom_effect_tooltip = enc_call_veterans_tt
+			hidden_effect = { load_oob = renoenclave } #ugly tooltip
+		}
+		
+}
+	focus = {#Expedition - to Mariposa
+		id = enc_expedition_mariposa
+		icon = GFX_goal_enc_verti
+		ai_will_do = { factor = 1 } 
+		prerequisite = { focus = enc_radio_purity}
+		relative_position_id = enc_radio_purity
+		x = -2
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_political_power = 30
+			hidden_effect = { country_event = { id = enc.28 } } # mariposa 1
+			custom_effect_tooltip = enc_expedition_mariposa_tt
+		}
+		
+ }
+	focus = {#Purity - Vault Tech HQ 
+		id = enc_vaulttechhq 
+		icon = GFX_goal_enc_vault_tec
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_expedition_mariposa
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_expedition_mariposa} 
+		cost = 5.8
+		completion_reward = {
+			add_political_power = 100
+		}
+		
+ }  
+ 	focus = {#Purity - protectors of humanity
+		id = enc_protectors
+		icon = GFX_goal_shield_enc_wip
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_remember_rig
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_remember_rig}
+		available = {
+			elites > 0.7
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = ENC_purist2 
+				remove_idea = ENC_purist
+			}
+		}
+		cost = 5.8
+		
+ }
+  	focus = {#Purity - God Bless the Enclave
+		id = enc_god_bless
+		icon = GFX_goal_enc_sword_cross
+		ai_will_do = { factor = 1 } 
+		available = {
+			elites > 0.95
+		}
+		relative_position_id = enc_remember_navarro
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_remember_navarro }
+		cost = 5.8
+		completion_reward = {swap_ideas = {add_idea = ENC_purist3 remove_idea = ENC_purist2}}
+ }
+ 	focus = {#Purity - Reorganize the troops
+		id = enc_mobilize_manpower
+		icon = GFX_goal_enc_troop
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_radio_purity }
+		available = { has_stability > 0.3 }
+		relative_position_id = enc_radio_purity
+		x = 2
+		y = 1
+		cost = 5.8
+		completion_reward = {			
+			add_tech_bonus = {
+				name = land_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_ideas = limited_conscription
+			division_template = { name = "Enclave Troops" regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } } }
+		}
+	}
+ 	focus = {#Purity - Reorganize the economy
+		id = enc_mobilize_economy
+		icon = GFX_goal_enc_tools
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_mobilize_manpower }
+		available = { has_stability > 0.4 }
+		relative_position_id = enc_mobilize_manpower
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_ideas = war_economy
+		}
+	}
+ 	focus = {#Purity - Buff radio
+		id = enc_radio_purity_2
+		icon = GFX_goal_enc_beacon
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_mobilize_economy }
+		relative_position_id = enc_mobilize_economy
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			159 = {
+				add_building_construction = {
+					type = radar_station
+					level = 2
+					instant_build = yes
+				}
+			}
+			swap_ideas = {remove_idea = ENC_radio add_idea = ENC_radio_purity}
+		}
+	}
+ 	focus = {#Purist - Remember Navarro
+		id = enc_remember_navarro
+		icon = GFX_goal_enc_remember
+		prerequisite = { focus = enc_protectors }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_protectors
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_war_support = 0.1
+			add_political_power = 100
+		}
+	}
+ 	focus = {#Purist - Remember the oil rig
+		id = enc_remember_rig
+		icon = GFX_goal_enc_remember_rig
+		prerequisite = { focus = enc_purity }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_purity
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_war_support = 0.1
+			add_political_power = 100
+		}
+ }
+ 	focus = {#Purity - Slave labor
+		id = enc_slave_labour
+		icon = GFX_goal_enc_slave_labour
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_depot_armor
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = enc_depot_armor
+			focus = enc_depot_weapons
+		} 
+		cost = 5.8
+		completion_reward = {add_ideas = ENC_slave_labour}
+		
+ } 
+ 	focus = {#Purity - Slave collars
+		id = enc_slave_labour_collars
+		icon = GFX_goal_enc_slave_labour_collars
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_slave_labour
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_slave_labour}
+		completion_reward = {swap_ideas = {remove_idea = ENC_slave_labour add_idea = ENC_slave_labour_collars}}
+		cost = 5.8
+		
+ }
+  	focus = {#Purity - Super Mutant Slaves
+		id = enc_slave_labour_mutants
+		icon = GFX_goal_enc_slave_labour_mutants
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_slave_labour_collars
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_slave_labour_collars}
+		available = {
+			OR = {
+				has_country_flag = enc_supermutants_captured_flag
+				235 = { is_controlled_by = ERB} # The Warren
+			}
+		}
+		completion_reward = {swap_ideas = {remove_idea = ENC_slave_labour_collars add_idea = ENC_slave_labour_mutants}}
+
+		cost = 5.8	
+ }
+	focus = {#Purity - Open the Vaults 
+		id = openthevaults 
+		icon = GFX_goal_enc_vault_open
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_vaulttechhq
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_vaulttechhq} 
+		cost = 5.8  
+		completion_reward = {
+			159 = {
+				add_manpower = 4000	
+			}
+		}
+
+ }
+	focus = {#Purity - FEV experiments
+		id = enc_FEV_experiments
+		icon = GFX_goal_enc_experiments
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_depot_lab
+		x = 2
+		y = 1
+		prerequisite = { focus = openthevaults}
+		prerequisite = { focus = oldscientists}
+		prerequisite = { focus = enc_depot_lab} 
+		cost = 5.8
+		completion_reward = {
+			add_stability = -0.10
+		}
+ }
+	focus = {#Purity - Human improvement
+		id = enc_perfect_human
+		icon = GFX_goal_enc_superhuman 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_FEV_experiments
+		x = 2
+		y = 1
+		prerequisite = { focus = enc_FEV_experiments}
+		completion_reward = {
+			add_ideas = ENC_FEV_soldiers
+		}
+		cost = 8.6
+ }
+
+	focus = {#Purity - Poison the bear
+		id = enc_poison_bear
+		icon = GFX_goal_enc_poison_bear 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_FEV_experiments
+		x = 0
+		y = 2
+		prerequisite = { focus = enc_FEV_experiments}
+		bypass = {
+			NOT = { exists = NCR }
+		}
+		available = {
+			is_neighbor_of = NCR
+		}
+		cost = 5.8 
+		will_lead_to_war_with = NCR
+		completion_reward = {
+			declare_war_on = { target = NCR type = annex_everything }
+			add_war_support = 0.10
+			NCR = {
+				add_ideas = enc_plague
+			}
+		}	
+	}
+	focus = {#Purity - war with BOS
+		id = enc_war_with_bos
+		icon = GFX_goal_flag_burn_BOS 
+		ai_will_do = { factor = 1 } 
+		
+		relative_position_id = enc_FEV_experiments		
+		x = 2
+		y = 2
+		
+		available = { is_neighbor_of = BOS }
+		bypass = { has_war_with = BOS }
+		cost = 5.8 
+		will_lead_to_war_with = BOS
+		completion_reward = {
+			declare_war_on = { target = BOS type = annex_everything }
+		}	
+	}
+	focus = {#Purity - anti bos propaganda
+		id = enc_anti_bos_propaganda
+		icon = GFX_goal_enc_radio 
+		ai_will_do = { factor = 1 } 
+		
+		prerequisite = { focus = enc_war_with_bos }
+		relative_position_id = enc_war_with_bos		
+		x = 1
+		y = 1
+
+		cost = 5.8 
+		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = enc_anti_bos_propaganda_tt
+		}	
+	}
+	
+	focus = {#Purity - ------------------------------EXPANSION----------------------
+		id = enc_expansion
+		available = {
+			has_war_support > 0.5
+			has_completed_focus = enc_purity
+		}
+		# prerequisite = { focus = enc_purity } # ugly line
+		icon = GFX_goal_enc_superhuman
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_purity
+		x = -1
+		y = 6
+		cost = 1
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+	focus = {#Purity - YKZ - annex
+		id = enc_yakuza_annex
+		icon = GFX_goal_enc_annex_ykz
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_expansion }
+		bypass = {
+			YKZ = { exists = NO }
+		}	
+		relative_position_id = enc_expansion
+		x = -3
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = YKZ
+			}
+		}
+	}
+	focus = {#Purity - YKZ - sack (160)
+		id = enc_yakuza_sack
+		cost = 5.8
+		icon = GFX_goal_enc_construction
+		ai_will_do = { factor = 1 }
+		
+		mutually_exclusive = { focus = enc_yakuza_keep }
+		prerequisite = { focus = enc_yakuza_annex }
+		available = {
+			160 = { is_controlled_by = ERB } #do we actually own it right now?
+		}
+		
+		relative_position_id = enc_yakuza_annex
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			159 = { #black rock
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			160 = { remove_building = { type = industrial_complex level = 2 } }
+		}
+	}
+	focus = {#Purity - YKZ - keep
+		id = enc_yakuza_keep
+		available = {
+			160 = { is_controlled_by = ERB } #do we actually own it right now?
+		}
+		icon = GFX_goal_enc_weapon_factory
+		ai_will_do = { factor = 1 }
+		mutually_exclusive = { focus = enc_yakuza_sack }
+		prerequisite = { focus = enc_yakuza_annex }
+		relative_position_id = enc_yakuza_annex
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_war_support = -0.10
+			160 = { #Carson city
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+  	focus = {#Purity - VLT - annex
+		id = enc_vlt_annex
+		icon = GFX_goal_enc_major_war
+		cost = 5.8
+		ai_will_do = { factor = 1 } 
+		
+		relative_position_id = enc_expansion
+		x = -1
+		y = 1
+		mutually_exclusive = { focus = enc_vlt_annex_diplo }
+		prerequisite = { focus = enc_expansion }		
+		bypass = {
+			VLT = { exists = NO }
+		}	
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = VLT
+			}
+		}		
+	} 
+  	focus = {#Purity - VLT - annex diplo
+		id = enc_vlt_annex_diplo
+		icon = GFX_goal_enc_forced_deal
+		cost = 5.8
+		ai_will_do = { factor = 1 } 		
+		relative_position_id = enc_expansion
+		x = 1
+		y = 1	
+		mutually_exclusive = { focus = enc_vlt_annex }
+		prerequisite = { focus = enc_expansion }
+		available = {
+			strength_ratio = { tag = VLT ratio > 2 }
+			VLT = {
+				OR = {
+					has_country_leader = {
+						id = 910
+						ruling_only = yes
+						name = "First Citizen Lynette"
+					}
+					has_country_leader = {
+						id = 912
+						ruling_only = yes
+						name = "Security Chief Wallace"
+					}
+				}
+			}
+		}
+		bypass = {
+			VLT = { exists = NO }
+		}	
+		completion_reward = {
+			annex_country = { target = VLT }
+		}		
+	}
+ 	focus = {#Purity - VLT - labs
+		id = enc_vlt_labs
+		icon = GFX_goal_generic_advanced_technology_focus
+		ai_will_do = { factor = 1 } 		
+		available = {
+			291 = { is_controlled_by = ERB } #do we actually own it right now?
+		}
+		relative_position_id = enc_vlt_annex
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = enc_vlt_annex
+			focus = enc_vlt_annex_diplo
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				#name = enc_research_medicine
+				ahead_reduction = 1
+				uses = 3
+				category = hospital_tech
+			}
+		}
+		cost = 5.8
+		
+ }
+  	focus = {#Purity - VLT - purify
+		id = enc_vlt_pure
+		icon = GFX_goal_enc_smash
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_vlt_labs
+		x = -1
+		y = 1
+		prerequisite = { focus = enc_vlt_labs}
+		mutually_exclusive = { focus = enc_vlt_core} 		
+		completion_reward = {
+			291 = {
+				add_manpower = -2000
+			}
+			add_state_core = 291
+		}
+		cost = 5.8	
+ }
+   	focus = {#Purity - VLT - core
+		id = enc_vlt_core
+		icon = GFX_goal_enc_management
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_vlt_labs
+		x = 1
+		y = 1
+		prerequisite = { focus = enc_vlt_labs} 
+		mutually_exclusive = { focus = enc_vlt_pure} 
+		completion_reward = {
+			add_state_core = 291 # VLT city
+			add_stability = -0.20
+			add_war_support = -0.20
+		}
+		cost = 5.8	
+ }
+  	focus = {#Purity - VLT - power
+		id = enc_vlt_power
+		icon = GFX_goal_generic_electricity_focus
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_vlt_labs
+		x = 0
+		y = 2
+		prerequisite = { 
+			focus = enc_vlt_pure
+			focus = enc_vlt_core
+		}		
+		completion_reward = {
+			add_resource = { type = electricity amount = 30 state = 291 }
+		}
+		cost = 5.8	
+ }   	
+ 
+	focus = {#Purity - ANT - annex
+		id = enc_ANT_annex
+		icon = GFX_goal_enc_ant
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_expansion
+		x = 3
+		y = 1
+		prerequisite = { focus = enc_expansion }
+		cost = 5.8
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ANT
+			}
+		}
+	}
+	focus = {#Purity - ANT - cache
+		id = enc_ANT_cache
+		icon = GFX_goal_generic_supplies_focus
+		available = {
+			585 = { is_controlled_by = ERB } #do we actually own it right now?
+		}
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_ANT_annex
+		x = -1
+		y = 1
+		prerequisite = { focus = enc_ANT_annex}
+		completion_reward = {
+			add_equipment_to_stockpile = { type = power_armor_equipment_3 amount = 600 producer = ERB }
+		}
+		cost = 5.8
+	}
+ 	focus = {#Purity - ANT - resourceful
+		id = enc_ANT_cache_resourceful
+		icon = GFX_goal_generic_supplies_focus
+		available = {
+			585 = { is_controlled_by = ERB } #do we actually own it right now?
+			has_country_flag = leader_resourceful
+		}
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_ANT_annex
+		x = 1
+		y = 1
+		prerequisite = { focus = enc_ANT_annex}
+		completion_reward = {
+			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 200 producer = ERB }
+			add_equipment_to_stockpile = { type = energy_equipment_1 amount = 200 producer = ERB }
+		}
+		cost = 5.8
+	}
+
+   	focus = {#Navarro
+		id = enc_reclaim_navarro
+		icon = GFX_goal_enc_fort
+		ai_will_do = { factor = 1 }
+		available = {
+			548 = { is_controlled_by = ERB } # NAVARRO
+		}
+		prerequisite = { 
+			focus = enc_poison_bear
+			focus = enc_war_with_bos
+		}
+		relative_position_id = enc_poison_bear
+		x = 1
+		y = 1
+		cost = 8.6
+		completion_reward = {
+			# TODO
+		}
+	}
+   	focus = {#Military Cashes
+		id = enc_reclaim_cashes
+		icon = GFX_goal_generic_supplies_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_poison_bear }
+		relative_position_id = enc_poison_bear
+		x = -1
+		y = 1
+		cost = 8.6
+		completion_reward = {
+			custom_effect_tooltip = enc_reclaim_cashes.tt
+		}
+	}
+
+   	focus = {#Cloning
+		id = enc_cloning
+		icon = GFX_goal_generic_data_focus
+		ai_will_do = { factor = 1 }
+		available = {
+			548 = { is_controlled_by = ERB } # NAVARRO
+		}
+		prerequisite = { focus = enc_reclaim_navarro }
+		prerequisite = { focus = enc_vlt_power }
+		relative_position_id = enc_reclaim_navarro
+		x = 0
+		y = 3
+		cost = 8.6
+		completion_reward = {
+			custom_effect_tooltip = enc_cloning_tt
+		}
+	}
+	focus = {#SIERRA ------------------------ THE SIERA ARMY DEPOT ------------------------------
+		id = enc_depot_start
+		icon =GFX_goal_generic_walls_focus
+		prerequisite = { focus = enc_purity }
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_purity
+		x = -13
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_political_power = 100
+			159 = {
+				add_building_construction = { 
+					type = infrastructure 
+					level = 4
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = {#SIERRA - Rebuild the airstrip
+		id = enc_depot_airport
+		icon = GFX_goal_enc_verti
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_depot_start}
+		relative_position_id = enc_depot_start
+		x = -3
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			159 = {
+				add_building_construction = { 
+					type = air_base
+					level = 4
+					instant_build = yes 
+				}
+			}
+			add_equipment_to_stockpile = { type = vb_transport_plane_equipment amount = 50 producer = ERB }
+			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 100 producer = ERB }
+		}
+	}
+	focus = {#SIERRA - reprogram robot defences
+		id = enc_depot_robot
+		icon = GFX_goal_generic_robots_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_depot_start}
+		relative_position_id = enc_depot_start
+		x = -1
+		y = 1
+		cost = 5.8
+
+		completion_reward = {
+			custom_effect_tooltip = enc_depot_robot_tt
+		
+			add_tech_bonus = {
+				name = robotics_armour_bonus
+				bonus = 0.5
+				uses = 1
+				category = robotics_tech
+			}
+			hidden_effect = {
+				set_technology = { security_protectron_tech = 1 }
+				load_oob = enc_robots
+			}
+		}
+	}
+	focus = {#SIERRA - Excevate the lower departments
+		id = enc_depot_lower
+		icon = GFX_goal_generic_construction2
+		prerequisite = {focus = enc_depot_start}
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_depot_start
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 600 producer = ERB }
+			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 400 producer = ERB }
+			add_resource = { type = advanced_technology amount = 16 state = 159 }
+			add_resource = { type = electronics amount = 30 state = 159 }
+		}
+	}
+	focus = {#SIERRA - The Archives
+		id = enc_depot_research
+		icon = GFX_goal_generic_data_focus
+		prerequisite = {focus = enc_depot_start}
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_depot_start
+		x = 3
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_tech_bonus = {
+				ahead_reduction = 1
+				uses = 3
+				category = energy_weaponry_tech
+			}
+		}
+	}
+	focus = {#SIERRA - Our Base of Operations
+		id = enc_depot_end
+		icon = GFX_goal_enc_fort
+		prerequisite = {focus = enc_depot_research}
+		prerequisite = {focus = enc_depot_lower}
+		prerequisite = {focus = enc_depot_robot}
+		prerequisite = {focus = enc_depot_airport}
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_depot_start
+		x = 0
+		y = 2
+		cost = 5.8
+		completion_reward = {
+			add_stability = 0.2
+			159 = { #black rock
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = { 
+					type = bunker 
+					province = 8478 #Black Rock
+					level = 6
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = {#SIERRA - 2- The lab
+		id = enc_depot_lab
+		icon = GFX_goal_enc_scientists
+		prerequisite = {focus = enc_depot_end}
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_depot_end
+		x = 1
+		y = 1
+		cost = 8.6
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {#SIERRA - 2- weapons
+		id = enc_depot_weapons
+		icon = GFX_goal_enc_laser_weapons
+		prerequisite = {focus = enc_depot_end}
+		mutually_exclusive = {focus = enc_depot_armor}
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_depot_end
+		x = -1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_ideas = ENC_energy_production
+			add_tech_bonus = {
+				ahead_reduction = 0.80
+				uses = 1
+				category = plasma_weaponry_tech
+			}
+		}
+	}
+	focus = {#SIERRA - 2- PA
+		id = enc_depot_armor
+		icon = GFX_goal_enc_power_armor_focus
+		prerequisite = {focus = enc_depot_end}
+		mutually_exclusive = {focus = enc_depot_weapons}
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_depot_end
+		x = -3
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_ideas = ENC_PA_production
+		}
+	}
+	focus = {#SIERRA - 2- Intensify efforts
+		id = enc_depot_lab_buff
+		icon = GFX_goal_enc_research
+		prerequisite = { focus = enc_FEV_experiments }
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_FEV_experiments
+		x = -2
+		y = 1
+		cost = 8.6
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {remove_idea = ENC_scientists add_idea = ENC_scientists_buffed}
+		}
+	}
+
+	focus = { # --------------- ENC RANGERS START -----------------------------
+		id = enc_rangers_start
+		icon = GFX_goal_enc_rangers_start
+		cost = 1
+		ai_will_do = { factor = 1 }
+		
+		available = {
+			is_neighbor_of = DES
+		}
+		
+		relative_position_id = enc_vlt_power
+		x = 0
+		y = 2
+		
+		completion_reward = {
+			add_war_support = 0.10
+		}	
+	}
+	focus = { # ------ enc_rangers_defense -------
+		id = enc_rangers_defense
+		icon = GFX_goal_enc_defenders
+		cost = 5.8
+		available = {
+			is_neighbor_of = DES
+		}
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_rangers_start
+		x = 2
+		y = 1
+		prerequisite = { focus = enc_rangers_start }
+		mutually_exclusive = { focus = enc_rangers_offense }
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = { ENC_rangers_defense }
+		}
+
+	}
+	focus = { # enc_rangers_defense_forts
+		id = enc_rangers_defense_forts
+		icon = GFX_goal_enc_fort
+		cost = 5.8
+		ai_will_do = { factor = 1 }	
+		relative_position_id = enc_rangers_defense
+		x = -1
+		y = 1
+		available = {
+			is_neighbor_of = DES
+		}
+		prerequisite = { focus = enc_rangers_defense }
+		
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						is_controlled_by = DES
+					}
+				}
+				add_building_construction = { 
+					type = bunker 
+					province = {
+						limit_to_border = yes
+						all_provinces = yes						
+					}
+					level = 2 
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = { # enc_rangers_defense_sabotage
+		id = enc_rangers_defense_sabotage
+		icon = GFX_goal_enc_sabotage
+		cost = 5.8
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_rangers_defense
+		x = 1
+		y = 1
+		available = {
+			is_neighbor_of = DES
+		}
+		prerequisite = { focus = enc_rangers_defense }
+		
+		completion_reward = {
+			custom_effect_tooltip = enc_rangers_defense_sabotage_tt
+			# decision added automatically
+		}
+	}
+	focus = { # enc_rangers_defense_lessons
+		id = enc_rangers_defense_lessons
+		icon = GFX_goal_enc_construction
+		cost = 5.8
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_rangers_defense_forts
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_rangers_defense_forts }
+		
+		completion_reward = {
+			add_ideas = { ENC_construction_forts }
+		}
+	}
+	focus = { # enc_rangers_defense_plan
+		id = enc_rangers_defense_plan
+		icon = GFX_goal_enc_planning
+		cost = 5.8
+		ai_will_do = { factor = 1 }	
+		relative_position_id = enc_rangers_defense_sabotage
+		x = 0
+		y = 1
+		available = {
+			is_neighbor_of = DES
+		}
+		prerequisite = { focus = enc_rangers_defense_sabotage }
+		
+		completion_reward = {
+			custom_effect_tooltip = enc_rangers_defense_plan_tt
+		}
+	}
+	focus = { # -------- enc_rangers_offense ------
+		id = enc_rangers_offense
+		icon = GFX_goal_enc_sword_cross
+		cost = 5.8
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_rangers_start
+		x = -2
+		y = 1
+		available = {
+			is_neighbor_of = DES
+		}
+		prerequisite = { focus = enc_rangers_start }
+		mutually_exclusive = { focus = enc_rangers_defense }
+		
+		completion_reward = {
+			add_ideas = {
+				ENC_rangers_attack
+			}
+		}
+	}
+	focus = { # enc_rangers_offense_training
+		id = enc_rangers_offense_training
+		icon = GFX_goal_enc_major_war
+		cost = 5.8
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_rangers_offense
+		x = 1
+		y = 1
+		available = {
+			is_neighbor_of = DES
+		}
+		prerequisite = { focus = enc_rangers_offense }
+		completion_reward = {
+			custom_effect_tooltip = enc_rangers_offense_training_tt
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = ENC_rangers_attack
+					add_idea = ENC_rangers_attack_2
+				}
+			}
+		}
+	}
+	focus = { # enc_rangers_offense_infrastructure
+		id = enc_rangers_offense_infrastructure
+		icon = GFX_goal_enc_infra
+		cost = 5.8
+		ai_will_do = { factor = 1 }
+		available = {
+			is_neighbor_of = DES
+		}
+		relative_position_id = enc_rangers_offense
+		x = -1
+		y = 1
+		prerequisite = { focus = enc_rangers_offense }
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						is_controlled_by = DES
+					}
+				}
+				add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = { # enc_rangers_offense_lessons
+		id = enc_rangers_offense_lessons
+		icon = GFX_goal_enc_tools
+		cost = 5.8
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_rangers_offense_infrastructure
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_rangers_offense_infrastructure }
+		completion_reward = {
+			add_ideas = { ENC_construction_infra }
+		}
+	}
+	focus = { # enc_rangers_offense_plan
+		id = enc_rangers_offense_plan
+		icon = GFX_goal_enc_rangers_planning
+		cost = 5.8
+		ai_will_do = { factor = 1 }
+		available = {
+			is_neighbor_of = DES
+		}
+		relative_position_id = enc_rangers_offense_training
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_rangers_offense_training }
+		completion_reward = {
+			custom_effect_tooltip = enc_rangers_attack_plan_tt
+		}
+	}
+
+###############################################################
+#REFORM TREE
+###############################################################	
+	focus = {#----------------enc_reform -------------------------- 
+		id =enc_reform 
+		icon = GFX_goal_enc_reform
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_ourpresident
+		x = 4
+		y = 1
+		mutually_exclusive = {focus = enc_purity} 
+		prerequisite = {focus = enc_ourpresident} 
+		available = {
+			has_country_leader = {
+					ruling_only = yes
+					name = "Douglas Granite"
+			}
+		}
+		cost = 5.8 
+		completion_reward = {  
+			add_ideas = ENC_reform
+		} 
+ }
+	focus = {#Reform - Announce welfare program 
+		id = enc_announce_welfare_program 
+		icon = GFX_goal_generic_propaganda 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_reform
+		x = 1
+		y = 1
+		prerequisite = {focus =enc_reform}
+
+		completion_reward = {
+			add_political_power = 100
+		}		
+		cost = 8.6  
+		available_if_capitulated = yes  
+				
+ }
+	focus = {#Reform - Purge the opposition  
+		id = enc_purge_opposition
+		icon = GFX_goal_enc_purity 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_ourpresident
+		x = 0
+		y = 3
+		prerequisite = { 
+			focus = enc_purity
+			focus = enc_reform
+		}
+		available = {
+			if = {
+				has_completed_focus = enc_purity
+			}
+			elites > 0.8
+			else = {
+				intellectuals > 0.8
+			}
+		}
+		cost = 8.6 
+		completion_reward = {
+			remove_ideas = ENC_infighting
+		}
+ }
+	focus = {#Reform - Accept wastelanders 
+		id = enc_accept_wastelanders 
+		icon = GFX_goal_enc_accept_wastelanders
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_radio
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_radio}
+		cost = 8.6
+		completion_reward = {
+			swap_ideas = { remove_idea = ENC_reform add_idea = ENC_wastelanders }
+		}
+		
+ }
+	focus = {#Reform - A ERB patriotism
+		id = enc_new_patriotism 
+		icon = GFX_goal_enc_flags
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_accept_wastelanders
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_accept_wastelanders } 
+		cost = 8.6   	 		
+		completion_reward = {
+			swap_ideas = { remove_idea = ENC_wastelanders add_idea = ENC_wastelanders2 }
+		}
+		
+ }
+	focus = {#Reform - Americans, one and all 
+		id = enc_americans_one_and_all 
+		icon = GFX_goal_enc_us_flags
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_new_patriotism
+		x = 1
+		y = 1
+		prerequisite = { focus = enc_new_patriotism }
+		prerequisite = { focus = publiceducation } 
+		cost = 8.6
+		completion_reward = { swap_ideas = {remove_idea = ENC_wastelanders2 add_idea = ENC_americans_one_and_all}} 
+		
+ }
+ 	focus = {#Reform - Integrate Officers
+		id = integrate_officers 
+		icon = GFX_focus_generic_military_mission 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_americans_one_and_all
+		x = -2
+		y = 1
+		prerequisite = { focus = enc_americans_one_and_all }
+		completion_reward = {add_ideas = ENC_integrating_officers}
+		cost = 8.6
+ }
+  	focus = {#Reform - Integrate Scientists
+		id = integrate_scientists 
+		icon = GFX_goal_enc_integrate_scientists
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_americans_one_and_all
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_americans_one_and_all } 
+		cost = 8.6
+		completion_reward = {add_ideas = ENC_integrating_scientists}
+ }
+  	focus = {#Reform - Integrate politicians
+		id = integrate_politicians
+		icon = GFX_goal_enc_integrate_politicians
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_americans_one_and_all
+		x = 2
+		y = 1
+		prerequisite = { focus = enc_americans_one_and_all }
+		cost = 8.6
+		completion_reward = {add_ideas = ENC_integrating_politicians}
+ }
+ 	focus = {#Reform - A nation reborn 
+		id = enc_reborn 
+		icon = GFX_goal_enc_us_reborn
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_americans_one_and_all
+		x = 0
+		y = 2
+		prerequisite = { focus = integrate_officers }
+		prerequisite = { focus = integrate_scientists }
+		prerequisite = { focus = integrate_politicians }
+		cost = 8.6
+		completion_reward = {
+			set_cosmetic_tag = USA
+		}
+ }
+	focus = {#Reform - enc_vaccinations
+		id = enc_vaccinations 
+		icon = GFX_goal_enc_vac 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_announce_welfare_program
+		x = 0
+		y = 1
+		mutually_exclusive = { } 
+		prerequisite = { focus = enc_announce_welfare_program} 
+		cost = 8.6    
+		completion_reward = {
+			add_ideas = ENC_vacinations
+		}
+ }
+	focus = {#Reform - Public Education 
+		id = publiceducation 
+		icon = GFX_goal_generic_intelligence_exchange 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_vaccinations
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_vaccinations } 
+		cost = 8.6 
+		completion_reward = {
+			add_ideas = ENC_education
+		}
+############### TECH FOCUSES ################################
+
+ }
+ 	focus = {#Reform - Enclave Radio 
+		id = enc_radio 
+		icon = GFX_goal_enc_radio
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_reform
+		x = -1
+		y = 1
+		prerequisite = { focus = enc_reform } 
+		completion_reward = {
+			add_ideas = ENC_radio
+			159 = {
+				add_building_construction = {
+					type = radar_station
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		cost = 8.6  	
+ }
+ 	focus = {#Reform - Assasinate F
+		id = enc_assasinate_F 
+		icon = GFX_goal_ENC_assasinate 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_reform
+		x = 3
+		y = 1
+		prerequisite = { focus = enc_reform } 
+		available = {
+			# is ruthless
+		}
+		
+		completion_reward = {
+			add_popularity = { ideology = elites popularity = -0.2 } 
+			#add_national_unity = -0.1
+			create_country_leader  = {
+				name = "Henry Richardson"
+				desc = "Anderson_desc" #placeholder
+				picture = "gfx/leaders/portrait_Anderson.dds" #placeholder
+				expire = "3000.1.1"
+				ideology = militarist_technocracy
+				traits = {}
+			}
+		}
+		cost = 8.6 
+		
+	
+ }
+ 	focus = {#RENO - The city of crime
+		id = enc_reno_start
+		icon = GFX_goal_NEW_generic_reno
+		ai_will_do = { factor = 1 }		
+		prerequisite = { focus = enc_reform }
+		relative_position_id = enc_ourpresident
+		x = 11
+		y = 2
+		cost = 8.6
+	} 
+	focus = {#RENO - The Mordinos
+		id = enc_reno_mordinos
+		icon = GFX_goal_NEW_Mordinos_Tributaries
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_reno_start}
+		relative_position_id = enc_reno_start
+		x = -3
+		y = 1
+		cost = 8.6
+	}
+	focus = {#RENO - The Bishops
+		id = enc_reno_bishops
+		icon = GFX_goal_NEW_White_Pawn_to_E4
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_reno_start}
+		relative_position_id = enc_reno_start
+		x = -1
+		y = 1
+		cost = 8.6
+	}
+	focus = {#RENO - The Wrights
+		id = enc_reno_wrights
+		icon = GFX_goal_NEW_Calling_in_the_Family
+		prerequisite = {focus = enc_reno_start}
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_reno_start
+		x = 1
+		y = 1
+		cost = 8.6
+	}
+	focus = {#RENO - The Salvatores
+		id = enc_reno_salvatores
+		icon = GFX_goal_NEW_Salvatore_Reborn
+		prerequisite = {focus = enc_reno_start}
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_reno_start
+		x = 3
+		y = 1
+		cost = 8.6
+	}
+	focus = {#RENO - The ERB Capital
+		id = enc_reno_end
+		icon = GFX_goal_NEW_new_capital
+		prerequisite = {focus = enc_reno_bishops}
+		prerequisite = {focus = enc_reno_mordinos}
+		prerequisite = {focus = enc_reno_wrights}
+		prerequisite = {focus = enc_reno_salvatores}
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_reno_start
+		x = 0
+		y = 2
+		cost = 8.6
+		completion_reward = {
+			add_state_core = 285
+		}
+	}
+
+	focus = {#Diplomacy - Foreign policy
+		id = enc_foreign_policy
+		icon = GFX_goal_generic_improve_relations
+		available = { has_completed_focus =enc_reform	}
+		relative_position_id = enc_reform
+		x = 18
+		y = -1
+		cost = 8.6
+			
+	}
+	
+	focus = {#Diplomacy - Send out Diplomats
+		id = enc_send_diplomats
+		icon = GFX_focus_generic_diplomatic_treaty
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_foreign_policy
+		x = -1
+		y = 1
+		cost = 8.6 	
+		prerequisite = { focus = enc_foreign_policy }
+		mutually_exclusive = {focus = enc_no_diplomats}
+		completion_reward = {add_ideas = ENC_send_diplomats}
+	}
+	focus = {#Diplomacy - Claim sole legitimacy
+		id = enc_no_diplomats
+		icon = GFX_focus_generic_strike_at_democracy1
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_foreign_policy
+		x = 1
+		y = 1
+		cost = 8.6 	
+		prerequisite = { focus = enc_foreign_policy }
+		mutually_exclusive = {focus = enc_send_diplomats}
+		completion_reward = {add_ideas = ENC_no_diplomats}		
+	}
+	
+	focus = {#Diplomacy - BOS - start
+		id = enc_BOS_start
+		icon = GFX_goal_bos_victory_or_death 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_foreign_policy
+		x = -5
+		y = 2
+		cost = 8.6 
+		prerequisite = { focus = enc_send_diplomats }
+		completion_reward = {
+			BOS = {add_opinion_modifier = { target = ERB modifier = wontShootOnsight }}
+			BOS = {remove_opinion_modifier = { target = ERB modifier = bitterEnemies }}
+			add_opinion_modifier = { target = BOS modifier = wontShootOnsight }
+			remove_opinion_modifier = { target = BOS modifier = bitterEnemies }
+		}
+	}
+	focus = {#Diplomacy - BOS - tech
+		id = enc_BOS_tech
+		icon = GFX_goal_generic_advanced_technology_focus 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_BOS_start
+		x = 0
+		y = 1
+		cost = 8.6 
+		prerequisite = { focus = enc_BOS_start }
+		completion_reward = {
+			BOS = {add_opinion_modifier = { target = ERB modifier = intriguedDistrust }}
+			BOS = {remove_opinion_modifier = { target = ERB modifier = wontShootOnsight }}
+			add_opinion_modifier = { target = BOS modifier = intriguedDistrust }
+			remove_opinion_modifier = { target = BOS modifier = wontShootOnsight }
+		}
+	}
+	focus = {#Diplomacy - BOS - peace
+		id = enc_BOS_peace
+		icon = GFX_goal_generic_dangerous_deal
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_BOS_tech
+		x = 0
+		y = 1
+		cost = 8.6 
+		prerequisite = { focus = enc_BOS_tech }	
+		completion_reward = {
+			diplomatic_relation = { country = BOS relation = non_aggression_pact }	
+		}				
+	}
+	focus = {#Diplomacy - BOS - vengeance
+		id = enc_BOS_vengeance
+		icon = GFX_goal_generic_BoS_diplomatic_focus 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_BOS_peace
+		x = 0
+		y = 1
+		cost = 8.6 
+		prerequisite = { focus = enc_BOS_peace }			
+	}
+	
+	focus = {#Diplomacy - NCR - start
+		id = enc_NCR_start
+		icon = GFX_goal_NCR_Allisgood 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_foreign_policy
+		x = -3
+		y = 2
+		cost = 8.6 
+		prerequisite = { focus = enc_send_diplomats }
+		completion_reward = {
+			NCR = {add_opinion_modifier = { target = ERB modifier = wontShootOnsight }}
+			NCR = {remove_opinion_modifier = { target = ERB modifier = bitterEnemies }}
+			add_opinion_modifier = { target = NCR modifier = wontShootOnsight }
+			remove_opinion_modifier = { target = NCR modifier = bitterEnemies }
+		}
+	}
+	focus = {#Diplomacy - NCR - bribes
+		id = enc_NCR_bribes
+		icon = GFX_goal_generic_intelligence_exchange 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NCR_start
+		x = 0
+		y = 1
+		cost = 8.6 
+		prerequisite = { focus = enc_NCR_start }	
+		completion_reward = {
+			NCR = {add_opinion_modifier = { target = ERB modifier = intriguedDistrust }}
+			NCR = {remove_opinion_modifier = { target = ERB modifier = wontShootOnsight }}
+			add_opinion_modifier = { target = NCR modifier = intriguedDistrust }
+			remove_opinion_modifier = { target = NCR modifier = wontShootOnsight }
+		}
+	}
+	focus = {#Diplomacy - NCR - trade
+		id = enc_NCR_trade
+		icon = GFX_goal_generic_trade
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NCR_bribes
+		x = 0
+		y = 1
+		cost = 8.6 
+		prerequisite = { focus = enc_NCR_bribes }				
+	}
+	focus = {#Diplomacy - NCR - embassy
+		id = enc_NCR_embassy
+		icon = GFX_goal_generic_NCR_diplomatic_focus 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NCR_trade
+		x = 0
+		y = 1
+		cost = 8.6 
+		prerequisite = { focus = enc_NCR_trade }
+		completion_reward = {
+			diplomatic_relation = { country = NCR relation = non_aggression_pact }	
+		}			
+	}
+	
+	focus = {#Diplomacy - CES - start
+		id = enc_CES_start
+		icon = GFX_goal_legion_generic_focus 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_foreign_policy
+		x = -1
+		y = 2
+		cost = 8.6 
+		prerequisite = { focus = enc_send_diplomats }				
+	}
+	focus = {#Diplomacy - CES - cache
+		id = enc_CES_cache
+		icon = GFX_goal_generic_common_energy_weapons_focus 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_CES_start
+		x = 0
+		y = 1
+		cost = 8.6 
+		prerequisite = { focus = enc_CES_start }				
+	}
+	focus = {#Diplomacy - CES - trade
+		id = enc_CES_trade
+		icon = GFX_goal_legion_denarius 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_CES_cache
+		x = 0
+		y = 1
+		cost = 8.6 
+		prerequisite = { focus = enc_CES_cache }				
+	}
+	focus = {#Diplomacy - CES - common_enemy
+		id = enc_CES_common_enemy
+		icon = GFX_goal_generic_Legion_diplomatic_focus 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_CES_trade
+		x = 0
+		y = 1
+		cost = 8.6 
+		prerequisite = { focus = enc_CES_trade }
+		completion_reward = {
+			diplomatic_relation = { country = CES relation = non_aggression_pact }	
+		}					
+	}
+	
+	focus = {#Diplomacy - ERB - start
+		id = enc_NEW_start
+		icon = GFX_goal_VEG_The_House 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_foreign_policy
+		x = 1
+		y = 2
+		cost = 8.6
+		prerequisite = { focus = enc_send_diplomats focus = enc_no_diplomats }				
+	}
+	focus = {#Diplomacy - ERB - vacation
+		id = enc_NEW_vacation
+		icon = GFX_goal_VEG_The_Ultra-Luxe 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NEW_start
+		x = 0
+		y = 1
+		cost = 8.6
+		prerequisite = { focus = enc_NEW_start}				
+	}
+	focus = {#Diplomacy - ERB - robot
+		id = enc_NEW_robot
+		icon = GFX_goal_generic_robots_focus
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NEW_vacation
+		x = 0
+		y = 1
+		cost = 8.6
+		prerequisite = { focus = enc_NEW_vacation}
+		completion_reward = {
+			add_tech_bonus = {
+				name = robotics_armour_bonus
+				bonus = 0.5
+				uses = 2
+				category = robotics_tech
+			}
+		}
+	}
+	focus = {#Diplomacy - ERB - recognize
+		id = enc_NEW_recognize
+		icon = GFX_goal_VEG_Vegas_for_the_People 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NEW_robot
+		x = 0
+		y = 1
+		cost = 8.6
+		prerequisite = { focus = enc_NEW_robot}
+		completion_reward = {
+			diplomatic_relation = { country = VEG relation = non_aggression_pact }	
+		}		
+	}
+	focus = {#Diplomacy - ERB - pact
+		id = enc_NEW_pact
+		icon = GFX_goal_VEG_New_World_Order 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NEW_recognize
+		x = 0
+		y = 1
+		cost = 8.6
+		prerequisite = { focus = enc_NEW_recognize}				
+	}
+	focus = {#Diplomacy - ERB - puppet
+		id = enc_NEW_puppet
+		icon = GFX_goal_generic_major_alliance 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NEW_pact
+		x = 0
+		y = 1
+		cost = 8.6
+		prerequisite = { focus = enc_NEW_pact}				
+	}
+
+	focus = {#Diplomacy - VLT - start
+		id = enc_VLT_start
+		icon = GFX_goal_generic_major_alliance
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_foreign_policy
+		x = 4
+		y = 2
+		cost = 8.6 
+		prerequisite = { focus = enc_send_diplomats focus = enc_no_diplomats }	
+	}
+	focus = {#Diplomacy - VLT - clear
+		id = enc_VLT_clear
+		icon = GFX_goal_generic_propaganda 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_VLT_start
+		x = 0
+		y = 1
+		cost = 8.6 
+		prerequisite = { focus = enc_VLT_start}	
+	}
+	focus = {#Diplomacy - VLT - assert
+		id = enc_VLT_assert
+		icon = GFX_goal_generic_demand_territory 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_VLT_clear
+		x = 0
+		y = 1
+		cost = 8.6 
+		prerequisite = { focus = enc_VLT_clear}	
+	}
+	focus = {#Diplomacy - VLT - raiders
+		id = enc_VLT_raiders
+		icon = GFX_goal_NCR_Mojave 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_VLT_assert
+		x = -1
+		y = 1
+		cost = 8.6 
+		prerequisite = { focus = enc_VLT_assert}
+		mutually_exclusive = { focus = enc_VLT_force }
+		completion_reward = {
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = -50 producer = ERB }
+		}
+		custom_effect_tooltip = enc_VLT_raiders_tt
+	}
+	focus = {#Diplomacy - VLT - force
+		id = enc_VLT_force
+		icon = GFX_goal_enc_verti 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_VLT_assert
+		x = 1
+		y = 1
+		cost = 8.6 
+		prerequisite = { focus = enc_VLT_assert}
+		mutually_exclusive = { focus = enc_VLT_raiders }			
+	}
+	focus = {#Diplomacy - VLT - puppet
+			id = enc_VLT_puppet
+			icon = GFX_goal_generic_major_alliance 
+			ai_will_do = { factor = 1 } 
+			relative_position_id = enc_VLT_assert
+			x = 0
+			y = 2
+			cost = 8.6 
+			prerequisite = { focus = enc_VLT_force focus = enc_VLT_raiders}
+			completion_reward = {
+				puppet = VLT	
+			}	
+		}
+
+	focus = {#Diplomacy - Deal with the Yakuza
+		id = enc_yakuza_annex_2
+		icon = GFX_focus_AST_war_japan
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_send_diplomats focus = enc_no_diplomats }
+		bypass = {
+			YKZ = { exists = NO }
+		}		
+		relative_position_id = enc_VLT_start
+		x = 2
+		y = 0
+
+		cost = 8.6
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = YKZ
+			}
+		}
+	}
+ 	focus = {#Diplomacy - Deal with the antelope tribe
+		id = enc_antelope_annex
+		icon = GFX_focus_generic_air_defense
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_send_diplomats focus = enc_no_diplomats }
+		bypass = {
+			ANT = { exists = NO }
+		}			
+		relative_position_id = enc_yakuza_annex_2
+		x = 2
+		y = 0
+		cost = 8.6
+		completion_reward = {create_wargoal = {type = annex_everything target = ANT}}
+	}
+	
+	
+	focus = {#secret service
+		id = enc_secret_service
+		icon = GFX_focus_generic_strike_at_democracy1
+		ai_will_do = { factor = 1 }
+		available = { has_completed_focus = enc_reform	}
+		relative_position_id = enc_foreign_policy
+		x = 15
+		y = 0
+		cost = 8.6
+		completion_reward = {
+			add_ideas = enc_secret_service
+		}
+	}
+	
+	focus = {#SS-CER-START ---------
+		id = enc_ss_ceasar_start
+		icon = GFX_goal_legion_generic_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_secret_service}
+		relative_position_id = enc_secret_service
+		x = 2
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-CER-TOP-START
+		id = enc_ss_ceasar_top
+		icon = GFX_goal_legion_spqr
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_start}
+		relative_position_id = enc_ss_ceasar_start
+		x = -1
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-CER-TOP-BOOKS
+		id = enc_ss_ceasar_top_books
+		icon = GFX_goal_generic_data_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_top}
+		relative_position_id = enc_ss_ceasar_top
+		x = 0
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-CER-TOP-RAIDING
+		id = enc_ss_ceasar_top_raiding
+		icon = GFX_goal_generic_attack_allies
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_top_books}
+		relative_position_id = enc_ss_ceasar_top_books
+		x = 0
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-CER-TOP-AUGUSTUS ---------
+		id = enc_ss_ceasar_top_augustus
+		icon = GFX_goal_legion_immortal_empire
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_top_raiding}
+		relative_position_id = enc_ss_ceasar_top_raiding
+		x = 0
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-CER-BOTTOM-START
+		id = enc_ss_ceasar_bottom
+		icon = GFX_goal_legion_slaves
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_start}
+		relative_position_id = enc_ss_ceasar_start
+		x = 1
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-CER-BOTTOM-INFILTRATE
+		id = enc_ss_ceasar_bottom_infiltrate
+		icon = GFX_goal_legion_generic_infantry
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_bottom}
+		relative_position_id = enc_ss_ceasar_bottom
+		x = 0
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-CER-BOTTOM-WEAPONS
+		id = enc_ss_ceasar_bottom_weapons
+		icon = GFX_goal_generic_regular_firearms_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_bottom_infiltrate}
+		relative_position_id = enc_ss_ceasar_bottom_infiltrate
+		x = 0
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-CER-BOTTOM-SPARTACUS
+		id = enc_ss_ceasar_bottom_uprising
+		icon = GFX_goal_enc_poison_bull
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_bottom_weapons}
+		relative_position_id = enc_ss_ceasar_bottom_weapons
+		x = 0
+		y = 1
+		cost = 8.6
+	}
+
+	focus = {#SS-NCR-START
+		id = enc_ss_ncr_start
+		icon = GFX_goal_NCR_Bears_Roar
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_secret_service}
+		relative_position_id = enc_secret_service
+		x = -2
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-NCR-A-START
+		id = enc_ss_ncr_barons
+		icon = GFX_goal_NCR_Baronofbarons
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ncr_start}
+		relative_position_id = enc_ss_ncr_start
+		x = -1
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-NCR-A-deals
+		id = enc_ss_ncr_barons_deals
+		icon = GFX_goal_generic_intelligence_exchange
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ncr_barons}
+		relative_position_id = enc_ss_ncr_barons
+		x = 0
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-NCR-A-RAIDING
+		id = enc_ss_ncr_barons_raiding
+		icon = GFX_goal_NCR_Mojave
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ncr_barons_deals}
+		relative_position_id = enc_ss_ncr_barons_deals
+		x = 0
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-NCR-A-petition
+		id = enc_ss_ncr_barons_petition
+		icon = GFX_goal_generic_forceful_treaty
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ncr_barons_raiding}
+		relative_position_id = enc_ss_ncr_barons_raiding
+		x = 0
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-NCR-PEOPLE-START
+		id = enc_ss_ncr_people
+		icon = GFX_goal_NCR_Urban_Draft
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ncr_start}
+		relative_position_id = enc_ss_ncr_start
+		x = 1
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-NCR-PEOPLE-PROPAGANDA
+		id = enc_ss_ncr_people_propaganda
+		icon = GFX_goal_enc_radio
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ncr_people}
+		relative_position_id = enc_ss_ncr_people
+		x = 0
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-NCR-PEOPLE-WEAPONS
+		id = enc_ss_ncr_people_weapons
+		icon = GFX_goal_NCR_Weapon_Standardization
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ncr_people_propaganda}
+		relative_position_id = enc_ss_ncr_people_propaganda
+		x = 0
+		y = 1
+		cost = 8.6
+	}
+	focus = {#SS-NCR-PEOPLE-UPRISING
+		id = enc_ss_ncr_people_uprising
+		icon = GFX_goal_enc_poison_bear
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ncr_people_weapons}
+		relative_position_id = enc_ss_ncr_people_weapons
+		x = 0
+		y = 1
+		cost = 8.6
+	}	
+ 
+	focus = {#Department of Defense
+		id = enc_dod_start
+		icon = GFX_goal_generic_army_doctrines
+		ai_will_do = { factor = 1 }
+		available = {
+			has_completed_focus = enc_reform
+		}
+		relative_position_id = enc_secret_service
+		x = 10
+		y = 0
+		cost = 8.6
+		completion_reward = {
+
+		}
+	}
+	focus = {#tactics
+		id = enc_dod_tactics
+		icon = GFX_goal_generic_intelligence_exchange 
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_dod_start}
+		relative_position_id = enc_dod_start
+		x = -2
+		y = 1
+		cost = 8.6	
+	}
+	focus = {#prewar tactics
+		id = prewar_tactics
+		icon = GFX_focus_generic_military_mission
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_dod_tactics }
+		mutually_exclusive = { focus = postwar_tactics }
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		relative_position_id = enc_dod_tactics
+		x = 1
+		y = 1
+		cost = 8.6
+	}
+	focus = {#post war tactics
+		id = enc_postwar_tactics
+		icon = GFX_focus_generic_military_mission
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus=enc_dod_tactics}
+		mutually_exclusive = { focus = prewar_tactics}
+		completion_reward{
+			add_tech_bonus = {
+				name = land_doctrine_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		relative_position_id = enc_dod_tactics
+		x = -1
+		y = 1
+		cost = 8.6
+	}
+	focus = {#RND budget
+		id = enc_RND
+		icon = GFX_goal_generic_intelligence_exchange 
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_dod_start}
+		relative_position_id = enc_dod_start
+		x = 2
+		y = 1
+		cost = 8.6	
+	}
+	focus = {#energy-1
+		id = enc_dod_energy_1
+		icon = GFX_goal_generic_common_energy_weapons_focus 
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_RND}
+		mutually_exclusive = { focus = enc_dod_balistic_1 }
+		relative_position_id = enc_RND
+		x = 1
+		y = 1
+		cost = 8.6	
+	}
+	focus = {#energy-2
+		id = enc_dod_energy_2
+		icon = GFX_goal_generic_common_energy_weapons_focus 
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_dod_energy_1}
+		relative_position_id = enc_dod_energy_1
+		x = 0
+		y = 1
+		cost = 8.6	
+	}
+	focus = {#energy-3
+		id = enc_dod_energy_3
+		icon = GFX_goal_generic_common_energy_weapons_focus 
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_dod_energy_2}
+		relative_position_id = enc_dod_energy_2
+		x = 0
+		y = 1
+		cost = 8.6	
+	}
+	focus = {#balistic-1
+		id = enc_dod_balistic_1
+		icon = GFX_goal_generic_regular_firearms_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_RND}
+		mutually_exclusive = { focus = enc_dod_energy_1 }
+		relative_position_id = enc_RND
+		x = -1
+		y = 1
+		cost = 8.6	
+	}
+	focus = {#balistic-2
+		id = enc_dod_balistic_2
+		icon = GFX_goal_generic_regular_firearms_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_dod_balistic_1}
+		relative_position_id = enc_dod_balistic_1
+		x = 0
+		y = 1
+		cost = 8.6	
+	}
+	focus = {#balistic-3
+		id = enc_dod_balistic_3
+		icon = GFX_goal_generic_regular_firearms_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_dod_balistic_2}
+		relative_position_id = enc_dod_balistic_2
+		x = 0
+		y = 1
+		cost = 8.6	
+	}
+
+ }#   WIP  --------------------------------------------------
+
+	
+# GFX_goal_enc_accept_wastelanders
+# GFX_goal_enc_annex_ykz
+# GFX_goal_enc_ant
+# GFX_goal_enc_arrows2
+# GFX_goal_ENC_assasinate
+# GFX_goal_enc_beacon
+# GFX_goal_enc_construction
+# GFX_goal_enc_defenders
+# GFX_goal_enc_draft_wastelanders
+# GFX_goal_enc_election
+# GFX_goal_enc_experiments
+# GFX_goal_enc_eyebot
+# GFX_goal_enc_flags
+# GFX_goal_enc_fort
+# GFX_goal_enc_infra
+# GFX_goal_enc_integrate_politicians
+# GFX_goal_enc_integrate_scientists
+# GFX_goal_enc_laser_weapons
+# GFX_goal_enc_major_war
+# GFX_goal_enc_management
+# GFX_goal_enc_mutant_extinction
+# GFX_goal_enc_planning
+# GFX_goal_enc_poison_bear
+# GFX_goal_enc_poison_bull
+# GFX_goal_enc_power_armor_focus
+# GFX_goal_enc_power_armor_focus2
+# GFX_goal_enc_president
+# GFX_goal_enc_president_p
+# GFX_goal_enc_purge
+# GFX_goal_enc_purify
+# GFX_goal_enc_purity
+# GFX_goal_enc_radio
+# GFX_goal_enc_radio_2
+# GFX_goal_enc_rangers_planning
+# GFX_goal_enc_rangers_start
+# GFX_goal_enc_reform
+# GFX_goal_enc_reform3
+# GFX_goal_enc_remember
+# GFX_goal_enc_remember_rig
+# GFX_goal_enc_research
+# GFX_goal_enc_sabotage
+# GFX_goal_enc_sabotage.pdn
+# GFX_goal_enc_scientists
+# GFX_goal_enc_slave_labour
+# GFX_goal_enc_slave_labour_collars
+# GFX_goal_enc_slave_labour_mutants
+# GFX_goal_enc_smash
+# GFX_goal_enc_superhuman
+# GFX_goal_enc_sword_cross
+# GFX_goal_enc_tools
+# GFX_goal_enc_troop
+# GFX_goal_enc_troop_call
+# GFX_goal_enc_us_flags
+# GFX_goal_enc_us_reborn
+# GFX_goal_enc_us_reborn_red.pdn
+# GFX_goal_enc_vac
+# GFX_goal_enc_vault_open
+# GFX_goal_enc_vault_tec
+# GFX_goal_enc_verti
+# GFX_goal_enc_verti_dual_2.pdn
+# GFX_goal_enc_verti_o
+# GFX_goal_enc_veterans_call
+# GFX_goal_enc_weapon_factory
+# GFX_goal_ew_production.pdn
+# GFX_goal_pa_production
+# GFX_goal_shield_enc_wip
+# GFX_goal_US_dock
+# GFX_goal_US_navy
+# GFX_goal_us_plane
+# GFX_goal_us_plane_advanced
+# GFX_goal_vault_tec

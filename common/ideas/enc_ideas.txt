@@ -1,0 +1,725 @@
+ideas = {	
+	country = {
+####################################################
+# MISC
+####################################################
+		ENC_PA_production= {
+			picture = enc_pa_production
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			equipment_bonus = {
+				power_armor_equipment = { #enclave_power_armour_equipment_1
+					build_cost_ic = -0.30
+					instant = yes
+				}
+			}			
+		} 
+		ENC_energy_production = { 
+			picture = generic_production_bonus
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			equipment_bonus = {
+				energy_equipment_3 = {
+					build_cost_ic = -0.30
+					instant = yes
+				}
+			}
+			
+		}
+		ENC_infighting = {  
+	picture = enc_idea_infighting #FRA_scw_intervention_republicans_focus
+	allowed = { 
+		always = no
+	}
+
+	allowed_civil_war = { 
+		always = yes
+	}
+	removal_cost = -1
+	modifier = {
+	   stability_factor = -0.20
+	   army_morale_factor = -0.20
+	   army_org_Factor = -0.20
+	   political_power_gain = -0.30
+	}
+}
+		ENC_scientists = {  		
+			picture = enc_scientists #check
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   research_time_factor = -0.10
+			   elites_drift = 0.1
+			}
+		}
+		ENC_remnant_officers = {  
+			picture = enc_officers
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				elites_drift = 0.1
+				research_bonus = { land_doctrine = 0.10	}
+				max_planning = 0.2
+				army_leader_start_level = 3
+			}
+		}
+	
+####################################################
+# REFORM
+####################################################
+		ENC_reform = {  
+			picture = air_support_focus
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   stability_factor = -0.2
+			   army_morale_factor = -0.2
+			   army_org_factor = -0.2
+			   political_power_gain = -0.2
+			   war_support_factor = -0.3
+			}
+		}
+		ENC_scientists_purged = {  		
+			picture = enc_scientists #check
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   research_time_factor = -0.05
+			}
+		}
+		ENC_vacinations = {  
+			picture = SOV_scientist_defect
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				conscription = 0.01
+				MONTHLY_POPULATION = 0.1
+				consumer_goods_factor = 0.05
+				attrition = -0.1
+			}
+		}
+		ENC_education = {  
+			picture = enc_education
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				research_time_factor = -0.08
+				political_power_gain = 0.20
+				consumer_goods_factor = 0.05
+			}
+		}
+		ENC_radio = {  
+			picture = enc_radio
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   political_power_gain = 0.20
+			   decryption_factor = 0.2
+			}
+		}
+		ENC_wastelanders = {  
+			picture = generic_reserve_divisions
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   non_core_manpower = 0.1
+			   stability_factor = -0.2
+			   army_org_factor = -0.2
+			   army_morale_factor = -0.2
+			   training_time_factor = 0.15
+			   planning_speed = -0.2
+			   max_planning = -0.2
+			   intellectuals_drift = 0.1
+			   political_power_gain = -0.2
+			}
+		}
+		ENC_wastelanders2 = {  
+			picture = generic_reserve_divisions
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   non_core_manpower = 0.1
+			   stability_factor = -0.1
+			   army_org_factor = -0.1
+			   army_morale_factor = -0.1
+			   training_time_factor = 0.20
+			   planning_speed = -0.1
+			   max_planning = -0.1
+			   intellectuals_drift = 0.1
+			}
+		}
+		ENC_remnant_officers_purged = {  
+			picture = enc_officers
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   research_bonus = { land_doctrine = 0.05}
+			   max_planning = 0.1
+			   army_leader_start_level = 1
+			}
+		}
+		ENC_new_patriotism = {  
+			picture = victors_of_the_great_war #FIX
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		ENC_americans_one_and_all= {  
+			picture = Victors_of_the_Great_War #FIX
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				non_core_manpower = 0.2
+			}
+		}
+		ENC_police= {  
+			picture = ast_classify_aliens
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				conscription_factor = -0.10
+				political_power_gain = 0.10
+				enemy_partisan_effect = -0.1
+				stability_factor = 0.10
+			}
+		}
+		ENC_constitution= {  
+			picture = generic_constitutional_guarantee
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				political_power_gain = -0.10
+				stability_factor = 0.10
+				industrial_capacity_factory = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				consumer_goods_factor = -0.10
+			}
+		}
+		ENC_constitution_rule_of_law= {  
+			picture = idea_generic_constitutional_guarantee
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				# TODO
+			}
+		}
+		ENC_secret_service = {
+			picture = generic_secret_police
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				encryption_factor = 0.2
+				decryption_factor = 0.2
+				conscription_factor = -0.05
+			}
+		}
+		ENC_integrating_officers = {  
+			picture = enc_officers
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				army_org_factor = -0.20
+				army_attack_factor = -0.20
+				political_power_gain = -0.20
+			}
+		}
+		ENC_integrating_scientists = {  
+			picture = generic_research_bonus
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				research_time_factor = +0.08
+				political_power_gain = -0.20
+			}
+		}
+		ENC_integrating_politicians = {
+			picture = generic_secret_police
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				political_power_gain = -0.30
+				consumer_goods_factor = 0.05
+			}
+		}
+
+####################################################
+# REFORM - DIPLOMACY TREE
+####################################################
+		ENC_no_diplomats = {
+			picture = generic_secret_police
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				justify_war_goal_time = -0.25
+				generate_wargoal_tension = -0.25
+				political_power_gain = 0.1
+			}
+		}	
+		ENC_send_diplomats = {
+			picture = generic_secret_police
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				justify_war_goal_time = +0.10
+				trade_opinion_factor = 0.25
+			}
+		ENC_send_diplomats = {
+			picture = generic_secret_police
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				justify_war_goal_time = +0.10
+				trade_opinion_factor = 0.25
+			}
+		}
+		}
+
+####################################################
+# PURITY
+####################################################
+		ENC_purist = {  
+			picture = GFX_idea_enc_purity_1
+			allowed = {
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   non_core_manpower = -0.02
+			   stability_factor = -0.1
+			   army_morale_factor = 0.1
+			   army_org_factor = 0.1
+			}
+		}
+		ENC_purist2 = {  
+			picture = GFX_idea_enc_purity_2
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   non_core_manpower = -0.02
+			   army_morale_factor = 0.20
+			   army_org_factor = 0.20
+			   conscription = 0.1
+			}
+		}
+		ENC_purist3 = {  		
+			picture = GFX_idea_enc_purity_3
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   non_core_manpower = -0.02
+			   stability_factor = 0.10
+			   army_morale_factor = 0.20
+			   army_org_factor = 0.20
+			   conscription = 0.20
+			   justify_war_goal_time = -0.30
+			}
+		}
+		ENC_vengeance= {  		
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				army_morale_factor = 0.10
+				army_org_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = NCR
+				attack_bonus_against = 0.25
+			}
+		}		
+		ENC_slave_labour = {  
+			picture = enc_slave_labour
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				conscription_factor = -0.2
+			}
+		}
+		ENC_slave_labour_collars = {  
+			picture = enc_slave_labour
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.20
+				industrial_capacity_dockyard = 0.20
+				conscription_factor = -0.05
+			}
+		}
+		ENC_slave_labour_mutants = {  
+			picture = enc_slave_labour
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.10
+				industrial_capacity_factory = 0.20
+				industrial_capacity_dockyard = 0.20
+				conscription_factor = -0.05
+				production_speed_buildings_factor = 0.2
+			}
+		}
+		ENC_plague = {  
+			picture = ENG_the_war_to_end_all_wars
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				stability_factor = -0.3
+				MONTHLY_POPULATION = -5
+				attrition = 1
+				army_org_factor = -0.3
+				army_attack_factor = -0.3
+				army_defence_factor = -0.3
+				}
+		}
+		ENC_radio_purity = {  
+			picture = enc_radio
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				political_power_factor = 0.20
+				political_power_gain = 0.20
+				decryption_factor = 0.2
+				elites_drift = 0.2
+			}
+		}
+		ENC_FEV_soldiers= {  
+			picture = generic_infantry_bonus
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+					army_attack_factor = 0.30
+					army_defence_factor = 0.10
+					army_org_factor = 0.30
+					army_morale_factor = 0.30
+					army_speed_factor = 0.2
+			}
+		}
+		ENC_scientists_buffed = {  		
+			picture = enc_scientists #check
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   research_time_factor = -0.2
+			   conscription = -0.005
+			   elites_drift = 0.2
+			}
+		}
+		ENC_water_contaminated = {
+			picture = generic_research_bonus #TODO
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				supply_consumption_factor = 1	
+			}
+		}
+####################################################
+# PURITY - DESERT RANGERS TREE
+####################################################
+		ENC_construction_infra = {
+			modifier = {
+					production_speed_infrastructure_factor = 0.2
+				}
+		}
+		ENC_construction_forts = {
+			modifier = {
+				production_speed_bunker_factor = 0.3
+			}
+		}
+		ENC_rangers_defense = {
+			targeted_modifier = {
+				tag = DES
+				defense_bonus_against = 0.2
+			}
+		}
+		ENC_rangers_attack = {
+			targeted_modifier = {
+				tag = DES
+				attack_bonus_against = 0.2
+			}
+		}
+		ENC_rangers_attack_2 = {
+			modifier = {
+				heat_attrition_factor = -0.5
+			}
+			targeted_modifier = {
+				tag = DES
+				attack_bonus_against = 0.2
+			}
+		}
+		ENC_rangers_plan_attack = {
+			targeted_modifier = {
+				tag = DES
+				attack_bonus_against = 0.2
+			}
+		}
+		ENC_rangers_plan_defense = {
+			targeted_modifier = {
+				tag = DES
+				defense_bonus_against = 0.2
+			}
+		}
+	}
+
+	tank_manufacturer = {
+		ENC_PA_quality = {
+			picture = enc_designer_PA
+			allowed = {
+				original_TAG = ERB
+			}
+			equipment_bonus = {
+				power_armor_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}			
+			modifier = {
+				conscription_factor = -0.10
+			}
+		}
+		ENC_PA_quanitity = {
+			picture = enc_designer_PA
+			
+			allowed = {
+				original_TAG = ERB
+			}
+			equipment_bonus = {
+				power_armor_equipment = {
+					armor_value = 0.05
+					hardness = 0.1
+					breakthrough = 0.05
+					instant = yes
+				}
+			}			
+			modifier = {
+				conscription_factor = -0.10
+			}
+		}
+	}
+}
+# enc_education
+# enc_officers
+# enc_radio
+# enc_scientists
+# enc_slave_labour
+

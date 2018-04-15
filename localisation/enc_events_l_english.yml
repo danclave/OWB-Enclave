@@ -1,0 +1,221 @@
+﻿l_english:
+################################## EVENTS ##############################################
+enc.0.t:0 "Enclave Remnants Take Over Siera Military Depot!"
+enc.0.d:0 "Enclave Remnants have always flocked to New Reno. Safe from the prying eyes of the NCR, the city always needs muscle and never asks questions. We always assumed their spirits too broken to be a threat. It appears we were wrong, as Enclave remants from everywhere in the wastes have flocked to the banner of an aging drill sargeant."
+enc.0.a:0 "All according to plan."
+enc.0.a.tt:0 "Play as §YThe Enclave§!"
+enc.0.b:0 "Not this again!"
+ #######################################################################################
+enc.1.t:0 "Our Escape"
+enc.1.d:0 "Years ago, we managed to escape from the destruction of the main Enclave forces at Navarro. The manner in which we survived can still be felt today. We..."
+enc.1.a:0 "Fought our way out with power armor"
+enc.1.b:0 "Escaped using Vertibirds."
+enc.1.c:0 "Deserted before the fighting got bad."
+ #######################################################################################
+enc.2.t:0 "Our Past"
+enc.2.d:0 "During our hiding, we..."
+enc.2.a:0 "Focused on finding other survivors."
+enc.2.b:0 "Focused on building up civilian infastructure."
+enc.2.c:0 "Focused on building up military infastructure."
+########################################################################################
+enc.3.t:0 "Our President"
+enc.3.d:0 "Sargeant Dornan is well respected by both the Reformer and Purist faction within the Enclave. None the less, neither seem him as a viable president and have presented their own candidates. The Purists have selected Franklin Anderson as their candidate while the reformers are lead by Douglas Granite. It appears the Purist faction has the advantage, but the support of the Sarge could still tip the scales in favor of the refomers."
+enc.3.a:0 "Sargeant Dornan supports Franklin Anderson."
+enc.3.a.tt:0 "§YFranklin Anderson§! of the §YPurist Faction§! becomes the new Enclave president."
+enc.3.b:0 "Sargeant Dornan supports Douglas Granite."
+enc.3.b.tt:0 "Dornan decides Dr. Anderson is a §R'MO-RON'§! /n §YDouglas Granite§! of the §YPurist Faction§! becomes the new Enclave president,
+########################################################################################
+enc.4.t:0 "Disloyal scientists"
+enc.4.d:0 "Many of the leading figures in our remaining science teams have been open in their support of the Purists, even after the election."
+enc.4.a:0 "Let the egg heads talk, they know who's in charge."
+enc.4.b:0 "We'll make an example of the worst troublemakers."
+enc.4.c:0 "The penalty for treason is death."
+########################################################################################
+enc.5.t:0 "Disloyal officers"
+enc.5.d:0 "Many of our remaining officers have been open in their support of the Purists, even after the election."
+enc.5.a:0 "They will command outsiders or no one at all."
+enc.5.b:0 "We'll make an example of the worst troublemakers."
+enc.5.c:0 "The penalty for treason is death."
+########################################################################################
+enc.6.t:0 "Disloyal soldiers"
+enc.6.d:0 "Many of our remaining soldiers have been open in their support of the Purists, even after the election."
+enc.6.a:0 "They will command outsiders or no one at all."
+enc.6.b:0 "We'll make an example of the worst troublemakers."
+enc.6.c:0 "The penalty for treason is death."
+########################################################################################
+enc.7.t:0 "Disloyal engineers"
+enc.7.d:0 "Many of our remaining engineers have been open in their support of the Purists, even after the election."
+enc.7.a:0 "They will command outsiders or no one at all."
+enc.7.b:0 "We'll make an example of the worst troublemakers."
+enc.7.c:0 "The penalty for treason is death."
+########################################################################################
+enc.8.t:0 "Secrets Stolen"
+enc.8.d:0 "Last night, a small group of traitors made off with a vertibird and several old military codes. ."
+enc.8.a:0 "Good riddance. We don't need them."
+enc.8.b:0 "A great opportunity to set some examples."
+########################################################################################
+enc.9.t:0 "Anderson's Past"
+enc.9.d:0 "Doctor Franklin is a former member of the Enclave's Chemical Corps.The good doctor has recently escaped from thirty years of imprisonment and servitude as first a non-person prisoner in Shady Sands' darkest hole, then a slave to a tribe, then a slave in New Reno. Since his return to freedom he has championed the ideals of the Enclave of old; Purity, Supremacy and the Re-establishment of America. Formerly involved in several secret projects during the Presidency of Dick Richardson-notably the FEV Experiments of Mariposa and the creation of Frank Horrigan-he seeks to finish what he and his colleagues started four decades ago: the eradication of the mutant menace that dares to tread upon American soil. When he was a young scientist, he distinguised himself as he... "
+enc.9.a:0 "Stared down a rampaging Frank Horrigan until he could be subdued."
+enc.9.a.tt: "While the tranquilizers shot into Frank Horrigan were also taking their toll, none can deny that the towering beast of a man stopped his rampage when faced with a young scientist staring back at him without a hint of fear."
+enc.9.b:0 "Pioneered a new composition of the common Stimpak via self testing."
+enc.9.b.tt: "True devotion to science is measured in sacrifice. This man's risks inspire any scientist."
+enc.9.c:0 "Sought out test subjects for the Chemical Corps on the mainland."
+enc.9.c.tt: "Most scientists leave the dirty work to the soldiers, but Anderson often accompanied them to the mainland. Sharing in their company and dangers."
+########################################################################################
+enc.901.t:0 "Imprisonment by the NCR"
+enc.901.d:0 "TODO: text that outlines how he was captured and tortured ending with he..."
+enc.901.a:0 "Tricked them into using the wrong callsign."
+enc.901.b:0 "Swore vengeance."
+enc.901.c:0 "Stayed completely silent."
+################################################################################################################################################################################
+enc.10.t:0 "Sold into Slavery"
+enc.10.d:0 "After decades of NCR imprisonment, Anderson was forgotten about. He was one of many undocumented prisoners in the NCR beaurocracy. Moved from prison to prison until eventually an enterprising warden sold him and other unmarked prisoners into slavery to..."
+enc.10.a:0 "The Khans"
+enc.10.b:0 "The Eighties"
+########################################################################################
+enc.11.t:0 "Anderson's Escape"
+enc.11.d:0 "Whilst a slave, Anderson was kept from most physical labour duo to his knowledge of chemistry. Able to turn rudementary scavanged items into poisons and bombs, he was deemed useful by his captors. Years later, when age started taking its toll on Anderson, they decided to bring him to New Reno, hoping the Mordinos would be interested in an old but chemically gifted slave. Much to their surprise, when the party neared New Reno, he..."
+enc.11.a:0 "Organised the other slaves into an uprising."
+enc.11.b:0 "Killed his captors in their sleep using a gas."
+enc.11.c:0 "Snuck out in the middle of the night."
+#########################################################################################
+enc.12.t:0 "Douglas' Youth"
+enc.12.d:0 "When Douglas was young, his father told him stories about the Enclave..."
+enc.12.a:0 "Option one."
+enc.12.b:0 "Option two."
+enc.12.c:0 "Option three."
+#########################################################################################
+enc.13.t:0 "Douglas' first contact"
+enc.13.d:0 "Hunting Raiders, he came across a group of people looking for the same gang."
+enc.13.a:0 "NCR."
+enc.13.b:0 "Brotherhood."
+enc.13.c:0 "Caeser's Legion."
+#########################################################################################
+enc.14.t:0 "Douglas' Decision"
+enc.14.d:0 "He decided to..."
+enc.14.a:0 "Wait for the two to exhaust each other and finish off the survivors."
+enc.14.b:0 "Help take down the raiders."
+#########################################################################################
+enc.15.t:0 "Douglas Granite deserts"
+enc.15.d:0 "Granite has taken a few of his most devoted supported and deserted the Enclave in a vertibird last night. Support for the Reformers have dwindled with the dissapearance of their leader"
+enc.15.a:0 "Good riddance to them."
+#########################################################################################
+enc.16.t:0 "In the lair of the Bear"
+enc.16.d:0 "We are on the very borders of the NCR, a rogue nation occupying American soil. We can not deny that they would destroy us if they became fully aware of our existance. Luckily for us, the bear is blind. Weakened by beaurocracy, infighting and an ineffectual leader. With the right efforts made, we can hide under the very nose of the NCR until we are strong enough to reveal our plans. But we cannot keep them in the shadows forever, it will become harder and harder to conceal ourselves as time goes on."
+enc.16.a:0 "Our time will come soon."
+enc.16.a.tt:0 "Unlocks the §YHide Activities from NCR§! decision.\nThis allows you to spend £pol_power §YPolitical Power§! to keep the NCR from mobilizing against you.\nThe cost of this decision will increase by 10 £pol_power §YPolitical Power§! every time you use it!"
+#########################################################################################
+enc.17.t:0 "NCR Suspicious!" 
+enc.17.d:0 ""  .
+enc.17.a:0 "We are on the very borders of the NCR, a rogue nation occupying American soil.
+#########################################################################################
+enc.18.t: "Disloyalty"
+enc.18.d: "We are receiving reports of an Enclave officer openly disputing our leadership. Going as far as loudly claiming that the recent elections were fraudulent."
+enc.18.a: "Round up the officer and every one involved with him"
+enc.18.b: "Find the man and make an example of him"
+enc.18.c: "We have more important matters to attend to"
+############################################################################################################### -<
+enc.19.t: "Cafetaria Incident"
+enc.19.d: "A disturbing photograph has been circulating among cafetaria staff. Involving one of the staff members intentionally handling ingredients innapropriately."
+enc.19.a: "Make a show of finding and punishing the man"
+enc.19.b: "We have more important matters to attend to"
+################################################################################################################ -<
+enc.xx.t: "Hiding from the NCR"
+enc.xx.d: "Every 3 months, a decision will appear allowing us to spend Political Power to prevent the NCR from discovering our existance. If the mission times out and we have enough Political Power saved up, it will be spent automatically. If we do not, a crisis will apear where extreme measures must be taken to prevent the NCR from outright declaring was on us.."
+enc.xx.a: "Continue"
+################################################################################################################ -<
+enc.20.t: "Disloyalty"
+enc.20.d: "We are receiving reports of an Enclave officer openly disputing our leadership. Going as far as loudly claiming that the recent elections were fraudulent."
+enc.20.a: "Make a show of finding and punishing the man"
+enc.20.b: "We have more important matters to attend to"
+################################################################################################################ -<
+enc.21.t: "Unlicensed Mutie Hunt"
+enc.21.tt: "§R----Hide Activities from NCR cost increased by 15 PP§---!"
+enc.21.d: "It appears one of our Vertibird Assault Teams is going out of their way to inflict collatoral damage on mutants during their patrols, going as far as tallying a count on their vertibird. While their actions could risk the Operational Security of the Enclave, punishing them may prove an unpopular move considering our current stance on mutants."
+enc.21.a: "Make examples of them"
+enc.21.b: "Threaten court martial"
+enc.21.b.tt: "§YThis may happen again!§!"
+enc.21.c: "Boys will be boys!"
+enc.21.c.tt: "§RThis will happen again!§!"
+enc.21.dd: "Adress the soldiers personally!"
+enc.21.dd.tt: "Available because you are §GInspiring§!"
+################################################################################################################ -<
+enc.22.t: "Rumors of half-mutant"
+enc.22.d: "Rumors have begun spreading that a respected administrator of ours is half mutant. Like many of our younger personel, he was born years after the fall of Navarro to a surviving Enclave soldier and a mysteriously absent mother. If these allegations are true, he may be a serious risk to our security. "
+enc.22.a: "No compromise, no mercy"
+enc.22.b: "Arrange a blood test to determine the truth"
+enc.22.c: "They are just rumors"
+################################################################################################################ -<
+enc.23.t: "Treachery!"
+enc.23.d: "The administrator we expected of mutation has disappeared, leaving devastation in his wake as he shredded a sizeable amount of valuable intel before taking off."
+enc.23.a: "No good deed goes unpunished"
+################################################################################################################ -<
+enc.24.t: "Mariposa Expedition (2/3)"
+enc.24.d: "As our assault team pushes deeper into the bowels of the facility, rattling and screaming echoes through the metal corridors. It appears super mutants have survived in these depths, God knows how."
+enc.24.a: "Order the soldiers to capture them."
+enc.24.a.tt: "Unlocks the §YSuper Mutant Slaves§! focus."
+enc.24.b: "We kill mutants on sight."
+enc_supermutants_captured_flag: "§YEnclave§!: has captured Supermutants"
+################################################################################################################ -<
+enc.25.t: "Mariposa Expedition (3/3)"
+enc.25.d: "With the first squad super mutants taken care of, our team approaches the target of this expeditions. The glowing green vats of FEV are right where we left them, though many of the cases are damaged. The FEV in these vats contaminated beyond belief, they would not be suitable for our research.\n With more super mutants on their heels, our team must decide what to do quickly."
+enc.25.a: "One vial of pure FEV is all we need."
+enc.25.b: "Bring whatever we can carry."
+enc.25.b.tt: "§YThese may come in handy...§!"
+################################################################################################################ -<
+enc.26.t: "Cloning Success!"
+enc.26.d: "Our most recent experimentation in creating human clones has resulted in a resounding succes! Almost all clones have survived the process and passed physical and psychological evaluations. They have been imprinted with artificial memories and will soon be capable of fulfilling any role their government needs them to."
+enc.26.a: "Eureka!" 
+################################################################################################################ -<
+enc.27.t: "Cloning Failure!"
+enc.27.d: "Our most recent experimentation in creating human clones has resulted in a less than ideal outcome. The resulting specimens have been terminated and we will need to start back from scratch. We have also been recommended to put both the science team and clean up crew involved on administrative leave until they pass psychological evaluation."
+enc.27.a: "Back to the drawing board"
+################################################################################################################ -<
+enc.28.t: "The Mariposa Military Base (1/3)"
+enc.28.d: "It appears that the base is in even worse shape when we left it. Something demolished the entire upper level, presumably using explosives. Luckily, most of the base is underground and there are alternative entrances for those with the right access codes."
+enc.28.a: "Let's go"
+################################################################################################################ -<
+enc.30.t: "The Fall of Sac City"
+enc.30.d: "Once the beautiful city of Sacramento is now a ruin, occupied by mutant squatters. Its liberation is a great victory for the Enclave and America"
+enc.30.a: "For the Enclave!"
+################################################################################################################ -<
+enc.31.t: "The Fall of Shady Sands"
+enc.31.d: "Mister President, as you are reading this communication, Enclave troops are marching through the 'capital city' of the mutant empire of the NCR. Our troops are reporting limited resistance, with many mutants too sick to pick up weapons. It appears the NCR government has fled the city well before our arrival, but it remains to be seen how much longer they will be able to keep their overblown tribe together."
+enc.31.a: "Our Victory is certain"
+############################################################################    #################################### -<
+enc.32.t: "Soldier Caught out of Uniform"
+enc.32.d: "During one of his dreaded surprise inspections, Sargeant Dornan caught a private out his standard issue power armor. The soldier cited maintenance but no such request was filed. Dornan wasted no time in demanding one thousand push ups as you happened by."
+enc.32.a: "Cut the boys some slack!"
+enc.32.a.tt: "\nWhile strict standards are necesary to maintain order, a President favoured by the common soldier is great for morale."
+enc.32.b: "Let the sargeant do his job"
+################################################################################################################ -<
+enc.33.t: "Encounter with Crimson Caravan"
+enc.33.d: "One of our patrols stumbled upon an expeditions of the Crimson Caravan. The squad leader, less triggerhappy than some. Has reported back requesting orders on how to proceed. The caravan is not close enough to confirm that they are faced with Enclave power armor specifically, but rumours of suspicious patrols in Nevada desert the could reach the NCR none the less."
+enc.33.a: "Leave them be"
+enc.33.a.tt: "§YNCR suspicion§! will go up by §R10§!"
+enc.33.b: "No witnesses"
+enc.33.c: "§G(Resourceful)§! Order patrols to use T-51 power armour from now on"
+enc.33.c.tt: "§YNCR suspicion§! will be be reduced by §G10§!\n"
+wont_happen_again: "§GThis will not happen again§!\n"
+available_because_resourceful: "\nAvailable because you are §GResourceful§!"
+################################################################################################################ -<
+enc.34.t: "Sac City Remnants"
+enc.34.d: "After the fall of Navarro, many survivors tried their luck at integrating into the NCR. While a large number were found out and arrested, many more succesfuly began their new lives in Sac city. Those people and their descendants have now petitioned us to rejoin the Enclave. "
+enc.34.a: "Welcome back!"
+enc.34.b: "They turned their back on the Enclave"
+################################################################################################################ -<
+enc.35.t: "Shady Sands Remnants"
+enc.35.d: "After the fall of Navarro, many survivors tried their luck at integrating into the NCR. While a large number were found out and arrested, many more succesfuly began their new lives in Shady Sands. Those people and their descendants have now petitioned us to rejoin the Enclave. "
+enc.35.a: "Welcome back!"
+enc.35.b: "They turned their back on the Enclave"
+################################################################################################################ -<
+enc.36.t: "Boneyard Remnants"
+enc.36.d: "After the fall of Navarro, many survivors tried their luck at integrating into the NCR. While a large number were found out and arrested, many more succesfuly began their new lives in the Boneyard. Those people and their descendants have now petitioned us to rejoin the Enclave. "
+enc.36.a: "Welcome back!"
+enc.36.b: "They turned their back on the Enclave"
+################################################################################################################ -<
+enc.37.t: "The Fall of Arroyo"
+enc.37.d: "Mister President, as you are reading this communication, Enclave troops are marching through the 'capital city' of the backwards tribe of Arrayo. Our troops are reporting only token resistance from the locals using primitive weapons. Our only casualties were sustained battling a small band led by a figure in a vault suit. As of the time this message is sent, all hostiles in the area are confirmed KIA."
+enc.37.a: "Remember the Rig and show no mercy"
+# yellow§Y-§!

@@ -1,0 +1,98 @@
+spriteTypes = {
+        SpriteType = {#event_ENC_3_troopers
+            name = "GFX_event_ENC_3_troopers"
+ 		    texturefile = "gfx/event_pictures/event_ENC_3_troopers.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_assault_team
+            name = "GFX_event_ENC_assault_team"
+ 		    texturefile = "gfx/event_pictures/event_ENC_assault_team.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_bloody_suit
+            name = "GFX_event_ENC_bloody_suit"
+ 		    texturefile = "gfx/event_pictures/event_ENC_bloody_suit.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_cloning_failed
+            name = "GFX_event_ENC_cloning_failed"
+ 		    texturefile = "gfx/event_pictures/event_ENC_cloning_failed.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_cloning_success
+            name = "GFX_event_ENC_cloning_success"
+ 		    texturefile = "gfx/event_pictures/event_ENC_cloning_success.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_mariposa1
+            name = "GFX_event_ENC_mariposa1"
+ 		    texturefile = "gfx/event_pictures/event_ENC_mariposa1.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_mariposa2
+            name = "GFX_event_ENC_mariposa2"
+ 		    texturefile = "gfx/event_pictures/event_ENC_mariposa2.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_mariposa3
+            name = "GFX_event_ENC_mariposa3"
+ 		    texturefile = "gfx/event_pictures/event_ENC_mariposa3.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_picture
+            name = "GFX_event_ENC_picture"
+ 		    texturefile = "gfx/event_pictures/event_ENC_picture.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_president_onyl
+            name = "GFX_event_ENC_president_onyl"
+ 		    texturefile = "gfx/event_pictures/event_ENC_president_onyl.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_rebuilding
+            name = "GFX_event_ENC_rebuilding"
+ 		    texturefile = "gfx/event_pictures/event_ENC_rebuilding.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_secret
+            name = "GFX_event_ENC_secret"
+ 		    texturefile = "gfx/event_pictures/event_ENC_secret.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_secret.0.pdnBak
+            name = "GFX_event_ENC_secret.0.pdnBak"
+ 		    texturefile = "gfx/event_pictures/event_ENC_secret.0.pdnBak.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_secret2
+            name = "GFX_event_ENC_secret2"
+ 		    texturefile = "gfx/event_pictures/event_ENC_secret2.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_secret3
+            name = "GFX_event_ENC_secret3"
+ 		    texturefile = "gfx/event_pictures/event_ENC_secret3.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_torture.pdn
+            name = "GFX_event_ENC_torture.pdn"
+ 		    texturefile = "gfx/event_pictures/event_ENC_torture.pdn.tga"
+ 	    }
+		spriteType = { #GFX_idea_enc_designer_PA
+			name = "GFX_idea_enc_designer_PA"
+			texturefile = "gfx/interface/ideas/idea_enc_designer_PA.dds"
+		}
+		
+		SpriteType = {#sargeant_dornan
+            name = "GFX_idea_sargeant_dornan"
+ 		    texturefile = "gfx/interface/ideas/sargeant_dornan.dds"
+ 	    }
+        SpriteType = {#enc_designer_PA
+            name = "GFX_idea_enc_designer_PA"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_PA.dds"
+ 	    } 
+        SpriteType = {#enc_designer_verti
+            name = "GFX_idea_enc_designer_verti"
+ 		    texturefile = "gfx/interface/ideas/enc_designer_verti.dds"
+ 	    } 		
+}
