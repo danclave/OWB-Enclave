@@ -117,7 +117,7 @@ enc_slave_labour_collars:0 "Slave Collars"
 enc_slave_labour_collars_desc:0 "Pioneered by Pre-War scientists as an effective method of control in prison camps and research experiments, this will allow us to control the slave populace more efficently and with minimal risk."
 
 enc_slave_labour_mutants:0 "Super Mutant Slaves"
-enc_slave_labour_mutants_desc:0 "By utilizing the monstrous Super Mutants produced by the disgusting Master, we can increase the speed at which our buildings are built. However these beasts are still a force to be reckoned with and any sign of resistance should be dealt with quickly and with extreme prejuidice."
+enc_slave_labour_mutants_desc:0 "By utilizing the monstrous Super Mutants produced by the Master, we can increase the speed at which our buildings are built. However these beasts are still a force to be reckoned with and any sign of resistance should be dealt with quickly and with extreme prejuidice."
 
 enc_energy_prod:0 "Advanced Energy Weapon Production"
 enc_energy_prod_desc:0 "By focusing DARPA's efforts on Energy Weapon Production, we can improve on several models of Laser, Plasma, Gauss, and Tesla weaponry created before and after the Great War."
@@ -287,11 +287,24 @@ enc_vlt_power_desc:0 "In their ignorance, the people of Vault City were never ca
 enc_depot_lab_buff:0 "Intensifying Research Efforts"
 enc_depot_lab_buff_desc:0 "The the Siera Lab in proper order, we can increase our research efforts to match our ambitions."
 
+enc_lessons_from_the_war:0 "Lessons From The War"
+enc_anti_ncr_propaganda:0 "Anti NCR Propaganda"
+anti_ncr_propaganda_tt: "Unlocks the §YAnti NCR Propaganda§! decisions when at war with the §YNew California Republic§!."
+enc_extend_presidential_powers:0 "Extend Presidential Powers"
+enc_emergency_draft:0 "Emergency Draft"
+enc_emergency_draft_tt: "§YEmergency Draft§! can be removed by decision."
+
 ###################################
-# TODO
+# TODO - WIP
 ###################################
 
+enc_radio_eyebots: "Send Out Eyebots"
+enc_land_focus: "Army Reform"
+enc_land_focus_central: "Centralized Command"
+enc_land_focus_central_2: "Centralized Command 2"
 
+enc_land_focus_local: "Localized Command"
+enc_land_focus_local_2: "Localized Command 2"
 ###################################
 # MISC
 ###################################
@@ -454,7 +467,7 @@ ENC_scientists_buffed_desc:0 "Enclave scientists are among the most educated and
 ENC_plague:0 "FEV Plague"
 ENC_plague_desc:0 "The Enclave has unleashed a bio weapon of unseen proportion on our population. Our only hope is to take the antidote from them by force!"
 
-ENC_infighting:0 "Enclave Infighting"
+ENC_infighting:0 "Political Infighting"
 ENC_infighting_desc:0 "Polarization between the two mayor factions in the Enclave government has come to a boiling point."
 
 ENC_vacinations:0 "Vaccinations"
@@ -537,6 +550,10 @@ ENC_desert_training:0 "Desert Training"
 enc_rangers_offense_training_tt: "Modify §YAgressive Preparations§! by Heat Attrition: §G-50.00%§!"
 
 ENC_water_contaminated: "FEV contaminated water"
+
+ENC_radio_eyebots: "Eyebot Radio"
+
+ENC_emergency_draft: "Emergency Draft"
 ################ DECISIONS!!! ################################################################################################################################
 
 ENC_calling_the_remnants:0 "Call the Remnants"

@@ -495,10 +495,12 @@ country_event = {#18 - Reformer sympathies
 		name = enc.18.b
 		add_manpower = -1
 		add_popularity = { ideology = intellectuals popularity = -0.05 }
+		add_political_power = -50
 	}
 	option = {#We have more important
 		name = enc.18.c
 		add_popularity = { ideology = intellectuals popularity = 0.05 }
+		add_political_power = 50
 	}
 }
 
@@ -530,7 +532,7 @@ country_event = { #20 - Disloyalty
 	id = enc.20
 	title = enc.20.t
 	desc = enc.20.d
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_ENC_president_only
 	fire_only_once = no
 	
 	trigger = {
@@ -766,7 +768,7 @@ country_event = { #30 - Fall of Sack city
 	id = enc.30
 	title = enc.30.t
 	desc = enc.30.d
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_NCR_battle
 	fire_only_once = YES
 	
 	trigger = {
@@ -788,7 +790,7 @@ country_event = { #31 - Fall of Shady Sands
 	id = enc.31
 	title = enc.31.t
 	desc = enc.31.d
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_ARR_arroyo
 	fire_only_once = YES
 	
 	trigger = {
@@ -894,7 +896,7 @@ country_event = { #35 - remnants of Shady Sands
 	id = enc.35
 	title = enc.35.t
 	desc = enc.35.d
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_ARR_arroyo
 	fire_only_once = YES
 	
 	trigger = {

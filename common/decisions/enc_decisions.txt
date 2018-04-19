@@ -175,7 +175,7 @@ ENC_reno = {
 		cost = 50
 		fire_only_once = YES
 		visible = {
-			has_completed_focus = purity
+			has_completed_focus = enc_purity
 			has_full_control_of_state = 285 #NEW RENO
 		}
 		available = {
@@ -233,7 +233,7 @@ ENC_radio_broadcasts = {
 			has_war_support < 0.5
 		}
 		available = {
-			has_completed_focus = purity
+			has_completed_focus = enc_purity
 			NOT = { has_decision = ENC_raise_stability }
 		}
 		modifier = {
@@ -262,12 +262,11 @@ ENC_radio_broadcasts = {
 		cost = 75
 		days_remove = 28 # 4 weeks
 		days_re_enable = 90
+		visible = {
+			has_completed_focus = enc_anti_ncr_propaganda
+		}
 		available = {
-			has_opinion = {  # NCR disliked
-				target = NCR
-				value < -79
-			}
-			has_war_with = NCR          # At war with NICR
+			has_war_with = NCR          # At war with NICR		
 		}
 		modifier = {
 			war_support_weekly = 0.0225 # total = 10%
@@ -276,15 +275,12 @@ ENC_radio_broadcasts = {
 	remember_rig = { #increased war support and damage against NCR
 		cost = 75
 		fire_only_once = yes
-		visible = {
-			has_completed_focus = enc_remember_rig
+		visible = {			
+			has_completed_focus = enc_anti_ncr_propaganda
 		}
 		available = {
-			has_opinion = {  # NCR disliked
-				target = NCR
-				value < -79
-			} #or?
-			has_war_with = NCR          # At war with NICR
+			has_war_with = NCR          # At war with NCR
+			has_completed_focus = enc_remember_rig
 		}
 		complete_effect = {
 			add_timed_idea = { idea = ENC_vengeance days = 50 }
@@ -294,14 +290,11 @@ ENC_radio_broadcasts = {
 		cost = 75
 		fire_only_once = yes
 		visible = {
-			has_completed_focus = enc_remember_navarro
+			has_completed_focus = enc_anti_ncr_propaganda
 		}
 		available = {
-			has_opinion = {  # NCR disliked
-				target = NCR
-				value < -79
-			}
 			has_war_with = NCR          # At war with NICR
+			has_completed_focus = enc_remember_navarro
 		}
 		complete_effect = {
 			add_timed_idea = { idea = ENC_vengeance days = 50 }
@@ -532,7 +525,7 @@ operations = {
 		}
 		activation = {
 			and = {
-				has_completed_focus = purity 			#  went purity
+				has_completed_focus = enc_purity 			#  went purity
 				any_other_country = {
 					is_subject_of = ERB
 				}					
@@ -656,11 +649,9 @@ political_actions = {
 		days_remove = 5
 		available = {
 			intellectuals > 0.2
-			has_completed_focus = purity
+			has_completed_focus = enc_purity
 		}
 		visible = {
-			intellectuals > 0.2
-			has_completed_focus = purity
 		}		
 		complete_effect = {
 		   add_manpower = -100
@@ -690,6 +681,16 @@ political_actions = {
 		   add_popularity = { ideology = intellectuals popularity = 0.10 }
 		}
 		days_re_enable = 30
+	}
+	ENC_remove_emergency_draft = {
+		cost = 25
+		allowed = { tag = ERB }
+		visible = {
+			has_idea = ENC_emergency_draft
+		}
+		complete_effect = {
+			remove_ideas = ENC_emergency_draft
+		}
 	}
 }
 war_measures = {

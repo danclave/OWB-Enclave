@@ -428,11 +428,10 @@ ideas = {
 # PURITY
 ####################################################
 		ENC_purist = {  
-			picture = GFX_idea_enc_purity_1
+			picture = enc_purity_1
 			allowed = {
 				always = no
             }
-
             allowed_civil_war = { 
 				always = yes
             }
@@ -445,7 +444,7 @@ ideas = {
 			}
 		}
 		ENC_purist2 = {  
-			picture = GFX_idea_enc_purity_2
+			picture = enc_purity_2
 			allowed = { 
 				always = no
             }
@@ -462,7 +461,7 @@ ideas = {
 			}
 		}
 		ENC_purist3 = {  		
-			picture = GFX_idea_enc_purity_3
+			picture = enc_purity_3
 			allowed = { 
 				always = no
             }
@@ -555,7 +554,9 @@ ideas = {
 			allowed = { 
 				always = no
             }
-
+			cancel = { 
+				NOT = { country_exists = ERB } 
+			}
             allowed_civil_war = { 
 				always = yes
             }
@@ -586,6 +587,24 @@ ideas = {
 				elites_drift = 0.2
 			}
 		}
+		ENC_radio_eyebots = {  
+			picture = enc_radio
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				political_power_gain = 0.20
+				decryption_factor = 0.20
+				non_core_manpower = 0.01
+				recon_factor = 0.10
+			}
+		}
+
 		ENC_FEV_soldiers= {  
 			picture = generic_infantry_bonus
 			allowed = { 
@@ -633,32 +652,46 @@ ideas = {
 				supply_consumption_factor = 1	
 			}
 		}
+		ENC_emergency_draft = {
+			picture = chi_forced_conscription
+			modifier = {
+				conscription = 0.10
+				research_time_factor = 0.10
+				industrial_capacity_factory = -0.10
+				mobilization_speed = 0.15
+			}
+		}
 ####################################################
 # PURITY - DESERT RANGERS TREE
 ####################################################
 		ENC_construction_infra = {
+			picture = generic_exploit_mines
 			modifier = {
 					production_speed_infrastructure_factor = 0.2
 				}
 		}
 		ENC_construction_forts = {
+			picture = FRA_fortification_focus
 			modifier = {
 				production_speed_bunker_factor = 0.3
 			}
 		}
 		ENC_rangers_defense = {
+			picture = generic_fortify_the_borders
 			targeted_modifier = {
 				tag = DES
 				defense_bonus_against = 0.2
 			}
 		}
 		ENC_rangers_attack = {
+			picture = generic_war_preparation
 			targeted_modifier = {
 				tag = DES
 				attack_bonus_against = 0.2
 			}
 		}
 		ENC_rangers_attack_2 = {
+			picture = generic_war_preparation
 			modifier = {
 				heat_attrition_factor = -0.5
 			}
@@ -668,12 +701,14 @@ ideas = {
 			}
 		}
 		ENC_rangers_plan_attack = {
+			picture = cze_planning_bonus
 			targeted_modifier = {
 				tag = DES
 				attack_bonus_against = 0.2
 			}
 		}
-		ENC_rangers_plan_defense = {
+		ENC_rangers_plan_defense = {		
+			picture = cze_planning_bonus
 			targeted_modifier = {
 				tag = DES
 				defense_bonus_against = 0.2

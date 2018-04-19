@@ -12,6 +12,159 @@ focus_tree = {
 # INTRO
 ###############################################################
 
+	focus = {#Lessons from the war
+		id = enc_lessons_from_the_war
+		icon = GFX_goal_generic_army_doctrines
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_poison_bear }
+		x = 13
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {#AIR focus
+		id = enc_air_focus
+		icon = GFX_goal_generic_air_fighter
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_lessons_from_the_war }
+		mutually_exclusive = { focus = enc_land_focus }
+		relative_position_id = enc_lessons_from_the_war
+		x = -2
+		y = 1
+		cost = 5.8
+		completion_reward = {
+
+		}
+	}
+	focus = {#VERTIBIRD FOCUS
+		id = enc_verti_focus
+		icon = GFX_goal_enc_verti
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_air_focus }
+		mutually_exclusive = { focus = enc_air_focus_fighters }
+		relative_position_id = enc_air_focus
+		x = -1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+
+		}
+	}
+	focus = {#DROP TRAINING
+		id = enc_drop_training
+		icon = GFX_goal_enc_verti
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_verti_focus }
+		relative_position_id = enc_verti_focus
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+
+		}
+	}
+	focus = {#FIGHTER FOCUS
+		id = enc_air_focus_fighters
+		icon = GFX_goal_generic_air_fighter
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_air_focus }
+		mutually_exclusive = { focus = enc_verti_focus }
+		relative_position_id = enc_air_focus
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+
+		}
+	}
+	focus = {#FIGHTER FOCUS
+		id = enc_air_focus_todo
+		icon = GFX_goal_generic_air_fighter
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_air_focus_fighters }
+		relative_position_id = enc_air_focus_fighters
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+
+		}
+	}
+	focus = {#LAND focus
+		id = enc_land_focus
+		icon = GFX_goal_generic_small_arms
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_lessons_from_the_war }
+		mutually_exclusive = { focus = enc_air_focus }
+		relative_position_id = enc_lessons_from_the_war
+		x = 2
+		y = 1
+		cost = 5.8
+		completion_reward = {
+
+		}
+	}
+	focus = {#LAND focus
+		id = enc_land_focus_central 
+		icon = GFX_goal_generic_small_arms
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_land_focus }
+		mutually_exclusive = { focus = enc_land_focus_local }
+		relative_position_id = enc_land_focus
+		x = -1
+		y = 1  
+		cost = 5.8
+		completion_reward = {
+
+		}
+	}
+	focus = {#LAND focus
+		id = enc_land_focus_central_2
+		icon = GFX_goal_generic_small_arms
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_land_focus_central }
+		relative_position_id = enc_land_focus_central
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+
+		}
+	}
+	focus = {#LAND focus
+		id = enc_land_focus_local
+		icon = GFX_goal_generic_small_arms
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_land_focus }
+		mutually_exclusive = { focus = enc_land_focus_central }
+		relative_position_id = enc_land_focus
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+
+		}
+	}
+	focus = {#LAND focus
+		id = enc_land_focus_local_2
+		icon = GFX_goal_generic_small_arms
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_land_focus_local }
+		relative_position_id = enc_land_focus_local
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+
+		}
+	}
+}
 	focus = {#Our escape
 		id = enc_ourescape 
 		icon = GFX_goal_enc_verti
@@ -22,7 +175,6 @@ focus_tree = {
 		completion_reward = {
 			# Our Escape event with 3 choices
 			country_event = { id = enc.1 } 
-
 		} 
 	}
 	focus = {#Our Choice  
@@ -235,7 +387,7 @@ focus_tree = {
 			division_template = { name = "Enclave Troops" regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } } }
 		}
 	}
- 	focus = {#Purity - Reorganize the economy
+ 	focus = {#Purity - Reorganize the engineers
 		id = enc_mobilize_economy
 		icon = GFX_goal_enc_tools
 		ai_will_do = { factor = 1 }
@@ -260,8 +412,9 @@ focus_tree = {
 		icon = GFX_goal_enc_beacon
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_mobilize_economy }
+		mutually_exclusive = { focus = enc_radio_eyebots } 
 		relative_position_id = enc_mobilize_economy
-		x = 0
+		x = -1
 		y = 1
 		cost = 5.8
 		completion_reward = {
@@ -273,6 +426,21 @@ focus_tree = {
 				}
 			}
 			swap_ideas = {remove_idea = ENC_radio add_idea = ENC_radio_purity}
+		}
+	}
+	focus = {#Purity - Eyeboys
+		id = enc_radio_eyebots
+		icon = GFX_goal_enc_eyebot
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_mobilize_economy }
+		mutually_exclusive = { focus = enc_radio_purity_2 }
+		relative_position_id = enc_mobilize_economy
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			recon_factor = 0.05
+			swap_ideas = {remove_idea = ENC_radio add_idea = ENC_radio_eyebots}
 		}
 	}
  	focus = {#Purist - Remember Navarro
@@ -390,7 +558,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = ENC_FEV_soldiers
 		}
-		cost = 8.6
+		cost = 5.8
  }
 
 	focus = {#Purity - Poison the bear
@@ -431,7 +599,11 @@ focus_tree = {
 		cost = 5.8 
 		will_lead_to_war_with = BOS
 		completion_reward = {
-			declare_war_on = { target = BOS type = annex_everything }
+			add_war_support = 0.05
+			create_wargoal = {
+				type = annex_everything
+				target = BOS
+			}
 		}	
 	}
 	focus = {#Purity - anti bos propaganda
@@ -740,7 +912,7 @@ focus_tree = {
 		relative_position_id = enc_poison_bear
 		x = 1
 		y = 1
-		cost = 8.6
+		cost = 5.8
 		completion_reward = {
 			# TODO
 		}
@@ -753,15 +925,61 @@ focus_tree = {
 		relative_position_id = enc_poison_bear
 		x = -1
 		y = 1
-		cost = 8.6
+		cost = 5.8
 		completion_reward = {
 			custom_effect_tooltip = enc_reclaim_cashes.tt
 		}
 	}
 
+   	focus = {#enc_anti_ncr_propaganda
+		id = enc_anti_ncr_propaganda
+		icon = GFX_goal_enc_radio
+		ai_will_do = { factor = 1 }
+		# prerequisite = { focus = enc_poison_bear }
+		relative_position_id = enc_poison_bear
+		available = { has_war_with = NCR }
+		x = -3
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_war_support = 0.05
+			custom_effect_tooltip = anti_ncr_propaganda_tt
+		}
+	}
+   	focus = {#enc_extend_presidential_powers
+		id = enc_extend_presidential_powers
+		icon = GFX_goal_enc_president_purity
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_anti_ncr_propaganda }
+		relative_position_id = enc_anti_ncr_propaganda
+		available = { has_war_with = NCR } 
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+   	focus = {# emergency draft
+		id = enc_emergency_draft
+		icon = GFX_goal_enc_sign
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_extend_presidential_powers }
+		relative_position_id = enc_extend_presidential_powers
+		available = { has_war_with = NCR }
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = ENC_emergency_draft
+			custom_effect_tooltip = enc_emergency_draft_tt
+		}
+	}
+
    	focus = {#Cloning
 		id = enc_cloning
-		icon = GFX_goal_generic_data_focus
+		icon = GFX_goal_enc_cloning
 		ai_will_do = { factor = 1 }
 		available = {
 			548 = { is_controlled_by = ERB } # NAVARRO
@@ -869,9 +1087,14 @@ focus_tree = {
 		cost = 5.8
 		completion_reward = {
 			add_tech_bonus = {
-				ahead_reduction = 1
-				uses = 3
+				ahead_reduction = 0.8
+				uses = 2
 				category = energy_weaponry_tech
+			}
+			add_tech_bonus = {
+				ahead_reduction = 0.8
+				uses = 1
+				category = industry
 			}
 		}
 	}
@@ -2192,6 +2415,7 @@ focus_tree = {
 # GFX_goal_enc_arrows2
 # GFX_goal_ENC_assasinate
 # GFX_goal_enc_beacon
+# GFX_goal_enc_cloning
 # GFX_goal_enc_construction
 # GFX_goal_enc_defenders
 # GFX_goal_enc_draft_wastelanders
@@ -2199,6 +2423,7 @@ focus_tree = {
 # GFX_goal_enc_experiments
 # GFX_goal_enc_eyebot
 # GFX_goal_enc_flags
+# GFX_goal_enc_forced_deal
 # GFX_goal_enc_fort
 # GFX_goal_enc_infra
 # GFX_goal_enc_integrate_politicians
@@ -2214,6 +2439,7 @@ focus_tree = {
 # GFX_goal_enc_power_armor_focus2
 # GFX_goal_enc_president
 # GFX_goal_enc_president_p
+# GFX_goal_enc_president_purity
 # GFX_goal_enc_purge
 # GFX_goal_enc_purify
 # GFX_goal_enc_purity
@@ -2229,6 +2455,7 @@ focus_tree = {
 # GFX_goal_enc_sabotage
 # GFX_goal_enc_sabotage.pdn
 # GFX_goal_enc_scientists
+# GFX_goal_enc_sign
 # GFX_goal_enc_slave_labour
 # GFX_goal_enc_slave_labour_collars
 # GFX_goal_enc_slave_labour_mutants
@@ -2250,6 +2477,7 @@ focus_tree = {
 # GFX_goal_enc_veterans_call
 # GFX_goal_enc_weapon_factory
 # GFX_goal_ew_production.pdn
+# GFX_goal_flag_burn_BOS
 # GFX_goal_pa_production
 # GFX_goal_shield_enc_wip
 # GFX_goal_US_dock

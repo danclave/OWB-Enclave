@@ -113,6 +113,9 @@ build_cloning_facility: "Build cloning facility"
 cloning_experiment: "Cloning experiment"
 cloning_project: "Cloning project"
 
+#misc
+
+ENC_remove_emergency_draft: "Remove Emergency Draft"
 ################ special codes for special people ################################################################################################################
 
 # §Yyellow§!
