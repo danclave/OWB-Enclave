@@ -44,6 +44,7 @@ ideas = {
 			
 			allowed = {
 				original_tag = "ERB"
+				has_completed_focus = enc_reform
 			}		
 			traits = { 
 				reformer_2
@@ -66,5 +67,122 @@ ideas = {
 				factor = 1
 			}
 		}
+		raul = {
+			picture = raul_advisor
+
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { raul_engineer }
+
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		judah_kreger = {
+			picture = judah_kreger_advisor
+
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { judah_kreger_leader }
+
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		quincy = {
+			picture = qunicy_advisor
+
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { quincy_technician }
+			ai_will_do = {
+				factor = 10
+			}
+		}
 	}
+
+	high_command = {		
+		tech_officer_hilden = {			
+			picture = tech_officer_hilden_command			
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { esoteric_engineer }
+			
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		snookie = {
+			picture = snookie_command
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { snookie_guard }
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		sanders = {
+			picture = sanders_command
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { sanders_spec_ops }
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	
+	army_chief = {
+		enc_offensive = {
+			cost = 250
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { army_chief_offensive_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		enc_defensive = {
+			cost = 250			
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { army_chief_defensive_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	air_chief = {
+		enc_air_combat = {
+			
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = ERB
+			}			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+			
 }

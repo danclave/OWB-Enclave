@@ -59,11 +59,6 @@ spriteTypes = {
  		    texturefile = "gfx/event_pictures/event_ENC_secret.tga"
  	    }
 
-        SpriteType = {#event_ENC_secret.0.pdnBak
-            name = "GFX_event_ENC_secret.0.pdnBak"
- 		    texturefile = "gfx/event_pictures/event_ENC_secret.0.pdnBak.tga"
- 	    }
-
         SpriteType = {#event_ENC_secret2
             name = "GFX_event_ENC_secret2"
  		    texturefile = "gfx/event_pictures/event_ENC_secret2.tga"
@@ -78,11 +73,10 @@ spriteTypes = {
             name = "GFX_event_ENC_torture.pdn"
  		    texturefile = "gfx/event_pictures/event_ENC_torture.pdn.tga"
  	    }
-		spriteType = { #GFX_idea_enc_designer_PA
-			name = "GFX_idea_enc_designer_PA"
-			texturefile = "gfx/interface/ideas/idea_enc_designer_PA.dds"
-		}
-		
+		spriteType = { #GFX_idea_enc_designer_fighter
+			name = "GFX_idea_enc_designer_verti"
+			texturefile = "gfx/interface/ideas/idea_enc_designer_verti.dds"
+		}		
 		SpriteType = {#sargeant_dornan
             name = "GFX_idea_sargeant_dornan"
  		    texturefile = "gfx/interface/ideas/sargeant_dornan.dds"
@@ -92,7 +86,15 @@ spriteTypes = {
  		    texturefile = "gfx/interface/ideas/idea_enc_designer_PA.dds"
  	    } 
         SpriteType = {#enc_designer_verti
-            name = "GFX_idea_enc_designer_verti"
- 		    texturefile = "gfx/interface/ideas/enc_designer_verti.dds"
- 	    } 		
+            name = "GFX_idea_enc_chemical_corps"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_chemical_corps.dds"
+ 	    }  
+        SpriteType = {#idea_enc_atomic_commision
+            name = "GFX_idea_enc_atomic_commision"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_atomic_commision.dds"
+ 	    }  
+        SpriteType = {#idea_enc_designer_misc
+            name = "GFX_idea_enc_designer_misc"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_misc.dds"
+ 	    } 	 		
 }

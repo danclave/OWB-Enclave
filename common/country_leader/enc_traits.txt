@@ -60,4 +60,23 @@ leader_traits = {
 		enemy_partisan_effect = -0.50
 		conscription_factor = -0.05
 	}
+
+	# manufacturers
+	vertibird_aircraft_manufacturer = {
+		random = no
+		equipment_bonus = {
+			vb_gunship_equipment = {
+				build_cost_ic = -0.10
+				reliability = 0.20
+			}
+			vb_transport_plane_equipment = {
+				build_cost_ic = -0.10
+				reliability = 0.2
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
 }
