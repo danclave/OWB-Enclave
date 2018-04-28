@@ -843,7 +843,7 @@ country_event = { #32 - Soldier out of uniform
 		add_stability = 0.05
 	} 
 }
-country_event = { #33 - Caravan Encounter
+country_event = { #33 - Crimson Caravan Encounter
 	id = enc.33
 	title = enc.33.t
 	desc = enc.33.d
@@ -851,8 +851,14 @@ country_event = { #33 - Caravan Encounter
 	fire_only_once = NO
 	
 	trigger = {
-		not = { has_country_flag = enc_event_33_solved }
 		tag = ERB
+		has_country_flag = NCR_suspicious
+		not = { has_country_flag = enc_event_33_solved }
+		NCR = {
+			exists = yes
+			has_civil_war = NO
+			NOT = { has_war_with = ERB }
+		}
 	}
 	mean_time_to_happen = {
 		days = 200
