@@ -72,7 +72,7 @@ bookmarks = {
 		}
 		"ERB"={
 			history = "ERB_OWB_DESC"
-			ideology = elites
+			ideology = ruler
 			ideas = {
 				ENC_infighting
 			}

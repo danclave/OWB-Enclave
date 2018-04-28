@@ -2,7 +2,6 @@
 set_cosmetic_tag = ENC
 set_war_support = 0.20
 set_stability = 0.35
-
 ###############################
 # TECHNOLOGY
 ###############################
@@ -32,6 +31,8 @@ set_technology = {
 }
 
 set_country_flag = not_allowed_to_core
+set_country_flag = no_vanilla_designers_flag
+set_country_flag = no_owb_designers_flag
 
 ###############################
 # POLITICS
@@ -87,7 +88,7 @@ create_country_leader  = {
 create_country_leader = {
 	name = "Sergeant Dornan"
 	desc = "Dornan_DESC"
-	picture = "gfx/leaders/NEW/Portrait_New_Reno_Arch_Dornan.dds"
+	picture = "gfx/leaders/portrait_sarge.dds"
 	expire = "3000.1.1"
 	ideology = benevolent_dictatorship			
 	traits = {

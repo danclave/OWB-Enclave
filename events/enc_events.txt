@@ -1,44 +1,5 @@
 ﻿add_namespace = enc
 
-country_event = {#0 - Enclave spawns and takes over SMD
-    id = enc.0
-    title = enc.0.t
-    desc = enc.0.d
-    picture = GFX_event_ENC_rebuilding
-
-    trigger = {
-		is_ai = no
-		not = {
-			tag = NCR # play as NCR -> delete all units -> play as Enclave
- 		}
-	}
-	mean_time_to_happen = {
-		days = 2
-	}
-	fire_only_once = YES
-	
-    immediate = {
-		hidden_effect = { #don't want an ugly text box
-			159 = {
-				add_core_of = ERB
-			}
-			ERB = { 	
-				transfer_state = 159
-				load_oob = enc_10w_troops
-			}
-		}
-	}
-
-    option = { #I know, I'm one of them
-        name = enc.0.a
-		custom_effect_tooltip = enc.0.a.tt
-		hidden_effect = { ERB = { change_tag_from  = ROOT } }
-    }
-    option = { #Rumors..
-        name = enc.0.b
-    }
-}
-
 country_event = {#1 - OUR ESCAPE
     id = enc.1
     title = enc.1.t
@@ -1041,6 +1002,29 @@ country_event = { #39 Reduce plague if Desert rangers not allied with NCR
 				add_idea = ENC_plague_2
 			}
 		}
+	}
+}
+
+country_event = { #40 Hidden event to remove ncr_suspicious
+	id = enc.40
+	title = enc.40.t
+	desc = enc.40.d
+	picture = GFX_event_ENC_secret3
+	fire_only_once = YES
+	hidden = true
+	
+	trigger = {
+		tag = ERB
+		ERB = { has_war_with = NCR}
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	immediate = {
+		clr_country_flag = ncr_suspicious
+	}
+	option = {
+		# nothing
 	}
 }
 
