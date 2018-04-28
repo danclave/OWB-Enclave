@@ -90,7 +90,7 @@ ENC_shifts = {
 		}
 		modifier = {
 			war_support_weekly = -0.01125#total = 5%
-			research_time_factor = -0.3
+			research_time_factor = -0.2
 		}
 	}
 
@@ -145,31 +145,6 @@ ENC_shifts = {
 	}
 }
 ENC_reno = {
-	ENC_shock_and_awe = {
-		cost = 50
-		visible = {
-			country_exists = NEW
-		}
-		allowed = {
-			original_tag = ERB
-			has_war_support > 0.4
-		}
-		complete_effect = {
-		   	declare_war_on = { target = NEW type = annex_everything }
-		}
-	}
-	ENC_coup_reno = {
-		cost = 200
-		allowed = {
-			original_tag = ERB
-		}
-		visible = {
-			country_exists = NEW
-		}
-		complete_effect = {
-		   	annex_country = { target = NEW }
-		}
-	}
 	purify_city = {
 		icon = generic_scorched_earth
 		cost = 50
@@ -500,65 +475,6 @@ operations = {
 		}
 		days_re_enable = 30
 	}
-	dump_fev_ranch = {
-		cost = 10
-		visible = {
-			has_country_flag = enc_dirty_FEV_flag
-		}
-		
-		available = {
-			has_war_with = NCR
-			controls_state  = 543 # Marysville ranch
-		}
-		
-		days_remove = 20
-		remove_effect = {
-			NCR = add_timed_idea  = { idea = ENC_water_contaminated days = 50 }
-			clr_country_flag = enc_dirty_FEV_flag
-		}
-	}
-	ENC_annex_puppet = { 							# Enclave Purity faction is not allowed to have puppets because it would give them manpower, this mission bullies them into not releasing puppets
-		is_good = no									# being bullied is not good
-		cost = 100										# give me your lunch pp, nerd
-		allowed = { 
-			tag = ERB 									# if the Enclave
-		}
-		activation = {
-			and = {
-				has_completed_focus = enc_purity 			#  went purity
-				any_other_country = {
-					is_subject_of = ERB
-				}					
-			}	
-		}
-		days_mission_timeout = 30
-		timeout_effect = { 								# of Enclave
-			every_other_country = { 						# take all allied countries (limits scope for performance)
-				limit = {
-					is_subject_of = ERB					# that are puppets of Enclave
-				}
-				ERB = {
-					end_puppet = PREV					# end their puppetry
-					declare_war_on = { 					# Enclave declares war on them
-						target = PREV 
-						type = annex_everything
-					}
-				}
-			}
-		}
-		complete_effect = {	
-			every_other_country = {                     # take all allied countries (limits scope for performance)
-				limit = {
-					is_puppet_of = ERB                		# that are puppets of Enclave
-				}
-				ERB = {
-					annex_country = { 
-						target = ROOT  
-					}
-				}
-			}
-		}
-	}
 }
 ENC_production = {
 	retool_machinery = {
@@ -593,7 +509,6 @@ ENC_production = {
 				has_ROOT_at_least_1_div_in_current_state_scope = YES
 				is_fully_controlled_by = ERB
 				arms_factory > 2
-				divisions_in_state = { size > 0 }
 			}
 			any_owned_state = { # we have a core ready to receive 2 factories
 				is_fully_controlled_by = ERB
@@ -615,7 +530,6 @@ ENC_production = {
 					has_ROOT_at_least_1_div_in_current_state_scope = YES
 					NOT = { is_core_of = ERB }
 					arms_factory > 2
-					divisions_in_state = { size > 0 }
 				}
 				remove_building = { 
 					type = arms_factory 
@@ -671,7 +585,7 @@ political_actions = {
 		
 		visible = {
 			elites > 0.2
-			has_completed_focus = reform
+			has_completed_focus = enc_reform
 		}
 		
 		remove_effect = {
@@ -732,9 +646,6 @@ ENC_rangers = {
 		fire_only_once = YES
 		visible = {
 			has_completed_focus = enc_rangers_defense_sabotage
-		}
-		available = {
-			has_war_with = DES
 		}
 		complete_effect = {
 			DES = {

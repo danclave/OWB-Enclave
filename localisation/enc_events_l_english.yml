@@ -173,7 +173,7 @@ enc.27.d: "Our most recent experimentation in creating human clones has resulted
 enc.27.a: "Back to the drawing board"
 ################################################################################################################ -<
 enc.28.t: "The Mariposa Military Base (1/3)"
-enc.28.d: "It appears that the base is in even worse shape when we left it. Something demolished the entire upper level, presumably using explosives. Luckily, most of the base is underground and there are alternative entrances for those with the right access codes."
+enc.28.d: "It appears that the base is in even worse shape than when we left it. Something demolished the entire upper level, presumably using explosives. Luckily, most of the base is underground and there are alternative entrances for those with the right access codes."
 enc.28.a: "Let's go"
 ################################################################################################################ -<
 enc.30.t: "The Fall of Sac City"
@@ -218,4 +218,13 @@ enc.36.b: "They turned their back on the Enclave"
 enc.37.t: "The Fall of Arroyo"
 enc.37.d: "Mister President, as you are reading this communication, Enclave troops are marching through the 'capital city' of the backwards tribe of Arrayo. Our troops are reporting only token resistance from the locals using primitive weapons. Our only casualties were sustained battling a small band led by a figure in a vault suit. As of the time this message is sent, all hostiles in the area are confirmed KIA."
 enc.37.a: "Remember the Rig and show no mercy"
+################################################################################################################ -<
+enc.38.t: "Losing control of puppet"
+enc.38.d: "It appears that our agenda of exterminating the mutant menace makes is making it difficult to keep control of puppet states. We should annex them and correct this mistake before they completely escape our control."
+enc.38.a: "Good idea"
+enc.38.b: "No need"
+################################################################################################################ -<
+enc.39.t: "FEV plague weakened"
+enc.39.d: "Mister President, we've received word that the effects of our biological agent is lower than our field tests suggested. It appears a mutation in the strain has reduced its lethality."
+enc.39.a: "No matter."
 # yellow§Y-§!

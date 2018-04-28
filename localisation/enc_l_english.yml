@@ -1,5 +1,7 @@
 ﻿l_english:
 
+not_allowed_to_core: "§Y Enclave§!"
+
 ###################################
 # COMMON
 ###################################
@@ -101,8 +103,8 @@ enc_call_veterans_desc:0 "Many of the Hardline Veterans of the Enclave have gone
 oldscientists:0 "Remnant Scientists"
 oldscientists_desc:0 "Our technological advantage is the biggest edge we hold over the mutants. Let us organize the loyalist researchers we retrieved into teams capable of upholding that advantage."
 
-enc_expansion:0 "Expansion"
-enc_expansion_desc:0 "With morale improving, it is time to look outwards and prepare the liberation of the mutant occupied terrotories surrounding us. Many of which are sitting on military equipment cashes of indespenable value to our goals."
+enc_expansion:0 "Take New Reno"
+enc_expansion_desc:0 "With morale improving, it is time to look outwards and prepare the liberation of the mutant occupied territories surrounding us. Many of which are sitting on military equipment cashes of indespenable value to our goals. We will begin with New Reno, our old hiding place."
 
 openthevaults:0 "Open the Vaults"
 openthevaults_desc:0 "The time has come to open the last few control Vaults holding healthy human populations. Those that agree to join us can be added to our numbers and those that don't have other uses..."
@@ -119,8 +121,8 @@ enc_slave_labour_collars_desc:0 "Pioneered by Pre-War scientists as an effective
 enc_slave_labour_mutants:0 "Super Mutant Slaves"
 enc_slave_labour_mutants_desc:0 "By utilizing the monstrous Super Mutants produced by the Master, we can increase the speed at which our buildings are built. However these beasts are still a force to be reckoned with and any sign of resistance should be dealt with quickly and with extreme prejuidice."
 
-enc_energy_prod:0 "Advanced Energy Weapon Production"
-enc_energy_prod_desc:0 "By focusing DARPA's efforts on Energy Weapon Production, we can improve on several models of Laser, Plasma, Gauss, and Tesla weaponry created before and after the Great War."
+enc_energy_prod:0 "Plasma Weapon Production"
+enc_energy_prod_desc:0 "By focusing DARPA's efforts on Energy Weapon Production, we can improve on several models of Plasma weaponry created before and after the Great War."
 
 enc_energy_commission:0 "US Department of Energy"
 enc_energy_commission_desc:0 "The Department of Energy is responsible for managing the power generation and retention of the Enclave."
@@ -190,6 +192,7 @@ enc_mobilize_economy:0 "Reorganize the Engineers"
 enc_mobilize_economy_desc:0 "Our engineers have been hard at work repairing worn power armor and weaponry. But their work is ad hoc and inefficient. We can organize them in the same manner as the military to make sure their expertise is used to its full potential."
 
 enc_ANT_annex:0 "Clearing out the Natives"
+enc_ANT_annex_tt:0 "Gain §YAnnex§! wargoal against whomever controls §YModoc County§!."
 enc_ANT_annex_desc:0 "To the North are several tribes of devolved Abhuman mutants who squat upon resources, and more importantly American soil. It is time we eradicate this blight."
 
 enc_yakuza_sack:0 "Sack Carson City"
@@ -208,7 +211,7 @@ enc_remember_navarro:0 "Remember Navarro"
 enc_remember_navarro_desc:0 "Our older members remember clearly when the NCR and Brotherhood descended upon Navarro. Cut off from Enclave leadership, they none the less fought bravely. While most of us escaped the slaugher, those that stayed behind to delay our enemies died as American heroes. It is time we remember their sacrifice."
 
 enc_anti_bos_propaganda: "Anti-Brotherhood Propaganda"
-enc_anti_bos_propaganda_desc: "We have many reasons to seek the destruction of those power armoured boyscouts. Though our younger members may not remember their crimes against us at Navarro."
+enc_anti_bos_propaganda_desc: "Though our younger members may not remember their crimes against us at Navarro, we have many reasons to seek the destruction of those power armoured boyscouts. Let us compile our grievences into broadcasts to remind our soldiers why we fight."
 enc_anti_bos_propaganda_tt: "Unlocks the §YAnti Brotherhood Propaganda§! decisions when at war with the §YWestern Brotherhood§!."
 
 enc_reclaim_cashes: "Reclaim the Californian Army Bases"
@@ -258,6 +261,7 @@ enc_god_bless:0 "God Bless the Enclave"
 enc_god_bless_desc:0 "While we have plenty of reasons to remember the past, it is high time we look towards the future. An American future, free of the mutant menace occupying our beloved homeland. \nGod Bless the Enclave! \nGod bless America!"
 
 enc_yakuza_annex:0 "Deal with the Yakuza"
+enc_yakuza_annex_tt:0 "Gain §YAnnex§! wargoal against whomever controls §YCarson City§!."
 enc_yakuza_annex_desc:0 "The only thing worse than mutants is foreign mutants. Let us waste no time in removing this criminal infestation from our soil."
 
 enc_war_with_bos: "War with the Brotherhood"
@@ -267,13 +271,14 @@ enc_depot_lab:0 "Reopening the Sierra Laboratory"
 enc_depot_lab_desc:0 "Deep underground in the Siera Army Depot is what remains of a lab focused on biological warfare. Here, amid the ruins, is a single vial of Curling-2. A precursor of the lethal toxin lost during the destruction of Poseidon Oil."
 
 enc_vlt_annex:0 "Take Vault City"
+enc_vlt_annex_tt:0 "Gain §YAnnex§! wargoal against whomever controls §YVault City§!."
 enc_vlt_annex_desc:0 "Our eyes fall on an anomaly in the wasteland. An advanced city built out of a pre-war vault. None the less, we should act with prejudice and subject the city to us by force."
 
 enc_vlt_annex_diplo: "The Ultimatum"
 enc_vlt_annex_diplo_desc: "Our eyes fall on an anomaly in the wasteland. An advanced city built out of a pre-war vault. If they are as civilized as they seem, it may be worth attempting to reason with them."
 
 enc_vlt_labs:0 "Ransack the Labs"
-enc_vlt_labs_desc:0 "Medical technology is of immeasurable value to our purposes duo to our low numbers compared to the mutants. The labs of Vault City have many pre-war medical technologies as well as their own advancements. Furthermore, the advanced state of the city compared to the rest of the wastes have given rise to the notion that we may be dealing with more than degenerative mutants in this case..."
+enc_vlt_labs_desc:0 "Medical technology is of immeasurable value to our purposes due to our low numbers compared to the mutants. The labs of Vault City have many pre-war medical technologies as well as their own advancements. Furthermore, the advanced state of the city compared to the rest of the wastes have given rise to the notion that we may be dealing with more than degenerative mutants in this case..."
 
 enc_vlt_pure:0 "Purify the City"
 enc_vlt_pure_desc:0 "With the city in our hands, we can begin cleansing it of the mutant menace. Leaving only those few unmutated enough to be considered humans."
@@ -285,26 +290,79 @@ enc_vlt_power:0 "Repairing the Power Plant"
 enc_vlt_power_desc:0 "In their ignorance, the people of Vault City were never capable of restoring the nearby power plant to its full potential. With the city full secured, we can send in our engineers to complete this task."
 
 enc_depot_lab_buff:0 "Intensifying Research Efforts"
-enc_depot_lab_buff_desc:0 "The the Siera Lab in proper order, we can increase our research efforts to match our ambitions."
+enc_depot_lab_buff_desc:0 "With the Siera Lab in proper order, we can increase our research efforts to match our ambitions."
 
 enc_lessons_from_the_war:0 "Lessons From The War"
+enc_lessons_from_the_war_desc:0 "The war against the NCR is unlike any conflict the Enclave has engaged in for centuries. It is a wake up call for our generals to reinvent their doctrines or risk the total destruction of humanity."
+
 enc_anti_ncr_propaganda:0 "Anti NCR Propaganda"
+enc_anti_ncr_propaganda_desc:0 "Though our younger members may not remember their crimes against us at Navarro, we have many reasons to seek the destruction of the NCR. Let us compile our grievences into broadcasts to remind our soldiers why we fight."
+
 anti_ncr_propaganda_tt: "Unlocks the §YAnti NCR Propaganda§! decisions when at war with the §YNew California Republic§!."
 enc_extend_presidential_powers:0 "Extend Presidential Powers"
+enc_extend_presidential_powers_desc:0 "The Enclave president is more powerful than their pre-war equivalents, but none the less limited by certain restrictions. In the face of our final victory against the NCR, we canremove these limitations and grant our president total power over the Enclave and America."
 enc_emergency_draft:0 "Emergency Draft"
+enc_emergency_draft_desc:0 "Should the need arive, we must be prepared to draft any non essential personel from non military departments into the Enclave forces."
 enc_emergency_draft_tt: "§YEmergency Draft§! can be removed by decision."
+
+enc_new_annex_tt: "Gain §YAnnex§! wargoal against whomever controls §YNew Reno§!."
+
+###################################
+# PURITY - ARMY
+###################################
+enc_strike_teams: "Strike Team Doctrine"
+enc_strike_teams_desc: "The Enclave command structure was always geared towards surgical strikes and limited deployment. With the right adjustments, this doctrine can be adapted for a much larger scale war."
+
+enc_verti_focus: "Streamline VB-02 Production"
+enc_verti_focus_desc: "The VB-02 gunship is a symbol of the Enclave's power. While capable of producing them, we have always relied on military cashes to grow their numbers. It is time we look towards the future and build rather than loot."
+
+enc_radio_eyebots: "Send Out Eyebots"
+enc_radio_eyebots_desc: "The Eyebot is a simple design specializing in unmanned scouting as well as a mobile broadcasting station. Building and releasing a network of these bots will allow us to contact any Remnants still beyond the reach of our current broadcasts as well as provide our troops with reconnaisance."
+
+enc_army_reform_local: "Localized Command"
+enc_army_reform_local_desc: "Enclave assault squads have always enjoyed a great deal of autonomy in the field, left to their own devices on how to achieve their operational goals. We will continue this philosophy of command even as the scale of our operations escalate into full blown wars."
+
+enc_rapid_planning: "Flexible Battle Plans"
+enc_rapid_planning_desc: "No Battle Plan survives contact with the enemy. But neither do those that have no plan at all. We will give Enclave field commanders the autonomy they need to plan based on their individual situations, while keeping our strategies simple and flexible."
+
+enc_army_reform_command_2: "Precise Battle Plans"
+enc_army_reform_command_2_desc: "Powerful broadcasting stations, combined with advanced radio technology allows our high command to direct our troops instantaneously and precisely. The mutant rabble cannot possibly hope to win against the full force of the Enclave military, acting with a single mind and purpose."
+
+enc_army_reform: "Formalize The Forces"
+enc_army_reform_desc: "The Enclave command structure was always geared towards surgical strikes and limited deployment. If we are to wage total war, we must reform ourselves for that purpose."
+
+enc_advanced_fighter_project: "Advanced Fighter Project"
+enc_advanced_fighter_project_desc: "If we are the become the indisputed masters of the American skies, we must focus our efforts on making a technological leap in fighter technology."
+
+enc_fighters: "Air Supremacy"
+enc_fighters_desc: "For decades the Enclave rules the skies uncontested. In our absence, the mutants have gotten their own clunkers off the ground. VB-02s were never meant to compete for air superiority and are sitting ducks to even the most primitive of airplanes. We will reclaim the American Skies before reclaiming the American soil."
+
+enc_drop_training: "Drop Training"
+enc_drop_training_desc: "Dropping into hot landing zones has always been a risky venture. But with the right preparation and training, a well executed airial assault could be even more devestating than convential attacks"
 
 ###################################
 # TODO - WIP
 ###################################
 
-enc_radio_eyebots: "Send Out Eyebots"
-enc_land_focus: "Army Reform"
-enc_land_focus_central: "Centralized Command"
-enc_land_focus_central_2: "Centralized Command 2"
 
-enc_land_focus_local: "Localized Command"
-enc_land_focus_local_2: "Localized Command 2"
+ENC_remnant_officers_central: "Centralized Command"
+ENC_remnant_officers_central_2: "Centralized Command"
+
+enc_army_reform_command: "Centralized Command"
+enc_army_reform_command_desc: "Enclave assault squads have always enjoyed a great deal of autonomy in the field, but that was a different scale of warfare than what we are faced with. From now on, all field commanders will be directed by the sharpest minds at Enclave High Command."
+
+ENC_remnant_officers_local: "Localized Command"
+ENC_remnant_officers_local_2: "Localized Command"
+ENC_verti_production: "Streamlined VB-02 Production"
+
+ENC_strike_teams: "Strike Team Doctrine"
+ENC_drop_training: "Strike Team Doctrine"
+ENC_air_supremacy: "Air Supremacy Focus"
+
+ENC_presidential_powers: "Presidential Dictatorship"
+
+enc_silence_congress: "Silence Congress"
+enc_silence_congress_desc: "The Enclave president has always shared some power with a congress of representatives. While our equivalent was a symbolic institution at best, their word none the less carried some power and their suggestions were noted. It is high time they fall in line."
 ###################################
 # MISC
 ###################################
@@ -398,11 +456,11 @@ enc_energy_commission_desc:0 "The Department of Energy is responsible for managi
 enc_pa_prod:0 "Advanced Power Armor Production"
 enc_pa_prod_desc:0 "By focusing DARPA's efforts on Power Armour Production, we can begin to further advance and improve upon the venerable T-51b, X-01, and even the X-02 Power Armour systems, further widening the gap between ourselves and those who dare steal American Military assets. "
 
-enc_depot_armor:0 "Focus Power Armor Production"
+enc_depot_armor:0 "Streamline Power Armor Production"
 enc_depot_armor_desc:0 "By focusing our efforts on Power Armour Production, we can begin to further advance and improve upon the venerable T-51b, X-01, and even the X-02 Power Armour systems, further widening the gap between ourselves and those who dare steal American Military assets. "
 
-enc_depot_weapons: "Focus Energy Weapon Production"
-enc_depot_weapons_desc: "By focusing our efforts on Energy Weapon Production, we can improve abilities to produce them quickly."
+enc_depot_plasma: "Plasma Weaponry"
+enc_depot_plasma_desc: "By focusing our efforts on Energy Weapon Production, we can improve abilities to produce them quickly."
 
 
 
@@ -440,6 +498,9 @@ respectedByScientists: "Respected by Scientists"
 resourceful: "Resourceful"
 inspiring: "Inspiring"
 suppressor: "Bureaucratic Brute"
+
+genocidal_maniacs:0 "Genocidal Maniacs"
+dirty_muties:0 "Dirty Mutants"
 ############################################ IDEAS #####################################################################################
 ENC_purist:0 "Purist"
 ENC_purist_desc:0 "Even after all these setbacks, our vision for the return of the true humanity has not wavered. We will purify the mutants from this world and reclaim our beloved homeland. At any cost."
@@ -466,6 +527,10 @@ ENC_scientists_buffed_desc:0 "Enclave scientists are among the most educated and
 
 ENC_plague:0 "FEV Plague"
 ENC_plague_desc:0 "The Enclave has unleashed a bio weapon of unseen proportion on our population. Our only hope is to take the antidote from them by force!"
+
+ENC_plague_2:0 "FEV Plague"
+ENC_plague_2_desc:0 "The Enclave has unleashed a bio weapon of unseen proportion on our population. Our only hope is to take the antidote from them by force!"
+
 
 ENC_infighting:0 "Political Infighting"
 ENC_infighting_desc:0 "Polarization between the two mayor factions in the Enclave government has come to a boiling point."
@@ -496,7 +561,7 @@ ENC_enc_new_patriotismriotism:0 "New Patriotism"
 ENC_americans_one_and_all:0 "New Patriotism"
 ENC_police:0 "Federal Police"
 ENC_PA_production:0 "Power Armor production"
-ENC_energy_production: "Energy Weapon Production"
+ENC_energy_production: "Plasma Weapon Production"
 ENC_constitution:0 "Constitution"
 ENC_constitution_rule_of_law:0 "Constitution"
 ENC_cloning:0 "Cloning"

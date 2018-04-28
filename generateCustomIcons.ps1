@@ -68,15 +68,18 @@ $resultBody2 = Foreach ($name in $names)
 }" | Out-File -FilePath ..\..\interface/customicons_shine.gfx -Encoding utf8
 
 "added names:"
-Foreach ($name in $names)
-
+$goals_file = Foreach ($name in $names)
 {
    "# GFX_goal_$name"
 };
+ "goals = {" + $goals_file + "    
+}" 
+$goals_file | Out-File -FilePath ..\..\goals_file.txt -Encoding utf8 ;
 
 "added ideas:"
-Foreach ($idea in $ideas)
+$ideas_file = Foreach ($idea in $ideas)
 
 {
    "# GFX_idea_$idea"
-};
+}
+$ideas_file | Out-File -FilePath ..\..\ideas_file.txt -Encoding utf8 ;

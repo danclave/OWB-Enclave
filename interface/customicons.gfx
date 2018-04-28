@@ -3,6 +3,14 @@ spriteTypes = {
             name = "GFX_goal_enc_accept_wastelanders"
  		    texturefile = "gfx/interface/goals/enc_accept_wastelanders.dds"
  	    } 
+        SpriteType = {#enc_advanced_fighter
+            name = "GFX_goal_enc_advanced_fighter"
+ 		    texturefile = "gfx/interface/goals/enc_advanced_fighter.dds"
+ 	    } 
+        SpriteType = {#enc_air_production
+            name = "GFX_goal_enc_air_production"
+ 		    texturefile = "gfx/interface/goals/enc_air_production.dds"
+ 	    } 
         SpriteType = {#enc_annex_ykz
             name = "GFX_goal_enc_annex_ykz"
  		    texturefile = "gfx/interface/goals/enc_annex_ykz.dds"
@@ -11,6 +19,18 @@ spriteTypes = {
             name = "GFX_goal_enc_ant"
  		    texturefile = "gfx/interface/goals/enc_ant.dds"
  	    } 
+        SpriteType = {#enc_anti_bos
+            name = "GFX_goal_enc_anti_bos"
+ 		    texturefile = "gfx/interface/goals/enc_anti_bos.dds"
+ 	    } 
+        SpriteType = {#enc_anti_ncr
+            name = "GFX_goal_enc_anti_ncr"
+ 		    texturefile = "gfx/interface/goals/enc_anti_ncr.dds"
+ 	    } 
+        SpriteType = {#enc_army_doctrine
+            name = "GFX_goal_enc_army_doctrine"
+ 		    texturefile = "gfx/interface/goals/enc_army_doctrine.dds"
+ 	    } 
         SpriteType = {#enc_arrows2
             name = "GFX_goal_enc_arrows2"
  		    texturefile = "gfx/interface/goals/enc_arrows2.dds"
@@ -18,6 +38,10 @@ spriteTypes = {
         SpriteType = {#ENC_assasinate
             name = "GFX_goal_ENC_assasinate"
  		    texturefile = "gfx/interface/goals/ENC_assasinate.dds"
+ 	    } 
+        SpriteType = {#enc_ban_congress
+            name = "GFX_goal_enc_ban_congress"
+ 		    texturefile = "gfx/interface/goals/enc_ban_congress.dds"
  	    } 
         SpriteType = {#enc_beacon
             name = "GFX_goal_enc_beacon"
@@ -50,6 +74,10 @@ spriteTypes = {
         SpriteType = {#enc_eyebot
             name = "GFX_goal_enc_eyebot"
  		    texturefile = "gfx/interface/goals/enc_eyebot.dds"
+ 	    } 
+        SpriteType = {#enc_fighter
+            name = "GFX_goal_enc_fighter"
+ 		    texturefile = "gfx/interface/goals/enc_fighter.dds"
  	    } 
         SpriteType = {#enc_flags
             name = "GFX_goal_enc_flags"
@@ -87,9 +115,21 @@ spriteTypes = {
             name = "GFX_goal_enc_management"
  		    texturefile = "gfx/interface/goals/enc_management.dds"
  	    } 
+        SpriteType = {#enc_military_sphere
+            name = "GFX_goal_enc_military_sphere"
+ 		    texturefile = "gfx/interface/goals/enc_military_sphere.dds"
+ 	    } 
         SpriteType = {#enc_mutant_extinction
             name = "GFX_goal_enc_mutant_extinction"
  		    texturefile = "gfx/interface/goals/enc_mutant_extinction.dds"
+ 	    } 
+        SpriteType = {#enc_para
+            name = "GFX_goal_enc_para"
+ 		    texturefile = "gfx/interface/goals/enc_para.dds"
+ 	    } 
+        SpriteType = {#enc_para_2
+            name = "GFX_goal_enc_para_2"
+ 		    texturefile = "gfx/interface/goals/enc_para_2.dds"
  	    } 
         SpriteType = {#enc_planning
             name = "GFX_goal_enc_planning"
@@ -102,6 +142,10 @@ spriteTypes = {
         SpriteType = {#enc_poison_bull
             name = "GFX_goal_enc_poison_bull"
  		    texturefile = "gfx/interface/goals/enc_poison_bull.dds"
+ 	    } 
+        SpriteType = {#enc_position_armies
+            name = "GFX_goal_enc_position_armies"
+ 		    texturefile = "gfx/interface/goals/enc_position_armies.dds"
  	    } 
         SpriteType = {#enc_power_armor_focus
             name = "GFX_goal_enc_power_armor_focus"
@@ -175,10 +219,6 @@ spriteTypes = {
             name = "GFX_goal_enc_sabotage"
  		    texturefile = "gfx/interface/goals/enc_sabotage.dds"
  	    } 
-        SpriteType = {#enc_sabotage.pdn
-            name = "GFX_goal_enc_sabotage.pdn"
- 		    texturefile = "gfx/interface/goals/enc_sabotage.pdn.dds"
- 	    } 
         SpriteType = {#enc_scientists
             name = "GFX_goal_enc_scientists"
  		    texturefile = "gfx/interface/goals/enc_scientists.dds"
@@ -199,17 +239,33 @@ spriteTypes = {
             name = "GFX_goal_enc_slave_labour_mutants"
  		    texturefile = "gfx/interface/goals/enc_slave_labour_mutants.dds"
  	    } 
+        SpriteType = {#enc_small_arms
+            name = "GFX_goal_enc_small_arms"
+ 		    texturefile = "gfx/interface/goals/enc_small_arms.dds"
+ 	    } 
         SpriteType = {#enc_smash
             name = "GFX_goal_enc_smash"
  		    texturefile = "gfx/interface/goals/enc_smash.dds"
+ 	    } 
+        SpriteType = {#enc_special_forces
+            name = "GFX_goal_enc_special_forces"
+ 		    texturefile = "gfx/interface/goals/enc_special_forces.dds"
  	    } 
         SpriteType = {#enc_superhuman
             name = "GFX_goal_enc_superhuman"
  		    texturefile = "gfx/interface/goals/enc_superhuman.dds"
  	    } 
+        SpriteType = {#enc_super_soldier
+            name = "GFX_goal_enc_super_soldier"
+ 		    texturefile = "gfx/interface/goals/enc_super_soldier.dds"
+ 	    } 
         SpriteType = {#enc_sword_cross
             name = "GFX_goal_enc_sword_cross"
  		    texturefile = "gfx/interface/goals/enc_sword_cross.dds"
+ 	    } 
+        SpriteType = {#enc_take_reno
+            name = "GFX_goal_enc_take_reno"
+ 		    texturefile = "gfx/interface/goals/enc_take_reno.dds"
  	    } 
         SpriteType = {#enc_tools
             name = "GFX_goal_enc_tools"
@@ -231,10 +287,6 @@ spriteTypes = {
             name = "GFX_goal_enc_us_reborn"
  		    texturefile = "gfx/interface/goals/enc_us_reborn.dds"
  	    } 
-        SpriteType = {#enc_us_reborn_red.pdn
-            name = "GFX_goal_enc_us_reborn_red.pdn"
- 		    texturefile = "gfx/interface/goals/enc_us_reborn_red.pdn.dds"
- 	    } 
         SpriteType = {#enc_vac
             name = "GFX_goal_enc_vac"
  		    texturefile = "gfx/interface/goals/enc_vac.dds"
@@ -251,10 +303,6 @@ spriteTypes = {
             name = "GFX_goal_enc_verti"
  		    texturefile = "gfx/interface/goals/enc_verti.dds"
  	    } 
-        SpriteType = {#enc_verti_dual_2.pdn
-            name = "GFX_goal_enc_verti_dual_2.pdn"
- 		    texturefile = "gfx/interface/goals/enc_verti_dual_2.pdn.dds"
- 	    } 
         SpriteType = {#enc_verti_o
             name = "GFX_goal_enc_verti_o"
  		    texturefile = "gfx/interface/goals/enc_verti_o.dds"
@@ -266,10 +314,6 @@ spriteTypes = {
         SpriteType = {#enc_weapon_factory
             name = "GFX_goal_enc_weapon_factory"
  		    texturefile = "gfx/interface/goals/enc_weapon_factory.dds"
- 	    } 
-        SpriteType = {#ew_production.pdn
-            name = "GFX_goal_ew_production.pdn"
- 		    texturefile = "gfx/interface/goals/ew_production.pdn.dds"
  	    } 
         SpriteType = {#flag_burn_BOS
             name = "GFX_goal_flag_burn_BOS"
@@ -366,5 +410,9 @@ spriteTypes = {
         SpriteType = {#sargeant_dornan
             name = "GFX_idea_sargeant_dornan"
  		    texturefile = "gfx/interface/ideas/sargeant_dornan.dds"
+ 	    } 
+        SpriteType = {#verti_production
+            name = "GFX_idea_verti_production"
+ 		    texturefile = "gfx/interface/ideas/verti_production.dds"
  	    }    
 }

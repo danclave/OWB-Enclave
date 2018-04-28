@@ -7,34 +7,34 @@ country_event = {#0 - Enclave spawns and takes over SMD
     picture = GFX_event_ENC_rebuilding
 
     trigger = {
-		tag = NEW
+		is_ai = no
+		not = {
+			tag = NCR # play as NCR -> delete all units -> play as Enclave
+ 		}
 	}
 	mean_time_to_happen = {
 		days = 2
 	}
 	fire_only_once = YES
-
+	
     immediate = {
 		hidden_effect = { #don't want an ugly text box
 			159 = {
 				add_core_of = ERB
 			}
-			ERB = { 
+			ERB = { 	
 				transfer_state = 159
-				load_oob = enc_10w_vets
-				load_oob = enc_10w_vets
-				load_oob = enc_10w_vets
 				load_oob = enc_10w_troops
 			}
 		}
 	}
 
-    option = { #Horrible!
+    option = { #I know, I'm one of them
         name = enc.0.a
 		custom_effect_tooltip = enc.0.a.tt
 		hidden_effect = { ERB = { change_tag_from  = ROOT } }
     }
-    option = { #I know, I'm one of them
+    option = { #Rumors..
         name = enc.0.b
     }
 }
@@ -127,7 +127,7 @@ country_event = {#4 - DISLOYAL SCIENTISTS
 	
 	fire_only_once = yes	
     is_triggered_only = no
-	trigger = {	has_completed_focus = reform}	
+	trigger = {	has_completed_focus = enc_reform}	
 	mean_time_to_happen = {	days = 40 }	
 	
 	option = {#LEAVE THEM ALONE
@@ -152,7 +152,7 @@ country_event = {#5 - DISLOYAL OFFICERS
 	
 	fire_only_once = yes	
     is_triggered_only = no
-	trigger = {	has_completed_focus = reform}	
+	trigger = {	has_completed_focus = enc_reform}	
 	mean_time_to_happen = {	days = 50 }	
 	
 	option = {#LEAVE THEM ALONE
@@ -177,7 +177,7 @@ country_event = {#6 - DISLOYAL SOLDIERS
 	
 	fire_only_once = yes	
     is_triggered_only = no
-	trigger = {	has_completed_focus = reform}	
+	trigger = {	has_completed_focus = enc_reform}	
 	mean_time_to_happen = {	days = 50 }	
 	
 	option = {#LEAVE THEM ALONE
@@ -202,7 +202,7 @@ country_event = {#7 - DISLOYAL ENGINEERS
 	
 	fire_only_once = yes	
     is_triggered_only = no
-	trigger = {	has_completed_focus = reform}	
+	trigger = {	has_completed_focus = enc_reform}	
 	mean_time_to_happen = {	days = 30 }	
 	
 	option = {#LEAVE THEM ALONE
@@ -225,7 +225,7 @@ country_event = {#8 - SECRETS STOLEN
 	
 	fire_only_once = yes	
     is_triggered_only = no
-	trigger = {	has_completed_focus = reform}	
+	trigger = {	has_completed_focus = enc_reform}	
 	mean_time_to_happen = {	days = 30 }
 	
 	option = {#OH WELL
@@ -542,18 +542,19 @@ country_event = { #20 - Disloyalty
 		}
 	}
 	mean_time_to_happen = {
-		days = 300
+		days = 400
 	}
 	option = { # Punish!
 		name = enc.20.a
-		add_political_power = -50
+		add_political_power = -25
 		add_stability = -0.05
+		add_popularity = { ideology = intellectuals popularity = -0.05 }
 		# add idea?
 	}
 	option = { # Who cares?
 		name = enc.20.b
 		add_popularity = { ideology = intellectuals popularity = 0.05 }
-		add_war_support = -0.05
+		add_war_support = -0.02
 	}
 }
 country_event = { #21 - unlicensed mutie hunt
@@ -754,6 +755,11 @@ country_event = { #29 - fire mutie hunt event
 	id = enc.29 
 	hidden = yes 
 	fire_only_once = yes
+	
+	trigger = {	
+		tag = ERB
+	}
+	
 	mean_time_to_happen = {
 		days = 300
 	}
@@ -772,6 +778,7 @@ country_event = { #30 - Fall of Sack city
 	fire_only_once = YES
 	
 	trigger = {
+		tag = ERB
 		controls_state  = 135 # Sac City
 	}
 	mean_time_to_happen = {
@@ -790,10 +797,11 @@ country_event = { #31 - Fall of Shady Sands
 	id = enc.31
 	title = enc.31.t
 	desc = enc.31.d
-	picture = GFX_event_ARR_arroyo
+	picture = GFX_event_NCR_battle
 	fire_only_once = YES
 	
 	trigger = {
+		tag = ERB
 		controls_state  = 253 # Shady Sands
 	}
 	mean_time_to_happen = {
@@ -817,10 +825,11 @@ country_event = { #32 - Soldier out of uniform
 	fire_only_once = YES
 	
 	trigger = {
-		
+		tag = ERB
+		has_idea = sargeant_dornan
 	}
 	mean_time_to_happen = {
-		days = 100
+		days = 300
 	}
 	option = { # cut the boys some slack!
 		name = enc.32.a
@@ -860,7 +869,7 @@ country_event = { #33 - Caravan Encounter
 	option = { # resourceful option
 		name = enc.33.c
 		trigger = {
-			# has_country_flag = leader_resourceful
+			has_country_flag = leader_resourceful
 		}
 		set_country_flag = enc_event_33_solved
 		add_to_variable = { var = ENC_hiding_cost value = -10 }	
@@ -878,6 +887,7 @@ country_event = { #34 - remnants of Sack city
 	fire_only_once = YES
 	
 	trigger = {
+		tag = ERB
 		controls_state  = 135 # Sac City
 	}
 	mean_time_to_happen = {
@@ -900,6 +910,7 @@ country_event = { #35 - remnants of Shady Sands
 	fire_only_once = YES
 	
 	trigger = {
+		tag = ERB
 		controls_state  = 253 # Shady Sands
 	}
 	mean_time_to_happen = {
@@ -922,6 +933,7 @@ country_event = { #36 - remnants of the boneyard
 	fire_only_once = YES
 	
 	trigger = {
+		tag = ERB
 		controls_state  = 350 # Shady Sands
 	}
 	mean_time_to_happen = {
@@ -945,6 +957,7 @@ country_event = { #37 - Vengeance against Arroyo
 	fire_only_once = YES
 	
 	trigger = {
+		tag = ERB
 		controls_state  = 337 # Shady Sands
 	}
 	mean_time_to_happen = {
@@ -954,6 +967,74 @@ country_event = { #37 - Vengeance against Arroyo
 		name = enc.37.a
 		add_manpower = -20
 		add_war_support = 0.10
+	}
+}
+
+country_event = { #38 ANTI PUPPET
+	id = enc.38
+	title = enc.38.t
+	desc = enc.38.d
+	picture = GFX_event_ENC_president_only
+	fire_only_once = NO
+	
+	trigger = {
+		ERB = {
+			has_completed_focus = enc_purity
+			num_subjects > 0
+		}
+		
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	option = { # ANNEX!
+		name = enc.38.a
+		every_other_country = {
+			limit = {
+				is_subject_of  = ERB
+			}
+			ERB = { 
+				annex_country = { target = PREV }
+			}
+		}
+	}
+	option = { # meh
+		name = enc.38.b
+		every_other_country = {
+			limit = {
+				is_subject_of  = ERB
+			}
+			ERB = {	release_puppet = PREV }
+		}
+	}
+}
+country_event = { #39 Reduce plague if Desert rangers not allied with NCR
+	id = enc.39
+	title = enc.39.t
+	desc = enc.39.d
+	picture = GFX_event_ENC_secret3
+	fire_only_once = NO
+	
+	trigger = {
+		NCR = {
+			has_idea = ENC_plague
+			NOT = { 
+				is_in_faction_with = DES
+				is_in_faction_with = BOS
+			}
+		}		
+	}
+	mean_time_to_happen = {
+		days = 100
+	}
+	option = { # Damn it
+		name = enc.39.a
+		NCR = {
+			swap_ideas = {
+				remove_idea = ENC_plague
+				add_idea = ENC_plague_2
+			}
+		}
 	}
 }
 
@@ -972,7 +1053,6 @@ country_event = { #37 - Vengeance against Arroyo
 # GFX_event_ENC_president_onyl
 # GFX_event_ENC_rebuilding
 # GFX_event_ENC_secret
-# GFX_event_ENC_secret.0.pdnBak
 # GFX_event_ENC_secret2
 # GFX_event_ENC_secret3
 # GFX_event_ENC_torture.pdn

@@ -21,7 +21,7 @@ ideas = {
 			}			
 		} 
 		ENC_energy_production = { 
-			picture = generic_production_bonus
+			picture = GFX_idea_enc_ew_production
 			allowed = { 
 				always = no
             }
@@ -31,7 +31,7 @@ ideas = {
             }
             removal_cost = -1
 			equipment_bonus = {
-				energy_equipment_3 = {
+				plasma_equipment_1 = {
 					build_cost_ic = -0.30
 					instant = yes
 				}
@@ -82,7 +82,6 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				elites_drift = 0.1
-				research_bonus = { land_doctrine = 0.10	}
 				max_planning = 0.2
 				army_leader_start_level = 3
 			}
@@ -226,7 +225,6 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   research_bonus = { land_doctrine = 0.05}
 			   max_planning = 0.1
 			   army_leader_start_level = 1
 			}
@@ -373,7 +371,7 @@ ideas = {
 				consumer_goods_factor = 0.05
 			}
 		}
-
+		  
 ####################################################
 # REFORM - DIPLOMACY TREE
 ####################################################
@@ -407,21 +405,6 @@ ideas = {
 				justify_war_goal_time = +0.10
 				trade_opinion_factor = 0.25
 			}
-		ENC_send_diplomats = {
-			picture = generic_secret_police
-			allowed = { 
-				always = no
-            }
-
-            allowed_civil_war = { 
-				always = yes
-            }
-            removal_cost = -1
-			modifier = {
-				justify_war_goal_time = +0.10
-				trade_opinion_factor = 0.25
-			}
-		}
 		}
 
 ####################################################
@@ -440,7 +423,7 @@ ideas = {
 			   non_core_manpower = -0.02
 			   stability_factor = -0.1
 			   army_morale_factor = 0.1
-			   army_org_factor = 0.1
+			   mobilization_speed = 0.10
 			}
 		}
 		ENC_purist2 = {  
@@ -454,10 +437,11 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   non_core_manpower = -0.02
-			   army_morale_factor = 0.20
-			   army_org_factor = 0.20
 			   conscription = 0.1
+			   mobilization_speed = 0.20
+			   army_org_factor = 0.10
+			   army_morale_factor = 0.20
+			   non_core_manpower = -0.02
 			}
 		}
 		ENC_purist3 = {  		
@@ -471,12 +455,13 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   non_core_manpower = -0.02
-			   stability_factor = 0.10
-			   army_morale_factor = 0.20
-			   army_org_factor = 0.20
 			   conscription = 0.20
+			   mobilization_speed = 0.30
+			   army_morale_factor = 0.20
+			   army_org_factor = 0.20			   
+			   stability_factor = 0.10
 			   justify_war_goal_time = -0.30
+			   non_core_manpower = -0.02
 			}
 		}
 		ENC_vengeance= {  		
@@ -495,6 +480,25 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = NCR
+				attack_bonus_against = 0.25
+			}
+		}		
+		ENC_vengeance_bos = {  		
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				army_morale_factor = 0.10
+				army_org_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = BOS
 				attack_bonus_against = 0.25
 			}
 		}		
@@ -570,6 +574,27 @@ ideas = {
 				army_defence_factor = -0.3
 				}
 		}
+		ENC_plague_2 = {  # less severe
+			picture = ENG_the_war_to_end_all_wars
+			allowed = { 
+				always = no
+            }
+			cancel = { 
+				NOT = { country_exists = ERB } 
+			}
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				MONTHLY_POPULATION = -3
+				attrition = 1
+				army_org_factor = -0.2
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				}
+		}
 		ENC_radio_purity = {  
 			picture = enc_radio
 			allowed = { 
@@ -584,7 +609,6 @@ ideas = {
 				political_power_factor = 0.20
 				political_power_gain = 0.20
 				decryption_factor = 0.2
-				elites_drift = 0.2
 			}
 		}
 		ENC_radio_eyebots = {  
@@ -656,9 +680,10 @@ ideas = {
 			picture = chi_forced_conscription
 			modifier = {
 				conscription = 0.10
+				conscription_factor = 0.10
 				research_time_factor = 0.10
 				industrial_capacity_factory = -0.10
-				mobilization_speed = 0.15
+				mobilization_speed = 0.30
 			}
 		}
 ####################################################
@@ -714,10 +739,117 @@ ideas = {
 				defense_bonus_against = 0.2
 			}
 		}
+		ENC_remnant_officers_central = {  
+			picture = enc_officers
+            removal_cost = -1
+			modifier = {
+				elites_drift = 0.1
+				army_leader_start_level = 3
+				# new 
+				army_org_factor = 0.2
+				max_planning = 0.3						
+			}
+		}
+		ENC_remnant_officers_central_2 = {  
+			picture = enc_officers
+            removal_cost = -1
+			modifier = {
+				elites_drift = 0.1
+				army_leader_start_level = 3
+				# new 
+				army_org_factor = 0.30
+				max_planning = 0.40
+				supply_consumption_factor = -0.15
+			}
+		}
+		ENC_remnant_officers_local = {  
+			picture = enc_officers
+            removal_cost = -1
+			modifier = {
+				elites_drift = 0.1
+				max_planning = 0.1
+				army_leader_start_level = 3
+				# new
+				planning_speed = 0.25
+				army_speed_factor = 0.15
+				
+			}
+		}	
+		ENC_remnant_officers_local_2 = {  
+			picture = enc_officers
+            removal_cost = -1
+			modifier = {
+				elites_drift = 0.1
+				army_leader_start_level = 3
+				# new
+				planning_speed = 0.50
+				army_speed_factor = 0.15
+				
+			}
+		}	
+		ENC_drop_training = {  
+			picture = generic_air_bonus
+            removal_cost = -1
+			modifier = {
+				air_paradrop_attack_factor = 0.50
+				air_paradrop_defence_factor = 0.30
+				out_of_supply_factor = -0.3
+				no_supply_grace = 48
+				training_time_factor = 0.10
+			}
+		}	
+		ENC_verti_production = {  
+			picture = generic_air_research
+            removal_cost = -1
+			equipment_bonus = {
+				vb_gunship_equipment = {
+					build_cost_ic = -0.20
+					instant = yes
+				}
+				vb_transport_plane_equipment = {
+					build_cost_ic = -0.20
+					instant = yes
+				}
+			}	
+		}	
+		ENC_strike_teams = {  
+			picture = generic_air_research
+            removal_cost = -1
+			modifier = {
+				air_paradrop_attack_factor = 0.25
+				air_paradrop_defence_factor = 0.10
+				out_of_supply_factor = -0.3
+				no_supply_grace = 24
+			}
+		}	
+		ENC_air_supremacy = {
+			picture = air_war_plans_division
+			modifier = {
+				army_bonus_air_superiority_factor = 0.10
+			}
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.20
+					instant = yes
+				}
+			}
+		}
+		ENC_presidential_powers = {
+			picture = cze_planning_bonus
+			modifier = {
+				mobilization_laws_cost_factor = -0.30
+				economy_cost_factor = -0.30
+				political_advisor_cost_factor = -0.15
+			}
+		}
+	
+####################################################
+# PURITY - HIDDEN
+####################################################
 	}
 
 	tank_manufacturer = {
-		ENC_PA_quality = {
+		ENC_PA_quanitity = {
 			picture = enc_designer_PA
 			allowed = {
 				original_TAG = ERB
@@ -729,10 +861,10 @@ ideas = {
 				}
 			}			
 			modifier = {
-				conscription_factor = -0.10
+				conscription_factor = -0.05
 			}
 		}
-		ENC_PA_quanitity = {
+		ENC_PA_quality = {
 			picture = enc_designer_PA
 			
 			allowed = {
@@ -747,14 +879,27 @@ ideas = {
 				}
 			}			
 			modifier = {
-				conscription_factor = -0.10
+				conscription_factor = -0.05
 			}
 		}
 	}
 }
-# enc_education
-# enc_officers
-# enc_radio
-# enc_scientists
-# enc_slave_labour
+
+# GFX_idea_enc_designer_verti
+# GFX_idea_enc_education
+# GFX_idea_enc_ew_production
+# GFX_idea_enc_idea_eyebots
+# GFX_idea_enc_idea_infighting
+# GFX_idea_enc_officers
+# GFX_idea_enc_pa_production
+# GFX_idea_enc_purity_1
+# GFX_idea_enc_purity_2
+# GFX_idea_enc_purity_3
+# GFX_idea_enc_radio
+# GFX_idea_enc_scientists
+# GFX_idea_enc_slave_labour
+# GFX_idea_enc__idea_fist
+# GFX_idea_idea_enc_designer_PA
+# GFX_idea_sargeant_dornan
+# GFX_idea_verti_production
 

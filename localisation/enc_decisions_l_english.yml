@@ -37,7 +37,7 @@ ENC_setting_examples_purity:0 "Set some examples"
 ENC_setting_examples_reform:0 "Set some examples"
 
 ENC_field_veterans: "Field the Veterans ([?Root.enc_veterans_var]/3)"
-enc_call_veterans_tt: "Two divisions of §YEnclave Veterans§! return to the Enclave.\n\nUnlocks 3 §YField Veterans§! decision uses.\nThis allows you to field §YEnclave Veterans§! at the cost of £manpower_texticon §YManpower§!\n§RThey still have to be equipped afterwards!§!"
+enc_call_veterans_tt: "Two divisions of §YEnclave Veterans§! hiding in §YNew Reno§! return to the Enclave.\n\nUnlocks 3 §YField Veterans§! decision uses.\nThis allows you to field §YEnclave Veterans§! at the cost of £manpower_texticon §YManpower§!\n§RThey still have to be equipped afterwards!§!"
 
 clear_state: "Liberate State"
 

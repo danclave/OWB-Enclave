@@ -21,15 +21,12 @@ leader_traits = {
 		research_time_factor = -0.05
 	}	
 	resourceful = {
+		random = no
 		supply_consumption_factor = -0.20
 	}	
 	inspiring = {
 		random = no
 		conscription = 0.05
-	}	
-	hates_NCR = {
-		random = no
-		targeted_country = { tag = NCR attack_bonus_against = 0.20 }
 	}
 	purist = {
 		random = no

@@ -25,4 +25,34 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
+	division {
+		name = "Enclave Remnants"
+		location = 8479
+		division_template = "10w PA Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	
+	division {
+		name = "Enclave Remnants"
+		location = 8479
+		division_template = "10w PA Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division {
+		name = "Enclave Remnants"
+		location = 8479
+		division_template = "10w PA Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	
+	division {
+		name = "Enclave Remnants"
+		location = 8479
+		division_template = "10w PA Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
 }

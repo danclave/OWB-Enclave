@@ -28,8 +28,10 @@ set_technology = {
 	vertiberd_gunship = 1 
 	vertiberd_transport1 = 1 
 	support_weaponry = 1
-	light_robots = 1 
+	security_protectron_tech = 1 	
 }
+
+set_country_flag = not_allowed_to_core
 
 ###############################
 # POLITICS
@@ -88,7 +90,9 @@ create_country_leader = {
 	picture = "gfx/leaders/NEW/Portrait_New_Reno_Arch_Dornan.dds"
 	expire = "3000.1.1"
 	ideology = benevolent_dictatorship			
-	traits = {}
+	traits = {
+		drill_sargeant
+	}
 }		
 create_country_leader = {
 	name = "Chief Engineer R. Bishop"

@@ -39,6 +39,9 @@ ENC_political_actions = {
 ENC_rangers = {
 	icon = generic_army_support
 	allowed = {original_tag = ERB}
+	available = {
+		has_war_with = DES
+	}
 }
 special_projects = {
 	icon = generic_research
@@ -54,11 +57,6 @@ ENC_cloning = {
 	priority = 5
 	allowed = { original_tag = ERB }
 	visible = { has_completed_focus = enc_cloning }
-}
-operations = {
-	icon = generic_army_support
-	allowed = {original_tag = ERB}
-	
 }
 
 test_coring = {
@@ -79,13 +77,10 @@ ENC_NCR_hiding = {
 	}
 }
 
-war_measures = {
-
-}
-
 ENC_annex_puppet = {
 
 }
+
 ###############################
 # ICONS
 ###############################
