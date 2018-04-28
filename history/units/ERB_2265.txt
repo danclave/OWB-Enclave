@@ -1,0 +1,58 @@
+﻿division_template = {
+	name = "10w PA Division"
+	regiments = {
+		power_armour = { x = 0 y = 0 }
+		power_armour = { x = 0 y = 1 }
+		power_armour = { x = 0 y = 2 }
+		power_armour = { x = 0 y = 3 }
+		power_armour = { x = 0 y = 4 }
+	}
+}
+units = {
+
+	division {
+		name = "Navarro Veterans"
+		location = 8479
+		division_template = "10w PA Division"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	
+	division {
+		name = "Navarro Veterans"
+		location = 8479
+		division_template = "10w PA Division"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division {
+		name = "Navarro Remnants"
+		location = 8479
+		division_template = "10w PA Division"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	
+	division {
+		name = "Enclave Remnants"
+		location = 8479
+		division_template = "10w PA Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division {
+		name = "Enclave Remnants"
+		location = 8479
+		division_template = "10w PA Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	
+	division {
+		name = "Enclave Remnants"
+		location = 8479
+		division_template = "10w PA Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+}
