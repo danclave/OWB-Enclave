@@ -1,0 +1,194 @@
+bookmarks = {
+	bookmark = {
+		name = "OWB_NAME"
+		desc = "OWB_DESC"
+		date = 2275.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "NCR"
+		default = yes
+		
+		"NCR"={
+			history = "NCR_OWB_DESC"
+			ideology = people
+			ideas = {
+				ncrguns
+				brahminbarons
+			}
+			focuses = {
+				ncr_oldworldwall
+				ncr_baja
+				ncr_emergency
+			}
+		}
+		"CES"={
+			history = "CES_OWB_DESC"
+			ideology = ruler
+			ideas = {
+				cultofmars
+				national_spirit_rejection_of_automation
+			}
+			focuses = {
+				ces_war_for_hoover_dam
+				ces_thesis
+				ces_the_white_leg_petition
+			}
+		}
+		"BOS"={
+			history = "BOS_OWB_DESC"
+			ideology = intellectuals
+			ideas = {
+				bunkerblues
+				oldguard
+			}
+			focuses = {
+				bos_wastelandconscripts
+				bos_shichapter
+				bos_hangars
+			}
+		}
+		"VEG"={
+			history = "VEG_OWB_DESC"
+			ideology = ruler
+			ideas = {
+
+			}
+			focuses = {
+				veg_architect
+				veg_peoplesvegas
+				veg_checkereddevil
+			}
+		}
+		"NCN"={
+			history = "NCN_OWB_DESC"
+			ideology = people
+			ideas = {
+				wastelandmilitias
+			}
+			focuses = {
+				lds_josh
+				lds_merciful
+				lds_paradise
+			}
+		}
+		"ERB"={
+			history = "ERB_OWB_DESC"
+			ideology = elites
+			ideas = {
+				ENC_infighting
+			}
+			focuses = {
+				enc_purity
+				enc_ourpresident
+				enc_reform
+			}
+		}	
+		"NEW"={
+			history = "NEW_OWB_DESC"
+			ideology = people
+			ideas = {
+			}
+			focuses = {
+				new_topdog
+				new_klamathdeal
+				new_mercmilitary	
+			}
+		}
+		"DES"={
+			history = "DES_OWB_DESC"
+			ideology = ruler
+			minor = yes
+			ideas = {
+				desertrangers
+			}
+			focuses = {
+				des_steel
+				des_pact
+				des_treaty
+			}
+		}
+		"EHT"={
+			minor = yes
+			history = "EHT_OWB_DESC"
+			ideology = ruler
+			ideas = {
+
+			}
+			focuses = {
+			
+			}
+		}
+		"TRL"={
+			minor = yes
+			history = "TRL_OWB_DESC"
+			ideology = ruler
+			ideas = {
+			
+			}
+			focuses = {
+				firstholotape
+				warrenstirs
+				callofthefirst
+			}
+		}
+		"VLT"={
+			minor = yes
+			history = "VLT_OWB_DESC"
+			ideology = intellectuals
+			ideas = {
+				courtyard
+				vaultmed
+				utopia
+			}
+			focuses = {
+				vault_brain_4b
+				vault_first_1
+				vault_festus_1
+			}
+		}
+		"WHT"={
+			minor = yes
+			history = "WHT_OWB_DESC"
+			ideology = elites
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"WBH"={
+			minor = yes
+			history = "WBH_OWB_DESC"
+			ideology = intellectuals
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"ARR"={
+			minor = yes
+			history = "ARR_OWB_DESC"
+			ideology = ruler
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"HAN"={
+			minor = yes
+			history = "HAN_OWB_DESC"
+			ideology = ruler
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"---"={
+			history = "OTHER_OWB_DESC"
+		}
+
+		effect = {
+			randomize_weather = 12345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

@@ -1,0 +1,27 @@
+state = {
+	id = 159
+	name = "STATE_SIERRA_ARMY_DEPOT"
+	manpower = 14000
+	state_category = town
+	
+	resources = {
+		metal = 8
+		fuel = 8
+	}
+	
+	history = {
+		owner = ERB
+		add_core_of = ERB
+		victory_points = {
+			8479 10
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+	}
+	
+	provinces = {
+		1197 4982 4984 5070 5138 8476 8477 8478 8479 8480 8481 8482 8805 8806
+	}
+}

@@ -1,7 +1,7 @@
 ﻿l_english:
 
 not_allowed_to_core: "§Y Enclave§!"
-
+ERB_OWB_DESC: "Four decades ago Navarro was destroyed by NCR and Brotherhood forces in a joint strike to finish off the final bastion of the Enclave. Demoralized, leaderless and homeless, their remnants scattered to the wind, never to be seen again. At least that's what most believed.\n \n Under the nose of the sleeping NCR, Sargeant Dornan has been working tirelessly to unite the Enclave remnants under his banner. Contacting the many hidden civilian bases of the Enclave to integrate a new generation of America's finest."
 ###################################
 # COMMON
 ###################################
@@ -578,6 +578,8 @@ ENC_vengeance: "Vengeance!"
 
 ENC_PA_quanitity: "Quantity PA Team"
 ENC_PA_quality: "Quality PA Team"
+
+enclave_naval_manufacturer: "Naval Research Team"
 ############################################### MISC ###############################################################################################################
 renoenclave:0 "Enclave desc"
 renoenclave_tooltip:0 "Enclave veterans tool"
