@@ -1,0 +1,187 @@
+﻿l_english:
+
+###################################
+# REFORM
+###################################
+enc_reform:0 "Reform"
+enc_reform_desc:0 "If we are to rebuild our once-great nation, we must reform ourselves and our principles. Sadly, many of the reformist elements have already deserted in the last few years. Leaving mostly the devoted and fanatical. We will have to tread carefully in our efforts to reform the Enclave into an organisation fit to restore order, justice and democracy to these United States of America."
+
+enc_radio:0 "Enclave Radio"
+enc_radio_desc:0 "Our radio beacons could be used to broadcast the Enclave's message to the wasteland. Let sympathizers far and wide hear of the Enclaves vision. While we are at it, those same beacons can also be used as listening outposts."
+
+enc_accept_wastelanders:0 "Accept Wastelander Volunteers"
+enc_accept_wastelanders_desc:0 "Our numbers have dwindled down to dangerously low levels. There are men willing to fight and die for our country, so why not let them?"
+
+enc_new_patriotism:0 "New Patriotism"
+enc_new_patriotism_desc:0 "Our patriotism has devolved into a warped devotion to the Enclave and the US government rather than our country and her people. Let us reignite the old flame of American patriotism as a force to unite both the Enclave and our new citizens."
+
+enc_announce_welfare_program:0 "Announce Welfare Programs"
+enc_announce_welfare_program_desc:0 "A limited number of welfare programs could go a long way in alleviating the worst suffering of our population as well as improve their productivity."
+
+enc_americans_one_and_all:0 "Americans, One And All"
+enc_americans_one_and_all_desc:0 "The time has come to break down the barriers between our new citizens and the old guard of the Enclave. By accepting distinguished wastelanders into higher positions of government, we can improve our legitimacy as the rightful American government."
+
+enc_vaccinations:0 "Vaccinations"
+enc_vaccinations_desc:0 "We have the resources to immunize our citizens against many of the old and new illnesses plaguing them. This would show our worth as a government as well as increasing the number of able-bodied men at our disposal."
+
+begin_reconstruction:0 "Begin Reconstruction"
+begin_reconstruction_desc:0 "The strongest argument for the need of a federal government are well maintained roads. Let us make our argument and make it well."
+
+publiceducation:0 "US Department of Education"
+publiceducation_desc:0 "A staggering amount of our citizens are illiterate, having had neither the time or resources to learn how to read or write. We will reopen the public schools to provide at least these basic skills to any under 12 years of age. Those who distinguish themselves can be selected to join our researchers and those who don't will still be useful as clerks."
+
+enc_RND:0 "Refund DARPA"
+enc_RND_desc:0 "By diverting resources from our industry, we can fund DARPA once more, allowing us to improve our research efficiency to a previously impossible degree."
+
+enc_reform_placeholder: "Reformers Coming soon!"
+enc_reform_placeholder_tt: "This path will allow you to rebuild the §YUnited States of America§!"
+enc_reform_placeholder_desc:0 "By soon I mean like several months because that's how long it took to make the Puritsts"
+###################################
+# REFORM TODO
+###################################
+enc_police:0 "Federal Police"
+
+integrate_officers:0 "Integrate the Officers"
+integrate_officers_desc:0 "TODO"
+integrate_scientists:0 "Integrate the Scientists"
+
+integrate_scientists_desc:0 "TODO"
+integrate_politicians:0 "Integrate the Politicians"
+integrate_politicians_desc:0 "TODO"
+
+enc_reborn:0 "A Nation Reborn"
+enc_reborn_desc:0 "TODO"
+
+enc_reno_start:0 "The City of Crime"
+enc_reno_start_desc:0 "TODO"
+enc_reno_mordinos:0 "Going Cold Turkey"
+enc_reno_mordinos_desc:0 "TODO"
+enc_reno_bishops:0 "Checkmate"
+enc_reno_bishops_desc:0 "T"
+enc_reno_wrights:0 "A Shared Dream"
+enc_reno_wrights_desc:0 "TODO"
+enc_reno_salvatores:0 "Old Allies"
+enc_reno_salvatores_desc:0 "TODO"
+enc_reno_end:0 "The New Capital"
+enc_reno_end_desc:0 "TODO"
+
+enc_radio_civilian_music:0 "Old World Blues"
+enc_radio_civilian_music_desc:0 "TODO"
+
+################ special codes for special people ################################################################################################################
+
+# yellow§Ytext§!
+# £air_experience_20x20
+# £army_experience_20x20
+# £autonomy_texticon
+# £civ_factory
+# £civ_factory_output
+# £command_power_20x20
+# £convoy_texticon
+# £daynight_text
+# £decision_icon_small
+# £decrease_reversed_texticon
+# £decrease_texticon
+# £divisions
+# £efficiency_cap_texticon
+# £efficiency_texticon
+# £increase_reversed_texticon
+# £increase_texticon
+# £infinity_icon
+# £infrastructure_texticon
+# £location_pointer
+# £locked
+# £manpower_texticon
+# £mapicon_port_strike_result_text
+# £mission_efficiency_strip
+# £national_unity_texticon
+# £nato_unit_anti_air_icon_small
+# £nato_unit_anti_tank_icon_small
+# £nato_unit_artillery_icon_small
+# £nato_unit_cavalry_icon_small
+# £nato_unit_engineer_icon_small
+# £nato_unit_heavy_armor_icon_small
+# £nato_unit_infantry_icon_small
+# £nato_unit_light_armor_icon_small
+# £nato_unit_marine_icon_small
+# £nato_unit_mechanized_icon_small
+# £nato_unit_medium_armor_icon_small
+# £nato_unit_modern_armor_icon_small
+# £nato_unit_motorized_artillery_icon_small
+# £nato_unit_motorized_icon_small
+# £nato_unit_mountaineers_icon_small
+# £nato_unit_paratrooper_icon_small
+# £nato_unit_recon_icon_small
+# £nato_unit_rocket_artillery_icon_small
+# £nato_unit_super_heavy_armor_icon_small
+# £navy_experience_20x20
+# £organization_texticon
+# £pol_idea_texticon
+# £pol_power_20x20
+# £production_cost
+# £production_naval_cost
+# £right_arrow_texticon
+# £ship_battlecruiser_icon_small
+# £ship_battleship_icon_small
+# £ship_carrier_icon_small
+# £ship_destroyer_icon_small
+# £ship_heavy_cruiser_icon_small
+# £ship_light_cruiser_icon_small
+# £ship_sh_battleship_icon_small
+# £ship_submarine_icon_small
+# £ship_transport_icon_small
+# £stability_texticon
+# £strenght_texticon
+# £supply_texticon
+# £support_AA_small
+# £support_art_small
+# £support_AT_small
+# £support_engineer_small
+# £support_field_hospital_small
+# £support_logistics_small
+# £support_maintenance_small
+# £support_military_police_small
+# £support_rocket_art_small
+# £support_signal_small
+# £technology_texticon
+# £temperature_text
+# £trigger_no
+# £trigger_yes
+# £unit_anti_air_icon_small
+# £unit_anti_tank_icon_small
+# £unit_artillery_icon_small
+# £unit_bicycle_infantry_icon_small
+# £unit_cavalry_icon_small
+# £unit_engineer_icon_small
+# £unit_heavy_armor_icon_AA_small
+# £unit_heavy_armor_icon_art_small
+# £unit_heavy_armor_icon_AT_small
+# £unit_heavy_armor_icon_small
+# £unit_infantry_icon_small
+# £unit_light_armor_icon_art_AA_small
+# £unit_light_armor_icon_art_AT_small
+# £unit_light_armor_icon_art_small
+# £unit_light_armor_icon_small
+# £unit_marine_icon_small
+# £unit_mechanized_icon_small
+# £unit_medium_armor_icon_AA_small
+# £unit_medium_armor_icon_art_small
+# £unit_medium_armor_icon_AT_small
+# £unit_medium_armor_icon_small
+# £unit_modern_armor_icon_AA_small
+# £unit_modern_armor_icon_art_small
+# £unit_modern_armor_icon_AT_small
+# £unit_modern_armor_icon_small
+# £unit_motorized_artillery_icon_small
+# £unit_motorized_icon_small
+# £unit_mountaineers_icon_small
+# £unit_paratrooper_icon_small
+# £unit_recon_icon_small
+# £unit_rocket_artillery_icon_small
+# £unit_super_heavy_armor_icon_AA_small
+# £unit_super_heavy_armor_icon_art_small
+# £unit_super_heavy_armor_icon_AT_small
+# £unit_super_heavy_armor_icon_small
+# £victory_point_texticon
+# £weather_text
+# £wing_rebase_status_texticon

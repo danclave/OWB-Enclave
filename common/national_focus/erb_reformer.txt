@@ -1,0 +1,613 @@
+
+	focus = {#reform - ------------------------------EXPANSION----------------------
+		id = enc_expansion_reform
+		prerequisite = { focus = enc_reform } # ugly line
+		icon = GFX_goal_enc_take_reno
+		ai_will_do = { factor = 1 }
+		x = 10
+		y = 3
+		cost = 2.9
+		completion_reward = {
+			custom_effect_tooltip = enc_new_annex_tt
+			hidden_effect = { # ugly tooltip
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 285 # Carson City
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+					}
+				}
+			}
+		}
+	}
+	focus = {#reform - YKZ - annex
+		id = enc_yakuza_annex
+		icon = GFX_goal_enc_annex_ykz
+		ai_will_do = { factor = 1 }
+		available = { has_war_support > 0.5 }
+		prerequisite = { focus = enc_expansion_reform }
+		bypass = {
+			YKZ = { exists = NO }
+		}	
+		relative_position_id = enc_expansion_reform
+		x = -3
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			custom_effect_tooltip = enc_yakuza_annex_tt
+			hidden_effect = { # ugly tooltip
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 160 # Carson City
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+					}
+				}
+			}
+		}
+	}
+	focus = {#reform - YKZ - sack (160)
+		id = enc_yakuza_sack
+		cost = 5.8
+		icon = GFX_goal_enc_construction
+		ai_will_do = { factor = 1 }
+		
+		mutually_exclusive = { focus = enc_yakuza_keep }
+		prerequisite = { focus = enc_yakuza_annex }
+		available = {
+			160 = { is_controlled_by = ERB } #do we actually own it right now?
+		}
+		
+		relative_position_id = enc_yakuza_annex
+		x = -1
+		y = 1
+		
+		completion_reward = {
+			159 = { #black rock
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			160 = { remove_building = { type = industrial_complex level = 2 } }
+		}
+	}
+	focus = {#reform - YKZ - keep
+		id = enc_yakuza_keep
+		available = {
+			160 = { is_controlled_by = ERB } #do we actually own it right now?
+		}
+		icon = GFX_goal_enc_weapon_factory
+		ai_will_do = { factor = 1 }
+		mutually_exclusive = { focus = enc_yakuza_sack }
+		prerequisite = { focus = enc_yakuza_annex }
+		relative_position_id = enc_yakuza_annex
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_war_support = -0.10
+			160 = { #Carson city
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+  	focus = {#reform - VLT - annex
+		id = enc_vlt_annex
+		icon = GFX_goal_enc_major_war
+		cost = 5.8
+		ai_will_do = { factor = 1 } 
+		available = { has_war_support > 0.5 }
+		relative_position_id = enc_expansion_reform
+		x = -1
+		y = 1
+		mutually_exclusive = { focus = enc_vlt_annex_diplo }
+		prerequisite = { focus = enc_expansion_reform }		
+		bypass = {
+			has_full_control_of_state = 291 # vlt city
+		}	
+		completion_reward = {
+			custom_effect_tooltip = enc_vlt_annex_tt
+			hidden_effect = { # ugly tooltip
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 291 # vlt city
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+					}
+				}
+			}
+		}
+	} 
+  	focus = {#reform - VLT - annex diplo
+		id = enc_vlt_annex_diplo
+		icon = GFX_goal_enc_forced_deal
+		cost = 5.8
+		ai_will_do = { factor = 1 } 		
+		relative_position_id = enc_expansion_reform
+		x = 1
+		y = 1	
+		mutually_exclusive = { focus = enc_vlt_annex }
+		prerequisite = { focus = enc_expansion_reform }
+		available = {
+			strength_ratio = { tag = VLT ratio > 2 }
+			VLT = {
+				OR = {
+					has_country_leader = {
+						id = 910
+						ruling_only = yes
+						name = "First Citizen Lynette"
+					}
+					has_country_leader = {
+						id = 912
+						ruling_only = yes
+						name = "Security Chief Wallace"
+					}
+				}
+			}
+		}
+		completion_reward = {
+			annex_country = { target = VLT }
+		}		
+	}
+ 	focus = {#reform - VLT - labs
+		id = enc_vlt_labs
+		icon = GFX_goal_generic_advanced_technology_focus
+		ai_will_do = { factor = 1 } 		
+		available = {
+			291 = { is_controlled_by = ERB } #do we actually own it right now?
+		}
+		relative_position_id = enc_vlt_annex
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = enc_vlt_annex
+			focus = enc_vlt_annex_diplo
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				#name = enc_research_medicine
+				ahead_reduction = 1
+				uses = 3
+				category = hospital_tech
+			}
+		}
+		cost = 5.8
+		
+ }
+  	focus = {#reform - VLT - purify
+		id = enc_vlt_pure
+		icon = GFX_goal_enc_smash
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_vlt_labs
+		x = -1
+		y = 1
+		prerequisite = { focus = enc_vlt_labs}
+		mutually_exclusive = { focus = enc_vlt_core} 		
+		completion_reward = {
+			291 = {
+				add_manpower = -2000
+			}
+			add_state_core = 291
+		}
+		cost = 5.8	
+ }
+   	focus = {#reform - VLT - core
+		id = enc_vlt_core
+		icon = GFX_goal_enc_management
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_vlt_labs
+		x = 1
+		y = 1
+		prerequisite = { focus = enc_vlt_labs} 
+		mutually_exclusive = { focus = enc_vlt_pure} 
+		completion_reward = {
+			add_state_core = 291 # VLT city
+			add_stability = -0.20
+			add_war_support = -0.20
+		}
+		cost = 5.8	
+ }
+  	focus = {#reform - VLT - power
+		id = enc_vlt_power
+		icon = GFX_goal_generic_electricity_focus
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_vlt_labs
+		x = 0
+		y = 2
+		prerequisite = { 
+			focus = enc_vlt_pure
+			focus = enc_vlt_core
+		}
+		available = {
+			has_full_control_of_state = 339 #GECKO
+		}
+		completion_reward = {
+			add_resource = { type = electricity amount = 30 state = 291 } #VLT city
+		}
+		cost = 5.8	
+ }   	
+ 
+	focus = {#reform - ANT - annex
+		id = enc_ANT_annex
+		icon = GFX_goal_enc_ant
+		ai_will_do = { factor = 1 } 
+		available = { has_war_support > 0.5 }
+		relative_position_id = enc_expansion_reform
+		x = 3
+		y = 1
+		prerequisite = { focus = enc_expansion_reform }
+		cost = 5.8
+		completion_reward = {
+			custom_effect_tooltip = enc_ANT_annex_tt
+			hidden_effect = { # ugly tooltip
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 585 # modoc county
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+					}
+				}
+			}
+		}
+	}
+	focus = {#reform - ANT - cache
+		id = enc_ANT_cache
+		icon = GFX_goal_generic_supplies_focus
+		available = {
+			585 = { is_controlled_by = ERB } #do we actually own it right now?
+		}
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_ANT_annex
+		x = -1
+		y = 1
+		prerequisite = { focus = enc_ANT_annex}
+		completion_reward = {
+			add_equipment_to_stockpile = { type = power_armor_equipment_3 amount = 600 producer = ERB }
+		}
+		cost = 5.8
+	}
+ 	focus = {#reform - ANT - resourceful
+		id = enc_ANT_cache_resourceful
+		icon = GFX_goal_generic_supplies_focus
+		available = {
+			585 = { is_controlled_by = ERB } #do we actually own it right now?
+			has_country_flag = leader_resourceful
+		}
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_ANT_annex
+		x = 1
+		y = 1
+		prerequisite = { focus = enc_ANT_annex}
+		completion_reward = {
+			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 200 producer = ERB }
+			add_equipment_to_stockpile = { type = energy_equipment_1 amount = 200 producer = ERB }
+		}
+		cost = 5.8
+	}
+
+	
+	focus = {#Reform - Announce welfare program 
+		id = enc_announce_welfare_program 
+		icon = GFX_goal_generic_propaganda 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_reform
+		x = 1
+		y = 1
+		prerequisite = {focus =enc_reform}
+
+		completion_reward = {
+			add_political_power = 100
+		}		
+		cost = 8.6  
+		available_if_capitulated = yes  
+				
+ }
+
+
+	focus = {#Reform - A ERB patriotism
+		id = enc_new_patriotism 
+		icon = GFX_goal_enc_flags
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_accept_wastelanders
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_accept_wastelanders } 
+		cost = 8.6   	 		
+		completion_reward = {
+			swap_ideas = { remove_idea = ENC_wastelanders add_idea = ENC_wastelanders2 }
+		}
+		
+ }
+	focus = {#Reform - Americans, one and all 
+		id = enc_americans_one_and_all 
+		icon = GFX_goal_enc_us_flags
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_new_patriotism
+		x = 1
+		y = 1
+		prerequisite = { focus = enc_new_patriotism }
+		prerequisite = { focus = publiceducation } 
+		cost = 8.6
+		completion_reward = { swap_ideas = {remove_idea = ENC_wastelanders2 add_idea = ENC_americans_one_and_all}} 
+		
+ }
+ 	focus = {#Reform - Integrate Officers
+		id = integrate_officers 
+		icon = GFX_focus_generic_military_mission 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_americans_one_and_all
+		x = -2
+		y = 1
+		prerequisite = { focus = enc_americans_one_and_all }
+		completion_reward = {add_ideas = ENC_integrating_officers}
+		cost = 8.6
+ }
+  	focus = {#Reform - Integrate Scientists
+		id = integrate_scientists 
+		icon = GFX_goal_enc_integrate_scientists
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_americans_one_and_all
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_americans_one_and_all } 
+		cost = 8.6
+		completion_reward = {add_ideas = ENC_integrating_scientists}
+ }
+  	focus = {#Reform - Integrate politicians
+		id = integrate_politicians
+		icon = GFX_goal_enc_integrate_politicians
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_americans_one_and_all
+		x = 2
+		y = 1
+		prerequisite = { focus = enc_americans_one_and_all }
+		cost = 8.6
+		completion_reward = {add_ideas = ENC_integrating_politicians}
+ }
+ 	focus = {#Reform - A nation reborn 
+		id = enc_reborn 
+		icon = GFX_goal_enc_us_reborn
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_americans_one_and_all
+		x = 0
+		y = 2
+		prerequisite = { focus = integrate_officers }
+		prerequisite = { focus = integrate_scientists }
+		prerequisite = { focus = integrate_politicians }
+		cost = 8.6
+		completion_reward = {
+			set_cosmetic_tag = USA
+		}
+ }
+	focus = {#Reform - enc_vaccinations
+		id = enc_vaccinations 
+		icon = GFX_goal_enc_vac 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_announce_welfare_program
+		x = 0
+		y = 1
+		mutually_exclusive = { } 
+		prerequisite = { focus = enc_announce_welfare_program} 
+		cost = 8.6    
+		completion_reward = {
+			add_ideas = ENC_vacinations
+		}
+ }
+	focus = {#Reform - Public Education 
+		id = publiceducation 
+		icon = GFX_goal_generic_intelligence_exchange 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_vaccinations
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_vaccinations } 
+		cost = 8.6 
+		completion_reward = {
+			add_ideas = ENC_education
+		}
+############### TECH FOCUSES ################################
+
+ }
+
+ 	focus = {#Reform - Assasinate F
+		id = enc_assasinate_F 
+		icon = GFX_goal_ENC_assasinate
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_reform
+		x = 3
+		y = 1
+		prerequisite = { focus = enc_reform } 
+		available = {
+			# is ruthless
+		}
+		
+		completion_reward = {
+			add_popularity = { ideology = elites popularity = -0.2 } 
+			#add_national_unity = -0.1
+			create_country_leader  = {
+				name = "Henry Richardson"
+				desc = "Anderson_desc" #placeholder
+				picture = "gfx/leaders/portrait_Anderson.dds" #placeholder
+				expire = "3000.1.1"
+				ideology = militarist_technocracy
+				traits = {}
+			}
+		}
+		cost = 8.6 
+		
+	
+ }
+ 	focus = {#RENO - The city of crime
+		id = enc_reno_start
+		icon = GFX_goal_NEW_generic_reno
+		ai_will_do = { factor = 1 }		
+		prerequisite = { focus = enc_reform }
+		relative_position_id = enc_ourpresident
+		x = 11
+		y = 2
+		cost = 8.6
+	} 
+	focus = {#RENO - The Mordinos
+		id = enc_reno_mordinos
+		icon = GFX_goal_NEW_Mordinos_Tributaries
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_reno_start}
+		relative_position_id = enc_reno_start
+		x = -3
+		y = 1
+		cost = 8.6
+	}
+	focus = {#RENO - The Bishops
+		id = enc_reno_bishops
+		icon = GFX_goal_NEW_White_Pawn_to_E4
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_reno_start}
+		relative_position_id = enc_reno_start
+		x = -1
+		y = 1
+		cost = 8.6
+	}
+	focus = {#RENO - The Wrights
+		id = enc_reno_wrights
+		icon = GFX_goal_NEW_Calling_in_the_Family
+		prerequisite = {focus = enc_reno_start}
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_reno_start
+		x = 1
+		y = 1
+		cost = 8.6
+	}
+	focus = {#RENO - The Salvatores
+		id = enc_reno_salvatores
+		icon = GFX_goal_NEW_Salvatore_Reborn
+		prerequisite = {focus = enc_reno_start}
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_reno_start
+		x = 3
+		y = 1
+		cost = 8.6
+	}
+	focus = {#RENO - The ERB Capital
+		id = enc_reno_end
+		icon = GFX_goal_NEW_new_capital
+		prerequisite = {focus = enc_reno_bishops}
+		prerequisite = {focus = enc_reno_mordinos}
+		prerequisite = {focus = enc_reno_wrights}
+		prerequisite = {focus = enc_reno_salvatores}
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_reno_start
+		x = 0
+		y = 2
+		cost = 8.6
+		completion_reward = {
+			add_state_core = 285
+		}
+	}
+
+ # ------done--------
+ 
+ 	focus = {#Reform - Enclave Radio 
+		id = enc_radio
+		icon = GFX_goal_enc_radio
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_reform
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_reform } 
+		completion_reward = {
+			add_ideas = ENC_radio
+			159 = {
+				add_building_construction = {
+					type = radar_station
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		cost = 8.6  	
+	}
+	focus = {#Reform - Enclave military
+		id = enc_radio_military
+		icon = GFX_goal_enc_radio
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_radio
+		x = -1
+		y = 1
+		prerequisite = { focus = enc_radio } 
+		completion_reward = {
+		
+		}
+		cost = 8.6  	
+	}
+	focus = {#Reform - Enclave military command
+		id = enc_radio_military_command
+		icon = GFX_goal_enc_radio
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_radio_military
+		x = -1
+		y = 1
+		prerequisite = { focus = enc_radio_military } 
+		completion_reward = {
+		
+		}
+		cost = 8.6  	
+	}
+	focus = {#Reform - Enclave civilian
+		id = enc_radio_civilian
+		icon = GFX_goal_enc_radio
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_radio
+		x = 1
+		y = 1
+		prerequisite = { focus = enc_radio } 
+		completion_reward = {
+		
+		}
+		cost = 8.6  	
+	}
+	focus = {#Reform - Enclave civilian music
+		id = enc_radio_civilian_music
+		icon = GFX_goal_enc_radio
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_radio_civilian
+		x = 1
+		y = 1
+		prerequisite = { focus = enc_radio_civilian } 
+		completion_reward = {
+		
+		}
+		cost = 8.6  	
+	}
+	focus = {#Reform - Accept wastelanders 
+		id = enc_accept_wastelanders 
+		icon = GFX_goal_enc_accept_wastelanders
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_radio
+		x = 0
+		y = 2
+		prerequisite = { 
+			focus = enc_radio_civilian
+			focus = enc_radio_military
+		}
+		cost = 8.6
+		completion_reward = {
+			swap_ideas = { remove_idea = ENC_reform add_idea = ENC_wastelanders }
+		}		
+	}
