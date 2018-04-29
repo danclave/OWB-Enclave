@@ -73,9 +73,13 @@ spriteTypes = {
             name = "GFX_event_ENC_torture.pdn"
  		    texturefile = "gfx/event_pictures/event_ENC_torture.pdn.tga"
  	    }
-		spriteType = { #GFX_idea_enc_designer_fighter
+		spriteType = { #GFX_idea_enc_designer_verti
 			name = "GFX_idea_enc_designer_verti"
 			texturefile = "gfx/interface/ideas/idea_enc_designer_verti.dds"
+		}	
+		spriteType = { #GFX_idea_enc_designer_fighter
+			name = "GFX_idea_enc_designer_fighter"
+			texturefile = "gfx/interface/ideas/idea_enc_designer_fighter.dds"
 		}		
 		SpriteType = {#sargeant_dornan
             name = "GFX_idea_sargeant_dornan"
@@ -84,6 +88,18 @@ spriteTypes = {
         SpriteType = {#enc_designer_PA
             name = "GFX_idea_enc_designer_PA"
  		    texturefile = "gfx/interface/ideas/idea_enc_designer_PA.dds"
+ 	    } 
+        SpriteType = {#enc_designer_plasma
+            name = "GFX_idea_enc_designer_plasma"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_plasma.dds"
+ 	    } 
+        SpriteType = {#enc_designer_tesla
+            name = "GFX_idea_enc_designer_tesla"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_tesla.dds"
+ 	    }
+        SpriteType = {#enc_designer_PA_2
+            name = "GFX_idea_enc_designer_PA_2"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_PA_2.dds"
  	    } 
         SpriteType = {#enc_designer_verti
             name = "GFX_idea_enc_chemical_corps"

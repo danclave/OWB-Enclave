@@ -21,68 +21,6 @@ enc_purge_opposition_desc:0 "There are many in our midst who do not share our vi
 
 
 ###################################
-# REFORM
-###################################
-enc_reform:0 "Reform"
-enc_reform_desc:0 "If we are to rebuild our once-great nation, we must reform ourselves and our principles. Sadly, many of the reformist elements have already deserted in the last few years. Leaving mostly the devoted and fanatical. We will have to tread carefully in our efforts to reform the Enclave into an organisation fit to restore order, justice and democracy to these United States of America."
-
-enc_radio:0 "Enclave Radio"
-enc_radio_desc:0 "Our radio beacons could be used to broadcast the Enclave's message to the wasteland. Let sympathizers far and wide hear of the Enclaves vision. While we are at it, those same beacons can also be used as listening outposts."
-
-enc_accept_wastelanders:0 "Accept Wastelander Volunteers"
-enc_accept_wastelanders_desc:0 "Our numbers have dwindled down to dangerously low levels. There are men willing to fight and die for our country, so why not let them?"
-
-enc_new_patriotism:0 "New Patriotism"
-enc_new_patriotism_desc:0 "Our patriotism has devolved into a warped devotion to the Enclave and the US government rather than our country and her people. Let us reignite the old flame of American patriotism as a force to unite both the Enclave and our new citizens."
-
-enc_announce_welfare_program:0 "Announce Welfare Programs"
-enc_announce_welfare_program_desc:0 "A limited number of welfare programs could go a long way in alleviating the worst suffering of our population as well as improve their productivity."
-
-enc_americans_one_and_all:0 "Americans, One And All"
-enc_americans_one_and_all_desc:0 "The time has come to break down the barriers between our new citizens and the old guard of the Enclave. By accepting distinguished wastelanders into higher positions of government, we can improve our legitimacy as the rightful American government."
-
-enc_vaccinations:0 "Vaccinations"
-enc_vaccinations_desc:0 "We have the resources to immunize our citizens against many of the old and new illnesses plaguing them. This would show our worth as a government as well as increasing the number of able-bodied men at our disposal."
-
-begin_reconstruction:0 "Begin Reconstruction"
-begin_reconstruction_desc:0 "The strongest argument for the need of a federal government are well maintained roads. Let us make our argument and make it well."
-
-publiceducation:0 "US Department of Education"
-publiceducation_desc:0 "A staggering amount of our citizens are illiterate, having had neither the time or resources to learn how to read or write. We will reopen the public schools to provide at least these basic skills to any under 12 years of age. Those who distinguish themselves can be selected to join our researchers and those who don't will still be useful as clerks."
-
-enc_RND:0 "Refund DARPA"
-enc_RND_desc:0 "By diverting resources from our industry, we can fund DARPA once more, allowing us to improve our research efficiency to a previously impossible degree."
-
-###################################
-# REFORM TODO
-###################################
-enc_police:0 "Federal Police"
-
-integrate_officers:0 "Integrate the Officers"
-integrate_officers_desc:0 "TODO"
-integrate_scientists:0 "Integrate the Scientists"
-
-integrate_scientists_desc:0 "TODO"
-integrate_politicians:0 "Integrate the Politicians"
-integrate_politicians_desc:0 "TODO"
-
-enc_reborn:0 "A Nation Reborn"
-enc_reborn_desc:0 "TODO"
-
-enc_reno_start:0 "The City of Crime"
-enc_reno_start_desc:0 "TODO"
-enc_reno_mordinos:0 "Going Cold Turkey"
-enc_reno_mordinos_desc:0 "TODO"
-enc_reno_bishops:0 "Checkmate"
-enc_reno_bishops_desc:0 "T"
-enc_reno_wrights:0 "A Shared Dream"
-enc_reno_wrights_desc:0 "TODO"
-enc_reno_salvatores:0 "Old Allies"
-enc_reno_salvatores_desc:0 "TODO"
-enc_reno_end:0 "The New Capital"
-enc_reno_end_desc:0 "TODO"
-
-###################################
 # PURITY
 ###################################
 enc_purity:0 "Purity"
@@ -476,19 +414,23 @@ wontShootOnsight: "Won't shoot on sight"
 
 # trait flags
 leader_resourceful: "Resourceful Leader"
+leader_inspiring: "Inspiring Leader"
 #######################################DESC############################################################################################
 Anderson_desc:0 "Doctor Franklin is a former member of the Enclave's Chemical Corps and the current Enclave President. Formerly involved in several secret projects during the Presidency of Dick Richardson-notably the FEV Experiments of Mariposa and the creation of Frank Horrigan. He seeks to finish what he and his colleagues started four decades ago: the eradication of the mutant menace that dares to tread upon American soil. "
 Granite_desc:0 " Douglas Granite. Son of Sergeant George Granite and a California Caravaneer by the name of Molly, Douglas Granite represents the new Enclave. An Enclave dedicated to the rebuilding of America, and its ideals. Having grown up in the Wasteland amongst both children of the ECC his father once led, and the Wastelanders who they protect, he holds no illusions as to the perceived superiority of the "pure-blooded" over the majority of the Wasteland population. Indeed, due to the circumstances of his birth, he finds those that spout such rhetoric annoying at best, and dangerous at worst. Instilled with the ideals and stories of Old America by his Father, he dreams of the day when America is once again a reunited nation, from sea to shining sea with amber waves of grain and purple mountains majesty."
 
 benjamin_curling: "Benjamin Curling"
+benjamin_curling_desc: "Benjamin Curling has followed in the footsteps of his father, an acclaimed Enclave researcher who worked for the US Chemical Corps four decaded ago."
 sargeant_dornan: "Arch Dornan"
-sargeant_dornan_desc: "Arch Dornan"
-drill_sargeant: "Respected Sargeant"
-purist: "Purist"
-purist_2: "Rabid Purist"²
-reformer: "Reformer"
-reformer_2: "Dedicated Reformer"
+sargeant_dornan_desc: "Arch Dornan was mostly known as a hard ass drill sargeant at Navarro. After the destruction the headquarters, Dornan won the respect of many by keeping the largest group of destitutes together."
 resourceful: "Resourceful"
+
+felix_grayson: "Felix Grayson"
+col_wilkins: "Col. T.M. Wilkins"
+lt_kolyis: "Lt. Kolyis"
+lt_kolyis_desc: "Head of the EPA, and also its only current member. Kolyis has retired from the front lines to advocate for an agency focused on protecting what little green America has left."
+boris_t: "Boris T."
+boris_t_desc: "Nicknamed 'The Tsar', due to Noble Eastern European heritage, Boris nonetheless has been a vocal proponent of reform and democracy withing the Enclave."
 
 charismatic: "Charismatic"
 ruthless: "Ruthless"
@@ -497,7 +439,16 @@ unbreakable_will: "Unbreakable Will"
 respectedByScientists: "Respected by Scientists"
 resourceful: "Resourceful"
 inspiring: "Inspiring"
-suppressor: "Bureaucratic Brute"
+
+suppressor: "Genocidal Officer"
+attorney_general: "Attorney General"
+EPA_director: "EPA director"
+enc_paratroopers_commander: "Experienced Assault Team Leader"
+drill_sargeant: "Respected Sargeant"
+purist: "Purist"
+purist_2: "Rabid Purist"
+reformer: "Reformer"
+reformer_2: "Dedicated Reformer"
 
 genocidal_maniacs:0 "Genocidal Maniacs"
 dirty_muties:0 "Dirty Mutants"

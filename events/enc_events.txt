@@ -33,7 +33,7 @@ country_event = {#2 - UNUSED
     is_triggered_only = yes
     
 	option = { #looked for others
-		name = enc.2.a        
+		name = enc.2.a
 	}
 }
 country_event = {#3 - OUR PRESIDENT
@@ -293,6 +293,7 @@ country_event = {#11  - FRANKLIN PAST - ESCAPE
 	option = {# Revolt
 		name = enc.11.a
 		add_country_leader_trait = inspiring
+		set_country_flag = leader_inspiring
 	}
 	option = {# Gas
 		name = enc.11.b
@@ -407,7 +408,7 @@ country_event = {#16 - NCR is unaware
 		tag = ERB 
 		country_exists = NCR
 	}
-	mean_time_to_happen = {	days = 30 }	
+	mean_time_to_happen = {	days = 10 }	
 	
 	
 	option = {#Better be careful
@@ -422,8 +423,8 @@ country_event = {#17 - NCR failsafe
 	desc = enc.17.d
 	picture = GFX_event_ENC_secret
 	
-	fire_only_once = NO
-    is_triggered_only = YES
+	fire_only_once = no
+    is_triggered_only = yes
 		
 	option = {#Pay up, son
 		name = enc.17.a
@@ -498,7 +499,7 @@ country_event = { #20 - Disloyalty
 	
 	trigger = {
 		has_completed_focus = enc_purity
-		NOT = {
+		noT = {
 			has_completed_focus = enc_purge_opposition
 		}
 	}
@@ -523,37 +524,31 @@ country_event = { #21 - unlicensed mutie hunt
 	title = enc.21.t
 	desc = enc.21.d
 	picture = GFX_event_ENC_assault_team
-	fire_only_once = NO
-	is_triggered_only = YES # first time triggered by other event
-	
-	trigger = {
-		has_completed_focus = enc_purity
-		any_owned_state = {
-			NOT = { is_core_of = ERB }
-		}
-	}
-	immediate = {
-		custom_effect_tooltip = enc.21.tt
-		add_to_variable = { var = ENC_hiding_cost value = 15}
-	}
-	
+	fire_only_once = no
+	is_triggered_only = yes # first time triggered by other event
+
 	option = { # Punish
 		name = enc.21.a
+		custom_effect_tooltip = enc.21.tt
 		add_manpower = -100
 		add_stability = -0.05
 		add_war_support = -0.10
-		# decrease NCR suspicion?
+		add_to_variable = { var = ENC_hiding_cost value = 15}
+		custom_effect_tooltip = wont_happen_again
 	}
 	option = { # threaten
 		name = enc.21.b
+		custom_effect_tooltip = enc.21.tt
 		add_war_support = -0.05
 		add_political_power = -20
 		custom_effect_tooltip = enc.21.b.tt
+		add_to_variable = { var = ENC_hiding_cost value = 15}
 		hidden_effect = { # it happens again eventually
 			country_event = { days = 300 id = enc.21 }
 		}
 	}
 	option = { # ignore
+		custom_effect_tooltip = enc.21.tt
 		name = enc.21.c
 		add_popularity = { ideology = elites popularity = 0.05 }
 		add_war_support = 0.10
@@ -562,10 +557,16 @@ country_event = { #21 - unlicensed mutie hunt
 			country_event = { days = 150 id = enc.21 }
 		}
 		custom_effect_tooltip = enc.21.c.tt
+		add_to_variable = { var = ENC_hiding_cost value = 15}
 	}
 	option = { # respected by soldiers / inspirational
+		trigger = {
+			# has_country_flag = leader_inspiring
+		}
 		name = enc.21.dd
 		add_political_power = -20
+		custom_effect_tooltip = available_because_inspiring
+		custom_effect_tooltip = wont_happen_again
 	}
 }
 
@@ -574,7 +575,7 @@ country_event = { #22 - Half mutant
 	title = enc.22.t
 	desc = enc.22.d
 	picture = GFX_event_ENC_picture
-	fire_only_once = YES
+	fire_only_once = yes
 	
 	trigger = {
 		has_completed_focus = enc_purity
@@ -601,7 +602,7 @@ country_event = { #23 - Half mutant - sabotage
 	title = enc.23.t
 	desc = enc.23.d
 	picture = GFX_event_ENC_picture
-	fire_only_once = YES
+	fire_only_once = yes
 	
 	trigger = {
 		has_country_flag = ignored_half_mutant
@@ -689,7 +690,7 @@ country_event = { #27 - Cloning failure
 	picture = GFX_event_ENC_cloning_failed
 	
 	is_triggered_only = yes
-	fire_only_once = NO
+	fire_only_once = no
 	
 	option = { # Damn!
 		name = enc.27.a
@@ -719,8 +720,10 @@ country_event = { #29 - fire mutie hunt event
 	
 	trigger = {	
 		tag = ERB
-	}
-	
+		any_owned_state = {
+			NOT = { is_core_of = ERB }
+		}
+	}	
 	mean_time_to_happen = {
 		days = 300
 	}
@@ -729,6 +732,9 @@ country_event = { #29 - fire mutie hunt event
 			country_event = { id = enc.21 }
 		}
 	}
+	option = {
+		name = enc.29.a
+	}
 }
 
 country_event = { #30 - Fall of Sack city
@@ -736,11 +742,11 @@ country_event = { #30 - Fall of Sack city
 	title = enc.30.t
 	desc = enc.30.d
 	picture = GFX_event_NCR_battle
-	fire_only_once = YES
+	fire_only_once = yes
 	
 	trigger = {
 		tag = ERB
-		controls_state  = 135 # Sac City
+		has_full_control_of_state   = 135 # Sac City
 	}
 	mean_time_to_happen = {
 		days = 2
@@ -759,11 +765,11 @@ country_event = { #31 - Fall of Shady Sands
 	title = enc.31.t
 	desc = enc.31.d
 	picture = GFX_event_NCR_battle
-	fire_only_once = YES
+	fire_only_once = yes
 	
 	trigger = {
 		tag = ERB
-		controls_state  = 253 # Shady Sands
+		has_full_control_of_state   = 253 # Shady Sands
 	}
 	mean_time_to_happen = {
 		days = 2
@@ -783,7 +789,7 @@ country_event = { #32 - Soldier out of uniform
 	title = enc.32.t
 	desc = enc.32.d
 	picture = GFX_event_ENC_secret
-	fire_only_once = YES
+	fire_only_once = yes
 	
 	trigger = {
 		tag = ERB
@@ -809,7 +815,7 @@ country_event = { #33 - Crimson Caravan Encounter
 	title = enc.33.t
 	desc = enc.33.d
 	picture = GFX_event_ENC_3_troopers
-	fire_only_once = NO
+	fire_only_once = no
 	
 	trigger = {
 		tag = ERB
@@ -817,8 +823,8 @@ country_event = { #33 - Crimson Caravan Encounter
 		not = { has_country_flag = enc_event_33_solved }
 		NCR = {
 			exists = yes
-			has_civil_war = NO
-			NOT = { has_war_with = ERB }
+			has_civil_war = no
+			noT = { has_war_with = ERB }
 		}
 	}
 	mean_time_to_happen = {
@@ -851,11 +857,11 @@ country_event = { #34 - remnants of Sack city
 	title = enc.34.t
 	desc = enc.34.d
 	picture = GFX_event_ENC_secret
-	fire_only_once = YES
+	fire_only_once = yes
 	
 	trigger = {
 		tag = ERB
-		controls_state  = 135 # Sac City
+		has_full_control_of_state   = 135 # Sac City
 	}
 	mean_time_to_happen = {
 		days = 30
@@ -874,11 +880,11 @@ country_event = { #35 - remnants of Shady Sands
 	title = enc.35.t
 	desc = enc.35.d
 	picture = GFX_event_ARR_arroyo
-	fire_only_once = YES
+	fire_only_once = yes
 	
 	trigger = {
 		tag = ERB
-		controls_state  = 253 # Shady Sands
+		has_full_control_of_state   = 253 # Shady Sands
 	}
 	mean_time_to_happen = {
 		days = 30
@@ -897,11 +903,11 @@ country_event = { #36 - remnants of the boneyard
 	title = enc.36.t
 	desc = enc.36.d
 	picture = GFX_event_ENC_secret
-	fire_only_once = YES
+	fire_only_once = yes
 	
 	trigger = {
 		tag = ERB
-		controls_state  = 350 # Shady Sands
+		has_full_control_of_state   = 350 # Shady Sands
 	}
 	mean_time_to_happen = {
 		days = 30
@@ -921,11 +927,11 @@ country_event = { #37 - Vengeance against Arroyo
 	title = enc.37.t
 	desc = enc.37.d
 	picture = GFX_event_ENC_bloody_suit
-	fire_only_once = YES
+	fire_only_once = yes
 	
 	trigger = {
 		tag = ERB
-		controls_state  = 337 # Shady Sands
+		has_full_control_of_state   = 337 # Shady Sands
 	}
 	mean_time_to_happen = {
 		days = 3
@@ -937,12 +943,12 @@ country_event = { #37 - Vengeance against Arroyo
 	}
 }
 
-country_event = { #38 ANTI PUPPET
+country_event = { #38 - ANTI PUPPET
 	id = enc.38
 	title = enc.38.t
 	desc = enc.38.d
 	picture = GFX_event_ENC_president_only
-	fire_only_once = NO
+	fire_only_once = no
 	
 	trigger = {
 		ERB = {
@@ -975,17 +981,17 @@ country_event = { #38 ANTI PUPPET
 		}
 	}
 }
-country_event = { #39 Reduce plague if Desert rangers not allied with NCR
+country_event = { #39 - Reduce plague if Desert rangers not allied with NCR
 	id = enc.39
 	title = enc.39.t
 	desc = enc.39.d
 	picture = GFX_event_ENC_secret3
-	fire_only_once = NO
+	fire_only_once = no
 	
 	trigger = {
 		NCR = {
 			has_idea = ENC_plague
-			NOT = { 
+			noT = { 
 				is_in_faction_with = DES
 				is_in_faction_with = BOS
 			}
@@ -1005,12 +1011,12 @@ country_event = { #39 Reduce plague if Desert rangers not allied with NCR
 	}
 }
 
-country_event = { #40 Hidden event to remove ncr_suspicious
+country_event = { #40 - Hidden event to remove ncr_suspicious
 	id = enc.40
 	title = enc.40.t
 	desc = enc.40.d
 	picture = GFX_event_ENC_secret3
-	fire_only_once = YES
+	fire_only_once = yes
 	hidden = true
 	
 	trigger = {
@@ -1027,6 +1033,30 @@ country_event = { #40 Hidden event to remove ncr_suspicious
 		# nothing
 	}
 }
+country_event = { #41 - NCR finds out
+	id = enc.41
+	title = enc.41.t
+	desc = enc.41.d
+	picture = GFX_event_ENC_bloody_suit
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # WAR noW!
+		name = enc.41.a
+		declare_war_on = { target = ERB type = annex_everything }
+	}
+	option = { # We must prepare!
+		name = enc.41.b
+		create_wargoal = {
+			type = annex_everything
+			target = ERB
+		}
+		ai_chance = {
+			factor = 0 # ai always declare 
+		}
+	}
+}
+
 
 #################
 ## PICTURES

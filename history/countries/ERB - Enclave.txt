@@ -2,6 +2,7 @@
 set_cosmetic_tag = ENC
 set_war_support = 0.20
 set_stability = 0.35
+oob = "ERB_2265"
 ###############################
 # TECHNOLOGY
 ###############################

@@ -49,7 +49,6 @@ ideas = {
                         }
                     }
                 }
-            }
             on_add = {
 				country_event = coring_event.2
             }
@@ -60,25 +59,4 @@ ideas = {
             cost = 0
             removal_cost = -1
 		}
-		
-		stop_coring_state = {
-			available = {
-				has_idea = coring_state
-			}
-			on_add = {
-				remove_ideas = coring_state
-				remove_ideas = enable_autocoring
-				every_owned_state = {
-					limit = {
-						has_state_flag = coring_state
-					}
-					clr_state_flag = coring_state
-				}
-			}
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		
-	}
 }

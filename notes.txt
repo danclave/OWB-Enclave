@@ -1,12 +1,29 @@
-changed in new patch
-
-TODO
-- add advisors
-- add designers
-	- vertibirds
-	- plasma weapons
-
-DONE
+changed in new patch 1.1
 - crimson caravan firing after NCR war
 - Super soldiers nerfed slightly
 - remove base game designers
+- fixed events not firing during NCR war
+- added designers
+- added advisors
+
+---
+
+hotfixed after patch 1.1
+- fixed oob
+- failing NCR crisis now launches event for NCR
+
+--- CURRENT ---
+Patch 1.2
+BUGFIX:
+- fixed repeatable looting decisions
+- fixed hide from ncr firing after NCR defeated
+- lowercased all YES and NO
+- added Reformer placeholder
+- bugfix to event involving assault team murdering wastelanders
+CHANGES:
+- Changes to Advisors
+- Changes to Atomic Energy Commission
+--
+
+TODO stuff
+- Reform stuff

@@ -12,7 +12,11 @@ enclave_industrial_concern: "US Chemical Corps"
 enclave_electronics_concern: "Atomic Energy Commission"
 
 enclave_motorized_equipment_manufacturer: "Team"
-enclave_infantry_equipment_manufacturer: "Weapon Design Team"
+enclave_plasma_equipment_manufacturer: "Plasma Weapon Design Team"
+enclave_plasma_equipment_manufacturer: "Plasma Weapons"
+
+enclave_tesla_equipment_manufacturer: "Tesla Weapon Design Team"
+enclave_tesla_equipment_manufacturer: "Tesla Weapons"
 enclave_artillery_manufacturer: "Team"
 
-vertibird_aircraft_manufacturer: "Vertibird Design Team"
+vertibird_aircraft_manufacturer: "Vertibird Designer"

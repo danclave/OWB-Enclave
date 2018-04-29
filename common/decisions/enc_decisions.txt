@@ -293,6 +293,7 @@ ENC_radio_broadcasts = {
 ENC_war_with_NCR = {
 	dump_fev_ranch = {
 		cost = 10
+		fire_only_once = yes 
 		visible = {
 			has_country_flag = enc_dirty_FEV_flag
 		}
@@ -310,6 +311,7 @@ ENC_war_with_NCR = {
 	}
 	recover_beale_air_force_base  = {
 		cost = 10
+		fire_only_once = yes 
 		visible = {
 			has_completed_focus = enc_reclaim_cashes
 		}
@@ -327,6 +329,7 @@ ENC_war_with_NCR = {
 	}
 	recover_edwards_air_force_base  = {
 		cost = 10
+		fire_only_once = yes 
 		visible = {
 			has_completed_focus = enc_reclaim_cashes
 		}
@@ -347,6 +350,7 @@ ENC_war_with_NCR = {
 	}
 	recover_los_angeles_air_force_base  = {
 		cost = 10
+		fire_only_once = yes 
 		visible = {
 			has_completed_focus = enc_reclaim_cashes
 		}
@@ -365,6 +369,7 @@ ENC_war_with_NCR = {
 	}
 	recover_march_air_reserve_base  = {
 		cost = 10
+		fire_only_once = yes 
 		visible = {
 			has_completed_focus = enc_reclaim_cashes
 		}
@@ -382,6 +387,7 @@ ENC_war_with_NCR = {
 	}
 	recover_travis_air_force_base_ = {
 		cost = 10
+		fire_only_once = yes 
 		visible = {
 			has_completed_focus = enc_reclaim_cashes
 		}
@@ -399,6 +405,7 @@ ENC_war_with_NCR = {
 	}
 	recover_vandenberg_air_force_base = {
 		cost = 10
+		fire_only_once = yes 
 		highlight_states = { state = 64 }
 		visible = {
 			has_completed_focus = enc_reclaim_cashes
@@ -693,10 +700,10 @@ ENC_NCR_hiding = {
 		#--------------------------		
 		activation  = {
 			has_country_flag = ncr_suspicious	# when ncr is suspicious
+			country_exists = NCR
 			NOT = { 
 				has_war_with = NCR 
 				has_country_flag = NCR_crisis_flag
-				exists = NCR
 				# any of the crisis solutions are active
 				has_decision = NCR_crisis_construction
 				has_decision = NCR_crisis_laylow
@@ -785,9 +792,9 @@ ENC_NCR_hiding = {
 		days_mission_timeout = 100
 		timeout_effect = {
 			NCR = {
-				declare_war_on = { target = ERB type = annex_everything }
+				country_event = { id = enc.41 }
 			}
-			add_war_support = -0.30
+			clr_country_flag = ncr_suspicious
 		}
 		complete_effect = {
 			clr_country_flag = NCR_crisis_flag
