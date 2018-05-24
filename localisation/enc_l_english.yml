@@ -283,14 +283,14 @@ enc_drop_training_desc: "Dropping into hot landing zones has always been a risky
 ###################################
 
 
-ENC_remnant_officers_central: "Centralized Command"
-ENC_remnant_officers_central_2: "Centralized Command"
+ENC_officers_central: "Centralized Command"
+ENC_officers_central_2: "Centralized Command"
 
 enc_army_reform_command: "Centralized Command"
 enc_army_reform_command_desc: "Enclave assault squads have always enjoyed a great deal of autonomy in the field, but that was a different scale of warfare than what we are faced with. From now on, all field commanders will be directed by the sharpest minds at Enclave High Command."
 
-ENC_remnant_officers_local: "Localized Command"
-ENC_remnant_officers_local_2: "Localized Command"
+ENC_officers_local: "Localized Command"
+ENC_officers_local_2: "Localized Command"
 ENC_verti_production: "Streamlined VB-02 Production"
 
 ENC_strike_teams: "Strike Team Doctrine"
@@ -312,13 +312,16 @@ enc_production_department_desc:0 "TODO"
 enc_defence:0 "US Department of Defense"
 enc_defence_desc:0 "TODO"
 
+enc_consolidate_power:0 "Consolidate Power"
+enc_consolidate_power_desc:0 "TODO"
+
+enc_compromises: "Minor Compromises"
+enc_compromises_desc: "TODO"
 
 
 
 
-
-
-enc_assasinate_F:0 "Assasinate Dr. Anderson"
+enc_assassinate_F:0 "Assassinate Dr. Anderson"
 
 enc_foreign_policy:0 "Foreign Policy"
 enc_send_diplomats:0 "Send out Diplomats"
@@ -430,7 +433,7 @@ col_wilkins: "Col. T.M. Wilkins"
 lt_kolyis: "Lt. Kolyis"
 lt_kolyis_desc: "Head of the EPA, and also its only current member. Kolyis has retired from the front lines to advocate for an agency focused on protecting what little green America has left."
 boris_t: "Boris T."
-boris_t_desc: "Nicknamed 'The Tsar', due to Noble Eastern European heritage, Boris nonetheless has been a vocal proponent of reform and democracy withing the Enclave."
+boris_t_desc: "Nicknamed 'The Tsar', due to Noble Eastern European heritage, Boris nonetheless has been a vocal proponent of reform and democracy within the Enclave."
 
 charismatic: "Charismatic"
 ruthless: "Ruthless"
@@ -500,11 +503,11 @@ ENC_wastelanders_desc:0 "The Enclave has elected to accept wastelanders voluntee
 ENC_wastelanders2:0 "Reformist"
 ENC_wastelanders2_desc:0 "The Enclave has succesfully integrated wastelander soldiers into their armed forces. Though the integration is limited to the lower rungs of the military."
 
-ENC_remnant_officers:0 "Enclave Officers"
-ENC_remnant_officers_desc:0 "The few Enclave Officers that remain are both well trained and experienced leaders. Many of them have plenty of comrades to avenge."
+ENC_officers:0 "Enclave Officers"
+ENC_officers_desc:0 "The few Enclave Officers that remain are both well trained and experienced leaders. Many of them have plenty of comrades to avenge."
 
-ENC_remnant_officers_purged:0 "Enclave Officers"
-ENC_remnant_officers_purged_desc:0 "The few Enclave Officers that remain are both well trained and experienced leaders."
+ENC_officers_purged:0 "Enclave Officers"
+ENC_officers_purged_desc:0 "The few Enclave Officers that remain are both well trained and experienced leaders."
 
 enc_sac_city:0"Old Promises"
 

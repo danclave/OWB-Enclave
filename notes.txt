@@ -12,7 +12,7 @@ hotfixed after patch 1.1
 - fixed oob
 - failing NCR crisis now launches event for NCR
 
---- CURRENT ---
+
 Patch 1.2
 BUGFIX:
 - fixed repeatable looting decisions
@@ -25,5 +25,11 @@ CHANGES:
 - Changes to Atomic Energy Commission
 --
 
-TODO stuff
+Patch 1.2b
+CHANGES:
+- FEV plague weakened when NCR is in civil war or at war with CES
+- remove purify region decision
+
+--- CURRENT ---
+WIP
 - Reform stuff

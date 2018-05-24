@@ -443,45 +443,6 @@ operations = {
 			experience_gain_army = 0.5
 		}
 	}
-	clear_state = {
-		icon = generic_scorched_earth
-		allowed = { 
-			tag = ERB # could be made generic
-		}
-		cost = 50
-		visible = {	
-			#at war?
-		}
-		available = {
-			has_war_support > 0.7
-			elites > 0.8
-			any_owned_state = {
-				is_core_of = ERB
-				any_neighbor_state = { 
-					NOT = { is_core_of = ROOT }
-					is_fully_controlled_by = ERB
-					state_population < 10000 #less than 10k pop
-				}
-			}
-		}
-		modifier = {
-			# something?
-		}
-		days_remove = 30
-		remove_effect = {
-			random_owned_state = {
-				limit = {
-					NOT = { is_core_of = ERB }
-					is_fully_controlled_by = ERB
-					state_population < 10000 #less than 10k pop
-					any_neighbor_state = { is_core_of = ROOT }					
-				}
-				add_manpower = -10000
-				add_core_of = ROOT
-			}
-		}
-		days_re_enable = 30
-	}
 }
 ENC_production = {
 	retool_machinery = {
@@ -599,7 +560,7 @@ political_actions = {
 		   add_manpower = -100
 		   add_stability = -0.05
 		   add_popularity = { ideology = elites popularity = -0.05 } 
-		   add_popularity = { ideology = intellectuals popularity = 0.10 }
+		   add_popularity = { ideology = intellectuals popularity = 0.05 }
 		}
 		days_re_enable = 30
 	}

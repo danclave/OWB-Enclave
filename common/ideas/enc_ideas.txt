@@ -70,7 +70,7 @@ ideas = {
 			   elites_drift = 0.1
 			}
 		}
-		ENC_remnant_officers = {  
+		ENC_officers = {  
 			picture = enc_officers
 			allowed = { 
 				always = no
@@ -101,7 +101,6 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   stability_factor = -0.2
 			   army_morale_factor = -0.2
 			   army_org_factor = -0.2
 			   political_power_gain = -0.2
@@ -171,6 +170,54 @@ ideas = {
 			   decryption_factor = 0.2
 			}
 		}
+		ENC_radio_civilian = {  
+			picture = enc_radio
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   political_power_gain = 0.20
+			   decryption_factor = 0.10
+			   encryption_factor = -0.10
+			}
+		}
+		ENC_radio_military = {  
+			picture = enc_radio
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   political_power_gain = 0.20
+			   decryption_factor = 0.2
+			   encryption_factor = 0.10
+			}
+		}
+		ENC_radio_military_encrypted = {  
+			picture = enc_radio
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   political_power_gain = 0.20
+			   decryption_factor = 0.2
+			   encryption_factor = 0.20
+			}
+		}
 		ENC_wastelanders = {  
 			picture = generic_reserve_divisions
 			allowed = { 
@@ -214,7 +261,7 @@ ideas = {
 			   intellectuals_drift = 0.1
 			}
 		}
-		ENC_remnant_officers_purged = {  
+		ENC_officers_purged = {  
 			picture = enc_officers
 			allowed = { 
 				always = no
@@ -371,7 +418,41 @@ ideas = {
 				consumer_goods_factor = 0.05
 			}
 		}
-		  
+
+		ENC_scientists_traitors = {  		
+			picture = enc_scientists_traitors #check
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				research_time_factor = -0.05
+				elites_drift = 0.2
+			}
+		}
+		ENC_officers_traitors = {  
+			picture = enc_officers_traitors
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				elites_drift = 0.2
+				max_planning = 0.05
+				army_leader_start_level = 1
+			}
+		}
+			
 ####################################################
 # REFORM - DIPLOMACY TREE
 ####################################################
@@ -739,7 +820,7 @@ ideas = {
 				defense_bonus_against = 0.2
 			}
 		}
-		ENC_remnant_officers_central = {  
+		ENC_officers_central = {  
 			picture = enc_officers
             removal_cost = -1
 			modifier = {
@@ -750,7 +831,7 @@ ideas = {
 				max_planning = 0.3						
 			}
 		}
-		ENC_remnant_officers_central_2 = {  
+		ENC_officers_central_2 = {  
 			picture = enc_officers
             removal_cost = -1
 			modifier = {
@@ -762,7 +843,7 @@ ideas = {
 				supply_consumption_factor = -0.15
 			}
 		}
-		ENC_remnant_officers_local = {  
+		ENC_officers_local = {  
 			picture = enc_officers
             removal_cost = -1
 			modifier = {
@@ -775,7 +856,7 @@ ideas = {
 				
 			}
 		}	
-		ENC_remnant_officers_local_2 = {  
+		ENC_officers_local_2 = {  
 			picture = enc_officers
             removal_cost = -1
 			modifier = {

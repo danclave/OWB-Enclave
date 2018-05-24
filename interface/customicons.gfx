@@ -1,4 +1,8 @@
-spriteTypes = {
+﻿spriteTypes = {
+        SpriteType = {#enc_accept_ghouls
+            name = "GFX_goal_enc_accept_ghouls"
+ 		    texturefile = "gfx/interface/goals/enc_accept_ghouls.dds"
+ 	    } 
         SpriteType = {#enc_accept_wastelanders
             name = "GFX_goal_enc_accept_wastelanders"
  		    texturefile = "gfx/interface/goals/enc_accept_wastelanders.dds"
@@ -63,9 +67,33 @@ spriteTypes = {
             name = "GFX_goal_enc_draft_wastelanders"
  		    texturefile = "gfx/interface/goals/enc_draft_wastelanders.dds"
  	    } 
+        SpriteType = {#enc_education
+            name = "GFX_goal_enc_education"
+ 		    texturefile = "gfx/interface/goals/enc_education.dds"
+ 	    } 
+        SpriteType = {#enc_education_civilian
+            name = "GFX_goal_enc_education_civilian"
+ 		    texturefile = "gfx/interface/goals/enc_education_civilian.dds"
+ 	    } 
+        SpriteType = {#enc_education_military
+            name = "GFX_goal_enc_education_military"
+ 		    texturefile = "gfx/interface/goals/enc_education_military.dds"
+ 	    } 
         SpriteType = {#enc_election
             name = "GFX_goal_enc_election"
  		    texturefile = "gfx/interface/goals/enc_election.dds"
+ 	    } 
+        SpriteType = {#enc_electricity
+            name = "GFX_goal_enc_electricity"
+ 		    texturefile = "gfx/interface/goals/enc_electricity.dds"
+ 	    } 
+        SpriteType = {#enc_encryption
+            name = "GFX_goal_enc_encryption"
+ 		    texturefile = "gfx/interface/goals/enc_encryption.dds"
+ 	    } 
+        SpriteType = {#enc_epa
+            name = "GFX_goal_enc_epa"
+ 		    texturefile = "gfx/interface/goals/enc_epa.dds"
  	    } 
         SpriteType = {#enc_experiments
             name = "GFX_goal_enc_experiments"
@@ -74,6 +102,10 @@ spriteTypes = {
         SpriteType = {#enc_eyebot
             name = "GFX_goal_enc_eyebot"
  		    texturefile = "gfx/interface/goals/enc_eyebot.dds"
+ 	    } 
+        SpriteType = {#enc_fed
+            name = "GFX_goal_enc_fed"
+ 		    texturefile = "gfx/interface/goals/enc_fed.dds"
  	    } 
         SpriteType = {#enc_fighter
             name = "GFX_goal_enc_fighter"
@@ -91,6 +123,10 @@ spriteTypes = {
             name = "GFX_goal_enc_fort"
  		    texturefile = "gfx/interface/goals/enc_fort.dds"
  	    } 
+        SpriteType = {#enc_geck
+            name = "GFX_goal_enc_geck"
+ 		    texturefile = "gfx/interface/goals/enc_geck.dds"
+ 	    } 
         SpriteType = {#enc_infra
             name = "GFX_goal_enc_infra"
  		    texturefile = "gfx/interface/goals/enc_infra.dds"
@@ -102,6 +138,14 @@ spriteTypes = {
         SpriteType = {#enc_integrate_scientists
             name = "GFX_goal_enc_integrate_scientists"
  		    texturefile = "gfx/interface/goals/enc_integrate_scientists.dds"
+ 	    } 
+        SpriteType = {#enc_jaz
+            name = "GFX_goal_enc_jaz"
+ 		    texturefile = "gfx/interface/goals/enc_jaz.dds"
+ 	    } 
+        SpriteType = {#enc_justice
+            name = "GFX_goal_enc_justice"
+ 		    texturefile = "gfx/interface/goals/enc_justice.dds"
  	    } 
         SpriteType = {#enc_laser_weapons
             name = "GFX_goal_enc_laser_weapons"
@@ -123,6 +167,10 @@ spriteTypes = {
             name = "GFX_goal_enc_mutant_extinction"
  		    texturefile = "gfx/interface/goals/enc_mutant_extinction.dds"
  	    } 
+        SpriteType = {#enc_ncr_dollar
+            name = "GFX_goal_enc_ncr_dollar"
+ 		    texturefile = "gfx/interface/goals/enc_ncr_dollar.dds"
+ 	    } 
         SpriteType = {#enc_para
             name = "GFX_goal_enc_para"
  		    texturefile = "gfx/interface/goals/enc_para.dds"
@@ -142,6 +190,10 @@ spriteTypes = {
         SpriteType = {#enc_poison_bull
             name = "GFX_goal_enc_poison_bull"
  		    texturefile = "gfx/interface/goals/enc_poison_bull.dds"
+ 	    } 
+        SpriteType = {#enc_police
+            name = "GFX_goal_enc_police"
+ 		    texturefile = "gfx/interface/goals/enc_police.dds"
  	    } 
         SpriteType = {#enc_position_armies
             name = "GFX_goal_enc_position_armies"
@@ -171,6 +223,14 @@ spriteTypes = {
             name = "GFX_goal_enc_purge"
  		    texturefile = "gfx/interface/goals/enc_purge.dds"
  	    } 
+        SpriteType = {#enc_purge_officers
+            name = "GFX_goal_enc_purge_officers"
+ 		    texturefile = "gfx/interface/goals/enc_purge_officers.dds"
+ 	    } 
+        SpriteType = {#enc_purge_scientists
+            name = "GFX_goal_enc_purge_scientists"
+ 		    texturefile = "gfx/interface/goals/enc_purge_scientists.dds"
+ 	    } 
         SpriteType = {#enc_purify
             name = "GFX_goal_enc_purify"
  		    texturefile = "gfx/interface/goals/enc_purify.dds"
@@ -186,6 +246,18 @@ spriteTypes = {
         SpriteType = {#enc_radio_2
             name = "GFX_goal_enc_radio_2"
  		    texturefile = "gfx/interface/goals/enc_radio_2.dds"
+ 	    } 
+        SpriteType = {#enc_radio_civilian
+            name = "GFX_goal_enc_radio_civilian"
+ 		    texturefile = "gfx/interface/goals/enc_radio_civilian.dds"
+ 	    } 
+        SpriteType = {#enc_radio_military
+            name = "GFX_goal_enc_radio_military"
+ 		    texturefile = "gfx/interface/goals/enc_radio_military.dds"
+ 	    } 
+        SpriteType = {#enc_radio_reform
+            name = "GFX_goal_enc_radio_reform"
+ 		    texturefile = "gfx/interface/goals/enc_radio_reform.dds"
  	    } 
         SpriteType = {#enc_rangers_planning
             name = "GFX_goal_enc_rangers_planning"
@@ -203,6 +275,26 @@ spriteTypes = {
             name = "GFX_goal_enc_reform3"
  		    texturefile = "gfx/interface/goals/enc_reform3.dds"
  	    } 
+        SpriteType = {#enc_reform_annex_ykz
+            name = "GFX_goal_enc_reform_annex_ykz"
+ 		    texturefile = "gfx/interface/goals/enc_reform_annex_ykz.dds"
+ 	    } 
+        SpriteType = {#enc_reform_ant
+            name = "GFX_goal_enc_reform_ant"
+ 		    texturefile = "gfx/interface/goals/enc_reform_ant.dds"
+ 	    } 
+        SpriteType = {#enc_reform_forced_deal
+            name = "GFX_goal_enc_reform_forced_deal"
+ 		    texturefile = "gfx/interface/goals/enc_reform_forced_deal.dds"
+ 	    } 
+        SpriteType = {#enc_reform_forced_deal_dark
+            name = "GFX_goal_enc_reform_forced_deal_dark"
+ 		    texturefile = "gfx/interface/goals/enc_reform_forced_deal_dark.dds"
+ 	    } 
+        SpriteType = {#enc_reject_ghouls
+            name = "GFX_goal_enc_reject_ghouls"
+ 		    texturefile = "gfx/interface/goals/enc_reject_ghouls.dds"
+ 	    } 
         SpriteType = {#enc_remember
             name = "GFX_goal_enc_remember"
  		    texturefile = "gfx/interface/goals/enc_remember.dds"
@@ -215,6 +307,10 @@ spriteTypes = {
             name = "GFX_goal_enc_research"
  		    texturefile = "gfx/interface/goals/enc_research.dds"
  	    } 
+        SpriteType = {#enc_rock
+            name = "GFX_goal_enc_rock"
+ 		    texturefile = "gfx/interface/goals/enc_rock.dds"
+ 	    } 
         SpriteType = {#enc_sabotage
             name = "GFX_goal_enc_sabotage"
  		    texturefile = "gfx/interface/goals/enc_sabotage.dds"
@@ -222,6 +318,10 @@ spriteTypes = {
         SpriteType = {#enc_scientists
             name = "GFX_goal_enc_scientists"
  		    texturefile = "gfx/interface/goals/enc_scientists.dds"
+ 	    } 
+        SpriteType = {#enc_self_management
+            name = "GFX_goal_enc_self_management"
+ 		    texturefile = "gfx/interface/goals/enc_self_management.dds"
  	    } 
         SpriteType = {#enc_sign
             name = "GFX_goal_enc_sign"
@@ -271,6 +371,10 @@ spriteTypes = {
             name = "GFX_goal_enc_tools"
  		    texturefile = "gfx/interface/goals/enc_tools.dds"
  	    } 
+        SpriteType = {#enc_tools_reform
+            name = "GFX_goal_enc_tools_reform"
+ 		    texturefile = "gfx/interface/goals/enc_tools_reform.dds"
+ 	    } 
         SpriteType = {#enc_troop
             name = "GFX_goal_enc_troop"
  		    texturefile = "gfx/interface/goals/enc_troop.dds"
@@ -278,6 +382,10 @@ spriteTypes = {
         SpriteType = {#enc_troop_call
             name = "GFX_goal_enc_troop_call"
  		    texturefile = "gfx/interface/goals/enc_troop_call.dds"
+ 	    } 
+        SpriteType = {#enc_us_dollar
+            name = "GFX_goal_enc_us_dollar"
+ 		    texturefile = "gfx/interface/goals/enc_us_dollar.dds"
  	    } 
         SpriteType = {#enc_us_flags
             name = "GFX_goal_enc_us_flags"
@@ -306,6 +414,10 @@ spriteTypes = {
         SpriteType = {#enc_verti_o
             name = "GFX_goal_enc_verti_o"
  		    texturefile = "gfx/interface/goals/enc_verti_o.dds"
+ 	    } 
+        SpriteType = {#enc_verti_reform
+            name = "GFX_goal_enc_verti_reform"
+ 		    texturefile = "gfx/interface/goals/enc_verti_reform.dds"
  	    } 
         SpriteType = {#enc_veterans_call
             name = "GFX_goal_enc_veterans_call"
@@ -347,10 +459,6 @@ spriteTypes = {
             name = "GFX_goal_vault_tec"
  		    texturefile = "gfx/interface/goals/vault_tec.dds"
  	    }
-        SpriteType = {#enc_designer_verti
-            name = "GFX_idea_enc_designer_verti"
- 		    texturefile = "gfx/interface/ideas/enc_designer_verti.dds"
- 	    } 
         SpriteType = {#enc_education
             name = "GFX_idea_enc_education"
  		    texturefile = "gfx/interface/ideas/enc_education.dds"
@@ -370,6 +478,10 @@ spriteTypes = {
         SpriteType = {#enc_officers
             name = "GFX_idea_enc_officers"
  		    texturefile = "gfx/interface/ideas/enc_officers.dds"
+ 	    } 
+        SpriteType = {#enc_officers_traitors
+            name = "GFX_idea_enc_officers_traitors"
+ 		    texturefile = "gfx/interface/ideas/enc_officers_traitors.dds"
  	    } 
         SpriteType = {#enc_pa_production
             name = "GFX_idea_enc_pa_production"
@@ -395,6 +507,10 @@ spriteTypes = {
             name = "GFX_idea_enc_scientists"
  		    texturefile = "gfx/interface/ideas/enc_scientists.dds"
  	    } 
+        SpriteType = {#enc_scientists_traitors
+            name = "GFX_idea_enc_scientists_traitors"
+ 		    texturefile = "gfx/interface/ideas/enc_scientists_traitors.dds"
+ 	    } 
         SpriteType = {#enc_slave_labour
             name = "GFX_idea_enc_slave_labour"
  		    texturefile = "gfx/interface/ideas/enc_slave_labour.dds"
@@ -403,13 +519,49 @@ spriteTypes = {
             name = "GFX_idea_enc__idea_fist"
  		    texturefile = "gfx/interface/ideas/enc__idea_fist.dds"
  	    } 
+        SpriteType = {#idea_enc_atomic_commision
+            name = "GFX_idea_idea_enc_atomic_commision"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_atomic_commision.dds"
+ 	    } 
+        SpriteType = {#idea_enc_chemical_corps
+            name = "GFX_idea_idea_enc_chemical_corps"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_chemical_corps.dds"
+ 	    } 
+        SpriteType = {#idea_enc_designer_fighter
+            name = "GFX_idea_idea_enc_designer_fighter"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_fighter.dds"
+ 	    } 
+        SpriteType = {#Idea_enc_designer_misc
+            name = "GFX_idea_Idea_enc_designer_misc"
+ 		    texturefile = "gfx/interface/ideas/Idea_enc_designer_misc.dds"
+ 	    } 
         SpriteType = {#idea_enc_designer_PA
             name = "GFX_idea_idea_enc_designer_PA"
  		    texturefile = "gfx/interface/ideas/idea_enc_designer_PA.dds"
  	    } 
+        SpriteType = {#idea_enc_designer_PA_2
+            name = "GFX_idea_idea_enc_designer_PA_2"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_PA_2.dds"
+ 	    } 
+        SpriteType = {#idea_enc_designer_plasma
+            name = "GFX_idea_idea_enc_designer_plasma"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_plasma.dds"
+ 	    } 
+        SpriteType = {#idea_enc_designer_tesla
+            name = "GFX_idea_idea_enc_designer_tesla"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_tesla.dds"
+ 	    } 
+        SpriteType = {#idea_enc_designer_verti
+            name = "GFX_idea_idea_enc_designer_verti"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_verti.dds"
+ 	    } 
         SpriteType = {#sargeant_dornan
             name = "GFX_idea_sargeant_dornan"
  		    texturefile = "gfx/interface/ideas/sargeant_dornan.dds"
+ 	    } 
+        SpriteType = {#t_boris
+            name = "GFX_idea_t_boris"
+ 		    texturefile = "gfx/interface/ideas/t_boris.dds"
  	    } 
         SpriteType = {#verti_production
             name = "GFX_idea_verti_production"

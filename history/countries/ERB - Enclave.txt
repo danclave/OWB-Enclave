@@ -123,7 +123,7 @@ every_country = {
 			
 # IDEAS
 add_ideas = enc_scientists
-add_ideas = enc_remnant_officers
+add_ideas = ENC_officers
 add_ideas = closed_economy
 add_ideas = ENC_infighting
 

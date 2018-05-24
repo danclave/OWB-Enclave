@@ -1,7 +1,7 @@
 ﻿l_english:
 
 ###################################
-# REFORM
+# FOCUS TREE
 ###################################
 enc_reform:0 "Reform"
 enc_reform_desc:0 "If we are to rebuild our once-great nation, we must reform ourselves and our principles. Sadly, many of the reformist elements have already deserted in the last few years. Leaving mostly the devoted and fanatical. We will have to tread carefully in our efforts to reform the Enclave into an organisation fit to restore order, justice and democracy to these United States of America."
@@ -35,11 +35,13 @@ enc_RND_desc:0 "By diverting resources from our industry, we can fund DARPA once
 
 enc_reform_placeholder: "Reformers Coming soon!"
 enc_reform_placeholder_tt: "This path will allow you to rebuild the §YUnited States of America§!"
-enc_reform_placeholder_desc:0 "By soon I mean like several months because that's how long it took to make the Puritsts"
+enc_reform_placeholder_desc:0 "By soon I mean like several months because that's how long it took to make the Purists"
+
 ###################################
 # REFORM TODO
 ###################################
 enc_police:0 "Federal Police"
+enc_police_desc:0 "TODO"
 
 integrate_officers:0 "Integrate the Officers"
 integrate_officers_desc:0 "TODO"
@@ -68,6 +70,114 @@ enc_reno_end_desc:0 "TODO"
 enc_radio_civilian_music:0 "Old World Blues"
 enc_radio_civilian_music_desc:0 "TODO"
 
+enc_federal_reserve:0 "Revive The Federal Reserve"
+enc_federal_reserve_desc:0 "TODO"
+
+enc_epa:0 "Fund The EPA"
+enc_epa_desc:0 "TODO"
+
+enc_NCR_dollar:0 "Accept The NCR Dollar"
+enc_NCR_dollar_desc:0 "TODO"
+
+enc_US_dollar:0 "Revive The US Dollar"
+enc_US_dollar_desc:0 "TODO"
+
+enc_radio_military:0 "Prioritize Military Channels"
+enc_radio_military_desc:0 "TODO"
+
+enc_radio_civilian:0 "Prioritize Civilian Channels"
+enc_radio_civilian_desc:0 "TODO"
+
+enc_radio_military_command:0 "Increase Encryption Standards"
+enc_radio_military_command_desc:0 "TODO"
+
+enc_geck:0 "The GECK Project"
+enc_geck_desc:0 "TODO"
+
+enc_accept_ghouls:0 "Accept Ghouls"
+
+enc_reject_ghouls:0 "Reject Ghouls"
+
+enc_department_of_energy:0 "Department of Energy"
+enc_department_of_energy_desc:0 "TODO"
+
+enc_department_of_education:0 "Department Of Education"
+enc_department_of_education_desc:0 "TODO"
+
+enc_department_of_manufacturing:0 "Department of Manufacturing"
+enc_department_of_manufacturing_desc:0 "TODO"
+
+enc_department_of_justice:0 "Department of Justice"
+enc_department_of_justice:0 "TODO"
+
+enc_department_of_commerce:0 "Department of Commerce"
+enc_department_of_commerce_desc:0 "TODO"
+
+enc_department_of_education_military:0 "Military Education"
+enc_department_of_education_military_desc:0 "TODO"
+
+enc_department_of_education_civilian:0 "Civilian Education"
+enc_department_of_education_civilian_desc:0 "TODO"
+
+enc_radio_civilian_music_new: "New World Tunes"
+enc_radio_civilian_music_new_desc:0 "TODO"
+
+enc_accept_bottlecaps:0 "Accept Bottlecaps"
+enc_accept_bottlecaps_desc:0 "TODO"
+
+enc_power_to_the_people:0 "Power to The People"
+enc_power_to_the_people:0 "TODO"
+
+enc_fate_of_our_nation:0 "The Fate of Our Nation"
+enc_moderate_proposal:0 "A Moderate Proposal"
+enc_old_world:0 "The Old World"
+enc_a_new_order:0 "An All American Order"
+
+enc_purge_scientists:0 "Purge the Scientists"
+enc_purge_scientists_desc:0 "TODO"
+
+enc_purge_officers:0 "Purge the Officers"
+enc_purge_officers_desc:0 "TODO"
+
+enc_infiltrate_ncr:0 "Infiltrate the NCR"
+enc_infiltrate_ncr_t_tt:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is higher than §Y25§!"
+enc_infiltrate_ncr_desc:0 "TODO"
+enc_infiltrate_ncr_tt:0 "§YNCR suspicion§! is reduced by £pol_power §G25§!"
+
+enc_expansion_reform:0 "Prepare Expansion"
+enc_expansion_reform_desc:0 "TODO"
+enc_vlt_power_reform:0 "The Gecko Power Plant"
+enc_vlt_power_reform_desc:0 "TODO"
+enc_vlt_core_reform:0 "Our New City"
+enc_vlt_core_reform_desc:0 "TODO"
+enc_yakuza_annex_reform:0 "Drive Out The Yakuza"
+enc_yakuza_annex_reform_desc:0 "TODO"
+enc_ANT_annex_reform:0 "Drive Out The Tribe"
+enc_ANT_annex_reform_desc:0 "TODO"
+
+ENC_scientists_traitors:0 "Treacherous Scientists"
+ENC_officers_traitors:0 "Treacherous Officers"
+
+enc_yakuza_enforce_american_culture:0 "Enforce American Culture"
+enc_yakuza_enforce_american_culture_desc:0 "TODO"
+
+enc_yakuza_preserve_japanese_culture:0 "Preserve Japanese Culture"
+enc_yakuza_preserve_japanese_culture_desc:0 "TODO"
+
+enc_ANT_civilization_by_force:0 "Civilization By Force"
+enc_ANT_civilization_by_force_desc:0 "TODO"
+
+enc_ANT_establish_tributaries:0 "Establish Tributaries"
+enc_ANT_establish_tributaries_desc:0 "TODO"
+
+enc_assassinate_F_tt:0 "§YFranklin Andersen§! dies!"
+###################################
+# REFORM IDEAS
+###################################
+
+ENC_radio_military: "Military Enclave Radio"
+ENC_radio_military_encrypted: "Military Enclave Radio"
+ENC_radio_civilian: "Civilian Enclave Radio"
 ################ special codes for special people ################################################################################################################
 
 # yellow§Ytext§!
