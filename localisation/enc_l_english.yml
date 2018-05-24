@@ -1,7 +1,7 @@
 ﻿l_english:
 
 not_allowed_to_core: "§Y Enclave§!"
-ERB_OWB_DESC: "Four decades ago Navarro was destroyed by NCR and Brotherhood forces in a joint strike to finish off the final bastion of the Enclave. Demoralized, leaderless and homeless, their remnants scattered to the wind, never to be seen again. At least that's what most believed.\n \n Under the nose of the sleeping NCR, Sargeant Dornan has been working tirelessly to unite the Enclave remnants under his banner. Contacting the many hidden civilian bases of the Enclave to integrate a new generation of America's finest."
+ERB_OWB_DESC: "Four decades ago Navarro was destroyed by NCR and Brotherhood forces in a joint strike to finish off the final bastion of the Enclave. Demoralized, leaderless and homeless, their remnants scattered to the wind, never to be seen again. At least that's what most believed.\n \n Under the nose of the sleeping NCR, Sargent Dornan has been working tirelessly to unite the Enclave remnants under his banner. Contacting the many hidden civilian bases of the Enclave to integrate a new generation of America's finest."
 ###################################
 # COMMON
 ###################################
@@ -14,7 +14,7 @@ enc_ourchoice_desc:0 "Sergeant Dornan is well respected by both the Reformer and
 
 enc_ourpresident:0 "Our President"
 enc_ourpresident.tt:0 "TEST"
-enc_ourpresident_desc:0 "We have made our choice and that choice will change the future of the Enclave and if we are succesful, America. \nBut who really is the man we elected?"
+enc_ourpresident_desc:0 "We have made our choice and that choice will change the future of the Enclave and if we are successful, America. \nBut who really is the man we elected?"
 
 enc_purge_opposition:0 "Purge the Opposition"
 enc_purge_opposition_desc:0 "There are many in our midst who do not share our vision for the future. They must be dealt with."
@@ -42,7 +42,7 @@ oldscientists:0 "Remnant Scientists"
 oldscientists_desc:0 "Our technological advantage is the biggest edge we hold over the mutants. Let us organize the loyalist researchers we retrieved into teams capable of upholding that advantage."
 
 enc_expansion:0 "Take New Reno"
-enc_expansion_desc:0 "With morale improving, it is time to look outwards and prepare the liberation of the mutant occupied territories surrounding us. Many of which are sitting on military equipment cashes of indespenable value to our goals. We will begin with New Reno, our old hiding place."
+enc_expansion_desc:0 "With morale improving, it is time to look outwards and prepare the liberation of the mutant occupied territories surrounding us. Many of which are sitting on military equipment cashes of indispensable value to our goals. We will begin with New Reno, our old hiding place."
 
 openthevaults:0 "Open the Vaults"
 openthevaults_desc:0 "The time has come to open the last few control Vaults holding healthy human populations. Those that agree to join us can be added to our numbers and those that don't have other uses..."
@@ -54,10 +54,10 @@ enc_slave_labour:0 "Slave Labour"
 enc_slave_labour_desc:0 "By enslaving the Abhuman mutants, they can be of use in the rebuilding of America, finding some purpose to their wasteful existence in service to us. "
 
 enc_slave_labour_collars:0 "Slave Collars"
-enc_slave_labour_collars_desc:0 "Pioneered by Pre-War scientists as an effective method of control in prison camps and research experiments, this will allow us to control the slave populace more efficently and with minimal risk."
+enc_slave_labour_collars_desc:0 "Pioneered by Pre-War scientists as an effective method of control in prison camps and research experiments, this will allow us to control the slave populace more efficiently and with minimal risk."
 
 enc_slave_labour_mutants:0 "Super Mutant Slaves"
-enc_slave_labour_mutants_desc:0 "By utilizing the monstrous Super Mutants produced by the Master, we can increase the speed at which our buildings are built. However these beasts are still a force to be reckoned with and any sign of resistance should be dealt with quickly and with extreme prejuidice."
+enc_slave_labour_mutants_desc:0 "By utilizing the monstrous Super Mutants produced by the Master, we can increase the speed at which our buildings are built. However these beasts are still a force to be reckoned with and any sign of resistance should be dealt with quickly and with extreme prejudice."
 
 enc_energy_prod:0 "Plasma Weapon Production"
 enc_energy_prod_desc:0 "By focusing DARPA's efforts on Energy Weapon Production, we can improve on several models of Plasma weaponry created before and after the Great War."
@@ -65,11 +65,11 @@ enc_energy_prod_desc:0 "By focusing DARPA's efforts on Energy Weapon Production,
 enc_energy_commission:0 "US Department of Energy"
 enc_energy_commission_desc:0 "The Department of Energy is responsible for managing the power generation and retention of the Enclave."
 
-enc_pa_prod:0 "Advanced Power Armor Production"
+enc_pa_prod:0 "Advanced Power Armour Production"
 enc_pa_prod_desc:0 "By focusing DARPA's efforts on Power Armour Production, we can begin to further advance and improve upon the venerable T-51b, X-01, and even the X-02 Power Armour systems, further widening the gap between ourselves and those who dare steal American Military assets. "
 
 enc_secret_service:0 "US Secret Service"
-enc_secret_service_desc:0 "The UNSS once protected both our treasury and our President from threats both foreign and domestic. With the recreation of this institution, we will secure both our economic future and our powerbase from threats within and without."
+enc_secret_service_desc:0 "The UNSS once protected both our treasury and our President from threats both foreign and domestic. With the recreation of this institution, we will secure both our economic future and our power base from threats within and without."
 
 prewar_tactics:0 "Pre-War Tactics"
 prewar_tactics_desc:0 "These are the tactics passed down through the generations of Officers and Commanders, deriving from those used to liberate Anchorage and obliterate the People's Republic of China, before the vile Communists brought nuclear hellfire upon us."
@@ -90,7 +90,7 @@ enc_poison_bear:0 "Poison the Bear"
 enc_poison_bear_desc:0 "The time has come to lay waste to those renegade upstarts of California, who defile this nation with their very existence. Today we avenge Navarro, Control Station Enclave and all those murdered by the NCR. Today we mount the Bear's heads on the wall of history."
 
 enc_poison_bull:0 "Poison the Bull"
-enc_poison_bull_desc:0 "The time has come to cleanse the Southwest of that pseudo-Roman parody of that ancient Empire. No longer will we allow a warlord and his rabid dogs to fight over Hoover Dam and the states of Arizona, New Mexico, Colorado and Utah. The Roman Empire died once, and the death of this madman's Legion will let it rest, it's memory unsullied."
+enc_poison_bull_desc:0 "The time has come to cleanse the South-west of that pseudo-Roman parody of that ancient Empire. No longer will we allow a warlord and his rabid dogs to fight over Hoover Dam and the states of Arizona, New Mexico, Colorado and Utah. The Roman Empire died once, and the death of this madman's Legion will let it rest, it's memory unsullied."
 
 enc_antelope_annex:0 "Deal With The Northern Tribes"
 
@@ -99,20 +99,20 @@ enc_expedition_mariposa_desc:0 "Long ago, we controlled the Mariposa Base and us
 enc_expedition_mariposa_tt: "An expedition to the §YMariposa Base§! is mounted."
 
 enc_depot_start:0 "The Sierra Army Depot"
-enc_depot_start_desc:0 "The Sierra Army Depot has remained relatively unlooted thanks to its automated defenses. They should respond to our military access codes, leaving us free to access the unspoiled lower levels of the depot to set up our new base of operations."
+enc_depot_start_desc:0 "The Sierra Army Depot has remained relatively unlooted thanks to its automated defences. They should respond to our military access codes, leaving us free to access the unspoiled lower levels of the depot to set up our new base of operations."
 
 enc_depot_airport:0 "Rebuilding the Airstrip"
 enc_depot_airport_desc:0 "Hidden deep underground is the Sierra Army Depot's second hangar. Designed to act as a contingency plan, it holds within several VB-02s and the means to keep them running as smoothly as the day they were entombed."
 
-enc_depot_robot:0 "Reprogramming the Robot Defenses"
-enc_depot_robot_desc:0 "The automated defenses of the Sierra Army Depot kept is safe from looting for two centuries until the return of their rightful owners. Let us adjust the programming of the most operational machines to serve as a field divison."
+enc_depot_robot:0 "Reprogramming the Robot Defences"
+enc_depot_robot_desc:0 "The automated defences of the Sierra Army Depot kept is safe from looting for two centuries until the return of their rightful owners. Let us adjust the programming of the most operational machines to serve as a field division."
 enc_depot_robot_tt: "Two divisions of §YLight Robots§! are formed in the §YSierra Army Depot§!.\n"
 
 enc_depot_research:0 "Recovering the Archives"
 enc_depot_research_desc:0 "Much of our research was lost at Navarro, Poseidon and our resulting exodus. Even our communication protocols had to be restablished. So let us salvage what we can from the servers and archives of the Siera Army Depot. Surely some of this information is suitable for our purposes."
 
 enc_depot_lower:0 "Excavating the Lower levels"
-enc_depot_lower_desc:0 "Our military codes give us access to parts of the depot that are almost entirely untouched. Let us open the old armory and maintenance storage and salvage what we can."
+enc_depot_lower_desc:0 "Our military codes give us access to parts of the depot that are almost entirely untouched. Let us open the old armoury and maintenance storage and salvage what we can."
  
 enc_depot_end:0 "Our New Base of Operations"
 enc_depot_end_desc:0 "While parts of the base remain in disrepair, we have found ourselves an excellent base of operations for now. We can dedicate some of the machinery left here towards producing equipment."
@@ -124,17 +124,17 @@ enc_remember_rig:0 "Remember the Rig"
 enc_remember_rig_desc:0 "Four decades ago, our base of operations was sabotaged. Many of our old guard lost comrades and family in the ensuing explosion. The act has gone unavenged in the decades since. But we have not forgotten. "
 
 enc_mobilize_manpower:0 "Reorganize the Troops"
-enc_mobilize_manpower_desc:0 "Decades of seperation and isolation has wreaked havoc on our military organization. Let us formalize our chain of command and combine the several seperated bands under our leadership into a united Enclave Armed Forces."
+enc_mobilize_manpower_desc:0 "Decades of separation and isolation has wreaked havoc on our military organization. Let us formalize our chain of command and combine the several separated bands under our leadership into a united Enclave Armed Forces."
 
 enc_mobilize_economy:0 "Reorganize the Engineers"
-enc_mobilize_economy_desc:0 "Our engineers have been hard at work repairing worn power armor and weaponry. But their work is ad hoc and inefficient. We can organize them in the same manner as the military to make sure their expertise is used to its full potential."
+enc_mobilize_economy_desc:0 "Our engineers have been hard at work repairing worn power armour and weaponry. But their work is ad hoc and inefficient. We can organize them in the same manner as the military to make sure their expertise is used to its full potential."
 
 enc_ANT_annex:0 "Clearing out the Natives"
 enc_ANT_annex_tt:0 "Gain §YAnnex§! wargoal against whomever controls §YModoc County§!."
 enc_ANT_annex_desc:0 "To the North are several tribes of devolved Abhuman mutants who squat upon resources, and more importantly American soil. It is time we eradicate this blight."
 
 enc_yakuza_sack:0 "Sack Carson City"
-enc_yakuza_sack_desc:0 "The less we are forced to interact with the degenerate squatters of Carson city, the better. We can simply salvage what we need from the city and bring that to our headquarters at the Siera Army Depot."
+enc_yakuza_sack_desc:0 "The less we are forced to interact with the degenerate squatters of Carson city, the better. We can simply salvage what we need from the city and bring that to our headquarters at the Sierra Army Depot."
 
 enc_yakuza_keep:0 "Use Carson City"
 enc_yakuza_keep_desc:0 "We can use the existing factories in Carson city for our purposes. Though regular interaction with the mutants of the city will not be great for morale."
@@ -146,15 +146,15 @@ enc_ANT_cache_resourceful:0 "The Military Surplus"
 enc_ANT_cache_resourceful_desc:0 "There are older caches of equipment, for those who don't consider themselves above digging for antiques..."
 
 enc_remember_navarro:0 "Remember Navarro"
-enc_remember_navarro_desc:0 "Our older members remember clearly when the NCR and Brotherhood descended upon Navarro. Cut off from Enclave leadership, they none the less fought bravely. While most of us escaped the slaugher, those that stayed behind to delay our enemies died as American heroes. It is time we remember their sacrifice."
+enc_remember_navarro_desc:0 "Our older members remember clearly when the NCR and Brotherhood descended upon Navarro. Cut off from Enclave leadership, they none the less fought bravely. While most of us escaped the slaughter, those that stayed behind to delay our enemies died as American heroes. It is time we remember their sacrifice."
 
 enc_anti_bos_propaganda: "Anti-Brotherhood Propaganda"
-enc_anti_bos_propaganda_desc: "Though our younger members may not remember their crimes against us at Navarro, we have many reasons to seek the destruction of those power armoured boyscouts. Let us compile our grievences into broadcasts to remind our soldiers why we fight."
+enc_anti_bos_propaganda_desc: "Though our younger members may not remember their crimes against us at Navarro, we have many reasons to seek the destruction of those power armoured boyscouts. Let us compile our grievances into broadcasts to remind our soldiers why we fight."
 enc_anti_bos_propaganda_tt: "Unlocks the §YAnti Brotherhood Propaganda§! decisions when at war with the §YWestern Brotherhood§!."
 
 enc_reclaim_cashes: "Reclaim the Californian Army Bases"
 enc_reclaim_cashes_desc: "The NCR is illegally occupying many US military bases. Once we have reclaimed them, we can get to excavating them and recovering whatever was not yet looted by the mutants."
-enc_reclaim_cashes.tt: "Unlocked the §YReclaim Cashes§! decisions. These allow you to excevate and loot secret military bases all over California."
+enc_reclaim_cashes.tt: "Unlocked the §YReclaim Cashes§! decisions. These allow you to excavate and loot secret military bases all over California."
 
 enc_reclaim_navarro: "Reclaim Navarro"
 enc_reclaim_navarro_desc: "We can finally reclaim our old base of operations. This alone is a good boost to morale, but there is more to be gained as the base houses much of our most advanced and secretive research."
@@ -163,13 +163,13 @@ enc_radio_purity_2: "Extend the Beacons"
 enc_radio_purity_2_desc: "With our engineers in proper order, we can begin extending the range and power of our radio beacons."
 
 enc_rangers_start: "The Ranger Question"
-enc_rangers_start_desc: "We have come to border a parody of pre-war US rangers. We should prepare for the risk of them alligning themselves with the NCR, pulling us into a two front war."
+enc_rangers_start_desc: "We have come to border a parody of pre-war US rangers. We should prepare for the risk of them aligning themselves with the NCR, pulling us into a two front war."
 
 enc_rangers_defense: "Hold The Line"
 enc_rangers_defense_desc: "We should focus on pushing through the NCR and dealing with the Rangers afterwards. Let us prepare accordingly."
 
 enc_rangers_defense_forts: "The Richardson Line"
-enc_rangers_defense_forts_desc: "Named after our late president Dick Richardson, we shall erect a long and hard line of fortications to deter any penetration by the Rangers."
+enc_rangers_defense_forts_desc: "Named after our late president Dick Richardson, we shall erect a long and hard line of fortifications to deter any penetration by the Rangers."
 
 enc_rangers_defense_sabotage: "Sabotage Supply Lines"
 enc_rangers_defense_sabotage_desc: "Supplying an army through the desert is a logistical nightmare. While the rangers are used to this task, their supply system is still dependant on a few vulnerable supply routes and caches. The right preparations will allow us to severely damage their supply lines in one fell swoop."
@@ -203,10 +203,10 @@ enc_yakuza_annex_tt:0 "Gain §YAnnex§! wargoal against whomever controls §YCar
 enc_yakuza_annex_desc:0 "The only thing worse than mutants is foreign mutants. Let us waste no time in removing this criminal infestation from our soil."
 
 enc_war_with_bos: "War with the Brotherhood"
-enc_war_with_bos_desc: "The Brotherhood of Steel is an old enemy of ours. While the distance between us has kept them off our mind, that time has passed. They will no longer be a threat to the existance of the United States once we are done with them."
+enc_war_with_bos_desc: "The Brotherhood of Steel is an old enemy of ours. While the distance between us has kept them off our mind, that time has passed. They will no longer be a threat to the existence of the United States once we are done with them."
 
 enc_depot_lab:0 "Reopening the Sierra Laboratory"
-enc_depot_lab_desc:0 "Deep underground in the Siera Army Depot is what remains of a lab focused on biological warfare. Here, amid the ruins, is a single vial of Curling-2. A precursor of the lethal toxin lost during the destruction of Poseidon Oil."
+enc_depot_lab_desc:0 "Deep underground in the Sierra Army Depot is what remains of a lab focused on biological warfare. Here, amid the ruins, is a single vial of Curling-2. A precursor of the lethal toxin lost during the destruction of Poseidon Oil."
 
 enc_vlt_annex:0 "Take Vault City"
 enc_vlt_annex_tt:0 "Gain §YAnnex§! wargoal against whomever controls §YVault City§!."
@@ -228,19 +228,19 @@ enc_vlt_power:0 "Repairing the Power Plant"
 enc_vlt_power_desc:0 "In their ignorance, the people of Vault City were never capable of restoring the nearby power plant to its full potential. With the city full secured, we can send in our engineers to complete this task."
 
 enc_depot_lab_buff:0 "Intensifying Research Efforts"
-enc_depot_lab_buff_desc:0 "With the Siera Lab in proper order, we can increase our research efforts to match our ambitions."
+enc_depot_lab_buff_desc:0 "With the Sierra Lab in proper order, we can increase our research efforts to match our ambitions."
 
 enc_lessons_from_the_war:0 "Lessons From The War"
 enc_lessons_from_the_war_desc:0 "The war against the NCR is unlike any conflict the Enclave has engaged in for centuries. It is a wake up call for our generals to reinvent their doctrines or risk the total destruction of humanity."
 
 enc_anti_ncr_propaganda:0 "Anti NCR Propaganda"
-enc_anti_ncr_propaganda_desc:0 "Though our younger members may not remember their crimes against us at Navarro, we have many reasons to seek the destruction of the NCR. Let us compile our grievences into broadcasts to remind our soldiers why we fight."
+enc_anti_ncr_propaganda_desc:0 "Though our younger members may not remember their crimes against us at Navarro, we have many reasons to seek the destruction of the NCR. Let us compile our grievances into broadcasts to remind our soldiers why we fight."
 
 anti_ncr_propaganda_tt: "Unlocks the §YAnti NCR Propaganda§! decisions when at war with the §YNew California Republic§!."
 enc_extend_presidential_powers:0 "Extend Presidential Powers"
-enc_extend_presidential_powers_desc:0 "The Enclave president is more powerful than their pre-war equivalents, but none the less limited by certain restrictions. In the face of our final victory against the NCR, we canremove these limitations and grant our president total power over the Enclave and America."
+enc_extend_presidential_powers_desc:0 "The Enclave president is more powerful than their pre-war equivalents, but none the less limited by certain restrictions. In the face of our final victory against the NCR, we can remove these limitations and grant our president total power over the Enclave and America."
 enc_emergency_draft:0 "Emergency Draft"
-enc_emergency_draft_desc:0 "Should the need arive, we must be prepared to draft any non essential personel from non military departments into the Enclave forces."
+enc_emergency_draft_desc:0 "Should the need arrive, we must be prepared to draft any non essential personnel from non military departments into the Enclave forces."
 enc_emergency_draft_tt: "§YEmergency Draft§! can be removed by decision."
 
 enc_new_annex_tt: "Gain §YAnnex§! wargoal against whomever controls §YNew Reno§!."

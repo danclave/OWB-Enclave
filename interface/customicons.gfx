@@ -1,4 +1,4 @@
-﻿spriteTypes = {
+spriteTypes = {
         SpriteType = {#enc_accept_ghouls
             name = "GFX_goal_enc_accept_ghouls"
  		    texturefile = "gfx/interface/goals/enc_accept_ghouls.dds"

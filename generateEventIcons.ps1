@@ -1,4 +1,4 @@
-﻿cd 'C:\Users\jef\Documents\Paradox Interactive\Hearts of Iron IV\mod\enclaverb\gfx\interface'
+cd 'C:\Users\jef\Documents\Paradox Interactive\Hearts of Iron IV\mod\enclaverb\gfx\interface'
 $names = ls -name -Path event_pictures;
 
 $names = $names.replace(".tga","")
