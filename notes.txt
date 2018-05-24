@@ -30,6 +30,14 @@ CHANGES:
 - FEV plague weakened when NCR is in civil war or at war with CES
 - remove purify region decision
 
+
+Patch 1.3
+- reduced appearance of Crimson Caravan event and reduced NCR suspicion in the first option
+- fixed a bug that could cause the Enclave national color to be green
+- hardliners no longer spawn in New Reno
+- On every failed cloning experiment, the chance to succeed now increases by 10% up until 80% success chance
+- fixed typos
+
 --- CURRENT ---
 WIP
 - Reform stuff

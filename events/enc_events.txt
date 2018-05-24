@@ -11,7 +11,7 @@ country_event = {#1 - OUR ESCAPE
     option = { #Fought our way out with power armor
         name = enc.1.a
         add_manpower = -500
-		hidden_effect = { load_oob = renoenclave } #ugly tooltip
+		hidden_effect = { load_oob = enc_hardliners } #ugly tooltip
 		custom_effect_tooltip = contactthehardliners_tt
     }
     option = { # Escaped using Vertibirds
@@ -681,6 +681,10 @@ country_event = { #27 - Cloning failure
 	
 	option = { # Damn!
 		name = enc.27.a
+		add_to_variable = {
+			var = enc_cloning_chance
+			value = 1
+		}
 		add_stability = -0.05
 		add_war_support = -0.05
 	}

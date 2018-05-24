@@ -534,6 +534,8 @@ ENC_PA_quanitity: "Quantity PA Team"
 ENC_PA_quality: "Quality PA Team"
 
 enclave_naval_manufacturer: "Naval Research Team"
+
+contactthehardliners_tt: "3 divisions of §YEnclave Veterans§! appear at the §YSierra Army Depot§!"
 ############################################### MISC ###############################################################################################################
 renoenclave:0 "Enclave desc"
 renoenclave_tooltip:0 "Enclave veterans tool"

@@ -877,10 +877,57 @@ ENC_cloning = {
 		
 		days_remove = 100
 		remove_effect = {
-			random_list = { 
-				70 = { country_event = { id = enc.27 } } 
-				30 = { country_event = { id = enc.26 } } 
-			}				
+			if = {
+				limit = {
+					check_variable = { enc_cloning_chance > 4 }
+				}
+				random_list = { 
+					20 = { country_event = { id = enc.27 } } 
+					80 = { country_event = { id = enc.26 } } 
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { enc_cloning_chance > 3 }
+				}
+				random_list = { 
+					30 = { country_event = { id = enc.27 } } 
+					70 = { country_event = { id = enc.26 } } 
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { enc_cloning_chance > 2 }
+				}
+				random_list = { 
+					40 = { country_event = { id = enc.27 } } 
+					60 = { country_event = { id = enc.26 } } 
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { enc_cloning_chance > 1 }
+				}
+				random_list = { 
+					50 = { country_event = { id = enc.27 } } 
+					50 = { country_event = { id = enc.26 } } 
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { enc_cloning_chance > 0 }
+				}
+				random_list = { 
+					60 = { country_event = { id = enc.27 } } 
+					40 = { country_event = { id = enc.26 } } 
+				}
+			}
+			else = {
+				random_list = { 
+					70 = { country_event = { id = enc.27 } } 
+					30 = { country_event = { id = enc.26 } } 
+				}
+			}		
 			random_owned_state = {
 				limit = {
 					has_state_flag = has_cloning_facility_occupied_flag

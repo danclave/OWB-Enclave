@@ -166,7 +166,7 @@ focus_tree = {
 		completion_reward = { 
 			army_experience = 100
 			custom_effect_tooltip = enc_call_veterans_tt
-			hidden_effect = { load_oob = renoenclave } #ugly tooltip
+			hidden_effect = { load_oob = enc_hardliners } #ugly tooltip
 		}
 		
 }
@@ -695,7 +695,8 @@ focus_tree = {
 			291 = {
 				add_manpower = -2000
 			}
-			add_state_core = 291
+			add_stability = 0.10
+			add_war_support = 0.10
 		}
 		cost = 5.8	
  }
@@ -1494,6 +1495,42 @@ focus_tree = {
 		}
 	}
 
+###############################################################
+#REFORM TREE
+###############################################################	
+	focus = {#----------------enc_reform -------------------------- 
+		id =enc_reform 
+		icon = GFX_goal_enc_reform
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_ourpresident
+		x = 4
+		y = 1
+		mutually_exclusive = {focus = enc_purity} 
+		prerequisite = {focus = enc_ourpresident}
+		available = {
+			has_country_leader = {
+					ruling_only = yes
+					name = "Douglas Granite"
+			}
+		}
+		cost = 5.8 
+		completion_reward = {  
+			add_ideas = ENC_reform
+		} 
+	}
+	focus = {# WIP placeholder
+		id =enc_reform_placeholder
+		icon = NOTHING
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_reform
+		x = 0
+		y = 1
+		prerequisite = {focus = enc_reform}
+		cost = 5.8 
+		completion_reward = {
+			custom_effect_tooltip = enc_reform_placeholder_tt
+		}
+	}
 
  }#   WIP  --------------------------------------------------
 

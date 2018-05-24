@@ -6,11 +6,7 @@ spriteTypes = {
 		spriteType = { #GFX_idea_enc_designer_fighter
 			name = "GFX_idea_enc_designer_fighter"
 			texturefile = "gfx/interface/ideas/idea_enc_designer_fighter.dds"
-		}		
-		SpriteType = {#sargeant_dornan
-            name = "GFX_idea_sargeant_dornan"
- 		    texturefile = "gfx/interface/ideas/sargeant_dornan.dds"
- 	    }
+		}
         SpriteType = {#enc_designer_PA
             name = "GFX_idea_enc_designer_PA"
  		    texturefile = "gfx/interface/ideas/idea_enc_designer_PA.dds"
@@ -38,5 +34,15 @@ spriteTypes = {
         SpriteType = {#idea_enc_designer_misc
             name = "GFX_idea_enc_designer_misc"
  		    texturefile = "gfx/interface/ideas/idea_enc_designer_misc.dds"
- 	    } 	 		
+ 	    } 
+		
+		
+		SpriteType = {#sargeant_dornan
+            name = "GFX_idea_sargeant_dornan"
+ 		    texturefile = "gfx/interface/ideas/sargeant_dornan.dds"
+ 	    }
+		SpriteType = {#boris_t
+            name = "GFX_idea_boris_t"
+ 		    texturefile = "gfx/interface/ideas/boris_t.dds"
+ 	    } 		
 }
