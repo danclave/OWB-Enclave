@@ -879,6 +879,24 @@ ENC_cloning = {
 		remove_effect = {
 			if = {
 				limit = {
+					check_variable = { enc_cloning_chance > 6 }
+				}
+				random_list = { 
+					0 = { country_event = { id = enc.27 } } 
+					100 = { country_event = { id = enc.26 } } 
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { enc_cloning_chance > 5 }
+				}
+				random_list = { 
+					10 = { country_event = { id = enc.27 } } 
+					90 = { country_event = { id = enc.26 } } 
+				}
+			}
+			else_if = {
+				limit = {
 					check_variable = { enc_cloning_chance > 4 }
 				}
 				random_list = { 

@@ -205,6 +205,7 @@ country_event = {#9   - FRANKLIN PAST - YOUTH
 	option = {#Stimpack
 		name = enc.9.b
 		add_country_leader_trait = respectedByScientists
+		set_country_flag = leader_respected_by_scientists
 		hidden_effect = {country_event = { id = enc.10 }}
 		custom_effect_tooltip = enc.9.b.tt
 	}
@@ -681,12 +682,26 @@ country_event = { #27 - Cloning failure
 	
 	option = { # Damn!
 		name = enc.27.a
+		custom_effect_tooltip = enc.27.a.tt
 		add_to_variable = {
 			var = enc_cloning_chance
 			value = 1
 		}
-		add_stability = -0.05
-		add_war_support = -0.05
+		add_stability = -0.03
+	}
+	option = { # Damn!
+		name = enc.27.b
+		custom_effect_tooltip = enc.27.b.tt
+		trigger = {
+			has_country_flag = leader_respected_by_scientists
+		}
+		add_to_variable = {
+			var = enc_cloning_chance
+			value = 2
+		}
+		add_stability = -0.03
+		add_political_power = -50
+		custom_effect_tooltip = leader_respected_by_scientists_tt
 	}
 }
 

@@ -38,10 +38,10 @@ set_country_flag = no_owb_designers_flag
 ###############################
 # POLITICS
 ###############################
-set_party_name = { ideology = intellectuals long_name = "Reformer Faction" name = "Reformer Faction"}
-set_party_name = { ideology = elites long_name = "Purist Faction" name = "Purist Faction"}
-set_party_name = { ideology = ruler long_name = "Dornan Loyalists" name = "Dornan Loyalists"}
-set_party_name = { ideology = people long_name = "Neutral Personnel" name = "Neutral Personnel"}
+set_party_name = { ideology = intellectuals long_name = ERB_intellectuals_party name = ERB_intellectuals_party_long }
+set_party_name = { ideology = elites long_name = ERB_elites_party name = ERB_elites_party_long }
+set_party_name = { ideology = ruler long_name = ERB_ruler_party name = ERB_ruler_party_long }
+set_party_name = { ideology = people long_name = ERB_people_party name = ERB_people_party_long }
 
 set_politics = {
 	parties = {
