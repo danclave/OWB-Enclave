@@ -365,8 +365,12 @@ country_event = {#15 - DOUGLAS DESERTS
 	
 	fire_only_once = yes	
     is_triggered_only = no
-	trigger = {	has_completed_focus = enc_purge_opposition }	
-	mean_time_to_happen = {	days = 50 }	
+	trigger = {	
+		focus_progress = { 
+			focus = enc_purge_opposition progress > 0.5 
+		} 
+	}	
+	mean_time_to_happen = {	days = 1 }	
 	
 	
 	option = {#Good riddance
@@ -1105,20 +1109,20 @@ country_event = {#43 - Traitors scientists
 		}
 	}
 }
-country_event = {#44 - Dealing with Bishops - arrest
+country_event = {#44 - Consolidating power
 	id = enc.44
 	title = enc.44.t
 	desc = enc.44.d
-	picture = GFX_event_ENC_new_reno
+	picture = GFX_event_ENC_president_only
 	
 	fire_only_once = yes
     is_triggered_only = yes
 	
-	option = {# Capture Operations
+	option = {# Speech
 		name = enc.44.a
 
 	}
-	option = {# Capture Mr. Bishop
+	option = {# explosives
 		name = enc.44.b
 	}
 }
