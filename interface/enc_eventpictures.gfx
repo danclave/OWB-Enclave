@@ -27,6 +27,10 @@ spriteTypes = {
             name = "GFX_event_ENC_deathclaw"
  		    texturefile = "gfx/event_pictures/event_ENC_deathclaw.tga"
  	    } 
+        SpriteType = {#event_ENC_door
+            name = "GFX_event_ENC_door"
+ 		    texturefile = "gfx/event_pictures/event_ENC_door.tga"
+ 	    } 
         SpriteType = {#event_ENC_double_flag
             name = "GFX_event_ENC_double_flag"
  		    texturefile = "gfx/event_pictures/event_ENC_double_flag.tga"
@@ -59,6 +63,14 @@ spriteTypes = {
             name = "GFX_event_ENC_picture"
  		    texturefile = "gfx/event_pictures/event_ENC_picture.tga"
  	    } 
+        SpriteType = {#event_ENC_plasma_pistol
+            name = "GFX_event_ENC_plasma_pistol"
+ 		    texturefile = "gfx/event_pictures/event_ENC_plasma_pistol.tga"
+ 	    } 
+        SpriteType = {#event_ENC_plasma_rifle
+            name = "GFX_event_ENC_plasma_rifle"
+ 		    texturefile = "gfx/event_pictures/event_ENC_plasma_rifle.tga"
+ 	    } 
         SpriteType = {#event_ENC_president_only
             name = "GFX_event_ENC_president_only"
  		    texturefile = "gfx/event_pictures/event_ENC_president_only.tga"
@@ -82,6 +94,10 @@ spriteTypes = {
         SpriteType = {#event_ENC_secret3
             name = "GFX_event_ENC_secret3"
  		    texturefile = "gfx/event_pictures/event_ENC_secret3.tga"
+ 	    } 
+        SpriteType = {#event_ENC_single_soldier
+            name = "GFX_event_ENC_single_soldier"
+ 		    texturefile = "gfx/event_pictures/event_ENC_single_soldier.tga"
  	    } 
         SpriteType = {#event_ENC_torture.pdn
             name = "GFX_event_ENC_torture.pdn"

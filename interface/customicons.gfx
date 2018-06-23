@@ -459,6 +459,10 @@ spriteTypes = {
             name = "GFX_goal_vault_tec"
  		    texturefile = "gfx/interface/goals/vault_tec.dds"
  	    }
+        SpriteType = {#boris_t
+            name = "GFX_idea_boris_t"
+ 		    texturefile = "gfx/interface/ideas/boris_t.dds"
+ 	    } 
         SpriteType = {#enc_education
             name = "GFX_idea_enc_education"
  		    texturefile = "gfx/interface/ideas/enc_education.dds"
@@ -502,6 +506,10 @@ spriteTypes = {
         SpriteType = {#enc_radio
             name = "GFX_idea_enc_radio"
  		    texturefile = "gfx/interface/ideas/enc_radio.dds"
+ 	    } 
+        SpriteType = {#enc_reform
+            name = "GFX_idea_enc_reform"
+ 		    texturefile = "gfx/interface/ideas/enc_reform.dds"
  	    } 
         SpriteType = {#enc_scientists
             name = "GFX_idea_enc_scientists"
@@ -558,10 +566,6 @@ spriteTypes = {
         SpriteType = {#sargeant_dornan
             name = "GFX_idea_sargeant_dornan"
  		    texturefile = "gfx/interface/ideas/sargeant_dornan.dds"
- 	    } 
-        SpriteType = {#t_boris
-            name = "GFX_idea_t_boris"
- 		    texturefile = "gfx/interface/ideas/t_boris.dds"
  	    } 
         SpriteType = {#verti_production
             name = "GFX_idea_verti_production"

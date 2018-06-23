@@ -34,9 +34,7 @@ spriteTypes = {
         SpriteType = {#idea_enc_designer_misc
             name = "GFX_idea_enc_designer_misc"
  		    texturefile = "gfx/interface/ideas/idea_enc_designer_misc.dds"
- 	    } 
-		
-		
+ 	    }		
 		SpriteType = {#sargeant_dornan
             name = "GFX_idea_sargeant_dornan"
  		    texturefile = "gfx/interface/ideas/sargeant_dornan.dds"
@@ -44,5 +42,80 @@ spriteTypes = {
 		SpriteType = {#boris_t
             name = "GFX_idea_boris_t"
  		    texturefile = "gfx/interface/ideas/boris_t.dds"
- 	    } 		
+ 	    } 
+		spriteType = {
+			name = "GFX_icons_power"
+			texturefile = "gfx/interface/icons/power_icon.dds"
+		} 
+		spriteType = {
+			name = "GFX_icons_police"
+			texturefile = "gfx/interface/icons/police_icon.dds"
+		}		 
+		spriteType = {
+			name = "GFX_decision_enc_helmet"
+			texturefile = "gfx/interface/icons/decision_enc_helmet.dds"
+		}		 
+		spriteType = {
+			name = "GFX_decision_enc_bear_head"
+			texturefile = "gfx/interface/icons/decision_enc_bear_head.dds"
+		}		 
+		spriteType = {
+			name = "GFX_decision_enc_bear_head_alert"
+			texturefile = "gfx/interface/icons/decision_enc_bear_head_alert.dds"
+		}			 
+		spriteType = {
+			name = "GFX_decision_enc_verti"
+			texturefile = "gfx/interface/icons/decision_enc_verti.dds"
+		}	 
+		spriteType = {
+			name = "category_enc_political_infighting"
+			texturefile = "gfx/interface/icons/decision_category_enc_political_infighting.dds"
+		}	 
+		spriteType = {
+			name = "category_enc_stopwatch"
+			texturefile = "gfx/interface/icons/decision_category_enc_stopwatch.dds"
+		}	 
+		spriteType = {
+			name = "decision_enc_skull"
+			texturefile = "gfx/interface/icons/decision_enc_skull.dds"
+		}	 
+		spriteType = {
+			name = "decision_enc_resources"
+			texturefile = "gfx/interface/icons/decision_enc_resources.dds"
+		}	 
+		spriteType = {
+			name = "decision_enc_propaganda"
+			texturefile = "gfx/interface/icons/decision_enc_propaganda.dds"
+		}
+		spriteType = {
+			name = "GFX_enc_weapons_green"
+			texturefile = "gfx/interface/enc_weapons_green_icon.dds"
+			legacy_lazy_load = no
+		}
+		spriteType = {
+			name = "GFX_enc_weapons_red"
+			texturefile = "gfx/interface/enc_weapons_red_icon.dds"
+			legacy_lazy_load = no
+		}
+		spriteType = {
+			name = "GFX_enc_weapons"
+			texturefile = "gfx/interface/enc_weapons_icon.dds"
+			legacy_lazy_load = no
+		}
+		spriteType = {
+			name = "category_enc_espionage"
+			texturefile = "gfx/interface/decision_category_enc_espionage.dds"
+		}
+		spriteType = {
+			name = "decision_enc_espionage"
+			texturefile = "gfx/interface/icons/decision_enc_espionage.dds"
+		}
+		spriteType = {
+			name = "decision_enc_agreement"
+			texturefile = "gfx/interface/icons/decision_enc_agreement.dds"
+		}
+		spriteType = {
+			name = "decision_enc_cloning"
+			texturefile = "gfx/interface/icons/decision_enc_cloning.dds"
+		}
 }

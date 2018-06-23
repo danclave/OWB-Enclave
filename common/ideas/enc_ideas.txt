@@ -39,22 +39,22 @@ ideas = {
 			
 		}
 		ENC_infighting = {  
-	picture = enc_idea_infighting #FRA_scw_intervention_republicans_focus
-	allowed = { 
-		always = no
-	}
+			picture = enc_idea_infighting
+			allowed = { 
+				always = no
+			}
 
-	allowed_civil_war = { 
-		always = yes
-	}
-	removal_cost = -1
-	modifier = {
-	   stability_factor = -0.20
-	   army_morale_factor = -0.20
-	   army_org_Factor = -0.20
-	   political_power_gain = -0.30
-	}
-}
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+			   stability_factor = -0.20
+			   army_morale_factor = -0.20
+			   army_org_Factor = -0.20
+			   political_power_gain = -0.30
+			}
+		}
 		ENC_scientists = {  		
 			picture = enc_scientists #check
 			allowed = { 
@@ -67,7 +67,7 @@ ideas = {
             removal_cost = -1
 			modifier = {
 			   research_time_factor = -0.10
-			   elites_drift = 0.1
+			   elites_drift = 0.05
 			}
 		}
 		ENC_officers = {  
@@ -81,7 +81,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-				elites_drift = 0.1
+				elites_drift = 0.05
 				max_planning = 0.2
 				army_leader_start_level = 3
 			}
@@ -90,8 +90,8 @@ ideas = {
 ####################################################
 # REFORM
 ####################################################
-		ENC_reform = {  
-			picture = air_support_focus
+		ENC_reform = {
+			picture = enc_reform
 			allowed = { 
 				always = no
             }
@@ -104,7 +104,6 @@ ideas = {
 			   army_morale_factor = -0.2
 			   army_org_factor = -0.2
 			   political_power_gain = -0.2
-			   war_support_factor = -0.3
 			}
 		}
 		ENC_scientists_purged = {  		
@@ -181,7 +180,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   political_power_gain = 0.20
+			   political_power_gain = 0.30
 			   decryption_factor = 0.10
 			   encryption_factor = -0.10
 			}
@@ -424,15 +423,14 @@ ideas = {
 			allowed = { 
 				always = no
             }
-
             allowed_civil_war = { 
 				always = yes
             }
             removal_cost = -1
 			modifier = {
-				stability_factor = -0.10
+				stability_factor = -0.05
 				research_time_factor = -0.05
-				elites_drift = 0.2
+				elites_drift = 0.10
 			}
 		}
 		ENC_officers_traitors = {  
@@ -446,13 +444,42 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-				stability_factor = -0.10
-				elites_drift = 0.2
+				stability_factor = -0.05
+				elites_drift = 0.10
 				max_planning = 0.05
 				army_leader_start_level = 1
 			}
 		}
-			
+		
+		ENC_air_force_best_man = {  
+			picture = # todo
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				air_close_air_support_attack_factor = 0.10
+				air_air_superiority_attack_factor = -0.05
+			}
+		}
+		ENC_air_force_loyalist = {  
+			picture = # todo
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				air_close_air_support_attack_factor = -0.05
+				intellectuals_drift = 0.05
+			}
+		}
+		
 ####################################################
 # REFORM - DIPLOMACY TREE
 ####################################################
@@ -1134,21 +1161,31 @@ ideas = {
 	}
 }
 
-# GFX_idea_enc_designer_verti
+# GFX_idea_boris_t
 # GFX_idea_enc_education
 # GFX_idea_enc_ew_production
 # GFX_idea_enc_idea_eyebots
 # GFX_idea_enc_idea_infighting
 # GFX_idea_enc_officers
+# GFX_idea_enc_officers_traitors
 # GFX_idea_enc_pa_production
 # GFX_idea_enc_purity_1
 # GFX_idea_enc_purity_2
 # GFX_idea_enc_purity_3
 # GFX_idea_enc_radio
+# GFX_idea_enc_reform
 # GFX_idea_enc_scientists
+# GFX_idea_enc_scientists_traitors
 # GFX_idea_enc_slave_labour
 # GFX_idea_enc__idea_fist
+# GFX_idea_idea_enc_atomic_commision
+# GFX_idea_idea_enc_chemical_corps
+# GFX_idea_idea_enc_designer_fighter
+# GFX_idea_Idea_enc_designer_misc
 # GFX_idea_idea_enc_designer_PA
+# GFX_idea_idea_enc_designer_PA_2
+# GFX_idea_idea_enc_designer_plasma
+# GFX_idea_idea_enc_designer_tesla
+# GFX_idea_idea_enc_designer_verti
 # GFX_idea_sargeant_dornan
 # GFX_idea_verti_production
-

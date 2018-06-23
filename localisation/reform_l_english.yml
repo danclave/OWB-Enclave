@@ -1,5 +1,18 @@
 ﻿l_english:
 
+ERB_USA_ruler:0 "United States"
+ERB_USA_ruler_DEF:0 "The United States"
+ERB_USA_ruler_ADJ:0 "American"
+ERB_USA_intellectuals:0 "United States"
+ERB_USA_intellectuals_DEF:0 "The United States"
+ERB_USA_intellectuals_ADJ:0 "American"
+ERB_USA_elites:0 "United States"
+ERB_USA_elites_DEF:0 "The United States"
+ERB_USA_elites_ADJ:0 "American"
+ERB_USA_people:0 "United States"
+ERB_USA_people_DEF:0 "The United States"
+ERB_USA_people_ADJ:0 "American"
+
 ###################################
 # FOCUS TREE
 ###################################
@@ -85,7 +98,7 @@ enc_US_dollar_desc:0 "TODO"
 enc_radio_military:0 "Prioritize Military Channels"
 enc_radio_military_desc:0 "TODO"
 
-enc_radio_civilian:0 "Prioritize Civilian Channels"
+enc_radio_civilian:0 "Old World Radio"
 enc_radio_civilian_desc:0 "TODO"
 
 enc_radio_military_command:0 "Increase Encryption Standards"
@@ -144,6 +157,9 @@ enc_infiltrate_ncr_t_tt:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) i
 enc_infiltrate_ncr_desc:0 "TODO"
 enc_infiltrate_ncr_tt:0 "§YNCR suspicion§! is reduced by £pol_power §G25§!"
 
+ncr_suspicion_minus_10:0 "§YNCR suspicion§! is reduced by £pol_power §G10§!\n"
+ncr_suspicion_higher_than_10:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is higher than §Y10§!"
+
 enc_expansion_reform:0 "Prepare Expansion"
 enc_expansion_reform_desc:0 "TODO"
 enc_vlt_power_reform:0 "The Gecko Power Plant"
@@ -156,7 +172,9 @@ enc_ANT_annex_reform:0 "Drive Out The Tribe"
 enc_ANT_annex_reform_desc:0 "TODO"
 
 ENC_scientists_traitors:0 "Treacherous Scientists"
+ENC_scientists_traitors_desc:0 "Many of our best and brightest were once part of the secret projects performed at Navarro and the rig. For this, they were persecuted relentlessly after the fall of Navarro. None of them have forgotten this, few have forgiven it."
 ENC_officers_traitors:0 "Treacherous Officers"
+ENC_officers_traitors_desc:0 "The Purists have many dedicated loyalists in the ranks of our mid to high level military leadership. We must tread carefully."
 
 enc_yakuza_enforce_american_culture:0 "Enforce American Culture"
 enc_yakuza_enforce_american_culture_desc:0 "TODO"
@@ -171,13 +189,61 @@ enc_ANT_establish_tributaries:0 "Establish Tributaries"
 enc_ANT_establish_tributaries_desc:0 "TODO"
 
 enc_assassinate_F_tt:0 "§YFranklin Andersen§! dies!"
+
+enc_stage_raider_attacks:0 "Stage Raider Attacks"
+enc_stage_raider_attacks_desc:0 "TODO"
+enc_stage_raider_attacks_tt: "Unlocks the §YArm Raider Gangs§! decision.\nThis allows you to send 300 £enc_weapons §YInfantry Equipment§! to any §YRaider§! faction bordering the §YNew California Republic§! to reduce §YNCR suspicion§! by §G10§! £pol_power."
+
+enc_call_ncr_favors:0 "Call In Favors"
+enc_call_ncr_favors_desc:0 "TODO"
+
+enc_contact_old_world_party:0 "Contact Old World Party"
+enc_contact_old_world_party_desc:0 "TODO"
+
 ###################################
 # REFORM IDEAS
 ###################################
-
 ENC_radio_military: "Military Enclave Radio"
 ENC_radio_military_encrypted: "Military Enclave Radio"
 ENC_radio_civilian: "Civilian Enclave Radio"
+
+ENC_air_force_loyalist: "Loyal Chief Of Airforce."
+ENC_air_force_loyalist_desc: "Enclave leadership has seen fit to promote someone loyal to their current government as their Chief of Staff of the Enclave Air Force."
+ENC_air_force_best_man: "competent Chief Of Airforce."
+ENC_air_force_best_man_desc: "Enclave leadership has seen fit to promote their best candidate as their Chief of Staff of the Enclave Air Force."
+
+norman_wood: "Norman Wood"
+
+###################################
+# REFORM TRAITS
+###################################
+military_constructor: "Peace through force"
+civilian_constructor: "Peace through plenty"
+courageous: "Courageous"
+enc_wounded_trait: "Wounded"
+enc_disliked_pragmatist: "Unpopular Pragmatist"
+enc_army_chief_loyalist: "Loyal Reformer"
+enc_air_chief_loyalist: "Loyal Reformer"
+enc_navy_chief_loyalist: "Loyal Reformer"
+
+###################################
+# REFORM UI
+###################################
+connect_to_power: "Connect to Grid"
+connect_to_power_tt: "Connect to Grid"
+
+install_police_force_tt: "Install Police Force"
+
+###################################
+# FLAGS
+###################################
+enc_ncr_connections_flag: "Connections in the §YNCR§!"
+enc_crackdown_justified: "§YCrackdown§! is justified"
+enc_crackdown_justified_tt: "We gain justifications for a §Ycrackdown§!"
+
+ENC_hiding_cost_increased_5_tt: "§YNCR suspicion§! will go up by §R5§! £pol_power/"
+ENC_hiding_cost_increased_10_tt: "§YNCR suspicion§! will go up by §R10§! £pol_power/"
+
 ################ special codes for special people ################################################################################################################
 
 # yellow§Ytext§!
@@ -227,7 +293,7 @@ ENC_radio_civilian: "Civilian Enclave Radio"
 # £navy_experience_20x20
 # £organization_texticon
 # £pol_idea_texticon
-# £pol_power_20x20
+# £pol_power
 # £production_cost
 # £production_naval_cost
 # £right_arrow_texticon

@@ -1,0 +1,239 @@
+
+category = 
+{
+ name = "Voices"
+ soundeffects = {
+	ERB_infantry_idle
+	ERB_infantry_neutral_combat
+	ERB_infantry_positive_combat
+	ERB_infantry_retreat
+	ERB_infantry_move_out
+	
+ }
+  compressor = 
+ {
+	enabled = yes
+	pregain = 3.0 #0
+	postgain = 3.0 #2
+	ratio = 10.0
+	threshold = -10.0
+	attacktime = 0.030
+	releasetime = 0.2 #1,2
+ }
+}
+
+########## 
+
+soundeffect = 
+{
+    name = "ERB_infantry_idle"
+    sounds = {
+        sound = ERB_Idle_01
+        sound = ERB_Idle_01
+        sound = ERB_Idle_01
+        sound = ERB_Idle_02
+        sound = ERB_Move_02
+        sound = ERB_Idle_02
+		sound = ERB_Idle_03
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.6
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "ERB_infantry_neutral_combat"
+    sounds = {
+        sound = ERB_Combat_01
+        sound = ERB_Combat_02
+        sound = ERB_Combat_03
+		sound = ERB_Combat_04
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.6
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "ERB_infantry_positive_combat"
+    sounds = {
+        sound = ERB_Winning_01
+        sound = ERB_Winning_02
+        sound = ERB_Winning_03
+		sound = ERB_Winning_04
+        sound = ERB_Winning_05
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.6
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "ERB_infantry_retreat"
+    sounds = {
+        sound = ERB_Retreat_01
+        sound = ERB_Retreat_02
+		sound = ERB_Retreat_03
+		sound = ERB_Retreat_04
+		sound = ERB_Retreat_05
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.6
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "ERB_infantry_move_out"
+    sounds = {
+        sound = ERB_Move_01
+		sound = ERB_Move_02
+		sound = ERB_Move_03
+		sound = ERB_Move_04
+		sound = ERB_Move_05
+		sound = ERB_Move_06
+		sound = ERB_Move_07
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.6
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+############## AUDIO ASSETS
+
+
+########### ERB
+sound = 
+{
+	name = "ERB_Idle_01"
+	file = "ERB/ERB_Idle_01.wav"
+}
+sound = 
+{
+	name = "ERB_Idle_02"
+	file = "ERB/ERB_Idle_02.wav"
+}
+sound = 
+{
+	name = "ERB_Idle_03"
+	file = "ERB/ERB_Idle_03.wav"
+}
+
+sound = 
+{
+	name = "ERB_Winning_01"
+	file = "ERB/ERB_Winning_01.wav"
+}
+sound = 
+{
+	name = "ERB_Winning_02"
+	file = "ERB/ERB_Winning_02.wav"
+}
+sound = 
+{
+	name = "ERB_Winning_03"
+	file = "ERB/ERB_Winning_03.wav"
+}
+sound = 
+{
+	name = "ERB_Winning_04"
+	file = "ERB/ERB_Winning_04.wav"
+}
+sound = 
+{
+	name = "ERB_Winning_05"
+	file = "ERB/ERB_Winning_05.wav"
+}
+
+sound = 
+{
+	name = "ERB_Retreat_01"
+	file = "ERB/ERB_Retreat_01.wav"
+}
+sound = 
+{
+	name = "ERB_Retreat_02"
+	file = "ERB/ERB_Retreat_02.wav"
+}
+sound = 
+{
+	name = "ERB_Retreat_03"
+	file = "ERB/ERB_Retreat_03.wav"
+}
+sound = 
+{
+	name = "ERB_Retreat_04"
+	file = "ERB/ERB_Retreat_04.wav"
+}
+sound = 
+{
+	name = "ERB_Retreat_05"
+	file = "ERB/ERB_Retreat_05.wav"
+}
+
+
+sound = 
+{
+	name = "ERB_Combat_01"
+	file = "ERB/ERB_Combat_01.wav"
+}
+sound = 
+{
+	name = "ERB_Combat_02"
+	file = "ERB/ERB_Combat_02.wav"
+}
+sound = 
+{
+	name = "ERB_Combat_03"
+	file = "ERB/ERB_Combat_03.wav"
+}
+sound = 
+{
+	name = "ERB_Combat_04"
+	file = "ERB/ERB_Combat_04.wav"
+}
+
+sound = 
+{
+	name = "ERB_Move_01"
+	file = "ERB/ERB_Move_01.wav"
+}
+sound = 
+{
+	name = "ERB_Move_02"
+	file = "ERB/ERB_Move_02.wav"
+}
+sound = 
+{
+	name = "ERB_Move_03"
+	file = "ERB/ERB_Move_03.wav"
+}
+sound = 
+{
+	name = "ERB_Move_04"
+	file = "ERB/ERB_Move_04.wav"
+}
+sound = 
+{
+	name = "ERB_Move_05"
+	file = "ERB/ERB_Move_05.wav"
+}
+sound = 
+{
+	name = "ERB_Move_06"
+	file = "ERB/ERB_Move_06.wav"
+}
+sound = 
+{
+	name = "ERB_Move_07"
+	file = "ERB/ERB_Move_07.wav"
+}

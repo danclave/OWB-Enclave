@@ -79,9 +79,9 @@ enc.11.c:0 "Snuck out in the middle of the night."
 #########################################################################################
 enc.12.t:0 "Douglas' Youth"
 enc.12.d:0 "When Douglas was young, his father told him stories about the Enclave..."
-enc.12.a:0 "Option one."
-enc.12.b:0 "Option two."
-enc.12.c:0 "Option three."
+enc.12.a:0 "They had the strength to secure peace."
+enc.12.b:0 "They wanted to rebuild America."
+enc.12.c:0 "They were brave warriors."
 #########################################################################################
 enc.13.t:0 "Douglas' first contact"
 enc.13.d:0 "Hunting Raiders, he came across a group of people looking for the same gang."
@@ -91,8 +91,9 @@ enc.13.c:0 "Caeser's Legion."
 #########################################################################################
 enc.14.t:0 "Douglas' Decision"
 enc.14.d:0 "He decided to..."
-enc.14.a:0 "Wait for the two to exhaust each other and finish off the survivors."
-enc.14.b:0 "Help take down the raiders."
+enc.14.b:0 "Wait for the two to exhaust each other and finish off the survivors."
+enc.14.b.tt: "This will give us a connection with this faction."
+enc.14.c:0 "Help take down the raiders."
 #########################################################################################
 enc.15.t:0 "Douglas Granite deserts"
 enc.15.d:0 "Granite has taken a few of his most devoted supported and deserted the Enclave in a vertibird last night. Support for the Reformers have dwindled with the disappearance of their leader"
@@ -233,11 +234,11 @@ enc.41.d: "It appears our worst fears have materialized themselves. The disappea
 enc.41.a: "No time to waste, declare war!"
 enc.41.b: "We must prepare outself!"
 ################################################################################################################ -<
-enc.42.t: "Traitos in the Officers Corps!"
+enc.42.t: "traitors in the Officers Corps!"
 enc.42.d: "Our recent "
 enc.42.a: "We will have to deal with them later"
 ################################################################################################################ -<
-enc.43.t: "Traitos amung our scientists!"
+enc.43.t: "traitors amung our scientists!"
 enc.43.d: ""
 enc.43.a: "We will have to deal with them later"
 ################################################################################################################ -<
@@ -245,3 +246,8 @@ enc.44.t: "Preparing our speech"
 enc.44.d: "Tensions have been high since the elections. It appears support for the Purists has only intensified as a result, especially in the upper echelons of our government. To address this situation, we have collected all those with grievences towards the new US government into one room. They are awaiting answers from their new president, so you prepare..."
 enc.44.a: "your speech."
 enc.44.b: "shaped explosives."
+################################################################################################################ -<
+enc.45.t: "Anderson Holds a Speech"
+enc.45.d: "Despite his near defeat in the recent elections, Franklin Anderson has been working tirelessly to rouse his supporters against the new administration. Though he carefully chooses his words to avoid anything openly treasonous, most believe the only real reason he is alive and allowed to speak is that his numerous supporters may be driven to open revolt otherwise."
+enc.45.a: "A man must know when he is beaten."
+enc.45.b: "Make sure it's not broadcast at least."

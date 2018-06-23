@@ -64,7 +64,7 @@ test_coring = {
 }
 
 ENC_NCR_hiding = {
-	icon = generic_nationalism
+	icon = generic_crisis
 	priority = { base = 10 }
 	allowed = {
 		tag = ERB
@@ -79,6 +79,28 @@ ENC_NCR_hiding = {
 
 ENC_annex_puppet = {
 
+}
+
+ENC_political_infighting = {
+	icon = category_enc_political_infighting
+	priority = { base = 10 }
+	allowed = {
+		tag = ERB
+	}
+	visible = {
+		has_idea = ENC_infighting
+	}
+}
+
+ENC_infiltrating_NCR = {
+	icon = category_enc_stopwatch
+	priority = { base = 5 }
+	allowed = {
+		tag = ERB
+	}
+	visible = {
+		has_completed_focus = enc_infiltrate_ncr
+	}
 }
 
 ###############################

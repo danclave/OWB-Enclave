@@ -5,6 +5,7 @@ ENC_reno: "New Reno"
 ENC_call_remnants: "Reaching Remnants"
 ENC_shifts: "Work Shift Policies"
 ENC_production: "Production Policies"
+ENC_political_infighting: "Political Infighting"
 operations: "Operations"
 # DECISIONS
 
@@ -14,18 +15,20 @@ ENC_calling_the_remnants:0 "Call the Remnants"
 #################################
 ENC_NCR_hiding: "In The Lair of the Bear (£pol_power [?Root.ENC_hiding_cost|H0])"
 ENC_hide_activity:0 "Hide Activities from NCR"
+ENC_hide_activity_desc:0 "The Bear may be blind, but as time goes by it will take more and more effort to escape its notice."
 ENC_hide_activity_days_tt:0 "Hide from the §YNCR§! for §Y90 days§!"
 ENC_hide_activity_bonus_tt:0 " + [?Root.days_mission_timeout@ENC_hide_activity|H0] §Gbonus§! days"
 ENC_hide_activity_crisis:0 "§RWe will have a crisis on our hands!§!\n"
+ENC_reveal_to_ncr: "Reveal Ourselves to the NCR"
+ENC_reveal_to_ncr_desc: "We cannot hide from the NCR forever, but we may be able to prevent war by revealing us at an opportune time. With an army of mad men on their borders, they may think twice about attacking us if we are strong enough. A few sympathetic voices in their government could also help."
+
+
 # CRISIS
 NCR_crisis: "§RTHE NCR IS ONTO US§!"
 NCR_crisis_flag: "§RThe NCR is unto us!§!"
 NCR_crisis_resources: "Cease resource extraction"
 NCR_crisis_laylow: "Cease aggressive tactics"
 NCR_crisis_construction: "Cease construction efforts"
-
-ENC_shock_and_awe:0 "Shock and Awe"
-ENC_coup_reno:0 "Coup New Reno"
 
 calling_the_remnants_tt: "Unlocks the §YCall Remnants§! decision.\nThis allows you to spend £pol_power §YPolitical Power§! to call home stray Enclave remnants as £manpower_texticon §YManpower§!."
 
@@ -34,7 +37,8 @@ has_cloning_facility_occupied_flag: "- that is not in use"
 has_cloning_facility_flag: "Has cloning facility"
 
 ENC_setting_examples_purity:0 "Set some examples"
-ENC_setting_examples_reform:0 "Set some examples"
+ENC_setting_examples_reform:0 "Crackdown"
+ENC_setting_examples_reform_desc:0 "With a combination of demotions, banishment and outright executions we can openly get rid of the worst traitors among us, at the cost of internal stability and our conscious."
 
 ENC_field_veterans: "Field the Veterans ([?Root.enc_veterans_var]/3)"
 enc_call_veterans_tt: "Two divisions of §YEnclave Veterans§! hiding in §YNew Reno§! return to the Enclave.\n\nUnlocks 3 §YField Veterans§! decision uses.\nThis allows you to field §YEnclave Veterans§! at the cost of £manpower_texticon §YManpower§!\n§RThey still have to be equipped afterwards!§!"
@@ -100,7 +104,8 @@ reduce_construction_shifts: "Reduce Construction Shifts"
 reduce_research_shifts: "Reduce Research Shifts"
 
 convert_command_power: "Hold Military Theory Commitee"
-command_power_max: "£command_power 100"
+convert_command_power_desc: "In times of relative peace, it would be better to have our generals meet to discuss and document military theory than to let them collect dust."
+command_power_max: "£command_power §Y100§!"
 command_power_max_blocked: "£command_power §R100§!"
 
 ########### PRODUCTION ########################
@@ -113,12 +118,44 @@ build_cloning_facility: "Build cloning facility"
 cloning_experiment: "Cloning experiment"
 cloning_project: "Cloning project"
 
-#misc
+########### POLITICAL INFIGHTING ########################
+ENC_political_crisis: "§RPURISTS OUTNUMBER US!§!"
+ENC_reform_small_speech: "Hold Small Speech"
+ENC_reform_small_speech_desc: "Taking some time to remind everyone of why we took this path is a good way to strengthen our resolve and win more internal support."
+ENC_reform_replace_officers: "Demote Purist Officers"
+ENC_reform_replace_officers_desc: "While the top brass is still out of our reach, we could carefully expand our influence by replacing the more outspoken Purists in the lower officer ranks with their more loyal colleagues."
+ENC_reform_replace_scientists: "Demote Purist Scientists"
+ENC_reform_replace_scientists_desc: "While the top brass is still out of our reach, we could carefully expand our influence by replacing the more outspoken Purists in the lower scientific ranks with their more loyal colleagues."
 
+ENC_reform_arrange_disappearance: "Arrange Disappearance"
+ENC_reform_arrange_disappearance_desc: "Accidents happen all the time. More so to those openly opposed to our decisions, but no one can prove that."
+ENC_reform_wild_promises: "Wild Promises"
+ENC_reform_wild_promises_desc: "If all else fails, wild yet vague promises can buy us time. But in the long run they will hurt our credibility."
+
+##############################
+# NCR INFILTRATION 
+##############################
+ENC_infiltrating_NCR: "NCR Espionage Network"
+ENC_support_OWP: "Support the Old World Party"
+ENC_call_favours: "Call In Favours"
+ENC_send_spies: "Send Out Spies"
+ENC_send_spies_tt: "§YEnclave§! gains spies in the §YNew California Republic§!"
+enc_ncr_spies: "§YEnclave§! has spies in the §YNew California Republic§!"
+
+ENC_arm_raiders: "Arm Raider Gangs"
+ENC_arm_raiders_desc: "We are not the only threat on the NCR's borders. At the cost of some equipment, we can help these thorns in the bear's side draw attention away from us."
+ENC_NCR_neighbours_raiders: "§YNew California Republic§!: borders on a §YRaider§! faction"
+ENC_arm_raiders_tt: "receive 300 §YInfantry Equipment§! from §Y[Root.GetName]§!. Old ones go first.\n\n"
+ENC_arm_raiders_cost: "£enc_weapons  §Y300§!"
+ENC_arm_raiders_cost_blocked: "£enc_weapons_red  §R300§!"
+
+ENC_send_spies_cost: "£manpower_texticon  §Y100§!"
+ENC_send_spies_cost_blocked: "£manpower_texticon  §R100§!"
+#misc
 ENC_remove_emergency_draft: "Remove Emergency Draft"
 ################ special codes for special people ################################################################################################################
 
-# §Yyellow§!
+# y§Yyellow§!
 # £air_experience_20x20
 # £army_experience_20x20
 # £autonomy_texticon

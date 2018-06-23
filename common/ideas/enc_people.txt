@@ -132,6 +132,17 @@ ideas = {
 				factor = 10
 			}
 		}
+		norman_wood = {
+			allowed = {
+				tag = ERB  
+			}
+			available = {
+				has_completed_focus = enc_reform
+			}
+			traits = {
+				enc_disliked_pragmatist  
+			}
+		}
 	}
 
 	high_command = {		
@@ -198,6 +209,20 @@ ideas = {
 				factor = 1
 			}
 		}
+
+		army_chief_loyalist = {
+			cost = 250			
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { enc_army_chief_loyalist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 
 	air_chief = {
@@ -214,8 +239,35 @@ ideas = {
 				factor = 1
 			}
 		}
+		enc_people_air_loyalist = {
+			
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = ERB
+			}			
+			traits = { enc_air_chief_loyalist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}				
 
+	navy_chief = {
+		navy_chief_loyalist = {		
+			picture = generic_army_europe_2			
+			allowed = {
+				original_tag = ERB
+			}			
+			traits = { enc_navy_chief_loyalist }			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+	
 	theorist = {
 		enc_bomber_guy = {
 			picture = generic_army_europe_4
@@ -282,6 +334,8 @@ ideas = {
 			}
 		}
 	}
+
+
 }
 
 # generic_air_bonus

@@ -1,5 +1,4 @@
 ﻿capital = 159
-# set_cosmetic_tag = ENC
 set_war_support = 0.20
 set_stability = 0.35
 oob = "ERB_2265"
@@ -76,7 +75,19 @@ create_country_leader  = {
 	expire = "3000.1.1"
 	ideology = militarist_technocracy
 	traits = {}
-}		
+}
+
+create_country_leader = {
+	name = "Cristina Warren"
+	desc = "POLITICS_WARREN_DESCRIPTION"
+	picture = "united_states_leader.dds"
+	expire = "2042.3.7"
+	ideology = liberalism
+	traits = {
+	}
+}
+
+
 create_country_leader  = {
 	name = "Douglas Granite"
 	desc = "Granite_desc"

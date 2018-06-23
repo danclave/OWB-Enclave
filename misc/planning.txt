@@ -1,0 +1,179 @@
+Event ideas:
+Reformers
+- Deathclaw spotted
+- Encalve joke event
+- power armor tech lost
+- 4th of July
+- diplomatic incident with NCR
+- encryption mistake on Radio (NCR suspicious)
+
+Purists
+- Barons petition for surrender
+
+Focus idea:
+Reformer:
+	- poseidonnet
+
+---------------------------------
+Reflections on Purists
+---------------------------------
+There are a few problems with the reformers in their current state, most of it is related to the NCR.
+The Purists were in a great position for interesting gameplay, bordering on the NCR meant that they would be building up for an inevitable conflict.
+After the defeat of the NCR, the Purist campaign is basically over and they are free to conquer the rest of the world. 
+
+Path for Purists:
+Stage 1: Expansion East
+Stage 2: Preparation for NCR
+Stage 3: War with NCR
+Stage 4: Map painting
+
+---------------------------------
+Purists vs Reformers
+---------------------------------
+The internal conflict was represented somewhat minimalistically in the Purist path. The Purists will not go down as easily as the Reformers, however.
+There are already several focuses that represent this internal struggle, mostly in the form of purges that remove the positive Enclave modifiers.
+This internal struggle should always be on the mind of the player. They should be keeping a careful eye on the party popularity.
+
+Decisions:
+- Multiple decisions in their own category related to consolidating power
+
+Events:
+- More events that can shift the political landscape
+	- conflicts within scientists
+	- conflicts within officers
+	- assassination attempt on Douglas
+	- Desertions
+	- Internal sabotage
+	- Vandalism
+	- Speech by Anderson
+
+Modifiers:
+- Modify the political infighting idea to be better/worse?
+
+Focuses:
+- Reformer support minimums for the purges?
+
+---------------------------------
+On the NCR:
+---------------------------------
+The Reformers should be capable of diplomacy with the NCR, if nothing else to stop the need to hide activities from the NCR.
+
+It would be interesting to lock diplomacy with the NCR behind a minimum amount of (cored?) states. Being strong enough would make the NCR think twice about invading you.
+This would make the early game a little similar to the Purists: a race against the clock to expand eastwards and build up power relative to the NCR.
+The goal is different, since the Reformers simply want to make themselves unappealing to invade. They will not enjoy the same buffs and debuffs as the Purists that made their attack on the NCR possible.
+As a result, a war against the NCR at this stage of the game should not be possible to win.
+The threat of Caeser's legion may also help in making the NCR somewhat more open to the idea of diplomacy with their old enemies.
+Diplomacy with the NCR could be a mini game involving taking decisions to improve relations and events.
+The player may also prefer to ally themselves with another nation, in that case, the NCR may be prevented from attacking by the fact that they would be pulled into a way with that alternative ally (usually CES)
+
+General path for the Reformers:
+Stage 1: Dealing with internal conflicts 				( Hide activities <-> Increase party popularity <-> Military expansion <-> development )
+Stage 2: Expanding East
+Stage 3: Diplomacy with the NCR
+Stage 4: Diplomacy & development & Subterfuge
+Stage 5: Big war with NCR or Caesar legion
+Stage 6: Settle down as State of Nevada or declare yourself the United States
+
+The advantage that the Reformers do have is their greater capacity for subterfuge.
+This will most likely be incredibly valuable when dealing with the NCR on your own.
+One problem here is that the base game will be balanced around a rather equal conflict between the NCR and Caeser's legion.
+The player choosing sides in this conflict may shift the balance in such a way that it's always easy for the player if they wait for the right moment to strike.
+Ideas for fixing this issue:
+	- secret buffs to the enemy country that you have allied against
+	- immediate conflict with the victorious ally (player allies with CES and takes out the NCR, only to have to fight CES immediately afterwards)
+	
+
+---------------------------------
+On Map painting:
+---------------------------------
+The Reformers, if they go full USA, are essentially map painters. To prevent this from getting boring, several mechanics should make expansion challenging in the late game.
+Ideas for this are:
+	- negative events and modifiers representing overextension
+	- addition of peace time mechanics
+	- anti Enclave alliances forming by event
+	- claims on enemy territories made more difficult?
+	- A special coring mechanic that will be costly
+	- Alternative, civilian used for military factories and manpower
+	- declaration of independence and revolts
+	- tribal and raider regions continue to be troublesome after conquest
+	
+---------------------------------
+Enclave Technology
+---------------------------------
+The Enclave starts with late game technology. This was no problem for the Purists, since they have a critical lack of manpower to compensate for. 
+The Reformers, on the other hand, will not have the same limitations. So it seems like they should be kicked back to a lower level of technology until later in the game.
+Sabotage by Purist loyalists could explain that from a lore perspective, though I will have to see if I can mechanically lock them from certain technologies until later in the game.
+I'm sure the brotherhood of Steel does not simply start with the ability to research top-level power armor, so whatever limiting mechanic they use could come in handy here.
+	
+---------------------------------
+Internal politics
+---------------------------------
+I always thought politics and political parties were an underused element of the game. After theorizing on how to use it more, I do understand the difficulties in doing so.
+Initially, I was hoping to create 3-4 political parties within the Reformers that would become the main parties after they consolidate their power. That said, mechanics that involve multiple possible parties may prove to be very challenging.
+It might be wise to cut this idea for now and see if it's possible to bring it back once more of the tree is done.
+
+---------------------------------
+Coring
+---------------------------------
+Purists could not core, this was a simple rule with the intention of severely limiting their manpower. Perhaps the biggest difference between the two factions is ability to core.
+Yet, I want to make coring a little more interesting for the Reformers. They will have to develop provinces to increase their legitimacy in the eyes of the populace.
+
+Currently, the idea is to let them connect provinces to the power grid. Permanently reducing electricity in one province of theirs (engine limitation prevents dynamic resource allocation).
+Only provinces connected to cores can be connected to the power grid. 
+Once they have been connected to the power grid, a police force can be deployed to a province. This would cost infantry equipment and/or manpower.
+When all of the above is completed, the province can be cored.
+This process may take an amount of time, during which events could pop up that can aid or hamper coring, representing the inevitable conflicts resulting from incorporating an area.
+I was also considering adding additional difficulties or costs when attempting to core provinces that previously belonged to Raider or Tribal factions, representing the cultural differences that would make civilizing them difficult.
+
+---------------------------------
+A Nation Reborn
+---------------------------------
+The big payoff of the Reformer path is that juicy flag, name and color change. Because of this, it should not come to early in the campaign.
+Ideally, the Enclave would declare themselves the United States only in a situation where they have or are about to attack the NCR.
+It seems unlikely that the USA would allow any other state to occupy it's claimed territories, so war with the NCR seems inevitable.
+
+Another option is to take a more moderate path and declare yourself the State of Nevada. This would give you a claim to a large area of land while being compatible with the NCR.
+This could lead to a situation where the United States is a military alliances between several autonomous states instead of a centralized power. 
+This would be a satisfying ending for people who want more diplomacy, since the United States is also restored in a sense that is closer to the original post-revolutionary vision of the USA.
+
+---------------------------------
+National focus tree
+---------------------------------
+The current national focus tree is largely unfinished.
+It exists of a few small stray trees, one big tree and several neat trees to the right.
+
+1. Internal conflict tree 	(aka purges)
+2. Infiltrate NCR tree 		(reduce suspicion)
+3. Nation Reborn tree 		(main tree)
+4. Enclave Radio tree
+5. Expansion tree
+6. USSS tree
+7. Diplomacy tree
+8. Department of Defense tree
+
+---------------------------------
+Road map
+---------------------------------
+x. Basic Coring mechanic
+	
+Stage 1: Dealing with internal conflicts
+	- Basic internal struggle system
+		- crisis when low popularity
+		
+Stage 2: Expanding East
+	- finish expansion tree
+	
+Stage 3: Diplomacy with the NCR
+	- basic NCR mechanic
+	- Basic Coring mechanic
+		- Energy button
+		- Police button
+	
+Stage 4: Diplomacy & development & Subterfuge
+	- finish diplomacy and espionage tree
+	- finish Nation Reborn Tree
+	
+Stage 5: Big war with NCR or Caesar legion
+
+
+Stage 6: Settle down as State of Nevada or declare yourself the United States

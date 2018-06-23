@@ -1,0 +1,97 @@
+scripted_gui = {
+	connect_to_power = {
+	
+		context_type = selected_state_context
+		
+		window_name = "connect_to_power_container"		
+		parent_window_token = selected_state_view
+		
+		visible = {
+			is_controlled_by = ROOT
+			# any neighbour state is cored
+			ROOT = { 
+				tag = ERB
+			}
+			NOT = { 
+				is_core_of = FROM
+			}
+			
+		}
+		
+		effects = {
+			connect_to_power_click = {
+				ROOT = { 
+					add_political_power = -100 					
+				}
+				add_core_of = FROM
+				add_resource = { type = electricity amount = -5 state = 291 } #VLT city
+			}
+		}
+		triggers = {
+			connect_to_power_click_enabled = {
+				check_variable = { ROOT.political_power > 99.99 }
+			}
+		}
+		        
+		ai_check = {
+			check_variable = { ROOT.political_power > 99.99 }
+			check_variable = { ai_random > 0.55 }
+		}
+		
+		ai_weights = {
+			connect_to_power_click = {
+				ai_will_do = {
+					factor = 40
+				}
+			}
+		}
+	}
+	install_police_force = {
+	
+		context_type = selected_state_context
+		
+		window_name = "install_police_force_container"		
+		parent_window_token = selected_state_view
+		
+		visible = {
+			is_controlled_by = ROOT
+			# any neighbour state is cored
+			ROOT = { 
+				tag = ERB
+			}
+			NOT = { 
+				is_core_of = FROM
+			}
+			
+		}
+		
+		effects = {
+			install_police_force_click = {
+				ROOT = { 
+					add_political_power = -100 					
+				}
+				add_core_of = FROM
+			}
+		}
+		triggers = {
+			install_police_force_click_enabled = {
+				check_variable = { ROOT.political_power > 99.99 }
+				# equipment
+			}
+		}
+		        
+		ai_check = {
+			check_variable = { ROOT.political_power > 99.99 }
+			check_variable = { ai_random > 0.55 }
+		}
+		
+		ai_weights = {
+			install_police_force_click = {
+				ai_will_do = {
+					factor = 40
+				}
+			}
+		}
+	}
+}
+

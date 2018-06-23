@@ -1,0 +1,501 @@
+﻿add_namespace = enc_reformers
+
+country_event = {#1 - DOUGLAS PAST - STORIES
+	id = enc_reformers.1
+	title = enc_reformers.1.t
+	desc = enc_reformers.1.d
+	picture = GFX_event_ENC_secret
+	
+	fire_only_once = yes	
+    is_triggered_only = yes	
+	
+	
+	option = {# force
+		name = enc_reformers.1.a
+		add_country_leader_trait = military_constructor
+		set_country_flag = leader_military_constructor
+		country_event = { id = enc_reformers.2 }
+
+	}
+	option = {# peace
+		name = enc_reformers.1.b
+		add_country_leader_trait = civilian_constructor
+		set_country_flag = leader_civilian_constructor
+		country_event = { id = enc_reformers.2 }
+	}
+	option = {# honor
+		name = enc_reformers.1.b
+		add_country_leader_trait = courageous
+		set_country_flag = leader_courageous
+		country_event = { id = enc_reformers.2 }
+	}
+}
+country_event = {#2 - DOUGLAS PAST - MID
+	id = enc_reformers.2
+	title = enc_reformers.2.t
+	desc = enc_reformers.2.d
+	picture = GFX_event_ENC_secret
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	
+	option = {#NCR
+		name = enc_reformers.2.a
+		country_event = { id = enc_reformers.3 }
+		set_country_flag = enc_ncr_connections_flag
+	}
+	option = {#BOS
+		name = enc_reformers.2.b
+		country_event = { id = enc_reformers.3 }
+		set_country_flag = enc_bos_connections_flag
+	}
+	option = {#CES
+		name = enc_reformers.2.c
+		country_event = { id = enc_reformers.3 }
+		set_country_flag = enc_ces_connections_flag
+	}
+}
+country_event = {#3 - DOUGLAS PAST - END
+	id = enc_reformers.3
+	title = enc_reformers.3.t
+	desc = enc_reformers.3.d
+	picture = GFX_event_ENC_secret
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	
+	option = {#Wait
+		name = enc_reformers.3.b
+		clr_country_flag = enc_ces_connections_flag
+		clr_country_flag = enc_bos_connections_flag
+		clr_country_flag = enc_ncr_connections_flag
+		add_country_leader_trait = ruthless
+		set_country_flag = leader_ruthless
+	}
+	option = {#Help
+		name = enc_reformers.3.a
+		add_country_leader_trait = charismatic
+		set_country_flag = leader_charismatic
+		custom_effect_tooltip = enc_reformers.3.a.tt		
+	}
+}
+
+country_event = {#4 - Dealing with Wrights
+	id = enc_reformers.4
+	title = enc_reformers.4.t
+	desc = enc_reformers.4.d
+	picture = GFX_event_ENC_new_reno
+	
+	fire_only_once = yes	
+    is_triggered_only = yes
+	
+	option = {#Allow him to go legit
+		name = enc_reformers.4.a
+		set_country_flag = enc_wrights_tolerated_flag
+	}
+	option = {#No place for him
+		name = enc_reformers.4.b
+		285 = { # New Reno
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+country_event = {#5 - Dealing with Bishops
+	id = enc_reformers.5
+	title = enc_reformers.5.t
+	desc = enc_reformers.5.d
+	picture = GFX_event_ENC_new_reno
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = {# Capture Operations
+		name = enc_reformers.5.a
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+		}
+	}
+	option = {# Capture Mr. Bishop
+		name = enc_reformers.5.b
+		add_political_power = 100
+		# event where he escapes?
+	}
+}
+country_event = {#6 - Dealing with Salvatores
+	id = enc_reformers.6
+	title = enc_reformers.6.t
+	desc = enc_reformers.6.d
+	picture = GFX_event_ENC_new_reno
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = {# puppet
+		name = enc_reformers.6.a	
+	}
+	option = {# house arrest
+		name = enc_reformers.6.b
+	}
+	option = {# we rule in new reno
+		name = enc_reformers.6.c
+	}
+}	
+country_event = {#7 - Dealing with Mordinos
+	id = enc_reformers.7
+	title = enc_reformers.7.t
+	desc = enc_reformers.7.d
+	picture = GFX_event_ENC_new_reno
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = {# Court of law
+		name = enc_reformers.7.a
+		add_stability = 0.10
+	}
+	option = {# executed
+		name = enc_reformers.7.b
+		add_political_power = 100
+	}
+}
+
+country_event = {#8 - SECRETS STOLEN
+	id = enc_reformers.8
+	title = enc_reformers.8.t
+	desc = enc_reformers.8.d
+	picture = GFX_event_ENC_secret
+	
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {	has_completed_focus = enc_reform}	
+	mean_time_to_happen = {	days = 30 }
+	
+	option = {#OH WELL
+		name = enc_reformers.8.a	
+	}
+	option = {#MAKE SOME EXAMPLES
+		name = enc_reformers.8.b
+		add_manpower = -300
+		add_popularity = { ideology = elites popularity = -0.05 }
+		add_popularity = { ideology = intellectuals popularity = 0.05 }
+	}
+}
+country_event = {#9 - Purist sympathies
+	id = enc_reformers.9
+	title = enc_reformers.9.t
+	desc = enc_reformers.9.d
+	picture = GFX_event_ENC_secret
+	
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {	has_completed_focus = enc_purity}	
+	mean_time_to_happen = {	days = 40 }
+	
+	option = {#Make a show of finding and punishing
+		name = enc_reformers.9.a
+		add_manpower = -250
+		add_popularity = { ideology = elites popularity = 0.10 }
+		add_popularity = { ideology = intellectuals popularity = -0.05 }
+	}
+	option = {#Punish only him
+		name = enc_reformers.9.b
+		add_manpower = -1
+		add_popularity = { ideology = intellectuals popularity = -0.05 }
+		add_political_power = -50
+	}
+	option = {#We have more important
+		name = enc_reformers.9.c
+		add_popularity = { ideology = intellectuals popularity = 0.05 }
+		add_political_power = 50
+	}
+}
+country_event = {#10 - Disloyalty
+	id = enc_reformers.10
+	title = enc_reformers.10.t
+	desc = enc_reformers.10.d
+	picture = GFX_event_ENC_president_only
+	fire_only_once = no
+	
+	trigger = {
+		has_completed_focus = enc_purity
+		noT = {
+			has_completed_focus = enc_purge_opposition
+		}
+	}
+	mean_time_to_happen = {
+		days = 400
+	}
+	option = { # Punish!
+		name = enc_reformers.10.a
+		add_political_power = -25
+		add_stability = -0.05
+		add_popularity = { ideology = intellectuals popularity = -0.05 }
+		# add idea?
+	}
+	option = { # Who cares?
+		name = enc_reformers.10.b
+		add_popularity = { ideology = intellectuals popularity = 0.05 }
+		add_war_support = -0.02
+	}
+}
+
+country_event = {#11 - Traitors officers
+	id = enc_reformers.11
+	title = enc_reformers.11.t
+	desc = enc_reformers.11.d
+	picture = GFX_event_ENC_secret
+	
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {	has_completed_focus = enc_reform}	
+	mean_time_to_happen = {	days = 30 }
+	
+	option = {#OH WELL
+		name = enc_reformers.11.a	
+		swap_ideas = { 
+			remove_idea = ENC_officers
+			add_idea = ENC_officers_traitors
+		}
+	}
+}
+country_event = {#12 - Traitors scientists
+	id = enc_reformers.12
+	title = enc_reformers.12.t
+	desc = enc_reformers.12.d
+	picture = GFX_event_ENC_secret
+	
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {	
+		has_completed_focus = enc_reform
+		has_idea = 
+	}	
+	mean_time_to_happen = {	days = 30 }
+	
+	option = {#OH WELL
+		name = enc_reformers.12.a	
+		swap_ideas = { 
+			remove_idea = ENC_scientists 
+			add_idea = ENC_scientists_traitors
+		}
+	}
+}
+
+country_event = {#13 - Consolidating power
+	id = enc_reformers.13
+	title = enc_reformers.13.t
+	desc = enc_reformers.13.d
+	picture = GFX_event_ENC_president_only
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = {# Speech
+		name = enc_reformers.13.a
+
+	}
+	option = {# explosives
+		name = enc_reformers.13.b
+	}
+}
+
+country_event = {#14 - Anderson Speech
+	id = enc_reformers.14
+	title = enc_reformers.14.t
+	desc = enc_reformers.14.d
+	picture = GFX_event_ENC_president_only
+	
+	fire_only_once = yes
+	mean_time_to_happen = {	days = 100 }
+    trigger = {	
+		has_completed_focus = enc_reform
+		intellectuals > 0.60
+		NOT = {
+			has_completed_focus = enc_purge_opposition
+			has_completed_focus = enc_assassinate_F
+		}
+	}	
+	
+	option = {# do nothing
+		name = enc_reformers.14.a
+		add_popularity = { ideology = elites popularity = 0.20 }
+
+	}
+	option = {# block radio
+		name = enc_reformers.14.b
+		add_popularity = { ideology = elites popularity = 0.15 }
+		add_political_power = -100
+	}
+}
+country_event = {#15 - Promotion - WIP
+	id = enc_reformers.15
+	title = enc_reformers.15.t
+	desc = enc_reformers.15.d
+	picture = GFX_event_ENC_secret
+	
+	fire_only_once = yes
+    is_triggered_only = yes
+	
+	option = {# promote loyalist
+		name = enc_reformers.15.a
+		add_timed_idea = {
+			days = 365
+			idea = ENC_air_force_best_man
+		}
+
+	}
+	option = {# best man for the job
+		name = enc_reformers.15.b
+		add_timed_idea = {
+			days = 365
+			idea = ENC_air_force_loyalist
+		}
+	}
+}
+country_event = {#16 - Assassination attempt!
+	id = enc_reformers.16
+	title = enc_reformers.16.t
+	desc = enc_reformers.16.d
+	picture = GFX_event_ENC_plasma_pistol
+	
+	fire_only_once = yes
+	mean_time_to_happen = {	days = 100 }
+    trigger = {	
+		has_completed_focus = enc_reform
+		NOT = {
+			has_completed_focus = enc_purge_opposition
+		}
+		intellectuals < 0.40
+	}	
+	
+	option = {# time for patience is over
+		name = enc_reformers.16.a
+		add_country_leader_trait = enc_wounded_trait
+		set_country_flag = enc_crackdown_justified
+		add_stability = -0.10
+		custom_effect_tooltip = enc_crackdown_justified_tt
+
+	}
+	option = {# keep this quiet
+		name = enc_reformers.16.b
+		add_country_leader_trait = enc_wounded_trait
+		add_political_power = -100
+	}
+}
+country_event = {#17 - Fortunate son
+	id = enc_reformers.17
+	title = enc_reformers.17.t
+	desc = enc_reformers.17.d
+	picture = GFX_event_ENC_assault_team
+	
+	fire_only_once = yes
+	mean_time_to_happen = {	days = 500 }
+    trigger = {	
+		has_completed_focus = enc_reform
+	}	
+	
+	option = {# crack down on this behaviour
+		name = enc_reformers.17.a
+		add_popularity = { ideology = intellectuals popularity = -0.02 }
+
+	}
+	option = {# just turn it down
+		name = enc_reformers.17.b
+		add_to_variable = { var = ENC_hiding_cost value = 5}
+		custom_effect_tooltip = ENC_hiding_cost_increased_5_tt
+	}
+	option = {# turn it up!
+		add_political_power = 100
+		add_popularity = { ideology = intellectuals popularity = 0.02 }
+		name = enc_reformers.17.c
+		add_to_variable = { var = ENC_hiding_cost value = 10}
+		custom_effect_tooltip = ENC_hiding_cost_increased_10_tt
+	}
+}
+country_event = {#18 - music found
+	id = enc_reformers.18
+	title = enc_reformers.18.t
+	desc = enc_reformers.18.d
+	picture = GFX_event_ENC_assault_team
+	
+	fire_only_once = yes
+	mean_time_to_happen = {	days = 200 }
+    trigger = {	
+		has_completed_focus = enc_reform		
+		has_full_control_of_state = 285 # New Reno
+	}	
+	
+	# found in new reno?
+
+	option = {# Promote patriotic songs
+		name = enc_reformers.18.a
+		add_war_support = 0.10
+		add_stability = 0.05
+	}
+	option = {# Promote Old World nostalgia
+		name = enc_reformers.18.b
+		add_popularity = { ideology = intellectuals popularity = 0.05 }		
+		add_stability = 0.05
+	}
+	option = {# Release the tapes freely
+		name = enc_reformers.18.c
+		add_political_power = 100
+		add_stability = 0.05
+	}
+}
+country_event = {#19 - fight between enclave members
+	id = enc_reformers.19
+	title = enc_reformers.19.t
+	desc = enc_reformers.19.d
+	picture = GFX_event_ENC_secret
+	
+	fire_only_once = yes
+	trigger = {	
+		has_completed_focus = enc_reform
+		NOT = {
+			has_completed_focus = enc_purge_opposition
+		}
+	}	
+	mean_time_to_happen = {	days = 300 }
+
+	option = {# Defend attacker
+		name = enc_reformers.19.a
+		add_stability = -0.05
+	}
+	option = {# Punish attacker
+		name = enc_reformers.19.b
+		add_political_power = 50
+		add_popularity = { ideology = intellectuals popularity = -0.03 }		
+	}
+	option = {# Punish both
+		name = enc_reformers.19.c
+		add_popularity = { ideology = intellectuals popularity = -0.01 }	
+		add_stability = -0.02
+	}
+}
+
+#################
+## IDEAS
+#################
+# Counterfeit US dollars
+# Deathclaw spotted
+# Ghoul incident
+# promote who?
+
+#################
+## PICTURES
+#################
+# GFX_enc_ncr_rangers # GFX_event_ENC_3_troopers # GFX_event_ENC_assault_team # GFX_event_ENC_bloody_suit # GFX_event_ENC_cloning_failed # GFX_event_ENC_cloning_success # GFX_event_ENC_deathclaw 
+# GFX_event_ENC_door # GFX_event_ENC_double_flag # GFX_event_ENC_double_flag_long # GFX_event_ENC_mariposa1 # GFX_event_ENC_mariposa2 # GFX_event_ENC_mariposa3 # GFX_event_ENC_minigun # GFX_event_ENC_new_r
+eno # GFX_event_ENC_picture # GFX_event_ENC_plasma_pistol # GFX_event_ENC_plasma_rifle # GFX_event_ENC_president_only # GFX_event_ENC_rebuilding # GFX_event_ENC_ruined_city # GFX_event_ENC_secret 
+# GFX_event_ENC_secret2 # GFX_event_ENC_secret3 # GFX_event_ENC_single_soldier

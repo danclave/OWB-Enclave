@@ -1,6 +1,6 @@
 ENC_call_remnants = {
 	ENC_calling_the_remnants = {
-		icon = generic_propaganda
+		icon = GFX_decision_enc_helmet
 		allowed = { 
 			tag = ERB
 		}
@@ -24,7 +24,7 @@ ENC_call_remnants = {
 		days_re_enable = 30
 	}
 	ENC_field_veterans = {
-		icon = generic_propaganda
+		icon = GFX_decision_enc_helmet
 		allowed = { tag = ERB }
 		cost = 50
 		days_remove = 5
@@ -35,6 +35,9 @@ ENC_call_remnants = {
 				value = 3 
 				compare = not_equals
 			}
+		}
+		available = {
+			has_manpower = 200
 		}
 		complete_effect = {
 			add_manpower = -200
@@ -203,6 +206,7 @@ ENC_reno = {
 }
 ENC_radio_broadcasts = {
 	ENC_raise_war_support = {
+		icon = decisions_enc_propaganda
 		cost = 75		
 		visible = {	
 			has_war_support < 0.5
@@ -435,6 +439,7 @@ operations = {
 			command_power > 99
 		}
 		custom_cost_text = command_power_max
+		icon = GFX_decision_generic_army_support
 		
 		complete_effect = {
 			hidden_effect = {add_command_power = -100}
@@ -525,45 +530,6 @@ ENC_production = {
 	}
 }
 political_actions = {
-	ENC_setting_examples_purity = {
-		allowed = { tag = ERB }
-		cost = 50
-		days_remove = 5
-		available = {
-			intellectuals > 0.2
-			has_completed_focus = enc_purity
-		}
-		visible = {
-		}		
-		complete_effect = {
-		   add_manpower = -100
-		   add_stability = -0.05
-		   add_popularity = { ideology = intellectuals popularity = -0.05 }
-		   add_popularity = { ideology = elites popularity = 0.10 } 
-		}
-		days_re_enable = 10
-	}
-	ENC_setting_examples_reform = {
-		cost = 30
-		days_remove = 5
-		allowed = { tag = ERB }
-		available = {
-			elites > 0.2
-		}
-		
-		visible = {
-			elites > 0.2
-			has_completed_focus = enc_reform
-		}
-		
-		remove_effect = {
-		   add_manpower = -100
-		   add_stability = -0.05
-		   add_popularity = { ideology = elites popularity = -0.05 } 
-		   add_popularity = { ideology = intellectuals popularity = 0.05 }
-		}
-		days_re_enable = 30
-	}
 	ENC_remove_emergency_draft = {
 		cost = 25
 		allowed = { tag = ERB }
@@ -655,7 +621,7 @@ ENC_rangers = {
 ENC_NCR_hiding = {
 # MISSION
 	ENC_hide_activity = {
-		icon = infiltration
+		icon = GFX_decision_enc_bear_head #infiltration
 		is_good = NO
 		priority = 10
 		#--------------------------		
@@ -672,7 +638,7 @@ ENC_NCR_hiding = {
 			}
 		}
 		#--------------------------
-		cost = ENC_hiding_cost?10
+		cost = ENC_hiding_cost_total?10
 		selectable_mission = YES
 		fire_only_once = NO
 		#--------------------------
@@ -701,6 +667,9 @@ ENC_NCR_hiding = {
 				set_variable = { var = ENC_hiding_cost value = 10 }
 			}
 			add_to_variable = { var = ENC_hiding_cost value = 10}
+			set_variable = { ENC_hiding_cost_total = ENC_hiding_cost }
+			add_to_variable = { var = ENC_hiding_cost_total value = num_controlled_states}
+			add_to_variable = { var = ENC_hiding_cost_total value = num_controlled_states}
 			# set duration of safety
 			set_variable = { ENC_hide_days = days_mission_timeout@ENC_hide_activity }
 			add_to_variable = { var = ENC_hide_days value = 90}
@@ -718,7 +687,7 @@ ENC_NCR_hiding = {
 	}
 # CRISIS
 	NCR_crisis = {
-		icon = generic_crisis
+		icon = GFX_decision_enc_bear_head_alert
 		priority = 30
 		activation = {
 			has_country_flag = NCR_crisis_flag
@@ -763,7 +732,7 @@ ENC_NCR_hiding = {
 	}
 # SOLUTIONS	
 	NCR_crisis_resources = {
-		icon = generic_prospect_for_resources
+		icon = decision_enc_resources
 		fire_only_once = YES
 		visible = {
 			has_active_mission = NCR_crisis
@@ -813,7 +782,31 @@ ENC_NCR_hiding = {
 			has_war_with = NCR
 		}
 	}
+	
+	ENC_reveal_to_ncr = {
+		priority = 5
+		icon = generic_political_discourse
+		visible = {
+			has_completed_focus = enc_reform
+			has_country_flag = ncr_suspicious
+		}
+		available = {
+			ic_ratio = {
+				tag = NCR
+				ratio > 0.3
+			}			
+			strength_ratio = { tag = NCR ratio > 0.3 }
+			NCR = {
+				is_neighbor_of = CES
+				intellectuals > 0.3
+			}
+		}
+		complete_effect = {
+			clr_country_flag = ncr_suspicious
+		}
+	}
 }
+
 ENC_cloning = {
 	cloning_project = {
 		icon = generic_research
@@ -991,14 +984,284 @@ ENC_cloning = {
 	}
 }
 
-# 543 	- Marysville ranch 	- Beale Air Force Base 
-# 19 	- Saint Gabrielle   - Edwards Air Force Base
-# 350 	- The boneyard		- Los Angeles Air Force Base
-# 591	- Diana Point		- March Air Reserve Base
-# 511 	- Point Green 		- Travis Air Force Base
-# 64 	- Santa Maria		- Vandenberg Air Force Base
-# 525 	- Dog city			- Buckley Air Force Base
+ENC_political_infighting = {
+# CRISIS
+	ENC_political_crisis = {
+		icon = revolt
+		priority = 200
+		activation = {			
+			has_completed_focus = enc_reform
+			intellectuals < party_popularity@elites
+		}
+		available = {
+			intellectuals > party_popularity@elites
+		}
+		is_good = NO
+		days_mission_timeout = 100
+		timeout_effect = {
+			add_stability = -0.10
+		}
+		complete_effect = {
+			# good stuff?
+		}
+	}
+	ENC_setting_examples_purity = {
+		icon = GFX_decision_oppression
+		allowed = { tag = ERB }
+		cost = 50
+		days_remove = 5
+		visible = {
+			intellectuals > 0.2
+			has_completed_focus = enc_purity
+		}		
+		complete_effect = {
+		   add_manpower = -100
+		   add_stability = -0.05
+		   add_popularity = { ideology = intellectuals popularity = -0.05 }
+		   add_popularity = { ideology = elites popularity = 0.10 } 
+		}
+		days_re_enable = 10
+	}
+	ENC_setting_examples_reform = {
+		icon = GFX_decision_oppression
+		cost = 75
+		priority = 100
+		allowed = { tag = ERB }
+		visible = {
+			elites > 0.2
+			has_completed_focus = enc_reform
+		}
+		available = {
+			has_country_flag = enc_crackdown_justified
+			has_manpower > 100
+			has_stability > 0.10
+		}
+		complete_effect = {
+			add_manpower = -100
+			add_stability = -0.10
+			add_popularity = { ideology = elites popularity = -0.10 }
+			add_popularity = { ideology = intellectuals popularity = 0.05 }
+		}
+		days_re_enable = 30
+	}
+	ENC_reform_replace_officers= {
+		icon = GFX_decision_oppression
+		cost = 75
+		priority = 75
+		allowed = { tag = ERB }
+		fire_only_once = YES
+		visible = {
+			elites > 0.2
+			has_completed_focus = enc_reform
+		}
+		available = {
+		}
+		modifier = {
+			army_org_Factor = -0.25
+			army_attack_factor = -0.10
+		}
+		days_remove = 60
+		complete_effect  = {
+			add_popularity = { ideology = elites popularity = -0.10 }
+		}
+		days_re_enable = 100
+	}
+	ENC_reform_replace_scientists= {
+		icon = GFX_decision_oppression
+		cost = 75
+		priority = 75
+		allowed = { tag = ERB }
+		fire_only_once = YES
+		visible = {
+			elites > 0.2
+			has_completed_focus = enc_reform
+		}
+		available = {
+		}
+		modifier = {
+			research_time_factor = +0.20
+		}
+		days_remove = 60
+		complete_effect  = {
+			add_popularity = { ideology = elites popularity = -0.10 }
+		}
+	}
+	ENC_reform_small_speech= {
+		icon = GFX_decision_generic_nationalism
+		cost = 50
+		priority = 50
+		allowed = { tag = ERB }
+		visible = {
+			elites > 0.2
+			has_completed_focus = enc_reform
+		}
+		available = {
+		}
+		complete_effect = {
+			add_popularity = { ideology = intellectuals popularity = 0.03 }
+		}
+		days_re_enable = 60
+	}
+	ENC_reform_arrange_disappearance= {
+		icon = decision_enc_skull
+		cost = 50
+		priority = 50
+		allowed = { tag = ERB }
+		visible = {
+			elites > 0.2
+			has_completed_focus = enc_reform
+		}
+		available = {
+		}
+		complete_effect = {
+			add_popularity = { ideology = elites popularity = -0.03 }
+			add_manpower = -1
+		}
+		days_re_enable = 60
+	}
+	ENC_reform_wild_promises= {
+		icon = generic_political_discourse
+		priority = 25
+		cost = 25
+		allowed = { tag = ERB }
+		visible = {
+			elites > 0.2
+			has_completed_focus = enc_reform
+		}
+		available = {
+			# always
+		}
+		complete_effect = {
+			add_popularity = { ideology = intellectuals popularity = 0.10 }
+		}
+		modifier = {
+			intellectuals_drift = -0.1
+		}
+		remove_effect = {
+			add_popularity = { ideology = intellectuals popularity = -0.10 }		
+		}
+		days_remove = 90
+		days_re_enable = 100
+	}
 
+}
+
+
+ENC_infiltrating_NCR = {
+	ENC_arm_raiders = {
+		icon = generic_prepare_civil_war
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 299
+			}
+		}
+		custom_cost_text = ENC_arm_raiders_cost
+		visible = {
+			has_completed_focus = enc_stage_raider_attacks
+		}
+		available = {
+			has_country_flag = enc_ncr_spies
+			has_equipment = {
+				infantry_equipment > 299
+			}
+			custom_trigger_tooltip = {
+				tooltip = ENC_NCR_neighbours_raiders		
+				NCR = {
+					any_neighbor_country = {
+						is_raider_nation = yes 
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ncr_suspicion_higher_than_10				
+				check_variable = { ENC_hiding_cost > 9.99 }
+			}
+		}
+		complete_effect = {
+			clr_country_flag = enc_ncr_spies
+			random_country = {
+				limit = {
+					is_raider_nation = yes
+					is_neighbor_of = NCR
+				}
+				custom_effect_tooltip = ENC_arm_raiders_tt
+				hidden_effect = {
+					ERB = {
+						send_equipment = {
+							equipment = infantry_equipment
+							amount = 300
+							target = PREV
+						}
+					}
+				}		
+			}
+			subtract_from_variable = { var = ENC_hiding_cost value = 10}
+			custom_effect_tooltip = ncr_suspicion_minus_10
+		}	
+	}
+	ENC_support_OWP = {
+		icon = decision_enc_agreement
+		cost = 25
+		visible = {
+			has_completed_focus = enc_contact_old_world_party
+		}
+		available = {
+			has_country_flag = enc_ncr_spies
+		}
+		complete_effect = {
+			clr_country_flag = enc_ncr_spies
+			NCR = {
+				add_popularity = { ideology = intellectuals popularity = 0.05 }
+			}
+		}
+		days_re_enable = 100
+	}
+	ENC_call_favours = {
+		icon = generic_political_discourse
+		cost = 25
+		visible = {
+			has_completed_focus = enc_contact_old_world_party
+		}
+		available = {
+			NCR = {
+				intellectuals > 0.25
+			}
+			custom_trigger_tooltip = {
+				tooltip = ncr_suspicion_higher_than_10				
+				check_variable = { ENC_hiding_cost > 9.99 }
+			}
+		}
+		complete_effect = {
+			clr_country_flag = enc_ncr_spies
+			subtract_from_variable = { var = ENC_hiding_cost value = 10}
+			custom_effect_tooltip = ncr_suspicion_minus_10
+			NCR = {
+				add_popularity = { ideology = intellectuals popularity = -0.05 }
+			}
+			
+		}
+		days_re_enable = 100
+	}
+	ENC_send_spies = {
+		icon = decision_enc_espionage
+		priority = 10
+		custom_cost_trigger = {
+			has_manpower > 100
+		}
+		custom_cost_text = ENC_send_spies_cost
+		visible = {
+			#has_completed_focus = enc_stage_raider_attacks
+		}
+		available = {
+			has_manpower > 100	
+		}
+		complete_effect = {
+			add_manpower = -100
+			set_country_flag = enc_ncr_spies
+			custom_effect_tooltip = ENC_send_spies_tt
+		}	
+	}
+}
 
 	
 ###############################

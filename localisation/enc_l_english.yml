@@ -559,23 +559,12 @@ ENC_PA_quality: "Quality PA Team"
 
 enclave_naval_manufacturer: "Naval Research Team"
 
-contactthehardliners_tt: "3 divisions of §YEnclave Veterans§! appear at the §YSierra Army Depot§!"
+contactthehardliners_tt: "2 divisions of §YEnclave Veterans§! appear at the §YSierra Army Depot§!"
 ############################################### MISC ###############################################################################################################
 renoenclave:0 "Enclave desc"
 renoenclave_tooltip:0 "Enclave veterans tool"
 
-USA_ruler:0 "United States"
-USA_ruler_DEF:0 "The United States"
-USA_ruler_ADJ:0 "American"
-USA_intellectuals:0 "United States"
-USA_intellectuals_DEF:0 "The United States"
-USA_intellectuals_ADJ:0 "American"
-USA_elites:0 "United States"
-USA_elites_DEF:0 "The United States"
-USA_elites_ADJ:0 "American"
-USA_people:0 "United States"
-USA_people_DEF:0 "The United States"
-USA_people_ADJ:0 "American"
+
 
 ENC_ruler:0 "Enclave"
 ENC_ruler_DEF:0 "The Enclave"

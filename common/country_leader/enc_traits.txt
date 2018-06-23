@@ -70,11 +70,18 @@ leader_traits = {
 		stability_factor = 0.10
 		political_power_factor = -0.05
 	}
-	EPA_director = {
+	courageous = {
 		random = no
-		monthly_population = 0.20
-		conscription_factor = -0.05
+		army_morale_factor = 0.10
 	}
+	civilian_constructor = {
+		random = no
+		production_speed_industrial_complex_factor = 0.10
+	}
+	military_constructor = {
+		random = no
+		production_speed_arms_factory_factor = 0.10
+	}	
 
 	# manufacturers
 	vertibird_aircraft_manufacturer = {
@@ -115,5 +122,39 @@ leader_traits = {
 		ai_will_do = {
 			factor = 1
 		}
+	}
+
+	# loyalists	
+	enc_air_chief_loyalist = {
+		random = no
+		cost = 100
+		stability_factor = 0.05
+		air_close_air_support_attack_factor = -0.05
+		intellectuals_drift = 0.1
+	}
+	
+	enc_army_chief_loyalist = {
+		random = no
+		cost = 100
+		army_morale_factor = -0.05
+		army_attack_factor = -0.05
+		intellectuals_drift = 0.10
+	}
+	enc_navy_chief_loyalist = {
+		random = no
+		cost = 100
+		intellectuals_drift = 0.10	
+	}
+	enc_wounded_trait = {
+		random = no
+		political_power_factor = -0.10
+	}
+
+	enc_disliked_pragmatist = {
+		random = no
+		non_core_manpower = 0.02
+		# construction speed?
+		stablility_factor = -0.05
+		war_support_factor = -0.05
 	}
 }

@@ -1,0 +1,33 @@
+guiTypes = {
+	containerWindowType = {
+		name = connect_to_power_container
+		position = {x = 290 y = 490}
+		
+		fade_time = 50
+		fade_type = linear
+		moveable = no
+		
+		buttonType = {
+			name = connect_to_power
+			spriteType = GFX_icons_power
+			pdx_tooltip = connect_to_power_tt
+			scale = 1.2
+		}
+	}	
+	containerWindowType = {
+		name = install_police_force_container
+		position = {x = 340 y = 490}
+		
+		fade_time = 50
+		fade_type = linear
+		moveable = no
+		
+		buttonType = {
+			name = install_police_force
+			spriteType = GFX_icons_police
+			pdx_tooltip = install_police_force_tt
+			scale = 1.2
+		}
+	}
+}
+	

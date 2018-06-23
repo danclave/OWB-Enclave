@@ -1,0 +1,97 @@
+﻿l_english:
+################################## EVENTS ##############################################
+enc_reformers.1.t:0 "Douglas' Youth"
+enc_reformers.1.d:0 "When Douglas was young, his father told him stories about the Enclave..."
+enc_reformers.1.a:0 "They had the strength to secure peace."
+enc_reformers.1.b:0 "They wanted to rebuild America."
+enc_reformers.1.c:0 "They were brave warriors."
+#########################################################################################
+enc_reformers.2.t:0 "Douglas' first contact"
+enc_reformers.2.d:0 "Hunting Raiders, he came across a group of people looking for the same gang."
+enc_reformers.2.a:0 "NCR."
+enc_reformers.2.b:0 "Brotherhood."
+enc_reformers.2.c:0 "Caeser's Legion."
+#########################################################################################
+enc_reformers.3.t:0 "Douglas' Decision"
+enc_reformers.3.d:0 "He decided to..."
+enc_reformers.3.b:0 "Wait for the two to exhaust each other and finish off the survivors."
+enc_reformers.3.b.tt: "This will give us a connection with this faction."
+enc_reformers.3.a:0 "Help take down the raiders."
+#########################################################################################
+enc_reformers.4.t:0 "Dealing with Wrights"
+enc_reformers.4.d:0 "Some say that the Wright family has spent the last few decades building with one hand and destroying with the other, but compared to the other families this makes them almost redeemable. Mr.. Wright's vision of a more peaceful and stable New Reno is not entirely incompatible with out own..."
+enc_reformers.4.a:0 "Allow him go legit."
+enc_reformers.4.b:0 "There is no place for his kind here."
+########################################################################################
+enc_reformers.5.t:0 "Dealing with Bishops"
+enc_reformers.5.d:0 "TODO: dealing with the Bishops."
+enc_reformers.5.a:0 "Focus on capturing their assets."
+enc_reformers.5.b:0 "Focus on apprehending the leader."
+########################################################################################
+enc_reformers.6.t:0 "Dealing with Salvatores"
+enc_reformers.6.d:0 "TODO: dealing with the Salvatores."
+enc_reformers.6.a:0 "He can rule as a puppet."
+enc_reformers.6.b:0 "He can live under house arrest."
+enc_reformers.6.c:0 "We rule in New Reno now."
+########################################################################################
+enc_reformers.7.t:0 "Dealing with Mordinos"
+enc_reformers.7.d:0 "The Mordinos long represented the status quo of New Reno. That is to say, criminality, exploitation, drugs and misery. They had many allies but no friends and few are now willing to lay their lives down in defense of the drug lords. We may strike quickly and expect only limited resistance, but some have suggested that we should use the Mordinos to demonstrate we are serious about our Old World values."
+enc_reformers.7.a:0 "They will be tried in a court of law."
+enc_reformers.7.b:0 "Justice is long overdue."
+########################################################################################
+enc_reformers.8.t:0 "Secrets Stolen"
+enc_reformers.8.d:0 "Last night, a small group of traitors made off with a vertibird and several old military codes. ."
+enc_reformers.8.a:0 "Good riddance. We don't need them."
+enc_reformers.8.b:0 "A great opportunity to set some examples."
+#########################################################################################
+enc_reformers.9.t: "Disloyalty"
+enc_reformers.9.d: "We are receiving reports of an Enclave officer openly disputing our leadership. Going as far as loudly claiming that the recent elections were fraudulent."
+enc_reformers.9.a: "Round up the officer and every one involved with him"
+enc_reformers.9.b: "Find the man and make an example of him"
+enc_reformers.9.c: "We have more important matters to attend to"
+################################################################################################################ -<
+enc_reformers.11.t: "traitors in the Officers Corps!"
+enc_reformers.11.d: "TODO"
+enc_reformers.11.a: "We will have to deal with them later"
+################################################################################################################ -<
+enc_reformers.12.t: "traitors amung our scientists!"
+enc_reformers.12.d: "TODO"
+enc_reformers.12.a: "We will have to deal with them later"
+################################################################################################################ -<
+enc_reformers.13.t: "Preparing our speech"
+enc_reformers.13.d: "Tensions have been high since the elections. It appears support for the Purists has only intensified as a result, especially in the upper echelons of our government. To address this situation, we have collected all those with grievences towards the new US government into one room. They are awaiting answers from their new president, so you prepare..."
+enc_reformers.13.a: "your speech."
+enc_reformers.13.b: "shaped explosives."
+################################################################################################################ -<
+enc_reformers.14.t: "Anderson Holds a Speech"
+enc_reformers.14.d: "Despite his near defeat in the recent elections, Franklin Anderson has been working tirelessly to rouse his supporters against the new administration. Though he carefully chooses his words to avoid anything openly treasonous, most believe the only real reason he is alive and allowed to speak is that his numerous supporters may be driven to open revolt otherwise."
+enc_reformers.14.a: "A man must know when he is beaten."
+enc_reformers.14.b: "Make sure it's not broadcast at least."
+################################################################################################################ -<
+enc_reformers.15.t: "Promotion for Chief of Staff of the U.S. Air Force"
+enc_reformers.15.d: "While the role is smaller than its historic predecessor, air power is still vital to the Enclave's armed forces. "
+enc_reformers.15.a: "The best man should get the job."
+enc_reformers.15.b: "We need a man we can trust."
+################################################################################################################ -<
+enc_reformers.16.t: "Assassination attempt!"
+enc_reformers.16.d: "'Death to traitors!' An officer screams as he pulls out a Plasma pistol and opens fire. The first bolt misses completely and the second grazes your side. There is no third as the would be assassin is put down by security. You are alive, but even a graze from a Plasma bolt is a wound one carries to the grave. \n\n The attempt on your life has left you scarred, a burning reminder of how close the Enclave is to complete collapse."
+enc_reformers.16.a: "The time for patience is over."
+enc_reformers.16.b: "Keep this quiet."
+################################################################################################################ -<
+enc_reformers.17.t: "Unfortunate news!"
+enc_reformers.17.d: "Unfortunately, it appears some of our soldiers have taken up the practice of blasting a pre-war song on from their vertibirds during routine patrols. It does not need explaining how this behaviour is reckless and needlessly conspicuous. None the less, our popularity must be considered in these uncertain times."
+enc_reformers.17.a: "Crack down on this behaviour"
+enc_reformers.17.b: "Just ask them to turn it down"
+enc_reformers.17.c: "Just ask them to turn it UP"
+################################################################################################################ -<
+enc_reformers.18.t: "Music vault found!"
+enc_reformers.18.d: "During their efforts to clean up some of the smaller criminal organizations, Enclave soldiers have stumpled on a treasure trove of pre-war audiotapes. The vast majority of the tapes have survives and hold long lost tunes of the Old World, collected by a wealthy crime lord over the course of decades. The propagandic value of such a collection should not be underestimated as very little music is available to those within the Enclave. "
+enc_reformers.18.a: "Promote patriotic songs."
+enc_reformers.18.b: "Promote Old World nostalgia."
+enc_reformers.18.c: "Release the tapes freely."
+################################################################################################################ -<
+enc_reformers.19.t: "Fist fight breaks out!"
+enc_reformers.19.d: "A heated argument turned violent in the general staff cafetaria today. Unsuprisingly, the topic of the argument was the recent elections. Though many claim that he was prevoked, none deny that the person defending the Reformer cause threw the first punch. This normally insignficant issue is gathering a lot of attention and we have been asked to intervene. An ungrateful position to be in, since defending the aggressor would reflect badly on us, but condemning him would come across as a stab in the back to the most zealous reformers."
+enc_reformers.19.a: "Blame aggressor."
+enc_reformers.19.b: "Defend aggressor."
+enc_reformers.19.c: "Condemn both."
