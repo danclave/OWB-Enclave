@@ -95,7 +95,10 @@ ENC_raise_stability: "Call for Order"
 remember_rig: "Remember The Rig"
 remember_navarro: "Remember Navarro"
 anti_bos_propaganda: "Anti Brotherhood propaganda"
-########### SHIFTS ########################
+
+##############################
+# SHIFT POLICY 
+##############################
 extend_production_shifts: "Extend Production Shifts"
 extend_construction_shifts: "Extend Construction Shifts"
 extend_research_shifts: "Extend Research Shifts"
@@ -108,17 +111,28 @@ convert_command_power_desc: "In times of relative peace, it would be better to h
 command_power_max: "£command_power §Y100§!"
 command_power_max_blocked: "£command_power §R100§!"
 
-########### PRODUCTION ########################
+extend_administrative_shifts: "Extend Administrative Shifts"
+reduce_administrative_shifts: "Reduce Administrative Shifts"
+stability_5_or_more: "£stability_texticon §Y5§!"
+stability_5_or_more_blocked: "£stability_texticon §R5§!"
+
+##############################
+# PRODUCTION 
+##############################
 economy_decisions: "Economy Decisions"
 retool_machinery: "Retool Machinery"
 plunder_military_machinery: "Plunder Military Machinery"
 
-########### CLONING ########################
+##############################
+# CLONING 
+##############################
 build_cloning_facility: "Build cloning facility"
 cloning_experiment: "Cloning experiment"
 cloning_project: "Cloning project"
 
-########### POLITICAL INFIGHTING ########################
+##############################
+# POLITICAL INFIGHTING 
+##############################
 ENC_political_crisis: "§RPURISTS OUTNUMBER US!§!"
 ENC_reform_small_speech: "Hold Small Speech"
 ENC_reform_small_speech_desc: "Taking some time to remind everyone of why we took this path is a good way to strengthen our resolve and win more internal support."
@@ -151,8 +165,12 @@ ENC_arm_raiders_cost_blocked: "£enc_weapons_red  §R300§!"
 
 ENC_send_spies_cost: "£manpower_texticon  §Y100§!"
 ENC_send_spies_cost_blocked: "£manpower_texticon  §R100§!"
-#misc
+
+##############################
+# POLITICAL DECISIONS
+##############################
 ENC_remove_emergency_draft: "Remove Emergency Draft"
+
 ################ special codes for special people ################################################################################################################
 
 # y§Yyellow§!
