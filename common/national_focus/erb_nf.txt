@@ -1962,7 +1962,12 @@ focus_tree = {
 		y = 2
 		
 		available = { is_neighbor_of = BOS }
-		bypass = { has_war_with = BOS }
+		bypass = { 
+			NOT = {
+					country_exists = BOS
+			}
+		}
+
 		cost = 5.8 
 		will_lead_to_war_with = BOS
 		completion_reward = {
@@ -1982,7 +1987,14 @@ focus_tree = {
 		relative_position_id = enc_war_with_bos		
 		x = 1
 		y = 1
-
+		available = {
+			has_war_with = BOS
+		}
+		bypass = { 
+			NOT = {
+					country_exists = BOS
+			}
+		}
 		cost = 2.9 
 		completion_reward = {
 			add_war_support = 0.05
@@ -2337,6 +2349,11 @@ focus_tree = {
 		prerequisite = { focus = enc_poison_bear }
 		relative_position_id = enc_poison_bear
 		available = { has_war_with = NCR }
+		bypass = {
+			NOT = {
+				country_exists = NCR
+			}
+		}
 		x = -3
 		y = 1
 		cost = 2.9
@@ -2351,7 +2368,10 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_anti_ncr_propaganda }
 		relative_position_id = enc_anti_ncr_propaganda
-		available = { has_war_with = NCR } 
+		available = { 
+			has_war = yes
+			enemies_strength_ratio > 0.75
+		}
 		x = 0
 		y = 1
 		cost = 2.9
@@ -2366,7 +2386,10 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_extend_presidential_powers }
 		relative_position_id = enc_extend_presidential_powers
-		available = { has_war_with = NCR }
+		available = { 
+			has_war = yes
+			enemies_strength_ratio > 0.75
+		}
 		x = 1
 		y = 1
 		cost = 2.9
@@ -2385,6 +2408,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 2.9
+		available = { 
+			has_war = yes
+			enemies_strength_ratio > 0.75
+		}
 		completion_reward = {
 			add_stability = 0.10
 		}

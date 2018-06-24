@@ -13,10 +13,10 @@ ENC_call_remnants = {
 	}
 }
 ENC_reno = {
+	icon = category_enc_new_reno
 	allowed = {
 		original_tag = ERB
 	}
-	icon = category_saf_anti_colonialist_crusade #punching flags
 }
 ENC_radio_broadcasts = {
 	allowed = {
@@ -48,15 +48,15 @@ special_projects = {
 	allowed = {original_tag = ERB}
 }
 ENC_war_with_NCR = {
-	icon = generic_prepare_civil_war
+	icon = generic_prospect_for_resources
 	priority = { base = 10 }
 	allowed = {original_tag = ERB}
 }
 ENC_cloning = {
-	icon = generic_research
+	icon = category_enc_cloning
 	priority = 5
 	allowed = { original_tag = ERB }
-	visible = { has_completed_focus = enc_cloning }
+	# visible = { has_completed_focus = enc_cloning }
 }
 
 test_coring = {
@@ -65,7 +65,7 @@ test_coring = {
 
 ENC_NCR_hiding = {
 	icon = generic_crisis
-	priority = { base = 10 }
+	priority = { base = 15 }
 	allowed = {
 		tag = ERB
 	}
@@ -100,6 +100,16 @@ ENC_infiltrating_NCR = {
 	}
 	visible = {
 		has_completed_focus = enc_infiltrate_ncr
+	}
+}
+
+ENC_render_unto_caesar = {
+	icon = generic_crisis
+	priority = { base = 15 }
+	allowed = {
+		tag = ERB
+	}
+	visible = {
 	}
 }
 

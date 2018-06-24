@@ -118,4 +118,49 @@ spriteTypes = {
 			name = "decision_enc_cloning"
 			texturefile = "gfx/interface/icons/decision_enc_cloning.dds"
 		}
+		spriteType = {
+			name = "category_enc_new_reno"
+			texturefile = "gfx/interface/icons/decision_category_enc_new_reno.dds"
+		}
+		spriteType = {
+			name = "decision_enc_officer"
+			texturefile = "gfx/interface/icons/decision_enc_officer.dds"
+		}
+		
+		spriteType = {
+			name = "decision_enc_research_up"
+			texturefile = "gfx/interface/icons/decision_enc_research_up.dds"
+		}
+		spriteType = {
+			name = "decision_enc_production_up"
+			texturefile = "gfx/interface/icons/decision_enc_production_up.dds"
+		}
+		spriteType = {
+			name = "decision_enc_construction_up"
+			texturefile = "gfx/interface/icons/decision_enc_construction_up.dds"
+		}
+		spriteType = {
+			name = "decision_enc_research_down"
+			texturefile = "gfx/interface/icons/decision_enc_research_down.dds"
+		}
+		spriteType = {
+			name = "decision_enc_production_down"
+			texturefile = "gfx/interface/icons/decision_enc_production_down.dds"
+		}
+		spriteType = {
+			name = "decision_enc_construction_down"
+			texturefile = "gfx/interface/icons/decision_enc_construction_down.dds"
+		}
+		spriteType = {
+			name = "decision_enc_admin_up"
+			texturefile = "gfx/interface/icons/decision_enc_admin_up.dds"
+		}
+		spriteType = {
+			name = "decision_enc_admin_down"
+			texturefile = "gfx/interface/icons/decision_enc_admin_down.dds"
+		}
+		spriteType = {
+			name = "category_enc_cloning"
+			texturefile = "gfx/interface/icons/decision_category_enc_cloning.dds"
+		}
 }

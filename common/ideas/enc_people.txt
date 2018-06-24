@@ -4,7 +4,15 @@ ideas = {
 			cost = 200
 			allowed = {
 				original_tag = ERB
-			}		
+			}
+			available = {				
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						name = "Sergeant Dornan"
+					}
+				}
+			}
 			traits = {
 				drill_sargeant
 			}		
@@ -42,7 +50,6 @@ ideas = {
 			
 			allowed = {
 				original_tag = ERB
-				has_completed_focus = enc_reform
 			}		
 			traits = { 
 				reformer_2

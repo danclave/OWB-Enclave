@@ -466,6 +466,10 @@ spriteTypes = {
         SpriteType = {#enc_education
             name = "GFX_idea_enc_education"
  		    texturefile = "gfx/interface/ideas/enc_education.dds"
+ 	    }  
+        SpriteType = {#enc_idea_super_soldiers
+            name = "GFX_idea_super_soldiers"
+ 		    texturefile = "gfx/interface/ideas/enc_idea_super_soldiers.dds"
  	    } 
         SpriteType = {#enc_ew_production
             name = "GFX_idea_enc_ew_production"

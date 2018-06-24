@@ -214,7 +214,7 @@ country_event = {#15 - DOUGLAS DESERTS
 	}
 }
 
-country_event = {#16 - NCR is unaware
+country_event = {#16 - In the Lair of the Bear
 	id = enc.16
 	title = enc.16.t
 	desc = enc.16.d
@@ -317,7 +317,7 @@ country_event = { #20 - Disloyalty
 	
 	trigger = {
 		has_completed_focus = enc_purity
-		noT = {
+		NOT = {
 			has_completed_focus = enc_purge_opposition
 		}
 	}
@@ -344,44 +344,44 @@ country_event = { #21 - unlicensed mutie hunt
 	picture = GFX_event_ENC_assault_team
 	fire_only_once = no
 	is_triggered_only = yes # first time triggered by other event
+	immediate = {
+		add_to_variable = { var = ENC_hiding_cost value = 10}	
+	}
 
 	option = { # Punish
 		name = enc.21.a
-		custom_effect_tooltip = enc.21.tt
+		custom_effect_tooltip = ncr_suspicion_plus_10
 		add_manpower = -100
 		add_stability = -0.05
 		add_war_support = -0.10
-		add_to_variable = { var = ENC_hiding_cost value = 15}
 		custom_effect_tooltip = wont_happen_again
 	}
 	option = { # threaten
 		name = enc.21.b
-		custom_effect_tooltip = enc.21.tt
+		custom_effect_tooltip = ncr_suspicion_plus_10
 		add_war_support = -0.05
 		add_political_power = -20
 		custom_effect_tooltip = enc.21.b.tt
-		add_to_variable = { var = ENC_hiding_cost value = 15}
 		hidden_effect = { # it happens again eventually
 			country_event = { days = 300 id = enc.21 }
 		}
 	}
 	option = { # ignore
-		custom_effect_tooltip = enc.21.tt
 		name = enc.21.c
+		custom_effect_tooltip = ncr_suspicion_plus_10
 		add_popularity = { ideology = elites popularity = 0.05 }
 		add_war_support = 0.10
-		# increase NCR suspicion?
 		hidden_effect = { # it happens again quickly
 			country_event = { days = 150 id = enc.21 }
 		}
 		custom_effect_tooltip = enc.21.c.tt
-		add_to_variable = { var = ENC_hiding_cost value = 15}
 	}
 	option = { # respected by soldiers / inspirational
-		trigger = {
-			# has_country_flag = leader_inspiring
-		}
 		name = enc.21.dd
+		trigger = {
+			has_country_flag = leader_inspiring
+		}
+		custom_effect_tooltip = ncr_suspicion_plus_10
 		add_political_power = -20
 		custom_effect_tooltip = available_because_inspiring
 		custom_effect_tooltip = wont_happen_again
@@ -474,6 +474,7 @@ country_event = { #25 - FEV encountered
 	
 	option = { # Bring only pure sample
 		name = enc.25.a
+		add_political_power = 25
 	}
 	option = { # Bring whatever we can carry
 		# only available if resourceful?
@@ -582,7 +583,7 @@ country_event = { #30 - Fall of Sack city
 	
 	trigger = {
 		tag = ERB
-		has_full_control_of_state = 135 # Sac City
+		has_control_of_state = 135 # Sac City
 	}
 	mean_time_to_happen = {
 		days = 2
@@ -605,7 +606,7 @@ country_event = { #31 - Fall of Shady Sands
 	
 	trigger = {
 		tag = ERB
-		has_full_control_of_state   = 253 # Shady Sands
+		has_control_of_state   = 253 # Shady Sands
 	}
 	mean_time_to_happen = {
 		days = 2
@@ -664,7 +665,7 @@ country_event = { #33 - Crimson Caravan Encounter
 		}
 	}
 	mean_time_to_happen = {
-		days = 300
+		days = 400
 	}
 	option = { # let them go
 		name = enc.33.a		
@@ -697,7 +698,7 @@ country_event = { #34 - remnants of Sack city
 	
 	trigger = {
 		tag = ERB
-		has_full_control_of_state   = 135 # Sac City
+		has_control_of_state   = 135 # Sac City
 	}
 	mean_time_to_happen = {
 		days = 30
@@ -720,7 +721,7 @@ country_event = { #35 - remnants of Shady Sands
 	
 	trigger = {
 		tag = ERB
-		has_full_control_of_state   = 253 # Shady Sands
+		has_control_of_state   = 253 # Shady Sands
 	}
 	mean_time_to_happen = {
 		days = 30
@@ -743,7 +744,7 @@ country_event = { #36 - remnants of the boneyard
 	
 	trigger = {
 		tag = ERB
-		has_full_control_of_state   = 350 # Shady Sands
+		has_control_of_state   = 350 # Shady Sands
 	}
 	mean_time_to_happen = {
 		days = 30
@@ -767,7 +768,7 @@ country_event = { #37 - Vengeance against Arroyo
 	
 	trigger = {
 		tag = ERB
-		has_full_control_of_state   = 337 # Shady Sands
+		has_control_of_state   = 337 # Shady Sands
 	}
 	mean_time_to_happen = {
 		days = 3
@@ -897,6 +898,30 @@ country_event = { #41 - NCR finds out
 	}
 }
 
+country_event = {#42 - On the border of the bull
+	id = enc.42
+	title = enc.42.t
+	desc = enc.42.d
+	picture = GFX_event_ENC_secret
+	
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {	
+		tag = ERB 
+		is_neighbor_of = CES
+		strength_ratio = {
+			tag = CES
+			ratio = 1
+		}
+	}
+	mean_time_to_happen = {	days = 30 }	
+	
+	
+	option = {#Better be careful
+		name = enc.42.a
+		set_country_flag = ENC_CES_hostile
+	}
+}
 #################
 ## IDEAS
 #################

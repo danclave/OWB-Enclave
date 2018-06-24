@@ -219,7 +219,7 @@ country_event = {#9 - Purist sympathies
 		add_political_power = 50
 	}
 }
-country_event = {#10 - Disloyalty
+country_event = {#10 - Disloyalty - WIP
 	id = enc_reformers.10
 	title = enc_reformers.10.t
 	desc = enc_reformers.10.d
@@ -227,8 +227,8 @@ country_event = {#10 - Disloyalty
 	fire_only_once = no
 	
 	trigger = {
-		has_completed_focus = enc_purity
-		noT = {
+		has_completed_focus = enc_reform
+		not = {
 			has_completed_focus = enc_purge_opposition
 		}
 	}

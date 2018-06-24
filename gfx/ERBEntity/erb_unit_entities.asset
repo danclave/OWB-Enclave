@@ -1,0 +1,44 @@
+#### INFANTRY
+##################
+###ERB INFANTRY
+##################
+entity = { 
+	clone = "owb_infantry_entity"
+	name = "ERB_infantry_entity"
+	pdxmesh = "ERB_infantry_rifle_mesh"	
+	scale = 0.8
+}
+
+####	ERB Power Armor		####
+################################
+entity = {
+	name = "ERB_power_armour_entity"
+	pdxmesh = "ERB_powerarmor_t51_mesh"
+	
+	default_state = "idle"
+	state = { name = "attack" 	
+		animation = "attack" 
+		animation_blend_time = 0.0  
+		animation_speed = 1.0 
+		looping = no 
+		next_state = "attack" 
+		chance = 2 }
+
+	state = { name = "attack"			animation = "attack2" animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 }
+	state = { name = "defend"			animation="shoot" }
+	state = { name = "support_attack"	animation="shoot"}
+	state = { name = "move"				animation = "move" 	animation_blend_time = 0.0 animation_speed = 1.0}
+	state = { name = "retreat"		animation="move" }
+	state = { name = "death"		}
+	state = { name = "idle" animation="idle1" chance = 6 looping=no}
+	state = { name = "idle" animation ="idle2" chance = 3 next_state="idle1"}
+	state = { name = "idle" animation ="idle3" chance = 1 next_state="idle1"}
+	state = { name = "training"	 }
+	
+	####These attachments are called inside the state = {} to change the bone the weapon is attached to. ex: back, hands
+	#attach = { 	name = "rifle1"	Right_Hand_node = "laser_rifle_entity" }
+	#attach = { 	name = "rifle2"	hand_l = "laser_rifle_entity" }
+	attach = { 	name = "rifle2"	hand_l = "infantry_conventional_gun_entity" }
+	#attach = { 	name = "rifle3"	Root = "laser_rifle_entity" }
+				
+}

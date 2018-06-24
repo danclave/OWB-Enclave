@@ -50,6 +50,8 @@ soundeffect =
         sound = ERB_Combat_02
         sound = ERB_Combat_03
 		sound = ERB_Combat_04
+		sound = ERB_Winning_04
+        sound = ERB_Winning_05
     }
 	max_audible = 1
 	max_audible_behaviour = fail

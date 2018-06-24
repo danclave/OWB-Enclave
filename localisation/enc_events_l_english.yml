@@ -129,7 +129,6 @@ enc.20.a: "Make a show of finding and punishing the man"
 enc.20.b: "We have more important matters to attend to"
 ################################################################################################################ -<
 enc.21.t: "Unlicensed Mutie Hunt"
-enc.21.tt: "\n§YHide Activities§! from §YNCR§! cost increased by £pol_power §R15§!\n"
 enc.21.d: "It appears one of our Vertibird Assault Teams is going out of their way to inflict collatoral damage on mutants during their patrols, going as far as tallying a count on their vertibird. While their actions could risk the Operational Security of the Enclave, punishing them may prove an unpopular move considering our current stance on mutants."
 enc.21.a: "Make examples of them"
 enc.21.b: "Threaten court martial"
@@ -178,7 +177,7 @@ enc.28.d: "It appears that the base is in even worse shape than when we left it.
 enc.28.a: "Let's go"
 ################################################################################################################ -<
 enc.30.t: "The Fall of Sac City"
-enc.30.d: "Once the beautiful city of Sacramento is now a ruin, occupied by mutant squatters. Its liberation is a great victory for the Enclave and America"
+enc.30.d: "Once the beautiful city of Sacramento is now a ruin, occupied by mutant squatters. Its liberation is a great victory for the Enclave and America. We have even managed to free some of our long lost brothers and sisters from the mutant's prisons."
 enc.30.a: "For the Enclave!"
 ################################################################################################################ -<
 enc.31.t: "The Fall of Shady Sands"
@@ -234,18 +233,10 @@ enc.41.d: "It appears our worst fears have materialized themselves. The disappea
 enc.41.a: "No time to waste, declare war!"
 enc.41.b: "We must prepare outself!"
 ################################################################################################################ -<
-enc.42.t: "traitors in the Officers Corps!"
-enc.42.d: "Our recent "
-enc.42.a: "We will have to deal with them later"
-################################################################################################################ -<
-enc.43.t: "traitors amung our scientists!"
-enc.43.d: ""
-enc.43.a: "We will have to deal with them later"
-################################################################################################################ -<
-enc.44.t: "Preparing our speech"
-enc.44.d: "Tensions have been high since the elections. It appears support for the Purists has only intensified as a result, especially in the upper echelons of our government. To address this situation, we have collected all those with grievences towards the new US government into one room. They are awaiting answers from their new president, so you prepare..."
-enc.44.a: "your speech."
-enc.44.b: "shaped explosives."
+enc.42.t: "On the Borders of the Bear"
+enc.42.d: "TODO: "
+enc.42.a: "Out of the frying pan..."
+
 ################################################################################################################ -<
 enc.45.t: "Anderson Holds a Speech"
 enc.45.d: "Despite his near defeat in the recent elections, Franklin Anderson has been working tirelessly to rouse his supporters against the new administration. Though he carefully chooses his words to avoid anything openly treasonous, most believe the only real reason he is alive and allowed to speak is that his numerous supporters may be driven to open revolt otherwise."

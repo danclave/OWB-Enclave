@@ -36,9 +36,8 @@ enc_cloning_tt: "Unlocks the §YCloning Experiment§! decision."
 has_cloning_facility_occupied_flag: "- that is not in use"
 has_cloning_facility_flag: "Has cloning facility"
 
-ENC_setting_examples_purity:0 "Set some examples"
-ENC_setting_examples_reform:0 "Crackdown"
-ENC_setting_examples_reform_desc:0 "With a combination of demotions, banishment and outright executions we can openly get rid of the worst traitors among us, at the cost of internal stability and our conscious."
+ENC_setting_examples:0 "Crackdown"
+ENC_setting_examples_desc:0 "With a combination of demotions, banishment and outright executions we can openly get rid of the worst traitors among us, at the cost of internal stability and our conscious."
 
 ENC_field_veterans: "Field the Veterans ([?Root.enc_veterans_var]/3)"
 enc_call_veterans_tt: "Two divisions of §YEnclave Veterans§! hiding in §YNew Reno§! return to the Enclave.\n\nUnlocks 3 §YField Veterans§! decision uses.\nThis allows you to field §YEnclave Veterans§! at the cost of £manpower_texticon §YManpower§!\n§RThey still have to be equipped afterwards!§!"
@@ -55,7 +54,7 @@ more_rations: "Increase Rations"
 ##############################
 # War with the NCR
 ##############################
-ENC_war_with_NCR: "War with the NCR"
+ENC_war_with_NCR: "New California Republic"
 
 dump_fev_ranch: "Dump the Dirty FEV"
 recover_beale_air_force_base: "Secure the Beale Air Force Base"
@@ -134,15 +133,18 @@ cloning_project: "Cloning project"
 # POLITICAL INFIGHTING 
 ##############################
 ENC_political_crisis: "§RPURISTS OUTNUMBER US!§!"
-ENC_reform_small_speech: "Hold Small Speech"
-ENC_reform_small_speech_desc: "Taking some time to remind everyone of why we took this path is a good way to strengthen our resolve and win more internal support."
+
+ENC_small_speech: "Hold Small Speech"
+ENC_small_speech_desc: "Taking some time to remind everyone of why we took this path is a good way to strengthen our resolve and win more internal support."
+
+ENC_arrange_disappearance: "Arrange Disappearance"
+ENC_arrange_disappearance_desc: "Accidents happen all the time. More so to those openly opposed to our decisions, but no one can prove that."
+
 ENC_reform_replace_officers: "Demote Purist Officers"
 ENC_reform_replace_officers_desc: "While the top brass is still out of our reach, we could carefully expand our influence by replacing the more outspoken Purists in the lower officer ranks with their more loyal colleagues."
 ENC_reform_replace_scientists: "Demote Purist Scientists"
 ENC_reform_replace_scientists_desc: "While the top brass is still out of our reach, we could carefully expand our influence by replacing the more outspoken Purists in the lower scientific ranks with their more loyal colleagues."
 
-ENC_reform_arrange_disappearance: "Arrange Disappearance"
-ENC_reform_arrange_disappearance_desc: "Accidents happen all the time. More so to those openly opposed to our decisions, but no one can prove that."
 ENC_reform_wild_promises: "Wild Promises"
 ENC_reform_wild_promises_desc: "If all else fails, wild yet vague promises can buy us time. But in the long run they will hurt our credibility."
 

@@ -77,17 +77,6 @@ create_country_leader  = {
 	traits = {}
 }
 
-create_country_leader = {
-	name = "Cristina Warren"
-	desc = "POLITICS_WARREN_DESCRIPTION"
-	picture = "united_states_leader.dds"
-	expire = "2042.3.7"
-	ideology = liberalism
-	traits = {
-	}
-}
-
-
 create_country_leader  = {
 	name = "Douglas Granite"
 	desc = "Granite_desc"
@@ -99,7 +88,7 @@ create_country_leader  = {
 
 create_country_leader = {
 	name = "Sergeant Dornan"
-	desc = "Dornan_DESC"
+	desc = Dornan_DESC
 	picture = "gfx/leaders/portrait_sarge.dds"
 	expire = "3000.1.1"
 	ideology = benevolent_dictatorship			
@@ -133,9 +122,9 @@ every_country = {
 }
 			
 # IDEAS
+add_ideas = ENC_infighting
 add_ideas = enc_scientists
 add_ideas = ENC_officers
 add_ideas = closed_economy
-add_ideas = ENC_infighting
 
 #DOM protection - do not remove

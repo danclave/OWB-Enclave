@@ -128,7 +128,7 @@ ENC_infiltrating_NCR = {
 ###############################
 ENC_shifts = {
 	extend_production_shifts = {	#increased production for reduced war support
-		icon = generic_industry
+		icon = decision_enc_production_up
 		cost = 25
 		days_remove = 56 # 8 weeks
 		days_re_enable = 2
@@ -143,7 +143,7 @@ ENC_shifts = {
 		}
 	}
 	extend_construction_shifts = {	#increased construction + repair for reduced war support
-		icon = generic_construction
+		icon = decision_enc_construction_up
 		cost = 25
 		days_remove = 56 # 8 weeks
 		days_re_enable = 2
@@ -154,11 +154,11 @@ ENC_shifts = {
 		modifier = {
 			war_support_weekly = -0.01125 #1,125% per week
 			production_speed_buildings_factor = 0.3
-			industry_repair_factor = 0.5
+			industry_free_repair_factor = 0.5
 		}
 	}
 	extend_research_shifts = {		#increased research for reduced war support
-		icon = generic_research
+		icon = decision_enc_research_up
 		cost = 25
 		days_remove = 56 # 8 weeks
 		days_re_enable = 2
@@ -172,10 +172,13 @@ ENC_shifts = {
 		}
 	}
 	extend_administrative_shifts = {      #reduced research for increased war support
-		icon = generic_decision
+		icon = decision_enc_admin_up
 		custom_cost_text = stability_5_or_more
 		custom_cost_trigger = {
 			has_stability > 0.05
+		}
+		available = {
+			NOT = { has_decision = reduce_administrative_shifts }
 		}
 		days_remove = 56 # 8 weeks
 		days_re_enable = 30
@@ -188,7 +191,7 @@ ENC_shifts = {
 	}
 
 	reduce_production_shifts = {	#reduced production for increased war support
-		icon = generic_industry
+		icon = decision_enc_production_down
 		cost = 25
 		days_remove = 56 # 8 weeks
 		
@@ -204,7 +207,7 @@ ENC_shifts = {
 		}
 	}
 	reduce_construction_shifts = {	#reduced construction + repair for increased war support
-		icon = generic_construction
+		icon = decision_enc_construction_down
 		cost = 25
 		days_remove = 56 # 8 weeks
 		days_re_enable = 30
@@ -221,7 +224,7 @@ ENC_shifts = {
 		}
 	}
 	reduce_research_shifts = {      #reduced research for increased war support
-		icon = generic_research
+		icon = decision_enc_research_down
 		cost = 25
 		days_remove = 56 # 8 weeks
 		days_re_enable = 30
@@ -237,13 +240,16 @@ ENC_shifts = {
 		}
 	}
 	reduce_administrative_shifts = {      #reduced research for increased war support
-		icon = generic_decision
+		icon = decision_enc_admin_down
 		cost = 100
+		available = {
+			NOT = { has_decision = extend_administrative_shifts }
+		}
 		days_remove = 56 # 8 weeks
 		days_re_enable = 30
 
 		modifier = {
-			stability_weekly = +0.0225 #total = 10%
+			stability_weekly = +0.0225 #total = 10 %
 		}
 	}
 }
@@ -306,7 +312,7 @@ ENC_reno = {
 }
 ENC_radio_broadcasts = {
 	ENC_raise_war_support = {
-		icon = decisions_enc_propaganda
+		icon = decision_enc_propaganda
 		cost = 75		
 		visible = {	
 			has_war_support < 0.5
@@ -324,6 +330,7 @@ ENC_radio_broadcasts = {
 	}
 	ENC_raise_stability = {
 		cost = 75
+		icon = decision_enc_propaganda
 		visible = {	
 			has_stability < 0.5
 			NOT = { has_decision = ENC_raise_war_support }
@@ -800,7 +807,7 @@ ENC_political_infighting = {
 # CRISIS
 	ENC_political_crisis = {
 		icon = revolt
-		priority = 200
+		priority = 35
 		activation = {			
 			has_completed_focus = enc_reform
 			intellectuals < party_popularity@elites
@@ -817,31 +824,13 @@ ENC_political_infighting = {
 			# good stuff?
 		}
 	}
-	ENC_setting_examples_purity = {
-		icon = GFX_decision_oppression
-		allowed = { tag = ERB }
-		cost = 50
-		days_remove = 5
-		visible = {
-			intellectuals > 0.2
-			has_completed_focus = enc_purity
-		}		
-		complete_effect = {
-		   add_manpower = -100
-		   add_stability = -0.05
-		   add_popularity = { ideology = intellectuals popularity = -0.05 }
-		   add_popularity = { ideology = elites popularity = 0.10 } 
-		}
-		days_re_enable = 10
-	}
-	ENC_setting_examples_reform = {
+	ENC_setting_examples = {
 		icon = GFX_decision_oppression
 		cost = 75
 		priority = 100
 		allowed = { tag = ERB }
 		visible = {
-			elites > 0.2
-			has_completed_focus = enc_reform
+			has_idea = ENC_infighting
 		}
 		available = {
 			has_country_flag = enc_crackdown_justified
@@ -849,10 +838,29 @@ ENC_political_infighting = {
 			has_stability > 0.10
 		}
 		complete_effect = {
-			add_manpower = -100
-			add_stability = -0.10
-			add_popularity = { ideology = elites popularity = -0.10 }
-			add_popularity = { ideology = intellectuals popularity = 0.05 }
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					has_completed_focus = enc_reform					
+				}				
+				add_manpower = -100
+				add_stability = -0.10
+				add_popularity = { ideology = elites popularity = -0.10 }
+				add_popularity = { ideology = intellectuals popularity = 0.05 }
+				add_manpower = -1
+				
+				else = {
+					limit = {
+						has_completed_focus = enc_purity					
+					}				
+					add_manpower = -100
+					add_stability = -0.10
+					add_popularity = { ideology = intellectuals popularity = -0.10 }
+					add_popularity = { ideology = elites popularity = 0.05 }
+					add_manpower = -1
+				}
+			}
 		}
 		days_re_enable = 30
 	}
@@ -898,36 +906,53 @@ ENC_political_infighting = {
 			add_popularity = { ideology = elites popularity = -0.10 }
 		}
 	}
-	ENC_reform_small_speech= {
-		icon = GFX_decision_generic_nationalism
+	ENC_small_speech= {
+		icon = decision_enc_propaganda
 		cost = 50
 		priority = 50
 		allowed = { tag = ERB }
 		visible = {
-			elites > 0.2
-			has_completed_focus = enc_reform
-		}
-		available = {
+			has_idea = ENC_infighting
 		}
 		complete_effect = {
-			add_popularity = { ideology = intellectuals popularity = 0.03 }
+			if = {
+				limit = {
+					has_completed_focus = enc_reform					
+				}
+				add_popularity = { ideology = intellectuals popularity = 0.03 }
+				else = {
+					limit = {
+						has_completed_focus = enc_purity					
+					}
+					add_popularity = { ideology = elites popularity = 0.03 }
+				}
+			}
 		}
 		days_re_enable = 60
 	}
-	ENC_reform_arrange_disappearance= {
+	ENC_arrange_disappearance= {
 		icon = decision_enc_skull
 		cost = 50
 		priority = 50
 		allowed = { tag = ERB }
 		visible = {
-			elites > 0.2
-			has_completed_focus = enc_reform
-		}
-		available = {
+			has_idea = ENC_infighting
 		}
 		complete_effect = {
-			add_popularity = { ideology = elites popularity = -0.03 }
-			add_manpower = -1
+			if = {
+				limit = {
+					has_completed_focus = enc_reform					
+				}
+				add_popularity = { ideology = elites popularity = -0.03 }
+				add_manpower = -1
+				else = {
+					limit = {
+						has_completed_focus = enc_purity					
+					}
+					add_popularity = { ideology = intellectuals popularity = -0.03 }
+					add_manpower = -1
+				}
+			}
 		}
 		days_re_enable = 60
 	}
@@ -972,6 +997,7 @@ political_actions = {
 }
 operations = {
 	convert_command_power = {      #reduced research for increased war support
+		icon = decision_enc_officer
 		allowed = {
 			original_tag = ERB
 		}
@@ -981,7 +1007,6 @@ operations = {
 		custom_cost_trigger = {
 			command_power > 99
 		}
-		icon = GFX_decision_generic_army_support
 		
 		complete_effect = {
 			hidden_effect = {add_command_power = -100}
@@ -995,6 +1020,9 @@ war_measures = {
 	less_rations = {
 		icon = generic_industry
 		cost = 25
+		allowed = {
+			tag = ERB
+		}
 		days_remove = 56 # 8 weeks
 		days_re_enable = 2
 		available = {
@@ -1009,6 +1037,9 @@ war_measures = {
 	more_rations = {
 		icon = generic_industry
 		cost = 25
+		allowed = {
+			tag = ERB
+		}
 		days_remove = 56 # 8 weeks
 		days_re_enable = 2
 		available = {
@@ -1028,6 +1059,7 @@ war_measures = {
 ###############################
 ENC_call_remnants = {
 	ENC_calling_the_remnants = {
+		priority = 1	
 		icon = GFX_decision_enc_helmet
 		allowed = { 
 			tag = ERB
@@ -1081,7 +1113,7 @@ ENC_call_remnants = {
 }
 ENC_cloning = {
 	cloning_project = {
-		icon = generic_research
+		icon = decision_enc_cloning
 		cost = 50
 		
 		visible = {
@@ -1117,7 +1149,7 @@ ENC_cloning = {
 		}
 	}
 	cloning_experiment = {
-		icon = generic_research
+		icon = decision_enc_cloning
 		cost = 50
 		
 		visible = {
@@ -1220,7 +1252,7 @@ ENC_cloning = {
 		}
 	}	
 	build_cloning_facility = {
-		icon = generic_industry
+		icon = generic_construction
 		cost = 200
 		
 		available = {
@@ -1299,7 +1331,60 @@ ENC_rangers = {
 		}
 	}
 }
-	
+ENC_render_unto_caesar = {
+	test = {
+		icon = generic_scorched_earth
+		cost = 25
+		fire_only_once = YES
+		available = {
+			strength_ratio = { tag = CES ratio < 0.5 }
+		}
+		complete_effect = {
+
+		}
+	}
+	CES_crisis = {
+		icon = generic_break_treaty
+		priority = 30
+		activation = {
+			has_country_flag = ENC_CES_hostile
+			NOT = {
+				CES = {
+					OR = {
+						exists = NO
+						has_civil_war = YES
+						has_war_with = ERB #Enclave
+					}
+				}
+			}
+		}
+		available = {
+			OR = {
+				NOT = { has_country_flag = ENC_CES_hostile }
+			}
+		}
+		cancel_trigger = {
+			CES = {
+				OR = {
+					exists = NO
+					has_civil_war = YES
+					has_war_with = ERB #Enclave
+				}
+			}
+		}
+		is_good = NO
+		days_mission_timeout = 300
+		timeout_effect = {
+			CES = {
+				country_event = { id = enc.41 } # todo: change
+			}
+			clr_country_flag = ENC_CES_hostile
+		}
+		complete_effect = {
+			# ???
+		}
+	}
+}	
 ###############################
 # ICONS
 ###############################

@@ -602,6 +602,7 @@ calling_the_remnants_tt: "Allows you to spend £pol_power §YPolitical Power§! 
 ENC_setting_examples_purity:0 "Set some examples"
 ENC_setting_examples_reform:0 "Set some examples"
 
+ncr_suspicion_plus_10:0 "§YNCR suspicion§! is increased by £pol_power §R10§!\n"
 ################ special codes for special people ################################################################################################################
 
 # yellow§Ytext§!
