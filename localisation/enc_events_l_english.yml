@@ -224,8 +224,8 @@ enc.38.d: "It appears that our agenda of exterminating the mutant menace makes i
 enc.38.a: "Good idea"
 enc.38.b: "No need"
 ################################################################################################################ -<
-enc.39.t: "FEV plague weakened"
-enc.39.d: "Mister President, we've received word that the effects of our biological agent is lower than our field tests suggested. It appears a mutation in the strain has reduced its lethality."
+enc.39.t: "FEV plague weakens"
+enc.39.d: "Mister President, we've received word that the effects of our biological agent is lower than our field tests suggested. It appears a mutation in the strain has reduced its lethality. Our scientists claim that interaction between our virus and the corrupted genes of the wasteland mutants was unpredictable at best. We should act fast and push our advantage before the strain mutates further."
 enc.39.a: "No matter."
 ################################################################################################################ -<
 enc.41.t: "The Enclave Rumors are True!"
@@ -234,9 +234,9 @@ enc.41.a: "No time to waste, declare war!"
 enc.41.b: "We must prepare outself!"
 ################################################################################################################ -<
 enc.42.t: "On the Borders of the Bear"
-enc.42.d: "TODO: "
+enc.42.d: "With the NCR and its allies vanquished, we are able to catch our breath. Though we fear our victory may be short lived. Our borders now connect us to a horde of mutants perhaps more terrible than any of our old enemies. Caesar's Legion, a parody of pre-war history, defiles our soil with their very existence. It is only a matter of time before their dictator understands the true nature of our goals and once more we will meet a mutant menace on the battlefield."
 enc.42.a: "Out of the frying pan..."
-
+enc.42.a.tt: "§YCaesar's Legion§! will declare war in §R3 years§!"
 ################################################################################################################ -<
 enc.45.t: "Anderson Holds a Speech"
 enc.45.d: "Despite his near defeat in the recent elections, Franklin Anderson has been working tirelessly to rouse his supporters against the new administration. Though he carefully chooses his words to avoid anything openly treasonous, most believe the only real reason he is alive and allowed to speak is that his numerous supporters may be driven to open revolt otherwise."

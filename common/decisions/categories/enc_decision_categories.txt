@@ -3,7 +3,7 @@
 ###############################
 
 ENC_shifts = {
-	icon = category_generic_political_actions
+	icon = category_enc_shift
 	allowed = {original_tag = ERB}
 }
 ENC_call_remnants = {
@@ -37,7 +37,7 @@ ENC_political_actions = {
 	allowed = {original_tag = ERB}
 }
 ENC_rangers = {
-	icon = generic_army_support
+	icon = category_enc_rangers
 	allowed = {original_tag = ERB}
 	available = {
 		has_war_with = DES
@@ -48,7 +48,7 @@ special_projects = {
 	allowed = {original_tag = ERB}
 }
 ENC_war_with_NCR = {
-	icon = generic_prospect_for_resources
+	icon = category_enc_anti_ncr
 	priority = { base = 10 }
 	allowed = {original_tag = ERB}
 }

@@ -509,6 +509,9 @@ ENC_plague_desc:0 "The Enclave has unleashed a bio weapon of unseen proportion o
 ENC_plague_2:0 "FEV Plague"
 ENC_plague_2_desc:0 "The Enclave has unleashed a bio weapon of unseen proportion on our population. Our only hope is to take the antidote from them by force!"
 
+ENC_plague_3:0 "FEV Plague"
+ENC_plague_3_desc:0 "The Enclave has unleashed a bio weapon of unseen proportion on our population. Our only hope is to take the antidote from them by force!"
+
 
 ENC_infighting:0 "Political Infighting"
 ENC_infighting_desc:0 "Polarization between the two mayor factions in the Enclave government has come to a boiling point."

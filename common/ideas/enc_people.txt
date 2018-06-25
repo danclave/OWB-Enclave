@@ -140,6 +140,7 @@ ideas = {
 			}
 		}
 		norman_wood = {
+			picture = generic_army_europe_1
 			allowed = {
 				tag = ERB  
 			}

@@ -14,7 +14,7 @@ ENC_infiltrating_NCR = {
 			has_completed_focus = enc_stage_raider_attacks
 		}
 		available = {
-			has_country_flag = enc_ncr_spies
+			has_country_flag = enc_ncr_spies 
 			has_equipment = {
 				infantry_equipment > 299
 			}
@@ -183,7 +183,7 @@ ENC_shifts = {
 		days_remove = 56 # 8 weeks
 		days_re_enable = 30
 		complete_effect = {
-			add_political_power = 100
+			add_political_power = 75
 		}
 		modifier = {
 			stability_weekly = -0.01125 #total = 5%
@@ -345,11 +345,13 @@ ENC_radio_broadcasts = {
 		days_re_enable = 30
 	}
 	anti_ncr_propaganda = { #increased war support and damage against NCR
+		icon = decision_enc_propaganda
 		cost = 75
 		days_remove = 28 # 4 weeks
 		days_re_enable = 90
 		visible = {
 			has_completed_focus = enc_anti_ncr_propaganda
+			country_exists = NCR
 		}
 		available = {
 			has_war_with = NCR          # At war with NICR		
@@ -359,10 +361,12 @@ ENC_radio_broadcasts = {
 		}
 	}
 	remember_rig = { #increased war support and damage against NCR
+		icon = decision_enc_propaganda
 		cost = 75
 		fire_only_once = yes
 		visible = {			
 			has_completed_focus = enc_anti_ncr_propaganda
+			country_exists = NCR
 		}
 		available = {
 			has_war_with = NCR          # At war with NCR
@@ -373,10 +377,12 @@ ENC_radio_broadcasts = {
 		}
 	}
 	remember_navarro = { #increased war support and damage against NCR
+		icon = decision_enc_propaganda
 		cost = 75
 		fire_only_once = yes
 		visible = {
 			has_completed_focus = enc_anti_ncr_propaganda
+			country_exists = NCR
 		}
 		available = {
 			has_war_with = NCR          # At war with NICR
@@ -387,10 +393,12 @@ ENC_radio_broadcasts = {
 		}
 	}
 	anti_bos_propaganda = { #increased war support and damage against NCR
+		icon = decision_enc_propaganda
 		cost = 75
 		fire_only_once = yes
 		visible = {
 			has_completed_focus = enc_anti_bos_propaganda
+			country_exists = BOS
 		}
 		available = {
 			has_war_with = BOS          # At war with NICR
@@ -400,140 +408,6 @@ ENC_radio_broadcasts = {
 		}
 	}
 
-}
-ENC_war_with_NCR = {
-	dump_fev_ranch = {
-		cost = 10
-		fire_only_once = yes 
-		visible = {
-			has_country_flag = enc_dirty_FEV_flag
-		}
-		
-		available = {
-			has_war_with = NCR
-			controls_state  = 543 # Marysville ranch
-		}
-		
-		days_remove = 20
-		remove_effect = {
-			NCR = { add_timed_idea  = { idea = ENC_water_contaminated days = 50 }}
-			clr_country_flag = enc_dirty_FEV_flag
-		}
-	}
-	recover_beale_air_force_base  = {
-		cost = 10
-		fire_only_once = yes 
-		visible = {
-			has_completed_focus = enc_reclaim_cashes
-		}
-		highlight_states = { state = 543 }
-		available = {
-			controls_state  = 543 # Marysville ranch
-			divisions_in_state = { size > 0 state = 543 }
-		}
-		
-		days_remove = 20
-		remove_effect = {
-			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 300 producer = ERB }
-			add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 300 producer = ERB }
-		}
-	}
-	recover_edwards_air_force_base  = {
-		cost = 10
-		fire_only_once = yes 
-		visible = {
-			has_completed_focus = enc_reclaim_cashes
-		}
-		highlight_states = { state = 19 }
-		available = {
-			controls_state  = 19 # Saint Gabrielle 
-			divisions_in_state = { 
-				state = 19
-				size > 0
-			}
-		}
-		
-		days_remove = 20
-		remove_effect = {
-			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 300 producer = ERB }
-			add_equipment_to_stockpile = { type = power_armor_equipment_3 amount = 500 producer = ERB }
-		}
-	}
-	recover_los_angeles_air_force_base  = {
-		cost = 10
-		fire_only_once = yes 
-		visible = {
-			has_completed_focus = enc_reclaim_cashes
-		}
-		highlight_states = { state = 350 }
-		available = {
-			controls_state  = 350 # The boneyard
-			divisions_in_state = { size > 0  state = 350}
-		}
-		
-		days_remove = 20
-		remove_effect = {
-			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 200 producer = ERB }
-			add_equipment_to_stockpile = { type = fighter_equipment_3 amount = 300 producer = ERB }
-			add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 400 producer = ERB }
-		}
-	}
-	recover_march_air_reserve_base  = {
-		cost = 10
-		fire_only_once = yes 
-		visible = {
-			has_completed_focus = enc_reclaim_cashes
-		}
-		highlight_states = { state = 591 }
-		available = {
-			controls_state  = 591 # Diana Point
-			divisions_in_state = { size > 0 state = 591 }
-		}
-		
-		days_remove = 20
-		remove_effect = {
-			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 500 producer = ERB }
-			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 300 producer = ERB }
-		}
-	}
-	recover_travis_air_force_base_ = {
-		cost = 10
-		fire_only_once = yes 
-		visible = {
-			has_completed_focus = enc_reclaim_cashes
-		}
-		highlight_states = { state = 511 }
-		available = {
-			controls_state  = 511 # Point Green
-			divisions_in_state = { size > 0 state = 511 }
-		}
-		
-		days_remove = 20
-		remove_effect = {
-			add_equipment_to_stockpile = { type = energy_equipment_1 amount = 600 producer = ERB }
-			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 600 producer = ERB }
-		}
-	}
-	recover_vandenberg_air_force_base = {
-		cost = 10
-		fire_only_once = yes 
-		highlight_states = { state = 64 }
-		visible = {
-			has_completed_focus = enc_reclaim_cashes
-		}
-		
-		available = {
-			controls_state  = 64 # Santa Maria
-			divisions_in_state = { size > 0 state = 64 }
-		}
-		
-		days_remove = 20
-		remove_effect = {
-			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 100 producer = ERB }
-			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 600 producer = ERB }
-			add_equipment_to_stockpile = { type = power_armor_equipment_3 amount = 200 producer = ERB }
-		}
-	}
 }
 ENC_production = {
 	retool_machinery = {
@@ -556,7 +430,7 @@ ENC_production = {
 		days_re_enable = 30
 	}
 	plunder_military_machinery = {
-		icon = generic_industry
+		icon = generic_scorched_earth
 		allowed = { 
 			tag = ERB # could be made generic
 		}
@@ -614,6 +488,48 @@ ENC_production = {
 		}
 		days_re_enable = 30
 	}
+	less_rations = {
+		icon = decision_enc_rations_down
+		priority = -1
+		cost = 25
+		allowed = {
+			tag = ERB
+		}
+		visible = {
+			has_war = YES
+		}
+		days_remove = 56 # 8 weeks
+		days_re_enable = 2
+		available = {
+			has_war_support > 0.2
+			NOT = { has_decision = more_rations }
+		}
+		modifier = {
+			war_support_weekly = -0.01125#total = 5%
+			consumer_goods_factor = -0.10
+		}
+	}
+	more_rations = {
+		icon = decision_enc_rations_up
+		cost = 25
+		allowed = {
+			tag = ERB
+		}
+		visible = {
+			has_war = YES
+		}
+		days_remove = 56 # 8 weeks
+		days_re_enable = 2
+		available = {
+			has_war_support > 0.2
+			NOT = { has_decision = less_rations }
+		}
+		modifier = {
+			war_support_weekly = 0.01125#total = 5%
+			consumer_goods_factor = +0.05
+		}
+	
+	}
 }
 ENC_NCR_hiding = {
 # MISSION
@@ -665,14 +581,17 @@ ENC_NCR_hiding = {
 			}
 			add_to_variable = { var = ENC_hiding_cost value = 10}
 			set_variable = { ENC_hiding_cost_total = ENC_hiding_cost }
-			add_to_variable = { var = ENC_hiding_cost_total value = num_controlled_states}
-			add_to_variable = { var = ENC_hiding_cost_total value = num_controlled_states}
+			
+			set_variable = { var = ENC_hiding_cost_states value = num_controlled_states }			
+			multiply_variable = { ENC_hiding_cost_states = 3 }			
+			add_to_variable = { var = ENC_hiding_cost_total value = ENC_hiding_cost_states}
+			
 			# set duration of safety
 			set_variable = { ENC_hide_days = days_mission_timeout@ENC_hide_activity }
 			add_to_variable = { var = ENC_hide_days value = 90}
 		}
 		#--------------------------
-		days_mission_timeout = 30
+		days_mission_timeout = 60
 		timeout_effect = {
 			custom_effect_tooltip = ENC_hide_activity_crisis
 			set_country_flag = NCR_crisis_flag
@@ -1016,43 +935,7 @@ operations = {
 		}
 	}
 }
-war_measures = {
-	less_rations = {
-		icon = generic_industry
-		cost = 25
-		allowed = {
-			tag = ERB
-		}
-		days_remove = 56 # 8 weeks
-		days_re_enable = 2
-		available = {
-			has_war_support > 0.2
-			NOT = { has_decision = more_rations }
-		}
-		modifier = {
-			war_support_weekly = -0.01125#total = 5%
-			consumer_goods_factor = -0.10
-		}
-	}
-	more_rations = {
-		icon = generic_industry
-		cost = 25
-		allowed = {
-			tag = ERB
-		}
-		days_remove = 56 # 8 weeks
-		days_re_enable = 2
-		available = {
-			has_war_support > 0.2
-			NOT = { has_decision = less_rations }
-		}
-		modifier = {
-			war_support_weekly = 0.01125#total = 5%
-			consumer_goods_factor = +0.05
-		}
-	
-	}
-}
+
 
 ###############################
 # PURIST
@@ -1097,7 +980,7 @@ ENC_call_remnants = {
 			}
 		}
 		available = {
-			has_manpower = 200
+			has_manpower > 200
 		}
 		complete_effect = {
 			add_manpower = -200
@@ -1274,7 +1157,7 @@ ENC_cloning = {
 		complete_effect = {
 			# add building
 			add_to_variable = { var = num_cloning_facilities value = 1 }
-			add_to_variable = { var = amount_cloned value = 1000 }
+			add_to_variable = { var = amount_cloned value = 500 }
 			random_owned_state = {
 				limit = {
 					has_resources_amount = { 
@@ -1332,20 +1215,10 @@ ENC_rangers = {
 	}
 }
 ENC_render_unto_caesar = {
-	test = {
-		icon = generic_scorched_earth
-		cost = 25
-		fire_only_once = YES
-		available = {
-			strength_ratio = { tag = CES ratio < 0.5 }
-		}
-		complete_effect = {
-
-		}
-	}
 	CES_crisis = {
 		icon = generic_break_treaty
-		priority = 30
+		priority = 30		
+		fire_only_once = YES
 		activation = {
 			has_country_flag = ENC_CES_hostile
 			NOT = {
@@ -1359,9 +1232,7 @@ ENC_render_unto_caesar = {
 			}
 		}
 		available = {
-			OR = {
-				NOT = { has_country_flag = ENC_CES_hostile }
-			}
+			NOT = { country_exists = CES }
 		}
 		cancel_trigger = {
 			CES = {
@@ -1373,7 +1244,7 @@ ENC_render_unto_caesar = {
 			}
 		}
 		is_good = NO
-		days_mission_timeout = 300
+		days_mission_timeout = 1068
 		timeout_effect = {
 			CES = {
 				country_event = { id = enc.41 } # todo: change
@@ -1385,6 +1256,175 @@ ENC_render_unto_caesar = {
 		}
 	}
 }	
+ENC_war_with_NCR = {
+	FEV_mutation_crisis = {
+		icon = generic_research
+		is_good = NO
+		priority = 30
+		activation = {
+			NCR = {
+				exists = YES
+				has_idea = ENC_plague_2
+			}
+		}
+		available = {
+			NOT = {
+				country_exists = NCR
+			} 
+		}
+		days_mission_timeout = 300
+		timeout_effect = {
+			NCR = {
+				swap_ideas = {
+					remove_idea = ENC_plague_2
+					add_idea = ENC_plague_3
+				}
+			}
+		}
+	}
+	dump_fev_ranch = {
+		cost = 10
+		icon = decision_enc_skull
+		fire_only_once = yes 
+		visible = {
+			has_country_flag = enc_dirty_FEV_flag
+			country_exists = NCR
+		}
+		
+		available = {
+			has_war_with = NCR
+			controls_state  = 543 # Marysville ranch
+			has_country_flag = enc_dirty_FEV_flag
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			NCR = { add_timed_idea  = { idea = ENC_water_contaminated days = 50 }}
+			clr_country_flag = enc_dirty_FEV_flag
+		}
+	}
+	recover_beale_air_force_base = {
+		icon = generic_construction
+		cost = 10
+		fire_only_once = yes 
+		visible = {
+			# has_completed_focus = enc_reclaim_cashes
+		}
+		highlight_states = { state = 543 }
+		available = {
+			controls_state  = 543 # Marysville ranch
+			divisions_in_state = { size > 0 state = 543 }
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 300 producer = ERB }
+			add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 300 producer = ERB }
+		}
+	}
+	recover_edwards_air_force_base  = {
+		icon = generic_construction
+		cost = 10
+		fire_only_once = yes 
+		visible = {
+			has_completed_focus = enc_reclaim_cashes
+		}
+		highlight_states = { state = 19 }
+		available = {
+			controls_state  = 19 # Saint Gabrielle 
+			divisions_in_state = { 
+				state = 19
+				size > 0
+			}
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 300 producer = ERB }
+			add_equipment_to_stockpile = { type = power_armor_equipment_3 amount = 500 producer = ERB }
+		}
+	}
+	recover_los_angeles_air_force_base  = {
+		icon = generic_construction
+		cost = 10
+		fire_only_once = yes 
+		visible = {
+			has_completed_focus = enc_reclaim_cashes
+		}
+		highlight_states = { state = 350 }
+		available = {
+			controls_state  = 350 # The boneyard
+			divisions_in_state = { size > 0  state = 350}
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 200 producer = ERB }
+			add_equipment_to_stockpile = { type = fighter_equipment_3 amount = 300 producer = ERB }
+			add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 400 producer = ERB }
+		}
+	}
+	recover_march_air_reserve_base  = {
+		icon = generic_construction
+		cost = 10
+		fire_only_once = yes 
+		visible = {
+			has_completed_focus = enc_reclaim_cashes
+		}
+		highlight_states = { state = 591 }
+		available = {
+			controls_state  = 591 # Diana Point
+			divisions_in_state = { size > 0 state = 591 }
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 500 producer = ERB }
+			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 300 producer = ERB }
+		}
+	}
+	recover_travis_air_force_base_ = {
+		icon = generic_construction
+		cost = 10
+		fire_only_once = yes 
+		visible = {
+			has_completed_focus = enc_reclaim_cashes
+		}
+		highlight_states = { state = 511 }
+		available = {
+			controls_state  = 511 # Point Green
+			divisions_in_state = { size > 0 state = 511 }
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			add_equipment_to_stockpile = { type = energy_equipment_1 amount = 600 producer = ERB }
+			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 600 producer = ERB }
+		}
+	}
+	recover_vandenberg_air_force_base = {
+		cost = 10
+		icon = generic_construction
+		fire_only_once = yes 
+		highlight_states = { state = 64 }
+		visible = {
+			has_completed_focus = enc_reclaim_cashes
+		}
+		
+		available = {
+			controls_state  = 64 # Santa Maria
+			divisions_in_state = { size > 0 state = 64 }
+		}
+		
+		days_remove = 20
+		remove_effect = {
+			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 100 producer = ERB }
+			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 600 producer = ERB }
+			add_equipment_to_stockpile = { type = power_armor_equipment_3 amount = 200 producer = ERB }
+		}
+	}
+}
+
 ###############################
 # ICONS
 ###############################

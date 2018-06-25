@@ -352,12 +352,12 @@ spriteTypes = {
  		    texturefile = "gfx/interface/goals/enc_special_forces.dds"
  	    } 
         SpriteType = {#enc_superhuman
-            name = "GFX_goal_enc_superhuman"
- 		    texturefile = "gfx/interface/goals/enc_superhuman.dds"
- 	    } 
-        SpriteType = {#enc_super_soldier
             name = "GFX_goal_enc_super_soldier"
  		    texturefile = "gfx/interface/goals/enc_super_soldier.dds"
+ 	    } 
+        SpriteType = {#enc_super_soldier
+            name = "GFX_idea_enc_super_soldier"
+ 		    texturefile = "gfx/interface/ideas/enc_super_soldier.dds"
  	    } 
         SpriteType = {#enc_sword_cross
             name = "GFX_goal_enc_sword_cross"
@@ -468,8 +468,8 @@ spriteTypes = {
  		    texturefile = "gfx/interface/ideas/enc_education.dds"
  	    }  
         SpriteType = {#enc_idea_super_soldiers
-            name = "GFX_idea_super_soldiers"
- 		    texturefile = "gfx/interface/ideas/enc_idea_super_soldiers.dds"
+            name = "GFX_idea_enc_super_soldiers"
+ 		    texturefile = "gfx/interface/ideas/enc_super_soldiers.dds"
  	    } 
         SpriteType = {#enc_ew_production
             name = "GFX_idea_enc_ew_production"

@@ -32,9 +32,12 @@ soundeffect =
         sound = ERB_Idle_01
         sound = ERB_Idle_01
         sound = ERB_Idle_02
-        sound = ERB_Move_02
         sound = ERB_Idle_02
+        sound = ERB_Move_04
 		sound = ERB_Idle_03
+		sound = ERB_Idle_04
+        sound = ERB_Idle_05
+        sound = ERB_Idle_06
     }
 	max_audible = 1
 	max_audible_behaviour = fail
@@ -129,7 +132,21 @@ sound =
 	name = "ERB_Idle_03"
 	file = "ERB/ERB_Idle_03.wav"
 }
-
+sound = 
+{
+	name = "ERB_Idle_04"
+	file = "ERB/ERB_Idle_04.wav"
+}
+sound = 
+{
+	name = "ERB_Idle_05"
+	file = "ERB/ERB_Idle_05.wav"
+}
+sound = 
+{
+	name = "ERB_Idle_06"
+	file = "ERB/ERB_Idle_06.wav"
+}
 sound = 
 {
 	name = "ERB_Winning_01"
@@ -181,7 +198,6 @@ sound =
 	name = "ERB_Retreat_05"
 	file = "ERB/ERB_Retreat_05.wav"
 }
-
 
 sound = 
 {

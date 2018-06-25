@@ -225,6 +225,9 @@ country_event = {#16 - In the Lair of the Bear
 	trigger = {	
 		tag = ERB 
 		country_exists = NCR
+		NOT = {
+			is_ai = yes
+		}
 	}
 	mean_time_to_happen = {	days = 10 }	
 	
@@ -583,7 +586,7 @@ country_event = { #30 - Fall of Sack city
 	
 	trigger = {
 		tag = ERB
-		has_control_of_state = 135 # Sac City
+		controls_state = 135 # Sac City
 	}
 	mean_time_to_happen = {
 		days = 2
@@ -606,7 +609,7 @@ country_event = { #31 - Fall of Shady Sands
 	
 	trigger = {
 		tag = ERB
-		has_control_of_state   = 253 # Shady Sands
+		controls_state   = 253 # Shady Sands
 	}
 	mean_time_to_happen = {
 		days = 2
@@ -698,7 +701,7 @@ country_event = { #34 - remnants of Sack city
 	
 	trigger = {
 		tag = ERB
-		has_control_of_state   = 135 # Sac City
+		controls_state   = 135 # Sac City
 	}
 	mean_time_to_happen = {
 		days = 30
@@ -721,7 +724,7 @@ country_event = { #35 - remnants of Shady Sands
 	
 	trigger = {
 		tag = ERB
-		has_control_of_state   = 253 # Shady Sands
+		controls_state   = 253 # Shady Sands
 	}
 	mean_time_to_happen = {
 		days = 30
@@ -744,7 +747,7 @@ country_event = { #36 - remnants of the boneyard
 	
 	trigger = {
 		tag = ERB
-		has_control_of_state   = 350 # Shady Sands
+		controls_state   = 350 # Shady Sands
 	}
 	mean_time_to_happen = {
 		days = 30
@@ -768,7 +771,7 @@ country_event = { #37 - Vengeance against Arroyo
 	
 	trigger = {
 		tag = ERB
-		has_control_of_state   = 337 # Shady Sands
+		controls_state   = 337 # Shady Sands
 	}
 	mean_time_to_happen = {
 		days = 3
@@ -822,8 +825,8 @@ country_event = { #39 - Reduce plague if Desert rangers not allied with NCR
 	id = enc.39
 	title = enc.39.t
 	desc = enc.39.d
-	picture = GFX_event_ENC_secret3
-	fire_only_once = no
+	picture = GFX_event_ENC_FEV_plague
+	fire_only_once = YES
 	
 	trigger = {
 		NCR = {
@@ -840,6 +843,10 @@ country_event = { #39 - Reduce plague if Desert rangers not allied with NCR
 	}
 	mean_time_to_happen = {
 		days = 100
+		modifier = {
+			factor = 0.5 # If true multiply 500 by 0.4 = 200
+			NCR = { surrender_progress > 0.25 }
+		}		
 	}
 	option = { # Damn it
 		name = enc.39.a
@@ -893,7 +900,7 @@ country_event = { #41 - NCR finds out
 			target = ERB
 		}
 		ai_chance = {
-			factor = 0 # ai always declare 
+			factor = 0 # ai always declares war
 		}
 	}
 }
@@ -902,7 +909,7 @@ country_event = {#42 - On the border of the bull
 	id = enc.42
 	title = enc.42.t
 	desc = enc.42.d
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_CES_caesar
 	
 	fire_only_once = yes	
     is_triggered_only = no
@@ -911,14 +918,18 @@ country_event = {#42 - On the border of the bull
 		is_neighbor_of = CES
 		strength_ratio = {
 			tag = CES
-			ratio = 1
+			ratio < 0.6
+		}
+		NOT = {
+			country_exists = NCR
 		}
 	}
 	mean_time_to_happen = {	days = 30 }	
 	
 	
-	option = {#Better be careful
+	option = {# Out of the frying pan...
 		name = enc.42.a
+		custom_effect_tooltip = enc.42.a.tt
 		set_country_flag = ENC_CES_hostile
 	}
 }

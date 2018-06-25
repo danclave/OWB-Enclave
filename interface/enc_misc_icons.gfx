@@ -160,7 +160,27 @@ spriteTypes = {
 			texturefile = "gfx/interface/icons/decision_enc_admin_down.dds"
 		}
 		spriteType = {
+			name = "decision_enc_rations_up"
+			texturefile = "gfx/interface/icons/decision_enc_rations_up.dds"
+		}
+		spriteType = {
+			name = "decision_enc_rations_down"
+			texturefile = "gfx/interface/icons/decision_enc_rations_down.dds"
+		}
+		spriteType = {
 			name = "category_enc_cloning"
 			texturefile = "gfx/interface/icons/decision_category_enc_cloning.dds"
+		}
+		spriteType = {
+			name = "category_enc_rangers"
+			texturefile = "gfx/interface/icons/decision_category_enc_rangers.dds"
+		}
+		spriteType = {
+			name = "category_enc_shift"
+			texturefile = "gfx/interface/icons/decision_category_enc_shift.dds"
+		}
+		spriteType = {
+			name = "category_enc_anti_ncr"
+			texturefile = "gfx/interface/icons/decision_category_enc_anti_ncr.dds"
 		}
 }

@@ -98,9 +98,9 @@ spriteTypes = {
         SpriteType = {#event_ENC_single_soldier
             name = "GFX_event_ENC_single_soldier"
  		    texturefile = "gfx/event_pictures/event_ENC_single_soldier.tga"
- 	    } 
-        SpriteType = {#event_ENC_torture.pdn
-            name = "GFX_event_ENC_torture.pdn"
- 		    texturefile = "gfx/event_pictures/event_ENC_torture.pdn.tga"
- 	    }    
+ 	    }
+        SpriteType = {#event_ENC_FEV_plague.pdn
+            name = "GFX_event_ENC_FEV_plague.tga"
+ 		    texturefile = "gfx/event_pictures/event_ENC_FEV_plague.tga"
+ 	    }       
 }

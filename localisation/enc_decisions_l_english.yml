@@ -13,7 +13,9 @@ ENC_calling_the_remnants:0 "Call the Remnants"
 #################################
 # HIDING FROM THE NCR
 #################################
-ENC_NCR_hiding: "In The Lair of the Bear (£pol_power [?Root.ENC_hiding_cost|H0])"
+ENC_NCR_hiding: "In The Lair of the Bear (£pol_power [?Root.ENC_hiding_cost_total|H0])"
+ENC_NCR_hiding_desc:0 "COST:                              TIME: [?Root.ENC_hiding_cost|H0]                  |                STATES (x3): [?Root.ENC_hiding_cost_states|H0]"
+
 ENC_hide_activity:0 "Hide Activities from NCR"
 ENC_hide_activity_desc:0 "The Bear may be blind, but as time goes by it will take more and more effort to escape its notice."
 ENC_hide_activity_days_tt:0 "Hide from the §YNCR§! for §Y90 days§!"
@@ -57,13 +59,15 @@ more_rations: "Increase Rations"
 ENC_war_with_NCR: "New California Republic"
 
 dump_fev_ranch: "Dump the Dirty FEV"
+dump_fev_ranch_desc: "Waste not, want not."
+enc_dirty_FEV_flag: "§YEnclave§!: secured dirty FEV"
 recover_beale_air_force_base: "Secure the Beale Air Force Base"
 recover_edwards_air_force_base: "Secure the Edwards Air Force Base"
 recover_los_angeles_air_force_base: "Secure the Los Angeles Air Force Base"
 recover_march_air_reserve_base: "Secure the March Air Reserve Base"
 recover_travis_air_force_base_: "Secure the Travis Air Force Base"
 recover_vandenberg_air_force_base: "Secure the Vandenberg Air Force Base"
-
+FEV_mutation_crisis: "§RFEV PLAGUE MUTATION!§!"
 ##############################
 # RANGERS 
 ##############################
@@ -88,12 +92,12 @@ purify_city: "Purify the city"
 ##############################
 ENC_radio_broadcasts: "Enclave Radio Broadcasts"
 ENC_radio_broadcasts__tt: "Unlocks the §YEnclave Radio Broadcasts§! decisions."
-anti_ncr_propaganda: "Anti NCR propaganda"
+anti_ncr_propaganda: "Anti NCR Propaganda"
 ENC_raise_war_support: "Rousing Speech"
 ENC_raise_stability: "Call for Order"
 remember_rig: "Remember The Rig"
 remember_navarro: "Remember Navarro"
-anti_bos_propaganda: "Anti Brotherhood propaganda"
+anti_bos_propaganda: "Anti Brotherhood Propaganda"
 
 ##############################
 # SHIFT POLICY 
@@ -173,6 +177,8 @@ ENC_send_spies_cost_blocked: "£manpower_texticon  §R100§!"
 ##############################
 ENC_remove_emergency_draft: "Remove Emergency Draft"
 
+CES_crisis: "The Wrath of Caesar"
+ENC_render_unto_caesar: "Into the Frying Pan"
 ################ special codes for special people ################################################################################################################
 
 # y§Yyellow§!
