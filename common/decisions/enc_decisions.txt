@@ -1308,7 +1308,7 @@ ENC_war_with_NCR = {
 		cost = 10
 		fire_only_once = yes 
 		visible = {
-			# has_completed_focus = enc_reclaim_cashes
+			has_completed_focus = enc_reclaim_cashes
 		}
 		highlight_states = { state = 543 }
 		available = {
