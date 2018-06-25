@@ -48,7 +48,7 @@ enc_RND_desc:0 "By diverting resources from our industry, we can fund DARPA once
 
 enc_reform_placeholder: "Reformers Coming soon!"
 enc_reform_placeholder_tt: "This path will allow you to rebuild the §YUnited States of America§!"
-enc_reform_placeholder_desc:0 "By soon I mean like several months because that's how long it took to make the Purists"
+enc_reform_placeholder_desc:0 "Thanks for your patience so far, but it will take at least 2-3 months before the reformers could be ready for release. I've been working on them since patch 1.1. These patches are just me porting Reformer stuff to the Purists so that people can enjoy the progress early."
 
 ###################################
 # REFORM TODO
