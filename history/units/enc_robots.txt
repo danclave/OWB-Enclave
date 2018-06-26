@@ -1,6 +1,5 @@
 ﻿division_template = {
 	name = "Mr. Handy Division"
-	is_locked = yes
 	regiments = {
 		light_robot = { x = 0 y = 0 }
 		light_robot = { x = 0 y = 1 }
