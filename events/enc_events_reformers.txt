@@ -1266,25 +1266,11 @@ country_event = {#66 - The Vice President
 	}
 }
 
-country_event = {# 100 NCR Joins the ASA
-	id = enc_reformers.100
-	title = enc_reformers.100.t
-	desc = enc_reformers.100.d
-	picture = GFX_event_ENC_barons
-	fire_only_once = yes
-   	is_triggered_only = yes
-	option = {# welcome!
-		name = enc_reformers.100.a
-		NCR = { dismantle_faction = yes }
-		add_to_faction = NCR
-		add_political_power = 40
-		}
-	}
 
 	
 ### new stuff
 
-country_event = {#68 Slavery
+country_event = {#68 - Slavery
 	id = enc_reformers.68
 	title = enc_reformers.68.t
 	desc = enc_reformers.68.d
@@ -1317,7 +1303,7 @@ country_event = {#68 Slavery
 
 
 
-country_event = {#The Democracy Question
+country_event = {#70 - The Democracy Question
 	id = enc_reformers.70
 	title = enc_reformers.70.t
 	desc = enc_reformers.70.d
@@ -1334,7 +1320,7 @@ country_event = {#The Democracy Question
 		}
 	}
 
-country_event = {#Freedom Rings
+country_event = {#71 - Freedom Rings
 	id = enc_reformers.71
 	title = enc_reformers.71.t
 	desc = enc_reformers.71.d
@@ -1348,7 +1334,7 @@ country_event = {#Freedom Rings
 	
 }
 
-country_event = {#This is How Liberty Dies
+country_event = {#72 This is How Liberty Dies
 	id = enc_reformers.72
 	title = enc_reformers.72.t
 	desc = enc_reformers.72.d
@@ -1362,10 +1348,10 @@ country_event = {#This is How Liberty Dies
 	
 }
 
-country_event = {#Area 51
-    id = enc_reformers.100
-    title = enc_reformers.100.t
-    desc = enc_reformers.100.d
+country_event = {#99 Area 51
+    id = enc_reformers.99
+    title = enc_reformers.99.t
+    desc = enc_reformers.99.d
     picture = event_enc_Recon_Craft_Theta
     fire_only_once = yes    
     is_triggered_only = yes    
@@ -1374,12 +1360,25 @@ country_event = {#Area 51
       8855 = { is_owned_by = ERB }
          }
     option = {# Easter Egg
-        name = enc_reformers.100.a
+        name = enc_reformers.99.a
         add_ideas = ENC_energy_production
 	}
    }
 
-
+country_event = {# 100 NCR Joins the ASA
+	id = enc_reformers.100
+	title = enc_reformers.100.t
+	desc = enc_reformers.100.d
+	picture = GFX_event_ENC_barons
+	fire_only_once = yes
+   	is_triggered_only = yes
+	option = {# welcome!
+		name = enc_reformers.100.a
+		NCR = { dismantle_faction = yes }
+		add_to_faction = NCR
+		add_political_power = 40
+		}
+	}
 # integration
 #
 
