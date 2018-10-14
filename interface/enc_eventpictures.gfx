@@ -107,11 +107,7 @@ spriteTypes = {
             name = "GFX_event_ENC_single_soldier"
  		    texturefile = "gfx/event_pictures/event_ENC_single_soldier.tga"
  	    } 
-        SpriteType = {#event_ENC_torture.pdn
-            name = "GFX_event_ENC_torture.pdn"
- 		    texturefile = "gfx/event_pictures/event_ENC_torture.pdn.tga"
- 	    } 
-        SpriteType = {#event_ENC_vertibird
+		SpriteType = {#event_ENC_vertibird
             name = "GFX_event_ENC_vertibird"
  		    texturefile = "gfx/event_pictures/event_ENC_vertibird.tga"
  	    } 
@@ -135,4 +131,28 @@ spriteTypes = {
             name = "GFX_event_ENC_barons"
  		    texturefile = "gfx/event_pictures/event_ENC_barons.tga"
  	    } 
+		SpriteType = {#event_ENC_Slavery
+				name = "GFX_event_ENC_Slavery"
+				texturefile = "gfx/event_pictures/event_ENC_Slavery.dds"
+			} 
+		SpriteType = {#event_Resistance_weapons
+					name = "GFX_event_ENC_Resistance_Weapons"
+					texturefile = "gfx/event_pictures/event_ENC_Resistance_Weapons.dds"
+				}
+		SpriteType = {#event_Washington_Monument
+					name = "GFX_event_Washington_Monument"
+					texturefile = "gfx/event_pictures/event_enc_washington_monument.dds"
+				}
+		SpriteType = {#event_Washington_Monument
+					name = "GFX_event_enc_linconl_memorial"
+					texturefile = "gfx/event_pictures/event_enc_linconl_memorial.dds"
+				}
+		SpriteType = {#event_Mothership Zeta
+					name = "event_enc_Recon_Craft_Theta"
+					texturefile = "gfx/event_pictures/event_enc_Recon_Craft_Theta.dds"
+				}
+		SpriteType = {#event_enc_suspend_elections Zeta
+					name = "GFX_event_enc_suspend_elections"
+					texturefile = "gfx/event_pictures/event_enc_suspend_elections.dds"
+				}
 }
