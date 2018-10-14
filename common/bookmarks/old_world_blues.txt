@@ -6,8 +6,8 @@ bookmarks = {
 		picture = "GFX_select_date_1936"
 		default_country = "NCR"
 		default = yes
-		
-		"NCR"={
+
+		NCR = {
 			history = "NCR_OWB_DESC"
 			ideology = people
 			ideas = {
@@ -20,7 +20,7 @@ bookmarks = {
 				ncr_emergency
 			}
 		}
-		"CES"={
+		CES = {
 			history = "CES_OWB_DESC"
 			ideology = ruler
 			ideas = {
@@ -33,7 +33,7 @@ bookmarks = {
 				ces_the_white_leg_petition
 			}
 		}
-		"BOS"={
+		BOS = {
 			history = "BOS_OWB_DESC"
 			ideology = intellectuals
 			ideas = {
@@ -46,7 +46,7 @@ bookmarks = {
 				bos_hangars
 			}
 		}
-		"VEG"={
+		VEG = {
 			history = "VEG_OWB_DESC"
 			ideology = ruler
 			ideas = {
@@ -58,7 +58,7 @@ bookmarks = {
 				veg_checkereddevil
 			}
 		}
-		"NCN"={
+		NCN = {
 			history = "NCN_OWB_DESC"
 			ideology = people
 			ideas = {
@@ -82,7 +82,7 @@ bookmarks = {
 				enc_reform
 			}
 		}	
-		"NEW"={
+		NEW = {
 			history = "NEW_OWB_DESC"
 			ideology = people
 			ideas = {
@@ -90,31 +90,62 @@ bookmarks = {
 			focuses = {
 				new_topdog
 				new_klamathdeal
-				new_mercmilitary	
+				new_mercmilitary
 			}
 		}
-		"DES"={
-			history = "DES_OWB_DESC"
-			ideology = ruler
+		"HEA"={
 			minor = yes
+			history = "HEA_OWB_DESC"
+			ideology = ruler
 			ideas = {
-				desertrangers
+				hea_divided_leadership
+				hea_steam_power
+				hea_theocratic_elite_good_1
 			}
 			focuses = {
-				des_steel
-				des_pact
-				des_treaty
+				hea_nf_age_of_steam
+				hea_nf_grand_cathedral
+				hea_nf_innocence_lost_deal
 			}
 		}
-		"EHT"={
+		"MOJ"={
 			minor = yes
-			history = "EHT_OWB_DESC"
-			ideology = ruler
+			history = "MOJ_OWB_DESC"
+			ideology = intellectuals
 			ideas = {
-
+				bunkerblues
 			}
 			focuses = {
-			
+				MOJ_what_remains
+				MOJ_technology_raids
+				MOJ_ncr_alliance
+			}
+		}
+		"WBH"={
+			minor = yes
+			history = "WBH_OWB_DESC"
+			ideology = elites
+			ideas = {
+				bunkerblues
+			}
+			focuses = {
+				WBH_within_the_blizzard
+				WBH_eradicate_the_mutants
+				WBH_alaskan_expedition
+			}
+		}
+		"BRK"={
+			minor = yes
+			history = "BRK_OWB_DESC"
+			ideology = ruler
+			ideas = {
+				brk_raider_society
+				brk_coastal_terror
+			}
+			focuses = {
+				brk_nf_ruler_pol
+				brk_nf_grand_moot
+				brk_nf_elites_pol
 			}
 		}
 		"TRL"={
@@ -122,7 +153,7 @@ bookmarks = {
 			history = "TRL_OWB_DESC"
 			ideology = ruler
 			ideas = {
-			
+
 			}
 			focuses = {
 				firstholotape
@@ -145,43 +176,19 @@ bookmarks = {
 				vault_festus_1
 			}
 		}
-		"WHT"={
+		DES = {
 			minor = yes
-			history = "WHT_OWB_DESC"
-			ideology = elites
-			ideas = {
-			}
-			focuses = {
-			}
-		}
-		"WBH"={
-			minor = yes
-			history = "WBH_OWB_DESC"
-			ideology = intellectuals
-			ideas = {
-			}
-			focuses = {
-			}
-		}
-		"ARR"={
-			minor = yes
-			history = "ARR_OWB_DESC"
+			history = "DES_OWB_DESC"
 			ideology = ruler
 			ideas = {
+				desertrangers
 			}
 			focuses = {
+				des_steel
+				des_pact
+				des_treaty
 			}
 		}
-		"HAN"={
-			minor = yes
-			history = "HAN_OWB_DESC"
-			ideology = ruler
-			ideas = {
-			}
-			focuses = {
-			}
-		}
-		
 		"---"={
 			history = "OTHER_OWB_DESC"
 		}

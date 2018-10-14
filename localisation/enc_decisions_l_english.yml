@@ -6,6 +6,7 @@ ENC_call_remnants: "Reaching Remnants"
 ENC_shifts: "Work Shift Policies"
 ENC_production: "Production Policies"
 ENC_political_infighting: "Political Infighting"
+ENC_political_infighting_desc:0 "POPULARITY:                   Reformers: [?party_popularity@intellectuals|%G0]              |                   Purists: [?party_popularity@elites|%R0]"
 operations: "Operations"
 # DECISIONS
 
@@ -15,6 +16,8 @@ ENC_calling_the_remnants:0 "Call the Remnants"
 #################################
 ENC_NCR_hiding: "In The Lair of the Bear (£pol_power [?Root.ENC_hiding_cost_total|H0])"
 ENC_NCR_hiding_desc:0 "COST:                              TIME: [?Root.ENC_hiding_cost|H0]                  |                STATES (x3): [?Root.ENC_hiding_cost_states|H0]"
+
+ncr_suspicious: "§YNew California Republic§! is unaware of §YThe Enclave§!"
 
 ENC_hide_activity:0 "Hide Activities from NCR"
 ENC_hide_activity_desc:0 "The Bear may be blind, but as time goes by it will take more and more effort to escape its notice."
@@ -146,8 +149,10 @@ ENC_arrange_disappearance_desc: "Accidents happen all the time. More so to those
 
 ENC_reform_replace_officers: "Demote Purist Officers"
 ENC_reform_replace_officers_desc: "While the top brass is still out of our reach, we could carefully expand our influence by replacing the more outspoken Purists in the lower officer ranks with their more loyal colleagues."
+enc_demoted_officers: "Purist Officers demoted by §Ydecision§!"
 ENC_reform_replace_scientists: "Demote Purist Scientists"
 ENC_reform_replace_scientists_desc: "While the top brass is still out of our reach, we could carefully expand our influence by replacing the more outspoken Purists in the lower scientific ranks with their more loyal colleagues."
+enc_demoted_scientists: "Purist Scientists demoted by §Ydecision§!"
 
 ENC_reform_wild_promises: "Wild Promises"
 ENC_reform_wild_promises_desc: "If all else fails, wild yet vague promises can buy us time. But in the long run they will hurt our credibility."
@@ -159,8 +164,13 @@ ENC_infiltrating_NCR: "NCR Espionage Network"
 ENC_support_OWP: "Support the Old World Party"
 ENC_call_favours: "Call In Favours"
 ENC_send_spies: "Send Out Spies"
+ENC_extract_spies: "Extract Spies"
+ENC_extract_spies_desc: "The longer our spies are active, the higher the chance they will be compromised. To prevent this from happening, we can extract them safely."
 ENC_send_spies_tt: "§YEnclave§! gains spies in the §YNew California Republic§!"
 enc_ncr_spies: "§YEnclave§! has spies in the §YNew California Republic§!"
+enc_ncr_spies_set: "§YEnclave§! gains spies in the §YNew California Republic§!"
+enc_ncr_spies_clr: "§YEnclave§! loses their spies in §YNew California Republic§!\n"
+enc_ncr_spies_not: "§YEnclave§! does §RNOT§! have spies in the §YNew California Republic§!"
 
 ENC_arm_raiders: "Arm Raider Gangs"
 ENC_arm_raiders_desc: "We are not the only threat on the NCR's borders. At the cost of some equipment, we can help these thorns in the bear's side draw attention away from us."
@@ -172,11 +182,19 @@ ENC_arm_raiders_cost_blocked: "£enc_weapons_red  §R300§!"
 ENC_send_spies_cost: "£manpower_texticon  §Y100§!"
 ENC_send_spies_cost_blocked: "£manpower_texticon  §R100§!"
 
+
+enc_bishop_in_NCR: "§YMr. Bishop§! is in the §YNew California Republic§!"
+assassinate_bishop_crisis: "§RAssassinate Mr. Bishop§!"
+assassinate_bishop_crisis_complete_effect: "§YMr. Bishop§! dies!"
+
+ENC_the_lucia_incident: "The Lucia Incident"
+ENC_the_bishop_incident: "The Bishop Incident"
+ENC_deliver_petition: "Deliver Petition for Independence"
 ##############################
 # POLITICAL DECISIONS
 ##############################
 ENC_remove_emergency_draft: "Remove Emergency Draft"
-
+enc_emergency_draft_reform: "Institute an Emergency Draft"
 CES_crisis: "The Wrath of Caesar"
 ENC_render_unto_caesar: "Into the Frying Pan"
 ################ special codes for special people ################################################################################################################

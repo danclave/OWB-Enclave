@@ -1,4 +1,12 @@
 spriteTypes = {
+        SpriteType = {#26977-0-1506274562.jpg
+            name = "GFX_26977-0-1506274562.jpg"
+ 		    texturefile = "gfx/event_pictures/26977-0-1506274562.jpg.tga"
+ 	    } 
+        SpriteType = {#311px-Holotape.png
+            name = "GFX_311px-Holotape.png"
+ 		    texturefile = "gfx/event_pictures/311px-Holotape.png.tga"
+ 	    } 
         SpriteType = {#enc_ncr_rangers
             name = "GFX_enc_ncr_rangers"
  		    texturefile = "gfx/event_pictures/enc_ncr_rangers.tga"
@@ -98,9 +106,33 @@ spriteTypes = {
         SpriteType = {#event_ENC_single_soldier
             name = "GFX_event_ENC_single_soldier"
  		    texturefile = "gfx/event_pictures/event_ENC_single_soldier.tga"
- 	    }
-        SpriteType = {#event_ENC_FEV_plague.pdn
-            name = "GFX_event_ENC_FEV_plague.tga"
- 		    texturefile = "gfx/event_pictures/event_ENC_FEV_plague.tga"
- 	    }       
+ 	    } 
+        SpriteType = {#event_ENC_torture.pdn
+            name = "GFX_event_ENC_torture.pdn"
+ 		    texturefile = "gfx/event_pictures/event_ENC_torture.pdn.tga"
+ 	    } 
+        SpriteType = {#event_ENC_vertibird
+            name = "GFX_event_ENC_vertibird"
+ 		    texturefile = "gfx/event_pictures/event_ENC_vertibird.tga"
+ 	    } 
+        SpriteType = {#event_ENC_vertibird_burning
+            name = "GFX_event_ENC_vertibird_burning"
+ 		    texturefile = "gfx/event_pictures/event_ENC_vertibird_burning.tga"
+ 	    } 
+        SpriteType = {#event_FAV_plague.dds
+            name = "GFX_event_FAV_plague.dds"
+ 		    texturefile = "gfx/event_pictures/event_FAV_plague.dds.tga"
+ 	    } 
+        SpriteType = {#event_FAV_plague
+            name = "GFX_event_FAV_plague"
+ 		    texturefile = "gfx/event_pictures/event_FAV_plague.tga"
+ 	    } 
+        SpriteType = {#event_ENC_camp_navarro
+            name = "GFX_event_ENC_camp_navarro"
+ 		    texturefile = "gfx/event_pictures/event_ENC_camp_navarro.tga"
+ 	    } 
+        SpriteType = {#event_ENC_barons
+            name = "GFX_event_ENC_barons"
+ 		    texturefile = "gfx/event_pictures/event_ENC_barons.tga"
+ 	    } 
 }

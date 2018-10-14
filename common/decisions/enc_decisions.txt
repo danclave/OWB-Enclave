@@ -2,6 +2,46 @@
 # REFORMER
 ###############################
 ENC_infiltrating_NCR = {
+	assassinate_bishop_crisis = {
+		icon = decision_enc_bishop
+		priority = 30		
+		fire_only_once = YES
+		selectable_mission = YES	
+		activation = {
+			has_country_flag = enc_bishop_in_NCR
+			has_country_flag = ncr_suspicious
+			NOT = {
+				NCR = {
+					OR = {
+						exists = NO
+						has_war_with = ERB #Enclave
+					}
+				}
+			}
+		}
+		available = {
+			has_country_flag = enc_ncr_spies
+		}
+		cancel_trigger = {
+			NOT = {
+				has_country_flag = enc_bishop_in_NCR
+				has_country_flag = ncr_suspicious
+			}
+		}
+		is_good = NO
+		days_mission_timeout = 200
+		timeout_effect = {			
+			set_temp_variable = {
+				var = suspicion_change_var
+				value = 25
+			}
+			change_suspicion = YES
+			clr_country_flag = enc_bishop_in_NCR
+		}
+		complete_effect = {
+				country_event = { id = enc_reformers.10 }			
+		}
+	}
 	ENC_arm_raiders = {
 		icon = generic_prepare_civil_war
 		custom_cost_trigger = {
@@ -18,7 +58,7 @@ ENC_infiltrating_NCR = {
 			has_equipment = {
 				infantry_equipment > 299
 			}
-			custom_trigger_tooltip = {
+			custom_trigger_tooltip = { 
 				tooltip = ENC_NCR_neighbours_raiders		
 				NCR = {
 					any_neighbor_country = {
@@ -27,8 +67,8 @@ ENC_infiltrating_NCR = {
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = ncr_suspicion_higher_than_10				
-				check_variable = { ENC_hiding_cost > 9.99 }
+				tooltip = ncr_suspicion_higher_than_20			
+				check_variable = { ENC_hiding_cost > 19.99 }
 			}
 		}
 		complete_effect = {
@@ -52,8 +92,11 @@ ENC_infiltrating_NCR = {
 					}
 				}		
 			}
-			subtract_from_variable = { var = ENC_hiding_cost value = 10}
-			custom_effect_tooltip = ncr_suspicion_minus_10
+			set_temp_variable = {
+				var = suspicion_change_var
+				value = -20
+			}
+			change_suspicion = YES
 		}	
 	}
 	ENC_support_OWP = {
@@ -90,8 +133,11 @@ ENC_infiltrating_NCR = {
 		}
 		complete_effect = {
 			clr_country_flag = enc_ncr_spies
-			subtract_from_variable = { var = ENC_hiding_cost value = 10}
-			custom_effect_tooltip = ncr_suspicion_minus_10
+			set_temp_variable = {
+				var = suspicion_change_var
+				value = -10
+			}
+			change_suspicion = YES
 			NCR = {
 				add_popularity = { ideology = intellectuals popularity = -0.05 }
 			}
@@ -106,11 +152,22 @@ ENC_infiltrating_NCR = {
 			has_manpower > 100
 		}
 		custom_cost_text = ENC_send_spies_cost
-		visible = {
-			has_completed_focus = enc_infiltrate_ncr
-		}
+		
 		available = {
-			has_manpower > 100	
+			has_completed_focus = enc_infiltrate_ncr
+			has_manpower > 100
+			custom_trigger_tooltip = {
+				tooltip = enc_ncr_spies_not		
+			}
+		}
+		visible = {
+			not = {
+				has_country_flag = enc_ncr_spies
+			}
+			or = {
+				has_completed_focus = enc_infiltrate_ncr
+				has_country_flag = enc_bishop_in_NCR
+			}
 		}
 		complete_effect = {
 			add_manpower = -100
@@ -120,6 +177,90 @@ ENC_infiltrating_NCR = {
 			set_country_flag = enc_ncr_spies
 			custom_effect_tooltip = ENC_send_spies_tt		
 		}
+	}
+	ENC_extract_spies = {
+		icon = GFX_decision_enc_verti
+		priority = 10
+	
+		visible = {
+			has_country_flag = enc_ncr_spies
+		}
+		complete_effect = {
+			clr_country_flag = enc_ncr_spies
+			custom_effect_tooltip = enc_ncr_spies_clr	
+		}
+		days_remove = 60
+		remove_effect = {
+			add_manpower = 100
+		}
+	}
+	ENC_deliver_petition = {
+	
+		priority = 300
+		fire_only_once = yes		
+	
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_petition_for_independence
+		}
+		complete_effect = {
+			country_event = { id = enc_reformers.34 }
+			set_country_flag = enc_petition_delivered
+		}
+	}
+	ENC_the_lucia_incident = {
+		icon = decision_enc_espionage
+		priority = 10
+		
+		available = {
+			has_country_flag = enc_ncr_spies			
+		}
+		visible = {
+			has_completed_focus = enc_the_lucia_incident
+		}
+		complete_effect = {
+
+		}
+		days_remove = 60
+		remove_effect = {
+			BOS = {
+				declare_war_on = {
+					target = NCR
+					type = annex_everything
+				}
+			}	
+		}	
+	}
+	ENC_the_bishop_incident = {
+		icon = decision_enc_espionage
+		priority = 10
+		
+		available = {
+			has_country_flag = enc_ncr_spies			
+		}
+		visible = {
+			has_completed_focus = enc_the_bishop_incident
+		}
+		complete_effect = {
+
+		}
+		days_remove = 60
+		remove_effect = {
+			DES = { 
+				if = {
+					limit = {
+						is_in_faction = yes 
+					} 
+					leave_faction = yes 
+				}	
+			}
+			DES = {
+				declare_war_on = {
+					target = NCR
+					type = annex_everything
+				}
+			}	
+		}	
 	}
 }
 
@@ -412,9 +553,6 @@ ENC_radio_broadcasts = {
 ENC_production = {
 	retool_machinery = {
 		icon = generic_industry
-		allowed = { 
-			tag = ERB
-		}
 		cost = 50
 		visible = {	
 		}
@@ -431,8 +569,8 @@ ENC_production = {
 	}
 	plunder_military_machinery = {
 		icon = generic_scorched_earth
-		allowed = { 
-			tag = ERB # could be made generic
+		visible = {
+			has_completed_focus = enc_purity
 		}
 		cost = 50
 		available = {
@@ -726,7 +864,7 @@ ENC_political_infighting = {
 # CRISIS
 	ENC_political_crisis = {
 		icon = revolt
-		priority = 35
+		priority = 300
 		activation = {			
 			has_completed_focus = enc_reform
 			intellectuals < party_popularity@elites
@@ -737,7 +875,7 @@ ENC_political_infighting = {
 		is_good = NO
 		days_mission_timeout = 100
 		timeout_effect = {
-			add_stability = -0.10
+			country_event = { id = enc_reformers.16 }  
 		}
 		complete_effect = {
 			# good stuff?
@@ -750,6 +888,10 @@ ENC_political_infighting = {
 		allowed = { tag = ERB }
 		visible = {
 			has_idea = ENC_infighting
+			OR = {
+				has_completed_focus = enc_reform
+				has_completed_focus = enc_purity				
+			}
 		}
 		available = {
 			has_country_flag = enc_crackdown_justified
@@ -784,7 +926,7 @@ ENC_political_infighting = {
 		days_re_enable = 30
 	}
 	ENC_reform_replace_officers= {
-		icon = GFX_decision_oppression
+		icon = decision_demote_officers_boot
 		cost = 75
 		priority = 75
 		allowed = { tag = ERB }
@@ -799,14 +941,19 @@ ENC_political_infighting = {
 			army_org_Factor = -0.25
 			army_attack_factor = -0.10
 		}
-		days_remove = 60
+		days_remove = 200
 		complete_effect  = {
 			add_popularity = { ideology = elites popularity = -0.10 }
+			set_country_flag = enc_demoted_officers
+			swap_ideas = {
+				remove_idea = ENC_officers_traitors
+				add_idea = ENC_officers_traitors_2
+			}
 		}
 		days_re_enable = 100
 	}
 	ENC_reform_replace_scientists= {
-		icon = GFX_decision_oppression
+		icon = decision_demote_scientists
 		cost = 75
 		priority = 75
 		allowed = { tag = ERB }
@@ -820,9 +967,14 @@ ENC_political_infighting = {
 		modifier = {
 			research_time_factor = +0.20
 		}
-		days_remove = 60
+		days_remove = 200
 		complete_effect  = {
 			add_popularity = { ideology = elites popularity = -0.10 }
+			set_country_flag = enc_demoted_scientists
+			swap_ideas = {
+				remove_idea = ENC_scientists_traitors
+				add_idea = ENC_scientists_traitors_2
+			}
 		}
 	}
 	ENC_small_speech= {
@@ -832,8 +984,13 @@ ENC_political_infighting = {
 		allowed = { tag = ERB }
 		visible = {
 			has_idea = ENC_infighting
+			OR = {
+				has_completed_focus = enc_reform 
+				has_completed_focus = enc_purity				
+			}
 		}
 		complete_effect = {
+			set_variable = { var = legitimacy value = 5}
 			if = {
 				limit = {
 					has_completed_focus = enc_reform					
@@ -856,6 +1013,10 @@ ENC_political_infighting = {
 		allowed = { tag = ERB }
 		visible = {
 			has_idea = ENC_infighting
+			OR = {
+				has_completed_focus = enc_reform
+				has_completed_focus = enc_purity				
+			}
 		}
 		complete_effect = {
 			if = {
@@ -913,6 +1074,15 @@ political_actions = {
 			remove_ideas = ENC_emergency_draft
 		}
 	}
+	ENC_emergency_draft_reform = {
+		icon = decision_enc_agreement
+		cost = 25
+		available = { has_completed_focus = enc_emergency_draft_reform }
+		visible = { has_completed_focus = enc_emergency_draft_reform }
+		complete_effect = { add_manpower = 1000 }
+		days_re_enable = 69
+	}
+
 }
 operations = {
 	convert_command_power = {      #reduced research for increased war support
@@ -924,11 +1094,11 @@ operations = {
 		days_re_enable = 30
 		custom_cost_text = command_power_max
 		custom_cost_trigger = {
-			command_power > 99
+			command_power > 99.9
 		}
 		
 		complete_effect = {
-			hidden_effect = {add_command_power = -100}
+			hidden_effect = {add_command_power = -100 }
 		}		
 		modifier = {
 			experience_gain_army = 0.5
@@ -1423,6 +1593,32 @@ ENC_war_with_NCR = {
 			add_equipment_to_stockpile = { type = power_armor_equipment_3 amount = 200 producer = ERB }
 		}
 	}
+}
+
+###############################
+# DEBUG
+###############################
+
+ENC_debug = {
+	ENC_add_legitimacy = {
+		complete_effect = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 10
+			}
+			change_legitimacy = yes
+		}
+	}
+	ENC_reduce_legitimacy = {
+		complete_effect = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = -10
+			}
+			change_legitimacy = yes
+		}
+	}
+
 }
 
 ###############################

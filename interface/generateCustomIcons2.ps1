@@ -1,4 +1,4 @@
-﻿$names = ls -name -Path goals;
+$names = ls -name -Path goals;
 $ideas = ls -name -Path ideas;
 
 $names = $names.replace(".dds","")
@@ -64,7 +64,7 @@ $resultBody2 = Foreach ($name in $names)
 };
 
 "spriteTypes = {" + $resultBody2 + "    
-}" | Out-File -FilePath ..\..\interface/customicons_shine.gfx -Encoding utf8
+}" | Out-File -FilePath ..\..\interface/erb_customicons_shine.gfx -Encoding utf8
 
 "added names:"
 $goals_file = Foreach ($name in $names)

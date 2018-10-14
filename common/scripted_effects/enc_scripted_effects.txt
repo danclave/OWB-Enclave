@@ -1,0 +1,76 @@
+
+##################################################
+### Stability loss based on purist popularity ####
+##################################################
+
+stability_loss_based_on_purist_popularity = {
+	set_temp_variable = {
+		var = ban_ideology_var
+		value = party_popularity@elites
+	}
+	multiply_temp_variable = {
+		var = ban_ideology_var
+		value = -1
+	}
+	multiply_temp_variable = {
+		var = ban_ideology_var
+		value = 0.66
+	}
+	add_stability = ban_ideology_var
+	custom_effect_tooltip = stability_loss_based_on_purist_popularity
+}
+
+##################################################
+### 		Adjust NCR suspicion 			   ###
+##################################################
+
+change_suspicion = {
+	add_to_variable  = {
+		var = ENC_hiding_cost
+		value = suspicion_change_var
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = suspicion_change_var
+				value = 0
+				compare = less_than
+			}
+		}
+		custom_effect_tooltip =  lose_suspicion_tt
+	}
+	else = {
+		custom_effect_tooltip = gain_suspicion_tt
+	}
+	calculate_hiding_cost = YES
+}
+
+calculate_hiding_cost = {
+	# set up if it's 0
+	if = {
+		limit = {
+			check_variable = { var = ENC_hiding_cost value = 15 compare = less_than }
+		}
+		set_variable = { var = ENC_hiding_cost value = 10 }
+	}
+	# add 10
+	add_to_variable = { var = ENC_hiding_cost value = 10}
+	set_variable = { ENC_hiding_cost_total = ENC_hiding_cost }
+	# calculate state cost
+	set_variable = { var = ENC_hiding_cost_states value = num_controlled_states }			
+	multiply_variable = { ENC_hiding_cost_states = 3 }	
+	# add state cost to total
+	add_to_variable = { var = ENC_hiding_cost_total value = ENC_hiding_cost_states}
+	# set duration of safety
+	set_variable = { ENC_hide_days = days_mission_timeout@ENC_hide_activity }
+	add_to_variable = { var = ENC_hide_days value = 90}
+}
+
+##################################
+# EFFECT
+##################################
+# set_temp_variable = {
+	# var = suspicion_change_var
+	# value = 5
+# }
+# change_suspicion = YES

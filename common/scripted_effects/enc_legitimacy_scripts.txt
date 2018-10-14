@@ -1,0 +1,164 @@
+update_legitimacy = {
+	clamp_variable = { # move this clamp
+		var = legitimacy
+		min = 0
+		max = 100
+	}
+	# we cannot use a non temp variable for trigger comparisons
+	add_to_temp_variable = {
+		var = legitimacy_change_var
+		value = legitimacy
+	}
+	if  = { # value is higher than 75, assign high effect and remove the rest
+		limit = {
+			check_variable = {
+				var = legitimacy_change_var
+				value > 74.99
+			}
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ENC_legitimacy_medium	
+				ENC_legitimacy_low
+				ENC_legitimacy_none
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_idea = ENC_legitimacy_high
+				}
+			}			
+			add_ideas = {
+				ENC_legitimacy_high					
+			}	
+		}
+	}
+	else_if  = { # value is between 75 and 50, assign medium effect and remove the rest
+		limit = {
+			check_variable = {
+				var = legitimacy_change_var
+				value > 49.99
+			}
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ENC_legitimacy_high
+				ENC_legitimacy_low
+				ENC_legitimacy_none
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_idea = ENC_legitimacy_medium
+				}
+			}			
+			add_ideas = {
+				ENC_legitimacy_medium					
+			}	
+		}	
+	}
+	else_if  = { # value is between 50 and 25, assign low effect and remove the rest
+		limit = {
+			check_variable = {
+				var = legitimacy_change_var
+				value > 24.99
+			}
+		}
+		hidden_effect = {
+			remove_ideas = {
+				ENC_legitimacy_high
+				ENC_legitimacy_medium
+				ENC_legitimacy_none
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_idea = ENC_legitimacy_low
+				}
+			}			
+			add_ideas = {
+				ENC_legitimacy_low					
+			}
+		}
+	}
+	else = { # value is between 50 and 25, assign lowest effect and remove the rest
+		hidden_effect = {
+			remove_ideas = {
+				ENC_legitimacy_high
+				ENC_legitimacy_medium
+				ENC_legitimacy_low
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_idea = ENC_legitimacy_none
+				}
+			}
+			add_ideas = {
+				ENC_legitimacy_none					
+			}	
+		}
+	}
+}
+
+change_legitimacy = {
+	if = {
+		limit = {
+			not = {
+				has_country_flag = legitimacy_disabled
+			}
+		}
+		add_to_variable  = {
+			var = legitimacy
+			value = legitimacy_change_var
+		}
+		if = {
+			limit = {
+				check_variable = { legitimacy_change_var < 0 }
+			}
+			custom_effect_tooltip = lose_legitimacy_tt
+			update_legitimacy = yes
+		}
+		else_if  = {
+			limit = {
+				check_variable = { legitimacy_change_var > 0 }
+			}
+			custom_effect_tooltip = gain_legitimacy_tt
+			update_legitimacy = yes
+		}	
+	}
+}
+
+has_more_legitimacy = {
+
+	has_manpower > 12
+	
+	# custom_trigger_tooltip = {
+		# tooltip = has_legitimacy_tt		
+		# check_variable = {
+			# var = legitimacy
+			# value > legitimacy_check_var
+		# }
+	# }
+}
+
+
+
+##################################
+# EFFECT
+##################################
+# set_temp_variable = {
+	# var = legitimacy_change_var
+	# value = 5
+# }
+# change_legitimacy = YES
+
+# set_temp_variable = {
+	# var = legitimacy_check_var
+	# value = 100
+# }
+# legitimacy_check_var = YES

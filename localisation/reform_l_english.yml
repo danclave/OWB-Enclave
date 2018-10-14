@@ -13,6 +13,32 @@ ERB_USA_people:0 "United States"
 ERB_USA_people_DEF:0 "The United States"
 ERB_USA_people_ADJ:0 "American"
 
+DES_ERB_ruler:0 "United States Rangers"
+DES_ERB_ruler_DEF:0 "The United States Rangers"
+DES_ERB_ruler_ADJ:0 "American Rangers"
+DES_ERB_intellectuals:0 "United States Rangers"
+DES_ERB_intellectuals_DEF:0 "The United States Rangers"
+DES_ERB_intellectuals_ADJ:0 "American Rangers"
+DES_ERB_elites:0 "United States Rangers"
+DES_ERB_elites_DEF:0 "The United States Rangers"
+DES_ERB_elites_ADJ:0 "American Rangers"
+DES_ERB_people:0 "United States Rangers"
+DES_ERB_people_DEF:0 "The United States Rangers"
+DES_ERB_people_ADJ:0 "American Rangers"
+
+
+ERB_nevada_ruler:0 "Nevada"
+ERB_nevada_ruler_DEF:0 "The State of Nevada"
+ERB_nevada_ruler_ADJ:0 "Nevadan"
+ERB_nevada_intellectuals:0 "Nevada"
+ERB_nevada_intellectuals_DEF:0 "The State of Nevada"
+ERB_nevada_intellectuals_ADJ:0 "Nevadan"
+ERB_nevada_elites:0 "Nevada"
+ERB_nevada_elites_DEF:0 "The State of Nevada"
+ERB_nevada_elites_ADJ:0 "Nevadan"
+ERB_nevada_people:0 "Nevada"
+ERB_nevada_people_DEF:0 "The State of Nevada"
+ERB_nevada_people_ADJ:0 "Nevadan"
 ###################################
 # FOCUS TREE
 ###################################
@@ -21,6 +47,15 @@ enc_reform_desc:0 "If we are to rebuild our once-great nation, we must reform ou
 
 enc_radio:0 "Enclave Radio"
 enc_radio_desc:0 "Our radio beacons could be used to broadcast the Enclave's message to the wasteland. Let sympathizers far and wide hear of the Enclaves vision. While we are at it, those same beacons can also be used as listening outposts."
+
+enc_the_lucia_incident: "The Lucia Incident"
+enc_the_lucia_incident_desc: "TODO"
+enc_the_lucia_incident_tt: "Unlocks the §YThe Lucia Incident§! decision.\nThis allows you to use your spies to send a fake radio broadcast causing the §Y[BOS.GetName]§! to declare war on the §Y[NCR.GetName]§!."
+
+
+enc_the_bishop_incident: "The Bishop Incident"
+enc_the_bishop_incident_desc: "TODO"
+enc_the_bishop_incident_tt:0 "Unlocks the §YThe Bishop Incident§! decision.\nThis allows you to use your spies to send a fake radio broadcast causing the §Y[DES.GetName]§! to declare war on the §Y[NCR.GetName]§!."
 
 enc_accept_wastelanders:0 "Accept Wastelander Volunteers"
 enc_accept_wastelanders_desc:0 "Our numbers have dwindled down to dangerously low levels. There are men willing to fight and die for our country, so why not let them?"
@@ -48,7 +83,142 @@ enc_RND_desc:0 "By diverting resources from our industry, we can fund DARPA once
 
 enc_reform_placeholder: "Reformers Coming soon!"
 enc_reform_placeholder_tt: "This path will allow you to rebuild the §YUnited States of America§!"
-enc_reform_placeholder_desc:0 "Thanks for your patience so far, but it will take at least 2-3 months before the reformers could be ready for release. I've been working on them since patch 1.1. These patches are just me porting Reformer stuff to the Purists so that people can enjoy the progress early."
+enc_reform_placeholder_desc:0 "Welcome to OWB 1.1, I hope my Enclave mod made the switch in one piece. Work continues as schedules on the Reformers. Thank you for your interest!"# army tree
+
+enc_department_of_defense:0 "US Department of Defense"
+enc_department_of_defense_desc:0 "Until the rise of the Reformers, the Enclave was largely run by the military.  Now that we are trying to restore the rule of law, perhaps we should revive a department devoted to military matters."
+enc_user_friendly_firearms:0 "User Friendly Firearms"
+enc_user_friendly_firearms_desc:0 "As we open the military to other Americans, we must strive to simplify our designs to survive outside our elite units."
+enc_military_propaganda:0 "Military Propaganda"
+enc_military_propaganda_desc:0 "By the rockets' red glare, the nukes bursting in air, gave proof through the night, that the flag was still there."
+enc_wartime_draft:0 "Wartime Draft"
+enc_wartime_draft_desc:0 "It is time to conscript the peoples of America to protect our nation and its interests."
+
+enc_armed_militias:0 "Armed Militias"
+enc_armed_militias_desc:0 "Early Americans survived in the wilderness by forming citizen militias to defend their nation.  Modern Americans can now do the same."
+
+enc_advanced_loadouts:0 "Advanced Loadouts"
+enc_advanced_loadouts_desc:0 "'If you shoot at someone and they come screaming, it's a raider.  If you shoot and they respond with lasers, they're the Brotherhood.  If there's silence for 5 minutes and then a bombing run, it's the Enclave.'-NCR Army Joke"
+
+enc_advanced_training:0 "Specialist training"
+enc_advanced_training_desc:0 "As heirs to the military industrial complex, we can train men far above the rabble of the Legion or the NCR."
+enc_american_minutemen:0 "American Minutemen"
+enc_american_minutemen_desc:0 "These men ensure that no one's settlement is under attack"
+enc_arms_development:0 "Arms Development"
+enc_arms_development_desc:0 "Working together, the military and industry can collaborate to promote a better society for all! We're thinking of calling it the military industrial collaboration... Or soomething."
+enc_army_reserves:0 "Army Reserves"
+enc_army_reserves_desc:0 "Americans in the Great War rallied to the flag when the nation was under attack, serving as part time soldiers.  They can do so again."
+
+enc_department_of_homeland_security:0 "Department of Homeland Security"
+enc_department_of_homeland_security_desc:0 "Communists, Legion spies, and Brotherhood agents lurk everywhere. It's only natural to form a Department to root them out."
+enc_disciplined_soldiers:0 "Disciplined Soldiers"
+enc_disciplined_soldiers_desc:0 "Unlike some societies, the Enclave trains its soldiers.  This is why it takes more than radscorpions to make them flee the field."
+enc_emergency_draft_reform:0 "Emergency Draft"
+enc_emergency_draft_reform_desc:0 "Let us call upon every man and woman to defend our nation in the greatest threat since the War."
+enc_guerrilla_warfare:0 "Guerilla Warfare"
+enc_guerrilla_warfare_desc:0 "When our enemies come, they will find a laser rifle behind every blade of grass. We can indoctrinate the people to help defend America."
+enc_high_quality_army:0 "High Quality Army"
+enc_high_quality_army_desc:0 "By focusing on combined arms tactics and improving logistics,we can bring the Enclave's strengths to new heights."
+enc_home_defense:0 "Home Defense"
+enc_home_defense_desc:0 "The soldiers of the Enclave fight to preserve the land of their forefathers"
+enc_mass_mobilization:0 "Mass Mobilization"
+enc_mass_mobilization_desc:0 "Since the war, no society has been able to engage in a total war like World War I, II, or III.  Until now."
+enc_mechanization:0 "Mechanization"
+enc_mechanization_desc:0 "With proper attention, we bring back to America a true post-industrial army."
+enc_military_equipment:0 "Military Equipment"
+enc_military_equipment_desc:0 "By learning from Vault City, Day Glow, and other bastions of civilization, we've learned how to simplfiy our military equipment production."
+enc_military_propaganda:0 "Military Propaganda"
+enc_military_propaganda_desc:0 "It's been half a century since George Washington and his troops gave forth a new nation, founded in liberty.  But Americans can be reminded that they will always fight for freedom."
+enc_mobile_army:0 "Mobile Army"
+enc_mobile_army_desc:0 "We need to move beyond relying on vertibirds to move our men.  The military can harness our nascent industries to restore America's armies to America's highways."
+enc_national_guard:0 "National Guard"
+enc_national_guard_desc:0 "The idea of a citizen militia is cute, but prewar America had formalized military forces made up of civilians subject to military training.  Why would we do anything else?"
+enc_new_air_force:0 "New Air Force"
+enc_new_air_force_desc:0 "We need more than vertibirds to secure America. It's time to take back to the skies."
+enc_new_american_army:0 "The New American Army"
+enc_new_american_army_desc:0 "Look at them march past. We are no longer a few bands hiding in powered armor.  We are the American army, and we're back."
+enc_new_generation_officers:0 "A new Generation of Officers"
+enc_new_generation_officers_desc:0 "A new generation of officers has arisen, who have hidden throughout the Wasteland.  They have their own views of how to handle combat, and we'd be foolish to ignore them."
+enc_new_officer_corps:0 "Officers Corps Reform"
+enc_new_officer_corps_desc:0 "That spit and polish, that crisp solute, that ability to launch a pincer into the enemies' positions.  Our officers are as good as any Westpoint turned out."
+
+enc_officers_by_loyalty_and_devotion:0 "Officers by Loyalty and Devotion"
+enc_officers_by_loyalty_and_devotion_desc:0 "Too many Purists still hide in the officers' ranks.  We should only promote those loyal to America."
+enc_officers_by_merit_and_skill:0 "Officers by Merit and Skill"
+enc_officers_by_merit_and_skill_desc:0 "What if we chose officers based on merit and skill instead of who their forefathers were?"
+enc_old_remnant_officers:0 "Old Remnant Officers"
+enc_old_remnant_officers_desc:0 "The old officers are set in their ways, but the ones who have survived held out against the New California Republic and Brotherhood.  We'd be fools to ignore them."
+enc_power_armor_integration:0 "Power Armor integration"
+enc_power_armor_integration_desc:0 "Although we've always relied on power armor, one of our officers wants to take this to the next step. Captain Wilson Freeman has published a treatise callign for a 'lightning war', where powered armor flanks enemy positions, cuts off their lines of retreat, and capture the survivors. This just might work."
+enc_rank_and_file_infantry:0 "Rank and File Infantry"
+enc_rank_and_file_infantry_desc:0 "Powered armor will always be key to the Enclave, but resources are better spent on arming as many men as possible.  How do you plan to maintain divisions of powered armor in a nuclear wasteland?"
+enc_reform_general_staff:0 "Reform General Staff"
+enc_reform_general_staff_desc:0 "Our General Staff need to prepare for real wars against real states.  Fortunately the databanks have plenty of records of the last time Americans fought a real war...""
+enc_second_amendment:0 "Revive Second Amendment"
+enc_second_amendment_desc:0 "We once held that everyone had the right to a firearm, doubtless explaining why there's a laser pistol in every prewar kitchen.  But if we revived the Second Amendment, it might encourage familiarity with firearms among our citizens..."
+enc_specialist_soldiers:0 "Specialist Soldiers"
+enc_specialist_soldiers_desc:0 "The United States once had a marine corps, paratroopers, and special forces.  The time has come to have these troops again."
+enc_standing_army:0 "A Standing Army"
+enc_standing_army_desc:0 "If you want peace, prepare for war.  And war, war never changes. A standing army will ensure we are always on guard."
+
+
+
+
+enc_expansion_reform:0 "Prepare Expansion"
+enc_expansion_reform_desc:0 "With New Reno secured, the rest of northern Nevada lies open to us.  The technology of Vault City, the manpower of the tribals... and then there are the Yakuza, a threat to our flank."
+enc_vlt_power_reform:0 "The Gecko Power Plant"
+enc_vlt_power_reform_desc:0 "Vault City and Gecko could not cooperate, meaning their power supply was a fraction of what it could be.  Now that we've united them, aren't we all better off?"
+enc_vlt_core_reform:0 "Our New City"
+enc_vlt_core_reform_desc:0 "There were enough disaffected elements in Vault City that we've been able to secure their loyalty. This is the second city of the Reunited States."
+enc_yakuza_annex_reform:0 "Drive Out The Yakuza"
+enc_yakuza_annex_reform_desc:0 "The Yakuza pretend to be heirs to Japanese traditions, which would be fine if they weren't on American soil."
+enc_ANT_annex_reform:0 "Break the Tribe"
+enc_ANT_annex_reform_desc:0 "Hard as it may to believe, these tribals are Americans too.  Or will be shortly."
+
+ENC_scientists_traitors:0 "Treacherous Scientists"
+ENC_scientists_traitors_desc:0 "Many of our best and brightest were once part of the secret projects performed at Navarro and the rig. For this, they were persecuted relentlessly after the fall of Navarro. None of them have forgotten this, few have forgiven it."
+ENC_officers_traitors:0 "Treacherous Officers"
+ENC_officers_traitors_desc:0 "The Purists have many dedicated loyalists in the ranks of our mid to high level military leadership. We must tread carefully."
+
+ENC_scientists_traitors_2:0 "Treacherous Scientists"
+ENC_scientists_traitors_2_desc:0 "Many of our best and brightest were once part of the secret projects performed at Navarro and the rig. For this, they were persecuted relentlessly after the fall of Navarro. None of them have forgotten this, few have forgiven it."
+ENC_officers_traitors_2:0 "Treacherous Officers"
+ENC_officers_traitorss_2_desc:0 "The Purists have many dedicated loyalists in the ranks of our mid to high level military leadership. We must tread carefully."
+
+enc_yakuza_enforce_american_culture:0 "Enforce American Culture"
+enc_yakuza_enforce_american_culture_desc:0 "The Yakuza ape a vanished Nippon, but we know they're really Americans.  They just need to be... reminded."
+
+enc_yakuza_preserve_japanese_culture:0 "Preserve Japanese Culture"
+enc_yakuza_preserve_japanese_culture_desc:0 "The Yakuza are fierce fighters, and would swear loyalty to us in exchange for autonomy.  Wouldn't we rather they point their guns at our enemies?"
+
+enc_ANT_civilization_by_force:0 "Civilization By Force"
+enc_ANT_civilization_by_force_desc:0 "These Americans have fallen on hard times.  It's the burden of the Enclave to bring enlightenment to this begotten land, whether they want it or not."
+
+enc_ANT_establish_tributaries:0 "Establish Tributaries"
+enc_ANT_establish_tributaries_desc:0 "We can protect tribal culture by giving them autonomy in exchange for men. Old America did this and no one complained."
+
+enc_VLT_raiders:0 "Bribing Raiders"
+enc_VLT_raiders_desc:0 "We can bribe raiders to trigger a border conflict with Vault City.  If they can't protect their borders we can claim 
+enc_VLT_force:0 "A Show of Force"
+enc_VLT_force_desc:0 "Our military forces have persuaded the Vault City Council that their future lies with us. We'll gladly protect our latest citizens."
+
+enc_rangers_submit:0 "The Desert Rangers Join US!"
+enc_rangers_submit_desc:0 "With the peace we've brought to Northern Nevada, the Desert Rangers are willign to work with our government to protect the region."
+
+enc_NCR_start:0 "The NCR"
+enc_NCR_start_desc:0 "We had our tensions with the NCR, but they are based on the old American ideals.  Perhaps we can work with them to restore America in light of threats from the Mutants, the Brotherhood, and others."
+
+enc_accept_status_quo:0 "Accept the Status Quo"
+enc_accept_status_quo_desc:0 "Painful though it is for old veterans, the support for the Enclave within the NCR's elite means we can reach an agreement with them."
+
+enc_the_state_of_nevada:0 "The State of Nevada"
+enc_the_state_of_nevada_des:0  "With the peace with the NCR, reformers have set their sights on Nevada.  We can work ourselves to make ourselves the legitimate government of the Old World state of Nevada."
+enc_NCR_trade:0 "Open Up Trade"
+enc_NCR_trade_desc:0 "Although the NCR lacks the advanced technology of the Enclave, they possess ample natural resources and foodstuffs.  If we trade with them we'll free our economy to focus on high technology."
+enc_NCR_embassy:0 "Establish an Embassy"
+enc_NCR_embassy_desc:0 "By establishing an embassy in the NCR's 'Capital", we can recognize that it is a legitimate, if misguided, government in the Wasteland."
+enc_the_true_enemy: "The True Enemy"
+enc_the_true_enemy_desc: "The NCR stands for many of our ideals:  Life, liberty, and the pursuit of happiness.  The legion's led by a despot who must learn Americans never ever will be slaves."
 
 ###################################
 # REFORM TODO
@@ -68,20 +238,20 @@ enc_reborn:0 "A Nation Reborn"
 enc_reborn_desc:0 "TODO"
 
 enc_reno_start:0 "The City of Crime"
-enc_reno_start_desc:0 "TODO"
+enc_reno_start_desc:0 "Reno, a wretched hive of scum and villainy, offers both a secure base of operations on the margins of the NCR and the chance to show the world the benefits of Enclave rule."
 enc_reno_mordinos:0 "Going Cold Turkey"
-enc_reno_mordinos_desc:0 "TODO"
+enc_reno_mordinos_desc:0 "The Mordinos are parasites, selling drugs and other vices to the riffraff of the Wastes."
 enc_reno_bishops:0 "Checkmate"
-enc_reno_bishops_desc:0 "T"
+enc_reno_bishops_desc:0 "The Bishops plotted to bring New Reno into the NCR.  That was a mistake."
 enc_reno_wrights:0 "A Shared Dream"
-enc_reno_wrights_desc:0 "TODO"
+enc_reno_wrights_desc:0 "The Wrights dream of a peaceful, prosperous city.  Maybe they can collaborate with us towards a better tomorrow, today."
 enc_reno_salvatores:0 "Old Allies"
-enc_reno_salvatores_desc:0 "TODO"
+enc_reno_salvatores_desc:0 "The Salvatores still remember our last time in New Reno.  It might be worth cutting a deal with them again."
 enc_reno_end:0 "The New Capital"
-enc_reno_end_desc:0 "TODO"
+enc_reno_end_desc:0 "We've broken the backs of the scum that run New Reno.  Look how much happier everyone is with Enclave soldiers patrolling the streets. No one complains, not even in private."
 
 enc_radio_civilian_music:0 "Old World Blues"
-enc_radio_civilian_music_desc:0 "TODO"
+enc_radio_civilian_music_desc:0 "'Country roads, take me home, to the place I belong...' Broadcasting songs of a bygone era can drive support for our cause and what we represent."
 
 enc_federal_reserve:0 "Revive The Federal Reserve"
 enc_federal_reserve_desc:0 "TODO"
@@ -101,15 +271,17 @@ enc_radio_military_desc:0 "TODO"
 enc_radio_civilian:0 "Old World Radio"
 enc_radio_civilian_desc:0 "TODO"
 
-enc_radio_military_command:0 "Increase Encryption Standards"
-enc_radio_military_command_desc:0 "TODO"
+enc_raise_encryption_standards:0 "Increase Encryption Standards"
+enc_raise_encryption_standards_desc:0 "TODO"
 
 enc_geck:0 "The GECK Project"
 enc_geck_desc:0 "TODO"
 
 enc_accept_ghouls:0 "Accept Ghouls"
-
 enc_reject_ghouls:0 "Reject Ghouls"
+
+enc_accept_super_mutants:0 "Accept Super Mutants"
+enc_reject_super_mutants:0 "Reject Super Mutants"
 
 enc_department_of_energy:0 "Department of Energy"
 enc_department_of_energy_desc:0 "TODO"
@@ -143,7 +315,8 @@ enc_power_to_the_people:0 "TODO"
 
 enc_fate_of_our_nation:0 "The Fate of Our Nation"
 enc_moderate_proposal:0 "A Moderate Proposal"
-enc_old_world:0 "The Old World"
+enc_old_world:0 "A Nation Reborn"
+enc_old_world_desc:0 "TODO"
 enc_a_new_order:0 "An All American Order"
 
 enc_purge_scientists:0 "Purge the Scientists"
@@ -152,53 +325,162 @@ enc_purge_scientists_desc:0 "TODO"
 enc_purge_officers:0 "Purge the Officers"
 enc_purge_officers_desc:0 "TODO"
 
+stability_loss_based_on_purist_popularity: "\n§MStability loss is based on popularity of§! §YPurist Faction§!"
+
 enc_infiltrate_ncr:0 "Infiltrate the NCR"
 enc_infiltrate_ncr_t_tt:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is higher than §Y25§!"
 enc_infiltrate_ncr_desc:0 "TODO"
 enc_infiltrate_ncr_tt:0 "§YNCR suspicion§! is reduced by £pol_power §G25§!"
 
-ncr_suspicion_minus_10:0 "§YNCR suspicion§! is reduced by £pol_power §G10§!\n"
-ncr_suspicion_higher_than_10:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is higher than §Y10§!"
-
-enc_expansion_reform:0 "Prepare Expansion"
-enc_expansion_reform_desc:0 "TODO"
-enc_vlt_power_reform:0 "The Gecko Power Plant"
-enc_vlt_power_reform_desc:0 "TODO"
-enc_vlt_core_reform:0 "Our New City"
-enc_vlt_core_reform_desc:0 "TODO"
-enc_yakuza_annex_reform:0 "Drive Out The Yakuza"
-enc_yakuza_annex_reform_desc:0 "TODO"
-enc_ANT_annex_reform:0 "Drive Out The Tribe"
-enc_ANT_annex_reform_desc:0 "TODO"
-
-ENC_scientists_traitors:0 "Treacherous Scientists"
-ENC_scientists_traitors_desc:0 "Many of our best and brightest were once part of the secret projects performed at Navarro and the rig. For this, they were persecuted relentlessly after the fall of Navarro. None of them have forgotten this, few have forgiven it."
-ENC_officers_traitors:0 "Treacherous Officers"
-ENC_officers_traitors_desc:0 "The Purists have many dedicated loyalists in the ranks of our mid to high level military leadership. We must tread carefully."
-
-enc_yakuza_enforce_american_culture:0 "Enforce American Culture"
-enc_yakuza_enforce_american_culture_desc:0 "TODO"
-
-enc_yakuza_preserve_japanese_culture:0 "Preserve Japanese Culture"
-enc_yakuza_preserve_japanese_culture_desc:0 "TODO"
-
-enc_ANT_civilization_by_force:0 "Civilization By Force"
-enc_ANT_civilization_by_force_desc:0 "TODO"
-
-enc_ANT_establish_tributaries:0 "Establish Tributaries"
-enc_ANT_establish_tributaries_desc:0 "TODO"
 
 enc_assassinate_F_tt:0 "§YFranklin Andersen§! dies!"
 
 enc_stage_raider_attacks:0 "Stage Raider Attacks"
 enc_stage_raider_attacks_desc:0 "TODO"
-enc_stage_raider_attacks_tt: "Unlocks the §YArm Raider Gangs§! decision.\nThis allows you to send 300 £enc_weapons §YInfantry Equipment§! to any §YRaider§! faction bordering the §YNew California Republic§! to reduce §YNCR suspicion§! by §G10§! £pol_power."
+enc_stage_raider_attacks_tt: "Unlocks the §YArm Raider Gangs§! decision.\nThis allows you to send 300 £enc_weapons §YInfantry Equipment§! to any §YRaider§! faction bordering the §Y[NCR.GetName]§! to reduce §YNCR suspicion§! by §G20§! £pol_power."
+
+
+enc_foreign_policy_tt: "Unlocks the §YReveal Ourselves to the NCR§! decision.\nThis allows you to reveal yourself to the §Y[NCR.GetName]§! under the right circumstances, removing the need to hide from them."
 
 enc_call_ncr_favors:0 "Call In Favors"
 enc_call_ncr_favors_desc:0 "TODO"
 
 enc_contact_old_world_party:0 "Contact Old World Party"
 enc_contact_old_world_party_desc:0 "TODO"
+enc_contact_old_world_party_tt: "Unlocks the §YSupport Old World Party§! decision.\nThis allows you to spend £pol_power §Ypolitical power§! to support the §YOld World Party§! in the §Y[NCR.GetName]§!."
+
+enc_victory_speech:0 "Presidential Victory Speech"
+enc_victory_speech_desc:0 "TODO"
+enc_provoke_purists:0 "Provoke the Purists"
+enc_provoke_purists_desc:0 "TODO"
+enc_reach_the_centrists:0 "Reach Out To Centrists"
+enc_reach_the_centrists_desc:0 "TODO"
+enc_reach_the_centrists_tt:0 "\n§MWe will have to promise compromises to centrists§!"
+
+enc_local_elections: "Local Elections"
+enc_local_elections_desc: "TODO"
+
+enc_presidential_elections: "Presidential Elections"
+enc_presidential_elections_desc: "TODO"
+
+enc_expand_human_definition: "Expand the Definition of Human"
+enc_expand_human_definition_desc: "The American experiment is a history of progress.  It's time for one more step."
+
+enc_the_mutant_question: "The Mutant Question"
+enc_the_mutant_question_desc: "TODO"
+
+enc_suspend_elections: "Suspend Elections"
+enc_suspend_elections_desc: "TODO"
+
+enc_suspend_elections_legitimacy_loss: "§YLegitimacy§! is now capped at §R0§!.\n"
+enc_suspend_elections_tt: "Remove negative effects of low §YLegitimacy§!.\n"
+
+enc_extend_presidential_powers_reform: "Extend Presidential Powers"
+enc_extend_presidential_powers_reform_desc: "TODO"
+
+enc_silence_congress_reform: "Silence Congress"
+enc_silence_congress_reform_desc: "TODO"
+
+enc_segregation: "Segregation"
+
+enc_institutionalize_separation: "Institutionalize Seperation"
+
+enc_stability_first: "Stability First"
+enc_limited_integration: "Limited Integration"
+enc_citizenship_for_service: "Citizenship for Service"
+enc_appointed_governors: "Appointed Governors"
+
+enc_a_common_enemy:0 "A Common Enemy"
+enc_a_common_enemy_tt:0 "\n§MBonus is doubled if both groups are rejected.§!"
+
+enc_integrate_scientists: "Integrate Scientists"
+enc_integrate_politicians: "Integrate Politicians"
+enc_integrate_officers: "Integrate Officers"
+
+enc_empower_congress: "Empower Congress"
+enc_empower_congress_desc: "TODO"
+
+enc_normalization: "The New Normal"
+enc_normalization_desc: "TODO"
+
+enc_owb_propaganda: "Old World Propaganda"
+enc_owb_propaganda_desc: "By reminding people that America onced stretched from sea to glowing sea, we can encourage them to support the Enclave and its causes."
+
+enc_the_first_brick:0 "The First Brick"
+enc_the_first_brick_desc:0 "TODO"
+
+enc_reno_police:0 "New Reno Police"
+enc_reno_police_desc:0 "TODO"
+
+enc_amnesty_for_service:0 "Amnesty For Service"
+enc_amnesty_for_service_desc:0 "TODO"
+
+enc_out_with_the_old:0 "Out With The Old"
+enc_out_with_the_old_desc:0 "TODO"
+
+enc_military_complex:0 "Military Industrial Complex"
+enc_military_complex_desc:0 "TODO"
+
+enc_civilian_infrastructure:0 "Civilian Inftrastructure"
+enc_civilian_infrastructure_desc:0 "TODO"
+
+enc_the_fate_of_our_democracy:0 "The Fate of Our Democracy"
+enc_the_fate_of_our_democracy_desc:0 "TODO"
+
+enc_NCR_no_compromise:"No Compromise"
+enc_NCR_no_compromise_desc: "The NCR is a rebellion against the United States Government.  We can't compromise with traitors."
+
+enc_NCR_seak_allies:"Seeking Allies"
+enc_NCR_seak_allies_desc: "We aren't the only power opposed to the NCR.  To the east comes a fool who dreams of reviving the Roman Empire.  To the south lies another legacy of the Old War, Mr. House, and New Vegas.  And then there is the Brotherhood of Steel, who have no love for the NCR or us. Perhaps the enemy of our enemy can be our... not enemy?"
+
+
+enc_the_american_alliance: "The Allied States of America"
+enc_the_american_alliance_desc: "We can come to an agreement with the NCR to stand together against the Brotherhood, the Legion, and all who stand in the way of peace and progress."
+
+enc_the_state_of_utah: "The State of Utah"
+enc_the_state_of_utah_desc: "To the east, New Canaan is the nucleus for the Mormons of Utah.  With our backing they can stand against Caesar and bring freedom to the East."
+
+
+enc_our_new_ally: "Our New Ally"
+enc_our_new_ally_desc: "TODO"
+
+enc_crack_the_code: "Crack the Code"
+enc_crack_the_code_desc: "TODO"
+
+enc_wastelander_draft: "Draft the Wastelanders"
+enc_wastelander_draft_desc: "TODO"
+
+enc_ss_ceasar_start:0 "Operation Brutus"
+enc_ss_ceasar_bottom:0 "From the Bottom Up"
+enc_ss_ceasar_bottom_infiltrate:0 "Infiltrate the Slaves"
+enc_ss_ceasar_bottom_weapons:0 "Plant Weapon Caches"
+enc_ss_ceasar_top:0 "From the Top Down"
+enc_ss_ceasar_top_books:0 "Operation Lycaon"
+enc_ss_ceasar_bottom_uprising:0 "Operation Spartacus"
+enc_ss_ceasar_top_raiding:0 "Disturbing the Peace"
+enc_ss_ceasar_top_augustus:0 "Operation Augustus"
+
+enc_operation_babylon:0 "Operation Babylon"
+enc_the_barons:0 "The Barons"
+enc_secret_dealings:0 "Secret Dealings"
+enc_operation_carnaval:0 "Operation Carnaval"
+enc_petition_for_independence:0 "Petition For Independence"
+enc_petition_for_independence_tt:0 "Unlocks the §YPetition for Independence§! decision.\nThis decision will release the §YBaron's Republic§! with any states that have armed rebels."
+enc_the_common_man:0 "The Common Man"
+enc_fear_uncertainty_and_doubt:0 "Fear, Uncertainty, and Doubt"
+enc_organise_the_sympathizers:0 "Organise the Sympathizer"
+enc_the_divided_state:0 "The Divided State"
+
+
+enc_dod_tactics:0 "Department of Military Intelligence"
+enc_postwar_tactics:0 "Post-war tactics"
+enc_dod_energy_1:0 "Energy Focus"
+enc_dod_energy_2:0 "Improve the Design"
+enc_dod_energy_3:0 "High Crystal Standards"
+enc_dod_balistic_1:0 "Ballistic Focus"
+enc_dod_balistic_2:0 "Streamline Production"
+
+
 
 ###################################
 # REFORM IDEAS
@@ -206,6 +488,8 @@ enc_contact_old_world_party_desc:0 "TODO"
 ENC_radio_military: "Military Enclave Radio"
 ENC_radio_military_encrypted: "Military Enclave Radio"
 ENC_radio_civilian: "Civilian Enclave Radio"
+ENC_radio_civilian_old: "Old World Radio"
+ENC_radio_civilian_new: "New World Tunes"
 
 ENC_air_force_loyalist: "Loyal Chief Of Airforce."
 ENC_air_force_loyalist_desc: "Enclave leadership has seen fit to promote someone loyal to their current government as their Chief of Staff of the Enclave Air Force."
@@ -213,6 +497,93 @@ ENC_air_force_best_man: "competent Chief Of Airforce."
 ENC_air_force_best_man_desc: "Enclave leadership has seen fit to promote their best candidate as their Chief of Staff of the Enclave Air Force."
 
 norman_wood: "Norman Wood"
+dr_henry: "Dr. Henry"
+
+ENC_infighting_2: "Civil War"
+
+ENC_ncr_enclave_propaganda: "Enclave Propaganda"
+
+ENC_legitimacy_none: "No Legitimacy"
+ENC_legitimacy_none_desc: "Despite their claims, the Enclave is seen as little more than dangerous mad men claiming to be a goverment few remember and fewer want. "
+ENC_legitimacy_low: "Little Legitimacy"
+ENC_legitimacy_medium: "Moderate Legitimacy"
+ENC_legitimacy_high: "High Legitimacy"
+
+max_legitimacy: "[?legitimacy]/100 §Ylegitimacy§!"
+half_legitimacy: "[?legitimacy]/50 §Ylegitimacy§!"
+25_legitimacy: "[?legitimacy]/25 §Ylegitimacy§!"
+
+has_legitimacy_tt: "[?legitimacy]/[?has_legitimacy_var] §Ylegitimacy§!"
+
+ENC_reno_police: "New Reno Police"
+ENC_reno_police_corrupt: "Corrupt New Reno Police"
+
+ENC_accepted_ghouls:0 "Accepted Ghouls"
+ENC_accepted_ghouls_and_super_mutants:0 "Accepted Ghouls and Super Mutants"
+
+ENC_begun_integration: "Begun Integration"
+
+ENC_completed_integration: "Completed Integration"
+
+ENC_smuggling: "Smuggling"
+ENC_NCR_smuggling: "Smuggling"
+
+ENC_NCR_demoralization_campaign: "Demoralization Campaign"
+
+ENC_home_defense: "Home Defense"
+
+ENC_militias:0 "Armed Militias"
+ENC_militias_2:0 "Armed Militias"
+ENC_militias_3:0 "Armed Militias"
+ENC_militias_4:0 "Armed Militias"
+
+ENC_national_guard: "National Guard"
+
+ENC_army_reserves: "Army Reserves"
+
+ENC_NCR_code_cracked: "NCR Code Cracked"
+enc_jingoism: "Jingoism"
+enc_military_equipment:  "Gearing Up for War"
+enc_the_new_american_army:  "The New American Heroes"
+
+enc_open_to_new_ideas: "Open to New Ideas"
+enc_open_to_new_ideas_desc:  "The Enclave is opening to new ideas as it tries to reunite America. This is leading to a new way of looking at problems."
+
+enc_house_always_wins:  "The House Always Wins"
+###################################
+# Seek Allies
+###################################
+
+enc_BOS_start:0 "The Brotherhood of Steel"
+enc_BOS_start_desc: "Although the Brotherhood of Steel hated our plans for New California, their love of ancient technology, and concern about NCR expansionism, could bring them to our side."
+enc_BOS_tech:"Technological Temptations"
+enc_BOS_tech_desc: "As a show of our good faith and support for the Brotherhood, we can offer them Vertibird plans.  They may come in handy in the event the NCR tries to break their bunkers.  In return they will provide us with more powered armor."
+enc_BOS_peace:0 "An Uneasy Peace"
+enc_BOS_peace_desc:0 "The Brotherhood, at the end of the day, never cared for the people of the NCR.  They're focused on preserving their technology, and as long as we respect their rights it is hoped they'll respect ours."
+enc_BOS_vengeance:0 "Old Enemies, Older Ties"
+enc_BOS_vengeance_desc:0 "The Brotherhood got its start as remnants of the US military, just as we did. Together, we can protect each other from the yokels of the NCR."
+
+
+enc_CES_start:0 "The Legion"
+enc_CES_start_desc:0 "The Legion could be a powerful ally for our cause.  "
+enc_CES_cache:0 "Render unto Ceasar"
+enc_CES_cache_desc:0 "As a show of good faith, we can offer Caesar energy weapons. The Legion claims they don't use firearms, but that might change if they see what we can offer."
+enc_CES_trade:0 "Establish Trade"
+enc_CES_trade_desc:0 "The Legion may offer a smaller market than NCR would, but they still have products we want.  If nothing else, slaves."
+enc_CES_common_enemy:0 "A Common Enemy"
+enc_CES_common_enemy_desc:0 "Whatever our feelings for the Legion, the NCR is the enemy on our doorstep.  We must focus on them first."
+enc_NEW_start:0 "New Vegas"
+enc_NEW_start_desc:0 "REconnaisance has determined that Los Vegas is rapidly rebuilding under the mysterious Mr. House with the aid of prewar technology.  That may be good for business."
+enc_NEW_vacation:0 "Negotiate a Group Rate"
+enc_NEW_vacation_desc:0 "With control of New Reno's 'pharmaceutical industry' and electronics, we can arrange trade between our two groups."
+enc_NEW_robot:0 "Exchange Robotic Technology"
+enc_NEW_robot_desc:0 "In exchange for robotic technology, we can teach New Vegas how to upgrade their weaponry."
+enc_NEW_recognize:0 "Recognize Vegas Autonomy"
+enc_NEW_recognize_desc:0 "In exchange access to New Vegas's weapons manufactories, we are prepared to recognize its privileged status in the Reunited States."
+enc_NEW_pact:0 "Closer Ties"
+enc_NEW_pact_desc:0 "We can forge closer ties with one of the last remnants of the Old America.  Mr. House has always worked with the United States government, after all."
+enc_NEW_puppet:0 "Our New Vice President"
+enc_NEW_puppet_desc:0 "Mr. House's reputation precedes him.  Recognizing the power and good intentions of the Enclave, he's prepared to join forces to bring peace and order to the Wastes.  Please rise for our new vice president."
 
 ###################################
 # REFORM TRAITS
@@ -234,6 +605,14 @@ connect_to_power_tt: "Connect to Grid"
 
 install_police_force_tt: "Install Police Force"
 
+legitimacy_TOOLTIP:0 "§HLegitimacy§! \n\nCurrent legitimacy: §Y[?legitimacy]§!\n\nLegitimacy is capped at §H100§!."
+
+arm_rebels_tt: "Arm Rebels (§Y50§! £pol_power )"
+arm_rebels_tt_delayed: "[!arm_rebels_click]"
+arm_rebels_click: "Arm rebels in the state"
+enc_rebels_armed: "Rebels already armed"
+
+unlock_arm_rebels: "Unlocks the ability to §Yarm rebels§! in any §YNCR§! state where §YBarron Republic§! has a core.\n\n"
 ###################################
 # FLAGS
 ###################################
@@ -241,8 +620,47 @@ enc_ncr_connections_flag: "Connections in the §YNCR§!"
 enc_crackdown_justified: "§YCrackdown§! is justified"
 enc_crackdown_justified_tt: "We gain justifications for a §Ycrackdown§!"
 
-ENC_hiding_cost_increased_5_tt: "§YNCR suspicion§! will go up by §R5§! £pol_power/"
-ENC_hiding_cost_increased_10_tt: "§YNCR suspicion§! will go up by §R10§! £pol_power/"
+ncr_suspicion_higher_than_5:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y5§! or higher"
+ncr_suspicion_higher_than_10:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y10§! or higher"
+ncr_suspicion_higher_than_15:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y15§! or higher"
+ncr_suspicion_higher_than_20:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y20§! or higher"
+ncr_suspicion_higher_than_25:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y25§! or higher"
+ncr_suspicion_higher_than_30:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y30§! or higher"
+ncr_suspicion_higher_than_35:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y35§! or higher"
+
+ENC_hiding_cost_decreased_5_tt: "§YNCR suspicion§! will go down by §G5§! £pol_power\n\n"
+ENC_hiding_cost_decreased_10_tt: "§YNCR suspicion§! will go down by §G10§! £pol_power\n\n"
+ENC_hiding_cost_decreased_15_tt: "§YNCR suspicion§! will go down by §G15§! £pol_power\n\n"
+ENC_hiding_cost_decreased_20_tt: "§YNCR suspicion§! will go down by §G20§! £pol_power\n\n"
+ENC_hiding_cost_decreased_25_tt: "§YNCR suspicion§! will go down by §G25§! £pol_power\n\n"
+ENC_hiding_cost_decreased_30_tt: "§YNCR suspicion§! will go down by §G30§! £pol_power\n\n"
+
+ENC_hiding_cost_increased_5_tt: "§YNCR suspicion§! will go up by §R5§! £pol_power\n\n"
+ENC_hiding_cost_increased_10_tt: "§YNCR suspicion§! will go up by §R10§! £pol_power\n\n"
+ENC_hiding_cost_increased_15_tt: "§YNCR suspicion§! will go up by §R15§! £pol_power\n\n"
+ENC_hiding_cost_increased_20_tt: "§YNCR suspicion§! will go up by §R20§! £pol_power\n\n"
+ENC_hiding_cost_increased_25_tt: "§YNCR suspicion§! will go up by §R25§! £pol_power\n\n"
+ENC_hiding_cost_increased_30_tt: "§YNCR suspicion§! will go up by §R30§! £pol_power\n\n"
+
+change_legitimacy_tt:0 "Modify §YLegitimacy§! by §+§![?legitimacy_change_var|+]§!\n\n"
+lose_legitimacy_tt:0 "Lose §+§![?legitimacy_change_var|+]§! §YLegitimacy§!\n\n"
+gain_legitimacy_tt:0 "Gain §+§![?legitimacy_change_var|+]§! §YLegitimacy§!\n\n"
+
+lose_suspicion_tt:0 "§YNCR suspicion§! will go down by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
+gain_suspicion_tt:0 "§YNCR suspicion§! will go up by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
+
+###################################
+# DIPLOMACY
+###################################
+intriguedDistrust: "Intrigued distrust"
+goodBusiness: "Good business"
+potentialPartner: "Potential Partner"
+ourEnemiesFriend: "Our enemy's friend"
+wontShootOnsight: "Won't shoot on sight"
+
+relations_increased_20: "Mutual Relations with §YEnclave§! improved by §G+20§!"
+
+erb_independence_faction:0 "Anti NCR Alliance"
 
 ################ special codes for special people ################################################################################################################
 

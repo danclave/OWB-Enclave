@@ -62,6 +62,9 @@ country_event = {#3 - OUR CHOICE
 	}	
 	option = { # reformers 
 		name = enc.3.b
+		# trigger = {
+			# has_completed_focus = enc_reform #enable for releases
+		# }
 		custom_effect_tooltip = enc.3.b.tt
 		hidden_effect = { # reformers take over
 			set_politics = {
@@ -141,19 +144,32 @@ country_event = {#10  - FRANKLIN PAST - SOLD
     is_triggered_only = yes
 	
 	
-	option = {#KHANS
+	option = {#CHEMULT
 		name = enc.10.a
 		create_wargoal = {
 			type = annex_everything
-			target = KHA
+			target = CHE
+		}
+		add_tech_bonus = {
+			name = enc_research_medicine
+			bonus = 0.5
+			uses = 1
+			category = hospital_tech
 		}
 		hidden_effect = {country_event = { id = enc.11 }} #next part
+		
 	}
 	option = {#EIGHTIES
 		name = enc.10.b
 		create_wargoal = {
 			type = annex_everything
 			target = EHT
+		}
+		add_tech_bonus = {
+			name = motorized_bonus
+			bonus = 0.75
+			uses = 3
+			category = vehicle_tech
 		}
 		hidden_effect = {country_event = { id = enc.11 }}
 
@@ -187,11 +203,12 @@ country_event = {#15 - DOUGLAS DESERTS
 	id = enc.15
 	title = enc.15.t
 	desc = enc.15.d
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_ENC_vertibird
 	
 	fire_only_once = yes	
     is_triggered_only = no
-	trigger = {	
+	trigger = {
+		has_completed_focus = enc_purity
 		focus_progress = { 
 			focus = enc_purge_opposition progress > 0.5 
 		} 
@@ -227,6 +244,7 @@ country_event = {#16 - In the Lair of the Bear
 		country_exists = NCR
 		NOT = {
 			is_ai = yes
+			has_country_flag = NCR_suspicious
 		}
 	}
 	mean_time_to_happen = {	days = 10 }	
@@ -238,7 +256,7 @@ country_event = {#16 - In the Lair of the Bear
 		set_country_flag = NCR_suspicious
 	}
 }
-country_event = {#17 - NCR failsafe
+country_event = {#17 - NCR failsafe - unused
 	id = enc.17
 	title = enc.17.t
 	desc = enc.17.d
@@ -307,6 +325,7 @@ country_event = { #19 - Cafetaria incident
 	}
 	option = { # Who cares?
 		name = enc.19.b
+		add_political_power = 25
 		add_war_support = -0.05
 	}
 }
@@ -347,13 +366,14 @@ country_event = { #21 - unlicensed mutie hunt
 	picture = GFX_event_ENC_assault_team
 	fire_only_once = no
 	is_triggered_only = yes # first time triggered by other event
-	immediate = {
-		add_to_variable = { var = ENC_hiding_cost value = 10}	
-	}
 
 	option = { # Punish
 		name = enc.21.a
-		custom_effect_tooltip = ncr_suspicion_plus_10
+		set_temp_variable = {
+			var = suspicion_change_var
+			value = 10
+		}
+		change_suspicion = YES
 		add_manpower = -100
 		add_stability = -0.05
 		add_war_support = -0.10
@@ -361,7 +381,11 @@ country_event = { #21 - unlicensed mutie hunt
 	}
 	option = { # threaten
 		name = enc.21.b
-		custom_effect_tooltip = ncr_suspicion_plus_10
+		set_temp_variable = {
+			var = suspicion_change_var
+			value = 10
+		}
+		change_suspicion = YES
 		add_war_support = -0.05
 		add_political_power = -20
 		custom_effect_tooltip = enc.21.b.tt
@@ -371,7 +395,11 @@ country_event = { #21 - unlicensed mutie hunt
 	}
 	option = { # ignore
 		name = enc.21.c
-		custom_effect_tooltip = ncr_suspicion_plus_10
+		set_temp_variable = {
+			var = suspicion_change_var
+			value = 10
+		}
+		change_suspicion = YES
 		add_popularity = { ideology = elites popularity = 0.05 }
 		add_war_support = 0.10
 		hidden_effect = { # it happens again quickly
@@ -407,8 +435,8 @@ country_event = { #22 - Half mutant
 	option = { # kill
 		name = enc.22.a
 		add_manpower = -1
-		add_stability = -0.10
-		add_political_power = -100
+		add_stability = -0.05
+		add_political_power = -50
 	}
 	option = { # ignore
 		name = enc.22.c
@@ -560,6 +588,7 @@ country_event = { #29 - fire mutie hunt event
 	
 	trigger = {	
 		tag = ERB
+		has_completed_focus = enc_purity
 		any_owned_state = {
 			NOT = { is_core_of = ERB }
 		}
@@ -671,9 +700,12 @@ country_event = { #33 - Crimson Caravan Encounter
 		days = 400
 	}
 	option = { # let them go
-		name = enc.33.a		
-		custom_effect_tooltip = enc.33.a.tt
-		add_to_variable = { var = ENC_hiding_cost value = 5 }		
+		name = enc.33.a
+		set_temp_variable = {
+			var = suspicion_change_var
+			value = 5
+		}
+		change_suspicion = YES	
 	}
 	option = { # no witnesses
 		name = enc.33.b
@@ -685,9 +717,12 @@ country_event = { #33 - Crimson Caravan Encounter
 			has_country_flag = leader_resourceful
 		}
 		set_country_flag = enc_event_33_solved
-		add_to_variable = { var = ENC_hiding_cost value = -10 }	
+		set_temp_variable = {
+			var = suspicion_change_var
+			value = -10
+		}
+		change_suspicion = YES
 		custom_effect_tooltip = wont_happen_again
-		custom_effect_tooltip = enc.33.c.tt
 		#custom_effect_tooltip = available_because_resourceful
 	}
 }

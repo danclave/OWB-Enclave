@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = "Enclave Infantry"
+	name = "Enclave PA Infantry"
 	
 	regiments = {
 		power_armour = { x = 0 y = 0 }
@@ -18,7 +18,7 @@ units = {
 	division {
 		name = "1st Nevada Core"
 		location = 8479
-		division_template = "Enclave Infantry"
+		division_template = "Enclave PA Infantry"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1.0
 	}
@@ -26,8 +26,16 @@ units = {
 	division {
 		name = "2nd Nevada Core"
 		location = 8479
-		division_template = "Enclave Infantry"
+		division_template = "Enclave PA Infantry"
 		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+	}
+	
+	division {
+		name = "Granite Defense Company"
+		location = 8479
+		division_template = "Enclave PA Infantry"
+		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 	}
 	

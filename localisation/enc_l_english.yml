@@ -25,6 +25,8 @@ ERB_ruler_party_long:0 "Dornan Loyalists"
 
 not_allowed_to_core: "§Y Enclave§!"
 ERB_OWB_DESC: "Four decades ago Navarro was destroyed by NCR and Brotherhood forces in a joint strike to finish off the final bastion of the Enclave. Demoralized, leaderless and homeless, their remnants scattered to the wind, never to be seen again. At least that's what most believed.\n \n Under the nose of the sleeping NCR, Sargent Dornan has been working tirelessly to unite the Enclave remnants under his banner. Contacting the many hidden civilian bases of the Enclave to integrate a new generation of America's finest."
+
+enc_research_medicine: "Medicine"
 ###################################
 # COMMON
 ###################################
@@ -40,6 +42,7 @@ enc_ourpresident.tt:0 "TEST"
 enc_ourpresident_desc:0 "We have made our choice and that choice will change the future of the Enclave and if we are successful, America. \nBut who really is the man we elected?"
 
 enc_purge_opposition:0 "Purge the Opposition"
+enc_purge_opposition_tt: "More than §Y80%§! support for [Root.GetRulingParty]."
 enc_purge_opposition_desc:0 "There are many in our midst who do not share our vision for the future. They must be dealt with."
 
 
@@ -349,62 +352,14 @@ enc_assassinate_F:0 "Assassinate Dr. Anderson"
 enc_foreign_policy:0 "Foreign Policy"
 enc_send_diplomats:0 "Send out Diplomats"
 enc_no_diplomats:0 "Claim Sole Legitimacy"
-enc_BOS_start:0 "The Brotherhood of Steel"
-enc_BOS_tech:0 "Technological Temptations"
-enc_BOS_peace:0 "An Uneasy Peace"
-enc_BOS_vengeance:0 "Old Enemies, Older Ties"
-enc_NCR_start:0 "The NCR"
-enc_NCR_bribes:0 "Bribe the Officials"
-enc_NCR_trade:0 "Open Up Trade"
-enc_NCR_embassy:0 "Establish an Embassy"
-enc_CES_start:0 "The Legion"
-enc_CES_cache:0 "Render unto Ceasar"
-enc_CES_trade:0 "Establish Trade"
-enc_CES_common_enemy:0 "A Common Enemy"
-enc_NEW_start:0 "New Vegas"
-enc_NEW_vacation:0 "Negotiate a Group Rate"
-enc_NEW_robot:0 "Exchange Robotic Technology"
-enc_NEW_recognize:0 "Recognize Vegas Autonomy"
-enc_NEW_pact:0 "Closer Ties"
-enc_NEW_puppet:0 "Our New Vice President"
+
 enc_VLT_start:0 "Vault City"
 enc_VLT_clear:0 "All Clear Signal"
 enc_VLT_assert:0 "Assert Old Loyalties"
-enc_VLT_raiders:0 "Bribing Raiders"
-enc_VLT_raiders_tt:0 "200 infantry equipment is sent to the raiders"
-enc_VLT_force:0 "A Show of Force"
-enc_VLT_puppet:0 "Our New City"
 
 
-enc_ss_ceasar_start:0 "Operation Brutus"
-enc_ss_ceasar_bottom:0 "From the Bottom Up"
-enc_ss_ceasar_bottom_infiltrate:0 "Infiltrate the Slaves"
-enc_ss_ceasar_bottom_weapons:0 "Plant Weapon Caches"
-enc_ss_ceasar_top:0 "From the Top Down"
-enc_ss_ceasar_top_books:0 "Operation Lycaon"
-enc_ss_ceasar_bottom_uprising:0 "Operation Spartacus"
-enc_ss_ceasar_top_raiding:0 "Disturbing the Peace"
-enc_ss_ceasar_top_augustus:0 "Operation Augustus"
 
-enc_ss_ncr_start:0 "Operation Babylon"
-enc_ss_ncr_barons:0 "The Barons"
-enc_ss_ncr_barons_deals:0 "Secret Dealings"
-enc_ss_ncr_barons_raiding:0 "Operation Carnaval"
-enc_ss_ncr_barons_petition:0 "Petition For Independence"
-enc_ss_ncr_people:0 "The Common Man"
-enc_ss_ncr_people_propaganda:0 "Fear, Uncertainty, and Doubt"
-enc_ss_ncr_people_weapons:0 "Organise the Sympathizer"
-enc_ss_ncr_people_uprising:0 "The Divided State"
 
-enc_dod_start:0 "US Departement of Defense"
-enc_dod_tactics:0 "Department of Military Intelligence"
-enc_postwar_tactics:0 "Post-war tactics"
-enc_dod_energy_1:0 "Energy Focus"
-enc_dod_energy_2:0 "Improve the Design"
-enc_dod_energy_3:0 "High Crystal Standards"
-enc_dod_balistic_1:0 "Ballistic Fo²cus"
-enc_dod_balistic_2:0 "Streamline Production"
-enc_dod_balistic_3:0 "User Friendly Firearms"
 
 
 
@@ -426,22 +381,31 @@ enc_depot_armor_desc:0 "By focusing our efforts on Power Armour Production, we c
 enc_depot_plasma: "Plasma Weaponry"
 enc_depot_plasma_desc: "By focusing our efforts on Energy Weapon Production, we can improve abilities to produce them quickly."
 
+enc_hang_all_raiders: "Hang All Raiders"
+enc_rehabilitate_raiders: "Rehabilitate Raiders"
 
+enc_support_old_world_party:0 "Support Old World Party"
+enc_support_old_world_party_desc:0 "TODO"
+enc_support_armed_coup:0 "Support Armed Coup"
+enc_support_armed_coup_desc:0 "TODO"
+enc_electoral_victory:0 "Electoral Victory"
+enc_electoral_victory_desc:0 "TODO"
 
 
 ################################## OPINIONS&traits&flags  ##############################################################################################################################
 
 bitterEnemies: "Bitter enemies"
-intriguedDistrust: "Intrigued distrust"
-goodBusiness: "Good business"
-potentialPartner: "Potential Partner"
-ourEnemiesFriend: "Our enemy's friend"
-wontShootOnsight: "Won't shoot on sight"
 
 # trait flags
 leader_resourceful: "Resourceful Leader"
 leader_inspiring: "Inspiring Leader"
 leader_respected_by_scientists_tt: "\nAvailable because you are §Grespected by scientists§!"
+
+exiles_arrived: " East Coast Exiles have arrived"
+
+enc_air_chief_cas: "Air Support Specialist"
+clayton_schultz: "Michael Schultz"
+clayton_schultz_desc: "Schultz traveled from the Raven Rock facility in the Capitol Wasteland on a suicide mission ordered by Colonel Autumn."
 #######################################DESC############################################################################################
 Anderson_desc:0 "Doctor Franklin is a former member of the Enclave's Chemical Corps and the current Enclave President. Formerly involved in several secret projects during the Presidency of Dick Richardson-notably the FEV Experiments of Mariposa and the creation of Frank Horrigan. He seeks to finish what he and his colleagues started four decades ago: the eradication of the mutant menace that dares to tread upon American soil. "
 Granite_desc:0 " Douglas Granite. Son of Sergeant George Granite and a California Caravaneer by the name of Molly, Douglas Granite represents the new Enclave. An Enclave dedicated to the rebuilding of America, and its ideals. Having grown up in the Wasteland amongst both children of the ECC his father once led, and the Wastelanders who they protect, he holds no illusions as to the perceived superiority of the "pure-blooded" over the majority of the Wasteland population. Indeed, due to the circumstances of his birth, he finds those that spout such rhetoric annoying at best, and dangerous at worst. Instilled with the ideals and stories of Old America by his Father, he dreams of the day when America is once again a reunited nation, from sea to shining sea with amber waves of grain and purple mountains majesty."

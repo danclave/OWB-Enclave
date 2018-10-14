@@ -7,6 +7,9 @@ scripted_gui = {
 		parent_window_token = selected_state_view
 		
 		visible = {
+			ROOT =  {
+				has_completed_focus = enc_reform			
+			}
 			is_controlled_by = ROOT
 			# any neighbour state is cored
 			ROOT = { 
@@ -54,6 +57,9 @@ scripted_gui = {
 		parent_window_token = selected_state_view
 		
 		visible = {
+			ROOT =  {
+				has_completed_focus = enc_reform			
+			}
 			is_controlled_by = ROOT
 			# any neighbour state is cored
 			ROOT = { 
@@ -62,7 +68,6 @@ scripted_gui = {
 			NOT = { 
 				is_core_of = FROM
 			}
-			
 		}
 		
 		effects = {
@@ -93,5 +98,75 @@ scripted_gui = {
 			}
 		}
 	}
+	legitimacy = {
+		context_type = player_context
+		
+		window_name = "legitimacy_container"
+		
+		visible = {
+			original_tag = ERB
+			has_completed_focus = enc_reform
+		}
+		
+		effects = {
+			legitimacy_bg_click = {
+				# nothing
+			}
+			
+			legitimacy_bg_right_click = { #todo remove me todo
+				add_to_variable = { legitimacy = 100 }
+				set_variable = { legitimacy_max = 500 }
+			}
+		}
+	}
+
+	arm_rebels = {
+	
+		context_type = selected_state_context
+		
+		window_name = arm_rebels_container
+		parent_window_token = selected_state_view
+		
+		visible = {
+			is_core_of = BAR
+			ROOT =  { 
+				has_completed_focus = enc_reform
+				NOT = {
+					has_country_flag = enc_petition_delivered
+				}
+			}			
+		}		
+		effects = {
+			arm_rebels_click = {
+				ROOT = { 
+					add_political_power = -50		
+				}
+				set_state_flag = enc_rebels_armed
+				custom_effect_tooltip = arm_rebels_ttt
+			}
+		}
+		triggers = {
+			arm_rebels_click_enabled = {
+				ROOT = { 
+					has_political_power > 49.99		
+				}
+				NOT = {
+					has_state_flag = enc_rebels_armed
+				}
+			}
+		}
+		        
+		ai_check = {
+			check_variable = { ai_random > 0.55 }
+		}
+		
+		ai_weights = {
+			connect_to_power_click = {
+				ai_will_do = {
+					factor = 40
+				}
+			}
+		}
+	}	
 }
 

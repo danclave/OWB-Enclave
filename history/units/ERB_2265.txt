@@ -1,25 +1,56 @@
 ﻿division_template = {
-	name = "10w PA Division"
+	name = "Rapid Response Division"
 	regiments = {
 		power_armour = { x = 0 y = 0 }
 		power_armour = { x = 0 y = 1 }
 		power_armour = { x = 0 y = 2 }
 		power_armour = { x = 0 y = 3 }
 		power_armour = { x = 0 y = 4 }
+	}	
+}
+division_template = {
+	name = "Enclave Auxiliaries"	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
 	}
 }
-units = {
 
+# division_template = {
+	# name = "Mech Test"
+	# regiments = {
+		# motorized = { x = 0 y = 0 }
+	# }
+# }
+# division_template = {
+	# name = "Robot Test"
+	# regiments = {
+		# light_robot = { x = 0 y = 0 }
+	# }
+# }
+# division_template = {
+	# name = "Tank Test"
+	# regiments = {
+		# medium_armor = { x = 0 y = 0 }
+	# }
+# }
+
+units = {
 	division {
-		name = "Navarro Veterans"
+		name = "1st Navarro Veterans"
 		location = 8479
 		division_template = "10w PA Division"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
-	}
-	
+	}	
 	division {
-		name = "Navarro Veterans"
+		name = "2nd Navarro Veterans"
 		location = 8479
 		division_template = "10w PA Division"
 		start_experience_factor = 1.0
@@ -31,7 +62,7 @@ units = {
 		division_template = "10w PA Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
-	}
+	}	
 	division {
 		name = "Enclave Remnants"
 		location = 8479
@@ -39,12 +70,34 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
+	division {
+		name = "1st Enclave Auxiliaries"
+		location = 8479
+		division_template = "Enclave Auxiliaries"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	#------------ test ------------
 	
-	division {
-		name = "Enclave Remnants"
-		location = 8479
-		division_template = "10w PA Division"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1.0
-	}
+	# division {
+		# name = "1st Mech Test"
+		# location = 8479
+		# division_template = "Mech Test"
+		# start_experience_factor = 0.2
+		# start_equipment_factor = 1.0
+	# }
+	# division {
+		# name = "1st Robot Test"
+		# location = 8479
+		# division_template = "Robot Test"
+		# start_experience_factor = 0.2
+		# start_equipment_factor = 1.0
+	# }
+	# division {
+		# name = "1st Tank Test"
+		# location = 8479
+		# division_template = "Tank Test"
+		# start_experience_factor = 0.2
+		# start_equipment_factor = 1.0
+	# }
 }

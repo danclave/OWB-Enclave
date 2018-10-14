@@ -25,7 +25,7 @@ $resultBody = Foreach ($name in $names)
 };
 
 "spriteTypes = {" + $resultBody + $resultIdeas +  "    
-}" | Out-File -FilePath ..\..\interface/customicons.gfx -Encoding utf8
+}" | Out-File -FilePath ..\..\interface/erb_customicons.gfx -Encoding utf8
 
 $resultBody2 = Foreach ($name in $names)
 
@@ -64,7 +64,7 @@ $resultBody2 = Foreach ($name in $names)
 };
 
 "spriteTypes = {" + $resultBody2 + "    
-}" | Out-File -FilePath ..\..\interface/customicons_shine.gfx -Encoding utf8
+}" | Out-File -FilePath ..\..\interface/erb_customicons_shine.gfx -Encoding utf8
 
 "added names:"
 $goals_file = Foreach ($name in $names)

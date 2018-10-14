@@ -151,6 +151,17 @@ ideas = {
 				enc_disliked_pragmatist  
 			}
 		}
+		dr_henry = {
+			allowed = {
+				tag = ERB  
+			}
+			available = {
+				has_completed_focus = enc_reform
+			}
+			traits = {
+				# todo
+			}
+		}
 	}
 
 	high_command = {		
@@ -255,6 +266,22 @@ ideas = {
 				original_tag = ERB
 			}			
 			traits = { enc_air_chief_loyalist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		clayton_schultz = {
+		
+			cost = 200
+			
+			allowed = {
+				original_tag = ERB
+			}
+			available = {
+				has_country_flag = exiles_arrived
+			}
+			traits = { air_close_air_support_3 }
 			
 			ai_will_do = {
 				factor = 1

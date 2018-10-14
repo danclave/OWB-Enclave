@@ -77,10 +77,6 @@ ENC_NCR_hiding = {
 	}
 }
 
-ENC_annex_puppet = {
-
-}
-
 ENC_political_infighting = {
 	icon = category_enc_political_infighting
 	priority = { base = 10 }
@@ -99,7 +95,10 @@ ENC_infiltrating_NCR = {
 		tag = ERB
 	}
 	visible = {
-		has_completed_focus = enc_infiltrate_ncr
+		# OR = {
+			# has_completed_focus = enc_infiltrate_ncr
+			# has_country_flag = enc_bishop_in_NCR
+		# }
 	}
 }
 
@@ -111,6 +110,16 @@ ENC_render_unto_caesar = {
 	}
 	visible = {
 	}
+}
+
+ENC_debug = {
+	allowed = {
+		tag = ERB
+	}	
+	visible = {
+		# always = false
+	}
+
 }
 
 ###############################

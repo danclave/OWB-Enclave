@@ -39,6 +39,14 @@ spriteTypes = {
             name = "GFX_idea_sargeant_dornan"
  		    texturefile = "gfx/interface/ideas/sargeant_dornan.dds"
  	    }
+		SpriteType = {#clayton_schultz
+            name = "GFX_idea_clayton_schultz"
+ 		    texturefile = "gfx/interface/ideas/clayton_schultz.dds"
+ 	    }
+		SpriteType = {#d_henry
+            name = "GFX_idea_d_henry"
+ 		    texturefile = "gfx/interface/ideas/d_henry.dds"
+ 	    }
 		SpriteType = {#boris_t
             name = "GFX_idea_boris_t"
  		    texturefile = "gfx/interface/ideas/boris_t.dds"
@@ -182,5 +190,26 @@ spriteTypes = {
 		spriteType = {
 			name = "category_enc_anti_ncr"
 			texturefile = "gfx/interface/icons/decision_category_enc_anti_ncr.dds"
+		}
+		spriteType = {
+			name = "decision_enc_bishop"
+			texturefile = "gfx/interface/icons/decision_enc_bishop.dds"
+		}
+		spriteType = {
+			name = "decision_demote_scientists"
+			texturefile = "gfx/interface/icons/decision_demote_scientists.dds"
+		}
+		spriteType = {
+			name = "decision_demote_officers_boot"
+			texturefile = "gfx/interface/icons/decision_demote_officers_boot.dds"
+		}
+		spriteType = {
+			name = "decision_demote_officers"
+			texturefile = "gfx/interface/icons/decision_demote_officers.dds"
+		}
+		spriteType = {
+			name = "legitimacy"
+			texturefile = "gfx/interface/icons/legitimacy.dds"
+			legacy_lazy_load = no
 		}
 }

@@ -83,6 +83,11 @@ leader_traits = {
 		production_speed_arms_factory_factor = 0.10
 	}	
 
+	compassionate_doctor = {
+		random = no
+		production_speed_arms_factory_factor = 0.10
+	}	
+
 	# manufacturers
 	vertibird_aircraft_manufacturer = {
 		random = no
@@ -131,6 +136,13 @@ leader_traits = {
 		stability_factor = 0.05
 		air_close_air_support_attack_factor = -0.05
 		intellectuals_drift = 0.1
+	}
+	enc_air_chief_cas = {
+		random = no
+		cost = 100
+		air_close_air_support_attack_factor = 0.05
+		air_close_air_support_defence_factor = 0.03
+		air_close_air_support_agility_factor = 0.03
 	}
 	
 	enc_army_chief_loyalist = {

@@ -1,0 +1,23 @@
+objectTypes = {
+	pdxmesh = {
+		name = "ERB_powerarmor_t51_mesh"
+		file = "gfx/OWBEntity/infantry/ERB/power_armor/ERB_t51.mesh"
+		scale = 0.5
+		
+		animation = { id = "move"			type = "fo4_t51_walk_anim" }
+		animation = { id = "attack"			type = "fo4_t51_running_anim" }
+		animation = { id = "shoot"			type = "fo4_t51_fire_anim" }
+		animation = { id = "retreat"		type = "fo4_t51_retreat_anim" }
+		animation = { id = "idle1"			type = "fo4_t51_idel1_anim" }
+		animation = { id = "idle2"			type = "fo4_t51_idel2_anim" }
+		
+		meshsettings = {
+			name = "jorodoxShape"
+			index = 0
+			shader="PdxMeshAdvanced"
+			texture_diffuse = "ERB_t51_diffuse.dds"
+			texture_normal = "ERB_t51_normal.dds"
+			texture_specular = "fo4_t51_spec.dds"
+		}
+	}
+}

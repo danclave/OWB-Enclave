@@ -26,7 +26,7 @@ enc.3.b:0 "Sergeant Dornan supports Douglas Granite."
 enc.3.b.tt:0 "Dornan decides Dr. Anderson is a §R'MO-RON'§! \n §YDouglas Granite§! of the §YReformer Faction§! becomes the new Enclave president."
 ########################################################################################
 enc.4.t:0 "Dealing with Wrights"
-enc.4.d:0 "Some say that the Wright family has spent the last few decades building with one hand and destroying with the other, but compared to the other families this makes them almost redeemable. Mr.. Wright's vision of a more peaceful and stable New Reno is not entirely incompatible with out own..."
+enc.4.d:0 "Some say that the Wright family has spent the last few decades building with one hand and destroying with the other, but compared to the other families this makes them almost redeemable. Mr. Wright's vision of a more peaceful and stable New Reno is not entirely incompatible with our own..."
 enc.4.a:0 "Allow him go legit."
 enc.4.b:0 "There is no place for his kind here."
 ########################################################################################
@@ -68,7 +68,7 @@ enc.901.c:0 "Stayed completely silent."
 ################################################################################################################################################################################
 enc.10.t:0 "Sold into Slavery"
 enc.10.d:0 "After decades of NCR imprisonment, Anderson was forgotten about. He was one of many undocumented prisoners in the NCR bureaucracy. Moved from prison to prison until eventually an enterprising warden sold him and other unmarked prisoners into slavery to..."
-enc.10.a:0 "The Khans"
+enc.10.a:0 "Chemult Station"
 enc.10.b:0 "The Eighties"
 ########################################################################################
 enc.11.t:0 "Anderson's Escape"

@@ -15,7 +15,7 @@ $resultBody = Foreach ($name in $names)
 };
 
 "spriteTypes = {" + $resultBody + $resultIdeas +  "    
-}" | Out-File -FilePath ..\..\interface/enc_eventpictures.gfx -Encoding utf8
+}" | Out-File -FilePath ..\..\enc_eventpictures.gfx -Encoding utf8
 
 $events_file = Foreach ($name in $names)
 {

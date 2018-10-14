@@ -7,11 +7,13 @@ ERB_USA = {
 	color = rgb { 67 123 237 } # base game blue
 	color_ui = rgb { 255 255 255 }
 }
-ERB_USA_2 = { 
-	color = rgb { 0 67 178 } # Old Glory Blue
+
+ERB_nevada = {
+	color = rgb { 67 123 237 } # base game blue
 	color_ui = rgb { 255 255 255 }
 }
-ERB_USA_3 = { 
-	color = rgb { 51 133 255 } # Old Glory Blue
+
+DES_ERB = {
+	color = rgb { 67 123 237 } # base game blue
 	color_ui = rgb { 255 255 255 }
 }

@@ -11,7 +11,7 @@ guiTypes = {
 			name = connect_to_power
 			spriteType = GFX_icons_power
 			pdx_tooltip = connect_to_power_tt
-			scale = 1.2
+			scale = 1.2 
 		}
 	}	
 	containerWindowType = {
@@ -24,9 +24,57 @@ guiTypes = {
 		
 		buttonType = {
 			name = install_police_force
-			spriteType = GFX_icons_police
+			spriteType = GFX_icons_police 
 			pdx_tooltip = install_police_force_tt
 			scale = 1.2
+		}
+	}
+	containerWindowType = {
+		name = arm_rebels_container
+		position = {x=90 y=114}
+		
+		fade_time = 1
+		fade_type = linear
+		moveable = no
+		
+		buttonType = {
+			name = arm_rebels
+			spriteType = GFX_resistance_icon
+			pdx_tooltip = arm_rebels_tt
+			pdx_tooltip_delayed = arm_rebels_tt_delayed
+			scale = 1.2
+		}
+	}
+	containerWindowType = { # legitimacy
+		name = "legitimacy_container"
+		position = { x = 885 y = 4 }
+		
+		buttonType ={
+			name ="legitimacy_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=0 y=0 }
+			shortcut = "ctrl+k"
+		}
+		
+		iconType = {
+			name ="legitimacy_icon"
+			spriteType = "legitimacy"
+			position = { x = 4 y = -1² }
+			scale = 0.8
+		}
+		
+		instantTextBoxType = {
+			name ="legitimacy_text"
+			position = { x = 22 y = 4 }
+			font = "hoi_18mbs"
+			text = "[?legitimacy]%"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+			
+			pdx_tooltip = "legitimacy_TOOLTIP"
+			pdx_tooltip_delayed = "legitimacy_TOOLTIP_DELAYED"
 		}
 	}
 }
