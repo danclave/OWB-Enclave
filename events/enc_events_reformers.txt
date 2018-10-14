@@ -1266,8 +1266,28 @@ country_event = {#66 - The Vice President
 	}
 }
 
-
-	
+country_event = {#67 Ghoul Marriage
+	id = enc_reformers.67
+	title = enc_reformers.67.t
+	desc = enc_reformers.67.d
+	picture = GFX_event_ENC_Ham
+	fire_only_once = yes	
+	is_triggered_only = yes	
+	option = {# Adam and Eve not Atom and Steve
+		name = enc_reformers.67.a
+		add_stability = 0.05
+		add_war_support = 0.02
+		add_political_power = 50
+		}
+	option = {# Equal Protection Argument
+		name = enc_reformers.67.b
+		add_ideas = ENC_Marriage_Equality
+		}
+	option = {# Dig at Kennedy But Still Support Ghoul Marriage
+		name = enc_reformers.67.c
+		add_ideas = ENC_Marriage_Equality
+		}
+	}
 ### new stuff
 
 country_event = {#68 - Slavery
