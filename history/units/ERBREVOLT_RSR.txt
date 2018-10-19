@@ -7,9 +7,6 @@
 		militia = { x = 1 y = 1 }
 		militia = { x = 2 y = 0 }
 	}
-	support = {
-		logistics_company = { x = 0 y = 0 }
-	}
 }
 
 division_template = {
@@ -21,29 +18,25 @@ division_template = {
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 	}
-	support = {
-		logistics_company = { x = 0 y = 0 }
-		recon_company = { x = 0 y = 1 }
-	}
 }
 
 units = {
 	# Infantry
 	division = {
-		name = "Dry Wells Division"
-		location = 6629 division_template = "Rebellion Infantry"
+		name = "Baron's Guard"
+		location = 2428 division_template = "Rebellion Infantry"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "Needles Division"
-		location = 6629 division_template = "Rebellion Infantry"
+		name = "Sac City Guard"
+		location = 2428 division_template = "Rebellion Infantry"
 		start_experience_factor = 0.6
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "Bonelli Division"
-		location = 6629 
+		name = "Farmhands' Militia"
+		location = 2428 
 		division_template = "Rebellion Infantry"
 		start_experience_factor = 0.6
 		start_equipment_factor = 1.0
@@ -51,59 +44,38 @@ units = {
 	# Militias
 	division = {
 		name = "Bonelli Militia"
-		location = 6629 division_template = "Rebellion Militia"
+		location = 2428 division_template = "Rebellion Militia"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Willow Beach Militia"
-		location = 6629 division_template = "Rebellion Militia"
+		location = 2428 division_template = "Rebellion Militia"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Hopi Militia"
-		location = 6629 division_template = "Rebellion Militia"
+		location = 2428 division_template = "Rebellion Militia"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Kingman Militia"
-		location = 6629 division_template = "Rebellion Militia"
+		location = 2428 division_template = "Rebellion Militia"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Needles Militia"
-		location = 6629 division_template = "Rebellion Militia"
+		location = 2428 division_template = "Rebellion Militia"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Dry Wells Militia"
-		location = 6629 division_template = "Rebellion Militia"
+		location = 2428 division_template = "Rebellion Militia"
 		start_experience_factor = 0.6
 		start_equipment_factor = 1.0
-	}
-}
-
-##### Starting Production #####
-instant_effect = {
-	add_equipment_production = {
-		equipment = {
-			type = infantry_equipment_1
-			creator = "TWI"
-		}
-		requested_factories = 1
-		progress = 0.9
-		efficiency = 100
-	}
-	add_equipment_production = {
-		equipment = {
-			type = support_equipment
-		}
-		requested_factories = 1
-		progress = 0.9
-		efficiency = 100
 	}
 }
