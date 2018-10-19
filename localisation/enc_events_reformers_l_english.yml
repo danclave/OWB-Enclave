@@ -263,13 +263,26 @@ enc_reformers.72.t: "The Iron President"
 enc_reformers.72.d: "Douglas did his best.  But this wasn't the fat and happy world of prewar America.  He had to guide his nation through a nuclear wasteland.  He had no time to listen to whining barons from California, councillors from Vault City, or ministers from New Canaan.  Only blood and iron would save America.  But without liberty, Douglas was sifting through the dust, the ruins.... the shell of America, dead forever."
 enc_reformers.72.a: "God Bless the Enclave!"
 ################################################################################################################ 
+enc_reformers.73.t: "The Forgotten Men and Women"
+enc_reformers.73.d: "Although the NCR is a democracy, it's highly flawed.  Brahmin barons run the northern territories like feudal holdings, crushing small farmers and factory workers.  The caravans buy and sell senators for bottlecaps, and ethnic tensions simmer beneath the surface.  A leader who promised to restore Prewar America's ideals and rally the forgotten people of New California could be very successful.  With our aid."
+enc_reformers.73.a: "We will remember those who have been forgotten."
+################################################################################################################ 
+enc_reformers.74.t: "The Failure at Shady Sands"
+enc_reformers.74.d: "Mayor Hayes of Day Glow has called for a constitutional convention, with petitions from across the NCR. But the NCR's Congress has refused to hear it, claiming he's in league with the remnants of the Enclave.  At a protest in Boneyard, shots have been fired... and war was beginning."
+enc_reformers.74.a: "It's time to support the Old World Party."
+################################################################################################################ 
+enc_reformers.75.t: "Operation Californian Freedom"
+enc_reformers.75.d: "The Civil War in the NCR gives us the opportunity to support freedom and remove the NCR's taint from California.  And perhaps with a change of regime we'll have a pro-American voice in the Wastes..."
+enc_reformers.75.a: "They will welcome us as liberators."
+################################################################################################################ 
+enc_reformers.76.t: "The State of California"
+enc_reformers.76.d: "With the victory of the Old World Party and support for the Enclave at an all time high, it's time to restore California to the Union."
+enc_reformers.76.a: "Out of Many, One."
+################################################################################################################ 
 enc_reformers.99.t: "Area 51"
 enc_reformers.99.d: "With Area 51 under our control, Enclave scientists are sifting through reams of prewar data.  It appears that the Prewar United States was monitored by vast intellicts cool and unsympathetic, and their technology was studied by the military.  We could pick this research up, but there may be consequences... "
 enc_reformers.99.a: "Let us press every button we can find."
 ################################################################################################################ -<
-enc_reformers.100.t: "We need to decide who to reach out to.  Shall we ally w"
-enc_reformers.100.d: "The vote in Shady Sands was close, but with the threat of Caesar approaching, they have decided to stand with us. We stand together for progress and order in America."
-enc_reformers.100.a: "Out of many, some"
 
 enc_reformers.100.t: "The NCR Signs On to the Allied States of America"
 enc_reformers.100.d: "The vote in Shady Sands was close, but with the threat of Caesar approaching, they have decided to stand with us. We stand together for progress and order in America."
