@@ -198,9 +198,9 @@ enc_ANT_establish_tributaries:0 "Establish Tributaries"
 enc_ANT_establish_tributaries_desc:0 "We can protect tribal culture by giving them autonomy in exchange for men. Old America did this and no one complained."
 
 enc_VLT_raiders:0 "Bribing Raiders"
-enc_VLT_raiders_desc:0 "We can bribe raiders to trigger a border conflict with Vault City.  If they can't protect their borders we can claim 
+enc_VLT_raiders_desc:0 "We can bribe raiders to trigger a border conflict with Vault City.  If they can't protect their borders we can persuede the Vault City Council that their future lies with us. We'll gladly protect our new citizens."
 enc_VLT_force:0 "A Show of Force"
-enc_VLT_force_desc:0 "Our military forces have persuaded the Vault City Council that their future lies with us. We'll gladly protect our latest citizens."
+enc_VLT_force_desc:0 "Vault city must be ours. An overwhelming amount of force should bring the city under our control with minimal damage to its precious facilities and citizens."
 
 enc_rangers_submit:0 "The Desert Rangers Join US!"
 enc_rangers_submit_desc:0 "With the peace we've brought to Northern Nevada, the Desert Rangers are willign to work with our government to protect the region."

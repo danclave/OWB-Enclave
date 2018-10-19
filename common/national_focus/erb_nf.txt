@@ -866,20 +866,20 @@ focus_tree = {
 	}
 
 	focus = {#EXPANSION - VLT - annex
-		id = enc_VLT_raiders
-		icon = GFX_goal_NCR_Mojave
+		id = enc_VLT_force 
+		icon = GFX_goal_enc_verti_reform
 		cost = 5.8
 		ai_will_do = { factor = 1 } 
 		available = { has_war_support > 0.5 }
 		relative_position_id = enc_expansion_reform
 		x = -1
 		y = 1
-		mutually_exclusive = { focus = enc_vlt_annex_diplo_reform }
+		mutually_exclusive = { focus = enc_VLT_raiders }
 		prerequisite = { focus = enc_expansion_reform }		
 		bypass = {
 			has_full_control_of_state = 291 # vlt city
 		}	
-		completion_reward = {
+		completion_reward = { 
 			custom_effect_tooltip = enc_vlt_annex_tt
 			hidden_effect = { # ugly tooltip
 				every_other_country = {
@@ -894,8 +894,8 @@ focus_tree = {
 		}
 	}
   	focus = {#EXPANSION - VLT - annex diplo
-		id = enc_VLT_force
-		icon = GFX_goal_enc_verti_reform
+		id = enc_VLT_raiders
+		icon = GFX_goal_NCR_Mojave
 		cost = 5.8
 		ai_will_do = { factor = 1 } 		
 		relative_position_id = enc_expansion_reform
@@ -904,7 +904,7 @@ focus_tree = {
 		bypass = {
 			has_full_control_of_state = 291 # VLT city			
 		}
-		mutually_exclusive = { focus = enc_vlt_annex_reform }
+		mutually_exclusive = { focus = enc_VLT_force }
 		prerequisite = { focus = enc_expansion_reform }
 		available = {
 			strength_ratio = { tag = VLT ratio > 2 }
@@ -917,7 +917,7 @@ focus_tree = {
 					}
 					has_country_leader = {
 						id = 912
-						ruling_only = yes
+						ruling_only = yes 
 						name = "Security Chief Wallace"
 					}
 				}
@@ -932,7 +932,7 @@ focus_tree = {
 		icon = GFX_goal_enc_self_management
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_VLT_force
-		x = -1
+		x = 1
 		y = 1
 		available = {
 			has_full_control_of_state = 291 # VLT city
@@ -1865,6 +1865,9 @@ focus_tree = {
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_foreign_policy }
+		mutually_exclusive = {
+			focus = enc_NCR_no_compromise
+		}
 		completion_reward = {
 			NCR = {
 				custom_effect_tooltip = relations_increased_20
@@ -2585,6 +2588,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		icon = GFX_goal_NCR_Baronofbarons
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_operation_babylon}
+		mutually_exclusive = { focus = enc_the_common_man }
 		relative_position_id = enc_operation_babylon
 		x = -1
 		y = 1
@@ -2649,6 +2653,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 			}
 		}
 		prerequisite = { focus = enc_operation_babylon}
+		mutually_exclusive = { focus = enc_the_barons }
 		relative_position_id = enc_operation_babylon
 		x = 1
 		y = 1
