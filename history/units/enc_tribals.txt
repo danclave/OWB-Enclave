@@ -1,0 +1,62 @@
+﻿division_template = {
+	name = "Tribal Militia"
+	regiments = { # 10-width Militia
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 2 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Tribal Infantry"
+	regiments = { # 10-width Infantry
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	# Infantry
+	division = {
+		name = "Chief's Bodyguard"
+		location = 2428 division_template = "Tribal Infantry"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Sac City Guard"
+		location = 2428 division_template = "Tribal Infantry"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0
+	}
+	# Militias
+	division = {
+		name = "Bonelli Militia"
+		location = 2428 division_template = "Tribal Militia"
+		start_experience_factor = 0.55
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Willow Beach Militia"
+		location = 2428 division_template = "Tribal Militia"
+		start_experience_factor = 0.55
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Hopi Militia"
+		location = 2428 division_template = "Tribal Militia"
+		start_experience_factor = 0.55
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Kingman Militia"
+		location = 2428 division_template = "Tribal Militia"
+		start_experience_factor = 0.55
+		start_equipment_factor = 1.0
+	}
+}

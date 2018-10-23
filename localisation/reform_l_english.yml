@@ -662,6 +662,10 @@ relations_increased_20: "Mutual Relations with §YEnclave§! improved by §G+20�
 
 erb_independence_faction:0 "Anti NCR Alliance"
 
+###########################################
+# OOB
+###########################################
+enc_tribals_tt: "2 §Ytribal infantry§! and 4 §Ytribal militias§! appear in §YAntelope Reservation§! state."
 ################ special codes for special people ################################################################################################################
 
 # yellow§Ytext§!
