@@ -964,21 +964,35 @@ focus_tree = {
 		}
 		cost = 5.8
  }
+   	focus = {#EXPANSION - Rebuild the power grid
+		id = enc_rebuild_the_power_grid
+		icon = GFX_goal_enc_rebuild_the_power_grid
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_vlt_power_reform
+		x = 0
+		y = 1
+		prerequisite = { 
+			focus = enc_vlt_power_reform
+		}
+		completion_reward = {
+			custom_effect_tooltip = enc_rebuild_the_power_grid_tt
+		}
+		cost = 5.8
+ }
 
 	focus = {#EXPANSION - DES - puppet
         id = enc_rangers_submit
         icon = GFX_goal_enc_rangers_start
         ai_will_do = { factor = 1 } 
-        relative_position_id = enc_vlt_power_reform
+        relative_position_id = enc_the_bishop_incident
         x = 0
         y = 1
-        prerequisite = { focus = enc_vlt_power_reform }
-	available = {
-		has_stability > 0.70 }        
+        prerequisite = { focus = enc_the_bishop_incident }
+		available = { has_stability > 0.70 }        
 		completion_reward = { 
-		puppet = DES
-	DES = { set_cosmetic_tag = DES_ERB }
- }
+			puppet = DES
+			DES = { set_cosmetic_tag = DES_ERB }
+		}
         cost = 5.8
  }     
  

@@ -550,6 +550,12 @@ enc_open_to_new_ideas: "Open to New Ideas"
 enc_open_to_new_ideas_desc:  "The Enclave is opening to new ideas as it tries to reunite America. This is leading to a new way of looking at problems."
 
 enc_house_always_wins:  "The House Always Wins"
+
+enc_rebuild_the_power_grid: "Rebuild The Power Grid"
+enc_rebuild_the_power_grid_tt: "Allows you to build civilian power stations, connecting the local populations to your power grid and your control."
+enc_debug_tt: "electricity: [?resource@electricity]"
+
+more_than_2_electricity: "More than 2 §YElecticity§! available (§Y[?resource@electricity]§!)"
 ###################################
 # Seek Allies
 ###################################
@@ -602,6 +608,9 @@ enc_navy_chief_loyalist: "Loyal Reformer"
 ###################################
 connect_to_power: "Connect to Grid"
 connect_to_power_tt: "Connect to Grid"
+connect_to_power_tt_delayed: "Builds a §YCivilian Power Grid§!, costing 2 §YElecticity§! permanently.\nRequires: More than 2 §YElecticity§! available (§Y[?resource@electricity]§!)"
+civilian_power_grid: "Civilian Power Grid"
+civilian_power_grid_desc: "Allows a state to be §GCored§!"
 
 install_police_force_tt: "Install Police Force"
 
@@ -666,6 +675,7 @@ erb_independence_faction:0 "Anti NCR Alliance"
 # OOB
 ###########################################
 enc_tribals_tt: "2 §Ytribal infantry§! and 4 §Ytribal militias§! appear in §YAntelope Reservation§! state."
+
 ################ special codes for special people ################################################################################################################
 
 # yellow§Ytext§!

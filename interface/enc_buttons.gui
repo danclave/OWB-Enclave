@@ -1,5 +1,5 @@
 guiTypes = {
-	containerWindowType = {
+	containerWindowType = { # connect_to_power
 		name = connect_to_power_container
 		position = {x = 290 y = 490}
 		
@@ -11,10 +11,11 @@ guiTypes = {
 			name = connect_to_power
 			spriteType = GFX_icons_power
 			pdx_tooltip = connect_to_power_tt
+			pdx_tooltip_delayed = connect_to_power_tt_delayed
 			scale = 1.2 
 		}
-	}	
-	containerWindowType = {
+	}
+	containerWindowType = { # install_police_force 
 		name = install_police_force_container
 		position = {x = 340 y = 490}
 		
@@ -29,7 +30,7 @@ guiTypes = {
 			scale = 1.2
 		}
 	}
-	containerWindowType = {
+	containerWindowType = { # arm_rebels
 		name = arm_rebels_container
 		position = {x=90 y=114}
 		
@@ -39,7 +40,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = arm_rebels
-			spriteType = GFX_resistance_icon
+			spriteType = GFX_resistance_icon 
 			pdx_tooltip = arm_rebels_tt
 			pdx_tooltip_delayed = arm_rebels_tt_delayed
 			scale = 1.2
