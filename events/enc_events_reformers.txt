@@ -45,7 +45,7 @@ country_event = {#2 - DOUGLAS PAST - MID
 		name = enc_reformers.2.b
 		country_event = { id = enc_reformers.3 }
 		set_country_flag = enc_bos_connections_flag
-	}
+		}
 	option = {#CES
 		name = enc_reformers.2.c
 		country_event = { id = enc_reformers.3 }
@@ -925,7 +925,7 @@ country_event = {#36 - The baron's petition fails
 	desc = enc_reformers.36.d
 	picture = GFX_event_ENC_barons
 	
-	fire_only_once = yes
+	fire_only_once = yes 
     is_triggered_only = yes
 	
 	
@@ -951,20 +951,19 @@ country_event = {#36 - The baron's petition fails
 					has_state_flag = temporary_decored
 				}
 				add_core_of = BAR
-			}
-			BAR = {
-				every_owned_state = {
-					revolt_spawn_militia = yes
-				}
-			}
-		}
-		NCR = {
+			}			
 			declare_war_on = {
 					target = BAR
 					type = annex_everything
-				}
 			}
 		}
+		BAR = {
+			every_owned_state = {
+				revolt_spawn_militia = yes
+			}
+		}
+	country_event = { id = enc_reformers.37 }
+	}
 }
 
 country_event = {#37 - The baron calls for help
@@ -1266,8 +1265,28 @@ country_event = {#66 - The Vice President
 	}
 }
 
-
-	
+country_event = {#67 Ghoul Marriage
+	id = enc_reformers.67
+	title = enc_reformers.67.t
+	desc = enc_reformers.67.d
+	picture = GFX_event_ENC_Ham
+	fire_only_once = yes	
+	is_triggered_only = yes	
+	option = {# Adam and Eve not Atom and Steve
+		name = enc_reformers.67.a
+		add_stability = 0.05
+		add_war_support = 0.02
+		add_political_power = 50
+		}
+	option = {# Equal Protection Argument
+		name = enc_reformers.67.b
+		add_ideas = ENC_Marriage_Equality
+		}
+	option = {# Dig at Kennedy But Still Support Ghoul Marriage
+		name = enc_reformers.67.c
+		add_ideas = ENC_Marriage_Equality
+		}
+	}
 ### new stuff
 
 country_event = {#68 - Slavery
@@ -1347,6 +1366,226 @@ country_event = {#72 This is How Liberty Dies
 		}
 	
 }
+
+country_event = {#73 Forgotten Man
+	id = enc_reformers.73
+	title = enc_reformers.73.t
+	desc = enc_reformers.73.d
+	picture = GFX_event_enc_forgotten_man
+	fire_only_once = yes	
+	is_triggered_only = yes	
+	option = {# Remember
+		name = enc_reformers.73.a
+		add_political_power = 150
+		}
+	
+}
+
+	country_event = { #75 Civil War
+	id = enc_reformers.75
+	title = enc_reformers.75.t
+	desc = enc_reformers.75.d
+	picture = GFX_event_ENC_single_soldier
+	fire_only_once = yes
+	option = {#aid
+		name = enc_reformers.75.a
+
+		if = { 
+			limit = { is_in_faction = no }
+			create_faction = "The Enclave" 
+			add_to_faction = D01
+			}
+		else_if = { 
+			limit = { is_in_faction = yes }
+			add_to_faction = D01
+			}
+		add_to_war = { 
+			targeted_alliance = D01 
+			enemy = NCR 
+			hostility_reason = asked_to_join
+					}
+			}
+}
+
+country_event = {# Reunited States 
+	id = enc_reformers.76
+	title = enc_reformers.76.t
+	desc = enc_reformers.76.d
+	picture = GFX_event_ENC_double_flag_long
+	
+	fire_only_once = yes	
+	trigger = {	
+		has_country_flag = pro_enclave_NCR
+			NCR = { has_civil_war = No }
+			NCR = { has_government = intellectuals}
+			custom_trigger_tooltip = {
+				tooltip = half_legitimacy		
+				check_variable = {
+					var = legitimacy
+					value > 69.99
+				}
+			}
+	}	
+	mean_time_to_happen = {	days = 30 }
+	option = {#KOOLAID MAN
+		name = enc_reformers.76.a
+		NCR = {
+        every_owned_state = {
+                set_state_flag = do_not_decimate
+        }
+}
+		annex_country = { target = NCR transfer_troops = yes }
+		NCR = {
+				every_owned_state = {
+					add_core_of = ERB
+				}
+	}
+		ERB  = { 
+				every_owned_state = {
+                clr_state_flag = do_not_decimate
+        }
+}
+	
+			}
+}
+country_event = { #74 Civil War
+	id = enc_reformers.74
+	title = enc_reformers.74.t
+	desc = enc_reformers.74.d
+	picture = GFX_event_enc_forgotten_man
+	fire_only_once = yes	
+	option = {# Oops
+		name = enc_reformers.74.a
+		add_political_power = 150
+		set_global_flag = pro_enclave_NCR
+		NCR = 
+			{ set_variable = 	{
+					var = civil_war_size_var
+					value = party_popularity@intellectuals 
+								}
+			}
+		NCR = { divide_variable = { civil_war_size_var = 2  } }
+		NCR = { 
+			start_civil_war = {
+			ruling_party = intellectuals 
+			ideology = intellectuals
+			size = civil_war_size_var
+					   }
+			       }
+		country_event = { id = enc_reformers.75 }
+		
+			}
+	}
+	
+	country_event = {#77 - The Democracy Question
+	id = enc_reformers.77
+	title = enc_reformers.77.t
+	desc = enc_reformers.77.d
+	picture = GFX_event_Shrine_to_Lincoln
+	fire_only_once = yes	
+	is_triggered_only = yes	
+	option = {# Extend Presidential Powers
+		name = enc_reformers.77.a
+		complete_national_focus = enc_segregation
+		}
+	option = {# Democracy
+		name = enc_reformers.77.b
+		complete_national_focus = enc_expand_human_definition
+		}
+	}
+	
+	country_event = {#78 - Arcade Gannon
+	id = enc_reformers.78
+	title = enc_reformers.78.t
+	desc = enc_reformers.78.d
+	picture = GFX_event_Arcade_Gannon_Enclave
+	fire_only_once = yes	
+	is_triggered_only = yes	
+	option = {# Arcade Games
+		name = enc_reformers.78.a
+		set_country_flag = gannon_returns
+		custom_effect_tooltip = enc_reformers.78.a.tt	
+		}
+	
+	}
+	
+	country_event = {# Ulysses
+	id = enc_reformers.79
+	title = enc_reformers.79.t
+	desc = enc_reformers.79.d
+	picture = GFX_event_Ulysses
+	
+	fire_only_once = yes	
+	trigger = {
+			tag = ERB
+			has_completed_focus = enc_americans_one_and_all
+			check_variable = {
+					var = legitimacy
+					value > 79.99
+				}
+			}
+	mean_time_to_happen = {	days = 80 }
+	option = {#Yayy!!!
+		name = enc_reformers.79.a
+		create_corps_commander = {
+			name = "Ulysses"
+			portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Ulysses.dds"
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+		}
+			}
+}
+
+country_event = {#1 - HORSES
+	id = enc_reformers.80
+	title = enc_reformers.80.t
+	desc = enc_reformers.80.d
+	picture = GFX_event_enc_horse
+	fire_only_once = yes	
+	 is_triggered_only = yes	
+		
+	option = {# 
+		name = enc_reformers.80.a
+		add_ideas = enc_horses
+		}
+		
+	}
+
+country_event = {#81 - Economic Policy
+	id = enc_reformers.81
+	title = enc_reformers.81.t
+	desc = enc_reformers.81.d
+	picture = GFX_event_enc_currency
+	fire_only_once = yes	
+	is_triggered_only = yes	
+	option = {# USD
+		name = enc_reformers.81.a
+		complete_national_focus = enc_US_dollar
+		add_stability = -0.10
+		add_ideas = enc_broken_houses
+		}
+	option = {# NCRD
+		name = enc_reformers.81.b
+		complete_national_focus = enc_NCR_dollar
+		add_stability = 0.05
+		}
+	}	
+	
+country_event = {#82 - End of Bottlecaps
+	id = enc_reformers.82
+	title = enc_reformers.82.t
+	desc = enc_reformers.82.d
+	picture = GFX_event_enc_currency
+	fire_only_once = yes	
+	is_triggered_only = yes	
+	option = {# USD
+		name = enc_reformers.82.a
+		add_ideas = Enc_Fiat_Currency
+		}
+	}		
 
 country_event = {#99 Area 51
     id = enc_reformers.99

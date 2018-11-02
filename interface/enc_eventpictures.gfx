@@ -155,4 +155,28 @@ spriteTypes = {
 					name = "GFX_event_enc_suspend_elections"
 					texturefile = "gfx/event_pictures/event_enc_suspend_elections.dds"
 				}
-}
+		SpriteType = {#LincolnShrine
+					name = "GFX_event_Shrine_to_Lincoln"
+					texturefile = "gfx/event_pictures/event_Shrine_to_Lincoln.tga"
+				}
+				
+		SpriteType = {#Gannon
+					name = "GFX_event_Arcade_Gannon_Enclave"
+					texturefile = "gfx/event_pictures/event_Arcade_Gannon_Enclave.dds"
+				}
+		SpriteType = {#Ulysses
+					name = "GFX_event_Ulysses"
+					texturefile = "gfx/event_pictures/event_Ulysses.tga"
+				}
+		SpriteType = {#Currency
+					name = "GFX_event_enc_currency"
+					texturefile = "gfx/event_pictures/event_enc_currency.dds"
+				}	
+SpriteType = {#Horses
+					name = "GFX_event_enc_horse"
+					texturefile = "gfx/event_pictures/event_enc_horse.dds"
+				}					
+}			
+
+
+
