@@ -1367,6 +1367,33 @@ country_event = {#72 This is How Liberty Dies
 	
 }
 
+country_event = {#73 Unpowered province!
+	id = enc_reformers.73
+	title = enc_reformers.73.t
+	desc = enc_reformers.73.d
+	picture = GFX_event_enc_suspend_elections
+	fire_only_once = yes	
+	is_triggered_only = no
+	trigger = {
+		original_tag = ERB
+		any_owned_state = {
+			has_state_flag = needs_civilian_power_grid
+			civilian_power_grid < 1
+		}
+	}
+	option = {# Extend Presidential Powers
+		name = enc_reformers.73.a
+		every_owned_state = {
+			limit = {
+				has_state_flag = needs_civilian_power_grid
+				civilian_power_grid < 1
+			}
+			remove_core_of = ROOT
+		}
+	}
+	
+}
+
 country_event = {#73 Forgotten Man
 	id = enc_reformers.73
 	title = enc_reformers.73.t
@@ -1377,8 +1404,7 @@ country_event = {#73 Forgotten Man
 	option = {# Remember
 		name = enc_reformers.73.a
 		add_political_power = 150
-		}
-	
+	}	
 }
 
 	country_event = { #75 Civil War
@@ -1458,22 +1484,15 @@ country_event = { #74 Civil War
 		name = enc_reformers.74.a
 		add_political_power = 150
 		set_global_flag = pro_enclave_NCR
-		NCR = 
-			{ set_variable = 	{
-					var = civil_war_size_var
-					value = party_popularity@intellectuals 
-								}
+		NCR = {
+			set_variable = 	{
+				var = civil_war_size_var
+				value = party_popularity@intellectuals 
 			}
-		NCR = { divide_variable = { civil_war_size_var = 2  } }
-		NCR = { 
+			divide_variable = { civil_war_size_var = 2  }
 			start_civil_war = {
-			ideology = intellectuals
-			size = civil_war_size_var
-					   }
-			       }
-		country_event = { id = enc_reformers.75 }
-				}
 	}
+}
 	
 	country_event = {#77 - The Democracy Question
 	id = enc_reformers.77

@@ -1616,12 +1616,16 @@ ENC_debug = {
 		}
 	}
 	ENC_reduce_legitimacy = {
+		available = {
+
+		}
 		complete_effect = {
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = -10
 			}
 			change_legitimacy = yes
+			custom_effect_tooltip = enc_debug_tt
 		}
 	}
 	BAR_spawn_militia = {
