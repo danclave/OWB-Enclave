@@ -1467,14 +1467,12 @@ country_event = { #74 Civil War
 		NCR = { divide_variable = { civil_war_size_var = 2  } }
 		NCR = { 
 			start_civil_war = {
-			ruling_party = intellectuals 
 			ideology = intellectuals
 			size = civil_war_size_var
 					   }
 			       }
 		country_event = { id = enc_reformers.75 }
-		
-			}
+				}
 	}
 	
 	country_event = {#77 - The Democracy Question
@@ -1587,6 +1585,29 @@ country_event = {#82 - End of Bottlecaps
 		}
 	}		
 
+country_event = {#83 - National Anthem
+	id = enc_reformers.83
+	title = enc_reformers.83.t
+	desc = enc_reformers.83.d
+	picture = GFX_event_ENC_double_flag_long
+	fire_only_once = yes	
+	 is_triggered_only = NO
+	trigger = {	
+		has_completed_focus = enc_old_world 
+	}	
+	mean_time_to_happen = {	days = 30 }
+	option = {# Star Spangled
+		name = enc_reformers.83.a
+				}
+	option = {# Battle Cry of Freedom
+		name = enc_reformers.83.b
+		}
+		option = {# Ru Paul
+		name = enc_reformers.83.c
+		}
+	}	
+		
+	
 country_event = {#99 Area 51
     id = enc_reformers.99
     title = enc_reformers.99.t

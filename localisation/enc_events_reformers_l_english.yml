@@ -306,6 +306,12 @@ enc_reformers.82.t: "The End of Bottlecaps"
 enc_reformers.82.d: "Bottlecaps were an ingenious solution to the Wasteland's problems; how do you create a currency with no government?  The original bottlecaps were backed by potable water from the Hub, and because the bottlecaps could not be replicated in postwar conditions, they had a fixed store of value.  But as the Wasteland's economy grew, the limited supply of bottlecaps meant more goods were chasing less money, discouraging economic growth.  With the return of Old Glory to the Wastes, the Government can impose a rational currency worth whatever the government says it's worth."
 enc_reformers.82.a: "Wait, isn't this why candy bars cost $1000 before the war?"
 ################################################################################################################
+enc_reformers.83.t: "The National Anthem"
+enc_reformers.83.d: "The Reunited States must choose a national anthem.  Some say we should stick with the Star Spangled Banner, or perhaps the Battle Cry of Freedom.  But Secret Service spies in the Boneyard found a holodisc at a prewar bar called the Eagle by a singer named RuPaul.  Her song 'American' is a hit with the troops, for 'she's the stars and stripes flying high, red, white, and blue, she is me and you, she's American through and through.'"
+enc_reformers.83.a: "The Star Spangled Banner Yet waves"
+enc_reformers.83.b: "We rally once again, shouting the Battle Cry of Freedom"
+enc_reformers.83.c: "The Enclave can learn from RuPaul."
+################################################################################################################
 enc_reformers.99.t: "Area 51"
 enc_reformers.99.d: "With Area 51 under our control, Enclave scientists are sifting through reams of prewar data.  It appears that the Prewar United States was monitored by vast intellicts cool and unsympathetic, and their technology was studied by the military.  We could pick this research up, but there may be consequences... "
 enc_reformers.99.a: "Let us press every button we can find."

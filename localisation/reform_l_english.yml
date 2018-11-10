@@ -401,7 +401,7 @@ enc_a_common_enemy_desc:0 "The peoples of the Wasteland can be united under the 
 enc_a_common_enemy_tt:0 "\n§MBonus is doubled if both groups are rejected.§!"
 
 enc_integrate_scientists: "Integrate Scientists"
-enc_integrate_scientists_desc: "The Recovery since the Great War has led to centers of hire learning that produce scientists for the first time in decades.  They can serve in the American dream."
+enc_integrate_scientists_desc: "The Recovery since the Great War has led to centers of higher learning that produce scientists for the first time in decades.  They can serve in the American dream."
 enc_integrate_politicians: "Integrate Politicians"
 enc_integrate_politicians_desc: "Citizens can stand for office no matter their origin."
 enc_integrate_officers: "Integrate Officers"
