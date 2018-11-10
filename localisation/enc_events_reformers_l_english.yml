@@ -279,6 +279,33 @@ enc_reformers.76.t: "The State of California"
 enc_reformers.76.d: "With the victory of the Old World Party and support for the Enclave at an all time high, it's time to restore California to the Union."
 enc_reformers.76.a: "Out of Many, One."
 ################################################################################################################ 
+enc_reformers.77.t: "Human Rights?"
+enc_reformers.77.d: "Although the Reformers in the Enclave have recognized the average wastelander as an American citizen, a few fools even dare to call for equality for ghouls and mutants.  As absurd as it seems, some of the ghouls were actually citizens of prewar America..."
+enc_reformers.77.a: "Mutants?  In my neighborhood?"
+enc_reformers.77.b: "We fight not to enslave, but to set a country free."
+################################################################################################################ 
+enc_reformers.78.t: "The Return of Arcade Gannon"
+enc_reformers.78.d: "Since the Enclave's reform and integration of American citizens, some of those who fled after the fall of Navarro have returned to us.  Most notable among those is the 'scientist' Arcade Gannon, who trained with the Followers of the Apocalypse. Inspired by our promises of a better life for the people of the Wastes and our technology, he's willing to work for us again. Although we don't like the courier he's dating."
+enc_reformers.78.a: "I love a man in uniform."
+enc_reformers.78.a.tt:  "Arcade Gannon is now available as a Theoretician."
+################################################################################################################
+enc_reformers.79.t: "A Frumentarius Defects!"
+enc_reformers.79.d: "As America wakes from its slumber and the Wasteland begins to rally to our cause, a former member of the Legion has appeared in New Reno, asking to join our army. He has taken the name Ulysses, after a great soldier who fought to unite America under one flag, and vows that When he sets his flag down, it'll be over his body or a nation he believes in."
+enc_reformers.79.a: "Who are you, that you do not know your own history?"
+################################################################################################################
+enc_reformers.80.t: "Horses!"
+enc_reformers.80.d: "Although there were about 8 million horses in prewar America, they all died out due to the Great War, nuclear winter, and hungry survivors.  Now the EPA wants to use genetic engineering to revive horses and other large mammals rather than engineering Deathclaws with laser guns."
+enc_reformers.80.a: "Great.  Now give them lasers."
+################################################################################################################
+enc_reformers.81.t: "The New Economic Policy"
+enc_reformers.81.d: "Now that we have reestablished the Federal Reserve, there's some debate as to just what our currency should be.  Some have proposed we tie the United States Dollar to the NCR Dollar, ensuring economic stability.  Others argue that we can force everyone to use the United States Dollar, driving the great New Californian Houses into bankruptcy and seizing their interests.  Doing so wiill upset the economy but increase our influence."
+enc_reformers.81.a: "Make the NCRD worthless! Break the merchant houses."
+enc_reformers.81.b: "An orderly integration into the American economy is best."
+################################################################################################################
+enc_reformers.82.t: "The End of Bottlecaps"
+enc_reformers.82.d: "Bottlecaps were an ingenious solution to the Wasteland's problems; how do you create a currency with no government?  The original bottlecaps were backed by potable water from the Hub, and because the bottlecaps could not be replicated in postwar conditions, they had a fixed store of value.  But as the Wasteland's economy grew, the limited supply of bottlecaps meant more goods were chasing less money, discouraging economic growth.  With the return of Old Glory to the Wastes, the Government can impose a rational currency worth whatever the government says it's worth."
+enc_reformers.82.a: "Wait, isn't this why candy bars cost $1000 before the war?"
+################################################################################################################
 enc_reformers.99.t: "Area 51"
 enc_reformers.99.d: "With Area 51 under our control, Enclave scientists are sifting through reams of prewar data.  It appears that the Prewar United States was monitored by vast intellicts cool and unsympathetic, and their technology was studied by the military.  We could pick this research up, but there may be consequences... "
 enc_reformers.99.a: "Let us press every button we can find."
