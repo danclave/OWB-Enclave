@@ -887,9 +887,9 @@ ENC_political_infighting = {
 			# good stuff?
 		}
 	}
-	ENC_setting_examples = {
+	ENC_setting_examples = { # crackdown
 		icon = GFX_decision_oppression
-		cost = 75
+		cost = 50
 		priority = 100
 		allowed = { tag = ERB }
 		visible = {
@@ -901,23 +901,20 @@ ENC_political_infighting = {
 		}
 		available = {
 			has_country_flag = enc_crackdown_justified
-			has_manpower > 100
 			has_stability > 0.10
-		}
-		complete_effect = {
 		}
 		complete_effect = {
 			if = {
 				limit = {
 					has_completed_focus = enc_reform					
 				}				
-				add_manpower = -100
-				add_stability = -0.10
+				add_manpower = -50
+				add_stability = -0.05
 				add_popularity = { ideology = elites popularity = -0.10 }
 				add_popularity = { ideology = intellectuals popularity = 0.05 }
 				add_manpower = -1
 				
-				else = {
+				else = { #purity version
 					limit = {
 						has_completed_focus = enc_purity					
 					}				
@@ -1610,7 +1607,7 @@ ENC_debug = {
 		complete_effect = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 10
+				value = 0.10
 			}
 			change_legitimacy = yes
 		}
@@ -1622,7 +1619,7 @@ ENC_debug = {
 		complete_effect = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = -10
+				value = -0.10
 			}
 			change_legitimacy = yes
 			custom_effect_tooltip = enc_debug_tt

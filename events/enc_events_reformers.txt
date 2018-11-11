@@ -1,6 +1,6 @@
 ﻿add_namespace = enc_reformers
 
-country_event = {#1 - DOUGLAS PAST - STORIES
+country_event = {#1 - DOUGLAS YOUTH
 	id = enc_reformers.1
 	title = enc_reformers.1.t
 	desc = enc_reformers.1.d
@@ -13,11 +13,8 @@ country_event = {#1 - DOUGLAS PAST - STORIES
 	option = {# He aided the Chosen One and after the Oil Rig Destruction went their seperate ways
 		name = enc_reformers.1.a
 		country_event = { id = enc_reformers.2 }
-
-	}
-	option = {#  He aided the Chosen One and after he settled in Arroyo where he met and married a local woman 
-		name = enc_reformers.1.b
-		country_event = { id = enc_reformers.2 }
+		add_country_leader_trait = mutant_sympathies
+		set_country_flag = leader_mutant_sympathies
 	}
 	option = {# He didn't aid the Chosen One 
 		name = enc_reformers.1.c
@@ -30,7 +27,7 @@ country_event = {#2 - DOUGLAS PAST - MID
 	id = enc_reformers.2
 	title = enc_reformers.2.t
 	desc = enc_reformers.2.d
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_ENC_3_troopers
 	
 	fire_only_once = yes	
     is_triggered_only = yes
@@ -56,7 +53,7 @@ country_event = {#3 - DOUGLAS PAST - END
 	id = enc_reformers.3
 	title = enc_reformers.3.t
 	desc = enc_reformers.3.d
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_ENC_plasma_rifle
 	
 	fire_only_once = yes	
     is_triggered_only = yes
@@ -69,7 +66,8 @@ country_event = {#3 - DOUGLAS PAST - END
 		clr_country_flag = enc_ncr_connections_flag
 		add_country_leader_trait = ruthless
 		set_country_flag = leader_ruthless
-	}
+		add_manpower = 200
+		}
 	option = {#Help
 		name = enc_reformers.3.a
 		add_country_leader_trait = charismatic

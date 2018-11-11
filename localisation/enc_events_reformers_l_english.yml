@@ -2,20 +2,20 @@
 
 breaklines:0 "----\n"
 ################################## EVENTS ##############################################
-enc_reformers.1.t:0 "Douglas' Youth"
+enc_reformers.1.t:0 "Douglas' Father"
 enc_reformers.1.d:0 "There is controversy regarding Granite’s Father and his relation to the Chosen One. The Purists accuse Granite’s Father of treason for aiding the Chosen One and destroying the Oil Rig, however there is no evidence proving these claims. Granite however is curious about these allegations, thus Granite takes it upon himself to ask his retired father about whether these claims are true or not. Regardless whether it is true or not, Granite will say that those claims are nothing but slander from rivals. ."
 enc_reformers.1.a:0 "He aided the Chosen One and then went their seperate ways."
 enc_reformers.1.b:0 "He aided the Chosen One and settled in Arroyo where he met and married a local woman ."
 enc_reformers.1.c:0 "He didn't aid the Chosen One."
 #########################################################################################
 enc_reformers.2.t:0 "Douglas' first contact"
-enc_reformers.2.d:0 "Hunting Raiders, he came across a group of people looking for the same gang."
-enc_reformers.2.a:0 "NCR."
-enc_reformers.2.b:0 "Brotherhood."
+enc_reformers.2.d:0 "When Douglas was a lieutenant of the Granite Defense Company, he was contacted by a settlement under attack by raiders. The call sounded desperate and came from a settlement belonging to..."
+enc_reformers.2.a:0 "the NCR."
+enc_reformers.2.b:0 "the Brotherhood."
 enc_reformers.2.c:0 "Caesar's Legion."
 #########################################################################################
 enc_reformers.3.t:0 "Douglas' Decision"
-enc_reformers.3.d:0 "He decided to..."
+enc_reformers.3.d:0 "When Douglas arrived with his team, the situation of the settlement had grown more dire. Their battered defenses crumbling quickly under a determined but almost equally attritioned raider party. Looking over the sad state of both parties, Douglas decided to... "
 enc_reformers.3.a:0 "Help take down the raiders."
 enc_reformers.3.a.tt: "This will give us a connection with this faction."
 enc_reformers.3.b:0 "Wait for the two to exhaust each other and finish off the survivors."

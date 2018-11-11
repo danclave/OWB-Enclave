@@ -60,7 +60,7 @@ guiTypes = {
 		iconType = {
 			name ="legitimacy_icon"
 			spriteType = "legitimacy"
-			position = { x = 4 y = -1² }
+			position = { x = 4 y = -1 }
 			scale = 0.8
 		}
 		
@@ -68,9 +68,9 @@ guiTypes = {
 			name ="legitimacy_text"
 			position = { x = 22 y = 4 }
 			font = "hoi_18mbs"
-			text = "[?legitimacy]%"
+			text = "[?legitimacy|%0]"
 			format = center
-			maxWidth = 46
+			maxWidth = 55
 			maxHeight = 24
 			fixedsize = yes
 			

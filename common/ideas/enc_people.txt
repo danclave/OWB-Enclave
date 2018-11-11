@@ -124,7 +124,7 @@ ideas = {
 			}
 			traits = { judah_kreger_leader }
 
-			ai_will_do = {
+			ai_will_do = { 
 				factor = 10
 			}
 		}
@@ -152,6 +152,7 @@ ideas = {
 			}
 		}
 		dr_henry = {
+			picture = d_henry
 			allowed = {
 				tag = ERB  
 			}
@@ -159,7 +160,7 @@ ideas = {
 				has_completed_focus = enc_reform
 			}
 			traits = {
-				# todo
+				compassionate_doctor
 			}
 		}
 	}

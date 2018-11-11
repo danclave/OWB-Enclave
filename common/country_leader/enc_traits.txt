@@ -82,12 +82,16 @@ leader_traits = {
 		random = no
 		production_speed_arms_factory_factor = 0.10
 	}	
-
 	compassionate_doctor = {
 		random = no
-		production_speed_arms_factory_factor = 0.10
+		monthly_population = 0.02
 	}	
-
+	mutant_sympathies = {
+		random = no
+		non_core_manpower = 0.02		
+		stablility_factor = -0.05
+	}
+	
 	# manufacturers
 	vertibird_aircraft_manufacturer = {
 		random = no

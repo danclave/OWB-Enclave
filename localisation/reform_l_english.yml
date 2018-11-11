@@ -106,6 +106,8 @@ enc_arms_development_desc:0 "Working together, the military and industry can col
 enc_army_reserves:0 "Army Reserves"
 enc_army_reserves_desc:0 "Americans in the Great War rallied to the flag when the nation was under attack, serving as part time soldiers.  They can do so again."
 
+ENC_servitude: "Endebted Servitude"
+
 enc_department_of_homeland_security:0 "Department of Homeland Security"
 enc_department_of_homeland_security_desc:0 "Communists, Legion spies, and Brotherhood agents lurk everywhere. It's only natural to form a Department to root them out."
 enc_disciplined_soldiers:0 "Disciplined Soldiers"
@@ -534,7 +536,7 @@ ENC_ncr_enclave_propaganda: "Enclave Propaganda"
 ENC_electrification:  "Rural Electrification"
 
 ENC_legitimacy_none: "No Legitimacy"
-ENC_legitimacy_none_desc: "Despite their claims, the Enclave is seen as little more than dangerous mad men claiming to be a goverment few remember and fewer want. "
+ENC_legitimacy_none_desc: "(0-25% legitimacy)\nDespite their claims, the Enclave is seen as little more than dangerous mad men claiming to be a goverment few remember and fewer want. "
 ENC_legitimacy_low: "Little Legitimacy"
 ENC_legitimacy_medium: "Moderate Legitimacy"
 ENC_legitimacy_high: "High Legitimacy"
@@ -639,6 +641,8 @@ enc_disliked_pragmatist: "Unpopular Pragmatist"
 enc_army_chief_loyalist: "Loyal Reformer"
 enc_air_chief_loyalist: "Loyal Reformer"
 enc_navy_chief_loyalist: "Loyal Reformer"
+mutant_sympathies: "Mutant Sympathies"
+compassionate_doctor: "Compassionate Doctor"
 
 ###################################
 # REFORM UI
@@ -651,7 +655,7 @@ civilian_power_grid_desc: "Allows a state to be §GCored§!"
 
 install_police_force_tt: "Install Police Force"
 
-legitimacy_TOOLTIP:0 "§HLegitimacy§! \n\nCurrent legitimacy: §Y[?legitimacy]§!\n\nLegitimacy is capped at §H100§!."
+legitimacy_TOOLTIP:0 "§HLegitimacy§! \n\nCurrent legitimacy: §Y[?legitimacy|%0]§!\n\nLegitimacy is capped at §H100%§!."
 
 arm_rebels_tt: "Arm Rebels (§Y50§! £pol_power )"
 arm_rebels_tt_delayed: "[!arm_rebels_click]"
@@ -688,9 +692,9 @@ ENC_hiding_cost_increased_20_tt: "§YNCR suspicion§! will go up by §R20§! £p
 ENC_hiding_cost_increased_25_tt: "§YNCR suspicion§! will go up by §R25§! £pol_power\n\n"
 ENC_hiding_cost_increased_30_tt: "§YNCR suspicion§! will go up by §R30§! £pol_power\n\n"
 
-change_legitimacy_tt:0 "Modify §YLegitimacy§! by §+§![?legitimacy_change_var|+]§!\n\n"
-lose_legitimacy_tt:0 "Lose §+§![?legitimacy_change_var|+]§! §YLegitimacy§!\n\n"
-gain_legitimacy_tt:0 "Gain §+§![?legitimacy_change_var|+]§! §YLegitimacy§!\n\n"
+change_legitimacy_tt:0 "Modify §YLegitimacy§! by §+§![?legitimacy_change_var|%+]§!\n\n"
+lose_legitimacy_tt:0 "Lose §+§![?legitimacy_change_var|%+]§! §YLegitimacy§!\n\n"
+gain_legitimacy_tt:0 "Gain §+§![?legitimacy_change_var|%+]§! §YLegitimacy§!\n\n"
 
 lose_suspicion_tt:0 "§YNCR suspicion§! will go down by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
 gain_suspicion_tt:0 "§YNCR suspicion§! will go up by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
