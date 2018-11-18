@@ -959,6 +959,36 @@ ideas = {
 				stability_factor = 0.05
 			}
 		}
+		
+		ENC_BOS_Connections = {  		
+			picture = enc_scientists #check
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   research_time_factor = -0.03
+			}
+		}
+		ENC_CES_Wisdom = {  
+			picture = enc_idea_infighting
+			allowed = { 
+				always = no
+			}
+
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+			  army_morale_factor = 0.05
+			  
+			}
+		}
 ####################################################
 # REFORM - DIPLOMACY TREE
 ####################################################
@@ -1240,6 +1270,21 @@ ideas = {
 						}
 			stability_factor = 0.10
 		} 
+		Enc_Hacking = {  
+			picture = enc_radio
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   political_power_gain = 0.20
+			   decryption_factor = 0.2
+			}
+		}
 ####################################################
 # Diplomacy
 ####################################################
@@ -1610,13 +1655,20 @@ ideas = {
 				consumer_goods_factor = -0.10
 				}
 		}
+		Enc_Construction_nuka = {
+			picture = generic_exploit_mines
+			modifier = {
+					production_speed_infrastructure_factor = -0.10
+					production_speed_buildings_factor = -0.05
+				}
+		}
 ####################################################
 # PURITY - DESERT RANGERS TREE
 ####################################################
 		ENC_construction_infra = {
 			picture = generic_exploit_mines
 			modifier = {
-					production_speed_infrastructure_factor = 0.2
+					production_speed_infrastructure_factor = -0.2
 				}
 		}
 		ENC_construction_forts = {

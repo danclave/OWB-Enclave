@@ -42,6 +42,7 @@ ERB_nevada_people_ADJ:0 "Nevadan"
 ###################################
 # FOCUS TREE
 ###################################
+
 enc_reform:0 "Reform"
 enc_reform_desc:0 "If we are to rebuild our once-great nation, we must reform ourselves and our principles. Sadly, many of the reformist elements have already deserted in the last few years. Leaving mostly the devoted and fanatical. We will have to tread carefully in our efforts to reform the Enclave into an organisation fit to restore order, justice and democracy to these United States of America."
 
@@ -509,6 +510,10 @@ enc_dod_balistic_2:0 "Streamline Production"
 ###################################
 # REFORM IDEAS
 ###################################
+Enc_Construction_nuka:  "Building Nuka World"
+Enc_Hacking:0 "Monitoring the Computer Networks"
+ENC_CES_Wisdom:  "Learning from Caesar"
+ENC_BOS_Connections:  "Friends in the Brotherhood"
 Enc_Fiat_Currency:  "Fiat currency"
 ENC_Chamber_Commerce:  "Chamber of Commerce"
 ENC_Department_Manufacturing:  "Department of Manufacturing"
