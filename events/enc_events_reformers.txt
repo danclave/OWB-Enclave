@@ -4,7 +4,7 @@ country_event = {#1 - DOUGLAS YOUTH
 	id = enc_reformers.1
 	title = enc_reformers.1.t
 	desc = enc_reformers.1.d
-	picture = #
+	picture = GFX_event_enc_reform_origin
 	
 	fire_only_once = yes	
     is_triggered_only = yes	
@@ -27,8 +27,7 @@ country_event = {#2 - DOUGLAS PAST - MID
 	id = enc_reformers.2
 	title = enc_reformers.2.t
 	desc = enc_reformers.2.d
-	picture = GFX_event_ENC_3_troopers
-	
+	picture = GFX_event_ENC_minigun
 	fire_only_once = yes	
     is_triggered_only = yes
 	
@@ -41,12 +40,12 @@ country_event = {#2 - DOUGLAS PAST - MID
 	option = {#BOS
 		name = enc_reformers.2.b
 		country_event = { id = enc_reformers.3 }
-		set_country_flag = enc_bos_connections_flag
+		add_ideas = ENC_BOS_Connections
 		}
 	option = {#CES
 		name = enc_reformers.2.c
 		country_event = { id = enc_reformers.3 }
-		set_country_flag = enc_ces_connections_flag
+		add_ideas = ENC_CES_Wisdom
 	}
 }
 country_event = {#3 - DOUGLAS PAST - END
@@ -54,7 +53,6 @@ country_event = {#3 - DOUGLAS PAST - END
 	title = enc_reformers.3.t
 	desc = enc_reformers.3.d
 	picture = GFX_event_ENC_plasma_rifle
-	
 	fire_only_once = yes	
     is_triggered_only = yes
 	
@@ -67,7 +65,9 @@ country_event = {#3 - DOUGLAS PAST - END
 		add_country_leader_trait = ruthless
 		set_country_flag = leader_ruthless
 		add_manpower = 200
-		}
+		remove_ideas = ENC_BOS_Connections
+		remove_ideas = ENC_CES_Wisdom
+	}
 	option = {#Help
 		name = enc_reformers.3.a
 		add_country_leader_trait = charismatic
@@ -236,7 +236,7 @@ country_event = {#10 - Dealing with Bishops - assassination
 	id = enc_reformers.10
 	title = enc_reformers.10.t
 	desc = enc_reformers.10.d
-	picture = GFX_event_ENC_secret2
+	picture = GFX_event_enc_new_reno2
 	
 	fire_only_once = yes
     is_triggered_only = yes
@@ -298,7 +298,7 @@ country_event = {#13 - Consolidating power
 	id = enc_reformers.13
 	title = enc_reformers.13.t
 	desc = enc_reformers.13.d
-	picture = GFX_event_ENC_president_only
+	picture = GFX_event_enc_reform_origin
 	
 	fire_only_once = yes
     is_triggered_only = yes
@@ -326,7 +326,7 @@ country_event = {#14 - Anderson Speech
 	id = enc_reformers.14
 	title = enc_reformers.14.t
 	desc = enc_reformers.14.dd
-	picture = GFX_event_ENC_president_only
+	picture = GFX_event_Enc_speech
 	
 	fire_only_once = yes
 	mean_time_to_happen = {	days = 100 }
@@ -695,7 +695,7 @@ country_event = {#26 - Addressing concerns - 1 - NCR
 	id = enc_reformers.26
 	title = enc_reformers.26.t
 	desc = enc_reformers.26.d
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_ENC_rebuilding
 	
 	fire_only_once = yes
     is_triggered_only = yes
@@ -720,7 +720,7 @@ country_event = {#27 - Addressing concerns - 2 - integration
 	id = enc_reformers.27
 	title = enc_reformers.27.t
 	desc = enc_reformers.27.d
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_ENC_rebuilding
 	
 	fire_only_once = yes
     is_triggered_only = yes
@@ -744,7 +744,7 @@ country_event = {#28 - Addressing concerns - 3 - ghouls
 	id = enc_reformers.28
 	title = enc_reformers.28.t
 	desc = enc_reformers.28.d
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_ENC_picture
 	
 	fire_only_once = yes
     is_triggered_only = yes
@@ -791,7 +791,7 @@ country_event = {#30 - Spies in NCR - relocated successfully
 	id = enc_reformers.30
 	title = enc_reformers.30.t
 	desc = enc_reformers.30.d
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_enc_spies
 	
 	fire_only_once = no
     is_triggered_only = yes
@@ -805,7 +805,7 @@ country_event = {#31 - Spies in NCR - escaped successfully
 	id = enc_reformers.31
 	title = enc_reformers.31.t
 	desc = enc_reformers.31.d
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_enc_spies
 	
 	fire_only_once = no
     is_triggered_only = yes
@@ -1300,7 +1300,7 @@ country_event = {#68 - Slavery
 		# modify legitimacy
 		set_temp_variable  = {
 			var = legitimacy_change_var
-			value = -5
+			value = -0.05
 		}
 		change_legitimacy = yes
 		}
@@ -1365,10 +1365,10 @@ country_event = {#72 This is How Liberty Dies
 	
 }
 
-country_event = {#73 Unpowered province!
-	id = enc_reformers.73
-	title = enc_reformers.73.t
-	desc = enc_reformers.73.d
+country_event = {#84 Unpowered province!
+	id = enc_reformers.84
+	title = enc_reformers.84.t
+	desc = enc_reformers.84.d
 	picture = GFX_event_enc_suspend_elections
 	fire_only_once = yes	
 	is_triggered_only = no
@@ -1380,7 +1380,7 @@ country_event = {#73 Unpowered province!
 		}
 	}
 	option = {# Extend Presidential Powers
-		name = enc_reformers.73.a
+		name = enc_reformers.84.a
 		every_owned_state = {
 			limit = {
 				has_state_flag = needs_civilian_power_grid
@@ -1392,18 +1392,6 @@ country_event = {#73 Unpowered province!
 	
 }
 
-country_event = {#73 Forgotten Man
-	id = enc_reformers.73
-	title = enc_reformers.73.t
-	desc = enc_reformers.73.d
-	picture = GFX_event_enc_forgotten_man
-	fire_only_once = yes	
-	is_triggered_only = yes	
-	option = {# Remember
-		name = enc_reformers.73.a
-		add_political_power = 150
-	}	
-}
 
 	country_event = { #75 Civil War
 	id = enc_reformers.75
@@ -1446,7 +1434,7 @@ country_event = {# Reunited States
 				tooltip = half_legitimacy		
 				check_variable = {
 					var = legitimacy
-					value > 69.99
+					value > 0.07
 				}
 			}
 	}	
@@ -1473,30 +1461,31 @@ country_event = {# Reunited States
 			}
 }
 country_event = { #74 Civil War
-	id = enc_reformers.74
-	title = enc_reformers.74.t
-	desc = enc_reformers.74.d
-	picture = GFX_event_enc_forgotten_man
-	fire_only_once = yes	
-	option = {# Oops
-		name = enc_reformers.74.a
-		add_political_power = 150
-		set_global_flag = pro_enclave_NCR
-		NCR = {
-			set_variable = 	{
-				var = civil_war_size_var
-				value = party_popularity@intellectuals 
-			}
-			divide_variable = { civil_war_size_var = 2  }
-			start_civil_war = {
-				ruling_party = intellectuals 
-				ideology = intellectuals
-				size = civil_war_size_var
-			}
-		}
-		country_event = { id = enc_reformers.75 }		
-	}
-}
+    id = enc_reformers.74
+    title = enc_reformers.74.t
+    desc = enc_reformers.74.d
+    picture = GFX_event_NCR_battle
+    fire_only_once = yes    
+    option = {# Oops
+        name = enc_reformers.74.a
+        add_political_power = 150
+        set_global_flag = pro_enclave_NCR
+        NCR = 
+            { set_variable =     {
+                    var = civil_war_size_var
+                    value = party_popularity@intellectuals 
+                                }
+            }
+        NCR = { divide_variable = { civil_war_size_var = 2  } }
+        NCR = { 
+            start_civil_war = {
+            ideology = intellectuals
+            size = civil_war_size_var
+                       }
+                   }
+        country_event = { id = enc_reformers.75 }
+                }
+    }
 	
 	country_event = {#77 - The Democracy Question
 	id = enc_reformers.77
@@ -1608,37 +1597,295 @@ country_event = {#82 - End of Bottlecaps
 		}
 	}		
 
+country_event = {#83 - National Anthem
+	id = enc_reformers.83
+	title = enc_reformers.83.t
+	desc = enc_reformers.83.d
+	picture = GFX_event_ENC_double_flag_long
+	fire_only_once = yes	
+	 is_triggered_only = NO
+	trigger = {	
+		has_completed_focus = enc_old_world 
+	}	
+	mean_time_to_happen = {	days = 30 }
+	option = {# Star Spangled
+		name = enc_reformers.83.a
+				}
+	option = {# Battle Cry of Freedom
+		name = enc_reformers.83.b
+		}
+		option = {# Ru Paul
+		name = enc_reformers.83.c
+		}
+	}	
+
+country_event = {#85 - Shi
+	id = enc_reformers.85
+	title = enc_reformers.85.t
+	desc = enc_reformers.85.d
+	picture = GFX_event_enc_shi
+	fire_only_once = yes	
+	is_triggered_only = no
+	trigger = {	
+		tag = ERB 
+		has_border_with = SHI
+	}	
+	mean_time_to_happen = {	days = 3 }
+	option = {# Wipe Them Out
+		name = enc_reformers.85.a
+				add_war_support = 0.10
+				add_stability = 0.05
+				create_wargoal = {
+				type = annex_everything
+				target = SHI
+				}	
+				}
+	option = {# No Chinese Exclusion Act
+    set_country_flag = enc_China_Town
+	name = enc_reformers.85.b
+			add_war_support = -0.05
+			add_stability = -0.05
+		if = {
+        limit = { SHI = { is_in_faction = yes} }
+        SHI = {
+            leave_faction = yes
+        }
+    }
+    if = { 
+        limit = { is_in_faction = no }
+        create_faction = "The Enclave"
+        add_to_faction = SHI
+    }
+    else_if = { 
+        limit = { is_in_faction = yes }
+        add_to_faction = SHI
+    }
+}
+	}
+		
+country_event = {#86 - Bomb Bay
+	id = enc_reformers.86
+	title = enc_reformers.86.t
+	desc = enc_reformers.86.d
+	picture = GFX_event_enc_New_SanFran
+	fire_only_once = yes	
+	is_triggered_only = no
+	trigger = {	
+		has_country_flag = enc_China_Town
+	}	
+	mean_time_to_happen = {	days = 30 }
+	option = {# Bomb Bay
+		name = enc_reformers.86.a
+		set_technology = { xian_85_fighter = 1}		
+				}
+	
+	}
+
+country_event = {#87 - Baseball
+	id = enc_reformers.87
+	title = enc_reformers.87.t
+	desc = enc_reformers.87.d
+	picture = GFX_event_enc_baseball
+	fire_only_once = yes	
+	is_triggered_only = no
+	trigger = {	
+		has_completed_focus = enc_reform
+	}	
+	mean_time_to_happen = {	days = 60 }
+	option = {# Play Ball
+		name = enc_reformers.87.a
+		add_stability = 0.05
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = 0.05
+		}
+		change_legitimacy = yes		
+				}
+	
+	}		
+	
+country_event = {#88 - Mistakes
+	id = enc_reformers.88
+	title = enc_reformers.88.t
+	desc = enc_reformers.88.d
+	picture = GFX_event_enc_capitol_ruins
+	fire_only_once = yes	
+	is_triggered_only = NO
+	trigger = {	
+		has_completed_focus = enc_vlt_core_reform
+	}	
+	mean_time_to_happen = {	days = 60 }
+	option = {# Idolize 
+		name = enc_reformers.88.a
+			add_stability = 0.05
+				# modify legitimacy
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.05
+		}
+		change_legitimacy = yes
+				}
+	option = {# Honesty
+		name = enc_reformers.88.b
+			add_stability = -0.05
+				# modify legitimacy
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = 0.05
+		}
+		change_legitimacy = yes
+		}
+		}
+
+country_event = {#89 - Supreme Court
+	id = enc_reformers.89
+	title = enc_reformers.89.t
+	desc = enc_reformers.89.d
+	picture = GFX_event_ENC_Ham
+	fire_only_once = yes	
+	 is_triggered_only = NO
+	trigger = {	
+		has_completed_focus = enc_accept_ghouls
+	}	
+	mean_time_to_happen = {	days = 60 }
+	option = {# Welcome back! 
+		name = enc_reformers.89.a
+			add_stability = 0.05
+			add_political_power = 50
+		country_event = { id = enc_reformers.90 days = 360 }
+			}
+	option = {# Honesty
+		name = enc_reformers.89.b
+			add_stability = -0.05
+			}
+		}
+		
+country_event = {#90 - Supreme Court
+	id = enc_reformers.90
+	title = enc_reformers.90.t
+	desc = enc_reformers.90.d
+	picture = GFX_event_ENC_Ham
+	fire_only_once = yes	
+	 is_triggered_only = NO
+	trigger = {	
+		has_completed_focus = enc_accept_ghouls
+	}	
+	mean_time_to_happen = {	days = 60 }
+	option = {# Argh!
+		name = enc_reformers.90.a
+			add_stability = -0.05
+			add_political_power = 50
+					}
+	option = {# Okay
+		name = enc_reformers.90.b
+			add_stability = 0.05
+			add_political_power = -50
+			}
+		}
+		
+country_event = {#91 - Computer Network
+	id = enc_reformers.91
+	title = enc_reformers.91.t
+	desc = enc_reformers.91.d
+	picture = GFX_event_ENC_Zax
+	fire_only_once = yes	
+	 is_triggered_only = NO
+	trigger = {	
+		has_completed_focus = enc_accept_ghouls
+	}	
+	mean_time_to_happen = {	days = 60 }
+	option = {# Spooky!
+		name = enc_reformers.91.a
+		add_ideas = Enc_Hacking	
+		add_stability = 0.1
+					}
+	option = {# Okay
+		name = enc_reformers.91.b
+		add_political_power = -100
+		add_research_slot = 1	
+			}
+		}
+
+country_event = {#92 Nuka-land
+    id = enc_reformers.92
+    title = enc_reformers.92.t
+    desc = enc_reformers.92.d
+    picture = GFX_event_enc_nuka_land
+    fire_only_once = yes    
+    is_triggered_only = no    
+    trigger = { 
+		 }
+    mean_time_to_happen = {	days = 60 }
+	option = {# No!
+		name = enc_reformers.92.a
+				}
+	option = {# Okay
+		name = enc_reformers.92.b
+		add_ideas = Enc_Construction_nuka
+		hidden_effect = {
+			country_event = { id = enc_reformers.93 days = 360}		
+		}
+		}
+		
+		
+country_event = {#93 Nuka-land
+    id = enc_reformers.93
+    title = enc_reformers.93.t
+    desc = enc_reformers.93.d
+    picture = GFX_event_enc_nuka_land_open
+    fire_only_once = yes    
+    is_triggered_only = yes    
+    trigger = { 
+		 }
+    mean_time_to_happen = {	days = 60 }
+	option = {# Wee!
+		name = enc_reformers.93.a
+		remove_ideas = Enc_Construction_nuka
+		add_stability = 0.10
+		# modify legitimacy
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = 0.10
+		}
+		change_legitimacy = yes
+					}
+
+		}		
+		
 country_event = {#99 Area 51
     id = enc_reformers.99
     title = enc_reformers.99.t
     desc = enc_reformers.99.d
     picture = event_enc_Recon_Craft_Theta
     fire_only_once = yes    
-    is_triggered_only = yes    
+    is_triggered_only = no    
     trigger = { 
       tag = ERB 
-      8855 = { is_owned_by = ERB }
+      389 = { is_owned_by = ERB }
          }
     option = {# Easter Egg
         name = enc_reformers.99.a
-        add_ideas = ENC_energy_production
+        set_technology = { plasma_weaponry = 1 }
+	add_ideas = ENC_energy_production
 	}
    }
+   
+country_event = {#73 Forgotten Man
+	id = enc_reformers.73
+	title = enc_reformers.73.t
+	desc = enc_reformers.73.d
+	picture = GFX_event_enc_forgotten_man
+	fire_only_once = yes	
+	is_triggered_only = yes	
+	option = {# Remember
+		name = enc_reformers.73.a
+		add_political_power = 150
+	}	
+}
 
-country_event = {# 100 NCR Joins the ASA
-	id = enc_reformers.100
-	title = enc_reformers.100.t
-	desc = enc_reformers.100.d
-	picture = GFX_event_ENC_barons
-	fire_only_once = yes
-   	is_triggered_only = yes
-	option = {# welcome!
-		name = enc_reformers.100.a
-		NCR = { dismantle_faction = yes }
-		add_to_faction = NCR
-		add_political_power = 40
-		}
-	}
+  
+
+	
 # integration
 #
 

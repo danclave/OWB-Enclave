@@ -6,7 +6,7 @@ scripted_gui = {
 		
 		visible = {
 			ROOT =  {
-				# has_completed_focus = enc_rebuild_the_power_grid			
+				has_completed_focus = enc_rebuild_the_power_grid			
 			}
 			is_controlled_by = ROOT
 			# any neighbour state is cored
