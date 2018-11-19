@@ -628,8 +628,6 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   army_morale_factor = -0.25
-			   army_org_factor = -0.25
 			   non_core_manpower = -0.02
 			}
 		}

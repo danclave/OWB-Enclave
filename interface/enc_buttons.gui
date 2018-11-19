@@ -34,7 +34,7 @@ guiTypes = {
 		name = arm_rebels_container
 		position = {x=90 y=114}
 		
-		fade_time = 1
+		fade_time = 1 
 		fade_type = linear
 		moveable = no
 		
@@ -68,7 +68,7 @@ guiTypes = {
 			name ="legitimacy_text"
 			position = { x = 22 y = 4 }
 			font = "hoi_18mbs"
-			text = "[?legitimacy|%0]"
+			text = "llegitimacy_TEXT"
 			format = center
 			maxWidth = 55
 			maxHeight = 24

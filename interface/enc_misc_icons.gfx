@@ -47,6 +47,10 @@ spriteTypes = {
             name = "GFX_idea_d_henry"
  		    texturefile = "gfx/interface/ideas/d_henry.dds"
  	    }
+		SpriteType = {#arcade_gannon
+            name = "GFX_idea_arcade_gannon"
+ 		    texturefile = "gfx/interface/ideas/arcade_gannon.dds"
+ 	    }
 		SpriteType = {#boris_t
             name = "GFX_idea_boris_t"
  		    texturefile = "gfx/interface/ideas/boris_t.dds"

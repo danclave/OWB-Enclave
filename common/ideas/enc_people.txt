@@ -34,7 +34,7 @@ ideas = {
 				factor = 1
 			}
 		}
-		boris_t = {			
+		boris_t = {	
 			allowed = {
 				original_tag = ERB
 			}		
@@ -45,14 +45,14 @@ ideas = {
 				factor = 1
 			}
 		}
-		generic_reformer_2 = {		
+		generic_reformer_2 = {	
 			picture = generic_political_advisor_europe_2
 			
 			allowed = {
 				original_tag = ERB
 			}		
 			traits = { 
-				reformer_2
+				genius_pacifist
 			}		
 			ai_will_do = {
 				factor = 1
@@ -334,8 +334,8 @@ ideas = {
 			traits = { air_warfare_theorist }
 		}
 		arcade_gannon = {
-			picture = generic_army_europe_4
-						allowed = {
+			picture = arcade_gannon
+			allowed = {
 				original_tag = ERB
 			}
 			available = {
@@ -345,9 +345,10 @@ ideas = {
 				chem_tech = 0.2
 			}
 			
-			traits = { respectedByScientists
-					compassionate_doctor
-					}
+			traits = { 
+				respectedByScientists
+				compassionate_doctor
+			}
 		}
 	}
 

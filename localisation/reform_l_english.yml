@@ -487,6 +487,7 @@ enc_secret_dealings:0 "Secret Dealings"
 enc_operation_carnaval:0 "Operation Carnaval"
 enc_petition_for_independence:0 "Petition For Independence"
 enc_petition_for_independence_tt:0 "Unlocks the §YPetition for Independence§! decision.\nThis decision will release the §YBaron's Republic§! with any states that have armed rebels."
+enc_the_common_man:0 "The Common Man"
 enc_the_common_man_desc:0 "It must be said that the NCR adopted a lot of the ideals of Old War America, including democracy and the respect for individual rights.  But many lie forgotten in this society, who could turn to us for assistance..."
 enc_fear_uncertainty_and_doubt:0 "The Old Deal"
 enc_fear_uncertainty_and_doubt_desc:0 "The Mayor of Day Glow, Grant C. Hayes, has been a fan of the Old War America.  He's willing to work with us to promote reforms to NCR's Senate, which is biased towards the barons and caravans, and for greater rights for NCR workers. He calls this the 'Old Deal.'" 
@@ -541,9 +542,11 @@ ENC_legitimacy_low: "Little Legitimacy"
 ENC_legitimacy_medium: "Moderate Legitimacy"
 ENC_legitimacy_high: "High Legitimacy"
 
-max_legitimacy: "[?legitimacy]/100 §Ylegitimacy§!"
-half_legitimacy: "[?legitimacy]/50 §Ylegitimacy§!"
-25_legitimacy: "[?legitimacy]/25 §Ylegitimacy§!"
+llegitimacy_TEXT: "[?legitimacy|%0]"
+
+max_legitimacy: "At least §Y100%§! Legitimacy"
+half_legitimacy: "More than §Y50%§! Legitimacy"
+25_legitimacy: "More than §Y25%§! Legitimacy"
 
 has_legitimacy_tt: "[?legitimacy]/[?has_legitimacy_var] §Ylegitimacy§!"
 
@@ -643,6 +646,7 @@ enc_air_chief_loyalist: "Loyal Reformer"
 enc_navy_chief_loyalist: "Loyal Reformer"
 mutant_sympathies: "Mutant Sympathies"
 compassionate_doctor: "Compassionate Doctor"
+genius_pacifist: "Genius Pacifist"
 
 ###################################
 # REFORM UI
@@ -656,6 +660,8 @@ civilian_power_grid_desc: "Allows a state to be §GCored§!"
 install_police_force_tt: "Install Police Force"
 
 legitimacy_TOOLTIP:0 "§HLegitimacy§! \n\nCurrent legitimacy: §Y[?legitimacy|%0]§!\n\nLegitimacy is capped at §H100%§!."
+
+
 
 arm_rebels_tt: "Arm Rebels (§Y50§! £pol_power )"
 arm_rebels_tt_delayed: "[!arm_rebels_click]"

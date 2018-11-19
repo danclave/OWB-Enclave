@@ -2666,7 +2666,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 				tooltip = 25_legitimacy		
 				check_variable = {
 					var = legitimacy
-					value > 29.99
+					value > 0.299
 				}
 			}
 		}
@@ -3146,7 +3146,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 				tooltip = half_legitimacy		
 				check_variable = {
 					var = legitimacy
-					value > 49.99
+					value > 0.499
 				}
 			}
 		}

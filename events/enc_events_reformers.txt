@@ -149,7 +149,7 @@ country_event = {#6 - Dealing with Salvatores
 		# modify legitimacy
 		set_temp_variable  = {
 			var = legitimacy_change_var
-			value = -5
+			value = -0.05
 		}
 		change_legitimacy = yes
 	}
@@ -176,7 +176,7 @@ country_event = {#7 - Dealing with Mordinos
 		add_stability = 0.05
 		set_temp_variable  = {
 			var = legitimacy_change_var
-			value = 5
+			value = 0.05
 		}
 		change_legitimacy = yes
 	}
@@ -1312,7 +1312,7 @@ country_event = {#68 - Slavery
 		name = enc_reformers.68.c
 		set_temp_variable  = {
 			var = legitimacy_change_var
-			value = 5
+			value = 0.05
 		}
 		change_legitimacy = yes
 		}
