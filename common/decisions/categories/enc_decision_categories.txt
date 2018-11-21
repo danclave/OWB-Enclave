@@ -114,7 +114,7 @@ ENC_render_unto_caesar = {
 
 ENC_debug = {
 	allowed = {
-		tag = ERB
+		#tag = ERB
 	}	
 	visible = {
 		# always = false

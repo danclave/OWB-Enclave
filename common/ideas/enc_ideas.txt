@@ -137,7 +137,7 @@ ideas = {
 			   research_time_factor = -0.05
 			}
 		}
-		ENC_vacinations = {  
+		ENC_EPA = {  
 			picture = SOV_scientist_defect
 			allowed = { 
 				always = no
@@ -155,7 +155,7 @@ ideas = {
 				attrition = -0.1
 			}
 		}
-		ENC_education = {  
+		Enc_Dept_Education = {  
 			picture = enc_education
 			allowed = { 
 				always = no
@@ -943,6 +943,52 @@ ideas = {
 				research_time_factor = -0.03
 			}
 		}
+		ENC_FBI = {  
+			picture = ast_classify_aliens
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				conscription_factor = -0.10
+				political_power_gain = 0.10
+				enemy_partisan_effect = -0.1
+				stability_factor = 0.05
+			}
+		}
+		
+		ENC_BOS_Connections = {  		
+			picture = enc_scientists #check
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   research_time_factor = -0.03
+			}
+		}
+		ENC_CES_Wisdom = {  
+			picture = enc_idea_infighting
+			allowed = { 
+				always = no
+			}
+
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+			  army_morale_factor = 0.05
+			  
+			}
+		}
 ####################################################
 # REFORM - DIPLOMACY TREE
 ####################################################
@@ -1116,7 +1162,7 @@ ideas = {
 					removal_cost = -1
 					modifier = {
 					   army_attack_factor = 0.05
-					   army_defend_Factor = 0.05
+					   army_defence_Factor = 0.05
 					   political_power_gain = 0.05
 					}
 				}
@@ -1204,6 +1250,40 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.04
 				research_time_factor = -0.03
+			}
+		}
+		
+		ENC_Dept_Energy = {
+			picture = enc_pa_production
+			allowed = { always = no }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+			modifier = { production_speed_electricity_generator_factor = 0.1		
+			}
+		} 
+		ENC_electrification = {
+			picture = enc_pa_production
+			allowed = { always = no }
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+			modifier = { production_speed_electricity_generator_factor = 0.2
+			stability_factor = 0.10
+			}
+			
+		} 
+		Enc_Hacking = {  
+			picture = enc_radio
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   political_power_gain = 0.20
+			   decryption_factor = 0.2
 			}
 		}
 ####################################################
@@ -1520,13 +1600,76 @@ ideas = {
 				mobilization_speed = 0.30
 			}
 		}
+			ENC_horses = {
+			picture = generic_research_bonus 
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				supply_consumption_factor = -0.05	
+				recon_factor = 0.05
+			}
+		}
+		enc_broken_houses = {  
+			picture = SOV_scientist_defect
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.07
+				}
+		}
+		
+		ENC_Chamber_Commerce= {
+			picture = generic_exploit_mines
+			modifier = {
+					production_speed_infrastructure_factor = 0.2
+				}
+		}
+		ENC_Department_Manufacturing = {
+			picture = generic_production_bonus
+			modifier = {
+					production_speed_industrial_complex_factor = 0.1
+				}
+		}
+		Enc_Fiat_Currency = {  
+			picture = SOV_scientist_defect
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = -0.10
+				}
+		}
+		Enc_Construction_nuka = {
+			picture = generic_exploit_mines
+			modifier = {
+					production_speed_infrastructure_factor = -0.10
+					production_speed_buildings_factor = -0.05
+				}
+		}
 ####################################################
 # PURITY - DESERT RANGERS TREE
 ####################################################
 		ENC_construction_infra = {
 			picture = generic_exploit_mines
 			modifier = {
-					production_speed_infrastructure_factor = 0.2
+					production_speed_infrastructure_factor = -0.2
 				}
 		}
 		ENC_construction_forts = {

@@ -332,6 +332,22 @@ ideas = {
 			
 			traits = { air_warfare_theorist }
 		}
+		arcade_gannon = {
+			picture = generic_army_europe_4
+						allowed = {
+				original_tag = ERB
+			}
+			available = {
+				has_country_flag = gannon_returns
+			}
+			research_bonus = {
+				chem_tech = 0.2
+			}
+			
+			traits = { respectedByScientists
+					compassionate_doctor
+					}
+		}
 	}
 
 	high_command = {

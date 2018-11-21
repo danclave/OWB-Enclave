@@ -1,43 +1,51 @@
 scripted_gui = {
-	connect_to_power = {
-	
-		context_type = selected_state_context
-		
+	connect_to_power = {	
+		context_type = selected_state_context		
 		window_name = "connect_to_power_container"		
 		parent_window_token = selected_state_view
 		
 		visible = {
 			ROOT =  {
-				has_completed_focus = enc_reform			
+				has_completed_focus = enc_rebuild_the_power_grid			
 			}
 			is_controlled_by = ROOT
 			# any neighbour state is cored
-			ROOT = { 
-				tag = ERB
-			}
 			NOT = { 
 				is_core_of = FROM
 			}
 			
-		}
-		
+		}		
 		effects = {
 			connect_to_power_click = {
 				ROOT = { 
 					add_political_power = -100 					
 				}
 				add_core_of = FROM
-				add_resource = { type = electricity amount = -5 state = 291 } #VLT city
+				add_building_construction = {
+					type = civilian_power_grid
+					level = 1
+					instant_build = no
+				}
+				add_state_flag = needs_civilian_power_grid
 			}
 		}
 		triggers = {
 			connect_to_power_click_enabled = {
-				check_variable = { ROOT.political_power > 99.99 }
+				ROOT = {
+					custom_trigger_tooltip = {
+						tooltip = more_than_2_electricity
+						check_variable = {
+							var = resource@electricity
+							value = 2
+							compare = greater_than_or_equals
+						}
+					}
+				}
 			}
 		}
 		        
 		ai_check = {
-			check_variable = { ROOT.political_power > 99.99 }
+			# check_variable = { ROOT.political_power > 99.99 }
 			check_variable = { ai_random > 0.55 }
 		}
 		
@@ -98,6 +106,7 @@ scripted_gui = {
 			}
 		}
 	}
+
 	legitimacy = {
 		context_type = player_context
 		
@@ -119,9 +128,7 @@ scripted_gui = {
 			}
 		}
 	}
-
-	arm_rebels = {
-	
+	arm_rebels = {	
 		context_type = selected_state_context
 		
 		window_name = arm_rebels_container
