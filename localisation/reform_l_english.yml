@@ -710,6 +710,7 @@ gain_legitimacy_tt:0 "Gain §+§![?legitimacy_change_var|%+]§! §YLegitimacy§!
 lose_suspicion_tt:0 "§YNCR suspicion§! will go down by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
 gain_suspicion_tt:0 "§YNCR suspicion§! will go up by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
 
+gannon_returns: "Arcade Ganon has returned to the Enclave"
 ###################################
 # DIPLOMACY
 ###################################

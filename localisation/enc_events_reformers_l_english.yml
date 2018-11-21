@@ -9,25 +9,14 @@ enc_reformers.1.b:0 "He aided the Chosen One and settled in Arroyo where he met 
 enc_reformers.1.c:0 "He didn't aid the Chosen One."
 #########################################################################################
 enc_reformers.2.t:0 "Douglas' first contact"
-<<<<<<< HEAD
-enc_reformers.2.d:0 "When Douglas was a lieutenant of the Granite Defense Company, he was contacted by a settlement under attack by raiders. The call sounded desperate and came from a settlement belonging to..."
-enc_reformers.2.a:0 "the NCR."
-enc_reformers.2.b:0 "the Brotherhood."
-enc_reformers.2.c:0 "Caesar's Legion."
-#########################################################################################
-enc_reformers.3.t:0 "Douglas' Decision"
-enc_reformers.3.d:0 "When Douglas arrived with his team, the situation of the settlement had grown more dire. Their battered defenses crumbling quickly under a determined but almost equally attritioned raider party. Looking over the sad state of both parties, Douglas decided to... "
-enc_reformers.3.a:0 "Help take down the raiders."
-=======
-enc_reformers.2.d:0 "On a mission to restore America, he came across..."
+enc_reformers.2.d:0 "When Douglas was a lieutenant of the Granite Defense Company, he was contacted by a party under attack by raiders. The call sounded desperate and came from a settlement belonging to..."
 enc_reformers.2.a:0 "An NCR battalion fighting raiders"
 enc_reformers.2.b:0 "Brotherhood knights containing a prewar threat"
-enc_reformers.2.c:0 "Caesar's scouts seeking new lands"
+enc_reformers.2.c:0 "Caesar's scouts seeking new lands"#²²
 #########################################################################################
 enc_reformers.3.t:0 "Douglas' Decision"
-enc_reformers.3.d:0 "He decided to..."
-enc_reformers.3.a:0 "Aid them in their quest to improve the Wastes"
->>>>>>> Faeelin-dev
+enc_reformers.3.d:0 "When Douglas arrived with his team, the situation had grown more dire. Their battered defenses crumbling quickly under a determined but almost equally attritioned raider party. Looking over the sad state of both parties, Douglas decided to... "
+enc_reformers.3.a:0 "Help take down the raiders"
 enc_reformers.3.a.tt: "This will give us a connection with this faction."
 enc_reformers.3.b:0 "Wipe them out lest they reveal the Enclave's survival."
 enc_reformers.3.tt:0 "Douglas Granite is a practical man. ."
@@ -64,7 +53,7 @@ enc_reformers.9.a: "Promote the experienced man"
 enc_reformers.9.b: "Promote the loyal man"
 #########################################################################################
 enc_reformers.10.t: "The Assassination of Mr. Bishop"
-enc_reformers.10.d: "Mr. Bishop, once the top dog in New Reno, died today after he was attacked in his safehouse by a team of Enclave spies posing as henchmen that fled New Reno.\n\nAfter the Enclave took over his city, Mr. Bishop spent his days attempting to bring our return to light, but treaded carefuly to avoid his own identity and location from becoming public knowledge.\n\nThis did little to protect him and only delayed his efforts in the end."
+enc_reformers.10.d: "Mr. Bishop, once the top dog in New Reno, died today after his safehouse was attacked by a team of Enclave operatives posing as old henchmen.\n\nAfter they took over his city, Mr. Bishop spent his days attempting to bring the Enclave's return to light, always treading carefuly to avoid his own identity and location from becoming public knowledge.\n\nIn the end, this only delayed the inevitable."
 enc_reformers.10.a: "Excellent news"
 ################################################################################################################ -<
 enc_reformers.11.t: "Traitors in the Officers Corps!"

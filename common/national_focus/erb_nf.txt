@@ -2705,7 +2705,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			remove_equipment = { type = infantry_equipment amount = 1000 }
+			add_equipment = { type = infantry_equipment amount = -1000 } # doesn't quite work
 			add_political_power = 50
 			NCR = {
 				add_popularity = { ideology = intellectuals popularity = 0.10 }
@@ -2833,8 +2833,10 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		x = 0
 		y = 1 
 		cost = 3
-		completion_reward = {159 = { add_manpower = 4000 }
-		stability = -0.05}
+		completion_reward = {
+			add_manpower = 4000 
+			add_stability = -0.05
+		}
 	}
 
 	focus = {#Military - quantity - mass mobilization
@@ -3041,7 +3043,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 				planning_skill = 3
 				logistics_skill = 4
 				traits = {
-					army_chief_old_guard
+					army_chief old_guard
 				}
 			}
 		}

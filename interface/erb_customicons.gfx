@@ -307,10 +307,6 @@ spriteTypes = {
             name = "GFX_goal_enc_new_generation_officers"
  		    texturefile = "gfx/interface/goals/enc_new_generation_officers.dds"
  	    } 
-        SpriteType = {#enc_new_generation_officers.pdn
-            name = "GFX_goal_enc_new_generation_officers.pdn"
- 		    texturefile = "gfx/interface/goals/enc_new_generation_officers.pdn.dds"
- 	    } 
         SpriteType = {#enc_normalization
             name = "GFX_goal_enc_normalization"
  		    texturefile = "gfx/interface/goals/enc_normalization.dds"
