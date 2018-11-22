@@ -1,5 +1,5 @@
 ﻿add_namespace = enc
-
+ 
 country_event = {#1 - OUR ESCAPE
     id = enc.1
     title = enc.1.t
@@ -16,12 +16,12 @@ country_event = {#1 - OUR ESCAPE
     }
     option = { # Escaped using Vertibirds
         name = enc.1.b
-        add_equipment_to_stockpile = { type = vb_transport_plane_equipment amount = 50 producer = ERB }
-        add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 100 producer = ERB }
+        add_equipment_to_stockpile = { type = vb_transport_plane_equipment amount = 200 producer = ERB }
+        add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 400 producer = ERB }
     }
     option = { #Deserted before the fighting got bad
         name = enc.1.c
-        add_manpower = 2000
+        add_manpower = 3000
     }
 }
 country_event = {#2 - unused

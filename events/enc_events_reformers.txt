@@ -125,10 +125,10 @@ country_event = {#5 - Dealing with Bishops
 	
 	option = {# Capture Operations
 		name = enc_reformers.5.a
-		add_extra_state_shared_building_slots = 2
+		add_extra_state_shared_building_slots = 3
 		add_building_construction = {
 			type = industrial_complex
-			level = 2
+			level = 3
 			instant_build = yes
 		}
 		hidden_effect = {
@@ -137,7 +137,7 @@ country_event = {#5 - Dealing with Bishops
 	}
 	option = {# Capture Mr. Bishop
 		name = enc_reformers.5.b
-		add_political_power = 100
+		add_political_power = 75
 	}
 }
 country_event = {#6 - Dealing with Salvatores
@@ -505,10 +505,10 @@ country_event = {#18 - music found
 	id = enc_reformers.18
 	title = enc_reformers.18.t
 	desc = enc_reformers.18.d
-	picture = GFX_event_ENC_assault_team
+	picture = GFX_event_ENC_secret
 	
 	fire_only_once = yes
-	mean_time_to_happen = {	days = 200 }
+	mean_time_to_happen = {	days = 200 } 
     trigger = {	
 		has_completed_focus = enc_reform
 		has_full_control_of_state = 285 # New Reno
@@ -1727,7 +1727,7 @@ country_event = {#86 - Bomb Bay
 
 }
 
-country_event = {#87 - Baseball
+country_event = {#87 - Baseball 
 	id = enc_reformers.87
 	title = enc_reformers.87.t
 	desc = enc_reformers.87.d
@@ -1738,7 +1738,7 @@ country_event = {#87 - Baseball
 		has_completed_focus = enc_reform
 	}
 	mean_time_to_happen = {
-		days = 60
+		days = 600
 	}
 	option = {#	Play Ball
 		name = enc_reformers.87.a

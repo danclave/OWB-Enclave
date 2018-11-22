@@ -431,6 +431,10 @@ spriteTypes = {
             name = "GFX_goal_enc_rangers_start"
  		    texturefile = "gfx/interface/goals/enc_rangers_start.dds"
  	    } 
+        SpriteType = {#enc_rebuild_the_power_grid
+            name = "GFX_goal_enc_rebuild_the_power_grid"
+ 		    texturefile = "gfx/interface/goals/enc_rebuild_the_power_grid.dds"
+ 	    } 
         SpriteType = {#enc_reform
             name = "GFX_goal_enc_reform"
  		    texturefile = "gfx/interface/goals/enc_reform.dds"
@@ -699,6 +703,10 @@ spriteTypes = {
             name = "GFX_goal_vault_tec"
  		    texturefile = "gfx/interface/goals/vault_tec.dds"
  	    }
+        SpriteType = {#arcade_gannon
+            name = "GFX_idea_arcade_gannon"
+ 		    texturefile = "gfx/interface/ideas/arcade_gannon.dds"
+ 	    } 
         SpriteType = {#boris_t
             name = "GFX_idea_boris_t"
  		    texturefile = "gfx/interface/ideas/boris_t.dds"
@@ -706,6 +714,14 @@ spriteTypes = {
         SpriteType = {#clayton_schultz
             name = "GFX_idea_clayton_schultz"
  		    texturefile = "gfx/interface/ideas/clayton_schultz.dds"
+ 	    } 
+        SpriteType = {#daisy_whitman
+            name = "GFX_idea_daisy_whitman"
+ 		    texturefile = "gfx/interface/ideas/daisy_whitman.dds"
+ 	    } 
+        SpriteType = {#d_henry
+            name = "GFX_idea_d_henry"
+ 		    texturefile = "gfx/interface/ideas/d_henry.dds"
  	    } 
         SpriteType = {#enc_education
             name = "GFX_idea_enc_education"
@@ -830,6 +846,10 @@ spriteTypes = {
         SpriteType = {#idea_enc_designer_verti
             name = "GFX_idea_idea_enc_designer_verti"
  		    texturefile = "gfx/interface/ideas/idea_enc_designer_verti.dds"
+ 	    } 
+        SpriteType = {#orion_moreno
+            name = "GFX_idea_orion_moreno"
+ 		    texturefile = "gfx/interface/ideas/orion_moreno.dds"
  	    } 
         SpriteType = {#sargeant_dornan
             name = "GFX_idea_sargeant_dornan"

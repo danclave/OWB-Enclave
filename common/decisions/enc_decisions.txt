@@ -913,7 +913,7 @@ ENC_political_infighting = {
 				}				
 				add_manpower = -50
 				add_stability = -0.05
-				add_popularity = { ideology = elites popularity = -0.10 }
+				add_popularity = { ideology = elites popularity = -0.05 }
 				add_popularity = { ideology = intellectuals popularity = 0.05 }
 				add_manpower = -1
 			}
@@ -923,7 +923,7 @@ ENC_political_infighting = {
 				}				
 				add_manpower = -100
 				add_stability = -0.10
-				add_popularity = { ideology = intellectuals popularity = -0.10 }
+				add_popularity = { ideology = intellectuals popularity = -0.05 }
 				add_popularity = { ideology = elites popularity = 0.05 }
 				add_manpower = -1
 			}
@@ -948,7 +948,7 @@ ENC_political_infighting = {
 		}
 		days_remove = 200
 		complete_effect  = {
-			add_popularity = { ideology = elites popularity = -0.10 }
+			add_popularity = { ideology = elites popularity = -0.08 }
 			set_country_flag = enc_demoted_officers
 			swap_ideas = {
 				remove_idea = ENC_officers_traitors
@@ -974,7 +974,7 @@ ENC_political_infighting = {
 		}
 		days_remove = 200
 		complete_effect  = {
-			add_popularity = { ideology = elites popularity = -0.10 }
+			add_popularity = { ideology = elites popularity = -0.08 }
 			set_country_flag = enc_demoted_scientists
 			swap_ideas = {
 				remove_idea = ENC_scientists_traitors

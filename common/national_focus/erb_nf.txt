@@ -675,6 +675,23 @@ focus_tree = {
 		}
 		cost = 5.8  	
 	}
+	focus = {#????? - DES - puppet
+        id = enc_rangers_submit
+        icon = GFX_goal_enc_rangers_start
+        ai_will_do = { factor = 1 } 
+        relative_position_id = enc_the_bishop_incident
+        x = 0
+        y = 1
+        prerequisite = { focus = enc_the_bishop_incident }
+		available = { has_stability > 0.70 }        
+		completion_reward = { 
+			puppet = DES
+			DES = { set_cosmetic_tag = DES_ERB }
+		}
+        cost = 5.8
+ }     
+ 
+
 	focus = {#RADIO - Enclave civilian
 		id = enc_radio_civilian
 		icon = GFX_goal_enc_radio_civilian
@@ -976,26 +993,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = enc_rebuild_the_power_grid_tt
+			custom_effect_tooltip = enc_rebuild_the_power_grid_ttt
+			clr_country_flag = not_allowed_to_core_flag
 		}
 		cost = 5.8
  }
 
-	focus = {#EXPANSION - DES - puppet
-        id = enc_rangers_submit
-        icon = GFX_goal_enc_rangers_start
-        ai_will_do = { factor = 1 } 
-        relative_position_id = enc_the_bishop_incident
-        x = 0
-        y = 1
-        prerequisite = { focus = enc_the_bishop_incident }
-		available = { has_stability > 0.70 }        
-		completion_reward = { 
-			puppet = DES
-			DES = { set_cosmetic_tag = DES_ERB }
-		}
-        cost = 5.8
- }     
- 
+
 	focus = {#EXPANSION - ANT - annex
 		id = enc_ANT_annex_reform
 		icon = GFX_goal_enc_reform_ant
