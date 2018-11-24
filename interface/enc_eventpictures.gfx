@@ -223,18 +223,26 @@ spriteTypes = {
 					name = "GFX_event_enc_reform_origin"
 					texturefile = "gfx/event_pictures/event_enc_reform_origin.dds"
 				}
-SpriteType = {#Enc_speech
+		SpriteType = {#Enc_City
+					name = "GFX_event_enc_city"
+					texturefile = "gfx/event_pictures/event_enc_city.dds"
+				}	
+		SpriteType = {#Thanksgiving
+					name = "GFX_event_enc_thanksgiving"
+					texturefile = "gfx/event_pictures/event_enc_thanksgiving.dds"
+				}		
+		SpriteType = {#Enc_speech
 					name = "GFX_event_Enc_speech"
 					texturefile = "gfx/event_pictures/event_Enc_speech.dds"
 				}
-SpriteType = {#Enc_speech
-					name = "GFX_event_enc_reform_propaganda"
-					texturefile = "gfx/event_pictures/event_enc_reform_propaganda.dds"
-				}
-SpriteType = {#Enc_speech
+	SpriteType = {#Enc_spies
 					name = "GFX_event_enc_spies"
 					texturefile = "gfx/event_pictures/event_enc_spies.dds"
-				}	
-				
+				}
+		SpriteType = {#Enc_4th_july
+					name = "GFX_event_enc_4th_july
+					texturefile = "gfx/event_pictures/event_enc_4th_july.dds"
+				}
+	
 }			
 
