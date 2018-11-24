@@ -354,10 +354,25 @@ enc_reformers.93.t: "Nuka Land's Opening Day!"
 enc_reformers.93.d: "After a year of construction, Nuka Land has opened to rave reviews and would be crushing competition if there was any other themepark in the Wastes.  Casualties from the deathclaw petting zoo are within acceptable parameters, the haunted house's feral ghouls provide excellent paramilitary training, and the rocket roller coaster is fun! For one brief day, America's citizens get a taste of what our nation will be like when we finish rebuilding.  Just obey park security."
 enc_reformers.93.a: "Cutting in line has unpleasant consequences."
 ################################################################################################################
+enc_reformers.94.t: "Flagstaff Liberated!"
+enc_reformers.94.d: "Vertibirds sweep overhead as Enclave soldiers trample the Legion's banners.  The City's slaves wait to learn whether they've found freedom or a new master, but the President can be proud to know that for the first time in two hundred years, the Stars and Stripes flies over Arizona."
+enc_reformers.94.a: "Sic Semper Tyrannis"
+################################################################################################################
+enc_reformers.95.t: "Thanksgiving"
+enc_reformers.95.d: "Americans enjoyed the return of the Fourth of July so much that the President is thinking about restoring more holidays.  One of his favorite Enclave traditions is Thanksgiving, where we carve the roast deathclaw and eat sweet tato pie. We could revive this tradition for the entire country, and ensure people are thankful for..."
+enc_reformers.95.a: "Friends and family"
+enc_reformers.95.b: "The Enclave, for protecting friends and family"
+enc_reformers.95.c: "Low, low prices from the Crimson Caravan!"
+################################################################################################################
+enc_reformers.96.t: "The Fourth of July!"
+enc_reformers.96.d: "America's five hundredth anniversary is approaching, and it stinks.  The land is scoured by mutants and raiders, and the Enclave, America's last great hope, is a shadow of its former self.  But President Granite has ordered a celebration for the Fourth of July anyway, reminding people that Americans have faced tough times before.  Who can forget:
+enc_reformers.96.a: "The Founding Fathers bid for independence"
+enc_reformers.96.b: "The Enclave's Founders preparation for the Great War"
+################################################################################################################
 enc_reformers.99.t: "Area 51"
 enc_reformers.99.d: "With Area 51 under our control, Enclave scientists are sifting through reams of prewar data.  It appears that the Prewar United States was monitored by vast intellicts cool and unsympathetic, and their technology was studied by the military.  We could pick this research up, but there may be consequences... "
 enc_reformers.99.a: "Let us press every button we can find."
-################################################################################################################ -<
+################################################################################################################
 
 enc_reformers.100.t: "The NCR Signs On to the Allied States of America"
 enc_reformers.100.d: "The vote in Shady Sands was close, but with the threat of Caesar approaching, they have decided to stand with us. We stand together for progress and order in America."

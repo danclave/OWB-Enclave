@@ -1851,6 +1851,79 @@ country_event = {#93 Nuka-land
 
 		}		
 		
+country_event = {#94 Flagstaff Liberated
+    id = enc_reformers.94
+    title = enc_reformers.94.t
+    desc = enc_reformers.94.d
+    picture = GFX_event_enc_city
+    fire_only_once = yes    
+    is_triggered_only = yes    
+    option = {# Wee!
+		name = enc_reformers.94.a
+		add_stability = 0.05
+			}
+		}		
+country_event = {#95 Thanksgiving
+    id = enc_reformers.95
+    title = enc_reformers.95.t
+    desc = enc_reformers.95.d
+    picture = GFX_event_enc_thanksgiving
+    fire_only_once = yes    
+    is_triggered_only = no
+	mean_time_to_happen = {	days = 3 }
+	trigger = {	
+		has_completed_focus = enc_reform
+		date > 2078.10.30
+		date < 2078.11.28
+	}	    
+    option = {# Loved Ones!
+		name = enc_reformers.95.a
+		add_stability = 0.05
+			}
+	option = {# Enclave
+		name = enc_reformers.95.b
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = 0.05
+		}
+		change_legitimacy = yes
+			}
+	option = {# Sponsors
+		name = enc_reformers.95.c
+		add_political_power = 100
+			}
+			
+		}				
+		
+country_event = {#96 4th of July
+    id = enc_reformers.96
+    title = enc_reformers.96.t
+    desc = enc_reformers.96.d
+    picture = GFX_event_enc_4th_july
+    fire_only_once = yes    
+    is_triggered_only = no
+	mean_time_to_happen = {	days = 3 }
+	trigger = {	
+		has_completed_focus = enc_reform
+		date > 2076.06.04
+		date < 2076.07.3
+		}	    
+    option = {# Founding Enclave
+		name = enc_reformers.96.a
+		add_stability = 0.05
+			}
+	option = {# Founding Fathers 
+		name = enc_reformers.96.b
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = 0.05
+		}
+		change_legitimacy = yes
+			}
+
+			
+		}	
+		
 country_event = {#99 Area 51
     id = enc_reformers.99
     title = enc_reformers.99.t

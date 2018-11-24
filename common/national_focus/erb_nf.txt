@@ -99,7 +99,7 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 8.6 
+		cost = 4.3
 		completion_reward = {
 			if = {
 				limit = {
@@ -131,11 +131,11 @@ focus_tree = {
 					name = "Douglas Granite"
 			}
 		}
-		cost = 5.8 
+		cost = 2.9 
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 10
+				value = 0.10
 			}
 			change_legitimacy = yes
 		} 
@@ -154,7 +154,7 @@ focus_tree = {
 			add_stability = 0.10
 			add_political_power = 100
 		}
-		cost = 5.8
+		cost = 2.9 
 	}	
 	focus = {#POLITICS - provoke Purists
 		id = enc_provoke_purists
@@ -206,7 +206,7 @@ focus_tree = {
 			add_stability = 0.10
 			country_event = { id = enc_reformers.13 }
 		}
-		cost = 4.3
+		cost = 2.9 
 	}
 	focus = {#POLITICS - Purge Scientists
 		id = enc_purge_scientists 
@@ -221,7 +221,7 @@ focus_tree = {
 			# has_idea = ENC_scientists_traitors_2
 			has_country_flag = enc_demoted_scientists
 		}
-		cost = 4.3
+		cost = 2.9 
 		completion_reward = {
 			clr_country_flag = enc_demoted_scientists
 			remove_ideas = ENC_scientists_traitors_2
@@ -243,7 +243,7 @@ focus_tree = {
 			# has_idea = ENC_officers_traitors_2
 			has_country_flag = enc_demoted_officers
 		}
-		cost = 4.3
+		cost = 2.9 
 		completion_reward = {
 			clr_country_flag = enc_demoted_officers
 			remove_ideas = ENC_officers_traitors_2
@@ -276,7 +276,7 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 5.8
+		cost = 2.9 
 	}
 
  	focus = {#RENO - The city of crime
@@ -287,7 +287,7 @@ focus_tree = {
 		relative_position_id = enc_reform
 		x = 7
 		y = 1
-		cost = 4.3
+		cost = 2.9 
 		completion_reward = {
 			custom_effect_tooltip = enc_new_annex_tt
 			hidden_effect = { # ugly tooltip
@@ -419,7 +419,7 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = -5
+				value = -0.05
 			}
 			change_legitimacy = yes
 			add_manpower = 2000
@@ -442,7 +442,7 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 5
+				value = 0.05
 			}
 			change_legitimacy = yes
 			add_political_power = 100
@@ -522,7 +522,7 @@ focus_tree = {
 	focus = {#SUSPICION - infiltrate NCR
 		id = enc_infiltrate_ncr
 		icon = GFX_goal_enc_infiltrate_ncr
-		cost = 5.8
+		cost = 2.9 
 		ai_will_do = { factor = 1 }
 		available = {
 			custom_trigger_tooltip = {
@@ -620,7 +620,7 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 5.8  	
+		cost = 2.9 	
 	}
 	focus = {#RADIO - Enclave military
 		id = enc_radio_military
@@ -1106,7 +1106,7 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = -5
+				value = -0.05
 			}
 			change_legitimacy = yes
 			add_stability = 0.10
@@ -1125,7 +1125,7 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = -5
+				value = -0.05
 			}
 			change_legitimacy = yes
 			add_stability = 0.10
@@ -1172,7 +1172,7 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 5
+				value = 0.05
 			}
 			change_legitimacy = yes
 				
@@ -1190,7 +1190,7 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 5
+				value = 0.05
 			}
 			change_legitimacy = yes
 			
@@ -1208,7 +1208,7 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 10
+				value = 0.10
 			}
 			change_legitimacy = yes
 			country_event = { id = enc_reformers.71 } 
@@ -1286,7 +1286,7 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 5
+				value = 0.05
 			}
 			change_legitimacy = yes			
 			add_ideas = {
@@ -1306,7 +1306,7 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 5
+				value = 0.05
 			} 
 			change_legitimacy = yes		
 			
@@ -1327,7 +1327,7 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 5
+				value = 0.05
 			}
 			change_legitimacy = yes		
 			add_ideas = {
@@ -1351,7 +1351,7 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 5
+				value = 0.05
 			}
 			change_legitimacy = yes
 			
@@ -1485,7 +1485,7 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = -5
+				value = -0.05
 			} 
 			change_legitimacy = yes
 			
@@ -1515,7 +1515,7 @@ focus_tree = {
 			add_ideas = {enc_segregation_forever}
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = -5
+				value = -0.05
 			} 
 			change_legitimacy = yes	
 			
@@ -1578,7 +1578,7 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = -5
+				value = -0.05
 			} 
 			change_legitimacy = yes	
 			add_ideas = {enc_technocrats}
@@ -2536,7 +2536,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	completion_reward = { 
 		set_temp_variable = {
 				var = legitimacy_change_var
-				value = 10
+				value = 0.10
 			}
 			change_legitimacy = yes
 		CES= {
@@ -2557,7 +2557,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		completion_reward = { add_equipment_to_stockpile = { type = infantry_equipment amount = -1000 }
 		set_temp_variable = {
 				var = legitimacy_change_var
-				value = 10
+				value = 0.10
 			}
 			change_legitimacy = yes }
 	}
@@ -2669,7 +2669,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 				tooltip = 25_legitimacy		
 				check_variable = {
 					var = legitimacy
-					value > 29.99
+					value > 0.299
 				}
 			}
 		}
@@ -3149,7 +3149,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 				tooltip = half_legitimacy		
 				check_variable = {
 					var = legitimacy
-					value > 49.99
+					value > 0.499
 				}
 			}
 		}
@@ -3273,7 +3273,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 					name = "Franklin Anderson"
 				}
 			}
-		cost = 5.8
+		cost = 2.9 
 		completion_reward = {   
 			add_ideas = ENC_purist
 		} 
