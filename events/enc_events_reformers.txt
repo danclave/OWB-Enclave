@@ -1025,6 +1025,7 @@ country_event = {#38 - weapon cache located
 	
 	fire_only_once = yes
 	trigger = {	
+		original_tag = ERB
 		has_country_flag = enc_ncr_spies
 	}	
 	mean_time_to_happen = {	days = 200 }
@@ -1048,7 +1049,33 @@ country_event = {#38 - weapon cache located
 		}
 		change_suspicion = yes
 	}
+}
 
+country_event = {#39 - loyalists want to rejoin
+	id = enc_reformers.39
+	title = enc_reformers.39.t
+	desc = enc_reformers.39.d
+	picture = GFX_event_ENC_vertibird
+	
+	fire_only_once = yes
+	trigger = {	
+		original_tag = ERB
+		has_completed_focus = enc_reform
+	}	
+	mean_time_to_happen = {	days = 200 }	
+	
+	option = {# Accept them
+		name = enc_reformers.39.a
+		add_popularity = { ideology = elites popularity = 0.08 }	
+		custom_effect_tooltip = enc_reformers.39.a.tt	
+		hidden_effect = {
+			load_oob = ERB_remnants		
+		}
+	}
+	option = {# send them away
+		name = enc_reformers.39.b
+		add_stability = -0.05		
+	}
 }
 
 country_event = {#50 - Seek Allies
@@ -1230,7 +1257,6 @@ country_event = {#63 - The Society of the Cincinnati
 	}
 }
 
-
 country_event = {#64 - Declarations of Independence
 	id = enc_reformers.64
 	title = enc_reformers.64.t
@@ -1384,33 +1410,39 @@ country_event = {#72 - This is How Liberty Dies
 	
 }
 
-country_event = {#84 - Unpowered province!
-	id = enc_reformers.84
-	title = enc_reformers.84.t
-	desc = enc_reformers.84.d
-	picture = GFX_event_enc_suspend_elections
-	fire_only_once = yes	
-	is_triggered_only = no
-	trigger = {
-		original_tag = ERB
-		any_owned_state = {
-			has_state_flag = needs_civilian_power_grid
-			civilian_power_grid < 1
-		}
-	}
-	option = {# Extend Presidential Powers
-		name = enc_reformers.84.a
-		every_owned_state = {
-			limit = {
-				has_state_flag = needs_civilian_power_grid
-				civilian_power_grid < 1
+country_event = {#74 - Civil War
+    id = enc_reformers.74
+	title = enc_reformers.74.t
+	desc = enc_reformers.74.d
+	picture = GFX_event_NCR_battle
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {#	Oops
+		name = enc_reformers.74.a
+		add_political_power = 150
+		set_global_flag = pro_enclave_NCR
+		NCR = {
+			set_variable = {
+				var = civil_war_size_var
+				value = party_popularity @intellectuals
 			}
-			remove_core_of = ROOT
+		}
+		NCR = {
+			divide_variable = {
+				civil_war_size_var = 2
+			}
+		}
+		NCR = {
+			start_civil_war = {
+				ideology = intellectuals
+				size = civil_war_size_var
+			}
+		}
+		country_event = {
+			id = enc_reformers.75
 		}
 	}
-	
 }
-
 country_event = {#75 - Civil War
 	id = enc_reformers.75
 	title = enc_reformers.75.t
@@ -1488,40 +1520,6 @@ country_event = {#76 - Reunited States
 			}
 		}
 
-	}
-}
-
-country_event = {#74 Civil War
-    id = enc_reformers.74
-	title = enc_reformers.74.t
-	desc = enc_reformers.74.d
-	picture = GFX_event_NCR_battle
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {#	Oops
-		name = enc_reformers.74.a
-		add_political_power = 150
-		set_global_flag = pro_enclave_NCR
-		NCR = {
-			set_variable = {
-				var = civil_war_size_var
-				value = party_popularity @intellectuals
-			}
-		}
-		NCR = {
-			divide_variable = {
-				civil_war_size_var = 2
-			}
-		}
-		NCR = {
-			start_civil_war = {
-				ideology = intellectuals
-				size = civil_war_size_var
-			}
-		}
-		country_event = {
-			id = enc_reformers.75
-		}
 	}
 }
 	
@@ -1661,6 +1659,32 @@ country_event = {#83 - National Anthem
 		name = enc_reformers.83.c
 	}
 }
+country_event = {#84 - Unpowered province!
+	id = enc_reformers.84
+	title = enc_reformers.84.t
+	desc = enc_reformers.84.d
+	picture = GFX_event_enc_suspend_elections
+	fire_only_once = yes	
+	is_triggered_only = no
+	trigger = {
+		original_tag = ERB
+		any_owned_state = {
+			has_state_flag = needs_civilian_power_grid
+			civilian_power_grid < 1
+		}
+	}
+	option = {# Extend Presidential Powers
+		name = enc_reformers.84.a
+		every_owned_state = {
+			limit = {
+				has_state_flag = needs_civilian_power_grid
+				civilian_power_grid < 1
+			}
+			remove_core_of = ROOT
+		}
+	}
+	
+}
 
 country_event = {#85 - Shi
 	id = enc_reformers.85
@@ -1715,7 +1739,6 @@ country_event = {#85 - Shi
 		}
 	}
 }
-
 country_event = {#86 - Bomb Bay
 	id = enc_reformers.86
 	title = enc_reformers.86.t
@@ -1822,7 +1845,6 @@ country_event = {#89 - Supreme Court
 		add_stability = -0.05
 	}
 }
-
 country_event = {#90 - Supreme Court
 	id = enc_reformers.90
 	title = enc_reformers.90.t
@@ -1892,29 +1914,24 @@ country_event = {#92 Nuka-land
 			}
 		}
 	}	
-		
+}	
 country_event = {#93 Nuka-land
     id = enc_reformers.93
     title = enc_reformers.93.t
     desc = enc_reformers.93.d
     picture = GFX_event_enc_nuka_land_open
     fire_only_once = yes    
-    is_triggered_only = yes    
-
-		name = enc_reformers.93.a
-		remove_ideas = Enc_Construction_nuka
-		add_stability = 0.10# modify legitimacy
-		set_temp_variable = {
-			var = legitimacy_change_var
-			value = 0.10
-		}
-		change_legitimacy = yes
+    is_triggered_only = yes 
+	name = enc_reformers.93.a
+	remove_ideas = Enc_Construction_nuka
+	add_stability = 0.10# modify legitimacy
+	set_temp_variable = {
+		var = legitimacy_change_var
+		value = 0.10
 	}
+	change_legitimacy = yes
+}	
 
-}
-
-		}		
-		
 country_event = {#94 Flagstaff Liberated
     id = enc_reformers.94
     title = enc_reformers.94.t
@@ -1925,8 +1942,9 @@ country_event = {#94 Flagstaff Liberated
     option = {# Wee!
 		name = enc_reformers.94.a
 		add_stability = 0.05
-			}
-		}		
+	}
+}		
+
 country_event = {#95 Thanksgiving
     id = enc_reformers.95
     title = enc_reformers.95.t
@@ -1943,7 +1961,7 @@ country_event = {#95 Thanksgiving
     option = {# Loved Ones!
 		name = enc_reformers.95.a
 		add_stability = 0.05
-			}
+	}
 	option = {# Enclave
 		name = enc_reformers.95.b
 		set_temp_variable  = {
@@ -1951,14 +1969,13 @@ country_event = {#95 Thanksgiving
 			value = 0.05
 		}
 		change_legitimacy = yes
-			}
+	}
 	option = {# Sponsors
 		name = enc_reformers.95.c
 		add_political_power = 100
-			}
-			
-		}				
-		
+	}
+}
+
 country_event = {#96 4th of July
     id = enc_reformers.96
     title = enc_reformers.96.t
@@ -1971,11 +1988,11 @@ country_event = {#96 4th of July
 		has_completed_focus = enc_reform
 		date > 2076.06.04
 		date < 2076.07.3
-		}	    
+	}	    
     option = {# Founding Enclave
 		name = enc_reformers.96.a
 		add_stability = 0.05
-			}
+	}
 	option = {# Founding Fathers 
 		name = enc_reformers.96.b
 		set_temp_variable  = {
@@ -1983,13 +2000,9 @@ country_event = {#96 4th of July
 			value = 0.05
 		}
 		change_legitimacy = yes
-			}
+	}	
+}	
 
-			
-		}	
-		
-=======
->>>>>>> master
 country_event = {#99 Area 51
     id = enc_reformers.99
 	title = enc_reformers.99.t
