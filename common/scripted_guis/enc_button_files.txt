@@ -137,19 +137,29 @@ scripted_gui = {
 		visible = {
 			is_core_of = BAR
 			ROOT =  { 
-				has_completed_focus = enc_reform
+				#has_completed_focus = enc_reform
 				NOT = {
 					has_country_flag = enc_petition_delivered
 				}
 			}			
 		}		
-		effects = {
+		effects = { 
 			arm_rebels_click = {
-				ROOT = { 
-					add_political_power = -50		
+				ROOT = { 	
+					hidden_effect = {
+						add_political_power = -50
+					}	
 				}
 				set_state_flag = enc_rebels_armed
-				custom_effect_tooltip = arm_rebels_ttt
+				if = {
+					limit = {
+						has_state_flag = enc_rebels_armed
+					}
+					custom_effect_tooltip = enc_rebels_armed
+				}
+				else = {
+					custom_effect_tooltip = arm_rebels_click
+				}
 			}
 		}
 		triggers = {

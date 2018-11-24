@@ -38,12 +38,12 @@ guiTypes = {
 		fade_type = linear
 		moveable = no
 		
-		buttonType = {
-			name = arm_rebels
+		buttonType = { 
+			name = arm_rebels 
 			spriteType = GFX_resistance_icon 
 			pdx_tooltip = arm_rebels_tt
 			pdx_tooltip_delayed = arm_rebels_tt_delayed
-			scale = 1.2
+			scale = 1.2 
 		}
 	}
 	containerWindowType = { # legitimacy
@@ -60,7 +60,7 @@ guiTypes = {
 		iconType = {
 			name ="legitimacy_icon"
 			spriteType = "legitimacy"
-			position = { x = 4 y = -1² }
+			position = { x = 4 y = -1 }
 			scale = 0.8
 		}
 		
@@ -68,7 +68,7 @@ guiTypes = {
 			name ="legitimacy_text"
 			position = { x = 22 y = 4 }
 			font = "hoi_18mbs"
-			text = "[?legitimacy]%"
+			text = "[?legitimacy|%0]"
 			format = center
 			maxWidth = 46
 			maxHeight = 24

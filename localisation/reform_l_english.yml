@@ -486,11 +486,11 @@ enc_secret_dealings:0 "Secret Dealings"
 enc_operation_carnaval:0 "Operation Carnaval"
 enc_petition_for_independence:0 "Petition For Independence"
 enc_petition_for_independence_tt:0 "Unlocks the §YPetition for Independence§! decision.\nThis decision will release the §YBaron's Republic§! with any states that have armed rebels."
+enc_the_common_man: "The Common Man"
 enc_the_common_man_desc:0 "It must be said that the NCR adopted a lot of the ideals of Old War America, including democracy and the respect for individual rights.  But many lie forgotten in this society, who could turn to us for assistance..."
 enc_fear_uncertainty_and_doubt:0 "The Old Deal"
 enc_fear_uncertainty_and_doubt_desc:0 "The Mayor of Day Glow, Grant C. Hayes, has been a fan of the Old War America.  He's willing to work with us to promote reforms to NCR's Senate, which is biased towards the barons and caravans, and for greater rights for NCR workers. He calls this the 'Old Deal.'" 
 enc_organise_the_sympathizers:0 "Organise the Sympathizer"
-enc_organise_the_sympathizers_desc:0 "Organise the Sympathizers"
 enc_organise_the_sympathizers_desc:0 "With proper equipment and supplies, we can ensure that the NCR takes the demands of Hayes and his allies seriously."
 enc_the_divided_state:0 "Californian Civil War"
 enc_the_divided_state_desc:0 "The petition for a constitutional convention to reform the NCR has reached the Senate... and they refused to hear it.  Proponents of the Old Deal have taken to the streets, and been fired on by Gun Runners and other NCR loyalists.  The Californian Civil War has begun."
@@ -539,14 +539,17 @@ ENC_ncr_enclave_propaganda: "Enclave Propaganda"
 ENC_electrification:  "Rural Electrification"
 
 ENC_legitimacy_none: "No Legitimacy"
-ENC_legitimacy_none_desc: "Despite their claims, the Enclave is seen as little more than dangerous mad men claiming to be a goverment few remember and fewer want. "
+ENC_legitimacy_none_desc: "(0-25% legitimacy)\nDespite their claims, the Enclave is seen as little more than dangerous mad men claiming to be a goverment few remember and fewer want. "
 ENC_legitimacy_low: "Little Legitimacy"
+ENC_legitimacy_low_desc: "(25-50% legitimacy)\nWhile still mostly distrusted, there are some wastelanders who have taken to the Enclave's message."
 ENC_legitimacy_medium: "Moderate Legitimacy"
+ENC_legitimacy_medium_desc: "(50-75% legitimacy)\nThe Enclave is now considered a faction like any other, with many within its borders daring to dream of a new American dawn."
 ENC_legitimacy_high: "High Legitimacy"
+ENC_legitimacy_high_desc: "(+75% legitimacy)\nThe Enclave is seen as a legitimate government in the eyes of most, its past crimes forgotten in favour of a hopeful future."
 
-max_legitimacy: "[?legitimacy]/100 §Ylegitimacy§!"
-half_legitimacy: "[?legitimacy]/50 §Ylegitimacy§!"
-25_legitimacy: "[?legitimacy]/25 §Ylegitimacy§!"
+max_legitimacy: "At least §Y100%§! Legitimacy"
+half_legitimacy: "More than §Y75%§! Legitimacy"
+25_legitimacy: "More than §Y25%§! Legitimacy"
 
 has_legitimacy_tt: "[?legitimacy]/[?has_legitimacy_var] §Ylegitimacy§!"
 
@@ -662,8 +665,8 @@ legitimacy_TOOLTIP:0 "§HLegitimacy§! \n\nCurrent legitimacy: §Y[?legitimacy]�
 
 arm_rebels_tt: "Arm Rebels (§Y50§! £pol_power )"
 arm_rebels_tt_delayed: "[!arm_rebels_click]"
-arm_rebels_click: "Arm rebels in the state"
-enc_rebels_armed: "Rebels already armed"
+arm_rebels_click: "§YArm rebels in the state!§!\nWhen the time is right, they will rise up should their petition for independence fail."
+enc_rebels_armed: "§GRebels already armed!§!\nThis state has rebels ready to take control of the state."
 
 unlock_arm_rebels: "Unlocks the ability to §Yarm rebels§! in any §YNCR§! state where §YBarron Republic§! has a core.\n\n"
 ###################################
@@ -695,9 +698,9 @@ ENC_hiding_cost_increased_20_tt: "§YNCR suspicion§! will go up by §R20§! £p
 ENC_hiding_cost_increased_25_tt: "§YNCR suspicion§! will go up by §R25§! £pol_power\n\n"
 ENC_hiding_cost_increased_30_tt: "§YNCR suspicion§! will go up by §R30§! £pol_power\n\n"
 
-change_legitimacy_tt:0 "Modify §YLegitimacy§! by §+§![?legitimacy_change_var|+]§!\n\n"
-lose_legitimacy_tt:0 "Lose §+§![?legitimacy_change_var|+]§! §YLegitimacy§!\n\n"
-gain_legitimacy_tt:0 "Gain §+§![?legitimacy_change_var|+]§! §YLegitimacy§!\n\n"
+change_legitimacy_tt:0 "Modify §YLegitimacy§! by §+§![?legitimacy_change_var|+%]§!\n\n"
+lose_legitimacy_tt:0 "Lose §+§![?legitimacy_change_var|+%]§! §YLegitimacy§!\n\n"
+gain_legitimacy_tt:0 "Gain §+§![?legitimacy_change_var|+%]§! §YLegitimacy§!\n\n"
 
 lose_suspicion_tt:0 "§YNCR suspicion§! will go down by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
 gain_suspicion_tt:0 "§YNCR suspicion§! will go up by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
