@@ -344,19 +344,19 @@ enc_stage_raider_attacks_tt: "Unlocks the §YArm Raider Gangs§! decision.\nThis
 enc_foreign_policy_tt: "Unlocks the §YReveal Ourselves to the NCR§! decision.\nThis allows you to reveal yourself to the §Y[NCR.GetName]§! under the right circumstances, removing the need to hide from them."
 
 enc_call_ncr_favors:0 "Call In Favors"
-enc_call_ncr_favors_desc:0 "TODO"
+enc_call_ncr_favors_desc:0 "Thanks to old exploits of ours in the mercenary company, we have a few contacts in the NCR that owe us a big favor. They don't need to know the big picture, only that we need them to 'lose' a few specific documents."
 
 enc_contact_old_world_party:0 "Contact Old World Party"
-enc_contact_old_world_party_desc:0 "TODO"
+enc_contact_old_world_party_desc:0 "There is a political party in the New California Republic that appears to have roots to the first wave of Enclave refugees that integrated into their territories. We may be able to find an ally inside of our greatest enemy yet."
 enc_contact_old_world_party_tt: "Unlocks the §YSupport Old World Party§! decision.\nThis allows you to spend £pol_power §Ypolitical power§! to support the §YOld World Party§! in the §Y[NCR.GetName]§!."
 
 enc_victory_speech:0 "Presidential Victory Speech"
-enc_victory_speech_desc:0 "TODO"
+enc_victory_speech_desc:0 "With electorial victory snatched from the jaws of defeat, it is time to speak to our supporters and opponents alike about our vision of the Enclave's future."
 enc_provoke_purists:0 "Provoke the Purists"
-enc_provoke_purists_desc:0 "TODO"
+enc_provoke_purists_desc:0 "Many of the most devoted purists are on edge. Feeling control of the Enclave's destiny slipping between their fingers, they are eager to abandon words in favor of actions. Too eager, in fact. This could be exploited. "
 enc_reach_the_centrists:0 "Reach Out To Centrists"
-enc_reach_the_centrists_desc:0 "TODO"
-enc_reach_the_centrists_tt:0 "\n§MWe will have to promise compromises to centrists§!"
+enc_reach_the_centrists_desc:0 "There are many among us still who have not chosen sides in this conflict. We could reach out to these centrists and the least radical purists to expand our power base. But this will invariably mean making promises that might compromise on our own vision of the Enclave's future."
+enc_reach_the_centrists_tt:0 "\n§MWe will have to promise compromises to the centrists!§!"
 
 enc_local_elections: "Local Elections"
 enc_local_elections_desc: "To reacquaint the American people with democracy, we're holding elections for municipal councils."
@@ -587,6 +587,8 @@ enc_open_to_new_ideas_desc:  "The Enclave is opening to new ideas as it tries to
 enc_house_always_wins:  "The House Always Wins"
 enc_rebuild_the_power_grid: "Rebuild The Power Grid"
 enc_rebuild_the_power_grid_tt: "Allows you to build civilian power stations, connecting the local populations to your power grid and your control."
+enc_rebuild_the_power_grid_ttt: "\n\n§MCurrently simplified:§!\nUnlocks OWB coring mechanic for §YEnclave§!"
+
 enc_debug_tt: "electricity: [?resource@electricity]"
 
 more_than_2_electricity: "More than 2 §YElecticity§! available (§Y[?resource@electricity]§!)"
@@ -700,6 +702,7 @@ gain_legitimacy_tt:0 "Gain §+§![?legitimacy_change_var|+]§! §YLegitimacy§!\
 lose_suspicion_tt:0 "§YNCR suspicion§! will go down by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
 gain_suspicion_tt:0 "§YNCR suspicion§! will go up by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
 
+gannon_returns: "Arcade Ganon has returned to the Enclave"
 ###################################
 # DIPLOMACY
 ###################################

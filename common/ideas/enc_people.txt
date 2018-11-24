@@ -343,10 +343,9 @@ ideas = {
 			research_bonus = {
 				chem_tech = 0.2
 			}
-			
-			traits = { respectedByScientists
-					compassionate_doctor
-					}
+			traits = { 
+				compassionate_doctor
+			}
 		}
 	}
 

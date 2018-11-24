@@ -51,6 +51,14 @@ spriteTypes = {
             name = "GFX_idea_boris_t"
  		    texturefile = "gfx/interface/ideas/boris_t.dds"
  	    } 
+		SpriteType = {#orion_moreno
+            name = "GFX_idea_orion_moreno"
+ 		    texturefile = "gfx/interface/ideas/orion_moreno.dds"
+ 	    } 
+		SpriteType = {#daisy_whitman
+            name = "GFX_idea_daisy_whitman"
+ 		    texturefile = "gfx/interface/ideas/daisy_whitman.dds"
+ 	    } 
 		spriteType = {
 			name = "GFX_icons_power"
 			texturefile = "gfx/interface/icons/power_icon.dds"
@@ -134,7 +142,6 @@ spriteTypes = {
 			name = "decision_enc_officer"
 			texturefile = "gfx/interface/icons/decision_enc_officer.dds"
 		}
-		
 		spriteType = {
 			name = "decision_enc_research_up"
 			texturefile = "gfx/interface/icons/decision_enc_research_up.dds"

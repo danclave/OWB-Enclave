@@ -2,7 +2,7 @@ update_legitimacy = {
 	clamp_variable = { # move this clamp
 		var = legitimacy
 		min = 0
-		max = 100
+		max = 1
 	}
 	# we cannot use a non temp variable for trigger comparisons
 	add_to_temp_variable = {
@@ -13,12 +13,12 @@ update_legitimacy = {
 		limit = {
 			check_variable = {
 				var = legitimacy_change_var
-				value > 74.99
+				value > 0.749
 			}
 		}
 		hidden_effect = {
 			remove_ideas = {
-				ENC_legitimacy_medium	
+				ENC_legitimacy_medium
 				ENC_legitimacy_low
 				ENC_legitimacy_none
 			}
@@ -38,7 +38,7 @@ update_legitimacy = {
 		limit = {
 			check_variable = {
 				var = legitimacy_change_var
-				value > 49.99
+				value > 0.499
 			}
 		}
 		hidden_effect = {
@@ -63,7 +63,7 @@ update_legitimacy = {
 		limit = {
 			check_variable = {
 				var = legitimacy_change_var
-				value > 24.99
+				value > 0.249
 			}
 		}
 		hidden_effect = {
@@ -84,7 +84,7 @@ update_legitimacy = {
 			}
 		}
 	}
-	else = { # value is between 50 and 25, assign lowest effect and remove the rest
+	else = { # value is between 0 and 25, assign lowest effect and remove the rest
 		hidden_effect = {
 			remove_ideas = {
 				ENC_legitimacy_high

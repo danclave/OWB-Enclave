@@ -85,9 +85,26 @@ leader_traits = {
 
 	compassionate_doctor = {
 		random = no
-		production_speed_arms_factory_factor = 0.10
-	}	
+		monthly_population = 0.02
+		war_support_factor = -0.10
 
+	}
+	mutant_sympathies = {
+		random = no
+		non_core_manpower = 0.02		
+		stability_factor = -0.05
+	}
+	EPA_director = {
+		random = no
+		monthly_population = 0.05
+		stability_factor = 0.10
+	}
+	genius_pacifist = {
+		random = no
+		war_support_weekly = -0.005
+		army_attack_factor = -0.10
+		political_power_factor = 0.25
+	}
 	# manufacturers
 	vertibird_aircraft_manufacturer = {
 		random = no
@@ -132,14 +149,12 @@ leader_traits = {
 	# loyalists	
 	enc_air_chief_loyalist = {
 		random = no
-		cost = 100
 		stability_factor = 0.05
 		air_close_air_support_attack_factor = -0.05
 		intellectuals_drift = 0.1
 	}
 	enc_air_chief_cas = {
 		random = no
-		cost = 100
 		air_close_air_support_attack_factor = 0.05
 		air_close_air_support_defence_factor = 0.03
 		air_close_air_support_agility_factor = 0.03
@@ -147,14 +162,12 @@ leader_traits = {
 	
 	enc_army_chief_loyalist = {
 		random = no
-		cost = 100
 		army_morale_factor = -0.05
 		army_attack_factor = -0.05
 		intellectuals_drift = 0.10
 	}
 	enc_navy_chief_loyalist = {
 		random = no
-		cost = 100
 		intellectuals_drift = 0.10	
 	}
 	enc_wounded_trait = {

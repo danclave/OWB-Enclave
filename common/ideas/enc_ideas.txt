@@ -372,22 +372,6 @@ ideas = {
 				stability_factor = 0.05
 			}
 		}
-		ENC_reno_police= {  
-			picture = ast_classify_aliens
-			allowed = { 
-				always = no
-            }
-            allowed_civil_war = { 
-				always = yes
-            }
-            removal_cost = -1
-			modifier = {
-				conscription_factor = -0.10
-				political_power_gain = 0.10
-				enemy_partisan_effect = -0.1
-				stability_factor = 0.05
-			}
-		}
 		ENC_reno_police_corrupt= {  
 			picture = ast_classify_aliens
 			allowed = { 
@@ -569,35 +553,6 @@ ideas = {
 				army_leader_start_defense_level = 1
 				army_leader_start_logistics_level = 1
 				military_leader_cost_factor = 1
-			}
-		}
-		
-		ENC_air_force_best_man = {  
-			picture = # todo
-			allowed = { 
-				always = no
-            }
-            allowed_civil_war = { 
-				always = yes
-            }
-            removal_cost = -1
-			modifier = {
-				air_close_air_support_attack_factor = 0.10
-				air_air_superiority_attack_factor = -0.05
-			}
-		}
-		ENC_air_force_loyalist = {  
-			picture = # todo
-			allowed = { 
-				always = no
-            }
-            allowed_civil_war = { 
-				always = yes
-            }
-            removal_cost = -1
-			modifier = {
-				air_close_air_support_attack_factor = -0.05
-				intellectuals_drift = 0.05
 			}
 		}
 
@@ -1162,7 +1117,7 @@ ideas = {
 					removal_cost = -1
 					modifier = {
 					   army_attack_factor = 0.05
-					   army_defence_Factor = 0.05
+					   army_defence_factor = 0.05
 					   political_power_gain = 0.05
 					}
 				}
@@ -1245,8 +1200,8 @@ ideas = {
 		ENC_House = {
 			picture = VEG_Loyal_Subordinates
 			allowed = { always = no }
-		        allowed_civil_war = { always = yes }
-            		removal_cost = -1
+		    allowed_civil_war = { always = yes }
+            removal_cost = -1
 			modifier = {
 				consumer_goods_factor = -0.04
 				research_time_factor = -0.03
@@ -1258,7 +1213,8 @@ ideas = {
 			allowed = { always = no }
             allowed_civil_war = { always = yes }
             removal_cost = -1
-			modifier = { production_speed_electricity_generator_factor = 0.1		
+			modifier = { 
+				production_speed_electricity_generator_factor = 0.1		
 			}
 		} 
 		ENC_electrification = {
@@ -1266,10 +1222,10 @@ ideas = {
 			allowed = { always = no }
             allowed_civil_war = { always = yes }
             removal_cost = -1
-			modifier = { production_speed_electricity_generator_factor = 0.2
-			stability_factor = 0.10
+			modifier = { 
+				production_speed_electricity_generator_factor = 0.2
+				stability_factor = 0.10
 			}
-			
 		} 
 		Enc_Hacking = {  
 			picture = enc_radio
