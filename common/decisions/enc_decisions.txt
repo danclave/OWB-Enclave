@@ -937,10 +937,11 @@ ENC_political_infighting = {
 		allowed = { tag = ERB }
 		fire_only_once = YES
 		visible = {
-			elites > 0.2
 			has_completed_focus = enc_reform
 		}
 		available = {
+			intellectuals > 0.50
+			has_stability > 0.50
 		}
 		modifier = {
 			army_org_Factor = -0.25
@@ -964,10 +965,11 @@ ENC_political_infighting = {
 		allowed = { tag = ERB }
 		fire_only_once = YES
 		visible = {
-			elites > 0.2
 			has_completed_focus = enc_reform
 		}
 		available = {
+			intellectuals > 0.50
+			has_stability > 0.50
 		}
 		modifier = {
 			research_time_factor = +0.20

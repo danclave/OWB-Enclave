@@ -212,11 +212,17 @@ country_event = {#8 - SECRETS STOLEN
 	option = {#OH WELL
 		name = enc_reformers.8.a
 		add_political_power = 25
+		set_technology = {
+			tesla_weaponry = 0
+		}
 	}
 	option = {#MAKE SOME EXAMPLES
 		name = enc_reformers.8.b
 		custom_effect_tooltip = enc_crackdown_justified_tt
 		set_country_flag = enc_crackdown_justified		
+		set_technology = {
+			tesla_weaponry = 0
+		}
 	}
 }
 
