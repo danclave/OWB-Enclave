@@ -1,6 +1,6 @@
-###############################
+##############################
 # CUSTOM
-###############################
+##############################
 
 ENC_shifts = {
 	icon = category_enc_shift
@@ -42,10 +42,6 @@ ENC_rangers = {
 	available = {
 		has_war_with = DES
 	}
-}
-special_projects = {
-	icon = generic_research
-	allowed = {original_tag = ERB}
 }
 ENC_war_with_NCR = {
 	icon = category_enc_anti_ncr
@@ -95,10 +91,10 @@ ENC_infiltrating_NCR = {
 		tag = ERB
 	}
 	visible = {
-		# OR = {
-			# has_completed_focus = enc_infiltrate_ncr
-			# has_country_flag = enc_bishop_in_NCR
-		# }
+		OR = {
+			has_completed_focus = enc_infiltrate_ncr
+			has_country_flag = enc_bishop_in_NCR
+		}
 	}
 }
 
@@ -114,17 +110,17 @@ ENC_render_unto_caesar = {
 
 ENC_debug = {
 	allowed = {
-		#tag = ERB
+		tag = ERB
 	}	
 	visible = {
-		# always = false
+		always = false
 	}
 
 }
 
-###############################
+# ##############################
 # ICONS
-###############################
+# ##############################
 
 # aluminium
 # border_war

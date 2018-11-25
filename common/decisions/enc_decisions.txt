@@ -1003,13 +1003,13 @@ ENC_political_infighting = {
 				limit = {
 					has_completed_focus = enc_reform					
 				}
-				add_popularity = { ideology = intellectuals popularity = 0.03 }
-				else_if = {
-					limit = {
-						has_completed_focus = enc_purity					
-					}
-					add_popularity = { ideology = elites popularity = 0.03 }
+				add_popularity = { ideology = intellectuals popularity = 0.03 }				
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = enc_purity					
 				}
+				add_popularity = { ideology = elites popularity = 0.03 }
 			}
 		}
 		days_re_enable = 60

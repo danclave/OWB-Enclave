@@ -104,7 +104,7 @@ ideas = {
 				factor = 1
 			}
 		}
-		raul = {
+		erb_raul = {
 			picture = raul_advisor
 
 			allowed = {
@@ -116,7 +116,7 @@ ideas = {
 				factor = 10
 			}
 		}
-		judah_kreger = {
+		erb_judah_kreger = {
 			picture = judah_kreger_advisor
 
 			allowed = {
@@ -128,7 +128,7 @@ ideas = {
 				factor = 10
 			}
 		}
-		quincy = {
+		erb_quincy = {
 			picture = qunicy_advisor
 
 			allowed = {
@@ -165,7 +165,7 @@ ideas = {
 	}
 
 	high_command = {		
-		tech_officer_hilden = {			
+		erb_tech_officer_hilden = {			
 			picture = tech_officer_hilden_command			
 			allowed = {
 				original_tag = ERB
@@ -177,7 +177,7 @@ ideas = {
 			}
 		}
 		
-		snookie = {
+		erb_snookie = {
 			picture = snookie_command
 			allowed = {
 				original_tag = ERB
@@ -188,7 +188,7 @@ ideas = {
 			}
 		}
 
-		sanders = {
+		erb_sanders = {
 			picture = sanders_command
 			allowed = {
 				original_tag = ERB

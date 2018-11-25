@@ -388,7 +388,7 @@ focus_tree = {
 			add_stability = 0.05
 			country_event = { id = enc_reformers.68  }
 			hidden_effect = {
-				country_event = { enc_reformers.92 days = 60 } 
+				country_event = { id = enc_reformers.92 days = 60 } 
 			}
 		}
 	}
@@ -2712,7 +2712,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_equipment = { type = infantry_equipment amount = -1000 } # doesn't quite work
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -1000 }
 			add_political_power = 50
 			NCR = {
 				add_popularity = { ideology = intellectuals popularity = 0.10 }
@@ -3050,7 +3050,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 				planning_skill = 3
 				logistics_skill = 4
 				traits = {
-					army_chief old_guard
+					offensive_doctrine old_guard
 				}
 			}
 		}

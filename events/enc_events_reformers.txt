@@ -130,11 +130,13 @@ country_event = {#5 - Dealing with Bishops
 	
 	option = {# Capture Operations
 		name = enc_reformers.5.a
-		add_extra_state_shared_building_slots = 3
-		add_building_construction = {
-			type = industrial_complex
-			level = 3
-			instant_build = yes
+		285 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
 		}
 		hidden_effect = {
 			country_event = { id = enc_reformers.20 days = 5}		
@@ -418,7 +420,7 @@ country_event = {#14 - Anderson Speech
 		custom_effect_tooltip = enc_reformers.14.e.tt
 	}
 }
-country_event = {#15 - Promotion - WIP
+country_event = {#15 - UNUSED
 	id = enc_reformers.15
 	title = enc_reformers.15.t
 	desc = enc_reformers.15.d
@@ -427,20 +429,8 @@ country_event = {#15 - Promotion - WIP
 	fire_only_once = yes
     is_triggered_only = yes
 	
-	option = {# promote loyalist
+	option = {# UNUSED
 		name = enc_reformers.15.a
-		add_timed_idea = {
-			days = 365
-			idea = ENC_air_force_best_man
-		}
-
-	}
-	option = {# best man for the job
-		name = enc_reformers.15.b
-		add_timed_idea = {
-			days = 365
-			idea = ENC_air_force_loyalist
-		}
 	}
 }
 country_event = {#16 - Assassination attempt!
@@ -1133,11 +1123,12 @@ country_event = {#61 - Operation Augustus
 	
 	option = {
 		name = enc_reformers.61.a
-	country_event = { id = enc_reformers.62
-	days = 
-	random = 50
+		country_event = { id = enc_reformers.62
+			days = 60
+			random = 50
+		}
 	}		
-CES = { 
+	CES = {
 		kill_country_leader = yes
 		create_country_leader = {
 			name = "Lanius"
@@ -1173,7 +1164,6 @@ CES = {
 					is_CES_civil_war_non_eligable = no
 				}
 				keep_unit_leaders = { 1003 1002 1004 }
-			}
 		}
 		hidden_effect = {
 			remove_unit_leader = 1001
@@ -1193,8 +1183,7 @@ CES = {
 			log = "[GetDateText]: [Root.GetName] nf_legion.5 option a exited"
 		}
 	}
-	}
-
+}
 country_event = {#62 - Render Unto Caesar
 	id = enc_reformers.62
 	title = enc_reformers.62.t
@@ -1311,7 +1300,7 @@ country_event = {#66 - The Vice President
 	}
 }
 
-country_event = {#67 Ghoul Marriage
+country_event = {#67 - Ghoul Marriage
 	id = enc_reformers.67
 	title = enc_reformers.67.t
 	desc = enc_reformers.67.d
@@ -1449,9 +1438,9 @@ country_event = {#75 - Civil War
 	desc = enc_reformers.75.d
 	picture = GFX_event_ENC_single_soldier
 	fire_only_once = yes
+	is_triggered_only = yes
 	option = {#	aid
 		name = enc_reformers.75.a
-
 		if = {
 			limit = {
 				is_in_faction = no
@@ -1547,8 +1536,7 @@ country_event = {#78 - Arcade Gannon
 	picture = GFX_event_Arcade_Gannon_Enclave
 	fire_only_once = yes
 	is_triggered_only = yes
-	option = {#
-		Arcade Games
+	option = {#	Arcade Games
 		name = enc_reformers.78.a
 		set_country_flag = gannon_returns
 		custom_effect_tooltip = enc_reformers.78.a.tt
@@ -1904,7 +1892,7 @@ country_event = {#92 Nuka-land
     is_triggered_only = yes    
     option = {# Idiots
 		name = enc_reformers.92.a
-				}
+	}
 	option = {# Whee
 		name = enc_reformers.92.b
 		add_ideas = Enc_Construction_nuka
@@ -1922,14 +1910,16 @@ country_event = {#93 Nuka-land
     picture = GFX_event_enc_nuka_land_open
     fire_only_once = yes    
     is_triggered_only = yes 
-	name = enc_reformers.93.a
-	remove_ideas = Enc_Construction_nuka
-	add_stability = 0.10# modify legitimacy
-	set_temp_variable = {
-		var = legitimacy_change_var
-		value = 0.10
+	option = {
+		name = enc_reformers.93.a
+		remove_ideas = Enc_Construction_nuka
+		add_stability = 0.10
+		set_temp_variable = {
+			var = legitimacy_change_var
+			value = 0.10
+		}
+		change_legitimacy = yes
 	}
-	change_legitimacy = yes
 }	
 
 country_event = {#94 Flagstaff Liberated

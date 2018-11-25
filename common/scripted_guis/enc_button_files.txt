@@ -26,7 +26,7 @@ scripted_gui = {
 					level = 1
 					instant_build = no
 				}
-				add_state_flag = needs_civilian_power_grid
+				set_state_flag = needs_civilian_power_grid
 			}
 		}
 		triggers = {
@@ -178,7 +178,7 @@ scripted_gui = {
 		}
 		
 		ai_weights = {
-			connect_to_power_click = {
+			arm_rebels_click = {
 				ai_will_do = {
 					factor = 40
 				}

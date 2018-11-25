@@ -134,9 +134,6 @@ change_legitimacy = {
 }
 
 has_more_legitimacy = {
-
-	has_manpower > 12
-	
 	# custom_trigger_tooltip = {
 		# tooltip = has_legitimacy_tt		
 		# check_variable = {

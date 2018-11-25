@@ -240,8 +240,8 @@ spriteTypes = {
 			texturefile = "gfx/event_pictures/event_enc_spies.dds"
 		}
 		SpriteType = {#Enc_4th_july
-			name = "GFX_event_enc_4th_july
-			texturefile = "gfx/event_pictures/event_enc_4th_july.dds"
+			name = "GFX_event_enc_4th_july"
+			texturefile = "gfx/event_pictures/event_enc_4th_july.tga"
 		}
 		SpriteType = {#dark
 			name = "GFX_event_enc_dark"

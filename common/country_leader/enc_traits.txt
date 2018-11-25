@@ -126,7 +126,7 @@ leader_traits = {
 	enclave_plasma_equipment_manufacturer = {
 		random = no
 		equipment_bonus = {
-			plasma_equipment_1 = {
+			plasma_weaponry = {
 				build_cost_ic = -0.10
 			}
 		}		
@@ -179,7 +179,7 @@ leader_traits = {
 		random = no
 		non_core_manpower = 0.02
 		# construction speed?
-		stablility_factor = -0.05
+		stability_factor = -0.05
 		war_support_factor = -0.05
 	}
 }
