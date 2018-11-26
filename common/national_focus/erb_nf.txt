@@ -138,6 +138,7 @@ focus_tree = {
 				value = 0.10
 			}
 			change_legitimacy = yes
+			country_event = { id = enc_reformers.15 }
 		} 
 	}	
 

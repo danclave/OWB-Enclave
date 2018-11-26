@@ -420,16 +420,16 @@ country_event = {#14 - Anderson Speech
 		custom_effect_tooltip = enc_reformers.14.e.tt
 	}
 }
-country_event = {#15 - UNUSED
+country_event = {#15 - Legitimacy turorial
 	id = enc_reformers.15
 	title = enc_reformers.15.t
 	desc = enc_reformers.15.d
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_enc_legitimacy_tutorial
 	
 	fire_only_once = yes
     is_triggered_only = yes
 	
-	option = {# UNUSED
+	option = {# Interesting
 		name = enc_reformers.15.a
 	}
 }

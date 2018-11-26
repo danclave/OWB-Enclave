@@ -137,7 +137,7 @@ scripted_gui = {
 		visible = {
 			is_core_of = BAR
 			ROOT =  { 
-				#has_completed_focus = enc_reform
+				has_completed_focus = enc_operation_carnaval
 				NOT = {
 					has_country_flag = enc_petition_delivered
 				}

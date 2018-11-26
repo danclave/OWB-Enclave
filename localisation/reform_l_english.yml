@@ -661,7 +661,7 @@ civilian_power_grid_desc: "Allows a state to be §GCored§!"
 
 install_police_force_tt: "Install Police Force"
 
-legitimacy_TOOLTIP:0 "§HLegitimacy§! \n\nCurrent legitimacy: §Y[?legitimacy]§!\n\nLegitimacy is capped at §H100§!."
+legitimacy_TOOLTIP:0 "§HLegitimacy§! \n\nCurrent legitimacy: §Y[?legitimacy|%0]§!\n\nLegitimacy is capped at §H100%§!."
 
 arm_rebels_tt: "Arm Rebels (§Y50§! £pol_power )"
 arm_rebels_tt_delayed: "[!arm_rebels_click]"

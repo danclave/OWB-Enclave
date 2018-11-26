@@ -251,5 +251,9 @@ spriteTypes = {
 			name = "GFX_event_enc_escape"
 			texturefile = "gfx/event_pictures/event_ENC_escape.tga"
 		}
+		SpriteType = {#legitimacy tutorial
+			name = "GFX_event_enc_legitimacy_tutorial"
+			texturefile = "gfx/event_pictures/event_enc_legitimacy_tutorial.tga"
+		}
 }			
 

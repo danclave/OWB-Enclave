@@ -80,10 +80,9 @@ enc_reformers.14.d.tt: "Available because you have completed §YPurge The Scient
 enc_reformers.14.e: "You are out of friends, Anderson."
 enc_reformers.14.e.tt: "Available because you have completed both §YPurge The Officers§! and §YPurge The Scientists§!."
 ################################################################################################################ -<
-enc_reformers.15.t: "Promotion for Chief of Staff of the U.S. Air Force"
-enc_reformers.15.d: "While the role is smaller than its historic predecessor, air power is still vital to the Enclave's armed forces. "
-enc_reformers.15.a: "The best man should get the job."
-enc_reformers.15.b: "We need a man we can trust."
+enc_reformers.15.t: "Legitimacy Tutorial"
+enc_reformers.15.d: "For the first time in centuries, our authority has extended beyond core Enclave members. Considering our previous interactions with these newfound citizens could easily be misinterpreted as 'attempted genocide', proving ourselfs to be a legitimate government will take time and effort.\n\nCertain choices we make will increase or decrease our legitimacy. Higher legitimacy comes with bonuses to our rule and allows for new choices in our focus tree."
+enc_reformers.15.a: "I'll keep that in mind."
 ################################################################################################################ -<
 enc_reformers.16.t: "Assassination attempt!"
 enc_reformers.16.d: "'Death to traitors!' An officer screams as he pulls out a Plasma pistol and opens fire. The first bolt misses completely and the second grazes your side. There is no third as the would be assassin is put down by security. You are alive, but even a graze from a Plasma bolt is a wound one carries to the grave. \n\n The attempt on your life has left you scarred, a burning reminder of how close the Enclave is to complete collapse."
@@ -250,7 +249,7 @@ enc_reformers.67.a: "Adam and Eve not Atom and Eve!"
 enc_reformers.67.b: "Adopt an Equal Protection Argument." 
 enc_reformers.67.c: "Let's go with a decision crafted to be used at weddings!" 
 ################################################################################################################ -<
-enc_reformers.68.t: "Slavery"
+enc_reformers.68.t: "New Reno's Slaves"
 enc_reformers.68.d: "During the liberation of New Reno we've come across a large population of slaves, triggering off a debate as to whether we should allow the practice of slavery in these United States.  Although there are those who say slavery is unamerican, others point out that a captive workforce could be a boon to our economy and has historical precedent.  As an compromise we could adopt Vault City's servitude system, providing food, protection, and medical care in exchange for involuntary servitude.  But others say that seems like slavery with extra steps."
 enc_reformers.68.a: "Slavery, a boon to our economy."
 enc_reformers.68.b: "Vault City's servitude is reasonable." 
