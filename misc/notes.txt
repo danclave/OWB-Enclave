@@ -2,6 +2,9 @@ Todo list:
 
 MUST
 1. Finish coring mechanic
+	a) add icon
+	b) fix localization error
+	
 2. Finish old world radio route
 3. Flavor event for assassinating Anderson
 
@@ -14,6 +17,7 @@ SHOULD
 
 COULD
 1. enc_reformers.39 followup that costs legitimacy
+2. More interactions with Anderson
 
 DONE:
 1. Finish arm rebel mechanic

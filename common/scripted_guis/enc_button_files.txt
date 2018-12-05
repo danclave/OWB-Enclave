@@ -6,7 +6,7 @@ scripted_gui = {
 		
 		visible = {
 			ROOT =  {
-				has_completed_focus = enc_rebuild_the_power_grid			
+				# has_completed_focus = enc_rebuild_the_power_grid			
 			}
 			is_controlled_by = ROOT
 			# any neighbour state is cored
@@ -17,9 +17,6 @@ scripted_gui = {
 		}		
 		effects = {
 			connect_to_power_click = {
-				ROOT = { 
-					add_political_power = -100 					
-				}
 				add_core_of = FROM
 				add_building_construction = {
 					type = civilian_power_grid
@@ -31,9 +28,9 @@ scripted_gui = {
 		}
 		triggers = {
 			connect_to_power_click_enabled = {
-				ROOT = {
+				ERB = {
 					custom_trigger_tooltip = {
-						tooltip = more_than_2_electricity
+						tooltip = more_than_2_electricity 
 						check_variable = {
 							var = resource@electricity
 							value = 2
