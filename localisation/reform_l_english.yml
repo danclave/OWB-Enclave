@@ -608,7 +608,7 @@ enc_rebuild_the_power_grid_ttt: "\n\n§MCurrently simplified:§!\nUnlocks OWB co
 
 enc_debug_tt: "electricity: [?resource@electricity]"
 
-more_than_2_electricity: "More than 2 §YElecticity§! available (§Y[?resource@electricity]§!)"
+more_than_2_electricity: "- More than 2 §YElecticity§! available (§Y[?resource@electricity]§!)"
 enc_seperate_but_equal:  "Service Guarantees Citizenship"
 enc_segregation_forever:  "Segregation Forever"
 enc_wastelander_draft:  "Unwilling Volunteers"
