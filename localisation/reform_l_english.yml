@@ -39,6 +39,20 @@ ERB_nevada_elites_ADJ:0 "Nevadan"
 ERB_nevada_people:0 "Nevada"
 ERB_nevada_people_DEF:0 "The State of Nevada"
 ERB_nevada_people_ADJ:0 "Nevadan"
+
+ERB_SHI_ruler:0 "San Fran"
+ERB_SHI_ruler_DEF:0 "San Fran"
+ERB_SHI_ruler_ADJ:0 "San Franciscan"
+ERB_SHI_intellectuals:0 "San Fran"
+ERB_SHI_intellectuals_DEF:0 "San Fran"
+ERB_SHI_intellectuals_ADJ:0 ""San Franciscan"
+ERB_SHI_elites:0 "San Fran"
+ERB_SHI_elites_DEF:0 "San Fran"
+ERB_SHI_elites_ADJ:0 "San Franciscan"
+ERB_SHI_people:0 "San Fran"
+ERB_SHI_people_DEF:0 "San Fran"
+ERB_SHI_people_ADJ:0 "San Franciscan"
+
 ###################################
 # FOCUS TREE
 ###################################
@@ -50,12 +64,12 @@ enc_radio:0 "Enclave Radio"
 enc_radio_desc:0 "Our radio beacons could be used to broadcast the Enclave's message to the wasteland. Let sympathizers far and wide hear of the Enclaves vision. While we are at it, those same beacons can also be used as listening outposts."
 
 enc_the_lucia_incident: "The Lucia Incident"
-enc_the_lucia_incident_desc: "TODO"
+enc_the_lucia_incident_desc: "Control of prewar technology lets us provoke a border influence provoke the NCR against its enemies."
 enc_the_lucia_incident_tt: "Unlocks the §YThe Lucia Incident§! decision.\nThis allows you to use your spies to send a fake radio broadcast causing the §Y[BOS.GetName]§! to declare war on the §Y[NCR.GetName]§!."
 
 
 enc_the_bishop_incident: "The Bishop Incident"
-enc_the_bishop_incident_desc: "TODO"
+enc_the_bishop_incident_desc: "We could trick the NCR into going to war with its enemies through control of their informatoin systems.DO"
 enc_the_bishop_incident_tt:0 "Unlocks the §YThe Bishop Incident§! decision.\nThis allows you to use your spies to send a fake radio broadcast causing the §Y[DES.GetName]§! to declare war on the §Y[NCR.GetName]§!."
 
 enc_accept_wastelanders:0 "Accept Wastelander Volunteers"
@@ -92,8 +106,8 @@ enc_military_propaganda_desc:0 "By the rockets' red glare, the nukes bursting in
 enc_wartime_draft:0 "Wartime Draft"
 enc_wartime_draft_desc:0 "It is time to conscript the peoples of America to protect our nation and its interests."
 
-enc_armed_militias:0 "Armed Militias"
-enc_armed_militias_desc:0 "Early Americans survived in the wilderness by forming citizen militias to defend their nation.  Modern Americans can now do the same."
+enc_armed_militias:0 "Militiass"
+enc_armed_militias_desc:0 "Early Americans survived in the wilderness by forming citizen militias to defend their nation.  Let's do the same."
 
 enc_advanced_loadouts:0 "Advanced Loadouts"
 enc_advanced_loadouts_desc:0 "'If you shoot at someone and they come screaming, it's a raider.  If you shoot and they respond with lasers, they're the Brotherhood.  If there's silence for 5 minutes and then a bombing run, it's the Enclave.'-NCR Army Joke"
@@ -101,7 +115,7 @@ enc_advanced_loadouts_desc:0 "'If you shoot at someone and they come screaming, 
 enc_advanced_training:0 "Specialist training"
 enc_advanced_training_desc:0 "As heirs to the military industrial complex, we can train men far above the rabble of the Legion or the NCR."
 enc_american_minutemen:0 "American Minutemen"
-enc_american_minutemen_desc:0 "These men ensure that no one's settlement is under attack"
+enc_american_minutemen_desc:0 "These men ensure that no one's settlement is under attack!"
 enc_arms_development:0 "Arms Development"
 enc_arms_development_desc:0 "Working together, the military and industry can collaborate to promote a better society for all! We're thinking of calling it the military industrial collaboration... Or soomething."
 enc_army_reserves:0 "Army Reserves"
@@ -247,9 +261,8 @@ enc_reno_salvatores:0 "Old Allies"
 enc_reno_salvatores_desc:0 "The Salvatores still remember our last time in New Reno.  It might be worth cutting a deal with them again."
 enc_reno_end:0 "The New Capital"
 enc_reno_end_desc:0 "We've broken the backs of the scum that run New Reno.  Look how much happier everyone is with Enclave soldiers patrolling the streets. No one complains, not even in private."
-
 enc_radio_civilian_music:0 "Old World Blues"
-enc_radio_civilian_music_desc:0 "'Country roads, take me home, to the place I belong...' Broadcasting songs of a bygone era can drive support for our cause and what we represent."
+enc_radio_civilian_music_desc:0 "'Country roads, take me home, to the place I belong...' Broadcasting songs of a bygone era can drive support for our cause and make people ignore crippling flaws."
 
 enc_federal_reserve:0 "Revive The Federal Reserve"
 enc_federal_reserve_desc:0 "The Reunited States is strong enough to pursue something unheard of since the Great War... a monetary policy."
@@ -264,16 +277,16 @@ enc_US_dollar:0 "Mandate the US Dollar"
 enc_US_dollar_desc:0 "If we forced people to adopt the US Dollar instead of the NCR Dollar, we could impoverish the elite overnight and purchase their assets with the new currency."
 
 enc_radio_military:0 "Prioritize Military Channels"
-enc_radio_military_desc:0 "TODO"
+enc_radio_military_desc:0 "We should use our advanced technology for military applications and manipulating the NCR."
 
 enc_radio_civilian:0 "Old World Radio"
-enc_radio_civilian_desc:0 "TODO"
+enc_radio_civilian_desc:0 "Enclave Radio can broadcast songs to trade on nostalgia for a better older America and ignoring our shortcomings."
 
 enc_raise_encryption_standards:0 "Increase Encryption Standards"
-enc_raise_encryption_standards_desc:0 "TODO"
+enc_raise_encryption_standards_desc:0 "Instead of playing country music, we can use our processing power to make our codes unbreakable."
 
 enc_geck:0 "The GECK Project"
-enc_geck_desc:0 "The Garden of Eden Creation Kit was designed to help revive the Wastes after a nuclear war.  The Reunited States can use this technology on a national level to restore America's ancient glories."
+enc_geck_desc:0 "The Garden of Eden Creation Kit was designed to help revive the Wastes after a nuclear war.  The Reunited States can use this technology on a national level to turn the Deadwood forests into Redwood forests once again."
 
 enc_accept_ghouls:0 "Accept Ghouls"
 enc_accept_ghouls_desc:0 "But some of them are old enough to remember when America was a country and not a Wasteland."
@@ -306,11 +319,11 @@ enc_department_of_education_military_desc:0 "We can implement paramilitary train
 enc_department_of_education_civilian:0 "Civilian Education"
 enc_department_of_education_civilian_desc:0 "TODO"
 
-enc_radio_civilian_music_new: "New World Tunes"
-enc_radio_civilian_music_new_desc:0 "TODO"
+enc_radio_civilian_music_new: "New World Hopes
+enc_radio_civilian_music_new_desc:0 "It's time to help people look forward to a better, brighter tomorrow.  Today!"
 
 enc_free_of_bottlecaps:0 "Free of Bottlecaps!"
-enc_accept_bottlecaps_desc:0 "It's a testament to our economic prowess that commerce no longer relies on bottlecaps."
+enc_free_of_bottlecaps_desc:0 "It's a testament to our economic prowess that commerce no longer relies on bottlecaps."
 
 enc_power_to_the_people:0 "Power to The People"
 enc_power_to_the_people_desc:0 "As the citizens of the waste turn on refrigerators and televisions, know that war never changes-- but peace just might."
@@ -481,6 +494,7 @@ enc_ss_ceasar_top_augustus:0 "Operation Augustus"
 enc_ss_ceasar_top_augustus_desc:0 "Thumbs down you son of a bitch.  Let's kill Caesar and profit from the aftermath."
 
 enc_operation_babylon:0 "Operation Babylon"
+enc_operation_babylon_desc:0 "The NCR mocks prewar America, claiming to stand for liberty and progress even as its mired in corruption.  By attacking its weak points we can knock the whole thing over."
 enc_the_barons:0 "The Barons"
 enc_secret_dealings:0 "Secret Dealings"
 enc_operation_carnaval:0 "Operation Carnaval"

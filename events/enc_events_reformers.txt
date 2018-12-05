@@ -13,11 +13,13 @@ country_event = {#1 - DOUGLAS PAST - STORIES
 	option = {# He aided the Chosen One and after the Oil Rig Destruction went their seperate ways
 		name = enc_reformers.1.a
 		country_event = { id = enc_reformers.2 }
+		set_country_flag = enc_arroyo
 
 	}
 	option = {#  He aided the Chosen One and after he settled in Arroyo where he met and married a local woman 
 		name = enc_reformers.1.b
 		country_event = { id = enc_reformers.2 }
+		set_country_flag = enc_arroyo
 	}
 	option = {# He didn't aid the Chosen One 
 		name = enc_reformers.1.c
@@ -56,7 +58,7 @@ country_event = {#3 - DOUGLAS PAST - END
 	id = enc_reformers.3
 	title = enc_reformers.3.t
 	desc = enc_reformers.3.d
-	picture = event_ENC_plasma_rifle
+	picture = GFX_event_ENC_plasma_rifle
 	
 	fire_only_once = yes	
     is_triggered_only = yes
@@ -1375,7 +1377,7 @@ country_event = {#71 - Freedom Rings
 	id = enc_reformers.71
 	title = enc_reformers.71.t
 	desc = enc_reformers.71.d
-	picture = GFX_event_enc_linconl_memorial
+	picture = GFX_event_enc_lincoln_memorial
 	fire_only_once = yes	
 	is_triggered_only = yes	
 	option = {# Extend Presidential Powers
@@ -1408,24 +1410,27 @@ country_event = {#74 - Civil War
 	fire_only_once = yes
 	option = {#	Oops
 		name = enc_reformers.74.a
-		add_political_power = 150
+		hidden_effect = {
 		set_global_flag = pro_enclave_NCR
+		NCR = { set_politics = { ruling_party = intellectuals}
+				set_cosmetic_tag = NCR_ERB }
 		NCR = {
 			set_variable = {
 				var = civil_war_size_var
-				value = party_popularity @intellectuals
+				value = party_popularity@people
 			}
 		}
 		NCR = {
-			divide_variable = {
-				civil_war_size_var = 2
+			multiply_variable = {
+				civil_war_size_var = 4.5
 			}
 		}
 		NCR = {
 			start_civil_war = {
-				ideology = intellectuals
+				ideology = people
 				size = civil_war_size_var
 			}
+		}
 		}
 		country_event = {
 			id = enc_reformers.75
@@ -1446,31 +1451,42 @@ country_event = {#75 - Civil War
 				is_in_faction = no
 			}
 			create_faction = "The Enclave"
-			add_to_faction = D01
+			NCR = { 
+				if = { 
+					limit = { is_in_faction = yes } 
+					leave_faction = yes 	
+				}
+				}
+			add_to_faction = NCR
+			}
 		}
 		else_if = {
 			limit = {
 				is_in_faction = yes
 			}
-			add_to_faction = D01
-		}
+			NCR = { 
+				if = { 
+					limit = { is_in_faction = yes } 
+					leave_faction = yes 	
+				}
+				}
+			add_to_faction = NCR
+			}
 		add_to_war = {
-			targeted_alliance = D01
-			enemy = NCR
+			targeted_alliance = NCR
+			enemy = D01
 			hostility_reason = asked_to_join
 		}
 	}
-}
 
 country_event = {#76 - Reunited States
 	id = enc_reformers.76
 	title = enc_reformers.76.t
 	desc = enc_reformers.76.d
 	picture = GFX_event_ENC_double_flag_long
-
 	fire_only_once = yes
 	trigger = {
-		has_country_flag = pro_enclave_NCR
+		has_global_flag = pro_enclave_NCR
 		NCR = {
 			has_civil_war = No
 		}
@@ -1481,7 +1497,7 @@ country_event = {#76 - Reunited States
 			tooltip = half_legitimacy
 			check_variable = {
 				var = legitimacy
-				value > 0.07
+				value > 0.70
 			}
 		}
 	}
@@ -1702,29 +1718,15 @@ country_event = {#85 - Shi
 		name = enc_reformers.85.b
 		add_war_support = -0.05
 		add_stability = -0.05
-		if = {
-			limit = {
-				SHI = {
-					is_in_faction = yes
+		SHI = {
+					set_politics = {
+						ruling_party = people
+						elections_allowed = no
+					}
 				}
-			}
-			SHI = {
-				leave_faction = yes
-			}
-		}
-		if = {
-			limit = {
-				is_in_faction = no
-			}
-			create_faction = "The Enclave"
-			add_to_faction = SHI
-		}
-		else_if = {
-			limit = {
-				is_in_faction = yes
-			}
-			add_to_faction = SHI
-		}
+		puppet = SHI
+		SHI = { transfer_state = 474 }
+		SHI = { set_cosmetic_tag = ERB_SHI }
 	}
 }
 country_event = {#86 - Bomb Bay
@@ -1945,8 +1947,8 @@ country_event = {#95 Thanksgiving
 	mean_time_to_happen = {	days = 3 }
 	trigger = {	
 		has_completed_focus = enc_reform
-		date > 2078.10.30
-		date < 2078.11.28
+		date > 2278.10.30
+		date < 2278.11.28
 	}	    
     option = {# Loved Ones!
 		name = enc_reformers.95.a
@@ -1976,8 +1978,8 @@ country_event = {#96 4th of July
 	mean_time_to_happen = {	days = 3 }
 	trigger = {	
 		has_completed_focus = enc_reform
-		date > 2076.06.04
-		date < 2076.07.03
+		date > 2276.06.04
+		date < 2276.07.03
 	}	    
     option = {# Founding Enclave
 		name = enc_reformers.96.a
@@ -2028,8 +2030,80 @@ country_event = {#73 Forgotten Man
 	}
 }
 
-  
+country_event = {#100 Christmas
+    id = enc_reformers.100
+    title = enc_reformers.100.t
+    desc = enc_reformers.100.d
+    picture = GFX_event_enc_christmas
+    fire_only_once = yes    
+    is_triggered_only = no
+	mean_time_to_happen = {	days = 3 }
+	trigger = {	
+		has_completed_focus = enc_reform
+		date > 2280.11.30
+		date < 2281.01.01
+	}	    
+    option = {# Loved Ones!
+		name = enc_reformers.100.a
+		add_stability = 0.05
+		hidden_effect = { sound_effect = ERB_Christmas }
+		custom_effect_tooltip = enc_reformers.100.a.tt
+	}
+	
+}
 
+country_event = {#101 Axis of Evil
+    id = enc_reformers.101
+    title = enc_reformers.101.t
+    desc = enc_reformers.101.d
+    picture = GFX_event_enc_christmas
+    fire_only_once = yes    
+    is_triggered_only = no
+	mean_time_to_happen = {	days = 3 }
+	trigger = {	
+		original_tag = ERB
+		has_completed_focus = enc_reform
+		NOT = {
+			country_exists = NCR
+		}
+		is_neighbor_of = CES
+		
+	}	    
+    option = {# Bringit
+		name = enc_reformers.101.a
+			WBH = { 
+				if = { 
+					limit = { is_in_faction = yes } 
+					leave_faction = yes 	
+				}
+				}
+		CES = { 
+			add_to_faction = WBH
+			add_to_faction = EHT
+			add_to_faction = CHE
+			}
+		set_country_flag = axis_of_evil
+	custom_effect_tooltip = enc_reformers.101.a.tt
+}
+}
+
+country_event = {#102 Hope
+    id = enc_reformers.102
+    title = enc_reformers.102.t
+    desc = enc_reformers.102.d
+    picture = GFX_event_enc_lincoln_memorial
+    fire_only_once = yes    
+    is_triggered_only = no
+	mean_time_to_happen = {	days = 3 }
+	trigger = {	
+	has_country_flag = axis_of_evil
+	has_country_flag = enc_arroyo	
+	}	    
+    option = {# Bringit
+		name = enc_reformers.102.a
+		
+}
+}
 	
 # integration
 #

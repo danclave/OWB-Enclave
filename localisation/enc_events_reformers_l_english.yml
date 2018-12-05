@@ -2,10 +2,10 @@
 
 breaklines:0 "----\n"
 ################################## EVENTS ##############################################
-enc_reformers.1.t:0 "Douglas' Father"
-enc_reformers.1.d:0 "There is controversy regarding Granite’s Father and his relation to the Chosen One. The Purists accuse Granite’s Father of treason for aiding the Chosen One and destroying the Oil Rig, however there is no evidence proving these claims. Granite however is curious about these allegations and takes it upon himself to ask his retired father about whether these claims are true or not. Regardless whether it is true or not, Granite will say that those claims are nothing but slander from rivals. ."
-enc_reformers.1.a:0 "He aided the Chosen One and then went their seperate ways."
-enc_reformers.1.b:0 "He aided the Chosen One and settled in Arroyo where he met and married a local woman ."
+enc_reformers.1.t:0 "Sins of the Father"
+enc_reformers.1.d:0 "Rumors swirl around Granite's father and his relationship to the Chosen One. The Purists accuse Granite’s father of treason for aiding the Chosen One and destroying the Oil Rig, but lack any evidence.  Granite however is curious about these allegations and takes it upon himself to ask his retired father about whether these claims are true or not. Regardless whether it is true or not, Granite will say that those claims are nothing but fake news."
+enc_reformers.1.a:0 "He aided the Chosen One and then went their separate ways."
+enc_reformers.1.b:0 "Speaking of the Chosen One, let me tell you who your mother was..."
 enc_reformers.1.c:0 "He didn't aid the Chosen One."
 #########################################################################################
 enc_reformers.2.t:0 "Douglas' first contact"
@@ -19,10 +19,10 @@ enc_reformers.3.d:0 "When Douglas arrived with his team, the situation of the de
 enc_reformers.3.a:0 "Help take down the raiders"
 enc_reformers.3.a.tt: "This will give us a connection with this faction."
 enc_reformers.3.b:0 "Wipe them out lest they reveal the Enclave's survival."
-enc_reformers.3.tt:0 "Douglas Granite is a practical man. ."
+enc_reformers.3.tt:0 "Douglas Granite is a practical man."
 #########################################################################################
 enc_reformers.4.t:0 "Dealing with Wrights"
-enc_reformers.4.d:0 "Some say that the Wright family has spent the last few decades building with one hand and destroying with the other, but compared to the other families this makes them almost redeemable. Mr.. Wright's vision of a more peaceful and stable New Reno is not entirely incompatible with out own..."
+enc_reformers.4.d:0 "Some say that the Wright family has spent the last few decades building with one hand and destroying with the other, but compared to the other families this makes them almost redeemable. Mr. Wright's vision of a more peaceful and stable New Reno is not entirely incompatible with out own..."
 enc_reformers.4.a:0 "Allow him go legit."
 enc_reformers.4.b:0 "There is no place for his kind here."
 ########################################################################################
@@ -32,7 +32,7 @@ enc_reformers.5.a:0 "Focus on capturing their assets."
 enc_reformers.5.b:0 "Focus on apprehending the leader."
 ########################################################################################
 enc_reformers.6.t:0 "Dealing with Salvatores"
-enc_reformers.6.d:0 "The Salvatores have been useful to the Enclave in the past, willing to deal with us in order to expand their own influence in New Reno. Perhaps they can be useful once again. A puppet ruling New Reno in our name could help make the situation in the city less suspicious to any outside observers.\n\nMr. Salvatores old smuggling connections may also prove a valuable resource to us, should we decide to keep him alive."
+enc_reformers.6.d:0 "The Salvatores have been useful to the Enclave in the past, dealing with us in order to expand their own influence in New Reno. Perhaps they can be useful once again. A puppet ruling New Reno in our name could help make the situation in the city less suspicious to any outside observers.\n\nMr. Salvatores old smuggling connections may also prove a valuable resource to us, should we decide to keep him alive."
 enc_reformers.6.a:0 "He can rule as a puppet."
 enc_reformers.6.b:0 "He can live under house arrest."
 enc_reformers.6.c:0 "We rule in New Reno now."
@@ -81,7 +81,7 @@ enc_reformers.14.e: "You are out of friends, Anderson."
 enc_reformers.14.e.tt: "Available because you have completed both §YPurge The Officers§! and §YPurge The Scientists§!."
 ################################################################################################################ -<
 enc_reformers.15.t: "Legitimacy Tutorial"
-enc_reformers.15.d: "For the first time in centuries, our authority has extended beyond core Enclave members. Considering our previous interactions with these newfound citizens could easily be misinterpreted as 'attempted genocide', proving ourselfs to be a legitimate government will take time and effort.\n\nCertain choices we make will increase or decrease our legitimacy. Higher legitimacy comes with bonuses to our rule and allows for new choices in our focus tree."
+enc_reformers.15.d: "For the first time in centuries, our authority has extended beyond core Enclave members. Considering our previous interactions with these newfound citizens could easily be misinterpreted as 'attempted genocide', proving ourselves the elgitimate government will take time and effort.\n\nCertain choices we make will increase or decrease our legitimacy. Higher legitimacy comes with bonuses to our rule and allows for new choices in our focus tree."
 enc_reformers.15.a: "I'll keep that in mind."
 ################################################################################################################ -<
 enc_reformers.16.t: "Assassination attempt!"
@@ -265,7 +265,7 @@ enc_reformers.71.d: "Standing before the podium as the first freely chosen presi
 enc_reformers.71.a: "God Bless America!"
 ################################################################################################################ 
 enc_reformers.72.t: "The Iron President"
-enc_reformers.72.d: "Douglas did his best.  But this wasn't the fat and happy world of prewar America.  He had to guide his nation through a nuclear wasteland.  He had no time to listen to whining barons from California, councillors from Vault City, or ministers from New Canaan.  Only blood and iron would save America.  But without liberty, Douglas was sifting through the dust, the ruins.... the shell of America, dead forever."
+enc_reformers.72.d: "Douglas did his best.  But this wasn't the fat and happy world of prewar America.  He had to guide his nation through a nuclear wasteland.  He had no time to listen to whining barons from California, councillors from Vault City, or ministers from New Canaan.  Only blood and iron would save America.  But without liberty, Douglas was sifting through the shell of dead America, one more victim of Old World Blues."
 enc_reformers.72.a: "God Bless the Enclave!"
 ################################################################################################################ 
 enc_reformers.73.t: "The Forgotten Men and Women"
@@ -370,15 +370,25 @@ enc_reformers.95.b: "The Enclave, for protecting friends and family"
 enc_reformers.95.c: "Low, low prices from the Crimson Caravan!"
 ################################################################################################################
 enc_reformers.96.t: "The Fourth of July!"
-enc_reformers.96.d: "America's five hundredth anniversary is approaching, and it stinks.  The land is scoured by mutants and raiders, and the Enclave, America's last great hope, is a shadow of its former self.  But President Granite has ordered a celebration for the Fourth of July anyway, reminding people that Americans have faced tough times before.  Who can forget:
-enc_reformers.96.a: "The Founding Fathers bid for independence"
-enc_reformers.96.b: "The Enclave's Founders preparation for the Great War"
+enc_reformers.96.d: "America's five hundredth anniversary is approaching, and it stinks.  The land is scoured by mutants and raiders, and the Enclave, America's last great hope, is a shadow of its former self.  But President Granite prepares to celebrate the Fourth of July anyway, reminding the citizens under the provisional government that:"  
+enc_reformers.96.a: "The Enclave will always fight a better world!"
+enc_reformers.96.b: "Americans will always fight for freedom!"
 ################################################################################################################
 enc_reformers.99.t: "Area 51"
 enc_reformers.99.d: "With Area 51 under our control, Enclave scientists are sifting through reams of prewar data.  It appears that the Prewar United States was monitored by vast intellicts cool and unsympathetic, and their technology was studied by the military.  We could pick this research up, but there may be consequences... "
 enc_reformers.99.a: "Let us press every button we can find."
 ################################################################################################################
+enc_reformers.100.t: "Happy Holidays!"
+enc_reformers.100.d: "The prewar carol fades as President Granite comes on the radio.  'My fellow Americans, we've been through a lot the last few years.  But I think we've remembered, for the first time in a long time, what binds us together instead of what blows us apart.  Whether we light a menorah, go to church, or worship an unexploded nuclear bomb, we all base our faith in love.  So for the new year, let's resolve to give of ourselves.  To be our brother’s keeper.  To be our sister’s keeper.  To be excellent to each other.  And if you do worship an unexploded nuclear bomb, please give it to us.'"
+enc_reformers.100.a:  "EDE, Play Christmas Roads"
+enc_reformers.100.a.tt: "Please make sure your sound is on and your music is off, and have a happy holiday, unless you like the Legion."
+################################################################################################################
+enc_reformers.101.t: "A World of Tyranny and Serfdom."
+enc_reformers.101.d: "With the fall of the New California Republic, America's cause seems brighter than it has in two hundred years.  But there are those opposed to the belief that all men are created equal.  Caesar and the Brotherhood, guided by unholy contempt for the human race, have formed an alliance against us.  They know that if left unchecked, the REunited States will save this country.  And so they've asked for war."
+enc_reformers.101.a:  "And they're going to get it."
+enc_reformers.101.a.tt: "Careful! In six months, the enemies of America will ally against you!"
+################################################################################################################
+enc_reformers.102.t: "These United States"
+enc_reformers.102.d: "The Chosen One heard the drums of war, and realized they had one last quest.  Donning their ancient vault suit, they flew to New Reno on a vertibird.  They stood before Congress, their voice creaking as they spoke into the microphone.  'War, war never changes.  But a people can change, based on the roads they walk. The Enclave, I think is dead.  But America is waking up.  Not the America of old, with FEV and vaults.  But something larger than the tribes of the East, something larger than the houses of the West. Something better.  America isn't powered armor and plasma guns.  It's the ranger leading slaves to freedom.  It's the tribal looking for his sister.  It's the scavenger looking for his big score. It's the Vault Dweller who steps into the light. It is us.'"
+enc_reformers.102.a:  "I forgot that the Chosen One had a high charisma."
 
-enc_reformers.100.t: "The NCR Signs On to the Allied States of America"
-enc_reformers.100.d: "The vote in Shady Sands was close, but with the threat of Caesar approaching, they have decided to stand with us. We stand together for progress and order in America."
-enc_reformers.100.a: "Out of many, some"

@@ -349,7 +349,6 @@ enc_compromises_desc: "TODO"
 
 enc_assassinate_F:0 "Assassinate Dr. Anderson"
 
-enc_foreign_policy:0 "Foreign Policy"
 enc_send_diplomats:0 "Send out Diplomats"
 enc_no_diplomats:0 "Claim Sole Legitimacy"
 

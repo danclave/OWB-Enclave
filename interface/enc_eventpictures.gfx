@@ -148,8 +148,8 @@ spriteTypes = {
 			texturefile = "gfx/event_pictures/event_enc_washington_monument.dds"
 		}
 		SpriteType = {#event_Washington_Monument
-			name = "GFX_event_enc_linconl_memorial"
-			texturefile = "gfx/event_pictures/event_enc_linconl_memorial.dds"
+			name = "GFX_event_enc_lincoln_memorial"
+			texturefile = "gfx/event_pictures/event_enc_lincoln_memorial.dds"
 		}
 		SpriteType = {#event_Mothership Zeta
 			name = "event_enc_Recon_Craft_Theta"
@@ -254,6 +254,10 @@ spriteTypes = {
 		SpriteType = {#legitimacy tutorial
 			name = "GFX_event_enc_legitimacy_tutorial"
 			texturefile = "gfx/event_pictures/event_enc_legitimacy_tutorial.tga"
+		}
+		SpriteType = {#Christmas
+			name = "GFX_event_enc_christmas"
+			texturefile = "gfx/event_pictures/event_enc_Christmas.tga"
 		}
 }			
 

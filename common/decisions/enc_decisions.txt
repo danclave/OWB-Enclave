@@ -998,7 +998,11 @@ ENC_political_infighting = {
 			}
 		}
 		complete_effect = {
-			set_variable = { var = legitimacy value = 5}
+			set_temp_variable = {
+			var = legitimacy_change_var
+			value = 0.05
+			}
+			change_legitimacy = yes
 			if = {
 				limit = {
 					has_completed_focus = enc_reform					

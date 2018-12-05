@@ -113,6 +113,19 @@ soundeffect =
 	playbackrate_random_offset = { 0.0 -0.15}
 }
 
+soundeffect = 
+{
+    name = "ERB_Christmas"
+    sounds = {
+        sound = ERB_Christmas1
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.6
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
 ############## AUDIO ASSETS
 
 
@@ -254,4 +267,10 @@ sound =
 {
 	name = "ERB_Move_07"
 	file = "ERB/ERB_Move_07.wav"
+}
+
+sound = 
+{
+	name = "ERB_Christmas1"
+	file = "ERB/ERB_Christmas.wav"
 }
