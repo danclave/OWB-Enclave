@@ -655,7 +655,7 @@ focus_tree = {
 	}
 	focus = {#RADIO - crack_the_code 2
 		id = enc_the_lucia_incident
-		icon = GFX_goal_enc_crack_the_code
+		icon = GFX_goal_NCR_Diplomacy
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_crack_the_code
 		x = -1
@@ -667,8 +667,8 @@ focus_tree = {
 		cost = 5.8  	
 	}
 	focus = {#RADIO - crack_the_code 3 
-		id = enc_the_bishop_incident
-		icon = GFX_goal_enc_crack_the_code
+		id = enc_the_bishop_incident 
+		icon = GFX_goal_NCR_Ranger_Core
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_crack_the_code
 		x = 1
@@ -3076,9 +3076,9 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 			}
 		}
 	}
-	focus = {#Military - staff - enc_officers_by_merit_and_skill
+	focus = {#Military - staff - skill
 		id = enc_officers_by_merit_and_skill
-		icon = GFX_goal_enc_integrate_officers
+		icon = GFX_goal_enc_officers_by_merit_and_skill
 		ai_will_do = { factor = 1 }
 		prerequisite = { 
 			focus = enc_old_remnant_officers
@@ -3094,9 +3094,9 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 			add_stability = -0.05
 		}
 	}
-	focus = {#Military - staff - old remnant officers
+	focus = {#Military - staff - loyalty
 		id = enc_officers_by_loyalty_and_devotion
-		icon = GFX_goal_enc_integrate_officers
+		icon = GFX_goal_enc_officers_by_loyalty_and_devotion
 		ai_will_do = { factor = 1 }
 		prerequisite = { 
 			focus = enc_old_remnant_officers

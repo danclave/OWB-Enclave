@@ -311,6 +311,14 @@ spriteTypes = {
             name = "GFX_goal_enc_normalization"
  		    texturefile = "gfx/interface/goals/enc_normalization.dds"
  	    } 
+        SpriteType = {#enc_officers_by_loyalty_and_devotion
+            name = "GFX_goal_enc_officers_by_loyalty_and_devotion"
+ 		    texturefile = "gfx/interface/goals/enc_officers_by_loyalty_and_devotion.dds"
+ 	    } 
+        SpriteType = {#enc_officers_by_merit_and_skill
+            name = "GFX_goal_enc_officers_by_merit_and_skill"
+ 		    texturefile = "gfx/interface/goals/enc_officers_by_merit_and_skill.dds"
+ 	    } 
         SpriteType = {#enc_old_remnant_officers
             name = "GFX_goal_enc_old_remnant_officers"
  		    texturefile = "gfx/interface/goals/enc_old_remnant_officers.dds"
@@ -703,10 +711,6 @@ spriteTypes = {
             name = "GFX_goal_vault_tec"
  		    texturefile = "gfx/interface/goals/vault_tec.dds"
  	    }
-        SpriteType = {#arcade_gannon
-            name = "GFX_idea_arcade_gannon"
- 		    texturefile = "gfx/interface/ideas/arcade_gannon.dds"
- 	    } 
         SpriteType = {#boris_t
             name = "GFX_idea_boris_t"
  		    texturefile = "gfx/interface/ideas/boris_t.dds"
