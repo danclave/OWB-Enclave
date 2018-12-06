@@ -319,7 +319,7 @@ enc_department_of_education_military_desc:0 "We can implement paramilitary train
 enc_department_of_education_civilian:0 "Civilian Education"
 enc_department_of_education_civilian_desc:0 "TODO"
 
-enc_radio_civilian_music_new: "New World Hopes
+enc_radio_civilian_music_new: "New World Hopes"
 enc_radio_civilian_music_new_desc:0 "It's time to help people look forward to a better, brighter tomorrow.  Today!"
 
 enc_free_of_bottlecaps:0 "Free of Bottlecaps!"
@@ -353,7 +353,7 @@ enc_stage_raider_attacks:0 "Stage Raider Attacks"
 enc_stage_raider_attacks_desc:0 "TODO"
 enc_stage_raider_attacks_tt: "Unlocks the §YArm Raider Gangs§! decision.\nThis allows you to send 300 £enc_weapons §YInfantry Equipment§! to any §YRaider§! faction bordering the §Y[NCR.GetName]§! to reduce §YNCR suspicion§! by §G20§! £pol_power."
 
-
+enc_foreign_policy: "Foreign Policy"
 enc_foreign_policy_tt: "Unlocks the §YReveal Ourselves to the NCR§! decision.\nThis allows you to reveal yourself to the §Y[NCR.GetName]§! under the right circumstances, removing the need to hide from them."
 
 enc_call_ncr_favors:0 "Call In Favors"
@@ -608,7 +608,7 @@ enc_rebuild_the_power_grid_ttt: "\n\n§MCurrently simplified:§!\nUnlocks OWB co
 
 enc_debug_tt: "electricity: [?resource@electricity]"
 
-more_than_2_electricity: "- More than 2 §YElecticity§! available (§Y[?resource@electricity]§!)"
+more_than_2_electricity: "[ROOT.GetName] MMore than 2 §YElecticity§! available (§[?resource@electricity]§!) [ROOT.GetName]"
 enc_seperate_but_equal:  "Service Guarantees Citizenship"
 enc_segregation_forever:  "Segregation Forever"
 enc_wastelander_draft:  "Unwilling Volunteers"
@@ -669,7 +669,11 @@ enc_navy_chief_loyalist: "Loyal Reformer"
 ###################################
 connect_to_power: "Connect to Grid"
 connect_to_power_tt: "Connect to Grid"
-connect_to_power_tt_delayed: "Builds a §YCivilian Power Grid§!, costing 2 §YElecticity§! permanently.\nRequires: More than 2 §YElecticity§! available (§Y[?resource@electricity]§!)"
+connect_to_power_tt_delayed: "[!connect_to_power_click]" 
+
+connect_to_power_ttt: "[!connect_to_power_click_enabled]" 
+#"Costs 2 §YElecticity§! to maintain.\nRequires:\n - More than 2 §YElecticity§! (§Y[?resource@electricity]§!)\n - State must border a cored state.\n - State have a free building slot"
+
 civilian_power_grid: "Civilian Power Grid"
 civilian_power_grid_desc: "Allows a state to be §GCored§!"
 

@@ -9,9 +9,9 @@ guiTypes = {
 		
 		buttonType = {
 			name = connect_to_power
-			spriteType = GFX_icons_power
+			spriteType = GFX_icons_power 
 			pdx_tooltip = connect_to_power_tt 
-			pdx_tooltip_delayed = connect_to_power_tt_delayed
+			pdx_tooltip_delayed = connect_to_power_tt_delayed 
 			scale = 1.2 
 		}
 	}

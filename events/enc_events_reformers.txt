@@ -1070,32 +1070,43 @@ country_event = {#39 - loyalists want to rejoin
 	}
 }
 
-country_event = {#50 - Seek Allies
-	id = enc_reformers.50
-	title = enc_reformers.50.t
-	desc = enc_reformers.50.d
-	picture = GFX_event_ENC_new_reno_2
-	
-	fire_only_once = yes	
-    is_triggered_only = yes
-	
-	option = {#Allow him to go legit
-		name = enc_reformers.4.a
-		add_stability = 0.05
-		set_country_flag = enc_wrights_tolerated_flag
-	}
-	option = {#No place for him
-		name = enc_reformers.4.b
-		add_political_power = 50
-		285 = { # New Reno
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = arms_factory
-				level = 3
-				instant_build = yes
-			}
+country_event = {#40 - powered province!
+	id = enc_reformers.40
+	title = enc_reformers.40.t
+	desc = enc_reformers.40.d
+	picture = GFX_event_enc_power_grid
+	fire_only_once = no	
+	is_triggered_only = no
+	trigger = {
+		original_tag = ERB
+		any_owned_state = {
+			NOT = { is_core_of = ERB }
+			civilian_power_grid > 0
 		}
 	}
+	option = {# get cores
+		name = enc_reformers.40.a
+		every_owned_state = {
+			limit = {
+				civilian_power_grid > 0
+				NOT = { is_core_of = ERB }
+			}
+			add_core_of = ROOT
+		}
+	}	
+}
+
+country_event = {#41 - power tutorial
+	id = enc_reformers.41
+	title = enc_reformers.41.t
+	desc = enc_reformers.41.d
+	picture = GFX_event_enc_power_grid_tutorial
+	fire_only_once = no	
+	is_triggered_only = yes
+	option = {# get cores
+		name = enc_reformers.41.a
+		add_political_power = 5
+	}	
 }
 
 country_event = {#60 - From the Top Down
@@ -1667,8 +1678,8 @@ country_event = {#84 - Unpowered province!
 	id = enc_reformers.84
 	title = enc_reformers.84.t
 	desc = enc_reformers.84.d
-	picture = GFX_event_enc_suspend_elections
-	fire_only_once = yes	
+	picture = GFX_event_enc_power_grid
+	fire_only_once = no	
 	is_triggered_only = no
 	trigger = {
 		original_tag = ERB
@@ -1678,7 +1689,7 @@ country_event = {#84 - Unpowered province!
 			civilian_power_grid < 1
 		}
 	}
-	option = {# Extend Presidential Powers
+	option = {# Oh well
 		name = enc_reformers.84.a
 		every_owned_state = {
 			limit = {

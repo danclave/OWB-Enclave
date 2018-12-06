@@ -215,6 +215,14 @@ enc_reformers.39.a: "The prodigal sons have returned."
 enc_reformers.39.a.tt: "1 §YEnclave Veterans§! and 2 §YVeteran Auxiliaries§! appear in §YSierra Army Depot§! state."
 enc_reformers.39.b: "Enclave? No Enclave here."
 ################################################################################################################ -<
+enc_reformers.40.t: "Province connected to our grid!"
+enc_reformers.40.d: "We have finished constructing a power grid in a state. It took a little longer for it too catch on, but before long many of the civilian centers have connected themselves to our grid. Bringing themselves literally and metaphorically in our power."
+enc_reformers.40.a: "And Eden said: 'let there be light!'"
+################################################################################################################ -<
+enc_reformers.41.t: "Our power grid is ready!"
+enc_reformers.41.d: "We are ready to begin connecting states to our power grid.\n From now on, we can connect any state neighbouring to a core state to our grid by constructing a civilian power grid.\nOnce built, we will gain a core on that state after a few days.\nShould we lose the building, we will soon lose the core.\nKeep in mind that every power grid requires 2 power to maintain."
+enc_reformers.41.a: "And Eden said: 'let there be light!'"
+################################################################################################################ -<
 enc_reformers.60.t: "The Ides of March"
 enc_reformers.60.d: "The Legion is a formidable foe, but not all within its ranks tolerate Caesar's rule.  Legate Lanius, the 'Monster of the East', thinks he could turn the Legion into a ruthless military machine. Perhaps he could be a useful ally to our bid to unite America...."
 enc_reformers.60.a: "He may be a son of a bitch but he'll be our son of a bitch."
@@ -316,6 +324,10 @@ enc_reformers.83.d: "The Reunited States must choose a national anthem.  Some sa
 enc_reformers.83.a: "The Star Spangled Banner Yet waves"
 enc_reformers.83.b: "We rally once again, shouting the Battle Cry of Freedom"
 enc_reformers.83.c: "The Enclave can learn from RuPaul."
+################################################################################################################
+enc_reformers.84.t: "Power Outages!"
+enc_reformers.84.d: "It appears one or more of our states has lost connection to our power grid. Both the lives of the inhabitants and our control of the region have grown dependent on electricy and without it, we lose our grasp on them."
+enc_reformers.84.a: "Power will be restored at our earliest convenience"
 ################################################################################################################
 enc_reformers.85.t: "The Chinese Menace!"
 enc_reformers.85.d: "San Francisco was one of the greatest cities of Prewar America, a center of tech and a window to the world.  But now it's occupied by the Shi, a Chinese beachhead on American soil! Some say we must drive them into the ocean.  Others, mindful of Camp Turtledove and other prewar mistakes, suggest we give the city autonomy and welcome the Shi into the Reunited States."

@@ -259,5 +259,13 @@ spriteTypes = {
 			name = "GFX_event_enc_christmas"
 			texturefile = "gfx/event_pictures/event_enc_Christmas.tga"
 		}
+		SpriteType = {#power_grid
+			name = "GFX_event_enc_power_grid"
+			texturefile = "gfx/event_pictures/event_enc_power_grid.tga"
+		}
+		SpriteType = {#power_grid_tutorial
+			name = "GFX_event_enc_power_grid_tutorial"
+			texturefile = "gfx/event_pictures/event_enc_power_grid_tutorial.tga"
+		}
 }			
 
