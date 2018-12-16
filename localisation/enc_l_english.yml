@@ -383,13 +383,6 @@ enc_depot_plasma_desc: "By focusing our efforts on Energy Weapon Production, we 
 enc_hang_all_raiders: "Hang All Raiders"
 enc_rehabilitate_raiders: "Rehabilitate Raiders"
 
-enc_support_old_world_party:0 "Support Old World Party"
-enc_support_old_world_party_desc:0 "TODO"
-enc_support_armed_coup:0 "Support Armed Coup"
-enc_support_armed_coup_desc:0 "TODO"
-enc_electoral_victory:0 "Electoral Victory"
-enc_electoral_victory_desc:0 "TODO"
-
 
 ################################## OPINIONS&traits&flags  ##############################################################################################################################
 

@@ -53,6 +53,33 @@ ERB_SHI_people:0 "San Fran"
 ERB_SHI_people_DEF:0 "San Fran"
 ERB_SHI_people_ADJ:0 "San Franciscan"
 
+ERB_VEG_ruler:0 "Vegas"
+ERB_VEG_ruler_DEF:0 "Vegas"
+ERB_VEG_ruler_ADJ:0 "San Franciscan"
+ERB_VEG_intellectuals:0 "Vegas"
+ERB_VEG_intellectuals_DEF:0 "Vegas"
+ERB_VEG_intellectuals_ADJ:0 ""San Franciscan"
+ERB_VEG_elites:0 "Vegas"
+ERB_VEG_elites_DEF:0 "San Fran"
+ERB_VEG_elites_ADJ:0 "San Franciscan"
+ERB_VEG_people:0 "Vegas"
+ERB_VEG_people_DEF:0 "Vegas"
+ERB_VEG_people_ADJ:0 "San Franciscan"
+
+SLV_ruler:0 "Slave Revolt"
+SLV_ruler_DEF:0 "Slave Revolt"
+SLV_ruler_ADJ:0 "Slave Revolt"
+SLV_intellectuals:0 "Slave Revolt"
+SLV_intellectuals_DEF:0 "Slave Revolt"
+SLV_intellectuals_ADJ:0 "Slave Revolt"
+SLV_elites:0 "Slave Revolt"
+SLV_elites_DEF:0 "Slave Revolt"
+SLV_elites_ADJ:0 "Slave Revolt"
+SLV_people:0 "Slave Revolt"
+SLV_people_DEF:0 "Slave Revolt"
+SLV_people_ADJ:0 "Slave Revolt"
+
+
 ###################################
 # FOCUS TREE
 ###################################
@@ -64,12 +91,12 @@ enc_radio:0 "Enclave Radio"
 enc_radio_desc:0 "Our radio beacons could be used to broadcast the Enclave's message to the wasteland. Let sympathizers far and wide hear of the Enclaves vision. While we are at it, those same beacons can also be used as listening outposts."
 
 enc_the_lucia_incident: "The Lucia Incident"
-enc_the_lucia_incident_desc: "Control of prewar technology lets us provoke a border influence provoke the NCR against its enemies."
+enc_the_lucia_incident_desc: "We have enough T-51 Powered Armor around that we can fake a Brotherhood attack on NCR Outposts.  Suckers."
 enc_the_lucia_incident_tt: "Unlocks the §YThe Lucia Incident§! decision.\nThis allows you to use your spies to send a fake radio broadcast causing the §Y[BOS.GetName]§! to declare war on the §Y[NCR.GetName]§!."
 
 
 enc_the_bishop_incident: "The Bishop Incident"
-enc_the_bishop_incident_desc: "We could trick the NCR into going to war with its enemies through control of their informatoin systems.DO"
+enc_the_bishop_incident_desc: "We could trick the NCR into going to war with its enemies through espionage."
 enc_the_bishop_incident_tt:0 "Unlocks the §YThe Bishop Incident§! decision.\nThis allows you to use your spies to send a fake radio broadcast causing the §Y[DES.GetName]§! to declare war on the §Y[NCR.GetName]§!."
 
 enc_accept_wastelanders:0 "Accept Wastelander Volunteers"
@@ -234,10 +261,6 @@ enc_the_true_enemy_desc: "The NCR stands for many of our ideals:  Life, liberty,
 enc_reborn:0 "The Reunited States"
 enc_reborn_desc:0 "To quote the classical musical Hamilton, 'We're finally on the field, we've had quite a run, Reform Path, we get the job done.'"
 
-
-###################################
-# REFORM TODO
-###################################
 enc_police:0 "Federal Police"
 enc_police_desc:0 "By implementing a Federal Bureau of Investigations, we can reduce crime across the Wastes and build confidence in the Reunited States."
 
@@ -307,8 +330,8 @@ enc_department_of_education_desc:0 "A staggering amount of our citizens are illi
 enc_department_of_manufacturing:0 "Department of Manufacturing"
 enc_department_of_manufacturing_desc:0 "By creating a department devoted solely to industrial growth, we can revive the American economy."
 
-enc_department_of_justice:0 "Department of Justice"
-enc_department_of_justice:0 "TODO"
+enc_department_of_justice:0 "Judicial Branch"
+enc_department_of_justice:0 "We can reestablish the Judicial Branch as an independent check on the government, protecting American freedoms."
 
 enc_department_of_commerce:0 "Chamber of Commerce"
 enc_department_of_commerce_desc:0 "The Chamber of Commerce can promote trade and economic develop, tying the American economy together."
@@ -317,9 +340,8 @@ enc_department_of_education_military:0 "Military Education"
 enc_department_of_education_military_desc:0 "We can implement paramilitary training in America's schools to prepare for the next war. Wars, if we're honest."
 
 enc_department_of_education_civilian:0 "Civilian Education"
-enc_department_of_education_civilian_desc:0 "TODO"
-
-enc_radio_civilian_music_new: "New World Hopes
+enc_department_of_education_civilian_desc:0 "Schools are not barracks.  American education will focus on rebuilding the economy and restoring our prewar prosperity."
+enc_radio_civilian_music_new: "New World Hopes"
 enc_radio_civilian_music_new_desc:0 "It's time to help people look forward to a better, brighter tomorrow.  Today!"
 
 enc_free_of_bottlecaps:0 "Free of Bottlecaps!"
@@ -343,10 +365,9 @@ enc_purge_officers_desc:0 "TODO"
 stability_loss_based_on_purist_popularity: "\n§MStability loss is based on popularity of§! §YPurist Faction§!"
 enc_infiltrate_ncr:0 "Infiltrate the NCR"
 enc_infiltrate_ncr_t_tt:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is higher than §Y25§!"
-enc_infiltrate_ncr_desc:0 "TODO"
+enc_infiltrate_ncr_desc:0 "We can make contact with those in the NCR who want to restore preawar America's glory."
 enc_infiltrate_ncr_tt:0 "§YNCR suspicion§! is reduced by £pol_power §G25§!"
-
-
+enc_assassinate_F_desc:0 "Assassinating Doctor Anderson will crush opposition towards our tolerant, inclusive Enclave."
 enc_assassinate_F_tt:0 "§YFranklin Andersen§! dies!"
 
 enc_stage_raider_attacks:0 "Stage Raider Attacks"
@@ -355,7 +376,8 @@ enc_stage_raider_attacks_tt: "Unlocks the §YArm Raider Gangs§! decision.\nThis
 
 
 enc_foreign_policy_tt: "Unlocks the §YReveal Ourselves to the NCR§! decision.\nThis allows you to reveal yourself to the §Y[NCR.GetName]§! under the right circumstances, removing the need to hide from them."
-
+enc_foreign_policy: "Foreign Policy"
+enc_foreign_policy_desc: "We need to decide how to handle the other 'nations' of the Wasteland.  Obviously they are but stepping stones in our plot to restore America."  
 enc_call_ncr_favors:0 "Call In Favors"
 enc_call_ncr_favors_desc:0 "Thanks to old exploits of ours in the mercenary company, we have a few contacts in the NCR that owe us a big favor. They don't need to know the big picture, only that we need them to 'lose' a few specific documents."
 
@@ -465,11 +487,8 @@ enc_the_state_of_utah: "The State of Utah"
 enc_the_state_of_utah_desc: "To the east, New Canaan is the nucleus for the Mormons of Utah.  With our backing they can stand against Caesar and bring freedom to the East."
 
 
-enc_our_new_ally: "Our New Ally"
-enc_our_new_ally_desc: "TODO"
-
 enc_crack_the_code: "Crack the Code"
-enc_crack_the_code_desc: "TODO"
+enc_crack_the_code_desc: "Our advanced technology could let us crack the NCCR's codes and predict their moves in advance.""
 
 enc_wastelander_draft: "Draft the Wastelanders"
 enc_wastelander_draft_desc: "Although many of the Wastelanders aren't up to the burden of being American citizens, they are up to the burden of being American cannon fodder."
@@ -496,21 +515,22 @@ enc_ss_ceasar_top_augustus_desc:0 "Thumbs down you son of a bitch.  Let's kill C
 enc_operation_babylon:0 "Operation Babylon"
 enc_operation_babylon_desc:0 "The NCR mocks prewar America, claiming to stand for liberty and progress even as its mired in corruption.  By attacking its weak points we can knock the whole thing over."
 enc_the_barons:0 "The Barons"
+enc_the_barons_desc:0 "The Barons of Northern California seek their own, independent state.  We can encourage their goals and break the NCR, leaving the Enclave to fill the vacuum left behind."
 enc_secret_dealings:0 "Secret Dealings"
-enc_operation_carnaval:0 "Operation Carnaval"
+enc_secret_dealings_desc:0 "A few kind words and cash transfers to the ranchers will encourage them to take a bolder stance against the NCR's Senate.  Why should these fine men be dictated to by merchants and tenant farmers?"
+enc_operation_carnaval:0 "Operation Carnival"
+enc_operation_carnaval_desc:0 "Our efforts have encouraged the brahmin barons to bring the NCR's senate to a standstill.  These fools think that Northern Nevada cares what they think, and that they have no need for the NCR's protection.  By giving arms to the barons we can encourage thoughts of independence and freedom from Shady Sands.  "
 enc_petition_for_independence:0 "Petition For Independence"
+enc_petition_for_independence_desc:0 "The Brahmin Barons will demand the right to form their own state, based on Sac City.  And should Shady Sands refuse their demands, we will stand ready to assist them."
 enc_petition_for_independence_tt:0 "Unlocks the §YPetition for Independence§! decision.\nThis decision will release the §YBaron's Republic§! with any states that have armed rebels."
 enc_the_common_man: "The Common Man"
-enc_the_common_man_desc:0 "It must be said that the NCR adopted a lot of the ideals of Old War America, including democracy and the respect for individual rights.  But many lie forgotten in this society, who could turn to us for assistance..."
+enc_the_common_man_desc: "The NCR adopted a lot of the ideals of Old War America, including democracy and the respect for individual rights.  But many lie forgotten in this society, who could turn to us for assistance..."
 enc_fear_uncertainty_and_doubt:0 "The Old Deal"
 enc_fear_uncertainty_and_doubt_desc:0 "The Mayor of Day Glow, Grant C. Hayes, has been a fan of the Old War America.  He's willing to work with us to promote reforms to NCR's Senate, which is biased towards the barons and caravans, and for greater rights for NCR workers. He calls this the 'Old Deal.'" 
 enc_organise_the_sympathizers:0 "Organise the Sympathizer"
 enc_organise_the_sympathizers_desc:0 "With proper equipment and supplies, we can ensure that the NCR takes the demands of Hayes and his allies seriously."
 enc_the_divided_state:0 "Californian Civil War"
 enc_the_divided_state_desc:0 "The petition for a constitutional convention to reform the NCR has reached the Senate... and they refused to hear it.  Proponents of the Old Deal have taken to the streets, and been fired on by Gun Runners and other NCR loyalists.  The Californian Civil War has begun."
-
-
-
 enc_dod_tactics:0 "Department of Military Intelligence"
 enc_postwar_tactics:0 "Post-war tactics"
 enc_dod_energy_1:0 "Energy Focus"
@@ -518,12 +538,18 @@ enc_dod_energy_2:0 "Improve the Design"
 enc_dod_energy_3:0 "High Crystal Standards"
 enc_dod_balistic_1:0 "Ballistic Focus"
 enc_dod_balistic_2:0 "Streamline Production"
-
-
+enc_support_armed_coup:   "Launch Civil War"
+enc_support_armed_coup_desc:  "The Old World Party's supporters could resort to civil war instead of the ballot box."
+enc_electoral_victory:  "President Hayes!"
+enc_electoral_victory_desc:  "Thanks to our support, President Hayes and the Old World Party have swept into office"
+enc_our_new_ally: "Our New Ally"
+enc_our_new_ally_desc: "The Old World Party is willing to ally to stand against the Enclave, Washington Brotherhood, and all who might oppose us."
 
 ###################################
 # REFORM IDEAS
 ###################################
+CES_BOS:  "Brotherhood Remnants"
+enc_nuka_cola:  "Nuka Cola Addiction"
 Enc_Construction_nuka:  "Building Nuka World"
 Enc_Hacking:0 "Monitoring the Computer Networks"
 ENC_CES_Wisdom:  "Learning from Caesar"
@@ -616,6 +642,8 @@ enc_technocrats:  "Technocratic Administration"
 ENC_Freedom_Rings:  "Freedom Rings"
 ENC_Freedom_Silent:  "Peace, Order, and Good Government"
 ENC_House:  "The House Always Wins"
+ENC_Marriage_Equality:  "Ghoul Marriage"
+Enc_Followers:  "Follower Patronage"
 
 ###################################
 # Seek Allies
@@ -681,8 +709,19 @@ arm_rebels_tt: "Arm Rebels (§Y50§! £pol_power )"
 arm_rebels_tt_delayed: "[!arm_rebels_click]"
 arm_rebels_click: "§YArm rebels in the state!§!\nWhen the time is right, they will rise up should their petition for independence fail."
 enc_rebels_armed: "§GRebels already armed!§!\nThis state has rebels ready to take control of the state."
+arm_slaves_tt: "Arm slaves (§Y50§! £pol_power )"
+arm_slaves_tt_delayed: "§YArm slaves in the state!§!\nWhen the time is right, they will rise up to show Americans will always fight for freedom."
+arm_slaves_click: "§YArm slaves in the state!§!\nWhen the time is right, they will rise up should their petition for independence fail."
+enc_slaves_armed: "This state has slaves ready to rise up for freedom."
+enc_slaves_armed2: "§GSlaves already armed!§!\nThis state has slaves ready to rise up for freedom."
+
+arm_patriots_tt: "Arm patriots (§Y50§! £pol_power )"
+arm_patriots_tt_delayed: "§YArm patriots in the state!§!\nWe can arm those who oppose the bloated Californian plutocracy."
+arm_patriots_click: "§YArm patriots in the state!§!\nIf push comes to shove, these people will stand to defend their rights."
+enc_patriots_armed: "This state has patriots ready to rise up for America."
 
 unlock_arm_rebels: "Unlocks the ability to §Yarm rebels§! in any §YNCR§! state where §YBarron Republic§! has a core.\n\n"
+unlock_arm_patriots: "Unlocks the ability to §Yarm patriots§! in any §NCR§! state where it has a core.\n\n"
 ###################################
 # FLAGS
 ###################################

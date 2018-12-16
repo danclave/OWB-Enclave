@@ -1265,7 +1265,8 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = {
 				ENC_begun_integration
-			}	
+			}
+			hidden_effect = { set_country_flag = enc_wastelander_integration }
 			if = {
 				limit = {
 					has_country_flag = enc_promised_no_integration				
@@ -2087,7 +2088,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		prerequisite = { focus = enc_support_old_world_party }
-		completion_reward = {
+		completion_reward = { country_event = { id = enc_reformers.74 } 
 		
 		}
 	}
@@ -2216,7 +2217,8 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 5.8 
-		prerequisite = { focus = enc_NCR_seak_allies }
+		prerequisite = { focus = enc_NCR_seak_allies
+				not = {has_country_flag = enc_promised_no_peace_with_bos} }
 		completion_reward = {
 			BOS = {
 				custom_effect_tooltip = relations_increased_20
@@ -2564,7 +2566,8 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 				var = legitimacy_change_var
 				value = 0.10
 			}
-			change_legitimacy = yes }
+			change_legitimacy = yes
+		custom_effect_tooltip = unlock_arm_slaves		}
 	}
 	focus = {#SS-CER-BOTTOM-SPARTACUS
 		id = enc_ss_ceasar_bottom_uprising
@@ -2576,22 +2579,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			CES = {
-				release = PHR
-				release = FLA
-				release = RSR
-			}
-			hidden_effect = { 
-				PHR = { load_oob = "NCRrevolt_PHR" }
-				FLA = { load_oob = "NCRrevolt_FLA" }
-				RSR = { load_oob = "ERBREVOLT_RSR" }
-			}
-			CES = {
-				declare_war_on = { target = PHR type = annex_everything }
-				declare_war_on = { target = FLA type = annex_everything }
-				declare_war_on = { target = RSR type = annex_everything }
-			}
-			country_event = { id = enc_reformers.65 } 
+		country_event = { id = enc_reformers.65 } 
 		} 
 	}
 	focus = {#SS operation babylon
@@ -2714,9 +2702,10 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		cost = 5.8
 		completion_reward = {
 			add_equipment_to_stockpile = { type = infantry_equipment amount = -1000 }
+			custom_effect_tooltip = unlock_arm_patriots
 			add_political_power = 50
 			NCR = {
-				add_popularity = { ideology = intellectuals popularity = 0.10 }
+				add_popularity = { ideology = intellectuals popularity = 0.05 }
 			}
 		}
 	}
@@ -2730,7 +2719,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		y = 1
 		cost = 5.8
 		completion_reward = {
-		country_event = { id = enc_reformers.74 } 
+		country_event = { id = enc_reformers.112 } 
 		  }
 	}	
  

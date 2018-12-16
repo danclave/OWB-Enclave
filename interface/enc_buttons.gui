@@ -46,6 +46,38 @@ guiTypes = {
 			scale = 1.2 
 		}
 	}
+	containerWindowType = { # arm_slaves
+		name = arm_slaves_container
+		position = {x=90 y=114}
+		
+		fade_time = 1
+		fade_type = linear
+		moveable = no
+		
+		buttonType = { 
+			name = arm_slaves 
+			spriteType = GFX_resistance_icon 
+			pdx_tooltip = arm_slaves_tt
+			pdx_tooltip_delayed = arm_slaves_tt_delayed
+			scale = 1.2 
+		}
+	}
+	containerWindowType = { # arm_patriots
+		name = arm_patriots_container
+		position = {x=90 y=114}
+		
+		fade_time = 1
+		fade_type = linear
+		moveable = no
+		
+		buttonType = { 
+			name = arm_patriots
+			spriteType = GFX_resistance_icon 
+			pdx_tooltip = arm_patriots_tt
+			pdx_tooltip_delayed = arm_patriots_tt_delayed
+			scale = 1.2 
+		}
+	}
 	containerWindowType = { # legitimacy
 		name = "legitimacy_container"
 		position = { x = 885 y = 4 }
