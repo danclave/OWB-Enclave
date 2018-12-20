@@ -283,5 +283,9 @@ spriteTypes = {
 			name = "GFX_event_enc_dam"
 			texturefile = "gfx/event_pictures/event_enc_dam.dds"
 		}
+		SpriteType = {#Enclave Dam
+			name = "GFX_event_enc_election"
+			texturefile = "gfx/event_pictures/event_enc_election.dds"
+		}
 }			
 

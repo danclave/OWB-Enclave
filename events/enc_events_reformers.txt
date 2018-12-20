@@ -1514,6 +1514,7 @@ country_event = {#75 - Civil War
 	is_triggered_only = yes
 	option = {#	aid
 		name = enc_reformers.75.a
+		complete_national_focus = enc_our_new_ally
 		if = {
 			limit = {
 				is_in_faction = no
@@ -1734,7 +1735,7 @@ country_event = {#85 - Shi
 		}
 	}
 	option = {#	No Chinese Exclusion Act
-		trigger = { has_completed_focus = enc_expand_human_definition }
+		trigger = { has_country_flag = enc_shi }
 		set_country_flag = enc_China_Town
 		name = enc_reformers.85.b
 		add_war_support = -0.05
@@ -1787,13 +1788,18 @@ country_event = {#87 - Baseball
 	}
 	option = {#	Play Ball
 		name = enc_reformers.87.a
-		add_stability = 0.05
+				add_war_support = -0.05
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = 0.05
 		}
 		change_legitimacy = yes
 	}
+	option = {#	Play Ball
+		name = enc_reformers.87.b
+		
+	}
+
 
 }
 
@@ -1821,6 +1827,7 @@ country_event = {#88 - Mistakes
 	}
 	option = {#	Honesty
 		name = enc_reformers.88.b
+		set_country_flag = enc_shi
 		add_stability = -0.05# modify legitimacy
 		set_temp_variable = {
 			var = legitimacy_change_var
@@ -1862,10 +1869,7 @@ country_event = {#90 - Supreme Court
 	desc = enc_reformers.90.d
 	picture = GFX_event_ENC_Ham
 	fire_only_once = yes
-	is_triggered_only = NO
-	trigger = {
-		has_completed_focus = enc_accept_ghouls
-	}
+	is_triggered_only = yes
 	mean_time_to_happen = {
 		days = 60
 	}
@@ -2080,17 +2084,8 @@ country_event = {#101 Axis of Evil
     desc = enc_reformers.101.d
     picture = GFX_event_CES_camp_1
     fire_only_once = yes    
-    is_triggered_only = no
+    is_triggered_only = yes
 	mean_time_to_happen = {	days = 3 }
-	trigger = {	
-		original_tag = ERB
-		has_completed_focus = enc_reform
-		NOT = {
-			country_exists = NCR
-		}
-		is_neighbor_of = CES
-		
-	}	    
     option = {# Bringit
 		name = enc_reformers.101.a
 			WBH = { 
@@ -2358,6 +2353,7 @@ country_event = {#104 - Followers of Apocolypse
 		change_legitimacy = yes
 		clr_country_flag = enc_healers
 		add_ideas = Enc_Followers
+		set_country_flag = enc_followers
 		}
 		
 	}	
@@ -2407,6 +2403,7 @@ country_event = {#106 Redding
 		name = enc_reformers.106.a
 		add_resource = { type = electronics amount = 5 state = 141 }
 		add_resource = { type = electricity amount = 20 state = 141 }
+		set_country_flag = enc_redding
 			}
 	
 		}	
@@ -2613,21 +2610,173 @@ country_event = {#113 - President Hayes
     id = enc_reformers.113
 	title = enc_reformers.113.t
 	desc = enc_reformers.113.d
-	picture = gfx_event_NCR_victory
+	picture = GFX_event_ENC_double_flag_long
+	  trigger = {
+        NCR = {
+            set_temp_variable = {
+                var = enclave_spies
+                value = party_popularity@intellectuals
+            }
+            check_variable = { enclave_spies > 0.80 }
+        }
+         }
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {#	Oops
 		name = enc_reformers.113.a
 		hidden_effect = {
-		set_global_flag = pro_enclave_NCR
-		NCR = { set_politics = { ruling_party = intellectuals}
-				set_cosmetic_tag = NCR_ERB }
+		set_global_flag = pro_enclave_NCR 
+		NCR = { set_politics = { ruling_party = intellectuals} } }
+		NCR = {	set_cosmetic_tag = NCR_ERB }
+		complete_national_focus = enc_our_new_ally
 	}
 }
-	
 
+country_event = {#114 - Election!
+    id = enc_reformers.114
+	title = enc_reformers.114.t
+	desc = enc_reformers.114.d
+	picture = GFX_event_enc_election
+	  trigger = {	
+		has_completed_focus = enc_presidential_elections
+		date > 2284.10.04
+		date < 2284.12.30
+			}	    
+    is_triggered_only = no
+	fire_only_once = yes
+	option = {#	King
+		name = enc_reformers.114.a
+		trigger = { has_completed_focus = enc_americans_one_and_all }
+		create_country_leader  = {
+	name = "The King"
+	desc = "THE_KING_DESC"
+	picture = "gfx/leaders/VEG/Portrait_King.dds"
+	expire = "3000.1.1"
+	ideology = ideocracy
+	traits = {
+		popular_figurehead
+		smooth_talking_charmer
+		}
+		}
+		}
+	option = {#	House
+		name = enc_reformers.114.b
+	trigger = { has_completed_focus = enc_NEW_puppet }
+	create_country_leader  = {
+	name = "Mr House"
+	desc = "MR_HOUSE_DESC"
+	picture = "gfx/leaders/VEG/Portrait_House.dds"
+	expire = "3000.1.1"
+	ideology = ideocracy
+	traits = {
+		dislikes_legion
+			}
+			}
+			}	
+	option = {#	Hayes
+	name = enc_reformers.114.c
+	trigger = {
+	controls_state   = 253 }
+	create_country_leader = {
+	name = "Grant C. Hayes"
+	desc = "Hayes_DESC"
+	picture = "gfx/leaders/ENC/.dds"
+	expire = "3000.1.1"
+	ideology = ideocracy
+	traits = {
+		
+			}		
+}
+}
+option = {#	Lynette
+	name = enc_reformers.114.e
+	create_country_leader = {
+	name = "First Citizen Lynette"
+	id = 910
+	desc = "POLITICS_CITIZEN_DESC"
+	picture = "gfx/leaders/Vault/Portrait_first_citizen.dds"
+	expire = "3000.1.1"
+	ideology = ideocracy
+	traits = {
+	}
+}
+}
+option = {#	Gannon
+		name = enc_reformers.114.f
+	trigger = { has_country_flag = enc_followers }
+	create_country_leader  = {
+	name = "Arcade Gannon"
+	desc = "THE_KING_DESC"
+	picture = "gfx/leaders/VEG/Portrait_Arcade.dds"
+	expire = "3000.1.1"
+	ideology = ideocracy
+	traits = {
+		popular_figurehead
+		smooth_talking_charmer
+		}
+		}
+		}
+option = {#	Courier
+		name = enc_reformers.114.g
+	trigger = { controls_state = 252}
+	create_country_leader  = {
+	name = "The Courier"
+	desc = "THE_KING_DESC"
+	picture = "gfx/leaders/ERB/Portrait_CourierNew.dds"
+	expire = "3000.1.1"
+	ideology = ideocracy
+	traits = {
+		popular_figurehead
+		smooth_talking_charmer
+		}
+		}
+		}
+option = {#	Marcus
+		name = enc_reformers.114.h
+		trigger = {has_country_flag = enc_redding }
+		create_country_leader  = {
+	name = "Marcus"
+	desc = "THE_KING_DESC"
+	picture = "gfx/leaders/Supermutant/Portrait_Supermutant_Generic_4.dds"
+	expire = "3000.1.1"
+	ideology = ideocracy
+	traits = {
+		popular_figurehead
+		smooth_talking_charmer
+		}
+		}
+		}			
+}
 
-	
+country_event = {#115 Axis of Evil
+    id = enc_reformers.115
+    title = enc_reformers.115.t
+    desc = enc_reformers.1151.d
+    picture = GFX_event_CES_camp_1
+    fire_only_once = yes    
+    is_triggered_only = no
+	trigger = {	
+		tag = ERB 
+		is_neighbor_of = CES
+		strength_ratio = {
+			tag = CES
+			ratio < 0.6
+		}
+		NOT = {
+			country_exists = NCR
+		}
+	has_completed_focus = enc_reform
+	}
+	mean_time_to_happen = {	days = 3 }
+    option = {# Bringit
+	name = enc_reformers.115.a
+	CES = {give_guarantee = WBH } 
+	WBH = { give_guarantee = CES } 
+	CES = { give_guarantee = EHT } 
+	EHT = {give_guarantee = CES } 
+		}
+}
+
 # integration
 #
 

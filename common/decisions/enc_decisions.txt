@@ -1428,6 +1428,7 @@ ENC_render_unto_caesar = {
 		is_good = no
 		days_mission_timeout = 1068
 		timeout_effect = {
+			ERB = { country_event = {id = enc_reformers.101 } }
 			CES = {
 				country_event = { id = enc.41 } # todo: change
 			}

@@ -544,7 +544,12 @@ enc_electoral_victory:  "President Hayes!"
 enc_electoral_victory_desc:  "Thanks to our support, President Hayes and the Old World Party have swept into office"
 enc_our_new_ally: "Our New Ally"
 enc_our_new_ally_desc: "The Old World Party is willing to ally to stand against the Enclave, Washington Brotherhood, and all who might oppose us."
-
+Enc_Tearing_Down_House:  "Tearing Down the House"
+Enc_Tearing_Down_House_desc:  "Mr. House thinks he's in control of New Vegas, but we have a wild card to play."
+Enc_Nevada_Rangers:  "The Nevada Rangers"
+Enc_Nevada_Rangers_desc:  "The Desert Rangers never wanted to run Nevada.  Now that there's a change for them to work with a lawful government to bring peace, order, and good government to the West, they'll gladly do so."
+Enc_Area_51: "Reclaiming Area 51"
+Enc_Area_51_desc:  "Area 51 was a center of elite military research before the war, and some of that surely remains.  Too bad it's occupied by trash that we need to clear out."
 ###################################
 # REFORM IDEAS
 ###################################
@@ -722,6 +727,7 @@ enc_patriots_armed: "This state has patriots ready to rise up for America."
 
 unlock_arm_rebels: "Unlocks the ability to §Yarm rebels§! in any §YNCR§! state where §YBarron Republic§! has a core.\n\n"
 unlock_arm_patriots: "Unlocks the ability to §Yarm patriots§! in any §NCR§! state where it has a core.\n\n"
+unlock_arm_patriots: "Unlocks the ability to §Yarm slaves§! in any Legion state where it has a core.  Bastards.\n\n"
 ###################################
 # FLAGS
 ###################################
