@@ -94,6 +94,9 @@ enc_the_lucia_incident: "The Lucia Incident"
 enc_the_lucia_incident_desc: "We have enough T-51 Powered Armor around that we can fake a Brotherhood attack on NCR Outposts.  Suckers."
 enc_the_lucia_incident_tt: "Unlocks the §YThe Lucia Incident§! decision.\nThis allows you to use your spies to send a fake radio broadcast causing the §Y[BOS.GetName]§! to declare war on the §Y[NCR.GetName]§!."
 
+ENC_rise_rebellion:  "The Old World Uprising!"
+ENC_rise_rebellion_desc: "Enclave loyalists, and supporters of President Hayes, are ready to rise in our support.  It's time for the eagle to slay the bear."
+
 
 enc_the_bishop_incident: "The Bishop Incident"
 enc_the_bishop_incident_desc: "We could trick the NCR into going to war with its enemies through espionage."
@@ -500,7 +503,7 @@ enc_ss_ceasar_bottom_desc:0 "The Legion's based upon the backs of men and women 
 enc_ss_ceasar_bottom_infiltrate:0 "Infiltrate the Slaves"
 enc_ss_ceasar_bottom_infiltrate_desc:0 "Enclave agents travel as merchants and couriers through the Legion's lands.  They bring an emancipation proclamation, a promise of freedom for all who stand against Caesar.  As we always say, Democracy is non-negotiable."
 enc_ss_ceasar_bottom_weapons:0 "Plant Weapon Caches"
-enc_ss_ceasar_bottom_weapons_desc:0 "The vertibirds land in the dark of night, dropping weapons outside slave barracks or occupied towns. The Legion will learn that democracy will never be defeated."
+enc_ss_ceasar_bottom_weapons_desc:0 "The vertibirds land in the dark of night, dropping weapons outside slave barracks or occupied towns. The Legion will learn that democracy will never be defeated.  But to kindle the revolt, we will need to make sure Phoenix, the hub of tehe Legion's industry, can rise up."
 enc_ss_ceasar_top:0 "From the Top Down"
 enc_ss_ceasar_top_desc:0 "Caesar's legionary commanders might obey him, but if he were to die the Legion would tear itself apart.  Something might be made of that."
 enc_ss_ceasar_top_books:0 "Operation Lycaon"
@@ -520,8 +523,12 @@ enc_secret_dealings:0 "Secret Dealings"
 enc_secret_dealings_desc:0 "A few kind words and cash transfers to the ranchers will encourage them to take a bolder stance against the NCR's Senate.  Why should these fine men be dictated to by merchants and tenant farmers?"
 enc_operation_carnaval:0 "Operation Carnival"
 enc_operation_carnaval_desc:0 "Our efforts have encouraged the brahmin barons to bring the NCR's senate to a standstill.  These fools think that Northern Nevada cares what they think, and that they have no need for the NCR's protection.  By giving arms to the barons we can encourage thoughts of independence and freedom from Shady Sands.  "
+enc_Second_Revolution: "Issue the Second Emancipation Proclamation"
+enc_Second_Revolution_desc: "We can trigger the Second American Revolution by promising freedom to the Legion's slaves.  However, the Legion may treat our decision to give plasma guns to slaves in their territory as an act of war."
 enc_petition_for_independence:0 "Petition For Independence"
 enc_petition_for_independence_desc:0 "The Brahmin Barons will demand the right to form their own state, based on Sac City.  And should Shady Sands refuse their demands, we will stand ready to assist them."
+enc_dayglow_proclamation:0  "Trigger the The Dayglow Proclamation"
+enc_dayglow_proclamation_desc:0  "With our cry, the mayor of Dayglow will acall for an outright rebellion against the NCR.  Of course we have to arm the mayor first."
 enc_petition_for_independence_tt:0 "Unlocks the §YPetition for Independence§! decision.\nThis decision will release the §YBaron's Republic§! with any states that have armed rebels."
 enc_the_common_man: "The Common Man"
 enc_the_common_man_desc: "The NCR adopted a lot of the ideals of Old War America, including democracy and the respect for individual rights.  But many lie forgotten in this society, who could turn to us for assistance..."
@@ -726,8 +733,10 @@ arm_patriots_click: "§YArm patriots in the state!§!\nIf push comes to shove, t
 enc_patriots_armed: "This state has patriots ready to rise up for America."
 
 unlock_arm_rebels: "Unlocks the ability to §Yarm rebels§! in any §YNCR§! state where §YBarron Republic§! has a core.\n\n"
-unlock_arm_patriots: "Unlocks the ability to §Yarm patriots§! in any §NCR§! state where it has a core.\n\n"
+unlock_arm_patriots: "Unlocks the ability to §Yarm patriots§! in any §YNCR§! state where it has a core.\n\n"
 unlock_arm_patriots: "Unlocks the ability to §Yarm slaves§! in any Legion state where it has a core.  Bastards.\n\n"
+ENC_rise_slaves:  "Issue the Second Emancipation Proclamation"
+ENC_rise_slaves_des: "It's time to remind Caesar that Americans will always fight for freedom."
 ###################################
 # FLAGS
 ###################################

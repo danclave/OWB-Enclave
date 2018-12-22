@@ -196,7 +196,9 @@ ENC_deliver_petition: "Deliver Petition for Independence"
 ENC_remove_emergency_draft: "Remove Emergency Draft"
 enc_emergency_draft_reform: "Institute an Emergency Draft"
 CES_crisis: "The Wrath of Caesar"
-ENC_render_unto_caesar: "Into the Frying Pan"
+ENC_render_unto_caesar: "Grabbing the Bull by the Horns"
+ENC_rise_slaves: "Issue the Second Emancipation Proclamation"
+ENC_rise_slaves_desc: "We can trigger the Second American Revolution by promising freedom to the Legion's slaves.  However, the Legion may treat our decision to give plasma guns to slaves in their territory as an act of war."
 ################ special codes for special people ################################################################################################################
 
 # y§Yyellow§!

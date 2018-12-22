@@ -189,7 +189,10 @@ arm_slaves = {
         
         visible = {
             is_core_of = CES
-            ROOT =  { 
+            NOT = {
+                has_state_flag = no_rebels_you_fucks
+            }
+			ROOT =  { 
                 has_completed_focus = enc_ss_ceasar_bottom_weapons
                 NOT = {
                     has_country_flag = enc_ss_ceasar_top_raiding
@@ -200,7 +203,7 @@ arm_slaves = {
             arm_slaves_click = {
                 ROOT = {     
                     hidden_effect = {
-                        add_political_power = -50
+                        add_political_power = -75
                     }    
                 }
                 set_state_flag = enc_slaves_armed
@@ -242,18 +245,20 @@ arm_patriots = {
         context_type = selected_state_context
         window_name = arm_patriots_container
         parent_window_token = selected_state_view
-        
         visible = {
             is_core_of = NCR
             ROOT =  { 
                 has_completed_focus = enc_organise_the_sympathizers
-                }            
+                }
+			 NOT = {
+                has_state_flag = no_rebels_you_fucks
+            }			
         }        
         effects = { 
             arm_patriots_click = {
                 ROOT = {     
                     hidden_effect = {
-                        add_political_power = -50
+                        add_political_power = -100
                     }    
                 }
                 set_state_flag = enc_patriots_armed

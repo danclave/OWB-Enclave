@@ -1340,6 +1340,9 @@ country_event = {#65 - The Emancipation Proclamations
 			create_unit = { division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
 			owner = ERB
 				}
+			create_unit = { division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+			owner = ERB
+				}
                 }
 			}
 	}

@@ -2030,6 +2030,9 @@ focus_tree = {
 		x = 3
 		y = 1
 		cost = 5.8 
+		bypass = {
+			DES = { exists = NO }
+		}	
 		prerequisite = { focus = enc_the_state_of_nevada }	
 		available = {
 		strength_ratio = { tag = DES ratio > 1 }
@@ -2078,6 +2081,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5.8 
+		bypass = {
+			VEG = { exists = NO }
+		}	
 		prerequisite = { focus = Enc_Area_51 }	
 		completion_reward = { 
 		hidden_effect = { set_autonomy = {
@@ -2627,7 +2633,9 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 				value = 0.10
 			}
 			change_legitimacy = yes
-		custom_effect_tooltip = unlock_arm_slaves		}
+		custom_effect_tooltip = unlock_arm_slaves 
+		520 = { set_state_flag = no_rebels_you_fucks }
+		}
 	}
 	focus = {#SS-CER-BOTTOM-SPARTACUS
 		id = enc_ss_ceasar_bottom_uprising
@@ -2639,7 +2647,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		y = 1
 		cost = 5.8
 		completion_reward = {
-		country_event = { id = enc_reformers.65 } 
+		custom_effect_tooltip = enc_Second_Revolution	
 		} 
 	}
 	focus = {#SS operation babylon
@@ -2767,6 +2775,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 			NCR = {
 				add_popularity = { ideology = intellectuals popularity = 0.05 }
 			}
+			253 = {set_state_flag = no_rebels_you_fucks }
 		}
 	}
 	focus = {#SS-NCR-PEOPLE-UPRISING
@@ -2779,7 +2788,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		y = 1
 		cost = 5.8
 		completion_reward = {
-		country_event = { id = enc_reformers.112 } 
+		custom_effect_tooltip = enc_dayglow_proclamation
 		  }
 	}	
  
