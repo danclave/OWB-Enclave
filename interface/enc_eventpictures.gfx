@@ -136,9 +136,9 @@ spriteTypes = {
  		    texturefile = "gfx/event_pictures/event_ENC_barons.tga"
  	    } 
 		SpriteType = {#event_ENC_Slavery
-		name = "GFX_event_ENC_Slavery"
-		texturefile = "gfx/event_pictures/event_ENC_Slavery.dds"
-	} 
+			name = "GFX_event_ENC_Slavery"
+			texturefile = "gfx/event_pictures/event_ENC_Slavery.dds"
+		} 
 		SpriteType = {#event_Resistance_weapons
 			name = "GFX_event_ENC_Resistance_Weapons"
 			texturefile = "gfx/event_pictures/event_ENC_Resistance_Weapons.dds"
@@ -270,6 +270,34 @@ spriteTypes = {
 		SpriteType = {#event_ENC_assassinate_anderson
 			name = "GFX_event_ENC_assassinate_anderson"
 			texturefile = "gfx/event_pictures/event_ENC_assassinate_anderson.tga"
+		}
+		SpriteType = {#Drugs
+			name = "GFX_event_enc_drugs"
+			texturefile = "gfx/event_pictures/event_enc_drugs.tga"
+		}
+		SpriteType = {#Followers
+			name = "GFX_event_enc_Followers"
+			texturefile = "gfx/event_pictures/event_enc_Followers.tga"
+		}
+		SpriteType = {#Marcus
+			name = "GFX_event_enc_Marcus"
+			texturefile = "gfx/event_pictures/event_enc_Marcus.tga"
+		}
+		SpriteType = {#Nuka Cola
+			name = "GFX_event_enc_nuka_cola"
+			texturefile = "gfx/event_pictures/event_enc_nuka_cola.tga"
+		}
+		SpriteType = {#Victory
+			name = "GFX_event_enc_victory"
+			texturefile = "gfx/event_pictures/event_enc_victory.tga"
+		}
+		SpriteType = {#Enclave Dam
+			name = "GFX_event_enc_dam"
+			texturefile = "gfx/event_pictures/event_enc_dam.dds"
+		}
+		SpriteType = {#Enclave Dam
+			name = "GFX_event_enc_election"
+			texturefile = "gfx/event_pictures/event_enc_election.dds"
 		}
 }			
 

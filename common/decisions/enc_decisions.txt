@@ -268,6 +268,23 @@ ENC_infiltrating_NCR = {
 			}	
 		}	
 	}
+	ENC_rise_rebellion = {
+	priority = 300
+		fire_only_once = yes
+		available = {
+			63 = {
+				has_state_flag = enc_patriots_armed
+			}
+		}
+	visible = {
+			tag = ERB
+			has_completed_focus = enc_the_divided_state
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.112 }
+			}
+	}
+	
 }
 
 ###############################
@@ -1428,6 +1445,7 @@ ENC_render_unto_caesar = {
 		is_good = no
 		days_mission_timeout = 1068
 		timeout_effect = {
+			ERB = { country_event = {id = enc_reformers.101 } }
 			CES = {
 				country_event = { id = enc.41 } # todo: change
 			}
@@ -1437,6 +1455,22 @@ ENC_render_unto_caesar = {
 			# ???
 		}
 	}
+ENC_rise_slaves = {
+	priority = 300
+		fire_only_once = yes
+		available = {
+			518 = {
+				has_state_flag = enc_slaves_armed
+			}
+		}
+	visible = {
+			tag = ERB
+			has_completed_focus = enc_ss_ceasar_bottom_uprising
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.65 }
+			}
+	}	
 }	
 ENC_war_with_NCR = {
 	FEV_mutation_crisis = {

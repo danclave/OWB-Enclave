@@ -187,6 +187,120 @@ scripted_gui = {
 				}
 			}
 		}
-	}	
+	}
+arm_slaves = {    
+        context_type = selected_state_context
+        window_name = arm_slaves_container
+        parent_window_token = selected_state_view
+        
+        visible = {
+            is_core_of = CES
+            NOT = {
+                has_state_flag = no_rebels_you_fucks
+            }
+			ROOT =  { 
+                has_completed_focus = enc_ss_ceasar_bottom_weapons
+                NOT = {
+                    has_country_flag = enc_ss_ceasar_top_raiding
+                }
+            }            
+        }        
+        effects = { 
+            arm_slaves_click = {
+                ROOT = {     
+                    hidden_effect = {
+                        add_political_power = -75
+                    }    
+                }
+                set_state_flag = enc_slaves_armed
+                if = {
+                    limit = {
+                        has_state_flag = enc_slaves_armed
+                    }
+                    custom_effect_tooltip = enc_slaves_armed
+                }
+                else = {
+                    custom_effect_tooltip = arm_slaves_click
+                }
+            }
+        }
+        triggers = {
+            arm_slaves_click_enabled = {
+                ROOT = { 
+                    has_political_power > 49.99        
+                }
+                NOT = {
+                    has_state_flag = enc_slaves_armed
+                }
+            }
+        }
+                
+        ai_check = {
+            check_variable = { ai_random > 0.55 }
+        }
+        
+        ai_weights = {
+            arm_slaves_click = {
+                ai_will_do = {
+                    factor = 40
+                }
+            }
+        }
+    }
+arm_patriots = {    
+        context_type = selected_state_context
+        window_name = arm_patriots_container
+        parent_window_token = selected_state_view
+        visible = {
+            is_core_of = NCR
+            ROOT =  { 
+                has_completed_focus = enc_organise_the_sympathizers
+                }
+			 NOT = {
+                has_state_flag = no_rebels_you_fucks
+            }			
+        }        
+        effects = { 
+            arm_patriots_click = {
+                ROOT = {     
+                    hidden_effect = {
+                        add_political_power = -100
+                    }    
+                }
+                set_state_flag = enc_patriots_armed
+                if = {
+                    limit = {
+                        has_state_flag = enc_patriots_armed
+                    }
+                    custom_effect_tooltip = enc_patriots_armed
+                }
+                else = {
+                    custom_effect_tooltip = arm_patriots_click
+                }
+            }
+        }
+        triggers = {
+            arm_patriots_click_enabled = {
+                ROOT = { 
+                    has_political_power > 49.99        
+                }
+                NOT = {
+                    has_state_flag = enc_patriots_armed
+                }
+            }
+        }
+                
+        ai_check = {
+            check_variable = { ai_random > 0.55 }
+        }
+        
+        ai_weights = {
+            arm_patriots_click = {
+                ai_will_do = {
+                    factor = 40
+                }
+            }
+        }
+    }			
 }
 

@@ -522,7 +522,8 @@ WHD = {
 	color = rgb { 84 50 23 }
 	color_ui = rgb { 84 50 23 }
 }
-D01 = {
+
+SLV = {
 	color = rgb { 153 76 0 }
 	color_ui = rgb { 84 50 23 }
 }

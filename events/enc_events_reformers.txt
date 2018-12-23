@@ -14,11 +14,11 @@ country_event = {#1 - DOUGLAS PAST - STORIES
 		name = enc_reformers.1.a
 		country_event = { id = enc_reformers.2 }
 		set_country_flag = enc_arroyo
-
-	}
+			}
 	option = {#  He aided the Chosen One and after he settled in Arroyo where he met and married a local woman 
 		name = enc_reformers.1.b
 		country_event = { id = enc_reformers.2 }
+		set_country_flag = enc_arroyo_mom
 		set_country_flag = enc_arroyo
 	}
 	option = {# He didn't aid the Chosen One 
@@ -924,13 +924,30 @@ country_event = {#35 - The baron's petition succeeds
 				add_core_of = BAR
 			}
 			BAR = {
-				every_owned_state = {
-					revolt_spawn_militia = yes
+			division_template = {
+				name = "Rebel Militia"
+				division_names_group = REBEL_INF_01
+			regiments = {
+				militia = { x = 0 y = 0 }
+			militia = { x = 0 y = 1 }
+			militia = { x = 0 y = 2 }
+			militia  = { x = 1 y = 0 }
+			militia  = { x = 1 y = 1 }
+			militia  = { x = 1 y = 2 }
+			militia  = { x = 1 y = 3 }
+			}
+		support = { 	}
+						}
+			every_owned_state = {
+			create_unit = { division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+			owner = ROOT
+				}
+                }
 				}
 			}
 		}
 	}
-}
+
 country_event = {#36 - The baron's petition fails
 	id = enc_reformers.36
 	title = enc_reformers.36.t
@@ -970,11 +987,33 @@ country_event = {#36 - The baron's petition fails
 			}
 		}
 		BAR = {
-			every_owned_state = {
-				revolt_spawn_militia = yes
+			division_template = {
+				name = "Rebel Militia"
+				division_names_group = REBEL_INF_01
+			regiments = {
+				militia = { x = 0 y = 0 }
+			militia = { x = 0 y = 1 }
+			militia = { x = 0 y = 2 }
+			militia  = { x = 1 y = 0 }
+			militia  = { x = 1 y = 1 }
+			militia  = { x = 1 y = 2 }
+			militia  = { x = 1 y = 3 }
 			}
-		}
-	country_event = { id = enc_reformers.37 }
+		support = { 	}
+						}
+			every_owned_state = {
+			create_unit = { division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+			owner = BAR
+				}
+			create_unit = { division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+			owner = BAR
+				}
+			create_unit = { division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+			owner = BAR
+				}
+                }
+				}
+		country_event = { id = enc_reformers.37 }
 	}
 }
 
@@ -1294,22 +1333,43 @@ country_event = {#65 - The Emancipation Proclamations
     is_triggered_only = yes
 	option = {#Declaration
 		name = enc_reformers.65.a
-		add_political_power = 100
-		if = { 
-			limit = { is_in_faction = no }
-			create_faction = "The Enclave" 
-			add_to_faction = PHR
-			add_to_faction = FLA
-			add_to_faction = RSR
+		every_state = {
+		limit = { is_owned_by = CES has_state_flag = enc_slaves_armed }
+		ERB = {transfer_state = PREV } 
 		}
-		else_if = { 
-			limit = { is_in_faction = yes }
-			add_to_faction = PHR
-			add_to_faction = FLA
-			add_to_faction = RSR
+		CES = {
+		declare_war_on = {
+					target = ERB
+					type = annex_everything
+			}
 		}
+		ERB = {
+	division_template = { name = "Rebel Militia"
+	division_names_group = REBEL_INF_01
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia  = { x = 1 y = 0 }
+		militia  = { x = 1 y = 1 }
+		militia  = { x = 1 y = 2 }
+		militia  = { x = 1 y = 3 }
+	}
+	support = {
 	}
 }
+		every_owned_state = {
+			limit = { has_state_flag = enc_slaves_armed }
+			create_unit = { division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+			owner = ERB
+				}
+			create_unit = { division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+			owner = ERB
+				}
+                }
+			}
+	}
+	}
 
 country_event = {#66 - The Vice President
 	id = enc_reformers.66
@@ -1322,8 +1382,19 @@ country_event = {#66 - The Vice President
 		name = enc_reformers.66.a
 		add_political_power = 100
 		add_ideas = ENC_House 
+		VEG = { set_cosmetic_tag = ERB_VEG }
+		hidden_effect = { VEG = { create_country_leader = {
+			name = "Mr House"
+			desc = "MR_HOUSE_DESC"
+			picture = "Portrait_House.dds"
+			expire = "3000.1.1"
+			ideology = technocracy
+			traits = { dislikes_legion }
+															}
+			}
+		}
 	}
-}
+	}
 
 country_event = {#67 - Ghoul Marriage
 	id = enc_reformers.67
@@ -1445,7 +1516,7 @@ country_event = {#74 - Civil War
 		}
 		NCR = {
 			multiply_variable = {
-				civil_war_size_var = 4.5
+				civil_war_size_var = 3
 			}
 		}
 		NCR = {
@@ -1469,6 +1540,7 @@ country_event = {#75 - Civil War
 	is_triggered_only = yes
 	option = {#	aid
 		name = enc_reformers.75.a
+		complete_national_focus = enc_our_new_ally
 		if = {
 			limit = {
 				is_in_faction = no
@@ -1502,55 +1574,6 @@ country_event = {#75 - Civil War
 		}
 	}
 
-country_event = {#76 - Reunited States
-	id = enc_reformers.76
-	title = enc_reformers.76.t
-	desc = enc_reformers.76.d
-	picture = GFX_event_ENC_double_flag_long
-	fire_only_once = yes
-	trigger = {
-		has_global_flag = pro_enclave_NCR
-		NCR = {
-			has_civil_war = No
-		}
-		NCR = {
-			has_government = intellectuals
-		}
-		custom_trigger_tooltip = {
-			tooltip = half_legitimacy
-			check_variable = {
-				var = legitimacy
-				value > 0.70
-			}
-		}
-	}
-	mean_time_to_happen = {
-		days = 30
-	}
-	option = {#	KOOLAID MAN
-		name = enc_reformers.76.a
-		NCR = {
-			every_owned_state = {
-				set_state_flag = do_not_decimate
-			}
-		}
-		annex_country = {
-			target = NCR transfer_troops = yes
-		}
-		NCR = {
-			every_owned_state = {
-				add_core_of = ERB
-			}
-		}
-		ERB = {
-			every_owned_state = {
-				clr_state_flag = do_not_decimate
-			}
-		}
-
-	}
-}
-	
 country_event = {#77 - The Democracy Question
 	id = enc_reformers.77
 	title = enc_reformers.77.t
@@ -1738,6 +1761,7 @@ country_event = {#85 - Shi
 		}
 	}
 	option = {#	No Chinese Exclusion Act
+		trigger = { has_country_flag = enc_shi }
 		set_country_flag = enc_China_Town
 		name = enc_reformers.85.b
 		add_war_support = -0.05
@@ -1790,13 +1814,18 @@ country_event = {#87 - Baseball
 	}
 	option = {#	Play Ball
 		name = enc_reformers.87.a
-		add_stability = 0.05
+				add_war_support = -0.05
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = 0.05
 		}
 		change_legitimacy = yes
 	}
+	option = {#	Play Ball
+		name = enc_reformers.87.b
+		
+	}
+
 
 }
 
@@ -1824,6 +1853,7 @@ country_event = {#88 - Mistakes
 	}
 	option = {#	Honesty
 		name = enc_reformers.88.b
+		set_country_flag = enc_shi
 		add_stability = -0.05# modify legitimacy
 		set_temp_variable = {
 			var = legitimacy_change_var
@@ -1865,10 +1895,7 @@ country_event = {#90 - Supreme Court
 	desc = enc_reformers.90.d
 	picture = GFX_event_ENC_Ham
 	fire_only_once = yes
-	is_triggered_only = NO
-	trigger = {
-		has_completed_focus = enc_accept_ghouls
-	}
+	is_triggered_only = yes
 	mean_time_to_happen = {
 		days = 60
 	}
@@ -2076,26 +2103,30 @@ country_event = {#100 Christmas
 	
 }
 
+
 country_event = {#101 Axis of Evil
     id = enc_reformers.101
     title = enc_reformers.101.t
     desc = enc_reformers.101.d
-    picture = GFX_event_enc_christmas
+    picture = GFX_event_CES_camp_1
     fire_only_once = yes    
-    is_triggered_only = no
+    is_triggered_only = yes
 	mean_time_to_happen = {	days = 3 }
-	trigger = {	
-		original_tag = ERB
-		has_completed_focus = enc_reform
-		NOT = {
-			country_exists = NCR
-		}
-		is_neighbor_of = CES
-		
-	}	    
     option = {# Bringit
 		name = enc_reformers.101.a
 			WBH = { 
+				if = { 
+					limit = { is_in_faction = yes } 
+					leave_faction = yes 	
+				}
+				}
+			PMR = { 
+				if = { 
+					limit = { is_in_faction = yes } 
+					leave_faction = yes 	
+				}
+				}
+			TOC = { 
 				if = { 
 					limit = { is_in_faction = yes } 
 					leave_faction = yes 	
@@ -2105,9 +2136,50 @@ country_event = {#101 Axis of Evil
 			add_to_faction = WBH
 			add_to_faction = EHT
 			add_to_faction = CHE
+			add_to_faction = PMR
+			add_to_faction = TOC
 			}
-		set_country_flag = axis_of_evil
+		WBH = {
+					add_ai_strategy = {
+						type = alliance
+						id = "CES"
+						value = 200
+					}
+				}
+		EHT = {
+					add_ai_strategy = {
+						type = alliance
+						id = "CES"
+						value = 200
+					}
+				}
+		CHE = {
+					add_ai_strategy = {
+						type = alliance
+						id = "CES"
+						value = 200
+					}
+				}
+		PMR = {
+					add_ai_strategy = {
+						type = alliance
+						id = "CES"
+						value = 200
+					}
+				}
+		TOC = {
+					add_ai_strategy = {
+						type = alliance
+						id = "CES"
+						value = 200
+					}
+				}
+							
+		set_global_flag = axis_of_evil
 	custom_effect_tooltip = enc_reformers.101.a.tt
+	hidden_effect = {
+			country_event = { id = enc_reformers.103 days = 180 }		
+		}
 }
 }
 
@@ -2118,17 +2190,619 @@ country_event = {#102 Hope
     picture = GFX_event_enc_lincoln_memorial
     fire_only_once = yes    
     is_triggered_only = no
-	mean_time_to_happen = {	days = 3 }
+	mean_time_to_happen = {	days = 30 }
 	trigger = {	
-	has_country_flag = axis_of_evil
+	has_global_flag = axis_of_evil
 	has_country_flag = enc_arroyo	
 	}	    
     option = {# Bringit
 		name = enc_reformers.102.a
+		dismantle_faction = yes
+		create_faction = "The United States"
+		add_to_faction = ARR
+		NCN = { 
+				if = { 
+					limit = { is_in_faction = yes } 
+					leave_faction = yes 	
+				}
+			}
+			add_to_faction = NCN
+			BEL = { 
+				if = { 
+					limit = { is_in_faction = yes } 
+					leave_faction = yes 	
+				}
+			}
+			add_to_faction = BEL
+		ARR = {
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+				}
+		BEL = {
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+				}
+		NCN = {
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+				}				
+		}
+    option = {# Bringit
+		trigger = { has_country_flag = enc_arroyo_mom }
+		name = enc_reformers.102.b
+		dismantle_faction = yes
+		create_faction = "The United States"
+		add_to_faction = ARR
+		NCN = { 
+				if = { 
+					limit = { is_in_faction = yes } 
+					leave_faction = yes 	
+				}
+			}
+			add_to_faction = NCN
+			BEL = { 
+				if = { 
+					limit = { is_in_faction = yes } 
+					leave_faction = yes 	
+				}
+			}
+			add_to_faction = BEL
+		ARR = {
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+				}
+		BEL = {
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+				}
+		NCN = {
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+				}				
+		}	
+				
 		
 }
-}
+
+country_event = {#103 - Drugs
+	id = enc_reformers.103
+	title = enc_reformers.103.t
+	desc = enc_reformers.103.d
+	picture = GFX_event_enc_drugs
+	mean_time_to_happen = {	days = 30 }
+	fire_only_once = yes
+    is_triggered_only = no
+	trigger = { has_completed_focus = enc_vlt_power_reform }
+		
 	
+	option = {# Drug Trade
+		name = enc_reformers.103.a
+		285 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		285 = { add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		# modify legitimacy
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.10
+		}
+		change_legitimacy = yes
+			set_country_flag = enc_drugs
+		}
+	option = {# Legalization
+		name = enc_reformers.103.b
+		285 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_stability = -0.05
+		set_country_flag = enc_drugs
+	}
+	option = {# Heal The Sick
+		name = enc_reformers.103.c
+			add_resource = { type = advanced_technology amount = 5 state = 285 }
+			add_resource = { type = electronics amount = 5 state = 285 }
+			set_country_flag = enc_healers
+		}
+		
+	}
+
+country_event = {#104 - Followers of Apocolypse
+	id = enc_reformers.104
+	title = enc_reformers.104.t
+	desc = enc_reformers.104.d
+	picture = GFX_event_enc_Followers
+	mean_time_to_happen = {	days = 30 }
+	fire_only_once = yes
+    is_triggered_only = no
+	trigger = { 	custom_trigger_tooltip = {
+			tooltip = half_legitimacy
+			check_variable = {
+				var = legitimacy
+				value > 0.70
+			}
+		}}
+	option = {# Capture Operations
+		name = enc_reformers.104.a
+		add_war_support = 0.05
+		add_stability = -0.05
+		}
+	option = {# Legalization
+		name = enc_reformers.104.b
+		add_war_support = -0.05
+		add_stability = 0.05
+	}
+	option = {# Heal The Sick
+		name = enc_reformers.104.c
+			trigger = { has_country_flag = enc_healers }
+			# modify legitimacy
+			set_temp_variable  = {
+			var = legitimacy_change_var
+			value = 0.05
+		}
+		custom_effect_tooltip = enc_reformers.104.c.tt	
+		add_resource = { type = advanced_technology amount = -5 state = 285 }
+		add_resource = { type = electronics amount = -5 state = 285 }
+		change_legitimacy = yes
+		clr_country_flag = enc_healers
+		add_ideas = Enc_Followers
+		set_country_flag = enc_followers
+		}
+		
+	}	
+
+country_event = {#105 Brahmin Barons
+    id = enc_reformers.105
+	title = enc_reformers.105.t
+	desc = enc_reformers.105.d
+	picture = GFX_event_generic_caravan
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		and = { tag = ERB
+		       141 = { is_owned_by = ERB }
+		}
+	}
+	option = {#	Easter Egg
+		name = enc_reformers.105.a
+		set_technology = {
+			plasma_weaponry = 1
+		}
+		add_ideas = ENC_energy_production
+	}
+	option = {#	Easter Egg
+		name = enc_reformers.105.b
+		set_technology = {
+			plasma_weaponry = 1
+		}
+		add_ideas = ENC_energy_production
+	}
+	option = {#	Easter Egg
+		name = enc_reformers.105.c
+		trigger = { has_completed_focus = enc_accept_super_mutants }
+		custom_effect_tooltip = enc_reformers.105.c.tt	
+		country_event = { id = enc_reformers.106 }
+		}
+		}
+country_event = {#106 Redding
+    id = enc_reformers.106
+	title = enc_reformers.106.t
+	desc = enc_reformers.106.d
+	picture = GFX_event_enc_Marcus
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {#	Easter Egg
+		name = enc_reformers.106.a
+		add_resource = { type = electronics amount = 5 state = 141 }
+		add_resource = { type = electricity amount = 20 state = 141 }
+		set_country_flag = enc_redding
+			}
+	
+		}	
+	
+country_event = {#107 Nuka Cola
+    id = enc_reformers.107
+	title = enc_reformers.107.t
+	desc = enc_reformers.107.d
+	picture = GFX_event_enc_nuka_cola
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_reform
+		date > 2298.3.10
+	}	
+	mean_time_to_happen = {	days = 400 }
+	option = {#	Jet
+		name = enc_reformers.107.a
+		trigger = { has_country_flag = enc_drugs }
+		add_ideas = enc_nuka_cola
+		clr_country_flag = enc_drugs 
+		custom_effect_tooltip = enc_reformers.107.a.tt	
+	}
+	option = {#	Flavorful
+		name = enc_reformers.107.b
+		add_stability = 0.05
+	}
+	}	
+
+country_event = {#108 Hoover Dam
+    id = enc_reformers.108
+	title = enc_reformers.108.t
+	desc = enc_reformers.108.d
+	picture = GFX_event_CES_first_battle_for_hoover_dam
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		OR = { 
+		AND = { 
+			tag = ERB
+			ERB = { has_completed_focus = enc_the_divided_state }
+			NCR = { has_civil_war = yes }
+			252 = { is_owned_by = NCR }
+				}
+		AND = { 
+			tag = ERB
+			ERB = { has_completed_focus = enc_the_divided_state }
+			NCR = { has_civil_war = yes }
+			252 = { is_owned_by = D01 }
+				}
+		}
+	}
+	mean_time_to_happen = {	days = 15 }
+	option = {#	Damnit
+		name = enc_reformers.108.a
+		CES = {transfer_state = 252 }
+		set_global_flag = enc_ces_dam
+	}
+	
+	}
+country_event = {#109 The Liberation of Hoover Dam
+    id = enc_reformers.109
+	title = enc_reformers.109.t
+	desc = enc_reformers.109.d
+	picture = GFX_event_enc_dam
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_global_flag = enc_ces_dam
+		tag = ERB
+		252 = { is_controlled_by = ERB }
+		CES = { has_completed_focus = ces_to_the_victor_go_the_spoils }	
+			}
+	mean_time_to_happen = {	days = 15 }
+	option = {#	Yayy
+		name = enc_reformers.109.a
+		252 = {
+				add_resource = {
+					type = electricity
+					amount = 30
+				}
+				add_resource = {
+					type = electronics
+					amount = 5
+				}
+			}
+		CES = {  520 = { 
+				add_resource = {
+					type = electricity
+					amount = -30
+				}
+				}
+				520 = {
+				add_resource = {
+					type = electronics
+					amount = -5
+				}
+				}
+			}
+		clr_global_flag = enc_ces_dam
+	}
+		}		
+country_event = {#110 - BOS Legionaries
+	id = enc_reformers.110
+	title = enc_reformers.110.t
+	desc = enc_reformers.110.d
+	picture = GFX_event_BOS_desert_patrol
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = ERB
+		is_neighbor_of = CES
+		NOT = { country_exists = BOS }
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	option = {#	Damnit
+		name = enc_reformers.110.a
+		CES ={ add_ideas = CES_BOS }
+		}
+	}
+country_event = {#111 Turn Off Radio
+	id = enc_reformers.111
+	title = enc_reformers.111.t
+	desc = enc_reformers.111.d
+	picture = GFX_event_radio_new_vegas
+	fire_only_once = yes
+	is_triggered_only = no
+	  trigger = {
+        NCR = {
+            set_temp_variable = {
+                var = enclave_spies
+                value = party_popularity@intellectuals
+            }
+            check_variable = { enclave_spies > 0.50 }
+        }
+         }
+	mean_time_to_happen = {
+		days = 3
+	}
+	option = {#	Damnit
+		name = enc_reformers.111.a
+		NCR ={ remove_ideas = ENC_ncr_enclave_propaganda }
+		}
+	option = {#	Push
+		trigger = { has_completed_focus = enc_military_propaganda }
+		name = enc_reformers.111.b
+		custom_effect_tooltip = enc_reformers.111.b.tt	
+		NCR ={ remove_ideas = ENC_ncr_enclave_propaganda }
+		NCR = {
+				add_popularity = { ideology = intellectuals popularity = 0.10 }
+			}
+		}
+	}
+		
+country_event = {#112 - Insurgency
+	id = enc_reformers.112
+	title = enc_reformers.112.t
+	desc = enc_reformers.112.d
+	picture = GFX_event_radio_new_vegas
+	fire_only_once = yes	
+    is_triggered_only = yes
+	option = {#Declaration
+		name = enc_reformers.112.a
+		every_state = {
+		limit = { is_owned_by = NCR has_state_flag = enc_patriots_armed }
+		ERB = {transfer_state = PREV } 
+		}
+		NCR= {
+		declare_war_on = {
+					target = ERB
+					type = annex_everything
+			}
+		}
+		ERB = {
+	division_template = { name = "Rebel Militia"
+	division_names_group = REBEL_INF_01
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia  = { x = 1 y = 0 }
+		militia  = { x = 1 y = 1 }
+		militia  = { x = 1 y = 2 }
+		militia  = { x = 1 y = 3 }
+	}
+	support = {
+	}
+}
+		every_owned_state = {
+			limit = { has_state_flag = enc_patriots_armed }
+			create_unit = { division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+				owner = ERB
+				}
+				create_unit = { division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+				owner = ERB
+				}
+                }
+			}
+	}
+	}
+country_event = {#113 - President Hayes
+    id = enc_reformers.113
+	title = enc_reformers.113.t
+	desc = enc_reformers.113.d
+	picture = GFX_event_ENC_double_flag_long
+	  trigger = {
+        NCR = {
+            set_temp_variable = {
+                var = enclave_spies
+                value = party_popularity@intellectuals
+            }
+            check_variable = { enclave_spies > 0.80 }
+        }
+         }
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {#	Oops
+		name = enc_reformers.113.a
+		hidden_effect = {
+		set_global_flag = pro_enclave_NCR 
+		NCR = { set_politics = { ruling_party = intellectuals} } }
+		NCR = {	set_cosmetic_tag = NCR_ERB }
+		complete_national_focus = enc_our_new_ally
+	}
+}
+
+country_event = {#114 - Election!
+    id = enc_reformers.114
+	title = enc_reformers.114.t
+	desc = enc_reformers.114.d
+	picture = GFX_event_enc_election
+	  trigger = {	
+		has_completed_focus = enc_presidential_elections
+		date > 2284.10.04
+		date < 2284.12.30
+			}	    
+    is_triggered_only = no
+	fire_only_once = yes
+	option = {#	King
+		name = enc_reformers.114.a
+		trigger = { has_completed_focus = enc_americans_one_and_all }
+		create_country_leader  = {
+	name = "The King"
+	desc = "THE_KING_DESC"
+	picture = "gfx/leaders/VEG/Portrait_King.dds"
+	expire = "3000.1.1"
+	ideology = ideocracy
+	traits = {
+		popular_figurehead
+		smooth_talking_charmer
+		}
+		}
+		}
+	option = {#	House
+		name = enc_reformers.114.b
+	trigger = { has_completed_focus = enc_NEW_puppet }
+	create_country_leader  = {
+	name = "Mr House"
+	desc = "MR_HOUSE_DESC"
+	picture = "gfx/leaders/VEG/Portrait_House.dds"
+	expire = "3000.1.1"
+	ideology = ideocracy
+	traits = {
+		dislikes_legion
+			}
+			}
+			}	
+	option = {#	Hayes
+	name = enc_reformers.114.c
+	trigger = {
+	controls_state   = 253 }
+	create_country_leader = {
+	name = "Grant C. Hayes"
+	desc = "Hayes_DESC"
+	picture = "gfx/leaders/ENC/.dds"
+	expire = "3000.1.1"
+	ideology = ideocracy
+	traits = {
+		
+			}		
+}
+}
+option = {#	Lynette
+	name = enc_reformers.114.e
+	create_country_leader = {
+	name = "First Citizen Lynette"
+	id = 910
+	desc = "POLITICS_CITIZEN_DESC"
+	picture = "gfx/leaders/Vault/Portrait_first_citizen.dds"
+	expire = "3000.1.1"
+	ideology = ideocracy
+	traits = {
+	}
+}
+}
+option = {#	Gannon
+		name = enc_reformers.114.f
+	trigger = { has_country_flag = enc_followers }
+	create_country_leader  = {
+	name = "Arcade Gannon"
+	desc = "THE_KING_DESC"
+	picture = "gfx/leaders/VEG/Portrait_Arcade.dds"
+	expire = "3000.1.1"
+	ideology = ideocracy
+	traits = {
+		popular_figurehead
+		smooth_talking_charmer
+		}
+		}
+		}
+option = {#	Courier
+		name = enc_reformers.114.g
+	trigger = { controls_state = 252}
+	create_country_leader  = {
+	name = "The Courier"
+	desc = "THE_KING_DESC"
+	picture = "gfx/leaders/ERB/Portrait_CourierNew.dds"
+	expire = "3000.1.1"
+	ideology = ideocracy
+	traits = {
+		popular_figurehead
+		smooth_talking_charmer
+		}
+		}
+		}
+option = {#	Marcus
+		name = enc_reformers.114.h
+		trigger = {has_country_flag = enc_redding }
+		create_country_leader  = {
+	name = "Marcus"
+	desc = "THE_KING_DESC"
+	picture = "gfx/leaders/Supermutant/Portrait_Supermutant_Generic_4.dds"
+	expire = "3000.1.1"
+	ideology = ideocracy
+	traits = {
+		popular_figurehead
+		smooth_talking_charmer
+		}
+		}
+		}			
+}
+
+country_event = {#115 Axis of Evil
+    id = enc_reformers.115
+    title = enc_reformers.115.t
+    desc = enc_reformers.1151.d
+    picture = GFX_event_CES_camp_1
+    fire_only_once = yes    
+    is_triggered_only = no
+	trigger = {	
+		tag = ERB 
+		is_neighbor_of = CES
+		strength_ratio = {
+			tag = CES
+			ratio < 0.6
+		}
+		NOT = {
+			country_exists = NCR
+		}
+	has_completed_focus = enc_reform
+	}
+	mean_time_to_happen = {	days = 3 }
+    option = {# Bringit
+	name = enc_reformers.115.a
+	CES = {give_guarantee = WBH } 
+	WBH = { give_guarantee = CES } 
+	CES = { give_guarantee = EHT } 
+	EHT = {give_guarantee = CES } 
+		}
+}
+
 # integration
 #
 
