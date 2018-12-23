@@ -113,7 +113,7 @@ ENC_debug = {
 		tag = ERB
 	}	
 	visible = {
-		always = false
+		# always = false
 	}
 
 }

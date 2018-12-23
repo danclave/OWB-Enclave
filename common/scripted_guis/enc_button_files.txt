@@ -151,7 +151,7 @@ scripted_gui = {
 			arm_rebels_click = {
 				ROOT = { 	
 					hidden_effect = {
-						add_political_power = -50
+						add_political_power = arm_rebels_cost?-50
 					}	
 				}
 				set_state_flag = enc_rebels_armed
@@ -179,8 +179,7 @@ scripted_gui = {
 		        
 		ai_check = {
 			check_variable = { ai_random > 0.55 }
-		}
-		
+		}		
 		ai_weights = {
 			arm_rebels_click = {
 				ai_will_do = {

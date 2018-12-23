@@ -1639,6 +1639,66 @@ ENC_debug = {
 			load_oob = ERBREVOLT_RSR
 		}
 	}
+	ENC_debug_enc_civil_war = {
+		complete_effect = 	{		
+			NCR = {
+				# Enclave
+				start_civil_war = {
+					ideology = intellectuals
+					size = 0.5
+					capital = 63
+					states = { 63 583 4 205 80 }
+					states_filter = {
+						
+					}
+					keep_unit_leaders = { 1522 }
+				}
+			}
+			random_country = {
+				limit = {
+					original_tag = NCR
+					has_government = intellectuals
+				}
+				set_cosmetic_tag = ENC
+				global_every_army_leader = {
+					limit = {
+						has_id = 1522
+					}
+					set_nationality = ENC
+				}
+			}
+		}
+	}
+	ENC_debug_bar_civil_war = {
+		complete_effect = 	{		
+			NCR = {
+				# Enclave
+				start_civil_war = {
+					ideology = elites
+					size = 0.5
+					capital = 63
+					states = { 63 }
+					states_filter = {
+						has_state_flag = enc_rebels_armed
+					}
+					keep_unit_leaders = { 1522 }
+				}
+			}
+			random_country = {
+				limit = {
+					original_tag = NCR
+					has_government = intellectuals
+				}
+				set_cosmetic_tag = ENC
+				global_every_army_leader = {
+					limit = {
+						has_id = 1522
+					}
+					set_nationality = ENC
+				}
+			}
+		}
+	}
 }
 
 ###############################

@@ -7,4 +7,5 @@ opinion_modifiers = {
 	wontShootOnsight = { value = -80 }
 	genocidal_maniacs = { value = -80 }
 	dirty_muties = { value = -80 }
+	shared_currency = { value = 30 }
 }

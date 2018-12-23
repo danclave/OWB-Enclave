@@ -267,5 +267,9 @@ spriteTypes = {
 			name = "GFX_event_enc_power_grid_tutorial"
 			texturefile = "gfx/event_pictures/event_enc_power_grid_tutorial.tga"
 		}
+		SpriteType = {#event_ENC_assassinate_anderson
+			name = "GFX_event_ENC_assassinate_anderson"
+			texturefile = "gfx/event_pictures/event_ENC_assassinate_anderson.tga"
+		}
 }			
 

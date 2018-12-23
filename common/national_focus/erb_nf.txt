@@ -264,8 +264,8 @@ focus_tree = {
 		y = 2	
 		completion_reward = {
 			add_popularity = { ideology = elites popularity = -0.2 } 
-			add_stability = -0.10
-			custom_effect_tooltip = enc_assassinate_F_tt
+			add_stability = -0.10		
+			country_event = { id = enc_reformers.42 } 
 			hidden_effect = {
 				create_country_leader  = {
 					name = "Henry Richardson"
@@ -316,7 +316,6 @@ focus_tree = {
 		y = 1
 		cost = 2.15
 		completion_reward = {
-			add_stability = 0.05
 			country_event = { id = enc_reformers.7 }
 		}
 	}
@@ -333,7 +332,6 @@ focus_tree = {
 		y = 1
 		cost = 2.15
 		completion_reward = {
-			add_stability = 0.05
 			country_event = { id = enc_reformers.5 }
 		}
 	}
@@ -350,7 +348,6 @@ focus_tree = {
 		y = 1
 		cost = 2.15
 		completion_reward = {
-			add_stability = 0.05
 			country_event = { id = enc_reformers.4 }
 		}
 	}
@@ -367,7 +364,6 @@ focus_tree = {
 		y = 1
 		cost = 2.15
 		completion_reward = {
-			add_stability = 0.05
 			country_event = { id = enc_reformers.6 }
 		}
 	}
@@ -1030,7 +1026,7 @@ focus_tree = {
 	}
 	focus = {#EXPANSION - ANT - civilize
 		id = enc_ANT_civilization_by_force
-		icon = GFX_goal_enc_reform_ant
+		icon = GFX_goal_enc_ANT_establish_tributaries
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_ANT_annex_reform
 		x = -1
@@ -1057,7 +1053,7 @@ focus_tree = {
 	}
 	focus = {#EXPANSION - ANT - tributary
 		id = enc_ANT_establish_tributaries
-		icon = GFX_goal_enc_reform_ant
+		icon = GFX_goal_enc_appointed_governors
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_ANT_annex_reform
 		x = 1
@@ -1758,7 +1754,7 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-		add_stability = 0.10
+		add_stability = 0.05
 		add_political_power = 100
 		country_event = { id = enc_reformers.81 } 		
 			
@@ -1775,7 +1771,8 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			
+			add_political_power = 100
+			# todo something more interesting
 		}
 	}
 	focus = {#REBorN - accept NCR dollar
@@ -1785,10 +1782,25 @@ focus_tree = {
 		mutually_exclusive = { focus = enc_US_dollar }
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_federal_reserve
+		available = {
+			is_in_faction_with = NCR
+			has_opinion = {
+				target = NCR
+				value > 50
+			}
+		}
 		x = 1
 		y = 1
 		cost = 5.8
 		completion_reward = {
+			add_opinion_modifier = {
+				target = NCR
+				modifier = shared_currency
+			}
+			reverse_add_opinion_modifier = {
+				target = NCR
+				modifier = shared_currency
+			}
 			
 		}
 	}
@@ -1885,7 +1897,7 @@ focus_tree = {
 		icon = GFX_goal_NCR_Allisgood 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_foreign_policy
-		x = 6
+		x = 8
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_foreign_policy }
@@ -1918,30 +1930,15 @@ focus_tree = {
 			
 		}
 	}
-
-	focus = {#Diplomacy - NCR - accept status quo 
-		id = enc_accept_status_quo
-		icon = GFX_goal_generic_intelligence_exchange 
-		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_NCR_start
-		mutually_exclusive = { focus = enc_support_old_world_party }
-		x = 0
-		y = 1
-		cost = 5.8 
-		prerequisite = { focus = enc_NCR_start }	
-		available = { NCR = { intellectuals > 0.3 }}
-		completion_reward = { NCR = { clr_country_flag = ncr_suspicious } 
-		}
-		}
-	focus = {#Diplomacy - NCR - bribes
+	focus = {#Diplomacy - NCR - state of nevada
 		id = enc_the_state_of_nevada
 		icon = GFX_goal_enc_the_state_of_nevada
 		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_accept_status_quo
+		relative_position_id = enc_our_new_ally
 		x = 0
 		y = 1
 		cost = 5.8 
-		prerequisite = { focus = enc_accept_status_quo }	
+		prerequisite = { focus = enc_our_new_ally }	
 		completion_reward = {
 			NCR = {add_opinion_modifier = { target = ERB modifier = intriguedDistrust }}
 			NCR = {remove_opinion_modifier = { target = ERB modifier = wontShootOnsight }}
@@ -2070,8 +2067,8 @@ focus_tree = {
 		icon = GFX_goal_enc_reform_hayes
 		cost = 5.8
 		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_owb_propaganda }
-		relative_position_id = enc_owb_propaganda
+		prerequisite = { focus = enc_NCR_start }
+		relative_position_id = enc_NCR_start
 		x = 0
 		y = 1
 		completion_reward = {
@@ -2087,8 +2084,38 @@ focus_tree = {
 		x = -1
 		y = 1
 		prerequisite = { focus = enc_support_old_world_party }
-		completion_reward = {
-		
+		available = {
+			NCR = {
+				intellectuals > 0.3
+			}
+		}
+		completion_reward = {		
+			NCR = {
+				# Enclave
+				start_civil_war = {
+					ideology = intellectuals
+					size = 0.5
+					capital = 63
+					states = { 63 583 4 205 80 }
+					states_filter = {
+
+					}
+					keep_unit_leaders = { 1522 }
+				}
+				random_country = {
+					limit = {
+						original_tag = NCR
+						has_government = intellectuals
+					}
+					set_cosmetic_tag = ENC
+					global_every_army_leader = {
+						limit = {
+							has_id = 1522
+						}
+						set_nationality = ENC
+					}
+				}
+			}
 		}
 	}
 	focus = {#Diplomacy - NCR - electoral victory
@@ -2100,8 +2127,16 @@ focus_tree = {
 		x = 1
 		y = 1
 		prerequisite = { focus = enc_support_old_world_party }
+		available = {
+			NCR = {
+				intellectuals > 0.50
+			}
+			
+		}
 		completion_reward = {
-		
+			NCR = {
+				
+			}
 		}
 	}
 	focus = {#Diplomacy - NCR - Our New Ally
@@ -2743,7 +2778,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_reform }
 		relative_position_id = enc_foreign_policy	
-		x = 18
+		x = 25
 		y = 0
 		cost = 3
 		completion_reward = {
@@ -2998,7 +3033,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	####################################
 	focus = {#Military - staff - reform general staff
 		id = enc_reform_general_staff
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_enc_reform_general_staff
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_department_of_defense
 		prerequisite = { focus = enc_department_of_defense }

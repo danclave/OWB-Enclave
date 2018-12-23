@@ -223,6 +223,10 @@ enc_reformers.41.t: "Our power grid is ready!"
 enc_reformers.41.d: "We are ready to begin connecting states to our power grid.\n From now on, we can connect any state neighbouring to a core state to our grid by constructing a civilian power grid.\nOnce built, we will gain a core on that state after a few days.\nShould we lose the building, we will soon lose the core.\nKeep in mind that every power grid requires 2 power to maintain."
 enc_reformers.41.a: "And Eden said: 'let there be light!'"
 ################################################################################################################ -<
+enc_reformers.42.t: "The Assassination of Franklin Anderson"
+enc_reformers.42.d: ""The good doctor has been a thorn in our side ever since his loss in the election. His connections and wits have kept him alive until now, but we have politically outmanoeuvred him at last.\n\nDespite quickly running out of allies, Anderson has stayed put in the Sierra Army Depot, stubbernly fulfilling his administrative duties. It was in his office that our operatives found him, unprepared for the confontation.\nPerhaps he had resigned himself to his fate, perhaps he was too single-minded to see how dire his situation had become.\n\nAll the same, Franklin Anderson was burried in an unmarked grave in the Nevada desert. If anyone noticed his dissapearance, they were wise enough not to notice it out loud. We made sure of that."
+enc_reformers.42.a: "Defiant until the end."
+################################################################################################################ -<
 enc_reformers.60.t: "The Ides of March"
 enc_reformers.60.d: "The Legion is a formidable foe, but not all within its ranks tolerate Caesar's rule.  Legate Lanius, the 'Monster of the East', thinks he could turn the Legion into a ruthless military machine. Perhaps he could be a useful ally to our bid to unite America...."
 enc_reformers.60.a: "He may be a son of a bitch but he'll be our son of a bitch."

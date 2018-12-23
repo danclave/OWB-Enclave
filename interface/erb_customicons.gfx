@@ -43,6 +43,10 @@ spriteTypes = {
             name = "GFX_goal_enc_anti_ncr"
  		    texturefile = "gfx/interface/goals/enc_anti_ncr.dds"
  	    } 
+        SpriteType = {#enc_ANT_establish_tributaries
+            name = "GFX_goal_enc_ANT_establish_tributaries"
+ 		    texturefile = "gfx/interface/goals/enc_ANT_establish_tributaries.dds"
+ 	    } 
         SpriteType = {#enc_appointed_governors
             name = "GFX_goal_enc_appointed_governors"
  		    texturefile = "gfx/interface/goals/enc_appointed_governors.dds"

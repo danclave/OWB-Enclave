@@ -1108,6 +1108,18 @@ country_event = {#41 - power tutorial
 		add_political_power = 5
 	}	
 }
+country_event = {#42 - the assassination of Anderson
+	id = enc_reformers.42
+	title = enc_reformers.42.t
+	desc = enc_reformers.42.d
+	picture = GFX_event_ENC_assassinate_anderson
+	fire_only_once = yes	
+	is_triggered_only = yes
+	option = {#
+		name = enc_reformers.42.a
+		custom_effect_tooltip = enc_assassinate_F_tt	
+	}	
+}
 
 country_event = {#60 - From the Top Down
 	id = enc_reformers.60

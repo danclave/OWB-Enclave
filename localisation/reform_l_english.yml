@@ -604,7 +604,6 @@ enc_open_to_new_ideas_desc:  "The Enclave is opening to new ideas as it tries to
 enc_house_always_wins:  "The House Always Wins"
 enc_rebuild_the_power_grid: "Rebuild The Power Grid"
 enc_rebuild_the_power_grid_tt: "Allows you to build civilian power stations, connecting the local populations to your power grid and your control."
-enc_rebuild_the_power_grid_ttt: "\n\n§MCurrently simplified:§!\nUnlocks OWB coring mechanic for §YEnclave§!"
 
 enc_debug_tt: "electricity: [?resource@electricity]"
 
