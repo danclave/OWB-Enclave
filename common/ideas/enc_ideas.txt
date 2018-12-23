@@ -155,6 +155,36 @@ ideas = {
 				attrition = -0.1
 			}
 		}
+		enc_nuka_cola = {  
+			picture = SOV_scientist_defect
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				
+			}
+		}
+		
+		Enc_Followers = {  
+			picture = SOV_scientist_defect
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				MONTHLY_POPULATION = 0.03
+				}
+		}
 		Enc_Dept_Education = {  
 			picture = enc_education
 			allowed = { 
@@ -1332,7 +1362,26 @@ ideas = {
 				tag = NCR
 				attack_bonus_against = 0.25
 			}
-		}		
+		}
+		CES_BOS = {  		
+			picture = FRA_scw_intervention_nationalists_focus
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.10
+				army_org_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = ERB
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}			
 		ENC_vengeance_bos = {  		
 			picture = FRA_scw_intervention_nationalists_focus
 			allowed = { 

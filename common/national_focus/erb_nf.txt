@@ -679,22 +679,7 @@ focus_tree = {
 		}
 		cost = 5.8  	
 	}
-	focus = {#????? - DES - puppet
-        id = enc_rangers_submit
-        icon = GFX_goal_enc_rangers_start
-        ai_will_do = { factor = 1 } 
-        relative_position_id = enc_the_bishop_incident
-        x = 0
-        y = 1
-        prerequisite = { focus = enc_the_bishop_incident }
-		available = { has_stability > 0.70 }        
-		completion_reward = { 
-			puppet = DES
-			DES = { set_cosmetic_tag = DES_ERB }
-		}
-        cost = 5.8
- }     
- 
+	
 
 	focus = {#RADIO - Enclave civilian
 		id = enc_radio_civilian
@@ -1265,7 +1250,8 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = {
 				ENC_begun_integration
-			}	
+			}
+			hidden_effect = { set_country_flag = enc_wastelander_integration }
 			if = {
 				limit = {
 					has_country_flag = enc_promised_no_integration				
@@ -1795,8 +1781,8 @@ focus_tree = {
 	focus = {#REBorN - Establish a Caps exchange rate
 		id = enc_free_of_bottlecaps
 		icon = GFX_goal_bottlecap
-		prerequisite = { focus = enc_NCR_dollar }
-		prerequisite = { focus = enc_US_dollar }
+		prerequisite = { focus = enc_NCR_dollar 
+						focus = enc_US_dollar }
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NCR_dollar
 		x = -1
@@ -2036,6 +2022,84 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {#
+		id = Enc_Nevada_Rangers
+		icon = GFX_goal_enc_rangers_start
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_the_state_of_nevada
+		x = 3
+		y = 1
+		cost = 5.8 
+		bypass = {
+			DES = { exists = NO }
+		}	
+		prerequisite = { focus = enc_the_state_of_nevada }	
+		available = {
+		strength_ratio = { tag = DES ratio > 1 }
+		custom_trigger_tooltip = {
+				tooltip = half_legitimacy		
+				check_variable = {
+					var = legitimacy
+					value > 0.2499
+				}
+			}
+			}
+		completion_reward = { 
+		annex_country = { target = DES }
+		}
+		}
+		
+	focus = {#
+		id = Enc_Area_51
+		icon = GFX_goal_enc_verti
+		ai_will_do = { factor = 1 } 
+		relative_position_id = Enc_Nevada_Rangers
+		x = 0
+		y = 1
+		cost = 5.8 
+		prerequisite = { focus = Enc_Nevada_Rangers}	
+		available = { has_full_control_of_state = 389 } 
+		completion_reward = { 
+			389 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		add_resource = { type = electronics amount = 15 state = 389 }
+		add_resource = { type = advanced_technology amount = 16 state = 389 }	
+		}
+		}
+				
+	focus = {#Tearing Down the HOuse 
+		id = Enc_Tearing_Down_House
+		icon = GFX_goal_VEG_The_Ultra-Luxe 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = Enc_Area_51
+		x = 0
+		y = 1
+		cost = 5.8 
+		bypass = {
+			VEG = { exists = NO }
+		}	
+		prerequisite = { focus = Enc_Area_51 }	
+		completion_reward = { 
+		hidden_effect = { set_autonomy = {
+					target = VEG
+					autonomy_state = autonomy_free
+					}
+		VEG = { if = { limit = { is_in_faction = yes } 
+			leave_faction = yes }	
+			}
+					ERB = {
+						create_wargoal = { type = annex_everything target = VEG }
+						}	
+						}
+		}
+		}
+		
 	focus = {#Diplomacy - NCR - trade
 		id = enc_NCR_trade
 		icon = GFX_goal_generic_trade
@@ -2087,7 +2151,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		prerequisite = { focus = enc_support_old_world_party }
-		completion_reward = {
+		completion_reward = { country_event = { id = enc_reformers.74 } 
 		
 		}
 	}
@@ -2100,7 +2164,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		prerequisite = { focus = enc_support_old_world_party }
-		completion_reward = {
+		available = {
+		       NCR = { intellectuals > 0.80 }
+                   }
+        completion_reward = { country_event = { id = enc_reformers.113 }
 		
 		}
 	}
@@ -2216,7 +2283,8 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 5.8 
-		prerequisite = { focus = enc_NCR_seak_allies }
+		prerequisite = { focus = enc_NCR_seak_allies
+				not = {has_country_flag = enc_promised_no_peace_with_bos} }
 		completion_reward = {
 			BOS = {
 				custom_effect_tooltip = relations_increased_20
@@ -2564,7 +2632,10 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 				var = legitimacy_change_var
 				value = 0.10
 			}
-			change_legitimacy = yes }
+			change_legitimacy = yes
+		custom_effect_tooltip = unlock_arm_slaves 
+		520 = { set_state_flag = no_rebels_you_fucks }
+		}
 	}
 	focus = {#SS-CER-BOTTOM-SPARTACUS
 		id = enc_ss_ceasar_bottom_uprising
@@ -2576,22 +2647,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			CES = {
-				release = PHR
-				release = FLA
-				release = RSR
-			}
-			hidden_effect = { 
-				PHR = { load_oob = "NCRrevolt_PHR" }
-				FLA = { load_oob = "NCRrevolt_FLA" }
-				RSR = { load_oob = "ERBREVOLT_RSR" }
-			}
-			CES = {
-				declare_war_on = { target = PHR type = annex_everything }
-				declare_war_on = { target = FLA type = annex_everything }
-				declare_war_on = { target = RSR type = annex_everything }
-			}
-			country_event = { id = enc_reformers.65 } 
+		custom_effect_tooltip = enc_Second_Revolution	
 		} 
 	}
 	focus = {#SS operation babylon
@@ -2714,10 +2770,12 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		cost = 5.8
 		completion_reward = {
 			add_equipment_to_stockpile = { type = infantry_equipment amount = -1000 }
+			custom_effect_tooltip = unlock_arm_patriots
 			add_political_power = 50
 			NCR = {
-				add_popularity = { ideology = intellectuals popularity = 0.10 }
+				add_popularity = { ideology = intellectuals popularity = 0.05 }
 			}
+			253 = {set_state_flag = no_rebels_you_fucks }
 		}
 	}
 	focus = {#SS-NCR-PEOPLE-UPRISING
@@ -2730,7 +2788,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		y = 1
 		cost = 5.8
 		completion_reward = {
-		country_event = { id = enc_reformers.74 } 
+		custom_effect_tooltip = enc_dayglow_proclamation
 		  }
 	}	
  
@@ -2984,8 +3042,8 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		icon = GFX_goal_NEW_new_world_old_ideas
 	
 		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_specialist_soldiers}
-		prerequisite = {focus = enc_disciplined_soldiers}
+		prerequisite = {focus = enc_specialist_soldiers
+						focus = enc_disciplined_soldiers }
 		relative_position_id = enc_specialist_soldiers
 		x = -1
 		y = 1
