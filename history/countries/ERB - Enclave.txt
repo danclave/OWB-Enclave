@@ -32,6 +32,9 @@ set_technology = {
 
 set_country_flag = not_allowed_to_core_flag
 set_country_flag = generic_decisions_disabled
+set_country_flag = no_generic_manufacturer
+set_country_flag = no_generic_advisor
+
 ###############################
 # POLITICS
 ###############################
@@ -127,8 +130,7 @@ add_ideas = closed_economy
 add_manpower = 500
 
 # 4rth of july
-country_event = { id = enc.22 } 
-country_event = { id = enc.23 days = 25 } 
+country_event = { id = enc_reformers.23 days = 25 } 
 
 
 #DOM protection - do not remove

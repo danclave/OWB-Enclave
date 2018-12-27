@@ -1,23 +1,29 @@
-Todo list:
-
-MUST	
-1. Finish currency decisions
-2. Finish old world radio route
-3. More icons
+MUST
+1. Finish Nevada route
+2. Rework punishment for being outnumbered by purists 
 
 SHOULD
-1. buff human choice in event 1
-2. Expand on "shaped explosives" choice
-3. Expand on charismatic vs ruthless options
-4. legitimacy mechanic tutorial event
-5. more legitimacy based decisions
+1. Expand on charismatic vs ruthless options
+2. update legitimacy mechanic tutorial event
+3. more legitimacy based decisions
+4. More icons
+5. finish advisors for hayes, moreno
 
 COULD
-1. enc_reformers.39 followup that costs legitimacy
-2. More interactions with Anderson
+1. More interactions with Anderson
+2. Add Helios One 
+3. Make thehe cost of spawning rebels scale.
+4. Add custom effect for increasing/decreasing purist popularity (inverse red/green)
+5. More descriptions for events / advisors / decisions
+6. consequences for enc_reformers.13.c
 
 DONE:
 1. Finish arm rebel mechanic
 2. Finish coring mechanic
-	a) fix localization error
+    a) fix localization error
 3. Flavor event for assassinating Anderson
+4. Finish currency decisions
+5. buff human choice in event 1
+6. consequence for enc_reformers.39.c
+6. added advisors for wright, salvatore
+7. Expand on "shaped explosives" choice

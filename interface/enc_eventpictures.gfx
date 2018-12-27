@@ -299,5 +299,9 @@ spriteTypes = {
 			name = "GFX_event_enc_election"
 			texturefile = "gfx/event_pictures/event_enc_election.dds"
 		}
+		SpriteType = {#Skeletons
+			name = "GFX_event_enc_skeletons"
+			texturefile = "gfx/event_pictures/event_enc_skeletons.tga"
+		}
 }			
 

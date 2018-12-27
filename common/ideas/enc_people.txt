@@ -29,7 +29,10 @@ ideas = {
 			traits = { 
 				respectedByScientists
 				purist
-			}		
+			}
+			visible = {
+				NOT = { has_country_flag = purists_purged }
+			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -78,7 +81,7 @@ ideas = {
 			allowed = {
 				original_tag = ERB
 			}		
-			available = {			
+			visible = {			
 				has_completed_focus = enc_reform
 				has_completed_focus = enc_purge_opposition
 			}
@@ -95,48 +98,16 @@ ideas = {
 			
 			allowed = {
 				original_tag = ERB
-			}		
+			}
+			visible = {
+				NOT = { has_country_flag = purists_purged }
+			}
 			traits = {
 				suppressor
 				purist_2
 			}		
 			ai_will_do = {
 				factor = 1
-			}
-		}
-		erb_raul = {
-			picture = raul_advisor
-
-			allowed = {
-				original_tag = ERB
-			}
-			traits = { raul_engineer }
-
-			ai_will_do = {
-				factor = 10
-			}
-		}
-		erb_judah_kreger = {
-			picture = judah_kreger_advisor
-
-			allowed = {
-				original_tag = ERB
-			}
-			traits = { judah_kreger_leader }
-
-			ai_will_do = {
-				factor = 10
-			}
-		}
-		erb_quincy = {
-			picture = qunicy_advisor
-
-			allowed = {
-				original_tag = ERB
-			}
-			traits = { quincy_technician }
-			ai_will_do = {
-				factor = 10
 			}
 		}
 		norman_wood = {
@@ -152,6 +123,7 @@ ideas = {
 			}
 		}
 		dr_henry = {
+			picture = d_henry
 			allowed = {
 				tag = ERB  
 			}
@@ -159,7 +131,67 @@ ideas = {
 				has_completed_focus = enc_reform
 			}
 			traits = {
-				# todo
+				compassionate_doctor
+			}
+		}
+		erb_hayes = {
+			picture = enc_hayes
+			allowed = {
+				tag = ERB  
+			}
+			available = {
+				has_completed_focus = enc_reform
+			}	
+			traits = {
+				old_world_blues
+			}
+		}
+		erb_wright = {
+			picture = enc_wright		
+			allowed = {
+				tag = ERB  
+			}
+			visible = {
+				has_country_flag = enc_wrights_tolerated_flag
+			}	
+			traits = {
+				captain_of_industry # todo change?
+			}
+		}
+		erb_salvatore = {
+			picture = enc_salvatore		
+			allowed = {
+				tag = ERB  
+			}
+			visible = {
+				has_country_flag = enc_salvatores_tolerated_flag
+			}	
+			traits = {
+				salvatore_puppet
+			}
+		}
+		erb_arcade_gannon = {
+			picture = arcade_gannon		
+			allowed = {
+				tag = ERB  
+			}
+			visible = {
+				has_country_flag = gannon_returns
+			}	
+			traits = {
+				genius_pacifist
+			}
+		}
+		erb_orion_moreno = {
+			picture = orion_moreno		
+			allowed = {
+				tag = ERB  
+			}
+			visible = {
+				has_country_flag = merono_returns
+			}	
+			traits = {
+				loyal_soldier
 			}
 		}
 	}
@@ -278,7 +310,7 @@ ideas = {
 			allowed = {
 				original_tag = ERB
 			}
-			available = {
+			visible = {
 				has_country_flag = exiles_arrived
 			}
 			traits = { air_close_air_support_3 }

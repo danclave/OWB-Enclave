@@ -612,10 +612,9 @@ ideas = {
 				always = yes
             }
             removal_cost = -1
-			modifier = {
-			   army_morale_factor = -0.25
-			   army_org_factor = -0.25
-			   non_core_manpower = -0.02
+			modifier = {				
+				political_power_factor = -0.05
+				non_core_manpower = -0.02
 			}
 		}
 		ENC_legitimacy_low = {
@@ -946,7 +945,7 @@ ideas = {
 		}
 		
 		ENC_BOS_Connections = {  		
-			picture = enc_scientists #check
+			picture = generic_BOS_idea_paladins
 			allowed = { 
 				always = no
             }
@@ -960,7 +959,7 @@ ideas = {
 			}
 		}
 		ENC_CES_Wisdom = {  
-			picture = enc_idea_infighting
+			picture = caesar's_legacy
 			allowed = { 
 				always = no
 			}

@@ -475,6 +475,10 @@ spriteTypes = {
             name = "GFX_goal_enc_reform_forced_deal_dark"
  		    texturefile = "gfx/interface/goals/enc_reform_forced_deal_dark.dds"
  	    } 
+        SpriteType = {#enc_reform_general_staff
+            name = "GFX_goal_enc_reform_general_staff"
+ 		    texturefile = "gfx/interface/goals/enc_reform_general_staff.dds"
+ 	    } 
         SpriteType = {#enc_reform_hayes
             name = "GFX_goal_enc_reform_hayes"
  		    texturefile = "gfx/interface/goals/enc_reform_hayes.dds"
@@ -715,6 +719,10 @@ spriteTypes = {
             name = "GFX_goal_vault_tec"
  		    texturefile = "gfx/interface/goals/vault_tec.dds"
  	    }
+        SpriteType = {#arcade_gannon
+            name = "GFX_idea_arcade_gannon"
+ 		    texturefile = "gfx/interface/ideas/arcade_gannon.dds"
+ 	    } 
         SpriteType = {#boris_t
             name = "GFX_idea_boris_t"
  		    texturefile = "gfx/interface/ideas/boris_t.dds"
@@ -738,6 +746,10 @@ spriteTypes = {
         SpriteType = {#enc_ew_production
             name = "GFX_idea_enc_ew_production"
  		    texturefile = "gfx/interface/ideas/enc_ew_production.dds"
+ 	    } 
+        SpriteType = {#enc_hayes
+            name = "GFX_idea_enc_hayes"
+ 		    texturefile = "gfx/interface/ideas/enc_hayes.dds"
  	    } 
         SpriteType = {#enc_idea_eyebots
             name = "GFX_idea_enc_idea_eyebots"
@@ -795,6 +807,10 @@ spriteTypes = {
             name = "GFX_idea_enc_reform"
  		    texturefile = "gfx/interface/ideas/enc_reform.dds"
  	    } 
+        SpriteType = {#enc_salvatore
+            name = "GFX_idea_enc_salvatore"
+ 		    texturefile = "gfx/interface/ideas/enc_salvatore.dds"
+ 	    } 
         SpriteType = {#enc_scientists
             name = "GFX_idea_enc_scientists"
  		    texturefile = "gfx/interface/ideas/enc_scientists.dds"
@@ -814,6 +830,10 @@ spriteTypes = {
         SpriteType = {#enc_super_soldiers
             name = "GFX_idea_enc_super_soldiers"
  		    texturefile = "gfx/interface/ideas/enc_super_soldiers.dds"
+ 	    } 
+        SpriteType = {#enc_wright
+            name = "GFX_idea_enc_wright"
+ 		    texturefile = "gfx/interface/ideas/enc_wright.dds"
  	    } 
         SpriteType = {#enc__idea_fist
             name = "GFX_idea_enc__idea_fist"

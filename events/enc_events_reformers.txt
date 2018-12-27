@@ -14,12 +14,15 @@ country_event = {#1 - DOUGLAS PAST - STORIES
 		name = enc_reformers.1.a
 		country_event = { id = enc_reformers.2 }
 		set_country_flag = enc_arroyo
-			}
+		add_country_leader_trait = mutant_sympathies
+	}
 	option = {#  He aided the Chosen One and after he settled in Arroyo where he met and married a local woman 
 		name = enc_reformers.1.b
 		country_event = { id = enc_reformers.2 }
 		set_country_flag = enc_arroyo_mom
 		set_country_flag = enc_arroyo
+		add_country_leader_trait = mutant_sympathies
+		add_stability = -0.05
 	}
 	option = {# He didn't aid the Chosen One 
 		name = enc_reformers.1.c
@@ -107,6 +110,7 @@ country_event = {#4 - Dealing with Wrights
 		name = enc_reformers.4.a
 		add_stability = 0.05
 		set_country_flag = enc_wrights_tolerated_flag
+		custom_effect_tooltip = enc_reformers.4.a.tt
 	}
 	option = {#No place for him
 		name = enc_reformers.4.b
@@ -160,18 +164,16 @@ country_event = {#6 - Dealing with Salvatores
 	
 	option = {# puppet
 		name = enc_reformers.6.a
-		# modify NCR suspcion
-		set_temp_variable = {
-			var = suspicion_change_var
-			value = -10
-		}
-		change_suspicion = yes
+		custom_effect_tooltip = enc_reformers.6.a.tt
+		custom_effect_tooltip = erb_salvatore_desc
+		custom_effect_tooltip = breaklines
 		# modify legitimacy
 		set_temp_variable  = {
 			var = legitimacy_change_var
 			value = -0.05
 		}
 		change_legitimacy = yes
+		set_country_flag = enc_salvatores_tolerated_flag
 	}
 	option = {# house arrest
 		name = enc_reformers.6.b
@@ -221,17 +223,11 @@ country_event = {#8 - SECRETS STOLEN
 	option = {#OH WELL
 		name = enc_reformers.8.a
 		add_political_power = 25
-		set_technology = {
-			tesla_weaponry = 0
-		}
 	}
 	option = {#MAKE SOME EXAMPLES
 		name = enc_reformers.8.b
 		custom_effect_tooltip = enc_crackdown_justified_tt
-		set_country_flag = enc_crackdown_justified		
-		set_technology = {
-			tesla_weaponry = 0
-		}
+		set_country_flag = enc_crackdown_justified			
 	}
 }
 
@@ -326,25 +322,53 @@ country_event = {#13 - Consolidating power
 	desc = enc_reformers.13.d
 	picture = GFX_event_Enc_speech
 	
-	fire_only_once = yes
+	fire_only_once = no
     is_triggered_only = yes
 	
 	option = {# Speech
 		name = enc_reformers.13.a
 		add_political_power = 50
 		add_popularity = { ideology = intellectuals popularity = 0.05 }
-		
-
+	}
+	option = {# Speech
+		name = enc_reformers.13.c
+		trigger = {
+			has_country_flag = leader_charismatic
+		}
+		add_political_power = 100
+		add_popularity = { ideology = intellectuals popularity = 0.10 }
+		custom_effect_tooltip = leader_charismatic_tt
 	}
 	option = {# explosives
 		name = enc_reformers.13.b
+		trigger = {
+			has_country_flag = leader_ruthless
+		}
+		custom_effect_tooltip = enc_reformers.13.b.tt
+		remove_ideas = {
+			ENC_scientists_traitors
+		}
+		remove_ideas = {
+			ENC_officers_traitors
+		}
+		custom_effect_tooltip = empty_line
+		hidden_effect = {
+			remove_ideas = {
+				ENC_scientists_traitors_2
+				ENC_officers_traitors_2
+			}
+		}
 		add_popularity = { ideology = elites popularity = -0.15 }
-		add_stability = -0.15
-		add_war_support = -0.10
+		add_stability = -0.30
+		add_war_support = -0.30
+		custom_effect_tooltip = empty_line	
 		swap_ideas = {
 			remove_idea = ENC_infighting
 			add_idea = ENC_infighting_2
 		}
+		country_event = { id = enc_reformers.43}
+		custom_effect_tooltip = leader_ruthless_tt
+		set_country_flag = purists_purged
 	}
 }
 
@@ -582,7 +606,7 @@ country_event = {#20 - Dealing with Bishops - escape
 		name = enc_reformers.20.a
 		set_temp_variable = {
 			var = suspicion_change_var
-			value = 10
+			value = 25
 		}
 		change_suspicion = yes
 		
@@ -675,7 +699,7 @@ country_event = {#23 - 4rth of July
 	}
 }
 
-country_event = {#24 - killing all opposition
+country_event = {#24 - UNUSED
 	id = enc_reformers.24
 	title = enc_reformers.24.t
 	desc = enc_reformers.24.d
@@ -688,16 +712,14 @@ country_event = {#24 - killing all opposition
 		name = enc_reformers.24.a
 	}
 }
-country_event = {#25 - Anderson goes into hiding
+country_event = {#25 - UNUSED
 	id = enc_reformers.25
 	title = enc_reformers.25.t
 	desc = enc_reformers.25.d
 	picture = GFX_event_ENC_vertibird
 	
+	is_triggered_only = yes
 	fire_only_once = yes
-	trigger = {	
-		has_idea = ENC_infighting_2
-	}	
 	mean_time_to_happen = {	days = 30 }
 	
 	option = {# RIP
@@ -798,6 +820,7 @@ country_event = {#29 - East Coast exiles
 		add_equipment_to_stockpile = { type = vb_transport_plane_equipment amount = 50 producer = ERB }
         add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 50 producer = ERB }
 		custom_effect_tooltip = enc_reformers.29.a.tt
+		set_country_flag = exiles_arrived
 	}
 }
 
@@ -1097,15 +1120,31 @@ country_event = {#39 - loyalists want to rejoin
 	
 	option = {# Accept them
 		name = enc_reformers.39.a
-		add_popularity = { ideology = elites popularity = 0.08 }	
-		custom_effect_tooltip = enc_reformers.39.a.tt	
+		custom_effect_tooltip = enc_reformers.39.a.tt2
+		custom_effect_tooltip = enc_reformers.39.a.tt
+		add_popularity = { ideology = elites popularity = 0.08 }
 		hidden_effect = {
 			load_oob = ERB_remnants		
 		}
+		set_country_flag = remnants_accepted
 	}
 	option = {# send them away
 		name = enc_reformers.39.b
+		custom_effect_tooltip = enc_reformers.39.b.tt
 		add_stability = -0.05		
+	}
+	option = {# RUTHLESS - take their equipment
+		name = enc_reformers.39.c
+		trigger = {
+			has_country_flag = leader_ruthless
+		}
+		custom_effect_tooltip = enc_reformers.39.c.tt
+		add_stability = -0.10
+		add_equipment_to_stockpile = { type = vb_transport_plane_equipment amount = 50 producer = ERB }
+        add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 50 producer = ERB }
+		add_equipment_to_stockpile = { type = power_armor_equipment_3 amount = 300 producer = ERB }
+		add_equipment_to_stockpile = { type = energy_weapons_3 amount = 500 producer = ERB }
+		custom_effect_tooltip = leader_ruthless_tt
 	}
 }
 
@@ -1158,6 +1197,74 @@ country_event = {#42 - the assassination of Anderson
 		name = enc_reformers.42.a
 		custom_effect_tooltip = enc_assassinate_F_tt	
 	}	
+}
+
+country_event = {#43 - Out with the old
+	id = enc_reformers.43
+	title = enc_reformers.43.t
+	desc = enc_reformers.43.d
+	picture = GFX_event_enc_skeletons
+	fire_only_once = yes	
+	is_triggered_only = yes
+	option = { # too bad Anderson wasn't there
+		name = enc_reformers.43.a		
+	}	
+}
+country_event = {#44 - Remnants kill wastelanders
+	id = enc_reformers.44
+	title = enc_reformers.44.t
+	desc = enc_reformers.44.d
+	picture = GFX_event_ENC_3_troopers
+	fire_only_once = yes	
+	is_triggered_only = no
+	trigger = {
+		has_country_flag = remnants_accepted
+	}
+	mean_time_to_happen =  { days = 350 }
+	option = { # turn a blind eye
+		name = enc_reformers.44.a
+		# modify legitimacy
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.05
+		}
+		change_legitimacy = yes
+	}
+	option = { # punish
+		name = enc_reformers.44.b
+		add_manpower = -200
+		add_war_support = -0.10
+	}
+}
+
+country_event = {#45 - Gannon leaves
+	id = enc_reformers.45
+	title = enc_reformers.45.t
+	desc = enc_reformers.45.d
+	picture = GFX_event_Arcade_Gannon_Enclave
+	fire_only_once = yes	
+	is_triggered_only = no
+	trigger = {
+		# segregation or no elections
+		has_country_flag = gannon_returns
+		OR = {
+			has_completed_focus = enc_extend_presidential_powers_reform
+			has_completed_focus = enc_institutionalize_separation
+		}
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = { # too bad
+		name = enc_reformers.45.a
+		# gannon leaves
+		custom_effect_tooltip = enc_reformers.45.a.tt
+		clr_country_flag = gannon_returns
+		# modify legitimacy
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.05
+		}
+		change_legitimacy = yes
+	}
 }
 
 country_event = {#60 - From the Top Down
@@ -1495,6 +1602,19 @@ country_event = {#72 - This is How Liberty Dies
 	
 }
 
+country_event = {#73 Forgotten Man
+	id = enc_reformers.73
+	title = enc_reformers.73.t
+	desc = enc_reformers.73.d
+	picture = GFX_event_enc_forgotten_man
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Remember
+		name = enc_reformers.73.a
+		add_political_power = 150
+	}
+}
+
 country_event = {#74 - Civil War
     id = enc_reformers.74
 	title = enc_reformers.74.t
@@ -1597,7 +1717,13 @@ country_event = {#78 - Arcade Gannon
 	desc = enc_reformers.78.d
 	picture = GFX_event_Arcade_Gannon_Enclave
 	fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = no
+	trigger = {		
+		check_variable = {
+			var = legitimacy
+			value > 24.99
+		}	
+	}	
 	option = {#	Arcade Games
 		name = enc_reformers.78.a
 		set_country_flag = gannon_returns
@@ -1945,6 +2071,7 @@ country_event = {#92 Nuka-land
     is_triggered_only = yes    
     option = {# Idiots
 		name = enc_reformers.92.a
+		add_political_power = 50 # focus on more useful things
 	}
 	option = {# Whee
 		name = enc_reformers.92.b
@@ -2068,19 +2195,6 @@ country_event = {#99 Area 51
 	}
 }
 
-country_event = {#73 Forgotten Man
-	id = enc_reformers.73
-	title = enc_reformers.73.t
-	desc = enc_reformers.73.d
-	picture = GFX_event_enc_forgotten_man
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {#	Remember
-		name = enc_reformers.73.a
-		add_political_power = 150
-	}
-}
-
 country_event = {#100 Christmas
     id = enc_reformers.100
     title = enc_reformers.100.t
@@ -2102,7 +2216,6 @@ country_event = {#100 Christmas
 	}
 	
 }
-
 
 country_event = {#101 Axis of Evil
     id = enc_reformers.101
@@ -2348,18 +2461,18 @@ country_event = {#104 - Followers of Apocolypse
 	mean_time_to_happen = {	days = 30 }
 	fire_only_once = yes
     is_triggered_only = no
-	trigger = { 	custom_trigger_tooltip = {
-			tooltip = half_legitimacy
-			check_variable = {
-				var = legitimacy
-				value > 0.70
-			}
-		}}
+	trigger = { 	
+		check_variable = {
+			var = legitimacy
+			value > 0.50
+		}
+	}
+	
 	option = {# Capture Operations
 		name = enc_reformers.104.a
 		add_war_support = 0.05
 		add_stability = -0.05
-		}
+	}
 	option = {# Legalization
 		name = enc_reformers.104.b
 		add_war_support = -0.05
@@ -2373,10 +2486,10 @@ country_event = {#104 - Followers of Apocolypse
 			var = legitimacy_change_var
 			value = 0.05
 		}
+		change_legitimacy = yes
 		custom_effect_tooltip = enc_reformers.104.c.tt	
 		add_resource = { type = advanced_technology amount = -5 state = 285 }
 		add_resource = { type = electronics amount = -5 state = 285 }
-		change_legitimacy = yes
 		clr_country_flag = enc_healers
 		add_ideas = Enc_Followers
 		set_country_flag = enc_followers
@@ -2430,10 +2543,8 @@ country_event = {#106 Redding
 		add_resource = { type = electronics amount = 5 state = 141 }
 		add_resource = { type = electricity amount = 20 state = 141 }
 		set_country_flag = enc_redding
-			}
-	
-		}	
-	
+	}	
+}
 country_event = {#107 Nuka Cola
     id = enc_reformers.107
 	title = enc_reformers.107.t
@@ -2585,7 +2696,7 @@ country_event = {#111 Turn Off Radio
 			}
 		}
 	}
-		
+
 country_event = {#112 - Insurgency
 	id = enc_reformers.112
 	title = enc_reformers.112.t

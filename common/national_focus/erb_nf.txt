@@ -110,6 +110,12 @@ focus_tree = {
 			else = {
 				remove_ideas = ENC_infighting
 			}
+			if = {
+				limit = {
+					has_completed_focus = enc_reform
+				}				
+				set_country_flag = purists_purged
+			}
 		}
  }
 
@@ -139,6 +145,7 @@ focus_tree = {
 			}
 			change_legitimacy = yes
 			country_event = { id = enc_reformers.15 }
+			set_rule = { can_puppet = yes }
 		} 
 	}	
 
@@ -155,7 +162,7 @@ focus_tree = {
 			add_stability = 0.10
 			add_political_power = 100
 		}
-		cost = 5.8
+		cost = 2.9
 	}	
 	focus = {#POLITICS - provoke Purists
 		id = enc_provoke_purists
@@ -207,7 +214,7 @@ focus_tree = {
 			add_stability = 0.10
 			country_event = { id = enc_reformers.13 }
 		}
-		cost = 4.3
+		cost = 2.9
 	}
 	focus = {#POLITICS - Purge Scientists
 		id = enc_purge_scientists 
@@ -218,6 +225,12 @@ focus_tree = {
 		x = -1
 		y = 1
 		prerequisite = { focus = enc_consolidate_power	}
+		bypass = {
+			NOT = {
+				has_idea = ENC_scientists_traitors
+				has_idea = ENC_scientists_traitors_2
+			}
+		}
 		available = {
 			# has_idea = ENC_scientists_traitors_2
 			has_country_flag = enc_demoted_scientists
@@ -240,6 +253,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		prerequisite = { focus = enc_consolidate_power	}
+		bypass = {
+			NOT = {
+				has_idea = ENC_officers_traitors
+				has_idea = ENC_officers_traitors_2
+			}
+		}
 		available = {
 			# has_idea = ENC_officers_traitors_2
 			has_country_flag = enc_demoted_officers
@@ -277,7 +296,7 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 5.8
+		cost = 4.3
 	}
 
  	focus = {#RENO - The city of crime
@@ -454,7 +473,7 @@ focus_tree = {
 		relative_position_id = enc_reno_end
 		x = -2
 		y = 1
-		cost = 5.8
+		cost = 4.3
 		completion_reward = {
 			285 = {
 				add_extra_state_shared_building_slots = 4
@@ -519,7 +538,7 @@ focus_tree = {
 	focus = {#SUSPICION - infiltrate NCR
 		id = enc_infiltrate_ncr
 		icon = GFX_goal_enc_infiltrate_ncr
-		cost = 5.8
+		cost = 4.3
 		ai_will_do = { factor = 1 }
 		available = {
 			custom_trigger_tooltip = {
@@ -542,7 +561,7 @@ focus_tree = {
 	focus = {#SUSPICION - stage raider attacks
 		id = enc_stage_raider_attacks
 		icon = GFX_goal_NCR_Mojave
-		cost = 5.8
+		cost = 4.3
 		ai_will_do = { factor = 1 }
 		available = {
 			custom_trigger_tooltip = {
@@ -585,7 +604,7 @@ focus_tree = {
 	focus = {#SUSPICION - Contact Old World Party
 		id = enc_contact_old_world_party
 		icon = GFX_goal_enc_reform_hayes
-		cost = 5.8
+		cost = 4.3
 		ai_will_do = { factor = 1 }
 		available = {
 			# something, for sure
@@ -617,9 +636,9 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 5.8  	
+		cost = 4.3
 	}
-	focus = {#RADIO - Enclave military
+	focus = {#RADIO - Enclave military Radio
 		id = enc_radio_military
 		icon = GFX_goal_enc_radio_military
 		ai_will_do = { factor = 1 } 
@@ -634,7 +653,7 @@ focus_tree = {
 				add_idea = ENC_radio_military
 			}		
 		}
-		cost = 5.8  	
+		cost = 4.3
 	}
 	focus = {#RADIO - crack_the_code
 		id = enc_crack_the_code
@@ -649,7 +668,7 @@ focus_tree = {
 		}
 		cost = 5.8  	
 	}
-	focus = {#RADIO - crack_the_code 2
+	focus = {#RADIO - the_lucia_incident
 		id = enc_the_lucia_incident
 		icon = GFX_goal_NCR_Diplomacy
 		ai_will_do = { factor = 1 }
@@ -662,7 +681,7 @@ focus_tree = {
 		}
 		cost = 5.8  	
 	}
-	focus = {#RADIO - crack_the_code 3 
+	focus = {#RADIO - the_bishop_incident 
 		id = enc_the_bishop_incident 
 		icon = GFX_goal_NCR_Ranger_Core
 		ai_will_do = { factor = 1 }
@@ -676,7 +695,6 @@ focus_tree = {
 		cost = 5.8  	
 	}
 	
-
 	focus = {#RADIO - Enclave civilian
 		id = enc_radio_civilian
 		icon = GFX_goal_enc_radio_civilian
@@ -692,7 +710,7 @@ focus_tree = {
 				add_idea = ENC_radio_civilian
 			}
 		}
-		cost = 5.8  	
+		cost = 4.3 	
 	}
 	focus = {#RADIO - Old world Blues
 		id = enc_radio_civilian_music 
@@ -709,7 +727,7 @@ focus_tree = {
 				add_idea = ENC_radio_civilian_old
 			}
 		}
-		cost = 5.8  	
+		cost = 4.3
 	}
 	focus = {#RADIO - New World Tunes
 		id = enc_radio_civilian_music_new
@@ -727,7 +745,7 @@ focus_tree = {
 				add_idea = ENC_radio_civilian_new
 			}
 		}
-		cost = 5.8	
+		cost = 4.3
 	}
 	focus = {#RADIO - OWB propaganda
 		id = enc_owb_propaganda
@@ -740,7 +758,7 @@ focus_tree = {
 			focus = enc_radio_civilian_music
 			focus = enc_contact_old_world_party
 		}
-		cost = 5.8
+		cost = 4.3
 		completion_reward = {
 			NCR = {
 				add_ideas = { ENC_ncr_enclave_propaganda }
@@ -780,7 +798,7 @@ focus_tree = {
 		relative_position_id = enc_expansion_reform
 		x = -3
 		y = 1
-		cost = 5.8
+		cost = 4.3
 		completion_reward = {
 			custom_effect_tooltip = enc_yakuza_annex_tt
 			hidden_effect = { # ugly tooltip
@@ -809,7 +827,7 @@ focus_tree = {
 		relative_position_id = enc_yakuza_annex_reform
 		x = -1
 		y = 1
-		cost = 5.8
+		cost = 4.3
 		completion_reward = {
 			add_manpower = 1000
 			add_political_power = 100
@@ -829,7 +847,7 @@ focus_tree = {
 		relative_position_id = enc_yakuza_annex_reform
 		x = 1
 		y = 1
-		cost = 5.8
+		cost = 4.3
 		completion_reward = {
 			160 = {
 				add_core_of = ERB
@@ -870,7 +888,7 @@ focus_tree = {
 	focus = {#EXPANSION - VLT - annex
 		id = enc_VLT_force 
 		icon = GFX_goal_enc_verti_reform
-		cost = 5.8
+		cost = 4.3
 		ai_will_do = { factor = 1 } 
 		available = { has_war_support > 0.5 }
 		relative_position_id = enc_expansion_reform
@@ -946,7 +964,7 @@ focus_tree = {
 		completion_reward = {
 			add_state_core = 291 # VLT city
 		}
-		cost = 5.8	
+		cost = 4.3	
  }
   	focus = {#EXPANSION - VLT - power
 		id = enc_vlt_power_reform
@@ -964,7 +982,7 @@ focus_tree = {
 		completion_reward = {
 			add_resource = { type = electricity amount = 30 state = 291 } #VLT city
 		}
-		cost = 5.8
+		cost = 4.3
  }
    	focus = {#EXPANSION - Rebuild the power grid
 		id = enc_rebuild_the_power_grid
@@ -983,7 +1001,6 @@ focus_tree = {
 		}
 		cost = 5.8
  }
-
 
 	focus = {#EXPANSION - ANT - annex
 		id = enc_ANT_annex_reform
@@ -2019,7 +2036,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {#
+	focus = {#Enc_Nevada_Rangers
 		id = Enc_Nevada_Rangers
 		icon = GFX_goal_enc_rangers_start
 		ai_will_do = { factor = 1 } 
@@ -2045,8 +2062,7 @@ focus_tree = {
 		annex_country = { target = DES }
 		}
 		}
-		
-	focus = {#
+	focus = {#Enc_Area_51
 		id = Enc_Area_51
 		icon = GFX_goal_enc_verti
 		ai_will_do = { factor = 1 } 
@@ -2069,7 +2085,6 @@ focus_tree = {
 		add_resource = { type = advanced_technology amount = 16 state = 389 }	
 		}
 		}
-				
 	focus = {#Tearing Down the HOuse 
 		id = Enc_Tearing_Down_House
 		icon = GFX_goal_VEG_The_Ultra-Luxe 
@@ -2095,8 +2110,8 @@ focus_tree = {
 						}	
 						}
 		}
-		}
-		
+		}	
+
 	focus = {#Diplomacy - NCR - trade
 		id = enc_NCR_trade
 		icon = GFX_goal_generic_trade

@@ -1,9 +1,10 @@
 ﻿l_english:
 
-breaklines:0 "----\n"
+breaklines:0 "\n----\n"
 ################################## EVENTS ##############################################
 enc_reformers.1.t:0 "Sins of the Father"
-enc_reformers.1.d:0 "Rumors swirl around Granite's father and his relationship to the Chosen One. The Purists accuse Granite’s father of treason for aiding the Chosen One and destroying the Oil Rig, but lack any evidence.  Granite however is curious about these allegations and takes it upon himself to ask his retired father about whether these claims are true or not. Regardless whether it is true or not, Granite will say that those claims are nothing but fake news."
+enc_reformers.1.d:0 "Rumors swirl around Granite's father and his relationship to the Chosen One. The Purists accuse Granite's father of treason for aiding the Chosen One and destroying the Oil Rig, but lack any evidence.  Granite however is curious about these allegations and takes it upon himself to ask his retired father about whether these claims are true or not. Regardless whether it is true or not, Granite will say that those claims are nothing but fake news."
+# todo rewrite the above
 enc_reformers.1.a:0 "He aided the Chosen One and then went their separate ways."
 enc_reformers.1.b:0 "Speaking of the Chosen One, let me tell you who your mother was..."
 enc_reformers.1.c:0 "He didn't aid the Chosen One."
@@ -25,6 +26,7 @@ enc_reformers.4.t:0 "Dealing with Wrights"
 enc_reformers.4.d:0 "Some say that the Wright family has spent the last few decades building with one hand and destroying with the other, but compared to the other families this makes them almost redeemable. Mr. Wright's vision of a more peaceful and stable New Reno is not entirely incompatible with out own..."
 enc_reformers.4.a:0 "Allow him go legit."
 enc_reformers.4.b:0 "There is no place for his kind here."
+enc_reformers.4.a.tt:0 "Unlocks §YWright§! as a political advisor"
 ########################################################################################
 enc_reformers.5.t:0 "Dealing with Bishops"
 enc_reformers.5.d:0 "The Bishops may have been the most powerful family in New Reno, a dangerous man for many reasons, one of which are his numerous political connections in the NCR. Mr. Bishop's gangsters were loyal enough to face down the other families, but the sight of X-01 power armor sent them scattered. He has retreated to his mansion, accompanied by only his closest and most loyal, surrounded by our forces and trapped."
@@ -34,6 +36,7 @@ enc_reformers.5.b:0 "Focus on apprehending the leader."
 enc_reformers.6.t:0 "Dealing with Salvatores"
 enc_reformers.6.d:0 "The Salvatores have been useful to the Enclave in the past, dealing with us in order to expand their own influence in New Reno. Perhaps they can be useful once again. A puppet ruling New Reno in our name could help make the situation in the city less suspicious to any outside observers.\n\nMr. Salvatores old smuggling connections may also prove a valuable resource to us, should we decide to keep him alive."
 enc_reformers.6.a:0 "He can rule as a puppet."
+enc_reformers.6.a.tt:0 "Unlocks §YSalvatore§! as a political advisor\n\nHis effect is:\n"
 enc_reformers.6.b:0 "He can live under house arrest."
 enc_reformers.6.c:0 "We rule in New Reno now."
 ########################################################################################
@@ -48,12 +51,12 @@ enc_reformers.8.a:0 "Good riddance. We don't need them."
 enc_reformers.8.b:0 "Blame the Purists."
 #########################################################################################
 enc_reformers.9.t: "Promotion"
-enc_reformers.9.d: "One of our older military theorists has just retired. There are two available candidates eligable for promotion. An older, experienced Navarro veteran and a younger, outspoken reformer."
+enc_reformers.9.d: "One of our older military theorists has just retired. There are two available candidates eligible for promotion. An older, experienced Navarro veteran and a younger, outspoken reformer."
 enc_reformers.9.a: "Promote the experienced man"
 enc_reformers.9.b: "Promote the loyal man"
 #########################################################################################
 enc_reformers.10.t: "The Assassination of Mr. Bishop"
-enc_reformers.10.d: "Mr. Bishop, once the top dog in New Reno, died today after his safehouse was attacked by a team of Enclave operatives posing as old henchmen.\n\nAfter they took over his city, Mr. Bishop spent his days attempting to bring the Enclave's return to light, always treading carefuly to avoid his own identity and location from becoming public knowledge.\n\nIn the end, this only delayed the inevitable."
+enc_reformers.10.d: "Mr. Bishop, once the top dog in New Reno, died today after his safehouse was attacked by a team of Enclave operatives posing as old henchmen.\n\nAfter they took over his city, Mr. Bishop spent his days attempting to bring the Enclave's return to light, always treading carefully to avoid his own identity and location from becoming public knowledge.\n\nIn the end, this only delayed the inevitable."
 enc_reformers.10.a: "Excellent news"
 ################################################################################################################ -<
 enc_reformers.11.t: "Traitors in the Officers Corps!"
@@ -64,10 +67,13 @@ enc_reformers.12.t: "Traitors among our scientists!"
 enc_reformers.12.d: "Many of our best and brightest were once part of the secret projects performed at Navarro and the rig. For this, they were persecuted relentlessly after the fall of Navarro. None of them have forgotten this, few have forgiven it. Since the recent elections, progress on some projects has slowed down, laboratory equipment has gone missing and reports of unpatriotic behaviour have become common."
 enc_reformers.12.a: "We will have to deal with them later"
 ################################################################################################################ -<
-enc_reformers.13.t: "Preparing our speech"
-enc_reformers.13.d: "Tensions have been high since the elections. It appears support for the Purists has only intensified as a result, especially in the upper echelons of our government. To address this situation, we have collected all those with grievances towards the new US government into one room. They are awaiting answers from their new president, so you prepare..."
-enc_reformers.13.a: "your speech."
-enc_reformers.13.b: "shaped explosives."
+enc_reformers.13.t: "Consolidating Power"
+enc_reformers.13.d: "Tensions have been high since the elections. It appears support for the Purists has only intensified as a result, especially in the upper echelons of our government. To address this situation, we have collected all those with grievances towards the new US government into one room, awaiting answers from their new president."
+enc_reformers.13.a: "Somebody hand me my speech."
+enc_reformers.13.c: "§GMy fellow Americans...§!"
+enc_reformers.13.c.tt: "§g§!"
+enc_reformers.13.b: "§R... one room, you say?§!"
+enc_reformers.13.b.tt: "§g\"Somebody hand me a plasma grenade.\"§!\n\n"
 ################################################################################################################ -<
 enc_reformers.14.t: "Anderson Holds a Speech"
 enc_reformers.14.dd: "Despite his near defeat in the recent elections, Franklin Anderson has been working tirelessly to rouse his supporters against the new administration. Though he carefully chooses his words to avoid anything openly treasonous, most believe the only real reason he is alive and allowed to speak is that his numerous supporters may be driven to open revolt otherwise."
@@ -81,7 +87,7 @@ enc_reformers.14.e: "You are out of friends, Anderson."
 enc_reformers.14.e.tt: "Available because you have completed both §YPurge The Officers§! and §YPurge The Scientists§!."
 ################################################################################################################ -<
 enc_reformers.15.t: "Legitimacy Tutorial"
-enc_reformers.15.d: "For the first time in centuries, our authority has extended beyond core Enclave members. Considering our previous interactions with these newfound citizens could easily be misinterpreted as 'attempted genocide', proving ourselves the elgitimate government will take time and effort.\n\nCertain choices we make will increase or decrease our legitimacy. Higher legitimacy comes with bonuses to our rule and allows for new choices in our focus tree."
+enc_reformers.15.d: "For the first time in centuries, our authority has extended beyond core Enclave members. Considering our previous interactions with these newfound citizens could easily be misinterpreted as 'attempted genocide', proving ourselves the legitimate government will take time and effort.\n\nCertain choices we make will increase or decrease our legitimacy. Higher legitimacy comes with bonuses to our rule and allows for new choices in our focus tree."
 enc_reformers.15.a: "I'll keep that in mind."
 ################################################################################################################ -<
 enc_reformers.16.t: "Assassination attempt!"
@@ -210,10 +216,14 @@ enc_reformers.38.a: "Excavate what we can."
 enc_reformers.38.b: "Cover our tracks instead."
 ################################################################################################################ -<
 enc_reformers.39.t: "Remnants wish to return!"
-enc_reformers.39.d: "We have been contacted by the leader of a sizeable company of Enclave remnants. They have survived the decades as raiders, greatly feared duo to their advanced tactics and technology. Having heard rumors of the return of the Enclave, they asking to be reinstated as members of the Enclave.\n\nWhile the extra manpower could be very useful, their disdain for the mutants rival that of Anderson and his ilk. We must therefore consider the political consequences of accepting them into our ranks."
+enc_reformers.39.d: "We have been contacted by the leader of a sizeable company of Enclave remnants. They have survived the decades as raiders, greatly feared duo to their advanced tactics and technology. Having heard rumors of the return of the Enclave, they are asking to be reinstated into our armed forces.\n\nWhile the extra manpower could be very useful, their disdain for the mutants rival that of Anderson and his ilk. We must therefore consider the political consequences of accepting them into our ranks."
 enc_reformers.39.a: "The prodigal sons have returned."
-enc_reformers.39.a.tt: "1 §YEnclave Veterans§! and 2 §YVeteran Auxiliaries§! appear in §YSierra Army Depot§! state."
+enc_reformers.39.a.tt2: "§gThe remnants are accepted as a new division and quickly join the Purists.§!\n\n"
+enc_reformers.39.a.tt: "1 §YEnclave Veterans§! and 2 §YVeteran Auxiliaries§! appear in §YSierra Army Depot§! state.\n\n"
 enc_reformers.39.b: "Enclave? No Enclave here."
+enc_reformers.39.b.tt: "§gThe remnants are sent away, no doubt working out their frustration on any settlement they come across.§!\n\n"
+enc_reformers.39.c: "§GWe don't need raiders.\nTheir equipment, however...§!"
+enc_reformers.39.c.tt: "§gThe remnants are tricked into disarming, then executed as deserters, criminals and raiders.§!\n\n"
 ################################################################################################################ -<
 enc_reformers.40.t: "Province connected to our grid!"
 enc_reformers.40.d: "We have finished constructing a power grid in a state. It took a little longer for it too catch on, but before long many of the civilian centers have connected themselves to our grid. Bringing themselves literally and metaphorically in our power."
@@ -226,6 +236,20 @@ enc_reformers.41.a: "And Eden said: 'let there be light!'"
 enc_reformers.42.t: "The Assassination of Franklin Anderson"
 enc_reformers.42.d: ""The good doctor has been a thorn in our side ever since his loss in the election. His connections and wits have kept him alive until now, but we have politically outmanoeuvred him at last.\n\nDespite quickly running out of allies, Anderson has stayed put in the Sierra Army Depot, stubbernly fulfilling his administrative duties. It was in his office that our operatives found him, unprepared for the confontation.\nPerhaps he had resigned himself to his fate, perhaps he was too single-minded to see how dire his situation had become.\n\nAll the same, Franklin Anderson was burried in an unmarked grave in the Nevada desert. If anyone noticed his dissapearance, they were wise enough not to notice it out loud. We made sure of that."
 enc_reformers.42.a: "Defiant until the end."
+################################################################################################################ -<
+enc_reformers.43.t: "Out with the Old"
+enc_reformers.43.d: "By the time anyone realized the President wasn't coming, it was too late. The only exit was locked. Now, all there is left to do is dealing with the aftermath."
+enc_reformers.43.a: "Too bad Anderson couldn't attend."
+################################################################################################################ -<
+enc_reformers.44.t: "Disturbing Reports"
+enc_reformers.44.d: "We have received reports of an Enclave division using unjustified force against a wastelander settlement. The division in question is the one we accepted into the fold recently. They filed an after-action report that mentioned retaliating against small arms fire but, when pressed, admitted to have received no more than thrown rocks."
+enc_reformers.44.a: "What did the wastelanders expect would happen?"
+enc_reformers.44.b: "Court martial the commanders and break up the division."
+################################################################################################################ -<
+enc_reformers.45.t: "Arcade Gannon Leaves the Enclave"
+enc_reformers.45.d: "Citing recent decisions made by our government, Arcade Gannon has left the Enclave in disgust. He was smart enough to make his grievences known by letter, to be discovered long after his dissapearance. Gannon's wherabouts are currently unknown."
+enc_reformers.45.a.tt: "§YArcade Gannon§! leaves the Enclave!\n"
+enc_reformers.45.a: "Game over"
 ################################################################################################################ -<
 enc_reformers.60.t: "The Ides of March"
 enc_reformers.60.d: "The Legion is a formidable foe, but not all within its ranks tolerate Caesar's rule.  Legate Lanius, the 'Monster of the East', thinks he could turn the Legion into a ruthless military machine. Perhaps he could be a useful ally to our bid to unite America...."
@@ -343,7 +367,7 @@ enc_reformers.86.d: "San Francisco was one of the greatest cities of Prewar Amer
 enc_reformers.86.a: "Groovy"
 ################################################################################################################
 enc_reformers.87.t: "Baseball"
-enc_reformers.87.d: "The president's decided to revive a prewar game to boost patriotism, and has gone on the radio with a new speech.  'We've been thinking quite a bit lately about something we can all relate to, something that is unquestionably, inescapably… American. I am referring, of course, to our great national pastime - baseball.  Now ask yourself this: What if Nevada's Gamblers could live again? What if they could compete with baseball teams from California, or Oregon? Put your faith in the Enclave, great America, and baseball will live again! Comfort, recreation, healthy competition - all will live again! This country WILL live again!'"
+enc_reformers.87.d: "The president's decided to revive a prewar game to boost patriotism, and has gone on the radio with a new speech.  'We've been thinking quite a bit lately about something we can all relate to, something that is unquestionably, inescapably American. I am referring, of course, to our great national pastime - baseball.  Now ask yourself this: What if Nevada's Gamblers could live again? What if they could compete with baseball teams from California, or Oregon? Put your faith in the Enclave, great America, and baseball will live again! Comfort, recreation, healthy competition - all will live again! This country WILL live again!'"
 enc_reformers.87.a: "Play Ball!"
 enc_reformers.87.b: "Back to work"
 ################################################################################################################
@@ -396,7 +420,7 @@ enc_reformers.99.d: "With Area 51 under our control, Enclave scientists are sift
 enc_reformers.99.a: "Let us press every button we can find."
 ################################################################################################################
 enc_reformers.100.t: "Happy Holidays!"
-enc_reformers.100.d: "The prewar carol fades as President Granite comes on the radio.  'My fellow Americans, we've been through a lot the last few years.  But I think we've remembered, for the first time in a long time, what binds us together instead of what blows us apart.  Whether we light a menorah, go to church, or worship an unexploded nuclear bomb, we all base our faith in love.  So for the new year, let's resolve to give of ourselves.  To be our brother’s keeper.  To be our sister’s keeper.  To be excellent to each other.  And if you do worship an unexploded nuclear bomb, please give it to us.'"
+enc_reformers.100.d: "The prewar carol fades as President Granite comes on the radio.  'My fellow Americans, we've been through a lot the last few years.  But I think we've remembered, for the first time in a long time, what binds us together instead of what blows us apart.  Whether we light a menorah, go to church, or worship an unexploded nuclear bomb, we all base our faith in love.  So for the new year, let's resolve to give of ourselves.  To be our brothers keeper.  To be our sisters keeper.  To be excellent to each other.  And if you do worship an unexploded nuclear bomb, please give it to us.'"
 enc_reformers.100.a:  "EDE, Play Christmas Roads"
 enc_reformers.100.a.tt: "Please make sure your sound is on and your music is off, and have a happy holiday, unless you like the Legion."
 ################################################################################################################

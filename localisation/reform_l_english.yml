@@ -79,7 +79,7 @@ SLV_people:0 "Slave Revolt"
 SLV_people_DEF:0 "Slave Revolt"
 SLV_people_ADJ:0 "Slave Revolt"
 
-
+empty_line: " \n "
 ###################################
 # FOCUS TREE
 ###################################
@@ -558,6 +558,8 @@ Enc_Nevada_Rangers:  "The Nevada Rangers"
 Enc_Nevada_Rangers_desc:  "The Desert Rangers never wanted to run Nevada.  Now that there's a change for them to work with a lawful government to bring peace, order, and good government to the West, they'll gladly do so."
 Enc_Area_51: "Reclaiming Area 51"
 Enc_Area_51_desc:  "Area 51 was a center of elite military research before the war, and some of that surely remains.  Too bad it's occupied by trash that we need to clear out."
+enc_support_old_world_party: "Support Old World Party"
+enc_support_old_world_party_desc: "Should we decide to co-exist with the New California Republic, our only option may be to install a regime that will be more sympathetic to our goals and forgiving of our past.\n\nThe Old World Party in the NCR is the ally we need to accomplish this, let us see how we can help them help us."
 ###################################
 # REFORM IDEAS
 ###################################
@@ -582,8 +584,6 @@ ENC_air_force_loyalist_desc: "Enclave leadership has seen fit to promote someone
 ENC_air_force_best_man: "competent Chief Of Airforce."
 ENC_air_force_best_man_desc: "Enclave leadership has seen fit to promote their best candidate as their Chief of Staff of the Enclave Air Force."
 Enc_Dept_Education:  "Department of Education"
-norman_wood: "Norman Wood"
-dr_henry: "Dr. Henry"
 ENC_EPA: "The Environmental Protection Agency"
 ENC_EPA_desc:  "Cleaning the environment will cost time and money, it's well worth it."
 ENC_infighting_2: "Civil War"
@@ -657,6 +657,20 @@ ENC_House:  "The House Always Wins"
 ENC_Marriage_Equality:  "Ghoul Marriage"
 Enc_Followers:  "Follower Patronage"
 
+ENC_servitude: "Indentured Servitude"
+
+###################################
+# PEOPLE
+###################################
+
+norman_wood:0 "Norman Wood"
+dr_henry:0 "Dr. Henry"
+erb_hayes:0 "Grant C. Hayes"
+erb_wright:0 "Christopher Wright"
+erb_salvatore:0 "Mason Salvatore"
+erb_salvatore_desc:0 "§WIncrease of NCR suspicion reduced to £pol_power §Y5§! from £pol_power §Y10§!.§!"
+erb_arcade_gannon:0 "Arcade Gannon"
+
 ###################################
 # Seek Allies
 ###################################
@@ -703,6 +717,11 @@ enc_disliked_pragmatist: "Unpopular Pragmatist"
 enc_army_chief_loyalist: "Loyal Reformer"
 enc_air_chief_loyalist: "Loyal Reformer"
 enc_navy_chief_loyalist: "Loyal Reformer"
+mutant_sympathies: "Mutant Sympathies"
+compassionate_doctor: "Compassionate Doctor"
+genius_pacifist: "Genius Pacifist"
+salvatore_puppet: "Reluctant Puppet"
+loyal_soldier: "Loyal Soldier"
 
 ###################################
 # REFORM UI
@@ -711,8 +730,7 @@ connect_to_power: "Connect to Grid"
 connect_to_power_tt: "Connect to Grid"
 connect_to_power_tt_delayed: "[!connect_to_power_click]" 
 
-connect_to_power_ttt: "[!connect_to_power_click_enabled]" 
-#"Costs 2 §YElecticity§! to maintain.\nRequires:\n - More than 2 §YElecticity§! (§Y[?resource@electricity]§!)\n - State must border a cored state.\n - State have a free building slot"
+connect_to_power_ttt: "Costs 2 §YElecticity§! to maintain.\nRequires:\n - More than 2 §YElecticity§! (§Y[?resource@electricity]§!)\n - State must border a cored state.\n - State have a free building slot"
 
 civilian_power_grid: "Civilian Power Grid"
 civilian_power_grid_desc: "Allows a state to be §GCored§!"
@@ -778,6 +796,9 @@ lose_suspicion_tt:0 "§YNCR suspicion§! will go down by §+§![?suspicion_chang
 gain_suspicion_tt:0 "§YNCR suspicion§! will go up by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
 
 gannon_returns: "Arcade Ganon has returned to the Enclave"
+
+enc_salvatores_tolerated_flag: "Salvatores tolerated"
+enc_wrights_tolerated_flag: "Wrights tolerated"
 ###################################
 # DIPLOMACY
 ###################################

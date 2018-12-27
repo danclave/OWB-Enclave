@@ -80,7 +80,14 @@ ENC_political_infighting = {
 		tag = ERB
 	}
 	visible = {
-		has_idea = ENC_infighting
+		OR = {
+			has_idea = ENC_infighting
+			has_idea = ENC_infighting_2		
+		}
+		OR = {
+			has_completed_focus = enc_reform 
+			has_completed_focus = enc_purity				
+		}
 	}
 }
 
@@ -114,6 +121,7 @@ ENC_debug = {
 	}	
 	visible = {
 		# always = false
+		# todo disable
 	}
 
 }

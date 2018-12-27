@@ -737,20 +737,30 @@ ENC_NCR_hiding = {
 			custom_effect_tooltip = ENC_hide_activity_days_tt
 			custom_effect_tooltip = ENC_hide_activity_bonus_tt
 			# set or increase hiding cost
-			if = {
+			if = { # if the cost is lower than 15, set to 10. AKA if it's still 0, set to 10
 				limit = {
 					check_variable = { var = ENC_hiding_cost value = 15 compare = less_than }
 				}
 				set_variable = { var = ENC_hiding_cost value = 10 }
 			}
-			add_to_variable = { var = ENC_hiding_cost value = 10}
+			# now, we increase the cost by 5 if salvatore is a minister and 10 otherwise
+			if = {
+				limit = {						
+					has_idea_with_trait = salvatore_puppet
+				}
+				add_to_variable = { var = ENC_hiding_cost value = 5}	
+			}
+			else = {
+				add_to_variable = { var = ENC_hiding_cost value = 10}			
+			}
 			set_variable = { ENC_hiding_cost_total = ENC_hiding_cost }
 			
+			# make it 3 more expensive for every controlled state
 			set_variable = { var = ENC_hiding_cost_states value = num_controlled_states }			
 			multiply_variable = { ENC_hiding_cost_states = 3 }			
 			add_to_variable = { var = ENC_hiding_cost_total value = ENC_hiding_cost_states}
 			
-			# set duration of safety
+			# set duration of safety based on how quickly the player used the decision
 			set_variable = { ENC_hide_days = days_mission_timeout@ENC_hide_activity }
 			add_to_variable = { var = ENC_hide_days value = 90}
 		}
@@ -912,15 +922,17 @@ ENC_political_infighting = {
 		cost = 50
 		priority = 100
 		allowed = { tag = ERB }
-		visible = {
-			has_idea = ENC_infighting
+		visible = {		
 			OR = {
 				has_completed_focus = enc_reform
 				has_completed_focus = enc_purity				
 			}
 		}
 		available = {
-			has_country_flag = enc_crackdown_justified
+			OR = {
+				has_country_flag = enc_crackdown_justified
+				has_idea = ENC_infighting_2
+			}
 			has_stability > 0.10
 		}
 		complete_effect = {
@@ -956,6 +968,7 @@ ENC_political_infighting = {
 		fire_only_once = YES
 		visible = {
 			has_completed_focus = enc_reform
+			has_idea = ENC_officers_traitors
 		}
 		available = {
 			intellectuals > 0.50
@@ -984,6 +997,7 @@ ENC_political_infighting = {
 		fire_only_once = YES
 		visible = {
 			has_completed_focus = enc_reform
+			has_idea = ENC_scientists_traitors
 		}
 		available = {
 			intellectuals > 0.50
@@ -1007,19 +1021,7 @@ ENC_political_infighting = {
 		cost = 50
 		priority = 50
 		allowed = { tag = ERB }
-		visible = {
-			has_idea = ENC_infighting
-			OR = {
-				has_completed_focus = enc_reform 
-				has_completed_focus = enc_purity				
-			}
-		}
 		complete_effect = {
-			set_temp_variable = {
-			var = legitimacy_change_var
-			value = 0.05
-			}
-			change_legitimacy = yes
 			if = {
 				limit = {
 					has_completed_focus = enc_reform					
@@ -1040,13 +1042,6 @@ ENC_political_infighting = {
 		cost = 50
 		priority = 50
 		allowed = { tag = ERB }
-		visible = {
-			has_idea = ENC_infighting
-			OR = {
-				has_completed_focus = enc_reform
-				has_completed_focus = enc_purity				
-			}
-		}
 		complete_effect = {
 			if = {
 				limit = {
@@ -1089,7 +1084,6 @@ ENC_political_infighting = {
 		days_remove = 90
 		days_re_enable = 100
 	}
-
 }
 
 political_actions = {
@@ -1455,7 +1449,7 @@ ENC_render_unto_caesar = {
 			# ???
 		}
 	}
-ENC_rise_slaves = {
+	ENC_rise_slaves = {
 	priority = 300
 		fire_only_once = yes
 		available = {
@@ -1648,11 +1642,18 @@ ENC_war_with_NCR = {
 ENC_debug = {
 	ENC_add_legitimacy = {
 		complete_effect = {
+			set_country_flag = no_generic_manufacturer
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = 0.10
 			}
 			change_legitimacy = yes
+		}
+	}
+	ENC_misc = {
+		complete_effect = {
+			set_country_flag = enc_salvatores_tolerated_flag
+			set_country_flag = enc_wrights_tolerated_flag
 		}
 	}
 	ENC_reduce_legitimacy = {

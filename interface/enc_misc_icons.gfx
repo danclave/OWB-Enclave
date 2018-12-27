@@ -47,9 +47,25 @@ spriteTypes = {
             name = "GFX_idea_d_henry"
  		    texturefile = "gfx/interface/ideas/d_henry.dds"
  	    }
+		SpriteType = {#arcade_gannon
+            name = "GFX_idea_arcade_gannon"
+ 		    texturefile = "gfx/interface/ideas/arcade_gannon.dds"
+ 	    }
 		SpriteType = {#boris_t
             name = "GFX_idea_boris_t"
  		    texturefile = "gfx/interface/ideas/boris_t.dds"
+ 	    } 
+		SpriteType = {#enc_hayes
+            name = "GFX_idea_enc_hayes"
+ 		    texturefile = "gfx/interface/ideas/enc_hayes.dds"
+ 	    } 
+		SpriteType = {#enc_salvatore
+            name = "GFX_idea_enc_salvatore"
+ 		    texturefile = "gfx/interface/ideas/enc_salvatore.dds"
+ 	    } 
+		SpriteType = {#enc_wright
+            name = "GFX_idea_enc_wright"
+ 		    texturefile = "gfx/interface/ideas/enc_wright.dds"
  	    } 
 		SpriteType = {#orion_moreno
             name = "GFX_idea_orion_moreno"
