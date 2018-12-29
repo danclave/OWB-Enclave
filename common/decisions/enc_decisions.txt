@@ -286,7 +286,149 @@ ENC_infiltrating_NCR = {
 	}
 	
 }
-
+ENC_Pacific_Commonwealth = {
+	ENC_Trolling = {
+		priority = 300
+		fire_only_once = yes
+		
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_Pacific_Commonwealth
+				country_exists = TRL
+			}
+		complete_effect = {
+			TRL = {
+			every_owned_state = {
+				add_core_of = KLA
+								}
+				}
+			add_political_power = -75	
+						}			
+	}
+	ENC_BONE = {
+		priority = 300
+		fire_only_once = yes
+		
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_Pacific_Commonwealth
+			}
+		complete_effect = {
+			BPT = {
+			every_owned_state = {
+				add_core_of = KLA
+								}
+				}
+			add_political_power = -25	
+						}			
+	}
+	ENC_ARR = {
+		priority = 300
+		fire_only_once = yes
+		
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_Pacific_Commonwealth
+			country_exists = ARR
+			}
+		complete_effect = {
+			ARR = {
+			every_owned_state = {
+				add_core_of = KLA
+								}
+				}
+			add_political_power = -25	
+						}			
+	}
+	ENC_MLT = {
+		priority = 300
+		fire_only_once = yes
+		
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_Pacific_Commonwealth
+			country_exists = MLT
+			}
+		complete_effect = {
+			MLT = {
+			every_owned_state = {
+				add_core_of = KLA
+								}
+				}
+			add_political_power = -25	
+						}			
+	}
+	ENC_MDT = {
+		priority = 300
+		fire_only_once = yes
+		
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_Pacific_Commonwealth
+			country_exists = MDT
+			}
+		complete_effect = {
+			MDT = {
+			every_owned_state = {
+				add_core_of = KLA
+								}
+				}
+			add_political_power = -25	
+						}			
+	}
+	ENC_RBT = {
+		priority = 300
+		fire_only_once = yes
+		
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_Pacific_Commonwealth
+			country_exists = RBT
+			}
+		complete_effect = {
+			RBT = {
+			every_owned_state = {
+				add_core_of = KLA
+								}
+				}
+			add_political_power = -25	
+						}			
+	}
+	ENC_PMR = {
+		priority = 300
+		fire_only_once = yes
+		
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_Pacific_Commonwealth
+			country_exists = PMR
+			}
+		complete_effect = {
+			PMR = {
+			every_owned_state = {
+				add_core_of = KLA
+								}
+				}
+			add_political_power = -25	
+						}			
+	}
+	ENC_PMC = {
+	priority = 300
+		fire_only_once = no
+		
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_Pacific_Commonwealth
+			country_exists = KLA
+			}
+		complete_effect = {
+			every_state = {
+			limit = { is_core_of = KLA is_owned_by = ERB  }
+			KLA = {transfer_state = PREV } 
+			}
+			}			
+	}
+}
 ###############################
 # SHARED
 ###############################

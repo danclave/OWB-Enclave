@@ -125,6 +125,13 @@ ENC_debug = {
 	}
 
 }
+ENC_Pacific_Commonwealth = {
+	allowed = {
+		tag = ERB }
+	visible = {
+			has_completed_focus = enc_Pacific_Commonwealth
+			}	
+}
 
 # ##############################
 # ICONS

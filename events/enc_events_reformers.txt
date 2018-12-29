@@ -720,8 +720,7 @@ country_event = {#25 - UNUSED
 	
 	is_triggered_only = yes
 	fire_only_once = yes
-	mean_time_to_happen = {	days = 30 }
-	
+
 	option = {# RIP
 		name = enc_reformers.25.a
 	}
@@ -1298,7 +1297,6 @@ country_event = {#61 - Operation Augustus
 			days = 60
 			random = 50
 		}
-	}		
 	CES = {
 		kill_country_leader = yes
 		create_country_leader = {
@@ -1353,6 +1351,7 @@ country_event = {#61 - Operation Augustus
 			limit = { has_global_flag = debug_logs }
 			log = "[GetDateText]: [Root.GetName] nf_legion.5 option a exited"
 		}
+	}
 	}
 }
 country_event = {#62 - Render Unto Caesar
@@ -1748,7 +1747,7 @@ country_event = {#79 - Ulysses
 		}
 	}
 	mean_time_to_happen = {
-		days = 80
+		days = 25
 	}
 	option = {#	Yayy!!!
 		name = enc_reformers.79.a
@@ -2022,9 +2021,6 @@ country_event = {#90 - Supreme Court
 	picture = GFX_event_ENC_Ham
 	fire_only_once = yes
 	is_triggered_only = yes
-	mean_time_to_happen = {
-		days = 60
-	}
 	option = {#	Argh!
 		name = enc_reformers.90.a
 		add_stability = -0.05
@@ -2224,7 +2220,6 @@ country_event = {#101 Axis of Evil
     picture = GFX_event_CES_camp_1
     fire_only_once = yes    
     is_triggered_only = yes
-	mean_time_to_happen = {	days = 3 }
     option = {# Bringit
 		name = enc_reformers.101.a
 			WBH = { 
@@ -2661,6 +2656,71 @@ country_event = {#110 - BOS Legionaries
 	option = {#	Damnit
 		name = enc_reformers.110.a
 		CES ={ add_ideas = CES_BOS }
+		CES = {
+		add_research_slot = 1
+		set_technology = {
+			power_armour = 1
+			servo_motors = 1
+			mounted_cooler = 1
+			anti_tank_tech = 1
+			anti_tank_tech_2 = 1
+			anti_tank_tech_3 = 1
+			anti_tank_tech_4 = 1
+			laser_tech = 1
+			laser_tech_2 = 1
+			laser_tech_3 = 1
+			laser_tech_4 = 1
+		}
+	division_template = { name = "Brotherhood Remnants"
+	division_names_group = Power_ARMOR_01
+	regiments = {
+		power_armour = { x = 0 y = 0 }
+		power_armour = { x = 0 y = 1 }
+		power_armour = { x = 0 y = 2 }
+		power_armour  = { x = 1 y = 0 }
+		power_armour  = { x = 1 y = 1 }
+		power_armour  = { x = 1 y = 2 }
+		power_armour  = { x = 1 y = 3 }
+	}
+	support = {
+	anti_tank_company = { x = 0 y = 0 }
+	laser_company = { x = 0 y = 1 }
+		}
+			}
+			}
+		520 = {
+			create_unit = { division = "name = \"Brotherhood Remnants\"  division_template = \"Brotherhood Remnants\"  start_experience_factor = 0.28" 
+			owner = CES
+				}
+			create_unit = { division = "name = \"Brotherhood Remnants\"  division_template = \"Brotherhood Remnants\"  start_experience_factor = 0.28" 
+			owner = CES
+				}
+			create_unit = { division = "name = \"Brotherhood Remnants\"  division_template = \"Brotherhood Remnants\"  start_experience_factor = 0.28" 
+			owner = CES
+				}
+			create_unit = { division = "name = \"Brotherhood Remnants\"  division_template = \"Brotherhood Remnants\"  start_experience_factor = 0.28" 
+			owner = CES
+				}
+			create_unit = { division = "name = \"Brotherhood Remnants\"  division_template = \"Brotherhood Remnants\"  start_experience_factor = 0.28" 
+			owner = CES
+				}
+			create_unit = { division = "name = \"Brotherhood Remnants\"  division_template = \"Brotherhood Remnants\"  start_experience_factor = 0.28" 
+			owner = CES
+				}
+			create_unit = { division = "name = \"Brotherhood Remnants\"  division_template = \"Brotherhood Remnants\"  start_experience_factor = 0.28" 
+			owner = CES
+				}
+			create_unit = { division = "name = \"Brotherhood Remnants\"  division_template = \"Brotherhood Remnants\"  start_experience_factor = 0.28" 
+			owner = CES
+				}	
+			create_unit = { division = "name = \"Brotherhood Remnants\"  division_template = \"Brotherhood Remnants\"  start_experience_factor = 0.28" 
+			owner = CES
+				}
+			create_unit = { division = "name = \"Brotherhood Remnants\"  division_template = \"Brotherhood Remnants\"  start_experience_factor = 0.28" 
+			owner = CES
+				}		
+                }
+			}
 		}
 	}
 country_event = {#111 Turn Off Radio
@@ -2913,7 +2973,351 @@ country_event = {#115 Axis of Evil
 	EHT = {give_guarantee = CES } 
 		}
 }
+country_event = {#117 Helios One
+    id = enc_reformers.117
+	title = enc_reformers.117.t
+	desc = enc_reformers.117.d
+	picture = GFX_event_enc_Helios_one
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = ERB
+		417 = { is_controlled_by = ERB }
+				}
+	mean_time_to_happen = {	days = 15 }
+	option = {#	Yayy
+			name = enc_reformers.117.a
+		417 = {
+			add_extra_state_shared_building_slots = 5
+			add_building_construction = {
+					type = electricity_generator
+					level = 5
+					instant_build = yes
+				}	
+				add_resource = {
+					type = fuel
+					amount = 15
+				}	
+				add_resource = {
+					type = electricity
+					amount = 15
+				}				  
+			}
+		}	
+	option = {#	Ion Cannon
+			name = enc_reformers.117.b
+			}		
+				}
+		}
+country_event = {#118 Legion Propaganda
+    id = enc_reformers.118
+    title = enc_reformers.118.t
+    desc = enc_reformers.118.d
+    picture = GFX_event_CES_burning
+    fire_only_once = yes    
+    is_triggered_only = no
+	trigger = {	
+	ERB = { has_war_with = CES }
+	has_completed_focus = enc_reform
+	}
+	mean_time_to_happen = {	days = 3 }
+    option = {# Ow!
+	name = enc_reformers.118.a
+		}
+	 option = {# Yuck Yuck!
+	name = enc_reformers.118.b
+	custom_effect_tooltip = enc_reformers.118.b.tt	
+	 		}
+	option = {# Evil
+	name = enc_reformers.118.c
+	custom_effect_tooltip = enc_reformers.118.c.tt	
+	 		}				
+}		
+country_event = {#119 NCR
+    id = enc_reformers.119
+    title = enc_reformers.119.t
+    desc = enc_reformers.119.d
+    picture = GFX_event_enc_endNCR
+    fire_only_once = yes    
+    is_triggered_only = no
+	trigger = {	
+	And = { NOT = { country_exists = NCR }	
+	has_completed_focus = enc_expand_human_definition
+	controls_state = 253 }
+	}
+	mean_time_to_happen = {	days = 3 }
+    option = {# Ow!
+	name = enc_reformers.119.a
+	add_stability = -0.05
+		}
+	 option = {# Yuck Yuck!
+	name = enc_reformers.119.b
+	custom_effect_tooltip = enc_reformers.118.b.tt	
+	trigger = { has_country_flag = leader_charismatic 	}
+	add_stability = 0.05		
+	add_war_support = -0.05
+		 		}
+	option = {# Evil
+	name = enc_reformers.119.c
+	custom_effect_tooltip = enc_reformers.119.c.tt
+	trigger = {
+			has_country_flag = leader_ruthless
+			}
+		add_stability = 0.05
+		add_manpower = -500
+	 		}
+	
+}		
 
+country_event = {#120 PNW
+    id = enc_reformers.120
+    title = enc_reformers.120.t
+    desc = enc_reformers.120.d
+    picture = GFX_event_enc_Klamath
+    fire_only_once = yes    
+    is_triggered_only = yes
+	 option = {# Arroyo
+	name = enc_reformers.120.a
+	trigger = { has_country_flag = enc_arroyo
+				country_exists = ARR }
+		KLA = { set_cosmetic_tag = ERB_KLA }
+		ARR = {
+			every_owned_state = {
+				add_core_of = KLA
+			}
+			}			
+		KLA = { annex_country = { target = ARR } }
+			ERB = { 
+			add_to_faction = Kla
+			}
+		KLA = {
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+				}
+	 		}	
+	option = {# Bellingham
+	name = enc_reformers.120.b
+		trigger = {country_exists = BEL }
+		KLA = { set_cosmetic_tag = ERB_KLA }
+		BEL = {
+			every_owned_state = {
+				add_core_of = KLA}
+			 }			
+		KLA = { annex_country = { target = BEL } }
+			ERB = { 
+			add_to_faction = KLA
+			}
+		KLA = {
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+				}
+		}
+	option = {# Ghouls
+	name = enc_reformers.120.c
+		trigger = {country_exists = TOC
+			has_completed_focus = enc_accept_ghouls}
+		KLA = { set_cosmetic_tag = ERB_KLA }			
+		TOC = {
+			every_owned_state = {
+				add_core_of = KLA }
+				}
+		KLA = { annex_country = { target = TOC } }
+			ERB = { 
+			add_to_faction = KLA
+			}
+		KLA = {
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+				}
+			}
+	option = {# Party!
+	name = enc_reformers.120.e
+	custom_effect_tooltip = enc_reformers.120.e.tt	
+	trigger = {
+		has_completed_focus = enc_accept_ghouls
+		has_country_flag = enc_arroyo	
+				}
+	KLA = { set_cosmetic_tag = ERB_KLA }
+		TOC = {
+			every_owned_state = {
+				add_core_of = KLA }
+				}
+		BEL = {
+			every_owned_state = {
+				add_core_of = KLA}
+			 }
+	ARR = {
+			every_owned_state = {
+				add_core_of = KLA
+			}
+			}			 
+	KLA = { annex_country = { target = ARR } }
+	KLA = { annex_country = { target = BEL } }
+	KLA = { annex_country = { target = TOC } }	
+			ERB = { 
+			add_to_faction = Kla
+			}
+		KLA = {
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+				}				
+	 		}				
+}
+
+country_event = {#121
+    id = enc_reformers.121
+    title = enc_reformers.121.t
+    desc = enc_reformers.121.d
+    picture = GFX_event_enc_BigMT
+    fire_only_once = yes    
+    is_triggered_only = yes
+	
+    option = {# Rude!
+	name = enc_reformers.121.a
+	trigger = {has_country_flag = leader_ruthless }
+	add_ideas = ENC_Plunder_MT
+	285 = { # New Reno
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	add_manpower = -100	
+	country_event = { id = enc_reformers.122 }	
+		}
+	 option = {# Nice
+	name = enc_reformers.121.b
+		add_resource = { type = advanced_technology amount = 5 state = 307 }
+		add_resource = { type = fuel amount = 5 state = 307 }
+		country_event = { id = enc_reformers.122 }	
+			}	
+	 }
+			
+country_event = {#122
+    id = enc_reformers.122
+    title = enc_reformers.122.t
+    desc = enc_reformers.122.d
+    picture = GFX_event_enc_think_tank
+    fire_only_once = yes    
+    is_triggered_only = yes
+	
+    option = {# Rude!
+	name = enc_reformers.122.a
+	add_ideas = Enc_Think_Tank
+	add_manpower = -400
+	add_stability = -0.05
+		}
+	 option = {# Nice
+	name = enc_reformers.122.b
+	add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+	
+ 		}
+	option = {# Evil
+	name = enc_reformers.122.c
+	custom_effect_tooltip = enc_reformers.122.c.tt	
+	add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+	add_stability = 0.05	
+	 		}			
+	option = {# Evil
+	name = enc_reformers.122.e
+	add_ideas = Enc_Think_Tank
+	 		}				
+}
+
+country_event = {#123
+    id = enc_reformers.123
+    title = enc_reformers.123.t
+    desc = enc_reformers.123.d
+    picture = GFX_event_enc_currency
+    fire_only_once = yes    
+    is_triggered_only = yes
+	    option = {# Rude!
+	name = enc_reformers.123.a
+	complete_national_focus = enc_Nevada_Dollar
+			}
+	 option = {# Nice
+	name = enc_reformers.123.b
+	complete_national_focus = enc_Unified_Currency
+	set_country_flag = integrated_economy
+ 		}
+	}		
+country_event = {#124
+    id = enc_reformers.124
+    title = enc_reformers.124.t
+    desc = enc_reformers.124.d
+    picture = GFX_event_ENC_double_flag_long
+    fire_only_once = yes    
+    is_triggered_only = yes
+	    option = {# Golden Ending
+	name = enc_reformers.124.a
+	NCR = { set_technology = {
+				tesla_weaponry = 1
+				settled_civilization = 1
+				scientific_civilization = 1
+			} }
+	country_event = { id = enc_reformers.125 }			
+			}
+	
+	}		
+country_event = {#125
+    id = enc_reformers.125
+    title = enc_reformers.125.t
+    desc = enc_reformers.125.d
+    picture = GFX_event_event_enc_sierra
+    fire_only_once = yes    
+    is_triggered_only = yes
+	    option = {# Golden Ending
+	name = enc_reformers.125.a
+				}
+	}
+
+country_event = {#126 Redding
+    id = enc_reformers.126
+	title = enc_reformers.126.t
+	desc = enc_reformers.126.d
+	picture = GFX_event_enc_Marcus
+	fire_only_once = yes
+	trigger = { has_completed_focus = enc_accept_super_mutants
+				has_completed_focus = enc_uranium_fever
+		284 = {
+			is_owned_by = ERB
+				}
+		}
+		option = {#	Easter Egg
+		name = enc_reformers.126.a
+		add_resource = { type = electronics amount = 5 state = 284 }
+		add_resource = { type = electricity amount = 20 state = 284 }
+		set_province_name = {
+		id = 8784
+		name = "Broken Hills"
+							}
+		add_popularity = { ideology = intellectuals popularity = 0.03 } 						
+	}	
+}	
 # integration
 #
 

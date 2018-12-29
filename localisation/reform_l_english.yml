@@ -1,5 +1,19 @@
 ﻿l_english:
 
+ERB_KLA_ruler:0 "Pacific Commonwealth"
+ERB_KLA_ruler_DEF:0 "Pacific Commonwealth"
+ERB_KLA_ruler_ADJ:0 "Pacific Commonwealth"
+ERB_KLA_intellectuals:0 "Pacific Commonwealth"
+ERB_KLA_intellectuals_DEF:0 "Pacific Commonwealth"
+ERB_KLA_intellectuals_ADJ:0 "Pacific Commonwealth"
+ERB_KLA_elites:0 "Pacific Commonwealth"
+ERB_KLA_elites_DEF:0 "Pacific Commonwealth"
+ERB_KLA_elites_ADJ:0 "Pacific Commonwealth"
+ERB_KLA_people:0 "Pacific Commonwealth"
+ERB_KLA_people_DEF:0 "Pacific Commonwealth"
+ERB_KLA_people_ADJ:0 "Pacific Commonwealth"
+
+
 ERB_USA_ruler:0 "United States"
 ERB_USA_ruler_DEF:0 "The United States"
 ERB_USA_ruler_ADJ:0 "American"
@@ -83,9 +97,12 @@ empty_line: " \n "
 ###################################
 # FOCUS TREE
 ###################################
-
+shared_currency: "The American Economy"
 enc_reform:0 "Reform"
 enc_reform_desc:0 "If we are to rebuild our once-great nation, we must reform ourselves and our principles. Sadly, many of the reformist elements have already deserted in the last few years. Leaving mostly the devoted and fanatical. We will have to tread carefully in our efforts to reform the Enclave into an organisation fit to restore order, justice and democracy to these United States of America."
+
+Enc_Arizona: "The Southwest Commonwealth"
+Enc_Arizona: "With the defeat of the Legion, it's time to set up a government for the American southwest. By hook and by crook, we will corral the cities and tribes of the region to join the Associated States of America"
 
 enc_radio:0 "Enclave Radio"
 enc_radio_desc:0 "Our radio beacons could be used to broadcast the Enclave's message to the wasteland. Let sympathizers far and wide hear of the Enclaves vision. While we are at it, those same beacons can also be used as listening outposts."
@@ -247,15 +264,15 @@ enc_VLT_force_desc:0 "Vault city must be ours. An overwhelming amount of force s
 enc_rangers_submit:0 "The Desert Rangers Join US!"
 enc_rangers_submit_desc:0 "With the peace we've brought to Northern Nevada, the Desert Rangers are willign to work with our government to protect the region."
 
-enc_NCR_start:0 "The NCR"
-enc_NCR_start_desc:0 "We had our tensions with the NCR, but they are based on the old American ideals.  Perhaps we can work with them to restore America in light of threats from the Mutants, the Brotherhood, and others."
+enc_NCR_start:0 "Home is Nevada"
+enc_NCR_start_desc:0 "Although the Enclave's focus has traditionally been on California, perhpaps we would do better focus on Nevada.  Relatively lightly damaged during the Great War, and without any great power like the NCR, Nevada could be the birthplace for the American dream.  Sadly, to do so we will need to come to terms with the NCR's elite, in one way or another."
 
 enc_accept_status_quo:0 "Accept the Status Quo"
 enc_accept_status_quo_desc:0 "Painful though it is for old veterans, the support for the Enclave within the NCR's elite means we can reach an agreement with them."
 
 enc_the_state_of_nevada:0 "The State of Nevada"
-enc_the_state_of_nevada_desc:0  "With the peace with the NCR, reformers have set their sights on Nevada.  We can work ourselves to make ourselves the legitimate government of the Old World state of Nevada."
-enc_NCR_trade:0 "Open Up Trade"
+enc_the_state_of_nevada_desc:0  "Support for the Old World Party Within the NCR, and our efforts to bring order to the Wastes, have meant that people in both California and Nevada now recognizze us as the region's legitimate government."
+enc_NCR_trade:0 "Free Trade"
 enc_NCR_trade_desc:0 "Although the NCR lacks the advanced technology of the Enclave, they possess ample natural resources and foodstuffs.  If we trade with them we'll free our economy to focus on high technology."
 enc_NCR_embassy:0 "Establish an Embassy"
 enc_NCR_embassy_desc:0 "By establishing an embassy in the NCR's 'Capital", we can recognize that it is a legitimate, if misguided, government in the Wasteland."
@@ -295,22 +312,30 @@ enc_federal_reserve_desc:0 "The Reunited States is strong enough to pursue somet
 
 enc_epa:0 "Fund The EPA"
 enc_epa_desc:0 "We need to preserve what remains of our nature and preserve the planet for future generations.  Plus, we'll gain popular support doing so."
-
+Benjamin_Franklin_Society: "The Benjamin Franklin Society"
+Benjamin_Franklin_Society_desc: "Named after America's Founding Scientist, the Benjamin Franklin Society brings researchers together from across the Wasteland"
 enc_NCR_dollar:0 "Accept The NCR Dollar"
 enc_NCR_dollar_desc:0 "Given that New California is the motor of the Wasteland's economy, we could peg the NCR Dollar to the US Dollar."
-
+Enc_Robco_Reborn: "Restarting Robco"
+Enc_Robco_Reborn_desc: "Robert House founded Robco before the war, and many of its secrets lie scattered throughout Vegas.  Now that we are in control, we can restart this company."
 enc_US_dollar:0 "Mandate the US Dollar"
 enc_US_dollar_desc:0 "If we forced people to adopt the US Dollar instead of the NCR Dollar, we could impoverish the elite overnight and purchase their assets with the new currency."
-
+Enc_Broken_Hills: "Fixing the Broken Hills"
+Enc_Broken_Hills_desc: "Although the Wastleanders thought the Broken Hills mine ran dry, that's because the mining companies used 19th century technology, harvesting uranium and gold with primitive engineering equipment. Enclave engineering can do better."
 enc_radio_military:0 "Prioritize Military Channels"
 enc_radio_military_desc:0 "We should use our advanced technology for military applications and manipulating the NCR."
-
+Enc_Uranium_Fever: "Uranium Fever"
+Enc_Uranium_Fever_desc: "Well, I don't know, but I've been told, uranium ore's worth more than gold, and Broken Hills used to be a booming uranium mining and refining plant. Why don't we make it one again?"
+Enc_Mojave_Express: "Nationalize the Mojave Express"
+Enc_Mojave_Express_desc: "With the expansion of post-apocalyptic society across the American southwest, courier groups like the Mojave Express have appeared to take on the difficult task of carrying letters and packages over enormous distances. And with the rise of a centralzed government in Nevada, that role can be served by the Nevada Postal Service!"
 enc_radio_civilian:0 "Old World Radio"
 enc_radio_civilian_desc:0 "Enclave Radio can broadcast songs to trade on nostalgia for a better older America and ignoring our shortcomings."
-
+enc_Baseball: "The American Baseball League"
+enc_Baseball_desc: "Good evening, Nevada. I've been thinking quite a bit lately about something we can all relate to, something that is unquestionably, inescapably . . . American. I am referring, of course, to our great national pastime - baseball. Or so it had been. That's right, America. Before we were devastated by atomic war, each state had its OWN professional baseball team. And now they will again."
 enc_raise_encryption_standards:0 "Increase Encryption Standards"
 enc_raise_encryption_standards_desc:0 "Instead of playing country music, we can use our processing power to make our codes unbreakable."
-
+Enc_Nevada_Railway: "Build a Nevada railway"
+Enc_Nevada_Railway_desc: "California is the only place in America that's been building railways since the end of the Great War.  But our rule over Nevada will give us the change to tie its citizens together. No longer will Nevadans dependent on brahmin caravans or couriers. They're going places with the Enclave."
 enc_geck:0 "The GECK Project"
 enc_geck_desc:0 "The Garden of Eden Creation Kit was designed to help revive the Wastes after a nuclear war.  The Reunited States can use this technology on a national level to turn the Deadwood forests into Redwood forests once again."
 
@@ -484,8 +509,8 @@ enc_NCR_seak_allies:"Seeking Allies"
 enc_NCR_seak_allies_desc: "We aren't the only power opposed to the NCR.  To the east comes a fool who dreams of reviving the Roman Empire.  To the south lies another legacy of the Old War, Mr. House, and New Vegas.  And then there is the Brotherhood of Steel, who have no love for the NCR or us. Perhaps the enemy of our enemy can be our... not enemy?"
 
 
-enc_the_american_alliance: "The Allied States of America"
-enc_the_american_alliance_desc: "We can come to an agreement with the NCR to stand together against the Brotherhood, the Legion, and all who stand in the way of peace and progress."
+enc_the_american_alliance: "The Benjamin Franklin Society"
+enc_the_american_alliance_desc: "With trade flourishing between Nevada and California, it's time to take deepen our alliance.  California's best and brightest will learn from the Enclave. And maybe the Wastelanders have a few tricks we could use too."
 
 enc_the_state_of_utah: "The State of Utah"
 enc_the_state_of_utah_desc: "To the east, New Canaan is the nucleus for the Mormons of Utah.  With our backing they can stand against Caesar and bring freedom to the East."
@@ -554,15 +579,64 @@ enc_our_new_ally: "Our New Ally"
 enc_our_new_ally_desc: "The Old World Party is willing to ally to stand against the Enclave, Washington Brotherhood, and all who might oppose us."
 Enc_Tearing_Down_House:  "Tearing Down the House"
 Enc_Tearing_Down_House_desc:  "Mr. House thinks he's in control of New Vegas, but we have a wild card to play."
-Enc_Nevada_Rangers:  "The Nevada Rangers"
+Enc_Discredit_Rangers: "Discrediting the Desert Rangers"
+Enc_Discredit_Rangers_desc: "If the Rangers will not join Nevada peacefully, we can always use propaganda to cast them as hooligans and bandits.  After all, what gives them the right to conscript men and material from Nevada's communities? That's our job!"
+Enc_Nevada_Rangers:  "Incorporating the Nevada Rangers"
 Enc_Nevada_Rangers_desc:  "The Desert Rangers never wanted to run Nevada.  Now that there's a change for them to work with a lawful government to bring peace, order, and good government to the West, they'll gladly do so."
 Enc_Area_51: "Reclaiming Area 51"
 Enc_Area_51_desc:  "Area 51 was a center of elite military research before the war, and some of that surely remains.  Too bad it's occupied by trash that we need to clear out."
 enc_support_old_world_party: "Support Old World Party"
 enc_support_old_world_party_desc: "Should we decide to co-exist with the New California Republic, our only option may be to install a regime that will be more sympathetic to our goals and forgiving of our past.\n\nThe Old World Party in the NCR is the ally we need to accomplish this, let us see how we can help them help us."
+ENC_Kill_Sat: "The Archimedes Defense Platform"
+ENC_energy_boom: "Repairing Helios One"
+Enc_Platinum_Chip: "Forging a Platinum Chip"
+ENC_Big_MT: "Securing the Big MT"
+Enc_Big_MT: "The Big MT was one of the greatest sites of prewar research, and rumors of flickering lights haunting the nights suggest there could still be much to be gained from an expedition to its ruins. What's the worst that could happen?"
+Enc_Hoover_Dam_1: "The Treaty of Hoover Dam"
+Enc_Hoover_Dam_1_desc: "A treaty with the NCR will restore the dam to Nevada's control, although we will be reuqired to supply them with a portion of its power."
+enc_Pacific_Commonwealth: "Rebuilding the Pacific Commonwealth"
+enc_Pacific_Commonwealth_desc: "Before the Great War, Seattle and Portland were gleaming cities of the Ameriican northwest.  Now the region is given over to supermutants, raiders, and Brotherhood knights led by... a ghoul? I guess.  Anyway, we can rally American patriots in the region to create a new member of the Associated States of America."
+enc_Wash_BOS: "Taking Down the Brotherhood"
+enc_Wash_BOS_desc: "Although their powered armor makes these guys a threat, whatever happens, we have got, vertibirds, and they have not."
+ENC_PMR: "Closing Port Maw"
+ENC_PMR_desc: "Port Maw's pirates are a threat to trade throughout the northwest. Until now."
+ENC_RBT: "Civilize the Rib Breakers"
+ENC_RBT_desc: "The Rib Breakers used to be Americans. It's time to persuade them that they are again."
+ENC_MDT: "Stop Drinking Marrow!"
+ENC_MDT_desc: "Seriously, what is wrong with these tribes?"
+ENC_MLT: "Clean up the Mirelurks"
+ENC_MLT_desc: "These tribals are a real nuisance."
+ENC_ARR: "Freeing Arroyo"
+ENC_ARR_desc: "They should have joined voluntarily when they had the chance."
+ENC_BONE: "Subduing the Bone Pickers"
+ENC_BONE_desc: "What are they even picking with bones?"
+ENC_Trolling: "Stop Trolling"
+ENC_Trolling_desc: "The Troll Warren enslaves humans throughout the region and sends annoying messages on RobcoNet. Time to ban them."
+Enc_Vegas_miracle: "The Economic Miracle"
+enc_Nevada_dollar: "Promote the Nevada Dollar"
+enc_Nevada_dollar_desc: "The only thing we'll use dollars with Tandi for is to wipe our ass."
+enc_Unified_Currency: "Adopt the NCR Dollar"
+enc_Unified_currency_desc: "By adopting a current currency for California and Nevada, we will bind America closer together."
+Enc_Vegas_miracle_desc: "Ring a ding ding! House might hvave promised an economic boom, but his city-state was dependent on Californian gambling and prostitution. Now that it's been tied to the rest of Nevada, Vegas's economy is booming.  The lights of the strip are not just from casinos, but now come from factories and workshops where everyone wins."
+Enc_Platinum_Chip_desc: "What's this? A secret vault of forbidden prewar lore? This is basically why the Engineering Corps exists. We'll get in in no time."
+ENC_Big_MT_Restored: "Restoring the Big MT"
+ENC_Big_MT_Restored_desc: "Now that we've dealt with the original inhabitants, we can turn the Big MT towards the Enclave's research. Please note that calling it the 'Big Full' will result in a firing squad."
+Enc_Irrigation_Dam: "Irrigation Systems"
+Enc_Irrigation_Dam_desc: "One of the original purposes of Hoover dam was to irrigate the west.  Working with the NCR, revive that dream."
+Enc_New_day: "The New Day"
+Enc_New_day_desc: "The United States of America may be gone, but the American Confederation is here to stay. And the integration of Nevada into California's economy has had some surprising consequences..."
 ###################################
 # REFORM IDEAS
 ###################################
+Enc_New_day: "The New Day"
+
+Enc_Irrigation: "The Fruits of Irrigation"
+Enc_Railways: "Nevada Department of Transportation"
+NCR_unified_Currency: "Integration into the American Economy"
+Enc_Think_Tank: "The Think Tank"
+ENC_Plunder_MT: "Plunder from the Big MT"
+ENC_Unified_Currency: "Using the Californian Dollar"
+enc_Unified_Currency: "Tied to Nevada's Economy"
 CES_BOS:  "Brotherhood Remnants"
 enc_nuka_cola:  "Nuka Cola Addiction"
 Enc_Construction_nuka:  "Building Nuka World"
@@ -656,7 +730,6 @@ ENC_Freedom_Silent:  "Peace, Order, and Good Government"
 ENC_House:  "The House Always Wins"
 ENC_Marriage_Equality:  "Ghoul Marriage"
 Enc_Followers:  "Follower Patronage"
-
 ENC_servitude: "Indentured Servitude"
 
 ###################################
@@ -811,7 +884,7 @@ wontShootOnsight: "Won't shoot on sight"
 relations_increased_20: "Mutual Relations with §YEnclave§! improved by §G+20§!"
 
 erb_independence_faction:0 "Anti NCR Alliance"
-
+integrated_economy: "Integrated Economies"
 ###########################################
 # OOB
 ###########################################

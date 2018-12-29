@@ -1,0 +1,14 @@
+technology_sharing_group = { #Phalanstere (International)
+	id = Benjamin_Franklin_Society
+	name = Benjamin_Franklin_Society
+	desc = phalanstere_research_desc
+	picture = GFX_technology_sharing_default
+
+	research_sharing_per_country_bonus = 0.1
+
+	available = {
+		ERB = {
+			is_faction_leader = yes
+		}
+	}
+}

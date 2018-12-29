@@ -303,5 +303,37 @@ spriteTypes = {
 			name = "GFX_event_enc_skeletons"
 			texturefile = "gfx/event_pictures/event_enc_skeletons.tga"
 		}
+		SpriteType = {#Helios
+			name = "GFX_event_enc_Helios_one"
+			texturefile = "gfx/event_pictures/event_enc_Helios_One.dds"
+		}
+		SpriteType = {#End of NCR
+			name = "GFX_event_enc_endNCR"
+			texturefile = "gfx/event_pictures/event_enc_endNCR.dds"
+		}
+		SpriteType = {#Klamath
+			name = "GFX_event_enc_Klamath"
+			texturefile = "gfx/event_pictures/event_enc_Klamath.dds"
+		}
+		
+		SpriteType = {#Archimdes
+			name = "GFX_event_enc_archimedes"
+			texturefile = "gfx/event_pictures/event_enc_archimedes.dds"
+		}
+		SpriteType = {#BigMT
+			name = "GFX_event_enc_BigMT"
+			texturefile = "gfx/event_pictures/event_enc_BigMT.dds"
+		}
+		SpriteType = {#Archimdes
+			name = "GFX_event_enc_think_tank"
+			texturefile = "gfx/event_pictures/event_enc_think_tank.dds"
+		}
+		SpriteType = {#Sierra
+			name = "GFX_event_event_enc_sierra"
+			texturefile = "gfx/event_pictures/event_enc_sierra.dds"
+		}
+		
+		
+		
 }			
 

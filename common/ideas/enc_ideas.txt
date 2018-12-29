@@ -83,6 +83,36 @@ ideas = {
 			   elites_drift = 0.05
 			}
 		}
+		ENC_Plunder_MT = {
+			picture = enc_scientists 
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   research_time_factor = -0.03
+			 
+			}
+		}
+		ENC_Think_Tank = {
+			picture = enc_scientists 
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   research_time_factor = -0.04
+			 
+			}
+		}
 		ENC_officers = {  
 			picture = enc_officers
 			allowed = { 
@@ -153,6 +183,52 @@ ideas = {
 				MONTHLY_POPULATION = 0.1
 				consumer_goods_factor = 0.05
 				attrition = -0.1
+			}
+		}
+		
+		Enc_Irrigation = {  
+			picture = SOV_scientist_defect
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+				attrition = -0.03
+			}
+		}
+		ENC_Unified_Currency = {  
+			picture = SOV_scientist_defect
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+				
+			}
+		}
+		NCR_unified_Currency = {  
+			picture = SOV_scientist_defect
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.10
+				
 			}
 		}
 		enc_nuka_cola = {  
@@ -1633,7 +1709,13 @@ ideas = {
 				}
 		}
 		
-		ENC_Chamber_Commerce= {
+		ENC_Chamber_Commerce = {
+			picture = generic_exploit_mines
+			modifier = {
+					production_speed_infrastructure_factor = 0.2
+				}
+		}
+		Enc_Railways = {
 			picture = generic_exploit_mines
 			modifier = {
 					production_speed_infrastructure_factor = 0.2
