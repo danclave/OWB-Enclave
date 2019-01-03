@@ -3,7 +3,6 @@ MUST
 2. Rework punishment for being outnumbered by purists 
 
 SHOULD
-1. Expand on charismatic vs ruthless options
 2. update legitimacy mechanic tutorial event
 3. more legitimacy based decisions
 4. More icons
@@ -16,6 +15,7 @@ COULD
 4. Add custom effect for increasing/decreasing purist popularity (inverse red/green)
 5. More descriptions for events / advisors / decisions
 6. consequences for enc_reformers.13.c
+7. Expand on charismatic vs ruthless options
 
 DONE:
 1. Finish arm rebel mechanic

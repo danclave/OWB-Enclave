@@ -670,7 +670,7 @@ focus_tree = {
 	}
 	focus = {#RADIO - the_lucia_incident
 		id = enc_the_lucia_incident
-		icon = GFX_goal_NCR_Diplomacy
+		icon = GFX_goal_enc_the_lucia_incident
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_crack_the_code
 		x = -1
@@ -835,7 +835,7 @@ focus_tree = {
 	}
 	focus = {#EXPANSION - YKZ - enforce american culture
 		id = enc_yakuza_enforce_american_culture
-		icon = GFX_focus_chi_mission_to_the_us
+		icon = GFX_goal_enc_us_handshake
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_yakuza_annex_reform }
 		mutually_exclusive = { focus = enc_yakuza_preserve_japanese_culture }
@@ -2104,9 +2104,9 @@ focus_tree = {
 		
 		} 
 	}
-	focus = {#
-		id = Enc_Nevada_Rangers
-		icon = GFX_goal_NEW_new_world_old_ideas
+	focus = {# Nevada rangers
+		id = enc_Nevada_Rangers
+		icon = GFX_goal_enc_rangers
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_the_state_of_nevada
 		x = 5
@@ -2163,14 +2163,14 @@ focus = {#
 		}	
 	
 	focus = {#
-		id = Enc_Area_51
-		icon = GFX_goal_enc_verti
+		id = enc_Area_51
+		icon = GFX_goal_enc_verti_reform
 		ai_will_do = { factor = 1 } 
-		relative_position_id = Enc_Nevada_Rangers
+		relative_position_id = enc_Nevada_Rangers
 		x = -1
 		y = 1
 		cost = 5.8 
-		prerequisite = { focus = Enc_Nevada_Rangers
+		prerequisite = { focus = enc_Nevada_Rangers
 						focus = Enc_Discredit_Rangers }	
 		available = { has_full_control_of_state = 389 } 
 		completion_reward = { 
@@ -2190,11 +2190,11 @@ focus = {#
 		id = Enc_Mojave_Express
 		icon = GFX_goal_molotov_ribbentrop_pact
 		ai_will_do = { factor = 1 } 
-		relative_position_id = Enc_Area_51
+		relative_position_id = enc_Area_51
 		x = 4
 		y = 1
 		cost = 5.8 
-		prerequisite = { focus = Enc_Area_51 }	
+		prerequisite = { focus = enc_Area_51 }	
 		completion_reward = { 
 			226 = {
 					add_building_construction = { 
@@ -2290,11 +2290,11 @@ focus = {#
 		id = Enc_Broken_Hills
 		icon = GFX_goal_NCR_Newnorth
 		ai_will_do = { factor = 1 } 
-		relative_position_id = Enc_Area_51
+		relative_position_id = enc_Area_51
 		x = -4
 		y = 1
 		cost = 5.8 
-		prerequisite = { focus = Enc_Area_51 }	
+		prerequisite = { focus = enc_Area_51 }	
 		available = { has_full_control_of_state = 284 } 
 		completion_reward = { 
 			284 = {add_building_construction = {
@@ -2331,14 +2331,14 @@ focus = {#
 		id = Enc_Tearing_Down_House
 		icon = GFX_goal_VEG_The_Ultra-Luxe 
 		ai_will_do = { factor = 1 } 
-		relative_position_id = Enc_Area_51
+		relative_position_id = enc_Area_51
 		x = 0
 		y = 1
 		cost = 5.8 
 		bypass = {
 			VEG = { exists = NO }
 		}	
-		prerequisite = { focus = Enc_Area_51 }	
+		prerequisite = { focus = enc_Area_51 }	
 		completion_reward = { 
 		hidden_effect = { set_autonomy = {
 					target = VEG
@@ -2422,9 +2422,9 @@ focus = {#
 		icon = GFX_goal_moj_energy_boom
 		cost = 5.8
 		prerequisite = {
-			focus = Enc_Area_51
+			focus = enc_Area_51
 		}
-		relative_position_id = Enc_Area_51
+		relative_position_id = enc_Area_51
 		x = 2
 		y = 1
 		available = {
@@ -2479,9 +2479,9 @@ focus = {#
 		icon = GFX_goal_generic_BOS_focus_surface_outposts
 		cost = 5.8
 		prerequisite = {
-			focus = Enc_Area_51
+			focus = enc_Area_51
 		}
-		relative_position_id = Enc_Area_51
+		relative_position_id = enc_Area_51
 		x = -2
 		y = 1
 		completion_reward = {
@@ -3284,7 +3284,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	}
 	focus = {#SS-NCR-PEOPLE-PROPAGandA
 		id = enc_fear_uncertainty_and_doubt
-		icon = GFX_goal_enc_radio
+		icon = GFX_goal_enc_radio_reform
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_the_common_man}
 		relative_position_id = enc_the_common_man
@@ -3766,7 +3766,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	}
 	focus = {#Military - defense - second amendment
 		id = enc_second_amendment
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_goal_enc_department_of_defense
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_armed_militias }
 		relative_position_id = enc_armed_militias

@@ -124,11 +124,9 @@ scripted_gui = {
 		effects = {
 			legitimacy_bg_click = {
 				# nothing
-			}
-			
-			legitimacy_bg_right_click = { #todo remove me todo
-				add_to_variable = { legitimacy = 100 }
-				set_variable = { legitimacy_max = 500 }
+			}			
+			legitimacy_bg_right_click = { #todo remove
+				add_to_variable = { legitimacy = 0.10 }
 			}
 		}
 	}
@@ -169,7 +167,7 @@ scripted_gui = {
 		triggers = {
 			arm_rebels_click_enabled = {
 				ROOT = { 
-					has_political_power > 49.99		
+					has_political_power > arm_rebels_cost?50	
 				}
 				NOT = {
 					has_state_flag = enc_rebels_armed
@@ -188,7 +186,7 @@ scripted_gui = {
 			}
 		}
 	}
-arm_slaves = {    
+	arm_slaves = {    
         context_type = selected_state_context
         window_name = arm_slaves_container
         parent_window_token = selected_state_view
@@ -247,7 +245,7 @@ arm_slaves = {
             }
         }
     }
-arm_patriots = {    
+	arm_patriots = {    
         context_type = selected_state_context
         window_name = arm_patriots_container
         parent_window_token = selected_state_view

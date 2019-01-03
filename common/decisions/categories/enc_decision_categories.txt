@@ -121,7 +121,7 @@ ENC_debug = {
 	}	
 	visible = {
 		# always = false
-		# todo disable
+		# release disable
 	}
 
 }
