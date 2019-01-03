@@ -1635,7 +1635,7 @@ country_event = {#74 - Civil War
 		}
 		NCR = {
 			multiply_variable = {
-				civil_war_size_var = 3
+				civil_war_size_var = 2
 			}
 		}
 		NCR = {
@@ -2104,7 +2104,11 @@ country_event = {#94 Flagstaff Liberated
     desc = enc_reformers.94.d
     picture = GFX_event_enc_city
     fire_only_once = yes    
-    is_triggered_only = yes    
+    is_triggered_only = no    
+	trigger = { tag = ERB
+				ERB = { has_war_with = CES }
+				has_full_control_of_state = 520
+	}
     option = {# Wee!
 		name = enc_reformers.94.a
 		add_stability = 0.05
@@ -2574,27 +2578,59 @@ country_event = {#108 Hoover Dam
 	is_triggered_only = no
 	trigger = {
 		OR = { 
-		AND = { 
-			tag = ERB
-			ERB = { has_completed_focus = enc_the_divided_state }
-			NCR = { has_civil_war = yes }
-			252 = { is_owned_by = NCR }
+			AND = { 
+				tag = ERB
+				ERB = { has_completed_focus = enc_support_armed_coup }
+				NCR = { has_civil_war = yes }
+				252 = { is_owned_by = NCR }
 				}
-		AND = { 
-			tag = ERB
-			ERB = { has_completed_focus = enc_the_divided_state }
-			NCR = { has_civil_war = yes }
-			252 = { is_owned_by = D01 }
+			AND = { 
+				tag = ERB
+				ERB = { has_completed_focus = enc_support_armed_coup }
+				NCR = { has_civil_war = yes }
+				252 = { is_owned_by = D01 }
 				}
+			AND = { tag = ERB
+				ERB = { has_completed_focus = enc_the_divided_state}
+				252 = { is_owned_by = NCR }
+				ERB = { has_war_with = NCR }
+			 }
 		}
 	}
 	mean_time_to_happen = {	days = 15 }
 	option = {#	Damnit
+		trigger = { NCR = { has_completed_focus = ncr_powertopeople} }
 		name = enc_reformers.108.a
 		CES = {transfer_state = 252 }
 		set_global_flag = enc_ces_dam
+		253 = {
+				add_resource = {
+					type = electricity
+					amount = -30
+				}
+				add_resource = {
+					type = electronics
+					amount = -5
+				}
+			}
+			520 = {
+				add_resource = {
+					type = electricity
+					amount = 30
+				}
+				add_resource = {
+					type = electronics
+					amount = 5
+				}
+			}
+		
 	}
-	
+		option = {#	Damnit
+		trigger = { NCR = { NOT = {has_completed_focus = ncr_powertopeople} } }
+		name = enc_reformers.108.a
+		CES = {transfer_state = 252 }
+		set_global_flag = enc_ces_dam
+			}
 	}
 country_event = {#109 The Liberation of Hoover Dam
     id = enc_reformers.109
@@ -2607,7 +2643,7 @@ country_event = {#109 The Liberation of Hoover Dam
 		has_global_flag = enc_ces_dam
 		tag = ERB
 		252 = { is_controlled_by = ERB }
-		CES = { has_completed_focus = ces_to_the_victor_go_the_spoils }	
+		ERB = { has_war_with = CES }
 			}
 	mean_time_to_happen = {	days = 15 }
 	option = {#	Yayy
@@ -2657,7 +2693,6 @@ country_event = {#110 - BOS Legionaries
 		name = enc_reformers.110.a
 		CES ={ add_ideas = CES_BOS }
 		CES = {
-		add_research_slot = 1
 		set_technology = {
 			power_armour = 1
 			servo_motors = 1
@@ -2722,7 +2757,7 @@ country_event = {#110 - BOS Legionaries
                 }
 			}
 		}
-	}
+
 country_event = {#111 Turn Off Radio
 	id = enc_reformers.111
 	title = enc_reformers.111.t
@@ -2732,12 +2767,8 @@ country_event = {#111 Turn Off Radio
 	is_triggered_only = no
 	  trigger = {
         NCR = {
-            set_temp_variable = {
-                var = enclave_spies
-                value = party_popularity@intellectuals
-            }
-            check_variable = { enclave_spies > 0.50 }
-        }
+				intellectuals > 0.5
+			}
          }
 	mean_time_to_happen = {
 		days = 3
@@ -2756,6 +2787,7 @@ country_event = {#111 Turn Off Radio
 			}
 		}
 	}
+
 
 country_event = {#112 - Insurgency
 	id = enc_reformers.112
@@ -2988,13 +3020,7 @@ country_event = {#117 Helios One
 	option = {#	Yayy
 			name = enc_reformers.117.a
 		417 = {
-			add_extra_state_shared_building_slots = 5
-			add_building_construction = {
-					type = electricity_generator
-					level = 5
-					instant_build = yes
-				}	
-				add_resource = {
+			add_resource = {
 					type = fuel
 					amount = 15
 				}	
@@ -3004,11 +3030,9 @@ country_event = {#117 Helios One
 				}				  
 			}
 		}	
-	option = {#	Ion Cannon
-			name = enc_reformers.117.b
-			}		
+		
 				}
-		}
+		
 country_event = {#118 Legion Propaganda
     id = enc_reformers.118
     title = enc_reformers.118.t
@@ -3017,20 +3041,26 @@ country_event = {#118 Legion Propaganda
     fire_only_once = yes    
     is_triggered_only = no
 	trigger = {	
-	ERB = { has_war_with = CES }
-	has_completed_focus = enc_reform
-	}
+			ERB = { has_war_with = CES }
+			has_completed_focus = enc_reform
+			}
 	mean_time_to_happen = {	days = 3 }
     option = {# Ow!
 	name = enc_reformers.118.a
+	CES = {add_ideas = atrocities }
+	add_ideas = guerilla_raids
 		}
 	 option = {# Yuck Yuck!
 	name = enc_reformers.118.b
 	custom_effect_tooltip = enc_reformers.118.b.tt	
+	add_ideas = guerilla_raids
+	add_war_support = -0.10
 	 		}
 	option = {# Evil
 	name = enc_reformers.118.c
-	custom_effect_tooltip = enc_reformers.118.c.tt	
+	custom_effect_tooltip = enc_reformers.118.c.tt
+	add_ideas = guerilla_raids	
+	add_manpower = -500
 	 		}				
 }		
 country_event = {#119 NCR
@@ -3041,9 +3071,9 @@ country_event = {#119 NCR
     fire_only_once = yes    
     is_triggered_only = no
 	trigger = {	
-	And = { NOT = { country_exists = NCR }	
-	has_completed_focus = enc_expand_human_definition
-	controls_state = 253 }
+		And = { NOT = { country_exists = NCR }	
+		has_completed_focus = enc_expand_human_definition
+		controls_state = 253 }
 	}
 	mean_time_to_happen = {	days = 3 }
     option = {# Ow!
@@ -3223,6 +3253,7 @@ country_event = {#122
 		}
 	 option = {# Nice
 	name = enc_reformers.122.b
+	trigger = { has_country_flag = leader_charismatic 	}
 	add_tech_bonus = {
 				name = electronics_bonus
 				bonus = 0.5
@@ -3244,6 +3275,7 @@ country_event = {#122
 	 		}			
 	option = {# Evil
 	name = enc_reformers.122.e
+	trigger = { has_country_flag = leader_ruthless }
 	add_ideas = Enc_Think_Tank
 	 		}				
 }
@@ -3257,7 +3289,7 @@ country_event = {#123
     is_triggered_only = yes
 	    option = {# Rude!
 	name = enc_reformers.123.a
-	complete_national_focus = enc_Nevada_Dollar
+	complete_national_focus = enc_Nevada_dollar
 			}
 	 option = {# Nice
 	name = enc_reformers.123.b
@@ -3302,14 +3334,14 @@ country_event = {#126 Redding
 	picture = GFX_event_enc_Marcus
 	fire_only_once = yes
 	trigger = { has_completed_focus = enc_accept_super_mutants
-				has_completed_focus = enc_uranium_fever
+				has_completed_focus = Enc_Uranium_Fever
 		284 = {
 			is_owned_by = ERB
 				}
 		}
 		option = {#	Easter Egg
 		name = enc_reformers.126.a
-		add_resource = { type = electronics amount = 5 state = 284 }
+		add_resource = { type = fuel amount = 5 state = 284 }
 		add_resource = { type = electricity amount = 20 state = 284 }
 		set_province_name = {
 		id = 8784
@@ -3317,7 +3349,123 @@ country_event = {#126 Redding
 							}
 		add_popularity = { ideology = intellectuals popularity = 0.03 } 						
 	}	
+}
+
+country_event = {#127 Wild Card
+    id = enc_reformers.127
+	title = enc_reformers.127.t
+	desc = enc_reformers.127.d
+	picture = GFX_event_VEG_strip
+	fire_only_once = yes
+	is_triggered_only = yes	
+	option = {#	
+		name = enc_reformers.127.a
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = 0.05
+		}
+		change_legitimacy = yes
+	}	
+	option = {#	
+		name = enc_reformers.127.b
+		add_ideas = threefamilies
+				}
+option = {#	
+		name = enc_reformers.127.c
+		add_ideas = ENC_House 
+		trigger = { has_country_flag = leader_charismatic 	}
+
+	}	
+option = {#	
+		name = enc_reformers.127.e
+		trigger = { has_country_flag = leader_ruthless }
+		add_ideas = whitegloves
+	}		
+}
+country_event = {#128 New Vegas
+    id = enc_reformers.128
+	title = enc_reformers.128.t
+	desc = enc_reformers.128.d
+	picture = GFX_event_radio_new_vegas
+	fire_only_once = yes
+	is_triggered_only = yes	
+	option = {#	
+		name = enc_reformers.128.a
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = 0.05
+		}
+		change_legitimacy = yes
+	}	
+	option = {#	
+		name = enc_reformers.128.b
+		add_stability = 0.05
+				}
+
 }	
+
+country_event = {# Repconn
+    id = enc_reformers.129
+	title = enc_reformers.129.t
+	desc = enc_reformers.129.d
+	picture = GFX_event_Repconn
+	fire_only_once = yes
+	is_triggered_only = yes	
+	option = {#	
+		name = enc_reformers.129.a
+	trigger = { has_country_flag = leader_charismatic 	}
+	add_tech_bonus = {
+				name = explosives_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+	}	
+	option = {#	
+		name = enc_reformers.129.b
+		trigger = { has_country_flag = leader_ruthless	}
+		CES = { add_manpower = -200 }
+				}
+	option = {#	
+		name = enc_reformers.129.c
+		add_tech_bonus = {
+				name = explosives_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+			add_manpower = -100
+			}
+option = {#	
+		name = enc_reformers.129.e
+		181= { # New Reno
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = -1
+				instant_build = yes
+			}
+		}
+				}			
+}	
+
+country_event = {# Enclave to Legion
+    id = enc_reformers.130
+	title = enc_reformers.130.t
+	desc = enc_reformers.130.d
+	picture = GFX_event_CES_caesar
+	fire_only_once = yes
+	trigger = {	
+		has_completed_focus = enc_reform
+		has_completed_focus = enc_purge_opposition
+	}	
+	mean_time_to_happen = {	days = 30 }
+	option = {#
+		name = enc_reformers.130.a
+		CES = { add_research_slot = 1 }
+			}	
+	}
+		
 # integration
 #
 

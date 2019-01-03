@@ -125,11 +125,18 @@ ENC_debug = {
 	}
 
 }
-ENC_Pacific_Commonwealth = {
+ENC_Pacific_Commonwealth1 = {
 	allowed = {
 		tag = ERB }
 	visible = {
 			has_completed_focus = enc_Pacific_Commonwealth
+			}	
+}
+
+ENC_Treaty_Hoover_Dam = {
+	allowed = { tag = ERB }
+	visible = {
+			has_completed_focus = Enc_Hoover_Dam_1
 			}	
 }
 
