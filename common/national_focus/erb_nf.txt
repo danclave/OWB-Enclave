@@ -1956,7 +1956,16 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5.8 
-		prerequisite = { focus = enc_support_old_world_party }	
+		prerequisite = { focus = enc_support_old_world_party }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = 25_legitimacy		
+				check_variable = {
+					var = legitimacy
+					value > 0.299
+				}
+			}
+		}		
 		completion_reward = {
 			NCR = {add_opinion_modifier = { target = ERB modifier = intriguedDistrust }}
 			NCR = {remove_opinion_modifier = { target = ERB modifier = wontShootOnsight }}
@@ -2066,8 +2075,8 @@ focus_tree = {
 				intellectuals > 0.3
 			}
 		}
-		completion_reward = { country_event = { id = enc_reformers.74 } 
-		}
+		completion_reward = { custom_effect_tooltip = enc_Civil_War.tt
+		} 
 	}
 	focus = {#Diplomacy - NCR - electoral victory
 		id = enc_electoral_victory
@@ -2327,43 +2336,177 @@ focus = {#
 		}
 		}		
 				
-	focus = {#Tearing Down the HOuse 
-		id = Enc_Tearing_Down_House
-		icon = GFX_goal_VEG_The_Ultra-Luxe 
+	focus = {#Khan Job
+		id = Enc_KHan_Job
+		icon = GFX_goal_VEG_The_Khaganate
 		ai_will_do = { factor = 1 } 
 		relative_position_id = Enc_Area_51
 		x = 0
 		y = 1
 		cost = 5.8 
 		bypass = {
-			VEG = { exists = NO }
+			KHA = { exists = NO }
 		}	
 		prerequisite = { focus = Enc_Area_51 }	
+		completion_reward = { 
+		ERB = {	create_wargoal = { type = annex_everything target = KHA } }	
+			}
+		
+		}
+	focus = {#Tearing Down the HOuse 
+		id = Enc_Tearing_Down_House
+		icon = GFX_goal_VEG_The_Ultra-Luxe 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = Enc_KHan_Job
+		x = 0
+		y = 1
+		cost = 5.8 
+		bypass = {
+			VEG = { exists = NO }
+		}	
+		prerequisite = { focus = Enc_KHan_Job }	
 		completion_reward = { 
 		hidden_effect = { set_autonomy = {
 					target = VEG
 					autonomy_state = autonomy_free
-					}
+					}}
 		VEG = { if = { limit = { is_in_faction = yes } 
 			leave_faction = yes }	
 			}
+		NCR = {diplomatic_relation = {
+		country = VEG
+		relation = guarantee
+		active = no
+							  }	 }
+			country_event = { id = enc_reformers.127 }		
 					ERB = {
 						create_wargoal = { type = annex_everything target = VEG }
 						}	
 						}
-		}
+		
 		}
 		
+	focus = {
+		id = Enc_Second_City
+		icon = GFX_goal_VEG_The_Lucky_38
+		cost = 2
+		prerequisite = {
+			focus = Enc_Tearing_Down_House
+		}
+		available = { has_full_control_of_state = 211 }
+		relative_position_id = Enc_Tearing_Down_House
+		x = 0
+		y = 1
+		completion_reward = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] veg_lucky38 entered"
+			}
+			add_political_power = 100
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] veg_lucky38 exited"
+			}
+		}
+	}
+	focus = {
+		id = ERB_vault21
+		icon = GFX_goal_VEG_Vault_21
+		cost = 3
+		ai_will_do = { factor = 1 } 
+		relative_position_id = Enc_Second_City
+		x = -2
+		y = 1
+		cost = 3
+		available = { has_full_control_of_state = 211 }
+		prerequisite = { focus = Enc_Second_City }	
+		completion_reward = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] veg_vault21 entered"
+			}
+			country_event = nf_vegas.9
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] veg_vault21 exited"
+			}
+		}
+	}
+	focus = {
+		id = ERB_Repconn
+		icon = GFX_focus_rocketry
+		cost = 5
+		ai_will_do = { factor = 1 } 
+		relative_position_id = ERB_vault21
+		x = 0
+		y = 1
+		cost = 3
+		available = { has_full_control_of_state = 181 }
+		prerequisite = { focus = ERB_vault21 }	
+		completion_reward = {
+		181 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		country_event = { id = enc_reformers.129 }
+	}
+	}
+	focus = {
+		id = ERB_Tourists
+		icon = GFX_goal_card_tricks
+		cost = 3
+		ai_will_do = { factor = 1 } 
+		relative_position_id = Enc_Second_City
+		x = 0
+		y = 1
+		cost = 3
+		available = { has_full_control_of_state = 419 }
+		prerequisite = { focus = Enc_Second_City }	
+		completion_reward = {
+			419 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes } }
+			
+		}
+	}
+	
+	focus = {
+		id = ERB_Local_Development
+		icon = GFX_goal_enc_fed
+		cost = 4
+		prerequisite = { focus = ERB_Tourists }
+		relative_position_id = ERB_Tourists
+		x = 0
+		y = 1
+		completion_reward = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] veg_sewage entered"
+			}
+			add_ideas = sanitarycity
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] veg_sewage exited"
+			}
+		}
+	}
 	focus = {#Platinum Chip
 		id = Enc_Platinum_Chip
 		icon = GFX_goal_VEG_The_Platinum_Chip
 		ai_will_do = { factor = 1 } 
-		relative_position_id = Enc_Tearing_Down_House
-		x = 0
+		relative_position_id = Enc_Second_City
+		x = 2
 		y = 1
 		cost = 3
-		available = { VEG = { exists = NO } }
-		prerequisite = { focus = Enc_Tearing_Down_House}	
+		available = { has_full_control_of_state = 211 }
+		prerequisite = { focus = Enc_Second_City }	
 		completion_reward = { 
 		set_technology = { securitron_2_tech = 1 }
 		add_ideas = securitron_vault
@@ -2383,7 +2526,7 @@ focus = {#
 				add_tech_bonus = {
 				name = robotics_armour_bonus
 				bonus = 0.5
-				uses = 1
+				uses = 2
 				category = robotics_tech	
 			}
 			
@@ -2394,12 +2537,14 @@ focus = {#
 		icon = GFX_goal_VEG_Economic_Miracle
 		ai_will_do = { factor = 1 } 
 		relative_position_id = Enc_Robco_Reborn
-		x = 0
+		x = -2
 		y = 1
 		cost = 5.8 
-		prerequisite = { focus = Enc_Robco_Reborn }	
+		prerequisite = { focus = Enc_Robco_Reborn }
+		prerequisite = { focus = ERB_Local_Development }
+		prerequisite = { focus = ERB_Repconn }	
 		completion_reward = { 
-		313 = { #black rock
+		313 = { #
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
@@ -2407,16 +2552,11 @@ focus = {#
 					instant_build = yes
 				}
 			}
-			313 = { #black rock
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
+			add_ideas = goodbusiness2
+			country_event = { id = enc_reformers.128 } 
 			}
 		}
-	}		
+		
 	focus = {
 		id = ENC_energy_boom 
 		icon = GFX_goal_moj_energy_boom
@@ -2533,7 +2673,7 @@ focus = {#
 		completion_reward = {
 			add_resource = { type = electronics amount = 15 state = 159 }
 			add_resource = { type = advanced_technology amount = 16 state = 159 }	
-			country_event = { id = enc_refomers.123 } 
+			country_event = { id = enc_reformers.123 } 
 		}				
 	}
 	focus = {#Currency
@@ -2562,7 +2702,7 @@ focus = {#
 		id = enc_Unified_Currency
 		icon = GFX_goal_enc_ncr_dollar 
 		prerequisite = { focus = enc_NCR_trade }
-		mutually_exclusive = { focus = enc_Nevada_Dollar }
+		mutually_exclusive = { focus = enc_Nevada_dollar }
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NCR_trade
 		x = 1
@@ -2590,7 +2730,7 @@ focus = {#Diplomacy - NCR - american alliance
 	relative_position_id = enc_Nevada_dollar
 	x = 1
 	y = 1 
-		cost = 5.8 
+		cost = 4 
 		prerequisite = { focus = enc_Unified_Currency focus = enc_Nevada_dollar }
 		completion_reward = { 
 		ERB = { if = { limit = { is_in_faction = yes } 
@@ -2621,15 +2761,42 @@ focus = {#Diplomacy - NCR - american alliance
 		relative_position_id = enc_the_american_alliance
 		x = 2
 		y = 1
-		cost = 5.8 
+		cost = 4
 		prerequisite = { focus = enc_the_american_alliance }
 		completion_reward = {
 		NCN = { if = { limit = { is_in_faction = yes } 
 			leave_faction = yes }	
 			}
 		add_to_faction = NCN
+		NCN = {
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+				} 
 		NCN = { add_to_tech_sharing_group = Benjamin_Franklin_Society }
 		}
+	}
+	focus = {#Diplomacy - NCR - Mexico
+		id = Enc_Mexican_Trade
+		icon = GFX_goal_flag_Mexico
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_the_state_of_utah
+		x = 0
+		y = 1
+		cost = 4 
+		prerequisite = { focus = enc_the_state_of_utah }
+		completion_reward = {
+		custom_effect_tooltip = enc_coffee_tt
+		hidden_effect = {
+		add_ideas = Enc_Trade_Coffee
+		every_other_country = {
+					limit = { is_in_faction_with = ENC }
+					add_ideas = Enc_Trade_Coffee
+				}
+				}
+		}	
 }
 	focus = {#Diplomacy - NCR - the true enemy
 		id = enc_the_true_enemy
@@ -2638,7 +2805,7 @@ focus = {#Diplomacy - NCR - american alliance
 		relative_position_id = enc_the_american_alliance
 		x = -2
 		y = 1
-		cost = 5.8 
+		cost = 4 
 		prerequisite = { focus = enc_the_american_alliance }
 		completion_reward = {
 		ERB = { create_wargoal = { type = annex_everything target = CES } }			
@@ -2651,7 +2818,7 @@ focus = {#Diplomacy - Arizona
 		relative_position_id = enc_the_true_enemy
 		x = 0
 		y = 1
-		cost = 5.8 
+		cost = 4 
 		Available = { CES = { exists = NO } }
 		prerequisite = { focus = enc_the_true_enemy }
 		completion_reward = {
@@ -2659,14 +2826,36 @@ focus = {#Diplomacy - Arizona
 			leave_faction = yes }	
 			}
 		add_to_faction = PHR
+		hidden_effect = {
 			PHR = {
 					add_ai_strategy = {
 						type = alliance
 						id = "ERB"
 						value = 200
 					}
+				} 
+			PHR = { set_cosmetic_tag = ERB_PHR } }
+		PHR = { add_to_tech_sharing_group = Benjamin_Franklin_Society 
+		HUA = {
+			every_owned_state = {
+				add_core_of = PHR
+								}
 				}
-		PHR = { add_to_tech_sharing_group = Benjamin_Franklin_Society } }			
+		FLA = {
+			every_owned_state = {
+				add_core_of = PHR
+								}
+				}		
+		TWI = {
+			every_owned_state = {
+				add_core_of = PHR
+								}
+				}
+		PHR = { annex_country = { target = TWI }		
+				annex_country = { target = HUA }
+				annex_country = { target = FLA }
+		}}			
+	}
 	}
 		
 	focus = {#Diplomacy - NCR - the true enemy
@@ -2679,18 +2868,8 @@ focus = {#Diplomacy - Arizona
 		cost = 5.8 
 		prerequisite = { focus = enc_the_american_alliance }
 		completion_reward = {
-		ERB = {transfer_state = 252 }
-		252 = {
-				add_resource = {
-					type = electricity
-					amount = 15
-				}
-				add_resource = {
-					type = electronics
-					amount = 5
-				}
-			}	
-			}
+		custom_effect_tooltip = enc_Hoovertreaty.tt
+		}
 	}
 	
 	focus = {#Irrigation
@@ -2703,10 +2882,15 @@ focus = {#Diplomacy - Arizona
 		cost = 5.8 
 		prerequisite = { focus = Enc_Hoover_Dam_1}
 		completion_reward = {
+		custom_effect_tooltip = enc_Irrigation_tt
+		hidden_effect = {
 		add_ideas = Enc_Irrigation
-		NCR = { add_ideas = Enc_Irrigation }
-		
-			}
+		every_other_country = {
+					limit = { is_in_faction_with = ENC }
+					add_ideas = Enc_Irrigation
+				}
+				}
+		}
 	}
 	
 	focus = {#Diplomacy - Northwest
@@ -2754,6 +2938,11 @@ focus = {#Diplomacy - Arizona
 		completion_reward = {
 		add_war_support = 0.05
 		add_stability = 0.05
+		every_other_country = {
+					limit = { is_in_faction_with = ENC }
+					add_war_support = 0.05
+					add_stability = 0.05
+				}
 		}			
 	}
 	focus = {#New Day
@@ -2777,7 +2966,7 @@ focus = {#Diplomacy - Arizona
 	####################################
 	focus = {#Diplomacy - NCR - no compromise
 		id = enc_NCR_no_compromise
-		icon = GFX_goal_poison_bear_reformer
+		icon = GFX_goal_enc_us_reborn
 		ai_will_do = { factor = 1 } 
 		mutually_exclusive = { focus = enc_NCR_start }
 		relative_position_id = enc_foreign_policy

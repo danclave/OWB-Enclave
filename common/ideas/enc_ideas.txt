@@ -98,7 +98,7 @@ ideas = {
 			 
 			}
 		}
-		ENC_Think_Tank = {
+		Enc_Think_Tank = {
 			picture = enc_scientists 
 			allowed = { 
 				always = no
@@ -109,7 +109,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   research_time_factor = -0.04
+			   research_time_factor = -0.03
 			 
 			}
 		}
@@ -138,6 +138,33 @@ ideas = {
 ####################################################
 # REFORM
 ####################################################
+		atrocities = {	
+			
+			picture = caesar's_legacy_2
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.1
+				non_core_manpower = 0.1
+				army_speed_factor = 0.05
+				attrition = -0.1
+			}
+			
+			equipment_bonus = {
+				infantry = {
+					instant = yes
+					soft_attack = 0.05
+				}
+			}
+		}
 		ENC_reform = {
 			picture = enc_reform
 			allowed = { 
@@ -493,7 +520,7 @@ ideas = {
 				enemy_partisan_effect = -0.1
 			}
 		}
-		ENC_constitution= {  
+		ENC_constitution = {  
 			picture = generic_constitutional_guarantee
 			allowed = { 
 				always = no
@@ -509,6 +536,21 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.10
 				production_factory_max_efficiency_factor = 0.10
 				consumer_goods_factor = -0.10
+			}
+		}
+		Enc_Trade_Coffee = {  
+			picture = generic_constitutional_guarantee
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.05
 			}
 		}
 		ENC_constitution_rule_of_law= {  
@@ -1309,8 +1351,7 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				consumer_goods_factor = -0.04
-				research_time_factor = -0.03
-			}
+						}
 		}
 		
 		ENC_Dept_Energy = {
@@ -1450,11 +1491,8 @@ ideas = {
 			modifier = {
 				army_morale_factor = 0.10
 				army_org_factor = 0.10
-			}
-			targeted_modifier = {
-				tag = ERB
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
+				pffense = 0.15
+				defense = 0.15
 			}
 		}			
 		ENC_vengeance_bos = {  		
@@ -1668,6 +1706,18 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				supply_consumption_factor = 1	
+			}
+		}
+		guerilla_raids = {
+			
+			picture = ncr_ranger_idea
+			
+			allowed = {}
+
+			removal_cost = -1
+			
+			modifier = {
+				supply_consumption_factor = 0.05
 			}
 		}
 		ENC_emergency_draft = {

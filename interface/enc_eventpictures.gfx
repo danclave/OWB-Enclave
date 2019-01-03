@@ -332,7 +332,10 @@ spriteTypes = {
 			name = "GFX_event_event_enc_sierra"
 			texturefile = "gfx/event_pictures/event_enc_sierra.dds"
 		}
-		
+		SpriteType = {#Sierra
+			name = "GFX_event_Repconn"
+			texturefile = "gfx/event_pictures/event_Repconn.dds"
+		}	
 		
 		
 }			

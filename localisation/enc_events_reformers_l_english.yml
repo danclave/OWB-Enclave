@@ -506,10 +506,10 @@ enc_reformers.117.a:  "We have the plant, and we have the power"
 enc_reformers.117.b:  "Wait, this can be a weapon?"
 ################################################################################################################
 enc_reformers.118.t: "Caesar's Atrocities"
-enc_reformers.118.d: "Caesar is a nasty son of a bitch, and as we push east his men have responded with increasing guerilla attacks on our supply lines and atrocities.  Recently, they somehow crucified thirteen men on Hoover Dam, declaring they left their bodies facing west, to watch our world die."
+enc_reformers.118.d: "Caesar is a nasty son of a bitch, and as we push east his men have responded with increasing guerilla attacks on our supply lines and atrocities to demoralize our men.  Recently, they somehow crucified thirteen men on Hoover Dam, declaring they left their bodies facing west, to watch our world die."
 enc_reformers.118.a:  "What is wrong with them!?"
 enc_reformers.118.b:  "§MThe real atrocities are Caesar's speeches§M"
-enc_reformers.118.b.tt:0 "Available because you're a charismatic son of a gun"
+enc_reformers.118.b.tt:0 "Available because you're a charismatic son of a gun.   "
 enc_reformers.118.c:  "§RAnyone spreading these stories gets a visit from the Secret Service§R"
 enc_reformers.118.c.tt:0 "...Man, even we think that's Ruthless"
 ################################################################################################################
@@ -557,5 +557,28 @@ enc_reformers.125.d: "Granite would have the honor of chairing a conference at t
 enc_reformers.125.a: "God Bless America"
 ###############################################################################################################
 enc_reformers.126.t: "The Broken Hills Boom Town"
-enc_reformers.126.d: "To some of the older members of the Enclave, Broken Hills is disgusting.  Enclave engineers found new uranium veins, super mutants labor in the mines to extract uranium for wages, and ghouls run the refinery. But even the old guard are hard pressed to argue with the results and money pouring into our coffers."
-enc_reformers.126.a: "The only color that matters is the color of your money"
+enc_reformers.126.d: "Broken Hills, once abandoned, bustles with new life.  Since Enclave engineers found new uranium veins, supermutants have returned to plunder the precious metal from the earth, while ghouls, impervious to radiation, run the refinery.  Some of the old guard find this disgusting, but even they look a little green as they watch th emoney poor into our pockets."
+enc_reformers.126.a: "It's the American Dream!"
+###############################################################################################################
+enc_reformers.127.t: "Wild Card: Change in Management"
+enc_reformers.127.d: "Mr. President, now that we have seized New Vegas we must decide who will help us rule the city.  Reports from the courier we've hired suggest the Kings have the support of the people, but although they control Freeside they have little influence on the Strip.  The great families  might work with us, although they will probably chafe under Enclave rule.  And we could remind Mr. House that he used to be a very successful American citizen..."
+enc_reformers.127.a: "Every Man a King has a nice ring..."
+enc_reformers.127.b: "We can work with the old families"
+enc_reformers.127.c: "§MPersuade Mr. House to work with the Enclave!§"
+enc_reformers.127.e: "§RInvite these esteemed citizens to dinner at the White Glove Society!§"
+###############################################################################################################
+enc_reformers.128.t: "The Lights Are Going On"
+enc_reformers.128.d: "It's me, Mr. New Vegas. That was 'When the Lights Go On Again,' by Vera Lynn. And speaking of the lights going on, the Nevada Reconstruction Authority is reporting that Primm has been connected to the electrical grid for the first time in two hundred years. And while I know you're concerned about some of the changes to the Mojave, like the changes to my programming, they're only to better serve you, my beautiful fans. Signing off, it's me, Mr. New Vegas, reminding you that you're nobody till somebody loves you. And that somebody is the Enclave. The Enclave loves you."
+enc_reformers.128.a: "Mr. Vegas, play American Saturday Night by Brad Paisley"
+enc_reformers.128.b: "Mr. Vegas, play Always Remember Us This Way by Stefani Germanotta"
+###############################################################################################################
+enc_reformers.129.t: "Come Fly With Me"
+enc_reformers.129.d: "The courier we dispatched to investigate the REPCONN facility has brought some good news and bad news. The good news is there are still some operable rockets there. The bad news is that there's a cult of ghouls who occupied the facility and dream to use some of the rockets to escape this battered old world.  What do you want to do?"
+enc_reformers.129.a: "§MWe will aid you on your journey, astromen!§!"
+enc_reformers.129.b: "§R Aim their rockets at the Legion's capital in Flagstaff!§"
+enc_reformers.129.c: "This is the part where you shoot them"
+enc_reformers.129.e: "I guess we can leave them be?"
+###############################################################################################################
+enc_reformers.130.t: "Enclave Purists Flee to the Legion"
+enc_reformers.130.d: "Although we took power with a promise to not purge our political enemies, like most politicians we've fallen short of our promises.  Some of the Purists within the Enclave have defected to Caesar's Legion for the promise of more wealth and power than they'd have at the Sierra Army Depot. But what's the worst that can happen? "
+enc_reformers.130.a: "I'm going to crucify them."
