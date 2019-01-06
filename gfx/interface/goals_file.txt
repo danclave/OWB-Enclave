@@ -53,6 +53,7 @@
 # GFX_goal_enc_fort
 # GFX_goal_enc_geck
 # GFX_goal_enc_gecko_power_plant
+# GFX_goal_Enc_goal_flag_mexico
 # GFX_goal_enc_guerrilla_warfare
 # GFX_goal_enc_improve_relations_reformer
 # GFX_goal_enc_infiltrate_ncr
@@ -87,6 +88,7 @@
 # GFX_goal_enc_planning
 # GFX_goal_enc_poison_bear
 # GFX_goal_enc_poison_bull
+# GFX_goal_enc_poison_bull_reformer
 # GFX_goal_enc_police
 # GFX_goal_enc_position_armies
 # GFX_goal_enc_power_armor_focus
@@ -107,6 +109,7 @@
 # GFX_goal_enc_radio_civilian
 # GFX_goal_enc_radio_military
 # GFX_goal_enc_radio_reform
+# GFX_goal_enc_rangers
 # GFX_goal_enc_rangers_planning
 # GFX_goal_enc_rangers_start
 # GFX_goal_enc_rebuild_the_power_grid
@@ -149,6 +152,7 @@
 # GFX_goal_enc_take_reno
 # GFX_goal_enc_the_american_alliance-3
 # GFX_goal_enc_the_american_alliance
+# GFX_goal_enc_the_lucia_incident
 # GFX_goal_enc_the_mutant_question
 # GFX_goal_enc_the_state_of_nevada
 # GFX_goal_enc_threat_of_communism
@@ -158,6 +162,7 @@
 # GFX_goal_enc_troop_call
 # GFX_goal_enc_us_dollar
 # GFX_goal_enc_us_flags
+# GFX_goal_enc_us_handshake
 # GFX_goal_enc_us_reborn
 # GFX_goal_enc_vac
 # GFX_goal_enc_vault_open
@@ -170,6 +175,7 @@
 # GFX_goal_enc_weapon_factory
 # GFX_goal_enc_wip
 # GFX_goal_flag_burn_BOS
+# GFX_goal_goal_card_tricks
 # GFX_goal_pa_production
 # GFX_goal_poison_bear_reformer
 # GFX_goal_shield_enc_wip

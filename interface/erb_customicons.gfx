@@ -219,6 +219,10 @@ spriteTypes = {
             name = "GFX_goal_enc_gecko_power_plant"
  		    texturefile = "gfx/interface/goals/enc_gecko_power_plant.dds"
  	    } 
+        SpriteType = {#Enc_goal_flag_mexico
+            name = "GFX_goal_Enc_goal_flag_mexico"
+ 		    texturefile = "gfx/interface/goals/Enc_goal_flag_mexico.dds"
+ 	    } 
         SpriteType = {#enc_guerrilla_warfare
             name = "GFX_goal_enc_guerrilla_warfare"
  		    texturefile = "gfx/interface/goals/enc_guerrilla_warfare.dds"
@@ -355,6 +359,10 @@ spriteTypes = {
             name = "GFX_goal_enc_poison_bull"
  		    texturefile = "gfx/interface/goals/enc_poison_bull.dds"
  	    } 
+        SpriteType = {#enc_poison_bull_reformer
+            name = "GFX_goal_enc_poison_bull_reformer"
+ 		    texturefile = "gfx/interface/goals/enc_poison_bull_reformer.dds"
+ 	    } 
         SpriteType = {#enc_police
             name = "GFX_goal_enc_police"
  		    texturefile = "gfx/interface/goals/enc_police.dds"
@@ -434,6 +442,10 @@ spriteTypes = {
         SpriteType = {#enc_radio_reform
             name = "GFX_goal_enc_radio_reform"
  		    texturefile = "gfx/interface/goals/enc_radio_reform.dds"
+ 	    } 
+        SpriteType = {#enc_rangers
+            name = "GFX_goal_enc_rangers"
+ 		    texturefile = "gfx/interface/goals/enc_rangers.dds"
  	    } 
         SpriteType = {#enc_rangers_planning
             name = "GFX_goal_enc_rangers_planning"
@@ -603,6 +615,10 @@ spriteTypes = {
             name = "GFX_goal_enc_the_american_alliance"
  		    texturefile = "gfx/interface/goals/enc_the_american_alliance.dds"
  	    } 
+        SpriteType = {#enc_the_lucia_incident
+            name = "GFX_goal_enc_the_lucia_incident"
+ 		    texturefile = "gfx/interface/goals/enc_the_lucia_incident.dds"
+ 	    } 
         SpriteType = {#enc_the_mutant_question
             name = "GFX_goal_enc_the_mutant_question"
  		    texturefile = "gfx/interface/goals/enc_the_mutant_question.dds"
@@ -638,6 +654,10 @@ spriteTypes = {
         SpriteType = {#enc_us_flags
             name = "GFX_goal_enc_us_flags"
  		    texturefile = "gfx/interface/goals/enc_us_flags.dds"
+ 	    } 
+        SpriteType = {#enc_us_handshake
+            name = "GFX_goal_enc_us_handshake"
+ 		    texturefile = "gfx/interface/goals/enc_us_handshake.dds"
  	    } 
         SpriteType = {#enc_us_reborn
             name = "GFX_goal_enc_us_reborn"
@@ -687,6 +707,10 @@ spriteTypes = {
             name = "GFX_goal_flag_burn_BOS"
  		    texturefile = "gfx/interface/goals/flag_burn_BOS.dds"
  	    } 
+        SpriteType = {#goal_card_tricks
+            name = "GFX_goal_goal_card_tricks"
+ 		    texturefile = "gfx/interface/goals/goal_card_tricks.dds"
+ 	    } 
         SpriteType = {#pa_production
             name = "GFX_goal_pa_production"
  		    texturefile = "gfx/interface/goals/pa_production.dds"
@@ -734,6 +758,10 @@ spriteTypes = {
         SpriteType = {#daisy_whitman
             name = "GFX_idea_daisy_whitman"
  		    texturefile = "gfx/interface/ideas/daisy_whitman.dds"
+ 	    } 
+        SpriteType = {#desktop.ini
+            name = "GFX_idea_desktop.ini"
+ 		    texturefile = "gfx/interface/ideas/desktop.ini.dds"
  	    } 
         SpriteType = {#d_henry
             name = "GFX_idea_d_henry"
@@ -887,19 +915,4 @@ spriteTypes = {
             name = "GFX_idea_verti_production"
  		    texturefile = "gfx/interface/ideas/verti_production.dds"
  	    }    
-		SpriteType = {#Mexico
-            name = "GFX_goal_flag_Mexico"
- 		    texturefile = "gfx/interface/goals/Enc_goal_flag_Mexico.dds"
- 	    }
-		SpriteType = {#Cards
-            name = "GFX_goal_card_tricks"
- 		    texturefile = "gfx/interface/goals/goal_card_tricks.dds"
- 	    }
-		SpriteType = {#Cards
-            name = "GFX_goal_card_tricks"
- 		    texturefile = "gfx/interface/goals/goal_card_tricks.dds"
- 	    }
 }
-}
-
-

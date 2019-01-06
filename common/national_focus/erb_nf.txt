@@ -683,7 +683,7 @@ focus_tree = {
 	}
 	focus = {#RADIO - the_bishop_incident 
 		id = enc_the_bishop_incident 
-		icon = GFX_goal_NCR_Ranger_Core
+		icon = GFX_goal_enc_rangers
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_crack_the_code
 		x = 1
