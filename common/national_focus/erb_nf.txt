@@ -146,6 +146,10 @@ focus_tree = {
 			change_legitimacy = yes
 			country_event = { id = enc_reformers.15 }
 			set_rule = { can_puppet = yes }
+			swap_ideas = {
+				remove_idea = volunteer_only
+				add_idea = The_Fools_And_Dreamers
+			}
 		} 
 	}	
 
