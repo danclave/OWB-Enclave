@@ -126,7 +126,7 @@ add_ideas = ENC_infighting
 add_ideas = enc_scientists
 add_ideas = ENC_officers
 add_ideas = closed_economy
-
+add_ideas = volunteer_only
 add_manpower = 500
 
 # 4rth of july
