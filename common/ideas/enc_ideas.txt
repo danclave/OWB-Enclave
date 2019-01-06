@@ -1491,8 +1491,8 @@ ideas = {
 			modifier = {
 				army_morale_factor = 0.10
 				army_org_factor = 0.10
-				pffense = 0.15
-				defense = 0.15
+				army_core_attack_factor	 = 0.15
+				army_core_defense_factor = 0.15
 			}
 		}			
 		ENC_vengeance_bos = {  		
