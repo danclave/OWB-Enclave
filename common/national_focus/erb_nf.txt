@@ -2143,7 +2143,7 @@ focus_tree = {
 		annex_country = { target = DES }
 		}
 		}
-focus = {#
+	focus = {#
 		id = Enc_Discredit_Rangers
 		icon = GFX_goal_enc_rangers_start
 		ai_will_do = { factor = 1 } 
@@ -2320,7 +2320,7 @@ focus = {#
 		}
 		}
 	focus = {#
-		id = Enc_Uranium_Fever
+		id = Enc_Uranium_Fever 
 		icon = GFX_goal_generic_construction2
 		ai_will_do = { factor = 1 } 
 		relative_position_id = Enc_Broken_Hills
@@ -2330,21 +2330,26 @@ focus = {#
 		prerequisite = { focus = Enc_Broken_Hills }	
 		available = { has_full_control_of_state = 284 } 
 		completion_reward = { 
-			284 = {add_building_construction = {
+			284 = {
+				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
-				}
-		add_resource = { type = electricity amount = 15 state = 284 }
+			}
+			add_resource = { 
+				type = electricity 
+				amount = 15 
+				state = 284 
+			}
 		}
-		}		
+	}		
 				
 	focus = {#Khan Job
-		id = Enc_KHan_Job
+		id = enc_khan_job
 		icon = GFX_goal_VEG_The_Khaganate
 		ai_will_do = { factor = 1 } 
-		relative_position_id = Enc_Area_51
+		relative_position_id = enc_Area_51
 		x = 0
 		y = 1
 		cost = 5.8 
@@ -2361,14 +2366,14 @@ focus = {#
 		id = Enc_Tearing_Down_House
 		icon = GFX_goal_VEG_The_Ultra-Luxe 
 		ai_will_do = { factor = 1 } 
-		relative_position_id = Enc_KHan_Job
+		relative_position_id = enc_khan_job
 		x = 0
 		y = 1
 		cost = 5.8 
 		bypass = {
 			VEG = { exists = NO }
 		}	
-		prerequisite = { focus = Enc_KHan_Job }	
+		prerequisite = { focus = enc_khan_job }	
 		completion_reward = {
 			hidden_effect = { 
 				set_autonomy = {
@@ -2709,7 +2714,7 @@ focus = {#
 			}
 			}
 			}
-		focus = {#Currency Talks
+	focus = {#Currency Talks
 		id = enc_Unified_Currency
 		icon = GFX_goal_enc_ncr_dollar 
 		prerequisite = { focus = enc_NCR_trade }
@@ -2734,7 +2739,7 @@ focus = {#
 		}
 		}
 			}
-focus = {#Diplomacy - NCR - american alliance
+	focus = {#Diplomacy - NCR - american alliance
 	id = enc_the_american_alliance
 	icon = GFX_goal_enc_the_american_alliance
 	ai_will_do = { factor = 1 } 
@@ -2822,7 +2827,7 @@ focus = {#Diplomacy - NCR - american alliance
 		ERB = { create_wargoal = { type = annex_everything target = CES } }			
 	}
 	}
-focus = {#Diplomacy - Arizona
+	focus = {#Diplomacy - Arizona
 		id = enc_Arizona
 		icon = GFX_focus_chi_mission_to_the_us
 		ai_will_do = { factor = 1 } 
@@ -3021,8 +3026,10 @@ focus = {#Diplomacy - Arizona
 		x = 2
 		y = 1
 		cost = 5.8 
-		prerequisite = { focus = enc_NCR_seak_allies
-				not = {has_country_flag = enc_promised_no_peace_with_bos} }
+		prerequisite = { focus = enc_NCR_seak_allies }
+		available = {		
+			not = {has_country_flag = enc_promised_no_peace_with_bos} 
+		}
 		completion_reward = {
 			BOS = {
 				custom_effect_tooltip = relations_increased_20
