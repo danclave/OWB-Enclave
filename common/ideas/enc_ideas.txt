@@ -155,7 +155,33 @@ ideas = {
 				army_attack_factor = 0.1
 				non_core_manpower = 0.1
 				army_speed_factor = 0.05
-				attrition = -0.1
+				attrition = -0.10
+			}
+			
+			equipment_bonus = {
+				infantry = {
+					instant = yes
+					soft_attack = 0.05
+				}
+			}
+		}
+			enc_advisors = {	
+			
+			picture = caesar's_legacy_2
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.05
+				army_speed_factor = 0.05
+				attrition = -0.10
 			}
 			
 			equipment_bonus = {
@@ -1215,7 +1241,7 @@ ideas = {
 				defensive_war_stability_factor = 0.3
 			}
 		}
-		ENC_army_reserves = {
+		ENC_selective_service = {
 			picture = generic_wall_line
 			allowed = { always = no }
 
@@ -1223,6 +1249,18 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				conscription_factor = 0.10
+				mobilization_speed = 0.30
+				defensive_war_stability_factor = 0.3
+			}
+		}
+		ENC_army_reserves = {
+			picture = generic_wall_line
+			allowed = { always = no }
+
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+			modifier = {
+				conscription_factor = 0.15
 				mobilization_speed = 0.30
 				defensive_war_stability_factor = 0.3
 				army_core_defence_factor = 0.05
@@ -1400,6 +1438,15 @@ ideas = {
 			modifier = {
 				research_time_factor = -0.10
 				
+			}
+		}
+	enc_manifest_destiny = {  
+			picture = enc_reform
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes } 
+			removal_cost = -1
+			modifier = {
+			justify_war_goal_time = -0.35				
 			}
 		}
 

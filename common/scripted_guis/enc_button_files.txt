@@ -151,7 +151,7 @@ scripted_gui = {
 			arm_rebels_click = {
 				ROOT = { 	
 					hidden_effect = {
-						add_political_power = arm_rebels_cost?-50
+						add_political_power = enc_rebels_we_have_armed
 					}	
 				}
 				set_state_flag = enc_rebels_armed
@@ -164,13 +164,16 @@ scripted_gui = {
 				else = {
 					custom_effect_tooltip = arm_rebels_click
 				}
+				 ROOT = {
+					add_to_variable  = { enc_rebels_we_have_armed = -50}
+					}
 			}
 		}
 		triggers = {
 			arm_rebels_click_enabled = {
 				ROOT = { 
-					has_political_power > 49.99		
-				}
+					has_political_power > 49.99
+						}
 				NOT = {
 					has_state_flag = enc_rebels_armed
 				}
@@ -209,7 +212,7 @@ arm_slaves = {
             arm_slaves_click = {
                 ROOT = {     
                     hidden_effect = {
-                        add_political_power = -75
+                        add_political_power = enc_slaves_we_have_armed
                     }    
                 }
                 set_state_flag = enc_slaves_armed
@@ -222,6 +225,9 @@ arm_slaves = {
                 else = {
                     custom_effect_tooltip = arm_slaves_click
                 }
+				ROOT = {
+					add_to_variable  = { enc_slaves_we_have_armed = -50}
+					}
             }
         }
         triggers = {
@@ -264,7 +270,7 @@ arm_patriots = {
             arm_patriots_click = {
                 ROOT = {     
                     hidden_effect = {
-                        add_political_power = -100
+                        add_political_power = enc_patriots_we_have_armed
                     }    
                 }
                 set_state_flag = enc_patriots_armed
@@ -277,6 +283,9 @@ arm_patriots = {
                 else = {
                     custom_effect_tooltip = arm_patriots_click
                 }
+					ROOT = {
+					add_to_variable  = { enc_patriots_we_have_armed = -50}
+					}
             }
         }
         triggers = {

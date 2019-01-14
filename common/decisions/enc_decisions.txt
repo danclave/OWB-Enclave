@@ -228,6 +228,92 @@ ENC_infiltrating_NCR = {
 			set_country_flag = enc_petition_delivered
 		}
 	}
+	enc_embassy = {
+	
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+				}
+	
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_the_state_of_nevada
+		}
+		complete_effect = {
+			NCR = {
+				add_popularity = { ideology = intellectuals popularity = 0.05 }
+			}
+				add_popularity = { ideology = elites popularity = 0.10 }
+
+			set_temp_variable = {
+				var = suspicion_change_var
+				value = -05
+			}
+			change_suspicion = YES
+		}
+	}
+	enc_NCR_radio = {
+	
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+				}
+	
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_owb_propaganda
+		}
+		complete_effect = {
+			NCR = {
+				add_popularity = { ideology = intellectuals popularity = 0.05 }
+			}
+				add_popularity = { ideology = elites popularity = 0.10 }
+		}
+	}
+	enc_NCR_radio = {
+	
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+				}
+	
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_owb_propaganda
+		}
+		complete_effect = {
+			NCR = {
+				add_popularity = { ideology = intellectuals popularity = 0.05 }
+			}
+				add_popularity = { ideology = elites popularity = 0.10 }
+		}
+	}
+	enc_NCR_propaganda_tour = {
+	
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = enc_vlt_power_reform
+				}
+	
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_foreign_policy
+		}
+		complete_effect = {
+			set_temp_variable = {
+				var = suspicion_change_var
+				value = -15
+			}
+			change_suspicion = YES
+				add_popularity = { ideology = elites popularity = 0.05 }
+		}
+	}
+	
 	ENC_the_lucia_incident = {
 		icon = decision_enc_espionage
 		priority = 10
@@ -282,6 +368,7 @@ ENC_infiltrating_NCR = {
 			}	
 		}	
 	}
+	
 	ENC_rise_rebellion = {
 	priority = 300
 		fire_only_once = yes
@@ -300,14 +387,15 @@ ENC_infiltrating_NCR = {
 	}
 	
 }
-ENC_Pacific_Commonwealth1 = {
+
+ENC_pacific_commonwealth1 = {
 	ENC_Bellingham = {
 		priority = 300
 		fire_only_once = no
 		
 		visible = {
 			tag = ERB
-			has_completed_focus = enc_Pacific_Commonwealth
+			has_completed_focus = enc_pacific_commonwealth
 				
 			}
 		complete_effect = {
@@ -326,7 +414,7 @@ ENC_Pacific_Commonwealth1 = {
 		
 		visible = {
 			tag = ERB
-			has_completed_focus = enc_Pacific_Commonwealth
+			has_completed_focus = enc_pacific_commonwealth
 				country_exists = TRL
 			}
 		complete_effect = {
@@ -345,7 +433,7 @@ ENC_Pacific_Commonwealth1 = {
 		
 		visible = {
 			tag = ERB
-			has_completed_focus = enc_Pacific_Commonwealth
+			has_completed_focus = enc_pacific_commonwealth
 			country_exists = BPT
 			}
 		complete_effect = {
@@ -364,7 +452,7 @@ ENC_Pacific_Commonwealth1 = {
 		
 		visible = {
 			tag = ERB
-			has_completed_focus = enc_Pacific_Commonwealth
+			has_completed_focus = enc_pacific_commonwealth
 			country_exists = ARR
 			}
 		complete_effect = {
@@ -383,7 +471,7 @@ ENC_Pacific_Commonwealth1 = {
 		
 		visible = {
 			tag = ERB
-			has_completed_focus = enc_Pacific_Commonwealth
+			has_completed_focus = enc_pacific_commonwealth
 			country_exists = MLT
 			}
 		complete_effect = {
@@ -402,7 +490,7 @@ ENC_Pacific_Commonwealth1 = {
 		
 		visible = {
 			tag = ERB
-			has_completed_focus = enc_Pacific_Commonwealth
+			has_completed_focus = enc_pacific_commonwealth
 			country_exists = MDT
 			}
 		complete_effect = {
@@ -421,7 +509,7 @@ ENC_Pacific_Commonwealth1 = {
 		
 		visible = {
 			tag = ERB
-			has_completed_focus = enc_Pacific_Commonwealth
+			has_completed_focus = enc_pacific_commonwealth
 			country_exists = RBT
 			}
 		complete_effect = {
@@ -440,7 +528,7 @@ ENC_Pacific_Commonwealth1 = {
 		
 		visible = {
 			tag = ERB
-			has_completed_focus = enc_Pacific_Commonwealth
+			has_completed_focus = enc_pacific_commonwealth
 			country_exists = PMR
 			}
 		complete_effect = {
@@ -453,12 +541,12 @@ ENC_Pacific_Commonwealth1 = {
 			add_political_power = -25	
 						}			
 	}
-	ENC_PRECONSTRUCTION = {
+	ENC_preconstruction = {
 	priority = 300
 		fire_only_once = no
 		visible = {
 			tag = ERB
-			has_completed_focus = enc_Pacific_Commonwealth
+			has_completed_focus = enc_pacific_commonwealth
 			country_exists = ERB
 			}
 		complete_effect = {
@@ -472,7 +560,7 @@ ENC_Pacific_Commonwealth1 = {
 ENC_Treaty_Hoover_Dam = {
 	Enc_Cession_of_Helios_one = {
 	priority = 300
-		fire_only_once = yes
+		fire_only_once = no
 		
 		visible = {
 			tag = ERB
@@ -1378,12 +1466,13 @@ political_actions = {
 			remove_ideas = ENC_emergency_draft
 		}
 	}
-	ENC_emergency_draft_reform = {
+	enc_wartime_draft = {
 		icon = decision_enc_agreement
 		cost = 25
 		available = { has_completed_focus = enc_emergency_draft_reform }
 		visible = { has_completed_focus = enc_emergency_draft_reform }
-		complete_effect = { add_manpower = 1000 }
+		complete_effect = { add_manpower = 1000 
+		add_stability = -0.05 }
 		days_re_enable = 69
 	}
 

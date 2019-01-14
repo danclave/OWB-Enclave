@@ -582,3 +582,7 @@ enc_reformers.129.e: "I guess we can leave them be?"
 enc_reformers.130.t: "Enclave Purists Flee to the Legion"
 enc_reformers.130.d: "Although we took power with a promise to not purge our political enemies, like most politicians we've fallen short of our promises.  Some of the Purists within the Enclave have defected to Caesar's Legion for the promise of more wealth and power than they'd have at the Sierra Army Depot. But what's the worst that can happen? "
 enc_reformers.130.a: "I'm going to crucify them."
+###############################################################################################################
+enc_reformers.131.t: "The Birth of Nevada"
+enc_reformers.131.d: "Welcome back to New Vegas radio, the show with, if I may say so, the best looking audience around.  We've received reports from northern Nevada that New Reno united the local tribals, raiders, and Vault City and is now calling itself the 'Commonwealth of Nevada'. Ain't that cute. Some folks say this is an Enclave plot, but Governor Granite said Nevada merely welcomed all who wish to live in peace within its borders and to please report the location of any Enclave spies to his offices."
+enc_reformers.131.a: "No Enclave here!"
