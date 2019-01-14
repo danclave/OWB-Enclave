@@ -22,6 +22,8 @@
 # GFX_goal_enc_cloning
 # GFX_goal_enc_complete_integration
 # GFX_goal_enc_construction
+# GFX_goal_enc_construction_nev
+# GFX_goal_enc_construction_usa
 # GFX_goal_enc_crack_the_code
 # GFX_goal_enc_defenders
 # GFX_goal_enc_demilitarize_government
@@ -72,6 +74,7 @@
 # GFX_goal_enc_management
 # GFX_goal_enc_mass_mobilization
 # GFX_goal_enc_military_sphere
+# GFX_goal_enc_military_sphere_reform
 # GFX_goal_enc_mutant_extinction
 # GFX_goal_enc_ncr_dollar
 # GFX_goal_enc_NCR_seak_allies
@@ -110,6 +113,7 @@
 # GFX_goal_enc_radio_military
 # GFX_goal_enc_radio_reform
 # GFX_goal_enc_rangers
+# GFX_goal_enc_rangers_agreement
 # GFX_goal_enc_rangers_planning
 # GFX_goal_enc_rangers_start
 # GFX_goal_enc_rebuild_the_power_grid
@@ -131,7 +135,10 @@
 # GFX_goal_enc_remember_rig
 # GFX_goal_enc_research
 # GFX_goal_enc_rock
+# GFX_goal_enc_rocket_nevada
+# GFX_goal_enc_rocket_reform
 # GFX_goal_enc_sabotage
+# GFX_goal_enc_science_reform
 # GFX_goal_enc_scientists
 # GFX_goal_enc_segregation
 # GFX_goal_enc_self_management

@@ -716,7 +716,7 @@ has_legitimacy_tt: "[?legitimacy]/[?has_legitimacy_var] §Ylegitimacy§!"
 ENC_reno_police: "New Reno Police"
 ENC_reno_police_corrupt: "Corrupt New Reno Police"
 Enc_Justice: "Department of Justice"
-ENC_FBI: "The Federal Bureau of Investigatoins"
+ENC_FBI: "The Federal Bureau of Investigations"
 ENC_accepted_ghouls_and_super_mutants:0 "Accepted Ghouls and Super Mutants"
 
 ENC_begun_integration: "Begun Integration"

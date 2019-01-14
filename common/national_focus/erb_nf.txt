@@ -2143,9 +2143,9 @@ focus_tree = {
 		annex_country = { target = DES }
 		}
 		}
-	focus = {#
+	focus = {# discredit the rangers
 		id = Enc_Discredit_Rangers
-		icon = GFX_goal_enc_rangers_start
+		icon = GFX_goal_enc_agreement
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_the_state_of_nevada
 		x = 3
@@ -2175,7 +2175,7 @@ focus_tree = {
 		}
 		}	
 	
-	focus = {#
+	focus = {# area 51
 		id = enc_Area_51
 		icon = GFX_goal_enc_verti_reform
 		ai_will_do = { factor = 1 } 
@@ -2199,7 +2199,7 @@ focus_tree = {
 		add_resource = { type = advanced_technology amount = 16 state = 389 }	
 		}
 		}
-	focus = {#
+	focus = {# mojave express
 		id = Enc_Mojave_Express
 		icon = GFX_goal_molotov_ribbentrop_pact
 		ai_will_do = { factor = 1 } 
@@ -2234,7 +2234,7 @@ focus_tree = {
 			}		
 		}
 		}
-	focus = {#
+	focus = {# Nevada Railway
 		id = Enc_Nevada_Railway
 		icon = GFX_goal_enc_construction
 		ai_will_do = { factor = 1 } 
@@ -2299,7 +2299,7 @@ focus_tree = {
 			
 		
 		
-	focus = {#
+	focus = {# broken hills
 		id = Enc_Broken_Hills
 		icon = GFX_goal_NCR_Newnorth
 		ai_will_do = { factor = 1 } 
@@ -2319,7 +2319,7 @@ focus_tree = {
 		add_resource = { type = metal amount = 15 state = 284 }
 		}
 		}
-	focus = {#
+	focus = {# uranium fever
 		id = Enc_Uranium_Fever 
 		icon = GFX_goal_generic_construction2
 		ai_will_do = { factor = 1 } 
@@ -2402,7 +2402,7 @@ focus_tree = {
 		
 		}
 		
-	focus = {
+	focus = { # second city
 		id = Enc_Second_City
 		icon = GFX_goal_VEG_The_Lucky_38
 		cost = 2
@@ -2425,7 +2425,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
+	focus = { # vault 21
 		id = ERB_vault21
 		icon = GFX_goal_VEG_Vault_21
 		cost = 3
@@ -2448,7 +2448,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
+	focus = { # repconn
 		id = ERB_Repconn
 		icon = GFX_focus_rocketry
 		cost = 5
@@ -2471,9 +2471,9 @@ focus_tree = {
 		country_event = { id = enc_reformers.129 }
 	}
 	}
-	focus = {
+	focus = { # tourists
 		id = ERB_Tourists
-		icon = GFX_goal_card_tricks
+		icon = GFX_goal_goal_card_tricks
 		cost = 3
 		ai_will_do = { factor = 1 } 
 		relative_position_id = Enc_Second_City
@@ -2493,7 +2493,7 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
+	focus = { # local development
 		id = ERB_Local_Development
 		icon = GFX_goal_enc_fed
 		cost = 4
@@ -2573,7 +2573,7 @@ focus_tree = {
 			}
 		}
 		
-	focus = {
+	focus = { # Energy boom
 		id = ENC_energy_boom 
 		icon = GFX_goal_moj_energy_boom
 		cost = 5.8
@@ -2604,7 +2604,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { # KILL SAT
 		id = ENC_Kill_Sat
 		icon = GFX_goal_moj_a_forgotten_weapon
 		cost = 2.2
@@ -2630,7 +2630,7 @@ focus_tree = {
 			}
 		}
 	
-	focus = {
+	focus = { # BIG MT
 		id = ENC_Big_MT
 		icon = GFX_goal_generic_BOS_focus_surface_outposts
 		cost = 5.8
@@ -2645,7 +2645,7 @@ focus_tree = {
 			}
 		}
 	
-	focus = {
+	focus = { # BIG MT RESTORED
 		id = ENC_Big_MT_Restored
 		icon = GFX_goal_enc_research
 		relative_position_id = ENC_Big_MT
@@ -2794,9 +2794,9 @@ focus_tree = {
 		NCN = { add_to_tech_sharing_group = Benjamin_Franklin_Society }
 		}
 	}
-	focus = {#Diplomacy - NCR - Mexico
+	focus = {#Diplomacy - NCR - Mexico 
 		id = Enc_Mexican_Trade
-		icon = GFX_goal_flag_Mexico
+		icon = GFX_goal_Enc_goal_flag_mexico
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_the_state_of_utah
 		x = 0
@@ -3801,7 +3801,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	####################################
 	focus = {#Military - staff - reform general staff
 		id = enc_reform_general_staff
-		icon = GFX_enc_reform_general_staff
+		icon = GFX_goal_enc_reform_general_staff
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_department_of_defense
 		prerequisite = { focus = enc_department_of_defense }
@@ -3990,7 +3990,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	}
 	focus = {#Military - defense - american minutemen
 		id = enc_american_minutemen
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_goal_enc_military_sphere_reform
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_second_amendment }
 		relative_position_id = enc_second_amendment

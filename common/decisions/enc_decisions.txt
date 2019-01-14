@@ -1185,6 +1185,9 @@ ENC_political_infighting = {
 		activation = {			
 			has_completed_focus = enc_reform
 			intellectuals < party_popularity@elites
+			NOT = {
+				has_completed_focus = enc_purge_opposition
+			}
 		}
 		available = {
 			intellectuals > party_popularity@elites
@@ -1192,7 +1195,15 @@ ENC_political_infighting = {
 		is_good = no
 		days_mission_timeout = 100
 		timeout_effect = {
-			country_event = { id = enc_reformers.16 }  
+			if = {
+				limit = {
+					has_country_flag = assassination_attempt_flag
+				}
+				add_stability = -0.20
+			}
+			else = {
+				country_event = { id = enc_reformers.16 }
+			}
 		}
 		complete_effect = {
 			# good stuff?
@@ -1380,10 +1391,13 @@ political_actions = {
 	}
 	ENC_emergency_draft_reform = {
 		icon = decision_enc_agreement
-		cost = 25
+		cost = 75
 		available = { has_completed_focus = enc_emergency_draft_reform }
 		visible = { has_completed_focus = enc_emergency_draft_reform }
-		complete_effect = { add_manpower = 1000 }
+		complete_effect = { 
+			add_manpower = 1000
+			add_war_support = -0.05
+		}
 		days_re_enable = 69
 	}
 

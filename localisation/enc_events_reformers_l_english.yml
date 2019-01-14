@@ -135,9 +135,9 @@ enc_reformers.22.t: "Contact with spies lost!"
 enc_reformers.22.d: "Contact has been lost with our spy team in the New California Republic.\nThere is currently no telling weither they were KIA, captured or even gone rogue. Some are still holding out hope that our espionage team went silent to cover their tracks but we should expect the worst and plan accordingly. "
 enc_reformers.22.a: "They knew the risks."
 ################################################################################################################ -<
-enc_reformers.24.t: "Explosion in the meeting room!"
-enc_reformers.24.d: "Tragedy struck today as a gas leak caused a lethal explosion in the conference room where many of our administrators had gathered to discuss recent policy changes with the President. Due to the limited size of the conference room, the devastation was absolute and there were no survivors.\n\nOnly by God's grace did Douglas survive as he was running late due to an emergency meeting with the demolitions department."
-enc_reformers.24.a: "There but for the grace of God, go I."
+enc_reformers.24.t: "Plasma "
+enc_reformers.24.d: "Plasma wounds never truly heal. With enough time and the best medical care the Enclave can provide, they can be managed well enough, but sooner or later the treatments will begin to falter. Douglas' days are numbered. His physician has assured him that the next few years should be fine, but can't make any promises beyond that."
+enc_reformers.24.a: "No time to waste, then."
 ################################################################################################################ -<
 enc_reformers.25.t: "Anderson goes into hiding!"
 enc_reformers.25.d: "Despite assurances that the recent disaster was accidental in nature, Franklin Anderson, leader of the Purist faction within the Enclave, has seen fit to board a vertibird with a few of his closest followers and departed for an unknown location.\n\nDespite this, we have reasons to believe he is still communicating with his followers in the Enclave, who have become much more private with their political convinctions recently."
