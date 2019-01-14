@@ -62,6 +62,7 @@ ideas = {
 					}
 						is_major = no
 						surrender_progress > 0.05
+						NOT = { original_tab = ERB }
 				}
 				NOT = { original_tag = MOJ}
 				NOT = { original_tag = BOS }
@@ -84,6 +85,7 @@ ideas = {
 					}
 					is_major = no
 					surrender_progress > 0.1
+					NOT = { original_tab = ERB }
 				}
 				NOT = { original_tag = MOJ }
 				NOT = { original_tag = BOS }
@@ -264,7 +266,7 @@ ideas = {
 				factor = 1
 			}
 			modifier = {
-				conscription = 0.04
+				conscription = 0.07
 			}
 			
 			default = yes
@@ -292,7 +294,7 @@ ideas = {
 				factor = 1
 			}
 			modifier = {
-				conscription = 0.08
+				conscription = 0.12
 			}
 			
 			default = yes
@@ -323,7 +325,7 @@ ideas = {
 				factor = 1
 			}
 			modifier = {
-				conscription = 0.13
+				conscription = 0.16
 			}
 			
 			default = yes

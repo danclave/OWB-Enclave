@@ -915,4 +915,29 @@ spriteTypes = {
             name = "GFX_idea_verti_production"
  		    texturefile = "gfx/interface/ideas/verti_production.dds"
  	    }    
+		SpriteType = {#Mexico
+            name = "GFX_goal_flag_Mexico"
+ 		    texturefile = "gfx/interface/goals/Enc_goal_flag_Mexico.dds"
+ 	    }
+		SpriteType = {#Cards
+            name = "GFX_goal_card_tricks"
+ 		    texturefile = "gfx/interface/goals/goal_card_tricks.dds"
+ 	    }
+		SpriteType = {#Cards
+            name = "GFX_goal_card_tricks"
+ 		    texturefile = "gfx/interface/goals/goal_card_tricks.dds"
+ 	    }
+		SpriteType = {#Cards
+            name = "GFX_goal_card_tricks"
+ 		    texturefile = "gfx/interface/goals/goal_card_tricks.dds"
+ 	    }
+		SpriteType = {#Seattle
+            name = "GFX_goal_enc_pacific_commonwealth"
+ 		    texturefile = "gfx/interface/goals/enc_pacific_commonwealth.dds"
+ 	    }
+		SpriteType = {#Arizona
+            name = "GFX_goal_enc_arizona"
+ 		    texturefile = "gfx/interface/goals/enc_arizona.dds"
+ 	    }
+	}
 }

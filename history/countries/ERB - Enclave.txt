@@ -134,3 +134,8 @@ country_event = { id = enc_reformers.23 days = 25 }
 
 
 #DOM protection - do not remove
+
+ set_variable = { 
+                    var = enc_rebels_we_have_armed
+                    value = 0
+                         }    

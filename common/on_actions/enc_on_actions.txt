@@ -232,4 +232,34 @@ on_actions = {
 			
 		}
 	}
+	on_startup = {
+    effect = {
+    ERB = {
+        set_variable = { 
+                     var = enc_rebels_we_have_armed
+                     value = -50
+                 } 
+         }
+        }
+		}
+	on_startup = {
+    effect = {
+    ERB = {
+        set_variable = { 
+                     var = enc_slaves_we_have_armed
+                     value = -50
+                 } 
+         }
+        }
+		}
+on_startup = {
+    effect = {
+    ERB = {
+        set_variable = { 
+                     var = enc_patriots_we_have_armed
+                     value = -50
+                 } 
+         }
+        }
+		}			
 }
