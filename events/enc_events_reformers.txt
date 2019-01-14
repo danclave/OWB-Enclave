@@ -1364,54 +1364,6 @@ country_event = {#62 - Render Unto Caesar
 		}
 }
 
-country_event = {#63 - The Society of the Cincinnati
-	id = enc_reformers.63
-	title = enc_reformers.63.t
-	desc = enc_reformers.63.d
-	picture = GFX_event_ENC_vertibird
-	
-	fire_only_once = yes	
-    is_triggered_only = no
-	
-	trigger = {	
-		tag = ERB
-		CES = { 
-			intellectuals > 0.9
-			has_country_leader = { id = 1007
-		}
-}
-	}	
-	mean_time_to_happen = {	days = 30 }
-	
-	option = {#NIIICE
-		name = enc_reformers.63.a
-		add_political_power = 25
-		CES = { set_cosmetic_tag = CES_ERB }
-		
-		if = { 
-			limit = { is_in_faction = no }
-			create_faction = "The Enclave" 
-			CES = { 
-				if = { 
-					limit = { is_in_faction = yes } 
-					leave_faction = yes 	
-				}
-			add_to_faction = CES
-			}
-		}
-		else_if = { 
-			limit = { is_in_faction = yes }
-			CES = { 
-				if = {
-					limit = { is_in_faction = yes } 
-					leave_faction = yes 	
-				}
-			add_to_faction = CES
-			}
-		}
-	}
-}
-
 country_event = {#64 - Declarations of Independence
 	id = enc_reformers.64
 	title = enc_reformers.64.t
@@ -3459,9 +3411,24 @@ country_event = {# Enclave to Legion
 	option = {#
 		name = enc_reformers.130.a
 		CES = { add_research_slot = 1 }
-			}	
+		CES = { add_ideas = enc_advisors }
+		}
 	}
-		
+
+country_event = {# Home is Nevada
+    id = enc_reformers.131
+	title = enc_reformers.131.t
+	desc = enc_reformers.131.d
+	picture = GFX_event_nevada_enc
+	fire_only_once = yes
+	trigger = {	
+		has_completed_focus = enc_the_state_of_nevada
+		}	
+	mean_time_to_happen = {	days = 30 }
+	option = {#
+		name = enc_reformers.131.a
+			}	
+	}			
 # integration
 #
 

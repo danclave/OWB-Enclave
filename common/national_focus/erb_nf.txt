@@ -150,13 +150,14 @@ focus_tree = {
 				remove_idea = volunteer_only
 				add_idea = The_Fools_And_Dreamers
 			}
-		} 
+		custom_effect_tooltip = enc_reformers.tt		
+		}		
 	}	
 
 	focus = {#POLITICS - victory speech
 		id = enc_victory_speech
 		icon = GFX_goal_enc_reform_douglas
-		ai_will_do = { factor = 1 } 
+		ai_will_do = { factor = 1 }
 		relative_position_id = enc_reform
 		x = 0
 		y = 1
@@ -1087,6 +1088,7 @@ focus_tree = {
 		icon = GFX_goal_enc_justice
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_the_mutant_question
+		
 		available = {
 			has_completed_focus = enc_reno_end
 			has_stability > 0.70
@@ -1642,6 +1644,7 @@ focus_tree = {
 		cost = 5.8
 		completion_reward = {
 			set_cosmetic_tag = ERB_USA
+			add_ideas = { enc_manifest_destiny }
 		}
 	}
 
@@ -1932,6 +1935,7 @@ focus_tree = {
 				add_war_support = -0.10
 				clr_country_flag = enc_promised_no_peace_with_ncr
 			}
+			custom_effect_tooltip = enc_NCR_start.tt
 		}
 		available = { 
 			
@@ -1975,9 +1979,14 @@ focus_tree = {
 			NCR = {remove_opinion_modifier = { target = ERB modifier = wontShootOnsight }}
 			add_opinion_modifier = { target = NCR modifier = intriguedDistrust }
 			remove_opinion_modifier = { target = NCR modifier = wontShootOnsight }
+			country_event = { id = enc_reformers.131}
 			set_cosmetic_tag = ERB_nevada
 			custom_effect_tooltip = new_reclaimnevada_tt
 			hidden_effect = {
+				every_country = {
+				remove_opinion_modifier = { target = ERB modifier = genocidal_maniacs }
+				ERB = { remove_opinion_modifier = { target = PREV modifier = dirty_muties }}
+				}
 				add_state_core = 426
 				add_state_core = 126
 				add_state_core = 580
@@ -2114,7 +2123,11 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = enc_electoral_victory focus = enc_support_armed_coup }
 		completion_reward = {
-		
+		NCR = {
+					
+					remove_opinion_modifier = { target = ERB modifier = intriguedDistrust }
+					add_opinion_modifier = { target = ERB modifier = goodbusiness }
+				}
 		} 
 	}
 	focus = {# Nevada rangers
@@ -2122,7 +2135,7 @@ focus_tree = {
 		icon = GFX_goal_enc_rangers
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_the_state_of_nevada
-		x = 5
+				x = 5
 		y = 1
 		cost = 5.8 
 		bypass = {
@@ -2169,9 +2182,14 @@ focus_tree = {
 		if = { limit = { is_in_faction = yes } 
 			leave_faction = yes }	
 			}
-		ERB = {
-						create_wargoal = { type = annex_everything target = DES }
-					}	
+		ERB = { create_wargoal = { type = annex_everything target = DES } }
+		NCR = {
+			add_ai_strategy = {
+						type = ignore
+						id = "DES"
+						value = 200
+					}
+				}
 		}
 		}	
 	
@@ -2350,13 +2368,13 @@ focus_tree = {
 		icon = GFX_goal_VEG_The_Khaganate
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_Area_51
+		prerequisite = { focus = enc_Area_51 }
 		x = 0
 		y = 1
 		cost = 5.8 
 		bypass = {
 			KHA = { exists = NO }
 		}	
-		prerequisite = { focus = Enc_Area_51 }	
 		completion_reward = { 
 		ERB = {	create_wargoal = { type = annex_everything target = KHA } }	
 			}
@@ -2630,9 +2648,9 @@ focus_tree = {
 			}
 		}
 	
-	focus = { # BIG MT
-		id = ENC_Big_MT
-		icon = GFX_goal_generic_BOS_focus_surface_outposts
+	focus = {
+		id = Enc_Big_MT
+		icon = GFX_goal_NEW_the_old_world
 		cost = 5.8
 		prerequisite = {
 			focus = enc_Area_51
@@ -2648,12 +2666,12 @@ focus_tree = {
 	focus = { # BIG MT RESTORED
 		id = ENC_Big_MT_Restored
 		icon = GFX_goal_enc_research
-		relative_position_id = ENC_Big_MT
+		relative_position_id = Enc_Big_MT
 		x = 0
 		y = 1
 		cost = 5.8
 		prerequisite = {
-			focus = ENC_Big_MT
+			focus = Enc_Big_MT
 		}
 		
 		completion_reward = {
@@ -2829,7 +2847,7 @@ focus_tree = {
 	}
 	focus = {#Diplomacy - Arizona
 		id = enc_Arizona
-		icon = GFX_focus_chi_mission_to_the_us
+		icon = GFX_goal_enc_arizona
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_the_true_enemy
 		x = 0
@@ -2910,8 +2928,8 @@ focus_tree = {
 	}
 	
 	focus = {#Diplomacy - Northwest
-		id = enc_Pacific_Commonwealth
-		icon = GFX_goal_wbh_within_the_blizzard
+		id = enc_pacific_commonwealth
+		icon = GFX_goal_enc_pacific_commonwealth
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_the_american_alliance
 		x = 4
@@ -2927,11 +2945,11 @@ focus_tree = {
 		id = enc_Wash_BOS
 		icon = GFX_goal_brk_seattles_exorcism
 		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_Pacific_Commonwealth
+		relative_position_id = enc_pacific_commonwealth
 		x = 0
 		y = 1
 		cost = 5.8 
-		prerequisite = { focus = enc_Pacific_Commonwealth }
+		prerequisite = { focus = enc_pacific_commonwealth }
 		completion_reward = {
 		ERB = { create_wargoal = { type = annex_everything target = WBH }
 		WBH = {
@@ -3002,6 +3020,7 @@ focus_tree = {
 				add_war_support = 0.10
 				clr_country_flag = enc_promised_no_peace_with_ncr
 			}
+		custom_effect_tooltip = enc_ncr_no_compromise.tt	
 		}
 	}
 
@@ -3014,7 +3033,7 @@ focus_tree = {
 		x = 7
 		y = 0
 		cost = 5.8 
-		prerequisite = { focus = enc_NCR_no_compromise }	
+		prerequisite = { focus = enc_NCR_no_compromise }
 		completion_reward = { add_ideas = {ENC_open_to_new_ideas} }
 	}	
 	
@@ -3378,7 +3397,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 				value = 0.10
 			}
 			change_legitimacy = yes
-		custom_effect_tooltip = unlock_arm_slaves 
+		custom_effect_tooltip = unlock_arm_slaves.tt
 		520 = { set_state_flag = no_rebels_you_fucks }
 		}
 	}
@@ -3559,49 +3578,13 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 			add_research_slot = 1
 		}
 	}
-	focus = {#Military - mechanization
-		id = enc_mechanization
-		icon = GFX_goal_generic_army_motorized
-		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_department_of_defense}
-		relative_position_id = enc_department_of_defense
-		x = 0
-		y = 1
-		cost = 3
-		completion_reward = {
-			add_tech_bonus = {
-				name = motorized_bonus
-				bonus = 0.5
-				uses = 1
-				category = vehicle_tech
-			}
-		}
-	}
-	focus = {#Military - mobile army
-		id = enc_mobile_army
-		icon = GFX_focus_generic_army_tanks2
-		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_mechanization}
-		relative_position_id = enc_mechanization
-		x = 0
-		y = 1
-		cost = 3
-		completion_reward = {
-			add_tech_bonus = {
-				name = motorized_bonus
-				bonus = 0.5
-				uses = 1
-				category = vehicle_tech
-			}
-		}
-	}
 	focus = {#Military - arms develoment
 		id = enc_arms_development
 		icon = GFX_goal_generic_construct_mil_factory
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_department_of_defense}
 		relative_position_id = enc_department_of_defense
-		x = 2
+		x = 1
 		y = 1
 		cost = 3
 		completion_reward = {
@@ -3630,7 +3613,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_department_of_defense}
 		relative_position_id = enc_department_of_defense
-		x = -2
+		x = -1
 		y = 1
 		cost = 3
 		completion_reward = { add_ideas = enc_jingoism }
@@ -3645,56 +3628,28 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		y = 1 
 		cost = 3
 		completion_reward = {
-			add_manpower = 4000 
-			add_stability = -0.05
+			custom_effect_tooltip = enc_wartime_draft.tt
 		}
 	}
 
-	focus = {#Military - quantity - mass mobilization
-		id = enc_mass_mobilization
+	focus = {#Military - quantity - disciplined soldiers
+		id = enc_disciplined_soldiers
 		icon = GFX_goal_enc_mass_mobilization
 		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_mobile_army}
 		prerequisite = {focus = enc_military_equipment}
 		prerequisite = {focus = enc_wartime_draft}
-		relative_position_id = enc_mobile_army
-		mutually_exclusive = { focus = enc_advanced_training }
-		x = -1
-		y = 1
-		cost = 3
-		completion_reward = {
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
-				uses = 2
-				category = land_doctrine
-			}
-		}
-	}
-	focus = {#Military - quantity - user friendly firearms
-		id = enc_user_friendly_firearms
-		icon = GFX_goal_generic_common_firearms_focus
-		ai_will_do = { factor = 1 } 
-		prerequisite = {focus = enc_mass_mobilization}
-		relative_position_id = enc_mass_mobilization
+		relative_position_id = enc_wartime_draft
 		x = 0
 		y = 1
 		cost = 3
-		completion_reward = {
-			add_tech_bonus = {
-				name = gun_research_bonus
-				bonus = 0.5
-				uses = 1
-				category = infantry_tech
-			}
-		}
+		completion_reward = { add_ideas = enc_disciplined_soldiers }
 	}
 	focus = {#Military - quantity - rank and file infantry
 		id = enc_rank_and_file_infantry
 		icon = GFX_goal_shield_enc_wip
 		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_user_friendly_firearms}
-		relative_position_id = enc_user_friendly_firearms
+		prerequisite = {focus = enc_disciplined_soldiers}
+		relative_position_id = enc_disciplined_soldiers
 		x = 0
 		y = 1
 		cost = 3
@@ -3702,94 +3657,41 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 			add_ideas = enc_rank_and_file_infantry
 		}
 	}
-	focus = {#Military - quantity - disciplined soldiers
-		id = enc_disciplined_soldiers
-		icon = GFX_goal_enc_sword_cross	
-		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_rank_and_file_infantry}
-		relative_position_id = enc_rank_and_file_infantry
-		x = 0
-		y = 1
-		cost = 3
-		completion_reward = { add_ideas = enc_disciplined_soldiers }
-	}
-
+	
 	focus = {#Military - quality - advanced_training
 		id = enc_advanced_training
-		icon = GFX_goal_generic_special_forces
+		icon = GFX_goal_generic_advanced_firearms_focus
 		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_mobile_army}
 		prerequisite = {focus = enc_military_equipment}
 		prerequisite = {focus = enc_wartime_draft}
-		relative_position_id = enc_mobile_army
-		mutually_exclusive = { focus = enc_mass_mobilization }
-		x = 1
+		relative_position_id = enc_military_equipment
+		mutually_exclusive = { focus = enc_military_equipment }
+		x = 0
 		y = 1
 		cost = 3
 		completion_reward = { add_ideas = enc_advanced_training }
 	}
-	focus = {#Military - quality - advanced loadouts
-		id = enc_advanced_loadouts
-		icon = GFX_goal_generic_advanced_firearms_focus
-		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_advanced_training}
-		relative_position_id = enc_advanced_training
-		x = 0
-		y = 1
-		cost = 3
-		completion_reward = {
-		add_tech_bonus = {
-				name = support_research_bonus
-				bonus = 0.5
-				uses = 1
-				category = support_tech
-			}
-		add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 100 producer = ERB }
-}
-	}
-
+	
 	focus = {#Military - quality - power armor integration
 		id = enc_power_armor_integration
 		icon = GFX_goal_enc_power_armor_integration
 		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_advanced_loadouts}
-		relative_position_id = enc_advanced_loadouts
+		prerequisite = {focus = enc_advanced_training }
+		relative_position_id = enc_advanced_training
 		x = 0
 		y = 1
 		cost = 3
 		completion_reward = { add_ideas = enc_power_armor_integration }
 	}
 
-	focus = {#Military - quality - specialist soldiers
-		id = enc_specialist_soldiers
-		icon = GFX_goal_NEW_american_pmc
-		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_power_armor_integration}
-		relative_position_id = enc_power_armor_integration
-		x = 0
-		y = 1
-		cost = 3
-		completion_reward = { add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.5
-				uses = 1
-				category = land_doctrine }
-				add_tech_bonus = {
-				name = air_doc_bonus
-				bonus = 0.5
-				uses = 1
-				category = air_doctrine		}
-}
-}
-
-	focus = {#Military - the new american army
+		focus = {#Military - the new american army
 		id = enc_new_american_army
 		icon = GFX_goal_NEW_new_world_old_ideas
 	
 		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_specialist_soldiers
-						focus = enc_disciplined_soldiers }
-		relative_position_id = enc_specialist_soldiers
+		prerequisite = {focus = enc_power_armor_integration
+						focus = enc_rank_and_file_infantry }
+		relative_position_id = enc_power_armor_integration
 		x = -1
 		y = 1
 		cost = 3
@@ -3805,7 +3707,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_department_of_defense
 		prerequisite = { focus = enc_department_of_defense }
-		x = 5
+		x = 4
 		y = 1
 		cost = 2
 		completion_reward = {
@@ -3921,11 +3823,11 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	####################################
 	focus = {#Military - defense - home defense
 		id = enc_home_defense
-		icon = GFX_focus_generic_coastal_fort
+		icon = GFX_goal_enc_armed_militias
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_department_of_defense
 		prerequisite = { focus = enc_department_of_defense }
-		x = -5 
+		x = -4 
 		y = 1
 		cost = 3
 		completion_reward = {
@@ -3939,7 +3841,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		mutually_exclusive = { focus = enc_armed_militias }
 		prerequisite = { focus = enc_home_defense }
 		relative_position_id = enc_home_defense
-		x = 1
+		x = 0
 		y = 1
 		cost = 3
 		completion_reward = {
@@ -3947,79 +3849,6 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 			add_ideas = ENC_national_guard
 		}
 	}	
-	focus = {#Military - defense - armed militias
-		id = enc_armed_militias
-		icon = GFX_goal_enc_armed_militias
-		ai_will_do = { factor = 1 }
-		mutually_exclusive = { focus = enc_national_guard }
-		prerequisite = { focus = enc_home_defense }
-		relative_position_id = enc_home_defense
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = half_legitimacy		
-				check_variable = {
-					var = legitimacy
-					value > 0.499
-				}
-			}
-		}
-		x = -1
-		y = 1
-		cost = 3
-		completion_reward = {
-			add_stability = -0.05
-			add_ideas = ENC_militias
-		}
-	}
-	focus = {#Military - defense - second amendment
-		id = enc_second_amendment
-		icon = GFX_goal_enc_department_of_defense
-		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_armed_militias }
-		relative_position_id = enc_armed_militias
-		x = 0
-		y = 1
-		cost = 3
-		completion_reward = {
-			add_stability = -0.05
-			swap_ideas = {
-				remove_idea = ENC_militias
-				add_idea = ENC_militias_2
-			}
-		}
-	}
-	focus = {#Military - defense - american minutemen
-		id = enc_american_minutemen
-		icon = GFX_goal_enc_military_sphere_reform
-		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_second_amendment }
-		relative_position_id = enc_second_amendment
-		x = 0
-		y = 1
-		cost = 3
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = ENC_militias_2
-				add_idea = ENC_militias_3
-			}
-		}
-	}
-	focus = {#Military - defense - guerrilla warfare
-		id = enc_guerrilla_warfare
-		icon = GFX_goal_enc_guerrilla_warfare 
-		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_american_minutemen }
-		relative_position_id = enc_american_minutemen
-		x = 0
-		y = 1
-		cost = 3
-		completion_reward = {		
-			swap_ideas = {
-				remove_idea = ENC_militias_3
-				add_idea = ENC_militias_4
-			}
-		}
-	}
 	focus = {#Military - defense - homeland security
 		id = enc_department_of_homeland_security
 		icon = GFX_goal_enc_department_of_homeland_security
@@ -4047,7 +3876,10 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		x = 0
 		y = 1
 		cost = 3
-		completion_reward = { custom_effect_tooltip = enc_emergency_draft_reform }
+		completion_reward = { 
+		swap_ideas = { remove_idea = ENC_national_guard
+		add_idea = ENC_selective_service }
+						}
 	}
 	focus = {#Military - defense - army reserves
 		id = enc_army_reserves
@@ -4059,7 +3891,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		y = 1
 		cost = 3
 		completion_reward = {
-		swap_ideas = { remove_idea = ENC_national_guard
+		swap_ideas = { remove_idea = ENC_selective_service
 		add_idea = ENC_army_reserves }
 		}
 	}
@@ -4096,7 +3928,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_purity
 		x = -5
 		y = 1
-		prerequisite = { focus = enc_purity } 
+		prerequisite = { focus = enc_purity }
 		cost = 5.8
 		completion_reward = {
 			add_ideas = ENC_radio
