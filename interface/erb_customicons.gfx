@@ -1,4 +1,8 @@
 spriteTypes = {
+        SpriteType = {#desktop.ini
+            name = "GFX_goal_desktop.ini"
+ 		    texturefile = "gfx/interface/goals/desktop.ini.dds"
+ 	    } 
         SpriteType = {#enc_accept_ghouls
             name = "GFX_goal_enc_accept_ghouls"
  		    texturefile = "gfx/interface/goals/enc_accept_ghouls.dds"
@@ -50,6 +54,10 @@ spriteTypes = {
         SpriteType = {#enc_appointed_governors
             name = "GFX_goal_enc_appointed_governors"
  		    texturefile = "gfx/interface/goals/enc_appointed_governors.dds"
+ 	    } 
+        SpriteType = {#enc_arizona
+            name = "GFX_goal_enc_arizona"
+ 		    texturefile = "gfx/interface/goals/enc_arizona.dds"
  	    } 
         SpriteType = {#enc_armed_militias
             name = "GFX_goal_enc_armed_militias"
@@ -350,6 +358,10 @@ spriteTypes = {
         SpriteType = {#enc_owb_propaganda
             name = "GFX_goal_enc_owb_propaganda"
  		    texturefile = "gfx/interface/goals/enc_owb_propaganda.dds"
+ 	    } 
+        SpriteType = {#enc_pacific_commonwealth
+            name = "GFX_goal_enc_pacific_commonwealth"
+ 		    texturefile = "gfx/interface/goals/enc_pacific_commonwealth.dds"
  	    } 
         SpriteType = {#enc_para
             name = "GFX_goal_enc_para"
@@ -815,6 +827,18 @@ spriteTypes = {
             name = "GFX_idea_enc_idea_infighting"
  		    texturefile = "gfx/interface/ideas/enc_idea_infighting.dds"
  	    } 
+        SpriteType = {#enc_idea_manpower_1
+            name = "GFX_idea_enc_idea_manpower_1"
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_1.dds"
+ 	    } 
+        SpriteType = {#enc_idea_manpower_2
+            name = "GFX_idea_enc_idea_manpower_2"
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_2.dds"
+ 	    } 
+        SpriteType = {#enc_idea_manpower_3
+            name = "GFX_idea_enc_idea_manpower_3"
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_3.dds"
+ 	    } 
         SpriteType = {#ENC_legitimacy_high
             name = "GFX_idea_ENC_legitimacy_high"
  		    texturefile = "gfx/interface/ideas/ENC_legitimacy_high.dds"
@@ -943,29 +967,4 @@ spriteTypes = {
             name = "GFX_idea_verti_production"
  		    texturefile = "gfx/interface/ideas/verti_production.dds"
  	    }    
-		SpriteType = {#Mexico
-            name = "GFX_goal_flag_Mexico"
- 		    texturefile = "gfx/interface/goals/Enc_goal_flag_Mexico.dds"
- 	    }
-		SpriteType = {#Cards
-            name = "GFX_goal_card_tricks"
- 		    texturefile = "gfx/interface/goals/goal_card_tricks.dds"
- 	    }
-		SpriteType = {#Cards
-            name = "GFX_goal_card_tricks"
- 		    texturefile = "gfx/interface/goals/goal_card_tricks.dds"
- 	    }
-		SpriteType = {#Cards
-            name = "GFX_goal_card_tricks"
- 		    texturefile = "gfx/interface/goals/goal_card_tricks.dds"
- 	    }
-		SpriteType = {#Seattle
-            name = "GFX_goal_enc_pacific_commonwealth"
- 		    texturefile = "gfx/interface/goals/enc_pacific_commonwealth.dds"
- 	    }
-		SpriteType = {#Arizona
-            name = "GFX_goal_enc_arizona"
- 		    texturefile = "gfx/interface/goals/enc_arizona.dds"
- 	    }
-	}
 }

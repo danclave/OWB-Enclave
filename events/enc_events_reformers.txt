@@ -679,20 +679,7 @@ country_event = {#22 - Spies in NCR - contact lost
 	}
 }
 
-country_event = {#23 - UNSUED
-	id = enc_reformers.23
-	title = enc_reformers.23.t
-	desc = enc_reformers.23.d
-	picture = GFX_event_ENC_secret
-	
-	fire_only_once = no
-    is_triggered_only = yes
-	
-	option = {# RIP
-		name = enc_reformers.23.a
-		# todo
-	}
-}
+# event 23 slot free
 
 country_event = {#24 - Wound heals
 	id = enc_reformers.24
