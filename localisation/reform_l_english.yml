@@ -714,8 +714,9 @@ ENC_legitimacy_high: "High Legitimacy"
 ENC_legitimacy_high_desc: "(+75% legitimacy)\nThe Enclave is seen as a legitimate government in the eyes of most, its past crimes forgotten in favour of a hopeful future."
 
 max_legitimacy: "At least §Y100%§! Legitimacy"
-half_legitimacy: "More than §Y75%§! Legitimacy"
+half_legitimacy: "More than §Y50%§! Legitimacy"
 25_legitimacy: "More than §Y25%§! Legitimacy"
+75_legitimacy: "More than §Y75%§! Legitimacy"
 
 has_legitimacy_tt: "[?legitimacy]/[?has_legitimacy_var] §Ylegitimacy§!"
 ENC_reno_police: "New Reno Police"

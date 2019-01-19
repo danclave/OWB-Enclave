@@ -317,7 +317,7 @@ ENC_infiltrating_NCR = {
 	ENC_the_lucia_incident = {
 		icon = decision_enc_espionage
 		priority = 10
-		
+		fire_only_once = yes
 		available = {
 			has_country_flag = enc_ncr_spies			
 		}
@@ -340,7 +340,7 @@ ENC_infiltrating_NCR = {
 	ENC_the_bishop_incident = {
 		icon = decision_enc_espionage
 		priority = 10
-		
+		fire_only_once = yes
 		available = {
 			has_country_flag = enc_ncr_spies			
 		}
