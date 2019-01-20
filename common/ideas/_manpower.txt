@@ -285,7 +285,9 @@ ideas = {
 			
 			available = {
 				original_tag = ERB 
-				has_completed_focus = enc_reform 
+			}
+			visible = {
+				has_completed_focus = enc_reform		
 			}
 			allowed = {
 				original_tag = ERB
@@ -310,11 +312,13 @@ ideas = {
 			
 			available = {
 				original_tag = ERB 
-				has_completed_focus = enc_reform
 				OR = { 
 					has_completed_focus = enc_integrate_officers
 					has_completed_focus = enc_citizenship_for_service 
 				}
+			}
+			visible = {
+				has_completed_focus = enc_reform		
 			}
 			allowed = {
 				original_tag = ERB
@@ -339,7 +343,6 @@ ideas = {
 
 		available = {
 			original_tag = ERB
-			has_completed_focus = enc_reform
 			custom_trigger_tooltip = {
 				tooltip = half_legitimacy
 				check_variable = {
@@ -347,6 +350,9 @@ ideas = {
 					value > 0.499
 				}
 			}
+		}
+		visible = {
+			has_completed_focus = enc_reform		
 		}
 		allowed = {
 			original_tag = ERB
