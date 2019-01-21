@@ -2134,7 +2134,7 @@ focus_tree = {
 	}
 	focus = {# Nevada rangers
 		id = enc_Nevada_Rangers
-		icon = GFX_goal_enc_rangers
+		icon =  GFX_goal_enc_rangers_agreement
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_the_state_of_nevada
 				x = 5
@@ -2158,55 +2158,76 @@ focus_tree = {
 		annex_country = { target = DES }
 		}
 		}
-	focus = {# discredit the rangers
+	focus = {#	discredit the rangers
 		id = Enc_Discredit_Rangers
-		icon = GFX_goal_enc_agreement
-		ai_will_do = { factor = 1 } 
+		icon = GFX_goal_enc_rangers
+		ai_will_do = {
+			factor = 1
+		}
 		relative_position_id = enc_the_state_of_nevada
 		x = 3
 		y = 1
-		cost = 5.8 
+		cost = 5.8
 		bypass = {
-			DES = { exists = NO }
-		}	
-		prerequisite = { focus = enc_the_state_of_nevada }	
+			DES = {
+				exists = NO
+			}
+		}
+		prerequisite = {
+			focus = enc_the_state_of_nevada
+		}
 		available = {
-		custom_trigger_tooltip = {
-				tooltip = 25_legitimacy		
+			custom_trigger_tooltip = {
+				tooltip = 25_legitimacy
 				check_variable = {
 					var = legitimacy
 					value > 0.299
 				}
 			}
-			}
-		completion_reward = { 
-		DES = { 
-		if = { limit = { is_in_faction = yes } 
-			leave_faction = yes }	
-			}
-		ERB = { create_wargoal = { type = annex_everything target = DES } }
-		NCR = {
-			add_ai_strategy = {
-						type = ignore
-						id = "DES"
-						value = 200
-					}
-				}
 		}
-		}	
+		completion_reward = {
+			DES = {
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+					leave_faction = yes
+				}
+			}
+			ERB = {
+				create_wargoal = {
+					type = annex_everything 
+					target = DES
+				}
+			}
+			NCR = {
+				add_ai_strategy = {
+					type = ignore
+					id = "DES"
+					value = 200
+				}
+			}
+		}
+	}
 	
 	focus = {# area 51
 		id = enc_Area_51
 		icon = GFX_goal_enc_verti_reform
-		ai_will_do = { factor = 1 } 
+		ai_will_do = {
+			factor = 1
+		}
 		relative_position_id = enc_Nevada_Rangers
 		x = -1
 		y = 1
-		cost = 5.8 
-		prerequisite = { focus = enc_Nevada_Rangers
-						focus = Enc_Discredit_Rangers }	
-		available = { has_full_control_of_state = 389 } 
-		completion_reward = { 
+		cost = 5.8
+		prerequisite = {
+			focus = enc_Nevada_Rangers
+			focus = Enc_Discredit_Rangers
+		}
+		available = {
+			has_full_control_of_state = 389
+		}
+		completion_reward = {
 			389 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -2215,10 +2236,14 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-		add_resource = { type = electronics amount = 15 state = 389 }
-		add_resource = { type = advanced_technology amount = 16 state = 389 }	
+			add_resource = {
+				type = electronics amount = 15 state = 389
+			}
+			add_resource = {
+				type = advanced_technology amount = 16 state = 389
+			}
 		}
-		}
+	}
 	focus = {# mojave express
 		id = Enc_Mojave_Express
 		icon = GFX_goal_molotov_ribbentrop_pact
@@ -2235,14 +2260,14 @@ focus_tree = {
 					level = 2
 					instant_build = yes 
 				}
-					}
+			}
 			165 = {
 					add_building_construction = { 
 					type = infrastructure 
 					level = 2
 					instant_build = yes 
 				}
-					}
+			}
 			165 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -2253,10 +2278,10 @@ focus_tree = {
 				
 			}		
 		}
-		}
+	}
 	focus = {# Nevada Railway
 		id = Enc_Nevada_Railway
-		icon = GFX_goal_enc_construction
+		icon = GFX_goal_enc_construction_nev
 		ai_will_do = { factor = 1 } 
 		relative_position_id = Enc_Mojave_Express
 		x = -
@@ -2470,7 +2495,7 @@ focus_tree = {
 	}
 	focus = { # repconn
 		id = ERB_Repconn
-		icon = GFX_focus_rocketry
+		icon = GFX_goal_enc_rocket_nevada
 		cost = 5
 		ai_will_do = { factor = 1 } 
 		relative_position_id = ERB_vault21
@@ -2667,7 +2692,7 @@ focus_tree = {
 	
 	focus = { # BIG MT RESTORED
 		id = ENC_Big_MT_Restored
-		icon = GFX_goal_enc_research
+		icon = GFX_goal_enc_science_reform
 		relative_position_id = Enc_Big_MT
 		x = 0
 		y = 1
@@ -3582,7 +3607,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	}
 	focus = {#Military - arms develoment
 		id = enc_arms_development
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_enc_construct_mil_factory
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_department_of_defense}
 		relative_position_id = enc_department_of_defense
@@ -3600,7 +3625,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	}
 	focus = {#Military - military equipment
 		id = enc_military_equipment
-		icon = GFX_focus_generic_combined_arms
+		icon = GFX_goal_enc_combined_arms
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_arms_development}
 		relative_position_id = enc_arms_development
@@ -3636,7 +3661,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 
 	focus = {#Military - quantity - disciplined soldiers
 		id = enc_disciplined_soldiers
-		icon = GFX_goal_enc_mass_mobilization
+		icon = GFX_goal_enc_army_reserves
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_military_equipment}
 		prerequisite = {focus = enc_wartime_draft}
@@ -3648,7 +3673,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	}
 	focus = {#Military - quantity - rank and file infantry
 		id = enc_rank_and_file_infantry
-		icon = GFX_goal_shield_enc_wip
+		icon = GFX_goal_enc_mass_mobilization
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_disciplined_soldiers}
 		relative_position_id = enc_disciplined_soldiers
@@ -3662,7 +3687,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	
 	focus = {#Military - quality - advanced_training
 		id = enc_advanced_training
-		icon = GFX_goal_generic_advanced_firearms_focus
+		icon = GFX_goal_enc_laser_weapons_reform
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_military_equipment}
 		prerequisite = {focus = enc_wartime_draft}
