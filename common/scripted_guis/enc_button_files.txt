@@ -195,7 +195,7 @@ scripted_gui = {
         parent_window_token = selected_state_view
         
         visible = {
-            is_core_of = CES
+            is_owned_and_controlled_by = CES
             NOT = {
                 has_state_flag = no_rebels_you_fucks
             }
@@ -256,7 +256,7 @@ scripted_gui = {
         window_name = arm_patriots_container
         parent_window_token = selected_state_view
         visible = {
-            is_core_of = NCR
+            is_owned_and_controlled_by = NCR
             ROOT =  { 
                 has_completed_focus = enc_organise_the_sympathizers
                 }
