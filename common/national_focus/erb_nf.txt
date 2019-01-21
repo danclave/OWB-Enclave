@@ -676,7 +676,7 @@ focus_tree = {
 	focus = {#RADIO - the_lucia_incident
 		id = enc_the_lucia_incident
 		icon = GFX_goal_enc_the_lucia_incident
-		mutually_exclusive = enc_the_bishop_incident
+		mutually_exclusive = {focus = enc_the_bishop_incident}
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_crack_the_code
 		x = -1
@@ -691,7 +691,7 @@ focus_tree = {
 		id = enc_the_bishop_incident 
 		icon = GFX_goal_enc_rangers
 		ai_will_do = { factor = 1 }
-		mutually_exclusive = enc_the_lucia_incident
+		mutually_exclusive = {focus = enc_the_lucia_incident}
 		relative_position_id = enc_crack_the_code
 		x = 1
 		y = 1
@@ -3913,10 +3913,10 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		prerequisite = { focus = enc_ourpresident}
 		available = {
 			has_country_leader = {
-					ruling_only = yes
-					name = "Franklin Anderson"
-				}
+				ruling_only = yes
+				name = "Franklin Anderson"
 			}
+		}
 		cost = 5.8
 		completion_reward = {   
 			add_ideas = ENC_purist
