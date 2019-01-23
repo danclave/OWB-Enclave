@@ -2126,11 +2126,12 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = enc_electoral_victory focus = enc_support_armed_coup }
 		completion_reward = {
-		NCR = {
-					
-					remove_opinion_modifier = { target = ERB modifier = intriguedDistrust }
-					add_opinion_modifier = { target = ERB modifier = goodbusiness }
-				}
+		NCR = {					
+				remove_opinion_modifier = { target = ERB modifier = intriguedDistrust }
+				add_opinion_modifier = { target = ERB modifier = goodbusiness }
+			}
+			custom_effect_tooltip = ncr_suspicious_clr_tt
+			clr_country_flag = ncr_suspicious # removes hiding mechanic
 		} 
 	}
 	focus = {# Nevada rangers
@@ -3075,7 +3076,10 @@ focus_tree = {
 		cost = 5.8 
 		prerequisite = { focus = enc_NCR_seak_allies }
 		available = {		
-			not = {has_country_flag = enc_promised_no_peace_with_bos} 
+			country_exists = BOS
+			NOT = {
+				has_war_with = BOS
+			}
 		}
 		completion_reward = {
 			BOS = {
@@ -3089,6 +3093,15 @@ focus_tree = {
 				add_opinion_modifier = { target = BOS modifier = wontShootOnsight }
 				remove_opinion_modifier = { target = BOS modifier = bitterEnemies }
 			}
+			if = {
+				limit = {
+					has_country_flag = enc_promised_no_peace_with_bos				
+				}
+				custom_effect_tooltip = enc_promise_broken
+				add_popularity = { ideology = intellectuals popularity = -0.05 } 
+				add_stability = -0.15
+				add_war_support = -0.15
+			}
 		}
 	}
 	focus = {#Diplomacy - BOS - tech
@@ -3100,6 +3113,12 @@ focus_tree = {
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_BOS_start }
+		available = {		
+			country_exists = BOS
+			NOT = {
+				has_war_with = BOS
+			}			
+		}
 		completion_reward = {
 			BOS = {add_opinion_modifier = { target = ERB modifier = intriguedDistrust }}
 			BOS = {remove_opinion_modifier = { target = ERB modifier = wontShootOnsight }}
@@ -3118,6 +3137,12 @@ focus_tree = {
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_BOS_tech }	
+		available = {		
+			country_exists = BOS	
+			NOT = {
+				has_war_with = BOS
+			}		
+		}
 		completion_reward = {
 			diplomatic_relation = { country = BOS relation = non_aggression_pact }	
 		}				
@@ -3131,6 +3156,12 @@ focus_tree = {
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_BOS_peace }
+		available = {		
+			country_exists = BOS	
+			NOT = {
+				has_war_with = BOS
+			}		
+		}
 		completion_reward = { give_guarantee = BOS BOS= { give_guarantee = ERB } }			
 	}
 	
@@ -3143,6 +3174,12 @@ focus_tree = {
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_NCR_seak_allies }
+		available = {		
+			country_exists = CES
+			NOT = {
+				has_war_with = CES
+			}			
+		}
 		completion_reward = {
 			CES = {
 				custom_effect_tooltip = relations_increased_20
@@ -3166,6 +3203,12 @@ focus_tree = {
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_CES_start }
+		available = {		
+			country_exists = CES	
+			NOT = {
+				has_war_with = CES
+			}					
+		}
 		completion_reward = { send_equipment = { type = infantry_equipment amount = 100 target = CES } } 				
 	}
 	focus = {#Diplomacy - CES - trade
@@ -3177,14 +3220,21 @@ focus_tree = {
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_CES_cache }
+		available = {		
+			country_exists = CES	
+			NOT = {
+				has_war_with = CES
+			}					
+		}
 		completion_reward = {
 			285 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
-					instant_build = yes } }
-			
+					instant_build = yes 
+				} 
+			}	
 		}				
 	}
 	focus = {#Diplomacy - CES - common_enemy
@@ -3196,6 +3246,12 @@ focus_tree = {
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_CES_trade }
+		available = {		
+			country_exists = CES
+			NOT = {
+				has_war_with = CES
+			}
+		}
 		completion_reward = {
 			diplomatic_relation = { country = CES relation = non_aggression_pact
 			CES = { give_guarantee = ERB } }	
@@ -3211,6 +3267,12 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_NCR_seak_allies }
+		available = {		
+			country_exists = NEW
+			NOT = {
+				has_war_with = NEW
+			}					
+		}
 		completion_reward = {
 			VEG = {
 				custom_effect_tooltip = relations_increased_20
@@ -3234,6 +3296,12 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_NEW_start}
+		available = {		
+			country_exists = NEW	
+			NOT = {
+				has_war_with = NEW
+			}					
+		}
 		completion_reward = {
 			add_resource = { type = advanced_technology amount = 8 state = 159 }
 			add_resource = { type = electronics amount = 8 state = 159 }
@@ -3248,6 +3316,12 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_NEW_vacation}
+		available = {		
+			country_exists = NEW	
+			NOT = {
+				has_war_with = NEW
+			}					
+		}
 		completion_reward = {
 			add_tech_bonus = {
 				name = robotics_armour_bonus
@@ -3255,8 +3329,10 @@ focus_tree = {
 				uses = 2
 				category = robotics_tech
 			}
-			VEG = { set_technology = { tesla_weaponry = 1 }	}
-	         }
+			VEG = { 
+				set_technology = { tesla_weaponry = 1 }	
+			}
+	    }
 	}
 	focus = {#Diplomacy - NEW - recognize
 		id = enc_NEW_recognize
@@ -3267,6 +3343,12 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_NEW_robot}
+		available = {		
+			country_exists = NEW	
+			NOT = {
+				has_war_with = NEW
+			}					
+		}
 		completion_reward = {
 		285 = {
 				add_extra_state_shared_building_slots = 4
@@ -3286,6 +3368,12 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_NEW_recognize}
+		available = {		
+			country_exists = NEW
+			NOT = {
+				has_war_with = NEW
+			}				
+		}
 		completion_reward = { give_guarantee = VEG }								
 	}
 	focus = {#Diplomacy - NEW - puppet
@@ -3296,7 +3384,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5.8
-		prerequisite = { focus = enc_NEW_pact}				
+		prerequisite = { focus = enc_NEW_pact}	
+		available = {		
+			country_exists = NEW
+			NOT = {
+				has_war_with = NEW
+			}					
+		}			
 		completion_reward = { 
 		country_event = { id = enc_reformers.66 }
 		puppet = VEG }

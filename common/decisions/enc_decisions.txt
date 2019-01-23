@@ -1089,11 +1089,14 @@ ENC_NCR_hiding = {
 		fire_only_once = no
 		#--------------------------
 		cancel_trigger = {
+			NOT = {
+				has_country_flag = ncr_suspicious
+			}
 			NCR = {
 				OR = {
 					exists = no
 					has_civil_war = YES
-					has_war_with = ERB #Enclave
+					has_war_with = ROOT #Enclave
 				}
 			}
 		}
@@ -1262,6 +1265,7 @@ ENC_NCR_hiding = {
 		}
 		complete_effect = {
 			clr_country_flag = ncr_suspicious
+			custom_effect_tooltip = ncr_suspicious_clr_tt
 		}
 	}
 }

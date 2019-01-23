@@ -542,7 +542,7 @@ enc_the_state_of_utah_desc: "To the east, New Canaan is the nucleus for the Morm
 
 
 enc_crack_the_code: "Crack the Code"
-enc_crack_the_code_desc: "Our advanced technology could let us crack the NCCR's codes and predict their moves in advance.""
+enc_crack_the_code_desc: "Our advanced technology could let us crack the NCR's codes and predict their moves in advance.""
 
 enc_wastelander_draft: "Draft the Wastelanders"
 enc_wastelander_draft_desc: "Although many of the Wastelanders aren't up to the burden of being American citizens, they are up to the burden of being American cannon fodder."
@@ -910,6 +910,8 @@ gannon_returns: "Arcade Ganon has returned to the Enclave"
 
 enc_salvatores_tolerated_flag: "Salvatores tolerated"
 enc_wrights_tolerated_flag: "Wrights tolerated"
+
+ncr_suspicious_clr_tt: "\n§MRemoves the need to hide from the [NCR.GetName]§!"
 ###################################
 # DIPLOMACY
 ###################################

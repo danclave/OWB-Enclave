@@ -807,6 +807,7 @@ country_event = { #37 - Vengeance against Arroyo
 	trigger = {
 		tag = ERB
 		controls_state   = 337 # Shady Sands
+		has_completed_focus = enc_purity
 	}
 	mean_time_to_happen = {
 		days = 3
