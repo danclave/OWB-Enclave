@@ -1130,20 +1130,20 @@ country_event = {#39 - loyalists want to rejoin
 	}
 }
 
-country_event = {#40 - powered province!
+country_event = {#40 - powered province! (LEGACY)
 	id = enc_reformers.40
 	title = enc_reformers.40.t
 	desc = enc_reformers.40.d
 	picture = GFX_event_enc_power_grid
 	fire_only_once = no	
-	is_triggered_only = no
-	trigger = {
-		original_tag = ERB
-		any_owned_state = {
-			NOT = { is_core_of = ERB }
-			civilian_power_grid > 0
-		}
-	}
+	is_triggered_only = yes
+	# trigger = {
+		# original_tag = ERB
+		# any_owned_state = {
+			# NOT = { is_core_of = ERB }
+			# civilian_power_grid > 0
+		# }
+	# }
 	option = {# get cores
 		name = enc_reformers.40.a
 		every_owned_state = {

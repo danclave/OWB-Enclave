@@ -2035,8 +2035,9 @@ ENC_debug = {
 	}
 	ENC_misc = {
 		complete_effect = {
-			set_country_flag = enc_salvatores_tolerated_flag
-			set_country_flag = enc_wrights_tolerated_flag
+			set_technology = {
+				enc_civilian_power_grid_tech = 1
+			}
 		}
 	}
 	ENC_reduce_legitimacy = {

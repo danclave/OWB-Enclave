@@ -1,0 +1,15 @@
+technologies = {
+	# Used in focuses trees
+	enc_civilian_power_grid_tech = {
+
+		research_cost = 1
+
+		allow = {
+			always = no
+		}
+        enable_building = {
+            building = civilian_power_grid
+            level = 1
+        }
+	}
+}

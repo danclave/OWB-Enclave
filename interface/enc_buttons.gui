@@ -1,18 +1,18 @@
 guiTypes = {
 	containerWindowType = { # connect_to_power
 		name = connect_to_power_container
-		position = {x = 290 y = 490}
+		position = {x=90 y=58}
 		
 		fade_time = 50
 		fade_type = linear
-		moveable = no
+		moveable = no 
 		
 		buttonType = {
 			name = connect_to_power
 			spriteType = GFX_icons_power 
 			pdx_tooltip = connect_to_power_tt 
 			pdx_tooltip_delayed = connect_to_power_tt_delayed 
-			scale = 1.2 
+			scale = 1
 		}
 	}
 	containerWindowType = { # install_police_force 

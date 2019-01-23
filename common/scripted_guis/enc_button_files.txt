@@ -9,40 +9,32 @@ scripted_gui = {
 				# has_completed_focus = enc_rebuild_the_power_grid			
 			}
 			is_controlled_by = ROOT
-			# any neighbour state is cored
 			NOT = {
 				is_core_of = FROM
-			}
-			civilian_power_grid < 1
-			
+			}			
 		}		
 		effects = {  
 			connect_to_power_click = {
-				add_building_construction = {
-					type = civilian_power_grid 
-					level = 1
-					instant_build = no
-				}
-				set_state_flag = needs_civilian_power_grid 
-				ROOT = { custom_effect_tooltip = connect_to_power_ttt }
+				set_state_flag = needs_civilian_power_grid
+				add_core_of = root
+				# ROOT = { custom_effect_tooltip = connect_to_power_ttt }
 			}
 		}
 		triggers = {
-			connect_to_power_click_enabled = {
-				free_building_slots = {
-					building = civilian_power_grid
-					size > 0
-					included_locked = no
-				}
-				ROOT = {
-					custom_trigger_tooltip = {
-						tooltip = more_than_2_electricity
+			connect_to_power_click_enabled = {			
+				civilian_power_grid > 0
+				custom_trigger_tooltip = {
+					tooltip = more_than_2_electricity						
+					ROOT = { 
 						check_variable = {
 							var = resource@electricity
 							value = 2
 							compare = greater_than_or_equals
 						}
-					}
+					}  
+				}
+				any_neighbor_state = {
+					is_core_of = ROOT
 				}
 			}
 		}

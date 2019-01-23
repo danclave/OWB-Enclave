@@ -1002,9 +1002,10 @@ focus_tree = {
 			focus = enc_vlt_power_reform
 		}
 		completion_reward = {
+			set_technology = { 
+				enc_civilian_power_grid_tech = 1	
+			}
 			custom_effect_tooltip = enc_rebuild_the_power_grid_tt
-			custom_effect_tooltip = enc_rebuild_the_power_grid_ttt
-			clr_country_flag = not_allowed_to_core_flag
 		}
 		cost = 5.8
  }
