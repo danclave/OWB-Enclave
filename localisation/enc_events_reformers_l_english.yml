@@ -230,7 +230,7 @@ enc_reformers.40.d: "We have finished constructing a power grid in a state. It t
 enc_reformers.40.a: "And Eden said: 'let there be light!'"
 ################################################################################################################ -<
 enc_reformers.41.t: "Our power grid is ready!"
-enc_reformers.41.d: "We are ready to begin connecting states to our power grid.\n From now on, we can connect any state neighbouring to a core state to our grid by constructing a civilian power grid.\nOnce built, we will gain a core on that state after a few days.\nShould we lose the building, we will soon lose the core.\nKeep in mind that every power grid requires 2 power to maintain."
+enc_reformers.41.d: "We are ready to begin connecting states to our power grid.\n From now on, we can connect any state neighbouring to a core state to our grid by constructing a civilian power grid.\nOnce built, we will gain a core on that state by pressing the Connect To Grid button in that state's menu.\nShould we lose the Civilian Power Grid, we will soon lose the core.\nKeep in mind that every power grid requires 2 power to maintain."
 enc_reformers.41.a: "And Eden said: 'let there be light!'"
 ################################################################################################################ -<
 enc_reformers.42.t: "The Assassination of Franklin Anderson"

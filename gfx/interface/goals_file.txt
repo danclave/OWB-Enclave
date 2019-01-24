@@ -22,10 +22,12 @@
 # GFX_goal_enc_ban_congress
 # GFX_goal_enc_beacon
 # GFX_goal_enc_cloning
+# GFX_goal_enc_combined_arms
 # GFX_goal_enc_complete_integration
 # GFX_goal_enc_construction
 # GFX_goal_enc_construction_nev
 # GFX_goal_enc_construction_usa
+# GFX_goal_enc_construct_mil_factory
 # GFX_goal_enc_crack_the_code
 # GFX_goal_enc_defenders
 # GFX_goal_enc_demilitarize_government
@@ -70,6 +72,7 @@
 # GFX_goal_enc_jaz
 # GFX_goal_enc_justice
 # GFX_goal_enc_laser_weapons
+# GFX_goal_enc_laser_weapons_reform
 # GFX_goal_enc_limited_army_reform
 # GFX_goal_enc_limited_integration
 # GFX_goal_enc_major_war

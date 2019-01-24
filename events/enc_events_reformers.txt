@@ -402,12 +402,6 @@ country_event = {#14 - Anderson Speech
 
 	}
 	option = {# block radio
-		trigger = {
-			not = {
-				has_completed_focus = enc_purge_scientists
-				has_completed_focus = enc_purge_officers
-			}
-		}
 		name = enc_reformers.14.b
 		add_popularity = { ideology = elites popularity = 0.05 }
 		add_political_power = -100
@@ -420,7 +414,7 @@ country_event = {#14 - Anderson Speech
 			}
 		}
 		name = enc_reformers.14.c
-		add_popularity = { ideology = elites popularity = 0.10 }
+		add_popularity = { ideology = elites popularity = 0.07 }
 		custom_effect_tooltip = breaklines		
 		custom_effect_tooltip = enc_reformers.14.c.tt
 	}
@@ -432,7 +426,7 @@ country_event = {#14 - Anderson Speech
 			}
 		}
 		name = enc_reformers.14.d
-		add_popularity = { ideology = elites popularity = 0.10 }
+		add_popularity = { ideology = elites popularity = 0.07 }
 		custom_effect_tooltip = enc_reformers.14.d.tt
 	}
 	option = {# He is almost out of allies
@@ -441,7 +435,7 @@ country_event = {#14 - Anderson Speech
 			has_completed_focus = enc_purge_officers
 		}
 		name = enc_reformers.14.e
-		add_popularity = { ideology = elites popularity = 0.05 }
+		add_popularity = { ideology = elites popularity = 0.03 }
 		custom_effect_tooltip = breaklines		
 		custom_effect_tooltip = enc_reformers.14.e.tt
 	}
@@ -1130,20 +1124,20 @@ country_event = {#39 - loyalists want to rejoin
 	}
 }
 
-country_event = {#40 - powered province!
+country_event = {#40 - powered province! (LEGACY)
 	id = enc_reformers.40
 	title = enc_reformers.40.t
 	desc = enc_reformers.40.d
 	picture = GFX_event_enc_power_grid
 	fire_only_once = no	
-	is_triggered_only = no
-	trigger = {
-		original_tag = ERB
-		any_owned_state = {
-			NOT = { is_core_of = ERB }
-			civilian_power_grid > 0
-		}
-	}
+	is_triggered_only = yes
+	# trigger = {
+		# original_tag = ERB
+		# any_owned_state = {
+			# NOT = { is_core_of = ERB }
+			# civilian_power_grid > 0
+		# }
+	# }
 	option = {# get cores
 		name = enc_reformers.40.a
 		every_owned_state = {
@@ -2435,7 +2429,7 @@ country_event = {#105 Brahmin Barons
 	is_triggered_only = no
 	trigger = {
 		and = { tag = ERB
-		       141 = { is_owned_by = ERB }
+		      141 = { is_owned_by = ERB }
 		}
 	}
 	option = {#	Easter Egg

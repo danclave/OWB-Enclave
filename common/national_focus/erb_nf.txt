@@ -676,6 +676,7 @@ focus_tree = {
 	focus = {#RADIO - the_lucia_incident
 		id = enc_the_lucia_incident
 		icon = GFX_goal_enc_the_lucia_incident
+		mutually_exclusive = {focus = enc_the_bishop_incident}
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_crack_the_code
 		x = -1
@@ -692,6 +693,7 @@ focus_tree = {
 		mutually_exclusive = { focus = enc_the_lucia_incident }		
 		icon = GFX_goal_enc_rangers
 		ai_will_do = { factor = 1 }
+		mutually_exclusive = {focus = enc_the_lucia_incident}
 		relative_position_id = enc_crack_the_code
 		x = 1
 		y = 1
@@ -1002,6 +1004,9 @@ focus_tree = {
 			focus = enc_vlt_power_reform
 		}
 		completion_reward = {
+			set_technology = { 
+				enc_civilian_power_grid_tech = 1	
+			}
 			custom_effect_tooltip = enc_rebuild_the_power_grid_tt
 			clr_country_flag = not_allowed_to_core_flag
 		}
@@ -2367,16 +2372,17 @@ focus = {#Reunited
 		y = 1
 		prerequisite = { focus = enc_electoral_victory focus = enc_support_armed_coup }
 		completion_reward = {
-		NCR = {
-					
-					remove_opinion_modifier = { target = ERB modifier = intriguedDistrust }
-					add_opinion_modifier = { target = ERB modifier = goodbusiness }
-				}
+		NCR = {					
+				remove_opinion_modifier = { target = ERB modifier = intriguedDistrust }
+				add_opinion_modifier = { target = ERB modifier = goodbusiness }
+			}
+			custom_effect_tooltip = ncr_suspicious_clr_tt
+			clr_country_flag = ncr_suspicious # removes hiding mechanic
 		} 
 	}
 	focus = {# Nevada rangers
 		id = enc_Nevada_Rangers
-		icon = GFX_goal_enc_rangers
+		icon =  GFX_goal_enc_rangers_agreement
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_the_state_of_nevada
 				x = 5
@@ -2402,74 +2408,94 @@ focus = {#Reunited
 		}
 	focus = {# discredit the rangers
 		id = Enc_Discredit_Rangers
-		icon = GFX_goal_enc_agreement
-		ai_will_do = { factor = 1 } 
+		icon = GFX_goal_enc_rangers
+		ai_will_do = {
+			factor = 1
+		}
 		relative_position_id = enc_the_state_of_nevada
 		x = 3
 		y = 1
-		cost = 5.8 
+		cost = 5.8
 		bypass = {
-			DES = { exists = NO }
-		}	
-		prerequisite = { focus = enc_the_state_of_nevada }	
+			DES = {
+				exists = NO
+			}
+		}
+		prerequisite = {
+			focus = enc_the_state_of_nevada
+		}
 		available = {
-		custom_trigger_tooltip = {
-				tooltip = 25_legitimacy		
+			custom_trigger_tooltip = {
+				tooltip = 25 _legitimacy
 				check_variable = {
 					var = legitimacy
 					value > 0.299
 				}
 			}
-			}
-		completion_reward = { 
-		DES = { 
-		if = { limit = { is_in_faction = yes } 
-			leave_faction = yes }	
-			}
-		ERB = { create_wargoal = { type = annex_everything target = DES } }
-		NCR = {
-			add_ai_strategy = {
-						type = ignore
-						id = "DES"
-						value = 200
-					}
-				}
-		BOS = {
-			add_ai_strategy = {
-						type = ignore
-						id = "DES"
-						value = 200
-					}
-				}
-		DES = {
-			add_ai_strategy = {
-						type = ignore
-						id = "NCR"
-						value = 200
-					}
-				}
-		DES = {
-			add_ai_strategy = {
-						type = ignore
-						id = "BOS"
-						value = 200
-					}
-				}		
 		}
-		}	
-	
+		completion_reward = {
+			DES = {
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+					leave_faction = yes
+				}
+			}
+			ERB = {
+				create_wargoal = {
+					type = annex_everything
+					target = DES
+				}
+			}
+			NCR = {
+				add_ai_strategy = {
+					type = ignore
+					id = "DES"
+					value = 200
+				}
+			}
+			BOS = {
+				add_ai_strategy = {
+					type = ignore
+					id = "DES"
+					value = 200
+				}
+			}
+			DES = {
+				add_ai_strategy = {
+					type = ignore
+					id = "NCR"
+					value = 200
+				}
+			}
+			DES = {
+				add_ai_strategy = {
+					type = ignore
+					id = "BOS"
+					value = 200
+				}
+			}
+		}
+	}
 	focus = {# area 51
 		id = enc_Area_51
 		icon = GFX_goal_enc_verti_reform
-		ai_will_do = { factor = 1 } 
+		ai_will_do = {
+			factor = 1
+		}
 		relative_position_id = enc_Nevada_Rangers
 		x = -1
 		y = 1
-		cost = 5.8 
-		prerequisite = { focus = enc_Nevada_Rangers
-						focus = Enc_Discredit_Rangers }	
-		available = { has_full_control_of_state = 389 } 
-		completion_reward = { 
+		cost = 5.8
+		prerequisite = {
+			focus = enc_Nevada_Rangers
+			focus = Enc_Discredit_Rangers
+		}
+		available = {
+			has_full_control_of_state = 389
+		}
+		completion_reward = {
 			389 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -2478,10 +2504,14 @@ focus = {#Reunited
 					instant_build = yes
 				}
 			}
-		add_resource = { type = electronics amount = 15 state = 389 }
-		add_resource = { type = advanced_technology amount = 16 state = 389 }	
+			add_resource = {
+				type = electronics amount = 15 state = 389
+			}
+			add_resource = {
+				type = advanced_technology amount = 16 state = 389
+			}
 		}
-		}
+	}
 	focus = {# mojave express
 		id = Enc_Mojave_Express
 		icon = GFX_goal_molotov_ribbentrop_pact
@@ -2498,14 +2528,14 @@ focus = {#Reunited
 					level = 2
 					instant_build = yes 
 				}
-					}
+			}
 			165 = {
 					add_building_construction = { 
 					type = infrastructure 
 					level = 2
 					instant_build = yes 
 				}
-					}
+			}
 			165 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -2516,7 +2546,7 @@ focus = {#Reunited
 				
 			}		
 		}
-		}
+	}
 	focus = {# Nevada Railway
 		id = Enc_Nevada_Railway
 		icon = GFX_goal_enc_construction_nev
@@ -3311,7 +3341,10 @@ focus = {#Reunited
 		cost = 5.8 
 		prerequisite = { focus = enc_NCR_seak_allies }
 		available = {		
-			not = {has_country_flag = enc_promised_no_peace_with_bos} 
+			country_exists = BOS
+			NOT = {
+				has_war_with = BOS
+			}
 		}
 		completion_reward = {
 			BOS = {
@@ -3325,6 +3358,15 @@ focus = {#Reunited
 				add_opinion_modifier = { target = BOS modifier = wontShootOnsight }
 				remove_opinion_modifier = { target = BOS modifier = bitterEnemies }
 			}
+			if = {
+				limit = {
+					has_country_flag = enc_promised_no_peace_with_bos				
+				}
+				custom_effect_tooltip = enc_promise_broken
+				add_popularity = { ideology = intellectuals popularity = -0.05 } 
+				add_stability = -0.15
+				add_war_support = -0.15
+			}
 		}
 	}
 	focus = {#Diplomacy - BOS - tech
@@ -3336,7 +3378,12 @@ focus = {#Reunited
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_BOS_start }
-		available = { BOS = { exists = yes } }
+		available = {	
+			country_exists = BOS
+			NOT = {
+				has_war_with = BOS
+			}			
+		}
 		completion_reward = {
 			BOS = {add_opinion_modifier = { target = ERB modifier = intriguedDistrust }}
 			BOS = {remove_opinion_modifier = { target = ERB modifier = wontShootOnsight }}
@@ -3356,6 +3403,12 @@ focus = {#Reunited
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_BOS_tech }	
+		available = {		
+			country_exists = BOS	
+			NOT = {
+				has_war_with = BOS
+			}		
+		}
 		completion_reward = {
 			diplomatic_relation = { country = BOS relation = non_aggression_pact }	
 		}				
@@ -3370,6 +3423,12 @@ focus = {#Reunited
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_BOS_peace }
+		available = {		
+			country_exists = BOS	
+			NOT = {
+				has_war_with = BOS
+			}		
+		}
 		completion_reward = { give_guarantee = BOS BOS= { give_guarantee = ERB } }			
 	}
 	
@@ -3383,6 +3442,12 @@ focus = {#Reunited
 		cost = 5.8 
 		available = { CES = { exists = yes } }
 		prerequisite = { focus = enc_NCR_seak_allies }
+		available = {		
+			country_exists = CES
+			NOT = {
+				has_war_with = CES
+			}			
+		}
 		completion_reward = {
 			CES = {
 				custom_effect_tooltip = relations_increased_20
@@ -3407,6 +3472,12 @@ focus = {#Reunited
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_CES_start }
+		available = {		
+			country_exists = CES	
+			NOT = {
+				has_war_with = CES
+			}					
+		}
 		completion_reward = { send_equipment = { type = infantry_equipment amount = 100 target = CES } } 				
 	}
 	focus = {#Diplomacy - CES - trade
@@ -3419,14 +3490,21 @@ focus = {#Reunited
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_CES_cache }
+		available = {		
+			country_exists = CES	
+			NOT = {
+				has_war_with = CES
+			}					
+		}
 		completion_reward = {
 			285 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
-					instant_build = yes } }
-			
+					instant_build = yes 
+				} 
+			}	
 		}				
 	}
 	focus = {#Diplomacy - CES - common_enemy
@@ -3439,6 +3517,12 @@ focus = {#Reunited
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_CES_trade }
+		available = {		
+			country_exists = CES
+			NOT = {
+				has_war_with = CES
+			}
+		}
 		completion_reward = {
 			diplomatic_relation = { country = CES relation = non_aggression_pact
 			CES = { give_guarantee = ERB } }	
@@ -3455,6 +3539,12 @@ focus = {#Reunited
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_NCR_seak_allies }
+		available = {		
+			country_exists = NEW
+			NOT = {
+				has_war_with = NEW
+			}					
+		}
 		completion_reward = {
 			VEG = {
 				custom_effect_tooltip = relations_increased_20
@@ -3479,6 +3569,12 @@ focus = {#Reunited
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_NEW_start}
+		available = {		
+			country_exists = NEW	
+			NOT = {
+				has_war_with = NEW
+			}					
+		}
 		completion_reward = {
 			add_resource = { type = advanced_technology amount = 8 state = 159 }
 			add_resource = { type = electronics amount = 8 state = 159 }
@@ -3493,7 +3589,12 @@ focus = {#Reunited
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_NEW_vacation}
-		available = { VEG = { exists = yes } }
+		available = {		
+			country_exists = NEW	
+			NOT = {
+				has_war_with = NEW
+			}					
+		}
 		completion_reward = {
 			add_tech_bonus = {
 				name = robotics_armour_bonus
@@ -3501,8 +3602,10 @@ focus = {#Reunited
 				uses = 2
 				category = robotics_tech
 			}
-			VEG = { set_technology = { tesla_weaponry = 1 }	}
-	         }
+			VEG = { 
+				set_technology = { tesla_weaponry = 1 }	
+			}
+	    }
 	}
 	focus = {#Diplomacy - NEW - recognize
 		id = enc_NEW_recognize
@@ -3514,6 +3617,12 @@ focus = {#Reunited
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_NEW_robot}
+		available = {		
+			country_exists = NEW	
+			NOT = {
+				has_war_with = NEW
+			}					
+		}
 		completion_reward = {
 		285 = {
 				add_extra_state_shared_building_slots = 4
@@ -3534,6 +3643,12 @@ focus = {#Reunited
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_NEW_recognize}
+		available = {		
+			country_exists = NEW
+			NOT = {
+				has_war_with = NEW
+			}				
+		}
 		completion_reward = { give_guarantee = VEG }								
 	}
 	focus = {#Diplomacy - NEW - puppet
@@ -3545,7 +3660,13 @@ focus = {#Reunited
 		x = 0
 		y = 1
 		cost = 5.8
-		prerequisite = { focus = enc_NEW_pact}				
+		prerequisite = { focus = enc_NEW_pact}	
+		available = {		
+			country_exists = NEW
+			NOT = {
+				has_war_with = NEW
+			}					
+		}			
 		completion_reward = { 
 		country_event = { id = enc_reformers.66 }
 		puppet = VEG }
@@ -3859,7 +3980,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	}
 	focus = {#Military - arms develoment
 		id = enc_arms_development
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_enc_construct_mil_factory
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_department_of_defense}
 		relative_position_id = enc_department_of_defense
@@ -3877,7 +3998,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	}
 	focus = {#Military - military equipment
 		id = enc_military_equipment
-		icon = GFX_focus_generic_combined_arms
+		icon = GFX_goal_enc_combined_arms
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_arms_development}
 		relative_position_id = enc_arms_development
@@ -3913,7 +4034,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 
 	focus = {#Military - quantity - disciplined soldiers
 		id = enc_disciplined_soldiers
-		icon = GFX_goal_enc_mass_mobilization
+		icon = GFX_goal_enc_army_reserves
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_military_equipment}
 		prerequisite = {focus = enc_wartime_draft}
@@ -3926,7 +4047,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	}
 	focus = {#Military - quantity - rank and file infantry
 		id = enc_rank_and_file_infantry
-		icon = GFX_goal_shield_enc_wip
+		icon = GFX_goal_enc_mass_mobilization
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_disciplined_soldiers}
 		relative_position_id = enc_disciplined_soldiers
@@ -3941,7 +4062,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	focus = {#Military - quality - advanced_training
 		id = enc_advanced_training
 		exclusive = { focus = enc_enc_disciplined_soldiers }
-		icon = GFX_goal_generic_advanced_firearms_focus
+		icon = GFX_goal_enc_laser_weapons_reform
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_military_equipment}
 		prerequisite = {focus = enc_wartime_draft}
@@ -4192,10 +4313,10 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		prerequisite = { focus = enc_ourpresident}
 		available = {
 			has_country_leader = {
-					ruling_only = yes
-					name = "Franklin Anderson"
-				}
+				ruling_only = yes
+				name = "Franklin Anderson"
 			}
+		}
 		cost = 5.8
 		completion_reward = {   
 			add_ideas = ENC_purist

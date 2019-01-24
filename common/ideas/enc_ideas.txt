@@ -952,6 +952,7 @@ ideas = {
 		}
 		ENC_smuggling = {
 			picture = generic_research_bonus
+			cancel = { country_exists = BAR } # barons broke free
 			allowed = { 
 				always = no
             }

@@ -561,7 +561,7 @@ enc_the_state_of_utah_desc: "To the east, New Canaan is the nucleus for the Morm
 
 
 enc_crack_the_code: "Crack the Code"
-enc_crack_the_code_desc: "Our advanced technology could let us crack the NCCR's codes and predict their moves in advance.""
+enc_crack_the_code_desc: "Our advanced technology could let us crack the NCR's codes and predict their moves in advance.""
 
 enc_wastelander_draft: "Draft the Wastelanders"
 enc_wastelander_draft_desc: "Although many of the Wastelanders aren't up to the burden of being American citizens, they are up to the burden of being American cannon fodder."
@@ -743,8 +743,9 @@ ENC_legitimacy_high: "High Legitimacy"
 ENC_legitimacy_high_desc: "(+75% legitimacy)\nThe Enclave is seen as a legitimate government in the eyes of most, its past crimes forgotten in favour of a hopeful future."
 
 max_legitimacy: "At least §Y100%§! Legitimacy"
-half_legitimacy: "More than §Y75%§! Legitimacy"
+half_legitimacy: "More than §Y50%§! Legitimacy"
 25_legitimacy: "More than §Y25%§! Legitimacy"
+75_legitimacy: "More than §Y75%§! Legitimacy"
 
 has_legitimacy_tt: "[?legitimacy]/[?has_legitimacy_var] §Ylegitimacy§!"
 ENC_reno_police: "New Reno Police"
@@ -787,7 +788,7 @@ enc_rebuild_the_power_grid_tt: "Allows you to build §Ycivilian power stations§
 
 enc_debug_tt: "electricity: [?resource@electricity]"
 
-more_than_2_electricity: "[ROOT.GetName] MMore than 2 §YElecticity§! available (§[?resource@electricity]§!) [ROOT.GetName]"
+more_than_2_electricity: "More than 2 §YElecticity§! available (§Y[?ROOT.resource@electricity]§!)"
 enc_seperate_but_equal:  "Service Guarantees Citizenship"
 enc_segregation_forever:  "Segregation Forever"
 enc_wastelander_draft:  "Unwilling Volunteers"
@@ -926,9 +927,10 @@ loyal_soldier: "Loyal Soldier"
 ###################################
 connect_to_power: "Connect to Grid"
 connect_to_power_tt: "Connect to Grid"
-connect_to_power_tt_delayed: "[!connect_to_power_click]" 
+connect_to_power_tt_delayed: "[!connect_to_power_click]Requires:\n[!connect_to_power_click_enabled]" 
+building_slot_available: "At least 1 Building Slot available"
 
-connect_to_power_ttt: "Costs 2 §YElecticity§! to maintain.\nRequires:\n - More than 2 §YElecticity§! (§Y[?resource@electricity]§!)\n - State must border a cored state.\n - State have a free building slot"
+connect_to_power_ttt: " - costs 2 §YElecticity§! to maintain."
 
 civilian_power_grid: "Civilian Power Grid"
 civilian_power_grid_desc: "Allows a state to be §GCored§!"
@@ -997,6 +999,8 @@ gannon_returns: "Arcade Ganon has returned to the Enclave"
 
 enc_salvatores_tolerated_flag: "Salvatores tolerated"
 enc_wrights_tolerated_flag: "Wrights tolerated"
+
+ncr_suspicious_clr_tt: "\n§MRemoves the need to hide from the [NCR.GetName]§!"
 ###################################
 # DIPLOMACY
 ###################################
@@ -1010,6 +1014,13 @@ relations_increased_20: "Mutual Relations with §YEnclave§! improved by §G+20�
 
 erb_independence_faction:0 "Anti NCR Alliance"
 integrated_economy: "Integrated Economies"
+
+###################################
+# TECHNOLOGY
+###################################
+enc_civilian_power_grid_tech: "Civilian Power Grid"
+
+
 ###########################################
 # OOB
 ###########################################

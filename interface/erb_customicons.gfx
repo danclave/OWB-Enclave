@@ -95,6 +95,10 @@ spriteTypes = {
             name = "GFX_goal_enc_cloning"
  		    texturefile = "gfx/interface/goals/enc_cloning.dds"
  	    } 
+        SpriteType = {#enc_combined_arms
+            name = "GFX_goal_enc_combined_arms"
+ 		    texturefile = "gfx/interface/goals/enc_combined_arms.dds"
+ 	    } 
         SpriteType = {#enc_complete_integration
             name = "GFX_goal_enc_complete_integration"
  		    texturefile = "gfx/interface/goals/enc_complete_integration.dds"
@@ -110,6 +114,10 @@ spriteTypes = {
         SpriteType = {#enc_construction_usa
             name = "GFX_goal_enc_construction_usa"
  		    texturefile = "gfx/interface/goals/enc_construction_usa.dds"
+ 	    } 
+        SpriteType = {#enc_construct_mil_factory
+            name = "GFX_goal_enc_construct_mil_factory"
+ 		    texturefile = "gfx/interface/goals/enc_construct_mil_factory.dds"
  	    } 
         SpriteType = {#enc_crack_the_code
             name = "GFX_goal_enc_crack_the_code"
@@ -286,6 +294,10 @@ spriteTypes = {
         SpriteType = {#enc_laser_weapons
             name = "GFX_goal_enc_laser_weapons"
  		    texturefile = "gfx/interface/goals/enc_laser_weapons.dds"
+ 	    } 
+        SpriteType = {#enc_laser_weapons_reform
+            name = "GFX_goal_enc_laser_weapons_reform"
+ 		    texturefile = "gfx/interface/goals/enc_laser_weapons_reform.dds"
  	    } 
         SpriteType = {#enc_limited_army_reform
             name = "GFX_goal_enc_limited_army_reform"
