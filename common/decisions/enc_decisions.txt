@@ -327,6 +327,7 @@ ENC_infiltrating_NCR = {
 		complete_effect = {
 
 		}
+		fire_only_once = YES
 		days_remove = 60
 		remove_effect = {
 			BOS = {
@@ -347,6 +348,7 @@ ENC_infiltrating_NCR = {
 		visible = {
 			has_completed_focus = enc_the_bishop_incident
 		}
+		fire_only_once = YES
 		complete_effect = {
 
 		}
@@ -656,6 +658,302 @@ ENC_Treaty_Hoover_Dam = {
 		}
 		}
 	}
+ENC_california_reconstruction = {
+	rename_sacramento = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		allowed = { original_tag = ERB }
+		visible = {
+			135 = { is_owned_and_controlled_by = ERB }
+			}
+		complete_effect = {
+			135 = {
+				set_state_name = "Sacramento" 
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	rebuild_angeles = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		allowed = { original_tag = ERB }
+		visible = {
+			135 = { is_owned_and_controlled_by = ERB }
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.134 }			
+		}
+	}
+	NCR_leadership = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		allowed = { original_tag = ERB }
+		visible = {
+			253 = { is_owned_and_controlled_by = ERB }
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.119 }			
+		}
+	}
+	BOS_leadership = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		allowed = { original_tag = ERB }
+		visible = {
+			153 = { is_owned_and_controlled_by = ERB }
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.135 }
+			548 = {
+				set_state_name = "President Richardson Air Force Base" 
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = advanced_technology 
+					amount = 10					
+				}
+			}	
+		}
+	}
+	farming_california = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		allowed = { original_tag = ERB }
+		visible = {
+			153 = { is_owned_and_controlled_by = ERB }
+			}
+		complete_effect = {
+				add_ideas = Enc_Irrigation
+		}
+	}
+	ENC_new_dayglow = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		allowed = { original_tag = ERB }
+		visible = {
+			63 = { is_owned_and_controlled_by = ERB }
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.136 }			
+		}
+	}
+	}
+	
+ENC_northwest_reconstruction = {
+	ENC_hanford = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		available = { 351 = { is_owned_and_controlled_by = ERB } }
+		visible = {
+			original_tag = ERB 
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.137 }			
+		}
+	}
+	ENC_port_maw = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		available = { 37 = { is_owned_and_controlled_by = ERB } }
+		visible = {
+			original_tag = ERB 
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.138 }
+			37 = {
+				set_state_name = "Sacramento" 
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				
+			}			
+		}
+	}
+	ENC_troll_warren = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		available = { 235 = { is_owned_and_controlled_by = ERB } }
+		visible = {
+			original_tag = ERB 
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.139 }			
+		}
+		}
+	ENC_seattle = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		available = { 84 = { is_owned_and_controlled_by = ERB } }
+		visible = {
+			original_tag = ERB 
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.140 }			
+			84 = {
+				set_state_name = "Seattle" 
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+		}	
+	}
+	ENC_alaska = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		available = { 84 = { is_owned_and_controlled_by = ERB } }
+		visible = {
+			original_tag = ERB 
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.141 }			
+			}	
+	}
+}
+ENC_rockies_reconstruction = {
+ENC_los_alamos= {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		available = { 44 = { is_owned_and_controlled_by = ERB } }
+		visible = {
+			original_tag = ERB 
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.140 }			
+			
+		}	
+	}
+ENC_boulder_dome = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		available = { 568 = { is_owned_and_controlled_by = ERB } }
+		visible = {
+			original_tag = ERB 
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.140 }			
+			
+		}	
+	}
+ENC_mormons = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		available = { 266 = { is_owned_and_controlled_by = ERB } }
+		visible = {
+			original_tag = ERB 
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.151 }			
+		}	
+	}
+ENC_the_nursery = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		available = { AND = { 308 = { is_owned_and_controlled_by = ERB }
+							has_completed_focus = enc_geck } }
+		visible = {
+			original_tag = ERB 
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.150 }			
+							}		
+					}
+					
+	}
+ENC_starting_companies = {
+ENC_medtek = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		visible = {
+			original_tag = ERB 
+			}
+		complete_effect = {
+			add_ideas = medtek		
+							}		
+			}
+ENC_crimson_trucking = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		available = {has_completed_focus = enc_automobiles}
+		visible = {
+			original_tag = ERB 
+			}
+		complete_effect = {
+			add_ideas = enc_crimson_truckers		
+							}		
+			}
+ENC_nukacola = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		visible = {
+			original_tag = ERB 
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.107 }			
+							}		
+			}
+ENC_gunrunners = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		visible = {
+			original_tag = ERB 
+			}
+		complete_effect = {
+			add_ideas = ENC_gunrun }			
+				}		
+		}			
+							
+	
+	
 ###############################
 # SHARED
 ###############################
@@ -1797,6 +2095,7 @@ ENC_render_unto_caesar = {
 		fire_only_once = YES
 		activation = {
 			has_country_flag = ENC_CES_hostile
+			has_completed_focus = enc_purity
 			not = {
 				CES = {
 					OR = {
@@ -1808,7 +2107,7 @@ ENC_render_unto_caesar = {
 			}
 		}
 		available = {
-			not = { country_exists = CES }
+			not = { country_exists = NCR }
 		}
 		cancel_trigger = {
 			CES = {
@@ -1823,11 +2122,46 @@ ENC_render_unto_caesar = {
 		days_mission_timeout = 1068
 		timeout_effect = {
 			ERB = { country_event = {id = enc_reformers.101 } }
-			CES = {
-				country_event = { id = enc.41 } # todo: change
+			CES = {	country_event = { id = enc.41 } # todo: change
 			}
 			clr_country_flag = ENC_CES_hostile
 		}
+		complete_effect = {
+			ERB = { country_event = {id = enc_reformers.101 } }
+		}
+	}
+	CES_reformer_crisis = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		activation = {
+			has_country_flag = ENC_axis_evil
+			not = {
+				CES = {
+					OR = {
+						exists = no
+						has_civil_war = YES
+						has_war_with = ERB #Enclave
+					}
+				}
+			}
+		}
+		available = {
+			not = { country_exists = NCR }
+			 }
+		cancel_trigger = {
+			CES = {
+				OR = {
+					exists = no
+					has_civil_war = YES
+					has_war_with = ERB #Enclave
+				}
+			}
+		}
+		is_good = no
+		days_mission_timeout = 730
+		timeout_effect = { country_event = { id = enc_reformers.101 } # todo: change }
+			}
 		complete_effect = {
 			# ???
 		}

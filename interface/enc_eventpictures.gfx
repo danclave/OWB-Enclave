@@ -324,7 +324,7 @@ spriteTypes = {
 			name = "GFX_event_enc_BigMT"
 			texturefile = "gfx/event_pictures/event_enc_BigMT.dds"
 		}
-		SpriteType = {#Archimdes
+		SpriteType = {#ThinkTank
 			name = "GFX_event_enc_think_tank"
 			texturefile = "gfx/event_pictures/event_enc_think_tank.dds"
 		}
@@ -344,5 +344,41 @@ spriteTypes = {
 			name = "GFX_event_nevada_enc"
 			texturefile = "gfx/event_pictures/event_nevada_enc.dds"
 		}	
+		SpriteType = {#rockets
+			name = "GFX_enc_rockets_red_glare"
+			texturefile = "gfx/event_pictures/enc_rockets_red_glare.dds"
+			}
+		SpriteType = {#station
+			name = "GFX_enc_crashed_station"
+			texturefile = "gfx/event_pictures/enc_crashed_station.dds"	
+		}
+SpriteType = {#Power Plant
+			name = "GFX_event_enc_powerplant_on"
+			texturefile = "gfx/event_pictures/event_enc_powerplant_on.dds"	
+		}			
+SpriteType = {#Seattle
+			name = "GFX_event_enc_seattle"
+			texturefile = "gfx/event_pictures/event_enc_seattle.dds"	
+		}
+SpriteType = {#vault
+			name = "GFX_event_enc_vault"
+			texturefile = "gfx/event_pictures/event_enc_vault.dds"	
+		}
+SpriteType = {#ship
+			name = "GFX_event_enc_ship"
+			texturefile = "gfx/event_pictures/event_enc_ship.dds"	
+		}
+SpriteType = {#China
+			name = "GFX_event_china_poster"
+			texturefile = "gfx/event_pictures/event_china_poster.dds"	
+		}
+SpriteType = {#nature
+			name = "GFX_event_enc_nature"
+			texturefile = "gfx/event_pictures/event_enc_nature.dds"	
+		}
+SpriteType = {#nature
+			name = "GFX_event_enc_cars"
+			texturefile = "gfx/event_pictures/event_enc_cars.dds"	
+		}				
 }			
 

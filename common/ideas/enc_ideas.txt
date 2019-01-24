@@ -34,6 +34,52 @@ ideas = {
 			}
 			
 		}
+		ENC_vaults = {
+			picture = vault_open_bonus
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				research_time_factor = -0.03
+			}
+		}
+		medtek = {
+			
+			picture = generic_morale_bonus
+			
+			allowed = {}
+			
+			removal_cost = -1
+				
+			modifier = {
+				attrition = -0.03
+			}
+			}
+		enc_crimson_truckers = {
+			
+			picture = ncr_ranger_idea
+			
+			allowed = {}
+
+			removal_cost = -1
+			
+			modifier = {
+				supply_consumption_factor = -0.05
+			}
+		}
+				
+		ENC_gunrun = {
+			
+			picture = generic_morale_bonus
+			
+			allowed = {}
+			
+			removal_cost = -1
+			
+			modifier = {
+				equipment_conversion_speed = 0.15
+			}
+			}	
 		ENC_infighting = {  
 			picture = enc_idea_infighting
 			allowed = { 
@@ -95,7 +141,16 @@ ideas = {
             removal_cost = -1
 			modifier = {
 			   research_time_factor = -0.03
-			 
+			 	}
+		}
+		ENC_terraforming = {
+			picture = vault_open_bonus
+			allowed = { always = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+				conscription = 0.05
 			}
 		}
 		Enc_Think_Tank = {
@@ -579,6 +634,21 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
+		enc_trade_tea = {  
+			picture = generic_constitutional_guarantee
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
 		ENC_constitution_rule_of_law= {  
 			picture = idea_generic_constitutional_guarantee
 			allowed = { 
@@ -958,7 +1028,7 @@ ideas = {
 		}
 
 		ENC_Freedom_Rings = {
-			picture = legitimacy
+			picture = enc_legitimacy_high
 			allowed = { 
 				always = no
 			}
@@ -1150,6 +1220,20 @@ ideas = {
 				justify_war_goal_time = +0.10
 				trade_opinion_factor = 0.25
 			}
+		}
+		ENC_satellites = {
+			picture = generic_wall_line
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				recon_factor = 0.15
+					}
 		}
 
 ####################################################
@@ -1539,7 +1623,7 @@ ideas = {
 				army_morale_factor = 0.10
 				army_org_factor = 0.10
 				army_core_attack_factor	 = 0.15
-				army_core_defense_factor = 0.15
+				army_core_defence_factor = 0.15
 			}
 		}			
 		ENC_vengeance_bos = {  		
