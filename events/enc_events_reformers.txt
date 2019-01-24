@@ -1592,40 +1592,41 @@ country_event = {#75 - Civil War
     picture = GFX_event_ENC_single_soldier
     fire_only_once = yes
     is_triggered_only = yes
-    option = {#    aid
+
+    option = { #aid
         name = enc_reformers.75.a
         complete_national_focus = enc_our_new_ally
         if = {
-            limit = {is_in_faction = no    }
+            limit = { is_in_faction = no }
             create_faction = "The Enclave"
             NCR = { 
                 if = { 
                     limit = { is_in_faction = yes } 
                     leave_faction = yes     
-                     }
-                  }
-            add_to_faction = NCR
+                }
             }
+            add_to_faction = NCR
+        }
         else_if = {
             limit = { is_in_faction = yes }
             NCR = { 
                 if = { 
                     limit = { is_in_faction = yes } 
                     leave_faction = yes     
-                    }
-                   }
-            add_to_faction = NCR
-                  }
-        random_country = {
-            limit = {
-                original_tag = NCR
-                has_government = people
-            }
-           PREV = { set_variable = { target_country = PREV.id } }
-        }
-        add_to_war = { targeted_alliance = ERB enemy = var:target_country hostility_reason = asked_to_join }
-            }
                 }
+            }
+            add_to_faction = NCR
+        }
+        every_country = {
+            limit = {
+                and = { original_tag = NCR
+					 has_government = people 
+						}
+					}
+							}
+       ROOT = { add_to_war = { targeted_alliance = NCR enemy = PREV hostility_reason = asked_to_join }  }
+    }
+	}
 
 country_event = {#77 - The Democracy Question
 	id = enc_reformers.77
