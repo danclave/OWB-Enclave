@@ -102,6 +102,7 @@ ENC_infiltrating_NCR = {
 			has_completed_focus = enc_infiltrate_ncr
 			has_country_flag = enc_bishop_in_NCR
 		}
+		NCR = { exists = YES }
 	}
 }
 
@@ -140,6 +141,24 @@ ENC_Treaty_Hoover_Dam = {
 			}	
 }
 
+ENC_california_reconstruction = {
+	allowed = { tag = ERB }
+	visible = {	has_completed_focus = enc_rebuilding_california	}	
+}
+
+ENC_northwest_reconstruction = {
+	allowed = { tag = ERB }
+	visible = {	has_completed_focus = enc_rebuilding_pacific_commonwealth }	
+}
+
+ENC_rockies_reconstruction = {
+	allowed = { tag = ERB }
+	visible = {	has_completed_focus = enc_rebuilding_rockies }	
+}
+ENC_starting_companies = {
+	allowed = { tag = ERB }
+	visible = {	has_completed_focus = enc_prewar_corporations }	
+}
 # ##############################
 # ICONS
 # ##############################

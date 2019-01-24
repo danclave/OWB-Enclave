@@ -1580,46 +1580,46 @@ country_event = {#74 - Civil War
 	}
 }
 country_event = {#75 - Civil War
-	id = enc_reformers.75
-	title = enc_reformers.75.t
-	desc = enc_reformers.75.d
-	picture = GFX_event_ENC_single_soldier
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {#	aid
-		name = enc_reformers.75.a
-		complete_national_focus = enc_our_new_ally
-		if = {
-			limit = {
-				is_in_faction = no
-			}
-			create_faction = "The Enclave"
-			NCR = { 
-				if = { 
-					limit = { is_in_faction = yes } 
-					leave_faction = yes 	
-				}
-				}
-			add_to_faction = NCR
-			}
-		}
-		else_if = {
-			limit = {
-				is_in_faction = yes
-			}
-			NCR = { 
-				if = { 
-					limit = { is_in_faction = yes } 
-					leave_faction = yes 	
-				}
-				}
-			add_to_faction = NCR
-			}
-		add_to_war = {
-			targeted_alliance = NCR
-			enemy = D01
-			hostility_reason = asked_to_join
-		}
+    id = enc_reformers.75
+    title = enc_reformers.75.t
+    desc = enc_reformers.75.d
+    picture = GFX_event_ENC_single_soldier
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = { #aid
+        name = enc_reformers.75.a
+        complete_national_focus = enc_our_new_ally
+        if = {
+            limit = { is_in_faction = no }
+            create_faction = "The Enclave"
+            NCR = { 
+                if = { 
+                    limit = { is_in_faction = yes } 
+                    leave_faction = yes     
+                }
+            }
+            add_to_faction = NCR
+        }
+        else_if = {
+            limit = { is_in_faction = yes }
+            NCR = { 
+                if = { 
+                    limit = { is_in_faction = yes } 
+                    leave_faction = yes     
+                }
+            }
+            add_to_faction = NCR
+        }
+        every_country = {
+            limit = {
+                and = { original_tag = NCR
+					 has_government = people 
+						}
+					}
+							}
+       ROOT = { add_to_war = { targeted_alliance = NCR enemy = PREV hostility_reason = asked_to_join }  }
+    }
 	}
 
 country_event = {#77 - The Democracy Question
@@ -1646,6 +1646,7 @@ country_event = {#78 - Arcade Gannon
 	picture = GFX_event_Arcade_Gannon_Enclave
 	fire_only_once = yes
 	is_triggered_only = no
+	mean_time_to_happen = {	days = 7 }
 	trigger = {		
 		check_variable = {
 			var = legitimacy
@@ -1670,13 +1671,9 @@ country_event = {#79 - Ulysses
 	trigger = {
 		tag = ERB
 		has_completed_focus = enc_americans_one_and_all
-		check_variable = {
-			var = legitimacy
-			value > 79.99
 		}
-	}
 	mean_time_to_happen = {
-		days = 25
+		days = 15
 	}
 	option = {#	Yayy!!!
 		name = enc_reformers.79.a
@@ -2150,10 +2147,10 @@ country_event = {#101 Axis of Evil
     id = enc_reformers.101
     title = enc_reformers.101.t
     desc = enc_reformers.101.d
-    picture = GFX_event_CES_camp_1
+    picture = GFX_event_ENC_plasma_rifle
     fire_only_once = yes    
     is_triggered_only = yes
-    option = {# Bringit
+	option = {# Bringit
 		name = enc_reformers.101.a
 			WBH = { 
 				if = { 
@@ -2216,10 +2213,13 @@ country_event = {#101 Axis of Evil
 					}
 				}
 							
-		set_global_flag = axis_of_evil
-	custom_effect_tooltip = enc_reformers.101.a.tt
+	CES = { declare_war_on = {
+					target = ERB
+					type = annex_everything
+			} }
+
 	hidden_effect = {
-			country_event = { id = enc_reformers.103 days = 180 }		
+			country_event = { id = enc_reformers.102 days = 30 }		
 		}
 }
 }
@@ -2230,13 +2230,8 @@ country_event = {#102 Hope
     desc = enc_reformers.102.d
     picture = GFX_event_enc_lincoln_memorial
     fire_only_once = yes    
-    is_triggered_only = no
-	mean_time_to_happen = {	days = 30 }
-	trigger = {	
-	has_global_flag = axis_of_evil
-	has_country_flag = enc_arroyo	
-	}	    
-    option = {# Bringit
+    is_triggered_only = yes
+	option = {# Bringit
 		name = enc_reformers.102.a
 		dismantle_faction = yes
 		create_faction = "The United States"
@@ -2439,17 +2434,13 @@ country_event = {#105 Brahmin Barons
 	}
 	option = {#	Easter Egg
 		name = enc_reformers.105.a
-		set_technology = {
-			plasma_weaponry = 1
-		}
-		add_ideas = ENC_energy_production
+		add_stability = -0.05
+		add_ideas = ENC_smuggling 
 	}
 	option = {#	Easter Egg
 		name = enc_reformers.105.b
-		set_technology = {
-			plasma_weaponry = 1
-		}
-		add_ideas = ENC_energy_production
+		add_manpower = -500
+		add_war_support = -0.05
 	}
 	option = {#	Easter Egg
 		name = enc_reformers.105.c
@@ -2479,12 +2470,7 @@ country_event = {#107 Nuka Cola
 	desc = enc_reformers.107.d
 	picture = GFX_event_enc_nuka_cola
 	fire_only_once = yes
-	is_triggered_only = no
-	trigger = {
-		has_completed_focus = enc_reform
-		date > 2298.3.10
-	}	
-	mean_time_to_happen = {	days = 400 }
+	is_triggered_only = yes
 	option = {#	Jet
 		name = enc_reformers.107.a
 		trigger = { has_country_flag = enc_drugs }
@@ -2569,7 +2555,6 @@ country_event = {#109 The Liberation of Hoover Dam
 	fire_only_once = yes
 	is_triggered_only = no
 	trigger = {
-		has_global_flag = enc_ces_dam
 		tag = ERB
 		252 = { is_controlled_by = ERB }
 		ERB = { has_war_with = CES }
@@ -2577,6 +2562,7 @@ country_event = {#109 The Liberation of Hoover Dam
 	mean_time_to_happen = {	days = 15 }
 	option = {#	Yayy
 		name = enc_reformers.109.a
+		trigger = { has_global_flag = enc_ces_dam }
 		252 = {
 				add_resource = {
 					type = electricity
@@ -2602,6 +2588,9 @@ country_event = {#109 The Liberation of Hoover Dam
 			}
 		clr_global_flag = enc_ces_dam
 	}
+		option = {#	Yayy
+		name = enc_reformers.109.a
+			}
 		}		
 country_event = {#110 - BOS Legionaries
 	id = enc_reformers.110
@@ -2821,29 +2810,24 @@ country_event = {#114 - Election!
 		name = enc_reformers.114.b
 	trigger = { has_completed_focus = enc_NEW_puppet }
 	create_country_leader  = {
-	name = "Mr House"
-	desc = "MR_HOUSE_DESC"
-	picture = "gfx/leaders/VEG/Portrait_House.dds"
-	expire = "3000.1.1"
-	ideology = ideocracy
-	traits = {
-		dislikes_legion
-			}
-			}
+		name = "Mr House"
+		desc = "MR_HOUSE_DESC"
+		picture = "gfx/leaders/VEG/Portrait_House.dds"
+		expire = "3000.1.1"
+		ideology = ideocracy
+		traits = { dislikes_legion }
+							}
 			}	
 	option = {#	Hayes
 	name = enc_reformers.114.c
-	trigger = {
-	controls_state   = 253 }
+	trigger = { controls_state   = 253 }
 	create_country_leader = {
-	name = "Grant C. Hayes"
-	desc = "Hayes_DESC"
-	picture = "gfx/leaders/ENC/.dds"
-	expire = "3000.1.1"
-	ideology = ideocracy
-	traits = {
-		
-			}		
+		name = "Grant C. Hayes"
+		desc = "Hayes_DESC"
+		picture = "gfx/leaders/Portrait_Hayes.dds"
+		expire = "3000.1.1"
+		ideology = ideocracy
+			traits = {	}		
 }
 }
 option = {#	Lynette
@@ -2852,7 +2836,7 @@ option = {#	Lynette
 	name = "First Citizen Lynette"
 	id = 910
 	desc = "POLITICS_CITIZEN_DESC"
-	picture = "gfx/leaders/Vault/Portrait_first_citizen.dds"
+	picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
 	expire = "3000.1.1"
 	ideology = ideocracy
 	traits = {
@@ -2909,17 +2893,13 @@ option = {#	Marcus
 country_event = {#115 Axis of Evil
     id = enc_reformers.115
     title = enc_reformers.115.t
-    desc = enc_reformers.1151.d
+    desc = enc_reformers.115.d
     picture = GFX_event_CES_camp_1
     fire_only_once = yes    
     is_triggered_only = no
 	trigger = {	
 		tag = ERB 
 		is_neighbor_of = CES
-		strength_ratio = {
-			tag = CES
-			ratio < 0.6
-		}
 		NOT = {
 			country_exists = NCR
 		}
@@ -2928,10 +2908,12 @@ country_event = {#115 Axis of Evil
 	mean_time_to_happen = {	days = 3 }
     option = {# Bringit
 	name = enc_reformers.115.a
+	custom_effect_tooltip = enc_reformers.115.a.tt	
 	CES = {give_guarantee = WBH } 
 	WBH = { give_guarantee = CES } 
 	CES = { give_guarantee = EHT } 
-	EHT = {give_guarantee = CES } 
+	EHT = {give_guarantee = CES }
+	set_country_flag = ENC_axis_evil
 		}
 }
 country_event = {#117 Helios One
@@ -2999,29 +2981,25 @@ country_event = {#119 NCR
     picture = GFX_event_enc_endNCR
     fire_only_once = yes    
     is_triggered_only = no
-	trigger = {	
-		And = { NOT = { country_exists = NCR }	
-		has_completed_focus = enc_expand_human_definition
-		controls_state = 253 }
-	}
+	trigger = { 
+		ERB = { has_war_with = CES } 
+			}
 	mean_time_to_happen = {	days = 3 }
     option = {# Ow!
-	name = enc_reformers.119.a
-	add_stability = -0.05
-		}
-	 option = {# Yuck Yuck!
-	name = enc_reformers.119.b
-	custom_effect_tooltip = enc_reformers.118.b.tt	
-	trigger = { has_country_flag = leader_charismatic 	}
-	add_stability = 0.05		
-	add_war_support = -0.05
+		name = enc_reformers.119.a
+		add_stability = -0.05
+				}
+	option = {# Yuck Yuck!
+		name = enc_reformers.119.b
+		custom_effect_tooltip = enc_reformers.118.b.tt	
+		trigger = { has_country_flag = leader_charismatic 	}
+		add_stability = 0.05		
+		add_war_support = -0.05
 		 		}
 	option = {# Evil
-	name = enc_reformers.119.c
-	custom_effect_tooltip = enc_reformers.119.c.tt
-	trigger = {
-			has_country_flag = leader_ruthless
-			}
+		name = enc_reformers.119.c
+		custom_effect_tooltip = enc_reformers.119.c.tt
+		trigger = { has_country_flag = leader_ruthless 	}
 		add_stability = 0.05
 		add_manpower = -500
 	 		}
@@ -3193,18 +3171,18 @@ country_event = {#122
  		}
 	option = {# Evil
 	name = enc_reformers.122.c
-	custom_effect_tooltip = enc_reformers.122.c.tt	
 	add_tech_bonus = {
 				name = electronics_bonus
 				bonus = 0.5
 				uses = 2
 				category = electronics
 			}
-	add_stability = 0.05	
-	 		}			
+	add_stability = 0.05
+		}			
 	option = {# Evil
 	name = enc_reformers.122.e
 	trigger = { has_country_flag = leader_ruthless }
+	custom_effect_tooltip = enc_reformers.122.e.tt	
 	add_ideas = Enc_Think_Tank
 	 		}				
 }
@@ -3409,7 +3387,527 @@ country_event = {# Home is Nevada
 	option = {#
 		name = enc_reformers.131.a
 			}	
+	}
+country_event = {# Rocket's Red Glare
+    id = enc_reformers.132
+	title = enc_reformers.132.t
+	desc = enc_reformers.132.d
+	picture = GFX_enc_rockets_red_glare
+	fire_only_once = yes
+	is_triggered_only = yes	
+	option = {#
+		name = enc_reformers.132.a
+		country_event = { id = enc_reformers.133 }}			
+	option = {#
+		name = enc_reformers.132.b
+		trigger = {has_completed_focus = enc_accept_ghouls}
+		country_event = { id = enc_reformers.133 }	
+			}	
 	}			
+	
+country_event = {# Space Station
+    id = enc_reformers.133
+	title = enc_reformers.133.t
+	desc = enc_reformers.133.d
+	picture = GFX_enc_crashed_station
+	fire_only_once = yes
+	is_triggered_only = yes	
+	option = {#
+		name = enc_reformers.133.a
+		add_ideas = ENC_satellites
+	}	
+	}
+country_event = {# The Boneyard
+    id = enc_reformers.134
+	title = enc_reformers.134.t
+	desc = enc_reformers.134.d
+	picture = GFX_event_generic_settlement_1
+	fire_only_once = yes
+	is_triggered_only = yes	
+	option = {#
+		name = enc_reformers.134.a
+		350 = {
+				set_state_name = "Los Angeles" 
+				add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+				
+	}	
+	}
+	option = {#
+		name = enc_reformers.134.b
+		350 = {
+				set_state_name = "The Boneyard" 
+				add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+				
+	}	
+	}
+option = {#
+		name = enc_reformers.134.c
+		350 = {
+				set_state_name = "The City of Angels"
+				add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+				
+	}	
+	}			
+	}
+country_event = {#135 BOS
+    id = enc_reformers.135
+    title = enc_reformers.135.t
+    desc = enc_reformers.135.d
+    picture = GFX_event_MOJ_contact_the_west
+    fire_only_once = yes    
+    is_triggered_only = yes
+	
+    option = {# Ow!
+	name = enc_reformers.135.a
+	add_stability = -0.05
+		}
+	 option = {# Yuck Yuck!
+	name = enc_reformers.135.b
+	custom_effect_tooltip = enc_reformers.118.b.tt	
+	trigger = { has_country_flag = leader_charismatic 	}
+	add_stability = -0.-5		
+	add_manpower = 400
+		 		}
+	option = {# Evil
+	name = enc_reformers.135.c
+	custom_effect_tooltip = enc_reformers.119.c.tt
+	add_stability = 0.05
+	add_manpower = -100
+	 		}
+	}
+
+country_event = {#136 Helios_two
+    id = enc_reformers.136
+	title = enc_reformers.136.t
+	desc = enc_reformers.136.d
+	picture = GFX_event_enc_Helios_one
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			name = enc_reformers.136.a
+		63 = {
+			add_resource = {
+					type = fuel
+					amount = 15
+				}	
+				add_resource = {
+					type = electricity
+					amount = 15
+				}				  
+			}
+		}	
+		
+				}
+country_event = {#137 Hanford
+    id = enc_reformers.137
+	title = enc_reformers.137.t
+	desc = enc_reformers.137.d
+	picture = GFX_event_enc_powerplant_on
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			name = enc_reformers.137.a
+		351 = {
+			add_resource = {
+					type = fuel
+					amount = 5
+				}	
+				add_resource = {
+					type = electricity
+					amount = 5
+				}				  
+			}
+		add_manpower = -50	
+		}
+	option = {#	Yayy
+			name = enc_reformers.137.b
+		trigger = { has_completed_focus = enc_accept_ghouls }
+		custom_effect_tooltip = enc_reformers.137.b.tt	
+		351 = {
+			add_resource = {
+					type = fuel
+					amount = 10
+				}	
+				add_resource = {
+					type = advanced_technology
+					amount = 10
+				}				  
+			}
+		}
+	option = {#	Yayy
+			name = enc_reformers.137.c
+		351 = {
+			add_resource = {
+					type = fuel
+					amount = 10
+				}	
+				add_resource = {
+					type = advanced_technology
+					amount = 10
+				}				  
+			}
+		}	
+	}		
+country_event = {#138 Maw
+    id = enc_reformers.138
+	title = enc_reformers.138.t
+	desc = enc_reformers.138.d
+	picture = GFX_event_BRK_wasteland_boat_militia
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			name = enc_reformers.138.a
+			37 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+		}
+		}
+option = {#	Yayy
+			name = enc_reformers.138.b
+			trigger = { has_country_flag = leader_ruthless }
+			37 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+									}
+				}
+			add_stability = -0.05
+			add_tech_bonus = {
+				name = naval_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}	
+		}
+option = {#	Yayy
+			name = enc_reformers.138.c
+				trigger = { has_country_flag = leader_charismatic }
+				37 = {
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = dockyard
+							level = 2
+							instant_build = yes
+													}
+					}
+				add_stability = -0.05	
+				add_ideas = brk_naval_range
+				add_manpower = 1500
+		}		
+		}
+country_event = {#139 Mutants
+    id = enc_reformers.139
+	title = enc_reformers.139.t
+	desc = enc_reformers.139.d
+	picture =  GFX_event_BOS_super_mutant
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			trigger = {has_completed_focus = enc_accept_super_mutants}
+			name = enc_reformers.139.a
+			custom_effect_tooltip = enc_reformers.139.tt
+			add_stability = -0.05
+		235 = { 
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			}	
+		}
+	option = {#	Yayy
+			name = enc_reformers.139.b
+			add_manpower = -200
+			235 = { add_manpower = -4000 
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+			}
+		}
+option = {#	Yayy
+			name = enc_reformers.139.c
+		trigger = { has_country_flag = leader_ruthless }
+			235 = { 
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}		
+		}		
+	}	
+country_event = {#140 Washington Brotherhood
+    id = enc_reformers.140
+	title = enc_reformers.140.t
+	desc = enc_reformers.140.d
+	picture =  GFX_event_enc_seattle
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			name = enc_reformers.140.a
+			add_resource = { type = advanced_technology amount = 5 state = 84 }
+			add_resource = { type = electronics amount = 5 state = 84 }
+		}
+option = {#	Yayy
+			name = enc_reformers.140.b
+			trigger = {has_country_flag = leader_charismatic }
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+option = {#	Yayy
+			name = enc_reformers.140.c
+		trigger = {
+			has_country_flag = leader_ruthless }
+			add_ideas = genericbosdarkfoundries
+		}	
+		}		
+		
+
+country_event = {#141 Alaska
+    id = enc_reformers.141
+	title = enc_reformers.141.t
+	desc = enc_reformers.141.d
+	picture =  GFX_event_WBH_alaska_expedition_pods
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			name = enc_reformers.141.a
+		}
+		}
+
+country_event = {#142 Vault Tec
+    id = enc_reformers.142
+	title = enc_reformers.142.t
+	desc = enc_reformers.142.d
+	picture =  GFX_event_enc_vault
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			name = enc_reformers.142.a
+			add_ideas = enc_vaults
+		}
+option = {#	Yayy
+			name = enc_reformers.142.b
+			add_ideas = scavenge_vaults
+		}
+	
+		}			
+
+country_event = {#143 Journey West
+    id = enc_reformers.143
+	title = enc_reformers.143.t
+	desc = enc_reformers.143.d
+	picture =  GFX_event_enc_ship
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+		trigger = {has_country_flag = enc_China_Town}	
+		name = enc_reformers.143.a
+		country_event = { id = enc_reformers.144 }
+		}
+option = {#	Yayy
+			name = enc_reformers.143.b
+			country_event = { id = enc_reformers.148 }
+		}
+	}		
+	
+country_event = {#144 Journey West
+    id = enc_reformers.144
+	title = enc_reformers.144.t
+	desc = enc_reformers.144.d
+	picture =  GFX_event_china_poster
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			name = enc_reformers.144.a
+		country_event = { id = enc_reformers.145 }
+
+		}
+option = {#	Yayy
+			name = enc_reformers.144.b
+			country_event = { id = enc_reformers.147 }
+			
+		}	
+	}
+country_event = {#145 Journey Home
+    id = enc_reformers.145
+	title = enc_reformers.145.t
+	desc = enc_reformers.145.d
+	picture =  GFX_event_enc_ship
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			name = enc_reformers.145.a
+			add_ideas = { enc_trade_tea}
+				}
+option = {#	Yayy
+			name = enc_reformers.145.b
+			country_event = { id = enc_reformers.146 }
+			
+		}	
+	}	
+country_event = {#146 Journey West
+    id = enc_reformers.146
+	title = enc_reformers.146.t
+	desc = enc_reformers.146.d
+	picture =  GFX_event_ENC_double_flag_long
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			name = enc_reformers.146.a
+		}
+}
+country_event = {#147 War
+    id = enc_reformers.147
+	title = enc_reformers.147.t
+	desc = enc_reformers.147.d
+	picture =  GFX_event_ENC_double_flag_long
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			name = enc_reformers.147.a
+		}
+}
+country_event = {#148 No Shi
+    id = enc_reformers.148
+	title = enc_reformers.148.t
+	desc = enc_reformers.148.d
+	picture =  GFX_event_china_poster
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			trigger = { has_completed_focus = enc_accept_ghouls }
+			name = enc_reformers.148.b
+						country_event = { id = enc_reformers.149 }
+
+		}
+	option = {#	Yayy
+			name = enc_reformers.148.a
+			country_event = { id = enc_reformers.147 }
+		}	
+}
+country_event = {#149 No Shi-Peace
+    id = enc_reformers.149
+	title = enc_reformers.149.t
+	desc = enc_reformers.149.d
+	picture =  GFX_event_china_poster
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			
+			name = enc_reformers.149.a
+						add_ideas = { enc_trade_tea}
+
+		}
+	option = {#	Yayy
+			name = enc_reformers.149.b
+			country_event = { id = enc_reformers.146 }
+		}	
+}
+country_event = {#150
+    id = enc_reformers.150
+	title = enc_reformers.150.t
+	desc = enc_reformers.150.d
+	picture =  GFX_event_enc_nature
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			name = enc_reformers.150.a
+					trigger = { has_country_flag = leader_charismatic }
+					add_ideas = ENC_terraforming
+		}
+	option = {#	Yayy
+			name = enc_reformers.150.b
+			}
+	option = {#	Yayy
+			name = enc_reformers.150.c
+			country_event = { id = enc_reformers.146 }
+				trigger = { has_country_flag = leader_ruthless }
+			add_ideas = ENC_terraforming
+		}			
+}
+country_event = {#151 New Canaan
+    id = enc_reformers.151
+	title = enc_reformers.151.t
+	desc = enc_reformers.151.d
+	picture =  GFX_event_NCN_new_canaan
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			name = enc_reformers.151.a
+			release = NCN 
+			puppet = NCN
+			NCN = { set_cosmetic_tag = ncn_deseret }
+			add_stability = -0.05
+			}
+	option = {#	Yayy
+			name = enc_reformers.151.b
+			add_manpower = -2000
+			
+			}
+	option = {#	Yayy
+			name = enc_reformers.151.c
+			add_manpower = -500
+			551 = { add_manpower = -4000 }
+		}
+	option = {#	Yayy
+			name = enc_reformers.151.e
+			add_stability = -0.10
+			add_manpower = -100
+			add_war_support = -0.05
+		}			
+}
+country_event = {#152 cars
+    id = enc_reformers.152
+	title = enc_reformers.152.t
+	desc = enc_reformers.152.d
+	picture =  GFX_event_enc_cars
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {#	Yayy
+			name = enc_reformers.152.a
+		160 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}	
+			}
+	
+}														
 # integration
 #
 

@@ -632,7 +632,7 @@ focus_tree = {
 		y = 0
 		prerequisite = { focus = enc_reform } 
 		completion_reward = {
-			add_ideas = ENC_radio
+			add_ideas = { ENC_radio }
 			159 = {
 				add_building_construction = {
 					type = radar_station
@@ -669,7 +669,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = enc_radio_military } 
 		completion_reward = {
-			add_ideas = ENC_NCR_code_cracked
+			add_ideas = { ENC_NCR_code_cracked }
 		}
 		cost = 5.8  	
 	}
@@ -682,13 +682,15 @@ focus_tree = {
 		x = -1
 		y = 1
 		prerequisite = { focus = enc_crack_the_code } 
+		mutually_exclusive = { focus = enc_the_bishop_incident}
 		completion_reward = {
 			custom_effect_tooltip = enc_the_lucia_incident_tt
 		}
 		cost = 5.8  	
 	}
 	focus = {#RADIO - the_bishop_incident 
-		id = enc_the_bishop_incident 
+		id = enc_the_bishop_incident
+		mutually_exclusive = { focus = enc_the_lucia_incident }		
 		icon = GFX_goal_enc_rangers
 		ai_will_do = { factor = 1 }
 		mutually_exclusive = {focus = enc_the_lucia_incident}
@@ -696,10 +698,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		prerequisite = { focus = enc_crack_the_code } 
+		cost = 5.8  	
 		completion_reward = {
 			custom_effect_tooltip = enc_the_bishop_incident_tt
 		}
-		cost = 5.8  	
 	}
 	
 	focus = {#RADIO - Enclave civilian
@@ -904,7 +906,7 @@ focus_tree = {
 		mutually_exclusive = { focus = enc_VLT_raiders }
 		prerequisite = { focus = enc_expansion_reform }		
 		bypass = {
-			has_full_control_of_state = 291 # vlt city
+			has_full_control_of_state = 291 
 		}	
 		completion_reward = { 
 			custom_effect_tooltip = enc_vlt_annex_tt
@@ -929,7 +931,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		bypass = {
-			has_full_control_of_state = 291 # VLT city			
+			has_full_control_of_state = 291 			
 		}
 		mutually_exclusive = { focus = enc_VLT_force }
 		prerequisite = { focus = enc_expansion_reform }
@@ -1006,6 +1008,7 @@ focus_tree = {
 				enc_civilian_power_grid_tech = 1	
 			}
 			custom_effect_tooltip = enc_rebuild_the_power_grid_tt
+			clr_country_flag = not_allowed_to_core_flag
 		}
 		cost = 5.8
  }
@@ -1122,7 +1125,7 @@ focus_tree = {
 			}
 			change_legitimacy = yes
 			add_stability = 0.10
-			add_ideas = ENC_presidential_powers
+			add_ideas = { ENC_presidential_powers }
 		}
 	}
   	focus = {#REForM - silence congress
@@ -1633,6 +1636,7 @@ focus_tree = {
 		icon = GFX_goal_enc_us_reborn
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_the_mutant_question
+		mutually_exclusive = { focus = enc_NCR_start } 
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = max_legitimacy		
@@ -1642,7 +1646,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = 12
+		x = 16
 		y = 0
 		cost = 5.8
 		completion_reward = {
@@ -1657,7 +1661,7 @@ focus_tree = {
 		prerequisite = { focus = enc_old_world }
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_old_world
-		x = 4
+		x = 5
 		y = 1
 		cost = 5.8
 		completion_reward = {
@@ -1677,9 +1681,23 @@ focus_tree = {
 			add_ideas = ENC_Department_Manufacturing
 		}
 	}
+		focus = {#REBorN - Automobiles
+		id = enc_automobiles
+		icon = GFX_goal_NCR_Long15
+		prerequisite = {focus = enc_department_of_manufacturing}
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_department_of_manufacturing
+		x = 0
+		y = 1
+		cost = 5.8 
+		completion_reward = {
+		add_stability = 0.05
+		country_event = { id = enc_reformers.152 }
+		}
+	}
 	focus = {#REBorN - Department of Energy
 		id = enc_department_of_energy
-		icon = GFX_goal_generic_electricity_focus
+		icon = GFX_goal_enc_electricity
 		prerequisite = { focus = enc_department_of_commerce }
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_department_of_commerce
@@ -1690,21 +1708,170 @@ focus_tree = {
 		add_ideas = ENC_Dept_Energy
 		}
 	}
-	focus = {#REBorN - Power to the People
-		id = enc_power_to_the_people 
-		icon = GFX_goal_enc_electricity
-		prerequisite = { focus = enc_department_of_energy }
-		ai_will_do = { factor = 1 }
+		focus = {#REBorN - Daytime
+		id = enc_helios_two
+		icon = GFX_goal_moj_energy_boom
+		prerequisite = {focus = enc_department_of_energy}
+		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_department_of_energy
 		x = 0
 		y = 1
-		cost = 5.8
+		cost = 5.8 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = ENC_Dept_Energy
-				add_idea = ENC_electrification
-			}			
+		custom_effect_tooltip = enc_reconstruction.tt 	
 		}
+	}
+	focus = {#REBorN - rebuilding america
+		id = enc_rebuild_railway
+		icon = GFX_goal_enc_construction_usa
+		prerequisite = {focus = enc_helios_two}
+		prerequisite = {focus = enc_automobiles}
+		relative_position_id = enc_helios_two
+		ai_will_do = { factor = 1 }
+		available = { 84 = { is_owned_and_controlled_by = ERB }
+		350 = { is_owned_and_controlled_by = ERB } }
+		x = -1
+		y = 1
+		cost = 5.8 
+		completion_reward = {
+		custom_effect_tooltip = enc_rebuild_railway.tt
+		hidden_effect = {350 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }
+		396 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }
+		258 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }
+		64 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		558 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		243 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		104 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		463 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		474 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }
+		216 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		340 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		39 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		353 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }
+		340 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		39 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		353 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }	
+		239 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		32 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		86 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }
+		358 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		186 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }			
+		192 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }
+		23 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		7 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }
+		556 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }
+		61 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+		84 = {add_building_construction = { 
+					type = infrastructure 
+					level = 2
+					instant_build = yes 
+				} }		
+				}
+			}
 	}
 	focus = {#REBorN - Department of Education
 		id = enc_department_of_education
@@ -1719,43 +1886,32 @@ focus_tree = {
 		add_ideas = Enc_Dept_Education	
 		}
 	}
-	focus = {#REBorN - Department of Education - Military
-		id = enc_department_of_education_military 
-		icon = GFX_goal_enc_education_military
-		prerequisite = { focus = enc_department_of_education }
-		mutually_exclusive = { focus = enc_department_of_education_civilian }
-		ai_will_do = { factor = 1 }
+	focus = {#REBorN - Bloomfield
+		id = enc_bloomfield
+		icon = GFX_goal_enc_rocket_reform
+		prerequisite = {focus = enc_department_of_education }
+		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_department_of_education
-		x = -1
+		x = 0
 		y = 1
-		cost = 5.8
+		cost = 5.8 
 		completion_reward = {
-			army_experience = 50
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = land_doctrine 
-			}
+		country_event = { id = enc_reformers.132 }
 		}
 	}
-	focus = {#REBorN - Department of Education - Civilian
-		id = enc_department_of_education_civilian
-		icon = GFX_goal_enc_education_civilian
-		prerequisite = { focus = enc_department_of_education }
-		mutually_exclusive = { focus = enc_department_of_education_military }
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_department_of_education
-		x = 1
+		focus = {#REBorN - Prewar Corporations
+		id = enc_prewar_corporations
+		icon = GFX_goal_bos_repconn_hq
+		prerequisite = {focus = enc_bloomfield }
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_bloomfield
+		x = 0
 		y = 1
-		cost = 5.8
+		cost = 5.8 
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 2
-				category = electronics
-			}
+		custom_effect_tooltip = enc_prewar_corporations.tt 	
 		}
-	}
+		}
 
 	focus = {#REBorN - The Federal Reserve
 		id = enc_federal_reserve
@@ -1831,6 +1987,7 @@ focus_tree = {
 		country_event = { id = enc_reformers.82 } 	
 		}
 	}
+	
 	focus = {#REBorN - The EPA
 		id = enc_epa
 		icon = GFX_goal_enc_epa
@@ -1855,6 +2012,19 @@ focus_tree = {
 		cost = 5.8
 		completion_reward = {
 			country_event = { id = enc_reformers.80 }
+		}
+	}
+	focus = {#REBorN - Using Vaults
+		id = enc_refurbish_vaults
+		icon = GFX_goal_enc_vault_tec
+		prerequisite = {focus = enc_rebuilding_california }
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_rebuilding_california
+		x = 0
+		y = 2
+		cost = 5.8 
+		completion_reward = {
+		country_event = { id = enc_reformers.142 }
 		}
 	}
 	focus = {#REBorN - Department of Justice
@@ -1884,7 +2054,81 @@ focus_tree = {
 		add_ideas = ENC_FBI
 		}
 	}
+	
+	
 
+		focus = {#REBorN - Rebuilding California
+		id = enc_rebuilding_california
+		icon = GFX_goal_NCR_Mayoral_Victory_Speech
+		prerequisite = {focus = enc_old_world }
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_old_world 
+		x = -7
+		y = 1
+		cost = 5.8 
+		completion_reward = {
+		custom_effect_tooltip = enc_rebuilding_california.tt 	
+		}
+		}
+	
+		
+	
+focus = {#Rebuilding-Northwest
+		id = enc_rebuilding_pacific_commonwealth
+		icon = GFX_goal_enc_pacific_commonwealth
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_rebuilding_california
+		x = -1
+		y = 1
+		cost = 5.8 
+		prerequisite = { focus = enc_rebuilding_california }
+		completion_reward = {
+		custom_effect_tooltip = enc_rebuilding_pacific_commonwealth.tt
+			 }
+	}
+focus = {#Rebuilding-Rockies
+		id = enc_rebuilding_rockies
+		icon = GFX_goal_NCN_Kingdom_of_God
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_rebuilding_california
+		x = 1
+		y = 1
+		cost = 5.8 
+		prerequisite = { focus = enc_rebuilding_california }
+		completion_reward = {
+		custom_effect_tooltip = enc_rebuilding_rockies.tt
+							}
+		}
+		
+focus = {#China
+		id = enc_China
+		icon = GFX_goal_enc_threat_of_communism
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_rebuilding_california
+		x = 5
+		y = 3
+		cost = 5.8 
+		prerequisite = { focus = enc_rebuilding_california }
+		prerequisite = { focus = enc_refurbish_vaults }
+		prerequisite = { focus = enc_police }
+		completion_reward = {
+		country_event = { id = enc_reformers.143 }
+							}
+		}
+focus = {#Reunited
+		id = enc_reunited_states
+		icon = GFX_goal_map_us
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_China
+		prerequisite = { focus = enc_China}
+
+		x = 0
+		y = 1
+		cost = 1 
+		completion_reward = {
+		custom_effect_tooltip = enc_reunited_states.tt
+							}
+		}	
  	####################################
 	# DIPLOMACY
 	####################################
@@ -2092,6 +2336,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = { custom_effect_tooltip = enc_Civil_War.tt
+		set_rule = {can_be_called_to_war = yes} 
+		
 		} 
 	}
 	focus = {#Diplomacy - NCR - electoral victory
@@ -2147,7 +2393,7 @@ focus_tree = {
 		}	
 		prerequisite = { focus = enc_the_state_of_nevada }	
 		available = {
-		strength_ratio = { tag = DES ratio > 1.5 }
+		strength_ratio = { tag = DES ratio > 1.0 }
 			custom_trigger_tooltip = {
 				tooltip = 25_legitimacy		
 				check_variable = {
@@ -2160,7 +2406,7 @@ focus_tree = {
 		annex_country = { target = DES }
 		}
 		}
-	focus = {#	discredit the rangers
+	focus = {# discredit the rangers
 		id = Enc_Discredit_Rangers
 		icon = GFX_goal_enc_rangers
 		ai_will_do = {
@@ -2180,7 +2426,7 @@ focus_tree = {
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = 25_legitimacy
+				tooltip = 25 _legitimacy
 				check_variable = {
 					var = legitimacy
 					value > 0.299
@@ -2198,7 +2444,7 @@ focus_tree = {
 			}
 			ERB = {
 				create_wargoal = {
-					type = annex_everything 
+					type = annex_everything
 					target = DES
 				}
 			}
@@ -2209,9 +2455,29 @@ focus_tree = {
 					value = 200
 				}
 			}
+			BOS = {
+				add_ai_strategy = {
+					type = ignore
+					id = "DES"
+					value = 200
+				}
+			}
+			DES = {
+				add_ai_strategy = {
+					type = ignore
+					id = "NCR"
+					value = 200
+				}
+			}
+			DES = {
+				add_ai_strategy = {
+					type = ignore
+					id = "BOS"
+					value = 200
+				}
+			}
 		}
 	}
-	
 	focus = {# area 51
 		id = enc_Area_51
 		icon = GFX_goal_enc_verti_reform
@@ -2453,13 +2719,10 @@ focus_tree = {
 		id = Enc_Second_City
 		icon = GFX_goal_VEG_The_Lucky_38
 		cost = 2
-		prerequisite = {
-			focus = Enc_Tearing_Down_House
-		}
 		available = { has_full_control_of_state = 211 }
-		relative_position_id = Enc_Tearing_Down_House
-		x = 0
-		y = 1
+		relative_position_id = enc_expansion_reform
+		x = 8
+		y = 0
 		completion_reward = {
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -3019,7 +3282,8 @@ focus_tree = {
 		prerequisite = { focus = enc_Baseball }
 		available = { has_completed_focus = Enc_Irrigation_Dam
 		has_completed_focus = enc_expand_human_definition
-		has_country_flag = integrated_economy }
+		has_country_flag = integrated_economy
+		CES = { exists = NO } }
 		completion_reward = {
 		country_event = { id = enc_reformers.124 } 
 		}			
@@ -3071,6 +3335,7 @@ focus_tree = {
 		icon = GFX_goal_bos_victory_or_death 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NCR_seak_allies
+		available = { BOS = { exists = yes } }
 		x = 2
 		y = 1
 		cost = 5.8 
@@ -3113,7 +3378,7 @@ focus_tree = {
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = enc_BOS_start }
-		available = {		
+		available = {	
 			country_exists = BOS
 			NOT = {
 				has_war_with = BOS
@@ -3133,6 +3398,7 @@ focus_tree = {
 		icon = GFX_goal_generic_dangerous_deal
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_BOS_tech
+		available = { BOS = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8 
@@ -3152,6 +3418,7 @@ focus_tree = {
 		icon = GFX_goal_generic_BoS_diplomatic_focus 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_BOS_peace
+		available = { BOS = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8 
@@ -3173,6 +3440,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 5.8 
+		available = { CES = { exists = yes } }
 		prerequisite = { focus = enc_NCR_seak_allies }
 		available = {		
 			country_exists = CES
@@ -3199,6 +3467,7 @@ focus_tree = {
 		icon = GFX_goal_generic_common_energy_weapons_focus 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_CES_start
+		available = { CES = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8 
@@ -3216,6 +3485,7 @@ focus_tree = {
 		icon = GFX_goal_legion_denarius 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_CES_cache
+		Available = { CES = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8 
@@ -3242,6 +3512,7 @@ focus_tree = {
 		icon = GFX_goal_generic_Legion_diplomatic_focus 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_CES_trade
+		available = { CES = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8 
@@ -3263,6 +3534,7 @@ focus_tree = {
 		icon = GFX_goal_VEG_The_House 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NCR_seak_allies
+		available = { VEG = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8
@@ -3292,6 +3564,7 @@ focus_tree = {
 		icon = GFX_goal_VEG_The_Ultra-Luxe 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NEW_start
+		available = { VEG = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8
@@ -3339,6 +3612,7 @@ focus_tree = {
 		icon = GFX_goal_VEG_Vegas_for_the_People 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NEW_robot
+		available = { VEG = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8
@@ -3364,6 +3638,7 @@ focus_tree = {
 		icon = GFX_goal_VEG_New_World_Order 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NEW_recognize
+		available = { VEG = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8
@@ -3381,6 +3656,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_alliance 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NEW_pact
+		available = { VEG = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8
@@ -3424,6 +3700,7 @@ focus_tree = {
 	}
 	focus = {#SS-CER-TOP-START
 		id = enc_ss_ceasar_top
+		mutually_exclusive = {focus = enc_ss_ceasar_bottom } 
 		icon = GFX_goal_legion_spqr
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_ss_ceasar_start}
@@ -3472,6 +3749,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	focus = {#SS-CER-BOTTOM-START
 		id = enc_ss_ceasar_bottom
 		icon = GFX_goal_legion_slaves
+		mutually_exclusive = {focus = enc_ss_ceasar_top } 
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_ss_ceasar_start}
 		relative_position_id = enc_ss_ceasar_start
@@ -3499,7 +3777,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 			}
 			change_legitimacy = yes
 		CES= {
-				add_ideas = ENC_CES_Slave_rebellions
+				add_ideas = ENC_CES_slave_rebellions
 			}
 	}
 	}
@@ -3760,6 +4038,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_military_equipment}
 		prerequisite = {focus = enc_wartime_draft}
+		mutually_exclusive = { focus = enc_advanced_training }
 		relative_position_id = enc_wartime_draft
 		x = 0
 		y = 1
@@ -3782,12 +4061,14 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	
 	focus = {#Military - quality - advanced_training
 		id = enc_advanced_training
+		exclusive = { focus = enc_enc_disciplined_soldiers }
 		icon = GFX_goal_enc_laser_weapons_reform
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_military_equipment}
 		prerequisite = {focus = enc_wartime_draft}
 		relative_position_id = enc_military_equipment
-		mutually_exclusive = { focus = enc_military_equipment }
+		mutually_exclusive = { focus = enc_disciplined_soldiers }
+		
 		x = 0
 		y = 1
 		cost = 3
@@ -3960,7 +4241,6 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		id = enc_national_guard
 		icon = GFX_goal_enc_accept_wastelanders
 		ai_will_do = { factor = 1 }
-		mutually_exclusive = { focus = enc_armed_militias }
 		prerequisite = { focus = enc_home_defense }
 		relative_position_id = enc_home_defense
 		x = 0
@@ -4377,6 +4657,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	}
 	focus = {#Purity - war with BOS
 		id = enc_war_with_bos
+		available = { has_completed_focus = enc_purity}
 		icon = GFX_goal_flag_burn_BOS 
 		ai_will_do = { factor = 1 } 
 		
@@ -4407,6 +4688,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		ai_will_do = { factor = 1 } 
 		
 		prerequisite = { focus = enc_war_with_bos }
+		available = { has_completed_focus = enc_purity}
 		relative_position_id = enc_war_with_bos		
 		x = 1
 		y = 1

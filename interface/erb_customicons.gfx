@@ -779,6 +779,10 @@ spriteTypes = {
             name = "GFX_goal_US_dock"
  		    texturefile = "gfx/interface/goals/US_dock.dds"
  	    } 
+		SpriteType = {#US_Map
+            name = "GFX_goal_map_us"
+ 		    texturefile = "gfx/interface/goals/map_us.dds"
+ 	    } 
         SpriteType = {#US_navy
             name = "GFX_goal_US_navy"
  		    texturefile = "gfx/interface/goals/US_navy.dds"
