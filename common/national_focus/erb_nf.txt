@@ -115,6 +115,14 @@ focus_tree = {
 					has_completed_focus = enc_reform
 				}				
 				set_country_flag = purists_purged
+				custom_effect_tooltip = purists_purged_tt
+			}
+			if = {
+				limit = {
+					has_completed_focus = enc_purity
+				}				
+				set_country_flag = reformers_purged
+				custom_effect_tooltip = reformers_purged_tt
 			}
 		}
  }
@@ -3335,7 +3343,6 @@ focus = {#Reunited
 		icon = GFX_goal_bos_victory_or_death 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NCR_seak_allies
-		available = { BOS = { exists = yes } }
 		x = 2
 		y = 1
 		cost = 5.8 
@@ -3398,7 +3405,6 @@ focus = {#Reunited
 		icon = GFX_goal_generic_dangerous_deal
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_BOS_tech
-		available = { BOS = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8 
@@ -3418,7 +3424,6 @@ focus = {#Reunited
 		icon = GFX_goal_generic_BoS_diplomatic_focus 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_BOS_peace
-		available = { BOS = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8 
@@ -3440,7 +3445,6 @@ focus = {#Reunited
 		x = -2
 		y = 1
 		cost = 5.8 
-		available = { CES = { exists = yes } }
 		prerequisite = { focus = enc_NCR_seak_allies }
 		available = {		
 			country_exists = CES
@@ -3467,7 +3471,6 @@ focus = {#Reunited
 		icon = GFX_goal_generic_common_energy_weapons_focus 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_CES_start
-		available = { CES = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8 
@@ -3485,7 +3488,6 @@ focus = {#Reunited
 		icon = GFX_goal_legion_denarius 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_CES_cache
-		Available = { CES = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8 
@@ -3512,7 +3514,6 @@ focus = {#Reunited
 		icon = GFX_goal_generic_Legion_diplomatic_focus 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_CES_trade
-		available = { CES = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8 
@@ -3534,15 +3535,14 @@ focus = {#Reunited
 		icon = GFX_goal_VEG_The_House 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NCR_seak_allies
-		available = { VEG = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_NCR_seak_allies }
 		available = {		
-			country_exists = NEW
+			country_exists = VEG
 			NOT = {
-				has_war_with = NEW
+				has_war_with = VEG
 			}					
 		}
 		completion_reward = {
@@ -3564,15 +3564,14 @@ focus = {#Reunited
 		icon = GFX_goal_VEG_The_Ultra-Luxe 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NEW_start
-		available = { VEG = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_NEW_start}
 		available = {		
-			country_exists = NEW	
+			country_exists = VEG	
 			NOT = {
-				has_war_with = NEW
+				has_war_with = VEG
 			}					
 		}
 		completion_reward = {
@@ -3590,9 +3589,9 @@ focus = {#Reunited
 		cost = 5.8
 		prerequisite = { focus = enc_NEW_vacation}
 		available = {		
-			country_exists = NEW	
+			country_exists = VEG	
 			NOT = {
-				has_war_with = NEW
+				has_war_with = VEG
 			}					
 		}
 		completion_reward = {
@@ -3612,15 +3611,14 @@ focus = {#Reunited
 		icon = GFX_goal_VEG_Vegas_for_the_People 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NEW_robot
-		available = { VEG = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_NEW_robot}
 		available = {		
-			country_exists = NEW	
+			country_exists = VEG	
 			NOT = {
-				has_war_with = NEW
+				has_war_with = VEG
 			}					
 		}
 		completion_reward = {
@@ -3638,7 +3636,6 @@ focus = {#Reunited
 		icon = GFX_goal_VEG_New_World_Order 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NEW_recognize
-		available = { VEG = { exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8
@@ -3952,7 +3949,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		y = 1
 		cost = 5.8
 		completion_reward = {
-		custom_effect_tooltip = enc_dayglow_proclamation
+			custom_effect_tooltip = enc_dayglow_proclamation
 		  }
 	}	
  

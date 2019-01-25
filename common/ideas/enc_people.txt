@@ -46,6 +46,9 @@ ideas = {
 			}		
 			ai_will_do = {
 				factor = 1
+			}			
+			visible = {
+				NOT = { has_country_flag = reformers_purged }
 			}
 		}
 		generic_reformer_2 = {		
@@ -59,6 +62,9 @@ ideas = {
 			}		
 			ai_will_do = {
 				factor = 1
+			}			
+			visible = {
+				NOT = { has_country_flag = reformers_purged }
 			}
 		}
 
@@ -138,6 +144,9 @@ ideas = {
 			picture = enc_hayes
 			allowed = {
 				tag = ERB  
+			}
+			visible = {
+				has_country_flag = erb_hayes_unlocked_flag
 			}
 			available = {
 				has_completed_focus = enc_reform

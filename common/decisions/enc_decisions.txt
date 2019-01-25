@@ -372,20 +372,20 @@ ENC_infiltrating_NCR = {
 	}
 	
 	ENC_rise_rebellion = {
-	priority = 300
+		priority = 300
 		fire_only_once = yes
 		available = {
 			63 = {
 				has_state_flag = enc_patriots_armed
 			}
 		}
-	visible = {
+		visible = {
 			tag = ERB
 			has_completed_focus = enc_the_divided_state
-			}
+		}
 		complete_effect = {
 			country_event = { id = enc_reformers.112 }
-			}
+		}
 	}
 	
 }

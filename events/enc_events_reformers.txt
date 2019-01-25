@@ -2707,52 +2707,59 @@ country_event = {#111 Turn Off Radio
 	}
 
 
-country_event = {#112 - Insurgency
-	id = enc_reformers.112
-	title = enc_reformers.112.t
-	desc = enc_reformers.112.d
-	picture = GFX_event_radio_new_vegas
-	fire_only_once = yes	
-    is_triggered_only = yes
-	option = {#Declaration
-		name = enc_reformers.112.a
-		every_state = {
-		limit = { is_owned_by = NCR has_state_flag = enc_patriots_armed }
-		ERB = {transfer_state = PREV } 
-		}
-		NCR= {
-		declare_war_on = {
+country_event = {	#112 - Insurgency
+	id = enc_reformers .112
+		title = enc_reformers .112.t
+		desc = enc_reformers .112.d
+		picture = GFX_event_radio_new_vegas
+		fire_only_once = yes
+		is_triggered_only = yes
+		# todo add option to do it later in cause player clicked it too early
+		option = {#	Declaration
+			name = enc_reformers .112.a
+			every_state = {
+				limit = {
+					is_owned_by = NCR has_state_flag = enc_patriots_armed
+				}
+				ERB = {
+					transfer_state = PREV
+				}
+			}
+			NCR = {
+				declare_war_on = {
 					target = ERB
 					type = annex_everything
+				}
+			}
+			ERB = {
+				division_template = {
+					name = "Rebel Militia"
+					division_names_group = REBEL_INF_01
+					regiments = {
+						militia = {	x = 0 y = 0	}
+						militia = { x = 0 y = 1	}
+						militia = { x = 0 y = 2 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+						militia = { x = 1 y = 2 }
+						militia = { x = 1 y = 3 }
+					}
+					support = {}
+				}
+			every_owned_state = {
+				limit = { has_state_flag = enc_patriots_armed }
+				create_unit = { 
+					division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+					owner = ERB
+				}
+				create_unit = { 
+					division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+					owner = ERB
+				}
 			}
 		}
-		ERB = {
-	division_template = { name = "Rebel Militia"
-	division_names_group = REBEL_INF_01
-	regiments = {
-		militia = { x = 0 y = 0 }
-		militia = { x = 0 y = 1 }
-		militia = { x = 0 y = 2 }
-		militia  = { x = 1 y = 0 }
-		militia  = { x = 1 y = 1 }
-		militia  = { x = 1 y = 2 }
-		militia  = { x = 1 y = 3 }
-	}
-	support = {
 	}
 }
-		every_owned_state = {
-			limit = { has_state_flag = enc_patriots_armed }
-			create_unit = { division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
-				owner = ERB
-				}
-				create_unit = { division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
-				owner = ERB
-				}
-                }
-			}
-	}
-	}
 country_event = {#113 - President Hayes
     id = enc_reformers.113
 	title = enc_reformers.113.t
