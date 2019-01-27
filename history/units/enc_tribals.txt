@@ -24,38 +24,38 @@ units = {
 	# Infantry
 	division = {
 		name = "Chief's Bodyguard"
-		location = 2428 division_template = "Tribal Infantry"
+		location = 2219 division_template = "Tribal Infantry"
 		start_experience_factor = 0.7
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Sac City Guard"
-		location = 2428 division_template = "Tribal Infantry"
+		location = 2219 division_template = "Tribal Infantry"
 		start_experience_factor = 0.6
 		start_equipment_factor = 1.0
 	}
 	# Militias
 	division = {
 		name = "Bonelli Militia"
-		location = 2428 division_template = "Tribal Militia"
+		location = 2219 division_template = "Tribal Militia"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Willow Beach Militia"
-		location = 2428 division_template = "Tribal Militia"
+		location = 2219 division_template = "Tribal Militia"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Hopi Militia"
-		location = 2428 division_template = "Tribal Militia"
+		location = 2219 division_template = "Tribal Militia"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Kingman Militia"
-		location = 2428 division_template = "Tribal Militia"
+		location = 2219 division_template = "Tribal Militia"
 		start_experience_factor = 0.55
 		start_equipment_factor = 1.0
 	}
