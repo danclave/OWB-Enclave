@@ -2024,7 +2024,7 @@ focus_tree = {
 	}
 	focus = {#REBorN - Using Vaults
 		id = enc_refurbish_vaults
-		icon = GFX_goal_enc_vault_tec
+		icon = GFX_goal_enc_vault_tec_reform
 		prerequisite = {focus = enc_rebuilding_california }
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_rebuilding_california
@@ -2725,7 +2725,7 @@ focus = {#Reunited
 		
 	focus = { # second city
 		id = Enc_Second_City
-		icon = GFX_goal_VEG_The_Lucky_38
+		icon = GFX_goal_enc_the_Lucky_38
 		cost = 2
 		available = { has_full_control_of_state = 211 }
 		relative_position_id = enc_expansion_reform
@@ -2849,7 +2849,7 @@ focus = {#Reunited
 
 	focus = {#Robco
 		id = Enc_Robco_Reborn
-		icon = GFX_goal_enc_eyebot
+		icon = GFX_goal_enc_eyebot_reform
 		ai_will_do = { factor = 1 } 
 		relative_position_id = Enc_Platinum_Chip
 		x = 0
@@ -2868,7 +2868,7 @@ focus = {#Reunited
 		}
 	focus = {#Boom
 		id = Enc_Vegas_miracle
-		icon = GFX_goal_VEG_Economic_Miracle
+		icon = GFX_goal_enc_Economic_Miracle
 		ai_will_do = { factor = 1 } 
 		relative_position_id = Enc_Robco_Reborn
 		x = -2
@@ -2950,7 +2950,7 @@ focus = {#Reunited
 	
 	focus = {
 		id = Enc_Big_MT
-		icon = GFX_goal_NEW_the_old_world
+		icon = GFX_goal_enc_big_MT
 		cost = 5.8
 		prerequisite = {
 			focus = enc_Area_51

@@ -155,6 +155,10 @@ spriteTypes = {
             name = "GFX_goal_enc_draft_wastelanders"
  		    texturefile = "gfx/interface/goals/enc_draft_wastelanders.dds"
  	    } 
+        SpriteType = {#enc_Economic_Miracle
+            name = "GFX_goal_enc_Economic_Miracle"
+ 		    texturefile = "gfx/interface/goals/enc_Economic_Miracle.dds"
+ 	    } 
         SpriteType = {#enc_education
             name = "GFX_goal_enc_education"
  		    texturefile = "gfx/interface/goals/enc_education.dds"
@@ -210,6 +214,10 @@ spriteTypes = {
         SpriteType = {#enc_eyebot
             name = "GFX_goal_enc_eyebot"
  		    texturefile = "gfx/interface/goals/enc_eyebot.dds"
+ 	    } 
+        SpriteType = {#enc_eyebot_reform
+            name = "GFX_goal_enc_eyebot_reform"
+ 		    texturefile = "gfx/interface/goals/enc_eyebot_reform.dds"
  	    } 
         SpriteType = {#enc_fed
             name = "GFX_goal_enc_fed"
@@ -671,6 +679,10 @@ spriteTypes = {
             name = "GFX_goal_enc_the_lucia_incident"
  		    texturefile = "gfx/interface/goals/enc_the_lucia_incident.dds"
  	    } 
+        SpriteType = {#enc_the_Lucky_38
+            name = "GFX_goal_enc_the_Lucky_38"
+ 		    texturefile = "gfx/interface/goals/enc_the_Lucky_38.dds"
+ 	    } 
         SpriteType = {#enc_the_mutant_question
             name = "GFX_goal_enc_the_mutant_question"
  		    texturefile = "gfx/interface/goals/enc_the_mutant_question.dds"
@@ -763,6 +775,10 @@ spriteTypes = {
             name = "GFX_goal_goal_card_tricks"
  		    texturefile = "gfx/interface/goals/goal_card_tricks.dds"
  	    } 
+        SpriteType = {#map_us
+            name = "GFX_goal_map_us"
+ 		    texturefile = "gfx/interface/goals/map_us.dds"
+ 	    } 
         SpriteType = {#pa_production
             name = "GFX_goal_pa_production"
  		    texturefile = "gfx/interface/goals/pa_production.dds"
@@ -778,10 +794,6 @@ spriteTypes = {
         SpriteType = {#US_dock
             name = "GFX_goal_US_dock"
  		    texturefile = "gfx/interface/goals/US_dock.dds"
- 	    } 
-		SpriteType = {#US_Map
-            name = "GFX_goal_map_us"
- 		    texturefile = "gfx/interface/goals/map_us.dds"
  	    } 
         SpriteType = {#US_navy
             name = "GFX_goal_US_navy"
