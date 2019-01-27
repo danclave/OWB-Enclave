@@ -673,7 +673,35 @@ country_event = {#22 - Spies in NCR - contact lost
 	}
 }
 
-# event 23 slot free
+country_event = {#23 - Dealing with Raiders
+	id = enc_reformers.23
+	title = enc_reformers.23.t
+	desc = enc_reformers.23.d
+	picture = GFX_event_ENC_secret
+	
+	fire_only_once = no
+	
+	trigger = {	
+		num_of_controlled_states > 10
+		has_completed_focus = enc_reno_end
+	}	
+	mean_time_to_happen = {	days = 500 }
+
+	option = {# trail
+		name = enc_reformers.23.a
+		set_temp_variable  = { # +5 legitimacy
+			var = legitimacy_change_var
+			value = 0.05
+		}
+		change_legitimacy = yes
+		custom_effect_tooltip = enc_reformers.23.a.tt # flavor
+	}
+	option = {# kill
+		name = enc_reformers.23.b
+		add_political_power = 100
+		custom_effect_tooltip = enc_reformers.23.b.tt # flavor
+	}
+}
 
 country_event = {#24 - Wound heals
 	id = enc_reformers.24

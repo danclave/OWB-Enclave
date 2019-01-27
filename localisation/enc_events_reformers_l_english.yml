@@ -135,6 +135,13 @@ enc_reformers.22.t: "Contact with spies lost!"
 enc_reformers.22.d: "Contact has been lost with our spy team in the New California Republic.\nThere is currently no telling weither they were KIA, captured or even gone rogue. Some are still holding out hope that our espionage team went silent to cover their tracks but we should expect the worst and plan accordingly. "
 enc_reformers.22.a: "They knew the risks."
 ################################################################################################################ -<
+enc_reformers.23.t: "Raider attack"
+enc_reformers.23.d: "Raider attacks have been a part of the daily horrors of wastelander life. For many towns on the border of our controlled territory, this has not changed.\n\nRecently, another report has come in about a small town ravaged by a raider gang. But this time, we have a solid lead on the location of the perpetrators. "
+enc_reformers.23.a: "Those responsible will be brought to justice."
+enc_reformers.23.a.tt: "§gGo in, make as many arrests as possible.§!."
+enc_reformers.23.b: "Kill them all and let God sort it out."
+enc_reformers.23.b.tt: "§g\nFirebomb the raider settlement.§!"
+################################################################################################################ -<
 enc_reformers.24.t: "Plasma "
 enc_reformers.24.d: "Plasma wounds never truly heal. With enough time and the best medical care the Enclave can provide, they can be managed well enough, but sooner or later the treatments will begin to falter. Douglas' days are numbered. His physician has assured him that the next few years should be fine, but can't make any promises beyond that."
 enc_reformers.24.a: "No time to waste, then."
