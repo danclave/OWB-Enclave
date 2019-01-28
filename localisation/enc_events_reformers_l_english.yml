@@ -141,6 +141,8 @@ enc_reformers.23.a: "Those responsible will be brought to justice."
 enc_reformers.23.a.tt: "§gGo in, make as many arrests as possible.§!."
 enc_reformers.23.b: "Kill them all and let God sort it out."
 enc_reformers.23.b.tt: "§g\nFirebomb the raider settlement.§!"
+enc_reformers.23.c: "If only they had a better target for their raids..."
+enc_reformers.23.c.tt: "§g\nBribe the raiders into attacking the NCR in return for weapons and amnesty.§!"
 ################################################################################################################ -<
 enc_reformers.24.t: "Plasma "
 enc_reformers.24.d: "Plasma wounds never truly heal. With enough time and the best medical care the Enclave can provide, they can be managed well enough, but sooner or later the treatments will begin to falter. Douglas' days are numbered. His physician has assured him that the next few years should be fine, but can't make any promises beyond that."

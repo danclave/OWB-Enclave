@@ -1,16 +1,11 @@
-MUST
-1. Finish Nevada route
-
 SHOULD
-2. update legitimacy mechanic tutorial event
-3. more legitimacy based decisions
-4. More icons
-5. finish advisors for hayes, moreno
+1. update legitimacy mechanic tutorial event
+2. more legitimacy based decisions
+3. More icons
+4. finish advisors for hayes, moreno
 
 COULD
 1. More interactions with Anderson
-2. Add Helios One 
-3. Make thehe cost of spawning rebels scale.
 4. Add custom effect for increasing/decreasing purist popularity (inverse red/green)
 5. More descriptions for events / advisors / decisions
 6. consequences for enc_reformers.13.c
@@ -28,3 +23,5 @@ DONE:
 6. consequence for enc_reformers.39.c
 6. added advisors for wright, salvatore
 7. Expand on "shaped explosives" choice
+8. Finish Nevada route
+9. Make the cost of spawning rebels scale.

@@ -701,6 +701,19 @@ country_event = {#23 - Dealing with Raiders
 		add_political_power = 100
 		custom_effect_tooltip = enc_reformers.23.b.tt # flavor
 	}
+	option = {# lead to NCR
+		name = enc_reformers.23.c
+		set_temp_variable  = { # -5 legitimacy
+			var = legitimacy_change_var
+			value = -0.05		}
+		change_legitimacy = yes
+		set_temp_variable = {
+			var = suspicion_change_var
+			value = -25
+		}
+		change_suspicion = yes
+		custom_effect_tooltip = enc_reformers.23.c.tt # flavor
+	}
 }
 
 country_event = {#24 - Wound heals
