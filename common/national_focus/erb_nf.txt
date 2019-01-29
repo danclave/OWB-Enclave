@@ -1357,7 +1357,6 @@ focus_tree = {
 			add_ideas = {
 				ENC_integrating_scientists
 			}
-			country_event = { id = enc_reformers.78 }
 		}		
 	}
 

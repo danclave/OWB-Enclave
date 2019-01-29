@@ -1687,12 +1687,10 @@ country_event = {#78 - Arcade Gannon
 	picture = GFX_event_Arcade_Gannon_Enclave
 	fire_only_once = yes
 	is_triggered_only = no
-	mean_time_to_happen = {	days = 7 }
-	trigger = {		
-		check_variable = {
-			var = legitimacy
-			value > 24.99
-		}	
+	mean_time_to_happen = {	days = 30 }
+	trigger = {
+		check_variable = { legitimacy > 0.249 }
+		has_completed_focus = enc_reno_end
 	}	
 	option = {#	Arcade Games
 		name = enc_reformers.78.a
@@ -2749,15 +2747,15 @@ country_event = {#111 Turn Off Radio
 
 
 country_event = {	#112 - Insurgency
-	id = enc_reformers .112
-		title = enc_reformers .112.t
-		desc = enc_reformers .112.d
+	id = enc_reformers.112
+		title = enc_reformers.112.t
+		desc = enc_reformers.112.d
 		picture = GFX_event_radio_new_vegas
 		fire_only_once = yes
 		is_triggered_only = yes
 		# todo add option to do it later in cause player clicked it too early
 		option = {#	Declaration
-			name = enc_reformers .112.a
+			name = enc_reformers.112.a
 			every_state = {
 				limit = {
 					is_owned_by = NCR has_state_flag = enc_patriots_armed
