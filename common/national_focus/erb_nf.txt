@@ -412,10 +412,12 @@ focus_tree = {
 		y = 2
 		cost = 4.3
 		completion_reward = {
+		
 			add_state_core = 285
 			set_capital = 285
 			add_stability = 0.05
 			country_event = { id = enc_reformers.68  }
+			custom_effect_tooltip = enc_reno_end.tt
 			hidden_effect = {
 				country_event = { id = enc_reformers.92 days = 60 } 
 			}
@@ -988,7 +990,7 @@ focus_tree = {
 		icon = GFX_goal_enc_gecko_power_plant
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_vlt_core_reform
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = { 
 			focus = enc_vlt_core_reform
@@ -1001,6 +1003,95 @@ focus_tree = {
 		}
 		cost = 4.3
  }
+ focus = {# Nevada rangers
+		id = enc_Nevada_Rangers
+		icon =  GFX_goal_enc_rangers_agreement
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_vlt_core_reform
+		mutually_exclusive = {focus = Enc_Discredit_Rangers } 
+		x = 0
+		y = 1
+		cost = 5.8 
+		bypass = {
+			DES = { exists = NO }
+		}	
+		prerequisite = { focus = enc_vlt_core_reform }	
+		available = {
+		strength_ratio = { tag = DES ratio > 1.0 }
+			custom_trigger_tooltip = {
+				tooltip = 25_legitimacy		
+			check_variable = {
+					var = legitimacy
+					value > 0.25
+					}
+			}
+			}
+		completion_reward = { 
+		annex_country = { target = DES }
+		}
+		}
+	focus = {# discredit the rangers
+		id = Enc_Discredit_Rangers
+		icon = GFX_goal_enc_rangers
+		ai_will_do = {
+			factor = 1
+		}
+		relative_position_id = enc_vlt_core_reform
+		x = 2
+		y = 1
+		cost = 5.8
+		bypass = {
+			DES = {
+				exists = NO
+			}
+		}
+		prerequisite = { focus = enc_vlt_core_reform }
+		available = { has_stability > 0.50 }
+		completion_reward = {
+			DES = {
+				if = {
+					limit = {
+						is_in_faction = yes
+							}
+					leave_faction = yes
+					}
+			}
+			ERB = {
+				create_wargoal = {
+					type = annex_everything
+					target = DES
+				}
+			}
+			NCR = {
+				add_ai_strategy = {
+					type = ignore
+					id = "DES"
+					value = 200
+				}
+			}
+			BOS = {
+				add_ai_strategy = {
+					type = ignore
+					id = "DES"
+					value = 200
+				}
+			}
+			DES = {
+				add_ai_strategy = {
+					type = ignore
+					id = "NCR"
+					value = 200
+				}
+			}
+			DES = {
+				add_ai_strategy = {
+					type = ignore
+					id = "BOS"
+					value = 200
+				}
+			}
+		}
+	}
    	focus = {#EXPANSION - Rebuild the power grid
 		id = enc_rebuild_the_power_grid
 		icon = GFX_goal_enc_rebuild_the_power_grid
@@ -2388,118 +2479,19 @@ focus = {#Reunited
 			clr_country_flag = ncr_suspicious # removes hiding mechanic
 		} 
 	}
-	focus = {# Nevada rangers
-		id = enc_Nevada_Rangers
-		icon =  GFX_goal_enc_rangers_agreement
-		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_the_state_of_nevada
-				x = 5
-		y = 1
-		cost = 5.8 
-		bypass = {
-			DES = { exists = NO }
-		}	
-		prerequisite = { focus = enc_the_state_of_nevada }	
-		available = {
-		strength_ratio = { tag = DES ratio > 1.0 }
-			custom_trigger_tooltip = {
-				tooltip = 25_legitimacy		
-				check_variable = {
-					var = legitimacy
-					value > 0.299
-				}
-			}
-			}
-		completion_reward = { 
-		annex_country = { target = DES }
-		}
-		}
-	focus = {# discredit the rangers
-		id = Enc_Discredit_Rangers
-		icon = GFX_goal_enc_rangers
-		ai_will_do = {
-			factor = 1
-		}
-		relative_position_id = enc_the_state_of_nevada
-		x = 3
-		y = 1
-		cost = 5.8
-		bypass = {
-			DES = {
-				exists = NO
-			}
-		}
-		prerequisite = {
-			focus = enc_the_state_of_nevada
-		}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = 25 _legitimacy
-				check_variable = {
-					var = legitimacy
-					value > 0.299
-				}
-			}
-		}
-		completion_reward = {
-			DES = {
-				if = {
-					limit = {
-						is_in_faction = yes
-					}
-					leave_faction = yes
-				}
-			}
-			ERB = {
-				create_wargoal = {
-					type = annex_everything
-					target = DES
-				}
-			}
-			NCR = {
-				add_ai_strategy = {
-					type = ignore
-					id = "DES"
-					value = 200
-				}
-			}
-			BOS = {
-				add_ai_strategy = {
-					type = ignore
-					id = "DES"
-					value = 200
-				}
-			}
-			DES = {
-				add_ai_strategy = {
-					type = ignore
-					id = "NCR"
-					value = 200
-				}
-			}
-			DES = {
-				add_ai_strategy = {
-					type = ignore
-					id = "BOS"
-					value = 200
-				}
-			}
-		}
-	}
 	focus = {# area 51
 		id = enc_Area_51
 		icon = GFX_goal_enc_verti_reform
 		ai_will_do = {
 			factor = 1
 		}
-		relative_position_id = enc_Nevada_Rangers
-		x = -1
+		relative_position_id = enc_the_state_of_nevada
+		x = 4
 		y = 1
 		cost = 5.8
 		prerequisite = {
-			focus = enc_Nevada_Rangers
-			focus = Enc_Discredit_Rangers
-		}
+			focus = enc_the_state_of_nevada
+					}
 		available = {
 			has_full_control_of_state = 389
 		}
@@ -3126,7 +3118,7 @@ focus = {#Reunited
 		hidden_effect = {
 		add_ideas = Enc_Trade_Coffee
 		every_other_country = {
-					limit = { is_in_faction_with = ENC }
+					limit = { is_in_faction_with = ERB }
 					add_ideas = Enc_Trade_Coffee
 				}
 				}
@@ -4058,14 +4050,12 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	
 	focus = {#Military - quality - advanced_training
 		id = enc_advanced_training
-		exclusive = { focus = enc_enc_disciplined_soldiers }
+		mutually_exclusive = { focus = enc_enc_disciplined_soldiers }
 		icon = GFX_goal_enc_laser_weapons_reform
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_military_equipment}
 		prerequisite = {focus = enc_wartime_draft}
 		relative_position_id = enc_military_equipment
-		mutually_exclusive = { focus = enc_disciplined_soldiers }
-		
 		x = 0
 		y = 1
 		cost = 3
