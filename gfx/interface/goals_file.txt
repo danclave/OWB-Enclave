@@ -37,6 +37,7 @@
 # GFX_goal_enc_die
 # GFX_goal_enc_die_dark
 # GFX_goal_enc_draft_wastelanders
+# GFX_goal_enc_Economic_Miracle
 # GFX_goal_enc_education
 # GFX_goal_enc_education_civilian
 # GFX_goal_enc_education_military
@@ -51,6 +52,7 @@
 # GFX_goal_enc_expansion_reform
 # GFX_goal_enc_experiments
 # GFX_goal_enc_eyebot
+# GFX_goal_enc_eyebot_reform
 # GFX_goal_enc_fed
 # GFX_goal_enc_fighter
 # GFX_goal_enc_flags
@@ -166,6 +168,7 @@
 # GFX_goal_enc_the_american_alliance-3
 # GFX_goal_enc_the_american_alliance
 # GFX_goal_enc_the_lucia_incident
+# GFX_goal_enc_the_Lucky_38
 # GFX_goal_enc_the_mutant_question
 # GFX_goal_enc_the_state_of_nevada
 # GFX_goal_enc_threat_of_communism
@@ -189,6 +192,7 @@
 # GFX_goal_enc_wip
 # GFX_goal_flag_burn_BOS
 # GFX_goal_goal_card_tricks
+# GFX_goal_map_us
 # GFX_goal_pa_production
 # GFX_goal_poison_bear_reformer
 # GFX_goal_shield_enc_wip

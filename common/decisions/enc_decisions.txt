@@ -354,20 +354,20 @@ ENC_infiltrating_NCR = {
 	}
 	
 	ENC_rise_rebellion = {
-	priority = 300
+		priority = 300
 		fire_only_once = yes
 		available = {
 			63 = {
 				has_state_flag = enc_patriots_armed
 			}
 		}
-	visible = {
+		visible = {
 			tag = ERB
 			has_completed_focus = enc_the_divided_state
-			}
+		}
 		complete_effect = {
 			country_event = { id = enc_reformers.112 }
-			}
+		}
 	}
 	
 }
@@ -1476,14 +1476,16 @@ ENC_NCR_hiding = {
 		fire_only_once = no
 		#--------------------------
 		cancel_trigger = {
-			NOT = {
-				has_country_flag = ncr_suspicious
-			}
-			NCR = {
-				OR = {
-					exists = no
-					has_civil_war = YES
-					has_war_with = ROOT #Enclave
+			OR = {
+				NOT = {
+					has_country_flag = ncr_suspicious
+				}
+				NCR = {
+					OR = {
+						exists = no
+						has_civil_war = YES
+						has_war_with = ROOT #Enclave
+					}
 				}
 			}
 		}

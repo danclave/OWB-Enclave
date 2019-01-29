@@ -44,7 +44,8 @@ enc_ourpresident_desc:0 "We have made our choice and that choice will change the
 enc_purge_opposition:0 "Purge the Opposition"
 enc_purge_opposition_tt: "More than §Y80%§! support for [Root.GetRulingParty]."
 enc_purge_opposition_desc:0 "There are many in our midst who do not share our vision for the future. They must be dealt with."
-
+purists_purged_tt: "§RPurist Advisors are purged!§!"
+reformers_purged_tt: "§RReformer Advisors are purged!§!"
 
 ###################################
 # PURITY

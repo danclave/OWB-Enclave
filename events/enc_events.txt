@@ -616,6 +616,7 @@ country_event = { #30 - Fall of Sack city
 	trigger = {
 		tag = ERB
 		controls_state = 135 # Sac City
+		has_completed_focus = enc_purity
 	}
 	mean_time_to_happen = {
 		days = 2
@@ -639,6 +640,7 @@ country_event = { #31 - Fall of Shady Sands
 	trigger = {
 		tag = ERB
 		controls_state   = 253 # Shady Sands
+		has_completed_focus = enc_purity
 	}
 	mean_time_to_happen = {
 		days = 2
