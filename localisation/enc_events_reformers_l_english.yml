@@ -335,9 +335,9 @@ enc_reformers.77.a: "Mutants?  In my neighborhood?"
 enc_reformers.77.b: "We fight not to enslave, but to set a country free."
 ################################################################################################################ 
 enc_reformers.78.t: "The Return of Arcade Gannon"
-enc_reformers.78.d: "Since the Enclave's reform and integration of American citizens, some of those who fled after the fall of Navarro have returned to us.  Most notable among those is the 'scientist' Arcade Gannon, who trained with the Followers of the Apocalypse. Inspired by our promises of a better life for the people of the Wastes and our technology, he's willing to work for us again. Although we don't like the courier he's dating."
+enc_reformers.78.d: "Since the Enclave's reform and integration of American citizens, some of those who fled after the fall of Navarro have returned to us.  Among those is the scientist Arcade Gannon. A song of an Enclave Officer who later joined the Followers of the Apocalypse. Inspired by our promises of a better life for the people of the Wastes, he's willing to return to the Enclave's ranks."
 enc_reformers.78.a: "I love a man in uniform."
-enc_reformers.78.a.tt:  "Arcade Gannon is now available as a Theoretician."
+enc_reformers.78.a.tt:  "Arcade Gannon is now available as a §YTheorist§!."
 ################################################################################################################
 enc_reformers.79.t: "A Frumentarius Defects!"
 enc_reformers.79.d: "As America wakes from its slumber and the Wasteland begins to rally to our cause, a former member of the Legion has appeared in New Reno, asking to join our army. He has taken the name Ulysses, after a great soldier who fought to unite America under one flag, and vows that when he sets his flag down, it'll be over his body or a nation he believes in."
