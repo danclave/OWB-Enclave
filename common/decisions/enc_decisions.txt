@@ -272,25 +272,7 @@ ENC_infiltrating_NCR = {
 				add_popularity = { ideology = elites popularity = 0.10 }
 		}
 	}
-	enc_NCR_radio = {
 	
-		priority = 300
-		fire_only_once = yes
-
-		available = {
-				}
-	
-		visible = {
-			tag = ERB
-			has_completed_focus = enc_owb_propaganda
-		}
-		complete_effect = {
-			NCR = {
-				add_popularity = { ideology = intellectuals popularity = 0.05 }
-			}
-				add_popularity = { ideology = elites popularity = 0.10 }
-		}
-	}
 	enc_NCR_propaganda_tour = {
 	
 		priority = 300
@@ -784,7 +766,7 @@ ENC_northwest_reconstruction = {
 		complete_effect = {
 			country_event = { id = enc_reformers.138 }
 			37 = {
-				set_state_name = "Sacramento" 
+				set_state_name = "Portland" 
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -854,24 +836,11 @@ ENC_los_alamos= {
 			original_tag = ERB 
 			}
 		complete_effect = {
-			country_event = { id = enc_reformers.140 }			
+			country_event = { id = enc_reformers.157 }			
 			
 		}	
 	}
-ENC_boulder_dome = {
-		cost = 25
-		days_remove = 10
-		ai_will_do = { factor = 10 }
-		fire_only_once = yes
-		available = { 568 = { is_owned_and_controlled_by = ERB } }
-		visible = {
-			original_tag = ERB 
-			}
-		complete_effect = {
-			country_event = { id = enc_reformers.140 }			
-			
-		}	
-	}
+
 ENC_mormons = {
 		cost = 25
 		days_remove = 10
@@ -927,18 +896,7 @@ ENC_crimson_trucking = {
 			add_ideas = enc_crimson_truckers		
 							}		
 			}
-ENC_nukacola = {
-		cost = 25
-		days_remove = 10
-		ai_will_do = { factor = 10 }
-		fire_only_once = yes
-		visible = {
-			original_tag = ERB 
-			}
-		complete_effect = {
-			country_event = { id = enc_reformers.107 }			
-							}		
-			}
+
 ENC_gunrunners = {
 		cost = 25
 		days_remove = 10
@@ -951,8 +909,139 @@ ENC_gunrunners = {
 			add_ideas = ENC_gunrun }			
 				}		
 		}			
-							
-	
+ENC_build_nevada = {
+	ENC_vault_city_university = {
+		cost = 50
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		allowed = {original_tag = ERB } 
+		visible = {
+			has_completed_focus = enc_reform
+			291 = { is_owned_and_controlled_by = ERB }
+					}
+		complete_effect = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+				}	
+							}
+	ENC_water_supply = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		allowed = {original_tag = ERB } 
+		visible = {
+			has_completed_focus = enc_reform
+			295 = { is_owned_and_controlled_by = ERB }
+					}
+		complete_effect = {
+			295 = {
+				add_resource = {
+					type = water
+					amount = -10
+				}
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+				}	
+							}					
+					}
+	ENC_cassidy_caravans = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		allowed = {original_tag = ERB } 
+		visible = {
+			has_completed_focus = enc_the_state_of_nevada
+			295 = { is_owned_and_controlled_by = ERB }
+					}
+		complete_effect = {
+			country_event = { id = enc_reformers.154 }	
+							}					
+					}
+	ENC_nukacola = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		visible = {
+			original_tag = ERB
+			has_completed_focus = enc_vlt_power_reform		
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.107 }			
+							}		
+			}
+ENC_enclavecalifornia_helios_two = { 
+		cost = 25
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		visible = {
+			original_tag = ERB
+			has_completed_focus = enc_the_american_alliance	
+			}
+		available = {has_completed_focus = ENC_energy_boom }
+		complete_effect = {
+		350 = {
+				add_resource = {
+					type = electricity
+					amount = 10
+								}
+				add_resource = {
+					type = fuel
+					amount = 5					
+							}			
+				}		
+			
+		350 = {
+				add_resource = {
+					type = advanced_technology 
+					amount = 10
+								}			
+				}							
+		}
+	}
+ENC_follower_school_system = { 
+		cost = 50
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		visible = {
+			original_tag = ERB
+			has_completed_focus = enc_the_american_alliance	
+			}
+		available = {has_country_flag = enc_followers  }
+		complete_effect = {
+		add_ideas = ENC_follower_schools 
+		every_other_country = {
+					limit = { is_in_faction_with = ERB }
+					add_ideas = ENC_follower_schools 
+								}
+						  }						
+							}
+ENC_american_rangers = { 
+		cost = 50
+		days_remove = 10
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		visible = {
+			original_tag = ERB
+			has_completed_focus = enc_the_american_alliance	
+				}
+		available = {has_country_flag = enc_freedom  }
+		complete_effect = {
+		country_event = { id = enc_reformers.158 }		
+				}						
+		}									
+}	
 	
 ###############################
 # SHARED
@@ -1567,6 +1656,7 @@ ENC_NCR_hiding = {
 		}
 	}
 }
+	
 ENC_political_infighting = {
 # CRISIS
 	ENC_political_crisis = {
@@ -2111,7 +2201,7 @@ ENC_render_unto_caesar = {
 			}
 		}
 		available = {
-			not = { country_exists = NCR }
+			not = { country_exists = CES }
 		}
 		cancel_trigger = {
 			CES = {
@@ -2125,7 +2215,6 @@ ENC_render_unto_caesar = {
 		is_good = no
 		days_mission_timeout = 1068
 		timeout_effect = {
-			ERB = { country_event = {id = enc_reformers.101 } }
 			CES = {	country_event = { id = enc.41 } # todo: change
 			}
 			clr_country_flag = ENC_CES_hostile
@@ -2140,6 +2229,7 @@ ENC_render_unto_caesar = {
 		fire_only_once = YES
 		activation = {
 			has_country_flag = ENC_axis_evil
+			has_completed_focus = enc_reform
 			not = {
 				CES = {
 					OR = {
@@ -2151,7 +2241,7 @@ ENC_render_unto_caesar = {
 			}
 		}
 		available = {
-			not = { country_exists = NCR }
+			not = { country_exists = CES }
 			 }
 		cancel_trigger = {
 			CES = {
@@ -2164,12 +2254,12 @@ ENC_render_unto_caesar = {
 		}
 		is_good = no
 		days_mission_timeout = 730
-		timeout_effect = { country_event = { id = enc_reformers.101 } # todo: change }
-			}
-		complete_effect = {
-			# ???
+		visible = {original_tag = ERB }
+		timeout_effect = { country_event = { id = enc_reformers.101 }}
+		complete_effect = { }
 		}
-	}
+		
+		
 	ENC_rise_slaves = {
 	priority = 300
 		fire_only_once = yes

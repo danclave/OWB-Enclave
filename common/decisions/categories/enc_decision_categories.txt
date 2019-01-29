@@ -68,9 +68,11 @@ ENC_NCR_hiding = {
 	visible = {
 		has_country_flag = ncr_suspicious
 		not = {
-			has_war_with = NCR
-		}
-	}
+			OR = { has_war_with = NCR
+				NCR = { exists = YES }
+				}
+			  }
+			}	 
 }
 
 ENC_political_infighting = {
@@ -159,6 +161,12 @@ ENC_starting_companies = {
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_prewar_corporations }	
 }
+
+ENC_build_nevada = {
+	allowed = { tag = ERB }
+	visible = {	has_completed_focus = enc_reno_end }	
+}
+
 # ##############################
 # ICONS
 # ##############################

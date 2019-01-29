@@ -379,6 +379,10 @@ SpriteType = {#nature
 SpriteType = {#nature
 			name = "GFX_event_enc_cars"
 			texturefile = "gfx/event_pictures/event_enc_cars.dds"	
-		}				
+		}
+SpriteType = {#mutantprotests
+			name = "GFX_event_enc_antimutants"
+			texturefile = "gfx/event_pictures/event_enc_antimutants.dds"	
+		}		
 }			
 
