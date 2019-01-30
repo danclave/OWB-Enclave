@@ -91,6 +91,10 @@ spriteTypes = {
             name = "GFX_goal_enc_beacon"
  		    texturefile = "gfx/interface/goals/enc_beacon.dds"
  	    } 
+        SpriteType = {#enc_big_MT
+            name = "GFX_goal_enc_big_MT"
+ 		    texturefile = "gfx/interface/goals/enc_big_MT.dds"
+ 	    } 
         SpriteType = {#enc_cloning
             name = "GFX_goal_enc_cloning"
  		    texturefile = "gfx/interface/goals/enc_cloning.dds"
@@ -810,6 +814,10 @@ spriteTypes = {
         SpriteType = {#vault_tec
             name = "GFX_goal_vault_tec"
  		    texturefile = "gfx/interface/goals/vault_tec.dds"
+ 	    } 
+        SpriteType = {#vault_tec_reform
+            name = "GFX_goal_vault_tec_reform"
+ 		    texturefile = "gfx/interface/goals/vault_tec_reform.dds"
  	    }
         SpriteType = {#arcade_gannon
             name = "GFX_idea_arcade_gannon"

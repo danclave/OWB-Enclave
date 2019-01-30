@@ -2114,7 +2114,7 @@ focus_tree = {
 	}
 	focus = {#REBorN - Using Vaults
 		id = enc_refurbish_vaults
-		icon = GFX_goal_enc_vault_tec_reform
+		icon = GFX_goal_vault_tec_reform
 		prerequisite = {focus = enc_rebuilding_california }
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_rebuilding_california
@@ -2141,7 +2141,7 @@ focus_tree = {
 	}
 	focus = {#REBorN - A federal police force
 		id = enc_police 
-		icon = GFX_goal_NEW_New_Reno_Police_Department
+		icon = GFX_goal_enc_police
 		prerequisite = { focus = enc_department_of_justice }
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_department_of_justice
