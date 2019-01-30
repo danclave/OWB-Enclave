@@ -5,7 +5,7 @@ update_legitimacy = {
 		max = 1
 	}
 	# we cannot use a non temp variable for trigger comparisons
-	add_to_temp_variable = {
+	set_temp_variable = {
 		var = legitimacy_change_var
 		value = legitimacy
 	}
