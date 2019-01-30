@@ -129,6 +129,15 @@ ideas = {
 			   elites_drift = 0.05
 			}
 		}
+		ENC_scavenge_vaults = {
+			picture = idea_ast_naval_auxiliary_patrol
+				allowed = {always = no }
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.10
+			}
+		}
+		
 		ENC_Plunder_MT = {
 			picture = enc_scientists 
 			allowed = { 
@@ -220,7 +229,7 @@ ideas = {
 				}
 			}
 		}
-			enc_advisors = {	
+			ENC_advisors = {	
 			
 			picture = caesar's_legacy_2
 			
@@ -244,6 +253,15 @@ ideas = {
 					instant = yes
 					soft_attack = 0.05
 				}
+			}
+		}
+		ENC_cassidy_caravan = {
+			
+			picture = General_Staff
+			allowed = {}
+			removal_cost = -1
+			modifier = {
+				supply_consumption_factor = -0.05
 			}
 		}
 		ENC_reform = {
@@ -381,7 +399,23 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				research_time_factor = -0.08
-				political_power_gain = 0.20
+				political_power_gain = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		ENC_follower_schools = {  
+			picture = enc_education
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				research_time_factor = -0.08
+				political_power_gain = 0.05
 				consumer_goods_factor = 0.05
 			}
 		}

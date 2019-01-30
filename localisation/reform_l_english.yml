@@ -102,14 +102,14 @@ enc_helios_two: "Lighting Up the Night"
 enc_helios_two_desc: "We need to do more than live off the scraps of the Great War.  We can rebuild centers of high technology to train the next generation of scientists.  So let's do so."
 enc_automobiles: "Every Man a Car!"
 enc_automobiles_desc: "In prewar America, every American dreamed of owning a car.  Today, about one in two hundred people in California do, and the rest of the nation is worse off.  We can revive the American auto industry and promise some sort of 'People's Car.' Because life, as they say, is a highway, and the Enclave will ride it all night long."
-enc_rebuilding_california: "California Paradise"
+enc_rebuilding_california: "The Business of California"
 enc_rebuilding_california_desc: "California has fallen on hard times after NCR mismanagement, the Brotherhood raids, and damage from stray plasma grenades.  But Mayor Hayes and the Enclave will make it spick and span in no time!"
 enc_rebuilding_california.tt: "Unlocks events and decisions relating to the fate of §GCalifornia§! in the Reunited States."
 enc_refurbish_vaults: "Stripping the Vaults"
 enc_refurbish_vaults_desc: "As we reclaim America, there's a great deal we can gain from the prewar vaults. And we can use them for their original purposes..."
 enc_refurbish_vaults.tt: "Unlocks §HVault Experiments§! because we've learned nothing."
 enc_prewar_corporations: "Open for Business"
-enc_prewar_corporations_desc: "As we expand control over the §MReunited States§!, some have suggested reopening Repconn, Robco, and Vault Tec for business once again. Obviously we won't be mass producing robots for a while, but maybe we can give farmers some mechanical harvesters."
+enc_prewar_corporations_desc: "As we expand control over the §MReunited States§!, some have suggested reopening Repconn, Robco, and Vault Tek for business once again. Obviously we won't be mass producing robots for a while, but maybe we can give farmers some mechanical harvesters."
 enc_prewar_corporations.tt: "Unlocks decisions to support America's greatest companies!"
 enc_bloomfield: "Bloomfield Space Center" 
 enc_bloomfield_desc: "Somehow, a prewar space facility has survived time and nuclear war in Southwest Arizona. I'm not saying we should launch a rocket into the sky, but we're launching a rocket into the sky."
@@ -348,6 +348,7 @@ enc_reno_salvatores:0 "Old Allies"
 enc_reno_salvatores_desc:0 "The Salvatores still remember our last time in New Reno.  It might be worth cutting a deal with them again."
 enc_reno_end:0 "The New Capital"
 enc_reno_end_desc:0 "We've broken the backs of the scum that run New Reno.  Look how much happier everyone is with Enclave soldiers patrolling the streets. No one complains, not even in private."
+enc_reno_end.tt: "Unlocks decisions to help rebuild the Wastes. Some of these decisions will be unlocked based on your actions, so check periodically!"
 enc_radio_civilian_music:0 "Old World Blues"
 enc_radio_civilian_music_desc:0 "'Country roads, take me home, to the place I belong...' Broadcasting songs of a bygone era can drive support for our cause and make people ignore crippling flaws."
 
@@ -683,6 +684,10 @@ CES_reformer_crisis_desc: "The tyrants of the Wastes have closed ranks against A
 ###################################
 # REFORM IDEAS
 ###################################
+ENC_follower_schools: "Follower Education"
+ENC_follower_school_system: "Follower Schools"
+ENC_follower_school_system_desc: "The greatest dream of the Followers is to provide universal schooling for all the children of the Wastes.  They claim that true reconstruction will require rebuilding the foundations of prewar technology, not just reactivating old power plants. Let us fulfill their dream of every kid a textbook!"
+ENC_cassidy_caravan: "Cassidy Caravans"
 ENC_CES_slave_rebellions: "Slave Unrest"
 ENC_satellites: "Satellite Network"
 enc_crimson_truckers: "Crimson Trucking Company"
@@ -690,8 +695,9 @@ medtek: "Med Tek"
 ENC_gunrun: "Upgrading the Gun Runners"
 ENC_terraforming: "Terraforming the Wastes"
 enc_trade_tea: "The Tea Trade"
-enc_vaults: "Vault Tek Research"
-enc_advisors: "Enclave Advisors"
+ENC_vaults: "Vault Tek Research"
+ENC_scavenge_vaults: "Scavenging Vaults"
+ENC_advisors: "Enclave Advisors"
 enc_manifest_destiny: "Manifest Destiny"
 Enc_New_day: "The New Day"
 Enc_Irrigation: "The Fruits of Irrigation"
@@ -814,6 +820,8 @@ erb_arcade_gannon:0 "Arcade Gannon"
 ###################################
 # REFORM Reconstruction
 ###################################
+ENC_american_rangers: "The American Rangers"
+ENC_american_rangers_desc: "The California and Desert Rangers have done great work protecting the peoples of the Waste from slavery and raiders.  By pooling resources, we can create a force to protect people across America."
 ENC_california_reconstruction: "Reconstructing California"
 ENC_california_reconstruction_desc: "Please pardon the mess during reconstruction."
 rename_sacramento: "Rebuilding Sacramento"
@@ -870,6 +878,17 @@ ENC_nukacola: "Nuka Cola Corp."
 ENC_nukacola_desc: "Nothing tastes as sweet as the concept of making this stuff again. Except Quantum Nuka Cola."
 ENC_gunrunners: "Bring the Gun Runners up to Spec"
 ENC_gunrunners_desc: "The Gun Runners are fine if you want to arm the New California Republic, but America's fighting men and women need something with a bit of a kick.  We can help the Gun Runners upgrade their machinery to properly equip our forces."    
+ENC_build_nevada: "Nation Building"
+ENC_build_nevada_desc: "There is much we can do to rebuild America beyond conquering the cities of the wastes.  Let us win the hearts and minds of the people!"
+ENC_vault_city_university: "Vault City University"
+ENC_vault_city_university_desc: "Vault City is the most developed city in the Wastes, and home to many of the right sort of people.  We can build a center of hire learning to both educate the Wastelanders and persuade them to support the American dream.  If only we could think of a mascot..."
+ENC_water_supply: "The Hydraulic Republic"
+ENC_water_supply_desc: "One of the easiest ways to get the loyalty of the Wastelanders is to provide a clean water supply.  Hey, maybe we should tell the boys out East about this..."
+ENC_cassidy_caravans: "Support the Caravans"
+ENC_cassidy_caravans_desc: "The wastes are crossed by Brahmin caravans, but their growth limited by lack of capital.  If we were to throw resources behind the smaller businesses, perhaps they could rival the old houses of California."
+ENC_enclavecalifornia_helios_two: "Build Helios Two"
+ENC_enclavecalifornia_helios_two_desc: "Now that we've studied Helios One, Nevada's engineers think we could build another facility outside the Boneyard.  In exchange for a cut, of course."
+
 ###################################
 # Seek Allies
 ###################################
@@ -1017,6 +1036,9 @@ relations_increased_20: "Mutual Relations with §YEnclave§! improved by §G+20�
 
 erb_independence_faction:0 "Anti NCR Alliance"
 integrated_economy: "Integrated Economies"
+
+
+
 
 ###################################
 # TECHNOLOGY
