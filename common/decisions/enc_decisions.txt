@@ -244,13 +244,12 @@ ENC_infiltrating_NCR = {
 			NCR = {
 				add_popularity = { ideology = intellectuals popularity = 0.05 }
 			}
-				add_popularity = { ideology = elites popularity = 0.10 }
-
+			add_popularity = { ideology = elites popularity = 0.10 }
 			set_temp_variable = {
 				var = suspicion_change_var
-				value = -05
+				value = -0.05
 			}
-			change_suspicion = YES
+			change_suspicion = yes
 		}
 	}
 	enc_NCR_radio = {
@@ -855,192 +854,251 @@ ENC_mormons = {
 		}	
 	}
 ENC_the_nursery = {
-		cost = 25
-		days_remove = 10
-		ai_will_do = { factor = 10 }
-		fire_only_once = yes
-		available = { AND = { 308 = { is_owned_and_controlled_by = ERB }
-							has_completed_focus = enc_geck } }
-		visible = {
-			original_tag = ERB 
-			}
-		complete_effect = {
-			country_event = { id = enc_reformers.150 }			
-							}		
-					}
-					
+	cost = 25
+	days_remove = 10
+	ai_will_do = {
+		factor = 10
 	}
-ENC_starting_companies = {
-ENC_medtek = {
-		cost = 25
-		days_remove = 10
-		ai_will_do = { factor = 10 }
-		fire_only_once = yes
-		visible = {
-			original_tag = ERB 
+	fire_only_once = yes
+	available = {
+		AND = {
+			308 = {
+				is_owned_and_controlled_by = ERB
 			}
-		complete_effect = {
-			add_ideas = medtek		
-							}		
-			}
-ENC_crimson_trucking = {
-		cost = 25
-		days_remove = 10
-		ai_will_do = { factor = 10 }
-		fire_only_once = yes
-		available = {has_completed_focus = enc_automobiles}
-		visible = {
-			original_tag = ERB 
-			}
-		complete_effect = {
-			add_ideas = enc_crimson_truckers		
-							}		
-			}
-
-ENC_gunrunners = {
-		cost = 25
-		days_remove = 10
-		ai_will_do = { factor = 10 }
-		fire_only_once = yes
-		visible = {
-			original_tag = ERB 
-			}
-		complete_effect = {
-			add_ideas = ENC_gunrun }			
-				}		
-		}			
-ENC_build_nevada = {
-	ENC_vault_city_university = {
-		cost = 50
-		days_remove = 10
-		ai_will_do = { factor = 10 }
-		fire_only_once = yes
-		allowed = {original_tag = ERB } 
-		visible = {
-			has_completed_focus = enc_reform
-			291 = { is_owned_and_controlled_by = ERB }
-					}
-		complete_effect = {
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = 0.05
-			}
-			change_legitimacy = yes
-				}	
-							}
-	ENC_water_supply = {
-		cost = 25
-		days_remove = 10
-		ai_will_do = { factor = 10 }
-		fire_only_once = yes
-		allowed = {original_tag = ERB } 
-		visible = {
-			has_completed_focus = enc_reform
-			295 = { is_owned_and_controlled_by = ERB }
-					}
-		complete_effect = {
-			295 = {
-				add_resource = {
-					type = water
-					amount = -10
-				}
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = 0.05
-			}
-			change_legitimacy = yes
-				}	
-							}					
-					}
-	ENC_cassidy_caravans = {
-		cost = 25
-		days_remove = 10
-		ai_will_do = { factor = 10 }
-		fire_only_once = yes
-		allowed = {original_tag = ERB } 
-		visible = {
-			has_completed_focus = enc_the_state_of_nevada
-			295 = { is_owned_and_controlled_by = ERB }
-					}
-		complete_effect = {
-			country_event = { id = enc_reformers.154 }	
-							}					
-					}
-	ENC_nukacola = {
-		cost = 25
-		days_remove = 10
-		ai_will_do = { factor = 10 }
-		fire_only_once = yes
-		visible = {
-			original_tag = ERB
-			has_completed_focus = enc_vlt_power_reform		
-			}
-		complete_effect = {
-			country_event = { id = enc_reformers.107 }			
-							}		
-			}
-ENC_enclavecalifornia_helios_two = { 
-		cost = 25
-		days_remove = 10
-		ai_will_do = { factor = 10 }
-		fire_only_once = yes
-		visible = {
-			original_tag = ERB
-			has_completed_focus = enc_the_american_alliance	
-			}
-		available = {has_completed_focus = ENC_energy_boom }
-		complete_effect = {
-		350 = {
-				add_resource = {
-					type = electricity
-					amount = 10
-								}
-				add_resource = {
-					type = fuel
-					amount = 5					
-							}			
-				}		
-			
-		350 = {
-				add_resource = {
-					type = advanced_technology 
-					amount = 10
-								}			
-				}							
+			has_completed_focus = enc_geck
 		}
 	}
-ENC_follower_school_system = { 
-		cost = 50
+	visible = {
+		original_tag = ERB
+	}
+	complete_effect = {
+		country_event = {
+			id = enc_reformers .150
+		}
+	}
+}
+
+}
+ENC_starting_companies = {
+	ENC_medtek = {
+		cost = 25
 		days_remove = 10
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			factor = 10
+		}
 		fire_only_once = yes
 		visible = {
 			original_tag = ERB
-			has_completed_focus = enc_the_american_alliance	
+		}
+		complete_effect = {
+			add_ideas = medtek
+		}
+	}
+	ENC_crimson_trucking = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		available = {
+			has_completed_focus = enc_automobiles
+		}
+		visible = {
+			original_tag = ERB
+		}
+		complete_effect = {
+			add_ideas = enc_crimson_truckers
+		}
+	}
+
+	ENC_gunrunners = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		visible = {
+			original_tag = ERB
+		}
+		complete_effect = {
+			add_ideas = ENC_gunrun
+		}
+	}
+}
+ENC_build_nevada = {
+		ENC_vault_city_university = {
+			cost = 50
+			days_remove = 10
+			ai_will_do = {
+				factor = 10
 			}
-		available = {has_country_flag = enc_followers  }
-		complete_effect = {
-		add_ideas = ENC_follower_schools 
-		every_other_country = {
-					limit = { is_in_faction_with = ERB }
-					add_ideas = ENC_follower_schools 
-								}
-						  }						
-							}
-ENC_american_rangers = { 
-		cost = 50
-		days_remove = 10
-		ai_will_do = { factor = 10 }
-		fire_only_once = yes
-		visible = {
-			original_tag = ERB
-			has_completed_focus = enc_the_american_alliance	
+			fire_only_once = yes
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_completed_focus = enc_reform
+				291 = {
+					is_owned_and_controlled_by = ERB
 				}
-		available = {has_country_flag = enc_freedom  }
-		complete_effect = {
-		country_event = { id = enc_reformers.158 }		
-				}						
-		}									
+			}
+			complete_effect = {
+				set_temp_variable = {
+					var = legitimacy_change_var
+					value = 0.05
+				}
+				change_legitimacy = yes
+			}
+		}
+		ENC_water_supply = {
+			cost = 25
+			days_remove = 10
+			ai_will_do = {
+				factor = 10
+			}
+			fire_only_once = yes
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_completed_focus = enc_reform
+				295 = {
+					is_owned_and_controlled_by = ERB
+				}
+			}
+			complete_effect = {
+				295 = {
+					add_resource = {
+						type = water
+						amount = -10
+					}
+				}
+				set_temp_variable = {
+					var = legitimacy_change_var
+					value = 0.05
+				}
+				change_legitimacy = yes
+			}
+		}
+		ENC_cassidy_caravans = {
+			cost = 25
+			days_remove = 10
+			ai_will_do = {
+				factor = 10
+			}
+			fire_only_once = yes
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_completed_focus = enc_the_state_of_nevada
+				295 = {
+					is_owned_and_controlled_by = ERB
+				}
+			}
+			complete_effect = {
+				country_event = {
+					id = enc_reformers .154
+				}
+			}
+		}
+		ENC_nukacola = {
+			cost = 25
+			days_remove = 10
+			ai_will_do = {
+				factor = 10
+			}
+			fire_only_once = yes
+			visible = {
+				original_tag = ERB
+				has_completed_focus = enc_vlt_power_reform
+			}
+			complete_effect = {
+				country_event = {
+					id = enc_reformers .107
+				}
+			}
+		}
+		ENC_enclavecalifornia_helios_two = {
+			cost = 25
+			days_remove = 10
+			ai_will_do = {
+				factor = 10
+			}
+			fire_only_once = yes
+			visible = {
+				original_tag = ERB
+				has_completed_focus = enc_the_american_alliance
+			}
+			available = {
+				has_completed_focus = ENC_energy_boom
+			}
+			complete_effect = {
+				350 = {
+					add_resource = {
+						type = electricity
+						amount = 10
+					}
+					add_resource = {
+						type = fuel
+						amount = 5
+					}
+				}
+
+				350 = {
+					add_resource = {
+						type = advanced_technology
+						amount = 10
+					}
+				}
+			}
+		}
+		ENC_follower_school_system = {
+			cost = 50
+			days_remove = 10
+			ai_will_do = {
+				factor = 10
+			}
+			fire_only_once = yes
+			visible = {
+				original_tag = ERB
+				has_completed_focus = enc_the_american_alliance
+			}
+			available = {
+				has_country_flag = enc_followers
+			}
+			complete_effect = {
+				add_ideas = ENC_follower_schools
+				every_other_country = {
+					limit = {
+						is_in_faction_with = ERB
+					}
+					add_ideas = ENC_follower_schools
+				}
+			}
+		}
+		ENC_american_rangers = {
+			cost = 50
+			days_remove = 10
+			ai_will_do = {
+				factor = 10
+			}
+			fire_only_once = yes
+			visible = {
+				original_tag = ERB
+				has_completed_focus = enc_the_american_alliance
+			}
+			available = {
+				has_country_flag = enc_freedom
+			}
+			complete_effect = {
+				country_event = {
+					id = enc_reformers .158
+				}
+			}
+		}								
 }	
 	
 ###############################
@@ -1639,6 +1697,7 @@ ENC_NCR_hiding = {
 		icon = generic_political_discourse
 		visible = {
 			has_completed_focus = enc_reform
+			has_completed_focus = enc_foreign_policy
 			has_country_flag = ncr_suspicious
 		}
 		available = {

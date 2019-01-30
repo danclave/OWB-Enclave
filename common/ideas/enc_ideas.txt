@@ -1970,7 +1970,7 @@ ideas = {
 		ENC_construction_infra = {
 			picture = generic_exploit_mines
 			modifier = {
-					production_speed_infrastructure_factor = -0.2
+					production_speed_infrastructure_factor = 0.2
 				}
 		}
 		ENC_construction_forts = {
