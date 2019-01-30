@@ -55,10 +55,6 @@ ENC_cloning = {
 	visible = { has_completed_focus = enc_cloning }
 }
 
-test_coring = {
-	icon = generic_civil_support
-}
-
 ENC_NCR_hiding = {
 	icon = generic_crisis
 	priority = { base = 15 }
@@ -68,11 +64,12 @@ ENC_NCR_hiding = {
 	visible = {
 		has_country_flag = ncr_suspicious
 		not = {
-			OR = { has_war_with = NCR
-				NCR = { exists = YES }
-				}
-			  }
-			}	 
+			OR = { 
+				has_war_with = NCR
+				NCR = { exists = no }
+			}
+		}
+	}	 
 }
 
 ENC_political_infighting = {

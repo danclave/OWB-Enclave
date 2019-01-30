@@ -825,58 +825,58 @@ ENC_northwest_reconstruction = {
 	}
 }
 ENC_rockies_reconstruction = {
-ENC_los_alamos= {
-		cost = 25
-		days_remove = 10
-		ai_will_do = { factor = 10 }
-		fire_only_once = yes
-		available = { 44 = { is_owned_and_controlled_by = ERB } }
-		visible = {
-			original_tag = ERB 
-			}
-		complete_effect = {
-			country_event = { id = enc_reformers.157 }			
-			
-		}	
-	}
+	ENC_los_alamos= {
+			cost = 25
+			days_remove = 10
+			ai_will_do = { factor = 10 }
+			fire_only_once = yes
+			available = { 44 = { is_owned_and_controlled_by = ERB } }
+			visible = {
+				original_tag = ERB 
+				}
+			complete_effect = {
+				country_event = { id = enc_reformers.157 }			
+				
+			}	
+		}
 
-ENC_mormons = {
+	ENC_mormons = {
+			cost = 25
+			days_remove = 10
+			ai_will_do = { factor = 10 }
+			fire_only_once = yes
+			available = { 266 = { is_owned_and_controlled_by = ERB } }
+			visible = {
+				original_tag = ERB 
+				}
+			complete_effect = {
+				country_event = { id = enc_reformers.151 }			
+			}	
+		}
+	ENC_the_nursery = {
 		cost = 25
 		days_remove = 10
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			factor = 10
+		}
 		fire_only_once = yes
-		available = { 266 = { is_owned_and_controlled_by = ERB } }
+		available = {
+			AND = {
+				308 = {
+					is_owned_and_controlled_by = ERB
+				}
+				has_completed_focus = enc_geck
+			}
+		}
 		visible = {
-			original_tag = ERB 
-			}
+			original_tag = ERB
+		}
 		complete_effect = {
-			country_event = { id = enc_reformers.151 }			
-		}	
-	}
-ENC_the_nursery = {
-	cost = 25
-	days_remove = 10
-	ai_will_do = {
-		factor = 10
-	}
-	fire_only_once = yes
-	available = {
-		AND = {
-			308 = {
-				is_owned_and_controlled_by = ERB
+			country_event = {
+				id = enc_reformers.150
 			}
-			has_completed_focus = enc_geck
 		}
 	}
-	visible = {
-		original_tag = ERB
-	}
-	complete_effect = {
-		country_event = {
-			id = enc_reformers .150
-		}
-	}
-}
 
 }
 ENC_starting_companies = {
@@ -928,179 +928,179 @@ ENC_starting_companies = {
 	}
 }
 ENC_build_nevada = {
-		ENC_vault_city_university = {
-			cost = 50
-			days_remove = 10
-			ai_will_do = {
-				factor = 10
-			}
-			fire_only_once = yes
-			allowed = {
-				original_tag = ERB
-			}
-			visible = {
-				has_completed_focus = enc_reform
-				291 = {
-					is_owned_and_controlled_by = ERB
-				}
-			}
-			complete_effect = {
-				set_temp_variable = {
-					var = legitimacy_change_var
-					value = 0.05
-				}
-				change_legitimacy = yes
+	ENC_vault_city_university = {
+		cost = 50
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		allowed = {
+			original_tag = ERB
+		}
+		visible = {
+			has_completed_focus = enc_reform
+			291 = {
+				is_owned_and_controlled_by = ERB
 			}
 		}
-		ENC_water_supply = {
-			cost = 25
-			days_remove = 10
-			ai_will_do = {
-				factor = 10
+		complete_effect = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
 			}
-			fire_only_once = yes
-			allowed = {
-				original_tag = ERB
-			}
-			visible = {
-				has_completed_focus = enc_reform
-				295 = {
-					is_owned_and_controlled_by = ERB
-				}
-			}
-			complete_effect = {
-				295 = {
-					add_resource = {
-						type = water
-						amount = -10
-					}
-				}
-				set_temp_variable = {
-					var = legitimacy_change_var
-					value = 0.05
-				}
-				change_legitimacy = yes
+			change_legitimacy = yes
+		}
+	}
+	ENC_water_supply = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		allowed = {
+			original_tag = ERB
+		}
+		visible = {
+			has_completed_focus = enc_reform
+			295 = {
+				is_owned_and_controlled_by = ERB
 			}
 		}
-		ENC_cassidy_caravans = {
-			cost = 25
-			days_remove = 10
-			ai_will_do = {
-				factor = 10
-			}
-			fire_only_once = yes
-			allowed = {
-				original_tag = ERB
-			}
-			visible = {
-				has_completed_focus = enc_the_state_of_nevada
-				295 = {
-					is_owned_and_controlled_by = ERB
+		complete_effect = {
+			295 = {
+				add_resource = {
+					type = water
+					amount = -10
 				}
 			}
-			complete_effect = {
-				country_event = {
-					id = enc_reformers .154
-				}
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+		}
+	}
+	ENC_cassidy_caravans = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		allowed = {
+			original_tag = ERB
+		}
+		visible = {
+			has_completed_focus = enc_the_state_of_nevada
+			295 = {
+				is_owned_and_controlled_by = ERB
 			}
 		}
-		ENC_nukacola = {
-			cost = 25
-			days_remove = 10
-			ai_will_do = {
-				factor = 10
-			}
-			fire_only_once = yes
-			visible = {
-				original_tag = ERB
-				has_completed_focus = enc_vlt_power_reform
-			}
-			complete_effect = {
-				country_event = {
-					id = enc_reformers .107
-				}
+		complete_effect = {
+			country_event = {
+				id = enc_reformers.154
 			}
 		}
-		ENC_enclavecalifornia_helios_two = {
-			cost = 25
-			days_remove = 10
-			ai_will_do = {
-				factor = 10
+	}
+	ENC_nukacola = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		visible = {
+			original_tag = ERB
+			has_completed_focus = enc_vlt_power_reform
+		}
+		complete_effect = {
+			country_event = {
+				id = enc_reformers.107
 			}
-			fire_only_once = yes
-			visible = {
-				original_tag = ERB
-				has_completed_focus = enc_the_american_alliance
-			}
-			available = {
-				has_completed_focus = ENC_energy_boom
-			}
-			complete_effect = {
-				350 = {
-					add_resource = {
-						type = electricity
-						amount = 10
-					}
-					add_resource = {
-						type = fuel
-						amount = 5
-					}
+		}
+	}
+	ENC_enclavecalifornia_helios_two = {
+		cost = 25
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		visible = {
+			original_tag = ERB
+			has_completed_focus = enc_the_american_alliance
+		}
+		available = {
+			has_completed_focus = ENC_energy_boom
+		}
+		complete_effect = {
+			350 = {
+				add_resource = {
+					type = electricity
+					amount = 10
 				}
+				add_resource = {
+					type = fuel
+					amount = 5
+				}
+			}
 
-				350 = {
-					add_resource = {
-						type = advanced_technology
-						amount = 10
-					}
+			350 = {
+				add_resource = {
+					type = advanced_technology
+					amount = 10
 				}
 			}
 		}
-		ENC_follower_school_system = {
-			cost = 50
-			days_remove = 10
-			ai_will_do = {
-				factor = 10
-			}
-			fire_only_once = yes
-			visible = {
-				original_tag = ERB
-				has_completed_focus = enc_the_american_alliance
-			}
-			available = {
-				has_country_flag = enc_followers
-			}
-			complete_effect = {
+	}
+	ENC_follower_school_system = {
+		cost = 50
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		visible = {
+			original_tag = ERB
+			has_completed_focus = enc_the_american_alliance
+		}
+		available = {
+			has_country_flag = enc_followers
+		}
+		complete_effect = {
+			add_ideas = ENC_follower_schools
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ERB
+				}
 				add_ideas = ENC_follower_schools
-				every_other_country = {
-					limit = {
-						is_in_faction_with = ERB
-					}
-					add_ideas = ENC_follower_schools
-				}
 			}
 		}
-		ENC_american_rangers = {
-			cost = 50
-			days_remove = 10
-			ai_will_do = {
-				factor = 10
+	}
+	ENC_american_rangers = {
+		cost = 50
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		visible = {
+			original_tag = ERB
+			has_completed_focus = enc_the_american_alliance
+		}
+		available = {
+			has_country_flag = enc_freedom
+		}
+		complete_effect = {
+			country_event = {
+				id = enc_reformers.158
 			}
-			fire_only_once = yes
-			visible = {
-				original_tag = ERB
-				has_completed_focus = enc_the_american_alliance
-			}
-			available = {
-				has_country_flag = enc_freedom
-			}
-			complete_effect = {
-				country_event = {
-					id = enc_reformers .158
-				}
-			}
-		}								
+		}
+	}								
 }	
-	
+
 ###############################
 # SHARED
 ###############################
@@ -1964,7 +1964,7 @@ operations = {
 		}
 	}
 }
-
+ 
 
 ###############################
 # PURIST
