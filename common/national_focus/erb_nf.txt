@@ -807,7 +807,7 @@ focus_tree = {
 	}
 	focus = {#EXPANSION - YKZ - annex
 		id = enc_yakuza_annex_reform
-		icon = GFX_focus_AST_war_japan
+		icon = GFX_goal_enc_reform_annex_ykz
 		ai_will_do = { factor = 1 }
 		available = { has_war_support > 0.20 }
 		prerequisite = { focus = enc_expansion_reform }
@@ -1003,7 +1003,7 @@ focus_tree = {
 		}
 		cost = 4.3
  }
- focus = {# Nevada rangers
+	focus = {# Nevada rangers
 		id = enc_Nevada_Rangers
 		icon =  GFX_goal_enc_rangers_agreement
 		ai_will_do = { factor = 1 } 
@@ -4037,6 +4037,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		id = enc_rank_and_file_infantry
 		icon = GFX_goal_enc_mass_mobilization
 		ai_will_do = { factor = 1 }
+		mutually_exclusive = { focus = enc_disciplined_soldiers }
 		prerequisite = {focus = enc_disciplined_soldiers}
 		relative_position_id = enc_disciplined_soldiers
 		x = 0
