@@ -30,7 +30,7 @@ units = {
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "Sac City Guard"
+		name = "Warriors of the Eagle"
 		location = 2219 
     division_template = "Tribal Infantry"
 		start_experience_factor = 0.6

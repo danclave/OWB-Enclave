@@ -639,7 +639,7 @@ Enc_Big_MT: "Securing the Big MT"
 Enc_Big_MT_desc: "The Big MT was one of the greatest sites of prewar research, and rumors of flickering lights haunting the nights suggest there could still be much to be gained from an expedition to its ruins. What's the worst that could happen?"
 Enc_Hoover_Dam_1: "The Treaty of Hoover Dam"
 Enc_Hoover_Dam_1_desc: "A treaty with the NCR will restore the dam to Nevada's control, although we will be reuqired to supply them with a portion of its power."
-enc_pacific_commonwealth: "Rebuilding the Pacific Commonwealth"
+enc_pacific_commonwealth: "Rebuild the Pacific Commonwealth"
 enc_pacific_commonwealth_desc: "Before the Great War, Seattle and Portland were gleaming cities of the Ameriican northwest.  Now the region is given over to supermutants, raiders, and Brotherhood knights led by... a ghoul? I guess.  Anyway, we can rally American patriots in the region to create a new member of the Associated States of America."
 enc_Wash_BOS: "Taking Down the Brotherhood"
 enc_Wash_BOS_desc: "With the outlying regions of the Oregon secured, we have a base to drive the Brotherhood out of Seattle."
@@ -681,9 +681,18 @@ Enc_Mexican_Trade: "Trade with Mexico"
 Enc_Mexican_Trade_desc: "They say trade flows from Mexico like spilled wine, but until recently the American economies were too small and isolated to engage in direct trade. For reasons in the attached report we can't invade Mexico (yet), but at least we can promote trade by land and sea, bringing us real coffee instead of the stuff made with tobacco and mesquite pods. Let's see people criticize the Enclave now."
 CES_reformer_crisis: "Where Free Men Shall Stand"
 CES_reformer_crisis_desc: "The tyrants of the Wastes have closed ranks against America.  We must prepare for the war that is surely coming our way."
+enc_navy_reform: "The Department of the Navy"
+enc_navy_reform_desc: "Even before the Oil Rig Fell, the Enclave did not have much in the way of a navy.  But now that we have access to deep rivers and the ocean again, perhaps we should revive the Great White Fleet."
+enc_naval_industry_reform: "Liberty Ships"
+enc_naval_industry_reform_desc: "Before the Great War, the United States Navy sailed the world's seas, and brought the fight to China's shores directly.  Although it'll be a long time before we can do that again, we can take the first steps and get our men their sea legs, as it were."
+enc_air_force_reform: "Revive the Air Force"
+enc_air_force_reform_desc: "The rebel governments of the Wastes have been able to field planes of their own to contest the skies.  It's time to revive the United States Air Force and show them who really rules the heavens."
+enc_Area_52: "The Groom Lake Testing Ground"
+enc_Area_52_desc: "Some of the technologies we've found at Area 51 are beyond even the Enclave's scientists and surpass what we thought prewar engineers were capable of.  We can press them into our service, although you have to wonder where they got these ideas..."
 ###################################
 # REFORM IDEAS
 ###################################
+ENC_nuke: "Legion Decapitated"
 ENC_follower_schools: "Follower Education"
 ENC_follower_school_system: "Follower Schools"
 ENC_follower_school_system_desc: "The greatest dream of the Followers is to provide universal schooling for all the children of the Wastes.  They claim that true reconstruction will require rebuilding the foundations of prewar technology, not just reactivating old power plants. Let us fulfill their dream of every kid a textbook!"
@@ -799,7 +808,7 @@ enc_seperate_but_equal:  "Service Guarantees Citizenship"
 enc_segregation_forever:  "Segregation Forever"
 enc_wastelander_draft:  "Unwilling Volunteers"
 enc_technocrats:  "Technocratic Administration"
-ENC_Freedom_Rings:  "Freedom Rings"
+ENC_freedom_rings:  "Freedom Rings"
 ENC_Freedom_Silent:  "Peace, Order, and Good Government"
 ENC_House:  "The House Always Wins"
 ENC_Marriage_Equality:  "Ghoul Marriage"
@@ -984,6 +993,7 @@ ENC_rise_slaves_des: "It's time to remind Caesar that Americans will always figh
 ###################################
 # FLAGS
 ###################################
+enc_promised_no_peace_with_bos: "Promised no peace with the Brotherhood"
 enc_ncr_connections_flag: "Connections in the §YNCR§!"
 enc_crackdown_justified: "§YCrackdown§! is justified"
 enc_crackdown_justified_tt: "We gain justifications for a §Ycrackdown§!"
@@ -1167,3 +1177,4 @@ enc_tribals_tt: "2 §Ytribal infantry§! and 4 §Ytribal militias§! appear in �
 # £victory_point_texticon
 # £weather_text
 # £wing_rebase_status_texticon
+
