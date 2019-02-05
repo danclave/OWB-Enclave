@@ -2707,7 +2707,14 @@ focus = {#Reunited
 			KHA = { exists = NO }
 		}	
 		completion_reward = { 
-		ERB = {	create_wargoal = { type = annex_everything target = KHA } }	
+		every_other_country = {
+					limit = {
+						has_full_control_of_state = 106 # Bittersprings
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+					}
+				}
 			}
 		
 		}
@@ -2783,16 +2790,8 @@ focus = {#Reunited
 		available = { has_full_control_of_state = 211 }
 		prerequisite = { focus = Enc_Second_City }	
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] veg_vault21 entered"
+			country_event = enc_reformers.168
 			}
-			country_event = nf_vegas.9
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] veg_vault21 exited"
-			}
-		}
 	}
 	focus = { # repconn
 		id = ERB_Repconn
@@ -2871,7 +2870,7 @@ focus = {#Reunited
 		prerequisite = { focus = Enc_Second_City }	
 		completion_reward = { 
 		set_technology = { securitron_2_tech = 1 }
-		add_ideas = securitron_vault
+		add_ideas = securitron2
 			}
 		}
 
@@ -4074,7 +4073,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		id = enc_rank_and_file_infantry
 		icon = GFX_goal_enc_mass_mobilization
 		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_disciplined_soldiers}
+		prerequisite = {focus = enc_disciplined_soldiers }
 		relative_position_id = enc_disciplined_soldiers
 		x = 0
 		y = 1
@@ -4086,7 +4085,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 	
 	focus = {#Military - quality - advanced_training
 		id = enc_advanced_training
-		mutually_exclusive = { focus = enc_enc_disciplined_soldiers }
+		mutually_exclusive = { focus = enc_disciplined_soldiers }
 		icon = GFX_goal_enc_laser_weapons_reform
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_military_equipment}

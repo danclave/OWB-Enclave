@@ -540,14 +540,13 @@ ENC_pacific_commonwealth1 = {
 						}			
 	}
 }
-ENC_Treaty_Hoover_Dam = {
+ENC_treaty_hoover_dam = {
 	Enc_Cession_of_Helios_one = {
 	priority = 300
 		fire_only_once = no
 		
 		visible = {
 			tag = ERB
-			has_completed_focus = Enc_Hoover_Dam_1
 			417 = { is_owned_and_controlled_by = NCR }
 			}
 		complete_effect = {
@@ -610,11 +609,10 @@ ENC_Treaty_Hoover_Dam = {
 		
 		visible = {
 			tag = ERB
-			has_completed_focus = Enc_Hoover_Dam_1
-			98 = { is_owned_and_controlled_by = NCR }
+			252 = { is_owned_and_controlled_by = NCR }
 			}
 		complete_effect = {
-			ERB = { transfer_state = 98 }
+			ERB = { transfer_state = 252 }
 			253 = {
 				add_resource = {
 					type = electricity
@@ -625,7 +623,7 @@ ENC_Treaty_Hoover_Dam = {
 					amount = 25					
 				}
 							}
-			98 = {
+			252 = {
 				add_resource = {
 					type = electricity
 					amount = -25

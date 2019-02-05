@@ -489,8 +489,9 @@ country_event = {#17 - Fortunate son
     trigger = {	
 		has_completed_focus = enc_reform
 		has_country_flag = enc_music_found
-	}	
-	
+		country_exists = NCR
+		NOT = { has_completed_focus = enc_our_new_ally }
+		}	
 	option = {# crack down on this behaviour
 		name = enc_reformers.17.a
 		add_popularity = { ideology = intellectuals popularity = -0.02 }
@@ -3527,11 +3528,15 @@ country_event = {#135 BOS
 		}
 	 option = {# Yuck Yuck!
 	name = enc_reformers.135.b
-	custom_effect_tooltip = enc_reformers.118.b.tt	
-	trigger = { has_country_flag = leader_charismatic 	}
-	add_stability = -0.5		
-	add_manpower = 400
-		 		}
+	trigger = { OR = { has_country_flag = leader_charismatic
+						has_country_flag = enc_bos_connections_flag 
+					  }
+				}
+	add_stability = -0.05		
+	hidden_effect = { load_oob = enc_bos_recruits }
+	custom_effect_tooltip = enc_reformers.135.b.tt
+	set_country_flag = integrate_brotherhood
+		}
 	option = {# Evil
 	name = enc_reformers.135.c
 	custom_effect_tooltip = enc_reformers.119.c.tt
@@ -4050,7 +4055,7 @@ country_event = { #157 - Reservation
 			}
 	option = { # Great!
 		name = enc_reformers.157.b
-		trigger= { has_country_flag = leader_ruthless } }
+		trigger = { has_country_flag = leader_ruthless } 
 			custom_effect_tooltip = load_gammacore_enclave
 			hidden_effect = { load_oob = gammacore }
 			}
@@ -4345,12 +4350,38 @@ country_event = { #167  End of Reformers
 		name = enc_reformers.167.a
 		set_party_name = {
                 ideology = intellectuals
-                long_name = "Americans"
+                long_name = "The Grand New Party"
                 name = "Americans"
            }
 		}
 	}
+country_event = {
+	id = enc_reformers.168
+	title = enc_reformers.168.t
+	desc = enc_reformers.168.d
+	picture = GFX_event_VEG_vault21
 
+	is_triggered_only = yes
+
+	option = {
+		name = enc_reformers.168.a
+
+		211 = {
+			add_resource = {
+				type = fuel
+				amount = 10
+			}
+			add_resource = {
+				type = electronics
+				amount = 20
+			}
+			add_resource = {
+				type = advanced_technology
+				amount = 5
+			}
+		}
+	}
+}
 
 # integration
 #
