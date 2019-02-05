@@ -385,14 +385,14 @@ enc_geck:0 "The GECK Project"
 enc_geck_desc:0 "The Garden of Eden Creation Kit was designed to help revive the Wastes after a nuclear war.  The Reunited States can use this technology on a national level to turn the Deadwood forests into Redwood forests once again."
 
 enc_accept_ghouls:0 "Accept Ghouls"
-enc_accept_ghouls_desc:0 "But some of them are old enough to remember when America was a country and not a Wasteland."
+enc_accept_ghouls_desc:0 "Contrary to popular belief, not all ghouls are feral. Many of them are just like the rest of us, people struggling to thrive in the unforgiving wastes. Some are old enough to remember when America was a country and not a Wasteland. \nLet us reach out our hand and invite them to help us rebuild what they once knew."
 enc_reject_ghouls:0 "Reject Ghouls"
-enc_reject_ghouls_desc:0 "How can we claim ghouls are American citizens?  They smell..."
+enc_reject_ghouls_desc:0 "How can we claim ghouls are American citizens?  They are mutated far beyond even being human. Most of them are feral, bloodthirsty creatures and the few that aren't can turn at any time.\n Let us leave these relics in the past, there is no room for them in our newly reborn America."
 
 enc_accept_super_mutants:0 "Accept Super Mutants"
-enc_accept_super_mutants_desc:0 "On the other hand, supermutants can be as smart and far stronger than the average American."
+enc_accept_super_mutants_desc:0 "Super Mutants might once have been dangerous, but their numbers have been dwindling for decades. Plenty of them are brutes beyond reasoning, but some of them are rumored to think and feel just as a regular human being. If they are willing to join us, we can use their formidable  strength to rebuild America."
 enc_reject_super_mutants:0 "Reject Super Mutants"
-enc_reject_super_mutants_desc:0 "We need to figure out how to handle the Super Mutants.  They are nothing but a threat."
+enc_reject_super_mutants_desc:0 "Legends tell us of a time when the super mutants were more numerous and organized. Lead by a figure known as The Master, they attempted to replace humanity as the dominant species of this planet. Luckily for us, they failed. \nNow we will make sure they never have a chance to try again."
 
 enc_department_of_energy:0 "Department of Energy"
 enc_department_of_energy_desc:0 "Prewar America sent energy from Hoover Dam to California, from the Tennesee Valley to Chicago.  So can we."
@@ -492,7 +492,7 @@ enc_silence_congress_reform: "Silence Congress"
 enc_silence_congress_reform_desc: "Through bribes and bullet-related accidents, we can silence dissidents in Congress."
 
 enc_segregation: "Segregation"
-enc_segregation_desc: "Greenskins?  In our country?  Kind of gross."
+enc_segregation_desc: "No matter how you look at it, the wastelanders have been mutated by years of radiation and FEV contamination. While we don't believe they are guilty of anything, there must be barriers put up to protect unmutated human genes.\nThe Enclave will rule the wastelanders as a caste above them."
 
 enc_institutionalize_separation: "Institutionalize Seperation"
 enc_institutionalize_separation_desc: "By assigning special privileges to Americans based on their genetic makeup, level of civilization (as we define it), and usefulness, we can revive old American traditions."
