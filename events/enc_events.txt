@@ -695,7 +695,7 @@ country_event = { #33 - Crimson Caravan Encounter
 		NCR = {
 			exists = yes
 			has_civil_war = no
-			noT = { has_war_with = ERB }
+			not = { has_war_with = ERB }
 		}
 	}
 	mean_time_to_happen = {
@@ -745,7 +745,17 @@ country_event = { #34 - remnants of Sack city
 	}
 	option = { # Welcome them back!
 		name = enc.34.a
+		trigger = {
+			has_completed_focus = enc_purity
+		}
 		add_war_support = -0.10
+		add_manpower = 200
+	}
+	option = { # Welcome them back! (reform)
+		name = enc.34.a
+		trigger = {
+			has_completed_focus = enc_reform
+		}
 		add_manpower = 200
 	}
 		option = { # Refuse them!
@@ -767,9 +777,19 @@ country_event = { #35 - remnants of Shady Sands
 		days = 30
 	}
 	option = { # Welcome them back!
+		trigger = {
+			has_completed_focus = enc_purity
+		}
 		name = enc.35.a
 		add_war_support = -0.10
 		add_manpower = 300
+	}
+	option = { # Welcome them back! (reform)
+		name = enc.34.a
+		trigger = {
+			has_completed_focus = enc_reform
+		}
+		add_manpower = 200
 	}
 		option = { # Refuse them!
 		name = enc.35.b
@@ -791,8 +811,18 @@ country_event = { #36 - remnants of the boneyard
 	}
 	option = { # Welcome them back!
 		name = enc.36.a
+		trigger = {
+			has_completed_focus = enc_purity
+		}
 		add_war_support = -0.10
 		add_manpower = 400
+	}
+	option = { # Welcome them back! (reform)
+		name = enc.34.a
+		trigger = {
+			has_completed_focus = enc_reform
+		}
+		add_manpower = 200
 	}
 		option = { # Refuse them!
 		name = enc.36.b
@@ -953,6 +983,7 @@ country_event = {#42 - On the border of the bull
     is_triggered_only = no
 	trigger = {	
 		tag = ERB 
+		has_completed_focus = enc_purity
 		is_neighbor_of = CES
 		strength_ratio = {
 			tag = CES
@@ -971,6 +1002,7 @@ country_event = {#42 - On the border of the bull
 		set_country_flag = ENC_CES_hostile
 	}
 }
+
 #################
 ## IDEAS
 #################
