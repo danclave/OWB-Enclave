@@ -37,6 +37,27 @@ ideas = {
 				factor = 1
 			}
 		}
+	paladin_myers = {	
+			picture = BOS_generic6
+			
+			allowed = {
+				original_tag = ERB
+			}
+			
+			available = {
+				original_tag = ERB
+			}
+			visible = {
+				has_country_flag = integrate_brotherhood 
+				}
+			traits = { 
+				veteran_paladin
+			}
+		
+			ai_will_do = {
+				factor = 10
+			}
+		}
 		boris_t = {			
 			allowed = {
 				original_tag = ERB

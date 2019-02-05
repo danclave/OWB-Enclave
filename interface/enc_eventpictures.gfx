@@ -383,6 +383,19 @@ SpriteType = {#nature
 SpriteType = {#mutantprotests
 			name = "GFX_event_enc_antimutants"
 			texturefile = "gfx/event_pictures/event_enc_antimutants.dds"	
-		}		
+		}
+
+SpriteType = {#Ashton
+			name = "GFX_event_enc_divide1"
+			texturefile = "gfx/event_pictures/event_enc_divide1.dds"	
+		}	
+		SpriteType = {#silo
+			name = "GFX_event_the_silo"
+			texturefile = "gfx/event_pictures/event_the_silo.dds"	
+		}
+	SpriteType = {#nuke legion
+			name = "GFX_event_enc_legion_nuke"
+			texturefile = "gfx/event_pictures/event_enc_legion_nuke.dds"	
+		}			
 }			
 

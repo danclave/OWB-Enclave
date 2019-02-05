@@ -812,7 +812,7 @@ focus_tree = {
 		available = { has_war_support > 0.20 }
 		prerequisite = { focus = enc_expansion_reform }
 		bypass = {
-			YKZ = { exists = NO }
+			has_full_control_of_state = 160 
 		}	
 		relative_position_id = enc_expansion_reform
 		x = -3
@@ -1140,6 +1140,9 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = enc_expansion_reform }
 		cost = 5.8
+		bypass = {
+			has_full_control_of_state = 585 
+		}
 		completion_reward = {
 			custom_effect_tooltip = enc_ANT_annex_tt
 			hidden_effect = { # ugly tooltip
@@ -1834,7 +1837,19 @@ focus_tree = {
 		y = 1
 		cost = 5.8 
 		completion_reward = {
-		custom_effect_tooltip = enc_reconstruction.tt 	
+		add_resource = {
+				type = advanced_technology amount = 5 state = 350
+			}
+		add_resource = {
+				type = advanced_technology amount = 5 state = 253
+			}
+		add_resource = {
+				type = advanced_technology amount = 5 state = 253
+			}
+		add_resource = {
+				type = advanced_technology amount = 5 state = 285
+			}	
+		
 		}
 	}
 	focus = {#REBorN - rebuilding america
@@ -2011,6 +2026,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5.8 
+		available = { 395 = { is_owned_and_controlled_by = ERB } }
 		completion_reward = {
 		country_event = { id = enc_reformers.132 }
 		}
@@ -2179,6 +2195,7 @@ focus_tree = {
 		prerequisite = {focus = enc_old_world }
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_old_world 
+		available = { NOT = {country_exists = NCR } }
 		x = -7
 		y = 1
 		cost = 5.8 
@@ -2529,13 +2546,33 @@ focus = {#Reunited
 			}
 		}
 	}
+	focus = {# area 51
+		id = enc_Area_52
+		icon = GFX_goal_us_plane_advanced
+		ai_will_do = {
+			factor = 1
+		}
+		relative_position_id = enc_Area_51
+		x = 1
+		y = 1
+		cost = 5.8
+		prerequisite = {
+			focus = enc_Area_51
+					}
+		available = {
+			has_full_control_of_state = 389
+		}
+		completion_reward = {
+			set_technology = { xian_85_fighter = 1}
+			}
+	}
 	focus = {# mojave express
 		id = Enc_Mojave_Express
 		icon = GFX_goal_molotov_ribbentrop_pact
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_Area_51
 		x = 4
-		y = 1
+		y = 2
 		cost = 5.8 
 		prerequisite = { focus = enc_Area_51 }	
 		completion_reward = { 
@@ -2569,7 +2606,7 @@ focus = {#Reunited
 		icon = GFX_goal_enc_construction_nev
 		ai_will_do = { factor = 1 } 
 		relative_position_id = Enc_Mojave_Express
-		x = -
+		x = 0
 		y = 1
 		cost = 5.8 
 		prerequisite = { focus = Enc_Mojave_Express }	
@@ -2635,7 +2672,7 @@ focus = {#Reunited
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_Area_51
 		x = -4
-		y = 1
+		y = 2
 		cost = 5.8 
 		prerequisite = { focus = enc_Area_51 }	
 		available = { has_full_control_of_state = 284 } 
@@ -2682,13 +2719,20 @@ focus = {#Reunited
 		relative_position_id = enc_Area_51
 		prerequisite = { focus = enc_Area_51 }
 		x = 0
-		y = 1
+		y = 2
 		cost = 5.8 
 		bypass = {
 			KHA = { exists = NO }
 		}	
 		completion_reward = { 
-		ERB = {	create_wargoal = { type = annex_everything target = KHA } }	
+		every_other_country = {
+					limit = {
+						has_full_control_of_state = 106 # Bittersprings
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+					}
+				}
 			}
 		
 		}
@@ -2764,16 +2808,8 @@ focus = {#Reunited
 		available = { has_full_control_of_state = 211 }
 		prerequisite = { focus = Enc_Second_City }	
 		completion_reward = {
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] veg_vault21 entered"
+			country_event = enc_reformers.168
 			}
-			country_event = nf_vegas.9
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] veg_vault21 exited"
-			}
-		}
 	}
 	focus = { # repconn
 		id = ERB_Repconn
@@ -2852,7 +2888,7 @@ focus = {#Reunited
 		prerequisite = { focus = Enc_Second_City }	
 		completion_reward = { 
 		set_technology = { securitron_2_tech = 1 }
-		add_ideas = securitron_vault
+		add_ideas = securitron2
 			}
 		}
 
@@ -2909,7 +2945,7 @@ focus = {#Reunited
 		}
 		relative_position_id = enc_Area_51
 		x = 2
-		y = 1
+		y = 2
 		available = {
 			417 = { is_owned_and_controlled_by = ERB }
 		}
@@ -2966,7 +3002,7 @@ focus = {#Reunited
 		}
 		relative_position_id = enc_Area_51
 		x = -2
-		y = 1
+		y = 2
 		completion_reward = {
 		country_event = { id = enc_reformers.121 }	
 			}
@@ -3651,7 +3687,7 @@ focus = {#Reunited
 		diplomatic_relation = { country = VEG relation = non_aggression_pact }	
 		}		
 	} 
-	focus = {#Diplomacy - NEW - pact
+	focus = {#Diplomacy - VEG - pact
 		id = enc_NEW_pact
 		icon = GFX_goal_VEG_New_World_Order 
 		ai_will_do = { factor = 1 } 
@@ -3668,7 +3704,7 @@ focus = {#Reunited
 		}
 		completion_reward = { give_guarantee = VEG }								
 	}
-	focus = {#Diplomacy - NEW - puppet
+	focus = {#Diplomacy - veg - puppet
 		id = enc_NEW_puppet
 		icon = GFX_goal_generic_major_alliance 
 		ai_will_do = { factor = 1 } 
@@ -4126,7 +4162,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_department_of_defense
 		prerequisite = { focus = enc_department_of_defense }
-		x = 4
+		x = 5
 		y = 1
 		cost = 2
 		completion_reward = {
@@ -4167,8 +4203,8 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 			army_experience = 50
 			add_stability = 0.05
 			create_field_marshal = {
-				name = "General McLane"
-				portrait_path = "gfx/leaders/ENC/potrait_mclane.dds"
+				name = "General Judah Kreger"
+				portrait_path = "gfx/leaders/ENC/Portrait_ENC_Generic_3.dds"
 				skill = 5
 				attack_skill = 5
 				defense_skill = 4
@@ -4236,17 +4272,99 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 			add_political_power = 100
 		}
 	}
+	
+	####################################
+	# Air And Sea
+	####################################
 
+	focus = {#Military - Navy
+		id = enc_navy_reform
+		icon = GFX_goal_US_navy
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_department_of_defense
+		prerequisite = { focus = enc_department_of_defense }
+		x = -3
+		y = 1
+		cost = 3
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_doctrine }
+		}
+	}
+	
+	focus = {#Military - naval_development
+		id = enc_naval_industry_reform
+		icon = GFX_goal_US_dock
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_navy_reform
+		prerequisite = { focus = enc_navy_reform }
+		x = 0
+		y = 1
+		cost = 3
+		completion_reward = {
+	add_tech_bonus = { bonus = 0.5 uses = 2 category = ship_battleship_tech }		}
+	}
+	
+	
+	focus = {#Military - Air Force
+		id = enc_air_force_reform
+		icon = GFX_goal_us_plane
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_department_of_defense
+		prerequisite = { focus = enc_department_of_defense }
+		x = 3
+		y = 1
+		cost = 3
+		completion_reward = {
+		add_tech_bonus = { bonus = 0.5 uses = 2 category = air_doctrine }
+			}
+	}
 	####################################
 	# Home defense 
 	####################################
+
 	focus = {#Military - defense - home defense
 		id = enc_home_defense
 		icon = GFX_goal_enc_armed_militias
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_department_of_defense
 		prerequisite = { focus = enc_department_of_defense }
-		x = -4 
+		x = -5
 		y = 1
 		cost = 3
 		completion_reward = {
@@ -4754,8 +4872,8 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		available = { has_war_support > 0.5 }
 		prerequisite = { focus = enc_expansion }
 		bypass = {
-			YKZ = { exists = NO }
-		}	
+			has_full_control_of_state = 160 
+		}
 		relative_position_id = enc_expansion
 		x = -3
 		y = 1
@@ -5352,9 +5470,9 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		icon = GFX_goal_enc_rangers_start
 		cost = 1
 		ai_will_do = { factor = 1 }
-		
 		available = {
 			is_neighbor_of = DES
+			has_completed_focus = enc_purity
 		}
 		
 		relative_position_id = enc_vlt_power

@@ -134,14 +134,21 @@ ENC_pacific_commonwealth1 = {
 			}	
 }
 
+<<<<<<< HEAD
 ENC_Treaty_Hoover_Dam = {
 	icon = generic_political_actions
 	allowed = { tag = ERB }
 	visible = {
 		has_completed_focus = Enc_Hoover_Dam_1
 	}	
+=======
+ENC_treaty_hoover_dam = {
+	allowed = { tag = ERB }
+	visible = { 
+			has_completed_focus = Enc_Hoover_Dam_1
+		}
+>>>>>>> 70e6d239173b09f7e2e7f93cb44b549969bac784
 }
-
 ENC_california_reconstruction = {
 	icon = generic_industry
 	allowed = { tag = ERB }
@@ -159,6 +166,11 @@ ENC_rockies_reconstruction = {
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_rebuilding_rockies }	
 }
+ENC_deseret = {
+	allowed = { tag = ERB }
+	visible = {	has_completed_focus = enc_the_state_of_utah }	
+}
+
 ENC_starting_companies = {
 	icon = generic_industry
 	allowed = { tag = ERB }
@@ -171,6 +183,12 @@ ENC_build_nevada = {
 	visible = {	has_completed_focus = enc_reno_end }	
 }
 
+
+
+ENC_epilogue = {
+	allowed = { tag = ERB }
+	visible = {	has_completed_focus = enc_reno_end }	
+}
 # ##############################
 # ICONS
 # ##############################

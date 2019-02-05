@@ -976,7 +976,7 @@ ideas = {
             }
             allowed_civil_war = { 
 				always = yes
-            }
+				}
             removal_cost = -1
 			modifier = {
 				conscription_factor = 0.10
@@ -1066,22 +1066,22 @@ ideas = {
 			}
 		}
 
-		ENC_Freedom_Rings = {
+		ENC_freedom_rings = {
 			picture = enc_legitimacy_high
 			allowed = { 
 				always = no
-			}
-			allowed_civil_war = { 
+				}
+            allowed_civil_war = { 
 				always = yes
-			}
-			removal_cost = -1
+				}
+            removal_cost = -1
 			modifier = {
-				stability_factor = 0.05
 				war_support_factor = 0.05		
 				conscription_factor = 0.05
-				industrial_capacity_factory = 0.05				
+				industrial_capacity_factory = 0.05
 			}
-		}
+		}			
+		
 		enc_segregation_forever = {  # reformers only
 			picture = enc_idea_infighting
 			allowed = { 
@@ -1756,6 +1756,27 @@ ideas = {
 				army_defence_factor = -0.3
 				}
 		}
+		ENC_nuke = {  
+			picture = ENG_the_war_to_end_all_wars
+			allowed = { 
+				always = no
+            }
+			cancel = { 
+				NOT = { country_exists = ERB } 
+			}
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				stability_factor = -0.3
+				MONTHLY_POPULATION = -5
+				attrition = 1
+				army_org_factor = -0.3
+				army_attack_factor = -0.3
+				army_defence_factor = -0.3
+				}
+		}
 		ENC_plague_2 = {  # less severe
 			picture = ENG_the_war_to_end_all_wars
 			allowed = { 
@@ -2155,12 +2176,7 @@ ideas = {
 			}
 		}
 	
-####################################################
-# PURITY - HIDDEN
-####################################################
-	}
-
-	tank_manufacturer = {
+tank_manufacturer = {
 		ENC_PA_quanitity = {
 			picture = enc_designer_PA_2
 			allowed = {
@@ -2358,7 +2374,7 @@ ideas = {
 		}
 	}
 }
-
+}
 
 
 # GFX_idea_boris_t

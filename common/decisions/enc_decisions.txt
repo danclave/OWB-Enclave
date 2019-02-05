@@ -382,7 +382,7 @@ ENC_pacific_commonwealth1 = {
 		visible = {
 			tag = ERB
 			has_completed_focus = enc_pacific_commonwealth
-				
+			country_exists = BEL	
 			}
 		complete_effect = {
 			BEL = {
@@ -401,7 +401,7 @@ ENC_pacific_commonwealth1 = {
 		visible = {
 			tag = ERB
 			has_completed_focus = enc_pacific_commonwealth
-				country_exists = TRL
+			country_exists = TRL
 			}
 		complete_effect = {
 			TRL = {
@@ -543,14 +543,13 @@ ENC_pacific_commonwealth1 = {
 						}			
 	}
 }
-ENC_Treaty_Hoover_Dam = {
+ENC_treaty_hoover_dam = {
 	Enc_Cession_of_Helios_one = {
 	priority = 300
 		fire_only_once = no
 		
 		visible = {
 			tag = ERB
-			has_completed_focus = Enc_Hoover_Dam_1
 			417 = { is_owned_and_controlled_by = NCR }
 			}
 		complete_effect = {
@@ -613,11 +612,10 @@ ENC_Treaty_Hoover_Dam = {
 		
 		visible = {
 			tag = ERB
-			has_completed_focus = Enc_Hoover_Dam_1
-			98 = { is_owned_and_controlled_by = NCR }
+			252 = { is_owned_and_controlled_by = NCR }
 			}
 		complete_effect = {
-			ERB = { transfer_state = 98 }
+			ERB = { transfer_state = 252 }
 			253 = {
 				add_resource = {
 					type = electricity
@@ -628,7 +626,7 @@ ENC_Treaty_Hoover_Dam = {
 					amount = 25					
 				}
 							}
-			98 = {
+			252 = {
 				add_resource = {
 					type = electricity
 					amount = -25
@@ -1261,24 +1259,26 @@ ENC_reno = {
 			}
 		}
 	}
-	kill_graffs = {
-		icon = generic_prepare_civil_war
-		cost = 50
-		visible = {
-			not = {
-				has_country_flag = enc_graffs_completed
-			}
-			has_full_control_of_state = 285 #NEW REno
-		}
-		available = {
-		}
-		complete_effect = {		
-		   	add_equipment_to_stockpile = { type = energy_equipment_2 amount = 500 producer = ERB }
-			add_manpower = -200
-			285 = { add_manpower = -1000 }
-			set_country_flag = enc_graffs_completed
-		}
-	}
+	  kill_graffs = {
+        icon = generic_prepare_civil_war
+        cost = 50
+        visible = {
+            NOT = { has_country_flag = enc_graffs_completed }
+            has_full_control_of_state = 285 #NEW RENO
+        }
+        available = {}
+
+        complete_effect = {        
+            add_equipment_to_stockpile = {
+                type = energy_equipment_2
+                amount = 500
+                producer = ERB
+				}
+            add_manpower = -200
+            285 = { add_manpower = -1000 }
+            set_country_flag = enc_graffs_completed
+        }
+    }
 	spare_graffs = {
 		icon = generic_political_discourse
 		cost = 50
@@ -1635,7 +1635,7 @@ ENC_NCR_hiding = {
 					exists = no
 					has_civil_war = YES
 					has_war_with = ERB #Enclave
-				}
+						}
 			}
 		}
 		is_good = no
@@ -2367,8 +2367,32 @@ ENC_render_unto_caesar = {
 		complete_effect = {
 			country_event = { id = enc_reformers.65 }
 			}
+	}
+	CES_nuke = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		activation = {
+			country_exists = CES
+			has_country_flag = enc_nuke_legion
+			has_completed_focus = enc_reform
+			}
+		visible = { has_full_control_of_state = 592
+				}
+		available = {
+			NOT = { country_exists = CES }
+			}
+		cancel_trigger = {
+			NOT = { has_full_control_of_state = 592 }
+			}		
+		is_good = no
+		days_mission_timeout = 50
+		timeout_effect = {
+			country_event = { id = enc_reformers.164  }
+				}
+		}
 	}	
-}	
+	
 ENC_war_with_NCR = {
 	FEV_mutation_crisis = {
 		icon = generic_research
