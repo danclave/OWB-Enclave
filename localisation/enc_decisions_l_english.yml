@@ -189,7 +189,9 @@ assassinate_bishop_crisis: "§RAssassinate Mr. Bishop§!"
 assassinate_bishop_crisis_complete_effect: "§YMr. Bishop§! dies!"
 
 ENC_the_lucia_incident: "The Lucia Incident"
+ENC_the_lucia_incident_desc: "The Enclave fakes a Brotherhood attack on NCR Outposts. At the same time, they will order an attack on the Brotherhood using cracked NCR high command codes."
 ENC_the_bishop_incident: "The Bishop Incident"
+ENC_the_bishop_incident_desc: "A faked radio transmission will order NCR troops to attack the Rangers."
 ENC_deliver_petition: "Deliver Petition for Independence"
 ##############################
 # POLITICAL DECISIONS
