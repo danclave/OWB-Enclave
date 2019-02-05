@@ -223,6 +223,10 @@ spriteTypes = {
             name = "GFX_goal_enc_eyebot_reform"
  		    texturefile = "gfx/interface/goals/enc_eyebot_reform.dds"
  	    } 
+        SpriteType = {#enc_fear_uncertainty_and_doubt
+            name = "GFX_goal_enc_fear_uncertainty_and_doubt"
+ 		    texturefile = "gfx/interface/goals/enc_fear_uncertainty_and_doubt.dds"
+ 	    } 
         SpriteType = {#enc_fed
             name = "GFX_goal_enc_fed"
  		    texturefile = "gfx/interface/goals/enc_fed.dds"
@@ -262,6 +266,10 @@ spriteTypes = {
         SpriteType = {#enc_guerrilla_warfare
             name = "GFX_goal_enc_guerrilla_warfare"
  		    texturefile = "gfx/interface/goals/enc_guerrilla_warfare.dds"
+ 	    } 
+        SpriteType = {#enc_home_is_nevada
+            name = "GFX_goal_enc_home_is_nevada"
+ 		    texturefile = "gfx/interface/goals/enc_home_is_nevada.dds"
  	    } 
         SpriteType = {#enc_improve_relations_reformer
             name = "GFX_goal_enc_improve_relations_reformer"
@@ -902,6 +910,10 @@ spriteTypes = {
         SpriteType = {#enc_pa_production
             name = "GFX_idea_enc_pa_production"
  		    texturefile = "gfx/interface/ideas/enc_pa_production.dds"
+ 	    } 
+        SpriteType = {#enc_police
+            name = "GFX_idea_enc_police"
+ 		    texturefile = "gfx/interface/ideas/enc_police.dds"
  	    } 
         SpriteType = {#enc_purity_1
             name = "GFX_idea_enc_purity_1"

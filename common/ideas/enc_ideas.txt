@@ -731,7 +731,7 @@ ideas = {
 			}
 		}
 		ENC_integrating_scientists = {  
-			picture = generic_research_bonus
+			picture = enc_scientists
 			allowed = { 
 				always = no
             }
@@ -912,7 +912,7 @@ ideas = {
 				army_core_defence_factor = 0.10
 				army_core_attack_factor = 0.10
 			}
-		}			
+		}
 
 		ENC_accepted_ghouls = {
 			picture = generic_research_bonus
@@ -950,7 +950,7 @@ ideas = {
 		}
 
 		ENC_begun_integration = {
-			picture = generic_research_bonus
+			picture = generic_flexible_foreign_policy
 			allowed = { 
 				always = no
             }
@@ -970,7 +970,7 @@ ideas = {
 		}
 		
 		ENC_completed_integration = {
-			picture = generic_research_bonus
+			picture = generic_flexible_foreign_policy2
 			allowed = { 
 				always = no
             }
@@ -984,7 +984,7 @@ ideas = {
 			}
 		}
 		ENC_smuggling = {
-			picture = generic_research_bonus
+			picture = enc_smugging
 			cancel = { country_exists = BAR } # barons broke free
 			allowed = { 
 				always = no
@@ -998,7 +998,7 @@ ideas = {
 			}
 		}
 		ENC_NCR_smuggling = {
-			picture = generic_research_bonus
+			picture = enc_smugging
 			allowed = { 
 				always = no
             }
@@ -1011,7 +1011,7 @@ ideas = {
 			}
 		}
 		ENC_NCR_demoralization_campaign = {
-			picture = generic_research_bonus
+			picture = legacy_of_navarro
 			allowed = { 
 				always = no
             }
@@ -1028,10 +1028,15 @@ ideas = {
 		}
 		
 		ENC_NCR_code_cracked = {
-			picture = generic_morale_bonus
+			picture = MOJ_idea_settlements_raided_ncr # todo
 			allowed = { 
 				always = no
             }
+			cancel = {
+				NOT = {
+					country_exists = NCR
+				}
+			}
             allowed_civil_war = { 
 				always = yes
             }
@@ -1282,7 +1287,7 @@ ideas = {
 		}
 		# MILITIAS
 		ENC_militias = {
-			picture = generic_wall_line
+			picture = generic_manpower_bonus
 			allowed = { 
 				always = no
             }
@@ -1298,7 +1303,7 @@ ideas = {
 			}
 		}
 		ENC_militias_2 = {
-			picture = generic_wall_line
+			picture = generic_manpower_bonus
 			allowed = { 
 				always = no
             }
@@ -1315,7 +1320,7 @@ ideas = {
 			}
 		}
 		ENC_militias_3 = {
-			picture = generic_wall_line
+			picture = generic_manpower_bonus
 			allowed = { 
 				always = no
             }
@@ -1333,7 +1338,7 @@ ideas = {
 			}
 		}
 		ENC_militias_4 = {
-			picture = generic_wall_line
+			picture = generic_manpower_bonus
 			allowed = { always = no  }
 
             allowed_civil_war = { always = yes }
@@ -1348,7 +1353,7 @@ ideas = {
 		}
 		
 		ENC_national_guard = {
-			picture = generic_wall_line
+			picture = generic_manpower_bonus
 			allowed = { always = no }
 
             allowed_civil_war = { always = yes }
@@ -1360,7 +1365,7 @@ ideas = {
 			}
 		}
 		ENC_selective_service = {
-			picture = generic_wall_line
+			picture = generic_manpower_bonus
 			allowed = { always = no }
 
             allowed_civil_war = { always = yes }
@@ -1372,7 +1377,7 @@ ideas = {
 			}
 		}
 		ENC_army_reserves = {
-			picture = generic_wall_line
+			picture = generic_manpower_bonus
 			allowed = { always = no }
 
             allowed_civil_war = { always = yes }
@@ -1392,7 +1397,7 @@ ideas = {
 					modifier = {
 					   army_morale_factor = 0.05
 					   army_org_Factor = 0.05
-					   political_power_gain = 0.05
+					   mobilization_speed = 0.10
 					}
 				}
 		enc_military_equipment= {
@@ -1516,7 +1521,8 @@ ideas = {
             allowed_civil_war = { always = yes }
             removal_cost = -1
 			modifier = { 
-				production_speed_electricity_generator_factor = 0.1		
+				production_speed_electricity_generator_factor = 0.15
+				production_speed_civilian_power_grid_factor = 0.15 #todo verify
 			}
 		} 
 		ENC_electrification = {
@@ -1554,8 +1560,7 @@ ideas = {
 			allowed_civil_war = { always = yes } 
 			removal_cost = -1
 			modifier = {
-				research_time_factor = -0.10
-				
+				# dunno			
 			}
 		}
 	enc_manifest_destiny = {  
@@ -1564,7 +1569,7 @@ ideas = {
 			allowed_civil_war = { always = yes } 
 			removal_cost = -1
 			modifier = {
-			justify_war_goal_time = -0.35				
+				justify_war_goal_time = -0.35				
 			}
 		}
 
@@ -2272,9 +2277,6 @@ ideas = {
 
 			allowed = {
 				tag = ERB
-				NOT = {
-					has_available_idea_with_traits = { idea = industrial_concern limit = 1 }
-				}
 			}
 			
 			cost = 150
@@ -2293,9 +2295,6 @@ ideas = {
 
 			allowed = {
 				tag = ERB
-				NOT = {
-					has_available_idea_with_traits = { idea = electronics_concern limit = 1 }
-				}
 			}
 			
 			cost = 150
