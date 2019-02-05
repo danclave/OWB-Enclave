@@ -200,6 +200,8 @@ CES_crisis: "The Wrath of Caesar"
 ENC_render_unto_caesar: "Grabbing the Bull by the Horns"
 ENC_rise_slaves: "Issue the Second Emancipation Proclamation"
 ENC_rise_slaves_desc: "We can trigger the Second American Revolution by promising freedom to the Legion's slaves.  However, the Legion may treat our decision to give plasma guns to slaves in their territory as an act of war."
+CES_nuke: "Nuke Flagstaff"
+CES_nuke_desc: "When ready, we will nuke Flagstaff and decapitate the Legion."
 ENC_pacific_commonwealth1: "Rebuilding the Pacific Commonwealth"
 ENC_pacific_commonwealth1_desc: "The good people of Klamath will be the nucleus for a revived Pacific Commonwealth.  Because hey, compared to the Washington Brotherhood, even we look good."
 ################ special codes for special people ################################################################################################################

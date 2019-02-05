@@ -215,9 +215,7 @@ country_event = {#8 - SECRETS STOLEN
 	picture = GFX_event_ENC_vertibird
 	
 	fire_only_once = yes	
-	trigger = {	
-		has_completed_focus = enc_reform
-	}	
+	trigger = {	has_completed_focus = enc_reform }	
 	mean_time_to_happen = {	days = 30 }
 	
 	option = {#OH WELL
@@ -491,8 +489,9 @@ country_event = {#17 - Fortunate son
     trigger = {	
 		has_completed_focus = enc_reform
 		has_country_flag = enc_music_found
-	}	
-	
+		country_exists = NCR
+		NOT = { has_completed_focus = enc_our_new_ally }
+		}	
 	option = {# crack down on this behaviour
 		name = enc_reformers.17.a
 		add_popularity = { ideology = intellectuals popularity = -0.02 }
@@ -1555,7 +1554,7 @@ country_event = {#71 - Freedom Rings
 	is_triggered_only = yes	
 	option = {# Extend Presidential Powers
 		name = enc_reformers.71.a
-		add_ideas = ENC_Freedom_Rings
+		add_ideas = ENC_freedom_rings
 		}
 	
 }
@@ -1719,7 +1718,7 @@ country_event = {#79 - Ulysses
 		name = enc_reformers.79.a
 		create_corps_commander = {
 			name = "Ulysses"
-			portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Ulysses.dds"
+			portrait_path = "gfx/leaders/Portrait_Enclave_Ulysses.dds"
 			skill = 5
 			attack_skill = 4
 			defense_skill = 4
@@ -2633,7 +2632,8 @@ country_event = {#109 The Liberation of Hoover Dam
 		name = enc_reformers.109.a
 			}
 		}		
-country_event = {#110 - BOS Legionaries
+
+		country_event = {#110 - BOS Legionaries
 	id = enc_reformers.110
 	title = enc_reformers.110.t
 	desc = enc_reformers.110.d
@@ -2716,6 +2716,8 @@ country_event = {#110 - BOS Legionaries
                 }
 			}
 		}
+
+
 
 country_event = {#111 Turn Off Radio
 	id = enc_reformers.111
@@ -3014,12 +3016,18 @@ country_event = {#118 Legion Propaganda
 	custom_effect_tooltip = enc_reformers.118.b.tt	
 	add_ideas = guerilla_raids
 	add_war_support = -0.10
+	trigger = {
+			has_country_flag = leader_charismatic
+			}	
 	 		}
 	option = {# Evil
 	name = enc_reformers.118.c
 	custom_effect_tooltip = enc_reformers.118.c.tt
 	add_ideas = guerilla_raids	
 	add_manpower = -500
+	trigger = {
+			has_country_flag = leader_ruthless
+		}
 	 		}				
 }		
 country_event = {#119 NCR
@@ -3028,10 +3036,7 @@ country_event = {#119 NCR
     desc = enc_reformers.119.d
     picture = GFX_event_enc_endNCR
     fire_only_once = yes    
-    is_triggered_only = no
-	trigger = { 
-		ERB = { has_war_with = CES } 
-			}
+    is_triggered_only = yes
 	mean_time_to_happen = {	days = 3 }
     option = {# Ow!
 		name = enc_reformers.119.a
@@ -3523,11 +3528,15 @@ country_event = {#135 BOS
 		}
 	 option = {# Yuck Yuck!
 	name = enc_reformers.135.b
-	custom_effect_tooltip = enc_reformers.118.b.tt	
-	trigger = { has_country_flag = leader_charismatic 	}
-	add_stability = -0.5		
-	add_manpower = 400
-		 		}
+	trigger = { OR = { has_country_flag = leader_charismatic
+						has_country_flag = enc_bos_connections_flag 
+					  }
+				}
+	add_stability = -0.05		
+	hidden_effect = { load_oob = enc_bos_recruits }
+	custom_effect_tooltip = enc_reformers.135.b.tt
+	set_country_flag = integrate_brotherhood
+		}
 	option = {# Evil
 	name = enc_reformers.135.c
 	custom_effect_tooltip = enc_reformers.119.c.tt
@@ -4046,10 +4055,7 @@ country_event = { #157 - Reservation
 			}
 	option = { # Great!
 		name = enc_reformers.157.b
-		trigger= { 
-				OR = {
-						has_completed_focus = enc_accept_ghouls 
-						has_country_flag = leader_ruthless } }
+		trigger = { has_country_flag = leader_ruthless } 
 			custom_effect_tooltip = load_gammacore_enclave
 			hidden_effect = { load_oob = gammacore }
 			}
@@ -4089,18 +4095,28 @@ country_event = { #159 - Ghoul Libel
 	picture = GFX_event_enc_antimutants
 	fire_only_once = yes
 	trigger = {	
-		has_completed_focus = enc_accept_ghouls
-				}
+		has_completed_focus = enc_purge_officers
+		has_completed_focus = enc_purge_scientists
+		has_full_control_of_state = 291			}
 	mean_time_to_happen = {	days = 90 }				
 	option = { # Great!
 		name = enc_reformers.159.a
-		add_war_support = -0.05
-		add_stability = -0.05
-		set_temp_variable  = {
-			var = legitimacy_change_var
-			value = 0.05
-		}
-		change_legitimacy = yes
+			change_legitimacy = yes
+		set_party_name = {
+                ideology = elites
+                long_name = "Human Rights Party"
+                name = "Human Rights Party"
+            }
+		create_country_leader = {
+			name = "First Citizen Lynette"
+			desc = "POLITICS_CITIZEN_DESC"
+			picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
+			expire = "2500.1.1"
+	ideology = militarist_technocracy
+	traits = { }
+						}
+	add_popularity = { ideology = elites popularity = 0.15 } 	
+						
 		}
 	option = { # Fair!
 		name = enc_reformers.159.b
@@ -4109,6 +4125,20 @@ country_event = { #159 - Ghoul Libel
 			value = -0.05
 		}
 		change_legitimacy = yes
+		set_party_name = {
+                ideology = elites
+                long_name = "Human Rights Party"
+                name = "Human Rights Party"
+            }
+		add_popularity = { ideology = elites popularity = 0.10 }
+		create_country_leader = {
+			name = "First Citizen Lynette"
+			desc = "POLITICS_CITIZEN_DESC"
+			picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
+			expire = "2500.1.1"
+			ideology = militarist_technocracy
+			traits = { }
+						}
 		}
 option = { # Err!
 		name = enc_reformers.159.c
@@ -4121,13 +4151,236 @@ option = { # Err!
 			value = 0.07
 		}
 		change_legitimacy = yes
+		set_party_name = {
+                ideology = elites
+                long_name = "Human Rights Party"
+                name = "Human Rights Party"
+            }
+				add_popularity = { ideology = elites popularity = 0.20 } 	
+		create_country_leader = {
+			name = "First Citizen Lynette"
+			desc = "POLITICS_CITIZEN_DESC"
+			picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
+			expire = "2500.1.1"
+			ideology = militarist_technocracy
+			traits = { }
+						}
 		}
-option = { # Hmm
-		name = enc_reformers.159.e
+	}	
+		
+country_event = {#160 - The Divide
+	id = enc_reformers.160
+	title = enc_reformers.160.t
+	desc = enc_reformers.160.d
+	picture = GFX_event_enc_divide1
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_reform 
+		OR = { 
+			is_neighbor_of = HOP
+			is_neighbor_of = ASH
+			}
+		}
+	mean_time_to_happen = { days = 3 }
+	option = {#	Cool
+		name = enc_reformers.160.a
+		create_wargoal = {
+			type = annex_everything
+			target = ASH
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = HOP
+		}
+		set_country_flag = border_divide
+	}
+}		
+
+country_event = {#161 - Unification
+	id = enc_reformers.161
+	title = enc_reformers.161.t
+	desc = enc_reformers.161.d
+	picture = GFX_event_the_silo
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_reform 
+		has_full_control_of_state = 13 # Divide
+		has_full_control_of_state = 592 # Divide
+		}
+	mean_time_to_happen = { days = 3 }
+	option = {#	Wish we had codes
+		trigger = { 
+				NOT = { has_country_flag = enc_launch_codes
+						}
+					}
+		custom_effect_tooltip = enc_reformers.161.a.tt	
+		name = enc_reformers.161.a
+		set_country_flag = enc_nuke_silo
+		}
+	option = {#	Dismantle Nukes
+		custom_effect_tooltip = enc_reformers.161.b.tt	
+		name = enc_reformers.161.b
+		}	
+		
+	option = {#	NUKES
+		custom_effect_tooltip = enc_reformers.161.c.tt	
+		trigger = { has_country_flag = enc_launch_codes }
+		name = enc_reformers.161.c
+		set_country_flag = enc_nukes_armed
+		}	
+	}
+
+country_event = {#162 - Navarro
+	id = enc_reformers.162
+	title = enc_reformers.162.t
+	desc = enc_reformers.162.d
+	picture = GFX_event_ENC_double_flag_long
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_reform 
+		has_full_control_of_state = 548 # Navarro
+		}
+	mean_time_to_happen = { days = 3 }
+	option = {#	Codes but no Ashton
 		trigger = {
-			has_country_flag = leader_ruthless
+				NOT = { has_country_flag = enc_nuke_silo
+						}
+					}
+		name = enc_reformers.162.a
+		set_country_flag = enc_launch_codes
 		}
-		}			
+	option = {#	Have Ashton
+		trigger = {
+				has_country_flag = enc_nuke_silo
+					}
+		name = enc_reformers.162.b
+		set_country_flag = enc_nukes_armed
+		}
+}
+
+country_event = {#163 - The Lonesome Road
+	id = enc_reformers.163
+	title = enc_reformers.163.t
+	desc = enc_reformers.163.d
+	picture = GFX_event_CES_camp_1
+	fire_only_once = yes
+	is_triggered_only = no
+		trigger = {	
+			ERB = { has_war_with = CES }
+			has_completed_focus = enc_reform
+			has_country_flag = enc_nukes_armed
+			}
+	mean_time_to_happen = { days = 3 }
+	option = {#	
+		name = enc_reformers.163.a
+		set_country_flag = enc_nuke_legion
+		}
+	option = {#	
+		name = enc_reformers.163.b
+		custom_effect_tooltip = enc_reformers.163.b.tt	
+		}	
+}		
+	
+country_event = {#164 - Nuke Flagstaff
+	id = enc_reformers.164
+	title = enc_reformers.164.t
+	desc = enc_reformers.164.d
+	picture = GFX_event_enc_legion_nuke
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {#	
+		name = enc_reformers.164.a
+		CES = { remove_ideas = ENC_Influence }
+		CES = { remove_ideas = CES_BOS }
+		CES  = { add_ideas = ENC_nuke }
+		set_country_flag = enc_flagstaff_nuked 
+		clr_country_flag = enc_nuke_legion
+		clr_country_flag = enc_nuke_silo
+		clr_country_flag = enc_nukes_armed
+		hidden_effect = {
+			country_event = { id = enc_reformers.166 days = 30 } }
+		520 = { add_manpower = -15000 }		
+		}
+	}				
+	
+country_event = {#165 - Didn't Nuke Flagstaff
+	id = enc_reformers.165
+	title = enc_reformers.165.t
+	desc = enc_reformers.165.d
+	picture = GFX_event_ENC_double_flag_long
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = { 
+		NOT = { country_exists = CES }
+		NOT = { country_exists = NCR }
+		NOT = { has_country_flag = enc_flagstaff_nuked }
+				} 
+	 mean_time_to_happen = { days = 5 }
+	option = {#	
+		name = enc_reformers.165.a
+			}
+	}
+country_event = {#166 - Legion Recovers
+	id = enc_reformers.166
+	title = enc_reformers.166.t
+	desc = enc_reformers.166.d
+	picture = GFX_event_enc_legion_nuke
+	fire_only_once = yes
+	is_triggered_only = yes
+		
+	option = {#	
+		name = enc_reformers.166.a
+		CES = { remove_ideas = ENC_nuke }
+		}
+	}				
+
+country_event = { #167  End of Reformers
+	id = enc_reformers.167
+	title = enc_reformers.167.t
+	desc = enc_reformers.167.d
+	picture = GFX_event_enc_4th_july
+	fire_only_once = yes
+	trigger = {	has_completed_focus = enc_local_elections }
+	mean_time_to_happen = {	days = 30 }				
+	option = { # Great!
+		name = enc_reformers.167.a
+		set_party_name = {
+                ideology = intellectuals
+                long_name = "The Grand New Party"
+                name = "Americans"
+           }
+		}
+	}
+country_event = {
+	id = enc_reformers.168
+	title = enc_reformers.168.t
+	desc = enc_reformers.168.d
+	picture = GFX_event_VEG_vault21
+
+	is_triggered_only = yes
+
+	option = {
+		name = enc_reformers.168.a
+
+		211 = {
+			add_resource = {
+				type = fuel
+				amount = 10
+			}
+			add_resource = {
+				type = electronics
+				amount = 20
+			}
+			add_resource = {
+				type = advanced_technology
+				amount = 5
+			}
+		}
+	}
 }
 
 # integration
