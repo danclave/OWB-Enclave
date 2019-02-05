@@ -52,6 +52,7 @@ ENC_infiltrating_NCR = {
 		custom_cost_text = ENC_arm_raiders_cost
 		visible = {
 			has_completed_focus = enc_stage_raider_attacks
+			has_country_flag = ncr_suspicious
 		}
 		available = {
 			has_country_flag = enc_ncr_spies 
@@ -273,7 +274,7 @@ ENC_infiltrating_NCR = {
 	}
 	
 	enc_NCR_propaganda_tour = {
-	
+		icon = decision_enc_propaganda
 		priority = 300
 		fire_only_once = yes
 
@@ -284,6 +285,7 @@ ENC_infiltrating_NCR = {
 		visible = {
 			tag = ERB
 			has_completed_focus = enc_foreign_policy
+			has_country_flag = ncr_suspicious
 		}
 		complete_effect = {
 			set_temp_variable = {
@@ -353,10 +355,11 @@ ENC_infiltrating_NCR = {
 	}
 	
 	ENC_rise_rebellion = {
-		priority = 300
+		priority = 900
+		icon = GFX_decision_revolt
 		fire_only_once = yes
 		available = {
-			63 = {
+			any_state = {
 				has_state_flag = enc_patriots_armed
 			}
 		}
@@ -366,9 +369,9 @@ ENC_infiltrating_NCR = {
 		}
 		complete_effect = {
 			country_event = { id = enc_reformers.112 }
+			clr_country_flag = ncr_suspicious
 		}
 	}
-	
 }
 
 ENC_pacific_commonwealth1 = {
@@ -638,7 +641,7 @@ ENC_Treaty_Hoover_Dam = {
 			}			
 		}
 		}
-	}
+}
 ENC_california_reconstruction = {
 	rename_sacramento = {
 		cost = 25
@@ -648,7 +651,7 @@ ENC_california_reconstruction = {
 		allowed = { original_tag = ERB }
 		visible = {
 			135 = { is_owned_and_controlled_by = ERB }
-			}
+		}
 		complete_effect = {
 			135 = {
 				set_state_name = "Sacramento" 
@@ -962,10 +965,17 @@ ENC_build_nevada = {
 		allowed = {
 			original_tag = ERB
 		}
+		available = {	
+		}
 		visible = {
 			has_completed_focus = enc_reform
 			295 = {
 				is_owned_and_controlled_by = ERB
+			}	
+			has_resources_amount = {
+				resource = water
+				amount > 9
+				state = 295
 			}
 		}
 		complete_effect = {
@@ -1613,6 +1623,7 @@ ENC_NCR_hiding = {
 		available = {
 			OR = {
 				not = { has_country_flag = NCR_crisis_flag }
+				not = {	has_country_flag = ncr_suspicious }
 				has_decision = NCR_crisis_construction
 				has_decision = NCR_crisis_laylow
 				has_decision = NCR_crisis_resources
@@ -1713,6 +1724,7 @@ ENC_NCR_hiding = {
 		}
 		complete_effect = {
 			clr_country_flag = ncr_suspicious
+			country_event = { id = enc_reformers.46 }
 			custom_effect_tooltip = ncr_suspicious_clr_tt
 		}
 	}
@@ -1934,7 +1946,10 @@ political_actions = {
 		icon = decision_enc_agreement
 		cost = 75
 		available = { has_completed_focus = enc_emergency_draft_reform }
-		visible = { has_completed_focus = enc_emergency_draft_reform }
+		visible = { 
+			has_completed_focus = enc_emergency_draft_reform 
+			has_war = yes
+		}
 		complete_effect = { 
 			add_manpower = 1000
 			add_war_support = -0.05
@@ -1944,6 +1959,22 @@ political_actions = {
 
 }
 operations = {
+	ENC_sabotage_ces_supply_lines = {
+		cost = 100
+		visible = {
+			has_country_flag = enc_intervention_flag
+			NCR = { has_war_with = CES }
+		}
+		available = {
+			NCR = {
+				surrender_progress > 0.1 # NCR has lost some territory
+			}
+		}
+		complete_effect = {
+			# force peace
+			clr_country_flag = enc_intervention_flag
+		}
+	}
 	convert_command_power = {      #reduced research for increased war support
 		icon = decision_enc_officer
 		allowed = {
