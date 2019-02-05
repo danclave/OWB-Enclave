@@ -69,7 +69,7 @@ country_event = {#3 - DOUGLAS PAST - END
 	
 	option = {#Wait
 		name = enc_reformers.3.b
-		clr_country_flag = enc_ces_connections_flag
+		set_country_flag = enc_ncr_connections_flag
 		clr_country_flag = enc_bos_connections_flag
 		clr_country_flag = enc_ces_connections_flag
 		add_country_leader_trait = ruthless
@@ -195,6 +195,7 @@ country_event = {#7 - Dealing with Mordinos
 	
 	option = {# Court of law
 		name = enc_reformers.7.a
+		custom_effect_tooltip = enc_reformers.7.a.tt
 		add_stability = 0.05
 		set_temp_variable  = {
 			var = legitimacy_change_var
@@ -204,6 +205,7 @@ country_event = {#7 - Dealing with Mordinos
 	}
 	option = {# executed
 		name = enc_reformers.7.b
+		custom_effect_tooltip = enc_reformers.7.b.tt
 		add_political_power = 100
 	}
 }
@@ -679,7 +681,7 @@ country_event = {#23 - Dealing with Raiders
 	desc = enc_reformers.23.d
 	picture = GFX_event_ENC_secret
 	
-	fire_only_once = no
+	fire_only_once = yes
 	
 	trigger = {	
 		num_of_controlled_states > 10
@@ -730,17 +732,26 @@ country_event = {#24 - Wound heals
 		remove_country_leader_trait = enc_wounded_trait
 	}
 }
-country_event = {#25 - UNUSED
+country_event = {#25 - NCR - CES War
 	id = enc_reformers.25
 	title = enc_reformers.25.t
 	desc = enc_reformers.25.d
-	picture = GFX_event_ENC_vertibird
+	picture = GFX_event_NCR_battle_for_hoover_dam
 	
-	is_triggered_only = yes
+	is_triggered_only = no
+	mean_time_to_happen = { days = 7 }
+	trigger = {
+		date > 2279.1.1
+		NCR = { 
+			has_war_with = CES # war between NCR and CES
+			surrender_progress > 0.1 # NCR has lost some territory
+		} 
+	}
 	fire_only_once = yes
 
-	option = {# RIP
+	option = {# We could intervene
 		name = enc_reformers.25.a
+		set_country_flag = enc_intervention_flag
 	}
 }
 
@@ -1210,9 +1221,19 @@ country_event = {#42 - the assassination of Anderson
 	picture = GFX_event_ENC_assassinate_anderson
 	fire_only_once = yes	
 	is_triggered_only = yes
-	option = {#
+	option = {
 		name = enc_reformers.42.a
-		custom_effect_tooltip = enc_assassinate_F_tt	
+		custom_effect_tooltip = enc_assassinate_F_tt
+		hidden_effect = {
+			create_country_leader  = {
+				name = "Richard Grant"
+				# desc = "" 
+				# picture = "gfx/leaders/portrait_Anderson.dds"
+				expire = "3000.1.1"
+				ideology = militarist_technocracy
+				traits = {}
+			}		
+		}
 	}	
 }
 
@@ -1283,6 +1304,46 @@ country_event = {#45 - Gannon leaves
 		change_legitimacy = yes
 	}
 }
+country_event = {#46 - Enclave revealed
+	id = enc_reformers.46
+	title = enc_reformers.46.t
+	desc = enc_reformers.46.d
+	picture = GFX_event_ENC_secret
+	fire_only_once = yes	
+	is_triggered_only = yes
+	option = { # No more hiding.
+		name = enc_reformers.46.a
+		custom_effect_tooltip = enc_reformers.46.a.tt
+	}
+}
+country_event = {#47 - NCR falls
+	id = enc_reformers.47
+	title = enc_reformers.47.t
+	desc = enc_reformers.47.d
+	picture = GFX_event_enc_endNCR # todo
+	fire_only_once = yes	
+	is_triggered_only = yes
+	option = { # Other countries white peace
+		name = enc_reformers.47.a
+		NCR = {		
+			dismantle_faction = yes
+		}
+		custom_effect_tooltip = enc_reformers.47.a.tt
+		every_enemy_country = {
+			limit = {
+				has_capitulated = no
+				not = {
+					is_neighbor_of = ERB
+				}
+			}
+			white_peace = {
+				tag = ERB
+			}
+		}
+	}
+}
+
+# unused numbers
 
 country_event = {#60 - From the Top Down
 	id = enc_reformers.60
@@ -1905,18 +1966,17 @@ country_event = {#87 - Baseball
 	}
 	option = {#	Play Ball
 		name = enc_reformers.87.a
-				add_war_support = -0.05
+		add_war_support = -0.05
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = 0.05
 		}
 		change_legitimacy = yes
 	}
-	option = {#	Play Ball
+	option = {#	back to work
 		name = enc_reformers.87.b
-		
+		add_political_power = 50
 	}
-
 
 }
 
@@ -1935,7 +1995,8 @@ country_event = {#88 - Mistakes
 	}
 	option = {#	Idolize
 		name = enc_reformers.88.a
-		add_stability = 0.05# modify legitimacy
+		add_stability = 0.05
+		add_war_support = 0.05
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = -0.05
@@ -2748,7 +2809,7 @@ country_event = {#111 Turn Off Radio
 	}
 
 
-country_event = {	#112 - Insurgency
+country_event = {#112 - Insurgency
 	id = enc_reformers.112
 		title = enc_reformers.112.t
 		desc = enc_reformers.112.d
@@ -3417,10 +3478,12 @@ country_event = {# Enclave to Legion
 	mean_time_to_happen = {	days = 30 }
 	option = {#
 		name = enc_reformers.130.a
-		CES = { add_research_slot = 1 }
-		CES = { add_ideas = ENC_advisors }
+		CES = { 
+			add_research_slot = 1 
+			add_ideas = ENC_advisors 
 		}
 	}
+}
 
 country_event = {# Home is Nevada
     id = enc_reformers.131
@@ -4129,6 +4192,8 @@ option = { # Hmm
 		}
 		}			
 }
+
+
 
 # integration
 #
