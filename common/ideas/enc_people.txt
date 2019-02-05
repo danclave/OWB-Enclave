@@ -203,44 +203,8 @@ ideas = {
 				loyal_soldier
 			}
 		}
-	}
+	}	
 
-	high_command = {		
-		erb_tech_officer_hilden = {			
-			picture = tech_officer_hilden_command			
-			allowed = {
-				original_tag = ERB
-			}
-			traits = { esoteric_engineer }
-			
-			ai_will_do = {
-				factor = 10
-			}
-		}
-		
-		erb_snookie = {
-			picture = snookie_command
-			allowed = {
-				original_tag = ERB
-			}
-			traits = { snookie_guard }
-			ai_will_do = {
-				factor = 10
-			}
-		}
-
-		erb_sanders = {
-			picture = sanders_command
-			allowed = {
-				original_tag = ERB
-			}
-			traits = { sanders_spec_ops }
-			ai_will_do = {
-				factor = 10
-			}
-		}
-	}
-	
 	army_chief = {
 		enc_offensive = {
 			cost = 250
@@ -372,21 +336,6 @@ ideas = {
 			}
 			
 			traits = { air_warfare_theorist }
-		}
-		arcade_gannon = {
-			picture = generic_army_europe_4
-						allowed = {
-				original_tag = ERB
-			}
-			available = {
-				has_country_flag = gannon_returns
-			}
-			research_bonus = {
-				chem_tech = 0.2
-			}
-			traits = { 
-				compassionate_doctor
-			}
 		}
 	}
 
