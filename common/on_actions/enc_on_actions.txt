@@ -121,7 +121,15 @@ on_actions = {
 	# ROOT is capitulated country, FROM is winner
 	on_capitulation = {
 		effect = {
-			
+			if = {
+				limit = {
+					original_tag = NCR
+					FROM = {
+						original_tag = ERB
+					}
+				}
+				country_event = { id = enc_reformers.47 }
+			}
 		}
 	}
 
@@ -231,35 +239,5 @@ on_actions = {
 		effect = {
 			
 		}
-	}
-	on_startup = {
-    effect = {
-    ERB = {
-        set_variable = { 
-                     var = enc_rebels_we_have_armed
-                     value = -50
-                 } 
-         }
-        }
-		}
-	on_startup = {
-    effect = {
-    ERB = {
-        set_variable = { 
-                     var = enc_slaves_we_have_armed
-                     value = -50
-                 } 
-         }
-        }
-		}
-on_startup = {
-    effect = {
-    ERB = {
-        set_variable = { 
-                     var = enc_patriots_we_have_armed
-                     value = -50
-                 } 
-         }
-        }
-		}			
+	}		
 }

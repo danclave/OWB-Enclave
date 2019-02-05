@@ -144,7 +144,7 @@ scripted_gui = {
 						set_temp_variable = { click_cost = 0 }
 						subtract_from_temp_variable = { click_cost = enc_rebels_we_have_armed}
 						
-                        add_political_power = click_cost
+                        add_political_power = click_cost?-25
                     }    
                 }
 				set_state_flag = enc_rebels_armed
@@ -215,7 +215,7 @@ scripted_gui = {
 						set_temp_variable = { click_cost = 0 }
 						subtract_from_temp_variable = { click_cost = enc_slaves_we_have_armed}
 						
-                        add_political_power = click_cost
+                        add_political_power = click_cost?-25
                     }    
                 }
                 set_state_flag = enc_slaves_armed
@@ -281,9 +281,9 @@ scripted_gui = {
                 ROOT = { 
                     hidden_effect = {
 						set_temp_variable = { click_cost = 0 }
-						subtract_from_temp_variable = { click_cost = enc_patriots_we_have_armed}
-						
-                        add_political_power = click_cost
+						# click cost becomes negative value of enc_p_w_h_a
+						subtract_from_temp_variable = { click_cost = enc_patriots_we_have_armed}						
+                        add_political_power = click_cost?-25
                     }    
                 }
                 set_state_flag = enc_patriots_armed
@@ -296,9 +296,9 @@ scripted_gui = {
                 else = {
                     custom_effect_tooltip = arm_patriots_click
                 }
-					ROOT = {
-						add_to_variable  = { enc_patriots_we_have_armed = 25}
-					}
+				ROOT = {
+					add_to_variable  = { enc_patriots_we_have_armed = 25}
+				}
             }
         }
         triggers = {
