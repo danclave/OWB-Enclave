@@ -126,7 +126,8 @@ ENC_debug = {
 
 }
 ENC_pacific_commonwealth1 = {
-	icon = category_border_war
+	icon = category_seattle
+
 	allowed = {
 		tag = ERB }
 	visible = {
@@ -134,51 +135,45 @@ ENC_pacific_commonwealth1 = {
 			}	
 }
 
-<<<<<<< HEAD
-ENC_Treaty_Hoover_Dam = {
-	icon = generic_political_actions
-	allowed = { tag = ERB }
-	visible = {
-		has_completed_focus = Enc_Hoover_Dam_1
-	}	
-=======
+
 ENC_treaty_hoover_dam = {
+	picture = GFX_decision_cat_picture_mojave_campaign
 	allowed = { tag = ERB }
 	visible = { 
 			has_completed_focus = Enc_Hoover_Dam_1
 		}
->>>>>>> 70e6d239173b09f7e2e7f93cb44b549969bac784
 }
 ENC_california_reconstruction = {
-	icon = generic_industry
+	icon = category_usa_flag
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_rebuilding_california	}	
 }
 
 ENC_northwest_reconstruction = {
-	icon = generic_industry
+	icon = category_seattle
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_rebuilding_pacific_commonwealth }	
 }
 
 ENC_rockies_reconstruction = {
-	icon = generic_industry
+	icon = category_deseret
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_rebuilding_rockies }	
 }
 ENC_deseret = {
+	icon = category_deseret
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_the_state_of_utah }	
 }
 
 ENC_starting_companies = {
-	icon = generic_industry
+	icon = GFX_decision_category_vault_tec_calling
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_prewar_corporations }	
 }
 
 ENC_build_nevada = {
-	icon = generic_industry
+	icon = category_usa_construction
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_reno_end }	
 }

@@ -235,4 +235,66 @@ spriteTypes = {
 			texturefile = "gfx/interface/icons/legitimacy.dds"
 			legacy_lazy_load = no
 		}
+		spriteType = {
+			name = "decision_usa_flag"
+			texturefile = "gfx/interface/icons/decision_usa_flag.dds"
+		}
+		spriteType = {
+			name = "category_usa_flag"
+			texturefile = "gfx/interface/icons/category_usa_flag.dds"
+		}
+		spriteType = {
+			name = "category_deseret"
+			texturefile = "gfx/interface/icons/category_deseret.dds"
+		}
+		spriteType = {
+			name = "category_seattle"
+			texturefile = "gfx/interface/icons/category_seattle.dds"
+		}
+	spriteType = {
+			name = "decision_vault_boy"
+			texturefile = "gfx/interface/icons/decision_vault_boy.dds"
+		}
+	spriteType = {
+			name = "decision_usa_construction"
+			texturefile = "gfx/interface/icons/decision_usa_construction.dds"
+		}
+	spriteType = {
+			name = "category_usa_construction"
+			texturefile = "gfx/interface/icons/category_usa_construction.dds"
+		}
+spriteType = {
+			name = "decision_nuka_cola"
+			texturefile = "gfx/interface/icons/decision_nuka_cola.dds"
+		}		
+spriteType = {
+			name = "decision_water_pump"
+			texturefile = "gfx/interface/icons/decision_water_pump.dds"
+		}			
+spriteType = {
+			name = "decision_ncr_flag"
+			texturefile = "gfx/interface/icons/decision_ncr_flag.dds"
+		}
+spriteType = {
+			name = "decision_fate_bos"
+			texturefile = "gfx/interface/icons/decision_fate_bos.dds"
+		}			
+spriteType = {
+			name = "decision_stimpak"
+			texturefile = "gfx/interface/icons/decision_stimpak.dds"
+		}
+spriteType = {
+			name = "decision_plasma"
+			texturefile = "gfx/interface/icons/decision_plasma.dds"
+		}
+spriteType = {
+			name = "decision_power"
+			texturefile = "gfx/interface/icons/decision_power.dds"
+		}
+spriteType = {
+			name = "gfx_decision_nuke_flagstaff"
+			texturefile = "gfx/interface/icons/decision_nuke_flagstaff.dds"
+		}			
+							
 }
+
