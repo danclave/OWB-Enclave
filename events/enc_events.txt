@@ -863,7 +863,7 @@ country_event = { #39 - Reduce plague if Desert rangers not allied with NCR
 	id = enc.39
 	title = enc.39.t
 	desc = enc.39.d
-	picture = GFX_event_ENC_FEV_plague
+	picture = GFX_event_FAV_plague
 	fire_only_once = YES
 	
 	trigger = {

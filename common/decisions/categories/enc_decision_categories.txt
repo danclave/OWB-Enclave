@@ -126,6 +126,7 @@ ENC_debug = {
 
 }
 ENC_pacific_commonwealth1 = {
+	icon = category_seattle
 	allowed = {
 		tag = ERB }
 	visible = {
@@ -134,36 +135,43 @@ ENC_pacific_commonwealth1 = {
 }
 
 ENC_treaty_hoover_dam = {
+	picture = GFX_decision_cat_picture_mojave_campaign
 	allowed = { tag = ERB }
 	visible = { 
 			has_completed_focus = Enc_Hoover_Dam_1
 		}
 }
 ENC_california_reconstruction = {
+	icon = category_usa_flag
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_rebuilding_california	}	
 }
 
 ENC_northwest_reconstruction = {
+	icon = category_seattle
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_rebuilding_pacific_commonwealth }	
 }
 
 ENC_rockies_reconstruction = {
+	icon = category_deseret
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_rebuilding_rockies }	
 }
 ENC_deseret = {
+	icon = category_deseret
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_the_state_of_utah }	
 }
 
 ENC_starting_companies = {
+	icon = GFX_decision_category_vault_tec_calling
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_prewar_corporations }	
 }
 
 ENC_build_nevada = {
+	icon = category_usa_construction
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_reno_end }	
 }

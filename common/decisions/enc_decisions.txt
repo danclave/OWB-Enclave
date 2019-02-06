@@ -256,7 +256,7 @@ ENC_infiltrating_NCR = {
 	
 		priority = 300
 		fire_only_once = yes
-
+		icon = decision_ncr_flag
 		available = {
 				}
 	
@@ -639,6 +639,7 @@ ENC_treaty_hoover_dam = {
 	}
 ENC_california_reconstruction = {
 	rename_sacramento = {
+		icon = decision_usa_construction
 		cost = 25
 		days_remove = 10
 		ai_will_do = { factor = 10 }
@@ -659,6 +660,7 @@ ENC_california_reconstruction = {
 		}
 	}
 	rebuild_angeles = {
+		icon = decision_vault_boy
 		cost = 25
 		days_remove = 10
 		ai_will_do = { factor = 10 }
@@ -672,6 +674,7 @@ ENC_california_reconstruction = {
 		}
 	}
 	NCR_leadership = {
+		icon = decision_ncr_flag
 		cost = 25
 		days_remove = 10
 		ai_will_do = { factor = 10 }
@@ -685,6 +688,7 @@ ENC_california_reconstruction = {
 		}
 	}
 	BOS_leadership = {
+		icon = decision_fate_bos
 		cost = 25
 		days_remove = 10
 		ai_will_do = { factor = 10 }
@@ -710,6 +714,7 @@ ENC_california_reconstruction = {
 		}
 	}
 	farming_california = {
+		icon = decision_water_pump
 		cost = 25
 		days_remove = 10
 		ai_will_do = { factor = 10 }
@@ -723,6 +728,7 @@ ENC_california_reconstruction = {
 		}
 	}
 	ENC_new_dayglow = {
+		icon = decision_power
 		cost = 25
 		days_remove = 10
 		ai_will_do = { factor = 10 }
@@ -879,6 +885,7 @@ ENC_rockies_reconstruction = {
 }
 ENC_starting_companies = {
 	ENC_medtek = {
+		icon = decision_stimpak
 		cost = 25
 		days_remove = 10
 		ai_will_do = {
@@ -911,6 +918,7 @@ ENC_starting_companies = {
 	}
 
 	ENC_gunrunners = {
+		icon = decision_plasma
 		cost = 25
 		days_remove = 10
 		ai_will_do = {
@@ -927,6 +935,7 @@ ENC_starting_companies = {
 }
 ENC_build_nevada = {
 	ENC_vault_city_university = {
+		icon = decision_vault_boy
 		cost = 50
 		days_remove = 10
 		ai_will_do = {
@@ -951,6 +960,7 @@ ENC_build_nevada = {
 		}
 	}
 	ENC_water_supply = {
+		icon = decision_water_pump
 		cost = 25
 		days_remove = 10
 		ai_will_do = {
@@ -1003,6 +1013,7 @@ ENC_build_nevada = {
 		}
 	}
 	ENC_nukacola = {
+		icon = decision_nuka_cola
 		cost = 25
 		days_remove = 10
 		ai_will_do = {
@@ -1097,8 +1108,103 @@ ENC_build_nevada = {
 			}
 		}
 	}								
-}	
-
+}
+ENC_deseret = { 
+ENC_state_of_deseret = { 
+        cost = 50
+        days_remove = 10
+        ai_will_do = {    
+            factor = 10
+            }
+        visible = { original_tag = ERB }
+        available = { 
+            NCN = { has_full_control_of_state = 551 } 
+            } 
+        fire_only_once = yes
+        complete_effect = {
+            NCN = {set_cosmetic_tag = ncn_deseret }
+		custom_effect_tooltip = form_deseret_cores_tt
+		every_state = { # Adds a core on every state in the Utah region
+                limit = {
+                    is_utah_state = yes
+								}
+                add_core_of = NCN
+							}			
+					}
+			}
+	ENC_return_to_deseret = { 
+        cost = 50
+        days_remove = 10
+        ai_will_do = {    
+            factor = 10
+            }
+        visible = { original_tag = ERB }
+        available = { 
+            NCN = { has_full_control_of_state = 551 } 
+            } 
+        fire_only_once = yes
+		complete_effect = {
+			every_state = {
+			limit = { is_core_of = NCN is_owned_by = ERB  }
+			NCN = {transfer_state = PREV } 
+			}
+						}	
+       }
+	 ENC_annex_puppets = { 
+        cost = 250
+        days_remove = 10
+        ai_will_do = {    
+            factor = 10
+            }
+        visible = { original_tag = ERB }
+        available = { 
+            NCN = { has_full_control_of_state = 551 } 
+            } 
+        fire_only_once = yes
+		complete_effect = {
+			every_country = { # If a puppet has some but not all of their states in the Utah region, we snag the Utah states
+            		limit = {
+            			is_puppet_of = NCN
+           	 			any_owned_state = {
+            				is_utah_state = yes
+            			}
+            			NOT = {
+            				all_owned_state = {
+            					is_utah_state = yes
+            				}
+            			}
+            		}
+            		every_owned_state = {
+            			limit = { is_utah_state = yes }
+            			NCN = { transfer_state = PREV }
+            		}
+            	}
+			}  
+		}
+		ENC_liberty_title = { 
+        cost = 250
+        days_remove = 10
+        ai_will_do = {    
+            factor = 10
+            }
+        visible = { original_tag = ERB }
+        available = { 
+            NCN = { has_full_control_of_state = 551 } 
+            } 
+        fire_only_once = yes
+		complete_effect = {
+			NCN = { add_stability = 0.05
+					add_war_support = 0.05 
+					add_popularity = { ideology = intellectuals popularity = 0.10 }
+					set_party_name = {
+					ideology = intellectuals
+					long_name = "Friends of America"
+					name = "Friends of America"
+										}
+				}	
+			}
+		}
+}
 ###############################
 # SHARED
 ###############################
@@ -2338,7 +2444,7 @@ ENC_render_unto_caesar = {
 			}
 	}
 	CES_nuke = {
-		icon = generic_break_treaty
+		icon = gfx_decision_nuke_flagstaff
 		priority = 30		
 		fire_only_once = YES
 		activation = {
