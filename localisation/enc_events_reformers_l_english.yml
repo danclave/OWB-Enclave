@@ -802,3 +802,7 @@ enc_reformers.167.a: "The title made this sound much worse"
 enc_reformers.168.t: "The Fate of Vault 21"
 enc_reformers.168.d: "Vault 21 was a prewar experiment set up by Vault Tec to observe how a society based around gambling would function in isolation. Surprisingly, unlike numerous horror stories found in the wasteland, this Vault got by without complications. Due to its good condition some have suggested converting it into a nucleus for high tech industry in Vegas. Or turning it into a casino, but seriously, there are a dozen of those. Why do we need one more?"
 enc_reformers.168.a: "Bet on on industrial growth, not blackjack"
+##############################################################################################################
+enc_reformers.169.t: "Err, Some Bad News from Utah"
+enc_reformers.169.d: "Remember when some Enclave Purists headed east, and ended up getting captured by the Legion?  It turns out that they've been working on some new toys for Caesar, including a modified strain of FEV.  They're deploying it in Utah and offering the cure to those who submit.  We can vaccinate our own men, but it's hard to see how the New Canaanites will survive this disaster."
+enc_reformers.169.a: ".... Maybe we should have made more concessions to the Centrists"
