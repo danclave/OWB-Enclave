@@ -5,7 +5,7 @@
 ENC_shifts = {
 	icon = category_enc_shift
 	allowed = {original_tag = ERB}
-	priority = 2
+	priority = -1
 }
 ENC_call_remnants = {
 	icon = generic_propaganda
@@ -127,6 +127,7 @@ ENC_debug = {
 	}
 
 }
+
 ENC_pacific_commonwealth1 = {
 	icon = category_seattle
 	priority = 3
@@ -145,7 +146,8 @@ ENC_Treaty_Hoover_Dam = {
 	priority = 4
 	visible = {
 		has_completed_focus = Enc_Hoover_Dam_1
-	}	
+	}
+}	
 
 ENC_california_reconstruction = {
 	icon = category_usa_flag
@@ -167,6 +169,7 @@ ENC_rockies_reconstruction = {
 	priority = 3
 	visible = {	has_completed_focus = enc_rebuilding_rockies }	
 }
+
 ENC_deseret = {
 	icon = category_deseret
 	allowed = { tag = ERB }

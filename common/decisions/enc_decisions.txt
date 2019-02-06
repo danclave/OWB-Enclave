@@ -649,7 +649,7 @@ ENC_california_reconstruction = {
 		fire_only_once = yes
 		allowed = { original_tag = ERB }
 		visible = {
-			135 = { is_owned_by = ERB }
+			135 = { is_fully_controlled_by = ERB }
 		}
 		complete_effect = {
 			135 = {
@@ -670,7 +670,7 @@ ENC_california_reconstruction = {
 		fire_only_once = yes
 		allowed = { original_tag = ERB }
 		visible = {
-			135 = { is_owned_by = ERB }
+			135 = { is_fully_controlled_by = ERB }
 			}
 		complete_effect = {
 			country_event = { id = enc_reformers.134 }			
@@ -684,7 +684,7 @@ ENC_california_reconstruction = {
 		fire_only_once = yes
 		allowed = { original_tag = ERB }
 		visible = {
-			253 = { is_owned_by = ERB }
+			253 = { is_fully_controlled_by = ERB }
 		}
 		complete_effect = {
 			country_event = { id = enc_reformers.119 }			
@@ -698,7 +698,7 @@ ENC_california_reconstruction = {
 		fire_only_once = yes
 		allowed = { original_tag = ERB }
 		visible = {
-			153 = { is_owned_and_controlled_by = ERB }
+			153 = { is_fully_controlled_by = ERB }
 			}
 		complete_effect = {
 			country_event = { id = enc_reformers.135 }
@@ -724,7 +724,7 @@ ENC_california_reconstruction = {
 		fire_only_once = yes
 		allowed = { original_tag = ERB }
 		visible = {
-			153 = { is_controlled_by = ERB }
+			153 = { is_fully_controlled_by = ERB }
 			}
 		complete_effect = {
 				add_ideas = Enc_Irrigation
@@ -738,7 +738,7 @@ ENC_california_reconstruction = {
 		fire_only_once = yes
 		allowed = { original_tag = ERB }
 		visible = {
-			63 = { is_controlled_by = ERB }
+			63 = { is_fully_controlled_by = ERB }
 			}
 		complete_effect = {
 			country_event = { id = enc_reformers.136 }			
@@ -1019,7 +1019,7 @@ ENC_build_nevada = {
 		visible = {
 			has_completed_focus = enc_the_state_of_nevada
 			295 = {
-				is_owned_and_controlled_by = ERB
+				is_fully_controlled_by = ERB
 			}
 		}
 		complete_effect = {
@@ -1130,102 +1130,134 @@ ENC_build_nevada = {
 			}
 		}
 	}								
-}
-ENC_deseret = { 
-ENC_state_of_deseret = { 
-        cost = 50
-        days_remove = 10
-        ai_will_do = {    
-            factor = 10
-            }
-        visible = { original_tag = ERB }
-        available = { 
-            NCN = { has_full_control_of_state = 551 } 
-            } 
-        fire_only_once = yes
-        complete_effect = {
-            NCN = {set_cosmetic_tag = ncn_deseret }
-		custom_effect_tooltip = form_deseret_cores_tt
-		every_state = { # Adds a core on every state in the Utah region
-                limit = {
-                    is_utah_state = yes
-								}
-                add_core_of = NCN
-							}			
-					}
+	ENC_prioritize_civilian_relief = {
+		icon = generic_construction
+		fire_only_once = yes
+		cost = 50
+		selectable_mission = yes	
+		days_remove = 60
+		ai_will_do = {
+			factor = 10
+		}
+		activation = {
+			original_tag = ERB 
+			has_completed_focus = enc_NCR_no_compromise
+			NOT = { country_exists = NCR }
+			OR = {
+				controls_state = 135 # sac city
+				controls_state = 253 # shady sands
+				controls_state = 350 # the bone yard				
 			}
+		} 
+		days_mission_timeout = 60
+		modifier = {
+			production_speed_buildings_factor = -0.3
+			industry_free_repair_factor = -0.5
+		}
+		complete_effect = {			
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+		}
+	}
+}
+ENC_deseret = {
+	ENC_state_of_deseret = { 
+			cost = 50
+			days_remove = 10
+			ai_will_do = {    
+				factor = 10
+				}
+			visible = { original_tag = ERB }
+			available = { 
+				NCN = { has_full_control_of_state = 551 } 
+				} 
+			fire_only_once = yes
+			complete_effect = {
+				NCN = {set_cosmetic_tag = ncn_deseret }
+			custom_effect_tooltip = form_deseret_cores_tt
+			every_state = { # Adds a core on every state in the Utah region
+					limit = {
+						is_utah_state = yes
+									}
+					add_core_of = NCN
+								}			
+						}
+				}
 	ENC_return_to_deseret = { 
-        cost = 50
-        days_remove = 10
-        ai_will_do = {    
-            factor = 10
-            }
-        visible = { original_tag = ERB }
-        available = { 
-            NCN = { has_full_control_of_state = 551 } 
-            } 
-        fire_only_once = yes
+		cost = 50
+		days_remove = 10
+		ai_will_do = {    
+			factor = 10
+			}
+		visible = { original_tag = ERB }
+		available = { 
+			NCN = { has_full_control_of_state = 551 } 
+			} 
+		fire_only_once = yes
 		complete_effect = {
 			every_state = {
 			limit = { is_core_of = NCN is_owned_by = ERB  }
 			NCN = {transfer_state = PREV } 
 			}
 						}	
-       }
-	 ENC_annex_puppets = { 
-        cost = 250
-        days_remove = 10
-        ai_will_do = {    
-            factor = 10
-            }
-        visible = { original_tag = ERB }
-        available = { 
-            NCN = { has_full_control_of_state = 551 } 
-            } 
-        fire_only_once = yes
+	   }
+	ENC_annex_puppets = { 
+		cost = 250
+		days_remove = 10
+		ai_will_do = {    
+			factor = 10
+			}
+		visible = { original_tag = ERB }
+		available = { 
+			NCN = { has_full_control_of_state = 551 } 
+			} 
+		fire_only_once = yes
 		complete_effect = {
 			every_country = { # If a puppet has some but not all of their states in the Utah region, we snag the Utah states
-            		limit = {
-            			is_puppet_of = NCN
-           	 			any_owned_state = {
-            				is_utah_state = yes
-            			}
-            			NOT = {
-            				all_owned_state = {
-            					is_utah_state = yes
-            				}
-            			}
-            		}
-            		every_owned_state = {
-            			limit = { is_utah_state = yes }
-            			NCN = { transfer_state = PREV }
-            		}
-            	}
+					limit = {
+						is_puppet_of = NCN
+						any_owned_state = {
+							is_utah_state = yes
+						}
+						NOT = {
+							all_owned_state = {
+								is_utah_state = yes
+							}
+						}
+					}
+					every_owned_state = {
+						limit = { is_utah_state = yes }
+						NCN = { transfer_state = PREV }
+					}
+				}
 			}  
 		}
-		ENC_liberty_title = { 
-        cost = 250
-        days_remove = 10
-        ai_will_do = {    
-            factor = 10
-            }
-        visible = { original_tag = ERB }
-        available = { 
-            NCN = { has_full_control_of_state = 551 } 
-            } 
-        fire_only_once = yes
-		complete_effect = {
-			NCN = { add_stability = 0.05
-					add_war_support = 0.05 
-					add_popularity = { ideology = intellectuals popularity = 0.10 }
-					set_party_name = {
-					ideology = intellectuals
-					long_name = "Friends of America"
-					name = "Friends of America"
-										}
-				}	
+	ENC_liberty_title = { 
+			cost = 250
+			days_remove = 10
+			ai_will_do = {    
+				factor = 10
+				}
+			visible = { original_tag = ERB }
+			available = { 
+				NCN = { has_full_control_of_state = 551 } 
+				} 
+			fire_only_once = yes
+			complete_effect = {
+				NCN = { add_stability = 0.05
+						add_war_support = 0.05 
+						add_popularity = { ideology = intellectuals popularity = 0.10 }
+						set_party_name = {
+						ideology = intellectuals
+						long_name = "Friends of America"
+						name = "Friends of America"
+											}
+					}	
+				}
 			}
-		}
 }
 ###############################
 # SHARED
