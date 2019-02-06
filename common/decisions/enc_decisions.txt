@@ -648,7 +648,7 @@ ENC_california_reconstruction = {
 		fire_only_once = yes
 		allowed = { original_tag = ERB }
 		visible = {
-			135 = { is_owned_and_controlled_by = ERB }
+			135 = { is_owned_by = ERB }
 		}
 		complete_effect = {
 			135 = {
@@ -668,7 +668,7 @@ ENC_california_reconstruction = {
 		fire_only_once = yes
 		allowed = { original_tag = ERB }
 		visible = {
-			135 = { is_owned_and_controlled_by = ERB }
+			135 = { is_owned_by = ERB }
 			}
 		complete_effect = {
 			country_event = { id = enc_reformers.134 }			
@@ -681,8 +681,8 @@ ENC_california_reconstruction = {
 		fire_only_once = yes
 		allowed = { original_tag = ERB }
 		visible = {
-			253 = { is_owned_and_controlled_by = ERB }
-			}
+			253 = { is_owned_by = ERB }
+		}
 		complete_effect = {
 			country_event = { id = enc_reformers.119 }			
 		}
@@ -719,7 +719,7 @@ ENC_california_reconstruction = {
 		fire_only_once = yes
 		allowed = { original_tag = ERB }
 		visible = {
-			153 = { is_owned_and_controlled_by = ERB }
+			153 = { is_controlled_by = ERB }
 			}
 		complete_effect = {
 				add_ideas = Enc_Irrigation
@@ -732,13 +732,13 @@ ENC_california_reconstruction = {
 		fire_only_once = yes
 		allowed = { original_tag = ERB }
 		visible = {
-			63 = { is_owned_and_controlled_by = ERB }
+			63 = { is_controlled_by = ERB }
 			}
 		complete_effect = {
 			country_event = { id = enc_reformers.136 }			
 		}
 	}
-	}
+}
 	
 ENC_northwest_reconstruction = {
 	ENC_hanford = {
@@ -939,6 +939,12 @@ ENC_build_nevada = {
 		allowed = {
 			original_tag = ERB
 		}
+		available = {
+			num_of_available_civilian_factories > 5
+		}		
+		modifier = {
+			civilian_factory_use = 5
+		}
 		visible = {
 			has_completed_focus = enc_reform
 			291 = {
@@ -1014,11 +1020,17 @@ ENC_build_nevada = {
 	}
 	ENC_nukacola = {
 		cost = 25
+		fire_only_once = yes
 		days_remove = 10
 		ai_will_do = {
 			factor = 10
 		}
-		fire_only_once = yes
+		available = {
+			num_of_available_civilian_factories > 5
+		}		
+		modifier = {
+			civilian_factory_use = 5
+		}
 		visible = {
 			original_tag = ERB
 			has_completed_focus = enc_vlt_power_reform
