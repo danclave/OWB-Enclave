@@ -152,20 +152,20 @@ enc_radio_desc:0 "Our radio beacons could be used to broadcast the Enclave's mes
 enc_Arizona: "The Southwest Commonwealth"
 enc_Arizona_desc: "The defeat of Caesar has led to the rise of a a patchwork of tribes and city-states across the Southwest.  We need to pressure them to join the Allied States of America under someone's leadership."
 enc_the_lucia_incident: "The Lucia Incident"
-enc_the_lucia_incident_desc: "We have enough T-51 Powered Armor around that we can fake a Brotherhood attack on NCR Outposts.  Suckers."
+enc_the_lucia_incident_desc: "We have enough T-51 Powered Armor around that we can fake a Brotherhood attack on NCR Outposts. At the same time, we will order an attack on the Brotherhood using cracked NCR high command codes. This should be enough to tip their fragile peace."
 enc_the_lucia_incident_tt: "Unlocks the §YThe Lucia Incident§! decision.\nThis allows you to use your spies to send a fake radio broadcast causing the §Y[BOS.GetName]§! to declare war on the §Y[NCR.GetName]§!."
 ERB_Local_Development: "Improve Lending in Freeside"
 ERB_Local_Development_desc: "The bright lights of the strip may seem the soul of Vegas, but we know the real treasure resides in the dreams of Freeside's citizens. By extending loans using the funds we have from control of Nevada's mines, we can make Vegas boom."
 ENC_preconstruction: "Reconstructing the Pacific Commonwealth"
 ENC_preconstruction_desc: "We can return territory that belonged to the prewar Pacific Commonwealth to boost the strength of our little buddy."
 ENC_rise_rebellion:  "The Old World Uprising!"
-ENC_rise_rebellion_desc: "Enclave loyalists, and supporters of President Hayes, are ready to rise in our support.  It's time for the eagle to slay the bear."
+ENC_rise_rebellion_desc: "Enclave loyalists are ready to rise in our support.  It's time for the eagle to slay the bear."
 ENC_Civil_War: "Launch the Californian Civil War"
 ENC_Civil_War_desc: "Denied his victory at the ballot box, Mayor Hayes is prepared to fight a civil war to ensure the rights of Californians to set an old course for their state."
 ENC_Bellingham: "Protect Bellingham"
 ENC_Bellingham_desc: "The people of Belligham don't realize how exposed they are to the Broken Coast or the Brotherhood.  Why, one powered armor battalion dropped from vertibirds could swiftly conquer them!"
 enc_the_bishop_incident: "The Bishop Incident"
-enc_the_bishop_incident_desc: "We could trick the NCR into going to war with its enemies through espionage."
+enc_the_bishop_incident_desc: "The [NCR.GetName] has enjoyed farily good relations with their eastern neighbours, the [DES.GetName]. Still, a false flag attack combined with faked radio signals could get the two powers to believe the other has betrayed them."
 enc_the_bishop_incident_tt:0 "Unlocks the §YThe Bishop Incident§! decision.\nThis allows you to use your spies to send a fake radio broadcast causing the §Y[DES.GetName]§! to declare war on the §Y[NCR.GetName]§!."
 
 enc_accept_wastelanders:0 "Accept Wastelander Volunteers"
@@ -314,7 +314,7 @@ enc_rangers_submit_desc:0 "With the peace we've brought to Northern Nevada, the 
 
 enc_NCR_start:0 "Home is Nevada"
 enc_NCR_start_desc:0 "Although the Enclave's focus has traditionally been on California, and restoring the United States, some argue we should focus on securing Nevada and working with Americans across the Wastes. Some sort of League of American States may be more viable than invading everywhere New Victoria to the Pecos Colonies."
-enc_NCR_start.tt: "Unlocks the §MNevada§! Focus Tree."
+enc_NCR_start.tt: "\nUnlocks the §MNevada§! Focus Tree."
 enc_accept_status_quo:0 "Accept the Status Quo"
 enc_accept_status_quo_desc:0 "Painful though it is for old veterans, the support for the Enclave within the NCR's elite means we can reach an agreement with them."
 
@@ -389,14 +389,14 @@ enc_geck:0 "The GECK Project"
 enc_geck_desc:0 "The Garden of Eden Creation Kit was designed to help revive the Wastes after a nuclear war.  The Reunited States can use this technology on a national level to turn the Deadwood forests into Redwood forests once again."
 
 enc_accept_ghouls:0 "Accept Ghouls"
-enc_accept_ghouls_desc:0 "But some of them are old enough to remember when America was a country and not a Wasteland."
+enc_accept_ghouls_desc:0 "Contrary to popular belief, not all ghouls are feral. Many of them are just like the rest of us, people struggling to thrive in the unforgiving wastes. Some are old enough to remember when America was a country and not a Wasteland. \nLet us reach out our hand and invite them to help us rebuild what they once knew."
 enc_reject_ghouls:0 "Reject Ghouls"
-enc_reject_ghouls_desc:0 "How can we claim ghouls are American citizens?  They smell..."
+enc_reject_ghouls_desc:0 "How can we claim ghouls are American citizens?  They are mutated far beyond even being human. Most of them are feral, bloodthirsty creatures and the few that aren't can turn at any time.\n Let us leave these relics in the past, there is no room for them in our newly reborn America."
 
 enc_accept_super_mutants:0 "Accept Super Mutants"
-enc_accept_super_mutants_desc:0 "On the other hand, supermutants can be as smart and far stronger than the average American."
+enc_accept_super_mutants_desc:0 "Super Mutants might once have been dangerous, but their numbers have been dwindling for decades. Plenty of them are brutes beyond reasoning, but some of them are rumored to think and feel just as a regular human being. If they are willing to join us, we can use their formidable  strength to rebuild America."
 enc_reject_super_mutants:0 "Reject Super Mutants"
-enc_reject_super_mutants_desc:0 "We need to figure out how to handle the Super Mutants.  They are nothing but a threat."
+enc_reject_super_mutants_desc:0 "Legends tell us of a time when the super mutants were more numerous and organized. Lead by a figure known as The Master, they attempted to replace humanity as the dominant species of this planet. Luckily for us, they failed. \nNow we will make sure they never have a chance to try again."
 
 enc_department_of_energy:0 "Department of Energy"
 enc_department_of_energy_desc:0 "Prewar America sent energy from Hoover Dam to California, from the Tennesee Valley to Chicago.  So can we."
@@ -435,10 +435,10 @@ enc_old_world_desc:0 "To quote the classical musical Hamilton, 'We're finally on
 enc_a_new_order:0 "An All American Order"
 
 enc_purge_scientists:0 "Purge the Scientists"
-enc_purge_scientists_desc:0 "TODO"
+enc_purge_scientists_desc:0 "The time has come to rid ourselves of the most stubbern Purist elements within our research divisions. We cannot let such an essential part of the Enclave be infested with traitors and saboteurs. Demotions, banishments or executions. One way or another, our scientists will be loyal."
 
 enc_purge_officers:0 "Purge the Officers"
-enc_purge_officers_desc:0 "TODO"
+enc_purge_officers_desc:0 "The time has come to rid ourselves of the most stubbern Purist elements within our officer corps. We cannot let such an essential part of the Enclave be infested with traitors and saboteurs. Demotions, banishments or executions. One way or another, our officers will be loyal."
 
 stability_loss_based_on_purist_popularity: "\n§MStability loss is based on popularity of§! §YPurist Faction§!"
 enc_infiltrate_ncr:0 "Infiltrate the NCR"
@@ -449,7 +449,7 @@ enc_assassinate_F_desc:0 "Assassinating Doctor Anderson will crush opposition to
 enc_assassinate_F_tt:0 "§YFranklin Andersen§! dies!"
 
 enc_stage_raider_attacks:0 "Stage Raider Attacks"
-enc_stage_raider_attacks_desc:0 "TODO"
+enc_stage_raider_attacks_desc:0 "In order for the us to stay hidden, we must make sure that the [NCR.GetName] stays distracted with other enemies. By bribing nearby raiders into attacking [NCR.GetName] border towns, we can ensure our obscurity as long as it suits us."
 enc_stage_raider_attacks_tt: "Unlocks the §YArm Raider Gangs§! decision.\nThis allows you to send 300 £enc_weapons §YInfantry Equipment§! to any §YRaider§! faction bordering the §Y[NCR.GetName]§! to reduce §YNCR suspicion§! by §G20§! £pol_power."
 enc_reformers.tt: "Unlockes national focuses addressing whether to §MIntegrate Wastelanders§! §Wand§! §BRestore Democracy§!."
 enc_foreign_policy: "Foreign Policy"
@@ -496,7 +496,7 @@ enc_silence_congress_reform: "Silence Congress"
 enc_silence_congress_reform_desc: "Through bribes and bullet-related accidents, we can silence dissidents in Congress."
 
 enc_segregation: "Segregation"
-enc_segregation_desc: "Greenskins?  In our country?  Kind of gross."
+enc_segregation_desc: "No matter how you look at it, the wastelanders have been mutated by years of radiation and FEV contamination. While we don't believe they are guilty of anything, there must be barriers put up to protect unmutated human genes.\nThe Enclave will rule the wastelanders as a caste above them."
 
 enc_institutionalize_separation: "Institutionalize Seperation"
 enc_institutionalize_separation_desc: "By assigning special privileges to Americans based on their genetic makeup, level of civilization (as we define it), and usefulness, we can revive old American traditions."
@@ -566,7 +566,7 @@ enc_the_state_of_utah_desc: "To the east, New Canaan is the nucleus for the Morm
 
 
 enc_crack_the_code: "Crack the Code"
-enc_crack_the_code_desc: "Our advanced technology could let us crack the NCR's codes and predict their moves in advance.""
+enc_crack_the_code_desc: "The [NCR.GetName]§! may believe their rudimentary encryption is enough to secure their communications, but our but our new radio system makes cracking their codes child's play. Now, we can impersonate even their highest level command structure, at least once."
 
 enc_wastelander_draft: "Draft the Wastelanders"
 enc_wastelander_draft_desc: "Although many of the Wastelanders aren't up to the burden of being American citizens, they are up to the burden of being American cannon fodder."
@@ -607,12 +607,12 @@ enc_dayglow_proclamation_desc:0  "With our cry, the mayor of Dayglow will call f
 enc_petition_for_independence_tt:0 "Unlocks the §YPetition for Independence§! decision.\nThis decision will release the §YBaron's Republic§! with any states that have armed rebels."
 enc_the_common_man: "The Common Man"
 enc_the_common_man_desc: "The NCR adopted a lot of the ideals of Old War America, including democracy and the respect for individual rights.  But many lie forgotten in this society, who could turn to us for assistance..."
-enc_fear_uncertainty_and_doubt:0 "The Old Deal"
-enc_fear_uncertainty_and_doubt_desc:0 "The Mayor of Day Glow, Grant C. Hayes, has been a fan of the Old War America.  He's willing to work with us to promote reforms to NCR's Senate, which is biased towards the barons and caravans, and for greater rights for NCR workers. He calls this the 'Old Deal.'" 
+enc_fear_uncertainty_and_doubt:0 "Fear, Uncertainty and Doubt"
+enc_fear_uncertainty_and_doubt_desc:0 "We will fan the flames of discontent within the [NCR.GetName]. News of corruption, outside threats and broken promises will be spread by radio stations and spies. \n\nThere can be nothing but fear, uncertainty and doubt."
 enc_organise_the_sympathizers:0 "Organise the Sympathizer"
-enc_organise_the_sympathizers_desc:0 "With proper equipment and supplies, we can ensure that the NCR takes the demands of Hayes and his allies seriously."
+enc_organise_the_sympathizers_desc:0 "Many disillusioned citizens of the [NCR.GetName] have flocked to the message of the Enclave. It is time to help them turn their thoughts into actions. Our spies will contact as many sympathizers as possible and form bands of US patriots, waiting patiently to use the weapons we supply them."
 enc_the_divided_state:0 "Californian Civil War"
-enc_the_divided_state_desc:0 "The petition for a constitutional convention to reform the NCR has reached the Senate... and they refused to hear it.  Proponents of the Old Deal have taken to the streets, and been fired on by Gun Runners and other NCR loyalists.  The Californian Civil War has begun."
+enc_the_divided_state_desc:0 "The petition for a constitutional convention to reform the NCR has reached the Senate... and they refused to hear it.  Proponents of Enclave have taken to the streets, and been fired on by Gun Runners and other NCR loyalists.  The Californian Civil War has begun."
 enc_dod_tactics:0 "Department of Military Intelligence"
 enc_postwar_tactics:0 "Post-war tactics"
 enc_dod_energy_1:0 "Energy Focus"
@@ -821,6 +821,8 @@ ENC_Marriage_Equality:  "Ghoul Marriage"
 Enc_Followers:  "Follower Patronage"
 ENC_servitude: "Indentured Servitude"
 ENC_selective_service: "Selective Service"
+
+ENC_home_defense: "Defensive Planning"
 ###################################
 # PEOPLE
 ###################################
@@ -1003,7 +1005,7 @@ arm_patriots_click: "§YArm patriots in the state!§!\nIf push comes to shove, t
 enc_patriots_armed: "This state has patriots ready to rise up for America."
 
 unlock_arm_rebels: "Unlocks the ability to §Yarm rebels§! in any §YNCR§! state where §YBarron Republic§! has a core.\n\n"
-unlock_arm_patriots: "Unlocks the ability to §Yarm patriots§! in any §YNCR§! state where it has a core.\n\n"
+unlock_arm_patriots: "Unlocks the ability to §Yarm patriots§! in any core §Y[NCR.GetName]§! state.\n\n"
 unlock_arm_patriots: "Unlocks the ability to §Yarm slaves§! in any Legion state where it has a core.  Bastards.\n\n"
 ENC_rise_slaves:  "Issue the Second Emancipation Proclamation"
 ENC_rise_slaves_des: "It's time to remind Caesar that Americans will always fight for freedom."

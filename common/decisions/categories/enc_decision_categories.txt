@@ -127,12 +127,14 @@ ENC_debug = {
 }
 ENC_pacific_commonwealth1 = {
 	icon = category_seattle
+
 	allowed = {
 		tag = ERB }
 	visible = {
 			has_completed_focus = enc_pacific_commonwealth
 			}	
 }
+
 
 ENC_treaty_hoover_dam = {
 	picture = GFX_decision_cat_picture_mojave_campaign
