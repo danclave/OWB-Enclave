@@ -754,10 +754,10 @@ enc_reformers.158.d: "It's another beautiful morning in New Vegas, dear listener
 enc_reformers.158.a: "We're making the world a better place"
 ###############################################################################################################
 enc_reformers.159.t: "The Human Rights Party"
-enc_reformers.159.d: "As it turns out, many Wastelanders have their own views of ghouls, mutants, and 'primitives.' First Citizen Lynette of Vault City has joined ranks with many Enclave centrists who think that civilized Wastelanders are real Americans, but that tribals need a firm, guiding hand, and mutants and ghouls need a plasma blast. Vault City is to many members of the Enclave a model town, peaceful and prosperous, and the comparison to the riff raff of New Reno or Shady Sands only bolsters her claim to lead the Reunited States. Lynnete and Enclave Centrists have formed the Human Rights Party, promising to rebuild all of America in Vault City's image."
-enc_reformers.159.a: "I hate her so much"
+enc_reformers.159.d: "As it turns out, many Wastelanders have their own views of ghouls, mutants, and 'primitives'. First Citizen Lynette of Vault City has joined ranks with many Enclave centrists who think that civilized Wastelanders are real Americans, but that tribals need a firm, guiding hand, and mutants and ghouls need a plasma blast. Vault City is, to many members of the Enclave, a model town -peaceful and prosperous, and the comparison to the riff raff of New Reno or Shady Sands only bolsters her claim to lead the Reunited States. Lynnete and Enclave Centrists have formed the Human Rights Party, promising to rebuild all of America in Vault City's image."
+enc_reformers.159.a: "Two steps forward, one step back."
 enc_reformers.159.b: "She has something of a point..."
-enc_reformers.159.c: "§MNo. Let us go forward together§!"
+enc_reformers.159.c: "§MNo. Let us go forward together.§!"
 ###############################################################################################################
 enc_reformers.160.t: "The Road Gets Rougher From Here"
 enc_reformers.160.d: "Straddling the border between California and the Mojave are two prosperous trading towns, Ashton and Hopeville.  These small towns have boomed in recent years thanks to civilization's recovery, and were already on our list to liberate to simplify logistics, if nothing else.  But recently we've picked up some sort of signals from prewar military bases in the region. Since the area was home to ICBM bases before the war, we should secure the towns and investigate."

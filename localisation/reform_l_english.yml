@@ -916,7 +916,8 @@ ENC_annex_puppets: "To Gather All the People"
 ENC_annex_puppets_desc: "Surely the tribes of New Canaan are better off under firm leadership? New Canaaninite missionaries will teach them to read, save their souls, and help them pay their taxes."
 ENC_liberty_title: "Raise the Title of Liberty"
 ENC_liberty_title_desc: "In the Book of Liberty, Captain Moroni raised a banner declaring freedom for his people against those who would be king. Isn't the Enclave's banner just another banner of liberty?"
-
+ENC_prioritize_civilian_relief: "Prioritize Civilian Relief"
+ENC_prioritize_civilian_relief_desc: "The war has left many of our new citizens in dire straights. Let us prove ourselves as a benevolent government by prioritizing their needs over heavy industry."
 ###################################
 # Seek Allies
 ###################################

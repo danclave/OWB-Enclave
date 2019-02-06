@@ -1800,7 +1800,7 @@ focus_tree = {
 			add_ideas = ENC_Department_Manufacturing
 		}
 	}
-		focus = {#REBorN - Automobiles
+	focus = {#REBorN - Automobiles
 		id = enc_automobiles
 		icon = GFX_goal_NCR_Long15
 		prerequisite = {focus = enc_department_of_manufacturing}
@@ -1827,7 +1827,7 @@ focus_tree = {
 		add_ideas = ENC_Dept_Energy
 		}
 	}
-		focus = {#REBorN - Daytime
+	focus = {#REBorN - Daytime
 		id = enc_helios_two
 		icon = GFX_goal_moj_energy_boom
 		prerequisite = {focus = enc_department_of_energy}
@@ -2031,7 +2031,7 @@ focus_tree = {
 		country_event = { id = enc_reformers.132 }
 		}
 	}
-		focus = {#REBorN - Prewar Corporations
+	focus = {#REBorN - Prewar Corporations
 		id = enc_prewar_corporations
 		icon = GFX_goal_bos_repconn_hq
 		prerequisite = {focus = enc_bloomfield }
@@ -2125,12 +2125,15 @@ focus_tree = {
 		icon = GFX_goal_enc_epa
 		prerequisite = { focus = enc_old_world }
 		ai_will_do = { factor = 1 } 
+		available = {
+			has_idea = lt_kolyis
+		}
 		relative_position_id = enc_old_world
 		x = -2
 		y = 1
 		cost = 5.8
 		completion_reward = {
-		add_ideas = ENC_EPA	
+			add_ideas = ENC_EPA	
 		}
 	}
 	focus = {#REBorN - The GECK project
@@ -2138,11 +2141,15 @@ focus_tree = {
 		icon = GFX_goal_enc_geck
 		prerequisite = { focus = enc_epa }
 		ai_will_do = { factor = 1 } 
+		available = {
+			has_idea = lt_kolyis
+		}
 		relative_position_id = enc_epa
 		x = 0
 		y = 2
 		cost = 5.8
 		completion_reward = {
+			add_political_power = 80
 			country_event = { id = enc_reformers.80 }
 		}
 	}
@@ -2189,7 +2196,7 @@ focus_tree = {
 	
 	
 
-		focus = {#REBorN - Rebuilding California
+	focus = {#REBorN - Rebuilding California
 		id = enc_rebuilding_california
 		icon = GFX_goal_NCR_Mayoral_Victory_Speech
 		prerequisite = {focus = enc_old_world }
@@ -2206,7 +2213,7 @@ focus_tree = {
 	
 		
 	
-focus = {#Rebuilding-Northwest
+	focus = {#Rebuilding-Northwest
 		id = enc_rebuilding_pacific_commonwealth
 		icon = GFX_goal_enc_pacific_commonwealth
 		ai_will_do = { factor = 1 } 
@@ -2219,7 +2226,7 @@ focus = {#Rebuilding-Northwest
 		custom_effect_tooltip = enc_rebuilding_pacific_commonwealth.tt
 			 }
 	}
-focus = {#Rebuilding-Rockies
+	focus = {#Rebuilding-Rockies
 		id = enc_rebuilding_rockies
 		icon = GFX_goal_NCN_Kingdom_of_God
 		ai_will_do = { factor = 1 } 
@@ -2233,7 +2240,7 @@ focus = {#Rebuilding-Rockies
 							}
 		}
 		
-focus = {#China
+	focus = {#China
 		id = enc_China
 		icon = GFX_goal_enc_threat_of_communism
 		ai_will_do = { factor = 1 } 
@@ -2248,7 +2255,7 @@ focus = {#China
 		country_event = { id = enc_reformers.143 }
 							}
 		}
-focus = {#Reunited
+	focus = {#Reunited
 		id = enc_reunited_states
 		icon = GFX_goal_map_us
 		ai_will_do = { factor = 1 } 
@@ -2259,9 +2266,9 @@ focus = {#Reunited
 		y = 1
 		cost = 1 
 		completion_reward = {
-		custom_effect_tooltip = enc_reunited_states.tt
-							}
-		}	
+			custom_effect_tooltip = enc_reunited_states.tt
+		}
+	}	
  	####################################
 	# DIPLOMACY
 	####################################
@@ -2779,7 +2786,7 @@ focus = {#Reunited
 	focus = { # second city
 		id = Enc_Second_City
 		icon = GFX_goal_enc_the_Lucky_38
-		cost = 2
+		cost = 5.8 
 		available = { has_full_control_of_state = 211 }
 		relative_position_id = enc_expansion_reform
 		x = 8
@@ -2799,7 +2806,7 @@ focus = {#Reunited
 	focus = { # vault 21
 		id = ERB_vault21
 		icon = GFX_goal_VEG_Vault_21
-		cost = 3
+		cost = 5.8
 		ai_will_do = { factor = 1 } 
 		relative_position_id = Enc_Second_City
 		x = -2
@@ -2819,7 +2826,7 @@ focus = {#Reunited
 		relative_position_id = ERB_vault21
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5.8
 		available = { has_full_control_of_state = 181 }
 		prerequisite = { focus = ERB_vault21 }	
 		completion_reward = {
@@ -2837,7 +2844,7 @@ focus = {#Reunited
 	focus = { # tourists
 		id = ERB_Tourists
 		icon = GFX_goal_goal_card_tricks
-		cost = 3
+		cost = 5.8
 		ai_will_do = { factor = 1 } 
 		relative_position_id = Enc_Second_City
 		x = 0
@@ -2859,7 +2866,7 @@ focus = {#Reunited
 	focus = { # local development
 		id = ERB_Local_Development
 		icon = GFX_goal_enc_fed
-		cost = 4
+		cost = 5.8
 		prerequisite = { focus = ERB_Tourists }
 		relative_position_id = ERB_Tourists
 		x = 0
@@ -2883,7 +2890,7 @@ focus = {#Reunited
 		relative_position_id = Enc_Second_City
 		x = 2
 		y = 1
-		cost = 3
+		cost = 5.8
 		available = { has_full_control_of_state = 211 }
 		prerequisite = { focus = Enc_Second_City }	
 		completion_reward = { 
@@ -2899,7 +2906,7 @@ focus = {#Reunited
 		relative_position_id = Enc_Platinum_Chip
 		x = 0
 		y = 1
-		cost = 2
+		cost = 5.8
 		prerequisite = { focus = Enc_Platinum_Chip }	
 		completion_reward = { 
 				add_tech_bonus = {
@@ -2910,7 +2917,7 @@ focus = {#Reunited
 			}
 			
 		}
-		}
+	}
 	focus = {#Boom
 		id = Enc_Vegas_miracle
 		icon = GFX_goal_enc_Economic_Miracle
@@ -4020,7 +4027,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_foreign_policy	
 		x = 28
 		y = 0
-		cost = 3
+		cost = 5.8
 		completion_reward = {
 			army_experience = 50
 			add_tech_bonus = {
@@ -4039,7 +4046,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_department_of_defense
 		x = 1
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = {
 			add_tech_bonus = {
 				name = industrial_bonus
@@ -4057,7 +4064,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_arms_development
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = { add_ideas = enc_military_equipment }
 	}
 	focus = {#Military - military propaganda
@@ -4079,7 +4086,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_military_propaganda
 		x = 0
 		y = 1 
-		cost = 3
+		cost = 5.8
 		completion_reward = {
 			custom_effect_tooltip = enc_wartime_draft.tt
 		}
@@ -4095,7 +4102,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_wartime_draft
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = { add_ideas = enc_disciplined_soldiers }
 	}
 	focus = {#Military - quantity - rank and file infantry
@@ -4107,7 +4114,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_disciplined_soldiers
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = {
 			add_ideas = enc_rank_and_file_infantry
 		}
@@ -4123,7 +4130,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_military_equipment
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = { add_ideas = enc_advanced_training }
 	}
 	
@@ -4135,7 +4142,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_advanced_training
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = { add_ideas = enc_power_armor_integration }
 	}
 
@@ -4149,7 +4156,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_power_armor_integration
 		x = -1
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = { add_ideas = enc_the_new_american_army }
 	}
 
@@ -4164,7 +4171,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		prerequisite = { focus = enc_department_of_defense }
 		x = 5
 		y = 1
-		cost = 2
+		cost = 5.8
 		completion_reward = {
 			army_experience = 50
 			navy_experience = 30
@@ -4179,7 +4186,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		mutually_exclusive = { focus = enc_old_remnant_officers }
 		x = -1
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = {
 			add_stability = -0.05
 			add_tech_bonus = {
@@ -4198,7 +4205,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		mutually_exclusive = { focus = enc_new_generation_officers }
 		x = 1
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = {
 			army_experience = 50
 			add_stability = 0.05
@@ -4227,8 +4234,8 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_officers_by_merit_and_skill
 		x = 1
 		y = 1
-		cost = 3
-			completion_reward = {
+		cost = 5.8
+		completion_reward = {
 			add_tech_bonus = {
 				bonus = 0.5
 				uses = 1
@@ -4248,7 +4255,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		mutually_exclusive = { focus = enc_officers_by_loyalty_and_devotion }
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = {
 			army_experience = 50
 			add_stability = -0.05
@@ -4266,7 +4273,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		mutually_exclusive = { focus = enc_officers_by_merit_and_skill }
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 100
@@ -4285,7 +4292,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		prerequisite = { focus = enc_department_of_defense }
 		x = -3
 		y = 1
-		cost = 3
+		cost = 5.8
 		available = {
 			any_owned_state = {
 				is_coastal = yes
@@ -4335,9 +4342,10 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		prerequisite = { focus = enc_navy_reform }
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = {
-	add_tech_bonus = { bonus = 0.5 uses = 2 category = ship_battleship_tech }		}
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = ship_battleship_tech }
+		}
 	}
 	
 	
@@ -4349,10 +4357,10 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		prerequisite = { focus = enc_department_of_defense }
 		x = 3
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = {
-		add_tech_bonus = { bonus = 0.5 uses = 2 category = air_doctrine }
-			}
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = air_doctrine }
+		}
 	}
 	####################################
 	# Home defense 
@@ -4366,7 +4374,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		prerequisite = { focus = enc_department_of_defense }
 		x = -5
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = {
 			add_ideas = ENC_home_defense
 		}
@@ -4379,7 +4387,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_home_defense
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = {
 			add_stability = 0.05
 			add_ideas = ENC_national_guard
@@ -4393,15 +4401,16 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_national_guard
 		x = 0
 		y = 1
-		cost = 3
-		completion_reward = { add_stability = 0.10
-	add_tech_bonus = {
+		cost = 5.8
+		completion_reward = { 
+			add_stability = 0.10
+			add_tech_bonus = {
 				name = electronics_bonus
 				bonus = 0.5
 				uses = 2
 				category = electronics
 			}
- }
+		}
 	}
 	focus = {#Military - defense - emergency draft
 		id = enc_emergency_draft_reform
@@ -4411,7 +4420,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_department_of_homeland_security
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = { 
 		swap_ideas = { remove_idea = ENC_national_guard
 		add_idea = ENC_selective_service }
@@ -4425,7 +4434,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		relative_position_id = enc_emergency_draft_reform
 		x = 0
 		y = 1
-		cost = 3
+		cost = 5.8
 		completion_reward = {
 		swap_ideas = { remove_idea = ENC_selective_service
 		add_idea = ENC_army_reserves }
