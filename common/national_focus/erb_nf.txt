@@ -4109,7 +4109,6 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		id = enc_rank_and_file_infantry
 		icon = GFX_goal_enc_mass_mobilization
 		ai_will_do = { factor = 1 }
-		mutually_exclusive = { focus = enc_disciplined_soldiers }
 		prerequisite = {focus = enc_disciplined_soldiers}
 		relative_position_id = enc_disciplined_soldiers
 		x = 0
@@ -4146,7 +4145,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		completion_reward = { add_ideas = enc_power_armor_integration }
 	}
 
-		focus = {#Military - the new american army
+	focus = {#Military - the new american army
 		id = enc_new_american_army
 		icon = GFX_goal_NEW_new_world_old_ideas
 	

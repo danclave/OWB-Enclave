@@ -2175,8 +2175,9 @@ ideas = {
 				political_advisor_cost_factor = -0.15
 			}
 		}
-	
-tank_manufacturer = {
+	}
+
+	tank_manufacturer = {
 		ENC_PA_quanitity = {
 			picture = enc_designer_PA_2
 			allowed = {
@@ -2374,8 +2375,6 @@ tank_manufacturer = {
 		}
 	}
 }
-}
-
 
 # GFX_idea_boris_t
 # GFX_idea_enc_education
