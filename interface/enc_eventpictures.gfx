@@ -352,40 +352,40 @@ spriteTypes = {
 			name = "GFX_enc_crashed_station"
 			texturefile = "gfx/event_pictures/enc_crashed_station.dds"	
 		}
-SpriteType = {#Power Plant
+		SpriteType = {#Power Plant
 			name = "GFX_event_enc_powerplant_on"
 			texturefile = "gfx/event_pictures/event_enc_powerplant_on.dds"	
 		}			
-SpriteType = {#Seattle
+		SpriteType = {#Seattle
 			name = "GFX_event_enc_seattle"
 			texturefile = "gfx/event_pictures/event_enc_seattle.dds"	
 		}
-SpriteType = {#vault
+		SpriteType = {#vault
 			name = "GFX_event_enc_vault"
 			texturefile = "gfx/event_pictures/event_enc_vault.dds"	
 		}
-SpriteType = {#ship
+		SpriteType = {#ship
 			name = "GFX_event_enc_ship"
 			texturefile = "gfx/event_pictures/event_enc_ship.dds"	
 		}
-SpriteType = {#China
+		SpriteType = {#China
 			name = "GFX_event_china_poster"
 			texturefile = "gfx/event_pictures/event_china_poster.dds"	
 		}
-SpriteType = {#nature
+		SpriteType = {#nature
 			name = "GFX_event_enc_nature"
 			texturefile = "gfx/event_pictures/event_enc_nature.dds"	
 		}
-SpriteType = {#nature
+		SpriteType = {#nature
 			name = "GFX_event_enc_cars"
 			texturefile = "gfx/event_pictures/event_enc_cars.dds"	
 		}
-SpriteType = {#mutantprotests
+		SpriteType = {#mutantprotests
 			name = "GFX_event_enc_antimutants"
 			texturefile = "gfx/event_pictures/event_enc_antimutants.dds"	
 		}
 
-SpriteType = {#Ashton
+		SpriteType = {#Ashton
 			name = "GFX_event_enc_divide1"
 			texturefile = "gfx/event_pictures/event_enc_divide1.dds"	
 		}	
@@ -393,9 +393,17 @@ SpriteType = {#Ashton
 			name = "GFX_event_the_silo"
 			texturefile = "gfx/event_pictures/event_the_silo.dds"	
 		}
-	SpriteType = {#nuke legion
+		SpriteType = {#nuke legion
 			name = "GFX_event_enc_legion_nuke"
 			texturefile = "gfx/event_pictures/event_enc_legion_nuke.dds"	
-		}			
+		}	
+		SpriteType = {#the gun runners
+			name = "GFX_event_enc_gun_runners"
+			texturefile = "gfx/event_pictures/event_enc_gun_runners.dds"	
+		}	
+		SpriteType = {#USA FLAG
+			name = "GFX_event_ENC_USA_flag"
+			texturefile = "gfx/event_pictures/event_ENC_USA_flag.dds"	
+		}				
 }			
 

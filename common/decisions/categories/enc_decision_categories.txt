@@ -120,7 +120,7 @@ ENC_debug = {
 	allowed = {
 		tag = ERB
 	}	
-	priority = -1
+	priority = 100
 	visible = {
 		# always = false
 		# release disable

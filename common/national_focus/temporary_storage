@@ -1,0 +1,338 @@
+	# focus = {#REBorN - A Nation Reborn
+		# id = enc_old_world 
+		# icon = GFX_goal_enc_us_reborn
+		# ai_will_do = { factor = 1 }
+		# relative_position_id = enc_the_mutant_question
+		# mutually_exclusive = { focus = enc_NCR_start } 
+		# available = {
+			# NOT = {
+				# country_exists = NCR
+			# }
+			# custom_trigger_tooltip = {
+				# tooltip = 75_legitimacy		
+				# check_variable = {
+					# var = legitimacy
+					# value > 0.749
+				# }
+			# }
+		# }
+		# x = 16
+		# y = 0
+		# cost = 5.8
+		# completion_reward = {
+			# hidden_effect = { # remove negative opinions
+				# every_country = {
+					# remove_opinion_modifier = { target = ERB modifier = genocidal_maniacs }
+					# ERB = { remove_opinion_modifier = { target = PREV modifier = dirty_muties }}
+				# }
+			# }
+			# set_cosmetic_tag = ERB_USA
+			# country_event = { id = enc_reformers.50 }
+			# custom_effect_tooltip = enc_old_world_tt
+		# }
+	# }
+
+	# focus = {#REBorN - Automobiles
+		# id = enc_automobiles
+		# icon = GFX_goal_NCR_Long15
+		# prerequisite = {focus = enc_department_of_manufacturing}
+		# ai_will_do = { factor = 1 } 
+		# relative_position_id = enc_department_of_manufacturing
+		# x = 0
+		# y = 1
+		# cost = 5.8 
+		# completion_reward = {
+		# add_stability = 0.05
+		# country_event = { id = enc_reformers.152 }
+		# }
+	# }
+	# focus = {#REBorN - Daytime
+		# id = enc_helios_two
+		# icon = GFX_goal_moj_energy_boom
+		# prerequisite = {focus = enc_department_of_energy}
+		# ai_will_do = { factor = 1 } 
+		# relative_position_id = enc_department_of_energy
+		# x = 0
+		# y = 1
+		# cost = 5.8 
+		# completion_reward = {
+		# add_resource = {
+				# type = advanced_technology amount = 5 state = 350
+			# }
+		# add_resource = {
+				# type = advanced_technology amount = 5 state = 253
+			# }
+		# add_resource = {
+				# type = advanced_technology amount = 5 state = 253
+			# }
+		# add_resource = {
+				# type = advanced_technology amount = 5 state = 285
+			# }	
+		
+		# }
+	# }
+	# focus = {#REBorN - rebuilding america
+		# id = enc_rebuild_railway
+		# icon = GFX_goal_enc_construction_usa
+		# prerequisite = {focus = enc_helios_two}
+		# prerequisite = {focus = enc_automobiles}
+		# relative_position_id = enc_helios_two
+		# ai_will_do = { factor = 1 }
+		# available = { 84 = { is_owned_and_controlled_by = ERB }
+		# 350 = { is_owned_and_controlled_by = ERB } }
+		# x = -1
+		# y = 1
+		# cost = 5.8 
+		# completion_reward = {
+		# custom_effect_tooltip = enc_rebuild_railway.tt
+		# hidden_effect = {350 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }
+		# 396 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }
+		# 258 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }
+		# 64 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 558 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 243 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 104 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 463 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 474 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }
+		# 216 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 340 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 39 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 353 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }
+		# 340 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 39 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 353 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }	
+		# 239 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 32 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 86 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }
+		# 358 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 186 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }			
+		# 192 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }
+		# 23 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 7 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }
+		# 556 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }
+		# 61 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+		# 84 = {add_building_construction = { 
+					# type = infrastructure 
+					# level = 2
+					# instant_build = yes 
+				# } }		
+				# }
+			# }
+	# }
+	# focus = {#REBorN - Department of Education
+		# id = enc_department_of_education
+		# icon = GFX_goal_enc_education
+		# prerequisite = { focus = enc_old_world }
+		# ai_will_do = { factor = 1 }
+		# relative_position_id = enc_old_world
+		# x = -4
+		# y = 1
+		# cost = 5.8
+		# completion_reward = {
+		# add_ideas = Enc_Dept_Education	
+		# }
+	# }
+	# focus = {#REBorN - Bloomfield
+		# id = enc_bloomfield
+		# icon = GFX_goal_enc_rocket_reform
+		# prerequisite = {focus = enc_department_of_education }
+		# ai_will_do = { factor = 1 } 
+		# relative_position_id = enc_department_of_education
+		# x = 0
+		# y = 1
+		# cost = 5.8 
+		# available = { 395 = { is_owned_and_controlled_by = ERB } }
+		# completion_reward = {
+		# country_event = { id = enc_reformers.132 }
+		# }
+	# }
+	# focus = {#REBorN - Prewar Corporations
+		# id = enc_prewar_corporations
+		# icon = GFX_goal_bos_repconn_hq
+		# prerequisite = {focus = enc_bloomfield }
+		# ai_will_do = { factor = 1 } 
+		# relative_position_id = enc_bloomfield
+		# x = 0
+		# y = 1
+		# cost = 5.8 
+		# completion_reward = {
+		# custom_effect_tooltip = enc_prewar_corporations.tt 	
+		# }
+		# }
+
+	# focus = {#REBorN - Department of Justice
+		# id = enc_department_of_justice
+		# icon = GFX_goal_enc_justice
+		# prerequisite = { focus = enc_old_world }
+		# ai_will_do = { factor = 1 }
+		# relative_position_id = enc_old_world
+		# x = 2
+		# y = 1
+		# cost = 5.8
+		# completion_reward = {
+		# add_stability = 0.05
+		# add_political_power = 150
+		# }
+	# }
+	# focus = {#REBorN - A federal police force
+		# id = enc_police 
+		# icon = GFX_goal_enc_police
+		# prerequisite = { focus = enc_department_of_justice }
+		# ai_will_do = { factor = 1 } 
+		# relative_position_id = enc_department_of_justice
+		# x = 0
+		# y = 2
+		# cost = 5.8
+		# completion_reward = {
+		# add_ideas = ENC_FBI
+		# }
+	# }
+	
+	
+
+	# focus = {#China
+		# id = enc_China
+		# icon = GFX_goal_enc_threat_of_communism
+		# ai_will_do = { factor = 1 } 
+		# relative_position_id = enc_rebuilding_california
+		# x = 5
+		# y = 3
+		# cost = 5.8 
+		# prerequisite = { focus = enc_rebuilding_california }
+		# prerequisite = { focus = enc_refurbish_vaults }
+		# prerequisite = { focus = enc_police }
+		# completion_reward = {
+		# country_event = { id = enc_reformers.143 }
+							# }
+		# }
+	# focus = {#Reunited states
+		# id = enc_reunited_states
+		# icon = GFX_goal_map_us
+		# ai_will_do = { factor = 1 } 
+		# relative_position_id = enc_China
+		# prerequisite = { focus = enc_China}
+
+		# x = 0
+		# y = 1
+		# cost = 1 
+		# completion_reward = {
+			# custom_effect_tooltip = enc_reunited_states.tt
+		# }
+	# }	
+	# focus = {#Reunited states
+		# id = ""
+		# icon = ""
+		# ai_will_do = { factor = 1 } 
+		# relative_position_id = enc_China
+
+		# x = 5
+		# y = 1
+		# cost = 1 
+		# completion_reward = {
+			# custom_effect_tooltip = enc_reunited_states.tt
+		# }
+	# }

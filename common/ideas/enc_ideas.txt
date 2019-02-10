@@ -70,16 +70,17 @@ ideas = {
 				
 		ENC_gunrun = {
 			
-			picture = generic_morale_bonus
+			picture = gunrunners
 			
 			allowed = {}
 			
 			removal_cost = -1
 			
 			modifier = {
+				industrial_capacity_factory = 0.05
 				equipment_conversion_speed = 0.15
 			}
-			}	
+		}	
 		ENC_infighting = {  
 			picture = enc_idea_infighting
 			allowed = { 
@@ -1024,6 +1025,7 @@ ideas = {
 				stability_factor = -0.10
 				army_attack_factor = -0.05
 				army_morale_factor = -0.10
+				surrender_limit = -0.90
 			}
 		}
 		
@@ -1226,6 +1228,26 @@ ideas = {
 			  
 			}
 		}
+		
+		ENC_NCR_unrest = {  
+			picture = chi_war_of_resistance3
+			allowed = { 
+				always = no
+			}
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.005
+				mobilization_speed = -0.5
+				conscription_factor = -0.25
+				non_core_manpower = -0.05
+				industry_free_repair_factor = -0.25	
+			}
+		}
+
+		
 ####################################################
 # REFORM - DIPLOMACY TREE
 ####################################################

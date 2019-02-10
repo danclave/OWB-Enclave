@@ -1324,6 +1324,11 @@ country_event = {#47 - NCR falls
 	is_triggered_only = yes
 	option = { # Other countries white peace
 		name = enc_reformers.47.a
+		add_stability = -0.20
+		add_ideas = {
+			ENC_NCR_unrest
+		}
+		custom_effect_tooltip = breaklines
 		NCR = {		
 			dismantle_faction = yes
 		}
@@ -1339,6 +1344,84 @@ country_event = {#47 - NCR falls
 				tag = ERB
 			}
 		}
+	}
+}
+country_event = {#48 - The Fate of the Gun runners
+	id = enc_reformers.48
+	title = enc_reformers.48.t
+	desc = enc_reformers.48.d
+	picture = GFX_event_enc_gun_runners # todo
+	fire_only_once = yes	
+	is_triggered_only = yes
+	option = { # Let them continue operating
+		name = enc_reformers.48.a
+		custom_effect_tooltip = enc_reformers.48.a.tt
+		add_ideas = { ENC_gunrun }
+	}
+	option = { # Seize it
+		name = enc_reformers.48.b
+		custom_effect_tooltip = enc_reformers.48.b.tt
+		add_equipment_to_stockpile = { type = ballistic_equipment_1 amount = 1000 producer = NCR } 
+		add_equipment_to_stockpile = { type = energy_equipment_1 amount = 1000 producer = ERB }
+		add_equipment_to_stockpile = { type = ballistic_equipment_2 amount = 300 producer = NCR }
+		add_equipment_to_stockpile = { type = energy_equipment_2 amount = 300 producer = ERB }
+	}
+}
+country_event = {#49 - The purists Rebrand
+	id = enc_reformers.49
+	title = enc_reformers.49.t
+	desc = enc_reformers.49.d
+	picture = GFX_event_ENC_secret # todo
+	fire_only_once = yes	
+	is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_reform
+		has_completed_focus = enc_purge_opposition
+	}
+	mean_time_to_happen = {	days = 10 }
+	
+	option = { # Good to see 
+		name = enc_reformers.49.a
+		custom_effect_tooltip = enc_reformers.49.a.tt
+		set_party_name = { 
+			ideology = elites 
+			long_name = ENC_elites_party_anti_integration_long
+			name = ENC_elites_party_anti_integration 
+		}
+		add_popularity  = {
+			ideology = elites
+			popularity = 0.25
+		}
+	}
+	option = { # Seize it
+		name = enc_reformers.49.b
+		custom_effect_tooltip = enc_reformers.49.b.tt
+		set_party_name = { 
+			ideology = elites 
+			long_name = ENC_elites_party_anti_integration_long
+			name = ENC_elites_party_anti_integration 
+		}
+		add_stability = -0.10
+		add_popularity = {
+			ideology = elites
+			popularity = 0.15
+		}
+	}
+}
+country_event = {#50 - America Reborn
+	id = enc_reformers.50
+	title = enc_reformers.50.t
+	desc = enc_reformers.50.d
+	picture = GFX_event_ENC_USA_flag # todo
+	fire_only_once = yes	
+	is_triggered_only = yes
+	
+	immediate = {	
+		hidden_effect = { sound_effect = ERB_us_anthem } # oh say, can you see?
+	}
+	
+	option = { # God bless the USA
+		name = enc_reformers.50.a	
 	}
 }
 
@@ -3838,15 +3921,14 @@ country_event = {#142 Vault Tec
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {#	Yayy
-			name = enc_reformers.142.a
-			add_ideas = ENC_vaults
-		}
-option = {#	Yayy
-			name = enc_reformers.142.b
-			add_ideas = ENC_scavenge_vaults
-		}
-	
-		}			
+		name = enc_reformers.142.a
+		add_ideas = ENC_vaults
+	}
+	option = {#	Yayy
+		name = enc_reformers.142.b
+		add_ideas = ENC_scavenge_vaults
+	}
+}			
 
 country_event = {#143 Journey West
     id = enc_reformers.143

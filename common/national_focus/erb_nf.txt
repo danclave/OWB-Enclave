@@ -1125,7 +1125,6 @@ focus_tree = {
 				enc_civilian_power_grid_tech = 1	
 			}
 			custom_effect_tooltip = enc_rebuild_the_power_grid_tt
-			clr_country_flag = not_allowed_to_core_flag
 		}
 		cost = 5.8
  }
@@ -1209,146 +1208,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {#REForM - The Democracy Question
-		id = enc_the_fate_of_our_democracy 
-		icon = GFX_goal_enc_justice
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_the_mutant_question
-		
-		available = {
-			has_completed_focus = enc_reno_end
-			has_stability > 0.70
-		}
-		
-		x = -8
-		y = 0
-		cost = 5.8  
-		completion_reward = {
-			country_event = { id = enc_reformers.70 }
-		}			
-	} 
-	
-  	focus = {#REForM - extend_presidential_powers
-		id = enc_extend_presidential_powers_reform
-		icon = GFX_goal_enc_president_reform
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_the_fate_of_our_democracy
-		prerequisite = { focus = enc_the_fate_of_our_democracy }
-		mutually_exclusive = { focus = enc_local_elections }
-		x = -1
-		y = 1
-		cost = 2.9
-		completion_reward = {
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = -0.05
-			}
-			change_legitimacy = yes
-			add_stability = 0.10
-			add_ideas = { ENC_presidential_powers }
-		}
-	}
-  	focus = {#REForM - silence congress
-		id = enc_silence_congress_reform
-		icon = GFX_goal_enc_silence_congress_reform
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_extend_presidential_powers_reform
-		prerequisite = { focus = enc_extend_presidential_powers_reform }
-		x = 0
-		y = 1
-		cost = 2.9
-		completion_reward = {
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = -0.05
-			}
-			change_legitimacy = yes
-			add_stability = 0.10
-		}
-	}
-	focus = {#REForM - suspend elections
-		id = enc_suspend_elections
-		icon = GFX_goal_enc_suspend_elections
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_silence_congress_reform
-		prerequisite = { focus = enc_silence_congress_reform }
-		x = 0
-		y = 1
-		cost = 5.8
-		completion_reward = {
-			add_stability = -0.05
-			set_country_flag = legitimacy_disabled
-			custom_effect_tooltip = enc_suspend_elections_legitimacy_loss	
-			custom_effect_tooltip = enc_suspend_elections_tt
-			
-			hidden_effect = {
-
-				remove_ideas = {
-					ENC_legitimacy_high
-					ENC_legitimacy_medium
-					ENC_legitimacy_low
-					ENC_legitimacy_none				
-				}
-			}
-			country_event = { id = enc_reformers.72 } 
-		}		
-	}
- 
-	focus = {#REForM - local elections
-		id = enc_local_elections
-		icon = GFX_goal_enc_presidential_elections
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_the_fate_of_our_democracy
-		prerequisite = { focus = enc_the_fate_of_our_democracy }
-		mutually_exclusive = { focus = enc_extend_presidential_powers_reform }
-		x = 1
-		y = 1
-		cost = 5.8
-		completion_reward = {
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = 0.05
-			}
-			change_legitimacy = yes
-				
-		}		
-	}
-	focus = {#ReForM - empower congress
-		id = enc_empower_congress
-		icon = GFX_goal_enc_empower_congress
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_local_elections
-		prerequisite = { focus = enc_local_elections }
-		x = 0
-		y = 1
-		cost = 5.8
-		completion_reward = {
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = 0.05
-			}
-			change_legitimacy = yes
-			
-		}		
-	}
-	focus = {#REForM - presidential elections
-		id = enc_presidential_elections
-		icon = GFX_goal_enc_presidential_elections
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_empower_congress
-		prerequisite = { focus = enc_empower_congress }
-		x = 0
-		y = 1
-		cost = 5.8
-		completion_reward = {
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = 0.10
-			}
-			change_legitimacy = yes
-			country_event = { id = enc_reformers.71 } 
-		}		
-	}
 	
 	####################################
 	# The Mutant Question
@@ -1748,320 +1607,535 @@ focus_tree = {
 	}
 
 	####################################
-	# A Nation Reborn
+	# Rebuilding a nation
 	####################################
-	focus = {#REBorN - A Nation Reborn
-		id = enc_old_world 
+	focus = {#REBUILDING - Rebuilding a Nation
+		id = enc_rebuilding_a_nation 
 		icon = GFX_goal_enc_us_reborn
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_the_mutant_question
 		mutually_exclusive = { focus = enc_NCR_start } 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = max_legitimacy		
-				check_variable = {
-					var = legitimacy
-					value > 0.999
-				}
+			NOT = {
+				country_exists = NCR
 			}
+			num_of_controlled_states > 40
 		}
-		x = 16
+		x = 25
 		y = 0
 		cost = 5.8
 		completion_reward = {
-			set_cosmetic_tag = ERB_USA
-			add_ideas = { enc_manifest_destiny }
-		}
-	}
-
-	focus = {#REBorN - Department of Commerce
-		id = enc_department_of_commerce
-		icon = GFX_goal_generic_trade
-		prerequisite = { focus = enc_old_world }
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_old_world
-		x = 5
-		y = 1
-		cost = 5.8
-		completion_reward = {
-			add_ideas = ENC_Chamber_Commerce
+			set_cosmetic_tag = ERB_reconstruction
+			hidden_effect = { # remove negative opinions
+				every_country = {
+					remove_opinion_modifier = { target = ERB modifier = genocidal_maniacs }
+					ERB = { remove_opinion_modifier = { target = PREV modifier = dirty_muties }}
+				}
 			}
-	}
-	focus = {#REBorN - Department of Manufacturing
-		id = enc_department_of_manufacturing
-		icon = GFX_goal_enc_tools_reform
-		prerequisite = { focus = enc_department_of_commerce }
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_department_of_commerce
-		x = -1
-		y = 1
-		cost = 5.8
-		completion_reward = {
-			add_ideas = ENC_Department_Manufacturing
+			country_event = { id = enc_reformers.50 }
+			custom_effect_tooltip = enc_rebuilding_a_nation_tt # todo write this
 		}
 	}
-	focus = {#REBorN - Automobiles
-		id = enc_automobiles
-		icon = GFX_goal_NCR_Long15
-		prerequisite = {focus = enc_department_of_manufacturing}
+	focus = {#REBUILDING - hearts and minds
+		id = enc_hearts_and_minds
+		icon = GFX_goal_enc_new_capital
+		prerequisite = { focus = enc_rebuilding_a_nation }
 		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_department_of_manufacturing
+		relative_position_id = enc_rebuilding_a_nation
 		x = 0
 		y = 1
-		cost = 5.8 
+		cost = 5.8
 		completion_reward = {
-		add_stability = 0.05
-		country_event = { id = enc_reformers.152 }
+			add_stability = 0.05
+			add_political_power = 100
 		}
 	}
-	focus = {#REBorN - Department of Energy
-		id = enc_department_of_energy
-		icon = GFX_goal_enc_electricity
-		prerequisite = { focus = enc_department_of_commerce }
+	focus = {#REBUILDING - Department of Education
+		id = enc_department_of_education
+		icon = GFX_goal_enc_education
+		prerequisite = { focus = enc_hearts_and_minds }
 		ai_will_do = { factor = 1 }
-		relative_position_id = enc_department_of_commerce
+		relative_position_id = enc_hearts_and_minds
+		x = -2
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_ideas = Enc_Dept_Education	
+		}
+	}
+	focus = {#REBUILDING - Military Education
+		id = enc_department_of_education_military
+		icon = GFX_goal_enc_education_military
+		prerequisite = { focus = enc_department_of_education }
+		mutually_exclusive = { focus = enc_department_of_education_civilian }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_department_of_education
 		x = 1
 		y = 1
 		cost = 5.8
 		completion_reward = {
-		add_ideas = ENC_Dept_Energy
+			# todo
 		}
 	}
-	focus = {#REBorN - Daytime
-		id = enc_helios_two
-		icon = GFX_goal_moj_energy_boom
-		prerequisite = {focus = enc_department_of_energy}
-		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_department_of_energy
+	focus = {#REBUILDING - Civilian Education
+		id = enc_department_of_education_civilian
+		icon = GFX_goal_enc_education_civilian
+		prerequisite = { focus = enc_department_of_education }
+		mutually_exclusive = { focus = enc_department_of_education_military }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_department_of_education
+		x = -1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			# todo
+		}
+	}
+	focus = {#REBUILDING - Education By The Followers
+		id = enc_education_by_followers
+		icon = GFX_goal_enc_education
+		prerequisite = { focus = enc_department_of_education_civilian }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_department_of_education_civilian
 		x = 0
 		y = 1
-		cost = 5.8 
+		cost = 5.8
 		completion_reward = {
-		add_resource = {
-				type = advanced_technology amount = 5 state = 350
-			}
-		add_resource = {
-				type = advanced_technology amount = 5 state = 253
-			}
-		add_resource = {
-				type = advanced_technology amount = 5 state = 253
-			}
-		add_resource = {
-				type = advanced_technology amount = 5 state = 285
-			}	
-		
+			# todo
 		}
 	}
-	focus = {#REBorN - rebuilding america
-		id = enc_rebuild_railway
-		icon = GFX_goal_enc_construction_usa
-		prerequisite = {focus = enc_helios_two}
-		prerequisite = {focus = enc_automobiles}
-		relative_position_id = enc_helios_two
+	focus = {#REBUILDING - Vacinations
+		id = enc_vacinations
+		icon = GFX_goal_enc_vac
+		prerequisite = { focus = enc_hearts_and_minds }
 		ai_will_do = { factor = 1 }
-		available = { 84 = { is_owned_and_controlled_by = ERB }
-		350 = { is_owned_and_controlled_by = ERB } }
+		relative_position_id = enc_hearts_and_minds
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			# todo
+		}
+	}
+
+	focus = {#REBUILDING - American Broadcasting Department
+		id = enc_american_broadcasting_department
+		icon = GFX_goal_enc_radio_reform
+		prerequisite = { focus = enc_hearts_and_minds }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_hearts_and_minds
+		x = 2
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			# todo
+		}
+	}
+	focus = {#REBUILDING - Propaganda Department
+		id = enc_propaganda_broadcasts
+		icon = GFX_goal_enc_radio_reform
+		prerequisite = { focus = enc_american_broadcasting_department }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_american_broadcasting_department
+		x = -1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			# todo
+		}
+	}
+	focus = {#REBUILDING - Mandatory Patriotism
+		id = enc_mandatory_patriotism
+		icon = GFX_goal_enc_army_reserves
+		prerequisite = { focus = enc_propaganda_broadcasts }
+		prerequisite = { focus = enc_department_of_education_military }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_propaganda_broadcasts
+		x = -1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			# todo
+		}
+	}
+	focus = {#REBUILDING - Entertainment Broadcasts
+		id = enc_entertainment_broadcasts
+		icon = GFX_goal_enc_radio_reform
+		prerequisite = { focus = enc_american_broadcasting_department }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_american_broadcasting_department
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			# todo
+		}
+	}
+
+	focus = {#REBUILDING - The Fate of Our Democracy
+		id = enc_the_fate_of_our_democracy 
+		icon = GFX_goal_enc_justice
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_rebuilding_a_nation
+		prerequisite = { focus = enc_rebuilding_a_nation }
+		x = -6
+		y = 1
+		cost = 5.8  
+		completion_reward = {
+			country_event = { id = enc_reformers.70 }
+		}			
+	} 
+  	focus = {#REBUILDING - extend_presidential_powers
+		id = enc_extend_presidential_powers_reform
+		icon = GFX_goal_enc_president_reform
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_the_fate_of_our_democracy
+		prerequisite = { focus = enc_the_fate_of_our_democracy }
+		mutually_exclusive = { focus = enc_local_elections }
+		x = -1
+		y = 1
+		cost = 2.9
+		completion_reward = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = -0.05
+			}
+			change_legitimacy = yes
+			add_stability = 0.10
+			add_ideas = { ENC_presidential_powers }
+		}
+	}
+  	focus = {#REBUILDING - silence congress
+		id = enc_silence_congress_reform
+		icon = GFX_goal_enc_silence_congress_reform
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_extend_presidential_powers_reform
+		prerequisite = { focus = enc_extend_presidential_powers_reform }
+		x = 0
+		y = 1
+		cost = 2.9
+		completion_reward = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = -0.05
+			}
+			change_legitimacy = yes
+			add_stability = 0.10
+		}
+	}
+	focus = {#REBUILDING - suspend elections
+		id = enc_suspend_elections
+		icon = GFX_goal_enc_suspend_elections
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_silence_congress_reform
+		prerequisite = { focus = enc_silence_congress_reform }
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_stability = -0.05
+			set_country_flag = legitimacy_disabled
+			custom_effect_tooltip = enc_suspend_elections_legitimacy_loss	
+			custom_effect_tooltip = enc_suspend_elections_tt
+			
+			hidden_effect = {
+
+				remove_ideas = {
+					ENC_legitimacy_high
+					ENC_legitimacy_medium
+					ENC_legitimacy_low
+					ENC_legitimacy_none				
+				}
+			}
+			country_event = { id = enc_reformers.72 } 
+		}		
+	}
+	focus = {#REBUILDING - local elections
+		id = enc_local_elections
+		icon = GFX_goal_enc_presidential_elections
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_the_fate_of_our_democracy
+		prerequisite = { focus = enc_the_fate_of_our_democracy }
+		mutually_exclusive = { focus = enc_extend_presidential_powers_reform }
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+				
+		}		
+	}
+	focus = {#REBUILDING - empower congress
+		id = enc_empower_congress
+		icon = GFX_goal_enc_empower_congress
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_local_elections
+		prerequisite = { focus = enc_local_elections }
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+			
+		}		
+	}
+	focus = {#REBUILDING - presidential elections
+		id = enc_presidential_elections
+		icon = GFX_goal_enc_presidential_elections
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_empower_congress
+		prerequisite = { focus = enc_empower_congress }
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.10
+			}
+			change_legitimacy = yes
+			country_event = { id = enc_reformers.71 } 
+		}		
+	}
+	
+	focus = {#REBUILDING - Rebuilding California
+		id = enc_rebuilding_california
+		icon = GFX_goal_NCR_Mayoral_Victory_Speech
+		prerequisite = {focus = enc_rebuilding_a_nation }
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_the_fate_of_our_democracy 
+		x = -4
+		y = 0
+		cost = 5.8 
+		completion_reward = {
+			country_event = { id = enc_reformers.48 }
+			custom_effect_tooltip = enc_rebuilding_california.tt 
+		}
+	}
+	focus = {#REBUILDING - Northwest
+		id = enc_rebuilding_pacific_commonwealth
+		icon = GFX_goal_enc_pacific_commonwealth
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_rebuilding_california
 		x = -1
 		y = 1
 		cost = 5.8 
+		prerequisite = { focus = enc_rebuilding_california }
 		completion_reward = {
-		custom_effect_tooltip = enc_rebuild_railway.tt
-		hidden_effect = {350 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }
-		396 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }
-		258 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }
-		64 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		558 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		243 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		104 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		463 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		474 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }
-		216 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		340 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		39 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		353 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }
-		340 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		39 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		353 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }	
-		239 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		32 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		86 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }
-		358 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		186 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }			
-		192 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }
-		23 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		7 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }
-		556 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }
-		61 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-		84 = {add_building_construction = { 
-					type = infrastructure 
-					level = 2
-					instant_build = yes 
-				} }		
-				}
-			}
+			custom_effect_tooltip = enc_rebuilding_pacific_commonwealth.tt
+		}
 	}
-	focus = {#REBorN - Department of Education
-		id = enc_department_of_education
-		icon = GFX_goal_enc_education
-		prerequisite = { focus = enc_old_world }
+	focus = {#REBUILDING - Rockies
+		id = enc_rebuilding_rockies
+		icon = GFX_goal_NCN_Kingdom_of_God
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_rebuilding_california
+		x = 1
+		y = 1
+		cost = 5.8 
+		prerequisite = { focus = enc_rebuilding_california }
+		completion_reward = {
+			custom_effect_tooltip = enc_rebuilding_rockies.tt
+		}
+	}
+	focus = {#REBUILDING - Using Vaults
+		id = enc_refurbish_vaults
+		icon = GFX_goal_vault_tec_reform
+		prerequisite = {focus = enc_rebuilding_california }
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_rebuilding_california
+		x = 0
+		y = 2
+		cost = 5.8 
+		completion_reward = {
+			country_event = { id = enc_reformers.142 }
+		}
+	}
+
+	focus = {#REBUILDING - Yesterday's Enemies
+		id = enc_yesterdays_enemies
+		icon = GFX_goal_enc_the_lucia_incident
+		prerequisite = { focus = enc_rebuilding_a_nation }
 		ai_will_do = { factor = 1 }
-		relative_position_id = enc_old_world
+		relative_position_id = enc_rebuilding_california
 		x = -4
+		y = 0
+		cost = 5.8
+		completion_reward = {
+			# todo
+		}
+	}
+	focus = {#REBUILDING - The BOS leadership
+		id = enc_bos_leadership
+		icon = GFX_goal_enc_bos_leadership
+		prerequisite = { focus = enc_yesterdays_enemies }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_yesterdays_enemies
+		x = -1
 		y = 1
 		cost = 5.8
 		completion_reward = {
-		add_ideas = Enc_Dept_Education	
+			# todo
 		}
 	}
-	focus = {#REBorN - Bloomfield
-		id = enc_bloomfield
-		icon = GFX_goal_enc_rocket_reform
-		prerequisite = {focus = enc_department_of_education }
-		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_department_of_education
+	focus = {#REBUILDING - The BOS soldiers
+		id = enc_bos_soldiers
+		icon = GFX_goal_enc_bos_soldiers
+		prerequisite = { focus = enc_bos_leadership }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_bos_leadership
 		x = 0
 		y = 1
-		cost = 5.8 
-		available = { 395 = { is_owned_and_controlled_by = ERB } }
+		cost = 5.8
 		completion_reward = {
-		country_event = { id = enc_reformers.132 }
+			# todo
 		}
 	}
-	focus = {#REBorN - Prewar Corporations
-		id = enc_prewar_corporations
-		icon = GFX_goal_bos_repconn_hq
-		prerequisite = {focus = enc_bloomfield }
-		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_bloomfield
+	focus = {#REBUILDING - The NCR leadership
+		id = enc_ncr_leadership
+		icon = GFX_goal_enc_reform_hayes
+		prerequisite = { focus = enc_yesterdays_enemies }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_yesterdays_enemies
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			# todo
+		}
+	}
+	focus = {#REBUILDING - The NCR soldiers
+		id = enc_ncr_soldiers
+		icon = GFX_goal_enc_infiltrate_ncr
+		prerequisite = { focus = enc_ncr_leadership }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_ncr_leadership
 		x = 0
 		y = 1
-		cost = 5.8 
+		cost = 5.8
 		completion_reward = {
-		custom_effect_tooltip = enc_prewar_corporations.tt 	
+			# todo
 		}
-		}
+	}
 
-	focus = {#REBorN - The Federal Reserve
+	focus = {#REBUILDING - Law and Order
+		id = enc_law_and_order 
+		icon = GFX_goal_enc_justice
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_rebuilding_a_nation
+		prerequisite = { focus = enc_rebuilding_a_nation }
+		x = 6
+		y = 1
+		cost = 5.8  
+		completion_reward = {
+			# todo
+		}			
+	} 
+  	focus = {#REBUILDING - Law
+		id = enc_law
+		icon = GFX_goal_enc_judicial_branch_2
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_law_and_order
+		prerequisite = { focus = enc_law_and_order }
+		mutually_exclusive = { focus = enc_order }
+		x = -1
+		y = 1
+		cost = 2.9
+		completion_reward = {
+			# todo
+		}
+	}
+  	focus = {#REBUILDING - Judicial Branch
+		id = enc_judicial_branch 
+		icon = GFX_goal_enc_judicial_branch
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_law
+		prerequisite = { focus = enc_law }
+		x = 0
+		y = 1
+		cost = 2.9
+		completion_reward = {
+			# todo
+		}
+	}
+	focus = {#REBUILDING - The FBI
+		id = enc_fbi
+		icon = GFX_goal_enc_FBI
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_judicial_branch
+		prerequisite = { focus = enc_judicial_branch }
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+		
+		}		
+	}
+	focus = {#REBUILDING - Order
+		id = enc_order 
+		icon = GFX_goal_enc_police_officer
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_law_and_order
+		prerequisite = { focus = enc_law_and_order }
+		mutually_exclusive = { focus = enc_law }
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			# todo
+		}		
+	}
+	focus = {#REBUILDING - Military Police
+		id = enc_military_police
+		icon = GFX_goal_enc_eyebot_reform
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_order
+		prerequisite = { focus = enc_order }
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			# todo
+		}		
+	}
+	focus = {#REBUILDING - Martial Law
+		id = enc_martial_law
+		icon = GFX_goal_enc_military_police
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_military_police
+		prerequisite = { focus = enc_military_police }
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			
+		}		
+	}
+
+	focus = {#REBUILDING - The Federal Reserve
 		id = enc_federal_reserve
 		icon = GFX_goal_enc_fed
-		prerequisite = { focus = enc_old_world }
+		prerequisite = { focus = enc_rebuilding_a_nation }
 		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_old_world
-		x = 0
-		y = 1
+		relative_position_id = enc_law_and_order
+		x = 4
+		y = 0
 		cost = 5.8
 		completion_reward = {
-		add_stability = 0.05
-		add_political_power = 100
-		country_event = { id = enc_reformers.81 } 		
-			
+			add_stability = 0.05
+			add_political_power = 100
+			country_event = { id = enc_reformers.81 }			
 		}
 	}
-	focus = {#REBorN - The US dollar
+	focus = {#REBUILDING - The US dollar
 		id = enc_US_dollar
 		icon = GFX_goal_enc_us_dollar 
 		prerequisite = { focus = enc_federal_reserve }
@@ -2076,40 +2150,27 @@ focus_tree = {
 			# todo something more interesting
 		}
 	}
-	focus = {#REBorN - accept NCR dollar
+	focus = {#REBUILDING - accept NCR dollar
 		id = enc_NCR_dollar
 		icon = GFX_goal_enc_ncr_dollar 
 		prerequisite = { focus = enc_federal_reserve }
 		mutually_exclusive = { focus = enc_US_dollar }
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_federal_reserve
-		available = {
-			is_in_faction_with = NCR
-			has_opinion = {
-				target = NCR
-				value > 50
-			}
-		}
 		x = 1
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_opinion_modifier = {
-				target = NCR
-				modifier = shared_currency
-			}
-			reverse_add_opinion_modifier = {
-				target = NCR
-				modifier = shared_currency
-			}
-			
+			# todo
 		}
 	}
-	focus = {#REBorN - Establish a Caps exchange rate
+	focus = {#REBUILDING - Establish a Caps exchange rate
 		id = enc_free_of_bottlecaps
 		icon = GFX_goal_bottlecap
-		prerequisite = { focus = enc_NCR_dollar 
-						focus = enc_US_dollar }
+		prerequisite = { 
+			focus = enc_NCR_dollar 
+			focus = enc_US_dollar
+		}
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NCR_dollar
 		x = -1
@@ -2120,23 +2181,23 @@ focus_tree = {
 		}
 	}
 	
-	focus = {#REBorN - The EPA
+	focus = {#REBUILDING - The EPA
 		id = enc_epa
 		icon = GFX_goal_enc_epa
-		prerequisite = { focus = enc_old_world }
+		prerequisite = { focus = enc_rebuilding_a_nation }
 		ai_will_do = { factor = 1 } 
 		available = {
 			has_idea = lt_kolyis
 		}
-		relative_position_id = enc_old_world
-		x = -2
-		y = 1
+		relative_position_id = enc_federal_reserve
+		x = 2
+		y = 0
 		cost = 5.8
 		completion_reward = {
 			add_ideas = ENC_EPA	
 		}
 	}
-	focus = {#REBorN - The GECK project
+	focus = {#REBUILDING - The GECK project
 		id = enc_geck
 		icon = GFX_goal_enc_geck
 		prerequisite = { focus = enc_epa }
@@ -2153,122 +2214,73 @@ focus_tree = {
 			country_event = { id = enc_reformers.80 }
 		}
 	}
-	focus = {#REBorN - Using Vaults
-		id = enc_refurbish_vaults
-		icon = GFX_goal_vault_tec_reform
-		prerequisite = {focus = enc_rebuilding_california }
-		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_rebuilding_california
-		x = 0
-		y = 2
-		cost = 5.8 
-		completion_reward = {
-		country_event = { id = enc_reformers.142 }
-		}
-	}
-	focus = {#REBorN - Department of Justice
-		id = enc_department_of_justice
-		icon = GFX_goal_enc_justice
-		prerequisite = { focus = enc_old_world }
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_old_world
-		x = 2
-		y = 1
-		cost = 5.8
-		completion_reward = {
-		add_stability = 0.05
-		add_political_power = 150
-		}
-	}
-	focus = {#REBorN - A federal police force
-		id = enc_police 
-		icon = GFX_goal_enc_police
-		prerequisite = { focus = enc_department_of_justice }
-		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_department_of_justice
-		x = 0
-		y = 2
-		cost = 5.8
-		completion_reward = {
-		add_ideas = ENC_FBI
-		}
-	}
-	
-	
 
-	focus = {#REBorN - Rebuilding California
-		id = enc_rebuilding_california
-		icon = GFX_goal_NCR_Mayoral_Victory_Speech
-		prerequisite = {focus = enc_old_world }
-		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_old_world 
-		available = { NOT = {country_exists = NCR } }
-		x = -7
-		y = 1
-		cost = 5.8 
+	focus = {#REBUILDING - Department of Commerce
+		id = enc_department_of_commerce
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = enc_rebuilding_a_nation }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_epa
+		x = 2
+		y = 0
+		cost = 5.8
 		completion_reward = {
-		custom_effect_tooltip = enc_rebuilding_california.tt 	
+			add_ideas = ENC_Chamber_Commerce
 		}
-		}
-	
-		
-	
-	focus = {#Rebuilding-Northwest
-		id = enc_rebuilding_pacific_commonwealth
-		icon = GFX_goal_enc_pacific_commonwealth
-		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_rebuilding_california
+	}
+	focus = {#REBUILDING - Department of Manufacturing
+		id = enc_department_of_manufacturing
+		icon = GFX_goal_enc_tools_reform
+		prerequisite = { focus = enc_department_of_commerce }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_department_of_commerce
 		x = -1
 		y = 1
-		cost = 5.8 
-		prerequisite = { focus = enc_rebuilding_california }
+		cost = 5.8
 		completion_reward = {
-		custom_effect_tooltip = enc_rebuilding_pacific_commonwealth.tt
-			 }
+			add_ideas = ENC_Department_Manufacturing
+		}
 	}
-	focus = {#Rebuilding-Rockies
-		id = enc_rebuilding_rockies
-		icon = GFX_goal_NCN_Kingdom_of_God
-		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_rebuilding_california
+	focus = {#REBUILDING - Department of Energy
+		id = enc_department_of_energy
+		icon = GFX_goal_enc_electricity
+		prerequisite = { focus = enc_department_of_commerce }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_department_of_commerce
 		x = 1
 		y = 1
-		cost = 5.8 
-		prerequisite = { focus = enc_rebuilding_california }
+		cost = 5.8
 		completion_reward = {
-		custom_effect_tooltip = enc_rebuilding_rockies.tt
-							}
+			add_ideas = ENC_Dept_Energy
 		}
-		
-	focus = {#China
-		id = enc_China
-		icon = GFX_goal_enc_threat_of_communism
-		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_rebuilding_california
-		x = 5
-		y = 3
-		cost = 5.8 
-		prerequisite = { focus = enc_rebuilding_california }
-		prerequisite = { focus = enc_refurbish_vaults }
-		prerequisite = { focus = enc_police }
-		completion_reward = {
-		country_event = { id = enc_reformers.143 }
-							}
-		}
-	focus = {#Reunited
-		id = enc_reunited_states
-		icon = GFX_goal_map_us
-		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_China
-		prerequisite = { focus = enc_China}
+	}
 
-		x = 0
-		y = 1
-		cost = 1 
+	focus = {#REBUILDING - A Nation Reborn
+		id = enc_a_nation_reborn
+		icon = GFX_goal_enc_a_nation_reborn
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_rebuilding_a_nation
+		x = -1
+		y = 5
+		cost = 5.8
 		completion_reward = {
-			custom_effect_tooltip = enc_reunited_states.tt
+			set_cosmetic_tag = ERB_USA
+			country_event = { id = enc_reformers.50 }
 		}
-	}	
+	}
+	focus = {#REBUILDING - A Nation Remade
+		id = enc_a_nation_remade
+		icon = GFX_goal_enc_a_nation_remade
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_a_nation_reborn
+		x = 2
+		y = 0
+		cost = 5.8
+		completion_reward = {
+			# todo
+		}
+	}
+
  	####################################
 	# DIPLOMACY
 	####################################
@@ -2312,7 +2324,15 @@ focus_tree = {
 				}
 				add_opinion_modifier = { target = NCR modifier = wontShootOnsight }
 				remove_opinion_modifier = { target = NCR modifier = bitterEnemies }
-			}			
+			}
+			# remove negative opinions
+			hidden_effect = { 
+				every_country = {
+					remove_opinion_modifier = { target = ERB modifier = genocidal_maniacs }
+					ERB = { remove_opinion_modifier = { target = PREV modifier = dirty_muties }}
+				}
+			}	
+			# if you pormised no peace with the NCR
 			if = {
 				limit = {
 					has_country_flag = enc_promised_no_peace_with_ncr				

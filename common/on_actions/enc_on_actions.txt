@@ -179,8 +179,26 @@ on_actions = {
 	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
 	on_annex = {
 		effect = {
-			
+			if = {
+				limit = {
+					tag = ERB
+					FROM = { tag = NCR }
+				}	
+				country_event = { id = enc_reformers.47}
+			}
 		}
+	}
+	
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					tag = ERB
+					FROM = { tag = NCR }
+				}	
+				country_event = { id = enc_reformers.47}
+			}
+		}	
 	}
 
 	#Not run on a specific country.

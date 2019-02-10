@@ -272,6 +272,25 @@ enc_reformers.47.d: "Yesterday, in the bombed out capitol building of Shady Sand
 enc_reformers.47.a: "God bless the Enclave."
 enc_reformers.47.a.tt: "Any nations we are still at war with but don't border us will be signing a white peace.\n"
 ################################################################################################################ -<
+enc_reformers.48.t: "Out with the old, in with the new"
+enc_reformers.48.d: "The Gun Runners is a weapons merchant and manufacturer faction operating out of the Fortress in the Boneyard. By today, it has branches in many areas, including one near The Strip in the Mojave Wasteland. The Gun Runners supplies only the finest hardware to the most discerning of customers, which used to include the NCR.\n\nMost Gun Runner workshops are set up in areas that recently came under our control. Unsure of the new regime's view of their business, they have ceased production temporarily. Many are making plans to leave and will do so soon unless we make our opinion of them clear."
+enc_reformers.48.a: "Let them continue operating."
+enc_reformers.48.a.tt: "§gThe Gun Runners are recognized as a legitimate business and are allowed to continue operating as before.§!\n\n"
+enc_reformers.48.b: "All those fine guns will be safer in our hands."
+enc_reformers.48.b.tt: "§gForcefully close the Gun Runners down, confiscating as much as their stock as possible.§!\n\n"
+################################################################################################################ -<
+enc_reformers.49.t: "The anti-integration Faction"
+enc_reformers.49.d: "The Purists are no more, but that does not mean every member of the Reformer faction is an unconditional lover of wastelanders. Many hold the opinion that, while they are certainly no Purists, the wastelanders should be kept at a safe arms length from the pure stock humans of the Enclave. For them, their can be no integration, only the ruling of one class by their genetic betters. \n\nMany ex-Purists and Reformer moderates have gone over to this new faction in our goverment. How should we approach this new divide?"
+enc_reformers.49.a: "A valuable point of view."
+enc_reformers.49.a.tt: "§gThis new faction is allowed to absorb remaining Purists and moderates and discuss their ideas openly, easing tensions.§!\n\n"
+enc_reformers.49.b: "Two steps forward, one step back."
+enc_reformers.49.b.tt: "§gRefuse to acknowledge this new faction as anything but Purists with extra steps.§!\n\n"
+################################################################################################################ -<
+enc_reformers.50.t: "A Nation Reborn"
+enc_reformers.50.d: "After over 200 years of chaos, depravity and barbarism, the American flag onces more flies over this great country. Terms like Enclave are quietly phased out of use as the blue Enclave flags are replaced with the star sprangled banners of old. There is still much work to be done and many enemies to bring to heel. But the claim of the Enclave has been realized. America is back."
+enc_reformers.50.a: "God Bless the USA."
+# free numbers
+################################################################################################################ -<
 enc_reformers.60.t: "The Ides of March"
 enc_reformers.60.d: "The Legion is a formidable foe, but not all within its ranks tolerate Caesar's rule.  Legate Lanius, the 'Monster of the East', thinks he could turn the Legion into a ruthless military machine. Perhaps he could be a useful ally to our bid to unite America...."
 enc_reformers.60.a: "He may be a son of a bitch but he'll be our son of a bitch."
