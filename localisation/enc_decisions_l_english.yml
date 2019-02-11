@@ -57,6 +57,14 @@ less_rations: "Reduce Rations"
 more_rations: "Increase Rations"
 
 ##############################
+# WAR MEASURES 
+##############################
+ENC_sabotage_ces_supply_lines: "Sabotage Ceaser's Supply Lines"
+ENC_sabotage_ces_supply_lines_desc: "The Bull has the advantage in this war, but supporting supply lines over the Colorado river is a logistical nightmare. A few surgical strikes could force [CES.GetLeader] to consider his premature invasion, at least for a while."
+ENC_sabotage_ncr_supply_lines: "Sabotage NCR Supply Lines"
+ENC_sabotage_ncr_supply_lines_desc: "The NCR has the advantage in this war, but supporting supply lines over the Colorado river is a logistical nightmare. A few surgical strikes could force [NCR.GetLeader] to consider his premature invasion, at least for a while."
+
+##############################
 # War with the NCR
 ##############################
 ENC_war_with_NCR: "New California Republic"

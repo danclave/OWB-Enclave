@@ -435,6 +435,15 @@ enc_department_of_education_military_desc:0 "We can implement paramilitary train
 enc_department_of_education_civilian:0 "Civilian Education"
 enc_department_of_education_civilian_desc:0 "Schools are not barracks.  American education will focus on rebuilding the economy and restoring our prewar prosperity."
 
+enc_education_by_followers: "Fund the College of The Followers"
+enc_education_by_followers_desc: "TODO"
+
+enc_emergency_labour_draft: "Emergency Labour Draft"
+enc_emergency_labour_draft_desc: "TODO"
+enc_requisition_of_resources: "Requisition of Resources"
+enc_requisition_of_resources_desc: "TODO"
+
+
 enc_radio_civilian_music_new: "New World Hopes"
 enc_radio_civilian_music_new_desc:0 "It's time to help people look forward to a better, brighter tomorrow.  Today!"
 
@@ -457,7 +466,10 @@ enc_purge_scientists_desc:0 "The time has come to rid ourselves of the most stub
 enc_purge_officers:0 "Purge the Officers"
 enc_purge_officers_desc:0 "The time has come to rid ourselves of the most stubbern Purist elements within our officer corps. We cannot let such an essential part of the Enclave be infested with traitors and saboteurs. Demotions, banishments or executions. One way or another, our officers will be loyal."
 
-stability_loss_based_on_purist_popularity: "\n§MStability loss is based on popularity of§! §YPurist Faction§!"
+stability_loss_based_on_elites_popularity: "\n§MStability loss is based on popularity of§! §YElites Faction§!"
+stability_loss_based_on_people_popularity: "\n§MStability loss is based on popularity of§! §YPeople Faction§!"
+stability_loss_based_on_intellectuals_popularity: "\n§MStability loss is based on popularity of§! §YIntellectuals Faction§!"
+
 enc_infiltrate_ncr:0 "Infiltrate the NCR"
 enc_infiltrate_ncr_t_tt:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is higher than §Y25§!"
 enc_infiltrate_ncr_desc:0 "We can make contact with those in the NCR who want to restore preawar America's glory."
@@ -583,7 +595,7 @@ enc_the_state_of_utah_desc: "To the east, New Canaan is the nucleus for the Morm
 
 
 enc_crack_the_code: "Crack the Code"
-enc_crack_the_code_desc: "The [NCR.GetName]§! may believe their rudimentary encryption is enough to secure their communications, but our but our new radio system makes cracking their codes child's play. Now, we can impersonate even their highest level command structure, at least once."
+enc_crack_the_code_desc: "The [NCR.GetName]§! may believe their rudimentary encryption is enough to secure their communications, but our new radio system makes cracking their codes child's play. Now, we can impersonate even their highest level command structure, at least once."
 
 enc_wastelander_draft: "Draft the Wastelanders"
 enc_wastelander_draft_desc: "Although many of the Wastelanders aren't up to the burden of being American citizens, they are up to the burden of being American cannon fodder."
@@ -752,6 +764,8 @@ enc_mandatory_patriotism: "Mandatory Patriotism"
 enc_mandatory_patriotism_desc: "TODO"
 enc_entertainment_broadcasts: "Entertainment Broadcasts"
 enc_entertainment_broadcasts_desc: "TODO"
+enc_free_press: "Allow Free Press"
+enc_free_press_desc: "TODO"
 enc_a_nation_remade: "A Nation Remade"
 enc_a_nation_remade_desc:"TODO"
 ###################################
@@ -764,7 +778,8 @@ ENC_follower_school_system_desc: "The greatest dream of the Followers is to prov
 ENC_cassidy_caravan: "Cassidy Caravans"
 ENC_CES_slave_rebellions: "Slave Unrest"
 ENC_satellites: "Satellite Network"
-enc_crimson_truckers: "Crimson Trucking Company"
+enc_crimson_truckers: "Crimson Caravan"
+enc_crimson_truckers_conscripted: "Crimson Caravans Conscripted"
 medtek: "Med Tek"
 ENC_gunrun: "The Gun Runners"
 ENC_terraforming: "Terraforming the Wastes"
@@ -805,7 +820,9 @@ ENC_air_force_loyalist: "Loyal Chief Of Airforce."
 ENC_air_force_loyalist_desc: "Enclave leadership has seen fit to promote someone loyal to their current government as their Chief of Staff of the Enclave Air Force."
 ENC_air_force_best_man: "competent Chief Of Airforce."
 ENC_air_force_best_man_desc: "Enclave leadership has seen fit to promote their best candidate as their Chief of Staff of the Enclave Air Force."
-Enc_Dept_Education:  "Department of Education"
+ENC_dept_education: "Department of Education"
+ENC_dept_education_civilian: "Department of Education"
+ENC_dept_education_military: "Department of Education"
 ENC_EPA: "The Environmental Protection Agency"
 ENC_EPA_desc:  "Cleaning the environment will cost time and money, it's well worth it."
 ENC_infighting_2: "Civil War"
@@ -884,6 +901,15 @@ ENC_selective_service: "Selective Service"
 ENC_home_defense: "Defensive Planning"
 
 ENC_NCR_unrest: "Civilian Unrest"
+
+ENC_american_broadcasting_department: "American Broadcasting Department"
+ENC_american_broadcasting_department_propaganda: "American Broadcasting Department"
+ENC_american_broadcasting_department_entertainment: "American Broadcasting Department"
+ENC_free_press: "Free Press"
+enc_free_press_tt: "\n§MThe Press will be watching our actions with great interest!§!"
+ENC_free_press_desc: "The free press is a bullwark against corruption, mostly because fat cats make for juicy stories.\n\nThey will keep factory owners from lining their own pockets too much, but that same camera might easily be turned on us, too.\nAnd who knows who else is watching the news?"
+ENC_mandatory_patriotism: "Mandatory Patriotism"
+
 ###################################
 # PEOPLE
 ###################################

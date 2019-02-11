@@ -158,7 +158,10 @@ focus_tree = {
 				remove_idea = volunteer_only
 				add_idea = The_Fools_And_Dreamers
 			}
-		custom_effect_tooltip = enc_reformers.tt		
+		custom_effect_tooltip = enc_reformers.tt
+		# set up variables for rebuilding America
+		set_variable = { enc_good_allignment = 0 }
+		set_variable = { enc_evil_allignment = 0 }		
 		}		
 	}	
 
@@ -254,7 +257,7 @@ focus_tree = {
 			remove_ideas = ENC_scientists_traitors_2
 			add_manpower = -300
 			
-			stability_loss_based_on_purist_popularity = yes
+			stability_loss_based_on_elites_popularity = yes
 		}		
 	}
 	focus = {#POLITICS - Purge Officers
@@ -281,7 +284,7 @@ focus_tree = {
 			clr_country_flag = enc_demoted_officers
 			remove_ideas = ENC_officers_traitors_2
 			add_manpower = -300
-			stability_loss_based_on_purist_popularity = yes
+			stability_loss_based_on_elites_popularity = yes
 		}		
 	}
 	focus = {#POLITICS - assassinate F
@@ -1636,6 +1639,72 @@ focus_tree = {
 			custom_effect_tooltip = enc_rebuilding_a_nation_tt # todo write this
 		}
 	}
+	focus = {#REBUILDING - Emergency Labour Draft
+		id = enc_emergency_labour_draft 
+		icon = GFX_goal_enc_emergency_labour_draft
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_rebuilding_a_nation
+		mutually_exclusive = { focus = enc_rebuilding_a_nation }  
+		prerequisite = { focus = enc_rebuilding_a_nation }
+		x = 3
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_ideas = {
+				ENC_slave_labour
+			}
+		}
+	}
+	focus = {#REBUILDING - Requisition of Resources
+		id = enc_requisition_of_resources
+		icon = GFX_goal_enc_requisition_of_resources
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_rebuilding_a_nation
+		mutually_exclusive = { focus = enc_rebuilding_a_nation } 
+		prerequisite = { focus = enc_rebuilding_a_nation }
+		x = -3
+		y = 1
+		cost = 5.8
+		available = {
+			has_full_control_of_state = 253
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_full_control_of_state = 253 # shady sands
+				}
+				add_resource = {
+					type = metal
+					amount = 20
+					state = 135
+				}
+				add_resource = {
+					type = advanced_technology
+					amount = 15
+					state = 135
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 135 # sac city
+				}
+				add_resource = {
+					type = electronics
+					amount = 20
+					state = 253
+				}
+				add_resource = {
+					type = fuel
+					amount = 25
+					state = 135
+				}
+			}
+			add_popularity = {
+				ideology  = elites
+				popularity  = 0.05
+			}
+		}
+	}
 	focus = {#REBUILDING - hearts and minds
 		id = enc_hearts_and_minds
 		icon = GFX_goal_enc_new_capital
@@ -1660,7 +1729,7 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_ideas = Enc_Dept_Education	
+			add_ideas = ENC_dept_education
 		}
 	}
 	focus = {#REBUILDING - Military Education
@@ -1674,7 +1743,10 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			# todo
+			swap_ideas = {
+				remove_idea = ENC_dept_education
+				add_idea = ENC_dept_education_military
+			}
 		}
 	}
 	focus = {#REBUILDING - Civilian Education
@@ -1688,20 +1760,26 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			# todo
+			swap_ideas = {
+				remove_idea = ENC_dept_education
+				add_idea = ENC_dept_education_civilian
+			}
 		}
 	}
 	focus = {#REBUILDING - Education By The Followers
 		id = enc_education_by_followers
-		icon = GFX_goal_enc_education
+		icon = GFX_goal_enc_education_by_followers
 		prerequisite = { focus = enc_department_of_education_civilian }
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_department_of_education_civilian
+		available = {
+			has_idea = Enc_Followers
+		}
 		x = 0
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			# todo
+			# buffs follower idea
 		}
 	}
 	focus = {#REBUILDING - Vacinations
@@ -1728,25 +1806,29 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			# todo
+			add_ideas = ENC_american_broadcasting_department
 		}
 	}
 	focus = {#REBUILDING - Propaganda Department
 		id = enc_propaganda_broadcasts
-		icon = GFX_goal_enc_radio_reform
+		icon = GFX_goal_enc_owb_propaganda
 		prerequisite = { focus = enc_american_broadcasting_department }
+		mutually_exclusive = { focus = enc_entertainment_broadcasts }
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_american_broadcasting_department
 		x = -1
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			# todo
+			swap_ideas = {
+				remove_idea = ENC_american_broadcasting_department
+				add_idea = ENC_american_broadcasting_department_propaganda			
+			}
 		}
 	}
 	focus = {#REBUILDING - Mandatory Patriotism
 		id = enc_mandatory_patriotism
-		icon = GFX_goal_enc_army_reserves
+		icon = GFX_goal_enc_salute_america
 		prerequisite = { focus = enc_propaganda_broadcasts }
 		prerequisite = { focus = enc_department_of_education_military }
 		ai_will_do = { factor = 1 }
@@ -1755,20 +1837,43 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			# todo
+			add_ideas = ENC_mandatory_patriotism
 		}
 	}
 	focus = {#REBUILDING - Entertainment Broadcasts
 		id = enc_entertainment_broadcasts
-		icon = GFX_goal_enc_radio_reform
+		icon = GFX_goal_enc_radio_civilian
 		prerequisite = { focus = enc_american_broadcasting_department }
+		mutually_exclusive = { focus = enc_propaganda_broadcasts }
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_american_broadcasting_department
 		x = 1
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			# todo
+			swap_ideas = {
+				remove_idea = ENC_american_broadcasting_department
+				add_idea = ENC_american_broadcasting_department_entertainment		
+			}
+		}
+	}
+	focus = {#REBUILDING - Freedom of the Press
+		id = enc_free_press
+		icon = GFX_goal_enc_free_press
+		prerequisite = { focus = enc_entertainment_broadcasts }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_entertainment_broadcasts
+		x = 0
+		y = 1
+		cost = 5.8 
+		completion_reward = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+			add_ideas = ENC_free_press
+			custom_effect_tooltip = enc_free_press_tt
 		}
 	}
 
@@ -2260,6 +2365,9 @@ focus_tree = {
 		icon = GFX_goal_enc_a_nation_reborn
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_rebuilding_a_nation
+		mutually_exclusive = { focus = enc_a_nation_remade }
+		prerequisite = { focus = enc_presidential_elections }
+		prerequisite = { focus = enc_fbi }
 		x = -1
 		y = 5
 		cost = 5.8
@@ -2271,6 +2379,12 @@ focus_tree = {
 	focus = {#REBUILDING - A Nation Remade
 		id = enc_a_nation_remade
 		icon = GFX_goal_enc_a_nation_remade
+		prerequisite = { 
+			focus = enc_suspend_elections
+			focus = enc_martial_law
+			focus = enc_mandatory_patriotism
+		}
+		mutually_exclusive = { focus = enc_a_nation_reborn }
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_a_nation_reborn
 		x = 2
@@ -2298,6 +2412,7 @@ focus_tree = {
 		}
 			
 	}
+
 	####################################
 	# PEACE WITH NCR
 	####################################
