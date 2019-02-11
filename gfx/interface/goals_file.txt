@@ -26,7 +26,6 @@
 # GFX_goal_enc_big_MT
 # GFX_goal_enc_bos_leadership
 # GFX_goal_enc_bos_soldiers
-# GFX_goal_enc_bos_soldiers.pdn
 # GFX_goal_enc_cloning
 # GFX_goal_enc_combined_arms
 # GFX_goal_enc_complete_integration
@@ -45,12 +44,14 @@
 # GFX_goal_enc_draft_wastelanders
 # GFX_goal_enc_Economic_Miracle
 # GFX_goal_enc_education
+# GFX_goal_enc_education_by_followers
 # GFX_goal_enc_education_civilian
 # GFX_goal_enc_education_military
 # GFX_goal_enc_election
 # GFX_goal_enc_elections_reform
 # GFX_goal_enc_electoral_victory
 # GFX_goal_enc_electricity
+# GFX_goal_enc_emergency_labour_draft
 # GFX_goal_enc_empower_congress
 # GFX_goal_enc_encryption
 # GFX_goal_enc_epa
@@ -67,6 +68,7 @@
 # GFX_goal_enc_forced_conscription
 # GFX_goal_enc_forced_deal
 # GFX_goal_enc_fort
+# GFX_goal_enc_free_press
 # GFX_goal_enc_geck
 # GFX_goal_enc_gecko_power_plant
 # GFX_goal_Enc_goal_flag_mexico
@@ -156,11 +158,13 @@
 # GFX_goal_enc_reject_super_mutants
 # GFX_goal_enc_remember
 # GFX_goal_enc_remember_rig
+# GFX_goal_enc_requisition_of_resources
 # GFX_goal_enc_research
 # GFX_goal_enc_rock
 # GFX_goal_enc_rocket_nevada
 # GFX_goal_enc_rocket_reform
 # GFX_goal_enc_sabotage
+# GFX_goal_enc_salute_america
 # GFX_goal_enc_science_reform
 # GFX_goal_enc_scientists
 # GFX_goal_enc_segregation
@@ -191,6 +195,7 @@
 # GFX_goal_enc_tools_reform
 # GFX_goal_enc_troop
 # GFX_goal_enc_troop_call
+# GFX_goal_enc_uncle_sam
 # GFX_goal_enc_us_dollar
 # GFX_goal_enc_us_flags
 # GFX_goal_enc_us_handshake
