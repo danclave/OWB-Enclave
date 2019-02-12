@@ -871,7 +871,25 @@ spriteTypes = {
             name = "GFX_goal_vault_tec_reform"
  		    texturefile = "gfx/interface/goals/vault_tec_reform.dds"
  	    }
-        SpriteType = {#arcade_gannon
+		SpriteType = {#Legion
+            name = "GFX_goal_PAP_legionary_spirit"
+ 		    texturefile = "gfx/interface/goals/PAP_legionary_spirit.tga"
+ 	    }
+			
+		SpriteType = {#America Goal Eagle
+            name = "GFX_goal_america_goal_eagle"
+ 		    texturefile = "gfx/interface/goals/america_goal_eagle.tga"
+ 	    }
+		SpriteType = {#America Goal Deal 
+            name = "GFX_goal_america_goal_eagle_deal"
+ 		    texturefile = "gfx/interface/goals/america_goal_eagle_deal.tga"
+ 	    }
+		SpriteType = {#Golden Gate Bridge
+            name = "GFX_goal_america_goal_golden_gate"
+ 		    texturefile = "gfx/interface/goals/america_goal_golden_gate.tga"
+ 	    }
+		
+		    SpriteType = {#arcade_gannon
             name = "GFX_idea_arcade_gannon"
  		    texturefile = "gfx/interface/ideas/arcade_gannon.dds"
  	    } 
@@ -926,7 +944,15 @@ spriteTypes = {
         SpriteType = {#enc_idea_manpower_3
             name = "GFX_idea_enc_idea_manpower_3"
  		    texturefile = "gfx/interface/ideas/enc_idea_manpower_3.dds"
+ 	    }
+		SpriteType = {#enc_idea_manpower_4
+            name = "GFX_idea_enc_idea_manpower_4"
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_4.dds"
  	    } 
+		SpriteType = {#enc_idea_manpower_5
+            name = "GFX_idea_enc_idea_manpower_5"
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_5.dds"
+ 	    } 		
         SpriteType = {#ENC_legitimacy_high
             name = "GFX_idea_ENC_legitimacy_high"
  		    texturefile = "gfx/interface/ideas/ENC_legitimacy_high.dds"

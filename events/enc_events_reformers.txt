@@ -1547,7 +1547,7 @@ country_event = {#65 - The Emancipation Proclamations
 	id = enc_reformers.65
 	title = enc_reformers.65.t
 	desc = enc_reformers.65.d
-	picture = GFX_event_radio_new_vegas
+	picture = GFX_event_enc_vertibirds_abroad
 	fire_only_once = yes	
     is_triggered_only = yes
 	option = {#Declaration
@@ -1587,7 +1587,8 @@ country_event = {#65 - The Emancipation Proclamations
 				}
                 }
 			}
-	}
+	custom_effect_tooltip = enc_reformers.65.a_tt		
+		}
 	}
 
 country_event = {#66 - The Vice President
@@ -2259,7 +2260,7 @@ country_event = {#96 4th of July
     id = enc_reformers.96
     title = enc_reformers.96.t
     desc = enc_reformers.96.d
-    picture = GFX_event_enc_4th_july
+    picture = GFX_event_enc_america_eternity
     fire_only_once = yes    
     is_triggered_only = no
 	mean_time_to_happen = {	days = 3 }
@@ -2564,7 +2565,7 @@ country_event = {#104 - Followers of Apocolypse
 	title = enc_reformers.104.t
 	desc = enc_reformers.104.d
 	picture = GFX_event_enc_Followers
-	mean_time_to_happen = {	days = 30 }
+	mean_time_to_happen = {	days = 80 }
 	fire_only_once = yes
     is_triggered_only = no
 	trigger = { 	
@@ -2572,6 +2573,7 @@ country_event = {#104 - Followers of Apocolypse
 			var = legitimacy
 			value > 0.50
 		}
+		has_completed_focus = enc_vlt_power_reform
 	}
 	
 	option = {# Capture Operations
@@ -3181,15 +3183,17 @@ country_event = {#119 NCR
     picture = GFX_event_enc_endNCR
     fire_only_once = yes    
     is_triggered_only = yes
-	mean_time_to_happen = {	days = 3 }
-    option = {# Ow!
+	option = {# Ow!
 		name = enc_reformers.119.a
-		add_stability = -0.05
+		set_country_flag = erb_hayes_unlocked_flag
+		add_stability = 0.05
 				}
 	option = {# Yuck Yuck!
 		name = enc_reformers.119.b
 		custom_effect_tooltip = enc_reformers.118.b.tt	
-		trigger = { has_country_flag = leader_charismatic 	}
+		trigger = { has_country_flag = leader_charismatic }
+		set_country_flag = erb_hayes_unlocked_flag
+		set_country_flag = enc_compassionate_california
 		add_stability = 0.05		
 		add_war_support = -0.05
 		 		}
@@ -3567,7 +3571,6 @@ country_event = {# Enclave to Legion
 	option = {#
 		name = enc_reformers.130.a
 		CES = { 
-			add_research_slot = 1 
 			add_ideas = ENC_advisors 
 		}
 	}
@@ -3679,9 +3682,18 @@ country_event = {#135 BOS
 					  }
 				}
 	add_stability = -0.05		
-	hidden_effect = { load_oob = enc_bos_recruits }
-	custom_effect_tooltip = enc_reformers.135.b.tt
 	set_country_flag = integrate_brotherhood
+	BOS = {
+			random_army_leader = {
+				set_nationality = ERB
+			}
+			random_army_leader = {
+				set_nationality = ERB
+			}
+			random_army_leader = {
+				set_nationality = ERB
+			}
+		}
 		}
 	option = {# Evil
 	name = enc_reformers.135.c
@@ -3689,7 +3701,7 @@ country_event = {#135 BOS
 	trigger = { has_country_flag = leader_ruthless 	}
 	add_stability = 0.05
 	add_war_support = 0.05
-	add_manpower = -100
+	add_manpower = -2
 	 		}
 	}
 
@@ -4536,33 +4548,6 @@ country_event = {
 		}
 	}
 }
-country_event = {
-	id = enc_reformers.168
-	title = enc_reformers.168.t
-	desc = enc_reformers.168.d
-	picture = GFX_event_VEG_vault21
-
-	is_triggered_only = yes
-
-	option = {
-		name = enc_reformers.168.a
-
-		211 = {
-			add_resource = {
-				type = fuel
-				amount = 10
-			}
-			add_resource = {
-				type = electronics
-				amount = 20
-			}
-			add_resource = {
-				type = advanced_technology
-				amount = 5
-			}
-		}
-	}
-}
 
 country_event = { #169 - Utah Plague
 	id = enc_reformers.169
@@ -4575,14 +4560,225 @@ country_event = { #169 - Utah Plague
 		NOT = { country_exists = NCR }
 		}		
 	mean_time_to_happen = {
-		days = 100
+		days = 8
 		}
 	option = { # Damn it
 		name = enc_reformers.169.a
 		NCN = { add_ideas = ENC_plague
 			}
+		UIN = { add_ideas = ENC_plague
+			}
+		CRZ = { add_ideas = ENC_plague
+			}		
+		TAR = { add_ideas = ENC_plague
+			}
+		SOR = { add_ideas = ENC_plague
+			}
+		CRZ = { add_ideas = ENC_plague
+			}
+		LON = { add_ideas = ENC_plague
+			}
+		MUR = { add_ideas = ENC_plague
+			}	
 		}
 	}
+
+country_event = { #170 - Dark AGe
+	id = enc_reformers.170
+	title = enc_reformers.170.t
+	desc = enc_reformers.170.d
+	picture = GFX_event_enc_endNCR
+	fire_only_once = YES
+	trigger = {
+		NOT = { country_exists = NCR }
+		owns_state = 253
+		owns_state = 135
+		num_of_controlled_states > 40
+		}		
+	mean_time_to_happen = {
+		days = 100
+		}
+	option = { # Damn it
+		name = enc_reformers.170.a
+		add_ideas = enc_NCR_resistance
+		add_ideas = enc_NCR_instability
+		add_ideas = enc_NCR_power_struggle
+		
+		}
+	}
+country_event = { #171- Oh no Arroyo!
+	id = enc_reformers.171
+	title = enc_reformers.171.t
+	desc = enc_reformers.171.d
+	picture = GFX_event_ARR_arroyo
+	fire_only_once = YES
+	is_triggered_only = yes	
+	option = { # Damn it
+		name = enc_reformers.171.a
+		create_wargoal = {
+			type = annex_everything
+			target = ARR
+				}
+		add_stability = -0.05		
+		}
+	option = { # Damn it
+		name = enc_reformers.171.b
+		create_wargoal = {
+			type = annex_everything
+			target = ARR
+				}
+			}	
+	}
+
+country_event = { #172- Hayewire
+    id = enc_reformers.172
+    title = enc_reformers.172.t
+    desc = enc_reformers.172.d
+    picture = GFX_event_radio_new_vegas
+    fire_only_once = YES
+    is_triggered_only = yes    
+    option = { # STOP
+        name = enc_reformers.172.a
+        set_party_name = {
+            ideology = people
+            long_name = "The New World Party"
+            name = "The New World Party"
+        }
+        create_country_leader = {
+            name = "Mayor Grant C. Hayes"
+            desc = ""
+            picture = "gfx/leaders/Portrait_Hayes.dds"
+            expire = "2500.1.1"
+            ideology = town_hall_democracy
+            traits = {}
+            }    
+        }    
+    }	
+	
+country_event = { #173- Law School
+	id = enc_reformers.173
+	title = enc_reformers.173.t
+	desc = enc_reformers.173.d
+	picture = GFX_event_enc_school
+	fire_only_once = YES
+	is_triggered_only = yes	
+	option = { # This joke hurts
+		name = enc_reformers.173.a
+		add_stability = -0.05
+		add_political_power = 250
+		}	
+	}		
+	
+country_event = { #175- Law and Order
+    id = enc_reformers.175
+    title = enc_reformers.175.t
+    desc = enc_reformers.175.d
+    picture = GFX_event_enc_4th_july
+    fire_only_once = YES
+    is_triggered_only = yes    
+    option = { # STOP
+        name = enc_reformers.175.a
+		complete_national_focus = enc_law 
+        }
+	option = { # STOP
+        name = enc_reformers.175.b
+		complete_national_focus = enc_order
+        }   		
+    }
+country_event = { #176- Californian Resistance
+    id = enc_reformers.176
+    title = enc_reformers.176.t
+    desc = enc_reformers.176.d
+    picture = GFX_event_BOS_desert_patrol
+    fire_only_once = NO
+    trigger = {
+		NCN = { has_war_with = CES }
+		NOT = { country_exists = NCR }
+		NOT = { has_completed_focus = enc_ncr_soldiers }
+		NOT = { has_completed_focus = enc_bos_soldiers }
+			}		
+	mean_time_to_happen = {
+		days = 60
+		}  
+    option = { # STOP
+        name = enc_reformers.176.a
+		add_manpower = -250
+        }
+	option = { # STOP
+        name = enc_reformers.176.b
+		trigger = { has_completed_focus = enc_order }
+		set_country_flag = california_atrocities
+		custom_effect_tooltip = enc_reformers.176.b.tt
+        }   		
+    }
+country_event = { #177- Congressional Criticism
+    id = enc_reformers.177
+    title = enc_reformers.177.t
+    desc = enc_reformers.177.d
+    picture = GFX_event_ENC_double_flag_long
+    fire_only_once = NO
+    trigger = {
+		has_country_flag = california_atrocities
+		has_completed_focus = enc_empower_congress
+			}		
+	mean_time_to_happen = {
+		days = 60
+		}  
+    option = { # STOP
+        name = enc_reformers.177.a
+		add_stability = -0.10
+        }
+	option = { # STOP
+        name = enc_reformers.177.b
+		complete_national_focus = enc_silence_congress_reform
+		}   		
+    }
+country_event = { #178- Vertibird Crash
+    id = enc_reformers.178
+    title = enc_reformers.178.t
+    desc = enc_reformers.178.d
+    picture = GFX_event_enc_vertibird_crash
+    fire_only_once = NO
+    trigger = {
+		has_completed_focus = enc_reform
+		date > 2279.1.1
+			}		
+	mean_time_to_happen = {
+		days = 60
+		}  
+    option = { #  Oops
+        name = enc_reformers.178.a
+		CES  = { 
+		add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_equipment
+				}
+			}
+		}		
+	}
+country_event = { #179- New New Vegas
+    id = enc_reformers.179
+    title = enc_reformers.179.t
+    desc = enc_reformers.179.d
+    picture = GFX_event_VEG_strip
+    fire_only_once = NO
+    trigger = {
+		date > 2279.1.1
+		people > 0.40
+			}		
+	mean_time_to_happen = {
+		days = 40
+		}  
+    option = { # STOP
+        name = enc_reformers.179.a
+		annex_country = { target = VEG }
+		add_political_power = 50
+		remove_ideas = ENC_House 
+		}
+	  }	
+	
 
 
 

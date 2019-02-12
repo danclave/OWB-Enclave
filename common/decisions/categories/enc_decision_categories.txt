@@ -140,7 +140,7 @@ ENC_pacific_commonwealth1 = {
 	}	
 }
 
-ENC_Treaty_Hoover_Dam = {
+ENC_treaty_hoover_dam = {
 	icon = GFX_decision_cat_picture_mojave_campaign
 	allowed = { tag = ERB }
 	priority = 4
@@ -190,11 +190,30 @@ ENC_build_nevada = {
 	priority = 3
 	visible = {	has_completed_focus = enc_reno_end }	
 }
+ENC_gannon_doctrine = {
+	icon = category_usa_construction
+	allowed = { tag = ERB }
+	priority = 3
+	visible = {	has_completed_focus = enc_peaceful_usa }	
+}
+
+ENC_granite_doctrine = {
+	icon = category_usa_construction
+	allowed = { tag = ERB }
+	priority = 3
+	visible = {	has_completed_focus = enc_warmonger_usa }	
+}
 
 ENC_epilogue = {
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_reno_end }	
 }
+ENC_deseret = {
+	icon = category_deseret
+	allowed = { tag = ERB }
+	visible = {	has_completed_focus = enc_the_state_of_utah }	
+}
+
 # ##############################
 # ICONS
 # ##############################

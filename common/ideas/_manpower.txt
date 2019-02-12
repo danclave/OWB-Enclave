@@ -367,7 +367,8 @@ ideas = {
 		cancel_if_invalid = yes
 		}
 		american_revolution = {
-			picture = all_adults_serve
+			
+			picture = GFX_idea_enc_idea_manpower_4
 			cost = 150
 			removal_cost = -1
 			level = 3
@@ -395,10 +396,10 @@ ideas = {
 				training_time_factor = 0.2
 			}
 			default = yes
-			cancel_if_invalid = yes
+			cancel_if_invalid = no
 		}
 		burnished_rows_of_steel = {
-			picture = scraping_the_barrel
+			picture = GFX_idea_enc_idea_manpower_5
 			cost = 150
 			removal_cost = -1
 			level = 3

@@ -43,11 +43,7 @@ ideas = {
 			allowed = {
 				original_tag = ERB
 			}
-			
-			available = {
-				original_tag = ERB
-			}
-			visible = {
+		visible = {
 				has_country_flag = integrate_brotherhood 
 				}
 			traits = { 
@@ -227,6 +223,26 @@ ideas = {
 	}	
 
 	army_chief = {
+		big_jim_chief_of_army = {
+			
+			picture = bigjim_chief
+			
+			allowed = {
+				original_tag = NCR
+			}
+			
+			available = {
+				    has_completed_focus = ncr_bigjim
+			}
+			visible = { 
+				has_country_flag  = enc_compassionate_california
+				}
+			traits = { the_baron }
+			
+			ai_will_do = {
+				factor = 10
+			}
+		}
 		enc_offensive = {
 			cost = 250
 			picture = generic_army_europe_1
@@ -330,6 +346,19 @@ ideas = {
 	}
 	
 	theorist = {
+		BOS_military_theorist = {
+		picture = BOS_generic3
+		allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_country_flag = integrate_brotherhood 
+				}
+			research_bonus = {
+				cat_elite_army = 0.10
+			}
+		traits = {}
+		}
 		enc_bomber_guy = {
 			picture = generic_army_europe_4
 			allowed = {
