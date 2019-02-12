@@ -963,7 +963,9 @@ focus_tree = {
 						name = "Security Chief Wallace"
 					}
 				}
+				exists = yes
 			}
+			
 		}
 		completion_reward = {
 			annex_country = { target = VLT }
@@ -1029,7 +1031,7 @@ focus_tree = {
 		}
 		available = {
 			strength_ratio = {
-				tag = DES ratio > 2.0
+				tag = DES ratio > 1.0
 			}
 			custom_trigger_tooltip = {
 				tooltip = 25_legitimacy
@@ -1056,18 +1058,12 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 5.8
-		bypass = {
-			DES = {
-				exists = NO
-			}
-		}
-		available = {
-			DES = {
-				is_in_faction_with = NCR
-			}
-		}
 		prerequisite = { focus = enc_vlt_core_reform }
-		available = { has_stability > 0.50 }
+		available = { has_stability > 0.50
+						DES = {
+							exists = YES
+							}
+						}
 		completion_reward = {
 			DES = {
 				if = {
@@ -1087,7 +1083,7 @@ focus_tree = {
 				add_ai_strategy = {
 					type = ignore
 					id = "DES"
-					value = 200
+					value = 800
 				}
 			}
 			BOS = {
@@ -1101,7 +1097,7 @@ focus_tree = {
 				add_ai_strategy = {
 					type = ignore
 					id = "NCR"
-					value = 200
+					value = 800
 				}
 			}
 			DES = {
@@ -2013,7 +2009,7 @@ focus_tree = {
 	
 	focus = {#REBUILDING - Rebuilding California
 		id = enc_rebuilding_california
-		icon = GFX_goal_NCR_Mayoral_Victory_Speech
+		icon = GFX_goal_america_goal_golden_gate
 		prerequisite = {focus = enc_rebuilding_a_nation }
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_the_fate_of_our_democracy 
@@ -2075,7 +2071,11 @@ focus_tree = {
 		y = 0
 		cost = 5.8
 		completion_reward = {
-			# todo
+			add_stability = 0.10
+			add_political_power = 100
+		swap_ideas = { remove_idea = enc_NCR_resistance
+						add_idea = enc_NCR_resistance2
+						}
 		}
 	}
 	focus = {#REBUILDING - The BOS leadership
@@ -2088,9 +2088,9 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			# todo
-		}
-	}
+		country_event = { id = enc_reformers.135 }
+				}
+			}
 	focus = {#REBUILDING - The BOS soldiers
 		id = enc_bos_soldiers
 		icon = GFX_goal_enc_bos_soldiers
@@ -2101,9 +2101,24 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			# todo
+			add_ideas = steelconquerors
+			if = {
+				limit = {
+					has_country_flag = integrate_brotherhood
+					}
+				hidden_effect = {load_oob = enc_bos_recruits }
+				custom_effect_tooltip = enc_yesterdays_enemies_tt}
+			else_if = {
+				limit = {
+					NOT = { has_country_flag = integrate_brotherhood }
+					}
+				add_manpower = 1000
+				}
+				
+			}	
 		}
-	}
+			
+		
 	focus = {#REBUILDING - The NCR leadership
 		id = enc_ncr_leadership
 		icon = GFX_goal_enc_reform_hayes
@@ -2114,7 +2129,7 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			# todo
+			country_event = { id = enc_reformers.119 }		
 		}
 	}
 	focus = {#REBUILDING - The NCR soldiers
@@ -2127,7 +2142,7 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			# todo
+			remove_ideas = { enc_NCR_resistance2}  
 		}
 	}
 
@@ -2141,7 +2156,7 @@ focus_tree = {
 		y = 1
 		cost = 5.8  
 		completion_reward = {
-			# todo
+			country_event = { id = enc_reformers.175 }		
 		}			
 	} 
   	focus = {#REBUILDING - Law
@@ -2155,7 +2170,7 @@ focus_tree = {
 		y = 1
 		cost = 2.9
 		completion_reward = {
-			# todo
+			add_stability = 0.10
 		}
 	}
   	focus = {#REBUILDING - Judicial Branch
@@ -2168,7 +2183,10 @@ focus_tree = {
 		y = 1
 		cost = 2.9
 		completion_reward = {
-			# todo
+			swap_ideas = {
+				remove_idea = enc_NCR_power_struggle
+				add_idea = enc_NCR_power_struggle2
+			}
 		}
 	}
 	focus = {#REBUILDING - The FBI
@@ -2181,7 +2199,19 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-		
+		remove_ideas = enc_NCR_power_struggle2
+		add_stability = 0.10
+		country_event = { id = enc_reformers.173 } 
+		remove_ideas = ENC_smuggling
+		if = {
+				limit = {
+					has_completed_focus = enc_reno_police
+					}
+				swap_ideas = {
+				remove_idea = ENC_reno_police
+				add_idea = ENC_FBI_idea
+				}
+			}
 		}		
 	}
 	focus = {#REBUILDING - Order
@@ -2195,7 +2225,11 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			# todo
+			swap_ideas = {
+				remove_idea = enc_NCR_power_struggle
+				add_idea = enc_NCR_power_struggle2
+				}
+			remove_ideas = ENC_smuggling
 		}		
 	}
 	focus = {#REBUILDING - Military Police
@@ -2208,8 +2242,8 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			# todo
-		}		
+			remove_ideas = enc_NCR_power_struggle2
+			}		
 	}
 	focus = {#REBUILDING - Martial Law
 		id = enc_martial_law
@@ -2221,7 +2255,16 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			
+		add_ideas = enc_martial_law_idea	
+		if = {
+				limit = {
+					has_completed_focus = enc_amnesty_for_service
+					}
+				swap_ideas = {
+				remove_idea = ENC_reno_police_corrupt
+				add_idea = ENC_underworld_ties
+				}
+			}
 		}		
 	}
 
@@ -2394,7 +2437,223 @@ focus_tree = {
 			# todo
 		}
 	}
-
+	####################################
+	# REUNITING THE STATES
+	####################################
+	focus = {#Reuniting States
+		id = enc_reuniting_states
+		icon = GFX_goal_america_goal_eagle
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_rebuilding_a_nation
+		x = -5
+		y = 5
+		cost = 5.8
+		completion_reward = {
+			# todo
+		}
+	}
+	focus = {#Reuniting States
+		id = enc_peaceful_usa
+		icon = GFX_goal_america_goal_eagle_deal
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_reuniting_states
+		prerequisite = { focus = enc_reuniting_states }
+		mutually_exclusive = { focus = enc_warmonger_usa } 
+		x = -1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			custom_effect_tooltip = peaceful_usa_tt
+		}
+	}
+	focus = {#Reuniting States
+		id = enc_warmonger_usa
+		icon = GFX_goal_NCR_Mojave
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_reuniting_states
+		prerequisite = { focus = enc_reuniting_states }
+		mutually_exclusive = { focus = enc_peaceful_usa } 
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			custom_effect_tooltip = warmonger_usa_tt
+		}
+	}
+focus = {#Reuniting States
+		id = enc_axis_evil
+		icon = GFX_goal_enc_combined_arms
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_warmonger_usa
+		prerequisite = { 
+			focus = enc_warmonger_usa
+			focus = enc_peaceful_usa
+					}
+		x = -1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			# todo
+		}
+	}
+	
+	focus = {#Axis Evil
+		id = enc_fight_the_legion_usa
+		icon = GFX_goal_PAP_legionary_spirit
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_axis_evil
+		prerequisite = { 
+			focus = enc_axis_evil
+					}
+		x = 2
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			custom_effect_tooltip = enc_fight_the_legion_usa_tt
+		}
+	}
+	focus = {#Legion Border
+		id = enc_fortify_border_legion
+		icon = GFX_goal_enc_fort
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_fight_the_legion_usa
+		prerequisite = { 
+			focus = enc_fight_the_legion_usa
+					}
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			custom_effect_tooltip = enc_fortify_border_legion_tt
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] ncr_riverbank entered"
+			}
+			every_state = {
+				limit = {
+					is_owned_by = ERB
+					is_colorado_river_state = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] ncr_riverbank exited"
+			}
+		}
+	}
+	focus = {#Propaganda
+		id = enc_legion_propaganda
+		icon = GFX_goal_enc_jaz
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_fight_the_legion_usa
+		prerequisite = { 
+			focus = enc_fight_the_legion_usa
+					}
+		available = {
+			has_war_with = CES
+			CES = {has_idea = atrocities }
+						}
+		
+		x = -1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			CES = {remove_ideas = atrocities }
+		}
+	}	
+	focus = {#Seattle
+		id = enc_fight_wbh
+		icon = GFX_goal_brk_seattles_exorcism
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_axis_evil
+		prerequisite = { 
+			focus = enc_axis_evil
+					}
+		x = -2
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			custom_effect_tooltip = enc_fight_wbh_tt
+			hidden_effect = { 
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 84 # North Koover
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+					}
+				}
+			}	
+		}	
+	}
+focus = {#Broken Coast
+		id = enc_broken_coast
+		icon = GFX_goal_brk_enemy_in_the_north
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_fight_wbh
+		prerequisite = { 
+			focus = enc_fight_wbh
+					}
+		x = -1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			custom_effect_tooltip = enc_broken_coast_tt
+			hidden_effect = { 
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 492 # North Koover
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+					}
+				}
+			}	
+		}	
+	}
+focus = {#Mexico
+		id = enc_mexico_invasion
+		icon = GFX_goal_Enc_goal_flag_mexico
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_fight_wbh
+		prerequisite = { 
+			focus = enc_fight_wbh
+					}
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+		custom_effect_tooltip = enc_new_mexico_tt
+			hidden_effect = { 
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 22 # Libertad
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+					}
+				}
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 41 # Colonet
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+					}
+				}
+			}
+		}
+		}	
+			
  	####################################
 	# DIPLOMACY
 	####################################
@@ -4085,6 +4344,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		icon = GFX_goal_NCR_Urban_Draft
 		ai_will_do = { factor = 1 }
 		available = {
+			NCR = { exists = yes }
 			custom_trigger_tooltip = {
 				tooltip = 25_legitimacy		
 				check_variable = {
@@ -4112,6 +4372,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		x = 0
 		y = 1
 		cost = 5.8
+		available = {NCR = {exists = yes } }
 		completion_reward = {
 			NCR = {
 				add_ideas = ENC_NCR_demoralization_campaign
@@ -4124,6 +4385,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_fear_uncertainty_and_doubt}
 		relative_position_id = enc_fear_uncertainty_and_doubt
+		available = {NCR = {exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8
@@ -4143,6 +4405,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_organise_the_sympathizers}
 		relative_position_id = enc_organise_the_sympathizers
+		available = {NCR = {exists = yes } }
 		x = 0
 		y = 1
 		cost = 5.8
@@ -4244,7 +4507,6 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 		id = enc_rank_and_file_infantry
 		icon = GFX_goal_enc_mass_mobilization
 		ai_will_do = { factor = 1 }
-		mutually_exclusive = { focus = enc_disciplined_soldiers }
 		prerequisite = {focus = enc_disciplined_soldiers}
 		relative_position_id = enc_disciplined_soldiers
 		x = 0

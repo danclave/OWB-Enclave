@@ -669,7 +669,23 @@ ideas = {
 				stability_factor = 0.05
 			}
 		}
-		ENC_reno_police_corrupt= {  
+		ENC_FBI_idea= {  
+			picture = ast_classify_aliens
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				conscription_factor = -0.05
+				political_power_gain = 0.13
+				enemy_partisan_effect = -0.1
+				stability_factor = 0.08
+			}
+		}
+		ENC_reno_police_corrupt = {  
 			picture = ast_classify_aliens
 			allowed = { 
 				always = no
@@ -683,6 +699,21 @@ ideas = {
 				political_power_gain = 0.05
 				enemy_partisan_effect = -0.1
 			}
+		}
+		ENC_underworld_ties = {  
+			picture = ast_classify_aliens
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				conscription_factor = -0.05
+				political_power_gain = 0.10
+				enemy_partisan_effect = -0.15
+				}
 		}
 		ENC_constitution = {  
 			picture = generic_constitutional_guarantee
@@ -1043,7 +1074,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = 0.05
 			}
 		}
 		ENC_NCR_smuggling = {
@@ -1196,7 +1227,108 @@ ideas = {
 				non_core_manpower = 0.1
 			}
 		}
+		
+		enc_NCR_resistance = {
+			picture = generic_research_bonus
+			allowed = { 
+				always = no
+			}
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.25
+				supply_consumption_factor = 0.05
+				army_morale_factor = -0.05
+				mobilization_speed = -0.3
+				non_core_manpower = -0.05
+			}
+		}
+	enc_NCR_resistance2 = {
+			picture = generic_research_bonus
+			allowed = { 
+				always = no
+			}
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.10
+				supply_consumption_factor = 0.05
+				army_morale_factor = -0.03
+				mobilization_speed = -0.2
+				non_core_manpower = -0.02
+			}
+		}
+	enc_NCR_instability = {
+			picture = generic_research_bonus
+			allowed = { 
+				always = no
+			}
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industry_repair_factor	=-0.0025
+				stability_factor= -0.20
+				stability_weekly = -0.005
+				consumer_goods_factor = 0.105
+				industry_free_repair_factor = -0.25	
 
+			}
+		}
+	enc_NCR_power_struggle = {
+			picture = generic_research_bonus
+			allowed = { 
+				always = no
+			}
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				offensive_war_stability_factor	= -0.20
+				research_time_factor = 0.05
+				consumer_goods_factor = 0.05
+				stability_weekly = -0.005
+			}
+		}
+		enc_NCR_power_struggle2 = {
+			picture = generic_research_bonus
+			allowed = { 
+				always = no
+			}
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				offensive_war_stability_factor	= -0.10
+				research_time_factor = 0.02
+				consumer_goods_factor = 0.02
+				stability_weekly = -0.003
+			}
+		}
+	enc_martial_law_idea = {  
+			picture = generic_constitutional_guarantee
+			allowed = { 
+				always = no
+			}
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.03
+				army_attack_factor = 0.05
+				consumer_goods_factor = -0.03
+			}
+		}		
 		ENC_Freedom_Silent= {  
 			picture = generic_constitutional_guarantee
 			allowed = { 
@@ -1207,7 +1339,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_gain = -0.10
+				political_power_gain = -0.03
 				stability_factor = 0.10
 				industrial_capacity_factory = 0.10
 				production_factory_efficiency_gain_factor = 0.10
