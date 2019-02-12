@@ -738,18 +738,19 @@ country_event = {#25 - NCR - CES War
 	picture = GFX_event_NCR_battle_for_hoover_dam
 	
 	is_triggered_only = no
-	mean_time_to_happen = { days = 7 }
+	mean_time_to_happen = { days = 1 }
 	trigger = {
-		date > 2279.1.1
+		date < 2279.1.1
 		NCR = { 
 			has_war_with = CES # war between NCR and CES
-			surrender_progress > 0.1 # NCR has lost some territory
+			# surrender_progress > 0.1 # NCR has lost some territory
 		} 
 	}
 	fire_only_once = yes
 
 	option = {# We could intervene
 		name = enc_reformers.25.a
+		custom_effect_tooltip = enc_reformers.25.a.tt
 		set_country_flag = enc_intervention_flag
 	}
 }
@@ -1424,7 +1425,25 @@ country_event = {#50 - America Reborn
 		name = enc_reformers.50.a	
 	}
 }
-
+country_event = {#51 - The Crimson Caravan
+	id = enc_reformers.51
+	title = enc_reformers.51.t
+	desc = enc_reformers.51.d
+	picture = GFX_event_enc_crimson_caravan
+	fire_only_once = yes	
+	is_triggered_only = yes
+	
+	option = { # Let them continue operating
+		name = enc_reformers.51.a
+		custom_effect_tooltip = enc_reformers.51.a.tt
+		add_ideas = { enc_crimson_truckers }
+	}
+	option = { # Seize it
+		name = enc_reformers.51.b
+		custom_effect_tooltip = enc_reformers.51.b.tt
+		add_ideas = { enc_crimson_truckers_conscripted }
+	}
+}
 # unused numbers
 
 country_event = {#60 - From the Top Down

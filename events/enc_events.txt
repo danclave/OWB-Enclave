@@ -325,7 +325,7 @@ country_event = { #19 - Cafetaria incident
 	}
 	option = { # Who cares?
 		name = enc.19.b
-		add_political_power = 25
+		add_political_power = 50
 		add_war_support = -0.05
 	}
 }
@@ -685,7 +685,7 @@ country_event = { #33 - Crimson Caravan Encounter
 	id = enc.33
 	title = enc.33.t
 	desc = enc.33.d
-	picture = GFX_event_ENC_3_troopers
+	picture = GFX_event_ENC_secret # change
 	fire_only_once = no
 	
 	trigger = {

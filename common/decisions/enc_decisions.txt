@@ -863,7 +863,7 @@ ENC_starting_companies = {
 			add_ideas = medtek
 		}
 	}
-	ENC_crimson_trucking = {
+	ENC_crimson_trucking = { # unused
 		cost = 25
 		days_remove = 10
 		ai_will_do = {
@@ -877,7 +877,7 @@ ENC_starting_companies = {
 			original_tag = ERB
 		}
 		complete_effect = {
-			add_ideas = enc_crimson_truckers
+			add_ideas = enc_crimson_truckers # used for crimson event
 		}
 	}
 	ENC_gunrunners = {
@@ -1372,7 +1372,7 @@ ENC_reno = {
 			}
 		}
 	}
-	  kill_graffs = {
+	kill_graffs = {
         icon = generic_prepare_civil_war
         cost = 50
         visible = {
@@ -2073,6 +2073,7 @@ political_actions = {
 }
 operations = {
 	ENC_sabotage_ces_supply_lines = {
+		icon = generic_ignite_civil_war
 		cost = 100
 		visible = {
 			has_country_flag = enc_intervention_flag
@@ -2084,7 +2085,38 @@ operations = {
 			}
 		}
 		complete_effect = {
-			# force peace
+			CES = {
+				white_peace = {
+					tag = NCR
+				}
+				set_truce = {
+					target = NCR
+					days = 356
+				}
+			}
+			clr_country_flag = enc_intervention_flag
+		}
+	}
+	ENC_sabotage_ncr_supply_lines = {
+		icon = generic_ignite_civil_war
+		cost = 100
+		visible = {
+			has_country_flag = enc_intervention_flag
+			NCR = { has_war_with = CES }
+			CES = {
+				surrender_progress > 0.1 # NCR has lost some territory
+			}
+		}
+		complete_effect = {
+			NCR = {
+				white_peace = {
+					tag = CES
+				}
+				set_truce = {
+					target = CES
+					days = 356
+				}
+			}
 			clr_country_flag = enc_intervention_flag
 		}
 	}
@@ -2943,9 +2975,33 @@ ENC_debug = {
 			change_legitimacy = yes
 		}
 	}
+	ENC_set_up_allignments = {
+			set_variable = { enc_good_allignment = 0 }
+			set_variable = { enc_evil_allignment = 0 }
+			
+			add_to_variable = {enc_evil_allignment = 0.10}
+			add_to_variable = {enc_good_allignment = 0.15}
+			
+			add_to_variable = {enc_evil_allignment = 0.20}
+			add_to_variable = {enc_good_allignment = 0.15}
+			
+			add_to_variable = {enc_evil_allignment = 0.15}
+			add_to_variable = {enc_good_allignment = 0.30}
+		
+	}
+	ENC_people_upset = {
+		complete_effect = {
+			stability_loss_based_on_people_popularity = yes		
+		}
+	}
 	ENC_misc = {
 		complete_effect = {
-			add_manpower = 10
+			CES = {
+				declare_war_on = {
+					target = NCR
+					type = annex_everything
+				}
+			}
 		}
 	}
 	ENC_reduce_legitimacy = {
