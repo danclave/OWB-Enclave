@@ -1,19 +1,17 @@
-spriteTypes = {
-		SpriteType = {#School
-			name = "GFX_event_enc_school"
-			texturefile = "gfx/event_pictures/event_enc_school.dds"	
-		}
-	SpriteType = {#Crash!
-			name = "GFX_event_enc_vertibird_crash"
-			texturefile = "gfx/event_pictures/event_enc_vertibird_crash.tga"	
-		}
-SpriteType = {#Come Fly
-			name = "GFX_event_enc_vertibirds_abroad"
-			texturefile = "gfx/event_pictures/event_enc_vertibirds_abroad.tga"	
-		}		
+spriteTypes = {        
 	SpriteType = {#enc_crashed_station
 		name = "GFX_enc_crashed_station"
 		texturefile = "gfx/event_pictures/enc_crashed_station.tga"
+	}
+
+	SpriteType = {#enc_henry_returns
+		name = "GFX_enc_henry_returns"
+		texturefile = "gfx/event_pictures/enc_henry_returns.tga"
+	}
+
+	SpriteType = {#enc_moreno_returns
+		name = "GFX_enc_moreno_returns"
+		texturefile = "gfx/event_pictures/enc_moreno_returns.tga"
 	}
 
 	SpriteType = {#enc_ncr_rangers
@@ -44,6 +42,11 @@ SpriteType = {#Come Fly
 	SpriteType = {#event_enc_4th_july
 		name = "GFX_event_enc_4th_july"
 		texturefile = "gfx/event_pictures/event_enc_4th_july.tga"
+	}
+
+	SpriteType = {#event_enc_america_eternity
+		name = "GFX_event_enc_america_eternity"
+		texturefile = "gfx/event_pictures/event_enc_america_eternity.tga"
 	}
 
 	SpriteType = {#event_enc_antimutants
@@ -406,6 +409,11 @@ SpriteType = {#Come Fly
 		texturefile = "gfx/event_pictures/event_ENC_ruined_city.tga"
 	}
 
+	SpriteType = {#event_enc_school
+		name = "GFX_event_enc_school"
+		texturefile = "gfx/event_pictures/event_enc_school.tga"
+	}
+
 	SpriteType = {#event_enc_seattle
 		name = "GFX_event_enc_seattle"
 		texturefile = "gfx/event_pictures/event_enc_seattle.tga"
@@ -466,9 +474,19 @@ SpriteType = {#Come Fly
 		texturefile = "gfx/event_pictures/event_ENC_vertibird.tga"
 	}
 
+	SpriteType = {#event_enc_vertibirds_abroad
+		name = "GFX_event_enc_vertibirds_abroad"
+		texturefile = "gfx/event_pictures/event_enc_vertibirds_abroad.tga"
+	}
+
 	SpriteType = {#event_ENC_vertibird_burning
 		name = "GFX_event_ENC_vertibird_burning"
 		texturefile = "gfx/event_pictures/event_ENC_vertibird_burning.tga"
+	}
+
+	SpriteType = {#event_enc_vertibird_crash
+		name = "GFX_event_enc_vertibird_crash"
+		texturefile = "gfx/event_pictures/event_enc_vertibird_crash.tga"
 	}
 
 	SpriteType = {#event_enc_vertibird_squad
