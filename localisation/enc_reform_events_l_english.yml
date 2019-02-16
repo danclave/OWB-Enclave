@@ -297,6 +297,26 @@ enc_reformers.51.a: "Let them continue operating."
 enc_reformers.51.a.tt: "§gThe Crimson Caravan are recognized as a legitimate business and are allowed to continue operating as before.§!\n\n"
 enc_reformers.51.b: "Let's make them an offer they can't refuse."
 enc_reformers.51.b.tt: "§gThe Crimson Caravan is forcefully converted into a logistics department of our armed forces.§!\n\n"
+################################################################################################################ -<
+enc_reformers.52.t: "Dr. Henry returns!"
+enc_reformers.52.d: "Dr. Henry is an ex-enclave medical scientist. He used to work with the Enclave cyber-genetic research program at the Poseidon oil rig and at various other Enclave installations. Later, he deserted the Enclave due to a conflict with another scientist.\n\nWhen he received word of the revival of the Enclave, he was sceptical at first. But once news spread of our efforts to become a worth American government, he has left his clinic in order to rejoin the Enclave and 'Get one more grand accomplishment done'"
+enc_reformers.52.a: "Welcome back, doc!"
+enc_reformers.52.a.tt: "Dr. Henry is now available as a §YPolitical Advisor§!."
+################################################################################################################ -<
+enc_reformers.53.t: "Dr. Henry Leaves the Enclave"
+enc_reformers.53.d: "TODO"
+enc_reformers.54.a: "This is no place for the naive."
+enc_reformers.53.a.tt: "§YDr. Henry§! leaves the Enclave!\n"
+################################################################################################################ -<
+enc_reformers.54.t: "Moreno returns!"
+enc_reformers.54.d: "TODO"
+enc_reformers.54.a: "Welcome home, soldier!"
+enc_reformers.54.a.tt: "Orion Moreno is now available as a §YTheorist§!."
+################################################################################################################ -<
+enc_reformers.55.t: "Orion Moreno Leaves the Enclave!"
+enc_reformers.55.d: "TODO"
+enc_reformers.55.a: "Some soldier he is."
+enc_reformers.55.a.tt: "§YOrion Moreno§! leaves the Enclave!\n"
 # free numbers
 ################################################################################################################ -<
 enc_reformers.60.t: "The Ides of March"
