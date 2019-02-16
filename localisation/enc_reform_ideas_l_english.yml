@@ -139,6 +139,7 @@ ENC_american_broadcasting_department_propaganda: "American Broadcasting Departme
 ENC_american_broadcasting_department_entertainment: "American Broadcasting Department"
 ENC_free_press: "Free Press"
 enc_free_press_tt: "\n§MThe Press will be watching our actions with great interest!§!"
+ENC_free_press_2: "The First Amendment"
 ENC_free_press_desc: "The free press is a bullwark against corruption, mostly because fat cats make for juicy stories.\n\nThey will keep factory owners from lining their own pockets too much, but that same camera might easily be turned on us, too.\nAnd who knows who else is watching the news?"
 ENC_mandatory_patriotism: "Mandatory Patriotism"
 

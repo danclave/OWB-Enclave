@@ -96,6 +96,8 @@ ENC_rise_slaves_des: "It's time to remind Caesar that Americans will always figh
 ###################################
 # FLAGS
 ###################################
+enc_court_ordered_elections: "Constitution Upheld by Checks and Balances!"
+enc_free_press_by_court: "Constitution Upheld by Checks and Balances!"
 enc_promised_no_peace_with_bos: "Promised no peace with the Brotherhood"
 enc_ncr_connections_flag: "Connections in the §YNCR§!"
 enc_crackdown_justified: "§YCrackdown§! is justified"

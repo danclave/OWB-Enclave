@@ -1501,6 +1501,22 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
+			   production_factory_max_efficiency_factor = 0.05
+			   justify_war_goal_time = 0.05
+			   encryption_factor = -0.05
+			   offensive_war_stability_factor = -0.20
+			}
+		}
+		ENC_free_press_2 = {  
+			picture = enc_free_press
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
 			   production_factory_max_efficiency_factor = 0.10
 			   justify_war_goal_time = 0.10
 			   encryption_factor = -0.10

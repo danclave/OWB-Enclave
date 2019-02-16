@@ -200,7 +200,6 @@ ENC_gannon_doctrine = {
 ENC_granite_doctrine = {
 	icon = category_usa_construction
 	allowed = { tag = ERB }
-	priority = 3
 	visible = {	has_completed_focus = enc_warmonger_usa }	
 }
 

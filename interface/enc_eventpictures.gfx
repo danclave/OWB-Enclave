@@ -485,9 +485,13 @@ SpriteType = {#Come Fly
 		name = "GFX_event_Shrine_to_Lincoln"
 		texturefile = "gfx/event_pictures/event_Shrine_to_Lincoln.tga"
 	}
-
-	SpriteType = {#event_Ulysses
-		name = "GFX_event_Ulysses"
-		texturefile = "gfx/event_pictures/event_Ulysses.tga"
+	SpriteType = {#event_slaves
+		name = "GFX_event_enc_slaves"
+		texturefile = "gfx/event_pictures/event_enc_slaves.tga"
 	}
+SpriteType = {#suspend_elections
+		name = "GFX_event_enc_suspend_elections"
+		texturefile = "gfx/event_pictures/event_enc_suspend_elections.tga"
+	}
+	
 }

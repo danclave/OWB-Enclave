@@ -2564,7 +2564,6 @@ erb_tribals_become_civilized = {
 		}
 	}
 }
-
 ENC_granite_doctrine = { 
 	erb_tribal_burden = {
 		target_trigger = {
@@ -2596,7 +2595,7 @@ ENC_granite_doctrine = {
 			create_wargoal = { type = annex_everything target = FROM }
 				}
 		}	
-	erb_fire_and_blood = {
+erb_fire_and_blood = {
 		target_trigger = {
 			FROM = {
 					AND = { 
@@ -2607,9 +2606,7 @@ ENC_granite_doctrine = {
 					}	
 				}
 	visible = {
-			if = {
-				has_completed_focus = enc_reform
-				}	
+			if = { has_completed_focus = enc_reform }	
 			}
 		available = {
 			NOT = {
@@ -2978,7 +2975,6 @@ ENC_debug = {
 	ENC_set_up_allignments = {
 			set_variable = { enc_good_allignment = 0 }
 			set_variable = { enc_evil_allignment = 0 }
-			
 			add_to_variable = {enc_evil_allignment = 0.10}
 			add_to_variable = {enc_good_allignment = 0.15}
 			

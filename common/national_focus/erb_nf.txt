@@ -1812,6 +1812,9 @@ focus_tree = {
 		mutually_exclusive = { focus = enc_entertainment_broadcasts }
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_american_broadcasting_department
+		available = { 
+			NOT = { has_country_flag = enc_free_press_by_court }
+			}
 		x = -1
 		y = 1
 		cost = 5.8
@@ -1859,6 +1862,7 @@ focus_tree = {
 		prerequisite = { focus = enc_entertainment_broadcasts }
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_entertainment_broadcasts
+		available = {has_idea = ENC_free_press }
 		x = 0
 		y = 1
 		cost = 5.8 
@@ -1868,7 +1872,10 @@ focus_tree = {
 				value = 0.05
 			}
 			change_legitimacy = yes
-			add_ideas = ENC_free_press
+			swap_ideas = {
+				remove_idea = ENC_free_press
+				add_idea = ENC_free_press_2
+				}
 			custom_effect_tooltip = enc_free_press_tt
 		}
 	}
@@ -1930,6 +1937,9 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_silence_congress_reform
 		prerequisite = { focus = enc_silence_congress_reform }
+		available = { 
+			NOT = { has_country_flag = enc_court_ordered_elections }
+			}
 		x = 0
 		y = 1
 		cost = 5.8
@@ -1958,6 +1968,9 @@ focus_tree = {
 		relative_position_id = enc_the_fate_of_our_democracy
 		prerequisite = { focus = enc_the_fate_of_our_democracy }
 		mutually_exclusive = { focus = enc_extend_presidential_powers_reform }
+		available = { 
+			NOT = {has_completed_focus = enc_suspend_elections }
+			}
 		x = 1
 		y = 1
 		cost = 5.8
@@ -1994,6 +2007,9 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_empower_congress
 		prerequisite = { focus = enc_empower_congress }
+		available = { 
+			NOT = {has_completed_focus =  enc_silence_congress_reform }
+			}
 		x = 0
 		y = 1
 		cost = 5.8
@@ -2195,6 +2211,9 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_judicial_branch
 		prerequisite = { focus = enc_judicial_branch }
+		available = { 
+			NOT = {has_completed_focus = enc_martial_law }
+			}
 		x = 0
 		y = 1
 		cost = 5.8
@@ -2251,6 +2270,10 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_military_police
 		prerequisite = { focus = enc_military_police }
+		available = { 
+			NOT = {has_completed_focus = enc_fbi }
+			NOT = { has_country_flag = enc_free_press_by_court }
+				}
 		x = 0
 		y = 1
 		cost = 5.8
