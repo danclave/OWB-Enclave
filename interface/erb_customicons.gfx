@@ -1,4 +1,16 @@
 spriteTypes = {
+        SpriteType = {#america_goal_eagle
+            name = "GFX_goal_america_goal_eagle"
+ 		    texturefile = "gfx/interface/goals/america_goal_eagle.dds"
+ 	    } 
+        SpriteType = {#america_goal_eagle_deal
+            name = "GFX_goal_america_goal_eagle_deal"
+ 		    texturefile = "gfx/interface/goals/america_goal_eagle_deal.dds"
+ 	    } 
+        SpriteType = {#america_goal_golden_gate
+            name = "GFX_goal_america_goal_golden_gate"
+ 		    texturefile = "gfx/interface/goals/america_goal_golden_gate.dds"
+ 	    } 
         SpriteType = {#desktop.ini
             name = "GFX_goal_desktop.ini"
  		    texturefile = "gfx/interface/goals/desktop.ini.dds"
@@ -278,6 +290,10 @@ spriteTypes = {
         SpriteType = {#enc_fort
             name = "GFX_goal_enc_fort"
  		    texturefile = "gfx/interface/goals/enc_fort.dds"
+ 	    } 
+        SpriteType = {#enc_fort_reformer
+            name = "GFX_goal_enc_fort_reformer"
+ 		    texturefile = "gfx/interface/goals/enc_fort_reformer.dds"
  	    } 
         SpriteType = {#enc_free_press
             name = "GFX_goal_enc_free_press"
@@ -855,6 +871,10 @@ spriteTypes = {
             name = "GFX_goal_goal_card_tricks"
  		    texturefile = "gfx/interface/goals/goal_card_tricks.dds"
  	    } 
+        SpriteType = {#PAP_legionary_spirit
+            name = "GFX_goal_PAP_legionary_spirit"
+ 		    texturefile = "gfx/interface/goals/PAP_legionary_spirit.dds"
+ 	    } 
         SpriteType = {#pa_production
             name = "GFX_goal_pa_production"
  		    texturefile = "gfx/interface/goals/pa_production.dds"
@@ -891,25 +911,7 @@ spriteTypes = {
             name = "GFX_goal_vault_tec_reform"
  		    texturefile = "gfx/interface/goals/vault_tec_reform.dds"
  	    }
-		SpriteType = {#Legion
-            name = "GFX_goal_PAP_legionary_spirit"
- 		    texturefile = "gfx/interface/goals/PAP_legionary_spirit.tga"
- 	    }
-			
-		SpriteType = {#America Goal Eagle
-            name = "GFX_goal_america_goal_eagle"
- 		    texturefile = "gfx/interface/goals/america_goal_eagle.tga"
- 	    }
-		SpriteType = {#America Goal Deal 
-            name = "GFX_goal_america_goal_eagle_deal"
- 		    texturefile = "gfx/interface/goals/america_goal_eagle_deal.tga"
- 	    }
-		SpriteType = {#Golden Gate Bridge
-            name = "GFX_goal_america_goal_golden_gate"
- 		    texturefile = "gfx/interface/goals/america_goal_golden_gate.tga"
- 	    }
-		
-		    SpriteType = {#arcade_gannon
+        SpriteType = {#arcade_gannon
             name = "GFX_idea_arcade_gannon"
  		    texturefile = "gfx/interface/ideas/arcade_gannon.dds"
  	    } 
@@ -972,15 +974,19 @@ spriteTypes = {
         SpriteType = {#enc_idea_manpower_3
             name = "GFX_idea_enc_idea_manpower_3"
  		    texturefile = "gfx/interface/ideas/enc_idea_manpower_3.dds"
- 	    }
-		SpriteType = {#enc_idea_manpower_4
+ 	    } 
+        SpriteType = {#enc_idea_manpower_4
             name = "GFX_idea_enc_idea_manpower_4"
  		    texturefile = "gfx/interface/ideas/enc_idea_manpower_4.dds"
  	    } 
-		SpriteType = {#enc_idea_manpower_5
+        SpriteType = {#enc_idea_manpower_5
             name = "GFX_idea_enc_idea_manpower_5"
  		    texturefile = "gfx/interface/ideas/enc_idea_manpower_5.dds"
- 	    } 		
+ 	    } 
+        SpriteType = {#enc_idea_manpower_remnants
+            name = "GFX_idea_enc_idea_manpower_remnants"
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_remnants.dds"
+ 	    } 
         SpriteType = {#ENC_legitimacy_high
             name = "GFX_idea_ENC_legitimacy_high"
  		    texturefile = "gfx/interface/ideas/ENC_legitimacy_high.dds"
@@ -996,6 +1002,10 @@ spriteTypes = {
         SpriteType = {#ENC_legitimacy_none
             name = "GFX_idea_ENC_legitimacy_none"
  		    texturefile = "gfx/interface/ideas/ENC_legitimacy_none.dds"
+ 	    } 
+        SpriteType = {#enc_mandatory_patriotism
+            name = "GFX_idea_enc_mandatory_patriotism"
+ 		    texturefile = "gfx/interface/ideas/enc_mandatory_patriotism.dds"
  	    } 
         SpriteType = {#enc_officers
             name = "GFX_idea_enc_officers"
@@ -1056,6 +1066,10 @@ spriteTypes = {
         SpriteType = {#enc_super_soldiers
             name = "GFX_idea_enc_super_soldiers"
  		    texturefile = "gfx/interface/ideas/enc_super_soldiers.dds"
+ 	    } 
+        SpriteType = {#enc_vaccinations
+            name = "GFX_idea_enc_vaccinations"
+ 		    texturefile = "gfx/interface/ideas/enc_vaccinations.dds"
  	    } 
         SpriteType = {#enc_wright
             name = "GFX_idea_enc_wright"

@@ -3,7 +3,7 @@
 		# icon = GFX_goal_enc_us_reborn
 		# ai_will_do = { factor = 1 }
 		# relative_position_id = enc_the_mutant_question
-		# mutually_exclusive = { focus = enc_NCR_start } 
+		# mutually_exclusive = { focus = enc_home_is_nevada } 
 		# available = {
 			# NOT = {
 				# country_exists = NCR
@@ -336,3 +336,617 @@
 			# custom_effect_tooltip = enc_reunited_states.tt
 		# }
 	# }
+
+	focus = {#	Nevada rangers
+		id = enc_Nevada_Rangers
+		icon = GFX_goal_enc_rangers_agreement
+		ai_will_do = {
+			factor = 1
+		}
+		relative_position_id = enc_vlt_core_reform
+		mutually_exclusive = {
+			focus = Enc_Discredit_Rangers
+		}
+		x = -2
+		y = 1
+		cost = 5.8
+		bypass = {
+			DES = {
+				exists = NO
+			}
+		}
+		prerequisite = {
+			focus = enc_vlt_core_reform
+		}
+		available = {
+			strength_ratio = {
+				tag = DES ratio > 1.0
+			}
+			custom_trigger_tooltip = {
+				tooltip = 25_legitimacy
+				check_variable = {
+					var = legitimacy
+					value > 0.25
+				}
+			}
+		}
+		cancel_if_invalid = no
+		completion_reward = {
+			annex_country = {
+				target = DES
+			}
+		}
+	}
+	focus = {# discredit the rangers
+		id = Enc_Discredit_Rangers
+		icon = GFX_goal_enc_rangers
+		ai_will_do = {
+			factor = 1
+		}
+		relative_position_id = enc_vlt_core_reform
+		x = 2
+		y = 1
+		cost = 5.8
+		prerequisite = { focus = enc_vlt_core_reform }
+		available = { has_stability > 0.50
+						DES = {
+							exists = YES
+							}
+						}
+		completion_reward = {
+			DES = {
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+					leave_faction = yes
+				}
+			}
+			ERB = {
+				create_wargoal = {
+					type = annex_everything
+					target = DES
+				}
+			}
+			NCR = {
+				add_ai_strategy = {
+					type = ignore
+					id = "DES"
+					value = 800
+				}
+			}
+			BOS = {
+				add_ai_strategy = {
+					type = ignore
+					id = "DES"
+					value = 200
+				}
+			}
+			DES = {
+				add_ai_strategy = {
+					type = ignore
+					id = "NCR"
+					value = 800
+				}
+			}
+			DES = {
+				add_ai_strategy = {
+					type = ignore
+					id = "BOS"
+					value = 200
+				}
+			}
+		}
+	}
+ 
+	focus = {#Diplomacy - Foreign policy
+		id = enc_foreign_policy
+		icon = GFX_goal_enc_improve_relations_reformer
+		prerequisite = { focus = enc_reform }
+		relative_position_id = enc_reform
+		x = 40
+		y = 1
+		cost = 2.9
+		completion_reward = {
+			add_political_power = 30
+			custom_effect_tooltip = enc_foreign_policy_tt
+		}
+			
+	}
+	
+	focus = {#Diplomacy - NCR - seek allies
+		id = enc_NCR_seak_allies
+		icon = GFX_goal_enc_NCR_seak_allies
+		ai_will_do = { factor = 1 } 
+		# mutually_exclusive = { focus = enc_the_state_of_nevada }
+		relative_position_id = enc_secret_service
+		x = 7
+		y = 0
+		cost = 5.8 
+		prerequisite = { focus = enc_american_dream }
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = closed_economy
+				}
+				swap_ideas = {
+					remove_idea = closed_economy
+					add_idea = limited_exports
+				}
+			}
+		}
+		
+	}	
+	
+	focus = {#Diplomacy - BOS - start
+		id = enc_BOS_start
+		icon = GFX_goal_bos_victory_or_death 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NCR_seak_allies
+		x = 2
+		y = 1
+		cost = 5.8 
+		prerequisite = { focus = enc_NCR_seak_allies }
+		available = {		
+			country_exists = BOS
+			NOT = {
+				has_war_with = BOS
+			}
+		}
+		completion_reward = {
+			BOS = {
+				custom_effect_tooltip = relations_increased_20
+			}
+			hidden_effect = {
+				BOS = {
+					add_opinion_modifier = { target = ERB modifier = wontShootOnsight }
+					remove_opinion_modifier = { target = ERB modifier = bitterEnemies }
+				}
+				add_opinion_modifier = { target = BOS modifier = wontShootOnsight }
+				remove_opinion_modifier = { target = BOS modifier = bitterEnemies }
+			}
+			if = {
+				limit = {
+					has_country_flag = enc_promised_no_peace_with_bos				
+				}
+				custom_effect_tooltip = enc_promise_broken
+				add_popularity = { ideology = intellectuals popularity = -0.05 } 
+				add_stability = -0.15
+				add_war_support = -0.15
+			}
+		}
+	}
+	focus = {#Diplomacy - BOS - tech
+		id = enc_BOS_tech
+		icon = GFX_goal_generic_advanced_technology_focus 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_BOS_start
+		x = 0
+		y = 1
+		cost = 5.8 
+		prerequisite = { focus = enc_BOS_start }
+		available = {	
+			country_exists = BOS
+			NOT = {
+				has_war_with = BOS
+			}			
+		}
+		completion_reward = {
+			BOS = {add_opinion_modifier = { target = ERB modifier = intriguedDistrust }}
+			BOS = {remove_opinion_modifier = { target = ERB modifier = wontShootOnsight }}
+			add_opinion_modifier = { target = BOS modifier = intriguedDistrust }
+			remove_opinion_modifier = { target = BOS modifier = wontShootOnsight }
+			add_equipment_to_stockpile = { type = power_armor_equipment_3 amount = 600 producer = ERB }
+			BOS = { set_technology = { vertiberd_gunship = 1 } }
+			}
+	}
+	focus = {#Diplomacy - BOS - peace
+		id = enc_BOS_peace
+		icon = GFX_goal_generic_dangerous_deal
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_BOS_tech
+		x = 0
+		y = 1
+		cost = 5.8 
+		prerequisite = { focus = enc_BOS_tech }	
+		available = {		
+			country_exists = BOS	
+			NOT = {
+				has_war_with = BOS
+			}		
+		}
+		completion_reward = {
+			diplomatic_relation = { country = BOS relation = non_aggression_pact }	
+		}				
+	}
+	focus = {#Diplomacy - BOS - vengeance
+		id = enc_BOS_vengeance
+		icon = GFX_goal_generic_BoS_diplomatic_focus 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_BOS_peace
+		x = 0
+		y = 1
+		cost = 5.8 
+		prerequisite = { focus = enc_BOS_peace }
+		available = {		
+			country_exists = BOS	
+			NOT = {
+				has_war_with = BOS
+			}		
+		}
+		completion_reward = { give_guarantee = BOS BOS= { give_guarantee = ERB } }			
+	}
+	
+	focus = {#Diplomacy - CES - start
+		id = enc_CES_start
+		icon = GFX_goal_legion_generic_focus 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NCR_seak_allies
+		x = -2
+		y = 1
+		cost = 5.8 
+		prerequisite = { focus = enc_NCR_seak_allies }
+		available = {		
+			country_exists = CES
+			NOT = {
+				has_war_with = CES
+			}			
+		}
+		completion_reward = {
+			CES = {
+				custom_effect_tooltip = relations_increased_20
+			}
+			hidden_effect = {
+				CES = {
+					add_opinion_modifier = { target = ERB modifier = wontShootOnsight }
+					remove_opinion_modifier = { target = ERB modifier = bitterEnemies }
+				}
+				add_opinion_modifier = { target = CES modifier = wontShootOnsight }
+				remove_opinion_modifier = { target = CES modifier = bitterEnemies }
+			}
+		}
+	}
+	focus = {#Diplomacy - CES - cache
+		id = enc_CES_cache
+		icon = GFX_goal_generic_common_energy_weapons_focus 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_CES_start
+		x = 0
+		y = 1
+		cost = 5.8 
+		prerequisite = { focus = enc_CES_start }
+		available = {		
+			country_exists = CES	
+			NOT = {
+				has_war_with = CES
+			}					
+		}
+		completion_reward = { send_equipment = { type = infantry_equipment amount = 100 target = CES } } 				
+	}
+	focus = {#Diplomacy - CES - trade
+		id = enc_CES_trade
+		icon = GFX_goal_legion_denarius 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_CES_cache
+		x = 0
+		y = 1
+		cost = 5.8 
+		prerequisite = { focus = enc_CES_cache }
+		available = {		
+			country_exists = CES	
+			NOT = {
+				has_war_with = CES
+			}					
+		}
+		completion_reward = {
+			285 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				} 
+			}	
+		}				
+	}
+	focus = {#Diplomacy - CES - common_enemy
+		id = enc_CES_common_enemy
+		icon = GFX_goal_generic_Legion_diplomatic_focus 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_CES_trade
+		x = 0
+		y = 1
+		cost = 5.8 
+		prerequisite = { focus = enc_CES_trade }
+		available = {		
+			country_exists = CES
+			NOT = {
+				has_war_with = CES
+			}
+		}
+		completion_reward = {
+			diplomatic_relation = { country = CES relation = non_aggression_pact
+			CES = { give_guarantee = ERB } }	
+		}					
+	}
+	
+	focus = {#Diplomacy - NEW - start
+		id = enc_NEW_start
+		icon = GFX_goal_VEG_The_House 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NCR_seak_allies
+		x = 0
+		y = 1
+		cost = 5.8
+		prerequisite = { focus = enc_NCR_seak_allies }
+		available = {		
+			country_exists = VEG
+			NOT = {
+				has_war_with = VEG
+			}					
+		}
+		completion_reward = {
+			VEG = {
+				custom_effect_tooltip = relations_increased_20
+			}
+			hidden_effect = {
+				VEG = {
+					add_opinion_modifier = { target = ERB modifier = wontShootOnsight }
+					remove_opinion_modifier = { target = ERB modifier = bitterEnemies }
+				}
+				add_opinion_modifier = { target = VEG modifier = wontShootOnsight }
+				remove_opinion_modifier = { target = VEG modifier = bitterEnemies }
+			}
+		}
+	}
+	focus = {#Diplomacy - NEW - vacation
+		id = enc_NEW_vacation
+		icon = GFX_goal_VEG_The_Ultra-Luxe 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NEW_start
+		x = 0
+		y = 1
+		cost = 5.8
+		prerequisite = { focus = enc_NEW_start}
+		available = {		
+			country_exists = VEG	
+			NOT = {
+				has_war_with = VEG
+			}					
+		}
+		completion_reward = {
+			add_resource = { type = advanced_technology amount = 8 state = 159 }
+			add_resource = { type = electronics amount = 8 state = 159 }
+		}			
+	}
+	focus = {#Diplomacy - NEW - robot
+		id = enc_NEW_robot
+		icon = GFX_goal_generic_robots_focus
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NEW_vacation
+		x = 0
+		y = 1
+		cost = 5.8
+		prerequisite = { focus = enc_NEW_vacation}
+		available = {		
+			country_exists = VEG	
+			NOT = {
+				has_war_with = VEG
+			}					
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = robotics_armour_bonus
+				bonus = 0.5
+				uses = 2
+				category = robotics_tech
+			}
+			VEG = { 
+				set_technology = { tesla_weaponry = 1 }	
+			}
+	    }
+	}
+	focus = {#Diplomacy - NEW - recognize
+		id = enc_NEW_recognize
+		icon = GFX_goal_VEG_Vegas_for_the_People 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NEW_robot
+		x = 0
+		y = 1
+		cost = 5.8
+		prerequisite = { focus = enc_NEW_robot}
+		available = {		
+			country_exists = VEG	
+			NOT = {
+				has_war_with = VEG
+			}					
+		}
+		completion_reward = {
+		285 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes } }
+		diplomatic_relation = { country = VEG relation = non_aggression_pact }	
+		}		
+	} 
+	focus = {#Diplomacy - VEG - pact
+		id = enc_NEW_pact
+		icon = GFX_goal_VEG_New_World_Order 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NEW_recognize
+		x = 0
+		y = 1
+		cost = 5.8
+		prerequisite = { focus = enc_NEW_recognize}
+		available = {		
+			country_exists = VEG
+			NOT = {
+				has_war_with = VEG
+			}				
+		}
+		completion_reward = { give_guarantee = VEG }								
+	}
+	focus = {#Diplomacy - veg - puppet
+		id = enc_NEW_puppet
+		icon = GFX_goal_generic_major_alliance 
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_NEW_pact
+		available = { VEG = { exists = yes } }
+		x = 0
+		y = 1
+		cost = 5.8
+		prerequisite = { focus = enc_NEW_pact}	
+		available = {		
+			country_exists = VEG
+			NOT = {
+				has_war_with = VEG
+			}					
+		}			
+		completion_reward = { 
+		country_event = { id = enc_reformers.66 }
+		puppet = VEG }
+	}
+	focus = {#secret service
+		id = enc_secret_service
+		icon = GFX_focus_generic_strike_at_democracy1
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_american_dream
+		# prerequisite = { focus = enc_reform}
+		available = { has_completed_focus = enc_reform }
+		x = 0
+		y = 2
+		cost = 5.8
+		completion_reward = {
+			add_ideas = enc_secret_service
+		}
+	}
+	
+	focus = {#SS-CER-START ---------
+		id = enc_ss_ceasar_start
+		icon = GFX_goal_legion_generic_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_secret_service}
+		relative_position_id = enc_secret_service
+		x = 2
+		y = 1
+		cost = 5.8
+		completion_reward = { add_political_power = 100 }
+	}
+	focus = {#SS-CER-TOP-START
+		id = enc_ss_ceasar_top
+		mutually_exclusive = {focus = enc_ss_ceasar_bottom } 
+		icon = GFX_goal_legion_spqr
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_start}
+		relative_position_id = enc_ss_ceasar_start
+		x = -1
+		y = 1
+		cost = 5.8
+	completion_reward = {
+			country_event = { id = enc_reformers.60 } # the plot against Caesar		
+		}
+	}
+	focus = {#SS-CER-TOP-BOOKS
+		id = enc_ss_ceasar_top_books
+		icon = GFX_goal_generic_data_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_top}
+		relative_position_id = enc_ss_ceasar_top
+		x = 0
+		y = 1
+		cost = 5.8
+completion_reward = { CES = { add_stability = -.10 } }
+	}
+	focus = {#SS-CER-TOP-RAIDING
+		id = enc_ss_ceasar_top_raiding
+		icon = GFX_goal_generic_attack_allies
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_top_books}
+		relative_position_id = enc_ss_ceasar_top_books
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward =  { add_manpower = -300 }
+	}
+	focus = {#SS-CER-TOP-AUGUSTUS ---------
+		id = enc_ss_ceasar_top_augustus
+		icon = GFX_goal_legion_immortal_empire
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_top_raiding}
+		relative_position_id = enc_ss_ceasar_top_raiding
+		x = 0
+		y = 1
+		cost = 5.8
+completion_reward = { country_event = { id = enc_reformers.61} # Commencing the Civli War		
+		}
+	}
+	focus = {#SS-CER-BOTTOM-START
+		id = enc_ss_ceasar_bottom
+		icon = GFX_goal_legion_slaves
+		mutually_exclusive = {focus = enc_ss_ceasar_top } 
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_start}
+		relative_position_id = enc_ss_ceasar_start
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_stability = 0.10
+			country_event = { id = enc_reformers.64 } 
+		}
+	}
+	focus = {#SS-CER-BOTTOM-INFILTRATE
+		id = enc_ss_ceasar_bottom_infiltrate
+		icon = GFX_goal_legion_generic_infantry
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_bottom}
+		relative_position_id = enc_ss_ceasar_bottom
+		x = 0
+		y = 1
+		cost = 5.8
+	completion_reward = { 
+		set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.10
+			}
+			change_legitimacy = yes
+		CES= {
+				add_ideas = ENC_CES_slave_rebellions
+			}
+	}
+	}
+	focus = {#SS-CER-BOTTOM-WEAPONS
+		id = enc_ss_ceasar_bottom_weapons
+		icon = GFX_goal_generic_regular_firearms_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_bottom_infiltrate}
+		relative_position_id = enc_ss_ceasar_bottom_infiltrate
+		available = { has_equipment = { infantry_equipment > 1000 } }
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = { add_equipment_to_stockpile = { type = infantry_equipment amount = -1000 }
+		set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.10
+			}
+			change_legitimacy = yes
+		custom_effect_tooltip = unlock_arm_slaves.tt
+		520 = { set_state_flag = no_rebels_you_fucks }
+		}
+	}
+	focus = {#SS-CER-BOTTOM-SPARTACUS
+		id = enc_ss_ceasar_bottom_uprising
+		icon = GFX_goal_enc_poison_bull
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_bottom_weapons}
+		relative_position_id = enc_ss_ceasar_bottom_weapons
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+		custom_effect_tooltip = enc_Second_Revolution	
+		} 
+	}
