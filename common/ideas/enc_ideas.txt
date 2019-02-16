@@ -400,7 +400,7 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				MONTHLY_POPULATION = 0.03
-				}
+			}
 		}
 		ENC_dept_education = {  
 			picture = enc_education
@@ -654,9 +654,9 @@ ideas = {
 			}
 		}
 		ENC_reno_police= {  
-			picture = ast_classify_aliens
+			picture = enc_police
 			allowed = { 
-				always = no
+				always = no 
             }
             allowed_civil_war = { 
 				always = yes
@@ -670,7 +670,7 @@ ideas = {
 			}
 		}
 		ENC_FBI_idea= {  
-			picture = ast_classify_aliens
+			picture = enc_police
 			allowed = { 
 				always = no
             }
@@ -686,7 +686,7 @@ ideas = {
 			}
 		}
 		ENC_reno_police_corrupt = {  
-			picture = ast_classify_aliens
+			picture = enc_police
 			allowed = { 
 				always = no
             }
@@ -1104,7 +1104,7 @@ ideas = {
 				stability_factor = -0.10
 				army_attack_factor = -0.05
 				army_morale_factor = -0.10
-				surrender_limit = -0.90
+				surrender_limit = -0.10
 			}
 		}
 		
@@ -1245,7 +1245,7 @@ ideas = {
 				non_core_manpower = -0.05
 			}
 		}
-	enc_NCR_resistance2 = {
+		enc_NCR_resistance2 = {
 			picture = generic_research_bonus
 			allowed = { 
 				always = no
@@ -1262,7 +1262,7 @@ ideas = {
 				non_core_manpower = -0.02
 			}
 		}
-	enc_NCR_instability = {
+		enc_NCR_instability = {
 			picture = generic_research_bonus
 			allowed = { 
 				always = no
@@ -1280,7 +1280,7 @@ ideas = {
 
 			}
 		}
-	enc_NCR_power_struggle = {
+		enc_NCR_power_struggle = {
 			picture = generic_research_bonus
 			allowed = { 
 				always = no
@@ -1312,7 +1312,7 @@ ideas = {
 				stability_weekly = -0.003
 			}
 		}
-	enc_martial_law_idea = {  
+		enc_martial_law_idea = {  
 			picture = generic_constitutional_guarantee
 			allowed = { 
 				always = no
@@ -1392,7 +1392,22 @@ ideas = {
 			  
 			}
 		}
+		ENC_vaccinations = {  
+			picture = enc_vaccinations
+			allowed = { 
+				always = no
+			}
 
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				attrition = -0.10
+				MONTHLY_POPULATION = 0.10
+			}
+		}
+		
 ####################################################
 # REFORM - REBUILDING A NATION
 ####################################################	

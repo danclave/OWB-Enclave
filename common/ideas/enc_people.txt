@@ -150,8 +150,8 @@ ideas = {
 			allowed = {
 				tag = ERB  
 			}
-			available = {
-				has_completed_focus = enc_reform
+			visible = {
+				has_country_flag = dr_henry_returns
 			}
 			traits = {
 				compassionate_doctor

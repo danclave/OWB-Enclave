@@ -1102,7 +1102,7 @@ ENC_build_nevada = {
 		}
 		activation = {
 			original_tag = ERB 
-			has_completed_focus = enc_NCR_no_compromise
+			has_completed_focus = enc_american_dream
 			NOT = { country_exists = NCR }
 			OR = {
 				controls_state = 135 # sac city
@@ -2996,11 +2996,8 @@ ENC_debug = {
 	}
 	ENC_misc = {
 		complete_effect = {
-			CES = {
-				declare_war_on = {
-					target = NCR
-					type = annex_everything
-				}
+			news_event = {
+				id = enc_news.1
 			}
 		}
 	}
