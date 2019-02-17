@@ -138,6 +138,55 @@ soundeffect =
 	playbackrate_random_offset = { 0.0 -0.15}
 }
 
+soundeffect = 
+{
+    name = "ERB_us_anthem_simple"
+    sounds = {
+        sound = ERB_us_anthem_simple1
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "ERB_us_anthem_sad1"
+    sounds = {
+        sound = ERB_us_anthem_sad1
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "ERB_us_anthem_sad2"
+    sounds = {
+        sound = ERB_us_anthem_sad2
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "ERB_us_anthem_creepy"
+    sounds = {
+        sound = ERB_us_anthem_creepy1
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
 ############## AUDIO ASSETS
 
 
@@ -290,4 +339,25 @@ sound =
 {
 	name = "ERB_us_anthem1"
 	file = "ERB/ERB_us_anthem.wav"
+}
+sound = 
+{
+	name = "ERB_us_anthem_simple1"
+	file = "ERB/ERB_us_anthem_simple.wav"
+}
+sound = 
+{
+	name = "ERB_us_anthem_sad1"
+	file = "ERB/ERB_us_anthem_sad.wav"
+}
+sound = 
+{
+	name = "ERB_us_anthem_sad2"
+	file = "ERB/ERB_us_anthem_sad2.wav"
+}
+
+sound = 
+{
+	name = "ERB_us_anthem_creepy1"
+	file = "ERB/ERB_us_anthem_creepy.wav"
 }

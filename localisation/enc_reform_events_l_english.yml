@@ -26,7 +26,7 @@ enc_reformers.4.t:0 "Dealing with Wrights"
 enc_reformers.4.d:0 "Some say that the Wright family has spent the last few decades building with one hand and destroying with the other, but compared to the other families this makes them almost redeemable. Mr. Wright's vision of a more peaceful and stable New Reno is not entirely incompatible with out own..."
 enc_reformers.4.a:0 "Allow him go legit."
 enc_reformers.4.b:0 "There is no place for his kind here."
-enc_reformers.4.a.tt:0 "Unlocks §YWright§! as a political advisor"
+enc_reformers.4.a.tt:0 "Unlocks as a political advisor: "
 ########################################################################################
 enc_reformers.5.t:0 "Dealing with Bishops"
 enc_reformers.5.d:0 "The Bishops may have been the most powerful family in New Reno, a dangerous man for many reasons, one of which are his numerous political connections in the NCR. Mr. Bishop's gangsters were loyal enough to face down the other families, but the sight of X-01 power armor sent them scattered. He has retreated to his mansion, accompanied by only his closest and most loyal, surrounded by our forces and trapped."
@@ -89,8 +89,9 @@ enc_reformers.14.e: "You are out of friends, Anderson."
 enc_reformers.14.e.tt: "Available because you have completed both §YPurge The Officers§! and §YPurge The Scientists§!."
 ################################################################################################################ -<
 enc_reformers.15.t: "Legitimacy Tutorial"
-enc_reformers.15.d: "For the first time in centuries, our authority has extended beyond core Enclave members. Considering our previous interactions with these newfound citizens could easily be misinterpreted as 'attempted genocide', proving ourselves the legitimate government will take time and effort.\n\nCertain choices we make will increase or decrease our legitimacy. Higher legitimacy comes with bonuses to our rule and allows for new choices in our focus tree."
+enc_reformers.15.d: "For the first time in centuries, our authority has extended beyond core Enclave members. Considering our previous interactions with these newfound citizens could easily be misinterpreted as 'attempted genocide', proving ourselves the legitimate government will take time and effort.\n\nCertain choices we make will increase or decrease our legitimacy. Higher legitimacy comes with bonuses to our rule and allows for new choices in our focus tree.\n\nLow legitimacy will come with penalties, at least, until we find a way to keep the wastelanders loyal regardless of their opinions..."
 enc_reformers.15.a: "I'll keep that in mind."
+enc_reformers.15.b: "The Enclave will tell them what to think."
 ################################################################################################################ -<
 enc_reformers.16.t: "Assassination attempt!"
 enc_reformers.16.d: "'Death to traitors!' An officer screams as he pulls out a Plasma pistol and opens fire. The first bolt misses completely and the second grazes your side. There is no third as the would be assassin is put down by security. You are alive, but even a graze from a Plasma bolt is a wound one carries to the grave. \n\n The attempt on your life has left you scarred, a burning reminder of how close the Enclave is to complete collapse."
@@ -297,6 +298,33 @@ enc_reformers.51.a: "Let them continue operating."
 enc_reformers.51.a.tt: "§gThe Crimson Caravan are recognized as a legitimate business and are allowed to continue operating as before.§!\n\n"
 enc_reformers.51.b: "Let's make them an offer they can't refuse."
 enc_reformers.51.b.tt: "§gThe Crimson Caravan is forcefully converted into a logistics department of our armed forces.§!\n\n"
+################################################################################################################ -<
+enc_reformers.52.t: "Dr. Henry returns!"
+enc_reformers.52.d: "Dr. Henry is an ex-enclave medical scientist. He used to work with the Enclave cyber-genetic research program at the Poseidon oil rig and at various other Enclave installations. Later, he deserted the Enclave due to a conflict with another scientist.\n\nWhen he received word of the revival of the Enclave, he was sceptical at first. But once news spread of our efforts to become a worth American government, he has left his clinic in order to rejoin the Enclave and 'Get one more grand accomplishment done'"
+enc_reformers.52.a: "Welcome back, doc!"
+enc_reformers.52.a.tt: "Dr. Henry is now available as a §YPolitical Advisor§!."
+################################################################################################################ -<
+enc_reformers.53.t: "Dr. Henry Leaves the Enclave"
+enc_reformers.53.d: "Dr. Henry was never a political figure, but even he could not ignore"
+enc_reformers.54.a: "This is no place for the naive."
+enc_reformers.53.a.tt: "§YDr. Henry§! leaves the Enclave!\n"
+################################################################################################################ -<
+enc_reformers.54.t: "Moreno returns!"
+enc_reformers.54.d: "Orion Moreno is a soldier that used to serve in the Enclave until the destruction of Navarro. Like many others, he fled South into the NCR. A loyal soldier, he has never given up on the Enclave's dream of a restored America. When rumors of the Enclave's return reached him, Orion packed his bags to rejoin his lost comrades in arms."
+enc_reformers.54.a: "Welcome home, soldier!"
+enc_reformers.54.a.tt: "Orion Moreno is now available as a §YTheorist§!."
+################################################################################################################ -<
+enc_reformers.55.t: "Orion Moreno Leaves the Enclave!"
+enc_reformers.55.d: "Our recent policies have left Orion Moreno conflicted, doubting wether the Enclave he remembered from his youth ever even existed. After much doubt, Moreno has left our government and country. His current location is unknown."
+enc_reformers.55.a: "Some soldier he is."
+enc_reformers.55.a.tt: "§YOrion Moreno§! leaves the Enclave!\n"
+################################################################################################################ -<
+enc_reformers.56.t: "Patrolling New Reno"
+enc_reformers.56.d: "For the first time in the Enclave's history, we have reclaimed an American city. However, New Reno's population does not yet see it this way. While some are hopeful that the gangster are being pushed out, others fear and distrust the power armored strangers patrolling their streets.\n\nMinor acts of resistance such as thrown rocks or insults are not uncommon as unsavory types test the limits of our troops patience. If we appear weak, small arms fire may soon follow." 
+enc_reformers.56.a: "Teach them not to mess with the Enclave."
+enc_reformers.56.a.tt: "§gThose that keep their heads down, keep their heads. The others, not so much.§!\n\n"
+enc_reformers.56.b: "Establish strict rules of engagement."
+enc_reformers.56.b.tt: "§gReturn fire only, an onpopular move. But do we want to be the power armored monsters responding with plasma fire to kids throwing rocks?§!\n\n"
 # free numbers
 ################################################################################################################ -<
 enc_reformers.60.t: "The Ides of March"
@@ -979,9 +1007,5 @@ enc_reformers.198.a.tt: "\nSeriously, §Mvaccinations§! save lives.\n"
 enc_reformers.199.t: "Remember the Oil Rig"
 enc_reformers.199.d: "Across the nation, flags are at half mast today in honor of President Richardson and the brave men and women of the Enclave whose lives were taken in a tragic terrorist attack in on the United States government's redoubt on the Poseidon Oil Rig. A center of biological research and aid programs, the oil rig was cruelly destroyed by a terrorist who blew up its clean, efficient nuclear reactor. President Granite has decreed today Remembrance Day, a national holiday to mourn those among us whose lives were cruelly taken by raiders, vandals, and terrorists.  This is Enclave Radio, promising you that they are gone, but not forgotten."
 enc_reformers.199.a: "A dark day for all mankind"
-############################################################################################################
-enc_reformers.189.t: "The Bright Lights of New Vegas"
-enc_reformers.188.d: "Some within the Enclave sneer at New Vegas' decadence, but many A sniffle, a sneeze, a fever. Horrible, horrible bleeding. Since the outbreak of war with the Legion, the people of New Canaan and their tribal allies have been getting sick with a plague that seems somehow familiar. It's not surprising that a plague broke out among a Wasteland army, but it's rather surprising that it doesn't affect Caesar's men..."
-
 
 

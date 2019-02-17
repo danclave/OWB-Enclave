@@ -141,27 +141,18 @@ focus_tree = {
 		prerequisite = {focus = enc_ourpresident}
 		available = {
 			has_country_leader = {
-					ruling_only = yes
-					name = "Douglas Granite"
+				ruling_only = yes
+				name = "Douglas Granite"
 			}
 		}
 		cost = 5.8 
 		completion_reward = {
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = 0.10
-			}
-			change_legitimacy = yes
 			country_event = { id = enc_reformers.15 }
 			set_rule = { can_puppet = yes }
-			swap_ideas = {
-				remove_idea = volunteer_only
-				add_idea = The_Fools_And_Dreamers
-			}
-		custom_effect_tooltip = enc_reformers.tt
-		# set up variables for rebuilding America
-		set_variable = { enc_good_allignment = 0 }
-		set_variable = { enc_evil_allignment = 0 }		
+			custom_effect_tooltip = enc_reformers.tt
+			# set up variables for rebuilding America
+			set_variable = { enc_good_allignment = 0 }
+			set_variable = { enc_evil_allignment = 0 }
 		}		
 	}	
 
@@ -1000,9 +991,8 @@ focus_tree = {
 		relative_position_id = enc_vlt_power_reform
 		x = 0
 		y = 1
-		prerequisite = { 
-			focus = enc_vlt_power_reform
-		}
+		prerequisite = { focus = enc_vlt_power_reform }
+		available = { has_completed_focus = enc_reno_police	}
 		completion_reward = {
 			set_technology = { 
 				enc_civilian_power_grid_tech = 1	
@@ -2962,9 +2952,8 @@ focus = {#Legion Border
 		x = 0
 		y = 1
 		cost = 5.8
-completion_reward = { CES = { add_stability = -0.10 } }
+    completion_reward = { CES = { add_stability = -0.10 } }
 	}
-	
 	focus = {#SS-CER-TOP-AUGUSTUS ---------
 		id = enc_ss_ceasar_top_augustus
 		icon = GFX_goal_legion_immortal_empire
@@ -2974,7 +2963,7 @@ completion_reward = { CES = { add_stability = -0.10 } }
 		x = 0
 		y = 1
 		cost = 5.8
-completion_reward = { country_event = { id = enc_reformers.61} # Commencing the Civli War		
+    completion_reward = { country_event = { id = enc_reformers.61} # Commencing the Civli War		
 		}
 	}
 	focus = {#SS-CER-BOTTOM-START
@@ -2991,8 +2980,7 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 			add_stability = 0.10
 			country_event = { id = enc_reformers.64 } 
 		}
-	}
-	
+	}	
 	focus = {#SS-CER-BOTTOM-WEAPONS
 		id = enc_ss_ceasar_bottom_weapons
 		icon = GFX_goal_generic_regular_firearms_focus
@@ -3117,8 +3105,8 @@ completion_reward = { country_event = { id = enc_reformers.61} # Commencing the 
 			}
 		}
 		}	
-			
- 	####################################
+
+	####################################
 	# DIPLOMACY
 	####################################
 

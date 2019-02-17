@@ -1,5 +1,6 @@
 ﻿division_template = {
 	name = "Progidal Sons Armoured Division"
+	is_locked = yes
 	regiments = {
 		power_armour = { x = 0 y = 0 }
 		power_armour = { x = 0 y = 1 }
@@ -14,7 +15,8 @@
 	}	
 }
 division_template = {
-	name = "Progidal Sons Auxiliary Division"	
+	name = "Progidal Sons Auxiliary Division"
+	is_locked = yes
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }

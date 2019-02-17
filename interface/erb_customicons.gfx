@@ -1003,6 +1003,14 @@ spriteTypes = {
             name = "GFX_idea_enc_idea_manpower_remnants"
  		    texturefile = "gfx/interface/ideas/enc_idea_manpower_remnants.dds"
  	    } 
+        SpriteType = {#enc_idea_manpower_remnants_2
+            name = "GFX_idea_enc_idea_manpower_remnants_2"
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_remnants_2.dds"
+ 	    } 
+        SpriteType = {#enc_idea_manpower_remnants_3
+            name = "GFX_idea_enc_idea_manpower_remnants_3"
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_remnants_3.dds"
+ 	    } 
         SpriteType = {#ENC_legitimacy_high
             name = "GFX_idea_ENC_legitimacy_high"
  		    texturefile = "gfx/interface/ideas/ENC_legitimacy_high.dds"
@@ -1022,6 +1030,14 @@ spriteTypes = {
         SpriteType = {#enc_mandatory_patriotism
             name = "GFX_idea_enc_mandatory_patriotism"
  		    texturefile = "gfx/interface/ideas/enc_mandatory_patriotism.dds"
+ 	    } 
+        SpriteType = {#enc_manpower_final_line
+            name = "GFX_idea_enc_manpower_final_line"
+ 		    texturefile = "gfx/interface/ideas/enc_manpower_final_line.dds"
+ 	    } 
+        SpriteType = {#enc_manpower_remnants_disorganized
+            name = "GFX_idea_enc_manpower_remnants_disorganized"
+ 		    texturefile = "gfx/interface/ideas/enc_manpower_remnants_disorganized.dds"
  	    } 
         SpriteType = {#enc_officers
             name = "GFX_idea_enc_officers"
