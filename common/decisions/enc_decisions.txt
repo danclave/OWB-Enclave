@@ -1493,16 +1493,19 @@ ENC_radio_broadcasts = {
 			add_timed_idea = { idea = ENC_vengeance days = 50 }
 		}
 	}
-	anti_bos_propaganda = { #increased war support and damage against NCR
+	anti_bos_propaganda = { #increased war support and damage against BOS
 		icon = decision_enc_propaganda
 		cost = 75
 		fire_only_once = yes
 		visible = {
-			has_completed_focus = enc_anti_bos_propaganda
+			OR = { 
+				has_completed_focus = enc_anti_bos_propaganda
+				has_completed_focus = enc_reform_anti_bos_propaganda
+				}
 			country_exists = BOS
 		}
 		available = {
-			has_war_with = BOS          # At war with NICR
+			has_war_with = BOS          # At war with BOS
 		}
 		complete_effect = {
 			add_timed_idea = { idea = ENC_vengeance_bos days = 50 }
@@ -1821,10 +1824,10 @@ ENC_NCR_hiding = {
 		icon = generic_political_discourse
 		visible = {
 			has_completed_focus = enc_reform
-			has_completed_focus = enc_foreign_policy
 			has_country_flag = ncr_suspicious
 		}
 		available = {
+			has_completed_focus = enc_home_is_nevada
 			ic_ratio = {
 				tag = NCR
 				ratio > 0.3
@@ -1834,11 +1837,16 @@ ENC_NCR_hiding = {
 				is_neighbor_of = CES
 				intellectuals > 0.3
 			}
+			check_variable = {
+					var = legitimacy
+					value > 0.299
+				}
 		}
 		complete_effect = {
 			clr_country_flag = ncr_suspicious
 			country_event = { id = enc_reformers.46 }
 			custom_effect_tooltip = ncr_suspicious_clr_tt
+			custom_effect_tooltip = ENC_reveal_to_ncr.tt
 		}
 	}
 }
@@ -2418,7 +2426,7 @@ ENC_gannon_doctrine = {
 				}	
 			}
 		days_remove = 5
-		cost = 10
+		cost = 100
 		ai_will_do = {
 			factor = 100
 				}
@@ -2442,7 +2450,7 @@ erb_incorporate_to_commonwealth = {
 				}	
 			}
 		days_remove = 60
-		cost = 50
+		cost = 100
 		ai_will_do = {
 			factor = 100
 				}
@@ -2788,6 +2796,42 @@ ENC_render_unto_caesar = {
 		}
 	}	
 	
+ENC_oppose_legion = { 
+	erb_aid_foe_legion = {
+		target_trigger = {
+			FROM = {
+					AND = { 
+						is_neighbor_of = CES
+						has_idea = settler_nation
+						NOT = { has_idea = enclave_advisors }
+						} 	
+					}	
+				}
+	visible = {
+			has_completed_focus = enc_reform
+				}
+		available = {
+			NOT = {
+				FROM = { is_puppet_of = ERB }
+				has_war_with = FROM
+				}	
+			}
+		days_remove = 5
+		cost = 100
+		ai_will_do = {
+			factor = 100
+				}
+		complete_effect = { 
+			FROM = {
+				add_ideas = enc_enclave_advisors 
+				add_opinion_modifier = {
+				    target = ERB
+				    modifier = enc_support_opinion
+					}
+				}
+			}
+}
+}
 ENC_war_with_NCR = {
 	FEV_mutation_crisis = {
 		icon = generic_research
@@ -3074,6 +3118,54 @@ ENC_debug = {
 				}
 			}
 		}
+	}
+}
+tec_decision = {
+	tec_decision_dec1 = {
+
+		icon = generic_political_actions
+
+		fire_only_once = yes
+
+		available = {
+			is_ai = no
+		}
+
+		cost = 0
+
+		visible = {
+			always = yes
+		}
+
+		complete_effect = {
+			set_technology = {
+    			settled_civilization = 1
+			}
+		}
+
+	}
+	tec_decision_dec2 = {
+
+		icon = generic_political_actions
+
+		fire_only_once = yes
+
+		available = {
+			is_ai = no
+		}
+
+		cost = 0
+
+		visible = {
+			always = yes
+		}
+
+		complete_effect = {
+			set_technology = {
+    			scientific_civilization = 1
+			}
+		}
+
 	}
 }
 

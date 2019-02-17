@@ -511,5 +511,9 @@ SpriteType = {#suspend_elections
 		name = "GFX_event_enc_suspend_elections"
 		texturefile = "gfx/event_pictures/event_enc_suspend_elections.tga"
 	}
+SpriteType = {#oil rig 
+		name = "GFX_event_enc_oil_rig"
+		texturefile = "gfx/event_pictures/event_enc_oil_rig.tga"
+	}
 	
 }

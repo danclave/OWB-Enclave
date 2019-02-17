@@ -25,8 +25,8 @@ ENC_hide_activity_days_tt:0 "Hide from the §YNCR§! for §Y90 days§!"
 ENC_hide_activity_bonus_tt:0 " + [?Root.days_mission_timeout@ENC_hide_activity|H0] §Gbonus§! days"
 ENC_hide_activity_crisis:0 "§RWe will have a crisis on our hands!§!\n"
 ENC_reveal_to_ncr: "Reveal Ourselves to the NCR"
-ENC_reveal_to_ncr_desc: "We cannot hide from the NCR forever, but we may be able to prevent war by revealing us at an opportune time. With an army of mad men on their borders, they may think twice about attacking us if we are strong enough. A few sympathetic voices in their government could also help."
-
+ENC_reveal_to_ncr_desc: "We cannot hide from the NCR forever, but we may be able to prevent war by revealing us at an opportune time. With an army of mad men on their borders, they may think twice about attacking us if we are strong enough. A few sympathetic voices in their government could also help.  Of course, we'll have to renounce our claim to be the United States government in order to forge a peace."
+ENC_reveal_to_ncr.tt: "\nRequires more than §Y30% legitimacy§!"
 
 # CRISIS
 NCR_crisis: "§RTHE NCR IS ONTO US§!"

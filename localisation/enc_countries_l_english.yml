@@ -39,6 +39,20 @@ DES_ERB_people:0 "United States Rangers"
 DES_ERB_people_DEF:0 "The United States Rangers"
 DES_ERB_people_ADJ:0 "American Rangers"
 
+ERB_BOS_ruler:0 "American Brotherhood"
+ERB_BOS_ruler_DEF:0 "American Brotherhood"
+ERB_BOS_ruler_ADJ:0 "American Brotherhood"
+ERB_BOS_intellectuals:0 "American Brotherhood"
+ERB_BOS_intellectuals_DEF:0 ""American Brotherhood"
+ERB_BOS_intellectuals_ADJ:0 "American Brotherhood"
+ERB_BOS_elites:0 "American Brotherhood"
+ERB_BOS_elites_DEF:0 "The United States"
+ERB_BOS_elites_ADJ:0 "American Brotherhood"
+ERB_BOS_people:0 "American Brotherhood"
+ERB_BOS_people_DEF:0 "American Brotherhood"
+ERB_BOS_people_ADJ:0 "American Brotherhood"
+
+
 
 ERB_nevada_ruler:0 "Nevada"
 ERB_nevada_ruler_DEF:0 "The State of Nevada"
@@ -68,7 +82,7 @@ ERB_SHI_people_ADJ:0 "San Franciscan"
 
 ERB_VEG_ruler:0 "Vegas"
 ERB_VEG_ruler_DEF:0 "Vegas"
-ERB_VEG_ruler_ADJ:0 "San Franciscan"
+ERB_VEG_ruler_ADJ:0 "Vegas
 ERB_VEG_intellectuals:0 "Vegas"
 ERB_VEG_intellectuals_DEF:0 "Vegas"
 ERB_VEG_intellectuals_ADJ:0 ""San Franciscan"

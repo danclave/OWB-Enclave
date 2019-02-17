@@ -1821,7 +1821,7 @@ ideas = {
 			modifier = { intellectuals_drift = 0.10 }
 		}
 
-		ENC_CES_Slave_rebellions = {
+		ENC_CES_slave_rebellions = {
 			picture = generic_research_bonus
 			allowed = { always = no }
 		        allowed_civil_war = { always = yes }
@@ -1833,7 +1833,31 @@ ideas = {
 				army_morale_factor = -0.10
 			}
 		}
-		
+		enc_enclave_advisors = {
+			picture = generic_fortify_the_borders
+			removal_cost = -1
+			allowed = { }
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.05
+				training_time_army_factor = -0.10
+				conscription = 0.10
+				army_morale_factor = 0.10
+				}
+		}
+
+		ENC_WBH_cause_partisans = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+		        allowed_civil_war = { always = yes }
+            		removal_cost = -1
+			modifier = {
+				war_support_factor = -0.10
+				stability_factor = -0.10
+				army_attack_factor = -0.05
+				army_morale_factor = -0.10
+			}
+		}
 		ENC_House = {
 			picture = VEG_Loyal_Subordinates
 			allowed = { always = no }
@@ -1898,7 +1922,7 @@ ideas = {
 			allowed_civil_war = { always = yes } 
 			removal_cost = -1
 			modifier = {
-				justify_war_goal_time = -0.35				
+				justify_war_goal_time = -0.60				
 			}
 		}
 
@@ -2275,7 +2299,8 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.07
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
 				}
 		}
 		
