@@ -353,6 +353,8 @@ stability_loss_based_on_elites_popularity: "\n§MStability loss is based on popu
 stability_loss_based_on_people_popularity: "\n§MStability loss is based on popularity of§! §YPeople Faction§!"
 stability_loss_based_on_intellectuals_popularity: "\n§MStability loss is based on popularity of§! §YIntellectuals Faction§!"
 
+war_support_loss_based_on_elites_popularity: "\n§MWar Support loss is based on popularity of§! §YElites Faction§!"
+
 enc_infiltrate_ncr:0 "Infiltrate the NCR"
 enc_infiltrate_ncr_t_tt:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is higher than §Y25§!"
 enc_infiltrate_ncr_desc:0 "We can make contact with those in the NCR who want to restore preawar America's glory."

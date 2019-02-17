@@ -122,8 +122,8 @@ ENC_debug = {
 	}	
 	priority = 100
 	visible = {
-		# always = false
-		# release disable
+		always = false
+		# release disable todo
 	}
 
 }

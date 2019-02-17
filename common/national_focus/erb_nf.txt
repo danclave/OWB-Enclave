@@ -141,27 +141,18 @@ focus_tree = {
 		prerequisite = {focus = enc_ourpresident}
 		available = {
 			has_country_leader = {
-					ruling_only = yes
-					name = "Douglas Granite"
+				ruling_only = yes
+				name = "Douglas Granite"
 			}
 		}
 		cost = 5.8 
 		completion_reward = {
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = 0.10
-			}
-			change_legitimacy = yes
 			country_event = { id = enc_reformers.15 }
 			set_rule = { can_puppet = yes }
-			swap_ideas = {
-				remove_idea = volunteer_only
-				add_idea = The_Fools_And_Dreamers
-			}
-		custom_effect_tooltip = enc_reformers.tt
-		# set up variables for rebuilding America
-		set_variable = { enc_good_allignment = 0 }
-		set_variable = { enc_evil_allignment = 0 }		
+			custom_effect_tooltip = enc_reformers.tt
+			# set up variables for rebuilding America
+			set_variable = { enc_good_allignment = 0 }
+			set_variable = { enc_evil_allignment = 0 }
 		}		
 	}	
 
@@ -1000,9 +991,8 @@ focus_tree = {
 		relative_position_id = enc_vlt_power_reform
 		x = 0
 		y = 1
-		prerequisite = { 
-			focus = enc_vlt_power_reform
-		}
+		prerequisite = { focus = enc_vlt_power_reform }
+		available = { has_completed_focus = enc_reno_police	}
 		completion_reward = {
 			set_technology = { 
 				enc_civilian_power_grid_tech = 1	
@@ -1510,6 +1500,8 @@ focus_tree = {
 				country_exists = NCR
 			}
 			num_of_controlled_states > 40
+			controls_state = 253
+			controls_state = 135
 		}
 		cost = 5.8
 		completion_reward = {
@@ -2361,9 +2353,13 @@ focus_tree = {
 		id = enc_reuniting_states
 		icon = GFX_goal_america_goal_eagle
 		ai_will_do = { factor = 1 }
-		relative_position_id = enc_rebuilding_a_nation
-		x = -5
-		y = 5
+		prerequisite = { 
+			focus = enc_a_nation_reborn
+			focus = enc_a_nation_reborn
+		}
+		relative_position_id = enc_a_nation_reborn
+		x = 1
+		y = 1
 		cost = 5.8
 		completion_reward = {
 			# todo
@@ -2487,6 +2483,135 @@ focus_tree = {
 			CES = {remove_ideas = atrocities }
 		}
 	}	
+	focus = {#SS-CER-START ---------
+		id = enc_ss_ceasar_start
+		icon = GFX_goal_legion_generic_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_fight_the_legion_usa}
+		relative_position_id = enc_fight_the_legion_usa
+		x = 0
+		y = 2
+		cost = 5.8
+		completion_reward = { add_political_power = 100 }
+	}
+	focus = {#SS-CER-TOP-START
+		id = enc_ss_ceasar_top
+		mutually_exclusive = {focus = enc_ss_ceasar_bottom } 
+		icon = GFX_goal_legion_spqr
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_start}
+		relative_position_id = enc_ss_ceasar_start
+		x = -1
+		y = 1
+		cost = 5.8
+	completion_reward = {
+			country_event = { id = enc_reformers.60 } # the plot against Caesar		
+		}
+	}
+	focus = {#SS-CER-TOP-BOOKS
+		id = enc_ss_ceasar_top_books
+		icon = GFX_goal_generic_data_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_top}
+		relative_position_id = enc_ss_ceasar_top
+		x = 0
+		y = 1
+		cost = 5.8
+completion_reward = { CES = { add_stability = -.10 } }
+	}
+	focus = {#SS-CER-TOP-RAIDING
+		id = enc_ss_ceasar_top_raiding
+		icon = GFX_goal_generic_attack_allies
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_top_books}
+		relative_position_id = enc_ss_ceasar_top_books
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward =  { add_manpower = -300 }
+	}
+	focus = {#SS-CER-TOP-AUGUSTUS ---------
+		id = enc_ss_ceasar_top_augustus
+		icon = GFX_goal_legion_immortal_empire
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_top_raiding}
+		relative_position_id = enc_ss_ceasar_top_raiding
+		x = 0
+		y = 1
+		cost = 5.8
+completion_reward = { country_event = { id = enc_reformers.61} # Commencing the Civli War		
+		}
+	}
+	focus = {#SS-CER-BOTTOM-START
+		id = enc_ss_ceasar_bottom
+		icon = GFX_goal_legion_slaves
+		mutually_exclusive = {focus = enc_ss_ceasar_top } 
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_start}
+		relative_position_id = enc_ss_ceasar_start
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_stability = 0.10
+			country_event = { id = enc_reformers.64 } 
+		}
+	}
+	focus = {#SS-CER-BOTTOM-INFILTRATE
+		id = enc_ss_ceasar_bottom_infiltrate
+		icon = GFX_goal_legion_generic_infantry
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_bottom}
+		relative_position_id = enc_ss_ceasar_bottom
+		x = 0
+		y = 1
+		cost = 5.8
+	completion_reward = { 
+		set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.10
+			}
+			change_legitimacy = yes
+		CES= {
+				add_ideas = ENC_CES_slave_rebellions
+			}
+	}
+	}
+	focus = {#SS-CER-BOTTOM-WEAPONS
+		id = enc_ss_ceasar_bottom_weapons
+		icon = GFX_goal_generic_regular_firearms_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_bottom_infiltrate}
+		relative_position_id = enc_ss_ceasar_bottom_infiltrate
+		available = { has_equipment = { infantry_equipment > 1000 } }
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = { add_equipment_to_stockpile = { type = infantry_equipment amount = -1000 }
+		set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.10
+			}
+			change_legitimacy = yes
+		custom_effect_tooltip = unlock_arm_slaves.tt
+		520 = { set_state_flag = no_rebels_you_fucks }
+		}
+	}
+	focus = {#SS-CER-BOTTOM-SPARTACUS
+		id = enc_ss_ceasar_bottom_uprising
+		icon = GFX_goal_enc_poison_bull
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_ss_ceasar_bottom_weapons}
+		relative_position_id = enc_ss_ceasar_bottom_weapons
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+		custom_effect_tooltip = enc_Second_Revolution	
+		} 
+	}
+
+
 	focus = {#Seattle
 		id = enc_fight_wbh
 		icon = GFX_goal_brk_seattles_exorcism
@@ -2570,8 +2695,8 @@ focus_tree = {
 			}
 		}
 		}	
-			
- 	####################################
+
+	####################################
 	# DIPLOMACY
 	####################################
 

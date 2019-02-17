@@ -1229,7 +1229,7 @@ ideas = {
 		}
 		
 		enc_NCR_resistance = {
-			picture = generic_research_bonus
+			picture = chi_war_of_resistance3
 			allowed = { 
 				always = no
 			}
@@ -1239,14 +1239,14 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				conscription_factor = -0.25
-				supply_consumption_factor = 0.05
-				army_morale_factor = -0.05
-				mobilization_speed = -0.3
-				non_core_manpower = -0.05
+				supply_consumption_factor = 0.25
+				army_morale_factor = -0.10
+				mobilization_speed = -0.60
+				non_core_manpower = -0.10
 			}
 		}
 		enc_NCR_resistance2 = {
-			picture = generic_research_bonus
+			picture = chi_war_of_resistance2
 			allowed = { 
 				always = no
 			}
@@ -1255,15 +1255,15 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				conscription_factor = -0.10
-				supply_consumption_factor = 0.05
-				army_morale_factor = -0.03
-				mobilization_speed = -0.2
-				non_core_manpower = -0.02
+				conscription_factor = -0.15
+				supply_consumption_factor = 0.15
+				army_morale_factor = -0.05
+				mobilization_speed = -0.30
+				non_core_manpower = -0.03
 			}
 		}
 		enc_NCR_instability = {
-			picture = generic_research_bonus
+			picture = chi_hyper_inflation
 			allowed = { 
 				always = no
 			}
@@ -1272,16 +1272,16 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				industry_repair_factor	=-0.0025
-				stability_factor= -0.20
 				stability_weekly = -0.005
+				industry_repair_factor	= -0.25
+				stability_factor= -0.20
 				consumer_goods_factor = 0.105
-				industry_free_repair_factor = -0.25	
+				industry_free_repair_factor = -0.75
 
 			}
 		}
 		enc_NCR_power_struggle = {
-			picture = generic_research_bonus
+			picture = anti_soviet_pact
 			allowed = { 
 				always = no
 			}
@@ -1290,14 +1290,14 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
+				stability_weekly = -0.005
 				offensive_war_stability_factor	= -0.20
 				research_time_factor = 0.05
-				consumer_goods_factor = 0.05
-				stability_weekly = -0.005
+				consumer_goods_factor = 0.20
 			}
 		}
 		enc_NCR_power_struggle2 = {
-			picture = generic_research_bonus
+			picture = anti_soviet_pact
 			allowed = { 
 				always = no
 			}
