@@ -4219,7 +4219,7 @@ focus = {#Legion Border
 		icon = GFX_goal_NCR_Bears_Roar 
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_american_dream}
-		prerequisiteprerequisite = { focus = enc_radio}
+		prerequisite = { focus = enc_radio}
 		relative_position_id = enc_radio
 		x = -6
 		y = 1
