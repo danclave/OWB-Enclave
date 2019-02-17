@@ -4,14 +4,6 @@
 # Seek Allies
 ###################################
 
-enc_BOS_start:0 "The Brotherhood of Steel"
-enc_BOS_start_desc: "Although the Brotherhood of Steel hated our plans for New California, their love of ancient technology, and concern about NCR expansionism, could bring them to our side."
-enc_BOS_tech:"Technological Temptations"
-enc_BOS_tech_desc: "As a show of our good faith and support for the Brotherhood, we can offer them Vertibird plans.  They may come in handy in the event the NCR tries to break their bunkers.  In return they will provide us with more powered armor."
-enc_BOS_peace:0 "An Uneasy Peace"
-enc_BOS_peace_desc:0 "The Brotherhood, at the end of the day, never cared for the people of the NCR.  They're focused on preserving their technology, and as long as we respect their rights it is hoped they'll respect ours."
-enc_BOS_vengeance:0 "Old Enemies, Older Ties"
-enc_BOS_vengeance_desc:0 "The Brotherhood got its start as remnants of the US military, just as we did. Together, we can protect each other from the yokels of the NCR."
 
 
 enc_CES_start:0 "The Legion"
@@ -22,18 +14,6 @@ enc_CES_trade:0 "Establish Trade"
 enc_CES_trade_desc:0 "The Legion may offer a smaller market than NCR would, but they still have products we want.  If nothing else, slaves."
 enc_CES_common_enemy:0 "A Common Enemy"
 enc_CES_common_enemy_desc:0 "Whatever our feelings for the Legion, the NCR is the enemy on our doorstep.  We must focus on them first."
-enc_NEW_start:0 "New Vegas"
-enc_NEW_start_desc:0 "Reconnaisance has determined that Los Vegas is rapidly rebuilding under the mysterious Mr. House with the aid of prewar technology.  That may be good for business."
-enc_NEW_vacation:0 "Negotiate a Group Rate"
-enc_NEW_vacation_desc:0 "With control of New Reno's 'pharmaceutical industry' and electronics, we can arrange trade between our two groups."
-enc_NEW_robot:0 "Exchange Robotic Technology"
-enc_NEW_robot_desc:0 "In exchange for robotic technology, we can teach New Vegas how to upgrade their weaponry."
-enc_NEW_recognize:0 "Recognize Vegas Autonomy"
-enc_NEW_recognize_desc:0 "In exchange access to New Vegas's weapons manufactories, we are prepared to recognize its privileged status in the Reunited States."
-enc_NEW_pact:0 "Closer Ties"
-enc_NEW_pact_desc:0 "We can forge closer ties with one of the last remnants of the Old America.  Mr. House has always worked with the United States government, after all."
-enc_NEW_puppet:0 "Our New Vice President"
-enc_NEW_puppet_desc:0 "Mr. House's reputation precedes him.  Recognizing the power and good intentions of the Enclave, he's prepared to join forces to bring peace and order to the Wastes.  Please rise for our new vice president."
 
 ###################################
 # REFORM TRAITS

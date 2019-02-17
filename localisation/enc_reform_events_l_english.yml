@@ -388,9 +388,9 @@ enc_reformers.80.d: "Although there were about 8 million horses in prewar Americ
 enc_reformers.80.a: "Great.  Now give them lasers."
 ################################################################################################################
 enc_reformers.81.t: "The New Economic Policy"
-enc_reformers.81.d: "Now that we have reestablished the Federal Reserve, there's some debate as to just what our currency should be.  Some have proposed we tie the United States Dollar to the NCR Dollar, ensuring economic stability.  Others argue that we can force everyone to use the United States Dollar, driving the great New Californian Houses into bankruptcy and seizing their interests.  Doing so wiill upset the economy but increase our influence."
-enc_reformers.81.a: "Make the NCRD worthless! Break the merchant houses."
-enc_reformers.81.b: "An orderly integration into the American economy is best."
+enc_reformers.81.d: "Now that we have reestablished the Federal Reserve, there's some debate about fate of New california's currency.  If we declare the NCR dollar to be worthless, we can bankrupt some of our greatest foes and distribute their assets to the Enclave's friends and comrades. Or we can allow people to convert their NCR currency into American dollars, ensuring an orderly transition."
+enc_reformers.81.a: "Let us ban the NCR dollar"
+enc_reformers.81.b: "Allow for an orderly currency conversion"
 ################################################################################################################
 enc_reformers.82.t: "The End of Bottlecaps"
 enc_reformers.82.d: "Bottlecaps were an ingenious solution to the Wasteland's problems; how do you create a currency with no government?  The original bottlecaps were backed by potable water from the Hub, and because the bottlecaps could not be replicated in postwar conditions, they had a fixed store of value.  But as the Wasteland's economy grew, the limited supply of bottlecaps meant more goods were chasing less money, discouraging economic growth.  With the return of Old Glory to the Wastes, the Government can impose a rational currency worth whatever the government says it's worth."
@@ -955,6 +955,31 @@ enc_reformers.193.d: "There have been some upsides to the fall of the NCR.  By i
 enc_reformers.193.a: "Wait, what are they writing about us?"
 enc_reformers.193.a.tt: "\nThe §MFree Press§! will be watching your actions closely!\n"
 ##############################################################################################################
+enc_reformers.194.t: "Brotherhood Liberals"
+enc_reformers.194.d: "The Brotherhood has not always stood aloof from the Wastes.  They stood against the Master's mutant armyies, have cleaned up raiders, and have had, ah, romantic entanglements with the people of the Waste.  They have long been a minority, but Enclave's resurgence has shown them they must take a greater step into the outside world.  While conservatives see only their foes from Navarro in control of the Wastes, liberals argue that if the Brotherhood had supported New California perhaps vertibirds wouldn't fly with impunity from New Reno to Dayglow."
+enc_reformers.194.a: "Let's hear what they have to say."
+#############################################################################################################
+enc_reformers.195.t: "It's Treason Then!"
+enc_reformers.195.d: "The Brotherhood's diehards apparently felt threatened by our efforts to work with their liberal counterparts to find common ground and have launched a coup to 'restore order'.  Liberal chapters of the Western Brotherhood are under attack now seek our help. Aiding them would be tantamount to an act of war on the Brotherhood's conservative leadership, but we can find zero reason not to kill Brotherhood diehards, so let's help."
+enc_reformers.195.a: "Honestly, this is cathartic"
+#############################################################################################################
+enc_reformers.196.t: "The American Brotherhood"
+enc_reformers.196.d: "The Brotherhood sergeant stood before the men and women who knelt before him, their faces set to attention.'Pledge in your hearts and minds, pledge by your guns that you will stand with them in battle until the end, trust each of them with your life.  Pledge that you will protect wastes and develop new ideas. Pledge that you will stand as the thin line that protects this nation and its interests.  And rise, knights of America."
+enc_reformers.196.a: "Ad Victoriam!"
+#############################################################################################################
+enc_reformers.197.t: "FEV Fizzles"
+enc_reformers.197.d: "At Dr. Gannon's urging, the Reunited States pursued a costly vaccination program.  This paid off when the Legion tried to use FEV against us, promising to 'bring the ghosts of the pasts to their knees' with... no effect. But it's good to know we can add attempted genocide to the charges against Caesar at the war crimes tribunal."  
+enc_reformers.197.a: "Maybe Caesar should invest in some modern medicine"
+#############################################################################################################
+enc_reformers.198.t: "FEV Outbreak"
+enc_reformers.198.d: "Even though the Legion used FEV against its enemies to the east, and we have the ability to synthesize a vaccine, we chose to spend our time pursuing other matters.  Now the Legion has deployed FEV against our military to great effect.  We can listen to Dr. Gannon and vaccinate our population, but it will not be ready for some time."  
+enc_reformers.198.a: "But I thought vaccines turned you into a ghoul!"
+enc_reformers.198.a.tt: "\nSeriously, §Mvaccinations§! save lives.\n"
+#############################################################################################################
+enc_reformers.199.t: "Remember the Oil Rig"
+enc_reformers.199.d: "Across the nation, flags are at half mast today in honor of President Richardson and the brave men and women of the Enclave whose lives were taken in a tragic terrorist attack in on the United States government's redoubt on the Poseidon Oil Rig. A center of biological research and aid programs, the oil rig was cruelly destroyed by a terrorist who blew up its clean, efficient nuclear reactor. President Granite has decreed today Remembrance Day, a national holiday to mourn those among us whose lives were cruelly taken by raiders, vandals, and terrorists.  This is Enclave Radio, promising you that they are gone, but not forgotten."
+enc_reformers.199.a: "A dark day for all mankind"
+############################################################################################################
 enc_reformers.189.t: "The Bright Lights of New Vegas"
 enc_reformers.188.d: "Some within the Enclave sneer at New Vegas' decadence, but many A sniffle, a sneeze, a fever. Horrible, horrible bleeding. Since the outbreak of war with the Legion, the people of New Canaan and their tribal allies have been getting sick with a plague that seems somehow familiar. It's not surprising that a plague broke out among a Wasteland army, but it's rather surprising that it doesn't affect Caesar's men..."
 

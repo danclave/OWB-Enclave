@@ -1917,8 +1917,12 @@ country_event = {#81 - Economic Policy
 	option = {#	USD
 		name = enc_reformers.81.a
 		complete_national_focus = enc_US_dollar
-		add_stability = -0.10
 		add_ideas = enc_broken_houses
+		set_temp_variable = {
+				var = legitimacy_change_var
+				value = -0.05
+			}
+			change_legitimacy = yes
 	}
 	option = {#	NCRD
 		name = enc_reformers.81.b
@@ -5285,18 +5289,18 @@ country_event = {#192 - War Crimes
 	picture = GFX_event_enc_urban_patrol
 	fire_only_once = NO
     trigger = { 	
+		OR = { 
+			has_idea = ENC_free_press
+			has_idea = ENC_free_press_2
+				}
+			any_enemy_country = { 
+				has_defensive_war_with = ERB	
 				OR = { 
-					has_idea = ENC_free_press
-					has_idea = ENC_free_press_2
-						}
-				any_enemy_country = { 
-					has_defensive_war_with = ERB	
-					OR = { 
-						has_idea = settler_nation
-						has_idea = tribal_nation
-						}
+					has_idea = settler_nation
+					has_idea = tribal_nation
 					}
 			}
+		}
 	desc = enc_reformers.192.d				
 	mean_time_to_happen = { days = 15 }
 	option = {# Denounce
@@ -5323,17 +5327,157 @@ country_event = {#193 - Free Speech
 	picture = GFX_event_enc_reform_propaganda
 	fire_only_once = YES
     trigger = { 	
-				has_completed_focus = enc_rebuilding_a_nation 
-			}
+		has_completed_focus = enc_rebuilding_a_nation 
+		}
 	desc = enc_reformers.193.d				
 	mean_time_to_happen = { days = 7 }
 	option = {#  Shoot reporter
 		name = enc_reformers.193.a
 		add_ideas = ENC_free_press
 		custom_effect_tooltip = enc_reformers.193.a.tt
-		
 	}
-}		
+}
+country_event = {#194 - Brotherhood Reformers
+	id = enc_reformers.194
+	title = enc_reformers.194.t
+	picture = GFX_event_MOJ_contact_the_west
+	fire_only_once = YES
+	desc = enc_reformers.194.d				
+	is_triggered_only = yes	
+	option = {#  Shoot reporter
+		name = enc_reformers.194.a
+		BOS = { add_popularity = { ideology = people popularity = 0.25 } }
+	}
+}
+country_event = {#196 - Brotherhood Reformers
+	id = enc_reformers.196
+	title = enc_reformers.196.t
+	picture = GFX_event_MOJ_contact_the_west
+	fire_only_once = YES
+	desc = enc_reformers.194.d				
+	is_triggered_only = yes	
+	option = {#  Shoot reporter
+		name = enc_reformers.196.a
+		D01 = { set_cosmetic_tag = ERB_BOS }
+		add_ideas = maxsonsbulwark
+		set_country_flag = integrate_brotherhood
+	}
+}
+country_event = {#197 - War with Caesar and FEV
+	id = enc_reformers.197
+	title = enc_reformers.197.t
+	picture = GFX_event_FAV_plague
+	fire_only_once = YES
+	desc = enc_reformers.197.d				
+	trigger = { 
+		has_completed_focus = enc_vaccinations
+		has_war_with = CES }
+	mean_time_to_happen = {	days = 30 }
+	option = {#  Sucker
+		name = enc_reformers.197.a
+		add_stability = 0.05
+		CES = {add_stability = -0.05 }
+		if = {
+			limit = { has_idea = ENC_plague }
+			remove_ideas = ENC_plague }
+			
+	}
+}
+country_event = {#198 - War with Caesar and FEV No Vaccine
+	id = enc_reformers.198
+	title = enc_reformers.198.t
+	picture = GFX_event_FAV_plague
+	fire_only_once = YES
+	desc = enc_reformers.198.d				
+	trigger = { 
+		NOT = { has_completed_focus = enc_vaccinations }
+		has_war_with = CES }
+	mean_time_to_happen = {	days = 30 }
+	option = {#  Sucker
+		name = enc_reformers.198.a
+		add_ideas = ENC_plague
+		custom_effect_tooltip = enc_reformers.198.a.tt			
+		}
+}
+					
+country_event = {#199 - Remember the Rig
+	id = enc_reformers.199
+	title = enc_reformers.199.t
+	picture = GFX_event_enc_oil_rig
+	fire_only_once = YES
+	desc = enc_reformers.199.d				
+	trigger = {	has_completed_focus = enc_american_broadcasting_department }
+	mean_time_to_happen = {	days = 100 }
+	option = {#  Never Forget!
+		name = enc_reformers.199.a
+		add_stability = 0.05
+		add_political_power = 50
+		}
+}
+
+					
+country_event = {#195 - Brotherhood Civil War
+	id = enc_reformers.195
+	title = enc_reformers.195.t
+	picture = GFX_event_MOJ_contact_the_west
+	fire_only_once = YES
+	desc = enc_reformers.195.d				
+	is_triggered_only = yes	
+	option = {#  Alliance
+		name = enc_reformers.195.a
+		BOS = { add_popularity = { ideology = people popularity = 0.25 } }
+		BOS = { set_politics = { ruling_party = people } }
+		BOS = { 
+			start_civil_war = {
+				ideology = ruler
+				size = 0.65
+				}
+			}
+		if = {
+            limit = { is_in_faction = no }
+            create_faction = "The Enclave"
+            BOS = { 
+                if = { 
+                    limit = { is_in_faction = yes } 
+                 }
+				 leave_faction = yes 
+            }
+            add_to_faction = BOS
+        }
+        else_if = {
+            limit = { is_in_faction = yes }
+            BOS = { 
+                if = { 
+                    limit = { is_in_faction = yes } 
+					}
+				 leave_faction = yes 
+            }
+            add_to_faction = BOS
+        }
+		else_if = {
+            limit = { is_in_faction = no
+					BOS = {is_in_faction_no }
+					}
+            create_faction = "The Enclave"
+            add_to_faction = BOS
+        }
+          add_to_war = {
+            targeted_alliance = BOS
+            enemy = D01
+            hostility_reason = asked_to_join
+                    }
+     BOS = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ERB"
+				value = 400
+				}
+			}
+	 }	
+}
+
+			
+			
 # integration
 #
 

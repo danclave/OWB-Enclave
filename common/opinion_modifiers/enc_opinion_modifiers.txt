@@ -9,4 +9,9 @@ opinion_modifiers = {
 	dirty_muties = { value = -80 }
 	shared_currency = { value = 30 }
 	allied_state = { value = 60 }
+	imperialists = { value = -20 }
+	rebels = { value = -20}
+	heroes = { value = 20 }
+	enc_support_opinion = { value = 80}
+	
 }

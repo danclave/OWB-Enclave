@@ -911,6 +911,22 @@ spriteTypes = {
             name = "GFX_goal_vault_tec_reform"
  		    texturefile = "gfx/interface/goals/vault_tec_reform.dds"
  	    }
+		SpriteType = {#Brotherhood Faction
+            name = "GFX_goal_america_brotherhood_faction"
+ 		    texturefile = "gfx/interface/goals/america_brotherhood_faction.dds"
+ 	    }
+		SpriteType = {#cause_focus
+            name = "GFX_goal_enc_cause_focus"
+ 		    texturefile = "gfx/interface/goals/enc_cause_focus.dds"
+ 	    }
+		SpriteType = {#BOS Flag
+            name = "GFX_goal_enc_bos_flag_reform"
+ 		    texturefile = "gfx/interface/goals/enc_bos_flag_reform.dds"
+ 	    }
+		SpriteType = {#Reform Fort
+            name = "GFX_goal_america_forts"
+ 		    texturefile = "gfx/interface/goals/america_forts.dds"
+ 	    }
         SpriteType = {#arcade_gannon
             name = "GFX_idea_arcade_gannon"
  		    texturefile = "gfx/interface/ideas/arcade_gannon.dds"
