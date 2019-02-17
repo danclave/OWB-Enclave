@@ -2530,7 +2530,6 @@ ideas = {
 			}
 		}
 	}
-	
 	tank_manufacturer = {
 		ENC_PA_quanitity = {
 			picture = enc_designer_PA_2
@@ -2729,7 +2728,6 @@ ideas = {
 		}
 	}
 }
-
 
 # GFX_idea_boris_t
 # GFX_idea_enc_education

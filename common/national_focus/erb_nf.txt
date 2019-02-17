@@ -4488,7 +4488,7 @@ focus = {#Legion Border
 		completion_reward = { add_ideas = enc_power_armor_integration }
 	}
 
-		focus = {#Military - the new american army
+	focus = {#Military - the new american army
 		id = enc_new_american_army
 		icon = GFX_goal_NEW_new_world_old_ideas
 	
