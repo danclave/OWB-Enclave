@@ -94,6 +94,19 @@ ERB_PHR_people_DEF:0 "Arizona"
 ERB_PHR_people_ADJ:0 "Arizona"
 
 
+ERB_reconstruction_intellectuals:0 "Enclave Reconstruction Authority"
+ERB_reconstruction_intellectuals_DEF:0 "The Enclave Reconstruction Authority"
+ERB_reconstruction_intellectuals_ADJ:0 "Enclave"
+ERB_reconstruction_elites:0 "Enclave Reconstruction Authority"
+ERB_reconstruction_elites_DEF:0 "The Enclave Reconstruction Authority"
+ERB_reconstruction_elites_ADJ:0 "Enclave"
+ERB_reconstruction_people:0 "Enclave Reconstruction Authority"
+ERB_reconstruction_people_DEF:0 "The Enclave Reconstruction Authority"
+ERB_reconstruction_people_ADJ:0 "Enclave"
+ERB_reconstruction_ruler:0 "Enclave Reconstruction Authority"
+ERB_reconstruction_ruler_DEF:0 "The Enclave Reconstruction Authority"
+ERB_reconstruction_ruler_ADJ:0 "Enclave"
+
 empty_line: " \n "
 ###################################
 # FOCUS TREE
@@ -136,7 +149,7 @@ ERB_Repconn_desc: "Rocket Engineering and Production COmpaNy of Nevada specializ
 ERB_Tourists: "Develop Primm"
 ERB_Tourists_desc: "Primm is the closest town in Nevada to the California border.  With some proper funding, it could become an attraction in its own right."
 Enc_Second_City: "Nevada's Second City"
-Enc_Second_City_desc: "Although New Reno is Nevada's capital, Vegas is the largest city in Nevada and was lightly damaged in the war. House dreamed of to returning Vegas to its pre-War glory as a jewel of innovation and the bright neon paradise it once was. Since we are an actual organization and not a lone madman in a casino, we can actually make that happen."
+Enc_Second_City_desc: "Although New Reno is Nevada's capital, Vegas is the largest city in Nevada and was lightly damaged in the war. House dreamed of returning Vegas to its pre-War glory as a jewel of innovation and the bright neon paradise it once was. Since we are an actual organization and not a lone madman in a casino, we can actually make that happen."
 shared_currency: "The American Economy"
 atrocities: "Legion atrocities"
 enc_reform:0 "Reform"
@@ -148,7 +161,7 @@ Enc_Trade_Coffee: "Coffee Trade"
 enc_coffee_tt: "Grants the §MCoffee Trade§! to everyone in a faction with [Root.GetName]"
 enc_Irrigation_tt: "Grants the §MFruits of Irrigation§! to everyone in a faction with [Root.GetName]"
 enc_radio:0 "Enclave Radio"
-enc_radio_desc:0 "Our radio beacons could be used to broadcast the Enclave's message to the wasteland. Let sympathizers far and wide hear of the Enclaves vision. While we are at it, those same beacons can also be used as listening outposts."
+enc_radio_desc:0 "Our radio beacons could be used to broadcast the Enclave's message to the wasteland. Let sympathizers far and wide hear of the Enclave's vision. While we are at it, those same beacons can also be used as listening outposts."
 enc_Arizona: "The Southwest Commonwealth"
 enc_Arizona_desc: "The defeat of Caesar has led to the rise of a a patchwork of tribes and city-states across the Southwest.  We need to pressure them to join the Allied States of America under someone's leadership."
 enc_the_lucia_incident: "The Lucia Incident"
@@ -214,7 +227,7 @@ enc_advanced_training_desc:0 "As heirs to the military industrial complex, we ca
 enc_american_minutemen:0 "American Minutemen"
 enc_american_minutemen_desc:0 "These men ensure that no one's settlement is under attack!"
 enc_arms_development:0 "Arms Development"
-enc_arms_development_desc:0 "Working together, the military and industry can collaborate to promote a better society for all! We're thinking of calling it the military industrial collaboration... Or soomething."
+enc_arms_development_desc:0 "Working together, the military and industry can collaborate to promote a better society for all! We're thinking of calling it the military industrial collaboration... Or something."
 enc_army_reserves:0 "Army Reserves"
 enc_army_reserves_desc:0 "Americans in the Great War rallied to the flag when the nation was under attack, serving as part time soldiers.  They can do so again."
 
@@ -249,7 +262,7 @@ enc_new_american_army_desc:0 "Look at them march past. We are no longer a few ba
 enc_new_generation_officers:0 "A new Generation of Officers"
 enc_new_generation_officers_desc:0 "A new generation of officers has arisen, who have hidden throughout the Wasteland.  They have their own views of how to handle combat, and we'd be foolish to ignore them."
 enc_new_officer_corps:0 "Officers Corps Reform"
-enc_new_officer_corps_desc:0 "That spit and polish, that crisp solute, that ability to launch a pincer into the enemies' positions.  Our officers are as good as any Westpoint turned out."
+enc_new_officer_corps_desc:0 "That spit and polish, that crisp salute, that ability to launch a pincer into the enemies' positions.  Our officers are as good as any Westpoint turned out."
 
 enc_officers_by_loyalty_and_devotion:0 "Officers by Loyalty and Devotion"
 enc_officers_by_loyalty_and_devotion_desc:0 "Too many Purists still hide in the officers' ranks.  We should only promote those loyal to America."
@@ -280,7 +293,7 @@ enc_vlt_core_reform_desc:0 "There were enough disaffected elements in Vault City
 enc_yakuza_annex_reform:0 "Drive Out The Yakuza"
 enc_yakuza_annex_reform_desc:0 "The Yakuza pretend to be heirs to Japanese traditions, which would be fine if they weren't on American soil."
 enc_ANT_annex_reform:0 "Break the Tribe"
-enc_ANT_annex_reform_desc:0 "Hard as it may to believe, these tribals are Americans too.  Or will be shortly."
+enc_ANT_annex_reform_desc:0 "Hard as it may be to believe, these tribals are Americans too.  Or will be shortly."
 
 ENC_scientists_traitors:0 "Treacherous Scientists"
 ENC_scientists_traitors_desc:0 "Many of our best and brightest were once part of the secret projects performed at Navarro and the rig. For this, they were persecuted relentlessly after the fall of Navarro. None of them have forgotten this, few have forgiven it."
@@ -312,9 +325,9 @@ enc_VLT_force_desc:0 "Vault city must be ours. An overwhelming amount of force s
 enc_rangers_submit:0 "The Desert Rangers Join US!"
 enc_rangers_submit_desc:0 "With the peace we've brought to Northern Nevada, the Desert Rangers are willign to work with our government to protect the region."
 
-enc_NCR_start:0 "Home is Nevada"
-enc_NCR_start_desc:0 "Although the Enclave's focus has traditionally been on California, and restoring the United States, some argue we should focus on securing Nevada and working with Americans across the Wastes. Some sort of League of American States may be more viable than invading everywhere New Victoria to the Pecos Colonies."
-enc_NCR_start.tt: "\nUnlocks the §MNevada§! Focus Tree."
+enc_home_is_nevada:0 "Home is Nevada"
+enc_home_is_nevada_desc:0 "Although the Enclave's focus has traditionally been on California, and restoring the United States, some argue we should focus on securing Nevada and working with Americans across the Wastes. Some sort of League of American States may be more viable than invading everywhere New Victoria to the Pecos Colonies."
+enc_home_is_nevada.tt: "\nUnlocks the §MNevada§! Focus Tree."
 enc_accept_status_quo:0 "Accept the Status Quo"
 enc_accept_status_quo_desc:0 "Painful though it is for old veterans, the support for the Enclave within the NCR's elite means we can reach an agreement with them."
 
@@ -370,13 +383,13 @@ Enc_Robco_Reborn_desc: "Robert House founded Robco before the war, and many of i
 enc_US_dollar:0 "Mandate the US Dollar"
 enc_US_dollar_desc:0 "If we forced people to adopt the US Dollar instead of the NCR Dollar, we could impoverish the elite overnight and purchase their assets with the new currency."
 Enc_Broken_Hills: "Fixing the Broken Hills"
-Enc_Broken_Hills_desc: "Although the Wastleanders thought the Broken Hills mine ran dry, that's because the mining companies used 19th century technology, harvesting uranium and gold with primitive engineering equipment. Enclave engineering can do better."
+Enc_Broken_Hills_desc: "Although the Wastelanders thought the Broken Hills mine ran dry, that's because the mining companies used 19th century technology, harvesting uranium and gold with primitive engineering equipment. Enclave engineering can do better."
 enc_radio_military:0 "Prioritize Military Channels"
 enc_radio_military_desc:0 "We should use our advanced technology for military applications and manipulating the NCR."
 Enc_Uranium_Fever: "Uranium Fever"
 Enc_Uranium_Fever_desc: "Well, I don't know, but I've been told, uranium ore's worth more than gold, and Broken Hills used to be a booming uranium mining and refining plant. Why don't we make it one again?"
 Enc_Mojave_Express: "Nationalize the Mojave Express"
-Enc_Mojave_Express_desc: "With the expansion of post-apocalyptic society across the American southwest, courier groups like the Mojave Express have appeared to take on the difficult task of carrying letters and packages over enormous distances. And with the rise of a centralzed government in Nevada, that role can be served by the Nevada Postal Service!"
+Enc_Mojave_Express_desc: "With the expansion of post-apocalyptic society across the American southwest, courier groups like the Mojave Express have appeared to take on the difficult task of carrying letters and packages over enormous distances. And with the rise of a centralized government in Nevada, that role can be served by the Nevada Postal Service!"
 enc_radio_civilian:0 "Old World Radio"
 enc_radio_civilian_desc:0 "Enclave Radio can broadcast songs to trade on nostalgia for a better older America and ignoring our shortcomings."
 enc_Baseball: "The American Baseball League"
@@ -384,7 +397,7 @@ enc_Baseball_desc: "Good evening, Nevada. I've been thinking quite a bit lately 
 enc_raise_encryption_standards:0 "Increase Encryption Standards"
 enc_raise_encryption_standards_desc:0 "Instead of playing country music, we can use our processing power to make our codes unbreakable."
 Enc_Nevada_Railway: "Build a Nevada railway"
-Enc_Nevada_Railway_desc: "California is the only place in America that's been building railways since the end of the Great War.  But our rule over Nevada will give us the change to tie its citizens together. No longer will Nevadans dependent on brahmin caravans or couriers. They're going places with the Enclave."
+Enc_Nevada_Railway_desc: "California is the only place in America that's been building railways since the end of the Great War.  But our rule over Nevada will give us the change to tie its citizens together. No longer will Nevadans depend on brahmin caravans or couriers. They're going places with the Enclave."
 enc_geck:0 "The GECK Project"
 enc_geck_desc:0 "The Garden of Eden Creation Kit was designed to help revive the Wastes after a nuclear war.  The Reunited States can use this technology on a national level to turn the Deadwood forests into Redwood forests once again."
 
@@ -399,7 +412,7 @@ enc_reject_super_mutants:0 "Reject Super Mutants"
 enc_reject_super_mutants_desc:0 "Legends tell us of a time when the super mutants were more numerous and organized. Lead by a figure known as The Master, they attempted to replace humanity as the dominant species of this planet. Luckily for us, they failed. \nNow we will make sure they never have a chance to try again."
 
 enc_department_of_energy:0 "Department of Energy"
-enc_department_of_energy_desc:0 "Prewar America sent energy from Hoover Dam to California, from the Tennesee Valley to Chicago.  So can we."
+enc_department_of_energy_desc:0 "Prewar America sent energy from Hoover Dam to California, from the Tennessee Valley to Chicago.  So can we."
 
 enc_department_of_education:0 "Department Of Education"
 enc_department_of_education_desc:0 "A staggering amount of our citizens are illiterate. We will reopen the public schools to provide at least these basic skills to any under 12 years of age."
@@ -410,6 +423,9 @@ enc_department_of_manufacturing_desc:0 "By creating a department devoted solely 
 enc_department_of_justice:0 "Judicial Branch"
 enc_department_of_justice:0 "We can reestablish the Judicial Branch as an independent check on the government, protecting American freedoms."
 
+enc_vacinations:0 "Vaccinations"
+enc_vacinations_desc:0 "Vaccination is the administration of antigenic material (a vaccine) to stimulate an individual's immune system to develop adaptive immunity to a pathogen."
+
 enc_department_of_commerce:0 "Chamber of Commerce"
 enc_department_of_commerce_desc:0 "The Chamber of Commerce can promote trade and economic develop, tying the American economy together."
 
@@ -418,6 +434,9 @@ enc_department_of_education_military_desc:0 "We can implement paramilitary train
 
 enc_department_of_education_civilian:0 "Civilian Education"
 enc_department_of_education_civilian_desc:0 "Schools are not barracks.  American education will focus on rebuilding the economy and restoring our prewar prosperity."
+
+enc_education_by_followers: "Fund the College of The Followers"
+enc_education_by_followers_desc: "TODO"
 
 enc_radio_civilian_music_new: "New World Hopes"
 enc_radio_civilian_music_new_desc:0 "It's time to help people look forward to a better, brighter tomorrow.  Today!"
@@ -430,8 +449,9 @@ enc_power_to_the_people_desc:0 "As the citizens of the waste turn on refrigerato
 
 enc_fate_of_our_nation:0 "The Fate of Our Nation"
 enc_moderate_proposal:0 "A Moderate Proposal"
-enc_old_world:0 "A Nation Reborn"
-enc_old_world_desc:0 "To quote the classical musical Hamilton, 'We're finally on the field, we've had quite a run, Reform Path, we get the job done.'"
+enc_a_nation_reborn:0 "A Nation Reborn"
+enc_a_nation_reborn_tt: "§gPlease Rise for the National Anthem.§!"
+enc_a_nation_reborn_desc:0 "To quote the classical musical Hamilton, 'We're finally on the field, we've had quite a run, Reform Path, we get the job done.'"
 enc_a_new_order:0 "An All American Order"
 
 enc_purge_scientists:0 "Purge the Scientists"
@@ -440,7 +460,10 @@ enc_purge_scientists_desc:0 "The time has come to rid ourselves of the most stub
 enc_purge_officers:0 "Purge the Officers"
 enc_purge_officers_desc:0 "The time has come to rid ourselves of the most stubbern Purist elements within our officer corps. We cannot let such an essential part of the Enclave be infested with traitors and saboteurs. Demotions, banishments or executions. One way or another, our officers will be loyal."
 
-stability_loss_based_on_purist_popularity: "\n§MStability loss is based on popularity of§! §YPurist Faction§!"
+stability_loss_based_on_elites_popularity: "\n§MStability loss is based on popularity of§! §YElites Faction§!"
+stability_loss_based_on_people_popularity: "\n§MStability loss is based on popularity of§! §YPeople Faction§!"
+stability_loss_based_on_intellectuals_popularity: "\n§MStability loss is based on popularity of§! §YIntellectuals Faction§!"
+
 enc_infiltrate_ncr:0 "Infiltrate the NCR"
 enc_infiltrate_ncr_t_tt:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is higher than §Y25§!"
 enc_infiltrate_ncr_desc:0 "We can make contact with those in the NCR who want to restore preawar America's glory."
@@ -452,10 +475,6 @@ enc_stage_raider_attacks:0 "Stage Raider Attacks"
 enc_stage_raider_attacks_desc:0 "In order for the us to stay hidden, we must make sure that the [NCR.GetName] stays distracted with other enemies. By bribing nearby raiders into attacking [NCR.GetName] border towns, we can ensure our obscurity as long as it suits us."
 enc_stage_raider_attacks_tt: "Unlocks the §YArm Raider Gangs§! decision.\nThis allows you to send 300 £enc_weapons §YInfantry Equipment§! to any §YRaider§! faction bordering the §Y[NCR.GetName]§! to reduce §YNCR suspicion§! by §G20§! £pol_power."
 enc_reformers.tt: "Unlockes national focuses addressing whether to §MIntegrate Wastelanders§! §Wand§! §BRestore Democracy§!."
-enc_foreign_policy: "Foreign Policy"
-enc_foreign_policy_tt: "Unlocks the §YReveal Ourselves to the NCR§! decision.\nThis allows you to reveal yourself to the §Y[NCR.GetName]§! under the right circumstances, removing the need to hide from them. Further decisions for the NCR will be unlocked based on your choices."
-enc_foreign_policy: "Foreign Policy"
-enc_foreign_policy_desc: "We need to decide how to handle the other 'nations' of the Wasteland.  Obviously they are but stepping stones in our plot to restore America."  
 enc_call_ncr_favors:0 "Call In Favors"
 enc_call_ncr_favors_desc:0 "Thanks to old exploits of ours in the mercenary company, we have a few contacts in the NCR that owe us a big favor. They don't need to know the big picture, only that we need them to 'lose' a few specific documents."
 
@@ -508,7 +527,7 @@ enc_limited_integration_desc: "The argument could be made that some Wastelanders
 enc_citizenship_for_service: "Citizenship for Service"
 enc_citizenship_for_service_desc: "Although most of the Wastelanders are fit to only be civilians in the New America, for some, Service Guarantees Citizenship!"
 enc_appointed_governors: "Appointed Governors"
-enc_appointed_governors_desc: "The problem with democracy is you'll get some ghoul that glows a sickly orange ranting smoothtalking his way into power.  Rule by the administrative elite of the Enclave is more productive for now."
+enc_appointed_governors_desc: "The problem with democracy is you'll get some ghoul that glows a sickly orange smoothtalking his way into power.  Rule by the administrative elite of the Enclave is more productive for now."
 
 enc_a_common_enemy:0 "A Common Enemy"
 enc_a_common_enemy_desc:0 "The peoples of the Wasteland can be united under the Enclave if we stoke anti-Ghoul and mutant prejudice."
@@ -551,9 +570,9 @@ enc_civilian_infrastructure_desc:0 "We can focus on developing New Reno's civili
 enc_the_fate_of_our_democracy:0 "The Fate of Our Democracy"
 enc_the_fate_of_our_democracy_desc:0 "Some say that to truly be the United States, we need to restore democracy and end the martial law that has been in effect since 2077.  But others question whether this is the best time."
 
-enc_NCR_no_compromise:"The American Dream"
-enc_NCR_no_compromise_desc: "If we are going to revive the United States, we will need to take down the New California Republic, Caesar's legions, and the other so-called states of the Wastes."
-enc_ncr_no_compromise.tt: "Unlocks the §MUnited States of America§! Focus Tree"
+enc_american_dream:"The American Dream"
+enc_american_dream_desc: "If we are going to revive the United States, we will need to take down the New California Republic, Caesar's legions, and the other so-called states of the Wastes."
+enc_american_dream.tt: "Unlocks the §MUnited States of America§! Focus Tree"
 enc_NCR_seak_allies:"Seeking Allies"
 enc_NCR_seak_allies_desc: "We aren't the only power opposed to the NCR.  To the east comes a fool who dreams of reviving the Roman Empire.  To the south lies another legacy of the Old War, Mr. House, and New Vegas.  And then there is the Brotherhood of Steel, who have no love for the NCR or us. Perhaps the enemy of our enemy can be our... not enemy?"
 
@@ -566,12 +585,12 @@ enc_the_state_of_utah_desc: "To the east, New Canaan is the nucleus for the Morm
 
 
 enc_crack_the_code: "Crack the Code"
-enc_crack_the_code_desc: "The [NCR.GetName]§! may believe their rudimentary encryption is enough to secure their communications, but our but our new radio system makes cracking their codes child's play. Now, we can impersonate even their highest level command structure, at least once."
+enc_crack_the_code_desc: "The [NCR.GetName]§! may believe their rudimentary encryption is enough to secure their communications, but our new radio system makes cracking their codes child's play. Now, we can impersonate even their highest level command structure, at least once."
 
 enc_wastelander_draft: "Draft the Wastelanders"
 enc_wastelander_draft_desc: "Although many of the Wastelanders aren't up to the burden of being American citizens, they are up to the burden of being American cannon fodder."
 
-enc_ss_ceasar_start:0 "Operation Brutus"
+enc_ss_ceasar_start:0 "The Beast to the East"
 enc_ss_ceasar_start_desc:0 "The Legion's ramshackle state was built over the last few decades through ruthless expansion. But Caesar hasn't had time to give it a lasting government... and won't, if we succeed."
 enc_ss_ceasar_bottom:0 "From the Bottom Up"
 enc_ss_ceasar_bottom_desc:0 "The Legion's based upon the backs of men and women who labor under the tyrant's lash. With some encouragement we remind Caesar that Americans will always fight for freedom."
@@ -601,7 +620,7 @@ enc_operation_carnaval_desc:0 "Our efforts have encouraged the brahmin barons to
 enc_Second_Revolution: "Issue the Second Emancipation Proclamation"
 enc_Second_Revolution_desc: "We can trigger the Second American Revolution by promising freedom to the Legion's slaves.  However, the Legion may treat our decision to give plasma guns to slaves in their territory as an act of war."
 enc_petition_for_independence:0 "Petition For Independence"
-enc_petition_for_independence_desc:0 "The Brahmin Barons will demand the right to form their own state, based on Sac City.  And should Shady Sands refuse their demands, we will stand ready to assist them."
+enc_petition_for_independence_desc:0 "The Brahmin Barons will demand the right to form their own state, based in Sac City.  And should Shady Sands refuse their demands, we will stand ready to assist them."
 enc_dayglow_proclamation:0  "Unlocks the §YThe Old World Uprising§! decision."
 enc_dayglow_proclamation_desc:0  "With our cry, the mayor of Dayglow will call for an outright rebellion against the NCR.  Of course we have to arm the mayor first."
 enc_petition_for_independence_tt:0 "Unlocks the §YPetition for Independence§! decision.\nThis decision will release the §YBaron's Republic§! with any states that have armed rebels."
@@ -631,7 +650,7 @@ Enc_Tearing_Down_House_desc:  "Mr. House thinks he's in control of New Vegas, bu
 Enc_Discredit_Rangers: "Discrediting the Desert Rangers"
 Enc_Discredit_Rangers_desc: "If the Rangers will not join Nevada peacefully, we can always use propaganda to cast them as hooligans and bandits.  After all, what gives them the right to conscript men and material from Nevada's communities? That's our job!"
 enc_Nevada_Rangers:  "Incorporating the Nevada Rangers"
-enc_Nevada_Rangers_desc:  "The Desert Rangers never wanted to run Nevada.  Now that there's a change for them to work with a lawful government to bring peace, order, and good government to the West, they'll gladly do so."
+enc_Nevada_Rangers_desc:  "The Desert Rangers never wanted to run Nevada.  Now that there's a chance for them to work with a lawful government to bring peace, order, and good government to the West, they'll gladly do so."
 enc_Area_51: "Reclaiming Area 51"
 enc_Area_51_desc:  "Area 51 was a center of elite military research before the war, and some of that surely remains.  Too bad it's occupied by trash that we need to clear out."
 enc_support_old_world_party: "Support Old World Party"
@@ -646,7 +665,7 @@ Enc_Big_MT_desc: "The Big MT was one of the greatest sites of prewar research, a
 Enc_Hoover_Dam_1: "The Treaty of Hoover Dam"
 Enc_Hoover_Dam_1_desc: "A treaty with the NCR will restore the dam to Nevada's control, although we will be reuqired to supply them with a portion of its power."
 enc_pacific_commonwealth: "Rebuild the Pacific Commonwealth"
-enc_pacific_commonwealth_desc: "Before the Great War, Seattle and Portland were gleaming cities of the Ameriican northwest.  Now the region is given over to supermutants, raiders, and Brotherhood knights led by... a ghoul? I guess.  Anyway, we can rally American patriots in the region to create a new member of the Associated States of America."
+enc_pacific_commonwealth_desc: "Before the Great War, Seattle and Portland were gleaming cities of the American northwest.  Now the region is given over to supermutants, raiders, and Brotherhood knights led by... a ghoul? I guess.  Anyway, we can rally American patriots in the region to create a new member of the Associated States of America."
 enc_Wash_BOS: "Taking Down the Brotherhood"
 enc_Wash_BOS_desc: "With the outlying regions of the Oregon secured, we have a base to drive the Brotherhood out of Seattle."
 ENC_treaty_hoover_dam: "The Treaty of Hoover Dam"
@@ -672,7 +691,7 @@ ENC_Trolling: "Stop Trolling"
 ENC_Trolling_desc: "The Troll Warren enslaves humans throughout the region and sends annoying messages on RobcoNet. Time to ban them."
 Enc_Vegas_miracle: "The Economic Miracle"
 enc_Nevada_dollar: "Promote the Nevada Dollar"
-enc_Nevada_dollar_desc: "The only thing we'll use dollars with Tandi for is to wipe our ass."
+enc_Nevada_dollar_desc: "Given that the NCR's gold supply is irradiated and covered with Tandy's face, we'll stick with good Nevada dollars, backed by silver and uranium."
 enc_Unified_Currency: "Adopt the NCR Dollar"
 enc_Unified_Currency_desc: "By adopting a current currency for California and Nevada, we will bind America closer together."
 Enc_Vegas_miracle_desc: "Ring a ding ding! House might hvave promised an economic boom, but his city-state was dependent on Californian gambling and prostitution. Now that it's been tied to the rest of Nevada, Vegas's economy is booming.  The lights of the strip are not just from casinos, but now come from factories and workshops where everyone wins."
@@ -680,7 +699,7 @@ Enc_Platinum_Chip_desc: "What's this? A secret vault of forbidden prewar lore? T
 ENC_Big_MT_Restored: "Restoring the Big MT"
 ENC_Big_MT_Restored_desc: "Now that we've dealt with the original inhabitants, we can turn the Big MT towards the Enclave's research. Please note that calling it the 'Big Full' will result in a firing squad."
 Enc_Irrigation_Dam: "Irrigation Systems"
-Enc_Irrigation_Dam_desc: "One of the original purposes of Hoover dam was to irrigate the west.  Working with the NCR, revive that dream."
+Enc_Irrigation_Dam_desc: "One of the original purposes of Hoover dam was to irrigate the west.  Working with the NCR, we revive that dream."
 Enc_New_day: "The New Day"
 Enc_New_day_desc: "The United States of America may be gone, but the American Confederation is here to stay. And the integration of Nevada into California's economy has had some surprising consequences..."
 Enc_Mexican_Trade: "Trade with Mexico"
@@ -695,6 +714,58 @@ enc_air_force_reform: "Revive the Air Force"
 enc_air_force_reform_desc: "The rebel governments of the Wastes have been able to field planes of their own to contest the skies.  It's time to revive the United States Air Force and show them who really rules the heavens."
 enc_Area_52: "The Groom Lake Testing Ground"
 enc_Area_52_desc: "Some of the technologies we've found at Area 51 are beyond even the Enclave's scientists and surpass what we thought prewar engineers were capable of.  We can press them into our service, although you have to wonder where they got these ideas..."
+
+
+
+
+enc_a_nation_remade: "A Nation Remade"
+enc_a_nation_remade_desc:"TODO"
+###################################
+# America Foreign Policy Decisions
+###################################
+ENC_oppose_legion: "Aid to the Foes of the Legion"
+ENC_oppose_legion_desc: "The Reunited States aren't the only ones who stand against Caesar.  With some proper training, we can bleed him before he reaches America."
+erb_aid_foe_legion: "Aid to [From.GetName]"
+ENC_gannon_doctrine: "Extending a Helping Hand"
+ENC_gannon_doctrine_desc: "By building economic ties to the people of the Waste, and protecting them from Raiders, we can gradually persuade them to rejoin the Continuing Experiment."
+ENC_granite_doctrine: "Taking Out the Trash"
+ENC_granite_doctrine_desc: "By taking down the raiders and tribals, we are defending Life, Liberty, and the Pursuit of Happiness."  
+erb_reunited_state: "Send Couriers to [From.GetName]"
+erb_reunited_state_desc: "Like all survivors in the Wasteland, the people of [From.GetName] feel cut off and alone.  Adding them to the Courier network is the first step in tying [From.GetNameDef] into our Great Society, reminding them of where they truly belong."
+erb_incorporate_to_commonwealth: "[From.GetName] becomes a Federal Commonwealth!"
+erb_incorporate_to_commonwealth_desc: "The people of [From.GetName] have suffered for too long from slavers, troll raids, and raiders.  They've remembered the flag of their fathers and have taken the first steps to joining the Reunited States."
+erb_join_usa: "[From.GetName] joins the Reunited States"
+erb_join_usa_desc: "Out of Many, One."
+erb_fire_and_blood: "Bring Fire and Blood to [From.GetName]"
+erb_fire_and_blood_desc: "The only hive of scum and villainy worse than [From.GetName] are the raiders next door.  The best way to rebuild America is to remove these Raiders ravage the Wasteland, wearing prewar bondage gear.  There is no reason to spare the brigands of [From.GetNameDef]"
+good_tribal_handling: "Sponsor a Follower Expedition to [From.GetName]"
+good_tribal_handling_desc: "The Followers of the Apocalypse carry the torch of knowledge across the Wastes, and most of the 'Tribes' are really just survivors who lacked the skillset to rebuild society.  With some proper encouragement they can take up a proper way of life."
+erb_good_reservations: "Pressure [From.GetNameDef] Economically"
+erb_good_reservations_desc: "With the aid of Follower influence, the [From.GetName] are adopting crop rotation, literacy, and the basics of civilization. Now we can persuade their elite to sell some of the land they don't need to hungry settlers from California and Nevada, and create favorable economic deals.  Everyone will benefit from this!"
+erb_tribals_become_civilized: "[From.GetNameDef] Rejoins Society"
+erb_tribals_become_civilized_desc: "Thanks to our support, the Tribals of [From.GetName], and the heady melting pot of peoples who are settlign alongside them, act no different than anyone else in the Wastes.  Although they may keep their tribal traditions alive, they know the joys of literacy, electricity, and taxes.  Now we can add them to the United States Postal Service!"
+erb_tribal_burden: "Develop the tribal lands of [From.GetName]"
+erb_tribal_burden_desc: "Look at the people of [From.GetName].  Their ancestors were regular Americans, but now they wallow in poverty and ignorance. Time to take up the Enclave's burden and bring them our peaceful ways... by force."
+erb_reunited_state_arroyo: "Send a Courier to Arroyo"
+erb_reunited_state_arroyo_desc: "Although things have been tense with the people of Arroyo, surely they will let bygones be bygones and join the Courier network?"
+enc_axis_evil: "Defeat the Axis of Evil"
+enc_axis_evil_desc: "The Broken Coast, the Washington Brotherhood, and the Legion.  These three powers threaten to enslave the Wastes, and with the collapse of the New California Republic, only the Enclave are capable of protecting democracy.  Time to show them  that freedom is always worth fighting for."
+enc_fight_wbh: "Free Cascadia"
+enc_fight_wbh_desc: "There is no reason Americans should suffer under a Brotherhood ghoul or supermutants.  Nor will they."
+enc_fight_wbh_tt: "Gain an annex war goal against whoemver §Yowns Capital Hill§!."
+enc_fortify_border_legion: "The Colorado Line"
+enc_fortify_border_legion_desc: "Let's see how the Legion fares against defenses inspired by the Anchorage Reclamation.  This isn't war, this is pest control!"
+enc_fortify_border_legion_tt: "Fortifies the western bank of the Colorado against §YThe Legion§.!"
+enc_legion_propaganda: "Combat Legion Propaganda"
+enc_legion_propaganda_desc: "The Legion claims they will nail our men to Hoover Dam to watch the Old World die.  But Americans didn't spend the last five hundred years fighting for freedom to lose to a Roman cosplay."
+enc_broken_coast: "Fix the Broken Coast"
+enc_broken_coast_desc: "The funny thing about piracy is that it's only viable until a strong central government restores order. Let me demonstrate."
+enc_broken_coast_tt: "Provides a war goal against whomever §Yowns the Broken Coast§!."
+enc_mexico_invasion: "Oppose the Mexican Titans"
+enc_mexico_invasion_desc: "Before the Great War, America often intervened to protect the people of Mexico.  Now that they are threatened by rogue AIs and drug cartels, perhaps we should do so again?"
+enc_new_mexico_tt: "Provides a justification to occupy §YMexican territory§!, including Puerto de Libertad and Chihuaha."
+ENC_sabotage_ces_supply_lines: "Sabotage Supply Lines"
+ENC_sabotage_ces_supply_lines_desc: "
 ###################################
 # REFORM IDEAS
 ###################################
@@ -703,11 +774,11 @@ ENC_follower_schools: "Follower Education"
 ENC_follower_school_system: "Follower Schools"
 ENC_follower_school_system_desc: "The greatest dream of the Followers is to provide universal schooling for all the children of the Wastes.  They claim that true reconstruction will require rebuilding the foundations of prewar technology, not just reactivating old power plants. Let us fulfill their dream of every kid a textbook!"
 ENC_cassidy_caravan: "Cassidy Caravans"
-ENC_CES_slave_rebellions: "Slave Unrest"
 ENC_satellites: "Satellite Network"
-enc_crimson_truckers: "Crimson Trucking Company"
+enc_crimson_truckers: "Crimson Caravan"
+enc_crimson_truckers_conscripted: "Crimson Caravans Conscripted"
 medtek: "Med Tek"
-ENC_gunrun: "Upgrading the Gun Runners"
+ENC_gunrun: "The Gun Runners"
 ENC_terraforming: "Terraforming the Wastes"
 enc_trade_tea: "The Tea Trade"
 ENC_vaults: "Vault Tek Research"
@@ -746,7 +817,9 @@ ENC_air_force_loyalist: "Loyal Chief Of Airforce."
 ENC_air_force_loyalist_desc: "Enclave leadership has seen fit to promote someone loyal to their current government as their Chief of Staff of the Enclave Air Force."
 ENC_air_force_best_man: "competent Chief Of Airforce."
 ENC_air_force_best_man_desc: "Enclave leadership has seen fit to promote their best candidate as their Chief of Staff of the Enclave Air Force."
-Enc_Dept_Education:  "Department of Education"
+ENC_dept_education: "Department of Education"
+ENC_dept_education_civilian: "Department of Education"
+ENC_dept_education_military: "Department of Education"
 ENC_EPA: "The Environmental Protection Agency"
 ENC_EPA_desc:  "Cleaning the environment will cost time and money, it's well worth it."
 ENC_infighting_2: "Civil War"
@@ -767,10 +840,13 @@ max_legitimacy: "At least §Y100%§! Legitimacy"
 half_legitimacy: "More than §Y50%§! Legitimacy"
 25_legitimacy: "More than §Y25%§! Legitimacy"
 75_legitimacy: "More than §Y75%§! Legitimacy"
+10_legitimacy: "More than §Y10%§! Legitimacy"
+15_legitimacy: "More than §Y15%§! Legitimacy"
 
 has_legitimacy_tt: "[?legitimacy]/[?has_legitimacy_var] §Ylegitimacy§!"
 ENC_reno_police: "New Reno Police"
 ENC_reno_police_corrupt: "Corrupt New Reno Police"
+Enc_Justice: "Department of Justice"
 Enc_Justice: "Department of Justice"
 ENC_FBI: "The Federal Bureau of Investigations"
 ENC_accepted_ghouls_and_super_mutants:0 "Accepted Ghouls and Super Mutants"
@@ -823,6 +899,17 @@ ENC_servitude: "Indentured Servitude"
 ENC_selective_service: "Selective Service"
 
 ENC_home_defense: "Defensive Planning"
+
+ENC_NCR_unrest: "Civilian Unrest"
+
+ENC_american_broadcasting_department: "American Broadcasting Department"
+ENC_american_broadcasting_department_propaganda: "American Broadcasting Department"
+ENC_american_broadcasting_department_entertainment: "American Broadcasting Department"
+ENC_free_press: "Free Press"
+enc_free_press_tt: "\n§MThe Press will be watching our actions with great interest!§!"
+ENC_free_press_desc: "The free press is a bullwark against corruption, mostly because fat cats make for juicy stories.\n\nThey will keep factory owners from lining their own pockets too much, but that same camera might easily be turned on us, too.\nAnd who knows who else is watching the news?"
+ENC_mandatory_patriotism: "Mandatory Patriotism"
+
 ###################################
 # PEOPLE
 ###################################
@@ -922,15 +1009,6 @@ ENC_prioritize_civilian_relief_desc: "The war has left many of our new citizens 
 # Seek Allies
 ###################################
 
-enc_BOS_start:0 "The Brotherhood of Steel"
-enc_BOS_start_desc: "Although the Brotherhood of Steel hated our plans for New California, their love of ancient technology, and concern about NCR expansionism, could bring them to our side."
-enc_BOS_tech:"Technological Temptations"
-enc_BOS_tech_desc: "As a show of our good faith and support for the Brotherhood, we can offer them Vertibird plans.  They may come in handy in the event the NCR tries to break their bunkers.  In return they will provide us with more powered armor."
-enc_BOS_peace:0 "An Uneasy Peace"
-enc_BOS_peace_desc:0 "The Brotherhood, at the end of the day, never cared for the people of the NCR.  They're focused on preserving their technology, and as long as we respect their rights it is hoped they'll respect ours."
-enc_BOS_vengeance:0 "Old Enemies, Older Ties"
-enc_BOS_vengeance_desc:0 "The Brotherhood got its start as remnants of the US military, just as we did. Together, we can protect each other from the yokels of the NCR."
-
 
 enc_CES_start:0 "The Legion"
 enc_CES_start_desc:0 "The Legion could be a powerful ally for our cause.  "
@@ -940,18 +1018,6 @@ enc_CES_trade:0 "Establish Trade"
 enc_CES_trade_desc:0 "The Legion may offer a smaller market than NCR would, but they still have products we want.  If nothing else, slaves."
 enc_CES_common_enemy:0 "A Common Enemy"
 enc_CES_common_enemy_desc:0 "Whatever our feelings for the Legion, the NCR is the enemy on our doorstep.  We must focus on them first."
-enc_NEW_start:0 "New Vegas"
-enc_NEW_start_desc:0 "Reconnaisance has determined that Los Vegas is rapidly rebuilding under the mysterious Mr. House with the aid of prewar technology.  That may be good for business."
-enc_NEW_vacation:0 "Negotiate a Group Rate"
-enc_NEW_vacation_desc:0 "With control of New Reno's 'pharmaceutical industry' and electronics, we can arrange trade between our two groups."
-enc_NEW_robot:0 "Exchange Robotic Technology"
-enc_NEW_robot_desc:0 "In exchange for robotic technology, we can teach New Vegas how to upgrade their weaponry."
-enc_NEW_recognize:0 "Recognize Vegas Autonomy"
-enc_NEW_recognize_desc:0 "In exchange access to New Vegas's weapons manufactories, we are prepared to recognize its privileged status in the Reunited States."
-enc_NEW_pact:0 "Closer Ties"
-enc_NEW_pact_desc:0 "We can forge closer ties with one of the last remnants of the Old America.  Mr. House has always worked with the United States government, after all."
-enc_NEW_puppet:0 "Our New Vice President"
-enc_NEW_puppet_desc:0 "Mr. House's reputation precedes him.  Recognizing the power and good intentions of the Enclave, he's prepared to join forces to bring peace and order to the Wastes.  Please rise for our new vice president."
 
 ###################################
 # REFORM TRAITS
@@ -1061,15 +1127,17 @@ goodBusiness: "Good business"
 potentialPartner: "Potential Partner"
 ourEnemiesFriend: "Our enemy's friend"
 wontShootOnsight: "Won't shoot on sight"
-
+enc_support_opinion: "Enclave Advisors"
 relations_increased_20: "Mutual Relations with §YEnclave§! improved by §G+20§!"
 
 erb_independence_faction:0 "Anti NCR Alliance"
 integrated_economy: "Integrated Economies"
 
 
+# POLITICS
 
-
+ENC_elites_party_anti_integration: "Anti-Integrationists"
+ENC_elites_party_anti_integration_long: "The Anti Integration Party"
 ###################################
 # TECHNOLOGY
 ###################################

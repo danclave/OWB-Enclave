@@ -1,25 +1,77 @@
 
 ##################################################
-### Stability loss based on purist popularity ####
+### Stability loss based on party popularity ####
 ##################################################
 
-stability_loss_based_on_purist_popularity = {
+stability_loss_based_on_elites_popularity = {
 	set_temp_variable = {
-		var = ban_ideology_var
+		var = stability_loss_var
 		value = party_popularity@elites
 	}
 	multiply_temp_variable = {
-		var = ban_ideology_var
+		var = stability_loss_var
 		value = -1
 	}
 	multiply_temp_variable = {
-		var = ban_ideology_var
+		var = stability_loss_var
 		value = 0.66
 	}
-	add_stability = ban_ideology_var
-	custom_effect_tooltip = stability_loss_based_on_purist_popularity
+	add_stability = stability_loss_var
+	custom_effect_tooltip = stability_loss_based_on_elites_popularity
+}
+stability_loss_based_on_people_popularity = {
+	set_temp_variable = {
+		var = stability_loss_var
+		value = party_popularity@people
+	}
+	multiply_temp_variable = {
+		var = stability_loss_var
+		value = -1
+	}
+	multiply_temp_variable = {
+		var = stability_loss_var
+		value = 0.66
+	}
+	add_stability = stability_loss_var
+	custom_effect_tooltip = stability_loss_based_on_people_popularity
+}
+stability_loss_based_on_intellectuals_popularity = {
+	set_temp_variable = {
+		var = stability_loss_var
+		value = party_popularity@intellectuals
+	}
+	multiply_temp_variable = {
+		var = stability_loss_var
+		value = -1
+	}
+	multiply_temp_variable = {
+		var = stability_loss_var
+		value = 0.66
+	}
+	add_stability = stability_loss_var
+	custom_effect_tooltip = stability_loss_based_on_intellectuals_popularity_popularity
 }
 
+##################################################
+### War Support loss based on party popularity ####
+##################################################
+
+war_support_loss_based_on_elites_popularity = {
+	set_temp_variable = {
+		var = war_support_loss_var
+		value = party_popularity@elites
+	}
+	multiply_temp_variable = {
+		var = war_support_loss_var
+		value = -1
+	}
+	multiply_temp_variable = {
+		var = war_support_loss_var
+		value = 0.33
+	}
+	add_war_support = war_support_loss_var
+	custom_effect_tooltip = war_support_loss_based_on_elites_popularity
+}
 ##################################################
 ### 		Adjust NCR suspicion 			   ###
 ##################################################

@@ -1,0 +1,269 @@
+﻿l_english:
+
+###################################
+# Seek Allies
+###################################
+
+
+
+enc_CES_start:0 "The Legion"
+enc_CES_start_desc:0 "The Legion could be a powerful ally for our cause.  "
+enc_CES_cache:0 "Render unto Ceasar"
+enc_CES_cache_desc:0 "As a show of good faith, we can offer Caesar energy weapons. The Legion claims they don't use firearms, but that might change if they see what we can offer."
+enc_CES_trade:0 "Establish Trade"
+enc_CES_trade_desc:0 "The Legion may offer a smaller market than NCR would, but they still have products we want.  If nothing else, slaves."
+enc_CES_common_enemy:0 "A Common Enemy"
+enc_CES_common_enemy_desc:0 "Whatever our feelings for the Legion, the NCR is the enemy on our doorstep.  We must focus on them first."
+
+###################################
+# REFORM TRAITS
+###################################
+military_constructor: "Peace through force"
+civilian_constructor: "Peace through plenty"
+courageous: "Courageous"
+enc_wounded_trait: "Wounded"
+enc_disliked_pragmatist: "Unpopular Pragmatist"
+enc_army_chief_loyalist: "Loyal Reformer"
+enc_air_chief_loyalist: "Loyal Reformer"
+enc_navy_chief_loyalist: "Loyal Reformer"
+mutant_sympathies: "Mutant Sympathies"
+compassionate_doctor: "Compassionate Doctor"
+genius_pacifist: "Genius Pacifist"
+salvatore_puppet: "Reluctant Puppet"
+loyal_soldier: "Loyal Soldier"
+
+###################################
+# REFORM UI
+###################################
+connect_to_power: "Connect to Grid"
+connect_to_power_tt: "Connect to Grid"
+connect_to_power_tt_delayed: "[!connect_to_power_click]Requires:\n[!connect_to_power_click_enabled]" 
+building_slot_available: "At least 1 Building Slot available"
+
+connect_to_power_ttt: " - costs 2 §YElecticity§! to maintain."
+
+civilian_power_grid: "Civilian Power Grid"
+civilian_power_grid_desc: "Allows a state to be §GCored§!"
+
+install_police_force_tt: "Install Police Force"
+
+legitimacy_TOOLTIP:0 "§HLegitimacy§! \n\nCurrent legitimacy: §Y[?legitimacy|%0]§!\n\nLegitimacy is capped at §H100%§!."
+
+arm_rebels_tt: "Arm Rebels (§Y[?Root.enc_rebels_we_have_armed|H0]§! £pol_power))"
+arm_rebels_tt_delayed: "§YArm rebels in the state!§!\nWhen the time is right, they will rise up should their petition for independence fail.\n\n[!arm_rebels_click_enabled]"
+arm_rebels_tt_cost: "More political power than §Y[?Root.enc_rebels_we_have_armed|H0]§!"
+arm_rebels_click: "§YArm rebels in the state!§!\nWhen the time is right, they will rise up should their petition for independence fail.\n\n[!arm_rebels_click_enabled]"
+enc_rebels_armed: "§GRebels already armed!§!\nThis state has rebels ready to take control of the state."
+arm_slaves_tt: "Arm slaves (§Y[?Root.enc_slaves_we_have_armed|H0]§! £pol_power))"
+arm_slaves_tt_cost: "More political power than §Y[?Root.enc_slaves_we_have_armed|H0]§!"
+arm_slaves_tt_delayed: "§YArm slaves in the state!§!\nWhen the time is right, they will rise up to show Americans will always fight for freedom.\n\n[!arm_slaves_click_enabled]"
+arm_slaves_click: "§YArm slaves in the state!§!\nWhen the time is right, they will rise up should their petition for independence fail."
+enc_slaves_armed: "This state has slaves ready to rise up for freedom."
+enc_slaves_armed2: "§GSlaves already armed!§!\nThis state has slaves ready to rise up for freedom."
+
+arm_patriots_tt: "Arm patriots (§Y[?Root.enc_patriots_we_have_armed|H0]§! £pol_power))"
+arm_patriots_tt_delayed: "§YArm patriots in the state!§!\nWe can arm those who oppose the bloated Californian plutocracy.\n\n[!arm_patriots_click_enabled]"
+arm_patriots_tt_cost: "More political power than §Y[?Root.enc_patriots_we_have_armed|H0]§!"
+arm_patriots_click: "§YArm patriots in the state!§!\nIf push comes to shove, these people will stand to defend their rights."
+enc_patriots_armed: "This state has patriots ready to rise up for America."
+
+unlock_arm_rebels: "Unlocks the ability to §Yarm rebels§! in any §YNCR§! state where §YBarron Republic§! has a core.\n\n"
+unlock_arm_patriots: "Unlocks the ability to §Yarm patriots§! in any core §Y[NCR.GetName]§! state.\n\n"
+unlock_arm_patriots: "Unlocks the ability to §Yarm slaves§! in any Legion state where it has a core.  Bastards.\n\n"
+ENC_rise_slaves:  "Issue the Second Emancipation Proclamation"
+ENC_rise_slaves_des: "It's time to remind Caesar that Americans will always fight for freedom."
+
+###################################
+# FLAGS
+###################################
+enc_court_ordered_elections: "Constitution Upheld by Checks and Balances!"
+enc_free_press_by_court: "Constitution Upheld by Checks and Balances!"
+enc_promised_no_peace_with_bos: "Promised no peace with the Brotherhood"
+enc_ncr_connections_flag: "Connections in the §YNCR§!"
+enc_crackdown_justified: "§YCrackdown§! is justified"
+enc_crackdown_justified_tt: "We gain justifications for a §Ycrackdown§!"
+
+ncr_suspicion_higher_than_5:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y5§! or higher"
+ncr_suspicion_higher_than_10:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y10§! or higher"
+ncr_suspicion_higher_than_15:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y15§! or higher"
+ncr_suspicion_higher_than_20:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y20§! or higher"
+ncr_suspicion_higher_than_25:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y25§! or higher"
+ncr_suspicion_higher_than_30:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y30§! or higher"
+ncr_suspicion_higher_than_35:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y35§! or higher"
+
+ENC_hiding_cost_decreased_5_tt: "§YNCR suspicion§! will go down by §G5§! £pol_power\n\n"
+ENC_hiding_cost_decreased_10_tt: "§YNCR suspicion§! will go down by §G10§! £pol_power\n\n"
+ENC_hiding_cost_decreased_15_tt: "§YNCR suspicion§! will go down by §G15§! £pol_power\n\n"
+ENC_hiding_cost_decreased_20_tt: "§YNCR suspicion§! will go down by §G20§! £pol_power\n\n"
+ENC_hiding_cost_decreased_25_tt: "§YNCR suspicion§! will go down by §G25§! £pol_power\n\n"
+ENC_hiding_cost_decreased_30_tt: "§YNCR suspicion§! will go down by §G30§! £pol_power\n\n"
+
+ENC_hiding_cost_increased_5_tt: "§YNCR suspicion§! will go up by §R5§! £pol_power\n\n"
+ENC_hiding_cost_increased_10_tt: "§YNCR suspicion§! will go up by §R10§! £pol_power\n\n"
+ENC_hiding_cost_increased_15_tt: "§YNCR suspicion§! will go up by §R15§! £pol_power\n\n"
+ENC_hiding_cost_increased_20_tt: "§YNCR suspicion§! will go up by §R20§! £pol_power\n\n"
+ENC_hiding_cost_increased_25_tt: "§YNCR suspicion§! will go up by §R25§! £pol_power\n\n"
+ENC_hiding_cost_increased_30_tt: "§YNCR suspicion§! will go up by §R30§! £pol_power\n\n"
+
+change_legitimacy_tt:0 "Modify §YLegitimacy§! by §+§![?legitimacy_change_var|+%]§!\n\n"
+lose_legitimacy_tt:0 "Lose §+§![?legitimacy_change_var|+%]§! §YLegitimacy§!\n\n"
+gain_legitimacy_tt:0 "Gain §+§![?legitimacy_change_var|+%]§! §YLegitimacy§!\n\n"
+
+lose_suspicion_tt:0 "§YNCR suspicion§! will go down by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
+gain_suspicion_tt:0 "§YNCR suspicion§! will go up by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
+
+gannon_returns: "Arcade Ganon has returned to the Enclave"
+
+enc_salvatores_tolerated_flag: "Salvatores tolerated"
+enc_wrights_tolerated_flag: "Wrights tolerated"
+
+ncr_suspicious_clr_tt: "\n§MRemoves the need to hide from the [NCR.GetName]§!"
+
+###################################
+# DIPLOMACY
+###################################
+intriguedDistrust: "Intrigued distrust"
+goodBusiness: "Good business"
+potentialPartner: "Potential Partner"
+ourEnemiesFriend: "Our enemy's friend"
+wontShootOnsight: "Won't shoot on sight"
+
+relations_increased_20: "Mutual Relations with §YEnclave§! improved by §G+20§!"
+
+erb_independence_faction:0 "Anti NCR Alliance"
+integrated_economy: "Integrated Economies"
+
+
+# POLITICS
+ENC_elites_party_anti_integration: "Anti-Integrationists"
+ENC_elites_party_anti_integration_long: "The Anti Integration Party"
+###################################
+# TECHNOLOGY
+###################################
+enc_civilian_power_grid_tech: "Civilian Power Grid"
+
+
+###########################################
+# OOB
+###########################################
+enc_tribals_tt: "2 §Ytribal infantry§! and 4 §Ytribal militias§! appear in §YAntelope Reservation§! state."
+enc_bos_recruits: "§YBrotherhood of Steel soldiers§! report for duty!"
+
+################ special codes for special people ################################################################################################################
+
+# yellow§Ytext§!
+# £air_experience_20x20
+# £army_experience_20x20
+# £autonomy_texticon
+# £civ_factory
+# £civ_factory_output
+# £command_power_20x20
+# £convoy_texticon
+# £daynight_text
+# £decision_icon_small
+# £decrease_reversed_texticon
+# £decrease_texticon
+# £divisions
+# £efficiency_cap_texticon
+# £efficiency_texticon
+# £increase_reversed_texticon
+# £increase_texticon
+# £infinity_icon
+# £infrastructure_texticon
+# £location_pointer
+# £locked
+# £manpower_texticon
+# £mapicon_port_strike_result_text
+# £mission_efficiency_strip
+# £national_unity_texticon
+# £nato_unit_anti_air_icon_small
+# £nato_unit_anti_tank_icon_small
+# £nato_unit_artillery_icon_small
+# £nato_unit_cavalry_icon_small
+# £nato_unit_engineer_icon_small
+# £nato_unit_heavy_armor_icon_small
+# £nato_unit_infantry_icon_small
+# £nato_unit_light_armor_icon_small
+# £nato_unit_marine_icon_small
+# £nato_unit_mechanized_icon_small
+# £nato_unit_medium_armor_icon_small
+# £nato_unit_modern_armor_icon_small
+# £nato_unit_motorized_artillery_icon_small
+# £nato_unit_motorized_icon_small
+# £nato_unit_mountaineers_icon_small
+# £nato_unit_paratrooper_icon_small
+# £nato_unit_recon_icon_small
+# £nato_unit_rocket_artillery_icon_small
+# £nato_unit_super_heavy_armor_icon_small
+# £navy_experience_20x20
+# £organization_texticon
+# £pol_idea_texticon
+# £pol_power
+# £production_cost
+# £production_naval_cost
+# £right_arrow_texticon
+# £ship_battlecruiser_icon_small
+# £ship_battleship_icon_small
+# £ship_carrier_icon_small
+# £ship_destroyer_icon_small
+# £ship_heavy_cruiser_icon_small
+# £ship_light_cruiser_icon_small
+# £ship_sh_battleship_icon_small
+# £ship_submarine_icon_small
+# £ship_transport_icon_small
+# £stability_texticon
+# £strenght_texticon
+# £supply_texticon
+# £support_AA_small
+# £support_art_small
+# £support_AT_small
+# £support_engineer_small
+# £support_field_hospital_small
+# £support_logistics_small
+# £support_maintenance_small
+# £support_military_police_small
+# £support_rocket_art_small
+# £support_signal_small
+# £technology_texticon
+# £temperature_text
+# £trigger_no
+# £trigger_yes
+# £unit_anti_air_icon_small
+# £unit_anti_tank_icon_small
+# £unit_artillery_icon_small
+# £unit_bicycle_infantry_icon_small
+# £unit_cavalry_icon_small
+# £unit_engineer_icon_small
+# £unit_heavy_armor_icon_AA_small
+# £unit_heavy_armor_icon_art_small
+# £unit_heavy_armor_icon_AT_small
+# £unit_heavy_armor_icon_small
+# £unit_infantry_icon_small
+# £unit_light_armor_icon_art_AA_small
+# £unit_light_armor_icon_art_AT_small
+# £unit_light_armor_icon_art_small
+# £unit_light_armor_icon_small
+# £unit_marine_icon_small
+# £unit_mechanized_icon_small
+# £unit_medium_armor_icon_AA_small
+# £unit_medium_armor_icon_art_small
+# £unit_medium_armor_icon_AT_small
+# £unit_medium_armor_icon_small
+# £unit_modern_armor_icon_AA_small
+# £unit_modern_armor_icon_art_small
+# £unit_modern_armor_icon_AT_small
+# £unit_modern_armor_icon_small
+# £unit_motorized_artillery_icon_small
+# £unit_motorized_icon_small
+# £unit_mountaineers_icon_small
+# £unit_paratrooper_icon_small
+# £unit_recon_icon_small
+# £unit_rocket_artillery_icon_small
+# £unit_super_heavy_armor_icon_AA_small
+# £unit_super_heavy_armor_icon_art_small
+# £unit_super_heavy_armor_icon_AT_small
+# £unit_super_heavy_armor_icon_small
+# £victory_point_texticon
+# £weather_text
+# £wing_rebase_status_texticon
+

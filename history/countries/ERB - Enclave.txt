@@ -34,6 +34,8 @@ set_country_flag = not_allowed_to_core_flag
 set_country_flag = generic_decisions_disabled
 set_country_flag = no_generic_manufacturer
 set_country_flag = no_generic_advisor
+set_variable = { enc_good_allignment = 0 }
+set_variable = { enc_evil_allignment = 0 }
 
 ###############################
 # POLITICS
@@ -120,22 +122,19 @@ every_country = {
 	add_opinion_modifier = { target = ERB modifier = genocidal_maniacs }
 	ERB = { add_opinion_modifier = { target = PREV modifier = dirty_muties }}
 }
-			
+
 # IDEAS
 add_ideas = ENC_infighting
 add_ideas = enc_scientists
 add_ideas = ENC_officers
 add_ideas = closed_economy
-add_ideas = volunteer_only
+add_ideas = the_remnants
 add_manpower = 500
 
 # 4rth of july
 country_event = { id = enc_reformers.23 days = 25 } 
 
-
-#DOM protection - do not remove
-
  set_variable = { 
-                    var = enc_rebels_we_have_armed
-                    value = 0
-                         }    
+	var = enc_rebels_we_have_armed
+	value = 0
+ }    

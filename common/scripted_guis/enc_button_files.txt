@@ -116,9 +116,6 @@ scripted_gui = {
 		effects = {
 			legitimacy_bg_click = {
 				# nothing
-			}			
-			legitimacy_bg_right_click = { #todo remove
-				add_to_variable = { legitimacy = 0.10 }
 			}
 		}
 	}

@@ -1,0 +1,83 @@
+﻿l_english:
+
+############################################ IDEAS #####################################################################################
+ENC_purist:0 "Purist"
+ENC_purist_desc:0 "Even after all these setbacks, our vision for the return of the true humanity has not wavered. We will purify the mutants from this world and reclaim our beloved homeland. At any cost."
+ENC_purist2:0 "Purist"
+ENC_purist2_desc:0 "Even after all these setbacks, our vision for the return of the true humanity has not wavered. We will purify the mutants from this world and reclaim our beloved homeland. At any cost."
+ENC_purist3:0 "Purist"
+ENC_purist3_desc:0 "Even after all these setbacks, our vision for the return of the true humanity has not wavered. We will purify the mutants from this world and reclaim our beloved homeland. At any cost."
+
+ENC_slave_labour:0 "Slave Labour"
+ENC_slave_labour_collars:0 "Collared Slave Labour"
+ENC_slave_labour_mutants:0 "Super Mutant Slave Labour"
+
+ENC_reform:0 "Reformist"
+ENC_reform_desc:0 "The Enclave has elected Douglas Granite, who means to reform the Enclave from the top down. A transformation which is proving painful."
+
+ENC_scientists:0 "Enclave Scientists"
+ENC_scientists_desc:0 "Enclave scientists are among the most educated and well funded in the post-war world. Many have not forgotten about the defeat at Navarro and are eager to pick up where the Enclave left off."
+
+ENC_scientists_purged:0 "Enclave Scientists"
+ENC_scientists_purged_desc:0 "Enclave scientists are among the most educated and well funded in the post-war world."
+
+ENC_scientists_buffed:0 "Enclave Scientists"
+ENC_scientists_buffed_desc:0 "Enclave scientists are among the most educated and well funded in the post-war world. Many have not forgotten about the defeat at Navarro and are eager to pick up where the Enclave left off."
+
+ENC_plague:0 "FEV Plague"
+ENC_plague_desc:0 "The Enclave has unleashed a bio weapon of unseen proportion on our population. Our only hope is to take the antidote from them by force!"
+
+ENC_plague_2:0 "FEV Plague"
+ENC_plague_2_desc:0 "The Enclave has unleashed a bio weapon of unseen proportion on our population. Our only hope is to take the antidote from them by force!"
+
+ENC_plague_3:0 "FEV Plague"
+ENC_plague_3_desc:0 "The Enclave has unleashed a bio weapon of unseen proportion on our population. Our only hope is to take the antidote from them by force!"
+
+
+ENC_infighting:0 "Political Infighting"
+ENC_infighting_desc:0 "Polarization between the two major factions in the Enclave government has come to a boiling point."
+
+ENC_education:0 "Basic Education"
+ENC_education_desc:0 "The Enclave has made education mandatory from 6 years old to 12 years old. Home education is not allowed."
+
+ENC_radio:0 "Enclave Radio"
+ENC_radio_desc:0 "The Enclave is back, America! And no, not just on your radio! These fine men and women have one mission: the restoration of American peace and order." 
+
+ENC_wastelanders:0 "Reformist"
+ENC_wastelanders_desc:0 "The Enclave has elected to accept wastelanders volunteers into their armed forces. Expanding their pool of manpower but causing friction in the Enclave government and military."
+ENC_wastelanders2:0 "Reformist"
+ENC_wastelanders2_desc:0 "The Enclave has succesfully integrated wastelander soldiers into their armed forces. Though the integration is limited to the lower rungs of the military."
+
+ENC_officers:0 "Enclave Officers"
+ENC_officers_desc:0 "The few Enclave Officers that remain are both well trained and experienced leaders. Many of them have plenty of comrades to avenge."
+
+ENC_officers_purged:0 "Enclave Officers"
+ENC_officers_purged_desc:0 "The few Enclave Officers that remain are both well trained and experienced leaders."
+
+enc_sac_city:0"Old Promises"
+
+ENC_enc_new_patriotismriotism:0 "New Patriotism"
+ENC_americans_one_and_all:0 "New Patriotism"
+ENC_police:0 "Federal Police"
+ENC_PA_production:0 "Power Armor production"
+ENC_energy_production: "Plasma Weapon Production"
+ENC_constitution:0 "Constitution"
+ENC_constitution_rule_of_law:0 "Constitution"
+ENC_cloning:0 "Cloning"
+ENC_FEV_soldiers:0 "FEV Enhanced soldiers"
+ENC_secret_service:0 "US Secret Service"
+ENC_secret_service_desc:0 "The United States Secret Service is a federal law enforcement agency under the U.S. Department of Homeland Security, charged with conducting criminal investigations and protecting the nation's leaders."
+
+ENC_integrating_officers:0 "Integrating the Officers"
+ENC_integrating_scientists:0 "Integrating the Scientists"
+ENC_integrating_politicians:0 "Integrating the Politicians"
+
+ENC_radio_purity: "Enclave Radio"
+ENC_vengeance: "Vengeance!"
+
+ENC_PA_quanitity: "Quantity PA Team"
+ENC_PA_quality: "Quality PA Team"
+
+enclave_naval_manufacturer: "Naval Research Team"
+
+contactthehardliners_tt: "2 divisions of §YEnclave Veterans§! appear at the §YSierra Army Depot§!"

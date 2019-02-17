@@ -25,8 +25,8 @@ ENC_hide_activity_days_tt:0 "Hide from the §YNCR§! for §Y90 days§!"
 ENC_hide_activity_bonus_tt:0 " + [?Root.days_mission_timeout@ENC_hide_activity|H0] §Gbonus§! days"
 ENC_hide_activity_crisis:0 "§RWe will have a crisis on our hands!§!\n"
 ENC_reveal_to_ncr: "Reveal Ourselves to the NCR"
-ENC_reveal_to_ncr_desc: "We cannot hide from the NCR forever, but we may be able to prevent war by revealing us at an opportune time. With an army of mad men on their borders, they may think twice about attacking us if we are strong enough. A few sympathetic voices in their government could also help."
-
+ENC_reveal_to_ncr_desc: "We cannot hide from the NCR forever, but we may be able to prevent war by revealing us at an opportune time. With an army of mad men on their borders, they may think twice about attacking us if we are strong enough. A few sympathetic voices in their government could also help.  Of course, we'll have to renounce our claim to be the United States government in order to forge a peace."
+ENC_reveal_to_ncr.tt: "\nRequires more than §Y30% legitimacy§!"
 
 # CRISIS
 NCR_crisis: "§RTHE NCR IS ONTO US§!"
@@ -55,6 +55,14 @@ enc_rangers_defense_sabotage_tt: "Unlocks the §YSabotage Infrastructure§! deci
 ##############################
 less_rations: "Reduce Rations"
 more_rations: "Increase Rations"
+
+##############################
+# WAR MEASURES 
+##############################
+ENC_sabotage_ces_supply_lines: "Sabotage Ceaser's Supply Lines"
+ENC_sabotage_ces_supply_lines_desc: "The Bull has the advantage in this war, but supporting supply lines over the Colorado river is a logistical nightmare. A few surgical strikes could force [CES.GetLeader] to consider his premature invasion, at least for a while."
+ENC_sabotage_ncr_supply_lines: "Sabotage NCR Supply Lines"
+ENC_sabotage_ncr_supply_lines_desc: "The NCR has the advantage in this war, but supporting supply lines over the Colorado river is a logistical nightmare. A few surgical strikes could force [NCR.GetLeader] to consider his premature invasion, at least for a while."
 
 ##############################
 # War with the NCR
@@ -204,7 +212,6 @@ ENC_rise_slaves: "Issue the Second Emancipation Proclamation"
 ENC_rise_slaves_desc: "We can trigger the Second American Revolution by promising freedom to the Legion's slaves.  However, the Legion may treat our decision to give plasma guns to slaves in their territory as an act of war."
 CES_nuke: "Nuke Flagstaff"
 CES_nuke_desc: "When ready, we will nuke Flagstaff and decapitate Caesar.  Although you have to wonder of America will destroy itself by winning the war this way."
-"
 ENC_pacific_commonwealth1: "Rebuilding the Pacific Commonwealth"
 ENC_pacific_commonwealth1_desc: "The good people of Klamath will be the nucleus for a revived Pacific Commonwealth.  Because hey, compared to the Washington Brotherhood, even we look good."
 ################ special codes for special people ################################################################################################################

@@ -3,6 +3,11 @@ ERB = {
 	color_ui = rgb { 0 45 106 }
 }
 
+ERB_reconstruction = {
+	color = rgb { 0 45 106 }
+	color_ui = rgb { 0 45 106 }
+}
+
 ERB_USA = { 
 	color = rgb { 67 123 237 } # base game blue
 	color_ui = rgb { 255 255 255 }
@@ -22,6 +27,13 @@ NCR_ERB = {
 	color = rgb { 64 46 176 }
 	color_ui = rgb { 64 46 176 }
 }
+
+ERB_BOS = {
+	color = rgb { 64 46 176 }
+	color_ui = rgb { 64 46 176 }
+}
+
+
 ERB_SHI = {
 	color = rgb { 67 123 237 } # base game blue
 	color_ui = rgb { 255 255 255 }
