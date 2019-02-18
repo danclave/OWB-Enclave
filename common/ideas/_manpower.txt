@@ -294,9 +294,7 @@ ideas = {
 			level = 6
 			allowed = {
 				original_tag = ERB
-			}			
-			available = {				
-			}
+			}	
 			ai_will_do = {
 				factor = 1
 			}
@@ -320,8 +318,11 @@ ideas = {
 			visible = {
 				original_tag = ERB
 			}
+			allowed = {
+				original_tag = ERB
+			}	
 
-			available = {			
+			available = {
 				NOT = { 285 = { is_core_of = ERB }}
 				OR = {
 					AND = {
@@ -364,6 +365,9 @@ ideas = {
 				original_tag = ERB
 				has_completed_focus = enc_enc_mobilize_manpower
 			}
+			allowed = {
+				original_tag = ERB
+			}	
 			
 			modifier = {
 				conscription = 0.20
@@ -390,6 +394,9 @@ ideas = {
 					enemies_strength_ratio > 0.6
 				}
 			}
+			allowed = {
+				original_tag = ERB
+			}	
 			cost = 150
 			removal_cost = -1
 			level = 3
@@ -445,6 +452,9 @@ ideas = {
 				#XP from reinforcement penalty (small)
 				training_time_factor = 0.3
 			}
+			allowed = {
+				original_tag = ERB
+			}	
 			ai_will_do = {
 				factor = 1
 				modifier = {
@@ -501,6 +511,9 @@ ideas = {
 				original_tag = ERB
 				has_completed_focus = enc_enc_mobilize_manpower
 			}
+			allowed = {
+				original_tag = ERB
+			}	
 			cost = 150
 			removal_cost = -1
 			level = 1
