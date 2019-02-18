@@ -408,14 +408,17 @@ focus_tree = {
 		completion_reward = {
 		
 			add_state_core = 285
+			add_state_core = 184
+			add_state_core = 295
 			set_capital = 285
 			add_stability = 0.05
 			country_event = { id = enc_reformers.68  }
 			custom_effect_tooltip = enc_reno_end.tt
-			hidden_effect = {
-				country_event = { id = enc_reformers.92 days = 60 } 
-			}
-		}
+			swap_ideas = {
+				remove_idea = { the_remnants}
+				add_idea = { The_Fools_And_Dreamers }
+				}
+	}
 	}
 
 	focus = {#RENO - New Reno Police
@@ -429,6 +432,7 @@ focus_tree = {
 		cost = 5.8
 		completion_reward = {
 			add_ideas = {ENC_reno_police}
+			country_event = { id = enc_reformers.200 }	
 		}
 	}
 	focus = {#RENO - New Reno Police - amnesty
@@ -619,7 +623,7 @@ focus_tree = {
 		relative_position_id = enc_infiltrate_ncr
 		x = 0
 		y = 1
-		prerequisite = { focus = enc_reform } 
+		prerequisite = { focus = enc_infiltrate_ncr } 
 		completion_reward = {
 			add_ideas = { ENC_radio }
 			159 = {
@@ -888,7 +892,7 @@ focus_tree = {
 		icon = GFX_goal_enc_verti_reform
 		cost = 4.3
 		ai_will_do = { factor = 1 } 
-		available = { has_war_support > 0.5 }
+		available = { has_war_support > 0.3 }
 		relative_position_id = enc_expansion_reform
 		x = -1
 		y = 1
@@ -964,6 +968,9 @@ focus_tree = {
 		completion_reward = {
 			add_state_core = 291 # VLT city
 		}
+		hidden_effect = {
+				country_event = { id = enc_reformers.92 days = 60 } 
+			}
 		cost = 4.3	
  }
   	focus = {#EXPANSION - VLT - power
@@ -1517,7 +1524,7 @@ focus_tree = {
 				}
 			}
 			country_event = { id = enc_reformers.50 }
-			custom_effect_tooltip = enc_rebuilding_a_nation_tt # todo write this
+			custom_effect_tooltip = enc_rebuilding_a_nation_tt 
 		}
 	}
 	focus = {#REBUILDING - Emergency Labour Draft
@@ -1525,7 +1532,6 @@ focus_tree = {
 		icon = GFX_goal_enc_emergency_labour_draft
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_rebuilding_a_nation
-		mutually_exclusive = { focus = enc_rebuilding_a_nation }  
 		prerequisite = { focus = enc_rebuilding_a_nation }
 		x = 3
 		y = 1
@@ -1541,7 +1547,6 @@ focus_tree = {
 		icon = GFX_goal_enc_requisition_of_resources
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_rebuilding_a_nation
-		mutually_exclusive = { focus = enc_rebuilding_a_nation } 
 		prerequisite = { focus = enc_rebuilding_a_nation }
 		x = -3
 		y = 1
