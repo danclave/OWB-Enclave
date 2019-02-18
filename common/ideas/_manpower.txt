@@ -12,6 +12,7 @@ ideas = {
 				not = { has_manpower_for_recruit_change_to = { value = 0.005 group = mobilization_laws } }
 				not = { original_tag = MOJ }
 				not = { original_tag = BOS }
+				not = {	original_tag = ERB }
 			}			
 
 			visible = {
@@ -45,7 +46,7 @@ ideas = {
 				not = { has_idea = isolation }
 				not = { original_tag = MOJ }
 				not = { original_tag = BOS }
-				not = { has_completed_focus =enc_reform }
+				not = {	original_tag = ERB }
 			}
 			ai_will_do = {
 				factor = 1
@@ -83,6 +84,7 @@ ideas = {
 				}
 				not = { original_tag = MOJ}
 				not = { original_tag = BOS }
+				not = {	original_tag = ERB }
 			}
 			modifier = {
 				conscription = 0.15
@@ -105,7 +107,7 @@ ideas = {
 				}
 				not = { original_tag = MOJ }
 				not = { original_tag = BOS }
-				not = { has_completed_focus = enc_reform }
+				not = {	original_tag = ERB }
 				}
 				
 			cost = 150
@@ -149,7 +151,7 @@ ideas = {
 				}
 				not = { original_tag = MOJ }
 				not = { original_tag = BOS }
-				not = { has_completed_focus = enc_reform } 
+				not = {	original_tag = ERB }
 				}
 			
 			cost = 150
@@ -192,7 +194,7 @@ ideas = {
 				enemies_strength_ratio > 0.75
 				not = { original_tag = MOJ }
 				not = { original_tag = BOS }
-				not = { has_completed_focus = enc_reform }
+				not = {	original_tag = ERB }
 			}
 			cost = 150
 			removal_cost = -1
@@ -244,7 +246,7 @@ ideas = {
 				}
 				not = { original_tag = MOJ }
 				not = { original_tag = BOS }
-				not = { has_completed_focus = enc_reform }
+				not = {	original_tag = ERB }
 			}
 			ai_will_do = {
 				factor = 1
@@ -294,7 +296,6 @@ ideas = {
 				original_tag = ERB
 			}			
 			available = {				
-				NOT = { 285 = { is_core_of = ERB }}
 			}
 			ai_will_do = {
 				factor = 1
@@ -336,7 +337,8 @@ ideas = {
 				non_core_manpower = -0.05
 			}
 			
-			cancel_if_invalid = no
+			cancel_if_invalid = yes
+			default = no
 		}
 		
 		enclave_military = {
