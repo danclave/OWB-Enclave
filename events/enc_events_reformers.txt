@@ -2598,99 +2598,6 @@ country_event = {#101 Axis of Evil
 }
 }
 
-country_event = {#102 Hope
-    id = enc_reformers.102
-    title = enc_reformers.102.t
-    desc = enc_reformers.102.d
-    picture = GFX_event_enc_lincoln_memorial
-    fire_only_once = yes    
-    is_triggered_only = yes
-	option = {# Bringit
-		name = enc_reformers.102.a
-		dismantle_faction = yes
-		create_faction = "The United States"
-		add_to_faction = ARR
-		NCN = { 
-				if = { 
-					limit = { is_in_faction = yes } 
-					leave_faction = yes 	
-				}
-			}
-			add_to_faction = NCN
-			BEL = { 
-				if = { 
-					limit = { is_in_faction = yes } 
-					leave_faction = yes 	
-				}
-			}
-			add_to_faction = BEL
-		ARR = {
-					add_ai_strategy = {
-						type = alliance
-						id = "ERB"
-						value = 200
-					}
-				}
-		BEL = {
-					add_ai_strategy = {
-						type = alliance
-						id = "ERB"
-						value = 200
-					}
-				}
-		NCN = {
-					add_ai_strategy = {
-						type = alliance
-						id = "ERB"
-						value = 200
-					}
-				}				
-		}
-    option = {# Bringit
-		trigger = { has_country_flag = enc_arroyo_mom }
-		name = enc_reformers.102.b
-		dismantle_faction = yes
-		create_faction = "The United States"
-		add_to_faction = ARR
-		NCN = { 
-				if = { 
-					limit = { is_in_faction = yes } 
-					leave_faction = yes 	
-				}
-			}
-			add_to_faction = NCN
-			BEL = { 
-				if = { 
-					limit = { is_in_faction = yes } 
-					leave_faction = yes 	
-				}
-			}
-			add_to_faction = BEL
-		ARR = {
-					add_ai_strategy = {
-						type = alliance
-						id = "ERB"
-						value = 200
-					}
-				}
-		BEL = {
-					add_ai_strategy = {
-						type = alliance
-						id = "ERB"
-						value = 200
-					}
-				}
-		NCN = {
-					add_ai_strategy = {
-						type = alliance
-						id = "ERB"
-						value = 200
-					}
-				}				
-		}	
-				
-		
-}
 
 country_event = {#103 - Drugs
 	id = enc_reformers.103
@@ -2763,7 +2670,7 @@ country_event = {#104 - Followers of Apocolypse
 			var = legitimacy
 			value > 0.50
 		}
-		has_completed_focus = enc_vlt_power_reform
+		has_completed_focus = enc_rebuilding_a_nation
 	}
 	
 	option = {# Capture Operations
@@ -3299,7 +3206,6 @@ country_event = {#115 Axis of Evil
 		NOT = {
 			country_exists = NCR
 		}
-	has_completed_focus = enc_reform
 	}
 	mean_time_to_happen = {	days = 3 }
     option = {# Bringit
@@ -3308,7 +3214,6 @@ country_event = {#115 Axis of Evil
 	CES = {give_guarantee = WBH } 
 	WBH = { give_guarantee = CES } 
 	CES = { give_guarantee = EHT } 
-	EHT = {give_guarantee = CES }
 	set_country_flag = ENC_axis_evil
 		}
 }
@@ -4454,6 +4359,7 @@ country_event = { #159 - Ghoul Libel
 		has_completed_focus = enc_purge_opposition
 		has_full_control_of_state = 291
 		has_completed_focus = enc_reform
+		291 = { is_owned_and_controlled_by = ERB }
 	}
 	mean_time_to_happen = {
 		days = 90
@@ -4940,7 +4846,7 @@ country_event = { #178- Vertibird Crash
     title = enc_reformers.178.t
     desc = enc_reformers.178.d
     picture = GFX_event_enc_vertibird_crash
-    fire_only_once = NO
+    fire_only_once = YES
     trigger = {
 		has_completed_focus = enc_reform
 		date > 2279.1.1
@@ -4969,6 +4875,7 @@ country_event = { #179- New New Vegas
     trigger = {
 		date > 2279.1.1
 		people > 0.40
+		has_completed_focus = enc_rebuilding_a_nation 
 			}		
 	mean_time_to_happen = {
 		days = 40
@@ -5471,7 +5378,7 @@ country_event = {#192 - War Crimes
 		}
 	}
 	desc = enc_reformers.192.d				
-	mean_time_to_happen = { days = 15 }
+	mean_time_to_happen = { days = 60 }
 	option = {# Denounce
 		name = enc_reformers.192.a
 		custom_effect_tooltip = enc_reformers.192.a.tt
@@ -5585,6 +5492,21 @@ country_event = {#199 - Remember the Rig
 		}
 }
 
+country_event = {#200 -Police
+	id = enc_reformers.200
+	title = enc_reformers.200.t
+	desc = enc_reformers.200.d
+	picture = GFX_event_ENC_rebuilding
+	fire_only_once = yes	
+    is_triggered_only = yes	
+	option = {# Amnesty
+		name = enc_reformers.200.a
+		complete_national_focus = enc_amnesty_for_service
+	}
+	option = {#  Clean Trash
+		complete_national_focus = enc_out_with_the_old
+	}
+}
 					
 country_event = {#195 - Brotherhood Civil War
 	id = enc_reformers.195
@@ -5597,6 +5519,13 @@ country_event = {#195 - Brotherhood Civil War
 		name = enc_reformers.195.a
 		BOS = { add_popularity = { ideology = people popularity = 0.25 } }
 		BOS = { set_politics = { ruling_party = people } }
+		  BOS = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ERB"
+				value = 600
+				}
+			}
 		BOS = { 
 			start_civil_war = {
 				ideology = ruler
@@ -5636,14 +5565,7 @@ country_event = {#195 - Brotherhood Civil War
             enemy = D01
             hostility_reason = asked_to_join
                     }
-     BOS = {
-			add_ai_strategy = {
-				type = alliance
-				id = "ERB"
-				value = 400
-				}
-			}
-	 }	
+		}	
 }
 
 			
