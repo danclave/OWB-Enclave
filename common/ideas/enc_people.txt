@@ -37,7 +37,7 @@ ideas = {
 				factor = 1
 			}
 		}
-	paladin_myers = {	
+		paladin_myers = {	
 			picture = BOS_generic6
 			
 			allowed = {
@@ -206,18 +206,6 @@ ideas = {
 			}	
 			traits = {
 				genius_pacifist
-			}
-		}
-		erb_orion_moreno = {
-			picture = orion_moreno		
-			allowed = {
-				tag = ERB  
-			}
-			visible = {
-				has_country_flag = merono_returns
-			}	
-			traits = {
-				loyal_soldier
 			}
 		}
 	}	
@@ -423,9 +411,19 @@ ideas = {
 				factor = 1
 			}
 		}
+		erb_orion_moreno = {
+			picture = orion_moreno_erb
+			allowed = {
+				tag = ERB  
+			}
+			visible = {
+				has_country_flag = moreno_returns
+			}	
+			traits = {
+				loyal_soldier
+			}
+		}
 	}
-
-
 }
 
 # generic_air_bonus

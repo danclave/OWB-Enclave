@@ -306,13 +306,13 @@ enc_reformers.52.a.tt: "Dr. Henry is now available as a §YPolitical Advisor§!.
 ################################################################################################################ -<
 enc_reformers.53.t: "Dr. Henry Leaves the Enclave"
 enc_reformers.53.d: "Dr. Henry was never a political figure, but even he could not ignore"
-enc_reformers.54.a: "This is no place for the naive."
+enc_reformers.53.a: "This is no place for the naive."
 enc_reformers.53.a.tt: "§YDr. Henry§! leaves the Enclave!\n"
 ################################################################################################################ -<
 enc_reformers.54.t: "Moreno returns!"
 enc_reformers.54.d: "Orion Moreno is a soldier that used to serve in the Enclave until the destruction of Navarro. Like many others, he fled South into the NCR. A loyal soldier, he has never given up on the Enclave's dream of a restored America. When rumors of the Enclave's return reached him, Orion packed his bags to rejoin his lost comrades in arms."
 enc_reformers.54.a: "Welcome home, soldier!"
-enc_reformers.54.a.tt: "Orion Moreno is now available as a §YTheorist§!."
+enc_reformers.54.a.tt: "Now available as a §YHigh Command§!:\n"
 ################################################################################################################ -<
 enc_reformers.55.t: "Orion Moreno Leaves the Enclave!"
 enc_reformers.55.d: "Our recent policies have left Orion Moreno conflicted, doubting wether the Enclave he remembered from his youth ever even existed. After much doubt, Moreno has left our government and country. His current location is unknown."

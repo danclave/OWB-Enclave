@@ -321,7 +321,7 @@ country_event = {#13 - Consolidating power
 	id = enc_reformers.13
 	title = enc_reformers.13.t
 	desc = enc_reformers.13.d
-	picture = GFX_event_Enc_speech
+	picture = GFX_event_enc_speech
 	
 	fire_only_once = no
     is_triggered_only = yes
@@ -1523,6 +1523,7 @@ country_event = {#54 - Moreno returns
 		name = enc_reformers.54.a
 		set_country_flag = moreno_returns
 		custom_effect_tooltip = enc_reformers.54.a.tt
+		show_ideas_tooltip = erb_orion_moreno		
 	}
 
 }
@@ -1829,7 +1830,7 @@ country_event = {#68 - Slavery
 	id = enc_reformers.68
 	title = enc_reformers.68.t
 	desc = enc_reformers.68.d
-	picture = GFX_event_ENC_Slavery
+	picture = GFX_event_enc_slaves
 	fire_only_once = yes	
 	is_triggered_only = yes	
 	option = {# Slavery
@@ -5390,12 +5391,12 @@ country_event = { #190 - Free Press Supports rule of law
 		focus_progress = {
 			focus = enc_martial_law
 			progress > 0.1
-				}
-			OR = { 
-				has_idea = ENC_free_press
-				has_idea = ENC_free_press_2
-				}
-			}		
+		}
+		OR = { 
+			has_idea = ENC_free_press
+			has_idea = ENC_free_press_2
+		}
+	}		
 	mean_time_to_happen = {	days = 3 }  
     option = { # STOP
         name = enc_reformers.190.a
@@ -5651,7 +5652,7 @@ country_event = {#195 - Brotherhood Civil War
 # integration
 #
 
-country_event = {#300 - Raid!
+country_event = {#300 - Sac city protests!
 	id = enc_reformers.300
 	title = enc_reformers.300.t
 	desc = enc_reformers.300.d
@@ -5659,33 +5660,44 @@ country_event = {#300 - Raid!
 	fire_only_once = yes	
 	is_triggered_only = no
 	trigger = {
-		has_full_control_of_state = 285
-		NOT = {
-			has_completed_focus = enc_reno_end
+		has_full_control_of_state = 135 # sac city
+		OR = {
+			has_completed_focus = enc_suspend_elections
+			has_completed_focus = enc_requisition_of_resources
+			has_completed_focus = enc_emergency_labour_draft
+			has_completed_focus = enc_martial_law
 		}
 	}
-	mean_time_to_happen =  { days = 30 } # quick
+	mean_time_to_happen =  { days = 200 }
 	option = { # open fire
 		name = enc_reformers.300.a
 		custom_effect_tooltip = enc_reformers.300.a.tt
-		add_war_support = 0.10
 		# modify legitimacy
 		set_temp_variable  = {
 			var = legitimacy_change_var
-			value = -0.05
+			value = -0.10
 		}
 		change_legitimacy = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_idea = ENC_free_press
+						has_idea = ENC_free_press_2
+					}
+				}
+				country_event = { id = enc_reformers.301 } # news report
+			}
+			country_event = { # candel vigil
+				id = enc_reformers.302
+				days = 356
+			}
+		}
 	}
-	option = { # strict rules of engagement
+	option = { # Let them protest
 		name = enc_reformers.300.b
 		custom_effect_tooltip = enc_reformers.300.b.tt
 		# modify legitimacy
-		set_temp_variable  = {
-			var = legitimacy_change_var
-			value = 0.05
-		}
-		change_legitimacy = yes
-		war_support_loss_based_on_elites_popularity = yes
 	}
 }
 
