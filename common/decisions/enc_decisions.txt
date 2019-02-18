@@ -310,8 +310,8 @@ ENC_infiltrating_NCR = {
 		complete_effect = {
 
 		}
-		fire_only_once = YES
-		days_remove = 60
+		fire_only_once = yes
+		days_remove = 30
 		remove_effect = {
 			BOS = {
 				declare_war_on = {
@@ -331,11 +331,11 @@ ENC_infiltrating_NCR = {
 		visible = {
 			has_completed_focus = enc_the_bishop_incident
 		}
-		fire_only_once = YES
+		fire_only_once = yes
 		complete_effect = {
 
 		}
-		days_remove = 60
+		days_remove = 30
 		remove_effect = {
 			DES = { 
 				if = {
