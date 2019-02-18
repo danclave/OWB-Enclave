@@ -619,7 +619,7 @@ focus_tree = {
 		relative_position_id = enc_infiltrate_ncr
 		x = 0
 		y = 1
-		prerequisite = { focus = enc_reform } 
+		prerequisite = { focus = enc_infiltrate_ncr } 
 		completion_reward = {
 			add_ideas = { ENC_radio }
 			159 = {
@@ -998,6 +998,17 @@ focus_tree = {
 				enc_civilian_power_grid_tech = 1	
 			}
 			custom_effect_tooltip = enc_rebuild_the_power_grid_tt
+			custom_effect_tooltip = breaklines
+			every_owned_state = {
+				limit = {
+					is_core_of = ERB
+				}
+				add_building_construction = {
+				type = civilian_power_grid
+				level = 1
+				instant_build = yes
+				}
+			}
 		}
 		cost = 5.8
  }
@@ -2064,7 +2075,7 @@ focus_tree = {
 		prerequisite = { focus = enc_rebuilding_a_nation }
 		x = 6
 		y = 1
-		cost = 5.8  
+		cost = 5.8   
 		completion_reward = {
 			country_event = { id = enc_reformers.175 }		
 		}			
