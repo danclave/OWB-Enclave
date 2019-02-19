@@ -284,7 +284,10 @@ focus_tree = {
 		ai_will_do = { factor = 1 } 
 		prerequisite = { focus = enc_purge_scientists }
 		prerequisite = { focus = enc_purge_officers }
-		available = { intellectuals > 0.7	}
+		available = { 
+			intellectuals > 0.7
+			not = { has_completed_focus = enc_purge_opposition }
+		}
 		relative_position_id = enc_consolidate_power
 		x = 0
 		y = 2	
@@ -1527,7 +1530,6 @@ focus_tree = {
 					ERB = { add_opinion_modifier = { target = PREV modifier = rebels}}
 				}
 			}
-			country_event = { id = enc_reformers.50 }
 			custom_effect_tooltip = enc_rebuilding_a_nation_tt # todo write this
 		}
 	}
