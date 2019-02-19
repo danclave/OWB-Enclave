@@ -5,6 +5,11 @@
 ENC_shifts = {
 	icon = category_enc_shift
 	allowed = {original_tag = ERB}
+	visible = {
+		not = {
+			num_of_controlled_states > 30
+		}
+	}
 	priority = -1
 }
 ENC_call_remnants = {
