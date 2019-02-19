@@ -1008,4 +1008,31 @@ enc_reformers.199.t: "Remember the Oil Rig"
 enc_reformers.199.d: "Across the nation, flags are at half mast today in honor of President Richardson and the brave men and women of the Enclave whose lives were taken in a tragic terrorist attack in on the United States government's redoubt on the Poseidon Oil Rig. A center of biological research and aid programs, the oil rig was cruelly destroyed by a terrorist who blew up its clean, efficient nuclear reactor. President Granite has decreed today Remembrance Day, a national holiday to mourn those among us whose lives were cruelly taken by raiders, vandals, and terrorists.  This is Enclave Radio, promising you that they are gone, but not forgotten."
 enc_reformers.199.a: "A dark day for all mankind"
 
+#############################################################################################################
+enc_reformers.300.t: "Protests in [protesting_state.GetName]"
+enc_reformers.300.d: "Protests have broken out in [protesting_state.GetName]. Their demands include the following:"
+enc_reformers.300.d.enc_suspend_elections:0 "The return of elections, "
+enc_reformers.300.d.enc_requisition_of_resources:0 "the end of requisitioning civilian assets, "
+enc_reformers.300.d.enc_emergency_labour_draft:0 "the end of the labour draft, "
+enc_reformers.300.d.enc_martial_law:0 "the end of martial law, "
+enc_reformers.300.d.end: " more federal holidays and other concessions."
+enc_reformers.300.a: "Break up the protests"
+enc_reformers.300.a.tt: "§gThings could get out of hand...\n\n§!"
+enc_reformers.300.b: "Let them tire themselves out"
+enc_reformers.300.b.tt: "§gProtests may happen again.§!\n\n"
+#############################################################################################################
+enc_reformers.301.t: "The [protesting_state.GetName] massacre"
+enc_reformers.301.d: "Efforts to contain the protests in [protesting_state.GetName] have gone out of control, resulting in a massacre."
+enc_reformers.301.a: "A dark day for all mankind."
+enc_reformers.301.b: "Better shut down the press in advance."
+#############################################################################################################
+enc_reformers.302.t: "The press reports on the [protesting_state.GetName] massacre"
+enc_reformers.302.d: "The free press has started reporting on the unfortunate events in [protesting_state.GetName]."
+enc_reformers.302.a: "Thoughts and prayers"
+enc_reformers.302.b: "This free press thing has gone far enough."
+#############################################################################################################
+enc_reformers.303.t: "Candelight vigil in [protesting_state.GetName]"
+enc_reformers.303.d: "People have gathered in [protesting_state.GetName] to remember 1 year since the [protesting_state.GetName] massacre."
+enc_reformers.303.a: "Let them have their ceremony."
+enc_reformers.303.b: "Break it up."
 
