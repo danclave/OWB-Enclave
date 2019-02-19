@@ -2398,6 +2398,7 @@ ENC_gannon_doctrine = {
 	visible = {
 			if = {
 				has_completed_focus = enc_reform
+				FROM = { exists = yes }
 				}	
 			}
 		available = {
@@ -2418,6 +2419,7 @@ ENC_gannon_doctrine = {
 	erb_reunited_state_arroyo = {
 		visible = {
 			is_neighbor_of = ARR
+			ARR = { exists = yes }
 				}
 		available = {
 			NOT = {
@@ -2441,7 +2443,8 @@ erb_incorporate_to_commonwealth = {
 	visible = {
 			if = {
 				has_completed_focus = enc_reform
-				}	
+				}
+			FROM = { exists = yes }	
 			}
 		available = {
 			NOT = {
@@ -2466,7 +2469,8 @@ erb_join_usa = {
 	visible = {
 			if = {
 				has_completed_focus = enc_reform
-				}	
+				}
+			FROM = { exists = yes }			
 			}
 		available = {
 			NOT = {
@@ -2748,7 +2752,7 @@ ENC_render_unto_caesar = {
 			}
 		}
 		is_good = no
-		days_mission_timeout = 730
+		days_mission_timeout = 1068
 		visible = {original_tag = ERB }
 		timeout_effect = { country_event = { id = enc_reformers.101 }}
 		complete_effect = { }

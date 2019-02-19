@@ -208,6 +208,18 @@ ideas = {
 				genius_pacifist
 			}
 		}
+		erb_orion_moreno = {
+			picture = orion_moreno		
+			allowed = {
+				tag = ERB  
+			}
+			visible = {
+				has_country_flag = moreno_returns
+			}	
+			traits = {
+				loyal_soldier
+			}
+		}
 	}	
 
 	army_chief = {
@@ -220,7 +232,7 @@ ideas = {
 			}
 			
 			available = {
-				    has_completed_focus = ncr_bigjim
+				    has_completed_focus = enc_reform
 			}
 			visible = { 
 				has_country_flag  = enc_compassionate_california
