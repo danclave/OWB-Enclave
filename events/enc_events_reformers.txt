@@ -321,7 +321,7 @@ country_event = {#13 - Consolidating power
 	id = enc_reformers.13
 	title = enc_reformers.13.t
 	desc = enc_reformers.13.d
-	picture = GFX_event_Enc_speech
+	picture = GFX_event_enc_speech
 	
 	fire_only_once = no
     is_triggered_only = yes
@@ -632,6 +632,7 @@ country_event = {#21 - Spies in NCR - caught
 	
 	trigger = {	
 		has_country_flag = enc_ncr_spies
+		country_exists = NCR
 	}	
 	mean_time_to_happen = {	days = 300 }
 	
@@ -1523,6 +1524,7 @@ country_event = {#54 - Moreno returns
 		name = enc_reformers.54.a
 		set_country_flag = moreno_returns
 		custom_effect_tooltip = enc_reformers.54.a.tt
+		show_ideas_tooltip = erb_orion_moreno		
 	}
 
 }
@@ -1829,7 +1831,7 @@ country_event = {#68 - Slavery
 	id = enc_reformers.68
 	title = enc_reformers.68.t
 	desc = enc_reformers.68.d
-	picture = GFX_event_ENC_Slavery
+	picture = GFX_event_enc_slaves
 	fire_only_once = yes	
 	is_triggered_only = yes	
 	option = {# Slavery
@@ -4795,30 +4797,42 @@ country_event = { #175- Law and Order
     }
 country_event = { #176- Californian Resistance
     id = enc_reformers.176
-    title = enc_reformers.176.t
-    desc = enc_reformers.176.d
-    picture = GFX_event_BOS_desert_patrol
-    fire_only_once = NO
-    trigger = {
-		NCN = { has_war_with = CES }
-		NOT = { country_exists = NCR }
-		NOT = { has_completed_focus = enc_ncr_soldiers }
-		NOT = { has_completed_focus = enc_bos_soldiers }
-			}		
+	title = enc_reformers.176.t
+	desc = enc_reformers.176.d
+	picture = GFX_event_BOS_desert_patrol
+	fire_only_once = NO
+	trigger = {
+		NCN = {
+			has_war_with = CES
+		}
+		NOT = {
+			country_exists = NCR
+		}
+		NOT = {
+			has_completed_focus = enc_ncr_soldiers
+		}
+		NOT = {
+			has_completed_focus = enc_bos_soldiers
+		}
+	}
 	mean_time_to_happen = {
 		days = 60
-		}  
-    option = { # STOP
-        name = enc_reformers.176.a
+	}
+	option = {
+		#STOP
+		name = enc_reformers.176.a
 		add_manpower = -250
-        }
-	option = { # STOP
-        name = enc_reformers.176.b
-		trigger = { has_completed_focus = enc_order }
+	}
+	option = {
+		#STOP
+		name = enc_reformers.176.b
+		trigger = {
+			has_completed_focus = enc_order
+		}
 		set_country_flag = california_atrocities
 		custom_effect_tooltip = enc_reformers.176.b.tt
-        }   		
-    }
+	}
+}
 country_event = { #177- Congressional Criticism
     id = enc_reformers.177
     title = enc_reformers.177.t
@@ -5297,12 +5311,12 @@ country_event = { #190 - Free Press Supports rule of law
 		focus_progress = {
 			focus = enc_martial_law
 			progress > 0.1
-				}
-			OR = { 
-				has_idea = ENC_free_press
-				has_idea = ENC_free_press_2
-				}
-			}		
+		}
+		OR = { 
+			has_idea = ENC_free_press
+			has_idea = ENC_free_press_2
+		}
+	}		
 	mean_time_to_happen = {	days = 3 }  
     option = { # STOP
         name = enc_reformers.190.a
@@ -5489,7 +5503,7 @@ country_event = {#199 - Remember the Rig
 		name = enc_reformers.199.a
 		add_stability = 0.05
 		add_political_power = 50
-		}
+	}
 }
 
 country_event = {#200 -Police
@@ -5508,14 +5522,16 @@ country_event = {#200 -Police
 	}
 }
 					
-country_event = {#195 - Brotherhood Civil War
+country_event = {
+	#195 - Brotherhood Civil War
 	id = enc_reformers.195
 	title = enc_reformers.195.t
 	picture = GFX_event_MOJ_contact_the_west
 	fire_only_once = YES
-	desc = enc_reformers.195.d				
-	is_triggered_only = yes	
-	option = {#  Alliance
+	desc = enc_reformers.195.d
+	is_triggered_only = yes
+	option = {
+		# Alliance
 		name = enc_reformers.195.a
 		BOS = { add_popularity = { ideology = people popularity = 0.25 } }
 		BOS = { set_politics = { ruling_party = people } }
@@ -5530,87 +5546,217 @@ country_event = {#195 - Brotherhood Civil War
 			start_civil_war = {
 				ideology = ruler
 				size = 0.65
+			}
+		}
+		if = {
+			limit = {
+				is_in_faction = no
+			}
+			create_faction = "The Enclave"
+			BOS = {
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+				}
+				leave_faction = yes
+			}
+			add_to_faction = BOS
+		}
+		else_if = {
+			limit = {
+				is_in_faction = yes
+			}
+			BOS = {
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+				}
+				leave_faction = yes
+			}
+			add_to_faction = BOS
+		}
+		else_if = {
+			limit = {
+				is_in_faction = no
+				BOS = {
+					is_in_faction = no
 				}
 			}
-		if = {
-            limit = { is_in_faction = no }
-            create_faction = "The Enclave"
-            BOS = { 
-                if = { 
-                    limit = { is_in_faction = yes } 
-                 }
-				 leave_faction = yes 
-            }
-            add_to_faction = BOS
-        }
-        else_if = {
-            limit = { is_in_faction = yes }
-            BOS = { 
-                if = { 
-                    limit = { is_in_faction = yes } 
-					}
-				 leave_faction = yes 
-            }
-            add_to_faction = BOS
-        }
-		else_if = {
-            limit = { is_in_faction = no
-					BOS = {is_in_faction_no }
-					}
-            create_faction = "The Enclave"
-            add_to_faction = BOS
-        }
-          add_to_war = {
-            targeted_alliance = BOS
-            enemy = D01
-            hostility_reason = asked_to_join
-                    }
-		}	
+			create_faction = "The Enclave"
+			add_to_faction = BOS
+		}
+		add_to_war = {
+			targeted_alliance = BOS
+			enemy = D01
+			hostility_reason = asked_to_join
+		}
+		BOS = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ERB"
+				value = 400
+			}
+		}
+	}
 }
-
 			
 			
 # integration
 #
 
-country_event = {#300 - Raid!
+country_event = {#300 - state protests!
 	id = enc_reformers.300
 	title = enc_reformers.300.t
 	desc = enc_reformers.300.d
 	picture = GFX_event_enc_urban_patrol
-	fire_only_once = yes	
-	is_triggered_only = no
+	fire_only_once = yes
+	is_triggered_only = yes
 	trigger = {
-		has_full_control_of_state = 285
-		NOT = {
-			has_completed_focus = enc_reno_end
+		has_full_control_of_state = 135 # sac city
+		OR = {
+			has_completed_focus = enc_suspend_elections
+			has_completed_focus = enc_requisition_of_resources
+			has_completed_focus = enc_emergency_labour_draft
+			has_completed_focus = enc_martial_law
 		}
 	}
-	mean_time_to_happen =  { days = 30 } # quick
+	immediate = {
+		if = {
+			limit = {			
+				has_completed_focus = enc_suspend_elections
+			}
+			custom_effect_tooltip = enc_reformers.300.d.enc_suspend_elections
+		}
+		if = {
+			limit = {			
+				has_completed_focus = enc_requisition_of_resources
+			}
+			custom_effect_tooltip = enc_reformers.300.d.enc_requisition_of_resources
+		}
+		if = {
+			limit = {			
+				has_completed_focus = enc_emergency_labour_draft
+			}
+			custom_effect_tooltip = enc_reformers.300.d.enc_emergency_labour_draft
+		}
+		if = {
+			limit = {			
+				has_completed_focus = enc_martial_law
+			}
+			custom_effect_tooltip = enc_reformers.300.d.enc_martial_law
+		}
+		hidden_effect = {
+			random_owned_state = {
+				limit = {
+					is_core_of = NCR
+					state_population > 30000
+				}
+				save_event_target_as = protesting_state
+			}
+		}
+	}
+	
+	mean_time_to_happen =  { days = 200 }
 	option = { # open fire
 		name = enc_reformers.300.a
 		custom_effect_tooltip = enc_reformers.300.a.tt
-		add_war_support = 0.10
 		# modify legitimacy
 		set_temp_variable  = {
 			var = legitimacy_change_var
-			value = -0.05
+			value = -0.10
 		}
 		change_legitimacy = yes
+		hidden_effect = {
+			country_event = { id = enc_reformers.301 }
+		}
 	}
-	option = { # strict rules of engagement
+	option = { # Let them protest
 		name = enc_reformers.300.b
 		custom_effect_tooltip = enc_reformers.300.b.tt
-		# modify legitimacy
-		set_temp_variable  = {
-			var = legitimacy_change_var
-			value = 0.05
-		}
-		change_legitimacy = yes
-		war_support_loss_based_on_elites_popularity = yes
+		add_stability = -0.05
+		add_war_support = -0.05
 	}
 }
-
+country_event = {#301 - state protest turns into massacre!
+	id = enc_reformers.301
+	title = enc_reformers.301.t
+	picture = GFX_event_enc_urban_patrol
+	fire_only_once = no
+	desc = enc_reformers.301.d
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {			
+			country_event = { # Candle vigil one year layer
+				id = enc_reformers.303
+				days = 10 # todo make 365
+			}
+		}
+	}
+	
+	option = {# damn it
+		name = enc_reformers.301.a
+		add_stability = -0.10
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_idea = ENC_free_press
+						has_idea = ENC_free_press_2
+					}
+				}
+				country_event = { id = enc_reformers.302 } # news report
+			}
+		}
+	}
+	option = {# better shut down the press
+		name = enc_reformers.301.b
+		trigger = {
+			OR = {
+				has_idea = ENC_free_press
+				has_idea = ENC_free_press_2
+			}
+		}
+		add_stability = -0.15
+		remove_ideas = { ENC_free_press ENC_free_press_2 }
+	}
+}
+country_event = {#302 - Press reports massacre
+	id = enc_reformers.302
+	title = enc_reformers.302.t
+	picture = GFX_event_ENC_secret
+	fire_only_once = no
+	desc = enc_reformers.302.d
+	is_triggered_only = yes	
+	option = {# damn it
+		name = enc_reformers.302.a
+		add_stability = -0.10
+	}
+	option = {# better shut down the press
+		name = enc_reformers.302.b
+		add_stability = -0.15
+		remove_ideas = { ENC_free_press ENC_free_press_2 }
+	}
+}
+country_event = {#303 - Candle vigil
+	id = enc_reformers.303
+	title = enc_reformers.303.t
+	picture = GFX_event_ENC_secret
+	fire_only_once = no
+	desc = enc_reformers.303.d
+	is_triggered_only = yes
+	option = {# allow it to happen
+		name = enc_reformers.303.a
+		add_stability = -0.05
+	}
+	option = {# shut it down
+		name = enc_reformers.303.b
+		add_stability = -0.15
+		remove_idea = { ENC_free_press }
+	}
+}
 
 #################
 ## IDEAS

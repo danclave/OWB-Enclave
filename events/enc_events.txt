@@ -4,7 +4,7 @@ country_event = {#1 - OUR ESCAPE
     id = enc.1
     title = enc.1.t
     desc = enc.1.d
-    picture = GFX_event_enc_escape
+    picture = GFX_event_ENC_escape
 
     is_triggered_only = yes
 
@@ -235,7 +235,7 @@ country_event = {#16 - In the Lair of the Bear
 	id = enc.16
 	title = enc.16.t
 	desc = enc.16.d
-	picture = GFX_event_enc_dark
+	picture = GFX_event_ENC_dark
 	
 	fire_only_once = yes	
     is_triggered_only = no

@@ -68,7 +68,7 @@ spriteTypes = {
  		    texturefile = "gfx/interface/ideas/enc_wright.dds"
  	    } 
 		SpriteType = {#orion_moreno
-            name = "GFX_idea_orion_moreno"
+            name = "GFX_idea_orion_moreno_erb"
  		    texturefile = "gfx/interface/ideas/orion_moreno.dds"
  	    } 
 		SpriteType = {#daisy_whitman
