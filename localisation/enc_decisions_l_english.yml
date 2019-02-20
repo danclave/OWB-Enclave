@@ -168,12 +168,21 @@ ENC_reform_wild_promises_desc: "If all else fails, wild yet vague promises can b
 ##############################
 # NCR INFILTRATION 
 ##############################
+enc_NCR_seize_saccity: "Liberate Sac City"
+enc_NCR_seize_saccity_desc: "Sac City belongs to America.  Let us take it from people who think otherwise."
+enc_NCR_seize_shady_sands: "Liberate Shady Sands"
+enc_NCR_seize_shady_sands_desc: "Provides an annexation wargoal against the owner of Shady Sands."
+enc_NCR_seize_dayglow: "Liberate Day Glow"
+enc_NCR_seize_dayglow_desc: "Provides an annexation wargoal against the owner of DayGlow""
 ENC_infiltrating_NCR: "Back to California"
 ENC_infiltrating_NCR_desc: "California remains the heart of the West Coast, and the NCR is the largest postwar government.  How we handle them could determine the fate of America."
 ENC_support_OWP: "Support the Old World Party"
 ENC_call_favours: "Call In Favours"
 ENC_send_spies: "Send Out Spies"
 ENC_extract_spies: "Extract Spies"
+ENC_desert_rangers_hate: "Sow Tension With the Desert Rangers"
+ENC_desert_rangers_hate_desc: "We can use our spies to sow tensions between the Desert Rangers and the NCR, making them break their alliance and ending any hope of support between them. Nice."
+ENC_desert_rangers_hate_tt: "Will give the Desert rangers strategic reasons to ignore an NCR alliance.  Strategic reasons other than our vertibirds, that is."
 ENC_extract_spies_desc: "The longer our spies are active, the higher the chance they will be compromised. To prevent this from happening, we can extract them safely."
 ENC_send_spies_tt: "§YEnclave§! gains spies in the §YNew California Republic§!"
 enc_ncr_spies: "§YEnclave§! has spies in the §YNew California Republic§!"

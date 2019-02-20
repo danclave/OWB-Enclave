@@ -107,6 +107,22 @@ ERB_reconstruction_ruler:0 "Enclave Reconstruction Authority"
 ERB_reconstruction_ruler_DEF:0 "The Enclave Reconstruction Authority"
 ERB_reconstruction_ruler_ADJ:0 "Enclave"
 
+
+ERB_enclaveamerica_intellectuals:0 "New American State"
+ERB_enclaveamerica_intellectuals_DEF:0 "The New American State"
+ERB_enclaveamerica__intellectuals_ADJ:0 "Enclave"
+ERB_enclaveamerica_elites:0 "New American State"
+ERB_enclaveamerica_elites_DEF:0 "The New American State"
+ERB_enclaveamerica_elites_ADJ:0 "Enclave"
+ERB_enclaveamerica_people:0 "New American State"
+ERB_enclaveamerica_people_DEF:0 "The New American State"
+ERB_enclaveamerica_people_ADJ:0 "Enclave"
+ERB_enclaveamerica_ruler:0 "New American State"
+ERB_enclaveamerica_ruler_DEF:0 "The New American State"
+ERB_enclaveamerica_ruler_ADJ:0 "Enclave"
+
+
+
 empty_line: " \n "
 ###################################
 # FOCUS TREE
@@ -552,15 +568,6 @@ enc_owb_propaganda_desc: "By reminding people that America onced stretched from 
 enc_the_first_brick:0 "The First Brick"
 enc_the_first_brick_desc:0 "With New Reno under government better than drug running gangsters, we can develop the city."
 
-enc_reno_police:0 "New Reno Police"
-enc_reno_police_desc:0 "New Reno didn't need police when it was run by warring crime families, but establishing the rule of law could go a long way towards giving the Reunited States legitimacy in the wasteland."
-
-enc_amnesty_for_service:0 "Amnesty For Service"
-enc_amnesty_for_service_desc:0 "We can forgive some of the old gang members and welcome them into the Police.  This will give us trained soldiers, but some may question whether they're cops or robbers."
-
-enc_out_with_the_old:0 "Out With The Old"
-enc_out_with_the_old_desc:0 "Controversially, we can decide that the police force should consist of people who didn't run a gangster state."
-
 enc_military_complex:0 "Military Industrial Complex"
 enc_military_complex_desc:0 "Although our economists urge a focus on economic development in New Reno, an economy isn't much use if the city is Sacked by the NCR because we didn't make enough guns..."
 
@@ -715,11 +722,6 @@ enc_air_force_reform_desc: "The rebel governments of the Wastes have been able t
 enc_Area_52: "The Groom Lake Testing Ground"
 enc_Area_52_desc: "Some of the technologies we've found at Area 51 are beyond even the Enclave's scientists and surpass what we thought prewar engineers were capable of.  We can press them into our service, although you have to wonder where they got these ideas..."
 
-
-
-
-enc_a_nation_remade: "A Nation Remade"
-enc_a_nation_remade_desc:"TODO"
 ###################################
 # America Foreign Policy Decisions
 ###################################
@@ -844,7 +846,7 @@ half_legitimacy: "More than §Y50%§! Legitimacy"
 15_legitimacy: "More than §Y15%§! Legitimacy"
 
 has_legitimacy_tt: "[?legitimacy]/[?has_legitimacy_var] §Ylegitimacy§!"
-ENC_reno_police: "New Reno Police"
+ENC_reno_police: "Enclave Police"
 ENC_reno_police_corrupt: "Corrupt New Reno Police"
 Enc_Justice: "Department of Justice"
 Enc_Justice: "Department of Justice"

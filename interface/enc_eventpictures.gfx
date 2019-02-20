@@ -28,8 +28,18 @@ spriteTypes = {
 		name = "GFX_enc_skeletons"
 		texturefile = "gfx/event_pictures/enc_skeletons.tga"
 	}
+	
+	SpriteType = {#enc_ulysses
+		name = "GFX_event_ulysses"
+		texturefile = "gfx/event_pictures/event_ulysses.tga"
+	}
 
-	SpriteType = {#event_arcade_gannon_enclave
+	SpriteType = {#silo
+		name = "GFX_event_enc_the_silo"
+		texturefile = "gfx/event_pictures/event_enc_the_silo.tga"
+	}
+	
+		SpriteType = {#gannon
 		name = "GFX_event_arcade_gannon_enclave"
 		texturefile = "gfx/event_pictures/event_arcade_gannon_enclave.tga"
 	}
@@ -254,6 +264,14 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/event_enc_horse.tga"
 	}
 
+	SpriteType = {#event_enc_repconn
+		name = "GFX_event_enc_repconn"
+		texturefile = "gfx/event_pictures/event_enc_repconn.tga"
+	}
+	SpriteType = {#event_enc_nevada
+		name = "GFX_event_enc_nevada"
+		texturefile = "gfx/event_pictures/event_enc_nevada.tga"
+	}
 	SpriteType = {#event_enc_Klamath
 		name = "GFX_event_enc_Klamath"
 		texturefile = "gfx/event_pictures/event_enc_Klamath.tga"
@@ -270,9 +288,15 @@ spriteTypes = {
 	}
 
 	SpriteType = {#event_enc_lincoln_memorial
+		name = "GFX_event_enc_washington_monument"
+		texturefile = "gfx/event_pictures/event_enc_washington_monumentl.tga"
+	}
+	
+	SpriteType = {#event_enc_lincoln_memorial
 		name = "GFX_event_enc_lincoln_memorial"
 		texturefile = "gfx/event_pictures/event_enc_lincoln_memorial.tga"
 	}
+
 
 	SpriteType = {#event_enc_Marcus
 		name = "GFX_event_enc_Marcus"
@@ -385,8 +409,8 @@ spriteTypes = {
 	}
 
 	SpriteType = {#event_enc_Recon_Craft_Theta
-		name = "GFX_event_enc_Recon_Craft_Theta"
-		texturefile = "gfx/event_pictures/event_enc_Recon_Craft_Theta.tga"
+		name = "GFX_event_enc_recon_craft_theta"
+		texturefile = "gfx/event_pictures/event_enc_recon_craft_theta.tga"
 	}
 
 	SpriteType = {#event_enc_reform_origin
@@ -424,6 +448,11 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/event_ENC_secret.tga"
 	}
 
+	SpriteType = {#event_ENC_secret
+		name = "GFX_event_enc_spies"
+		texturefile = "gfx/event_pictures/event_enc_spiestga"
+	}
+	
 	SpriteType = {#event_ENC_secret2
 		name = "GFX_event_ENC_secret2"
 		texturefile = "gfx/event_pictures/event_ENC_secret2.tga"

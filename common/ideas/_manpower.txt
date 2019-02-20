@@ -321,6 +321,7 @@ ideas = {
 			}
 
 			available = {			
+			  original_tag = ERB
 				NOT = { 285 = { is_core_of = ERB }}
 				OR = {
 					AND = {
@@ -343,6 +344,7 @@ ideas = {
 			picture = enc_idea_manpower_remnants_2
 			
 			available = {
+				original_tag = ERB
 				OR = {
 					AND = {
 						has_war = yes
@@ -383,6 +385,7 @@ ideas = {
 		expanded_enclave_military = {
 			picture = enc_idea_manpower_remnants_3
 			available = {
+				original_tag = ERB
 				AND = {
 					has_war = yes
 					enemies_strength_ratio > 0.6
@@ -423,6 +426,7 @@ ideas = {
 		all_non_essential = {
 			picture = enc_super_soldiers
 			available = {
+				original_tag = ERB
 				has_war = yes
 				enemies_strength_ratio > 0.75
 				not = { has_completed_focus = enc_reform }
@@ -467,6 +471,7 @@ ideas = {
 		the_final_line = {
 			picture = enc_manpower_final_line
 			available = {
+				original_tag = ERB
 				has_war = yes
 				enemies_strength_ratio > 1
 				any_enemy_country = {
@@ -656,6 +661,7 @@ ideas = {
 			available = {
 				has_war = yes
 				has_completed_focus = enc_suspend_elections
+				original_tag = ERB
 			}
 			visible = {
 				has_completed_focus = enc_reform

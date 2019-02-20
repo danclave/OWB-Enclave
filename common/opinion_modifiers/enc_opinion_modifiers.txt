@@ -12,6 +12,7 @@ opinion_modifiers = {
 	imperialists = { value = -20 }
 	rebels = { value = -20}
 	heroes = { value = 20 }
-	enc_support_opinion = { value = 80}
+	enc_support_opinion = { value = 80 }
+	sabotaged_relations = { value = -400 }
 	
 }
