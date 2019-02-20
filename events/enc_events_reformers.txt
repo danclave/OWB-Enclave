@@ -370,6 +370,7 @@ country_event = {#13 - Consolidating power
 		country_event = { id = enc_reformers.43}
 		custom_effect_tooltip = leader_ruthless_tt
 		set_country_flag = purists_purged
+		set_country_flag = douglas_plasma_grenade
 	}
 }
 
@@ -1396,31 +1397,41 @@ country_event = {#49 - The purists Rebrand
 	}
 	mean_time_to_happen = {	days = 10 }
 	
-	option = { # Good to see 
-		name = enc_reformers.49.a
-		custom_effect_tooltip = enc_reformers.49.a.tt
+	immediate = {
 		set_party_name = { 
 			ideology = elites 
 			long_name = ENC_elites_party_anti_integration_long
 			name = ENC_elites_party_anti_integration 
 		}
+	}
+	
+	option = { # Good to see 
+		name = enc_reformers.49.a
+		custom_effect_tooltip = enc_reformers.49.a.tt
 		add_popularity  = {
 			ideology = elites
 			popularity = 0.25
 		}
 	}
-	option = { # Seize it
+	option = { # fuck them
 		name = enc_reformers.49.b
 		custom_effect_tooltip = enc_reformers.49.b.tt
-		set_party_name = { 
-			ideology = elites 
-			long_name = ENC_elites_party_anti_integration_long
-			name = ENC_elites_party_anti_integration 
-		}
 		add_stability = -0.10
 		add_popularity = {
 			ideology = elites
 			popularity = 0.15
+		}
+	}
+	option = { # remember the plasma grenade?
+		name = enc_reformers.49.c
+		trigger = {
+			# has_country_flag = douglas_plasma_grenade
+		}
+		custom_effect_tooltip = enc_reformers.49.c.tt
+		add_stability = -0.05
+		add_popularity = {
+			ideology = elites
+			popularity = 0.10
 		}
 	}
 }
@@ -5502,12 +5513,35 @@ country_event = {#200 -Police
 	option = {# Amnesty
 		name = enc_reformers.200.a
 		complete_national_focus = enc_amnesty_for_service
+		effect_tooltip = {
+			custom_effect_tooltip = breaklines
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = -0.05
+			}
+			change_legitimacy = yes
+			add_manpower = 2000
+			swap_ideas = {
+				remove_idea = ENC_reno_police
+				add_idea = ENC_reno_police_corrupt
+			}
+		}
 	}
 	option = {#  Clean Trash
+		name = enc_reformers.200.b
 		complete_national_focus = enc_out_with_the_old
+		effect_tooltip = {
+			custom_effect_tooltip = breaklines
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+			add_political_power = 100
+		}
 	}
 }
-					
+
 country_event = {#195 - Brotherhood Civil War
 	id = enc_reformers.195
 	title = enc_reformers.195.t

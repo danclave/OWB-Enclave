@@ -17,18 +17,18 @@ guiTypes = {
 	}
 	containerWindowType = { # install_police_force 
 		name = install_police_force_container
-		position = {x = 300 y = 490}
+		position = { x = 92 y = 58 }
 		
 		fade_time = 50
-		fade_type = linear
+		fade_type = linear 
 		moveable = no
 		
 		buttonType = {
 			name = install_police_force
 			spriteType = GFX_icons_police 
-			pdx_tooltip = install_police_force_tt
+			pdx_tooltip = install_police_force 
 			pdx_tooltip_delayed = install_police_force_tt_delayed 
-			scale = 1.2
+			scale = 1
 		}
 	}
 	containerWindowType = { # arm_rebels

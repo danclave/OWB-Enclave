@@ -3040,8 +3040,8 @@ ENC_debug = {
 	}
 	ENC_misc = {
 		complete_effect = {
-			ERB = {
-				puppet = KLA
+			set_technology = {	
+				enc_civilian_power_grid_tech = 1	
 			}
 		}
 	}

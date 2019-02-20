@@ -85,18 +85,18 @@ focus_tree = {
 			focus = enc_reform
 		}
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = enc_purge_opposition_tt		
-				or = {
-					and = {
-						has_completed_focus = enc_purity
-						elites > 0.80
-					}
-					and = {
-						has_completed_focus = enc_reform
-						intellectuals > 0.80			
-					}
+			if = {
+				limit = {
+					has_completed_focus = enc_reform	
 				}
+				intellectuals > 0.80
+				has_completed_focus = enc_assassinate_F
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = enc_purity
+				}
+				elites > 0.80
 			}
 		}
 		cost = 8.6 

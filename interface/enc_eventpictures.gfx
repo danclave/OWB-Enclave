@@ -1,519 +1,531 @@
 spriteTypes = {        
-	SpriteType = {#enc_crashed_station
-		name = "GFX_enc_crashed_station"
-		texturefile = "gfx/event_pictures/enc_crashed_station.tga"
-	}
-
-	SpriteType = {#enc_henry_returns
-		name = "GFX_enc_henry_returns"
-		texturefile = "gfx/event_pictures/enc_henry_returns.tga"
-	}
-
-	SpriteType = {#enc_moreno_returns
-		name = "GFX_enc_moreno_returns"
-		texturefile = "gfx/event_pictures/enc_moreno_returns.tga"
-	}
-
-	SpriteType = {#enc_ncr_rangers
-		name = "GFX_enc_ncr_rangers"
-		texturefile = "gfx/event_pictures/enc_ncr_rangers.tga"
-	}
-
-	SpriteType = {#enc_rockets_red_glare
-		name = "GFX_enc_rockets_red_glare"
-		texturefile = "gfx/event_pictures/enc_rockets_red_glare.tga"
-	}
-
-	SpriteType = {#enc_skeletons
-		name = "GFX_enc_skeletons"
-		texturefile = "gfx/event_pictures/enc_skeletons.tga"
-	}
-
-	SpriteType = {#event_arcade_gannon_enclave
-		name = "GFX_event_arcade_gannon_enclave"
-		texturefile = "gfx/event_pictures/event_arcade_gannon_enclave.tga"
-	}
-
-	SpriteType = {#event_china_poster
-		name = "GFX_event_china_poster"
-		texturefile = "gfx/event_pictures/event_china_poster.tga"
-	}
-
-	SpriteType = {#event_enc_4th_july
-		name = "GFX_event_enc_4th_july"
-		texturefile = "gfx/event_pictures/event_enc_4th_july.tga"
-	}
-
-	SpriteType = {#event_enc_america_eternity
-		name = "GFX_event_enc_america_eternity"
-		texturefile = "gfx/event_pictures/event_enc_america_eternity.tga"
-	}
-
-	SpriteType = {#event_enc_antimutants
-		name = "GFX_event_enc_antimutants"
-		texturefile = "gfx/event_pictures/event_enc_antimutants.tga"
-	}
-
-	SpriteType = {#event_ENC_arcade
-		name = "GFX_event_ENC_arcade"
-		texturefile = "gfx/event_pictures/event_ENC_arcade.tga"
-	}
-
-	SpriteType = {#event_Enc_archimedes
-		name = "GFX_event_Enc_archimedes"
-		texturefile = "gfx/event_pictures/event_Enc_archimedes.tga"
-	}
-
-	SpriteType = {#event_ENC_assassinate_anderson
-		name = "GFX_event_ENC_assassinate_anderson"
-		texturefile = "gfx/event_pictures/event_ENC_assassinate_anderson.tga"
-	}
-
-	SpriteType = {#event_ENC_assault_team
-		name = "GFX_event_ENC_assault_team"
-		texturefile = "gfx/event_pictures/event_ENC_assault_team.tga"
-	}
-
-	SpriteType = {#event_ENC_barons
-		name = "GFX_event_ENC_barons"
-		texturefile = "gfx/event_pictures/event_ENC_barons.tga"
-	}
-
-	SpriteType = {#event_enc_baseball
-		name = "GFX_event_enc_baseball"
-		texturefile = "gfx/event_pictures/event_enc_baseball.tga"
-	}
-
-	SpriteType = {#event_enc_BigMT
-		name = "GFX_event_enc_BigMT"
-		texturefile = "gfx/event_pictures/event_enc_BigMT.tga"
-	}
-
-	SpriteType = {#event_ENC_bishop_dead
-		name = "GFX_event_ENC_bishop_dead"
-		texturefile = "gfx/event_pictures/event_ENC_bishop_dead.tga"
-	}
-
-	SpriteType = {#event_enc_bloody_NCR
-		name = "GFX_event_enc_bloody_NCR"
-		texturefile = "gfx/event_pictures/event_enc_bloody_NCR.tga"
-	}
-
-	SpriteType = {#event_ENC_bloody_suit
-		name = "GFX_event_ENC_bloody_suit"
-		texturefile = "gfx/event_pictures/event_ENC_bloody_suit.tga"
-	}
-
-	SpriteType = {#event_ENC_bomb
-		name = "GFX_event_ENC_bomb"
-		texturefile = "gfx/event_pictures/event_ENC_bomb.tga"
-	}
-
-	SpriteType = {#event_ENC_camp_navarro
-		name = "GFX_event_ENC_camp_navarro"
-		texturefile = "gfx/event_pictures/event_ENC_camp_navarro.tga"
-	}
-
-	SpriteType = {#event_enc_capitol_ruins
-		name = "GFX_event_enc_capitol_ruins"
-		texturefile = "gfx/event_pictures/event_enc_capitol_ruins.tga"
-	}
-
-	SpriteType = {#event_enc_cars
-		name = "GFX_event_enc_cars"
-		texturefile = "gfx/event_pictures/event_enc_cars.tga"
-	}
-
-	SpriteType = {#event_enc_christmas
-		name = "GFX_event_enc_christmas"
-		texturefile = "gfx/event_pictures/event_enc_christmas.tga"
-	}
-
-	SpriteType = {#event_enc_christmas3.jpg
-		name = "GFX_event_enc_christmas3.jpg"
-		texturefile = "gfx/event_pictures/event_enc_christmas3.jpg.tga"
-	}
-
-	SpriteType = {#event_enc_city
-		name = "GFX_event_enc_city"
-		texturefile = "gfx/event_pictures/event_enc_city.tga"
-	}
-
-	SpriteType = {#event_ENC_cloning_failed
-		name = "GFX_event_ENC_cloning_failed"
-		texturefile = "gfx/event_pictures/event_ENC_cloning_failed.tga"
-	}
-
-	SpriteType = {#event_ENC_cloning_success
-		name = "GFX_event_ENC_cloning_success"
-		texturefile = "gfx/event_pictures/event_ENC_cloning_success.tga"
-	}
-
-	SpriteType = {#event_enc_crimson_caravan
-		name = "GFX_event_enc_crimson_caravan"
-		texturefile = "gfx/event_pictures/event_enc_crimson_caravan.tga"
-	}
-
-	SpriteType = {#event_enc_currency
-		name = "GFX_event_enc_currency"
-		texturefile = "gfx/event_pictures/event_enc_currency.tga"
-	}
-
-	SpriteType = {#event_enc_dam
-		name = "GFX_event_enc_dam"
-		texturefile = "gfx/event_pictures/event_enc_dam.tga"
-	}
-
-	SpriteType = {#event_ENC_dark
-		name = "GFX_event_ENC_dark"
-		texturefile = "gfx/event_pictures/event_ENC_dark.tga"
-	}
-
-	SpriteType = {#event_ENC_deathclaw
-		name = "GFX_event_ENC_deathclaw"
-		texturefile = "gfx/event_pictures/event_ENC_deathclaw.tga"
-	}
-
-	SpriteType = {#event_enc_divide1
-		name = "GFX_event_enc_divide1"
-		texturefile = "gfx/event_pictures/event_enc_divide1.tga"
-	}
-
-	SpriteType = {#event_ENC_door
-		name = "GFX_event_ENC_door"
-		texturefile = "gfx/event_pictures/event_ENC_door.tga"
-	}
-
-	SpriteType = {#event_ENC_double_flag
-		name = "GFX_event_ENC_double_flag"
-		texturefile = "gfx/event_pictures/event_ENC_double_flag.tga"
-	}
-
-	SpriteType = {#event_ENC_double_flag_2
-		name = "GFX_event_ENC_double_flag_2"
-		texturefile = "gfx/event_pictures/event_ENC_double_flag_2.tga"
-	}
-
-	SpriteType = {#event_ENC_double_flag_long
-		name = "GFX_event_ENC_double_flag_long"
-		texturefile = "gfx/event_pictures/event_ENC_double_flag_long.tga"
-	}
-
-	SpriteType = {#event_enc_drugs
-		name = "GFX_event_enc_drugs"
-		texturefile = "gfx/event_pictures/event_enc_drugs.tga"
-	}
-
-	SpriteType = {#event_enc_election
-		name = "GFX_event_enc_election"
-		texturefile = "gfx/event_pictures/event_enc_election.tga"
-	}
-
-	SpriteType = {#event_enc_endNCR
-		name = "GFX_event_enc_endNCR"
-		texturefile = "gfx/event_pictures/event_enc_endNCR.tga"
-	}
-
-	SpriteType = {#event_ENC_escape
-		name = "GFX_event_ENC_escape"
-		texturefile = "gfx/event_pictures/event_ENC_escape.tga"
-	}
-
-	SpriteType = {#event_enc_fiat_money
-		name = "GFX_event_enc_fiat_money"
-		texturefile = "gfx/event_pictures/event_enc_fiat_money.tga"
-	}
-
-	SpriteType = {#event_enc_followers
-		name = "GFX_event_enc_followers"
-		texturefile = "gfx/event_pictures/event_enc_followers.tga"
-	}
-
-	SpriteType = {#event_enc_forgotten_man
-		name = "GFX_event_enc_forgotten_man"
-		texturefile = "gfx/event_pictures/event_enc_forgotten_man.tga"
-	}
-
-	SpriteType = {#event_enc_gun_runners
-		name = "GFX_event_enc_gun_runners"
-		texturefile = "gfx/event_pictures/event_enc_gun_runners.tga"
-	}
-
-	SpriteType = {#event_ENC_Ham
-		name = "GFX_event_ENC_Ham"
-		texturefile = "gfx/event_pictures/event_ENC_Ham.tga"
-	}
-
-	SpriteType = {#event_enc_helios_one
-		name = "GFX_event_enc_helios_one"
-		texturefile = "gfx/event_pictures/event_enc_helios_one.tga"
-	}
-
-	SpriteType = {#event_enc_horse
-		name = "GFX_event_enc_horse"
-		texturefile = "gfx/event_pictures/event_enc_horse.tga"
-	}
-
-	SpriteType = {#event_enc_Klamath
-		name = "GFX_event_enc_Klamath"
-		texturefile = "gfx/event_pictures/event_enc_Klamath.tga"
-	}
-
-	SpriteType = {#event_enc_legion_nuke
-		name = "GFX_event_enc_legion_nuke"
-		texturefile = "gfx/event_pictures/event_enc_legion_nuke.tga"
-	}
-
-	SpriteType = {#event_enc_legitimacy_tutorial
-		name = "GFX_event_enc_legitimacy_tutorial"
-		texturefile = "gfx/event_pictures/event_enc_legitimacy_tutorial.tga"
-	}
-
-	SpriteType = {#event_enc_lincoln_memorial
-		name = "GFX_event_enc_lincoln_memorial"
-		texturefile = "gfx/event_pictures/event_enc_lincoln_memorial.tga"
-	}
-
-	SpriteType = {#event_enc_Marcus
-		name = "GFX_event_enc_Marcus"
-		texturefile = "gfx/event_pictures/event_enc_Marcus.tga"
-	}
-
-	SpriteType = {#event_ENC_mariposa1
-		name = "GFX_event_ENC_mariposa1"
-		texturefile = "gfx/event_pictures/event_ENC_mariposa1.tga"
-	}
-
-	SpriteType = {#event_ENC_mariposa2
-		name = "GFX_event_ENC_mariposa2"
-		texturefile = "gfx/event_pictures/event_ENC_mariposa2.tga"
-	}
-
-	SpriteType = {#event_ENC_mariposa3
-		name = "GFX_event_ENC_mariposa3"
-		texturefile = "gfx/event_pictures/event_ENC_mariposa3.tga"
-	}
-
-	SpriteType = {#event_ENC_minigun
-		name = "GFX_event_ENC_minigun"
-		texturefile = "gfx/event_pictures/event_ENC_minigun.tga"
-	}
-
-	SpriteType = {#event_enc_nature
-		name = "GFX_event_enc_nature"
-		texturefile = "gfx/event_pictures/event_enc_nature.tga"
-	}
-
-	SpriteType = {#event_enc_nevada_short
-		name = "GFX_event_enc_nevada_short"
-		texturefile = "gfx/event_pictures/event_enc_nevada_short.tga"
-	}
-
-	SpriteType = {#event_ENC_new_reno
-		name = "GFX_event_ENC_new_reno"
-		texturefile = "gfx/event_pictures/event_ENC_new_reno.tga"
-	}
-
-	SpriteType = {#event_enc_new_reno2
-		name = "GFX_event_enc_new_reno2"
-		texturefile = "gfx/event_pictures/event_enc_new_reno2.tga"
-	}
-
-	SpriteType = {#event_ENC_new_reno_2
-		name = "GFX_event_ENC_new_reno_2"
-		texturefile = "gfx/event_pictures/event_ENC_new_reno_2.tga"
-	}
-
-	SpriteType = {#event_enc_New_SanFran
-		name = "GFX_event_enc_New_SanFran"
-		texturefile = "gfx/event_pictures/event_enc_New_SanFran.tga"
-	}
-
-	SpriteType = {#event_enc_nuka_cola
-		name = "GFX_event_enc_nuka_cola"
-		texturefile = "gfx/event_pictures/event_enc_nuka_cola.tga"
-	}
-
-	SpriteType = {#event_enc_nuka_land
-		name = "GFX_event_enc_nuka_land"
-		texturefile = "gfx/event_pictures/event_enc_nuka_land.tga"
-	}
-
-	SpriteType = {#event_enc_nuka_land_open
-		name = "GFX_event_enc_nuka_land_open"
-		texturefile = "gfx/event_pictures/event_enc_nuka_land_open.tga"
-	}
-
-	SpriteType = {#event_ENC_picture
-		name = "GFX_event_ENC_picture"
-		texturefile = "gfx/event_pictures/event_ENC_picture.tga"
-	}
-
-	SpriteType = {#event_ENC_plasma_pistol
-		name = "GFX_event_ENC_plasma_pistol"
-		texturefile = "gfx/event_pictures/event_ENC_plasma_pistol.tga"
-	}
-
-	SpriteType = {#event_ENC_plasma_rifle
-		name = "GFX_event_ENC_plasma_rifle"
-		texturefile = "gfx/event_pictures/event_ENC_plasma_rifle.tga"
-	}
-
-	SpriteType = {#event_enc_powerplant_on
-		name = "GFX_event_enc_powerplant_on"
-		texturefile = "gfx/event_pictures/event_enc_powerplant_on.tga"
-	}
-
-	SpriteType = {#event_enc_power_grid
-		name = "GFX_event_enc_power_grid"
-		texturefile = "gfx/event_pictures/event_enc_power_grid.tga"
-	}
-
-	SpriteType = {#event_enc_power_grid_tutorial
-		name = "GFX_event_enc_power_grid_tutorial"
-		texturefile = "gfx/event_pictures/event_enc_power_grid_tutorial.tga"
-	}
-
-	SpriteType = {#event_ENC_president_only
-		name = "GFX_event_ENC_president_only"
-		texturefile = "gfx/event_pictures/event_ENC_president_only.tga"
-	}
-
-	SpriteType = {#event_ENC_rebuilding
-		name = "GFX_event_ENC_rebuilding"
-		texturefile = "gfx/event_pictures/event_ENC_rebuilding.tga"
-	}
-
-	SpriteType = {#event_enc_Recon_Craft_Theta
-		name = "GFX_event_enc_Recon_Craft_Theta"
-		texturefile = "gfx/event_pictures/event_enc_Recon_Craft_Theta.tga"
-	}
-
-	SpriteType = {#event_enc_reform_origin
-		name = "GFX_event_enc_reform_origin"
-		texturefile = "gfx/event_pictures/event_enc_reform_origin.tga"
-	}
-
-	SpriteType = {#event_enc_reform_propaganda
-		name = "GFX_event_enc_reform_propaganda"
-		texturefile = "gfx/event_pictures/event_enc_reform_propaganda.tga"
-	}
-
-	SpriteType = {#event_ENC_Resistance_Weapons
-		name = "GFX_event_ENC_Resistance_Weapons"
-		texturefile = "gfx/event_pictures/event_ENC_Resistance_Weapons.tga"
-	}
-
-	SpriteType = {#event_ENC_ruined_city
-		name = "GFX_event_ENC_ruined_city"
-		texturefile = "gfx/event_pictures/event_ENC_ruined_city.tga"
-	}
-
-	SpriteType = {#event_enc_school
-		name = "GFX_event_enc_school"
-		texturefile = "gfx/event_pictures/event_enc_school.tga"
-	}
-
-	SpriteType = {#event_enc_seattle
-		name = "GFX_event_enc_seattle"
-		texturefile = "gfx/event_pictures/event_enc_seattle.tga"
-	}
-
-	SpriteType = {#event_ENC_secret
-		name = "GFX_event_ENC_secret"
-		texturefile = "gfx/event_pictures/event_ENC_secret.tga"
-	}
-
-	SpriteType = {#event_ENC_secret2
-		name = "GFX_event_ENC_secret2"
-		texturefile = "gfx/event_pictures/event_ENC_secret2.tga"
-	}
-
-	SpriteType = {#event_ENC_secret3
-		name = "GFX_event_ENC_secret3"
-		texturefile = "gfx/event_pictures/event_ENC_secret3.tga"
-	}
-
-	SpriteType = {#event_enc_shi
-		name = "GFX_event_enc_shi"
-		texturefile = "gfx/event_pictures/event_enc_shi.tga"
-	}
-
-	SpriteType = {#event_enc_ship
-		name = "GFX_event_enc_ship"
-		texturefile = "gfx/event_pictures/event_enc_ship.tga"
-	}
-
-	SpriteType = {#event_enc_sierra
-		name = "GFX_event_enc_sierra"
-		texturefile = "gfx/event_pictures/event_enc_sierra.tga"
-	}
-
-	SpriteType = {#event_ENC_single_soldier
-		name = "GFX_event_ENC_single_soldier"
-		texturefile = "gfx/event_pictures/event_ENC_single_soldier.tga"
-	}
-
-	SpriteType = {#event_ENC_spy
-		name = "GFX_event_ENC_spy"
-		texturefile = "gfx/event_pictures/event_ENC_spy.tga"
-	}
-
-	SpriteType = {#event_enc_urban_patrol
-		name = "GFX_event_enc_urban_patrol"
-		texturefile = "gfx/event_pictures/event_enc_urban_patrol.tga"
-	}
-
-	SpriteType = {#event_ENC_USA_flag
-		name = "GFX_event_ENC_USA_flag"
-		texturefile = "gfx/event_pictures/event_ENC_USA_flag.tga"
-	}
-
-	SpriteType = {#event_ENC_vertibird
-		name = "GFX_event_ENC_vertibird"
-		texturefile = "gfx/event_pictures/event_ENC_vertibird.tga"
-	}
-
-	SpriteType = {#event_enc_vertibirds_abroad
-		name = "GFX_event_enc_vertibirds_abroad"
-		texturefile = "gfx/event_pictures/event_enc_vertibirds_abroad.tga"
-	}
-
-	SpriteType = {#event_ENC_vertibird_burning
-		name = "GFX_event_ENC_vertibird_burning"
-		texturefile = "gfx/event_pictures/event_ENC_vertibird_burning.tga"
-	}
-
-	SpriteType = {#event_enc_vertibird_crash
-		name = "GFX_event_enc_vertibird_crash"
-		texturefile = "gfx/event_pictures/event_enc_vertibird_crash.tga"
-	}
-
-	SpriteType = {#event_enc_vertibird_squad
-		name = "GFX_event_enc_vertibird_squad"
-		texturefile = "gfx/event_pictures/event_enc_vertibird_squad.tga"
-	}
-
-	SpriteType = {#event_FAV_plague
-		name = "GFX_event_FAV_plague"
-		texturefile = "gfx/event_pictures/event_FAV_plague.tga"
-	}
-
-	SpriteType = {#event_Shrine_to_Lincoln
-		name = "GFX_event_Shrine_to_Lincoln"
-		texturefile = "gfx/event_pictures/event_Shrine_to_Lincoln.tga"
-	}
-	SpriteType = {#event_slaves
-		name = "GFX_event_enc_slaves"
-		texturefile = "gfx/event_pictures/event_enc_slaves.tga"
-	}
-SpriteType = {#suspend_elections
-		name = "GFX_event_enc_suspend_elections"
-		texturefile = "gfx/event_pictures/event_enc_suspend_elections.tga"
-	}
-SpriteType = {#oil rig 
-		name = "GFX_event_enc_oil_rig"
-		texturefile = "gfx/event_pictures/event_enc_oil_rig.tga"
-	}
-	
+	        SpriteType = {#enc_crashed_station
+            name = "GFX_enc_crashed_station"
+ 		    texturefile = "gfx/event_pictures/enc_crashed_station.tga"
+ 	    }
+
+        SpriteType = {#enc_henry_returns
+            name = "GFX_enc_henry_returns"
+ 		    texturefile = "gfx/event_pictures/enc_henry_returns.tga"
+ 	    }
+
+        SpriteType = {#enc_moreno_returns
+            name = "GFX_enc_moreno_returns"
+ 		    texturefile = "gfx/event_pictures/enc_moreno_returns.tga"
+ 	    }
+
+        SpriteType = {#enc_ncr_rangers
+            name = "GFX_enc_ncr_rangers"
+ 		    texturefile = "gfx/event_pictures/enc_ncr_rangers.tga"
+ 	    }
+
+        SpriteType = {#enc_rockets_red_glare
+            name = "GFX_enc_rockets_red_glare"
+ 		    texturefile = "gfx/event_pictures/enc_rockets_red_glare.tga"
+ 	    }
+
+        SpriteType = {#enc_skeletons
+            name = "GFX_enc_skeletons"
+ 		    texturefile = "gfx/event_pictures/enc_skeletons.tga"
+ 	    }
+
+        SpriteType = {#event_arcade_gannon_enclave
+            name = "GFX_event_arcade_gannon_enclave"
+ 		    texturefile = "gfx/event_pictures/event_arcade_gannon_enclave.tga"
+ 	    }
+
+        SpriteType = {#event_china_poster
+            name = "GFX_event_china_poster"
+ 		    texturefile = "gfx/event_pictures/event_china_poster.tga"
+ 	    }
+
+        SpriteType = {#event_enc_4th_july
+            name = "GFX_event_enc_4th_july"
+ 		    texturefile = "gfx/event_pictures/event_enc_4th_july.tga"
+ 	    }
+
+        SpriteType = {#event_enc_america_eternity
+            name = "GFX_event_enc_america_eternity"
+ 		    texturefile = "gfx/event_pictures/event_enc_america_eternity.tga"
+ 	    }
+
+        SpriteType = {#event_enc_antimutants
+            name = "GFX_event_enc_antimutants"
+ 		    texturefile = "gfx/event_pictures/event_enc_antimutants.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_arcade
+            name = "GFX_event_ENC_arcade"
+ 		    texturefile = "gfx/event_pictures/event_ENC_arcade.tga"
+ 	    }
+
+        SpriteType = {#event_Enc_archimedes
+            name = "GFX_event_Enc_archimedes"
+ 		    texturefile = "gfx/event_pictures/event_Enc_archimedes.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_assassinate_anderson
+            name = "GFX_event_ENC_assassinate_anderson"
+ 		    texturefile = "gfx/event_pictures/event_ENC_assassinate_anderson.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_assault_team
+            name = "GFX_event_ENC_assault_team"
+ 		    texturefile = "gfx/event_pictures/event_ENC_assault_team.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_barons
+            name = "GFX_event_ENC_barons"
+ 		    texturefile = "gfx/event_pictures/event_ENC_barons.tga"
+ 	    }
+
+        SpriteType = {#event_enc_baseball
+            name = "GFX_event_enc_baseball"
+ 		    texturefile = "gfx/event_pictures/event_enc_baseball.tga"
+ 	    }
+
+        SpriteType = {#event_enc_BigMT
+            name = "GFX_event_enc_BigMT"
+ 		    texturefile = "gfx/event_pictures/event_enc_BigMT.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_bishop_dead
+            name = "GFX_event_ENC_bishop_dead"
+ 		    texturefile = "gfx/event_pictures/event_ENC_bishop_dead.tga"
+ 	    }
+
+        SpriteType = {#event_enc_bloody_NCR
+            name = "GFX_event_enc_bloody_NCR"
+ 		    texturefile = "gfx/event_pictures/event_enc_bloody_NCR.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_bloody_suit
+            name = "GFX_event_ENC_bloody_suit"
+ 		    texturefile = "gfx/event_pictures/event_ENC_bloody_suit.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_bomb
+            name = "GFX_event_ENC_bomb"
+ 		    texturefile = "gfx/event_pictures/event_ENC_bomb.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_camp_navarro
+            name = "GFX_event_ENC_camp_navarro"
+ 		    texturefile = "gfx/event_pictures/event_ENC_camp_navarro.tga"
+ 	    }
+
+        SpriteType = {#event_enc_capitol_ruins
+            name = "GFX_event_enc_capitol_ruins"
+ 		    texturefile = "gfx/event_pictures/event_enc_capitol_ruins.tga"
+ 	    }
+
+        SpriteType = {#event_enc_cars
+            name = "GFX_event_enc_cars"
+ 		    texturefile = "gfx/event_pictures/event_enc_cars.tga"
+ 	    }
+
+        SpriteType = {#event_enc_christmas
+            name = "GFX_event_enc_christmas"
+ 		    texturefile = "gfx/event_pictures/event_enc_christmas.tga"
+ 	    }
+
+        SpriteType = {#event_enc_christmas3.jpg
+            name = "GFX_event_enc_christmas3.jpg"
+ 		    texturefile = "gfx/event_pictures/event_enc_christmas3.jpg.tga"
+ 	    }
+
+        SpriteType = {#event_enc_city
+            name = "GFX_event_enc_city"
+ 		    texturefile = "gfx/event_pictures/event_enc_city.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_cloning_failed
+            name = "GFX_event_ENC_cloning_failed"
+ 		    texturefile = "gfx/event_pictures/event_ENC_cloning_failed.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_cloning_success
+            name = "GFX_event_ENC_cloning_success"
+ 		    texturefile = "gfx/event_pictures/event_ENC_cloning_success.tga"
+ 	    }
+
+        SpriteType = {#event_enc_crimson_caravan
+            name = "GFX_event_enc_crimson_caravan"
+ 		    texturefile = "gfx/event_pictures/event_enc_crimson_caravan.tga"
+ 	    }
+
+        SpriteType = {#event_enc_currency
+            name = "GFX_event_enc_currency"
+ 		    texturefile = "gfx/event_pictures/event_enc_currency.tga"
+ 	    }
+
+        SpriteType = {#event_enc_dam
+            name = "GFX_event_enc_dam"
+ 		    texturefile = "gfx/event_pictures/event_enc_dam.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_dark
+            name = "GFX_event_ENC_dark"
+ 		    texturefile = "gfx/event_pictures/event_ENC_dark.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_deathclaw
+            name = "GFX_event_ENC_deathclaw"
+ 		    texturefile = "gfx/event_pictures/event_ENC_deathclaw.tga"
+ 	    }
+
+        SpriteType = {#event_enc_divide1
+            name = "GFX_event_enc_divide1"
+ 		    texturefile = "gfx/event_pictures/event_enc_divide1.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_door
+            name = "GFX_event_ENC_door"
+ 		    texturefile = "gfx/event_pictures/event_ENC_door.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_double_flag
+            name = "GFX_event_ENC_double_flag"
+ 		    texturefile = "gfx/event_pictures/event_ENC_double_flag.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_double_flag_2
+            name = "GFX_event_ENC_double_flag_2"
+ 		    texturefile = "gfx/event_pictures/event_ENC_double_flag_2.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_double_flag_long
+            name = "GFX_event_ENC_double_flag_long"
+ 		    texturefile = "gfx/event_pictures/event_ENC_double_flag_long.tga"
+ 	    }
+
+        SpriteType = {#event_enc_drugs
+            name = "GFX_event_enc_drugs"
+ 		    texturefile = "gfx/event_pictures/event_enc_drugs.tga"
+ 	    }
+
+        SpriteType = {#event_enc_election
+            name = "GFX_event_enc_election"
+ 		    texturefile = "gfx/event_pictures/event_enc_election.tga"
+ 	    }
+
+        SpriteType = {#event_enc_endNCR
+            name = "GFX_event_enc_endNCR"
+ 		    texturefile = "gfx/event_pictures/event_enc_endNCR.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_escape
+            name = "GFX_event_ENC_escape"
+ 		    texturefile = "gfx/event_pictures/event_ENC_escape.tga"
+ 	    }
+
+        SpriteType = {#event_enc_fiat_money
+            name = "GFX_event_enc_fiat_money"
+ 		    texturefile = "gfx/event_pictures/event_enc_fiat_money.tga"
+ 	    }
+
+        SpriteType = {#event_enc_followers
+            name = "GFX_event_enc_followers"
+ 		    texturefile = "gfx/event_pictures/event_enc_followers.tga"
+ 	    }
+
+        SpriteType = {#event_enc_forgotten_man
+            name = "GFX_event_enc_forgotten_man"
+ 		    texturefile = "gfx/event_pictures/event_enc_forgotten_man.tga"
+ 	    }
+
+        SpriteType = {#event_enc_gun_runners
+            name = "GFX_event_enc_gun_runners"
+ 		    texturefile = "gfx/event_pictures/event_enc_gun_runners.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_Ham
+            name = "GFX_event_ENC_Ham"
+ 		    texturefile = "gfx/event_pictures/event_ENC_Ham.tga"
+ 	    }
+
+        SpriteType = {#event_enc_helios_one
+            name = "GFX_event_enc_helios_one"
+ 		    texturefile = "gfx/event_pictures/event_enc_helios_one.tga"
+ 	    }
+
+        SpriteType = {#event_enc_horse
+            name = "GFX_event_enc_horse"
+ 		    texturefile = "gfx/event_pictures/event_enc_horse.tga"
+ 	    }
+
+        SpriteType = {#event_enc_Klamath
+            name = "GFX_event_enc_Klamath"
+ 		    texturefile = "gfx/event_pictures/event_enc_Klamath.tga"
+ 	    }
+
+        SpriteType = {#event_enc_legion_nuke
+            name = "GFX_event_enc_legion_nuke"
+ 		    texturefile = "gfx/event_pictures/event_enc_legion_nuke.tga"
+ 	    }
+
+        SpriteType = {#event_enc_legitimacy_tutorial
+            name = "GFX_event_enc_legitimacy_tutorial"
+ 		    texturefile = "gfx/event_pictures/event_enc_legitimacy_tutorial.tga"
+ 	    }
+
+        SpriteType = {#event_enc_lincoln_memorial
+            name = "GFX_event_enc_lincoln_memorial"
+ 		    texturefile = "gfx/event_pictures/event_enc_lincoln_memorial.tga"
+ 	    }
+
+        SpriteType = {#event_enc_Marcus
+            name = "GFX_event_enc_Marcus"
+ 		    texturefile = "gfx/event_pictures/event_enc_Marcus.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_mariposa1
+            name = "GFX_event_ENC_mariposa1"
+ 		    texturefile = "gfx/event_pictures/event_ENC_mariposa1.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_mariposa2
+            name = "GFX_event_ENC_mariposa2"
+ 		    texturefile = "gfx/event_pictures/event_ENC_mariposa2.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_mariposa3
+            name = "GFX_event_ENC_mariposa3"
+ 		    texturefile = "gfx/event_pictures/event_ENC_mariposa3.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_minigun
+            name = "GFX_event_ENC_minigun"
+ 		    texturefile = "gfx/event_pictures/event_ENC_minigun.tga"
+ 	    }
+
+        SpriteType = {#event_enc_nature
+            name = "GFX_event_enc_nature"
+ 		    texturefile = "gfx/event_pictures/event_enc_nature.tga"
+ 	    }
+
+        SpriteType = {#event_enc_nevada_short
+            name = "GFX_event_enc_nevada_short"
+ 		    texturefile = "gfx/event_pictures/event_enc_nevada_short.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_new_reno
+            name = "GFX_event_ENC_new_reno"
+ 		    texturefile = "gfx/event_pictures/event_ENC_new_reno.tga"
+ 	    }
+
+        SpriteType = {#event_enc_new_reno2
+            name = "GFX_event_enc_new_reno2"
+ 		    texturefile = "gfx/event_pictures/event_enc_new_reno2.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_new_reno_2
+            name = "GFX_event_ENC_new_reno_2"
+ 		    texturefile = "gfx/event_pictures/event_ENC_new_reno_2.tga"
+ 	    }
+
+        SpriteType = {#event_enc_New_SanFran
+            name = "GFX_event_enc_New_SanFran"
+ 		    texturefile = "gfx/event_pictures/event_enc_New_SanFran.tga"
+ 	    }
+
+        SpriteType = {#event_enc_nuka_cola
+            name = "GFX_event_enc_nuka_cola"
+ 		    texturefile = "gfx/event_pictures/event_enc_nuka_cola.tga"
+ 	    }
+
+        SpriteType = {#event_enc_nuka_land
+            name = "GFX_event_enc_nuka_land"
+ 		    texturefile = "gfx/event_pictures/event_enc_nuka_land.tga"
+ 	    }
+
+        SpriteType = {#event_enc_nuka_land_open
+            name = "GFX_event_enc_nuka_land_open"
+ 		    texturefile = "gfx/event_pictures/event_enc_nuka_land_open.tga"
+ 	    }
+
+        SpriteType = {#event_enc_oil_rig
+            name = "GFX_event_enc_oil_rig"
+ 		    texturefile = "gfx/event_pictures/event_enc_oil_rig.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_picture
+            name = "GFX_event_ENC_picture"
+ 		    texturefile = "gfx/event_pictures/event_ENC_picture.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_plasma_pistol
+            name = "GFX_event_ENC_plasma_pistol"
+ 		    texturefile = "gfx/event_pictures/event_ENC_plasma_pistol.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_plasma_rifle
+            name = "GFX_event_ENC_plasma_rifle"
+ 		    texturefile = "gfx/event_pictures/event_ENC_plasma_rifle.tga"
+ 	    }
+
+        SpriteType = {#event_enc_powerplant_on
+            name = "GFX_event_enc_powerplant_on"
+ 		    texturefile = "gfx/event_pictures/event_enc_powerplant_on.tga"
+ 	    }
+
+        SpriteType = {#event_enc_power_grid
+            name = "GFX_event_enc_power_grid"
+ 		    texturefile = "gfx/event_pictures/event_enc_power_grid.tga"
+ 	    }
+
+        SpriteType = {#event_enc_power_grid_tutorial
+            name = "GFX_event_enc_power_grid_tutorial"
+ 		    texturefile = "gfx/event_pictures/event_enc_power_grid_tutorial.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_president_only
+            name = "GFX_event_ENC_president_only"
+ 		    texturefile = "gfx/event_pictures/event_ENC_president_only.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_rebuilding
+            name = "GFX_event_ENC_rebuilding"
+ 		    texturefile = "gfx/event_pictures/event_ENC_rebuilding.tga"
+ 	    }
+
+        SpriteType = {#event_enc_Recon_Craft_Theta
+            name = "GFX_event_enc_Recon_Craft_Theta"
+ 		    texturefile = "gfx/event_pictures/event_enc_Recon_Craft_Theta.tga"
+ 	    }
+
+        SpriteType = {#event_enc_reform_origin
+            name = "GFX_event_enc_reform_origin"
+ 		    texturefile = "gfx/event_pictures/event_enc_reform_origin.tga"
+ 	    }
+
+        SpriteType = {#event_enc_reform_propaganda
+            name = "GFX_event_enc_reform_propaganda"
+ 		    texturefile = "gfx/event_pictures/event_enc_reform_propaganda.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_Resistance_Weapons
+            name = "GFX_event_ENC_Resistance_Weapons"
+ 		    texturefile = "gfx/event_pictures/event_ENC_Resistance_Weapons.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_ruined_city
+            name = "GFX_event_ENC_ruined_city"
+ 		    texturefile = "gfx/event_pictures/event_ENC_ruined_city.tga"
+ 	    }
+
+        SpriteType = {#event_enc_school
+            name = "GFX_event_enc_school"
+ 		    texturefile = "gfx/event_pictures/event_enc_school.tga"
+ 	    }
+
+        SpriteType = {#event_enc_seattle
+            name = "GFX_event_enc_seattle"
+ 		    texturefile = "gfx/event_pictures/event_enc_seattle.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_secret
+            name = "GFX_event_ENC_secret"
+ 		    texturefile = "gfx/event_pictures/event_ENC_secret.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_secret2
+            name = "GFX_event_ENC_secret2"
+ 		    texturefile = "gfx/event_pictures/event_ENC_secret2.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_secret3
+            name = "GFX_event_ENC_secret3"
+ 		    texturefile = "gfx/event_pictures/event_ENC_secret3.tga"
+ 	    }
+
+        SpriteType = {#event_enc_shi
+            name = "GFX_event_enc_shi"
+ 		    texturefile = "gfx/event_pictures/event_enc_shi.tga"
+ 	    }
+
+        SpriteType = {#event_enc_ship
+            name = "GFX_event_enc_ship"
+ 		    texturefile = "gfx/event_pictures/event_enc_ship.tga"
+ 	    }
+
+        SpriteType = {#event_enc_sierra
+            name = "GFX_event_enc_sierra"
+ 		    texturefile = "gfx/event_pictures/event_enc_sierra.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_single_soldier
+            name = "GFX_event_ENC_single_soldier"
+ 		    texturefile = "gfx/event_pictures/event_ENC_single_soldier.tga"
+ 	    }
+
+        SpriteType = {#event_enc_slaves
+            name = "GFX_event_enc_slaves"
+ 		    texturefile = "gfx/event_pictures/event_enc_slaves.tga"
+ 	    }
+
+        SpriteType = {#event_enc_speech
+            name = "GFX_event_enc_speech"
+ 		    texturefile = "gfx/event_pictures/event_enc_speech.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_spy
+            name = "GFX_event_ENC_spy"
+ 		    texturefile = "gfx/event_pictures/event_ENC_spy.tga"
+ 	    }
+
+        SpriteType = {#event_enc_suspend_elections
+            name = "GFX_event_enc_suspend_elections"
+ 		    texturefile = "gfx/event_pictures/event_enc_suspend_elections.tga"
+ 	    }
+
+        SpriteType = {#event_enc_urban_patrol
+            name = "GFX_event_enc_urban_patrol"
+ 		    texturefile = "gfx/event_pictures/event_enc_urban_patrol.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_USA_flag
+            name = "GFX_event_ENC_USA_flag"
+ 		    texturefile = "gfx/event_pictures/event_ENC_USA_flag.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_vertibird
+            name = "GFX_event_ENC_vertibird"
+ 		    texturefile = "gfx/event_pictures/event_ENC_vertibird.tga"
+ 	    }
+
+        SpriteType = {#event_enc_vertibirds_abroad
+            name = "GFX_event_enc_vertibirds_abroad"
+ 		    texturefile = "gfx/event_pictures/event_enc_vertibirds_abroad.tga"
+ 	    }
+
+        SpriteType = {#event_ENC_vertibird_burning
+            name = "GFX_event_ENC_vertibird_burning"
+ 		    texturefile = "gfx/event_pictures/event_ENC_vertibird_burning.tga"
+ 	    }
+
+        SpriteType = {#event_enc_vertibird_crash
+            name = "GFX_event_enc_vertibird_crash"
+ 		    texturefile = "gfx/event_pictures/event_enc_vertibird_crash.tga"
+ 	    }
+
+        SpriteType = {#event_enc_vertibird_squad
+            name = "GFX_event_enc_vertibird_squad"
+ 		    texturefile = "gfx/event_pictures/event_enc_vertibird_squad.tga"
+ 	    }
+
+        SpriteType = {#event_FAV_plague
+            name = "GFX_event_FAV_plague"
+ 		    texturefile = "gfx/event_pictures/event_FAV_plague.tga"
+ 	    }
+
+        SpriteType = {#event_Shrine_to_Lincoln
+            name = "GFX_event_Shrine_to_Lincoln"
+ 		    texturefile = "gfx/event_pictures/event_Shrine_to_Lincoln.tga"
+ 	    }
+
+        SpriteType = {#event_Ulysses
+            name = "GFX_event_Ulysses"
+ 		    texturefile = "gfx/event_pictures/event_Ulysses.tga"
+ 	    }
 }

@@ -45,10 +45,10 @@ connect_to_power_ttt: " - costs 2 §YElecticity§! to maintain."
 civilian_power_grid: "Civilian Power Grid"
 civilian_power_grid_desc: "Allows a state to be §GCored§!"
 
-install_police_force_tt_delayed:0 "[!install_police_force_click]Requires:\n[!install_police_force_click_enabled]" 
+install_police_force_tt_delayed:0 "§gShould a province be too primitive to safely build a power grid, we will have to staff a police compound to keep it safe until we can develop the region furher§!\n\n[!install_police_force_click]\nRequires:\n[!install_police_force_click_enabled]" 
 install_police_force_tt: "Install Police Force"
-install_police_force: "Install Police Force"
-enc_police_force_installed: "Police force not already installed."
+install_police_force: "Install Police Force (§Y50§! £pol_power))"
+enc_police_force_installed: " Police force not already installed."
 
 legitimacy_TOOLTIP:0 "§HLegitimacy§! \n\nCurrent legitimacy: §Y[?legitimacy|%0]§!\n\nLegitimacy is capped at §H100%§!."
 

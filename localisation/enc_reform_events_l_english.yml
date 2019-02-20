@@ -287,6 +287,8 @@ enc_reformers.49.a: "A valuable point of view."
 enc_reformers.49.a.tt: "§gThis new faction is allowed to absorb remaining Purists and moderates and discuss their ideas openly, easing tensions.§!\n\n"
 enc_reformers.49.b: "Two steps forward, one step back."
 enc_reformers.49.b.tt: "§gRefuse to acknowledge this new faction as anything but Purists with extra steps.§!\n\n"
+enc_reformers.49.c: "Remember what happened last time?"
+enc_reformers.49.c.tt: "§gPlasma grenades can be a powerful demotivator.§!\n\n"
 ################################################################################################################ -<
 enc_reformers.50.t: "A Nation Reborn"
 enc_reformers.50.d: "After over 200 years of chaos, depravity and barbarism, the American flag onces more flies over this great country. Terms like Enclave are quietly phased out of use as the blue Enclave flags are replaced with the star sprangled banners of old. There is still much work to be done and many enemies to bring to heel. But the claim of the Enclave has been realized. America is back."
@@ -1009,7 +1011,7 @@ enc_reformers.199.d: "Across the nation, flags are at half mast today in honor o
 enc_reformers.199.a: "A dark day for all mankind"
 #############################################################################################################
 enc_reformers.200.t: "Enclave Police"
-enc_reformers.200.d: "New Reno is safer than you'd expect for a city with no police force, but that's because order is maintained by a gentleman's agreement between the families. We could incorporate many of their mobsters into our new police force, or we could start from scratch, with police trained by Sergeant Doron."
+enc_reformers.200.d: "New Reno is safer than you'd expect for a city with no police force, but that's because order is maintained by a gentleman's agreement between the families. We could incorporate many of their mobsters into our new police force, or we could start from scratch, with police trained by Sergeant Dornan."
 enc_reformers.200.a: "Why don't we just use these guys?"
 enc_reformers.200.b: "You'd have to be  MOR-ON to rely New Reno's gangs."
 
