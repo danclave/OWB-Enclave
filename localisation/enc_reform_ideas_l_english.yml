@@ -124,7 +124,7 @@ enc_open_to_new_ideas_desc:  "The Enclave is opening to new ideas as it tries to
 enc_house_always_wins:  "The House Always Wins"
 enc_rebuild_the_power_grid: "Rebuild The Power Grid"
 enc_rebuild_the_power_grid_desc: "Gaining popular support through rule of law and democracy is nice, but ensuring an adequate power supply will show that our enemies have always been in the dark."
-enc_rebuild_the_power_grid_tt: "Allows you to build §Ycivilian power stations§!, connecting the local populations to your power grid and your control."
+enc_rebuild_the_power_grid_tt: "Allows you to build §YCivilian Power Grid§!, connecting the local populations to your power grid and your control."
 
 enc_debug_tt: "electricity: [?resource@electricity]"
 
@@ -196,3 +196,4 @@ erb_wright:0 "Christopher Wright"
 erb_salvatore:0 "Mason Salvatore"
 erb_salvatore_desc:0 "§WIncrease of NCR suspicion reduced to £pol_power §Y5§! from £pol_power §Y10§!.§!"
 erb_arcade_gannon:0 "Arcade Gannon"
+erb_orion_moreno:0 "Orion Moreno"
