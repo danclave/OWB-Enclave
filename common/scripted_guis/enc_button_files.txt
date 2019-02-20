@@ -6,7 +6,7 @@ scripted_gui = {
 		
 		visible = {
 			ROOT =  {
-				# has_completed_focus = enc_rebuild_the_power_grid			
+				has_completed_focus = enc_rebuild_the_power_grid
 			}
 			is_controlled_by = ROOT
 			NOT = {
@@ -15,14 +15,13 @@ scripted_gui = {
 			free_building_slots = {
 				building = civilian_power_grid
 				size > 0
-				included_locked = no
+				include_locked  = no
 			}
 		}		
 		effects = {  
 			connect_to_power_click = {
 				set_state_flag = needs_civilian_power_grid
 				add_core_of = root
-				# ROOT = { custom_effect_tooltip = connect_to_power_ttt }
 			}
 		}
 		triggers = {
@@ -67,17 +66,17 @@ scripted_gui = {
 		visible = {
 			is_controlled_by = ROOT
 			ROOT =  {
+				has_completed_focus = enc_rebuild_the_power_grid
 				has_completed_focus = enc_reno_police
 				tag = ERB		
 			}
-			# any neighbour state is cored
 			NOT = { 
 				is_core_of = FROM
 			}			
 			free_building_slots = {
 				building = civilian_power_grid
 				size < 1
-				included_locked = no
+				include_locked  = no
 			}
 		}
 		
@@ -101,7 +100,7 @@ scripted_gui = {
 				free_building_slots = {
 					building = civilian_power_grid
 					size < 1
-					included_locked = no
+					include_locked  = no
 				}
 			}
 		}

@@ -2927,7 +2927,7 @@ ENC_oppose_legion = {
 					AND = { 
 						is_neighbor_of = CES
 						has_idea = settler_nation
-						NOT = { has_idea = enclave_advisors }
+							NOT = { has_idea = enc_enclave_advisors }
 						} 	
 					}	
 				}
