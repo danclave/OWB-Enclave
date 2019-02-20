@@ -5437,12 +5437,23 @@ country_event = {#192 - War Crimes
 	option = {# Propaganda
 		name = enc_reformers.192.c
 		trigger = {
-			# has_idea = ENC_american_broadcasting_department_propaganda
+			has_idea = ENC_american_broadcasting_department_propaganda
 		}
 		custom_effect_tooltip = enc_reformers.192.c.tt
 		add_war_support = -0.02
 		custom_effect_tooltip = available_because
 		custom_effect_tooltip = enc_propaganda_broadcasts
+	}
+	option = {# Entertainment
+		name = enc_reformers.192.dd
+		trigger = {
+			has_idea = ENC_american_broadcasting_department_entertainment
+		}
+		custom_effect_tooltip = enc_reformers.192.dd.tt
+		add_political_power = -50
+		add_war_support = -0.04
+		custom_effect_tooltip = available_because
+		custom_effect_tooltip = enc_entertainment_broadcasts
 	}
 }
 
