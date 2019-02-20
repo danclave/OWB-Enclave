@@ -209,6 +209,41 @@ ENC_infiltrating_NCR = {
 			add_manpower = 100
 		}
 	}
+	ENC_desert_rangers_hate = {
+		icon = GFX_decision_enc_verti
+		priority = 10
+	visible = {
+			has_country_flag = enc_ncr_spies
+		}
+		complete_effect = {
+			add_political_power = -80
+			custom_effect_tooltip = ENC_desert_rangers_hate_tt
+			NCR = { add_opinion_modifier = { target = DES modifier = sabotaged_relations } }
+			DES = { add_opinion_modifier = { target = NCR modifier = sabotaged_relations } }
+			DES = { 
+				if = {
+					limit = {
+						is_in_faction = yes 
+					} 
+					leave_faction = yes 
+				}	
+			}
+			DES = {
+				add_ai_strategy = {
+					type = ignore
+					id = "NCR"
+					value = 800
+					}
+				}
+			NCR = {
+				add_ai_strategy = {
+					type = ignore
+					id = "DES"
+					value = 800
+				}
+				}	
+		}
+	}
 	ENC_deliver_petition = {
 	
 		priority = 300
@@ -296,7 +331,6 @@ ENC_infiltrating_NCR = {
 				add_popularity = { ideology = elites popularity = 0.05 }
 		}
 	}
-	
 	ENC_the_lucia_incident = {
 		icon = decision_enc_espionage
 		priority = 10
@@ -898,6 +932,87 @@ ENC_starting_companies = {
 }
 
 ENC_build_nevada = {
+	enc_NCR_seize_dayglow = {
+		icon = decision_enc_propaganda
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = enc_american_dream
+				}
+		visible = {
+			tag = ERB
+			NCR = {exists = no }
+			NOT = {has_full_control_of_state = 63} # Dayglow
+			}
+		complete_effect = {
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 63 #Dayglow
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+						}
+					}
+				}
+			}	
+		}
+	enc_NCR_seize_shady_sands = {
+		icon = decision_enc_propaganda
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = enc_american_dream
+				}
+		visible = {
+			tag = ERB
+			NCR = {exists = no }
+			NOT = {has_full_control_of_state = 253} #shady sandsy
+			}
+		complete_effect = {
+			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 253 # Shady Sands
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+						}
+					}
+				}
+			}	
+		}
+	enc_NCR_seize_saccity = {
+		icon = decision_enc_propaganda
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = enc_american_dream
+				}
+		visible = {
+			tag = ERB
+			NCR = {exists = no }
+			NOT = {has_full_control_of_state = 135} #shady sandsy
+			}
+		complete_effect = {
+			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 135 # Shady Sands
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+						}
+					}
+				}
+			}	
+		}
+	
 	ENC_vault_city_university = {
 		icon = decision_vault_boy
 		cost = 50
@@ -2077,9 +2192,6 @@ political_actions = {
 		}
 		days_re_enable = 69
 	}
-
-}
-operations = {
 	ENC_sabotage_ces_supply_lines = {
 		icon = generic_ignite_civil_war
 		cost = 100
@@ -2148,6 +2260,9 @@ operations = {
 		}
 	}
 }
+
+
+	
  
 
 ###############################
@@ -2392,7 +2507,8 @@ ENC_gannon_doctrine = {
 						is_neighbor_of = ERB
 						has_idea = settler_nation
 						NOT = { has_country_flag = erb_couriers }
-						NOT = {tag = ARR}	} 	
+						NOT = {tag = ARR}
+						is_in_faction = no	} 	
 					}	
 				}
 	visible = {
@@ -2494,13 +2610,15 @@ good_tribal_handling = {
 						has_idea = tribal_nation
 						NOT = { has_country_flag = erb_teachers }
 						NOT = { has_country_flag = erb_civilizing }
+						is_in_faction = no
 						} 	
 					}	
 				}
 	visible = {
 			if = {
 				has_completed_focus = enc_reform
-				}	
+				}
+			FROM = { exists = yes }			
 			}
 		available = {
 			NOT = {
@@ -2525,7 +2643,8 @@ erb_good_reservations = {
 	visible = {
 			if = {
 				has_completed_focus = enc_reform
-				}	
+				}
+			FROM = { exists = yes }
 			}
 		available = {
 			NOT = {
@@ -2554,7 +2673,8 @@ erb_tribals_become_civilized = {
 	visible = {
 			if = {
 				has_completed_focus = enc_reform
-				}	
+				}
+			FROM = { exists = yes }		
 			}
 		available = {
 			NOT = {

@@ -349,8 +349,8 @@ enc_reformers.64.a: "We hold these truths to be self evident, that all men are c
 ################################################################################################################ -<
 enc_reformers.65.t: "Americans Will Always Fight for Freedom"
 enc_reformers.65.d: "'This is Enclave Radio, interrupting your regular programming.'  These were the words that sparked the Second American Revolution, heard by Americans in slave barracks, occupied cities, and factories across the Legion's territory, and beyond; anywhere Americans yet dreamed of freedom. Patriots across Arizona and beyond rose up, inspired by the past American struggles against tyranny, and as the first gunshots rang out in the Second American Revolution, a jaunty singer declared, 'We will welcome to our numbers the loyal, true and brave, shouting the battle cry of freedom! And although he may be poor, he shall never be a slave, shouting the battle cry of freedom!'"
-enc_reformers.65.a: "EDE, play The Army of the Free"
-enc_reformers.65.a_tt: "§gYou really should be listening to the Old World Blues Enclave radio on Spotify.§!"
+enc_reformers.65.a: "EDE, play The Battle Hymn of the Republic"
+enc_reformers.65.a_tt: "\nTurn up your sound effects and turn down any music, and prepare to crucify the man in Flagstaff\n"
 ################################################################################################################ -<
 enc_reformers.66.t: "The House Always Wins"
 enc_reformers.66.d: "Mr. House surveys the Enclave from a monitor.  'What I'm offering you is a ground-floor opportunity in the most important enterprise on Earth. What I'm offering is a future - for you, and for what remains of the human race.'  The delegation applauds, and soon a staff is set up serve the vice president... but why does it feel like he got the better end of the deal?"
@@ -887,7 +887,7 @@ enc_reformers.175.a: "To the Republic, a government of laws and not of men"
 enc_reformers.175.b: "Lawyers won't stop the Legion"
 ##############################################################################################################
 enc_reformers.176.t: "Californian Partisans"
-enc_reformers.176.d: "Although the NCR and Brotherhood have fallen, not everyone in California is willing to give up the fight.  Brotherhood paladins strike with NCR rebels and continue to be a pain.  Some suggest we adopt enhanced interrogation techniques to snuff these cells out, but that could prove problematic if we ever allow anyone to voice opposition to our just rule." 
+enc_reformers.176.d: "Although the NCR has fallen, not everyone in California is willing to give up the fight.  Brotherhood paladins strike with NCR rebels and continue to be a pain.  Some suggest we adopt enhanced interrogation techniques to snuff these cells out, but that could prove problematic if we ever allow anyone to voice opposition to our just rule." 
 enc_reformers.176.a: "What did we ever do to you?"
 enc_reformers.176.b: "Tell us where the rebel base is!"
 enc_reformers.176.b.tt: "Because you value order, you can used enhanced interrogation to find the partisan stronghold."
@@ -1013,6 +1013,13 @@ enc_reformers.200.d: "New Reno is safer than you'd expect for a city with no pol
 enc_reformers.200.a: "Why don't we just use these guys?"
 enc_reformers.200.b: "You'd have to be  MOR-ON to rely New Reno's gangs."
 #############################################################################################################
+enc_reformers.201.t: "A New America for a New World!"
+enc_reformers.201.d: "Let the cry go out across the wastes! The Enclave has guided America through its darkest hour, to the promise land.  We shall rid the world of mutants who desecrate our sacred land.  We will crush the Brotherhood wherever we find it. We will rebuild and take the war back to China.  America is reborn, tougher, stronger, and more unified than ever."
+enc_reformers.201.a: "God bless the Enclave!"
+
+#############################################################################################################
+## START OF 300 ###
+#############################################################################################################
 enc_reformers.300.t: "Protests in [protesting_state.GetName]"
 enc_reformers.300.d: "Protests have broken out in [protesting_state.GetName]. Their demands include the following:"
 enc_reformers.300.d.enc_suspend_elections:0 "The return of elections, "
@@ -1040,3 +1047,8 @@ enc_reformers.303.d: "People have gathered in [protesting_state.GetName] to reme
 enc_reformers.303.a: "Let them have their ceremony."
 enc_reformers.303.b: "Break it up."
 
+#############################################################################################################
+## EPILOGUE ###
+#############################################################################################################
+enc_events_epilogue.2.t:0 "The Fate of Ghouls"
+enc_events_epilogue.2.d:0 "Ghouls"

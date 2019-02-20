@@ -1,0 +1,17 @@
+﻿add_namespace = enc_events_epilogue
+
+country_event = {#2 - Ghouls
+	id = enc_events_epilogue.2
+	title = enc_events_epilogue.2.t
+	desc = enc_events_epilogue.2.d
+	picture = GFX_event_enc_reform_origin
+	
+	fire_only_once = yes	
+    is_triggered_only = yes	
+	
+	
+	option = {# Ghouls
+		name = enc_events_epilogue.2.a
+		
+	}
+}

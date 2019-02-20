@@ -1,5 +1,6 @@
 spriteTypes = {        
-	        SpriteType = {#enc_crashed_station
+
+	    SpriteType = {#enc_crashed_station
             name = "GFX_enc_crashed_station"
  		    texturefile = "gfx/event_pictures/enc_crashed_station.tga"
  	    }
@@ -207,7 +208,6 @@ spriteTypes = {
         SpriteType = {#event_enc_election
             name = "GFX_event_enc_election"
  		    texturefile = "gfx/event_pictures/event_enc_election.tga"
- 	    }
 
         SpriteType = {#event_enc_endNCR
             name = "GFX_event_enc_endNCR"
@@ -217,7 +217,7 @@ spriteTypes = {
         SpriteType = {#event_ENC_escape
             name = "GFX_event_ENC_escape"
  		    texturefile = "gfx/event_pictures/event_ENC_escape.tga"
- 	    }
+ 	 
 
         SpriteType = {#event_enc_fiat_money
             name = "GFX_event_enc_fiat_money"

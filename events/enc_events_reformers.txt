@@ -757,7 +757,7 @@ country_event = {#25 - NCR - CES War
 	is_triggered_only = no
 	mean_time_to_happen = { days = 1 }
 	trigger = {
-		date < 2279.1.1
+		date < 2280.01.01
 		NCR = { 
 			has_war_with = CES # war between NCR and CES
 			# surrender_progress > 0.1 # NCR has lost some territory
@@ -1740,6 +1740,7 @@ country_event = {#65 - The Emancipation Proclamations
     is_triggered_only = yes
 	option = {#Declaration
 		name = enc_reformers.65.a
+		sound_effect = ERB_battle_hymn
 		every_state = {
 		limit = { is_owned_by = CES has_state_flag = enc_slaves_armed }
 		ERB = {transfer_state = PREV } 
@@ -1865,7 +1866,7 @@ country_event = {#70 - The Democracy Question
 	id = enc_reformers.70
 	title = enc_reformers.70.t
 	desc = enc_reformers.70.d
-	picture = GFX_event_Washington_Monument
+	picture = GFX_event_enc_washington_monument
 	fire_only_once = yes	
 	is_triggered_only = yes	
 	option = {# Extend Presidential Powers
@@ -2017,7 +2018,7 @@ country_event = {#78 - Arcade Gannon returns
 	id = enc_reformers.78
 	title = enc_reformers.78.t
 	desc = enc_reformers.78.d
-	picture = GFX_event_Arcade_Gannon_Enclave
+	picture = GFX_event_arcade_gannon_enclave
 	fire_only_once = yes
 	is_triggered_only = no
 	mean_time_to_happen = {	days = 30 }
@@ -2037,7 +2038,7 @@ country_event = {#79 - Ulysses
 	id = enc_reformers.79
 	title = enc_reformers.79.t
 	desc = enc_reformers.79.d
-	picture = GFX_event_Ulysses
+	picture = GFX_event_enc_ulysses
 
 	fire_only_once = yes
 	trigger = {
@@ -2121,7 +2122,7 @@ country_event = {#83 - National Anthem
 	fire_only_once = yes
 	is_triggered_only = NO
 	trigger = {
-		has_completed_focus = enc_old_world
+		has_completed_focus = enc_rebuilding_a_nation
 	}
 	mean_time_to_happen = {
 		days = 30
@@ -2479,7 +2480,7 @@ country_event = {#99 Area 51
     id = enc_reformers.99
 	title = enc_reformers.99.t
 	desc = enc_reformers.99.d
-	picture = event_enc_Recon_Craft_Theta
+	picture = GFX_event_enc_recon_craft_theta
 	fire_only_once = yes
 	is_triggered_only = no
 	trigger = {
@@ -2663,7 +2664,7 @@ country_event = {#104 - Followers of Apocolypse
 	id = enc_reformers.104
 	title = enc_reformers.104.t
 	desc = enc_reformers.104.d
-	picture = GFX_event_enc_Followers
+	picture = GFX_event_enc_followers
 	mean_time_to_happen = {	days = 80 }
 	fire_only_once = yes
     is_triggered_only = no
@@ -2713,10 +2714,11 @@ country_event = {#105 Brahmin Barons
 	fire_only_once = yes
 	is_triggered_only = no
 	trigger = {
-		and = { tag = ERB
-		      141 = { is_owned_by = ERB }
+		tag = ERB
+		141 = { is_owned_by = ERB }
+		NOT = { country_exists = NCR }
 		}
-	}
+	
 	option = {#	Easter Egg
 		name = enc_reformers.105.a
 		add_stability = -0.05
@@ -2875,6 +2877,7 @@ country_event = {#109 The Liberation of Hoover Dam
 	}
 		option = {#	Yayy
 		name = enc_reformers.109.a
+		trigger = { NOT = { has_global_flag = enc_ces_dam } }
 			}
 		}		
 
@@ -2928,7 +2931,7 @@ country_event = {#109 The Liberation of Hoover Dam
 									}
 								}
 				}
-				520 = {
+				215 = {
 					create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28" 
 							owner = CES
 							}
@@ -3623,7 +3626,7 @@ country_event = {# Repconn
     id = enc_reformers.129
 	title = enc_reformers.129.t
 	desc = enc_reformers.129.d
-	picture = GFX_event_Repconn
+	picture = GFX_event_enc_repconn
 	fire_only_once = yes
 	is_triggered_only = yes	
 	option = {#	
@@ -3687,7 +3690,7 @@ country_event = {# Home is Nevada
     id = enc_reformers.131
 	title = enc_reformers.131.t
 	desc = enc_reformers.131.d
-	picture = GFX_event_nevada_enc
+	picture = GFX_event_enc_nevada
 	fire_only_once = yes
 	trigger = {	
 		has_completed_focus = enc_the_state_of_nevada
@@ -4185,8 +4188,7 @@ country_event = {#150
 			}
 	option = {#	Yayy
 			name = enc_reformers.150.c
-			country_event = { id = enc_reformers.146 }
-				trigger = { has_country_flag = leader_ruthless }
+			trigger = { has_country_flag = leader_ruthless }
 			add_ideas = ENC_terraforming
 		}			
 }
@@ -4450,6 +4452,7 @@ country_event = {#160 - The Divide
 	fire_only_once = yes
 	is_triggered_only = no
 	trigger = {
+		NOT = { country_exists = NCR }
 		has_completed_focus = enc_reform 
 		OR = { 
 			is_neighbor_of = HOP
@@ -4475,7 +4478,7 @@ country_event = {#161 - Unification
 	id = enc_reformers.161
 	title = enc_reformers.161.t
 	desc = enc_reformers.161.d
-	picture = GFX_event_the_silo
+	picture = GFX_event_enc_the_silo
 	fire_only_once = yes
 	is_triggered_only = no
 	trigger = {
@@ -4576,7 +4579,7 @@ country_event = {#164 - Nuke Flagstaff
 		clr_country_flag = enc_nuke_silo
 		clr_country_flag = enc_nukes_armed
 		hidden_effect = {
-			country_event = { id = enc_reformers.166 days = 30 } }
+			country_event = { id = enc_reformers.166 days = 70 } }
 		520 = { add_manpower = -15000 }		
 		}
 	}				
@@ -4592,6 +4595,7 @@ country_event = {#165 - Didn't Nuke Flagstaff
 		NOT = { country_exists = CES }
 		NOT = { country_exists = NCR }
 		NOT = { has_country_flag = enc_flagstaff_nuked }
+		has_completed_focus = enc_reform
 				} 
 	 mean_time_to_happen = { days = 5 }
 	option = {#	
@@ -4666,7 +4670,8 @@ country_event = { #169 - Utah Plague
 	trigger = {
 		NCN = { has_war_with = CES }
 		NOT = { country_exists = NCR }
-		}		
+		}
+		tag = ERB
 	mean_time_to_happen = {
 		days = 8
 		}
@@ -4691,7 +4696,7 @@ country_event = { #169 - Utah Plague
 		}
 	}
 
-country_event = { #170 - Dark AGe
+country_event = { #170 - Dark Age
 	id = enc_reformers.170
 	title = enc_reformers.170.t
 	desc = enc_reformers.170.d
@@ -4746,7 +4751,8 @@ country_event = { #172- Hayewire
     desc = enc_reformers.172.d
     picture = GFX_event_radio_new_vegas
     fire_only_once = YES
-    is_triggered_only = yes    
+    trigger =  { has_completed_focus = enc_rebuilding_a_nation } 
+	mean_time_to_happen = { days = 30 }
     option = { # STOP
         name = enc_reformers.172.a
         set_party_name = {
@@ -4816,15 +4822,13 @@ country_event = { #176- Californian Resistance
 		}
 	}
 	mean_time_to_happen = {
-		days = 60
+		days = 100
+		}  
+    option = { # Whatever
+        name = enc_reformers.176.a
+		    add_manpower = -250
 	}
-	option = {
-		#STOP
-		name = enc_reformers.176.a
-		add_manpower = -250
-	}
-	option = {
-		#STOP
+	option = {	#STOP todo consider deleting
 		name = enc_reformers.176.b
 		trigger = {
 			has_completed_focus = enc_order
@@ -4887,9 +4891,10 @@ country_event = { #179- New New Vegas
     picture = GFX_event_VEG_strip
     fire_only_once = NO
     trigger = {
-		date > 2279.1.1
-		people > 0.40
-		has_completed_focus = enc_rebuilding_a_nation 
+		date > 2279.01.01
+        people > 0.40
+        has_completed_focus = enc_rebuilding_a_nation 
+		tag = ERB
 			}		
 	mean_time_to_happen = {
 		days = 40
@@ -5392,7 +5397,7 @@ country_event = {#192 - War Crimes
 		}
 	}
 	desc = enc_reformers.192.d				
-	mean_time_to_happen = { days = 60 }
+	mean_time_to_happen = { days = 90 }
 	option = {# Denounce
 		name = enc_reformers.192.a
 		custom_effect_tooltip = enc_reformers.192.a.tt
@@ -5461,7 +5466,7 @@ country_event = {#197 - War with Caesar and FEV
 	fire_only_once = YES
 	desc = enc_reformers.197.d				
 	trigger = { 
-		has_completed_focus = enc_vaccinations
+		has_completed_focus = enc_vacinations
 		has_war_with = CES }
 	mean_time_to_happen = {	days = 30 }
 	option = {#  Sucker
@@ -5481,7 +5486,8 @@ country_event = {#198 - War with Caesar and FEV No Vaccine
 	fire_only_once = YES
 	desc = enc_reformers.198.d				
 	trigger = { 
-		NOT = { has_completed_focus = enc_vaccinations }
+		tag = ERB 
+		NOT = { has_completed_focus = enc_vacinations }
 		has_war_with = CES }
 	mean_time_to_happen = {	days = 30 }
 	option = {#  Sucker
@@ -5521,9 +5527,8 @@ country_event = {#200 -Police
 		complete_national_focus = enc_out_with_the_old
 	}
 }
-					
-country_event = {
-	#195 - Brotherhood Civil War
+
+country_event = {#195 - Brotherhood Civil War
 	id = enc_reformers.195
 	title = enc_reformers.195.t
 	picture = GFX_event_MOJ_contact_the_west
@@ -5535,6 +5540,7 @@ country_event = {
 		name = enc_reformers.195.a
 		BOS = { add_popularity = { ideology = people popularity = 0.25 } }
 		BOS = { set_politics = { ruling_party = people } }
+		BOS = { add_opinion_modifier = { target = ERB modifier = enc_support_opinion } }
 		  BOS = {
 			add_ai_strategy = {
 				type = alliance
@@ -5601,10 +5607,21 @@ country_event = {
 		}
 	}
 }
-			
-			
-# integration
-#
+
+country_event = {#201-Nation Remade
+	id = enc_reformers.201
+	title = enc_reformers.201.t
+	desc = enc_reformers.201.d
+	picture = GFX_event_ENC_rebuilding
+	fire_only_once = yes	
+    is_triggered_only = yes	
+	option = {#
+		hidden_effect = { sound_effect = ERB_us_anthem_creepy }
+		name = enc_reformers.201.a
+	}
+}
+				
+# Protest chain
 
 country_event = {#300 - state protests!
 	id = enc_reformers.300

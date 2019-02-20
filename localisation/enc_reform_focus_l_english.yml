@@ -248,6 +248,17 @@ enc_reno_salvatores:0 "Old Allies"
 enc_reno_salvatores_desc:0 "The Salvatores still remember our last time in New Reno.  It might be worth cutting a deal with them again."
 enc_reno_end:0 "The New Capital"
 enc_reno_end_desc:0 "We've broken the backs of the scum that run New Reno.  Look how much happier everyone is with Enclave soldiers patrolling the streets. No one complains, not even in private."
+
+enc_reno_police:0 "The Enclave Police"
+enc_reno_police_desc:0 "New Reno didn't need police when it was run by warring crime families, but establishing the rule of law could go a long way towards giving the Reunited States legitimacy in the wasteland. The Ne wReno police can be our base to build on."
+
+enc_amnesty_for_service:0 "Amnesty For Service"
+enc_amnesty_for_service_desc:0 "We can forgive some of the old gang members and welcome them into the Police.  This will give us trained soldiers, but some may question whether they're cops or robbers."
+
+enc_out_with_the_old:0 "Out With The Old"
+enc_out_with_the_old_desc:0 "Controversially, we can decide that the police force should consist of people who didn't run a gangster state."
+
+
 enc_reno_end.tt: "Unlocks decisions to help rebuild the Wastes. Some of these decisions will be unlocked based on your actions, so check periodically!"
 enc_radio_civilian_music:0 "Old World Blues"
 enc_radio_civilian_music_desc:0 "'Country roads, take me home, to the place I belong...' Broadcasting songs of a bygone era can drive support for our cause and make people ignore crippling flaws."
@@ -447,15 +458,6 @@ enc_owb_propaganda_desc: "By reminding people that America onced stretched from 
 enc_the_first_brick:0 "The First Brick"
 enc_the_first_brick_desc:0 "With New Reno under government better than drug running gangsters, we can develop the city."
 
-enc_reno_police:0 "New Reno Police"
-enc_reno_police_desc:0 "New Reno didn't need police when it was run by warring crime families, but establishing the rule of law could go a long way towards giving the Reunited States legitimacy in the wasteland."
-
-enc_amnesty_for_service:0 "Amnesty For Service"
-enc_amnesty_for_service_desc:0 "We can forgive some of the old gang members and welcome them into the Police.  This will give us trained soldiers, but some may question whether they're cops or robbers."
-
-enc_out_with_the_old:0 "Out With The Old"
-enc_out_with_the_old_desc:0 "Controversially, we can decide that the police force should consist of people who didn't run a gangster state."
-
 enc_military_complex:0 "Military Industrial Complex"
 enc_military_complex_desc:0 "Although our economists urge a focus on economic development in New Reno, an economy isn't much use if the city is Sacked by the NCR because we didn't make enough guns..."
 
@@ -653,8 +655,9 @@ enc_entertainment_broadcasts: "Entertainment Broadcasts"
 enc_entertainment_broadcasts_desc: "Time to play some new songs, because we've heard Johnny Cash quite enough."
 enc_free_press: "Honor the First Amendment"
 enc_free_press_desc: "'If in other lands the press and books and literature of all kinds are censored, we must redouble our efforts here to keep them free'- \nFranklin D. Roosevelt"
-enc_a_nation_remade: "A Nation Remade"
-enc_a_nation_remade_desc:"TODO"
+enc_a_nation_remade: "The Enclave Reborn"
+enc_a_nation_remade_desc: "Without our firm guidance and protection, you're not alive.  You're simply existing, America. Postponing death for a day or two. Well I'm going to tell you, right here, right now, those days are at an end! The Enclave is back, America. So celebrate! Sing out! America is back! America IS beautiful! And we will not rest until the Wastelands are scoured of all threats to our way of life."
+enc_a_nation_remade.tt: "Form the §HNew American State§!" 
 ###################################
 # REFORM Reconstruction
 ###################################
@@ -742,6 +745,22 @@ ENC_prioritize_civilian_relief_desc: "The war has left many of our new citizens 
 ###################################
 # America Foreign Policy Focus
 ###################################
+enc_fight_wbh: "Free Cascadia"
+enc_fight_wbh_desc: "There is no reason Americans should suffer under a Brotherhood ghoul or supermutants.  Nor will they."
+enc_fight_wbh_tt: "Gain an annex war goal against whoemver §Yowns Capital Hill§!."
+enc_fortify_border_legion: "The Colorado Line"
+enc_fortify_border_legion_desc: "Let's see how the Legion fares against defenses inspired by the Anchorage Reclamation.  This isn't war, this is pest control!"
+enc_fortify_border_legion_tt: "Fortifies the western bank of the Colorado against §YThe Legion§.!"
+enc_legion_propaganda: "Combat Legion Propaganda"
+enc_legion_propaganda_desc: "The Legion claims they will nail our men to Hoover Dam to watch the Old World die.  But Americans didn't spend the last five hundred years fighting for freedom to lose to a Roman cosplay."
+enc_broken_coast: "Fix the Broken Coast"
+enc_broken_coast_desc: "The funny thing about piracy is that it's only viable until a strong central government restores order. Let me demonstrate."
+enc_broken_coast_tt: "Provides a war goal against whomever §Yowns the Broken Coast§!."
+enc_mexico_invasion: "Oppose the Mexican Titans"
+enc_mexico_invasion_desc: "Before the Great War, America often intervened to protect the people of Mexico.  Now that they are threatened by rogue AIs and drug cartels, perhaps we should do so again?"
+enc_new_mexico_tt: "Provides a justification to occupy §YMexican territory§!, including Puerto de Libertad and Chihuaha."
+enc_axis_evil: "Defeat the Axis of Evil"
+enc_axis_evil_desc: "The Broken Coast, the Washington Brotherhood, and the Legion.  These three powers threaten to enslave the Wastes, and with the collapse of the New California Republic, only the Enclave are capable of protecting democracy.  Time to show them  that freedom is always worth fighting for."
 enc_reuniting_states: "Uniting the States of America"
 enc_reuniting_states_desc: "With control of California and Nevada, we can make begin the hard work of freeing the rest of our great nation.  And perhaps some others."
 enc_peaceful_usa: "The Gannon Doctrine"

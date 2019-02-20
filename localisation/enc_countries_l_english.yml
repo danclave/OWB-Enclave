@@ -118,3 +118,19 @@ ERB_reconstruction_people_ADJ:0 "Enclave"
 ERB_reconstruction_ruler:0 "Enclave Reconstruction Authority"
 ERB_reconstruction_ruler_DEF:0 "The Enclave Reconstruction Authority"
 ERB_reconstruction_ruler_ADJ:0 "Enclave"
+
+
+ERB_enclaveamerica_intellectuals:0 "New American State"
+ERB_enclaveamerica_intellectuals_DEF:0 "The New American State"
+ERB_enclaveamerica__intellectuals_ADJ:0 "Enclave"
+ERB_enclaveamerica_elites:0 "New American State"
+ERB_enclaveamerica_elites_DEF:0 "The New American State"
+ERB_enclaveamerica_elites_ADJ:0 "Enclave"
+ERB_enclaveamerica_people:0 "New American State"
+ERB_enclaveamerica_people_DEF:0 "The New American State"
+ERB_enclaveamerica_people_ADJ:0 "Enclave"
+ERB_enclaveamerica_ruler:0 "New American State"
+ERB_enclaveamerica_ruler_DEF:0 "The New American State"
+ERB_enclaveamerica_ruler_ADJ:0 "Enclave"
+
+
