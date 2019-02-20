@@ -49,7 +49,7 @@ modifier_production_speed_civilian_power_grid_desc: ""
 modifier_production_speed_civilian_power_grid_factor: "§YCivilian Power Grid§! production speed"
 modifier_production_speed_civilian_power_grid_factor_desc: ""
 
-install_police_force_tt_delayed:0 "§gShould a province be too primitive to safely build a power grid, we will have to staff a police compound to keep it safe until we can develop the region furher§!\n\n[!install_police_force_click]\nRequires:\n[!install_police_force_click_enabled]" 
+install_police_force_tt_delayed:0 "§gShould a province be too primitive to safely build a power grid, we will have to staff a police compound to keep it safe until we can develop the region further.§!\n\n[!install_police_force_click]\nRequires:\n[!install_police_force_click_enabled]" 
 install_police_force_tt: "Install Police Force"
 install_police_force: "Install Police Force (§Y50§! £pol_power))"
 enc_police_force_installed: " Police force not already installed."
