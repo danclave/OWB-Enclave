@@ -1,5 +1,5 @@
 spriteTypes = {        
-	        SpriteType = {#enc_crashed_station
+	    SpriteType = {#enc_crashed_station
             name = "GFX_enc_crashed_station"
  		    texturefile = "gfx/event_pictures/enc_crashed_station.tga"
  	    }
@@ -218,7 +218,7 @@ spriteTypes = {
             name = "GFX_event_ENC_escape"
  		    texturefile = "gfx/event_pictures/event_ENC_escape.tga"
  	    }
-
+		
         SpriteType = {#event_enc_fiat_money
             name = "GFX_event_enc_fiat_money"
  		    texturefile = "gfx/event_pictures/event_enc_fiat_money.tga"

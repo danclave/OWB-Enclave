@@ -308,13 +308,13 @@ enc_reformers.52.a.tt: "Dr. Henry is now available as a §YPolitical Advisor§!.
 ################################################################################################################ -<
 enc_reformers.53.t: "Dr. Henry Leaves the Enclave"
 enc_reformers.53.d: "Dr. Henry was never a political figure, but even he could not ignore"
-enc_reformers.54.a: "This is no place for the naive."
+enc_reformers.53.a: "This is no place for the naive."
 enc_reformers.53.a.tt: "§YDr. Henry§! leaves the Enclave!\n"
 ################################################################################################################ -<
 enc_reformers.54.t: "Moreno returns!"
 enc_reformers.54.d: "Orion Moreno is a soldier that used to serve in the Enclave until the destruction of Navarro. Like many others, he fled South into the NCR. A loyal soldier, he has never given up on the Enclave's dream of a restored America. When rumors of the Enclave's return reached him, Orion packed his bags to rejoin his lost comrades in arms."
 enc_reformers.54.a: "Welcome home, soldier!"
-enc_reformers.54.a.tt: "Orion Moreno is now available as a §YTheorist§!."
+enc_reformers.54.a.tt: "Now available as a §YHigh Command§!:\n"
 ################################################################################################################ -<
 enc_reformers.55.t: "Orion Moreno Leaves the Enclave!"
 enc_reformers.55.d: "Our recent policies have left Orion Moreno conflicted, doubting wether the Enclave he remembered from his youth ever even existed. After much doubt, Moreno has left our government and country. His current location is unknown."
@@ -351,8 +351,8 @@ enc_reformers.64.a: "We hold these truths to be self evident, that all men are c
 ################################################################################################################ -<
 enc_reformers.65.t: "Americans Will Always Fight for Freedom"
 enc_reformers.65.d: "'This is Enclave Radio, interrupting your regular programming.'  These were the words that sparked the Second American Revolution, heard by Americans in slave barracks, occupied cities, and factories across the Legion's territory, and beyond; anywhere Americans yet dreamed of freedom. Patriots across Arizona and beyond rose up, inspired by the past American struggles against tyranny, and as the first gunshots rang out in the Second American Revolution, a jaunty singer declared, 'We will welcome to our numbers the loyal, true and brave, shouting the battle cry of freedom! And although he may be poor, he shall never be a slave, shouting the battle cry of freedom!'"
-enc_reformers.65.a: "EDE, play The Army of the Free"
-enc_reformers.65.a_tt: "§gYou really should be listening to the Old World Blues Enclave radio on Spotify.§!"
+enc_reformers.65.a: "EDE, play The Battle Hymn of the Republic"
+enc_reformers.65.a_tt: "\nTurn up your sound effects and turn down any music, and prepare to crucify the man in Flagstaff\n"
 ################################################################################################################ -<
 enc_reformers.66.t: "The House Always Wins"
 enc_reformers.66.d: "Mr. House surveys the Enclave from a monitor.  'What I'm offering you is a ground-floor opportunity in the most important enterprise on Earth. What I'm offering is a future - for you, and for what remains of the human race.'  The delegation applauds, and soon a staff is set up serve the vice president... but why does it feel like he got the better end of the deal?"
@@ -889,7 +889,7 @@ enc_reformers.175.a: "To the Republic, a government of laws and not of men"
 enc_reformers.175.b: "Lawyers won't stop the Legion"
 ##############################################################################################################
 enc_reformers.176.t: "Californian Partisans"
-enc_reformers.176.d: "Although the NCR and Brotherhood have fallen, not everyone in California is willing to give up the fight.  Brotherhood paladins strike with NCR rebels and continue to be a pain.  Some suggest we adopt enhanced interrogation techniques to snuff these cells out, but that could prove problematic if we ever allow anyone to voice opposition to our just rule." 
+enc_reformers.176.d: "Although the NCR has fallen, not everyone in California is willing to give up the fight.  Brotherhood paladins strike with NCR rebels and continue to be a pain.  Some suggest we adopt enhanced interrogation techniques to snuff these cells out, but that could prove problematic if we ever allow anyone to voice opposition to our just rule." 
 enc_reformers.176.a: "What did we ever do to you?"
 enc_reformers.176.b: "Tell us where the rebel base is!"
 enc_reformers.176.b.tt: "Because you value order, you can used enhanced interrogation to find the partisan stronghold."
@@ -1014,4 +1014,43 @@ enc_reformers.200.t: "Enclave Police"
 enc_reformers.200.d: "New Reno is safer than you'd expect for a city with no police force, but that's because order is maintained by a gentleman's agreement between the families. We could incorporate many of their mobsters into our new police force, or we could start from scratch, with police trained by Sergeant Dornan."
 enc_reformers.200.a: "Why don't we just use these guys?"
 enc_reformers.200.b: "You'd have to be  MOR-ON to rely New Reno's gangs."
+#############################################################################################################
+enc_reformers.201.t: "A New America for a New World!"
+enc_reformers.201.d: "Let the cry go out across the wastes! The Enclave has guided America through its darkest hour, to the promise land.  We shall rid the world of mutants who desecrate our sacred land.  We will crush the Brotherhood wherever we find it. We will rebuild and take the war back to China.  America is reborn, tougher, stronger, and more unified than ever."
+enc_reformers.201.a: "God bless the Enclave!"
 
+#############################################################################################################
+## START OF 300 ###
+#############################################################################################################
+enc_reformers.300.t: "Protests in [protesting_state.GetName]"
+enc_reformers.300.d: "Protests have broken out in [protesting_state.GetName]. Their demands include the following:"
+enc_reformers.300.d.enc_suspend_elections:0 "The return of elections, "
+enc_reformers.300.d.enc_requisition_of_resources:0 "the end of requisitioning civilian assets, "
+enc_reformers.300.d.enc_emergency_labour_draft:0 "the end of the labour draft, "
+enc_reformers.300.d.enc_martial_law:0 "the end of martial law, "
+enc_reformers.300.d.end: " more federal holidays and other concessions."
+enc_reformers.300.a: "Break up the protests"
+enc_reformers.300.a.tt: "§gThings could get out of hand...\n\n§!"
+enc_reformers.300.b: "Let them tire themselves out"
+enc_reformers.300.b.tt: "§gProtests may happen again.§!\n\n"
+#############################################################################################################
+enc_reformers.301.t: "The [protesting_state.GetName] massacre"
+enc_reformers.301.d: "Efforts to contain the protests in [protesting_state.GetName] have gone out of control, resulting in a massacre."
+enc_reformers.301.a: "A dark day for all mankind."
+enc_reformers.301.b: "Better shut down the press in advance."
+#############################################################################################################
+enc_reformers.302.t: "The press reports on the [protesting_state.GetName] massacre"
+enc_reformers.302.d: "The free press has started reporting on the unfortunate events in [protesting_state.GetName]."
+enc_reformers.302.a: "Thoughts and prayers"
+enc_reformers.302.b: "This free press thing has gone far enough."
+#############################################################################################################
+enc_reformers.303.t: "Candelight vigil in [protesting_state.GetName]"
+enc_reformers.303.d: "People have gathered in [protesting_state.GetName] to remember 1 year since the [protesting_state.GetName] massacre."
+enc_reformers.303.a: "Let them have their ceremony."
+enc_reformers.303.b: "Break it up."
+
+#############################################################################################################
+## EPILOGUE ###
+#############################################################################################################
+enc_events_epilogue.2.t:0 "The Fate of Ghouls"
+enc_events_epilogue.2.d:0 "Ghouls"
