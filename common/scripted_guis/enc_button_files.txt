@@ -11,7 +11,7 @@ scripted_gui = {
 			is_controlled_by = ROOT
 			NOT = {
 				is_core_of = FROM
-			}			
+			}
 		}		
 		effects = {  
 			connect_to_power_click = {
@@ -36,6 +36,11 @@ scripted_gui = {
 				any_neighbor_state = {
 					is_core_of = ROOT
 				}
+				free_building_slots = {
+					building = civilian_power_grid
+					size > 1
+					included_locked = no
+				}
 			}
 		}
 		        
@@ -56,19 +61,16 @@ scripted_gui = {
 	
 		context_type = selected_state_context
 		
-		window_name = "install_police_force_container"		
+		window_name = "install_police_force_container"
 		parent_window_token = selected_state_view
 		
 		visible = {
-			always = false # currently not in use
-			ROOT =  {
-				has_completed_focus = enc_reform		
-			}
 			is_controlled_by = ROOT
-			# any neighbour state is cored
-			ROOT = { 
-				tag = ERB
+			ROOT =  {
+				has_completed_focus = enc_reno_police
+				tag = ERB		
 			}
+			# any neighbour state is cored
 			NOT = { 
 				is_core_of = FROM
 			}
@@ -77,20 +79,28 @@ scripted_gui = {
 		effects = {
 			install_police_force_click = {
 				ROOT = { 
-					add_political_power = -100 					
+					add_political_power = -50 					
 				}
-				add_core_of = FROM
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = enc_police_force_installed
 			}
 		}
 		triggers = {
 			install_police_force_click_enabled = {
-				check_variable = { ROOT.political_power > 99.99 }
-				# equipment
+				ROOT = {
+					has_political_power > 49.99
+				}
+				NOT = { has_state_flag = enc_police_force_installed }
+				free_building_slots = {
+					building = civilian_power_grid
+					size < 1
+					included_locked = no
+				}
 			}
 		}
 		        
 		ai_check = {
-			check_variable = { ROOT.political_power > 99.99 }
+			check_variable = { ROOT.political_power > 49.99 }
 			check_variable = { ai_random > 0.55 }
 		}
 		
@@ -102,7 +112,6 @@ scripted_gui = {
 			}
 		}
 	}
-
 	legitimacy = {
 		context_type = player_context
 		
