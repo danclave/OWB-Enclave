@@ -745,6 +745,22 @@ ENC_prioritize_civilian_relief_desc: "The war has left many of our new citizens 
 ###################################
 # America Foreign Policy Focus
 ###################################
+enc_fight_wbh: "Free Cascadia"
+enc_fight_wbh_desc: "There is no reason Americans should suffer under a Brotherhood ghoul or supermutants.  Nor will they."
+enc_fight_wbh_tt: "Gain an annex war goal against whoemver §Yowns Capital Hill§!."
+enc_fortify_border_legion: "The Colorado Line"
+enc_fortify_border_legion_desc: "Let's see how the Legion fares against defenses inspired by the Anchorage Reclamation.  This isn't war, this is pest control!"
+enc_fortify_border_legion_tt: "Fortifies the western bank of the Colorado against §YThe Legion§.!"
+enc_legion_propaganda: "Combat Legion Propaganda"
+enc_legion_propaganda_desc: "The Legion claims they will nail our men to Hoover Dam to watch the Old World die.  But Americans didn't spend the last five hundred years fighting for freedom to lose to a Roman cosplay."
+enc_broken_coast: "Fix the Broken Coast"
+enc_broken_coast_desc: "The funny thing about piracy is that it's only viable until a strong central government restores order. Let me demonstrate."
+enc_broken_coast_tt: "Provides a war goal against whomever §Yowns the Broken Coast§!."
+enc_mexico_invasion: "Oppose the Mexican Titans"
+enc_mexico_invasion_desc: "Before the Great War, America often intervened to protect the people of Mexico.  Now that they are threatened by rogue AIs and drug cartels, perhaps we should do so again?"
+enc_new_mexico_tt: "Provides a justification to occupy §YMexican territory§!, including Puerto de Libertad and Chihuaha."
+enc_axis_evil: "Defeat the Axis of Evil"
+enc_axis_evil_desc: "The Broken Coast, the Washington Brotherhood, and the Legion.  These three powers threaten to enslave the Wastes, and with the collapse of the New California Republic, only the Enclave are capable of protecting democracy.  Time to show them  that freedom is always worth fighting for."
 enc_reuniting_states: "Uniting the States of America"
 enc_reuniting_states_desc: "With control of California and Nevada, we can make begin the hard work of freeing the rest of our great nation.  And perhaps some others."
 enc_peaceful_usa: "The Gannon Doctrine"

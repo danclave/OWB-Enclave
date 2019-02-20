@@ -2036,7 +2036,7 @@ country_event = {#79 - Ulysses
 	id = enc_reformers.79
 	title = enc_reformers.79.t
 	desc = enc_reformers.79.d
-	picture = GFX_event_Ulysses
+	picture = GFX_event_enc_ulysses
 
 	fire_only_once = yes
 	trigger = {
@@ -2662,7 +2662,7 @@ country_event = {#104 - Followers of Apocolypse
 	id = enc_reformers.104
 	title = enc_reformers.104.t
 	desc = enc_reformers.104.d
-	picture = GFX_event_enc_Followers
+	picture = GFX_event_enc_followers
 	mean_time_to_happen = {	days = 80 }
 	fire_only_once = yes
     is_triggered_only = no

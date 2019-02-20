@@ -30,8 +30,8 @@ spriteTypes = {
 	}
 	
 	SpriteType = {#enc_ulysses
-		name = "GFX_event_ulysses"
-		texturefile = "gfx/event_pictures/event_ulysses.tga"
+		name = "GFX_event_enc_ulysses"
+		texturefile = "gfx/event_pictures/event_enc_ulysses.tga"
 	}
 
 	SpriteType = {#silo

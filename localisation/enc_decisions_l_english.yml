@@ -97,6 +97,34 @@ enc_rangers_attack_plan_tt: "Unlocks the §YAnti-Ranger attack Plan§! decision.
 kill_graffs: "Deal with the Van Graffs"
 spare_graffs: "Make a deal with the Van Graffs"
 purify_city: "Purify the city"
+###################################
+# America Foreign Policy Decisions
+###################################
+ENC_oppose_legion: "Aid to the Foes of the Legion"
+ENC_oppose_legion_desc: "The Reunited States aren't the only ones who stand against Caesar.  With some proper training, we can bleed him before he reaches America."
+erb_aid_foe_legion: "Aid to [From.GetName]"
+ENC_gannon_doctrine: "Extending a Helping Hand"
+ENC_gannon_doctrine_desc: "By building economic ties to the people of the Waste, and protecting them from Raiders, we can gradually persuade them to rejoin the Continuing Experiment."
+ENC_granite_doctrine: "Taking Out the Trash"
+ENC_granite_doctrine_desc: "By taking down the raiders and tribals, we are defending Life, Liberty, and the Pursuit of Happiness."  
+erb_reunited_state: "Send Couriers to [From.GetName]"
+erb_reunited_state_desc: "Like all survivors in the Wasteland, the people of [From.GetName] feel cut off and alone.  Adding them to the Courier network is the first step in tying [From.GetNameDef] into our Great Society, reminding them of where they truly belong."
+erb_incorporate_to_commonwealth: "[From.GetName] becomes a Federal Commonwealth!"
+erb_incorporate_to_commonwealth_desc: "The people of [From.GetName] have suffered for too long from slavers, troll raids, and raiders.  They've remembered the flag of their fathers and have taken the first steps to joining the Reunited States."
+erb_join_usa: "[From.GetName] joins the Reunited States"
+erb_join_usa_desc: "Out of Many, One."
+erb_fire_and_blood: "Bring Fire and Blood to [From.GetName]"
+erb_fire_and_blood_desc: "The only hive of scum and villainy worse than [From.GetName] are the raiders next door.  The best way to rebuild America is to remove these Raiders ravage the Wasteland, wearing prewar bondage gear.  There is no reason to spare the brigands of [From.GetNameDef]"
+good_tribal_handling: "Sponsor a Follower Expedition to [From.GetName]"
+good_tribal_handling_desc: "The Followers of the Apocalypse carry the torch of knowledge across the Wastes, and most of the 'Tribes' are really just survivors who lacked the skillset to rebuild society.  With some proper encouragement they can take up a proper way of life."
+erb_good_reservations: "Pressure [From.GetNameDef] Economically"
+erb_good_reservations_desc: "With the aid of Follower influence, the [From.GetName] are adopting crop rotation, literacy, and the basics of civilization. Now we can persuade their elite to sell some of the land they don't need to hungry settlers from California and Nevada, and create favorable economic deals.  Everyone will benefit from this!"
+erb_tribals_become_civilized: "[From.GetNameDef] Rejoins Society"
+erb_tribals_become_civilized_desc: "Thanks to our support, the Tribals of [From.GetName], and the heady melting pot of peoples who are settlign alongside them, act no different than anyone else in the Wastes.  Although they may keep their tribal traditions alive, they know the joys of literacy, electricity, and taxes.  Now we can add them to the United States Postal Service!"
+erb_tribal_burden: "Develop the tribal lands of [From.GetName]"
+erb_tribal_burden_desc: "Look at the people of [From.GetName].  Their ancestors were regular Americans, but now they wallow in poverty and ignorance. Time to take up the Enclave's burden and bring them our peaceful ways... by force."
+erb_reunited_state_arroyo: "Send a Courier to Arroyo"
+erb_reunited_state_arroyo_desc: "Although things have been tense with the people of Arroyo, surely they will let bygones be bygones and join the Courier network?"
 
 ##############################
 # PROPAGANDA 
