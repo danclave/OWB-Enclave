@@ -208,18 +208,6 @@ ideas = {
 				genius_pacifist
 			}
 		}
-		erb_orion_moreno = {
-			picture = orion_moreno		
-			allowed = {
-				tag = ERB  
-			}
-			visible = {
-				has_country_flag = moreno_returns
-			}	
-			traits = {
-				loyal_soldier
-			}
-		}
 	}	
 
 	army_chief = {
