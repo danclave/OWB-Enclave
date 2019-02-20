@@ -5394,36 +5394,55 @@ country_event = {#192 - War Crimes
 	title = enc_reformers.192.t
 	picture = GFX_event_enc_urban_patrol
 	fire_only_once = no
-    trigger = { 	
+    trigger = {
 		OR = {
 			has_idea = ENC_free_press
 			has_idea = ENC_free_press_2
 		}
-		any_enemy_country = { 
+		any_enemy_country = {
 			has_defensive_war_with = ERB	
 			OR = { 
 				has_idea = settler_nation
 				has_idea = tribal_nation
 			}
+			any_owned_state = { # enclave controlls their stuff
+				is_core_of = PREV
+				is_controlled_by = ERB
+			}
 		}
 	}
-	desc = enc_reformers.192.d				
-	mean_time_to_happen = { days = 90 }
+	desc = enc_reformers.192.d		
+	mean_time_to_happen = { days = 120 }
 	option = {# Denounce
 		name = enc_reformers.192.a
 		custom_effect_tooltip = enc_reformers.192.a.tt
-		add_stability = -0.15
+		add_stability = -0.03
+		add_war_support = -0.05
 		add_manpower = -30
 	}
 	option = {#  Shoot reporter
 		name = enc_reformers.192.b
+		custom_effect_tooltip = enc_reformers.192.b.tt
+		trigger = {
+			not = { has_idea = ENC_free_press_2 }
+		}
 		remove_ideas = ENC_free_press
 		# modify legitimacy
 		set_temp_variable  = {
 			var = legitimacy_change_var
-			value = -0.20
+			value = -0.15
 		}
 		change_legitimacy = yes
+	}
+	option = {# Propaganda
+		name = enc_reformers.192.c
+		trigger = {
+			# has_idea = ENC_american_broadcasting_department_propaganda
+		}
+		custom_effect_tooltip = enc_reformers.192.c.tt
+		add_war_support = -0.02
+		custom_effect_tooltip = available_because
+		custom_effect_tooltip = enc_propaganda_broadcasts
 	}
 }
 
@@ -5661,42 +5680,59 @@ country_event = {#300 - state protests!
 	id = enc_reformers.300
 	title = enc_reformers.300.t
 	desc = enc_reformers.300.d
-	picture = GFX_event_enc_urban_patrol
-	fire_only_once = yes
-	is_triggered_only = yes
+	picture = GFX_event_enc_urban_patrol # todo new picture
+	fire_only_once = no # todo change
+	is_triggered_only = yes # todo change
 	trigger = {
-		has_full_control_of_state = 135 # sac city
+		not = { has_country_flag = enc_protests_over } # todo mandatory patriotism stops protests
 		OR = {
-			has_completed_focus = enc_suspend_elections
+			has_idea = ENC_emergency_labour_draft
+			not = {
+				or = {
+					has_completed_focus = enc_the_fate_of_our_democracy # todo check					
+					has_completed_focus = enc_law_or_order # todo check
+				}
+			}
 			has_completed_focus = enc_requisition_of_resources
-			has_completed_focus = enc_emergency_labour_draft
-			has_completed_focus = enc_martial_law
+			not = {
+				has_idea = ENC_free_press
+				has_idea = ENC_free_press_2
+			}
 		}
 	}
 	immediate = {
-		if = {
-			limit = {			
-				has_completed_focus = enc_suspend_elections
+		# demands of the protesters
+		custom_effect_tooltip = enc_reformers.300.d.opening
+		if = { # labour draft exists, demand end of labour draft
+			limit = {
+				has_idea = ENC_emergency_labour_draft
 			}
-			custom_effect_tooltip = enc_reformers.300.d.enc_suspend_elections
+			custom_effect_tooltip = enc_reformers.300.d.enc_emergency_labour_draft
 		}
-		if = {
+		else_if = { # player has not chosen democracy, force change to democracy
+			not = {
+				has_completed_focus = enc_the_fate_of_our_democracy # todo check
+			}
+			custom_effect_tooltip = enc_reformers.300.d.enc_the_fate_of_our_democracy
+		}
+		else_if = { # player has no free press, restore free press
+			not = {
+				has_idea = ENC_free_press
+				has_idea = ENC_free_press_2
+			}
+			custom_effect_tooltip = enc_reformers.300.d.ENC_free_press
+		}
+		else_if = { # player has taken resource requisition, undo requisition of resources
 			limit = {			
 				has_completed_focus = enc_requisition_of_resources
 			}
 			custom_effect_tooltip = enc_reformers.300.d.enc_requisition_of_resources
 		}
-		if = {
-			limit = {			
-				has_completed_focus = enc_emergency_labour_draft
+		else_if = { # player has not chosen between law or order, force change to law
+			not = {
+				has_completed_focus = enc_law_or_order # todo check
 			}
-			custom_effect_tooltip = enc_reformers.300.d.enc_emergency_labour_draft
-		}
-		if = {
-			limit = {			
-				has_completed_focus = enc_martial_law
-			}
-			custom_effect_tooltip = enc_reformers.300.d.enc_martial_law
+			custom_effect_tooltip = enc_reformers.300.d.enc_law
 		}
 		hidden_effect = {
 			random_owned_state = {
@@ -5708,9 +5744,9 @@ country_event = {#300 - state protests!
 			}
 		}
 	}
-	
-	mean_time_to_happen =  { days = 200 }
-	option = { # open fire
+	}
+	mean_time_to_happen =  { days = 100 }
+	option = { # Break it up
 		name = enc_reformers.300.a
 		custom_effect_tooltip = enc_reformers.300.a.tt
 		# modify legitimacy
@@ -5720,14 +5756,83 @@ country_event = {#300 - state protests!
 		}
 		change_legitimacy = yes
 		hidden_effect = {
-			country_event = { id = enc_reformers.301 }
+			country_event = { id = enc_reformers.301 } # state protest turns into massacre!
 		}
 	}
 	option = { # Let them protest
 		name = enc_reformers.300.b
 		custom_effect_tooltip = enc_reformers.300.b.tt
+		trigger = {
+			not = { has_country_flag = leader_charismatic } # todo check
+		}		
 		add_stability = -0.05
 		add_war_support = -0.05
+		random_list = {
+			50 = {} # todo add tooltip
+			50 = {
+				country_event = { id = enc_reformers.304 } # state protest turns into riot!}
+			}
+		}
+	}
+	option = { # Meaningless placation
+		name = enc_reformers.300.c
+		custom_effect_tooltip = enc_reformers.300.b.tt
+		trigger = {
+			has_country_flag = leader_charismatic
+		}		
+		random_list = {
+			75 = {} # todo add tooltip
+			25 = {
+				country_event = { id = enc_reformers.304 } # state protest turns into riot!}
+			}
+		}
+		
+	}
+	option = { # Meet their demands
+		name = enc_reformers.300.d
+		if = { # labour draft exists, demand end of labour draft
+			limit = {
+				has_idea = ENC_emergency_labour_draft
+			}
+			removes_ideas = { ENC_emergency_labour_draft }
+		}
+		else_if = { # player has not chosen democracy, force change to democracy
+			not = {
+				has_completed_focus = enc_the_fate_of_our_democracy # todo check
+			}
+			complete_national_focus = enc_local_elections # todo bypass law_or_order
+		}
+		else_if = { # player has no free press, restore free press
+			not = {
+				has_idea = ENC_free_press
+				has_idea = ENC_free_press_2
+			}
+			add_ideas = { ENC_free_press }
+		}
+		else_if = { # player has taken resource requisition, undo requisition of resources
+			limit = {			
+				has_completed_focus = enc_requisition_of_resources
+			}
+			# todo remove resources
+		}
+		else_if = { # player has not chosen between law or order, force change to law
+			not = {
+				has_completed_focus = enc_law_or_order # todo check
+			}
+			complete_national_focus = enc_law # todo bypass law_or_order
+		}
+		add_stability = -0.05
+		add_political_power = -100
+	}
+	option = { # We have bigger problems, people!
+		name = enc_reformers.300.f
+		trigger = {
+			# war with legion?
+			# FEV plague?
+			# major war?
+			# todo unlock law? Make promise to take law next? In the form of a timed decision?
+		}
+		# todo add complete effect with minor effects
 	}
 }
 country_event = {#301 - state protest turns into massacre!
@@ -5739,10 +5844,11 @@ country_event = {#301 - state protest turns into massacre!
 	is_triggered_only = yes
 	
 	immediate = {
-		hidden_effect = {			
+		hidden_effect = {
+			set_country_flag = enc_protests_over # at least there's that
 			country_event = { # Candle vigil one year layer
 				id = enc_reformers.303
-				days = 10 # todo make 365
+				days = 365 # todo make 365
 			}
 		}
 	}
@@ -5773,6 +5879,14 @@ country_event = {#301 - state protest turns into massacre!
 		add_stability = -0.15
 		remove_ideas = { ENC_free_press ENC_free_press_2 }
 	}
+	option = {# Spin this in the propaganda media
+		name = enc_reformers.301.b
+		trigger = {
+			has_idea = ENC_american_broadcasting_department_propaganda
+		}
+		add_stability = -0.05
+	}
+
 }
 country_event = {#302 - Press reports massacre
 	id = enc_reformers.302
@@ -5784,11 +5898,37 @@ country_event = {#302 - Press reports massacre
 	option = {# damn it
 		name = enc_reformers.302.a
 		add_stability = -0.10
+		add_war_support = -0.10
+		set_temp_variable  = { 
+			legitimacy_change_var = -0.05 
+		}
+		change_legitimacy = yes
 	}
 	option = {# better shut down the press
 		name = enc_reformers.302.b
-		add_stability = -0.15
-		remove_ideas = { ENC_free_press ENC_free_press_2 }
+		if = {
+			limit = {
+				has_idea = ENC_free_press
+			}
+			add_stability = -0.15
+			remove_ideas = { ENC_free_press }
+		}
+		else = {
+			remove_ideas = { ENC_free_press_2 }
+			add_stability = -0.20
+		}
+	}
+	option = {# show them the alternative facts
+		name = enc_reformers.302.b
+		if = {
+			limit = {
+				has_idea = ENC_american_broadcasting_department_propaganda
+			}
+			add_stability = -0.05
+			set_temp_variable  = { 
+				legitimacy_change_var = -0.05 
+			}
+		}
 	}
 }
 country_event = {#303 - Candle vigil
@@ -5800,15 +5940,70 @@ country_event = {#303 - Candle vigil
 	is_triggered_only = yes
 	option = {# allow it to happen
 		name = enc_reformers.303.a
-		add_stability = -0.05
+		add_war_support = -0.05
+		country_event = { # Candle vigil one year layer
+			id = enc_reformers.303
+			days = 365 # todo make 365
+		}
 	}
 	option = {# shut it down
 		name = enc_reformers.303.b
-		add_stability = -0.15
-		remove_idea = { ENC_free_press }
+		add_stability = -0.10
+		set_temp_variable  = { 
+			legitimacy_change_var = -0.05 
+		}
+		change_legitimacy = yes
 	}
 }
-
+country_event = {#304 - State protests turns into riot!
+	id = enc_reformers.304
+	title = enc_reformers.304.t
+	picture = GFX_event_ENC_secret # todo
+	fire_only_once = no
+	desc = enc_reformers.304.d
+	is_triggered_only = yes
+	option = {# let them blow off some steam
+		name = enc_reformers.304.a
+		add_stability = -0.05
+		random_list = {
+			25 = { # damage civilian buildings		
+				damage_building = {
+					type = industrial_complex
+					damage = 3
+				}
+			}
+			25 = {# destroy civilian buildings	
+				remove_building  = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			25 = {# destroy production buildings	
+				remove_building  = {
+					type = arms_factory
+					level = 4
+				}
+			}
+			25 = {# damage production buildings	
+				damage_building = {
+					type = arms_factory
+					damage = 3
+				}
+			}
+		}
+	}
+	option = {# shut it down
+		name = enc_reformers.304.b
+		random_list = {
+			50 = {
+				# todo add tooltip
+			}
+			50 = {
+				country_event = { id = enc_reformers.301 } # riot turns into massacre!
+			}
+		}
+	}
+}
 #################
 ## IDEAS
 #################
