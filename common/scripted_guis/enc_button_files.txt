@@ -5,21 +5,22 @@ scripted_gui = {
 		parent_window_token = selected_state_view
 		
 		visible = {
-			ROOT =  {
-				has_completed_focus = enc_rebuild_the_power_grid
-			}
 			is_controlled_by = ROOT
 			NOT = {
 				is_core_of = FROM
 			}
-			free_building_slots = {
-				building = civilian_power_grid
-				size > 0
-				include_locked  = no
+			OR = {
+				free_building_slots = {
+					building = civilian_power_grid
+					size > 0
+					include_locked  = no
+				}			
+				civilian_power_grid > 0
 			}
 		}		
 		effects = {  
 			connect_to_power_click = {
+				sound_effect = ERB_electric
 				set_state_flag = needs_civilian_power_grid
 				add_core_of = root
 			}
@@ -63,15 +64,18 @@ scripted_gui = {
 		window_name = "install_police_force_container"
 		parent_window_token = selected_state_view
 		
+		allowed = {
+			tag = ERB		
+		}
+		
 		visible = {
 			is_controlled_by = ROOT
 			ROOT =  {
-				has_completed_focus = enc_rebuild_the_power_grid
 				has_completed_focus = enc_reno_police
-				tag = ERB		
 			}
 			NOT = { 
 				is_core_of = FROM
+				civilian_power_grid > 0
 			}			
 			free_building_slots = {
 				building = civilian_power_grid
@@ -81,10 +85,11 @@ scripted_gui = {
 		}
 		
 		effects = {
-			install_police_force_click = {
+			install_police_force_click = {   
+				sound_effect = ERB_police
 				hidden_effect = {
 					ROOT = { 
-						add_political_power = -50 					
+						add_manpower = -100
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -94,7 +99,7 @@ scripted_gui = {
 		triggers = {
 			install_police_force_click_enabled = {
 				ROOT = {
-					has_political_power > 49.99
+					has_manpower > 100
 				}
 				NOT = { has_state_flag = enc_police_force_installed }
 				free_building_slots = {

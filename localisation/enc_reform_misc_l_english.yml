@@ -51,7 +51,7 @@ modifier_production_speed_civilian_power_grid_factor_desc: ""
 
 install_police_force_tt_delayed:0 "§gShould a province be too primitive to safely build a power grid, we will have to staff a police compound to keep it safe until we can develop the region further.§!\n\n[!install_police_force_click]\nRequires:\n[!install_police_force_click_enabled]" 
 install_police_force_tt: "Install Police Force"
-install_police_force: "Install Police Force (§Y50§! £pol_power))"
+install_police_force: "Install Police Force (§Y100§! £manpower_texticon )"
 enc_police_force_installed: " Police force not already installed."
 
 legitimacy_TOOLTIP:0 "§HLegitimacy§! \n\nCurrent legitimacy: §Y[?legitimacy|%0]§!\n\nLegitimacy is capped at §H100%§!."

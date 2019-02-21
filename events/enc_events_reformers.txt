@@ -3533,17 +3533,18 @@ country_event = {#124
     picture = GFX_event_ENC_double_flag_long
     fire_only_once = yes    
     is_triggered_only = yes
-	    option = {# Golden Ending
-	name = enc_reformers.124.a
-	NCR = { set_technology = {
+	option = {# Golden Ending
+		name = enc_reformers.124.a
+		NCR = {
+			set_technology = {
 				tesla_weaponry = 1
 				settled_civilization = 1
 				scientific_civilization = 1
-			} }
-	country_event = { id = enc_reformers.125 }			
 			}
-	
-	}		
+		}
+		country_event = { id = enc_reformers.125 }			
+	}	
+}		
 country_event = {#125
     id = enc_reformers.125
     title = enc_reformers.125.t
