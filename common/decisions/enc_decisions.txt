@@ -740,7 +740,6 @@ ENC_california_reconstruction = {
 		}
 	}
 }
-	
 ENC_northwest_reconstruction = {
 	ENC_hanford = {
 		cost = 25
@@ -931,7 +930,7 @@ ENC_starting_companies = {
 	}
 }
 
-ENC_build_nevada = {
+ENC_build_nevada = { # todo rename to nation building
 	enc_NCR_seize_dayglow = {
 		icon = decision_enc_propaganda
 		priority = 300
@@ -1238,8 +1237,35 @@ ENC_build_nevada = {
 			change_legitimacy = yes
 		}
 	}
+	ENC_rebuild_infrastructure = {
+		icon = generic_construction
+		fire_only_once = yes
+		selectable_mission = yes
+		is_good = yes
+		ai_will_do = {
+			factor = 10
+		}
+		allowed = {
+			original_tag = ERB
+		}
+		activation = { 
+			has_completed_focus = enc_rebuilding_a_nation 
+		} 
+		available = {
+			has_built = {
+				type = infrastructure
+				value > 15
+			}
+		}
+		complete_effect = {			
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+		}
+	}
 }
-
 
 ENC_deseret = {
 	ENC_state_of_deseret = { 
@@ -1337,6 +1363,172 @@ ENC_deseret = {
 				}
 			}
 }
+
+ENC_american_broadcasts = { # todo add category
+	ENC_war_propaganda = {
+		icon = decision_enc_propaganda
+		cost = 75		
+		visible = {	
+			has_war_support < 0.5
+		}
+		available = {
+			has_completed_focus = enc_purity
+			not = { has_decision = ENC_raise_stability }
+		}
+		modifier = {
+			war_support_weekly = 0.0350
+			stability_weekly = -0.0175
+		}
+		days_remove = 20
+		days_re_enable = 30
+	}
+	ENC_raise_stability = {
+		cost = 75
+		icon = decision_enc_propaganda
+		visible = {	
+			has_stability < 0.5
+			not = { has_decision = ENC_raise_war_support }
+		}
+		available = {
+		}
+		modifier = {
+			stability_weekly = 0.0350
+			war_support_weekly = -0.0175
+		}
+		days_remove = 20
+		days_re_enable = 30
+	}
+	ENC_blame_ghouls = {
+		cost = 50
+		icon = decision_enc_propaganda
+		visible = {
+			has_completed_focus = enc_reject_ghouls
+		}
+		available = {
+			has_stability < 0.50
+		}
+		modifier = {
+			stability_weekly = 0.0350
+			war_support_weekly = 0.0175
+		}
+		days_remove = 20
+		days_re_enable = 90
+	}
+	ENC_blame_communists = {
+		cost = 75
+		icon = decision_enc_propaganda
+		visible = {
+			# has taken propaganda focus?
+		}
+		available = {
+			has_stability < 0.50
+		}
+		modifier = {
+			stability_weekly = 0.0350
+			war_support_weekly = 0.0175
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+	ENC_recruitment_drive = {
+		cost = 50
+		icon = decision_enc_propaganda
+		available = {
+			has_stability > 0.35
+			has_war_support > 0.50
+		}
+		modifier = {
+			war_support_weekly = -0.0175
+			mobilization_speed = 0.03
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+	# propaganda
+	ENC_boost_justification = {
+		cost = 100
+		icon = decision_enc_propaganda
+		available = {
+			has_war_support > 0.50
+		}
+		modifier = {
+			justify_war_goal_time = -0.50
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+	# movies!
+	ENC_restart_movie_industry = {
+		cost = 100		
+		fire_only_once = yes
+		available = {
+			has_stability > 0.50
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		remove_effect = {
+			set_country_flag = enc_movie_industry
+		}
+		days_remove = 60
+	}
+	ENC_war_movie = {
+		cost = 50
+		icon = decision_enc_propaganda
+		visible = {
+			has_country_flag = enc_movie_industry
+		}
+		available = {
+			has_stability > 0.50
+		}
+		modifier = {
+			war_support_weekly = 0.0175
+			mobilization_speed = 0.25
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+	ENC_comedy_movie = {
+		cost = 50
+		icon = decision_enc_propaganda
+		visible = {
+			has_country_flag = enc_movie_industry
+		}
+		available = {
+			has_stability > 0.50
+		}
+		modifier = {
+			stability_weekly = 0.0350
+			war_support_weekly = -0.0175
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+	ENC_patriotic_movie = {
+		cost = 50
+		icon = decision_enc_propaganda
+		visible = {
+			has_country_flag = enc_movie_industry
+		}
+		available = {
+			has_stability > 0.50
+		}
+		modifier = {
+			stability_weekly = 0.0175
+		}
+		remove_effect = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+}
+
 ###############################
 # SHARED
 ###############################
@@ -1627,6 +1819,7 @@ ENC_radio_broadcasts = {
 		}
 	}
 
+	
 }
 ENC_production = {
 	retool_machinery = {
