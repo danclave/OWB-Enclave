@@ -5192,7 +5192,7 @@ focus = {#Legion Border
 				uses = 1
 				category = land_doctrine
 			}
-			add_ideas = limited_conscription
+			add_ideas = enclave_military
 			division_template = { name = "Enclave Troops" regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } } }
 		}
 	}

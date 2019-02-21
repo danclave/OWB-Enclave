@@ -2892,7 +2892,7 @@ country_event = {#109 The Liberation of Hoover Dam
 			}
 		}		
 
-		country_event = {#110 - BOS Legionaries
+country_event = {#110 - BOS Legionaries
 	id = enc_reformers.110
 	title = enc_reformers.110.t
 	desc = enc_reformers.110.d
@@ -4731,6 +4731,8 @@ country_event = { #170 - Dark Age
 		add_ideas = enc_NCR_resistance
 		add_ideas = enc_NCR_instability
 		add_ideas = enc_NCR_power_struggle		
+		add_ideas = enc_disorganized_army
+		set_country_flag = enc_mid_game
 	}
 }
 country_event = { #171- Oh no Arroyo!

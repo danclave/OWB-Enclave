@@ -967,6 +967,10 @@ spriteTypes = {
             name = "GFX_idea_enc_free_press"
  		    texturefile = "gfx/interface/ideas/enc_free_press.dds"
  	    } 
+        SpriteType = {#enc_idea_manpower_disorganized
+            name = "GFX_idea_enc_idea_manpower_disorganized"
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_disorganized.dds"
+ 	    } 
         SpriteType = {#enc_hayes
             name = "GFX_idea_enc_hayes"
  		    texturefile = "gfx/interface/ideas/enc_hayes.dds"
