@@ -5745,7 +5745,7 @@ country_event = {#300 - state protests!
 			}
 			custom_effect_tooltip = enc_reformers.300.d.enc_law
 		}
-		hidden_effect = {
+		hidden_effect = { # decide target of event
 			random_owned_state = {
 				limit = {
 					is_core_of = NCR
@@ -5754,7 +5754,6 @@ country_event = {#300 - state protests!
 				save_event_target_as = protesting_state
 			}
 		}
-	}
 	}
 	mean_time_to_happen =  { days = 100 }
 	option = { # Break it up
@@ -5838,6 +5837,7 @@ country_event = {#300 - state protests!
 	option = { # We have bigger problems, people!
 		name = enc_reformers.300.f
 		trigger = {
+			always = false # todo change
 			# war with legion?
 			# FEV plague?
 			# major war?
