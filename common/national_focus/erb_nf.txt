@@ -1703,6 +1703,11 @@ focus_tree = {
 		cost = 5.8
 		completion_reward = {
 			add_ideas = { ENC_vaccinations }
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = hospital_tech
+			}
 		}
 	}
 
@@ -5008,10 +5013,12 @@ focus = {#Legion Border
 		x = 0
 		y = 1
 		cost = 5.8
-		completion_reward = { 
-		swap_ideas = { remove_idea = ENC_national_guard
-		add_idea = ENC_selective_service }
-						}
+		completion_reward = {
+			swap_ideas = { 	
+				remove_idea = ENC_national_guard
+				add_idea = ENC_selective_service 
+			}
+		}
 	}
 	focus = {#Military - defense - army reserves
 		id = enc_army_reserves
@@ -5622,7 +5629,6 @@ focus = {#Legion Border
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				#name = enc_research_medicine
 				ahead_reduction = 1
 				uses = 3
 				category = hospital_tech
@@ -5961,7 +5967,10 @@ focus = {#Legion Border
 		x = 3
 		y = 1
 		cost = 5.8
-		completion_reward = {
+		completion_reward = {			
+			set_technology = {
+				tesla_weaponry = 1
+			}
 			add_tech_bonus = {
 				ahead_reduction = 0.8
 				uses = 2

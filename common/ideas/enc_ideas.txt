@@ -2672,6 +2672,7 @@ ideas = {
 			
 			modifier = {
 				production_speed_electricity_generator_factor = 0.15
+				production_speed_civilian_power_grid_factor = 0.15
 			}
 			
 			research_bonus = {

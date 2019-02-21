@@ -25,12 +25,15 @@ category =
  category = {
 	name = "music" 
 	soundeffects = {
-	ERB_Christmas
-	ERB_us_anthem
-	ERB_us_anthem_simple
-	ERB_us_anthem_sad2
-	ERB_us_anthem_creepy
-	ERB_battle_hymn
+		ERB_Christmas
+		ERB_us_anthem
+		ERB_us_anthem_simple
+		ERB_us_anthem_sad2
+		ERB_us_anthem_creepy
+		ERB_battle_hymn
+		ERB_electric
+		ERB_typewriter
+		ERB_police
 	}
  compressor = 
  {
@@ -220,8 +223,42 @@ soundeffect =
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
-
-
+soundeffect = 
+{
+    name = "ERB_electric"
+    sounds = {
+        sound = ERB_electric1
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "ERB_typewriter"
+    sounds = {
+        sound = ERB_typewriter1
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.7
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = {
+    name = "ERB_police"
+    sounds = {
+        sound = ERB_police1
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.6
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+	fade_out = 0.01
+}
 ############## AUDIO ASSETS
 
 
@@ -400,4 +437,18 @@ sound =
 {
 	name = "ERB_battle_hymn1"
 	file = "ERB/ERB_battle_hymn.wav"
+}
+sound = 
+{
+	name = "ERB_typewriter1"
+	file = "ERB/ERB_typewriter.wav"
+}
+sound = 
+{
+	name = "ERB_electric1"
+	file = "ERB/ERB_electric.wav"
+}
+sound = {
+	name = "ERB_police1"
+	file = "ERB/ERB_police.wav"
 }

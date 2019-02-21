@@ -105,8 +105,7 @@ ideas = {
 				original_tag = ERB
 			}		
 			visible = {			
-				has_completed_focus = enc_reform
-				has_completed_focus = enc_purge_opposition
+				NOT = { has_country_flag = reformers_purged }
 			}
 			traits = { 
 				EPA_director
