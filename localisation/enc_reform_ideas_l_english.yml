@@ -3,6 +3,8 @@
 ###################################
 # REFORM IDEAS
 ###################################
+ENC_reform_officers: "Chiefs of Staff"
+ENC_reform_general_staff: "The Pentagon Reborn"
 enc_NCR_resistance: "Californian Resistance"
 enc_NCR_resistance2: "Reluctance to Serve"
 enc_NCR_power_struggle: "Anarchy"
@@ -49,7 +51,7 @@ enc_NCR_propaganda_tour: "Propaganda Tour"
 enc_NCR_propaganda_tour_desc: "With control of the Gecko Power Plant, and immigration from the Wastes, Vault City hums with progress, while Reno's murder rate has gone down significantly (even including deaths from plasma burns). The 'Nevada Reclamation Authority' can welcome NCR delegates and show we are certainly not planning to descend from their skies in vertibirds. Playing nice will, of course, anger some Purists."
 ENC_CES_Wisdom:  "Learning from Caesar"
 ENC_BOS_Connections:  "Friends in the Brotherhood"
-Enc_Fiat_Currency:  "Fiat currency"
+Enc_Fiat_Currency:  "Fiat Currency"
 ENC_Chamber_Commerce:  "Chamber of Commerce"
 ENC_Department_Manufacturing:  "Department of Manufacturing"
 enc_broken_houses:  "Bankrupted the Merchant Houses"

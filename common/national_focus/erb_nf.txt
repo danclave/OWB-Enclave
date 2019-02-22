@@ -413,6 +413,7 @@ focus_tree = {
 			add_state_core = 285
 			add_state_core = 184
 			add_state_core = 295
+			add_state_core = 614
 			set_capital = 285
 			add_stability = 0.05
 			country_event = { id = enc_reformers.68  }
@@ -4458,8 +4459,16 @@ focus = {#Legion Border
 				add_war_support = 0.10
 				clr_country_flag = enc_promised_no_peace_with_ncr
 			}
-		custom_effect_tooltip = enc_american_dream.tt	
-		}
+			hidden_effect = {
+				every_state = {
+				limit = {
+					is_owned_by = NCR 
+					}
+				add_claim_by = ERB
+				}
+			}
+			custom_effect_tooltip = enc_american_dream.tt		
+		}	
 	}
 	
 
@@ -4766,8 +4775,8 @@ focus = {#Legion Border
 		cost = 5.8
 		completion_reward = {
 			army_experience = 50
-			navy_experience = 30
-			air_experience = 30 }
+			air_experience = 30
+			add_ideas = ENC_reform_officers }
 	}
 	focus = {#Military - staff - enc_new_generation_officers
 		id = enc_new_generation_officers
@@ -4783,7 +4792,7 @@ focus = {#Legion Border
 			add_stability = -0.05
 			add_tech_bonus = {
 				bonus = 0.5
-				uses = 1
+				uses = 2
 				category = land_doctrine 
 			}
 		}
@@ -4828,10 +4837,9 @@ focus = {#Legion Border
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = land_doctrine 
+			swap_ideas = {
+			remove_idea = ENC_reform_officers
+			add_idea = ENC_reform_general_staff
 			}
 		}
 	}
@@ -5756,6 +5764,7 @@ focus = {#Legion Border
 		ai_will_do = { factor = 1 }
 		available = {
 			548 = { is_controlled_by = ERB } # NAVARRO
+			not = {has_completed_focus = enc_reform }
 		}
 		prerequisite = { 
 			focus = enc_poison_bear

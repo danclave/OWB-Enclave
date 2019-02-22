@@ -390,8 +390,8 @@ spriteTypes = {
  	    }
 
         SpriteType = {#event_enc_Recon_Craft_Theta
-            name = "GFX_event_enc_Recon_Craft_Theta"
- 		    texturefile = "gfx/event_pictures/event_enc_Recon_Craft_Theta.tga"
+            name = "GFX_event_enc_recon_craft_theta"
+ 		    texturefile = "gfx/event_pictures/event_enc_recon_craft_theta.tga"
  	    }
 
         SpriteType = {#event_enc_reform_origin
@@ -525,7 +525,39 @@ spriteTypes = {
  	    }
 
         SpriteType = {#event_Ulysses
-            name = "GFX_event_Ulysses"
- 		    texturefile = "gfx/event_pictures/event_Ulysses.tga"
+            name = "GFX_event_enc_ulysses"
+ 		    texturefile = "gfx/event_pictures/event_enc_ulysses.tga"
+ 	    }
+		SpriteType = {#ghoul fraternity
+            name = "GFX_event_enc_ghoul_fraternity"
+ 		    texturefile = "gfx/event_pictures/event_enc_ghoul_fraternity.tga"
+ 	    }
+		SpriteType = {#ZAX
+            name = "GFX_event_enc_ZAX"
+ 		    texturefile = "gfx/event_pictures/event_enc_ZAX.tga"
+ 	    }
+		SpriteType = {#Nevada
+            name = "GFX_event_enc_nevada"
+ 		    texturefile = "gfx/event_pictures/event_enc_nevada.tga"
+ 	    }
+		SpriteType = {#event_enc_protests
+            name = "GFX_event_enc_protests"
+ 		    texturefile = "gfx/event_pictures/event_enc_protests.tga"
+ 	    }
+		SpriteType = {#event_enc_repconn
+            name = "GFX_event_enc_repconn"
+ 		    texturefile = "gfx/event_pictures/event_enc_repconn.tga"
+ 	    }
+		SpriteType = {#event_enc_spies
+            name = "GFX_event_enc_spies"
+ 		    texturefile = "gfx/event_pictures/event_enc_spies.tga"
+ 	    }
+		SpriteType = {#event_enc_the_silo
+            name = "GFX_event_enc_the_silo"
+ 		    texturefile = "gfx/event_pictures/event_enc_the_silo.tga"
+ 	    }
+		SpriteType = {#washington monument
+            name = "GFX_event_enc_washington_monument"
+ 		    texturefile = "gfx/event_pictures/event_enc_washington_monument.tga"
  	    }
 }
