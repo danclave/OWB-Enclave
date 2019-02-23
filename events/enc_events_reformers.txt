@@ -722,6 +722,10 @@ country_event = {#23 - Dealing with Raiders
 	}
 	option = {# lead to NCR
 		name = enc_reformers.23.c
+		trigger = {
+			country_exists = NCR
+			has_country_flag = ncr_suspicious
+		}
 		set_temp_variable  = { # -5 legitimacy
 			var = legitimacy_change_var
 			value = -0.05		}
@@ -1426,7 +1430,7 @@ country_event = {#49 - The purists Rebrand
 	option = { # remember the plasma grenade?
 		name = enc_reformers.49.c
 		trigger = {
-			# has_country_flag = douglas_plasma_grenade
+			has_country_flag = douglas_plasma_grenade
 		}
 		custom_effect_tooltip = enc_reformers.49.c.tt
 		add_stability = -0.05
@@ -5540,7 +5544,7 @@ country_event = {#198 - War with Caesar and FEV No Vaccine
 		custom_effect_tooltip = enc_reformers.198.a.tt			
 		}
 }
-					
+
 country_event = {#199 - Remember the Rig
 	id = enc_reformers.199
 	title = enc_reformers.199.t
@@ -5687,7 +5691,7 @@ country_event = {#201-Nation Remade
 		name = enc_reformers.201.a
 	}
 }
-				
+
 # Protest chain
 
 country_event = {#300 - state protests!
@@ -5699,12 +5703,13 @@ country_event = {#300 - state protests!
 	is_triggered_only = yes # todo change
 	trigger = {
 		not = { has_country_flag = enc_protests_over } # todo mandatory patriotism stops protests
+		has_completed_focus = enc_rebuilding_a_nation
 		OR = {
 			has_idea = ENC_emergency_labour_draft
 			not = {
 				or = {
 					has_completed_focus = enc_the_fate_of_our_democracy # todo check					
-					has_completed_focus = enc_law_or_order # todo check
+					has_completed_focus = enc_law_and_order # todo check
 				}
 			}
 			has_completed_focus = enc_requisition_of_resources
@@ -5724,27 +5729,33 @@ country_event = {#300 - state protests!
 			custom_effect_tooltip = enc_reformers.300.d.enc_emergency_labour_draft
 		}
 		else_if = { # player has not chosen democracy, force change to democracy
-			not = {
-				has_completed_focus = enc_the_fate_of_our_democracy # todo check
+			limit = {	
+				not = {
+					has_completed_focus = enc_the_fate_of_our_democracy # todo check
+				}
 			}
 			custom_effect_tooltip = enc_reformers.300.d.enc_the_fate_of_our_democracy
 		}
 		else_if = { # player has no free press, restore free press
-			not = {
-				has_idea = ENC_free_press
-				has_idea = ENC_free_press_2
+			limit = {	
+				not = {
+					has_idea = ENC_free_press
+					has_idea = ENC_free_press_2
+				}
 			}
 			custom_effect_tooltip = enc_reformers.300.d.ENC_free_press
 		}
 		else_if = { # player has taken resource requisition, undo requisition of resources
 			limit = {			
-				has_completed_focus = enc_requisition_of_resources
+				has_country_flag = enc_requisitioned_resources
 			}
 			custom_effect_tooltip = enc_reformers.300.d.enc_requisition_of_resources
 		}
 		else_if = { # player has not chosen between law or order, force change to law
-			not = {
-				has_completed_focus = enc_law_or_order # todo check
+			limit = {	
+				not = {
+					has_completed_focus = enc_law_and_order # todo check
+				}
 			}
 			custom_effect_tooltip = enc_reformers.300.d.enc_law
 		}
@@ -5792,53 +5803,64 @@ country_event = {#300 - state protests!
 		custom_effect_tooltip = enc_reformers.300.b.tt
 		trigger = {
 			has_country_flag = leader_charismatic
-		}		
+		}
 		random_list = {
 			75 = {} # todo add tooltip
 			25 = {
 				country_event = { id = enc_reformers.304 } # state protest turns into riot!}
 			}
 		}
-		
+		custom_effect_tooltip = leader_charismatic_tt
 	}
 	option = { # Meet their demands
-		name = enc_reformers.300.d
-		if = { # labour draft exists, demand end of labour draft
+		name = enc_reformers.300.dd
+		if = { 		# labour draft exists, demand end of labour draft
 			limit = {
 				has_idea = ENC_emergency_labour_draft
 			}
 			removes_ideas = { ENC_emergency_labour_draft }
 		}
 		else_if = { # player has not chosen democracy, force change to democracy
-			not = {
-				has_completed_focus = enc_the_fate_of_our_democracy # todo check
+			limit = {
+				not = { has_completed_focus = enc_the_fate_of_our_democracy }
+			}
+			hidden_effect = {			
+				unlock_national_focus = enc_the_fate_of_our_democracy
 			}
 			complete_national_focus = enc_local_elections # todo bypass law_or_order
 		}
 		else_if = { # player has no free press, restore free press
-			not = {
-				has_idea = ENC_free_press
-				has_idea = ENC_free_press_2
+			limit = {
+				not = {
+					has_idea = ENC_free_press
+					has_idea = ENC_free_press_2
+				}
 			}
 			add_ideas = { ENC_free_press }
 		}
 		else_if = { # player has taken resource requisition, undo requisition of resources
 			limit = {			
-				has_completed_focus = enc_requisition_of_resources
+				has_country_flag = enc_requisitioned_resources
 			}
 			# todo remove resources
 		}
 		else_if = { # player has not chosen between law or order, force change to law
-			not = {
-				has_completed_focus = enc_law_or_order # todo check
+			limit = {
+				not = {
+					has_completed_focus = enc_law_and_order # todo check
+				}
+			}
+			hidden_effect = {			
+				unlock_national_focus = enc_law_and_order
 			}
 			complete_national_focus = enc_law # todo bypass law_or_order
 		}
+		custom_effect_tooltip = "newline"
 		add_stability = -0.05
 		add_political_power = -100
 	}
 	option = { # We have bigger problems, people!
-		name = enc_reformers.300.f
+		name = enc_reformers.300.e
 		trigger = {
 			always = false # todo change
 			# war with legion?
@@ -5933,16 +5955,16 @@ country_event = {#302 - Press reports massacre
 		}
 	}
 	option = {# show them the alternative facts
-		name = enc_reformers.302.b
-		if = {
-			limit = {
-				has_idea = ENC_american_broadcasting_department_propaganda
-			}
-			add_stability = -0.05
-			set_temp_variable  = { 
-				legitimacy_change_var = -0.05 
-			}
+		name = enc_reformers.302.c
+		trigger = {
+			has_idea = ENC_american_broadcasting_department_propaganda
 		}
+		add_stability = -0.05
+		set_temp_variable  = { 
+			legitimacy_change_var = -0.05 
+		}
+		custom_effect_tooltip = available_because
+		custom_effect_tooltip = enc_propaganda_broadcasts
 	}
 }
 country_event = {#303 - Candle vigil
@@ -5979,29 +6001,31 @@ country_event = {#304 - State protests turns into riot!
 	option = {# let them blow off some steam
 		name = enc_reformers.304.a
 		add_stability = -0.05
-		random_list = {
-			25 = { # damage civilian buildings		
-				damage_building = {
-					type = industrial_complex
-					damage = 3
+		event_target:protesting_state = {
+			random_list = {
+				25 = { # damage civilian buildings		
+					damage_building = {
+						type = industrial_complex
+						damage = 3
+					}
 				}
-			}
-			25 = {# destroy civilian buildings	
-				remove_building  = {
-					type = industrial_complex
-					level = 2
+				25 = {# destroy civilian buildings	
+					remove_building  = {
+						type = industrial_complex
+						level = 1
+					}
 				}
-			}
-			25 = {# destroy production buildings	
-				remove_building  = {
-					type = arms_factory
-					level = 4
+				25 = {# destroy production buildings	
+					remove_building  = {
+						type = arms_factory
+						level = 1
+					}
 				}
-			}
-			25 = {# damage production buildings	
-				damage_building = {
-					type = arms_factory
-					damage = 3
+				25 = {# damage production buildings	
+					damage_building = {
+						type = arms_factory
+						damage = 3
+					}
 				}
 			}
 		}
@@ -6018,6 +6042,7 @@ country_event = {#304 - State protests turns into riot!
 		}
 	}
 }
+
 #################
 ## IDEAS
 #################
