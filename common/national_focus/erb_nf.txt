@@ -1118,7 +1118,7 @@ focus_tree = {
 		available = {
 			has_stability > 0.70
 		}
-		cost = 5.8  
+		cost = 1.45
 		completion_reward = {
 			country_event = { id = enc_reformers.77 } 
 		}
@@ -1573,6 +1573,7 @@ focus_tree = {
 			NOT = {has_completed_focus = enc_a_nation_reborn }
 		}
 		completion_reward = {
+			set_country_flag = enc_requisitioned_resources
 			if = {
 				limit = {
 					has_full_control_of_state = 253 # shady sands

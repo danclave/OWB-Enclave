@@ -1,4 +1,6 @@
-﻿# GFX_goal_america_goal_eagle
+﻿# GFX_goal_america_brotherhood_faction
+# GFX_goal_america_forts
+# GFX_goal_america_goal_eagle
 # GFX_goal_america_goal_eagle_deal
 # GFX_goal_america_goal_golden_gate
 # GFX_goal_desktop.ini
@@ -27,8 +29,11 @@
 # GFX_goal_enc_ban_congress
 # GFX_goal_enc_beacon
 # GFX_goal_enc_big_MT
+# GFX_goal_enc_bos_flag_reform
 # GFX_goal_enc_bos_leadership
 # GFX_goal_enc_bos_soldiers
+# GFX_goal_enc_cause_focus
+# GFX_goal_enc_cause_focus.png
 # GFX_goal_enc_cloning
 # GFX_goal_enc_combined_arms
 # GFX_goal_enc_complete_integration
@@ -214,6 +219,7 @@
 # GFX_goal_enc_vlt_power
 # GFX_goal_enc_weapon_factory
 # GFX_goal_enc_wip
+# GFX_goal_erbbos.pdn
 # GFX_goal_flag_burn_BOS
 # GFX_goal_goal_card_tricks
 # GFX_goal_PAP_legionary_spirit
