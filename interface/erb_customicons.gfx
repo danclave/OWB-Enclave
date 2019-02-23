@@ -1,4 +1,12 @@
 spriteTypes = {
+        SpriteType = {#america_brotherhood_faction
+            name = "GFX_goal_america_brotherhood_faction"
+ 		    texturefile = "gfx/interface/goals/america_brotherhood_faction.dds"
+ 	    } 
+        SpriteType = {#america_forts
+            name = "GFX_goal_america_forts"
+ 		    texturefile = "gfx/interface/goals/america_forts.dds"
+ 	    } 
         SpriteType = {#america_goal_eagle
             name = "GFX_goal_america_goal_eagle"
  		    texturefile = "gfx/interface/goals/america_goal_eagle.dds"
@@ -115,6 +123,10 @@ spriteTypes = {
             name = "GFX_goal_enc_big_MT"
  		    texturefile = "gfx/interface/goals/enc_big_MT.dds"
  	    } 
+        SpriteType = {#enc_bos_flag_reform
+            name = "GFX_goal_enc_bos_flag_reform"
+ 		    texturefile = "gfx/interface/goals/enc_bos_flag_reform.dds"
+ 	    } 
         SpriteType = {#enc_bos_leadership
             name = "GFX_goal_enc_bos_leadership"
  		    texturefile = "gfx/interface/goals/enc_bos_leadership.dds"
@@ -122,6 +134,14 @@ spriteTypes = {
         SpriteType = {#enc_bos_soldiers
             name = "GFX_goal_enc_bos_soldiers"
  		    texturefile = "gfx/interface/goals/enc_bos_soldiers.dds"
+ 	    } 
+        SpriteType = {#enc_cause_focus
+            name = "GFX_goal_enc_cause_focus"
+ 		    texturefile = "gfx/interface/goals/enc_cause_focus.dds"
+ 	    } 
+        SpriteType = {#enc_cause_focus.png
+            name = "GFX_goal_enc_cause_focus.png"
+ 		    texturefile = "gfx/interface/goals/enc_cause_focus.png.dds"
  	    } 
         SpriteType = {#enc_cloning
             name = "GFX_goal_enc_cloning"
@@ -863,6 +883,10 @@ spriteTypes = {
             name = "GFX_goal_enc_wip"
  		    texturefile = "gfx/interface/goals/enc_wip.dds"
  	    } 
+        SpriteType = {#erbbos.pdn
+            name = "GFX_goal_erbbos.pdn"
+ 		    texturefile = "gfx/interface/goals/erbbos.pdn.dds"
+ 	    } 
         SpriteType = {#flag_burn_BOS
             name = "GFX_goal_flag_burn_BOS"
  		    texturefile = "gfx/interface/goals/flag_burn_BOS.dds"
@@ -911,22 +935,6 @@ spriteTypes = {
             name = "GFX_goal_vault_tec_reform"
  		    texturefile = "gfx/interface/goals/vault_tec_reform.dds"
  	    }
-		SpriteType = {#Brotherhood Faction
-            name = "GFX_goal_america_brotherhood_faction"
- 		    texturefile = "gfx/interface/goals/america_brotherhood_faction.dds"
- 	    }
-		SpriteType = {#cause_focus
-            name = "GFX_goal_enc_cause_focus"
- 		    texturefile = "gfx/interface/goals/enc_cause_focus.dds"
- 	    }
-		SpriteType = {#BOS Flag
-            name = "GFX_goal_enc_bos_flag_reform"
- 		    texturefile = "gfx/interface/goals/enc_bos_flag_reform.dds"
- 	    }
-		SpriteType = {#Reform Fort
-            name = "GFX_goal_america_forts"
- 		    texturefile = "gfx/interface/goals/america_forts.dds"
- 	    }
         SpriteType = {#arcade_gannon
             name = "GFX_idea_arcade_gannon"
  		    texturefile = "gfx/interface/ideas/arcade_gannon.dds"
@@ -967,10 +975,6 @@ spriteTypes = {
             name = "GFX_idea_enc_free_press"
  		    texturefile = "gfx/interface/ideas/enc_free_press.dds"
  	    } 
-        SpriteType = {#enc_idea_manpower_disorganized
-            name = "GFX_idea_enc_idea_manpower_disorganized"
- 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_disorganized.dds"
- 	    } 
         SpriteType = {#enc_hayes
             name = "GFX_idea_enc_hayes"
  		    texturefile = "gfx/interface/ideas/enc_hayes.dds"
@@ -1002,6 +1006,10 @@ spriteTypes = {
         SpriteType = {#enc_idea_manpower_5
             name = "GFX_idea_enc_idea_manpower_5"
  		    texturefile = "gfx/interface/ideas/enc_idea_manpower_5.dds"
+ 	    } 
+        SpriteType = {#enc_idea_manpower_disorganized
+            name = "GFX_idea_enc_idea_manpower_disorganized"
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_disorganized.dds"
  	    } 
         SpriteType = {#enc_idea_manpower_remnants
             name = "GFX_idea_enc_idea_manpower_remnants"
@@ -1054,6 +1062,10 @@ spriteTypes = {
         SpriteType = {#enc_pa_production
             name = "GFX_idea_enc_pa_production"
  		    texturefile = "gfx/interface/ideas/enc_pa_production.dds"
+ 	    } 
+        SpriteType = {#enc_plague
+            name = "GFX_idea_enc_plague"
+ 		    texturefile = "gfx/interface/ideas/enc_plague.dds"
  	    } 
         SpriteType = {#enc_police
             name = "GFX_idea_enc_police"
