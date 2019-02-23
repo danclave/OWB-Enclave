@@ -97,6 +97,7 @@ enc_rangers_attack_plan_tt: "Unlocks the §YAnti-Ranger attack Plan§! decision.
 kill_graffs: "Deal with the Van Graffs"
 spare_graffs: "Make a deal with the Van Graffs"
 purify_city: "Purify the city"
+
 ###################################
 # America Foreign Policy Decisions
 ###################################
@@ -251,6 +252,41 @@ CES_nuke: "Nuke Flagstaff"
 CES_nuke_desc: "When ready, we will nuke Flagstaff and decapitate Caesar.  Although you have to wonder of America will destroy itself by winning the war this way."
 ENC_pacific_commonwealth1: "Rebuilding the Pacific Commonwealth"
 ENC_pacific_commonwealth1_desc: "The good people of Klamath will be the nucleus for a revived Pacific Commonwealth.  Because hey, compared to the Washington Brotherhood, even we look good."
+
+###################################
+# American Broadcast Department
+###################################
+ENC_american_broadcasts:0 "American Broadcast Department"
+ENC_war_propaganda:0 "War Propaganda"
+ENC_war_propaganda_desc:0 "All you have to do is tell them they are being attacked and denounce the pacifists for lack of patriotism and exposing the country to danger. It works the same way in any country."
+ENC_raise_stability:0 "Address Nation"
+ENC_raise_stability_desc:0 "Terror. Murder. They're all around us, I know, I know. But not for long, sweet America. Not for long. Oh, no. The Enclave will restore order, peace, and prosperity to this great nation."
+ENC_blame_ghouls:0 "Blame Ghouls"
+ENC_blame_ghouls_desc:0 "We all know who is to blame for the current state of our nation. Ghouls."
+ENC_blame_communists:0 "Blame Communists"
+ENC_blame_communists_desc:0 "'Did you know, there are those amongst us who would shatter our hopes for peace, order, and security? America's oldest enemy, Communism, is alive and well. But not for long.'"
+ENC_recruitment_drive:0 "Recruitment Drive"
+ENC_recruitment_drive_desc:0 "'I want you for US army!'\n\nInspiring our citizens to show up at our recruiting centers without being dragged their in handcuffs could make life a lot easier for our military recruiters."
+ENC_boost_justification:0 "Boost Justification"
+ENC_boost_justification_desc:0 "Our people might be ignorant of the true evils of our enemies, but we can educate them on why it's vital we strike first."
+ENC_boost_justification_req:0 "Currently justifying a war"
+ENC_restart_movie_industry:0 "Restart Movie Industry"
+ENC_restart_movie_industry:0 "The movie industry has been dead for a long time. Still, there are plenty of drive-in theaters that would not be too difficult to repair."
+ENC_war_movie:0 "Sponsor War Movie"
+ENC_war_movie_desc:0 "We don't have to directly tell our people that war is glorious if we can just show them instead."
+ENC_comedy_movie:0 "Sponsor Comedy Movie"
+ENC_comedy_movie_desc:0 "Everyone needs an escape. A movie that allows us to laugh together is great for relieving tensions."
+ENC_patriotic_movie:0 "Sponsor Patriotic Movie"
+ENC_patriotic_movie_desc:0 "Too some of our citizens, America is still a long lost abstraction. How can we explain such a thing in words alone? We can't, so we need a movie."
+
+###################################
+# Nation Building
+###################################
+ENC_prioritize_civilian_relief: "Prioritize Civilian Relief"
+ENC_prioritize_civilian_relief_desc: "The war has left many of our new citizens in dire straights. Let us prove ourselves as a benevolent government by prioritizing their needs over heavy industry."
+ENC_rebuild_infrastructure:0 "Rebuild Infrastructure"
+ENC_rebuild_infrastructure_desc:0 "Our great nation's infrastructure is in considerable disrepair. Soldiers and merchants alike struggle to traverse the dilapidated roads connecting our cities. Let us show them the strength of our government by making a concentrated effort to rebuild America's infrastructure."
+ENC_rebuild_infrastructure_tt:0 "Gain §Y1%§! of legitimacy for every 2 levels of §Yinfrastructure§! built during the decision."
 ################ special codes for special people ################################################################################################################
 
 # y§Yyellow§!
