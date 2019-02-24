@@ -244,6 +244,7 @@ focus_tree = {
 		}
 		cost = 4.3
 		completion_reward = {
+			custom_effect_tooltip = benjamin_curling_purged
 			clr_country_flag = enc_demoted_scientists
 			remove_ideas = ENC_scientists_traitors_2
 			add_manpower = -300
@@ -272,6 +273,13 @@ focus_tree = {
 		}
 		cost = 4.3
 		completion_reward = {
+			every_army_leader = {
+				limit = {
+					has_trait = enc_purist
+				}
+				custom_effect_tooltip = are_purged
+				hidden_effect = { retire = yes }
+			}
 			clr_country_flag = enc_demoted_officers
 			remove_ideas = ENC_officers_traitors_2
 			add_manpower = -300
@@ -944,6 +952,14 @@ focus_tree = {
 						id = 912
 						ruling_only = yes 
 						name = "Security Chief Wallace"
+					}
+					and = {
+						ERB = { has_completed_focus = enc_accept_ghouls }
+						has_country_leader = {
+							id = 911
+							ruling_only = yes
+							name = "Festus"
+						}
 					}
 				}
 				exists = yes

@@ -355,9 +355,11 @@ enc_a_nation_reborn_desc:0 "To quote the classical musical Hamilton, 'We're fina
 enc_a_new_order:0 "An All American Order"
 
 enc_purge_scientists:0 "Purge the Scientists"
+benjamin_curling_purged:0 "§YBenjamin Curling§! is §Rexecuted§! on false charges!\n"
 enc_purge_scientists_desc:0 "The time has come to rid ourselves of the most stubbern Purist elements within our research divisions. We cannot let such an essential part of the Enclave be infested with traitors and saboteurs. Demotions, banishments or executions. One way or another, our scientists will be loyal."
 
 enc_purge_officers:0 "Purge the Officers"
+are_purged:0 " are §Rexecuted§! on false charges!\n"
 enc_purge_officers_desc:0 "The time has come to rid ourselves of the most stubbern Purist elements within our officer corps. We cannot let such an essential part of the Enclave be infested with traitors and saboteurs. Demotions, banishments or executions. One way or another, our officers will be loyal."
 
 stability_loss_based_on_elites_popularity: "\n§MStability loss is based on popularity of§! §YElites Faction§!"

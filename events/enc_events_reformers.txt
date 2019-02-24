@@ -1609,6 +1609,97 @@ country_event = {#56 - Reno attacks
 	}
 }
 
+country_event = {#56 - Purist commander
+	id = enc_reformers.57
+	title = enc_reformers.57.t
+	desc = enc_reformers.57.d
+	picture = GFX_event_ENC_secret
+	fire_only_once = no	
+	is_triggered_only = no
+	immediate = {
+		hidden_effect = {
+			random_army_leader = {
+				limit = {
+					has_trait = enc_purist
+					is_assigned = yes
+					not = { has_unit_leader_flag = warned_purist }
+				}
+				save_event_target_as = purist_commander 
+			}
+		}
+	}
+	trigger = {
+		has_completed_focus = enc_reform
+		any_unit_leader = {
+			has_trait = enc_purist
+			is_assigned = yes
+		}
+	}
+	mean_time_to_happen =  { days = 100 } # quick
+	option = { # time for an accident
+		trigger = {
+			has_country_flag = leader_ruthless # todo
+		}
+		name = enc_reformers.57.a
+		custom_effect_tooltip = enc_reformers.57.a.tt
+		hidden_effect = {
+			event_target:purist_commander = {
+				retire = yes
+			}
+		}
+		add_war_support = -0.05
+		custom_effect_tooltip = leader_ruthless_tt
+	}
+	option = { # time for an demotion
+		name = enc_reformers.57.b
+		custom_effect_tooltip = enc_reformers.57.b.tt
+		trigger = {
+			event_target:purist_commander = {
+				is_field_marshal = yes
+			}
+		}
+		event_target:purist_commander = {
+			demote_leader = yes
+			set_unit_leader_flag = warned_purist
+			remove_unit_leader_trait = enc_purist
+			add_unit_leader_trait = enc_demoted
+		}
+		add_popularity = { ideology = intellectuals popularity = -0.02 }
+		add_war_support = -0.05
+		
+	}
+	option = { # he earned his opinion
+		name = enc_reformers.57.c
+		custom_effect_tooltip = enc_reformers.57.c.tt
+		add_war_support = 0.03
+		add_popularity = { ideology = intellectuals popularity = -0.05 }		
+	}
+	option = { # speak to him personally
+		name = enc_reformers.57.e
+		trigger = {
+			has_country_flag = leader_charismatic
+		}
+		custom_effect_tooltip = enc_reformers.57.e.tt
+		random_list = {
+			25 = {
+				custom_effect_tooltip = enc_reformers.57.e.success
+				event_target:purist_commander = { remove_unit_leader_trait = enc_purist }
+			}
+			25 = {
+				custom_effect_tooltip = enc_reformers.57.e.success2
+					hidden_effect = {
+					event_target:purist_commander = { 
+						remove_unit_leader_trait = enc_purist 
+						add_unit_leader_trait = enc_reformer 
+					}
+				}
+			}
+			50 = { add_popularity = { ideology = intellectuals popularity = -0.05 }}
+			
+		}
+		custom_effect_tooltip = leader_charismatic_tt
+	}
+}
 
 # unused numbers
 news_event = {
@@ -5739,9 +5830,9 @@ country_event = {#300 - state protests!
 	id = enc_reformers.300
 	title = enc_reformers.300.t
 	desc = enc_reformers.300.d
-	picture = GFX_event_enc_urban_patrol # todo new picture
-	fire_only_once = no # todo change
-	is_triggered_only = yes # todo change
+	picture = GFX_event_enc_protests_ncr_flag 
+	fire_only_once = no
+	is_triggered_only = no # todo change
 	trigger = {
 		not = { has_country_flag = enc_protests_over } # todo mandatory patriotism stops protests
 		has_completed_focus = enc_rebuilding_a_nation
@@ -5988,7 +6079,7 @@ country_event = {#301 - state protest turns into massacre!
 country_event = {#302 - Press reports massacre
 	id = enc_reformers.302
 	title = enc_reformers.302.t
-	picture = GFX_event_ENC_secret
+	picture = GFX_event_radio_new_vegas
 	fire_only_once = no
 	desc = enc_reformers.302.d
 	is_triggered_only = yes	
@@ -6055,7 +6146,7 @@ country_event = {#303 - Candle vigil
 country_event = {#304 - State protests turns into riot!
 	id = enc_reformers.304
 	title = enc_reformers.304.t
-	picture = GFX_event_ENC_secret # todo
+	picture = GFX_event_enc_protests_ncr_flag # todo
 	fire_only_once = no
 	desc = enc_reformers.304.d
 	is_triggered_only = yes
