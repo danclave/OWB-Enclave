@@ -217,6 +217,43 @@ ideas = {
 ####################################################
 # REFORM
 ####################################################
+		ENC_reform_officers = {  
+			picture = enc_officers
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				max_planning = 0.1
+				army_leader_start_level = 1
+				army_leader_start_attack_level = 1
+				army_leader_start_planning_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 1
+				military_leader_cost_factor = 0.50
+			}
+		}
+		ENC_reform_general_staff = {  
+			picture = enc_officers
+            removal_cost = -1
+			modifier = {
+				army_leader_start_level = 2
+				army_org_factor = 0.20
+				max_planning = 0.25
+				supply_consumption_factor = -0.10
+				max_command_power = 30				
+					army_leader_start_level = 2
+				army_leader_start_attack_level = 2
+				army_leader_start_planning_level = 2
+				army_leader_start_defense_level = 2
+				army_leader_start_logistics_level = 2
+				military_leader_cost_factor = 1
+			}
+		}
 		atrocities = {	
 			
 			picture = caesar's_legacy_2

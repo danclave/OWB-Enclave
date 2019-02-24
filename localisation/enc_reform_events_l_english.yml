@@ -1036,7 +1036,7 @@ enc_reformers.199.a: "A dark day for all mankind"
 enc_reformers.200.t: "Enclave Police"
 enc_reformers.200.d: "New Reno is safer than you'd expect for a city with no police force, but that's because order is maintained by a gentleman's agreement between the families. We could incorporate many of their mobsters into our new police force, or we could start from scratch, with police trained by Sergeant Dornan."
 enc_reformers.200.a: "Why don't we just use these guys?"
-enc_reformers.200.b: "You'd have to be  MOR-ON to rely New Reno's gangs."
+enc_reformers.200.b: "You'd have to be  MOR-ON to rely on New Reno's gangs."
 #############################################################################################################
 enc_reformers.201.t: "A New America for a New World!"
 enc_reformers.201.d: "Let the cry go out across the wastes! The Enclave has guided America through its darkest hour, to the promise land.  We shall rid the world of mutants who desecrate our sacred land.  We will crush the Brotherhood wherever we find it. We will rebuild and take the war back to China.  America is reborn, tougher, stronger, and more unified than ever."
@@ -1086,8 +1086,3 @@ enc_reformers.304.d: "Protests have gotten out of hand and turned into riots."
 enc_reformers.304.a: "Let them blow off some steam."
 enc_reformers.304.b: "Send in the troops."
 
-#############################################################################################################
-## EPILOGUE ###
-#############################################################################################################
-enc_events_epilogue.2.t:0 "The Fate of Ghouls"
-enc_events_epilogue.2.d:0 "Ghouls"

@@ -214,7 +214,14 @@ ENC_infiltrating_NCR = {
 		priority = 10
 	visible = {
 			has_country_flag = enc_ncr_spies
+			
 		}
+		available = { 
+			DES = {
+				is_in_faction = yes
+				exists = yes 
+				} 
+			}
 		complete_effect = {
 			add_political_power = -80
 			custom_effect_tooltip = ENC_desert_rangers_hate_tt
@@ -2441,10 +2448,12 @@ political_actions = {
 		visible = {
 			has_country_flag = enc_intervention_flag
 			NCR = { has_war_with = CES }
+			}
+		available = {
 			CES = {
 				surrender_progress > 0.1 # NCR has lost some territory
 			}
-		}
+		}	
 		complete_effect = {
 			NCR = {
 				white_peace = {
@@ -2922,9 +2931,8 @@ ENC_granite_doctrine = {
 					}	
 				}
 	visible = {
-			if = {
-				has_completed_focus = enc_reform
-				}	
+			has_completed_focus = enc_reform
+			FROM = { exists = yes }		
 			}
 		available = {
 			NOT = {
@@ -2952,8 +2960,9 @@ erb_fire_and_blood = {
 					}	
 				}
 	visible = {
-			if = { has_completed_focus = enc_reform }	
-			}
+			has_completed_focus = enc_reform
+			FROM = { exists = yes }						
+				}
 		available = {
 			NOT = {
 				FROM = { is_puppet_of = ERB }
@@ -3142,12 +3151,15 @@ ENC_oppose_legion = {
 					AND = { 
 						is_neighbor_of = CES
 						has_idea = settler_nation
-							NOT = { has_idea = enc_enclave_advisors }
 						} 	
 					}	
 				}
 	visible = {
 			has_completed_focus = enc_reform
+			FROM = { 
+				exists = yes
+				NOT = { has_idea = enc_enclave_advisors }
+					}
 				}
 		available = {
 			NOT = {

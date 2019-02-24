@@ -764,8 +764,7 @@ country_event = {#25 - NCR - CES War
 		date < 2280.01.01
 		NCR = { 
 			has_war_with = CES # war between NCR and CES
-			# surrender_progress > 0.1 # NCR has lost some territory
-		} 
+			} 
 	}
 	fire_only_once = yes
 
@@ -2485,7 +2484,7 @@ country_event = {#91 - Computer Network
 	id = enc_reformers.91
 	title = enc_reformers.91.t
 	desc = enc_reformers.91.d
-	picture = GFX_event_ENC_Zax
+	picture = GFX_event_enc_ZAX
 	fire_only_once = yes
 	is_triggered_only = NO
 	trigger = {
@@ -4844,7 +4843,7 @@ country_event = { #169 - Utah Plague
 		}
 	}
 
-country_event = { #170 - Dark Age
+news_event = { #170 - Dark Age
 	id = enc_reformers.170
 	title = enc_reformers.170.t
 	desc = enc_reformers.170.d

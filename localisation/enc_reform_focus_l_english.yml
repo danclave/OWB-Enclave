@@ -145,7 +145,7 @@ enc_new_american_army_desc:0 "Look at them march past. We are no longer a few ba
 enc_new_generation_officers:0 "A new Generation of Officers"
 enc_new_generation_officers_desc:0 "A new generation of officers has arisen, who have hidden throughout the Wasteland.  They have their own views of how to handle combat, and we'd be foolish to ignore them."
 enc_new_officer_corps:0 "Officers Corps Reform"
-enc_new_officer_corps_desc:0 "That spit and polish, that crisp solute, that ability to launch a pincer into the enemies' positions.  Our officers are as good as any Westpoint turned out."
+enc_new_officer_corps_desc:0 "That spit and polish, that crisp solute, that ability to launch a pincer into the enemies' positions.  Our officers are as good as any West Point turned out."
 
 enc_officers_by_loyalty_and_devotion:0 "Officers by Loyalty and Devotion"
 enc_officers_by_loyalty_and_devotion_desc:0 "Too many Purists still hide in the officers' ranks.  We should only promote those loyal to America."
@@ -158,7 +158,7 @@ enc_power_armor_integration_desc:0 "Although we've always relied on power armor,
 enc_rank_and_file_infantry:0 "Rank and File Infantry"
 enc_rank_and_file_infantry_desc:0 "Powered armor will always be key to the Enclave, but resources are better spent on arming as many men as possible.  How do you plan to maintain divisions of powered armor in a nuclear wasteland?"
 enc_reform_general_staff:0 "Reform General Staff"
-enc_reform_general_staff_desc:0 "Our General Staff need to prepare for real wars against real states.  Fortunately the databanks have plenty of records of the last time Americans fought a real war...""
+enc_reform_general_staff_desc:0 "Our General Staff need to prepare for real wars against real states.  Fortunately the databanks have plenty of records of the last time Americans fought a real war."
 enc_specialist_soldiers:0 "Specialist Soldiers"
 enc_specialist_soldiers_desc:0 "The United States once had a marine corps, paratroopers, and special forces.  The time has come to have these troops again."
 enc_standing_army:0 "A Standing Army"
@@ -401,8 +401,8 @@ enc_reach_the_centrists_tt:0 "\n§MWe will have to promise compromises to the ce
 enc_local_elections: "Local Elections"
 enc_local_elections_desc: "To reacquaint the American people with democracy, we're holding elections for municipal councils."
 
-enc_presidential_elections: "Presidential Elections"
-enc_presidential_elections_desc: "Americans once came together to choose their leader.  It's time for them to do so again. "
+enc_presidential_elections: "The Voting Rights Act"
+enc_presidential_elections_desc: "Congress will do us little good if we don't safeguard the influence of every American in the electoral process. Vault City limited voting to its natural citizens, and the barons of the NCR ensured that only the powerful had a say.  Let's pass a law to ban literacy tests and open ballots. With our help, democracy will be non-negotiable."
 
 enc_expand_human_definition: "Expand the Definition of Human"
 enc_expand_human_definition_desc: "The American experiment is a history of progress.  Let's take one more step."
@@ -471,7 +471,7 @@ enc_the_fate_of_our_democracy_desc:0 "Some say that to truly be the United State
 
 enc_american_dream:"The American Dream"
 enc_american_dream_desc: "If we are going to revive the United States, we will need to take down the New California Republic, Caesar's legions, and the other so-called states of the Wastes."
-enc_american_dream.tt: "Unlocks the §MUnited States of America§! Focus Tree"
+enc_american_dream.tt: "Unlocks the §MRebuilding a Nation§! Focus Tree and gives you claims on §Ythe New California Republic§!."
 enc_NCR_seak_allies:"Seeking Allies"
 enc_NCR_seak_allies_desc: "We aren't the only power opposed to the NCR.  To the east comes a fool who dreams of reviving the Roman Empire.  To the south lies another legacy of the Old War, Mr. House, and New Vegas.  And then there is the Brotherhood of Steel, who have no love for the NCR or us. Perhaps the enemy of our enemy can be our... not enemy?"
 

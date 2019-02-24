@@ -1,17 +1,151 @@
 ﻿add_namespace = enc_events_epilogue
 
-country_event = {#2 - Ghouls
+news_event = {#2 - Ghouls
 	id = enc_events_epilogue.2
 	title = enc_events_epilogue.2.t
 	desc = enc_events_epilogue.2.d
 	picture = GFX_event_enc_reform_origin
-	
 	fire_only_once = yes	
     is_triggered_only = yes	
-	
-	
+	immediate = {
+		if = { # ghouls exist
+			limit = {
+				has_completed_focus = enc_accept_ghouls
+			}
+			custom_effect_tooltip = enc_events_epilogue.2.d.integrate}
+		else_if = { # player has not chosen democracy, force change to democracy
+			limit = {
+				not = {
+					has_completed_focus = enc_accept_ghouls
+					}
+				}	
+			custom_effect_tooltip = enc_events_epilogue.2.d.segregate
+			}
+		}
 	option = {# Ghouls
 		name = enc_events_epilogue.2.a
-		
-	}
+		}
+}
+
+news_event = {#3 - Dornan
+	id = enc_events_epilogue.3
+	title = enc_events_epilogue.3.t
+	desc = enc_events_epilogue.3.d
+	picture = GFX_event_enc_ghoul_fraternity
+	fire_only_once = yes	
+    is_triggered_only = yes	
+	option = { #lolz
+		name = enc_events_epilogue.3.a
+		}
+}
+
+news_event = {#4 - Gannon
+	id = enc_events_epilogue.4
+	title = enc_events_epilogue.4.t
+	desc = enc_events_epilogue.4.d
+	picture = GFX_event_arcade_gannon_enclave
+	fire_only_once = yes	
+    is_triggered_only = yes	
+	immediate = {
+		if = { # gannon
+			limit = {
+				has_country_flag = gannon_returns
+				}
+			custom_effect_tooltip = enc_events_epilogue.4.d.gannon
+			}
+		else_if = { # no gannon 
+			limit = { 
+				not = {
+				has_country_flag = gannon_returns
+					}
+				}
+			custom_effect_tooltip = enc_events_epilogue.4.d.nogannon
+			}
+		}
+	option = {# Gannon
+		name = enc_events_epilogue.2.a
+		}
+}
+news_event = {#5 - Press
+	id = enc_events_epilogue.5
+	title = enc_events_epilogue.5.t
+	desc = enc_events_epilogue.5.d
+	picture = GFX_event_radio_new_vegas
+	fire_only_once = yes	
+    is_triggered_only = yes	
+	immediate = {
+		if = { # gannon
+			limit = {
+				OR = { 
+					has_idea = ENC_free_press
+					has_idea = ENC_free_press_2
+					}		
+				}
+			custom_effect_tooltip = enc_events_epilogue.5.d.press
+			}
+		else_if = { # no gannon 
+			limit = { 
+				not = {
+					OR = { 
+						has_idea = ENC_free_press
+						has_idea = ENC_free_press_2
+						}	
+					}
+				}		
+			custom_effect_tooltip = enc_events_epilogue.5.d.censorship
+			}
+		}
+	option = {# Ah well
+		name = enc_events_epilogue.5.a
+		}
+}
+
+news_event = {#6 - Elections
+	id = enc_events_epilogue.6
+	title = enc_events_epilogue.6.t
+	desc = enc_events_epilogue.6.d
+	picture = GFX_event_enc_washington_monument
+	fire_only_once = yes	
+    is_triggered_only = yes	
+	immediate = {
+		if = { # election
+			limit = {
+				has_completed_focus = enc_presidential_elections		
+				}
+			custom_effect_tooltip = enc_events_epilogue.6.d.freedom
+
+			}
+		else_if = { # no elections
+			limit = { has_completed_focus = enc_suspend_elections
+				}
+			custom_effect_tooltip = enc_events_epilogue.6.d.noelections
+			}
+		}
+	option = {# Ah well
+		name = enc_events_epilogue.6.a
+		}
+news_event = {#7 - Integration
+	id = enc_events_epilogue.7
+	title = enc_events_epilogue.7.t
+	desc = enc_events_epilogue.7.d
+	picture = GFX_event_enc_lincoln_memorial
+	fire_only_once = yes	
+    is_triggered_only = yes	
+	immediate = {
+		if = { # integration
+			limit = {
+				has_completed_focus = enc_expand_human_definition
+				}
+			custom_effect_tooltip = enc_events_epilogue.7.d.integration
+
+			}
+		else_if = { # segregation
+			limit = { has_completed_focus = enc_segregation
+				}
+			custom_effect_tooltip = enc_events_epilogue.7.d.segregation
+			}
+		}
+	option = {# Ah well
+		name = enc_events_epilogue.6.a
+		}
 }
