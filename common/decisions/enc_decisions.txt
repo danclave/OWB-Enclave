@@ -118,7 +118,7 @@ ENC_infiltrating_NCR = {
 		icon = decision_enc_agreement
 		cost = 25
 		visible = {
-			has_completed_focus = enc_contact_old_world_party
+			has_completed_focus = enc_support_old_world_party
 		}
 		available = {
 			has_country_flag = enc_ncr_spies
@@ -135,7 +135,7 @@ ENC_infiltrating_NCR = {
 		icon = generic_political_discourse
 		cost = 25
 		visible = {
-			has_completed_focus = enc_contact_old_world_party
+			has_completed_focus = enc_support_old_world_party
 		}
 		available = {
 			NCR = {
@@ -2470,10 +2470,6 @@ political_actions = {
 		}
 	}
 }
-
-
-	
- 
 
 ###############################
 # PURIST

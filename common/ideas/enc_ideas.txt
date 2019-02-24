@@ -1065,7 +1065,10 @@ ideas = {
 		}
 		ENC_smuggling = {
 			picture = enc_smugging
-			cancel = { country_exists = BAR } # barons broke free
+			cancel = { 
+				country_exists = BAR
+				
+			} # barons broke free
 			allowed = { 
 				always = no
             }
@@ -1406,7 +1409,34 @@ ideas = {
 				MONTHLY_POPULATION = 0.10
 			}
 		}
-		
+		ENC_accepted_brahmin_barons = {  
+			picture = enc_smugging
+			allowed = { 
+				always = no
+			}
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = -0.03
+			}
+		}
+		ENC_rejected_brahmin_barons = {  
+			picture = enc_smugging
+			allowed = { 
+				always = no
+			}
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_weekly = 0.0045
+			}
+		}
 ####################################################
 # REFORM - REBUILDING A NATION
 ####################################################	

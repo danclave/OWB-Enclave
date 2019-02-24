@@ -84,6 +84,8 @@ ENC_legitimacy_high_desc: "(+75% legitimacy)\nThe Enclave is seen as a legitimat
 
 max_legitimacy: "At least §Y100%§! Legitimacy"
 half_legitimacy: "More than §Y50%§! Legitimacy"
+20_legitimacy: "More than §Y20%§! Legitimacy"
+10_legitimacy: "More than §Y10%§! Legitimacy"
 25_legitimacy: "More than §Y25%§! Legitimacy"
 75_legitimacy: "More than §Y75%§! Legitimacy"
 
@@ -156,6 +158,9 @@ ENC_mandatory_patriotism: "Mandatory Patriotism"
 
 ENC_vaccinations: "Vaccinations"
 ENC_emergency_labour_draft: "Emergency Labour Draft"
+
+ENC_accepted_brahmin_barons: "Brahmin Barons"
+ENC_rejected_brahmin_barons: "Brahmin Barons Evicted"
 ###################################
 # MANPOWER
 ###################################

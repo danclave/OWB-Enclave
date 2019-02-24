@@ -271,7 +271,6 @@ country_event = {#10 - Dealing with Bishops - assassination
 	}
 }
 
-
 country_event = {#11 - Traitors officers
 	id = enc_reformers.11
 	title = enc_reformers.11.t
@@ -1887,12 +1886,12 @@ country_event = {#70 - The Democracy Question
 	option = {# Extend Presidential Powers
 		name = enc_reformers.70.a
 		complete_national_focus = enc_extend_presidential_powers_reform
-		}
+	}
 	option = {# Democracy
 		name = enc_reformers.70.b
 		complete_national_focus = enc_local_elections
-		}
 	}
+}
 
 country_event = {#71 - Freedom Rings
 	id = enc_reformers.71
@@ -2012,20 +2011,60 @@ country_event = {#75 - Civil War
     }
 	
 
-country_event = {#77 - The Democracy Question
+country_event = {#77 - mutant question
 	id = enc_reformers.77
 	title = enc_reformers.77.t
 	desc = enc_reformers.77.d
 	picture = GFX_event_Shrine_to_Lincoln
 	fire_only_once = yes
 	is_triggered_only = yes
-	option = {#	Extend Presidential Powers
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = enc_promised_no_integration
+			}
+			custom_effect_tooltip = enc_reformers.77.d.promise
+		}
+		hidden_effect = {
+			unlock_national_focus = enc_the_mutant_question
+		}
+	}
+	option = {#	Segregation
 		name = enc_reformers.77.a
 		complete_national_focus = enc_segregation
+		custom_effect_tooltip = newline
+		set_temp_variable = {
+			var = legitimacy_change_var
+			value = -0.05
+		} 
+		change_legitimacy = yes
+		if = { # promised no integration
+			limit = {
+				has_country_flag = enc_promised_no_integration				
+			}
+			custom_effect_tooltip = enc_promised_no_integration_kept
+			add_popularity = { ideology = intellectuals popularity = 0.03 } 
+			add_stability = 0.05
+			clr_country_flag = enc_promised_no_integration
+		}
 	}
-	option = {#	Democracy
+	option = {#	Integration²
 		name = enc_reformers.77.b
 		complete_national_focus = enc_expand_human_definition
+		custom_effect_tooltip = newline
+		add_ideas = {
+			ENC_begun_integration
+		}
+		if = {
+			limit = {
+				has_country_flag = enc_promised_no_integration				
+			}
+			custom_effect_tooltip = enc_promised_no_integration_broken
+			add_popularity = { ideology = intellectuals popularity = -0.05 } 
+			add_stability = -0.15
+			add_war_support = -0.15
+			clr_country_flag = enc_promised_no_integration
+		}
 	}
 }
 
@@ -2732,25 +2771,29 @@ country_event = {#105 Brahmin Barons
 		tag = ERB
 		141 = { is_owned_by = ERB }
 		NOT = { country_exists = NCR }
-		}
-	
-	option = {#	Easter Egg
+	}	
+	option = {#	Work with them
 		name = enc_reformers.105.a
 		add_stability = -0.05
-		add_ideas = ENC_smuggling 
+		add_ideas = ENC_accepted_brahmin_barons 
 	}
-	option = {#	Easter Egg
+	option = {#	Cook them
 		name = enc_reformers.105.b
 		add_manpower = -500
-		add_war_support = -0.05
+		add_stability = -0.15
+		add_timed_idea = {
+			idea = ENC_rejected_brahmin_barons
+			days = 350 # 50 weeks
+		}
+		custom_effect_tooltip = enc_reformers.105.b.tt
 	}
 	option = {#	Easter Egg
 		name = enc_reformers.105.c
 		trigger = { has_completed_focus = enc_accept_super_mutants }
-		custom_effect_tooltip = enc_reformers.105.c.tt	
 		country_event = { id = enc_reformers.106 }
-		}
-		}
+		custom_effect_tooltip = enc_reformers.105.c.tt	
+	}
+}
 country_event = {#106 Redding
     id = enc_reformers.106
 	title = enc_reformers.106.t
@@ -2895,7 +2938,6 @@ country_event = {#109 The Liberation of Hoover Dam
 		trigger = { NOT = { has_global_flag = enc_ces_dam } }
 			}
 		}		
-
 country_event = {#110 - BOS Legionaries
 	id = enc_reformers.110
 	title = enc_reformers.110.t
@@ -2990,8 +3032,6 @@ country_event = {#110 - BOS Legionaries
 				}
 			}
 		}
-
-
 country_event = {#111 Turn Off Radio
 	id = enc_reformers.111
 	title = enc_reformers.111.t
@@ -3706,16 +3746,17 @@ country_event = {# Home is Nevada
     id = enc_reformers.131
 	title = enc_reformers.131.t
 	desc = enc_reformers.131.d
-	picture = GFX_event_enc_nevada
+	picture = GFX_event_enc_nevada_short
 	fire_only_once = yes
 	trigger = {	
 		has_completed_focus = enc_the_state_of_nevada
-		}	
+	}	
 	mean_time_to_happen = {	days = 30 }
 	option = {#
 		name = enc_reformers.131.a
-			}	
-	}
+		custom_effect_tooltip = enc_reformers.131.tt
+	}	
+}
 country_event = {# Rocket's Red Glare
     id = enc_reformers.132
 	title = enc_reformers.132.t
@@ -3730,8 +3771,8 @@ country_event = {# Rocket's Red Glare
 		name = enc_reformers.132.b
 		trigger = {has_completed_focus = enc_accept_ghouls}
 		country_event = { id = enc_reformers.133 }	
-			}	
-	}			
+		}	
+}			
 	
 country_event = {# Space Station
     id = enc_reformers.133
@@ -5708,8 +5749,9 @@ country_event = {#300 - state protests!
 			has_idea = ENC_emergency_labour_draft
 			not = {
 				or = {
-					has_completed_focus = enc_the_fate_of_our_democracy # todo check					
-					has_completed_focus = enc_law_and_order # todo check
+					has_completed_focus = enc_the_fate_of_our_democracy 				
+					has_completed_focus = enc_law_and_order
+					has_completed_focus = enc_the_mutant_question
 				}
 			}
 			has_completed_focus = enc_requisition_of_resources
@@ -5722,7 +5764,15 @@ country_event = {#300 - state protests!
 	immediate = {
 		# demands of the protesters
 		custom_effect_tooltip = enc_reformers.300.d.opening
-		if = { # labour draft exists, demand end of labour draft
+		if = { # not recognized as human, please do so
+			limit = {
+				not = {
+					has_completed_focus = enc_the_mutant_question # todo check
+				}
+			}
+			custom_effect_tooltip = enc_reformers.300.d.enc_the_mutant_question
+		}
+		else_if = { # labour draft exists, demand end of labour draft
 			limit = {
 				has_idea = ENC_emergency_labour_draft
 			}
@@ -5814,7 +5864,18 @@ country_event = {#300 - state protests!
 	}
 	option = { # Meet their demands
 		name = enc_reformers.300.dd
-		if = { 		# labour draft exists, demand end of labour draft
+		if = { # not recognized as human, please do so
+			limit = {
+				not = {
+					has_completed_focus = enc_the_mutant_question # todo check
+				}
+			}
+			hidden_effect = {			
+				unlock_national_focus = enc_the_mutant_question
+			}
+			complete_national_focus = enc_expand_human_definition
+		}
+		else_if = { # labour draft exists, demand end of labour draft
 			limit = {
 				has_idea = ENC_emergency_labour_draft
 			}
