@@ -560,4 +560,8 @@ spriteTypes = {
             name = "GFX_event_enc_washington_monument"
  		    texturefile = "gfx/event_pictures/event_enc_washington_monument.tga"
  	    }
+		SpriteType = {#event_enc_protests_ncr_flag
+            name = "GFX_event_enc_protests_ncr_flag"
+ 		    texturefile = "gfx/event_pictures/event_enc_protests_ncr_flag.tga"
+ 	    }
 }

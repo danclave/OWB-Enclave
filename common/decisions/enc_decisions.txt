@@ -118,7 +118,7 @@ ENC_infiltrating_NCR = {
 		icon = decision_enc_agreement
 		cost = 25
 		visible = {
-			has_completed_focus = enc_contact_old_world_party
+			has_completed_focus = enc_support_old_world_party
 		}
 		available = {
 			has_country_flag = enc_ncr_spies
@@ -135,7 +135,7 @@ ENC_infiltrating_NCR = {
 		icon = generic_political_discourse
 		cost = 25
 		visible = {
-			has_completed_focus = enc_contact_old_world_party
+			has_completed_focus = enc_support_old_world_party
 		}
 		available = {
 			NCR = {
@@ -747,7 +747,6 @@ ENC_california_reconstruction = {
 		}
 	}
 }
-	
 ENC_northwest_reconstruction = {
 	ENC_hanford = {
 		cost = 25
@@ -938,7 +937,7 @@ ENC_starting_companies = {
 	}
 }
 
-ENC_build_nevada = {
+ENC_nation_building = {
 	enc_NCR_seize_dayglow = {
 		icon = decision_enc_propaganda
 		priority = 300
@@ -1223,14 +1222,8 @@ ENC_build_nevada = {
 			factor = 10
 		}
 		activation = {
-			original_tag = ERB 
 			has_completed_focus = enc_american_dream
-			NOT = { country_exists = NCR }
-			OR = {
-				controls_state = 135 # sac city
-				controls_state = 253 # shady sands
-				controls_state = 350 # the bone yard				
-			}
+			has_country_flag = enc_mid_game
 		} 
 		days_mission_timeout = 60
 		modifier = {
@@ -1245,8 +1238,51 @@ ENC_build_nevada = {
 			change_legitimacy = yes
 		}
 	}
+	ENC_rebuild_infrastructure = {
+		icon = generic_construction
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+		visible = {
+			# has_country_flag = enc_mid_game
+		}
+		available = {
+			has_completed_focus = enc_rebuilding_a_nation
+		}
+		complete_effect   = {
+			clear_variable = current_infra
+			set_variable = { current_infra = 0 }
+			hidden_effect = {
+				every_owned_state = {
+					set_temp_variable = { local_infra = infrastructure_level}
+					add_to_variable = { ROOT.current_infra = local_infra }
+				}
+			}
+		}
+		modifier = {
+			production_speed_infrastructure_factor = 0.30
+		}		
+		remove_effect   = {
+			custom_effect_tooltip = ENC_rebuild_infrastructure_tt
+			hidden_effect = {
+				set_variable = { complete_infra = 0 }
+				every_owned_state = {
+					set_temp_variable = { local_infra = infrastructure_level}
+					add_to_variable = { ROOT.complete_infra = local_infra }
+				}
+				set_temp_variable = { inftra_built = complete_infra }
+				subtract_from_temp_variable = { inftra_built = current_infra}
+				divide_temp_variable = { inftra_built = 200 }
+				set_temp_variable = {
+					var = legitimacy_change_var
+					value = inftra_built
+				}			
+				change_legitimacy = yes
+				clear_variable = current_infra
+			}
+		}
+	}
 }
-
 
 ENC_deseret = {
 	ENC_state_of_deseret = { 
@@ -1344,6 +1380,180 @@ ENC_deseret = {
 				}
 			}
 }
+
+ENC_american_broadcasts = {
+	ENC_war_propaganda = {
+		icon = decision_enc_propaganda
+		cost = 75		
+		visible = {	
+			has_war_support < 0.5
+		}
+		modifier = {
+			war_support_weekly = 0.0350
+			stability_weekly = -0.0175
+		}
+		days_remove = 20
+		days_re_enable = 30
+	}
+	ENC_raise_stability = {
+		cost = 75
+		icon = decision_enc_propaganda
+		visible = {	
+			has_stability < 0.5
+		}
+		available = {
+		}
+		modifier = {
+			stability_weekly = 0.0350
+			war_support_weekly = -0.0175
+		}
+		days_remove = 20
+		days_re_enable = 30
+	}
+	ENC_blame_ghouls = {
+		cost = 50
+		icon = decision_enc_propaganda
+		visible = {
+			has_completed_focus = enc_reject_ghouls
+		}
+		available = {
+			has_stability < 0.50
+		}
+		modifier = {
+			stability_weekly = 0.0350
+			war_support_weekly = 0.0175
+		}
+		days_remove = 20
+		days_re_enable = 90
+	}
+	ENC_blame_communists = {
+		cost = 75
+		icon = decision_enc_propaganda
+		visible = {
+			# has taken propaganda focus?
+		}
+		available = {
+			has_stability < 0.50
+		}
+		modifier = {
+			stability_weekly = 0.0350
+			war_support_weekly = 0.0175
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+	ENC_recruitment_drive = {
+		cost = 50
+		icon = decision_enc_propaganda
+		available = {
+			has_stability > 0.35
+			has_war_support > 0.50
+		}
+		modifier = {
+			war_support_weekly = -0.0175
+			mobilization_speed = 0.03
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+	# propaganda
+	ENC_boost_justification = {
+		cost = 100
+		icon = decision_enc_propaganda
+		available = {
+			has_war_support > 0.50
+			custom_trigger_tooltip = {
+				tooltip = ENC_boost_justification_req
+				any_country = {
+					ERB = {
+						is_justifying_wargoal_against = PREV
+					}
+				}
+			}
+		}
+		modifier = {
+			justify_war_goal_time = -0.50
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+	# movies!
+	ENC_restart_movie_industry = {
+		icon = decision_enc_movie
+		cost = 100		
+		fire_only_once = yes
+		visible = {
+			not = { has_country_flag = enc_movie_industry }
+		}
+		available = {
+			has_stability > 0.50
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		remove_effect = {
+			set_country_flag = enc_movie_industry
+		}
+		days_remove = 1#60
+	}
+	ENC_war_movie = {
+		cost = 50
+		icon = decision_enc_movie
+		# cost war experience
+		visible = {
+			has_country_flag = enc_movie_industry
+		}
+		available = {
+			has_stability > 0.50
+		}
+		modifier = {
+			war_support_weekly = 0.0175
+			mobilization_speed = 0.25
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+	ENC_comedy_movie = {
+		cost = 50
+		icon = decision_enc_movie
+		visible = {
+			has_country_flag = enc_movie_industry
+		}
+		available = {
+			has_stability > 0.50
+		}
+		modifier = {
+			stability_weekly = 0.0350
+			war_support_weekly = -0.0175
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+	ENC_patriotic_movie = {
+		cost = 50
+		icon = decision_enc_movie
+		visible = {
+			has_country_flag = enc_movie_industry
+		}
+		available = {
+			has_stability > 0.50
+		}
+		modifier = {
+			stability_weekly = 0.0175
+		}
+		remove_effect = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+}
+
 ###############################
 # SHARED
 ###############################
@@ -1634,6 +1844,7 @@ ENC_radio_broadcasts = {
 		}
 	}
 
+	
 }
 ENC_production = {
 	retool_machinery = {
@@ -2068,6 +2279,13 @@ ENC_political_infighting = {
 		}
 		days_remove = 200
 		complete_effect  = {
+			every_army_leader = {
+				limit = {
+					has_trait = enc_purist
+				}
+				demote_leader = yes
+				add_unit_leader_trait = enc_demoted
+			}
 			add_popularity = { ideology = elites popularity = -0.08 }
 			set_country_flag = enc_demoted_officers
 			swap_ideas = {
@@ -2269,10 +2487,6 @@ political_actions = {
 		}
 	}
 }
-
-
-	
- 
 
 ###############################
 # PURIST
@@ -2843,7 +3057,8 @@ ENC_render_unto_caesar = {
 		is_good = no
 		days_mission_timeout = 1068
 		timeout_effect = {
-			CES = {	country_event = { id = enc.41 } # todo: change
+			CES = {	
+				country_event = { id = enc.41 } # todo: change
 			}
 			clr_country_flag = ENC_CES_hostile
 		}
@@ -3152,35 +3367,26 @@ ENC_debug = {
 			change_legitimacy = yes
 		}
 	}
-	ENC_set_up_allignments = {
-			set_variable = { enc_good_allignment = 0 }
-			set_variable = { enc_evil_allignment = 0 }
-			add_to_variable = {enc_evil_allignment = 0.10}
-			add_to_variable = {enc_good_allignment = 0.15}
-			
-			add_to_variable = {enc_evil_allignment = 0.20}
-			add_to_variable = {enc_good_allignment = 0.15}
-			
-			add_to_variable = {enc_evil_allignment = 0.15}
-			add_to_variable = {enc_good_allignment = 0.30}
-		
-	}
-	ENC_people_upset = {
+	ENC_misc = {
+		available = {
+			date > 2279.01.01
+		}
 		complete_effect = {
-			stability_loss_based_on_people_popularity = yes		
+		
+			sound_effect = ERB_battle_hymn
 		}
 	}
-	ENC_misc = {
+	ENC_NCR_CES_war = {
 		complete_effect = {
-			set_technology = {	
-				enc_civilian_power_grid_tech = 1	
+			CES = {				
+				declare_war_on = {
+					target = NCR
+					type = annex_everything
+				}
 			}
 		}
 	}
 	ENC_reduce_legitimacy = {
-		available = {
-
-		}
 		complete_effect = {
 			set_temp_variable = {
 				var = legitimacy_change_var
@@ -3188,11 +3394,6 @@ ENC_debug = {
 			}
 			change_legitimacy = yes
 			custom_effect_tooltip = enc_debug_tt
-		}
-	}
-	BAR_spawn_militia = {
-		complete_effect = {
-			load_oob = ERBREVOLT_RSR
 		}
 	}
 	ENC_debug_enc_civil_war = {
@@ -3255,53 +3456,10 @@ ENC_debug = {
 			}
 		}
 	}
-}
-tec_decision = {
-	tec_decision_dec1 = {
-
-		icon = generic_political_actions
-
-		fire_only_once = yes
-
-		available = {
-			is_ai = no
-		}
-
-		cost = 0
-
-		visible = {
-			always = yes
-		}
-
+	ENC_hide_debug = {
 		complete_effect = {
-			set_technology = {
-    			settled_civilization = 1
-			}
+			set_country_flag = enc_debug_disabled
 		}
-
-	}
-	tec_decision_dec2 = {
-
-		icon = generic_political_actions
-
-		fire_only_once = yes
-
-		available = {
-			is_ai = no
-		}
-
-		cost = 0
-
-		visible = {
-			always = yes
-		}
-
-		complete_effect = {
-			set_technology = {
-    			scientific_civilization = 1
-			}
-		}
-
 	}
 }
 

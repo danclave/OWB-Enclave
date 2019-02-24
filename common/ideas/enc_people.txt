@@ -31,7 +31,10 @@ ideas = {
 				purist
 			}
 			visible = {
-				NOT = { has_country_flag = purists_purged }
+				NOT = { 
+					has_country_flag = purists_purged 
+					has_completed_focus = enc_purge_scientists
+				}
 			}
 			ai_will_do = {
 				factor = 1

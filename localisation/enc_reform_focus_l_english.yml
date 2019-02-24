@@ -355,9 +355,11 @@ enc_a_nation_reborn_desc:0 "To quote the classical musical Hamilton, 'We're fina
 enc_a_new_order:0 "An All American Order"
 
 enc_purge_scientists:0 "Purge the Scientists"
+benjamin_curling_purged:0 "§YBenjamin Curling§! is §Rexecuted§! on false charges!\n"
 enc_purge_scientists_desc:0 "The time has come to rid ourselves of the most stubbern Purist elements within our research divisions. We cannot let such an essential part of the Enclave be infested with traitors and saboteurs. Demotions, banishments or executions. One way or another, our scientists will be loyal."
 
 enc_purge_officers:0 "Purge the Officers"
+are_purged:0 " are §Rexecuted§! on false charges!\n"
 enc_purge_officers_desc:0 "The time has come to rid ourselves of the most stubbern Purist elements within our officer corps. We cannot let such an essential part of the Enclave be infested with traitors and saboteurs. Demotions, banishments or executions. One way or another, our officers will be loyal."
 
 stability_loss_based_on_elites_popularity: "\n§MStability loss is based on popularity of§! §YElites Faction§!"
@@ -720,8 +722,8 @@ ENC_nukacola: "Nuka Cola Corp."
 ENC_nukacola_desc: "Nothing tastes as sweet as the concept of making this stuff again. Except Quantum Nuka Cola."
 ENC_gunrunners: "Bring the Gun Runners up to Spec"
 ENC_gunrunners_desc: "The Gun Runners are fine if you want to arm the New California Republic, but America's fighting men and women need something with a bit of a kick.  We can help the Gun Runners upgrade their machinery to properly equip our forces."    
-ENC_build_nevada: "Nation Building"
-ENC_build_nevada_desc: "There is much we can do to rebuild America beyond conquering the cities of the wastes.  Let us win the hearts and minds of the people!"
+ENC_nation_building: "Nation Building"
+ENC_nation_building_desc: "There is much we can do to rebuild America beyond conquering the cities of the wastes.  Let us win the hearts and minds of the people!"
 ENC_vault_city_university: "Vault City University"
 ENC_vault_city_university_desc: "Vault City is the most developed city in the Wastes, and home to many of the right sort of people.  We can build a center of hire learning to both educate the Wastelanders and persuade them to support the American dream.  If only we could think of a mascot..."
 ENC_water_supply: "The Hydraulic Republic"
@@ -740,8 +742,7 @@ ENC_annex_puppets: "To Gather All the People"
 ENC_annex_puppets_desc: "Surely the tribes of New Canaan are better off under firm leadership? New Canaaninite missionaries will teach them to read, save their souls, and help them pay their taxes."
 ENC_liberty_title: "Raise the Title of Liberty"
 ENC_liberty_title_desc: "In the Book of Liberty, Captain Moroni raised a banner declaring freedom for his people against those who would be king. Isn't the Enclave's banner just another banner of liberty?"
-ENC_prioritize_civilian_relief: "Prioritize Civilian Relief"
-ENC_prioritize_civilian_relief_desc: "The war has left many of our new citizens in dire straights. Let us prove ourselves as a benevolent government by prioritizing their needs over heavy industry."
+
 ###################################
 # America Foreign Policy Focus
 ###################################
