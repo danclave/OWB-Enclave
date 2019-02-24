@@ -1493,6 +1493,7 @@ ENC_american_broadcasts = {
 	ENC_war_movie = {
 		cost = 50
 		icon = decision_enc_movie
+		# cost war experience
 		visible = {
 			has_country_flag = enc_movie_industry
 		}
@@ -2271,6 +2272,13 @@ ENC_political_infighting = {
 		}
 		days_remove = 200
 		complete_effect  = {
+			every_army_leader = {
+				limit = {
+					has_trait = enc_purist
+				}
+				demote_leader = yes
+				add_unit_leader_trait = enc_demoted
+			}
 			add_popularity = { ideology = elites popularity = -0.08 }
 			set_country_flag = enc_demoted_officers
 			swap_ideas = {

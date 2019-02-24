@@ -1,0 +1,48 @@
+leader_traits = {
+	
+##################################
+# Enclave Traits
+##################################
+	enc_purist = {
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = { FROM = { tag = ERB } }
+		modifier = {
+			army_attack_factor = 0.05
+		}
+		new_commander_weight = {
+			factor = 0 # Only added for 5 commander
+		}
+	}
+	enc_reformer = {
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = { FROM = { tag = ERB } }
+		modifier = {
+			army_morale_factor = 0.05
+		}
+		new_commander_weight = {
+			factor = 0 # Only added for 5 commander
+		}
+	}
+	enc_demoted = { 
+		type = all
+		trait_type = personality_trait		
+		attack_skill = -1
+		defense_skill = -1
+		logistics_skill = -1
+		planning_skill = -1
+		
+		non_shared_modifier = {
+			experience_gain_factor = -0.10
+			promote_cost_factor = 10
+		}
+	}
+
+}
