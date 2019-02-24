@@ -96,6 +96,7 @@ leader_traits = {
 		random = no
 		monthly_population = 0.05
 		stability_factor = 0.10
+		consumer_goods_factor = 0.05
 	}
 	genius_pacifist = {
 		random = no

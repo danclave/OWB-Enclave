@@ -1,7 +1,7 @@
 ideas = {
 	mobilization_laws = {
 		law = yes
-
+		# Vanilla
 		disarmed_nation = {
 						
 			cost = 150
@@ -26,8 +26,7 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
-		}
-		
+		}		
 		volunteer_only = {
 						
 			cost = 150
@@ -58,10 +57,8 @@ ideas = {
 			default = yes
 			
 			cancel_if_invalid = no
-		}
-		
+		}		
 		limited_conscription = {
-					
 			cost = 150
 			removal_cost = -1
 			level = 5			
@@ -80,7 +77,7 @@ ideas = {
 					}
 						is_major = no
 						surrender_progress > 0.05
-						not = { original_tab = ERB }
+						not = { original_tag = ERB }
 				}
 				not = { original_tag = MOJ}
 				not = { original_tag = BOS }
@@ -92,7 +89,6 @@ ideas = {
 			
 			cancel_if_invalid = no
 		}
-		
 		extensive_conscription = {
 			
 			available = {
@@ -103,7 +99,7 @@ ideas = {
 					}
 					is_major = no
 					surrender_progress > 0.1
-					not = { original_tab = ERB }
+					not = { original_tag = ERB }
 				}
 				not = { original_tag = MOJ }
 				not = { original_tag = BOS }
@@ -135,7 +131,6 @@ ideas = {
 			}
 			cancel_if_invalid = no
 		}
-		
 		service_by_requirement = {
 			
 			available = {
@@ -232,8 +227,7 @@ ideas = {
 				}
 			}
 			cancel_if_invalid = no
-		}
-		
+		}		
 		scraping_the_barrel = {			
 			available = {
 				has_war = yes
@@ -292,8 +286,11 @@ ideas = {
 			cost = 25
 			removal_cost = -1
 			level = 6
-			allowed = {
+			visible = {
 				original_tag = ERB
+				not = {
+					has_country_flag = enc_mid_game
+				}
 			}	
 			ai_will_do = {
 				factor = 1
@@ -307,8 +304,6 @@ ideas = {
 			
 			cancel_if_invalid = yes
 		}
-	
-		# PURIST UNIQUES
 		reorganized_remnants = {
 			picture = enc_idea_manpower_remnants					
 			cost = 75
@@ -317,9 +312,10 @@ ideas = {
 
 			visible = {
 				original_tag = ERB
-			}
-			allowed = {
-				original_tag = ERB
+				not = {
+					has_country_flag = enc_mid_game
+					has_completed_focus = enc_the_state_of_nevada
+				}
 			}	
 
 			available = {			
@@ -341,8 +337,9 @@ ideas = {
 			
 			cancel_if_invalid = yes
 			default = no
-		}
-		
+		}		
+	
+		# PURIST UNIQUES
 		enclave_military = {
 			picture = enc_idea_manpower_remnants_2
 			
@@ -365,17 +362,11 @@ ideas = {
 			
 			visible = {
 				original_tag = ERB
-				has_completed_focus = enc_enc_mobilize_manpower
+				has_completed_focus = enc_mobilize_manpower
 			}
-			allowed = {
-				original_tag = ERB
-			}	
 			
 			modifier = {
 				conscription = 0.20
-				industrial_capacity_factory = -0.1
-				production_speed_buildings_factor = -0.1
-				training_time_factor = 0.1
 			}
 			ai_will_do = {
 				factor = 1
@@ -386,8 +377,7 @@ ideas = {
 				}
 			}
 			cancel_if_invalid = no
-		}
-		
+		}		
 		expanded_enclave_military = {
 			picture = enc_idea_manpower_remnants_3
 			available = {
@@ -397,15 +387,12 @@ ideas = {
 					enemies_strength_ratio > 0.6
 				}
 			}
-			allowed = {
-				original_tag = ERB
-			}	
 			cost = 150
 			removal_cost = -1
 			level = 3
 			visible = {
 				original_tag = ERB
-				has_completed_focus = enc_enc_mobilize_manpower
+				has_completed_focus = enc_mobilize_manpower
 			}
 
 			modifier = {
@@ -431,7 +418,6 @@ ideas = {
 			
 			cancel_if_invalid = no
 		}
-
 		all_non_essential = {
 			picture = enc_super_soldiers
 			available = {
@@ -445,7 +431,7 @@ ideas = {
 			level = 2
 			visible = {
 				original_tag = ERB
-				has_completed_focus = enc_enc_mobilize_manpower
+				has_completed_focus = enc_mobilize_manpower
 			}
 			
 			modifier = {
@@ -456,9 +442,6 @@ ideas = {
 				#XP from reinforcement penalty (small)
 				training_time_factor = 0.3
 			}
-			allowed = {
-				original_tag = ERB
-			}	
 			ai_will_do = {
 				factor = 1
 				modifier = {
@@ -478,8 +461,7 @@ ideas = {
 				}
 			}
 			cancel_if_invalid = no
-		}
-		
+		}		
 		the_final_line = {
 			picture = enc_manpower_final_line
 			available = {
@@ -514,9 +496,9 @@ ideas = {
 			}
 			visible = {
 				original_tag = ERB
-				has_completed_focus = enc_enc_mobilize_manpower
+				has_completed_focus = enc_mobilize_manpower
 			}
-			allowed = {
+			visible = {
 				original_tag = ERB
 			}	
 			cost = 150
@@ -534,8 +516,7 @@ ideas = {
 			cancel_if_invalid = no
 		}
 	
-		# REFORMER UNIQUES
-	
+		# REFORMER UNIQUES		
 		The_Fools_And_Dreamers = {
 			picture = enc_idea_manpower_2
 			cost = 150
@@ -553,10 +534,12 @@ ideas = {
 				}
 			}
 			visible = {
-				#has_completed_focus = enc_reform		
-			}
-			allowed = {
+				has_completed_focus = enc_reform
 				original_tag = ERB
+				not = {
+					has_country_flag = enc_mid_game
+					has_completed_focus = enc_the_state_of_nevada
+				}
 			} 
 			ai_will_do = {
 				factor = 1
@@ -569,8 +552,9 @@ ideas = {
 			default = yes
 			
 			cancel_if_invalid = no
-		}
+		}		
 		
+		# UNUSED
 		A_Better_World = {
 			picture = enc_idea_manpower_1						
 			cost = 150
@@ -587,7 +571,8 @@ ideas = {
 			visible = {
 				has_completed_focus = enc_reform		
 			}
-			allowed = {
+			visible = {
+				always = false # unused currently
 				original_tag = ERB
 			} 
 			ai_will_do = {
@@ -601,7 +586,6 @@ ideas = {
 			
 			cancel_if_invalid = no
 		}
-
 		The_Army_of_the_Free = {
 		picture = enc_idea_manpower_3
 		cost = 150
@@ -621,7 +605,8 @@ ideas = {
 		visible = {
 			has_completed_focus = enc_reform		
 		}
-		allowed = {
+		visible = {
+				always = false # unused currently
 			original_tag = ERB
 		}
 		ai_will_do = {
@@ -631,9 +616,8 @@ ideas = {
 			conscription = 0.16
 		}
 		default = yes
-		cancel_if_invalid = yes
+		cancel_if_invalid = no
 		}
-
 		american_revolution = {
 			
 			picture = enc_idea_manpower_4
@@ -650,7 +634,8 @@ ideas = {
 			visible = {
 				has_completed_focus = enc_reform
 			}
-			allowed = {
+			visible = {
+				always = false # unused currently
 				original_tag = ERB
 			}
 			ai_will_do = {
@@ -666,7 +651,6 @@ ideas = {
 			default = yes
 			cancel_if_invalid = no
 		}
-
 		burnished_rows_of_steel = {
 			picture = enc_idea_manpower_5
 			cost = 150
@@ -681,7 +665,8 @@ ideas = {
 			visible = {
 				has_completed_focus = enc_reform
 			}
-			allowed = {
+			visible = {
+				always = false # unused currently
 				original_tag = ERB
 			}
 			ai_will_do = {
@@ -695,7 +680,407 @@ ideas = {
 				training_time_factor = 0.2
 			}
 			default = yes
-			cancel_if_invalid = yes
+			cancel_if_invalid = no
+		}
+
+		# AMERICA UNIQUES		
+		enc_disorganized_army = {
+			picture = enc_idea_manpower_disorganized					
+			cost = 0
+			removal_cost = 100
+			level = 7
+			visible = {
+				original_tag = ERB
+				has_idea = enc_disorganized_army # only visible when forced
+				has_country_flag = enc_mid_game
+			}
+			modifier = {
+				conscription = 0.03
+				army_attack_factor = -0.15
+				mobilization_speed = -0.30
+			}			
+			cancel_if_invalid = no
+			default = no
+		}		
+		enc_peace_keeping = {
+			picture = disarmed_nation
+			cost = 100
+			removal_cost = -1
+			level = 6
+			
+			visible = {
+				original_tag = ERB
+				or = {
+					has_country_flag = enc_mid_game
+					has_completed_focus = enc_the_state_of_nevada				
+				}
+			}
+			
+			available = {
+				# not = { has_manpower_for_recruit_change_to =  { value = 0.004 group = mobilization_laws } }
+				has_stability > 0.20
+			}
+			ai_will_do = {
+				factor = 0.5
+			}
+			modifier = {
+				conscription = 0.04
+				non_core_manpower = 0.05
+				stability_weekly = 0.01
+			}
+			
+			default = no
+			
+			cancel_if_invalid = no
+		}		
+		enc_volunteer_only = {
+			picture = volunteer_only						
+			cost = 150
+			removal_cost = -1
+			level = 6
+			
+			visible = {
+				original_tag = ERB
+				or = {
+					has_country_flag = enc_mid_game
+					has_completed_focus = enc_the_state_of_nevada				
+				}
+				
+			}
+			
+			available = {
+				if = { # NEVADA
+					limit = {
+						has_completed_focus = enc_the_state_of_nevada
+					}
+					has_stability > 0.2
+					has_completed_focus = enc_rebuilding_a_nation					
+					custom_trigger_tooltip = {
+						tooltip = 20_legitimacy		
+						check_variable = {
+							var = legitimacy
+							value > 0.199
+						}
+					}
+				}
+				else = { # USA
+					has_stability > 0.20
+					has_completed_focus = enc_rebuilding_a_nation 
+					# not = { has_manpower_for_recruit_change_to = { value = -0.0007 group = mobilization_laws } }	
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			modifier = {
+				conscription = 0.07
+				non_core_manpower = 0.05
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = no
+		}		
+		enc_limited_conscription = {	
+			picture = limited_conscription				
+			cost = 150
+			removal_cost = -1
+			level = 5
+			visible = {
+				original_tag = ERB
+				or = {
+					has_country_flag = enc_mid_game
+					has_completed_focus = enc_the_state_of_nevada				
+				}
+			}
+			cancel_if_invalid = no
+			available = {				
+				if = { # NEVADA
+					limit = {
+						has_completed_focus = enc_the_state_of_nevada
+					}
+					or = {
+						and = {
+							has_war = yes
+							enemies_strength_ratio > 0.5
+						}					
+						surrender_progress > 0.1				
+						has_war_support > 0.75
+					}
+				}
+				else = { # USA
+					OR = {
+						AND = {
+							has_war = yes
+							enemies_strength_ratio > 0.25
+						}
+						surrender_progress > 0.05
+						has_completed_focus = enc_order
+						has_idea = ENC_dept_education_military
+						has_war_support > 0.50
+					}
+					has_stability > 0.20
+					has_completed_focus = enc_rebuilding_a_nation  			
+				}
+			}
+			modifier = {
+				conscription = 0.15
+			}
+			ai_will_do = {
+				factor = 10
+			}			
+		}		
+		enc_extensive_conscription = {
+			picture = extensive_conscription
+			cost = 150
+			removal_cost = -1
+			level = 4
+			visible = {
+				original_tag = ERB
+				or = {
+					has_country_flag = enc_mid_game
+					has_completed_focus = enc_the_state_of_nevada				
+				}
+			}
+			available = { 
+				if = {
+					limit = {
+						has_completed_focus = enc_the_state_of_nevada
+					}
+					or = {
+						and = {
+							has_war = yes
+							enemies_strength_ratio > 0.5
+						}					
+						surrender_progress > 0.1				
+						has_war_support > 0.75
+					}
+				}
+				else = {
+					or = {
+						and = {
+							has_war = yes
+							enemies_strength_ratio > 0.5
+						}					
+						surrender_progress > 0.1
+						has_completed_focus = enc_military_police					
+						has_war_support > 0.75
+					}
+					has_stability > 0.20
+					has_completed_focus = enc_rebuilding_a_nation  			
+				}
+			}
+			modifier = {
+				conscription = 0.20
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+				training_time_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  50
+				}
+			}
+			cancel_if_invalid = no
+		}		
+		enc_service_by_requirement = {	
+			picture = service_by_requirement		
+			cost = 150
+			removal_cost = -1
+			level = 3
+			visible = {
+				original_tag = ERB
+				or = {
+					has_country_flag = enc_mid_game
+					has_completed_focus = enc_the_state_of_nevada				
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_completed_focus = enc_the_state_of_nevada
+					}
+					or = {
+						and = {
+							has_war = yes
+							enemies_strength_ratio > 0.6
+						}					
+						has_war_support > 0.85	
+					}
+					has_stability > 0.20
+				}
+				else = {
+					or = {
+						and = {
+							has_war = yes
+							enemies_strength_ratio > 0.6
+						}
+						has_completed_focus = enc_martial_law					
+						has_war_support > 0.85	
+					}
+					has_stability > 0.20
+					has_completed_focus = enc_rebuilding_a_nation  			
+				}
+			}
+			modifier = {
+				conscription = 0.25
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.1
+				training_time_factor = 0.2
+				war_support_weekly = -0.005
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  25
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  100
+				}
+			}
+			
+			cancel_if_invalid = no
+		}		
+		enc_all_adults_serve = {
+			picture = all_adults_serve
+			cost = 150
+			removal_cost = -1
+			level = 2
+			visible = {
+				original_tag = ERB
+				or = {
+					has_country_flag = enc_mid_game
+					has_completed_focus = enc_the_state_of_nevada				
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_completed_focus = enc_the_state_of_nevada
+					}
+					has_war = yes
+					enemies_strength_ratio > 0.75
+					or = {
+						has_war_support > 0.75
+					}
+					has_stability > 0.20
+				}
+				else = {
+					or = {
+						and = {
+							has_war = yes
+							enemies_strength_ratio > 0.75							
+						}					
+						or = {
+							has_war_support > 0.95
+							has_completed_focus = enc_martial_law
+						}
+					}
+					has_stability > 0.20
+					has_completed_focus = enc_rebuilding_a_nation  			
+				}		
+			}			
+			modifier = {
+				conscription = 0.35
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				production_speed_buildings_factor = -0.3
+				training_time_factor = 0.3
+				war_support_weekly = -0.010
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory <  30
+				}
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory >  100
+				}
+				modifier = {
+					#Block has plenty manpower
+					factor = 0
+					manpower_per_military_factory >  1000
+				}
+			}
+			cancel_if_invalid = no
+		}		
+		enc_scraping_the_barrel = {
+			picture = scraping_the_barrel
+			cost = 150
+			removal_cost = -1
+			level = 1
+			
+			visible = {
+				original_tag = ERB
+				or = {
+					has_country_flag = enc_mid_game
+					has_completed_focus = enc_the_state_of_nevada				
+				}
+			}
+			available = {
+				has_war = yes
+				enemies_strength_ratio > 1
+				any_enemy_country = {
+					strength_ratio = {
+						tag = ROOT 
+						ratio > 1.25
+					}
+				}
+				has_stability > 0.20
+				if = {
+					limit = {
+						has_completed_focus = enc_the_state_of_nevada
+					}
+					has_completed_focus = enc_the_state_of_nevada
+				}
+				else = {					
+					has_completed_focus = enc_rebuilding_a_nation 			
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					#Prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 10
+				}				
+				modifier = {
+					#Lower chance if has decent amount
+					factor = 0.5
+					manpower_per_military_factory > 100
+				}
+				modifier = {
+					#Block has plenty manpower
+					factor = 0
+					manpower_per_military_factory > 1000
+				}
+			}
+
+			modifier = {
+				conscription = 0.45
+				army_org_factor = -0.05
+				army_morale_factor = -0.10
+				industrial_capacity_factory = -0.4
+				industrial_capacity_dockyard = -0.4
+				production_speed_buildings_factor = -0.4
+				training_time_factor = 0.5
+				war_support_weekly = -0.015
+			}
+			
+			cancel_if_invalid = no
 		}
 	}
 }
+

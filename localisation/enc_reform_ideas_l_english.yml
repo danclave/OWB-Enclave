@@ -84,6 +84,8 @@ ENC_legitimacy_high_desc: "(+75% legitimacy)\nThe Enclave is seen as a legitimat
 
 max_legitimacy: "At least §Y100%§! Legitimacy"
 half_legitimacy: "More than §Y50%§! Legitimacy"
+20_legitimacy: "More than §Y20%§! Legitimacy"
+10_legitimacy: "More than §Y10%§! Legitimacy"
 25_legitimacy: "More than §Y25%§! Legitimacy"
 75_legitimacy: "More than §Y75%§! Legitimacy"
 
@@ -155,7 +157,10 @@ ENC_free_press_desc: "The free press is a bullwark against corruption, mostly be
 ENC_mandatory_patriotism: "Mandatory Patriotism"
 
 ENC_vaccinations: "Vaccinations"
+ENC_emergency_labour_draft: "Emergency Labour Draft"
 
+ENC_accepted_brahmin_barons: "Brahmin Barons"
+ENC_rejected_brahmin_barons: "Brahmin Barons Evicted"
 ###################################
 # MANPOWER
 ###################################
@@ -184,6 +189,16 @@ american_revolution_desc: "These are the times that try men's souls. The summer 
 burnished_rows_of_steel: "The Rows of Steel"
 burnished_rows_of_steel_desc: "President Granite's undisputed control of the Enclave will let him mobilize our nation for war.  Time to show that son of a bitch in Flagstaff who's the real American Caesar." 
 
+enc_disorganized_army: "Disorganized Army"
+enc_disorganized_army_desc: "After the collapse of the NCR, our armed forces fell into complete disarray. Stretched out hopelessly among thousands of unwilling civilians.\n"
+enc_peace_keeping: "Peace Keeping"
+enc_peace_keeping_desc: "'You can make your throne out of bayonets, but you can't sit on it for long'\n\n If we want to hold what we've taken, we must teach our soldiers to wage peace as well as war."
+enc_volunteer_only: "Volunteer Army"
+enc_limited_conscription: "Limited Conscription"
+enc_extensive_conscription: "Extensive Conscription"
+enc_service_by_requirement: "Service by Requirement"
+enc_all_adults_serve: "All Adults Serve"
+enc_scraping_the_barrel: "Scraping the Barrel"
 
 ###################################
 # PEOPLE

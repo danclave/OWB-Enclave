@@ -251,9 +251,17 @@ spriteTypes = {
 			name = "category_seattle"
 			texturefile = "gfx/interface/icons/category_seattle.dds"
 		}
-	spriteType = {
+		spriteType = {
+			name = "category_tv"
+			texturefile = "gfx/interface/icons/category_tv.dds"
+		}
+		spriteType = {
 			name = "decision_vault_boy"
 			texturefile = "gfx/interface/icons/decision_vault_boy.dds"
+		}
+		spriteType = {
+			name = "decision_enc_movie"
+			texturefile = "gfx/interface/icons/decision_enc_movie.dds"
 		}
 	spriteType = {
 			name = "decision_usa_construction"
@@ -263,7 +271,7 @@ spriteTypes = {
 			name = "category_usa_construction"
 			texturefile = "gfx/interface/icons/category_usa_construction.dds"
 		}
-spriteType = {
+	spriteType = {
 			name = "decision_nuka_cola"
 			texturefile = "gfx/interface/icons/decision_nuka_cola.dds"
 		}		
@@ -295,6 +303,5 @@ spriteType = {
 			name = "gfx_decision_nuke_flagstaff"
 			texturefile = "gfx/interface/icons/decision_nuke_flagstaff.dds"
 		}			
-							
 }
 

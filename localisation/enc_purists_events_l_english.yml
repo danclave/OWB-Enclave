@@ -191,7 +191,7 @@ enc.32.a.tt: "\nWhile strict standards are necesary to maintain order, a Preside
 enc.32.b: "Let the sargeant do his job"
 ################################################################################################################ -<
 enc.33.t: "Encounter with Crimson Caravan"
-enc.33.d: "One of our patrols stumbled upon an expeditions of the Crimson Caravan. The squad leader, less triggerhappy than some. Has reported back requesting orders on how to proceed. The caravan is not close enough to confirm that they are faced with Enclave power armor specifically, but rumours of suspicious patrols in Nevada desert the could reach the NCR none the less."
+enc.33.d: "One of our patrols stumbled upon an expeditions of the Crimson Caravan. The squad leader, less trigger happy than some, has reported back requesting orders on how to proceed. The caravan is not close enough to confirm that they are faced with Enclave power armor specifically, but rumors of suspicious patrols in Nevada desert the could reach the NCR none the less."
 enc.33.a: "Leave them be"
 enc.33.a.tt: "§YNCR suspicion§! will go up by §R5§!"
 enc.33.b: "No witnesses"
