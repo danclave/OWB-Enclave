@@ -262,7 +262,7 @@ ideas = {
 		}
 
 		army_chief_loyalist = {
-			cost = 250			
+			cost = 100			
 			picture = generic_army_europe_3
 			
 			allowed = {
@@ -293,7 +293,7 @@ ideas = {
 		enc_people_air_loyalist = {
 			
 			picture = generic_army_europe_2
-			
+			cost = 100
 			allowed = {
 				original_tag = ERB
 			}			
@@ -323,7 +323,8 @@ ideas = {
 
 	navy_chief = {
 		navy_chief_loyalist = {		
-			picture = generic_army_europe_2			
+			picture = generic_army_europe_2
+			cost = 100
 			allowed = {
 				original_tag = ERB
 			}			

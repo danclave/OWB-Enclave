@@ -537,7 +537,7 @@ ideas = {
 		# REFORMER UNIQUES		
 		The_Fools_And_Dreamers = {
 			picture = enc_idea_manpower_2
-			cost = 150
+			cost = 100
 			removal_cost = -1
 			level = 5
 			allowed = {
@@ -546,9 +546,10 @@ ideas = {
 			
 			available = {
 				original_tag = ERB
+				elites < 0.30
 				custom_trigger_tooltip = {
 					tooltip = 10_legitimacy		
-					check_variable = {
+					check_variable =  {
 						var = legitimacy
 						value > 0.099
 					}
