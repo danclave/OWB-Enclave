@@ -6000,7 +6000,37 @@ country_event = {#300 - state protests!
 			limit = {			
 				has_country_flag = enc_requisitioned_resources
 			}
-			# todo remove resources
+			clr_country_flag = enc_requisitioned_resources
+			if = {
+				limit = {
+					has_full_control_of_state = 253 # shady sands
+				}
+				add_resource = {
+					type = metal
+					amount = -20
+					state = 135
+				}
+				add_resource = {
+					type = advanced_technology
+					amount = -15
+					state = 135
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 135 # sac city
+				}
+				add_resource = {
+					type = electronics
+					amount = -20
+					state = 253
+				}
+				add_resource = {
+					type = fuel
+					amount = -25
+					state = 135
+				}
+			}
 		}
 		else_if = { # player has not chosen between law or order, force change to law
 			limit = {
