@@ -4522,9 +4522,17 @@ country_event = { #159 - Ghoul Libel
 	mean_time_to_happen = {
 		days = 90
 	}
-	option = {#	Great!
+	option = {#	Denounce
 		name = enc_reformers.159.a
+		custom_effect_tooltip = enc_reformers.159.a.tt
+		set_temp_variable = {
+			var = legitimacy_change_var
+			value = 0.05
+		}
 		change_legitimacy = yes
+		add_popularity = {
+			ideology = elites popularity = 0.15
+		}
 		set_party_name = {
 			ideology = elites
 			long_name = "Human Rights Party"
@@ -4537,26 +4545,24 @@ country_event = { #159 - Ghoul Libel
 			expire = "2500.1.1"
 			ideology = militarist_technocracy
 			traits = {}
-		}
-		add_popularity = {
-			ideology = elites popularity = 0.15
 		}
 
 	}
 	option = {#	Fair!
 		name = enc_reformers.159.b
+		custom_effect_tooltip = enc_reformers.159.b.tt
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = -0.05
 		}
 		change_legitimacy = yes
+		add_popularity = {
+			ideology = elites popularity = 0.10
+		}
 		set_party_name = {
 			ideology = elites
 			long_name = "Human Rights Party"
 			name = "Human Rights Party"
-		}
-		add_popularity = {
-			ideology = elites popularity = 0.10
 		}
 		create_country_leader = {
 			name = "First Citizen Lynette"
@@ -4567,24 +4573,24 @@ country_event = { #159 - Ghoul Libel
 			traits = {}
 		}
 	}
-	option = {#	Err!
+	option = {#	Quote declaration of independence
 		name = enc_reformers.159.c
 		trigger = {
 			has_country_flag = leader_charismatic
 		}
-		add_war_support = -0.10
+		custom_effect_tooltip = enc_reformers.159.c.tt
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = 0.07
 		}
 		change_legitimacy = yes
+		add_popularity = {
+			ideology = elites popularity = 0.05
+		}
 		set_party_name = {
 			ideology = elites
 			long_name = "Human Rights Party"
 			name = "Human Rights Party"
-		}
-		add_popularity = {
-			ideology = elites popularity = 0.20
 		}
 		create_country_leader = {
 			name = "First Citizen Lynette"
@@ -5839,6 +5845,7 @@ country_event = {#300 - state protests!
 	picture = GFX_event_enc_protests_ncr_flag 
 	fire_only_once = no
 	is_triggered_only = no # todo change
+	mean_time_to_happen =  { days = 100 }
 	trigger = {
 		not = { has_country_flag = enc_protests_over } # todo mandatory patriotism stops protests
 		has_completed_focus = enc_rebuilding_a_nation
@@ -5916,7 +5923,6 @@ country_event = {#300 - state protests!
 			}
 		}
 	}
-	mean_time_to_happen =  { days = 100 }
 	option = { # Break it up
 		name = enc_reformers.300.a
 		custom_effect_tooltip = enc_reformers.300.a.tt
