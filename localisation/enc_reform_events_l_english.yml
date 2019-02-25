@@ -78,6 +78,7 @@ enc_reformers.13.c: "§GMy fellow Americans...§!"
 enc_reformers.13.c.tt: "§g§!"
 enc_reformers.13.b: "§R... one room, you say?§!"
 enc_reformers.13.b.tt: "§g\"Somebody hand me a plasma grenade.\"§!\n\n"
+are_plasma_grenaded: "are §Rvaporized§!!"
 ################################################################################################################ -<
 enc_reformers.14.t: "Anderson Holds a Speech"
 enc_reformers.14.dd: "Despite his near defeat in the recent elections, Franklin Anderson has been working tirelessly to rouse his supporters against the new administration. Though he carefully chooses his words to avoid anything openly treasonous, most believe the only real reason he is alive and allowed to speak is that his numerous supporters may be driven to open revolt otherwise."
