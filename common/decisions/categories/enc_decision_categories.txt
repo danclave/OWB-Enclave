@@ -7,8 +7,10 @@ ENC_shifts = {
 	allowed = {original_tag = ERB}
 	visible = {
 		not = {
-			has_completed_focus = enc_reform
-			num_of_controlled_states > 30
+			and = {
+				has_completed_focus = enc_reform
+				num_of_controlled_states > 30			
+			}
 		}
 	}
 	priority = -1
