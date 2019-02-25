@@ -766,16 +766,14 @@ country_event = {#25 - NCR - CES War
 	title = enc_reformers.25.t
 	desc = enc_reformers.25.d
 	picture = GFX_event_NCR_battle_for_hoover_dam
-	
-	is_triggered_only = no
-	mean_time_to_happen = { days = 1 }
 	trigger = {
+		not = { has_country_flag = enc_intervention_flag }
 		date < 2280.01.01
 		NCR = { 
 			has_war_with = CES # war between NCR and CES
-			} 
+		} 
 	}
-	fire_only_once = yes
+	fire_only_once = no
 
 	option = {# We could intervene
 		name = enc_reformers.25.a
