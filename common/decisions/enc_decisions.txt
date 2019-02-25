@@ -1244,7 +1244,7 @@ ENC_nation_building = {
 		days_remove = 90
 		fire_only_once = yes
 		visible = {
-			# has_country_flag = enc_mid_game
+			has_country_flag = enc_mid_game
 		}
 		available = {
 			has_completed_focus = enc_rebuilding_a_nation
