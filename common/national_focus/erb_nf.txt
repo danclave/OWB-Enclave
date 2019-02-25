@@ -121,8 +121,15 @@ focus_tree = {
 				limit = {
 					has_completed_focus = enc_purity
 				}				
-				set_country_flag = reformers_purged
+				set_country_flag = reformers_purged			
 				custom_effect_tooltip = reformers_purged_tt
+				every_army_leader = {
+					limit = {
+						has_trait = enc_reformer
+					}
+					custom_effect_tooltip = are_purged
+					hidden_effect = { retire = yes }
+				}
 			}
 		}
  }

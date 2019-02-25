@@ -250,7 +250,7 @@ enc_reno_end:0 "The New Capital"
 enc_reno_end_desc:0 "We've broken the backs of the scum that run New Reno.  Look how much happier everyone is with Enclave soldiers patrolling the streets. No one complains, not even in private."
 
 enc_reno_police:0 "The Enclave Police"
-enc_reno_police_desc:0 "New Reno didn't need police when it was run by warring crime families, but establishing the rule of law could go a long way towards giving the Reunited States legitimacy in the wasteland. The Ne wReno police can be our base to build on."
+enc_reno_police_desc:0 "New Reno didn't need police when it was run by warring crime families, but establishing the rule of law could go a long way towards giving the Reunited States legitimacy in the wasteland. The New Reno police can be our base to build on."
 
 enc_amnesty_for_service:0 "Amnesty For Service"
 enc_amnesty_for_service_desc:0 "We can forgive some of the old gang members and welcome them into the Police.  This will give us trained soldiers, but some may question whether they're cops or robbers."
@@ -360,6 +360,7 @@ enc_purge_scientists_desc:0 "The time has come to rid ourselves of the most stub
 
 enc_purge_officers:0 "Purge the Officers"
 are_purged:0 " are §Rexecuted§! on false charges!\n"
+is_purged:0 "is §Rexecuted§! on false charges!\n"
 enc_purge_officers_desc:0 "The time has come to rid ourselves of the most stubbern Purist elements within our officer corps. We cannot let such an essential part of the Enclave be infested with traitors and saboteurs. Demotions, banishments or executions. One way or another, our officers will be loyal."
 
 stability_loss_based_on_elites_popularity: "\n§MStability loss is based on popularity of§! §YElites Faction§!"

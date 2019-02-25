@@ -2245,6 +2245,14 @@ ENC_political_infighting = {
 				add_popularity = { ideology = elites popularity = -0.05 }
 				add_popularity = { ideology = intellectuals popularity = 0.05 }
 				add_manpower = -1
+				random_army_leader = {
+					limit = {
+						has_trait = enc_purist
+						is_field_marshal = no
+					}
+					custom_effect_tooltip = is_purged
+					hidden_effect = { retire = yes }
+				}
 			}
 			else_if = { #purity version
 				limit = {
@@ -2255,6 +2263,14 @@ ENC_political_infighting = {
 				add_popularity = { ideology = intellectuals popularity = -0.05 }
 				add_popularity = { ideology = elites popularity = 0.05 }
 				add_manpower = -1
+				random_army_leader = {
+					limit = {
+						has_trait = enc_reformer
+						is_field_marshal = no
+					}
+					custom_effect_tooltip = is_purged
+					hidden_effect = { retire = yes }
+				}
 			}
 		}
 		days_re_enable = 30
