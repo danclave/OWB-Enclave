@@ -339,7 +339,7 @@ country_event = {#13 - Consolidating power
 		add_popularity = { ideology = intellectuals popularity = 0.10 }
 		custom_effect_tooltip = leader_charismatic_tt
 	}
-	option = {# explosives
+	option = {# plasma grenade
 		name = enc_reformers.13.b
 		trigger = {
 			has_country_flag = leader_ruthless
@@ -350,6 +350,13 @@ country_event = {#13 - Consolidating power
 		}
 		remove_ideas = {
 			ENC_officers_traitors
+		}
+		every_army_leader = {
+			limit = {
+				has_trait = enc_purist
+			}
+			custom_effect_tooltip = are_plasma_grenaded
+			hidden_effect = { retire = yes }
 		}
 		custom_effect_tooltip = empty_line
 		hidden_effect = {
