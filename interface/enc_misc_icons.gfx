@@ -80,6 +80,10 @@ spriteTypes = {
 			texturefile = "gfx/interface/icons/power_icon.dds"
 		} 
 		spriteType = {
+			name = "GFX_icons_powered"
+			texturefile = "gfx/interface/icons/powered_icon.dds"
+		} 
+		spriteType = {
 			name = "GFX_icons_police"
 			texturefile = "gfx/interface/icons/police_icon.dds"
 		}		 

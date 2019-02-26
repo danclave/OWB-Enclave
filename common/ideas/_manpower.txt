@@ -86,6 +86,9 @@ ideas = {
 			modifier = {
 				conscription = 0.15
 			}
+			ai_will_do = {
+				factor = 10
+			}
 			
 			cancel_if_invalid = no
 		}

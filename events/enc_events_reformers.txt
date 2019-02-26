@@ -2133,19 +2133,19 @@ country_event = {#77 - mutant question
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = -0.05
-		} 
+		}
 		change_legitimacy = yes
+		add_popularity = { ideology = elites popularity = 0.05 } 
 		if = { # promised no integration
 			limit = {
 				has_country_flag = enc_promised_no_integration				
 			}
 			custom_effect_tooltip = enc_promised_no_integration_kept
-			add_popularity = { ideology = intellectuals popularity = 0.03 } 
 			add_stability = 0.05
 			clr_country_flag = enc_promised_no_integration
-		}
+		}	
 	}
-	option = {#	Integration²
+	option = {#	Integration
 		name = enc_reformers.77.b
 		complete_national_focus = enc_expand_human_definition
 		custom_effect_tooltip = newline
