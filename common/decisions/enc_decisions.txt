@@ -696,6 +696,7 @@ ENC_infiltrating_NCR = {
 			clr_country_flag = enc_ncr_spies		
 		}
 		days_remove = 30
+		days_re_enable = 70
 		remove_effect = {
 			random_country = {
 				limit = {
@@ -831,7 +832,7 @@ ENC_infiltrating_NCR = {
 	}
 
 	ENC_desert_rangers_hate = {
-		icon = GFX_decision_enc_verti
+		icon = generic_political_discourse
 		priority = 10
 		cost = 80
 		fire_only_once = yes
@@ -855,17 +856,17 @@ ENC_infiltrating_NCR = {
 					leave_faction = yes 
 				}	
 				add_ai_strategy = {
-					type = ignore
-					id = "NCR"
-					value = 800
+					type = alliance
+					id = NCR
+					value = -8000
 				}
 			}
 			NCR = {
 				add_opinion_modifier = { target = DES modifier = sabotaged_relations }
 				add_ai_strategy = {
-					type = ignore
-					id = "DES"
-					value = 800
+					type = alliance
+					id = DES
+					value = -8800
 				}
 			}	
 		}
@@ -3855,13 +3856,7 @@ ENC_debug = {
 	}
 	ENC_misc = {
 		complete_effect = {
-			NCR = {
-				add_ai_strategy = {
-					type = declare_war
-					id = CES
-					value = -8000
-				}
-			}
+			hidden_effect = { sound_effect = ERB_stripes_and_stars }
 		}
 	}
 	ENC_NCR_CES_war = {
