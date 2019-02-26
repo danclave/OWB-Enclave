@@ -433,11 +433,7 @@ focus_tree = {
 			add_stability = 0.05
 			country_event = { id = enc_reformers.68  }
 			custom_effect_tooltip = enc_reno_end.tt
-			swap_ideas = {
-				remove_idea = { the_remnants}
-				add_idea = { The_Fools_And_Dreamers }
-				}
-	}
+		}
 	}
 
 	focus = {#RENO - New Reno Police
