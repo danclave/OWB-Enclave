@@ -34,6 +34,7 @@ category =
 		ERB_electric
 		ERB_typewriter
 		ERB_police
+		ERB_stripes_and_stars
 	}
  compressor = 
  {
@@ -259,6 +260,18 @@ soundeffect = {
 	playbackrate_random_offset = { 0.0 -0.15}
 	fade_out = 0.01
 }
+soundeffect = {
+    name = "ERB_stripes_and_stars"
+    sounds = {
+        sound = ERB_stripes_and_stars1
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.6
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+	fade_out = 0.01
+}
 ############## AUDIO ASSETS
 
 
@@ -451,4 +464,8 @@ sound =
 sound = {
 	name = "ERB_police1"
 	file = "ERB/ERB_police.wav"
+}
+sound = {
+	name = "ERB_stripes_and_stars1"
+	file = "ERB/ERB_stripes_and_stars.wav"
 }
