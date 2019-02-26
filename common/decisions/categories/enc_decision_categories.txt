@@ -129,9 +129,6 @@ ENC_render_unto_caesar = {
 }
 
 ENC_debug = {
-	allowed = {
-		tag = ERB
-	}	
 	priority = 100
 	visible = {
 		# always = false

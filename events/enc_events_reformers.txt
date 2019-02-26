@@ -767,6 +767,7 @@ country_event = {#25 - NCR - CES War
 	desc = enc_reformers.25.d
 	picture = GFX_event_NCR_battle_for_hoover_dam
 	trigger = {
+		has_completed_focus = enc_reform
 		not = { has_country_flag = enc_intervention_flag }
 		date < 2280.01.01
 		NCR = { 

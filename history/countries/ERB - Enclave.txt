@@ -225,4 +225,15 @@ country_event = { id = enc_reformers.23 days = 25 }
  set_variable = { 
 	var = enc_rebels_we_have_armed
 	value = 0
- }    
+ }
+ 
+ # AI Strategies to guide the Enclave story
+ 
+ # we don't want this ever
+ NCR = {
+    add_ai_strategy = {
+        type = declare_war
+        id = CES
+        value = -8000
+    }
+}
