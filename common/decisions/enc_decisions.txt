@@ -15,9 +15,9 @@ ENC_bandit_raids = {
 		days_mission_timeout = 180
 		activation = {
 			OR = {
-					has_idea = enc_NCR_power_struggle2
-					has_idea = enc_NCR_power_struggle
-					}
+				has_idea = enc_NCR_power_struggle2
+				has_idea = enc_NCR_power_struggle
+			}
 		}
 		visible = {
 		}		
@@ -44,6 +44,13 @@ ENC_pacificy_northern_border = {
 
 		icon = generic_oppression
 		
+		activation = {
+			OR = {
+				has_idea = enc_NCR_power_struggle2
+				has_idea = enc_NCR_power_struggle
+			}
+		}
+		
 		available = {
             has_completed_focus = enc_rebuilding_a_nation
             has_idea = enc_NCR_instability
@@ -51,7 +58,7 @@ ENC_pacificy_northern_border = {
 				state = 141	
 				size > 5
 			}
-		not = { has_country_flag = ERB_northern_raiders_cleared }	
+			not = { has_country_flag = ERB_northern_raiders_cleared }	
 		}
 		highlight_states = {
 			state = 141
