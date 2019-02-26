@@ -1832,16 +1832,16 @@ ideas = {
 			}
 		}
 		enc_jingoism = {  
-					picture = enc_radio
-					allowed = { always = no	}
-					allowed_civil_war = { always = yes } 
-					removal_cost = -1
-					modifier = {
-					   army_morale_factor = 0.05
-					   army_org_Factor = 0.05
-					   mobilization_speed = 0.10
-					}
-				}
+			picture = enc_jingoism
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes } 
+			removal_cost = -1
+			modifier = {
+			   army_morale_factor = 0.05
+			   army_org_Factor = 0.05
+			   mobilization_speed = 0.10
+			}
+		}
 		enc_military_equipment= {
 					picture = enc_pa_production
 					allowed = { always = no }
