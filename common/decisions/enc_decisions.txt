@@ -1017,15 +1017,17 @@ ENC_infiltrating_NCR = {
 	ENC_rise_rebellion = {
 		priority = 900
 		icon = GFX_decision_revolt
+		allowed = {			
+			tag = ERB
+		}
 		fire_only_once = yes
 		available = {
+			has_completed_focus = enc_the_divided_state
+		}
+		visible = {
 			any_state = {
 				has_state_flag = enc_patriots_armed
 			}
-		}
-		visible = {
-			tag = ERB
-			has_completed_focus = enc_the_divided_state
 		}
 		complete_effect = {
 			country_event = { id = enc_reformers.112 }

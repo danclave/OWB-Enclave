@@ -33,7 +33,7 @@ guiTypes = {
 	}
 	containerWindowType = { # arm_rebels
 		name = arm_rebels_container
-		position = {x=90 y=114}
+		position = {x=90 y=58}
 		
 		fade_time = 1
 		fade_type = linear
@@ -49,7 +49,7 @@ guiTypes = {
 	}
 	containerWindowType = { # arm_slaves
 		name = arm_slaves_container
-		position = {x=90 y=114}
+		position = {x=90 y=58}
 		
 		fade_time = 1
 		fade_type = linear
@@ -65,7 +65,8 @@ guiTypes = {
 	}
 	containerWindowType = { # arm_patriots
 		name = arm_patriots_container
-		position = {x=90 y=114}
+
+		position = {x=90 y=58}
 		
 		fade_time = 1
 		fade_type = linear
