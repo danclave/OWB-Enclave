@@ -128,7 +128,7 @@ focus_tree = {
 						has_trait = enc_reformer
 					}
 					custom_effect_tooltip = are_purged
-					hidden_effect = { retire = yes }
+					retire = yes
 				}
 			}
 		}
@@ -285,7 +285,7 @@ focus_tree = {
 					has_trait = enc_purist
 				}
 				custom_effect_tooltip = are_purged
-				hidden_effect = { retire = yes }
+				retire = yes
 			}
 			clr_country_flag = enc_demoted_officers
 			remove_ideas = ENC_officers_traitors_2

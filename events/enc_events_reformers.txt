@@ -356,7 +356,7 @@ country_event = {#13 - Consolidating power
 				has_trait = enc_purist
 			}
 			custom_effect_tooltip = are_plasma_grenaded
-			hidden_effect = { retire = yes }
+			retire = yes
 		}
 		custom_effect_tooltip = empty_line
 		hidden_effect = {
@@ -1582,15 +1582,13 @@ country_event = {#56 - Reno attacks
 	title = enc_reformers.56.t
 	desc = enc_reformers.56.d
 	picture = GFX_event_enc_urban_patrol
-	fire_only_once = yes	
-	is_triggered_only = no
+	fire_only_once = yes
 	trigger = {
 		has_full_control_of_state = 285
 		NOT = {
 			has_completed_focus = enc_reno_end
 		}
 	}
-	mean_time_to_happen =  { days = 30 } # quick
 	option = { # open fire
 		name = enc_reformers.56.a
 		custom_effect_tooltip = enc_reformers.56.a.tt
@@ -1637,7 +1635,7 @@ country_event = {#56 - Purist commander
 	trigger = {
 		has_completed_focus = enc_reform
 		any_unit_leader = {
-			has_trait = enc_purist
+			has_trait = enc_purist 
 			is_assigned = yes
 		}
 	}
@@ -1665,6 +1663,7 @@ country_event = {#56 - Purist commander
 			}
 		}
 		event_target:purist_commander = {
+			custom_effect_tooltip = enc_loses_purist
 			demote_leader = yes
 			set_unit_leader_flag = warned_purist
 			remove_unit_leader_trait = enc_purist
@@ -3400,41 +3399,43 @@ country_event = {#117 Helios One
 		
 				}
 		
-country_event = {#118 Legion Propaganda
+country_event = {	#118 Legion Propaganda
     id = enc_reformers.118
-    title = enc_reformers.118.t
-    desc = enc_reformers.118.d
-    picture = GFX_event_CES_burning
-    fire_only_once = yes    
-    is_triggered_only = no
-	trigger = {	
-			ERB = { has_war_with = CES }
-			has_completed_focus = enc_reform
-			}
+	title = enc_reformers.118.t
+	desc = enc_reformers.118.d
+	picture = GFX_event_CES_burning
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_war_with = CES
+		has_completed_focus = enc_reform
+	}
 	mean_time_to_happen = {	days = 3 }
-    option = {# Ow!
-	name = enc_reformers.118.a
-	CES = {add_ideas = atrocities }
-	add_ideas = guerilla_raids
+	option = {	# Ow!
+		name = enc_reformers.118.a
+		CES = {
+			add_ideas = atrocities
 		}
-	 option = {# Yuck Yuck!
-	name = enc_reformers.118.b
-	custom_effect_tooltip = enc_reformers.118.b.tt	
-	add_ideas = guerilla_raids
-	add_war_support = -0.10
-	trigger = {
+		add_ideas = guerilla_raids
+	}
+	option = {	# Yuck Yuck!
+		name = enc_reformers.118.b
+		custom_effect_tooltip = enc_reformers.118.b.tt
+		add_ideas = guerilla_raids
+		add_war_support = -0.10
+		trigger = {
 			has_country_flag = leader_charismatic
-			}	
-	 		}
-	option = {# Evil
-	name = enc_reformers.118.c
-	custom_effect_tooltip = enc_reformers.118.c.tt
-	add_ideas = guerilla_raids	
-	add_manpower = -500
-	trigger = {
+		}
+	}
+	option = {	# Evil
+		name = enc_reformers.118.c
+		custom_effect_tooltip = enc_reformers.118.c.tt
+		add_ideas = guerilla_raids
+		add_manpower = -500
+		trigger = {
 			has_country_flag = leader_ruthless
 		}
-	 		}				
+	}
 }		
 country_event = {#119 NCR
     id = enc_reformers.119
