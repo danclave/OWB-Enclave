@@ -6001,13 +6001,13 @@ country_event = {#208- Reno 911
 	id = enc_reformers.208
 	title = enc_reformers.208.t
 	desc = enc_reformers.208.d
-	picture = event_enc_new_reno2
+	picture = GFX_event_enc_new_reno2
 	fire_only_once = yes	
     trigger = { 
 			OR = {
 				has_completed_focus = enc_amnesty_for_service
 				has_completed_focus = enc_out_with_the_old
-			}
+		}
 	}
 	mean_time_to_happen = { days = 600 }
 	option = {# Amnesty
@@ -6015,15 +6015,32 @@ country_event = {#208- Reno 911
 		 trigger = { has_completed_focus = enc_amnesty_for_service }
 		 add_equipment_to_stockpile = {
                 type = energy_equipment_2
-                amount = 100
-                producer = USA
-				}
+                amount = 500
+                producer = ERB
 		}
-	option = {#  Clean Trash
-		name = enc_reformers.200.b
-		trigger = { has_completed_focus = enc_out_with_the_old }
-		add_political_power = 100
+		custom_effect_tooltip = available_because
+		custom_effect_tooltip = enc_amnesty_for_service
+	}
+	option = {# We can tax that, right?
+		name = enc_reformers.208.c
+		 add_equipment_to_stockpile = {
+                type = energy_equipment_2
+                amount = 200
+                producer = ERB
 		}
+	}
+	option = {#  Dont steal
+		name = enc_reformers.208.b
+		trigger = { has_completed_focus = enc_out_with_the_old }		
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = 0.03
+		}
+		change_legitimacy = yes
+		add_political_power = 50
+		custom_effect_tooltip = available_because
+		custom_effect_tooltip = enc_out_with_the_old
+	}
 }
 country_event = {
 	id = enc_reformers.209
@@ -6142,7 +6159,7 @@ country_event = {#213 - Ghouls
 			value = -0.05
 		}
 		change_legitimacy = yes
-		}
+	}
 	option = {#Commie
 		name = enc_reformers.213.c
 		# modify legitimacy

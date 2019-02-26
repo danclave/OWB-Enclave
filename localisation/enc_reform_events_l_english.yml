@@ -1085,7 +1085,8 @@ enc_reformers.207.e.tt: "Available because you have completed §Ythe Judicial Br
 enc_reformers.208.t: "Scavenger Jackpot!"
 enc_reformers.208.d: "A scavenger has returned to New Reno with reports of an intact military base we thought lost with an energy weapons stockpile. Traditionally, scavengers have the right to the property they find, but we could use our new police force to seize his finds.  On the other hand, if we respect his claim it will cement our claim to stand for order and the rule of law."
 enc_reformers.208.a: "Look, they're clearly government property."
-enc_reformers.208.b: "Just laws apply to the government and the people."
+enc_reformers.208.b: "Laws apply to the people and the government alike."
+enc_reformers.208.c: "We can tax that, right?"
 #############################################################################################################
 enc_reformers.209.t: "Raiders strike an armory"
 enc_reformers.209.d: "With the NCR's collapse, our men are stretched thin guarding the Reunited States.  Sadly, that sometimes means that raiders can strike munitions depots or armories. They probably killed some civilians too, but one thing at a time."
