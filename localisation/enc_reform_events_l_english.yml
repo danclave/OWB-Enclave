@@ -818,7 +818,7 @@ enc_reformers.159.a: "Two steps forward, one step back."
 enc_reformers.159.b: "She has something of a point..."
 enc_reformers.159.c: "§MNo. Let us go forward together.§!"
 ###############################################################################################################
-enc_reformers.160.t: "The Road Gets Rougher From Here"
+enc_reformers.160.t: "The Sins of Our Fathers"
 enc_reformers.160.d: "Straddling the border between California and the Mojave are two prosperous trading towns, Ashton and Hopeville.  These small towns have boomed in recent years thanks to civilization's recovery, and were already on our list to liberate to simplify logistics, if nothing else.  But recently we've picked up some sort of signals from prewar military bases in the region. Since the area was home to ICBM bases before the war, we should secure the towns and investigate."
 enc_reformers.160.a: "ICBMs you say?"
 ###############################################################################################################
@@ -837,17 +837,19 @@ enc_reformers.162.a: "Weren't there silos in southern Nevada?"
 enc_reformers.162.b: "§RWait, they'll probably work in Ashton!§"
 ###############################################################################################################
 enc_reformers.163.t: "The Lonesome Road"
-enc_reformers.163.d: "The Legion poured west into the Reunited States, backed by Brotherhood diehards, Enclave purists, raiders threatened by the Reunited States, Tribals who resist the march of progress, and all who stand against the American dream.  To be blunt, Mr. President, the odds are grim. But there is a chance.  We could use the ICBMs in Ashton and Hopeville to take out the Legion's capital in Flagstaff.  We can't destroy the entire Legion, but it could cripple them and give us a chance. If we can hold Ashton and Hopeville long enough, we can refuel the nukes and fire them against the Legion. But remember, Mr. President: Thousands of American civilians live in the lands of the Legion, slaves who pray for better days and have no say in this war. They will perish in nuclear fire along with the slave soldiers of Caesar.  Their fate, and the fate of all Americans, lies with you."
+enc_reformers.163.d: "The Legion poured west into the Reunited States, backed by Brotherhood diehards, Enclave defectors, and raiders, and all who stand against the American dream.  Granite could deploy nuclear weapons, but there are those in his Cabinet and Congress  are mindful that thousands of American civilians live in the lands of the Legion, slaves who pray for better days and have no say in this war. \n\n They will perish in nuclear fire along with the soldiers of Caesar. Congress will not let the president strike unless things get worse."
 enc_reformers.163.a: "§RE Pluribus Uranium§!"
 enc_reformers.163.b: "§MOur history isn't revenge or hate. The road that brought us here isn't about that.§!"
 enc_reformers.163.b.tt: "§g 'There is a shadow of a nation behind us, the hope of a people. If we cannot prevent what is to come, if this is the end of the road for America, then let us walk it together.'-President Grante, after refusing to nuke Flagstaff§g"
+enc_reformers.163.c: "Congress enjoins the use of nukes"
+enc_reformers.163.c.tt: "Because you have not §YSilenced Congress§!, they will not use weapons of mass destruction unless things look far worse."
 ###############################################################################################################
 enc_reformers.164.t: "Burn Away the Flags"
 enc_reformers.164.d: "They say that in the silos of Ashton, you can still smell the pride, and the fear, of the Old World.  The horror, wrapped in fencing, covered in steel. That horror escaped its cage one night, leaping into the sky on a pillar of fire and and falling onto a sleeping Flagstaff. Legion soldiers and American civilians died together, silhouettes blasted into the ground, ashes on the wind. It was an ending for the Legion and the people that had walked with it.  But perhaps, for the president, it was worth it."
 enc_reformers.164.a: "God Bless America"
 ##############################################################################################################
-enc_reformers.165.t: "We Remember, America"
-enc_reformers.165.d: "In his darkest hour, before his election, Granite asked, 'Is there anything left? Anything that still carries America's voice?"  The President's decision to save Flagstaff demonstrated his faith that the answer was yes.  America didn't need nukes; it needed the slaves who deserted in the dark of night; the Followers who spread their teachings in the lands of the Midwest Brotherhood; and the Minutemen who followed their forefathers to defend the Commonwealth. Granite was a flawed man, and he made many, many mistakes. But he turned the Enclave into a bridge between the Old and New World.  He brought the Reunited States together.   Thanks to him there would be men and women who wore its flag proudly, at Hoover Dam, at Cheyenne Mountain, and at the Second Alamo. Men and and women who walked out of, and into, a history deeper than they knew. The men and women of America."
+enc_reformers.165.t: "We Remember America"
+enc_reformers.165.d: "In his darkest hour, before his election, Granite asked, "Is there anything left? Anything that still carries America's voice?"  \n\n The President's decision to save Flagstaff demonstrated his faith that the answer was yes.  America didn't need nukes; it needed the slaves who deserted in the dark of night; the Followers who spread their teachings in the lands of the Midwest Brotherhood; and the Minutemen who held the line against the Institute. Granite was a flawed man, and he made many, many mistakes. But he turned the Enclave into a bridge between the Old and New World.  He brought the Reunited States together.   \n\n Thanks to him there would be men and women who wore its flag proudly, at Hoover Dam, at the Second Alamo, and even in the Capital Wasteland. Men and and women who walked out of, and into, a history deeper than they knew. The men and women of America."
 enc_reformers.165.a: "God Bless the Enclave"
 ##############################################################################################################
 enc_reformers.166.t: "The History You Burned In The Earth"
@@ -1024,8 +1026,91 @@ enc_reformers.200.b: "You'd have to be  MOR-ON to rely on New Reno's gangs."
 enc_reformers.201.t: "A New America for a New World!"
 enc_reformers.201.d: "Let the cry go out across the wastes! The Enclave has guided America through its darkest hour, to the promise land.  We shall rid the world of mutants who desecrate our sacred land.  We will crush the Brotherhood wherever we find it. We will rebuild and take the war back to China.  America is reborn, tougher, stronger, and more unified than ever."
 enc_reformers.201.a: "God bless the Enclave!"
-
 #############################################################################################################
+enc_reformers.202.t: "Slitting the Bull's Throat"
+enc_reformers.202.d: "Whether because the Enclave delayed too long, or the NCR proved weaker than expected, the Legion has managed to take Shady Sands and overrun New California.  However, it lacks the logistics to hold onto its new territory properly and will require a year to make the region adjust to Legion rule.  We can use this time to strike and drive the Legion out of New California, but if we try to push into their heartland we will face stiffer resistance."
+enc_reformers.202.a: "We will exploit this!"
+#############################################################################################################
+enc_reformers.203.t: "Legion Occupation"
+enc_reformers.203.d: "It's been over a year since the Legion seized most of New California.  How fares the state?"
+enc_reformers.203.a: "It's grown accustomed to Legion rule"
+enc_reformers.203.b: "Too busy fighting to update you"
+#############################################################################################################
+enc_reformers.204.t: "The Treaty of New Vegas"
+enc_reformers.204.d: "We've driven the Legion out of California, but we lack the men and materials to march on Flagstaff.  As such, Mojave, and the lights of New Vegas, belong to the Legion.  For now. During this truce, we must address the fate of New California, a question we deferred during the emergency."
+enc_reformers.204.a: "We're going to be heroes, right?"
+#############################################################################################################
+enc_reformers.205.t: "Desparate Times, Desparate Measures"
+enc_reformers.205.d: "The United States Army has fallen back before the Legion, and many in Congress who once opposed the use of nukes are now willing to consider them, if the alternative is Legion victory."
+#############################################################################################################
+enc_reformers.206.t: "And We'll Never Be Free Until We End Slavery"
+enc_reformers.206.d: "The Enclave tolerated (and practiced slavery) in Nevada, but the federal judiciary, composed of Enclave reformers and New California's attorneys, has a different view of that practice in light of the Constitution.\n\nThe Thirteenth Amendment states that "Neither slavery nor involuntary servitude . . . shall exist within the United States." As such, the Supreme Court has issued a ruling declaring that all slaves within the United States are free and that "attempts to call it indentured servitude are just slavery with extra steps."\n\nThis may hinder the government's plans for reconstruction, but has been hailed by the New World Party as a tremendous victory for the rights of every American."
+enc_reformers.206.a: "We should've hired a better lawyer"
+enc_reformers.206.b: "Let me tell you about the amendments passed by the Enclave"
+#############################################################################################################
+enc_reformers.207.t: "The Families of Vegas"
+enc_reformers.207.d: "New Vegas is one of the richest cities of hte waste, but it's also under the influence of some powerful families.  With our economic growth, they've begun to spread their influence beyond New Vegas, and we need to decide how to handle them."
+enc_reformers.207.a: "Granite has always considered himself a family man"
+enc_reformers.207.b: "Sergeant Dornan leads the police to break the families!"
+enc_reformers.207.b.tt: "Available because you selected §YOut With The Old§!.\n"
+enc_reformers.207.c: "The police and Families reach an accomodation"
+enc_reformers.207.c.tt: "Available because you have §YGranted Amnesty§!.\n"
+enc_reformers.207.e: "The families, faced with the threat of the law, go legit."
+enc_reformers.207.e.tt: "Available because you have completed §Ythe Judicial Branch§!.\n"
+#############################################################################################################
+enc_reformers.208.t: "Scavenger Jackpot!"
+enc_reformers.208.d: "A scavenger has returned to New Reno with reports of an intact military base we thought lost with an energy weapons stockpile. Traditionally, scavengers have the right to the property they find, but we could use our new police force to seize his finds.  On the other hand, if we respect his claim it will cement our claim to stand for order and the rule of law."
+enc_reformers.208.a: "Look, they're clearly government property."
+enc_reformers.208.b: "Just laws apply to the government and the people."
+#############################################################################################################
+enc_reformers.209.t: "Raiders strike an armory"
+enc_reformers.209.d: "With the NCR's collapse, our men are stretched thin guarding the Reunited States.  Sadly, that sometimes means that raiders can strike munitions depots or armories. They probably killed some civilians too, but one thing at a time."
+enc_reformers.209.a: "We really need to restore law or order to this country."
+#############################################################################################################
+enc_reformers.210.t: "Raiders strike a settlement"
+enc_reformers.210.d: "With the NCR's collapse, our men are stretched thin guarding the Reunited States.  Sadly, that sometimes means that raiders can strike outlying settlements, reducing our tax base. They probably killed some civilians too, but one thing at a time."
+enc_reformers.210.a: "We really need to restore law or order to this country."
+#############################################################################################################
+enc_reformers.211.t: "Raiders blow up a bridge"
+enc_reformers.211.d: "With the NCR's collapse, our men are stretched thin guarding the Reunited States.  Sadly, that sometimes means that raiders can destroy key infrastructure.  They probably killed some civilians too, but one thing at a time."
+enc_reformers.211.a: "We really need to restore law or order to this country."
+#############################################################################################################
+enc_reformers.212.t: "Teach for America?"
+enc_reformers.212.d: "The establishment of a public school system (even if it will not, for a great while, extend beyond the cities) presents us with an opportunity.  We can persuade the Wasteland's youth that prewar America the best country on earth, a land of nuka cola fountains, prosperity, and greatness.  Or we can be honest and say that it was full of mostly good people who made some real mistakes, like the ones that led to the nuclear wasteland we inhabit today. Given those options, it's hard to see any reason not to whitewash the past a bit.  Who's going to tell them otherwise?"
+enc_reformers.212.a: "Tell kids about the time we conquered the Moon"
+enc_reformers.212.b: "Tell kids about the mistakes that led to the Great War"
+#############################################################################################################
+enc_reformers.213.t: "Ghouls Discuss America's Flaws"
+enc_reformers.213.d: "It turns out some ghouls remember the martial war, rationing, and general society collapse the presaged the Great War. As such, they are rather critical of our attempts to paint America as a City on the Hill.  One's published a book entitled "Lies Your Teacher Told You.""    
+enc_reformers.213.a: "Why don't we ever great a break?"
+enc_reformers.213.b: "This ghoul sounds a bit like a Communist."
+enc_reformers.213.c: "§RSounds like he's gone feral!§\n"
+enc_reformers.213.c.tt: "\n Available because you §YRejected Ghouls.§!"
+#############################################################################################################
+enc_reformers.214.t: "Enclave Education"
+enc_reformers.214.d: "We can also use public schooling to teach the world about the Enclave's noble goal of restoring America, a tale of how we shepherded our strength until we were ready to act.  Some idealists have suggested we air our dirty laundry about that time President Richardson tried to kill all mutants, but really, why bother?"
+enc_reformers.214.a: "The Enclave was devoted to saving America"
+enc_reformers.214.b: "The Truth Will Set Us Free"
+#############################################################################################################
+enc_reformers.215.t: "The Red Menace"
+enc_reformers.215.d: "One unfortunate consequence of our anti-communist education is that some of our enemies have claimed the mantle of Communism for themselves.  Although it's not clear these Commie bastards even know who Marx is, they've flocked to the  banner of the Legion, forming a "Popular Front" against "American imperialism."  No worries, they'll find out soon enough why it's better to be dead than red."
+enc_reformers.215.a: "Caesar reveals his true colors!"
+#############################################################################################################
+enc_reformers.216.t: "Are Deathclaws An Endangered Species?"
+enc_reformers.216.d: "With the revival of the EPA, one of the more vocal debates is whether North America's latest apex predator, the Deathclaw, is entitled to protection. Once a terrible threat, the deployment of heavy weaponry has reduced its natural habitat, and some scientists estimate that it could one day become extinct! We could preserve this proud animal, a testament to nature's fortitude through adversity.  On the other hand, farmers complain that death claws make off with their brahmin and children..."
+enc_reformers.216.a: "The Deathclaw, like the Bald Eagle, symbolizes America"
+enc_reformers.216.b: "Wait are you kidding me? Shoot them all!"
+#############################################################################################################
+enc_reformers.217.t: "Counterfeiters"
+enc_reformers.217.d: "With the collapse of New California's treausry, we are left to fill in the gap with Enclave Reconstruction Authority scrip and bottle caps. Unfortunately, this has left counterfeiters with the ability to inject false currency into the economy.  We'll need to revive the banking system to put a stop to this."
+enc_reformers.217.a: "How come nobody counterfeits Caesar's coinage?"
+#############################################################################################################
+enc_reformers.218.t: "America's Capital"
+enc_reformers.218.d: "With the restoration of America, it's time to decide where to place our capital.  Some suggest we move to Shady Sands, the largest city of California, but others, fearful of the threat of protestors and dissidents, suggest we fortify Navarro.  But there is a third idea..."
+enc_reformers.218.a: "Shady Sands is the heart of the New America"
+enc_reformers.218.b: "Let's rule from the citadel at Navarro"
+enc_reformers.218.c: "New Reno will do until we free Washington"
+enc_reformers.218.a.tt: "\n Please rise for the §MNational Anthem§!, and we'll see you if they ever get to the east coast!"
 ## START OF 300 ###
 #############################################################################################################
 enc_reformers.300.t: "Protests in [protesting_state.GetName]"
@@ -1056,4 +1141,7 @@ enc_reformers.303.t: "Candelight vigil in [protesting_state.GetName]"
 enc_reformers.303.d: "People have gathered in [protesting_state.GetName] to remember 1 year since the [protesting_state.GetName] massacre."
 enc_reformers.303.a: "Let them have their ceremony."
 enc_reformers.303.b: "Break it up."
+
+
+
 

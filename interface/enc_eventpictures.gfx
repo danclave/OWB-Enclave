@@ -29,11 +29,14 @@ spriteTypes = {
  		    texturefile = "gfx/event_pictures/enc_skeletons.tga"
  	    }
 
-        SpriteType = {#event_arcade_gannon_enclave
+        SpriteType = {#Thanksgiving
+            name = "GFX_event_enc_thanksgiving"
+ 		    texturefile = "gfx/event_pictures/event_enc_thanksgiving.tga"
+ 	    }
+		SpriteType = {#event_arcade_gannon_enclave
             name = "GFX_event_arcade_gannon_enclave"
  		    texturefile = "gfx/event_pictures/event_arcade_gannon_enclave.tga"
  	    }
-
         SpriteType = {#event_china_poster
             name = "GFX_event_china_poster"
  		    texturefile = "gfx/event_pictures/event_china_poster.tga"

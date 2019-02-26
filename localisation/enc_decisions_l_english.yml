@@ -51,19 +51,32 @@ clear_state: "Liberate State"
 
 enc_rangers_defense_sabotage_tt: "Unlocks the §YSabotage Infrastructure§! decision.\nThis allows you to damage the §YInfrastructure§! in nearby states owned by the §YDesert Ranger§!."
 ##############################
+# Executive Orders
+##############################
+enc_executive_orders: "Executive Orders"
+enc_executive_orders_desc: "A series of powerful tools that fall within the purview of the Commander in Chief."
+infrastructure_building_slot1: "Sponsor a Railway"
+infrastructure_building_slot1_desc: "By rebuilding railways that have lain in ruins since the Great War, we can open new opportunities for economic growth"
+ENC_bandit_raids: "Raiders!"
+ENC_bandit_raids_desc: "The collapse of New California has left our territories ripe to raiders. This will not be solved until we restore law or order."
+ENC_pacificy_northern_border: "Secure the Northern Border!"
+ENC_pacificy_northern_border_desc: "North of New California lay tribals, the Washington Brotherhood, and Supermutants; all of whom are happy to sack our settlements.  If we can show our citizens that we are capable of protecting them, perhaps we can earn some support."
+ENC_maintain_northern_control: "Fortify the North."
+ENC_maintain_northern_control_desc: "By deploying significant forces to Redding, we can crush resistance in the area. Yay!"
+ENC_protect_coasts: "Protect California's Coasts"
+ENC_protect_coasts_desc: "With the fall of the NCR, the Broken Coast, tribals, and bandits from Mexico can raid America's seaboard.  Let's put a stop to that."
+##############################
 # WAR MEASURES 
 ##############################
 less_rations: "Reduce Rations"
 more_rations: "Increase Rations"
 
-##############################
-# WAR MEASURES 
-##############################
 ENC_sabotage_ces_supply_lines: "Sabotage Ceaser's Supply Lines"
 ENC_sabotage_ces_supply_lines_desc: "The Bull has the advantage in this war, but supporting supply lines over the Colorado river is a logistical nightmare. A few surgical strikes could force [CES.GetLeader] to consider his premature invasion, at least for a while."
 ENC_sabotage_ncr_supply_lines: "Sabotage NCR Supply Lines"
 ENC_sabotage_ncr_supply_lines_desc: "The NCR has the advantage in this war, but supporting supply lines over the Colorado river is a logistical nightmare. A few surgical strikes could force [NCR.GetLeader] to consider his premature invasion, at least for a while."
-
+CES_california_crisis: "The Conquest of California"
+CES_california_crisis_desc: "Although the Legion is overextended and strugglign to crush California, that won't last forever. We need to take this opportunity to drive them out of the region."
 ##############################
 # War with the NCR
 ##############################
@@ -109,6 +122,7 @@ ENC_granite_doctrine: "Taking Out the Trash"
 ENC_granite_doctrine_desc: "By taking down the raiders and tribals, we are defending Life, Liberty, and the Pursuit of Happiness."  
 erb_reunited_state: "Send Couriers to [From.GetName]"
 erb_reunited_state_desc: "Like all survivors in the Wasteland, the people of [From.GetName] feel cut off and alone.  Adding them to the Courier network is the first step in tying [From.GetNameDef] into our Great Society, reminding them of where they truly belong."
+ENC_couriers_tt: "§M[From.GetName]§! is integrated into the American economy and cultural sphere, and we can begin negotiations for them to reenter the Union."
 erb_incorporate_to_commonwealth: "[From.GetName] becomes a Federal Commonwealth!"
 erb_incorporate_to_commonwealth_desc: "The people of [From.GetName] have suffered for too long from slavers, troll raids, and raiders.  They've remembered the flag of their fathers and have taken the first steps to joining the Reunited States."
 erb_join_usa: "[From.GetName] joins the Reunited States"
@@ -196,12 +210,16 @@ ENC_reform_wild_promises_desc: "If all else fails, wild yet vague promises can b
 ##############################
 # NCR INFILTRATION 
 ##############################
+ENC_boost_civilian_economy: "Boost the Civilian Economy"
+ENC_boost_civilian_economy_desc: "By turning military workshops over to civilian use, we can turn, if not swords into plowshares, then laser guns into mining equipment."
 enc_NCR_seize_saccity: "Liberate Sac City"
 enc_NCR_seize_saccity_desc: "Sac City belongs to America.  Let us take it from people who think otherwise."
 enc_NCR_seize_shady_sands: "Liberate Shady Sands"
 enc_NCR_seize_shady_sands_desc: "Provides an annexation wargoal against the owner of Shady Sands."
+enc_NCR_seize_shady_sands.tt: " Teach §Y[253.Owner.GetName]§! that Shady Sands is an American town."
+enc_NCR_seize_dayglow.tt: " Teach §Y[63.Owner.GetName]§! that Dayglow is an American town."
 enc_NCR_seize_dayglow: "Liberate Day Glow"
-enc_NCR_seize_dayglow_desc: "Provides an annexation wargoal against the owner of DayGlow""
+enc_NCR_seize_dayglow_desc: "Provides an annexation wargoal against the owner of DayGlow"
 ENC_infiltrating_NCR: "Back to California"
 ENC_infiltrating_NCR_desc: "California remains the heart of the West Coast, and the NCR is the largest postwar government.  How we handle them could determine the fate of America."
 ENC_support_OWP: "Support the Old World Party"

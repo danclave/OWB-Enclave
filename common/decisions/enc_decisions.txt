@@ -1,6 +1,520 @@
 ###############################
 # REFORMER
 ###############################
+enc_executive_orders  = {
+ENC_bandit_raids = {
+		icon = generic_civil_support
+		available = {
+			NOT = { 
+				OR = {
+					has_idea = enc_NCR_power_struggle2
+					has_idea = enc_NCR_power_struggle
+					}
+			}
+		}
+		days_mission_timeout = 180
+		activation = {
+			OR = {
+					has_idea = enc_NCR_power_struggle2
+					has_idea = enc_NCR_power_struggle
+					}
+		}
+		visible = {
+		}		
+		fire_only_once = no
+		is_good = no
+		timeout_effect = {
+			random_list = {
+				25 = {
+					country_event = enc_reformers.209
+				}
+				25 = {
+					country_event = enc_reformers.210
+				}
+				25 = {
+					country_event = enc_reformers.211
+				}
+				25 = {
+					
+				}
+			}
+		}
+	}
+ENC_pacificy_northern_border = {
+
+		icon = generic_oppression
+		
+		available = {
+            has_completed_focus = enc_rebuilding_a_nation
+            has_idea = enc_NCR_instability
+            divisions_in_state = {
+				state = 141	
+				size > 5
+			}
+		not = { has_country_flag = ERB_northern_raiders_cleared }	
+		}
+		highlight_states = {
+			state = 141
+		}
+		cost = 0
+		days_mission_timeout = 300
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 141	
+					size > 5
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = enc_rebuilding_a_nation
+			has_idea = enc_NCR_instability
+		}
+		is_good = yes
+		complete_effect = {
+			activate_mission = ENC_maintain_northern_control
+			}
+	}
+ENC_protect_coasts = {
+
+		icon = generic_oppression
+		
+		available = {
+            has_completed_focus = enc_rebuilding_a_nation
+            has_idea = enc_NCR_instability
+           ships_in_state_ports = {
+				type = capital_ship
+				state = 350	
+				size > 2
+			}
+        }
+		highlight_states = {
+			state = 350
+		}
+		cost = 0
+		visible = {
+			has_completed_focus = enc_rebuilding_a_nation
+			has_idea = enc_NCR_instability
+		}
+		is_good = yes
+		complete_effect = {
+			add_stability = 0.05
+		}
+	}	
+ENC_maintain_northern_control = {
+
+		icon = generic_civil_support
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 180
+
+		activation = {
+			always = no #Triggered from effect
+		}
+
+		cancel_trigger = {
+			divisions_in_state = {
+				state = 141	
+				size < 6
+			}
+		}
+
+		highlight_states = {
+			state = 141
+		}
+
+		visible = {
+			
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			add_stability = 0.05
+			army_experience = 10
+		set_country_flag = ERB_northern_raiders_cleared	
+		}
+	}	
+improved_worker_conditions = {
+
+		icon = generic_industry
+
+		available = {
+			
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+
+		modifier = {
+			stability_weekly = 0.005
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.1
+		}
+
+		days_remove = 180
+		days_re_enable = 540
+
+		cost = 100
+
+		complete_effect = {
+
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+promises_of_peace = {
+	icon = generic_political_discourse
+		available = {
+			has_war = no
+			has_war_support > 0.2
+		}
+		visible = {
+			always = yes
+		}
+		remove_trigger = {
+			has_war = yes
+			has_war_support < 0.05
+		}
+		fire_only_once = no
+		modifier = {
+			stability_weekly = 0.005
+			war_support_weekly = -0.01
+			political_power_gain = -0.5
+		}
+		days_remove = 90
+		days_re_enable = 360
+		cost = 50
+		complete_effect = {
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.4
+			}
+		}
+	}
+infrastructure_building_slot1 = {
+
+		icon = generic_construction
+
+        allowed = {
+            always = yes
+        }
+
+        cost = 100
+        fire_only_once = no
+
+        days_re_enable = 30
+
+        available = {
+            any_state = {
+            	NOT = { has_state_flag = infrastructure_building_slot_flag }
+            	is_fully_controlled_by = ROOT
+            	is_owned_by = ROOT
+				free_building_slots = {
+					building = infrastructure
+					size < 1
+				}
+            }
+        }
+
+        visible = {
+			any_state = {
+            	NOT = { has_state_flag = infrastructure_building_slot_flag }
+            	is_fully_controlled_by = ROOT
+            	is_owned_by = ROOT
+				free_building_slots = {
+					building = infrastructure
+					size < 1
+				}
+            }
+		}
+
+        complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+            		free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+					NOT = { has_state_flag = infrastructure_building_slot_flag }
+				}
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = infrastructure_building_slot_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				any_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
+			}
+		}
+    }
+
+    war_building_slot = {
+
+    	icon = generic_construction
+
+        allowed = {
+            always = yes
+        }
+
+        cost = 50
+        fire_only_once = no
+
+        available = {
+            any_state = {
+            	NOT = { has_state_flag = war_building_slot_flag }
+            	is_fully_controlled_by = ROOT
+            	is_owned_by = ROOT
+            }
+            has_war = yes
+        }
+
+        visible = {
+        	any_state = {
+            	NOT = { has_state_flag = war_building_slot_flag }
+            	is_fully_controlled_by = ROOT
+            	is_owned_by = ROOT
+            }
+            has_war = yes
+		}
+
+        complete_effect = {
+        	add_war_support = -0.025
+			add_stability = -0.025
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+            		free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					NOT = { has_state_flag = war_building_slot_flag }
+				}
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = war_building_slot_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				any_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
+			}
+		}
+    }
+CES_nuke = {
+		icon = gfx_decision_nuke_flagstaff
+		priority = 30		
+		fire_only_once = YES
+		activation = {
+			country_exists = CES
+			has_country_flag = enc_nuke_legion
+			has_completed_focus = enc_reform
+		}
+		visible = { has_full_control_of_state = 592	}
+		available = {
+			NOT = { country_exists = CES }
+		}
+		cancel_trigger = {
+			NOT = { has_full_control_of_state = 592 }
+		}		
+		is_good = no
+		days_mission_timeout = 50
+		timeout_effect = {
+			country_event = { id = enc_reformers.164  }
+		}
+	}
+ENC_desert_rangers_hate = {
+		icon = GFX_decision_enc_verti
+		priority = 10
+	visible = {
+			has_country_flag = enc_ncr_spies
+			
+		}
+		available = { 
+			DES = {
+				is_in_faction = yes
+				exists = yes 
+				} 
+			}
+		complete_effect = {
+			add_political_power = -80
+			custom_effect_tooltip = ENC_desert_rangers_hate_tt
+			NCR = { add_opinion_modifier = { target = DES modifier = sabotaged_relations } }
+			DES = { add_opinion_modifier = { target = NCR modifier = sabotaged_relations } }
+			DES = { 
+				if = {
+					limit = {
+						is_in_faction = yes 
+					} 
+					leave_faction = yes 
+				}	
+			}
+			DES = {
+				add_ai_strategy = {
+					type = ignore
+					id = "NCR"
+					value = 800
+					}
+				}
+			NCR = {
+				add_ai_strategy = {
+					type = ignore
+					id = "DES"
+					value = 800
+				}
+				}	
+		}
+	}
+CES_california_crisis = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		visible = { has_full_control_of_state = 285
+				}
+		activation = {
+			has_country_flag = ces_occupies_california
+			has_completed_focus = enc_reform
+			not = {
+				CES = {
+					OR = {
+						exists = no
+						has_civil_war = YES
+						has_war_with = ERB #Enclave
+					}
+				}
+			}
+		}
+		available = {
+			77 = { is_controlled_by = ERB}
+		}
+		cancel_trigger = {
+			CES = {
+				OR = {
+					exists = no
+					has_civil_war = YES
+					has_war_with = ERB #Enclave
+				}
+			}
+		}
+		is_good = no
+		days_mission_timeout = 400
+		timeout_effect = {
+			CES = {	remove_ideas = enc_NCR__ces_resistance }
+				}
+		complete_effect = { country_event = {id = enc_reformers.204 }
+		}
+	}
+	enc_NCR_seize_dayglow = {
+		icon = decision_plasma
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = enc_american_dream
+				}
+		visible = {
+			tag = ERB
+			NCR = {exists = no }
+			NOT = {has_full_control_of_state = 63} # Dayglow
+			}
+		complete_effect = {
+			custom_effect_tooltip = enc_NCR_seize_dayglow.tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 63 #Dayglow
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV transfer_troops = NO }
+						}
+					}
+				}
+			}	
+		}
+	enc_NCR_seize_shady_sands = {
+		icon = decision_plasma
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = enc_american_dream
+				}
+		visible = {
+			tag = ERB
+			NCR = {exists = no }
+			NOT = {has_full_control_of_state = 253} #shady sandsy
+			}
+		complete_effect = {
+			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 253 # Shady Sands
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+						}
+					}
+				}
+			}	
+		}
+enc_NCR_seize_saccity = {
+		icon = decision_plasma
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = enc_american_dream
+				}
+		visible = {
+			tag = ERB
+			NCR = {exists = no }
+			NOT = {has_full_control_of_state = 135} #shady sandsy
+			}
+		complete_effect = {
+			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 135 # Shady Sands
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+						}
+					}
+				}
+			}	
+		}	
+}
 ENC_infiltrating_NCR = {
 	assassinate_bishop_crisis = {
 		icon = decision_enc_bishop
@@ -107,9 +621,9 @@ ENC_infiltrating_NCR = {
 			has_completed_focus = enc_support_armed_coup
 		}
 		available = {
-			NCR = {
-				intellectuals > 0.25
-			}}
+			NCR = {	intellectuals > 0.25 }
+			NOT = {has_war_with = NCR }
+			}
 		complete_effect = {
 			country_event = { id = enc_reformers.74 } 
 		}
@@ -207,48 +721,6 @@ ENC_infiltrating_NCR = {
 		days_remove = 60
 		remove_effect = {
 			add_manpower = 100
-		}
-	}
-	ENC_desert_rangers_hate = {
-		icon = GFX_decision_enc_verti
-		priority = 10
-	visible = {
-			has_country_flag = enc_ncr_spies
-			
-		}
-		available = { 
-			DES = {
-				is_in_faction = yes
-				exists = yes 
-				} 
-			}
-		complete_effect = {
-			add_political_power = -80
-			custom_effect_tooltip = ENC_desert_rangers_hate_tt
-			NCR = { add_opinion_modifier = { target = DES modifier = sabotaged_relations } }
-			DES = { add_opinion_modifier = { target = NCR modifier = sabotaged_relations } }
-			DES = { 
-				if = {
-					limit = {
-						is_in_faction = yes 
-					} 
-					leave_faction = yes 
-				}	
-			}
-			DES = {
-				add_ai_strategy = {
-					type = ignore
-					id = "NCR"
-					value = 800
-					}
-				}
-			NCR = {
-				add_ai_strategy = {
-					type = ignore
-					id = "DES"
-					value = 800
-				}
-				}	
 		}
 	}
 	ENC_deliver_petition = {
@@ -939,88 +1411,141 @@ ENC_starting_companies = {
 }
 
 ENC_build_nevada = {
-	enc_NCR_seize_dayglow = {
-		icon = decision_enc_propaganda
-		priority = 300
-		fire_only_once = yes
-
-		available = {
-			has_completed_focus = enc_american_dream
-				}
-		visible = {
-			tag = ERB
-			NCR = {exists = no }
-			NOT = {has_full_control_of_state = 63} # Dayglow
-			}
-		complete_effect = {
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						has_full_control_of_state = 63 #Dayglow
-					}
-					ERB = {
-						create_wargoal = { type = annex_everything target = PREV }
-						}
-					}
-				}
-			}	
+ENC_boost_civilian_economy = {
+		icon = decision_vault_boy
+		cost = 50
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
 		}
-	enc_NCR_seize_shady_sands = {
-		icon = decision_enc_propaganda
-		priority = 300
+		visible = { has_completed_focus = enc_rebuilding_a_nation }
 		fire_only_once = yes
-
-		available = {
-			has_completed_focus = enc_american_dream
-				}
-		visible = {
-			tag = ERB
-			NCR = {exists = no }
-			NOT = {has_full_control_of_state = 253} #shady sandsy
-			}
-		complete_effect = {
-			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						has_full_control_of_state = 253 # Shady Sands
-					}
-					ERB = {
-						create_wargoal = { type = annex_everything target = PREV }
-						}
-					}
-				}
-			}	
+		allowed = {
+			original_tag = ERB
 		}
-	enc_NCR_seize_saccity = {
-		icon = decision_enc_propaganda
-		priority = 300
-		fire_only_once = yes
-
 		available = {
-			has_completed_focus = enc_american_dream
-				}
-		visible = {
-			tag = ERB
-			NCR = {exists = no }
-			NOT = {has_full_control_of_state = 135} #shady sandsy
+			any_owned_state = { 
+				is_fully_controlled_by = ERB
+				arms_factory > 2
 			}
-		complete_effect = {
-			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						has_full_control_of_state = 135 # Shady Sands
-					}
-					ERB = {
-						create_wargoal = { type = annex_everything target = PREV }
-						}
+			any_owned_state = { 
+				is_fully_controlled_by = ERB
+				arms_factory > 2
+			}
+		}
+		days_remove = 30
+		remove_effect = {
+				add_stability = 0.05
+				random_owned_state = {
+				limit = {arms_factory > 2 }
+				remove_building = { 
+					type = arms_factory 
+					level = 2 
+				}
+			}
+				random_owned_state = {
+				limit = { arms_factory > 2	}
+				remove_building = { 
+					type = arms_factory 
+					level = 2 
+				}
+			}
+			random_owned_state = { #add 2 civilian factories
+				limit = {
+					is_core_of = ERB
+					free_building_slots = {
+						building = industrial_complex
+						size > 2 
+						include_locked = yes 
 					}
 				}
-			}	
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = { #add 2 civilian factories
+				limit = {
+					is_core_of = ERB
+					free_building_slots = {
+						building = industrial_complex
+						size > 2 
+						include_locked = yes 
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
+	}
+
+plunder_military_machinery = {
+		icon = generic_scorched_earth
+		visible = {
+			has_completed_focus = enc_purity
+		}
+		cost = 50
+		available = {
+			num_of_available_civilian_factories > 5
+			any_owned_state = { #we occupy a non core state which has 3+ mil factories
+				not = { is_core_of = ERB }
+				has_ROOT_at_least_1_div_in_current_state_scope = YES
+				is_fully_controlled_by = ERB
+				arms_factory > 2
+			}
+			any_owned_state = { # we have a core ready to receive 2 factories
+				is_fully_controlled_by = ERB
+				is_core_of = ERB
+				free_building_slots = {
+					building = arms_factory
+					size > 2 
+					include_locked = YES 
+				}
+			}
+		}
+		modifier = { #moving cost (maybe use civ factories)
+			civilian_factory_use = 3
+		}
+		days_remove = 30
+		remove_effect = { #remove 3 military factories from a non core occupied state
+			random_owned_state = {
+				limit = {
+					has_ROOT_at_least_1_div_in_current_state_scope = YES
+					not = { is_core_of = ERB }
+					arms_factory > 2
+				}
+				remove_building = { 
+					type = arms_factory 
+					level = 3 
+				}
+			}
+			random_owned_state = { #add 2 military factories to a core state
+				limit = {
+					is_core_of = ERB
+					free_building_slots = {
+						building = arms_factory
+						size > 1 
+						include_locked = yes 
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		days_re_enable = 30
+	}	
 	
-	ENC_vault_city_university = {
+ENC_vault_city_university = {
 		icon = decision_vault_boy
 		cost = 50
 		days_remove = 10
@@ -2190,7 +2715,6 @@ political_actions = {
 		cost = 75
 		available = { has_completed_focus = enc_emergency_draft_reform }
 		visible = { 
-			has_completed_focus = enc_emergency_draft_reform 
 			has_war = yes
 		}
 		complete_effect = { 
@@ -2532,13 +3056,14 @@ ENC_gannon_doctrine = {
 				has_war_with = FROM
 				}	
 			}
-		days_remove = 5
 		cost = 100
 		ai_will_do = {
 			factor = 100
 				}
-		complete_effect = { 
+		days_remove = 70
+		remove_effect = {		
 			FROM = {set_country_flag = erb_couriers }
+			custom_effect_tooltip = ENC_couriers_tt
 				}
 		}
 	erb_reunited_state_arroyo = {
@@ -2582,7 +3107,7 @@ erb_incorporate_to_commonwealth = {
 		ai_will_do = {
 			factor = 100
 				}
-		complete_effect = { 
+		remove_effect = { 
 			puppet = FROM
 				}
 		}
@@ -2607,7 +3132,7 @@ erb_join_usa = {
 		ai_will_do = {
 			factor = 100
 				}
-		complete_effect = { 
+		remove_effect = { 
 			annex_country = { target = FROM transfer_troops = yes }
 			}
 	}
@@ -2635,12 +3160,12 @@ good_tribal_handling = {
 				has_war_with = FROM
 				}	
 			}
-		days_remove = 5
+		days_remove = 50
 		cost = 50
 		ai_will_do = {
 			factor = 100
 				}
-		complete_effect = { 
+		remove_effect = { 
 			FROM = {set_country_flag = erb_teachers }
 				}
 		}
@@ -2661,12 +3186,12 @@ erb_good_reservations = {
 				has_war_with = FROM
 				}	
 			}
-		days_remove = 5
+		days_remove = 50
 		cost = 100
 		ai_will_do = {
 			factor = 100
 				}
-		complete_effect = { 
+		remove_effect = { 
 			FROM = { set_technology = { settled_civilization = 1 }
 					add_research_slot = 1 
 					set_country_flag = erb_civilizing
@@ -2691,12 +3216,12 @@ erb_tribals_become_civilized = {
 				has_war_with = FROM
 				}	
 			}
-		days_remove = 3
+		days_remove = 80
 		cost = 100
 		ai_will_do = {
 			factor = 100
 				}
-		complete_effect = { 
+		remove_effect = { 
 			FROM = {  remove_ideas = tribal_nation
 					add_ideas = settler_nation
 					clr_country_flag = erb_teachers
@@ -2904,30 +3429,7 @@ ENC_render_unto_caesar = {
 			country_event = { id = enc_reformers.65 }
 			}
 	}
-	CES_nuke = {
-		icon = gfx_decision_nuke_flagstaff
-		priority = 30		
-		fire_only_once = YES
-		activation = {
-			country_exists = CES
-			has_country_flag = enc_nuke_legion
-			has_completed_focus = enc_reform
-			}
-		visible = { has_full_control_of_state = 592
-				}
-		available = {
-			NOT = { country_exists = CES }
-			}
-		cancel_trigger = {
-			NOT = { has_full_control_of_state = 592 }
-			}		
-		is_good = no
-		days_mission_timeout = 50
-		timeout_effect = {
-			country_event = { id = enc_reformers.164  }
-				}
-		}
-	}	
+}	
 	
 ENC_oppose_legion = { 
 	erb_aid_foe_legion = {

@@ -4,6 +4,9 @@ empty_line: " \n "
 ###################################
 # FOCUS TREE
 ###################################
+enc_nuclear_option: "The Last Argument of Presidents"
+enc_nuclear_option_desc: "Although most nuclear missiles were used in the Great War, we've been getting some signals near Ashton that suggest some of our prewar weapons are still around."
+enc_nuclear_option_tt: "Will unlock the ability to nuke Flagstaff. Note that some in the §Hfree press and Congress§! might take issue with using weapons that destroyed the world.\n"
 enc_helios_two: "Lighting Up the Night"
 enc_helios_two_desc: "We need to do more than live off the scraps of the Great War.  We can rebuild centers of high technology to train the next generation of scientists.  So let's do so."
 enc_automobiles: "Every Man a Car!"
@@ -44,6 +47,8 @@ Enc_Trade_Coffee: "Coffee Trade"
 enc_coffee_tt: "Grants the §MCoffee Trade§! to everyone in a faction with [Root.GetName]"
 enc_Irrigation_tt: "Grants the §MFruits of Irrigation§! to everyone in a faction with [Root.GetName]"
 enc_radio:0 "Enclave Radio"
+enc_red_menace: "Anti-Communist Propaganda"
+enc_red_menace_desc: "Far too many Americans have forgotten that the Red Menace is responsible for America's state.  We can use Enclave Radio to remind them that Communism is the very definition of failure! Once we explain to them what Communism is."
 enc_radio_desc:0 "Our spies' radio beacons could be used to broadcast the Enclave's message to the Californians. Let sympathizers far and wide hear of the Enclaves vision. While we are at it, those same beacons can also be used as listening outposts."
 enc_Arizona: "The Southwest Commonwealth"
 enc_Arizona_desc: "The defeat of Caesar has led to the rise of a a patchwork of tribes and city-states across the Southwest.  We need to pressure them to join the Allied States of America under someone's leadership."
@@ -250,7 +255,7 @@ enc_reno_end:0 "The New Capital"
 enc_reno_end_desc:0 "We've broken the backs of the scum that run New Reno.  Look how much happier everyone is with Enclave soldiers patrolling the streets. No one complains, not even in private."
 
 enc_reno_police:0 "The Enclave Police"
-enc_reno_police_desc:0 "New Reno didn't need police when it was run by warring crime families, but establishing the rule of law could go a long way towards giving the Reunited States legitimacy in the wasteland. The Ne wReno police can be our base to build on."
+enc_reno_police_desc:0 "New Reno didn't need police when it was run by warring crime families, but establishing the rule of law could go a long way towards giving the Reunited States legitimacy in the wasteland. The Enclave can create a police force to be a model for America!"
 
 enc_amnesty_for_service:0 "Amnesty For Service"
 enc_amnesty_for_service_desc:0 "We can forgive some of the old gang members and welcome them into the Police.  This will give us trained soldiers, but some may question whether they're cops or robbers."
@@ -805,7 +810,7 @@ enc_the_little_people_desc: "The NCR and the Brotherhood are the most powerful g
 enc_support_cause: "Support Cause Partisans"
 enc_support_cause_desc: "Abraham Lincoln once said that America was the Cause of All Nations.  This may not be true, but our dream of freedom certainly aligns with the goals of the resistance to the Washington Brotherhood."
 enc_second_american_revolution: "Masters of the Wasteland"
-enc_second_american_revolution_desc: "With the defeat of the Legion, the New California Republic, and the Washington Brotherhood, is is time to remind everyone that America's original motto was 'Join or Die'/n"
+enc_second_american_revolution_desc: "With the defeat of the Legion, the New California Republic, and the Washington Brotherhood, is is time to remind everyone that America's original motto was 'Join or Die'"
 # yellow§Ytext§!
 # £air_experience_20x20
 # £army_experience_20x20

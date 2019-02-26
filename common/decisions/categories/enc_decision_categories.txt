@@ -2,6 +2,11 @@
 # CUSTOM
 ##############################
 
+enc_executive_orders = {
+	icon = category_usa_flag
+	allowed = { tag = ERB }
+	visible = {	has_completed_focus = enc_reform }	
+}
 ENC_shifts = {
 	icon = category_enc_shift
 	allowed = {original_tag = ERB}
