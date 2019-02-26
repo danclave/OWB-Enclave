@@ -1,9 +1,9 @@
-focus_tree = {
-	id = legion
+focus_tree = { 
+	id = legion_debugged
 	country = {
 		factor = 0
 		modifier = {
-			add = 10
+			add = 100
 			original_tag = CES
 		}
 	}
@@ -653,7 +653,7 @@ focus_tree = {
 			focus = ces_shottol_god_of_dogs
 		}
 		available = {
-			525 = { is_owned_and_controlled_by = CES }
+			525 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 2
 		y = 7
@@ -1498,7 +1498,7 @@ focus_tree = {
 			252 = { is_owned_and_controlled_by = NCR }
 		}
 		bypass = {
-			252 = { is_owned_and_controlled_by = CES }
+			252 = { is_owned_and_controlled_by = ROOT }
 		}
 		will_lead_to_war_with = NCR
 		x = 9
@@ -1632,7 +1632,7 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-			252 = { is_owned_and_controlled_by = CES }
+			252 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 10
 		y = 11
@@ -1682,7 +1682,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					359 = { is_owned_and_controlled_by = CES }
+					359 = { is_owned_and_controlled_by = ROOT }
 				}
 				359 = { set_state_name = "Fort Hill" }
 				359 = {
@@ -1705,7 +1705,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						359 = { is_owned_and_controlled_by = CES }
+						359 = { is_owned_and_controlled_by = ROOT }
 					}
 				}
 				553 = {
@@ -2391,7 +2391,7 @@ focus_tree = {
 			focus = ces_the_lights_of_vegas
 		}
 		available = {
-			211 = { is_owned_and_controlled_by = CES }
+			211 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 4
 		y = 16
@@ -2435,7 +2435,7 @@ focus_tree = {
 			focus = ces_the_eternal_city
 		}
 		available = {
-			211 = { is_owned_and_controlled_by = CES }
+			211 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 4
 		y = 17
@@ -2486,7 +2486,7 @@ focus_tree = {
 			focus = ces_caesers_palace
 		}
 		available = {
-			211 = { is_owned_and_controlled_by = CES }
+			211 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 4
 		y = 18
@@ -2534,7 +2534,7 @@ focus_tree = {
 			focus = ces_the_lights_of_vegas
 		}
 		available = {
-			211 = { is_owned_and_controlled_by = CES }
+			211 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 6
 		y = 16
@@ -2577,7 +2577,7 @@ focus_tree = {
 			focus = ces_expand_the_via_militaris
 		}
 		available = {
-			211 = { is_owned_and_controlled_by = CES }
+			211 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 6
 		y = 17
@@ -2620,7 +2620,7 @@ focus_tree = {
 			focus = ces_mccarran_airstrip
 		}
 		available = {
-			211 = { is_owned_and_controlled_by = CES }
+			211 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 6
 		y = 18
@@ -2647,7 +2647,7 @@ focus_tree = {
 			focus = ces_open_the_lucky_38
 		}
 		available = {
-			211 = { is_owned_and_controlled_by = CES }
+			211 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 5
 		y = 19
@@ -2963,7 +2963,7 @@ focus_tree = {
 			533 = { is_owned_and_controlled_by = NCR }
 		}
 		bypass = {
-			533 = { is_owned_and_controlled_by = CES }
+			533 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 8
 		y = 18
@@ -3031,7 +3031,7 @@ focus_tree = {
 		#	focus = ces_poking_the_bear
 		#}
 		available = {
-			has_country_flag = legion_had_civil_war
+			has_global_flag = legion_had_civil_war
 		}
 		x = 15
 		y = 15
@@ -3245,7 +3245,7 @@ focus_tree = {
 			focus = ces_denarius
 		}
 		available = {
-			525 = { is_owned_and_controlled_by = CES }
+			525 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 20
 		y = 5
@@ -3276,7 +3276,7 @@ focus_tree = {
 			focus = ces_tame_dog_city
 		}
 		available = {
-			525 = { is_owned_and_controlled_by = CES }
+			525 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 20
 		y = 6
@@ -3307,7 +3307,7 @@ focus_tree = {
 			focus = ces_legion_salvagers
 		}
 		available = {
-			525 = { is_owned_and_controlled_by = CES }
+			525 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 20
 		y = 7
@@ -3331,7 +3331,7 @@ focus_tree = {
 			focus = ces_denarius
 		}
 		available = {
-			520 = { is_owned_and_controlled_by = CES }
+			520 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 22
 		y = 5
@@ -3362,7 +3362,7 @@ focus_tree = {
 			focus = ces_the_capital
 		}
 		available = {
-			520 = { is_owned_and_controlled_by = CES }
+			520 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 22
 		y = 6
@@ -3393,7 +3393,7 @@ focus_tree = {
 			focus = ces_flagstaff_fort
 		}
 		available = {
-			520 = { is_owned_and_controlled_by = CES }
+			520 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 22
 		y = 7
@@ -3417,7 +3417,7 @@ focus_tree = {
 			focus = ces_denarius
 		}
 		available = {
-			518 = { is_owned_and_controlled_by = CES }
+			518 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 24
 		y = 5
@@ -3448,7 +3448,7 @@ focus_tree = {
 			focus = ces_settlers_in_phoenix
 		}
 		available = {
-			518 = { is_owned_and_controlled_by = CES }
+			518 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 24
 		y = 6
@@ -3479,7 +3479,7 @@ focus_tree = {
 			focus = ces_phoenix_outpost
 		}
 		available = {
-			518 = { is_owned_and_controlled_by = CES }
+			518 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 24
 		y = 7
@@ -3503,7 +3503,7 @@ focus_tree = {
 			focus = ces_denarius
 		}
 		available = {
-			516 = { is_owned_and_controlled_by = CES }
+			516 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 26
 		y = 5
@@ -3534,7 +3534,7 @@ focus_tree = {
 			focus = ces_two_sun_tribute
 		}
 		available = {
-			516 = { is_owned_and_controlled_by = CES }
+			516 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 26
 		y = 6
@@ -3565,7 +3565,7 @@ focus_tree = {
 			focus = ces_two_sun_warcamp
 		}
 		available = {
-			516 = { is_owned_and_controlled_by = CES }
+			516 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 26
 		y = 7
@@ -3909,7 +3909,7 @@ focus_tree = {
 			focus = ces_pax_romana
 		}
 		available = {
-			613 = { is_owned_and_controlled_by = CES }
+			613 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 23
 		y = 11
@@ -3959,7 +3959,7 @@ focus_tree = {
 			focus = ces_boulder_city_salvage
 		}
 		available = {
-			525 = { is_owned_and_controlled_by = CES }
+			525 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 21
 		y = 12
@@ -3988,7 +3988,7 @@ focus_tree = {
 			focus = ces_boulder_city_salvage
 		}
 		available = {
-			518 = { is_owned_and_controlled_by = CES }
+			518 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 25
 		y = 12
@@ -4017,7 +4017,7 @@ focus_tree = {
 			focus = ces_old_world_discoveries
 		}
 		available = {
-			359 = { is_owned_and_controlled_by = CES }
+			359 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 23
 		y = 13
@@ -4053,7 +4053,7 @@ focus_tree = {
 			focus = ces_follower_slaves
 		}
 		available = {
-			46 = { is_owned_and_controlled_by = CES }
+			46 = { is_owned_and_controlled_by = ROOT }
 		}
 		x = 24
 		y = 14
@@ -4579,6 +4579,12 @@ focus_tree = {
 				log = "[GetDateText]: [Root.GetName] ces_legion_reborn entered"
 			}
 			set_technology = { power_armour_legion = 1 }
+			if = {
+				limit = {
+					NOT = { has_tech = power_armour }
+				}
+				set_technology = { power_armour = 1 }
+			}
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] ces_legion_reborn exited"

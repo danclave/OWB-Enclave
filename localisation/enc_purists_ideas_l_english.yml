@@ -80,4 +80,13 @@ ENC_PA_quality: "Quality PA Team"
 
 enclave_naval_manufacturer: "Naval Research Team"
 
-contactthehardliners_tt: "2 divisions of §YEnclave Veterans§! appear at the §YSierra Army Depot§!"
+contactthehardliners_tt: "3 divisions of §YEnclave Veterans§! appear at the §YSierra Army Depot§!"
+
+# traits
+
+enc_purist: "Purist"
+enc_purist_desc: "This commander is loyal to Anderson."
+enc_reformer: "Reformer"
+enc_reformer_desc: "This commander is loyal to Granite."
+enc_demoted: "Demoted"
+enc_demoted_desc: "A demotion saps this commander's motivation. Undoing it will be difficult."

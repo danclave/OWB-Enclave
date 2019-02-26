@@ -31,7 +31,10 @@ ideas = {
 				purist
 			}
 			visible = {
-				NOT = { has_country_flag = purists_purged }
+				NOT = { 
+					has_country_flag = purists_purged 
+					has_completed_focus = enc_purge_scientists
+				}
 			}
 			ai_will_do = {
 				factor = 1
@@ -259,7 +262,7 @@ ideas = {
 		}
 
 		army_chief_loyalist = {
-			cost = 250			
+			cost = 100			
 			picture = generic_army_europe_3
 			
 			allowed = {
@@ -290,7 +293,7 @@ ideas = {
 		enc_people_air_loyalist = {
 			
 			picture = generic_army_europe_2
-			
+			cost = 100
 			allowed = {
 				original_tag = ERB
 			}			
@@ -320,7 +323,8 @@ ideas = {
 
 	navy_chief = {
 		navy_chief_loyalist = {		
-			picture = generic_army_europe_2			
+			picture = generic_army_europe_2
+			cost = 100
 			allowed = {
 				original_tag = ERB
 			}			

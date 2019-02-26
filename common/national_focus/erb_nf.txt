@@ -121,8 +121,15 @@ focus_tree = {
 				limit = {
 					has_completed_focus = enc_purity
 				}				
-				set_country_flag = reformers_purged
+				set_country_flag = reformers_purged			
 				custom_effect_tooltip = reformers_purged_tt
+				every_army_leader = {
+					limit = {
+						has_trait = enc_reformer
+					}
+					custom_effect_tooltip = are_purged
+					hidden_effect = { retire = yes }
+				}
 			}
 		}
  }
@@ -244,6 +251,7 @@ focus_tree = {
 		}
 		cost = 4.3
 		completion_reward = {
+			custom_effect_tooltip = benjamin_curling_purged
 			clr_country_flag = enc_demoted_scientists
 			remove_ideas = ENC_scientists_traitors_2
 			add_manpower = -300
@@ -272,6 +280,13 @@ focus_tree = {
 		}
 		cost = 4.3
 		completion_reward = {
+			every_army_leader = {
+				limit = {
+					has_trait = enc_purist
+				}
+				custom_effect_tooltip = are_purged
+				hidden_effect = { retire = yes }
+			}
 			clr_country_flag = enc_demoted_officers
 			remove_ideas = ENC_officers_traitors_2
 			add_manpower = -300
@@ -957,6 +972,14 @@ focus = {#RADIO - Red Menace
 						ruling_only = yes 
 						name = "Security Chief Wallace"
 					}
+					and = {
+						ERB = { has_completed_focus = enc_accept_ghouls }
+						has_country_leader = {
+							id = 911
+							ruling_only = yes
+							name = "Festus"
+						}
+					}
 				}
 				exists = yes
 			}
@@ -1121,16 +1144,9 @@ focus = {#RADIO - Red Menace
 		x = 0
 		y = 1
 		ai_will_do = { factor = 1 }
-		prerequisite = { 
-			focus = enc_rebuild_the_power_grid
-			
-		}
 		prerequisite = {  }
 		relative_position_id = enc_rebuild_the_power_grid
-		available = {
-			has_stability > 0.70
-		}
-		cost = 5.8  
+		cost = 1.45
 		completion_reward = {
 			country_event = { id = enc_reformers.77 } 
 		}
@@ -1143,15 +1159,6 @@ focus = {#RADIO - Red Menace
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_the_mutant_question
 		mutually_exclusive = { focus = enc_segregation }
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = half_legitimacy		
-				check_variable = {
-					var = legitimacy
-					value > 0.499
-				}
-			}
-		}
 		x = 3
 		y = 1
 		prerequisite = { 
@@ -1159,20 +1166,23 @@ focus = {#RADIO - Red Menace
 		}
 		cost = 5.8 
 		completion_reward = {
-			add_ideas = {
-				ENC_begun_integration
-			}
-			hidden_effect = { set_country_flag = enc_wastelander_integration }
-			if = {
-				limit = {
-					has_country_flag = enc_promised_no_integration				
+			effect_tooltip = {
+				if = {
+					limit = {
+						has_country_flag = enc_promised_no_integration				
+					}
+					custom_effect_tooltip = enc_promised_no_integration_broken
+					add_popularity = { ideology = intellectuals popularity = -0.05 } 
+					add_stability = -0.15
+					add_war_support = -0.15
+					clr_country_flag = enc_promised_no_integration
 				}
-				custom_effect_tooltip = enc_promised_no_integration_broken
-				add_popularity = { ideology = intellectuals popularity = -0.05 } 
-				add_stability = -0.15
-				add_war_support = -0.15
-				clr_country_flag = enc_promised_no_integration
+				add_ideas = {
+					ENC_begun_integration
+				}
 			}
+			hidden_effect = { set_country_flag = enc_wastelander_integration }	
+			
 		}
 	}
 
@@ -1184,6 +1194,16 @@ focus = {#RADIO - Red Menace
 		relative_position_id = enc_expand_human_definition
 		x = -2
 		y = 1
+		available = {
+			has_stability > 0.50 
+			custom_trigger_tooltip = {
+				tooltip = half_legitimacy		
+				check_variable = {
+					var = legitimacy
+					value > 0.499
+				}
+			}
+		}
 		cost = 5.8
 		completion_reward = {
 			set_temp_variable = {
@@ -1205,6 +1225,16 @@ focus = {#RADIO - Red Menace
 		x = 2
 		y = 0
 		cost = 5.8
+		available = {
+			has_stability > 0.50
+			custom_trigger_tooltip = {
+				tooltip = half_legitimacy		
+				check_variable = {
+					var = legitimacy
+					value > 0.499
+				}
+			}
+		}
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
@@ -1226,6 +1256,16 @@ focus = {#RADIO - Red Menace
 		x = 2
 		y = 0
 		cost = 5.8
+		available = {
+			has_stability > 0.50
+			custom_trigger_tooltip = {
+				tooltip = half_legitimacy		
+				check_variable = {
+					var = legitimacy
+					value > 0.499
+				}
+			}
+		}
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
@@ -1249,6 +1289,15 @@ focus = {#RADIO - Red Menace
 		x = 0
 		y = 1
 		cost = 5.8
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = 75_legitimacy		
+				check_variable = {
+					var = legitimacy
+					value > 0.749
+				}
+			}
+		}
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
@@ -1384,21 +1433,23 @@ focus = {#RADIO - Red Menace
 		}
 		cost = 5.8 
 		completion_reward = {
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = -0.05
-			} 
-			change_legitimacy = yes
-			
-			if = { # promised no integration
-				limit = {
-					has_country_flag = enc_promised_no_integration				
-				}
-				custom_effect_tooltip = enc_promised_no_integration_kept
-				add_popularity = { ideology = intellectuals popularity = 0.03 } 
-				add_stability = 0.05
-				clr_country_flag = enc_promised_no_integration
-			}			
+			effect_tooltip = { # effect is actually applied by event
+				set_temp_variable = {
+					var = legitimacy_change_var
+					value = -0.05
+				} 
+				change_legitimacy = yes
+				
+				if = { # promised no integration
+					limit = {
+						has_country_flag = enc_promised_no_integration				
+					}
+					custom_effect_tooltip = enc_promised_no_integration_kept
+					add_popularity = { ideology = intellectuals popularity = 0.03 } 
+					add_stability = 0.05
+					clr_country_flag = enc_promised_no_integration
+				}			
+			}
 		}
 	}
 
@@ -1567,7 +1618,7 @@ focus = {#RADIO - Red Menace
 		cost = 5.8
 		completion_reward = {
 			add_ideas = {
-				ENC_slave_labour
+				ENC_emergency_labour_draft
 			}
 		}
 	}
@@ -1585,6 +1636,7 @@ focus = {#RADIO - Red Menace
 			NOT = {has_completed_focus = enc_a_nation_reborn }
 		}
 		completion_reward = {
+			set_country_flag = enc_requisitioned_resources
 			if = {
 				limit = {
 					has_full_control_of_state = 253 # shady sands
@@ -1821,7 +1873,10 @@ focus = {#RADIO - Red Menace
 		prerequisite = { focus = enc_rebuilding_a_nation }
 		x = -6
 		y = 1
-		cost = 5.8  
+		cost = 5.8 
+		available = {
+			has_completed_focus = enc_the_mutant_question
+		}
 		completion_reward = {
 			country_event = { id = enc_reformers.70 }
 		}			
@@ -1902,9 +1957,9 @@ focus = {#RADIO - Red Menace
 		relative_position_id = enc_the_fate_of_our_democracy
 		prerequisite = { focus = enc_the_fate_of_our_democracy }
 		mutually_exclusive = { focus = enc_extend_presidential_powers_reform }
-		available = { 
-			NOT = {has_completed_focus = enc_suspend_elections }
-			}
+		available = {
+			has_completed_focus = enc_expand_human_definition
+		}
 		x = 1
 		y = 1
 		cost = 7.2
@@ -2133,6 +2188,9 @@ focus = {#RADIO - Red Menace
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_rebuilding_a_nation
 		prerequisite = { focus = enc_rebuilding_a_nation }
+		available = {
+			has_completed_focus = enc_the_mutant_question
+		}		
 		x = 6
 		y = 1
 		cost = 5.8   
@@ -2147,6 +2205,9 @@ focus = {#RADIO - Red Menace
 		relative_position_id = enc_law_and_order
 		prerequisite = { focus = enc_law_and_order }
 		mutually_exclusive = { focus = enc_order }
+		available = {
+			has_completed_focus = enc_expand_human_definition
+		}
 		x = -1
 		y = 1
 		cost = 7.2
@@ -3416,6 +3477,8 @@ focus = {#Legion Border
 			focus = enc_american_dream
 		}
 		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
 			NCR = {
 				custom_effect_tooltip = relations_increased_20
 			}
@@ -3433,7 +3496,7 @@ focus = {#Legion Border
 					remove_opinion_modifier = { target = ERB modifier = genocidal_maniacs }
 					ERB = { remove_opinion_modifier = { target = PREV modifier = dirty_muties }}
 				}
-			}	
+			}
 			# if you pormised no peace with the NCR
 			if = {
 				limit = {
@@ -3484,17 +3547,22 @@ focus = {#Legion Border
 			}
 		}		
 		completion_reward = {
-			NCR = {add_opinion_modifier = { target = ERB modifier = intriguedDistrust }}
-			NCR = {remove_opinion_modifier = { target = ERB modifier = wontShootOnsight }}
-			add_opinion_modifier = { target = NCR modifier = intriguedDistrust }
-			remove_opinion_modifier = { target = NCR modifier = wontShootOnsight }
 			country_event = { id = enc_reformers.131}
 			set_cosmetic_tag = ERB_nevada
 			custom_effect_tooltip = new_reclaimnevada_tt
-			hidden_effect = {
+			NCR = { custom_effect_tooltip = relations_increased_30 }
+			hidden_effect = {			
+				NCR = {
+					add_opinion_modifier = { target = ERB modifier = intriguedDistrust }
+					remove_opinion_modifier = { target = ERB modifier = wontShootOnsight }
+				}
+				add_opinion_modifier = { target = NCR modifier = intriguedDistrust }
+				remove_opinion_modifier = { target = NCR modifier = wontShootOnsight }
+				
 				every_country = {
-				remove_opinion_modifier = { target = ERB modifier = genocidal_maniacs }
+					remove_opinion_modifier = { target = ERB modifier = genocidal_maniacs }
 					ERB = { remove_opinion_modifier = { target = PREV modifier = dirty_muties }}
+					remove_opinion_modifier = { target = ERB modifier = bitterEnemies }
 				}
 				add_state_core = 426
 				add_state_core = 126
@@ -5243,7 +5311,7 @@ focus = {#Legion Border
 				uses = 1
 				category = land_doctrine
 			}
-			add_ideas = limited_conscription
+			add_ideas = enclave_military
 			division_template = { name = "Enclave Troops" regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } } }
 		}
 	}

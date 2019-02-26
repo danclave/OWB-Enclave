@@ -41,12 +41,12 @@ leader_traits = {
 	}	
 	reformer = {
 		random = no
-		intellectuals_drift = 0.1
+		intellectuals_drift = 0.20
 		war_support_factor = -0.05
 	}
 	reformer_2 = {
 		random = no
-		intellectuals_drift = 0.30
+		intellectuals_drift = 0.40
 		war_support_weekly = -0.005
 	}
 	drill_sargeant = {
@@ -96,6 +96,7 @@ leader_traits = {
 		random = no
 		monthly_population = 0.05
 		stability_factor = 0.10
+		consumer_goods_factor = 0.05
 	}
 	genius_pacifist = {
 		random = no
@@ -159,7 +160,7 @@ leader_traits = {
 		random = no
 		stability_factor = 0.05
 		air_close_air_support_attack_factor = -0.05
-		intellectuals_drift = 0.1
+		intellectuals_drift = 0.30
 	}
 	enc_air_chief_cas = {
 		random = no
@@ -170,13 +171,16 @@ leader_traits = {
 	
 	enc_army_chief_loyalist = {
 		random = no
-		army_morale_factor = -0.05
+		stability_factor = 0.05
+		army_morale_factor = -0.03
 		army_attack_factor = -0.05
-		intellectuals_drift = 0.10
+		intellectuals_drift = 0.30
 	}
 	enc_navy_chief_loyalist = {
 		random = no
-		intellectuals_drift = 0.10	
+		intellectuals_drift = 0.30	
+		stability_factor = 0.05
+		naval_coordination = -0.05
 	}
 	enc_wounded_trait = {
 		random = no
@@ -190,4 +194,5 @@ leader_traits = {
 		stability_factor = -0.05
 		war_support_factor = -0.05
 	}
+
 }
