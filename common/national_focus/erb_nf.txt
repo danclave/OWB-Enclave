@@ -658,7 +658,7 @@ focus = {#RADIO - Red Menace
 		relative_position_id = enc_radio
 		x = 0
 		y = 1
-		prerequisite = { focus = enc_radior } 
+		prerequisite = { focus = enc_radio } 
 		completion_reward = {
 			add_political_power = 150
 			add_stability = 0.05
@@ -1143,6 +1143,10 @@ focus = {#RADIO - Red Menace
 		prerequisite = {  }
 		relative_position_id = enc_rebuild_the_power_grid
 		cost = 1.45
+		available = {
+			has_completed_focus = enc_reform
+			has_completed_focus = enc_purge_opposition
+		}
 		completion_reward = {
 			country_event = { id = enc_reformers.77 } 
 		}
