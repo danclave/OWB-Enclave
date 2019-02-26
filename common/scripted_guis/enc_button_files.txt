@@ -72,6 +72,7 @@ scripted_gui = {
 			is_controlled_by = ROOT
 			ROOT =  {
 				has_completed_focus = enc_reno_police
+				has_completed_focus = enc_rebuild_the_power_grid
 			}
 			NOT = { 
 				is_core_of = FROM
