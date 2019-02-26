@@ -20,7 +20,7 @@ scripted_gui = {
 		}		
 		effects = {  
 			connect_to_power_click = {
-				sound_effect = ERB_electric
+				hidden_effect = { sound_effect = ERB_electric }
 				set_state_flag = needs_civilian_power_grid
 				add_core_of = root
 			}
@@ -57,10 +57,20 @@ scripted_gui = {
 			}
 		}
 	}
-	install_police_force = {
-	
-		context_type = selected_state_context
-		
+	connected_to_power = {	
+		context_type = selected_state_context		
+		window_name = "connected_to_power_container"		
+		parent_window_token = selected_state_view
+		allowed = {
+			tag = ERB		
+		}
+		visible = {
+			is_core_of = ROOT
+			has_state_flag = needs_civilian_power_grid 
+		}
+	}
+	install_police_force = {	
+		context_type = selected_state_context		
 		window_name = "install_police_force_container"
 		parent_window_token = selected_state_view
 		
@@ -82,13 +92,18 @@ scripted_gui = {
 				building = civilian_power_grid
 				size < 1
 				include_locked  = no
+			}			
+			free_building_slots = {
+				building = industrial_complex
+				size > 19
+				include_locked  = yes
 			}
 		}
 		
 		effects = {
 			install_police_force_click = {   
-				sound_effect = ERB_police
 				hidden_effect = {
+					sound_effect = ERB_police
 					ROOT = { 
 						add_manpower = -100
 					}
