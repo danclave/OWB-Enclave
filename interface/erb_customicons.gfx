@@ -1175,4 +1175,8 @@ spriteTypes = {
             name = "GFX_idea_verti_production"
  		    texturefile = "gfx/interface/ideas/verti_production.dds"
  	    }    
+		SpriteType = {#enc_nuke
+            name = "GFX_america_nuke"
+ 		    texturefile = "gfx/interface/goals/america_nuke.dds"
+ 	    }  
 }

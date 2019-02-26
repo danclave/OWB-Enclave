@@ -2746,10 +2746,7 @@ country_event = {#101 Axis of Evil
 					type = annex_everything
 			} }
 
-	hidden_effect = {
-			country_event = { id = enc_reformers.102 days = 30 }		
-		}
-}
+	}
 }
 
 
@@ -3360,6 +3357,7 @@ country_event = {#115 Axis of Evil
 	trigger = {	
 		tag = ERB 
 		is_neighbor_of = CES
+		has_completed_focus = enc_rebuilding_a_nation
 		NOT = {
 			country_exists = NCR
 		}
@@ -3453,7 +3451,10 @@ country_event = {#119 NCR
 	option = {# Yuck Yuck!
 		name = enc_reformers.119.b
 		custom_effect_tooltip = enc_reformers.118.b.tt	
-		trigger = { has_country_flag = leader_charismatic }
+		trigger = { 
+			has_country_flag = leader_charismatic
+			NOT = { has_completed_focus = enc_segregation}
+		}
 		set_country_flag = erb_hayes_unlocked_flag
 		set_country_flag = enc_compassionate_california
 		add_stability = 0.05		
@@ -4123,7 +4124,7 @@ country_event = {#139 Mutants
 		}
 	option = {#	Yayy
 			name = enc_reformers.139.b
-			add_manpower = -200
+			add_manpower = -20
 			235 = { add_manpower = -4000 
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = {
@@ -4362,7 +4363,7 @@ country_event = {#151 New Canaan
 			}
 	option = {#	Yayy
 			name = enc_reformers.151.b
-			add_manpower = -2000
+			add_manpower = -1000
 			
 			}
 	option = {#	Yayy
@@ -4610,26 +4611,8 @@ country_event = {#160 - The Divide
 	desc = enc_reformers.160.d
 	picture = GFX_event_enc_divide1
 	fire_only_once = yes
-	is_triggered_only = no
-	trigger = {
-		NOT = { country_exists = NCR }
-		has_completed_focus = enc_reform 
-		OR = { 
-			is_neighbor_of = HOP
-			is_neighbor_of = ASH
-			}
-		}
-	mean_time_to_happen = { days = 3 }
+	is_triggered_only = yes
 	option = {#	Cool
-		name = enc_reformers.160.a
-		create_wargoal = {
-			type = annex_everything
-			target = ASH
-		}
-		create_wargoal = {
-			type = annex_everything
-			target = HOP
-		}
 		set_country_flag = border_divide
 	}
 }		
@@ -4713,12 +4696,17 @@ country_event = {#163 - The Lonesome Road
 	mean_time_to_happen = { days = 3 }
 	option = {#	
 		name = enc_reformers.163.a
+		trigger = {has_completed_focus = enc_silence_congress_reform }
 		set_country_flag = enc_nuke_legion
 		}
 	option = {#	
 		name = enc_reformers.163.b
 		custom_effect_tooltip = enc_reformers.163.b.tt	
-		}	
+		}
+	option = {#	
+		name = enc_reformers.163.c
+		custom_effect_tooltip = enc_reformers.163.c.tt	
+		}			
 }		
 	
 country_event = {#164 - Nuke Flagstaff
@@ -4744,7 +4732,7 @@ country_event = {#164 - Nuke Flagstaff
 		}
 	}				
 	
-country_event = {#165 - Didn't Nuke Flagstaff
+news_event = {#165 - Didn't Nuke Flagstaff
 	id = enc_reformers.165
 	title = enc_reformers.165.t
 	desc = enc_reformers.165.d
@@ -4837,21 +4825,21 @@ country_event = { #169 - Utah Plague
 		}
 	option = { # Damn it
 		name = enc_reformers.169.a
-		NCN = { add_ideas = ENC_plague
+		NCN = { add_ideas = CES_plague
 			}
-		UIN = { add_ideas = ENC_plague
+		UIN = { add_ideas = CES_plague
 			}
-		CRZ = { add_ideas = ENC_plague
+		CRZ = { add_ideas = CES_plague
 			}		
-		TAR = { add_ideas = ENC_plague
+		TAR = { add_ideas = CES_plague
 			}
-		SOR = { add_ideas = ENC_plague
+		SOR = { add_ideas = CES_plague
 			}
-		CRZ = { add_ideas = ENC_plague
+		CRZ = { add_ideas = CES_plague
 			}
-		LON = { add_ideas = ENC_plague
+		LON = { add_ideas = CES_plague
 			}
-		MUR = { add_ideas = ENC_plague
+		MUR = { add_ideas = CES_plague
 			}	
 		}
 	}
@@ -4866,6 +4854,7 @@ news_event = { #170 - Dark Age
 		NOT = { country_exists = NCR }
 		owns_state = 253
 		owns_state = 135
+		owns_state = 63
 		num_of_controlled_states > 40
 	}	
 	immediate = {	
@@ -4982,6 +4971,7 @@ country_event = { #176- Californian Resistance
 		NOT = {
 			has_completed_focus = enc_bos_soldiers
 		}
+		has_completed_focus = enc_rebuilding_a_nation 
 	}
 	mean_time_to_happen = {
 		days = 100
@@ -5161,7 +5151,7 @@ country_event = { #181 - Courts Enjoin Requisitions
 		}   		
     }	
 	
-country_event = { #182 - Court Enjoins Slave Labor
+country_event = { #182 - Court Enjoins Labor Draft
     id = enc_reformers.182
     title = enc_reformers.182.t
     desc = enc_reformers.182.d
@@ -5666,8 +5656,8 @@ country_event = {#197 - War with Caesar and FEV
 		add_stability = 0.05
 		CES = {add_stability = -0.05 }
 		if = {
-			limit = { has_idea = ENC_plague }
-			remove_ideas = ENC_plague }
+			limit = { has_idea = CES_plague }
+			remove_ideas = CES_plague }
 			
 	}
 }
@@ -5679,12 +5669,13 @@ country_event = {#198 - War with Caesar and FEV No Vaccine
 	desc = enc_reformers.198.d				
 	trigger = { 
 		tag = ERB 
+		has_completed_focus = enc_rebuilding_a_nation
 		NOT = { has_completed_focus = enc_vacinations }
 		has_war_with = CES }
-	mean_time_to_happen = {	days = 30 }
+			mean_time_to_happen = {	days = 30 }
 	option = {#  Sucker
 		name = enc_reformers.198.a
-		add_ideas = ENC_plague
+		add_ideas = CES_plague
 		custom_effect_tooltip = enc_reformers.198.a.tt			
 		}
 }
@@ -5721,7 +5712,7 @@ country_event = {#200 -Police
 				value = -0.05
 			}
 			change_legitimacy = yes
-			add_manpower = 2000
+			add_manpower = 500
 			swap_ideas = {
 				remove_idea = ENC_reno_police
 				add_idea = ENC_reno_police_corrupt
@@ -5835,6 +5826,442 @@ country_event = {#201-Nation Remade
 		name = enc_reformers.201.a
 	}
 }
+
+news_event = { #202 - Overextended Legion
+	id = enc_reformers.202
+	title = enc_reformers.202.t
+	desc = enc_reformers.202.d
+	picture = GFX_event_enc_bloody_NCR
+	fire_only_once = YES
+	trigger = {
+		NOT = { country_exists = NCR }
+		OR = { 
+			CES = { owns_state = 253 }
+			CES = { owns_state = 253 }
+			CES = { owns_state = 301 }
+			}
+		tag = ERB
+		not = {has_completed_focus = enc_rebuilding_a_nation }
+			}	
+	mean_time_to_happen = {
+		days = 10
+	}
+	option = { # Lol Cucks
+		name = enc_reformers.202.a
+		CES = { add_ideas = enc_NCR__ces_resistance } 
+		create_wargoal = {
+			type = annex_everything
+			target = CES
+			}
+		set_country_flag = ces_occupies_california	
+		hidden_effect = { country_event = { id = enc_reformers.203 days = 500 } }			
+		}
+}
+news_event = { #204 - The Divide
+	id = enc_reformers.204
+	title = enc_reformers.204.t
+	desc = enc_reformers.204.d
+	picture = GFX_event_enc_legion_nuke
+	fire_only_once = YES
+		is_triggered_only = yes
+	option = { # Owned
+		name = enc_reformers.204.a
+		every_state = {
+			limit = { 
+				is_owned_by = CES 
+				OR = {
+					is_core_of = NCR
+					is_core_of = DES
+					is_core_of = VIP
+					is_core_of = JAC
+					is_core_of = JAC
+					is_core_of = SCR
+					}	
+				}
+			ERB = {transfer_state = PREV } 		
+			}	
+		CES = { remove_ideas = enc_NCR__ces_resistance } 
+		ERB = {
+				white_peace = {
+					tag = CES
+				}
+				set_truce = {
+					target = CES
+					days = 356
+				}
+			}
+		}
+}
+
+country_event = {#205 - The Lonesome Road II
+	id = enc_reformers.205
+	title = enc_reformers.205.t
+	desc = enc_reformers.205.d
+	picture = GFX_event_CES_camp_1
+	fire_only_once = yes
+	is_triggered_only = no
+		trigger = {	
+			ERB = { has_war_with = CES }
+			has_completed_focus = enc_reform
+			has_country_flag = enc_nukes_armed
+			not = {has_country_flag = enc_nuke_legion }
+			surrender_progress > 0.3 	
+		}
+	mean_time_to_happen = { days = 3 }
+	option = {#	
+		name = enc_reformers.163.a
+		set_country_flag = enc_nuke_legion
+	}
+	option = {#	
+		name = enc_reformers.163.b
+		custom_effect_tooltip = enc_reformers.163.b.tt	
+	}
+}			
+	
+country_event = { #206 - Court Enjoins Labor Draft
+    id = enc_reformers.206
+    title = enc_reformers.206.t
+    desc = enc_reformers.206.d
+    picture = GFX_event_Shrine_to_Lincoln
+    fire_only_once = YES
+   trigger = {
+		has_completed_focus = enc_judicial_branch
+		OR = {
+			has_idea = ENC_slave_labour
+			has_idea = ENC_servitude
+		}
+	}	
+	mean_time_to_happen = {	days = 60}  
+    option = { # STOP
+        name = enc_reformers.206.a
+		add_stability = -0.15
+		remove_ideas = ENC_slave_labour
+		remove_ideas = ENC_servitude
+	}
+	option = { # STOP
+        name = enc_reformers.206.b
+		complete_national_focus = enc_order
+		# modify legitimacy
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.20
+		}
+		change_legitimacy = yes
+	}   		
+}
+
+country_event = { #207 - Corrupt Vegas
+   id = enc_reformers.207
+   title = enc_reformers.207.t
+   desc = enc_reformers.207.d
+   picture = GFX_event_VEG_strip
+   fire_only_once = YES
+   trigger = {
+		has_completed_focus = enc_rebuilding_a_nation
+		OR = {
+			owns_state = 211
+			VEG = {is_puppet_of = ERB }
+		}
+	}		
+	mean_time_to_happen = {	days = 360}  
+    option = { # STOP
+        name = enc_reformers.207.a
+		add_ideas = threefamilies2
+		add_political_power = -100
+		}
+	option = { # STOP
+        name = enc_reformers.207.b
+		custom_effect_tooltip = enc_reformers.207.b.tt
+		trigger = { has_completed_focus = enc_out_with_the_old }
+		add_stability = 0.05
+	}
+	option = { # STOP
+        name = enc_reformers.207.c
+		custom_effect_tooltip = enc_reformers.207.c.tt
+		trigger = { has_completed_focus = enc_amnesty_for_service }
+		add_ideas = threefamilies2
+		add_political_power = 100
+	}
+	option = { # STOP
+        name = enc_reformers.207.e
+		custom_effect_tooltip = enc_reformers.207.e.tt
+		trigger = { has_completed_focus = enc_judicial_branch  }
+		add_ideas = threefamilies2
+		# modify legitimacy
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = 0.05
+		}
+		change_legitimacy = yes
+	}
+}
+country_event = {#208- Reno 911
+	id = enc_reformers.208
+	title = enc_reformers.208.t
+	desc = enc_reformers.208.d
+	picture = event_enc_new_reno2
+	fire_only_once = yes	
+    trigger = { 
+			OR = {
+				has_completed_focus = enc_amnesty_for_service
+				has_completed_focus = enc_out_with_the_old
+			}
+	}
+	mean_time_to_happen = { days = 600 }
+	option = {# Amnesty
+		name = enc_reformers.208.a
+		 trigger = { has_completed_focus = enc_amnesty_for_service }
+		 add_equipment_to_stockpile = {
+                type = energy_equipment_2
+                amount = 100
+                producer = USA
+				}
+		}
+	option = {#  Clean Trash
+		name = enc_reformers.200.b
+		trigger = { has_completed_focus = enc_out_with_the_old }
+		add_political_power = 100
+		}
+}
+country_event = {
+	id = enc_reformers.209
+	title = enc_reformers.209.t
+	desc = enc_reformers.209.d
+	picture = GFX_report_event_generic_ruins
+
+	is_triggered_only = yes
+	
+	option = {
+		name = enc_reformers.209.a #okay
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				arms_factory > 0
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 0.6
+			}
+		}
+	}
+}
+
+#Bandit sabotage - civilian factory sabotaged
+country_event = {
+	id = enc_reformers.210
+	title = enc_reformers.210.t
+	desc = enc_reformers.210.d
+	picture = GFX_report_event_generic_ruins
+
+	is_triggered_only = yes
+	
+	option = {
+		name = enc_reformers.210.a #okay
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				arms_factory > 0
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.6
+			}
+		}
+	}
+}
+
+#Bandit sabotage - bridge blown
+country_event = {
+	id = enc_reformers.211
+	title = enc_reformers.211.t
+	desc = enc_reformers.211.d	
+	picture = GFX_report_event_generic_train
+
+	is_triggered_only = yes
+	
+	option = {
+		name = enc_reformers.211.a #okay
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				arms_factory > 0
+			}
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+		}
+	}
+}
+		
+	
+country_event = { #212 Education
+    id = enc_reformers.212
+    title = enc_reformers.212.t
+    desc = enc_reformers.212.d
+    picture = GFX_event_enc_4th_july
+    fire_only_once = YES
+	is_triggered_only = YES
+	option = { # STOP
+        name = enc_reformers.212.a
+		add_war_support = 0.05
+		add_stability = 0.05
+		set_country_flag = enc_ghouls_know
+		country_event = { id = enc_reformers.214 }
+	}
+	option = { # STOP
+        name = enc_reformers.212.b
+		add_political_power = 150
+		add_stability = -0.05
+		country_event = { id = enc_reformers.214}
+	}   		
+}
+
+country_event = {#213 - Ghouls
+	id = enc_reformers.213
+	title = enc_reformers.213.t
+	desc = enc_reformers.213.d
+	picture =  GFX_event_enc_4th_july
+	
+	fire_only_once = yes	
+	trigger = {	has_country_flag = enc_ghouls_know }	
+	mean_time_to_happen = {	days = 500 }
+	
+	option = {#OH WELL
+		name = enc_reformers.213.a
+		add_stability = -0.10
+		add_war_support = -0.10
+	}
+	option = {#Commie
+		name = enc_reformers.213.b
+		# modify legitimacy
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.05
+		}
+		change_legitimacy = yes
+		}
+	option = {#Commie
+		name = enc_reformers.213.c
+		# modify legitimacy
+		add_stability = 0.05
+		add_war_support = 0.05
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.05
+		}
+		change_legitimacy = yes
+		custom_effect_tooltip = enc_reformers.213.c.tt
+		}	
+}
+country_event = { #214 Enclave Education
+    id = enc_reformers.214
+    title = enc_reformers.214.t
+    desc = enc_reformers.214.d
+    picture =  GFX_event_enc_oil_rig
+    fire_only_once = YES
+	is_triggered_only = YES
+	option = { # STOP
+        name = enc_reformers.214.a
+		add_political_power = 25
+		
+	}
+	option = { # STOP
+        name = enc_reformers.214.b
+		add_stability = -0.25
+		add_war_support = -0.25
+	}   		
+}
+
+country_event = {#215 - Red Menace
+	id = enc_reformers.215
+	title = enc_reformers.215.t
+	desc = enc_reformers.215.d
+	picture =  GFX_event_CES_vulpes
+	
+	fire_only_once = yes	
+	trigger = {	has_completed_focus = enc_red_menace }	
+	mean_time_to_happen = {	days = 500 }
+	
+	option = {#OH WELL
+		name = enc_reformers.215.a
+		CES = { add_political_power = 25 }
+	}
+}
+
+country_event = {#216 - Deathclaws
+	id = enc_reformers.216
+	title = enc_reformers.216.t
+	desc = enc_reformers.216.d
+	picture =  GFX_event_ENC_deathclaw 
+	
+	fire_only_once = yes	
+	trigger = {	has_completed_focus = enc_epa }	
+	mean_time_to_happen = {	days = 180 }
+	option = {#OH WELL
+		name = enc_reformers.216.a
+		add_political_power = 50
+	}
+	option = {#OH WELL
+		name = enc_reformers.216.b
+		add_stability = 0.02
+	}
+}
+country_event = {#217 - Counterfeiting
+	id = enc_reformers.217
+	title = enc_reformers.217.t
+	desc = enc_reformers.217.d
+	picture =  GFX_event_enc_currency 
+	
+	fire_only_once = NO
+	trigger = {	
+		has_completed_focus = enc_rebuilding_a_nation 
+		NOT = {has_completed_focus = enc_federal_reserve }
+		NOT = {has_idea = enc_counterfeiting}
+	}	
+	mean_time_to_happen = {	days = 50 }
+	option = {#OH WELL
+		name = enc_reformers.217.a
+		add_timed_idea = { idea = enc_counterfeiting  days = 50 }
+		trigger = { NOT = { has_completed_focus = enc_amnesty_for_service} }
+	}
+	option = {#OH WELL
+		name = enc_reformers.216.a
+		add_timed_idea = { idea = enc_counterfeiting  days = 100 }
+		trigger = { has_completed_focus = enc_amnesty_for_service }
+	}
+	
+}
+country_event = { #218 - Our New Capital
+	id = enc_reformers.218
+	title = enc_reformers.218.t
+	desc = enc_reformers.218.d
+	picture = GFX_event_ARR_arroyo
+	fire_only_once = NO
+	trigger = {	
+		OR = {
+			has_completed_focus = enc_a_nation_reborn
+			has_completed_focus = enc_a_nation_remade
+			}
+		548 = { is_owned_by = ERB }	
+		}	
+	mean_time_to_happen = {	days = 50 }
+	is_triggered_only = yes	
+	option = { # Yea
+		name = enc_reformers.218.a
+		set_capital =  253
+		}
+	option = { # Yea
+		name = enc_reformers.218.b
+		set_capital = 548
+		}	
+	option = { # Only Correct Choice
+		name = enc_reformers.218.c
+		hidden_effect = { sound_effect = ERB_us_anthem }
+		custom_effect_tooltip = enc_reformers.218.a.tt
+		}		
+	}
+	
 
 # Protest chain
 
@@ -6250,3 +6677,4 @@ country_event = {#304 - State protests turns into riot!
 # GFX_event_ENC_door # GFX_event_ENC_double_flag # GFX_event_ENC_double_flag_long # GFX_event_ENC_mariposa1 # GFX_event_ENC_mariposa2 # GFX_event_ENC_mariposa3 # GFX_event_ENC_minigun 
 # GFX_event_ENC_new_reno # GFX_event_ENC_picture # GFX_event_ENC_plasma_pistol # GFX_event_ENC_plasma_rifle # GFX_event_ENC_president_only # GFX_event_ENC_rebuilding # GFX_event_ENC_ruined_city # GFX_event_ENC_secret 
 # GFX_event_ENC_secret2 # GFX_event_ENC_secret3 # GFX_event_ENC_single_soldier
+

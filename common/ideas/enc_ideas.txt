@@ -34,6 +34,26 @@ ideas = {
 			}
 			
 		}
+		enc_counterfeiting = {
+
+			picture = chi_hyper_inflation
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+
 		ENC_vaults = {
 			picture = vault_open_bonus
 			allowed = {
@@ -733,7 +753,6 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				conscription_factor = -0.05
-				political_power_gain = 0.05
 				enemy_partisan_effect = -0.1
 			}
 		}
@@ -1283,6 +1302,34 @@ ideas = {
 				army_morale_factor = -0.10
 				mobilization_speed = -0.60
 				non_core_manpower = -0.10
+			}
+		}
+		enc_NCR__ces_resistance = {
+			picture = chi_war_of_resistance3
+			allowed = { 
+				always = no
+			}
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.25
+				supply_consumption_factor = 0.25
+				army_morale_factor = -0.10
+				mobilization_speed = -0.60
+				non_core_manpower = -0.10
+				industry_repair_factor	= -0.25
+				stability_factor= -0.20
+				consumer_goods_factor = 0.10
+				industry_free_repair_factor = -0.75
+				stability_weekly = -0.005
+				offensive_war_stability_factor	= -0.20
+				research_time_factor = 0.05
+				consumer_goods_factor = 0.20
+				army_org_factor = -0.30
+				army_attack_factor = -0.30
+				army_defence_factor = -0.30
 			}
 		}
 		enc_NCR_resistance2 = {
@@ -1842,9 +1889,9 @@ ideas = {
 					allowed_civil_war = { always = yes } 
 					removal_cost = -1
 					modifier = {
-					   army_attack_factor = 0.1
-					   army_org_factor = 0.1
-					   army_speed_factor = 0.10	
+					   army_attack_factor = 0.03
+					   army_org_factor = 0.04
+					   army_speed_factor = 0.04	
 					}
 				}
 		enc_advanced_training = {  
@@ -1853,11 +1900,11 @@ ideas = {
 					allowed_civil_war = { always = yes } 
 					removal_cost = -1
 					modifier = {
-						conscription_factor = -0.02
-						army_morale_factor = 0.1
+						conscription_factor = -0.05
+						army_morale_factor = 0.05
 						army_org_Factor = 0.10
 						planning_speed = -0.05
-						army_attack_factor = 0.10
+						army_attack_factor = 0.025
 						
 					}
 				}
@@ -1867,13 +1914,13 @@ ideas = {
 					allowed_civil_war = { always = yes } 
 					removal_cost = -1
 					modifier = {
-						army_attack_factor = 0.10
-						army_artillery_attack_factor = 0.15
-						army_artillery_defence_factor = 0.15
+						army_attack_factor = 0.05
+						army_artillery_attack_factor = 0.05
+						army_artillery_defence_factor = 0.05
 						conscription_factor = 0.02
 						army_morale_factor = 0.1
 						planning_speed = 0.05
-						army_speed_factor = 0.10
+						army_speed_factor = 0.06
 						
 					}
 				}
@@ -2169,6 +2216,27 @@ ideas = {
 			modifier = {
 				stability_factor = -0.3
 				MONTHLY_POPULATION = -0.90
+				attrition = 1
+				army_org_factor = -0.3
+				army_attack_factor = -0.3
+				army_defence_factor = -0.3
+				}
+		}
+		CES_plague = {  
+			picture = ENG_the_war_to_end_all_wars
+			allowed = { 
+				always = no
+            }
+			cancel = { 
+				NOT = { country_exists = ERB } 
+			}
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				stability_factor = -0.3
+				MONTHLY_POPULATION = -5
 				attrition = 1
 				army_org_factor = -0.3
 				army_attack_factor = -0.3

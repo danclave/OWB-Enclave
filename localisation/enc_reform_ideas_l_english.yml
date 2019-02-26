@@ -3,6 +3,7 @@
 ###################################
 # REFORM IDEAS
 ###################################
+enc_counterfeiting: "Counterfeiting"
 ENC_reform_officers: "Chiefs of Staff"
 ENC_reform_general_staff: "The Pentagon Reborn"
 enc_NCR_resistance: "Californian Resistance"
@@ -74,6 +75,10 @@ ENC_infighting_2: "Civil War"
 ENC_Dept_Energy:  "Department of Energy" 
 ENC_ncr_enclave_propaganda: "Enclave Propaganda"
 ENC_electrification:  "Rural Electrification"
+CES_plague: "The Utah Plague"
+CES_plague_desc: "Enclave defectors helped Caesar create a modified form of FEV.  Jerks."
+enc_NCR__ces_resistance: "Legion Overextension"
+enc_NCR__ces_resistance_desc: "Although the Legion rapidly seized much of New Calfiornia, it has yet to develop the ability to rule it"
 
 ENC_legitimacy_none: "No Legitimacy"
 ENC_legitimacy_none_desc: "(0-25% legitimacy)\nDespite their claims, the Enclave is seen as little more than dangerous mad men claiming to be a goverment few remember and fewer want. "

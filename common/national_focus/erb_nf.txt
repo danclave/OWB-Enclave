@@ -470,7 +470,6 @@ focus_tree = {
 				value = -0.05
 			}
 			change_legitimacy = yes
-			add_manpower = 2000
 			swap_ideas = {
 				remove_idea = ENC_reno_police
 				add_idea = ENC_reno_police_corrupt
@@ -655,6 +654,22 @@ focus_tree = {
 		}
 		cost = 4.3
 	}
+	
+focus = {#RADIO - Red Menace
+		id = enc_red_menace
+		icon = GFX_goal_enc_threat_of_communism
+		ai_will_do = { factor = 1 } 
+		relative_position_id = enc_radio
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_radior } 
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.05
+		country_event = { id = enc_reformers.88 } 	
+		}
+		cost = 4.3
+	}	
 	focus = {#RADIO - Enclave military Radio
 		id = enc_radio_military
 		icon = GFX_goal_enc_radio_military
@@ -663,7 +678,6 @@ focus_tree = {
 		x = -2
 		y = 1
 		prerequisite = { focus = enc_radio } 
-		mutually_exclusive = { focus = enc_radio_civilian } 
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = ENC_radio
@@ -724,7 +738,6 @@ focus_tree = {
 		x = 2
 		y = 1
 		prerequisite = { focus = enc_radio } 
-		mutually_exclusive = { focus = enc_radio_military } 
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = ENC_radio
@@ -743,11 +756,9 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = enc_radio_civilian } 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = ENC_radio_civilian
-				add_idea = ENC_radio_civilian_old
+			remove_ideas = ENC_radio_civilian
+			add_timed_idea = { idea =  ENC_radio_civilian_old days = 600 }
 			}
-		}
 		cost = 4.3
 	}
 	focus = {#RADIO - New World Tunes
@@ -1690,6 +1701,8 @@ focus_tree = {
 		cost = 5.8
 		completion_reward = {
 			add_ideas = ENC_dept_education
+			country_event = { id = enc_reformers.212 } 
+			
 		}
 	}
 	focus = {#REBUILDING - Military Education
@@ -1877,7 +1890,7 @@ focus_tree = {
 		mutually_exclusive = { focus = enc_local_elections }
 		x = -1
 		y = 1
-		cost = 2.9
+		cost = 4.5
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
@@ -1897,7 +1910,7 @@ focus_tree = {
 		prerequisite = { focus = enc_extend_presidential_powers_reform }
 		x = 0
 		y = 1
-		cost = 2.9
+		cost = 4.5
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
@@ -1918,7 +1931,7 @@ focus_tree = {
 			}
 		x = 0
 		y = 1
-		cost = 5.8
+		cost = 4.5
 		completion_reward = {
 			add_stability = -0.05
 			set_country_flag = legitimacy_disabled
@@ -1949,7 +1962,7 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
-		cost = 5.8
+		cost = 7.2
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
@@ -1967,7 +1980,7 @@ focus_tree = {
 		prerequisite = { focus = enc_local_elections }
 		x = 0
 		y = 1
-		cost = 5.8
+		cost = 7.2
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
@@ -1975,6 +1988,7 @@ focus_tree = {
 			}
 			change_legitimacy = yes
 			remove_ideas = enc_NCR_instability
+			add_stability = 0.10
 		}		
 	}
 	focus = {#REBUILDING - presidential elections
@@ -1988,7 +2002,7 @@ focus_tree = {
 			}
 		x = 0
 		y = 1
-		cost = 5.8
+		cost = 7.2
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
@@ -2196,7 +2210,7 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
-		cost = 2.9
+		cost = 7.2
 		completion_reward = {
 			add_stability = 0.10
 		}
@@ -2209,7 +2223,7 @@ focus_tree = {
 		prerequisite = { focus = enc_law }
 		x = 0
 		y = 1
-		cost = 2.9
+		cost = 7.2
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = enc_NCR_power_struggle
@@ -2228,7 +2242,7 @@ focus_tree = {
 			}
 		x = 0
 		y = 1
-		cost = 5.8
+		cost = 7.2
 		completion_reward = {
 		remove_ideas = enc_NCR_power_struggle2
 		add_stability = 0.10
@@ -2254,7 +2268,7 @@ focus_tree = {
 		mutually_exclusive = { focus = enc_law }
 		x = 1
 		y = 1
-		cost = 5.8
+		cost = 4.5
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = enc_NCR_power_struggle
@@ -2271,7 +2285,7 @@ focus_tree = {
 		prerequisite = { focus = enc_order }
 		x = 0
 		y = 1
-		cost = 5.8
+		cost = 4.5
 		completion_reward = {
 			remove_ideas = enc_NCR_power_struggle2
 			}		
@@ -2288,7 +2302,7 @@ focus_tree = {
 				}
 		x = 0
 		y = 1
-		cost = 5.8
+		cost = 4.5
 		completion_reward = {
 		add_ideas = enc_martial_law_idea	
 		if = {
@@ -2669,6 +2683,31 @@ focus = {#REBorN - rebuilding america
 			country_event = { id = enc_reformers.201 }
 		}
 	}
+	focus = {#Reuniting States
+		id = enc_nuclear_option
+		icon = GFX_america_nuke
+		ai_will_do = { factor = 1 }
+		relative_position_id =  enc_a_nation_remade
+		prerequisite = { 
+			focus = enc_a_nation_remade
+			focus = enc_a_nation_reborn}
+		x = -1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			custom_effect_tooltip = enc_nuclear_option_tt
+			create_wargoal = {
+			type = annex_everything
+			target = ASH
+			}
+		create_wargoal = {
+			type = annex_everything
+			target = HOP
+			}
+		country_event = { id = enc_reformers.160 } 	
+		}
+	}
+	
 	####################################
 	# REUNITING THE STATES
 	####################################
@@ -3503,7 +3542,7 @@ focus = {#Legion Border
 				tooltip = 25_legitimacy		
 				check_variable = {
 					var = legitimacy
-					value > 0.299
+					value > 0.249
 				}
 			}
 		}		
@@ -4768,6 +4807,7 @@ focus = {#Legion Border
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_military_equipment}
 		prerequisite = {focus = enc_wartime_draft}
+		available = {has_army_experience > 30 }
 		mutually_exclusive = { focus = enc_advanced_training }
 		relative_position_id = enc_wartime_draft
 		x = 0
@@ -4794,6 +4834,7 @@ focus = {#Legion Border
 		mutually_exclusive = { focus = enc_disciplined_soldiers }
 		icon = GFX_goal_enc_laser_weapons_reform
 		ai_will_do = { factor = 1 }
+		available = {has_army_experience > 30 }
 		prerequisite = {focus = enc_military_equipment}
 		prerequisite = {focus = enc_wartime_draft}
 		relative_position_id = enc_military_equipment
@@ -4818,7 +4859,7 @@ focus = {#Legion Border
 	focus = {#Military - the new american army
 		id = enc_new_american_army
 		icon = GFX_goal_NEW_new_world_old_ideas
-	
+		available = {has_army_experience > 70 }	
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_power_armor_integration
 						focus = enc_rank_and_file_infantry }
@@ -4838,6 +4879,7 @@ focus = {#Legion Border
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_department_of_defense
 		prerequisite = { focus = enc_department_of_defense }
+		available = {has_army_experience > 55 }
 		x = 5
 		y = 1
 		cost = 5.8
@@ -4900,6 +4942,7 @@ focus = {#Legion Border
 			focus = enc_officers_by_loyalty_and_devotion
 			focus = enc_officers_by_merit_and_skill
 		}
+		available = {has_army_experience > 80 }
 		relative_position_id = enc_officers_by_merit_and_skill
 		x = 1
 		y = 1
