@@ -2915,7 +2915,12 @@ country_event = {#107 Nuka Cola
 		trigger = { has_country_flag = enc_drugs }
 		add_ideas = enc_nuka_cola
 		clr_country_flag = enc_drugs 
-		custom_effect_tooltip = enc_reformers.107.a.tt	
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.03
+		}
+		change_legitimacy = yes
+		custom_effect_tooltip = enc_reformers.107.a.tt
 	}
 	option = {#	Flavorful
 		name = enc_reformers.107.b
