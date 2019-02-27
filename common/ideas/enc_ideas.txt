@@ -430,7 +430,7 @@ ideas = {
 			}
 		}
 		enc_nuka_cola = {  
-			picture = SOV_scientist_defect
+			picture = enc_nuka_cola
 			allowed = { 
 				always = no
             }
@@ -440,8 +440,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
-				
+				consumer_goods_factor = -0.05				
 			}
 		}
 		
@@ -2472,7 +2471,7 @@ ideas = {
 				}
 		}
 		Enc_Construction_nuka = {
-			picture = generic_exploit_mines
+			picture = enc_nuka_cola
 			modifier = {
 					production_speed_infrastructure_factor = -0.10
 					production_speed_buildings_factor = -0.05

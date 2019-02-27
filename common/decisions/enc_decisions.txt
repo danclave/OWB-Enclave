@@ -1803,7 +1803,7 @@ ENC_vault_city_university = {
 			original_tag = ERB
 			has_completed_focus = enc_vlt_power_reform
 		}
-		complete_effect = {
+		remove_effect = {
 			country_event = {
 				id = enc_reformers.107
 			}
@@ -2069,6 +2069,9 @@ ENC_american_broadcasts = {
 		}
 		days_remove = 20
 		days_re_enable = 30
+		complete_effect = {
+			hidden_effect = { sound_effect = ERB_stripes_and_stars }
+		}
 	}
 	ENC_raise_stability = {
 		cost = 75
@@ -3915,10 +3918,8 @@ ENC_debug = {
 				limit = {
 					has_trait = enc_purist
 				}
-				hidden_effect = {
-					retire = yes
-				}
 				custom_effect_tooltip = are_purged
+				retire = yes
 			}
 		}
 	}

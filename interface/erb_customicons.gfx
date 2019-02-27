@@ -943,6 +943,10 @@ spriteTypes = {
             name = "GFX_idea_enc_jingoism"
  		    texturefile = "gfx/interface/ideas/enc_jingoism.dds"
  	    } 
+        SpriteType = {#enc_nuka_cola
+            name = "GFX_idea_enc_nuka_cola"
+ 		    texturefile = "gfx/interface/ideas/enc_nuka_cola.dds"
+ 	    } 
         SpriteType = {#boris_t
             name = "GFX_idea_boris_t"
  		    texturefile = "gfx/interface/ideas/boris_t.dds"

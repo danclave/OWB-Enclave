@@ -558,7 +558,7 @@ enc_reformers.106.a:  "It's the American Dream!"
 enc_reformers.107.t: "Nuka Cola"
 enc_reformers.107.d: "Crisp.  Cool.  Refreshing.  Somehow viable after 200 years and a nuclear war.  With control of some of the greatest chemical industries in the Wastes, we can revive Nuka Cola production and sell it as a nonperishable luxury good.  Each drink will even come with a free bottle-cap!"
 enc_reformers.107.a:  "Add some jet to bring customers back"
-enc_reformers.107.a.tt: "Available because you chose to support the chem trade, you monster"
+enc_reformers.107.a.tt: "\nAvailable because you chose to support the chem trade, you monster."
 enc_reformers.107.b:  "That fizz tastes like freedom!"
 ################################################################################################################
 enc_reformers.108.t: "The Fall of Hoover Dam"
