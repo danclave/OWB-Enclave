@@ -2862,9 +2862,9 @@ ideas = {
 			traits = { enclave_tesla_equipment_manufacturer }
 		}
 	}
-}
 
-# GFX_idea_boris_t
+}
+	# GFX_idea_boris_t
 # GFX_idea_enc_education
 # GFX_idea_enc_ew_production
 # GFX_idea_enc_idea_eyebots

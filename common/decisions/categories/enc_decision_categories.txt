@@ -5,6 +5,7 @@
 enc_executive_orders = {
 	icon = generic_political_actions
 	allowed = { tag = ERB }
+	priority = 2
 }
 ENC_shifts = {
 	icon = category_enc_shift

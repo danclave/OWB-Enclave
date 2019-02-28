@@ -1346,17 +1346,19 @@ country_event = {#46 - Enclave revealed
 		custom_effect_tooltip = enc_reformers.46.a.tt
 	}
 }
-country_event = {#47 - NCR falls
+
+news_event = {#47 - NCR falls
 	id = enc_reformers.47
 	title = enc_reformers.47.t
 	desc = enc_reformers.47.d
 	picture = GFX_event_enc_endNCR # todo
-	fire_only_once = yes	
+	fire_only_once = no	
 	is_triggered_only = yes
 	option = { # Other countries white peace
 		name = enc_reformers.47.a
 		add_stability = -0.20
-		custom_effect_tooltip = breaklines
+		add_war_support =  -0.20
+		custom_effect_tooltip = newline
 		NCR = {		
 			dismantle_faction = yes
 		}
@@ -1372,6 +1374,15 @@ country_event = {#47 - NCR falls
 				tag = ERB
 			}
 		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_war_with = VEG
+				}
+				country_event = { id = enc_reformers.58 }
+			}
+		}
+		
 	}
 }
 country_event = {#48 - The Fate of the Gun runners
@@ -1614,7 +1625,7 @@ country_event = {#56 - Reno attacks
 	}
 }
 
-country_event = {#56 - Purist commander
+country_event = {#57 - Purist commander
 	id = enc_reformers.57
 	title = enc_reformers.57.t
 	desc = enc_reformers.57.d
@@ -1708,24 +1719,24 @@ country_event = {#56 - Purist commander
 }
 
 # unused numbers
-news_event = {
-	id = enc_reformers.57
-	picture = GFX_news_event_generic_sign_treaty2
 
-	major = no
-	hidden = no
 
-	is_triggered_only = yes # Optional : if set to "yes" the event will only occur by command
-	fire_only_once = no # Optional : if set to "yes" the event will never occur more than once
-
-	option = { # This is an example of an option that has no function
-		name = enc_reformers.57.a # The localisable text that appears on the button.
+country_event = { #58 - House sues for peace
+    id = enc_reformers.58
+    title = enc_reformers.58.t
+    desc = enc_reformers.58.d
+    picture = GFX_event_VEG_strip
+    is_triggered_only = yes
+    option = { # Fine
+        name = enc_reformers.58.a
+		white_peace = {	tag = VEG }
 	}
-	option = { # This is an example of an option that has no function
-		name = enc_reformers.57.a # The localisable text that appears on the button.
-	}
+	option = { # Denied
+        name = enc_reformers.58.b
+		add_war_support = -0.05
+	}   		
 }
-
+#
 country_event = {#60 - From the Top Down
 	id = enc_reformers.60
 	title = enc_reformers.60.t
@@ -2861,6 +2872,7 @@ country_event = {#105 Brahmin Barons
 	picture = GFX_event_generic_caravan
 	fire_only_once = yes
 	is_triggered_only = no
+	mean_time_to_happen = {	days = 15 }
 	trigger = {
 		tag = ERB
 		141 = { is_owned_by = ERB }
@@ -4867,15 +4879,16 @@ news_event = { #170 - Dark Age
 	immediate = {	
 		hidden_effect = { sound_effect = ERB_us_anthem_sad1 } # oh say, can you see?
 	}
-	mean_time_to_happen = {
-		days = 10
-	}
 	option = { # Damn it
 		name = enc_reformers.170.a
-		add_ideas = enc_NCR_resistance
-		add_ideas = enc_NCR_instability
-		add_ideas = enc_NCR_power_struggle		
-		add_ideas = enc_disorganized_army
+		add_war_support = -0.50
+		add_ideas = { 
+			enc_NCR_resistance 
+			enc_NCR_instability 
+			enc_NCR_power_struggle 
+			enc_disorganized_army 
+			enc_collapsed_economy 
+		}
 		set_country_flag = enc_mid_game
 	}
 }
