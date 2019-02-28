@@ -1986,7 +1986,7 @@ country_event = {#70 - The Democracy Question
 	}
 	option = {# Democracy
 		name = enc_reformers.70.b
-		complete_national_focus = enc_local_elections
+		complete_national_focus = enc_empower_congress
 	}
 }
 
@@ -2634,6 +2634,7 @@ country_event = {#99 Area 51
 	picture = GFX_event_enc_recon_craft_theta
 	fire_only_once = yes
 	is_triggered_only = no
+	mean_time_to_happen = {	days = 1000 }
 	trigger = {
 		tag = ERB
 		389 = {
@@ -2645,7 +2646,6 @@ country_event = {#99 Area 51
 		set_technology = {
 			plasma_weaponry = 1
 		}
-		add_ideas = ENC_energy_production
 	}
 }
 
@@ -4820,11 +4820,11 @@ country_event = { #169 - Utah Plague
 	trigger = {
 		NCN = { has_war_with = CES }
 		NOT = { country_exists = NCR }
-		}
-		tag = ERB
+		tag = ERB	
+	}
 	mean_time_to_happen = {
 		days = 8
-		}
+	}
 	option = { # Damn it
 		name = enc_reformers.169.a
 		NCN = { add_ideas = CES_plague
@@ -5151,7 +5151,19 @@ country_event = { #181 - Courts Enjoin Requisitions
 		}
 		change_legitimacy = yes
 		}   		
-    }	
+    option = { # STOP
+        name = enc_reformers.181.c
+		trigger = { has_completed_focus = enc_segregation }
+		custom_effect_tooltip = enc_reformers.181.c.tt
+		# modify legitimacy
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.05
+		}
+		change_legitimacy = yes
+		add_popularity = { ideology = intellectuals popularity = 0.05 } 
+		}   		
+    }		
 	
 country_event = { #182 - Court Enjoins Labor Draft
     id = enc_reformers.182
@@ -5170,6 +5182,7 @@ country_event = { #182 - Court Enjoins Labor Draft
         name = enc_reformers.182.a
 		add_stability = -0.15
 		remove_ideas = ENC_slave_labour
+		remove_ideas = ENC_servitude
 		}
 	option = { # STOP
         name = enc_reformers.182.b
@@ -5244,12 +5257,26 @@ country_event = { #183 - Press Covers Requisitions
 			value = -0.20
 		}
 		change_legitimacy = yes
-		}
+	}
 	  option = { # STOP
         name = enc_reformers.183.c
-		add_stability = -0.20 }	
+		add_stability = -0.10 
+	}
+	option = { # STOP
+        name = enc_reformers.183.e
+		trigger = { has_completed_focus = enc_segregation }
+		custom_effect_tooltip = enc_reformers.181.c.tt
+		# modify legitimacy
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.05
+		}
+		change_legitimacy = yes
+		add_popularity = { ideology = intellectuals popularity = 0.05 } 
+		set_country_flag = enc_stop_requisition
+	}   			
    		
-    }	
+}	
 	
 country_event = { #184 - Slave Labor Press Scandal
     id = enc_reformers.184
@@ -5260,6 +5287,7 @@ country_event = { #184 - Slave Labor Press Scandal
     trigger = {
 		has_completed_focus =  enc_emergency_labour_draft 
 		has_idea = ENC_free_press
+		NOT = { has_completed_focus = enc_segregation }
 			}		
 	mean_time_to_happen = {
 		days = 60
@@ -5268,6 +5296,7 @@ country_event = { #184 - Slave Labor Press Scandal
         name = enc_reformers.184.a
 		add_stability = -0.10
 		remove_ideas = ENC_slave_labour
+		remove_ideas = ENC_servitude
 		}
 	option = { # STOP
         name = enc_reformers.184.b
@@ -5928,10 +5957,12 @@ country_event = { #206 - Court Enjoins Labor Draft
     fire_only_once = YES
    trigger = {
 		has_completed_focus = enc_judicial_branch
+		NOT = {has_completed_focus = enc_segregation }
 		OR = {
 			has_idea = ENC_slave_labour
 			has_idea = ENC_servitude
 		}
+		NOT = {has_completed_focus = emergency_labour_draft } 
 	}	
 	mean_time_to_happen = {	days = 60}  
     option = { # STOP
@@ -6160,9 +6191,12 @@ country_event = {#213 - Ghouls
 		}
 		change_legitimacy = yes
 	}
-	option = {#Commie
+	option = {#Feral
 		name = enc_reformers.213.c
 		# modify legitimacy
+		trigger = {
+			NOT = {has_completed_focus = enc_accept_ghouls } 
+		}
 		add_stability = 0.05
 		add_war_support = 0.05
 		set_temp_variable  = {
@@ -6238,7 +6272,7 @@ country_event = {#217 - Counterfeiting
 		NOT = {has_completed_focus = enc_federal_reserve }
 		NOT = {has_idea = enc_counterfeiting}
 	}	
-	mean_time_to_happen = {	days = 50 }
+	mean_time_to_happen = {	days = 180 }
 	option = {#OH WELL
 		name = enc_reformers.217.a
 		add_timed_idea = { idea = enc_counterfeiting  days = 50 }
@@ -6280,9 +6314,152 @@ country_event = { #218 - Our New Capital
 		custom_effect_tooltip = enc_reformers.218.a.tt
 		}		
 	}
+country_event = {#219 House or Senate
+	id = enc_reformers.219
+	title = enc_reformers.219.t
+	desc = enc_reformers.219.d
+	picture = GFX_event_enc_washington_monument
+	fire_only_once = yes	
+	is_triggered_only = yes	
+	option = {# Representative Congress
+		name = enc_reformers.219.a
+		custom_effect_tooltip = enc_reformers.219.a.tt
+	}
+	option = {# Advice and Consent
+		name = enc_reformers.219.b
+		trigger = { NOT = { has_completed_focus = enc_expand_human_definition } }
+		set_country_flag = segregate_senate
+		custom_effect_tooltip = enc_reformers.219.b.tt
+	}
+}	
+country_event = { #220- Congressional Criticism of Requisitions
+    id = enc_reformers.220
+    title = enc_reformers.220.t
+    desc = {
+        text = enc_reformers.220.d.segregation
+        trigger = {has_completed_focus = enc_segregation }
+	}
+	 desc = {
+        text = enc_reformers.220.d.integration
+        trigger = {has_completed_focus = enc_expand_human_definition }
+	}
+    picture = GFX_event_ENC_double_flag_long
+    fire_only_once = YES
+    trigger = {
+		has_completed_focus = enc_requisition_of_resources
+		has_completed_focus = enc_empower_congress
+			}		
+	mean_time_to_happen = {
+		days =100
+	}  
+    option = { # No big
+        name = enc_reformers.220.a
+		add_stability = -0.05
+		trigger = {has_completed_focus = enc_segregation }
+		custom_effect_tooltip = enc_reformers.220.a.tt
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.05
+		}
+    }
+	option = { # Democracy doesn't like corruption
+        name = enc_reformers.220.b
+		trigger = {has_completed_focus = enc_expand_human_definition }
+		stability = -0.25
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.20
+		}
+		change_legitimacy = yes
+	}
+	option = { # Cancel program
+        name = enc_reformers.220.c
+		add_stability = -0.05
+		if = {
+				limit = {
+					has_full_control_of_state = 253 # shady sands
+				}
+				add_resource = {
+					type = metal
+					amount = -20
+					state = 135
+				}
+				add_resource = {
+					type = advanced_technology
+					amount = -15
+					state = 25
+				}
+			}
+		if = {
+				limit = {
+					has_full_control_of_state = 135 # sac city
+				}
+				add_resource = {
+					type = electronics
+					amount = -20
+					state = 153
+				}
+				add_resource = {
+					type = fuel
+					amount = -25
+					state = 135
+				}
+			}
+	}
+}
 	
+	
+country_event = { #221- Congressional Reaction to Labor Draft
+    id = enc_reformers.221
+    title = enc_reformers.221.t
+    desc = {
+        text = enc_reformers.221.d.segregation
+        trigger = {has_completed_focus = enc_segregation }
+	}
+	 desc = {
+        text = enc_reformers.221.d.integration
+        trigger = {has_completed_focus = enc_expand_human_definition }
+	}
+    picture = GFX_event_ENC_double_flag_long
+    fire_only_once = YES
+    trigger = {
+		has_completed_focus = enc_emergency_labour_draft 
+		has_completed_focus = enc_empower_congress
+		OR = {
+			has_idea = ENC_slave_labour
+			has_idea = ENC_servitude 
+			}
+		NOT = {has_country_flag = tolerate_slavery }
+	}		
+	mean_time_to_happen = {
+		days = 100
+	}  
+    option = { # No big
+        name = enc_reformers.221.a
+		add_stability = -0.05
+		trigger = {has_completed_focus = enc_segregation }
+		custom_effect_tooltip = enc_reformers.221.a.tt
+		set_country_flag = tolerate_slavery 
+	}
+	option = { # Democracy doesn't like corruption
+        name = enc_reformers.221.b
+		trigger = {has_completed_focus = enc_expand_human_definition }
+		add_stability = -0.15
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.10
+		}
+		change_legitimacy = yes
+	}
+	option = { # Cancel program
+        name = enc_reformers.221.c
+		add_stability = -0.10
+		remove_ideas = ENC_slave_labour
+		remove_ideas = ENC_servitude
+	}
+	
+}	
 
-# Protest chain
 
 country_event = {#300 - state protests!
 	id = enc_reformers.300

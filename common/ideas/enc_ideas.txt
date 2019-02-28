@@ -15,7 +15,21 @@ ideas = {
 					instant = yes
 				}
 				}			
-		} 
+		}
+	ENC_PA_production2= {
+			picture = enc_pa_production
+			allowed = { always = no }
+
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+			equipment_bonus = {
+				power_armor_equipment = { #enclave_power_armour_equipment_1
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			modifier = { conscription_factor = -0.03 }
+		} 		
 		ENC_energy_production = { 
 			picture = GFX_idea_enc_ew_production
 			allowed = { 
@@ -1049,6 +1063,23 @@ ideas = {
 				army_core_attack_factor = 0.10
 			}
 		}
+		ENC_national_healthcare = {
+			picture = enc_legitimacy_high
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				conscription_factor = 0.03
+				MONTHLY_POPULATION = -0.01
+				political_power_factor = 0.0
+				
+			}
+		}
 
 		ENC_accepted_ghouls = {
 			picture = generic_research_bonus
@@ -1233,9 +1264,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-			  army_morale_factor = 0.10
-			   army_org_Factor = 0.05
-			   political_power_gain = 0.05
+			  army_morale_factor = 0.07
+			  army_org_Factor = 0.07
+			  political_power_gain = 0.05
+			  conscription_factor = -0.25
 			}
 		}
 
@@ -1267,6 +1299,36 @@ ideas = {
 			modifier = {
 				stability_factor = 0.05
 				consumer_goods_factor = -0.05
+				attrition = -0.05
+			}
+		}
+		enc_luxurious = {  
+			picture = SOV_scientist_defect
+			allowed = { 
+				always = no
+			}
+
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				attrition = -0.05
+			}
+		}
+		enc_luxurious = {  
+			picture = SOV_scientist_defect
+			allowed = { 
+				always = no
+			}
+
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
 				attrition = -0.05
 			}
 		}

@@ -3235,20 +3235,21 @@ ENC_gannon_doctrine = {
 	erb_reunited_state = {
 		target_trigger = {
 			FROM = {
-					AND = { 
-						is_neighbor_of = ERB
-						has_idea = settler_nation
-						NOT = { has_country_flag = erb_couriers }
-						NOT = {tag = ARR}
-						is_in_faction = no	} 	
+					is_neighbor_of = ERB
+					has_idea = settler_nation
+					NOT = {tag = ARR}
+					is_in_faction = no	 	
 					}	
 				}
 	visible = {
 			if = {
 				has_completed_focus = enc_reform
-				FROM = { exists = yes }
+				FROM = { 
+					exists = yes 
+					NOT = { has_country_flag = erb_couriers }
 				}	
 			}
+	}		
 		available = {
 			NOT = {
 				FROM = { is_puppet_of = ERB }
@@ -3287,13 +3288,20 @@ ENC_gannon_doctrine = {
 		}		
 erb_incorporate_to_commonwealth = {
 		target_trigger = {
-			FROM = { has_country_flag = erb_couriers }	
-				}
+			FROM = { 
+				has_country_flag = erb_couriers
+				is_in_faction = no	 
+			}	
+		}
 	visible = {
 			if = {
 				has_completed_focus = enc_reform
 				}
-			FROM = { exists = yes }	
+			FROM = { exists = yes }
+			NOT = {
+				FROM = { is_puppet_of = ERB }
+				has_war_with = FROM
+				}				
 			}
 		available = {
 			NOT = {
@@ -3351,7 +3359,11 @@ good_tribal_handling = {
 			if = {
 				has_completed_focus = enc_reform
 				}
-			FROM = { exists = yes }			
+			FROM = { exists = yes 
+					NOT = { has_country_flag = erb_teachers }
+					NOT = { has_country_flag = erb_civilizing }
+					is_in_faction = no
+					}			
 			}
 		available = {
 			NOT = {
@@ -3370,14 +3382,19 @@ good_tribal_handling = {
 		}
 erb_good_reservations = {
 		target_trigger = {
-			FROM = { has_country_flag = erb_teachers }
+			FROM = { has_country_flag = erb_teachers 
 			NOT = { has_country_flag = erb_civilizing }			
 				}
+		}
 	visible = {
 			if = {
 				has_completed_focus = enc_reform
 				}
-			FROM = { exists = yes }
+			FROM = { 
+				exists = yes 
+				NOT = { has_country_flag = erb_civilizing }
+				is_in_faction = no				
+			}	
 			}
 		available = {
 			NOT = {

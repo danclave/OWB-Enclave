@@ -135,7 +135,7 @@ good_tribal_handling_desc: "The Followers of the Apocalypse carry the torch of k
 erb_good_reservations: "Pressure [From.GetNameDef] Economically"
 erb_good_reservations_desc: "With the aid of Follower influence, the [From.GetName] are adopting crop rotation, literacy, and the basics of civilization. Now we can persuade their elite to sell some of the land they don't need to hungry settlers from California and Nevada, and create favorable economic deals.  Everyone will benefit from this!"
 erb_tribals_become_civilized: "[From.GetNameDef] Rejoins Society"
-erb_tribals_become_civilized_desc: "Thanks to our support, the Tribals of [From.GetName], and the heady melting pot of peoples who are settlign alongside them, act no different than anyone else in the Wastes.  Although they may keep their tribal traditions alive, they know the joys of literacy, electricity, and taxes.  Now we can add them to the United States Postal Service!"
+erb_tribals_become_civilized_desc: "Thanks to our support, the Tribals of [From.GetName], and the heady melting pot of peoples who are settling alongside them, act no different than anyone else in the Wastes.  Although they may keep their tribal traditions alive, they know the joys of literacy, electricity, and taxes.  Now we can add them to the United States Postal Service!"
 erb_tribal_burden: "Develop the tribal lands of [From.GetName]"
 erb_tribal_burden_desc: "Look at the people of [From.GetName].  Their ancestors were regular Americans, but now they wallow in poverty and ignorance. Time to take up the Enclave's burden and bring them our peaceful ways... by force."
 erb_reunited_state_arroyo: "Send a Courier to Arroyo"

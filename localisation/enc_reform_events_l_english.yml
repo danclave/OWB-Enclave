@@ -943,6 +943,8 @@ enc_reformers.181.t: "The Supreme Court Enjoins Requisitions"
 enc_reformers.181.d: "In the groundbreaking case Crimson Caravan Co. v. The California Reconstruction Authority, the Supreme Court has affirmed the prewar principle that the government cannot confiscate private property without adequate compensation. This may hinder the government's plans for reconstruction, but has been hailed by the New World Party as a tremendous victory for the rights of every American."
 enc_reformers.181.a: "Wait, the Court can rule against the Government?"
 enc_reformers.181.b: "The Court has made its ruling, now let it enforce it"
+enc_reformers.181.c: "The Court's decision only applies to American citizens."
+enc_reformers.181.c.tt: "\nAvailable because you selected §YSegregation.\n§!"
 ##############################################################################################################
 enc_reformers.182.t: "Supreme Court Enjoins Mandatory Volunteers"
 enc_reformers.182.d: "'The Constitution makes it clear: Neither slavery nor involuntary servitude . . . shall exist within the United States, or any place subject to their jurisdiction.' In the groundbreaking case of Rose Cassidy v. The California Reconstruction Authority, the Supreme Court has affirmed that no American can be enslaved. This may hinder the government's plans for reconstruction, but has been hailed by the New World Party as a tremendous victory for the rights of every American."
@@ -954,6 +956,7 @@ enc_reformers.183.d: "The press has revealed some gross misconduct in connection
 enc_reformers.183.a: "If sunlight is the best disinfectant, why does it sting so much?"
 enc_reformers.183.b: "Oh, you doesn't need to cover this story"
 enc_reformers.183.c: "Ride out the criticism"
+enc_reformers.183.e: "Those Wastelanders didn't need the resources anyway"
 ##############################################################################################################
 enc_reformers.184.t: "Press Covers Mandatory Volunteers"
 enc_reformers.184.d: "To our great surprise, some meddling reporter has published a story regarding our mandatory volunteers, drafted from across California.  They've detailed numerous abuses, corruption, and the inevitable consequences of the power imbalances inherent in forced labor. The Progressive Party has called for protests through New California, and we have to decide what to do quickly."
@@ -983,7 +986,7 @@ enc_reformers.188.d: "A sniffle, a sneeze, a fever. Horrible, horrible bleeding.
 enc_reformers.188.tt.a: "\n§gI wonder if we can protect our own troops against it.§!"  
 enc_reformers.188.a: "Are our troops safe?"
 ##############################################################################################################
-enc_reformers.189.t: "Congressional Opposition Questions PropagandaDepartment"
+enc_reformers.189.t: "Congressional Opposition Questions Propaganda Department"
 enc_reformers.189.d: "Hayes and other members of the New World Party have shut down the government, refusing to fund its continued operation! They say that they will not support funding until we withdraw funding for the propaganda and censorship, claiming it threatens all our founders wanted. What shall we do?"
 enc_reformers.189.a: "I hate checks and balances"
 enc_reformers.189.a.tt: "\n§gCongress frustrates your plan for a department of propaganda.§!"
@@ -1110,7 +1113,7 @@ enc_reformers.213.d: "It turns out some ghouls remember the martial law, rationi
 enc_reformers.213.a: "Why don't we ever great a break?"
 enc_reformers.213.b: "This ghoul sounds a bit like a Communist."
 enc_reformers.213.c: "§RSounds like he's gone feral!§\n"
-enc_reformers.213.c.tt: "\n Available because you §YRejected Ghouls.§!"
+enc_reformers.213.c.tt: "\n Available because you have not §YAccepted Ghouls.§!"
 #############################################################################################################
 enc_reformers.214.t: "Enclave Education"
 enc_reformers.214.d: "We can also use public schooling to teach the world about the Enclave's noble goal of restoring America, a tale of how we shepherded our strength until we were ready to act.  Some idealists have suggested we air our dirty laundry about that time President Richardson tried to kill all mutants, but really, why bother?"
@@ -1136,6 +1139,29 @@ enc_reformers.218.a: "Shady Sands is the heart of the New America"
 enc_reformers.218.b: "Let's rule from the citadel at Navarro"
 enc_reformers.218.c: "New Reno will do until we free Washington"
 enc_reformers.218.a.tt: "\n Please rise for the §MNational Anthem§!, and we'll see you if they ever get to the east coast!"
+#############################################################################################################
+enc_reformers.219.t: "The New Congress"
+enc_reformers.219.d: "Although Granite has decided to restore democracy, there are still many who express concern about giving everyone a say in their government.  After all, look at the morass the NCR was! Vault City's mayor has suggested suffrage be granted only to Americans who can something like their old citizenship test, or those with a clean genetic history.  These wise citizens could select representatives who advise the President. \n\n Alternatively, we could adopt the old view of every man a vote!" 
+enc_reformers.219.a: "What part of democracy are you not getting?"
+enc_reformers.219.a.tt: "This is the best option for those who §YExpanded the Definition of Human§!"
+enc_reformers.219.b: "Let us form an advisory senate selected by the best Americans"
+enc_reformers.219.b.tt: "This is the best option for those who §Ysegregated America§!"
+#############################################################################################################
+enc_reformers.220.t: "Requisition Scandal Before Congress"
+enc_reformers.220.d.segregation: "An influential wastelander has asked the Senate to address concerns about the National Requisition Act. Although ordinarily the Senate's members would merely thank her for her contribution to the reconstruction effort, she has gained the influential ear of a senator and he has submitted a petition before Congress.  Apparently her caravan company was sabotaged by a rival, who persuaded a government officer to confiscate her assets and sell them to a United States citizen. Rather embarassing!"
+enc_reformers.220.d.integration: "Congress is rocked by a scandal.  Ms. Cassidy Rose of Vault City has appeared before Congress challenging the government's requisition of her caravan company's assets, claiming they've been granted to a rival caravan company.  A congressional inquiry has uncovered numerous other examples of cronyism, and the entire National Requisition Act is in doubt."
+enc_reformers.220.a: "How embarassing to learn our officials may be corrupt!"
+enc_reformers.220.a.tt: "Available because you selected §YSegregation§!"
+enc_reformers.220.b: "I can't believe government confiscations led to scandal!"
+enc_reformers.220.c: "Fine, cancel the program."
+#############################################################################################################
+enc_reformers.221.t: "Congressional Criticism of Forced Labor"
+enc_reformers.221.d.segregation: "A member of Dayglow's delegation to the Senate has criticized the deployment of mandatory volunteers to outlying districts.  He argues we would be better served cleaning Dayglow's parks than improving the roads connecting farflung settlements to the Reunited States' core. Further, he has complained that Shady Sands gets preferential bidding rights on labor contracts, and said the system should favor blind bids." 
+enc_reformers.221.d.integration: "Representative Hayes has stood before Congress, waving photos of widespread misconduct in our forced labor battalions. The photos show human rights violations you'd expect from the Legion, and he's entered into the Congressional Records stacks of letters from his constituents asking about missing loved ones.  It's not a good look, especially compared to his haircut."
+enc_reformers.221.a: "We promise we'll build Dayglow a nice park when Reconstruction ends"
+enc_reformers.221.a.tt: "Available because you selected §YSegregation§!"
+enc_reformers.221.b: "Oh crap, this is bad."
+enc_reformers.221.c: "Cancel the program!"
 ## START OF 300 ###
 #############################################################################################################
 enc_reformers.300.t: "Protests in [protesting_state.GetName]"
@@ -1178,6 +1204,7 @@ enc_reformers.304.t: "Protests turn into riots in [protesting_state.GetName]!"
 enc_reformers.304.d: "Protests have gotten out of hand and turned into riots."
 enc_reformers.304.a: "Let them blow off some steam."
 enc_reformers.304.b: "Send in the troops."
+
 
 
 
