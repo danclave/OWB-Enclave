@@ -3367,7 +3367,14 @@ option = {#	Marcus
 country_event = {#115 Axis of Evil
     id = enc_reformers.115
     title = enc_reformers.115.t
-    desc = enc_reformers.115.d
+	desc = {  # integration stance
+        text = enc_reformers.115.d
+        trigger = { has_completed_focus = enc_expand_human_definition }
+    }
+    desc = { # neutral stance
+        text = enc_reformers.115.d.seg
+        trigger = { not = { has_completed_focus = enc_expand_human_definition } }
+	}
     picture = GFX_event_CES_camp_1
     fire_only_once = yes    
     is_triggered_only = no
@@ -3381,13 +3388,13 @@ country_event = {#115 Axis of Evil
 	}
 	mean_time_to_happen = {	days = 3 }
     option = {# Bringit
-	name = enc_reformers.115.a
-	custom_effect_tooltip = enc_reformers.115.a.tt	
-	CES = {give_guarantee = WBH } 
-	WBH = { give_guarantee = CES } 
-	CES = { give_guarantee = EHT } 
-	set_country_flag = ENC_axis_evil
-		}
+		name = enc_reformers.115.a
+		custom_effect_tooltip = enc_reformers.115.a.tt	
+		CES = {give_guarantee = WBH } 
+		WBH = { give_guarantee = CES } 
+		CES = { give_guarantee = EHT } 
+		set_country_flag = ENC_axis_evil
+	}
 }
 country_event = {#117 Helios One
     id = enc_reformers.117

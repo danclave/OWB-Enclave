@@ -603,10 +603,12 @@ enc_reformers.114.f:  "We will Follow Arcade Gannon"
 enc_reformers.114.g:  "We elected a Courier from the Mojave Express?"
 enc_reformers.114.h:  "Marcus, the Mayor of Redding!"
 ################################################################################################################
+# todo segregation
 enc_reformers.115.t: "A World of Tyranny and Serfdom"
-enc_reformers.115.d: "With the liberation of California, America's cause seems brighter than it has in two hundred years.  But there are those opposed to the belief that all men are created equal.  Caesar and the Brotherhood, guided by unholy contempt for the human race, have formed an alliance against us.  They know that if left unchecked, the Reunited States will save this country.  And so they've asked for war."
+enc_reformers.115.d: "With the liberation of California, America's cause seems brighter than it has in two hundred years.  But there are those opposed to the belief that all men are created equal.  [CES.GetName] and the Brotherhood, guided by unholy contempt for the human race, have formed an alliance against us.  They know that if left unchecked, the Reunited States will save this country.  And so they've asked for war."
+enc_reformers.115.d.seg: "WWith the liberation of California, America's cause seems brighter than it has in two hundred years.  But there are those opposed the restoration of the United States. [CES.GetName] and the Washington Brotherhood, guided by unholy contempt for America, have formed an alliance against us.  They know that if left unchecked, the Reunited States will reclaim this country.  And so they've asked for war."
 enc_reformers.115.a:  "And they're going to get it."
-enc_reformers.115.a.tt: "The enemies of America have begun to gather against you.  They will prepare to solidify their alliance and move upon you!"
+enc_reformers.115.a.tt: "The enemies of America have begun to gather against you.  They will prepare to solidify their alliance and move upon you!\n\n"
 ################################################################################################################
 enc_reformers.117.t: "Helios One"
 enc_reformers.117.d: "Good morning from Enclave Radio, bringing you news from Helios One!  As the sun rises over the prewar solar plant, reflecting off the solar panels, one can see how much progress the President has brought.  Gone are the Brotherhood knights stripping it for parts, or the NCR's 'engineers' stumbling in the dark.  Enclave scientists work proudly to restore power to the Wastes, and the sun rises over a new day for America."
