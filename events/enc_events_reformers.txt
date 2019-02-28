@@ -2837,25 +2837,32 @@ country_event = {#104 - Followers of Apocolypse
 	
 	option = {# Capture Operations
 		name = enc_reformers.104.a
+		custom_effect_tooltip = enc_reformers.104.a.tt
 		add_war_support = 0.05
-		add_stability = -0.05
+		add_stability = 0.05
+		custom_effect_tooltip = enc_reformers.104.a.tt.warning
 	}
 	option = {# Legalization
 		name = enc_reformers.104.b
-		add_war_support = -0.05
-		add_stability = 0.05
+		custom_effect_tooltip = enc_reformers.104.b.tt
 		set_country_flag = enc_followers
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = 0.03
+		}
+		change_legitimacy = yes
+		add_war_support = -0.05
 	}
 	option = {# Heal The Sick
 		name = enc_reformers.104.c
-			trigger = { has_country_flag = enc_healers }
-			# modify legitimacy
-			set_temp_variable  = {
+		custom_effect_tooltip = enc_reformers.104.c.tt
+		# modify legitimacy
+		set_temp_variable  = {
 			var = legitimacy_change_var
 			value = 0.05
 		}
 		change_legitimacy = yes
-		custom_effect_tooltip = enc_reformers.104.c.tt	
+		add_war_support = -0.10
 		add_resource = { type = advanced_technology amount = -5 state = 285 }
 		add_resource = { type = electronics amount = -5 state = 285 }
 		clr_country_flag = enc_healers
@@ -4970,15 +4977,41 @@ country_event = { #175- Law and Order
     picture = GFX_event_enc_4th_july
     fire_only_once = YES
     is_triggered_only = yes    
-    option = { # STOP
+    option = { # law
         name = enc_reformers.175.a
-		complete_national_focus = enc_law 
-        }
-	option = { # STOP
-        name = enc_reformers.175.b
-		complete_national_focus = enc_order
-        }   		
+		complete_national_focus = enc_law
+		custom_effect_tooltip = newline
+		effect_tooltip = { # show focus result
+			add_stability = 0.10
+		}
     }
+	option = { # lawyers won't stop the legion
+        name = enc_reformers.175.b
+		trigger = {	country_exists = CES }
+		complete_national_focus = enc_order
+		custom_effect_tooltip = newline
+		effect_tooltip = { # show focus result
+			swap_ideas = {
+				remove_idea = enc_NCR_power_struggle
+				add_idea = enc_NCR_power_struggle2
+				}
+			remove_ideas = ENC_smuggling
+		}
+    }   
+	option = { # We need soldiers, not lawyers
+        name = enc_reformers.175.c
+		trigger = {	NOT = { country_exists = CES } }
+		complete_national_focus = enc_order
+		custom_effect_tooltip = newline
+		effect_tooltip = { # show focus result
+			swap_ideas = {
+				remove_idea = enc_NCR_power_struggle
+				add_idea = enc_NCR_power_struggle2
+				}
+			remove_ideas = ENC_smuggling
+		}
+    } 		
+}
 country_event = { #176- Californian Resistance
     id = enc_reformers.176
 	title = enc_reformers.176.t
