@@ -344,6 +344,11 @@ enc_reformers.57.e: "§MSpeak to him personally.§!"
 enc_reformers.57.e.tt: "§gDouglas always had a way with words, this wouldn't be the first purist hardliner he brought to his side.§!\n\n"
 enc_reformers.57.e.success: "§Y[purist_commander.GetName]§! loses §YPurist§!"
 enc_reformers.57.e.success2: "§Y[purist_commander.GetName]§! becomes §YReformer§!"
+################################################################################################################ -<
+enc_reformers.58.t: "[VEG.GetLeader] sues for peace"
+enc_reformers.58.d: "[VEG.GetLeader] is no fool. Without the support of the [NCR.GetName], the war has turned against [VEG.GetName]. A Securitron model with the image of a jovial cowboy glowing on his monitor has approached our borders with a white flag and an offer to let bygones be bygones. This could be a good opportunity, considering an invasion into [VEG.GetName] could be a costly affair."
+enc_reformers.58.a: "Water under the bridge!"
+enc_reformers.58.b: "Scrap the bot for spare parts and get ready to march the long 15."
 # free numbers
 ################################################################################################################ -<
 enc_reformers.60.t: "The Ides of March"
@@ -558,7 +563,7 @@ enc_reformers.106.a:  "It's the American Dream!"
 enc_reformers.107.t: "Nuka Cola"
 enc_reformers.107.d: "Crisp.  Cool.  Refreshing.  Somehow viable after 200 years and a nuclear war.  With control of some of the greatest chemical industries in the Wastes, we can revive Nuka Cola production and sell it as a nonperishable luxury good.  Each drink will even come with a free bottle-cap!"
 enc_reformers.107.a:  "Add some jet to bring customers back"
-enc_reformers.107.a.tt: "Available because you chose to support the chem trade, you monster"
+enc_reformers.107.a.tt: "\nAvailable because you chose to support the chem trade, you monster."
 enc_reformers.107.b:  "That fizz tastes like freedom!"
 ################################################################################################################
 enc_reformers.108.t: "The Fall of Hoover Dam"

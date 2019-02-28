@@ -14,8 +14,14 @@ scripted_gui = {
 					building = civilian_power_grid
 					size > 0
 					include_locked  = no
-				}			
+				}
 				civilian_power_grid > 0
+				# something to delete
+				industrial_complex > 0
+				arms_factory > 0
+				water_generator > 0
+				electricity_generator > 0
+				metal_generator > 0
 			}
 		}		
 		effects = {  
@@ -92,12 +98,13 @@ scripted_gui = {
 				building = civilian_power_grid
 				size < 1
 				include_locked  = no
-			}			
-			free_building_slots = {
-				building = industrial_complex
-				size > 19
-				include_locked  = yes
 			}
+			# Nothing to delete
+			industrial_complex < 1
+			arms_factory < 1
+			water_generator < 1
+			electricity_generator < 1
+			metal_generator < 1
 		}
 		
 		effects = {

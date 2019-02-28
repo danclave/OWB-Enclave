@@ -137,7 +137,7 @@ enc_rebuild_the_power_grid_tt: "Allows you to build §YCivilian Power Grid§!, c
 
 enc_debug_tt: "electricity: [?resource@electricity]"
 
-more_than_2_electricity: "More than 2 §YElecticity§! available (§Y[?ROOT.resource@electricity]§!)"
+more_than_2_electricity: "More than 2 §YElectricity§! available (§Y[?ROOT.resource@electricity]§!)"
 enc_seperate_but_equal:  "Service Guarantees Citizenship"
 enc_segregation_forever:  "Limit Military Service"
 enc_wastelander_draft:  "Unwilling Volunteers"
@@ -210,6 +210,7 @@ enc_service_by_requirement: "Service by Requirement"
 enc_all_adults_serve: "All Adults Serve"
 enc_scraping_the_barrel: "Scraping the Barrel"
 
+enc_collapsed_economy: "Collapsed Economy"
 ###################################
 # PEOPLE
 ###################################

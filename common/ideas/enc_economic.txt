@@ -1,0 +1,26 @@
+ideas = {
+	economy = { 
+		law = yes
+		enc_collapsed_economy = {
+			picture = enc_economy_collapsed
+			allowed = {
+				always = no
+			}
+			removal_cost = -1		
+			modifier = {
+				consumer_goods_factor = 0.40
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				generate_wargoal_tension = 1.00
+			}
+			
+			allowed_to_remove = {
+				has_stability > 0.30
+			}		
+			cancel_if_invalid = no
+		}
+	}
+
+}

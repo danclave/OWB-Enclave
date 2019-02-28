@@ -5319,6 +5319,7 @@ focus = {#NEVADA - second city
 		y = 1
 		cost = 5.8
 		completion_reward = {
+			add_stability = 0.05
 			add_ideas = ENC_home_defense
 		}
 	}	
@@ -5332,7 +5333,6 @@ focus = {#NEVADA - second city
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_stability = 0.05
 			add_ideas = ENC_national_guard
 		}
 	}	
@@ -5346,7 +5346,7 @@ focus = {#NEVADA - second city
 		y = 1
 		cost = 5.8
 		completion_reward = { 
-			add_stability = 0.10
+			add_stability = 0.05
 			add_tech_bonus = {
 				name = electronics_bonus
 				bonus = 0.5

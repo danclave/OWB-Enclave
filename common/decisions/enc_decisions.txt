@@ -3,7 +3,8 @@
 ###############################
 enc_executive_orders  = {
 	ENC_bandit_raids = {
-			icon = generic_civil_support
+			icon = generic_scorched_earth
+			priority = 101
 			available = {
 				NOT = { 
 					OR = {
@@ -42,8 +43,8 @@ enc_executive_orders  = {
 		}
 	ENC_pacificy_northern_border = {
 
-			icon = generic_oppression
-			
+			icon = infiltrate_state
+			priority = 100
 			activation = {
 				OR = {
 					has_idea = enc_NCR_power_struggle2
@@ -82,7 +83,7 @@ enc_executive_orders  = {
 			is_good = yes
 			complete_effect = {
 				activate_mission = ENC_maintain_northern_control
-				}
+			}
 		}
 	ENC_protect_coasts = {
 
@@ -111,42 +112,33 @@ enc_executive_orders  = {
 			}
 		}	
 	ENC_maintain_northern_control = {
-
-			icon = generic_civil_support
-
-			available = {
-				always = no
+		icon = infiltrate_state
+		available = {
+			always = no
+		}
+		days_mission_timeout = 180
+		activation = {
+			always = no #Triggered from effect
+		}
+		cancel_trigger = {
+			divisions_in_state = {
+				state = 141	
+				size < 6
 			}
-
-			days_mission_timeout = 180
-
-			activation = {
-				always = no #Triggered from effect
-			}
-
-			cancel_trigger = {
-				divisions_in_state = {
-					state = 141	
-					size < 6
-				}
-			}
-
-			highlight_states = {
-				state = 141
-			}
-
-			visible = {
-				
-			}
-
-			is_good = yes
-
-			timeout_effect = {
-				add_stability = 0.05
-				army_experience = 10
+		}
+		highlight_states = {
+			state = 141
+		}
+		visible = {
+			
+		}
+		is_good = yes
+		timeout_effect = {
+			add_stability = 0.05
+			army_experience = 10
 			set_country_flag = ERB_northern_raiders_cleared	
-			}
-		}	
+		}
+	}	
 	improved_worker_conditions = {
 
 			icon = generic_industry
@@ -184,127 +176,6 @@ enc_executive_orders  = {
 				}
 			}
 		}
-
-	infrastructure_building_slot1 = {
-
-			icon = generic_construction
-
-			allowed = {
-				always = yes
-			}
-
-			cost = 100
-			fire_only_once = no
-
-			days_re_enable = 30
-
-			available = {
-				any_state = {
-					NOT = { has_state_flag = infrastructure_building_slot_flag }
-					is_fully_controlled_by = ROOT
-					is_owned_by = ROOT
-					free_building_slots = {
-						building = infrastructure
-						size < 1
-					}
-				}
-			}
-
-			visible = {
-				any_state = {
-					NOT = { has_state_flag = infrastructure_building_slot_flag }
-					is_fully_controlled_by = ROOT
-					is_owned_by = ROOT
-					free_building_slots = {
-						building = infrastructure
-						size < 1
-					}
-				}
-			}
-
-			complete_effect = {
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						is_owned_by = ROOT
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-						free_building_slots = {
-							building = infrastructure
-							size < 1
-						}
-						NOT = { has_state_flag = infrastructure_building_slot_flag }
-					}
-					add_extra_state_shared_building_slots = 1
-					set_state_flag = infrastructure_building_slot_flag
-				}
-			}
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 10
-					any_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
-				}
-			}
-		}
-
-	war_building_slot = {
-
-			icon = generic_construction
-
-			allowed = {
-				always = yes
-			}
-
-			cost = 50
-			fire_only_once = no
-
-			available = {
-				any_state = {
-					NOT = { has_state_flag = war_building_slot_flag }
-					is_fully_controlled_by = ROOT
-					is_owned_by = ROOT
-				}
-				has_war = yes
-			}
-			visible = {
-				any_state = {
-					NOT = { has_state_flag = war_building_slot_flag }
-					is_fully_controlled_by = ROOT
-					is_owned_by = ROOT
-				}
-				has_war = yes
-			}
-
-			complete_effect = {
-				add_war_support = -0.025
-				add_stability = -0.025
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						is_owned_by = ROOT
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-						NOT = { has_state_flag = war_building_slot_flag }
-					}
-					add_extra_state_shared_building_slots = 1
-					set_state_flag = war_building_slot_flag
-				}
-			}
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 10
-					any_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
-				}
-			}
-		}
 	CES_nuke = {
 			icon = gfx_decision_nuke_flagstaff
 			priority = 30		
@@ -322,8 +193,12 @@ enc_executive_orders  = {
 				NOT = { has_full_control_of_state = 592 }
 			}		
 			is_good = no
-			days_mission_timeout = 50
+			days_mission_timeout = 5#0
 			timeout_effect = {
+				# launch_nuke = { # MTG
+				   # province = 8951 #use either province or state. if state is used it will prefer enemies first while picking a province to nuke. otherwise it will pick one of the neutrals
+				   # use_nuke = no #will consume nuke if specified
+				# } 
 				country_event = { id = enc_reformers.164  }
 			}
 		}
@@ -1560,7 +1435,7 @@ ENC_starting_companies = {
 }
 
 ENC_nation_building = {
-ENC_boost_civilian_economy = {
+	ENC_boost_civilian_economy = {
 		icon = decision_vault_boy
 		cost = 50
 		days_remove = 10
@@ -1634,7 +1509,7 @@ ENC_boost_civilian_economy = {
 		}
 	}
 
-plunder_military_machinery = {
+	plunder_military_machinery = {
 		icon = generic_scorched_earth
 		visible = {
 			has_completed_focus = enc_purity
@@ -1694,7 +1569,7 @@ plunder_military_machinery = {
 		days_re_enable = 30
 	}	
 	
-ENC_vault_city_university = {
+	ENC_vault_city_university = {
 		icon = decision_vault_boy
 		cost = 50
 		days_remove = 10
@@ -1803,7 +1678,7 @@ ENC_vault_city_university = {
 			original_tag = ERB
 			has_completed_focus = enc_vlt_power_reform
 		}
-		complete_effect = {
+		remove_effect = {
 			country_event = {
 				id = enc_reformers.107
 			}
@@ -1957,6 +1832,128 @@ ENC_vault_city_university = {
 			}
 		}
 	}
+
+	infrastructure_building_slot1 = {
+
+			icon = generic_construction
+
+			allowed = {
+				always = yes
+			}
+
+			cost = 100
+			fire_only_once = no
+
+			days_re_enable = 30
+
+			available = {
+				any_state = {
+					NOT = { has_state_flag = infrastructure_building_slot_flag }
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+
+			visible = {
+				any_state = {
+					NOT = { has_state_flag = infrastructure_building_slot_flag }
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+
+			complete_effect = {
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						free_building_slots = {
+							building = infrastructure
+							size < 1
+						}
+						NOT = { has_state_flag = infrastructure_building_slot_flag }
+					}
+					add_extra_state_shared_building_slots = 1
+					set_state_flag = infrastructure_building_slot_flag
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 10
+					any_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
+				}
+			}
+		}
+
+	war_building_slot = {
+
+			icon = generic_construction
+
+			allowed = {
+				always = yes
+			}
+
+			cost = 50
+			fire_only_once = no
+
+			available = {
+				any_state = {
+					NOT = { has_state_flag = war_building_slot_flag }
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+				has_war = yes
+			}
+			visible = {
+				any_state = {
+					NOT = { has_state_flag = war_building_slot_flag }
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+				}
+				has_war = yes
+			}
+
+			complete_effect = {
+				add_war_support = -0.025
+				add_stability = -0.025
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						NOT = { has_state_flag = war_building_slot_flag }
+					}
+					add_extra_state_shared_building_slots = 1
+					set_state_flag = war_building_slot_flag
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 10
+					any_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
+				}
+			}
+		}
+
 }
 
 ENC_deseret = {
@@ -2069,6 +2066,9 @@ ENC_american_broadcasts = {
 		}
 		days_remove = 20
 		days_re_enable = 30
+		complete_effect = {
+			hidden_effect = { sound_effect = ERB_stripes_and_stars }
+		}
 	}
 	ENC_raise_stability = {
 		cost = 75
@@ -2760,7 +2760,7 @@ ENC_NCR_hiding = {
 				intellectuals > 0.3
 			}
 			check_variable = {
-					var = legitimacy
+					var = enc_legitimacy
 					value > 0.299
 				}
 		}
@@ -3873,6 +3873,7 @@ ENC_debug = {
 	}
 	ENC_misc = {
 		complete_effect = {
+			add_ideas = enc_collapsed_economy
 			hidden_effect = { sound_effect = ERB_stripes_and_stars }
 		}
 	}
@@ -3932,10 +3933,8 @@ ENC_debug = {
 				limit = {
 					has_trait = enc_purist
 				}
-				hidden_effect = {
-					retire = yes
-				}
 				custom_effect_tooltip = are_purged
+				retire = yes
 			}
 		}
 	}
