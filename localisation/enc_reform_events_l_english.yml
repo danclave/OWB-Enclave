@@ -55,7 +55,7 @@ enc_reformers.8.a:0 "Good riddance. We don't need them."
 enc_reformers.8.b:0 "Blame the Purists."
 #########################################################################################
 enc_reformers.9.t: "Promotion"
-enc_reformers.9.d: "One of our older military theorists has just retired. There are two available candidates eligible for promotion. An older, experienced Navarro veteran and a younger, outspoken reformer."
+enc_reformers.9.d: "Recently, a commander position has opened up. There are two available candidates eligible for promotion. An older, experienced Navarro veteran and a younger, outspoken reformer."
 enc_reformers.9.a: "Promote the experienced man"
 enc_reformers.9.b: "Promote the loyal man"
 #########################################################################################
@@ -526,7 +526,7 @@ enc_reformers.99.d: "With Area 51 under our control, Enclave scientists are sift
 enc_reformers.99.a: "Let us press every button we can find."
 ################################################################################################################
 enc_reformers.100.t: "Happy Holidays!"
-enc_reformers.100.d: "The prewar carol fades as President Granite comes on the radio.  'My fellow Americans, we've been through a lot the last few years.  But I think we've remembered, for the first time in a long time, what binds us together instead of what blows us apart.  Whether we light a menorah, go to church, or worship an unexploded nuclear bomb, we all base our faith in love.  So for the new year, let's resolve to give of ourselves.  To be our brothers keeper.  To be our sisters keeper.  To be excellent to each other.  And if you do worship an unexploded nuclear bomb, please give it to us.'"
+enc_reformers.100.d: "The prewar carol fades as President [ERB.GetLeader] comes on the radio.\n'My fellow Americans, we've been through a lot the last few years.  But I think we've remembered, for the first time in a long time, what binds us together instead of what blows us apart.  Whether we light a menorah, go to church, or worship an unexploded nuclear bomb, we all base our faith in love.  So for the new year, let's resolve to give of ourselves.  To be our brother's keeper.  To be our sister's keeper.  To be excellent to each other. \n\nAnd if you do worship an unexploded nuclear bomb, please give it to us.'"
 enc_reformers.100.a:  "EDE, Play Christmas Roads"
 enc_reformers.100.a.tt: "Please make sure your sound is on and your music is off, and have a happy holiday, unless you like the Legion."
 ################################################################################################################
@@ -1219,7 +1219,14 @@ enc_reformers.304.t: "Protests turn into riots in [protesting_state.GetName]!"
 enc_reformers.304.d: "Protests have gotten out of hand and turned into riots."
 enc_reformers.304.a: "Let them blow off some steam."
 enc_reformers.304.b: "Send in the troops."
-
+#############################################################################################################
+enc_reformers.305.t:0 "Whispers of hope!"
+enc_reformers.305.d:0 "Despite our current precarious position, there are those who are taken to our American dream. Whispers of a new dawn are spoken when no NCR loyalists are in the room. "
+enc_reformers.305.d.enc_arroyo_mom:0 "Outlandish stories of a president who is a descendant of the Vault Dweller himself. "
+enc_reformers.305.d.leader_charismatic:0 "Stories of a president who can sway even his bitter enemies with words and is incorruptible of soul."
+enc_reformers.305.d.leader_ruthless:0 "Stories of a president made of solid granite, who has the stomach to crush the enemies of America, within and without."
+enc_reformers.305.a:0 "Ask not what your government can do for you..."
+enc_reformers.305.b:0 "I need you for US army!"
 
 
 

@@ -15,6 +15,7 @@ ENC_underworld_ties_desc: "One of the benefits of military police is that they c
 ENC_FBI_idea: "The Federal Bureau of Investigations"
 enc_martial_law_idea: "Martial Law"
 enc_NCR_instability: "Collapsed Government"
+enc_NCR_instability2: "Unstable Government"
 enc_enclave_advisors: "Enclave Advisors"
 ENC_nuke: "Legion Decapitated"
 ENC_follower_schools: "Follower Education"
@@ -213,6 +214,8 @@ enc_all_adults_serve: "All Adults Serve"
 enc_scraping_the_barrel: "Scraping the Barrel"
 
 enc_collapsed_economy: "Collapsed Economy"
+collapsed_trade: "Collapsed Trade"
+collapsed_trade_desc: "Caravan routes lay idle, as merchants fear whether their dollars are worth the paper they're printed out.\n\n"
 ###################################
 # PEOPLE
 ###################################

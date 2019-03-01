@@ -247,12 +247,37 @@ country_event = {#9 - Promotion
 	
 	option = {#Best man for the job
 		name = enc_reformers.9.a
-		add_political_power = 25
 		army_experience = 100
+		create_corps_commander = { # Chris "Hamilton" Regular
+			name = "Frederick Van Buren" 
+			portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_2.dds"
+			skill = 4
+			traits = {
+				old_guard
+			}
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+		}
+
 	}
 	option = {#Most loyal man
 		name = enc_reformers.9.b
-		add_popularity = { ideology = intellectuals popularity = 0.03 } 
+		add_popularity = { ideology = intellectuals popularity = 0.05 }		
+		create_corps_commander = {
+			name = "Thomas 'Rimmy' Rim"
+			portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_9.dds"
+			skill = 2
+			traits = {
+				enc_reformer
+				bearer_of_artillery
+			}
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
 	}
 }
 country_event = {#10 - Dealing with Bishops - assassination
@@ -4835,7 +4860,7 @@ country_event = { #167  End of Reformers
 	desc = enc_reformers.167.d
 	picture = GFX_event_enc_4th_july
 	fire_only_once = yes
-	trigger = {	has_completed_focus = enc_local_elections }
+	trigger = {	has_completed_focus = enc_local_elections } # todo segregation
 	mean_time_to_happen = {	days = 30 }				
 	option = { # Great!
 		name = enc_reformers.167.a
@@ -4928,13 +4953,20 @@ news_event = { #170 - Dark Age
 	option = { # Damn it
 		name = enc_reformers.170.a
 		add_war_support = -0.50
-		add_ideas = { 
-			enc_NCR_resistance 
-			enc_NCR_instability 
-			enc_NCR_power_struggle 
-			enc_disorganized_army 
-			enc_collapsed_economy 
-		}
+		# add_ideas = { 
+			# enc_NCR_resistance 
+			# enc_NCR_instability 
+			# enc_NCR_power_struggle 
+			# enc_disorganized_army 
+			# enc_collapsed_economy 
+			# collapsed_trade
+		# }
+		add_ideas = { enc_NCR_resistance }
+		add_ideas = { enc_NCR_instability }
+		add_ideas = { enc_NCR_power_struggle } 
+		add_ideas = { enc_disorganized_army  }
+		add_ideas = { enc_collapsed_economy  }
+		add_ideas = { collapsed_trade }
 		set_country_flag = enc_mid_game
 	}
 }
@@ -6550,7 +6582,6 @@ country_event = { #221- Congressional Reaction to Labor Draft
 	
 }	
 
-
 country_event = {#300 - state protests!
 	id = enc_reformers.300
 	title = enc_reformers.300.t
@@ -6947,6 +6978,45 @@ country_event = {#304 - State protests turns into riot!
 				country_event = { id = enc_reformers.301 } # riot turns into massacre!
 			}
 		}
+	}
+}
+
+
+country_event = {#305 - Whispers of hope
+	id = enc_reformers.305
+	title = enc_reformers.305.t
+	picture = GFX_event_ENC_secret
+	fire_only_once = no
+	desc = enc_reformers.305.d
+	is_triggered_only = no
+	mean_time_to_happen = { days = 200 }
+	trigger = {
+		check_variable = { legitimacy > 0.60 }
+		has_country_flag = enc_mid_game
+		not = { has_completed_focus = enc_segregation }
+	}
+	immediate = { # stories
+		if = {
+			limit = { has_country_flag = enc_arroyo_mom }
+			custom_effect_tooltip = enc_reformers.305.d.enc_arroyo_mom
+		}
+		if = {
+			limit = { has_country_flag = leader_charismatic }
+			custom_effect_tooltip = enc_reformers.305.d.leader_charismatic
+		}
+		if = {
+			limit = { has_country_flag = leader_ruthless }
+			custom_effect_tooltip = enc_reformers.305.d.leader_ruthless
+		}		
+	}
+	option = {# great!
+		name = enc_reformers.305.a
+		add_political_power = 100
+		add_stability = 0.05
+	}
+	option = {# volunteer!
+		name = enc_reformers.305.b
+		add_manpower = 1000
 	}
 }
 

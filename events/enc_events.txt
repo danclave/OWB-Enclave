@@ -45,7 +45,7 @@ country_event = {#3 - OUR CHOICE
     is_triggered_only = yes
     
 	option = { # purists
-		name = enc.3.a
+		name = enc.3.a 
 		custom_effect_tooltip = enc.3.a.tt
 		hidden_effect = { # Purists take over
 			set_politics = {
@@ -314,6 +314,7 @@ country_event = { #19 - Cafetaria incident
 	
 	trigger = {
 		tag = ERB
+		num_of_controlled_states > 20 # enclave is still small
 	}
 	mean_time_to_happen = {
 		days = 400
