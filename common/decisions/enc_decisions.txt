@@ -1627,6 +1627,7 @@ ENC_nation_building = {
 	}								
 	ENC_prioritize_civilian_relief = {
 		icon = generic_construction
+		priority = 5
 		fire_only_once = yes
 		cost = 50
 		selectable_mission = yes	
