@@ -1347,24 +1347,6 @@ ideas = {
 				non_core_manpower = 0.1
 			}
 		}
-		
-		enc_NCR_resistance = {
-			picture = chi_war_of_resistance3
-			allowed = { 
-				always = no
-			}
-			allowed_civil_war = { 
-				always = yes
-			}
-			removal_cost = -1
-			modifier = {
-				conscription_factor = -0.25
-				supply_consumption_factor = 0.25
-				army_morale_factor = -0.10
-				mobilization_speed = -0.60
-				non_core_manpower = -0.10
-			}
-		}
 		enc_NCR__ces_resistance = {
 			picture = chi_war_of_resistance3
 			allowed = { 
@@ -1393,6 +1375,27 @@ ideas = {
 				army_defence_factor = -0.30
 			}
 		}
+		
+		# Californian resistance
+		enc_NCR_resistance = {
+			picture = chi_war_of_resistance3
+			allowed = { 
+				always = no
+			}
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.25
+				supply_consumption_factor = 0.25
+				army_morale_factor = -0.10
+				mobilization_speed = -0.60
+				non_core_manpower = -0.10
+				war_support_factor = -0.35
+				justify_war_goal_time = 0.50
+			}
+		}
 		enc_NCR_resistance2 = {
 			picture = chi_war_of_resistance2
 			allowed = { 
@@ -1408,6 +1411,8 @@ ideas = {
 				army_morale_factor = -0.05
 				mobilization_speed = -0.30
 				non_core_manpower = -0.03
+				war_support_factor = -0.20
+				justify_war_goal_time = 0.50
 			}
 		}
 		# collapsed government
@@ -1427,7 +1432,25 @@ ideas = {
 				stability_factor= -0.20
 				consumer_goods_factor = 0.105
 				industry_free_repair_factor = -0.75
+				justify_war_goal_time = 0.50
 
+			}
+		}
+		enc_NCR_instability2 = {
+			picture = generic_democratic_drift_bonus
+			allowed = { 
+				always = no
+			}
+			allowed_civil_war = { 
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.50
+				stability_factor= -0.10
+				consumer_goods_factor = 0.05
+				industry_free_repair_factor = -0.25
+				justify_war_goal_time = 0.50
 			}
 		}
 		# anarchy
@@ -1445,6 +1468,7 @@ ideas = {
 				offensive_war_stability_factor	= -0.20
 				research_time_factor = 0.05
 				consumer_goods_factor = 0.20
+				justify_war_goal_time = 0.50
 			}
 		}
 		enc_NCR_power_struggle2 = {
@@ -1694,7 +1718,7 @@ ideas = {
             removal_cost = -1
 			modifier = {
 			   production_factory_max_efficiency_factor = 0.05
-			   justify_war_goal_time = 0.05
+			   justify_war_goal_time = 0.20
 			   encryption_factor = -0.05
 			   offensive_war_stability_factor = -0.20
 			}
@@ -1710,7 +1734,7 @@ ideas = {
             removal_cost = -1
 			modifier = {
 			   production_factory_max_efficiency_factor = 0.10
-			   justify_war_goal_time = 0.10
+			   justify_war_goal_time = 0.25
 			   encryption_factor = -0.10
 			   offensive_war_stability_factor = -0.30
 			}

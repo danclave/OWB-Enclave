@@ -2081,7 +2081,10 @@ focus = {#RADIO - Red Menace
 				value = 0.10
 			}
 			change_legitimacy = yes
-			remove_ideas = enc_NCR_instability
+			swap_ideas = {
+				remove_idea = enc_NCR_instability
+				add_idea = enc_NCR_instability2
+			}
 		}		
 	}
 	
@@ -2104,8 +2107,8 @@ focus = {#RADIO - Red Menace
 				value = 0.05
 			}
 			change_legitimacy = yes
-				
-		}		
+			remove_ideas = enc_NCR_instability2
+		}				
 	}
 	
 	

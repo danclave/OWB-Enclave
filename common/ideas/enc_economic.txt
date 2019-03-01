@@ -2,7 +2,7 @@ ideas = {
 	economy = { 
 		law = yes
 		enc_collapsed_economy = {
-			picture = enc_economy_collapsed
+			picture = great_depression
 			allowed = {
 				always = no
 			}
@@ -18,9 +18,33 @@ ideas = {
 			
 			allowed_to_remove = {
 				has_stability > 0.30
+				has_completed_focus = enc_federal_reserve
 			}		
 			cancel_if_invalid = no
 		}
 	}
+	trade_laws = { 
+		law = yes
 
+		collapsed_trade = {
+			# picture = ROM_king_carol_emptied_accounts
+			picture = generic_neutrality_drift_bonus
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				min_export = 0
+				local_resources_factor = -0.90
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				production_speed_buildings_factor = -0.15
+			}
+			allowed_to_remove = {
+				has_stability > 0.30
+				has_completed_focus = enc_department_of_commerce
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
 }
