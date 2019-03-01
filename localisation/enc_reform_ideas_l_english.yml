@@ -96,6 +96,8 @@ half_legitimacy: "More than §Y50%§! Legitimacy"
 25_legitimacy: "More than §Y25%§! Legitimacy"
 75_legitimacy: "More than §Y75%§! Legitimacy"
 
+available_because_half_legitimacy: "\nOccured because §Y+50%§! Legitimacy."
+
 has_legitimacy_tt: "[?legitimacy]/[?has_legitimacy_var] §Ylegitimacy§!"
 ENC_reno_police: "New Reno Police"
 ENC_reno_police_corrupt: "Corrupt New Reno Police"

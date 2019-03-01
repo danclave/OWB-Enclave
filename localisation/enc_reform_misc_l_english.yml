@@ -128,6 +128,9 @@ enc_wrights_tolerated_flag: "Wrights tolerated"
 
 ncr_suspicious_clr_tt: "\n§MRemoves the need to hide from the [NCR.GetName]§!"
 
+costs_100_army_experience: "Costs 100 £army_experience\n"
+costs_50_army_experience: "Costs 50 £army_experience\n"
+costs_25_army_experience: "Costs 25 £army_experience\n"
 ###################################
 # DIPLOMACY
 ###################################
