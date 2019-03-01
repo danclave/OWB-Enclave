@@ -290,7 +290,7 @@ ENC_boost_justification:0 "Boost Justification"
 ENC_boost_justification_desc:0 "Our people might be ignorant of the true evils of our enemies, but we can educate them on why it's vital we strike first."
 ENC_boost_justification_req:0 "Currently justifying a war"
 ENC_restart_movie_industry:0 "Restart Movie Industry"
-ENC_restart_movie_industry:0 "The movie industry has been dead for a long time. Still, there are plenty of drive-in theaters that would not be too difficult to repair."
+ENC_restart_movie_industry_desc:0 "The American movie industry has been dead for a long time. Still, there are plenty of drive-in theaters that would not be too difficult to repair."
 ENC_war_movie:0 "Sponsor War Movie"
 ENC_war_movie_desc:0 "We don't have to directly tell our people that war is glorious if we can just show them instead."
 ENC_comedy_movie:0 "Sponsor Comedy Movie"
@@ -306,7 +306,8 @@ ENC_prioritize_civilian_relief_desc: "The war has left many of our new citizens 
 ENC_rebuild_infrastructure:0 "Rebuild Infrastructure"
 ENC_rebuild_infrastructure_desc:0 "Our great nation's infrastructure is in considerable disrepair. Soldiers and merchants alike struggle to traverse the dilapidated roads connecting our cities. Let us show them the strength of our government by making a concentrated effort to rebuild America's infrastructure."
 ENC_rebuild_infrastructure_tt:0 "Gain §Y1%§! of legitimacy for every 2 levels of §Yinfrastructure§! built during the decision."
-
+ENC_find_power_grid: "§YFind Ready Power Grid§!"
+ENC_find_power_grid_desc: "There is a power grid ready to core a province, you just need to push the button!"
 ###################################
 # Securing our borders
 ###################################

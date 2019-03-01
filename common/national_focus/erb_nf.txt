@@ -1657,6 +1657,9 @@ focus = {#RADIO - Red Menace
 		x = -17
 		y = 1
 		ai_will_do = { factor = 1 }
+		available = {
+			has_completed_focus = enc_americans_one_and_all
+		}
 		mutually_exclusive = { focus = enc_home_is_nevada }
 		prerequisite = { focus = enc_american_dream }
 		available = {
@@ -1881,6 +1884,7 @@ focus = {#RADIO - Red Menace
 		cost = 5.8
 		completion_reward = {
 			add_ideas = ENC_american_broadcasting_department
+			custom_effect_tooltip = enc_american_broadcasting_department_tt
 		}
 	}
 	focus = {#REBUILDING - Propaganda Department

@@ -874,7 +874,7 @@ ENC_debug = {
 	}
 	ENC_misc = {
 		complete_effect = {
-			add_ideas = collapsed_trade
+			remove_ideas = enc_NCR_power_struggle
 		}
 	}
 	ENC_NCR_CES_war = {

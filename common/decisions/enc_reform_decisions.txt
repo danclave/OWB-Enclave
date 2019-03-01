@@ -1246,7 +1246,7 @@ ENC_nation_building = {
 			icon = generic_construction
 
 			allowed = {
-				always = yes
+				original_tag = ERB
 			}
 
 			cost = 50
@@ -1295,7 +1295,37 @@ ENC_nation_building = {
 				}
 			}
 		}
-
+	ENC_find_power_grid = {
+		priority = 10
+		icon = GFX_icons_power
+		allowed = {
+			original_tag = ERB
+		}
+		fire_only_once = no		
+		visible = {
+			any_owned_state = {
+				civilian_power_grid > 0
+				not = { is_core_of = ERB }
+				any_neighbor_state = {
+					is_core_of = ERB
+				}
+			}			
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					civilian_power_grid > 0
+					not = { is_core_of = ERB }
+					any_neighbor_state = {
+						is_core_of = ERB
+					}
+				}
+				ROOT = {
+					goto_state = PREV
+				}
+			}
+		}
+	}
 }
 
 ###############################
@@ -2070,7 +2100,7 @@ ENC_american_broadcasts = {
 		remove_effect = {
 			set_country_flag = enc_movie_industry
 		}
-		days_remove = 1#60
+		days_remove = 80
 	}
 	ENC_war_movie = {
 		cost = 50
@@ -2120,7 +2150,7 @@ ENC_american_broadcasts = {
 		remove_effect = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 0.05
+				value = 0.025
 			}
 			change_legitimacy = yes
 		}
@@ -2171,7 +2201,7 @@ ENC_securing_borders = {
 			}
 			not = { 
 				has_country_flag = ERB_northern_raiders_cleared			
-				has_decision = ENC_maintain_northern_control
+				has_active_mission = ENC_maintain_northern_control
 			}	
 		}		
 		available = {
@@ -2182,7 +2212,7 @@ ENC_securing_borders = {
 			}
 		}
 		cancel_trigger = {	
-			has_decision = ENC_maintain_northern_control			
+			has_active_mission = ENC_maintain_northern_control			
 		}
 		highlight_states = {
 			state = 141

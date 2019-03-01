@@ -231,3 +231,42 @@ erb_orion_moreno:0 "Orion Moreno"
 army_chief_loyalist:0 "David M. Richardson"
 enc_people_air_loyalist:0 "Simon Garnett"
 navy_chief_loyalist: "Daniel Shepherd"
+
+###################################
+# NCR - PEOPLE
+#################################### 
+
+# NCR - High Command
+###################################
+enc_colonel_royez:0 "Colonel Royez"
+enc_colonel_royez_desc:0 "Colonel Royez earned his rank during the acquisition of the Long-15, through his great feats of bravery and strength; he is the pinnacle of what an NCR soldier can become. However, he is just one man, and cannot be everywhere at once.\n\nHe has cautiously agreed to take up his old post for the [ERB.GetName], providing they make good on their promises."
+
+enc_colonel_hsu:0 "Colonel Hsu"
+enc_colonel_hsu_desc:0 "Colonel Hsu is beloved by the men, and is a workhorse without compare in the top brass. Hsu knows how to manage supply lines, root out spies, and make sure the men know they are understood, and cared for: a great boon to morale.\n\nHe has cautiously agreed to take up his old post for the [ERB.GetName], providing they make good on their promises."
+
+# NCR - Ministers
+###################################
+enc_grant_c_hayes:0 "Grant C. Hayes"
+enc_grant_c_hayes_desc:0 "Hayes is a disruptive politician obsessed with the old world, with his help we can better reacquire its secrets, but he will be pushing his own agenda the entire time, and it will be a costly endeavor."
+
+enc_alice_mclafferty:0 "Alice McLafferty"
+enc_alice_mclafferty_desc:0 "Alice knows how to do business and do it well; she can satisfy the popular demand for consumerism, so long as she is given lucrative government contracts."
+
+enc_allgood_murphy:0 "Allgood Murphy"
+enc_allgood_murphy_desc:0 "Allgood wanted peace and prosperity, for the NCR at whole, but mostly the boneyard; with his help our manufacturing will benefit, but our jingoism and war enthusiasm will suffer."
+
+enc_zachariah_rigby:0 "Zachariah Rigby"
+enc_zachariah_rigby_desc:0 "As head of the Gunrunners, Rigby can make our arms manufacturing far more efficient; but the Gunrunner's are mercenary, and Rigby demands high pay."
+
+enc_julie_farkas:0 "Julie Farkas"
+enc_julie_farkas_desc:0 "Julie is a sweetheart, and her organization will happily improve our infrastructure and healthcare free of charge; but the more people that take the ideals of the Followers into their hearts, the less that are willing to die for the republic."
+
+
+# NCR - Chief of army
+###################################
+enc_big_jim_chief_of_army:0 "James 'Big Jim' Marshal"
+enc_big_jim_chief_of_army_desc:0 "Big Jim knows how to succeed at war, and succeed quick; overwhelming displays of force! As such his appointment as chief of army will result in an increase in conscription and mobilization efficiency."
+
+enc_drummund_chief_of_army:0 "General Alexander Drummund"
+enc_drummund_chief_of_army_desc:0 "Drummund has years of experience with which to back up his appointment, and it shows in his capacity for planning, both in speed and brilliance. However, he is unpopular among the people, and his appointment will weaken the republic's standing."
+ 

@@ -250,7 +250,7 @@ enc_reformers.41.d: "We are ready to begin connecting states to our power grid.\
 enc_reformers.41.a: "And Eden said: 'let there be light!'"
 ################################################################################################################ -<
 enc_reformers.42.t: "The Assassination of Franklin Anderson"
-enc_reformers.42.d: ""The good doctor has been a thorn in our side ever since his loss in the election. His connections and wits have kept him alive until now, but we have politically outmaneuvered him at last.\n\nDespite quickly running out of allies, Anderson has stayed put in the Sierra Army Depot, stubbornly fulfilling his administrative duties. It was in his office that our operatives found him, unprepared for the confrontation.\nPerhaps he had resigned himself to his fate, perhaps he was too single-minded to see how dire his situation had become.\n\nAll the same, Franklin Anderson was buried in an unmarked grave in the Nevada desert. If anyone noticed his disappearance, they were wise enough not to notice it out loud. We made sure of that."
+enc_reformers.42.d: ""The good doctor has been a thorn in our side ever since his loss in the election. His connections and wits have kept him alive until now, but we have politically outmaneuvered him at last.\n\nDespite quickly running out of allies, Anderson has stayed put in the Sierra Army Depot, stubbornly fulfilling his administrative duties. It was in his office that our operatives found him, unprepared for the confrontation.\nPerhaps he had resigned himself to his fate, perhaps he was too single-minded to see how dire his situation had become.\n\nAll the same, Franklin Anderson was buried in an unmarked grave in Golgotha. If anyone noticed his disappearance, they were wise enough not to notice it out loud. We made sure of that."
 enc_reformers.42.a: "Defiant until the end."
 ################################################################################################################ -<
 enc_reformers.43.t: "Out with the Old"
@@ -631,12 +631,13 @@ enc_reformers.118.c:  "§RAnyone spreading these stories gets a visit from the S
 enc_reformers.118.c.tt:0 "...Man, even we think that's Ruthless"
 ################################################################################################################
 enc_reformers.119.t: "Ruling California"
-enc_reformers.119.d: "With the fall of Shady Sands, the time has come to decide how to govern California. Hayes thinks we should appoint him to head the California Reconstruction Authority and bar anyone who took up arms against us from office. Enclave officers would go farther and imprison the NCR's leadership for life.  But maybe there's a third option?"
-enc_reformers.119.a:  "Follow Hayes' advice"
-enc_reformers.119.b:  "§MAs Lincoln said, Do I not destroy my enemies when I make them friends?§M"
-enc_reformers.119.b.tt:0 "Available because you're a charismatic son of a gun"
-enc_reformers.119.c:  "§RAs Lincoln said, do I not destroy my enemies when I make them ash?§R"
-enc_reformers.119.c.tt:0 "He didn't say that, you're just ruthless"
+enc_reformers.119.d: "Now that the dust raised by the fall of the NCR is settling, the time has come to decide how to govern the newly liberated Californians.\nGrant C. Hayes, previously Mayor of Dayglow under the NCR, has asked an audience with [ERB.GetLeader]. He claims to be a descendant of Enclave members who escaped Navarro and integrated into the NCR.\n\nHayes believes we should appoint him to a top position in our Reconstruction Authority and bar anyone who took up arms against us from office. Many of our older Enclave officers balk at the idea of working with our old enemies and demand that any NCR politicians we come across be executed."
+enc_reformers.119.a:  "§MIntegrate the NCR leader.§!"
+enc_reformers.119.a.tt:  "§gAs Lincoln said: 'Do I not destroy my enemies when I make them friends?'§!\n\n§gThe ex-NCR leadership selected by Hayes are restored to their former positions. The few that haven't fled a long time ago, at least.§!\n\n"
+enc_reformers.119.a.reward: "\n§MSeveral advisors of the [NCR.GetName] will become available to us.§!\n"
+enc_reformers.119.b:  "§RDisintegrate the NCR leaders.§!"
+enc_reformers.119.b.tt:  "§gAs Lincoln said: 'Do I not destroy my enemies when I make them ash?'§!\n\n"
+enc_reformers.119.b.reward: "\n§RSeveral advisors of the [NCR.GetName] will be executed.§!"
 ###############################################################################################################
 enc_reformers.120.t: "The Conference at Klamath"
 enc_reformers.120.d: "Supporters of the dream of reviving the Pacific Commonwealth have slinked to the trading town of Klamath.  Far from the Warren and the Brotherhood, its leaders have agreed to sponsor our plan to liberate the region from tyranny and bring the into the Associated States of America.  The only question is whether we can persuade anyone else to join them..."
@@ -1227,7 +1228,11 @@ enc_reformers.305.d.leader_charismatic:0 "Stories of a president who can sway ev
 enc_reformers.305.d.leader_ruthless:0 "Stories of a president made of solid granite, who has the stomach to crush the enemies of America, within and without."
 enc_reformers.305.a:0 "Ask not what your government can do for you..."
 enc_reformers.305.b:0 "I need you for US army!"
-
-
+#############################################################################################################
+enc_reformers.306.t: "[protesting_commander.GetName] outraged"
+enc_reformers.306.d: "One of our commanders, [protesting_commander.GetName], has approached [ERB.GetLeader] personally after our recent decision to accept NCR leadership into our government. Aggrevated, but respectfully, he told the President that he cannot accept working together with the people who order the attack on Navarro that killed his father. He has offered his resignation, feeling he can no longer perform his duties under the current administration."
+enc_reformers.306.a: "Accept his resignation."
+enc_reformers.306.b: "§MNone of us are Americans until we all are.§!"
+enc_reformers.306.b.reward: "Changes his mind.\n"
 
 

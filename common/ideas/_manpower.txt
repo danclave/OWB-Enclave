@@ -297,7 +297,15 @@ ideas = {
 				not = {
 					has_country_flag = enc_mid_game
 				}
-			}	
+			}
+			available = {
+				if = {
+					limit = { has_country_flag = enc_mid_game }
+					not = {
+						has_country_flag = enc_mid_game
+					}
+				}
+			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -560,7 +568,6 @@ ideas = {
 			}
 			visible = {
 				has_completed_focus = enc_reform
-				original_tag = ERB
 				not = {
 					has_country_flag = enc_mid_game
 					has_completed_focus = enc_the_state_of_nevada
@@ -586,6 +593,9 @@ ideas = {
 			cost = 0
 			removal_cost = 100
 			level = 7
+			available = {
+				has_stability < 0.20
+			}
 			visible = {
 				original_tag = ERB
 				has_idea = enc_disorganized_army # only visible when forced
@@ -598,41 +608,7 @@ ideas = {
 			}			
 			cancel_if_invalid = no
 			default = no
-		}		
-		enc_peace_keeping = {
-			picture = disarmed_nation
-			cost = 100
-			removal_cost = -1
-			level = 6
-			allowed = {
-				original_tag = ERB			
-			}
-			
-			visible = {
-				original_tag = ERB
-				or = {
-					has_country_flag = enc_mid_game
-					has_completed_focus = enc_the_state_of_nevada				
-				}
-			}
-			
-			available = {
-				# not = { has_manpower_for_recruit_change_to =  { value = 0.004 group = mobilization_laws } }
-				has_stability > 0.20
-			}
-			ai_will_do = {
-				factor = 0.5
-			}
-			modifier = {
-				conscription = 0.04
-				non_core_manpower = 0.05
-				stability_weekly = 0.01
-			}
-			
-			default = no
-			
-			cancel_if_invalid = no
-		}		
+		}				
 		enc_volunteer_only = {
 			picture = volunteer_only						
 			cost = 150
@@ -640,17 +616,13 @@ ideas = {
 			level = 6
 			allowed = {
 				original_tag = ERB			
-			}
-			
+			}			
 			visible = {
-				original_tag = ERB
 				or = {
 					has_country_flag = enc_mid_game
 					has_completed_focus = enc_the_state_of_nevada				
-				}
-				
-			}
-			
+				}				
+			}			
 			available = {
 				if = { # NEVADA
 					limit = {
@@ -684,6 +656,40 @@ ideas = {
 			
 			cancel_if_invalid = no
 		}		
+		enc_peace_keeping = {
+			picture = disarmed_nation
+			cost = 100
+			removal_cost = -1
+			level = 6
+			allowed = {
+				original_tag = ERB			
+			}
+			
+			visible = {
+				original_tag = ERB
+				or = {
+					has_country_flag = enc_mid_game
+					has_completed_focus = enc_the_state_of_nevada				
+				}
+			}
+			
+			available = {
+				has_stability > 0.20
+				has_stability < 0.50
+			}
+			ai_will_do = {
+				factor = 0.5
+			}
+			modifier = {
+				conscription = 0.04
+				non_core_manpower = 0.05
+				stability_weekly = 0.01
+			}
+			
+			default = no
+			
+			cancel_if_invalid = yes
+		}
 		enc_limited_conscription = {	
 			picture = limited_conscription				
 			cost = 150

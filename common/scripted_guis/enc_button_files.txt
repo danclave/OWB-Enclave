@@ -17,11 +17,11 @@ scripted_gui = {
 				}
 				civilian_power_grid > 0
 				# something to delete
-				industrial_complex > 0
-				arms_factory > 0
-				water_generator > 0
-				electricity_generator > 0
-				metal_generator > 0
+				# industrial_complex > 0
+				# arms_factory > 0
+				# water_generator > 0
+				# electricity_generator > 0
+				# metal_generator > 0
 			}
 		}		
 		effects = {  
@@ -100,11 +100,11 @@ scripted_gui = {
 				include_locked  = no
 			}
 			# Nothing to delete
-			industrial_complex < 1
-			arms_factory < 1
-			water_generator < 1
-			electricity_generator < 1
-			metal_generator < 1
+			# industrial_complex < 1
+			# arms_factory < 1
+			# water_generator < 1
+			# electricity_generator < 1
+			# metal_generator < 1
 		}
 		
 		effects = {
