@@ -1430,6 +1430,7 @@ country_event = {#49 - The purists Rebrand
 	option = { # Good to see 
 		name = enc_reformers.49.a
 		custom_effect_tooltip = enc_reformers.49.a.tt
+		add_stability = 0.05
 		add_popularity  = {
 			ideology = elites
 			popularity = 0.25
@@ -1718,9 +1719,6 @@ country_event = {#57 - Purist commander
 	}
 }
 
-# unused numbers
-
-
 country_event = { #58 - House sues for peace
     id = enc_reformers.58
     title = enc_reformers.58.t
@@ -1735,6 +1733,40 @@ country_event = { #58 - House sues for peace
         name = enc_reformers.58.b
 		add_war_support = -0.05
 	}   		
+}
+
+country_event = { #59 - Power grid sabotaged!
+    id = enc_reformers.59
+    title = enc_reformers.59.t
+    desc = enc_reformers.59.d
+    picture = GFX_event_enc_power_grid
+    is_triggered_only = no
+	allowed = { original_tag = ERB }
+	trigger = {		
+		or = {
+			has_idea = { enc_NCR_resistance }
+			has_idea = { enc_NCR_resistance2 }
+		}
+		any_owned_state = {
+			is_core_of = NCR
+			civilian_power_grid > 0
+		}
+	} 
+		
+    option = { # Fine
+        name = enc_reformers.59.a
+		add_stability = -0.02
+		random_owned_state = {
+			limit = {
+				is_core_of = NCR
+				civilian_power_grid > 0			
+			}
+			remove_building  = {
+				type = civilian_power_grid
+				level = 1
+			} 
+		}
+	}  		
 }
 #
 country_event = {#60 - From the Top Down
