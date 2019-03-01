@@ -197,7 +197,7 @@ ENC_starting_companies = {
 }
 
 ENC_nation_building = {
-	icon = category_usa_construction
+	icon = generic_democracy
 	allowed = { tag = ERB }
 	priority = 3
 	visible = {	has_completed_focus = enc_reno_end }	
@@ -230,6 +230,12 @@ ENC_american_broadcasts = {
 	icon = category_tv
 	priority = 10
 	visible = {	has_completed_focus = enc_american_broadcasting_department }	
+}
+
+ENC_securing_borders = {
+	allowed = { tag = ERB }
+	icon = border_war
+	priority = 10
 }
 
 # ##############################

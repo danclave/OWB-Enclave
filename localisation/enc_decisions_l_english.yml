@@ -63,7 +63,7 @@ ERB_northern_raiders_cleared: " Northern Raiders cleared out!"
 ENC_pacificy_northern_border: "Secure the Northern Border!"
 ENC_pacificy_northern_border_desc: "North of New California lay tribals, the Washington Brotherhood, and Supermutants; all of whom are happy to sack our settlements.  If we can show our citizens that we are capable of protecting them, perhaps we can earn some support."
 ENC_maintain_northern_control: "Fortify the North."
-ENC_maintain_northern_control_desc: "By deploying significant forces to Redding, we can crush resistance in the area. Yay!"
+ENC_maintain_northern_control_desc: "By deploying significant forces to Redding, we can crush resistance in the area."
 ENC_protect_coasts: "Protect California's Coasts"
 ENC_protect_coasts_desc: "With the fall of the NCR, the Broken Coast, tribals, and bandits from Mexico can raid America's seaboard.  Let's put a stop to that."
 ##############################
@@ -306,6 +306,12 @@ ENC_prioritize_civilian_relief_desc: "The war has left many of our new citizens 
 ENC_rebuild_infrastructure:0 "Rebuild Infrastructure"
 ENC_rebuild_infrastructure_desc:0 "Our great nation's infrastructure is in considerable disrepair. Soldiers and merchants alike struggle to traverse the dilapidated roads connecting our cities. Let us show them the strength of our government by making a concentrated effort to rebuild America's infrastructure."
 ENC_rebuild_infrastructure_tt:0 "Gain §Y1%§! of legitimacy for every 2 levels of §Yinfrastructure§! built during the decision."
+
+###################################
+# Securing our borders
+###################################
+ENC_securing_borders:0 "Securing the Borders"
+
 ################ special codes for special people ################################################################################################################
 
 # y§Yyellow§!
