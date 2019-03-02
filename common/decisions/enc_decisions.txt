@@ -1334,7 +1334,7 @@ ENC_debug = {
 	}
 	ENC_misc = {
 		complete_effect = {
-			remove_ideas = enc_NCR_power_struggle
+			remove_5_popularity_from_ruling_party = yes
 		}
 	}
 	ENC_NCR_CES_war = {

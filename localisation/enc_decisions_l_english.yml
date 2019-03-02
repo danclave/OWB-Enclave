@@ -313,6 +313,13 @@ ENC_find_power_grid_desc: "There is a power grid ready to core a province, you j
 ###################################
 ENC_securing_borders:0 "Securing the Borders"
 
+
+###################################
+# MISC
+###################################
+add_popularity_to_ruling_party_tt: "Change in popularity of §GGetRulingParty§!: [?popularity_change|%2+].\n"
+add_popularity_to_reformers_good:  "Change in popularity of §GReformers§!: [?popularity_change|%2+].\n"
+
 ################ special codes for special people ################################################################################################################
 
 # y§Yyellow§!
