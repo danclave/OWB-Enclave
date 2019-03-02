@@ -497,7 +497,7 @@ ENC_NCR_hiding = {
 				intellectuals > 0.3
 			}
 			check_variable = {
-					var = enc_legitimacy
+					var = legitimacy
 					value > 0.299
 				}
 		}
@@ -1337,7 +1337,7 @@ ENC_debug = {
 			has_no_free_press = no
 		}
 		complete_effect = {
-			remove_ideas = enc_NCR_power_struggle
+			remove_5_popularity_from_ruling_party = yes
 		}
 	}
 	ENC_NCR_CES_war = {
