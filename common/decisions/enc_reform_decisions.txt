@@ -2238,6 +2238,9 @@ ENC_securing_borders = {
 	ENC_maintain_northern_control = { # fortify the noth
 		icon = generic_prepare_civil_war
 		priority = 10
+		allowed = {
+			always = no
+		}
 		available = {
 			divisions_in_state = {
 				state = 141	

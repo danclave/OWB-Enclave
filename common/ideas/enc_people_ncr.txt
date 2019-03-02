@@ -67,7 +67,7 @@ ideas = {
 		enc_colonel_royez = {			
 			picture = colonel_royez
 			allowed = {	original_tag = ERB }
-			# visible = { has_country_flag = enc_accepted_ncr_leaders }
+			visible = { has_country_flag = enc_accepted_ncr_leaders }
 			traits = { all_american_badass }
 			available = {
 				custom_trigger_tooltip = {
@@ -86,7 +86,7 @@ ideas = {
 		enc_colonel_hsu = {			
 			picture = colonel_hsu
 			allowed = {	original_tag = ERB }
-			# visible = { has_country_flag = enc_accepted_ncr_leaders }
+			visible = { has_country_flag = enc_accepted_ncr_leaders }
 			traits = { calm_leader }
 			available = {
 				custom_trigger_tooltip = {
