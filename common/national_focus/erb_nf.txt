@@ -2347,7 +2347,6 @@ focus = {#RADIO - Red Menace
 		completion_reward = {
 			remove_ideas = enc_NCR_power_struggle2
 			add_stability = 0.10
-			country_event = { id = enc_reformers.173 } 
 			remove_ideas = ENC_smuggling
 			if = {
 				limit = {

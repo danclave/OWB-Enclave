@@ -1333,6 +1333,9 @@ ENC_debug = {
 		}
 	}
 	ENC_misc = {
+		available = {
+			has_no_free_press = no
+		}
 		complete_effect = {
 			remove_ideas = enc_NCR_power_struggle
 		}

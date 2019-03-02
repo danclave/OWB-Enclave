@@ -5211,11 +5211,9 @@ country_event = { #180- Media Scandal
     fire_only_once = NO
     trigger = {
 		has_country_flag = california_atrocities
-		OR = { 
-			has_idea = ENC_free_press
-			has_idea = ENC_free_press_2
-			}	
-		}		
+		has_free_press = yes
+	}
+	
 	mean_time_to_happen = {
 		days = 60
 		}  
@@ -5347,10 +5345,7 @@ country_event = { #183 - Press Covers Requisitions
     fire_only_once = YES
     trigger = {
 		has_completed_focus = enc_requisition_of_resources
-		OR = { 
-				has_idea = ENC_free_press
-				has_idea = ENC_free_press_2
-			}
+		has_free_press = yes
 		NOT = {has_country_flag = enc_stop_requisition} 
 			}		
 	mean_time_to_happen = {
@@ -5429,7 +5424,7 @@ country_event = { #184 - Slave Labor Press Scandal
     fire_only_once = YES
     trigger = {
 		has_completed_focus =  enc_emergency_labour_draft 
-		has_idea = ENC_free_press
+		has_free_press = yes
 		NOT = { has_completed_focus = enc_segregation }
 			}		
 	mean_time_to_happen = {
@@ -5643,10 +5638,7 @@ country_event = { #190 - Free Press Supports rule of law
 			focus = enc_martial_law
 			progress > 0.1
 		}
-		OR = { 
-			has_idea = ENC_free_press
-			has_idea = ENC_free_press_2
-		}
+		has_free_press = yes
 	}		
 	mean_time_to_happen = {	days = 3 }  
     option = { # STOP
@@ -5679,10 +5671,7 @@ country_event = { #191 - Free Press Supports Democracy
 			focus = enc_martial_law
 			progress > 0.1
 		}
-		OR = { 
-			has_idea = ENC_free_press
-			has_idea = ENC_free_press_2
-		}	
+		has_free_press = yes	
 	}		
 	mean_time_to_happen = {	days = 3 }  
     option = { # STOP
@@ -5710,10 +5699,7 @@ country_event = {#192 - War Crimes
 	picture = GFX_event_enc_urban_patrol
 	fire_only_once = no
     trigger = {
-		OR = {
-			has_idea = ENC_free_press
-			has_idea = ENC_free_press_2
-		}
+		has_free_press = yes
 		any_enemy_country = {
 			has_defensive_war_with = ERB	
 			OR = { 
@@ -6624,10 +6610,7 @@ country_event = {#300 - state protests!
 				}
 			}
 			has_completed_focus = enc_requisition_of_resources
-			not = {
-				has_idea = ENC_free_press
-				has_idea = ENC_free_press_2
-			}
+			has_no_free_press = yes
 		}
 	}
 	immediate = {
@@ -6657,10 +6640,7 @@ country_event = {#300 - state protests!
 		}
 		else_if = { # player has no free press, restore free press
 			limit = {	
-				not = {
-					has_idea = ENC_free_press
-					has_idea = ENC_free_press_2
-				}
+				has_no_free_press = yes
 			}
 			custom_effect_tooltip = enc_reformers.300.d.ENC_free_press
 		}
@@ -6760,10 +6740,7 @@ country_event = {#300 - state protests!
 		}
 		else_if = { # player has no free press, restore free press
 			limit = {
-				not = {
-					has_idea = ENC_free_press
-					has_idea = ENC_free_press_2
-				}
+				has_no_free_press = yes
 			}
 			add_ideas = { ENC_free_press }
 		}
@@ -6839,11 +6816,19 @@ country_event = {#301 - state protest turns into massacre!
 	is_triggered_only = yes
 	
 	immediate = {
+		if = {
+			limit = { has_free_press = yes }
+			custom_effect_tooltip = enc_reformers.301.d.free_press			
+		}
+		else = {
+			custom_effect_tooltip = enc_reformers.301.d.no_free_press		
+		}
 		hidden_effect = {
 			set_country_flag = enc_protests_over # at least there's that
+			set_variable = { enc_years_since_massacre = 1 }
 			country_event = { # Candle vigil one year layer
 				id = enc_reformers.303
-				days = 365 # todo make 365
+				days = 3#65 # todo make 365
 			}
 		}
 	}
@@ -6854,10 +6839,7 @@ country_event = {#301 - state protest turns into massacre!
 		hidden_effect = {
 			if = {
 				limit = {
-					OR = {
-						has_idea = ENC_free_press
-						has_idea = ENC_free_press_2
-					}
+					has_free_press = yes
 				}
 				country_event = { id = enc_reformers.302 } # news report
 			}
@@ -6866,10 +6848,7 @@ country_event = {#301 - state protest turns into massacre!
 	option = {# better shut down the press
 		name = enc_reformers.301.b
 		trigger = {
-			OR = {
-				has_idea = ENC_free_press
-				has_idea = ENC_free_press_2
-			}
+			has_free_press = yes
 		}
 		add_stability = -0.15
 		remove_ideas = { ENC_free_press ENC_free_press_2 }
@@ -6931,21 +6910,33 @@ country_event = {#303 - Candle vigil
 	title = enc_reformers.303.t
 	picture = GFX_event_ENC_secret
 	fire_only_once = no
-	desc = enc_reformers.303.d
+	desc = {
+        text = enc_reformers.303.d.first_year
+        trigger = {
+			check_variable = { enc_years_since_massacre < 1 } 
+        }
+    }
+	desc = {
+        text = enc_reformers.303.d.later
+        trigger = {
+			check_variable = { enc_years_since_massacre > 1 } 
+        }
+    }
 	is_triggered_only = yes
 	option = {# allow it to happen
 		name = enc_reformers.303.a
-		add_war_support = -0.05
+		add_war_support = -0.10
+		add_to_variable = { enc_years_since_massacre = 1 }
 		country_event = { # Candle vigil one year layer
 			id = enc_reformers.303
-			days = 365 # todo make 365
+			days = 3#65 # todo make 365
 		}
 	}
 	option = {# shut it down
 		name = enc_reformers.303.b
 		add_stability = -0.10
 		set_temp_variable  = { 
-			legitimacy_change_var = -0.05 
+			legitimacy_change_var = -0.10
 		}
 		change_legitimacy = yes
 	}

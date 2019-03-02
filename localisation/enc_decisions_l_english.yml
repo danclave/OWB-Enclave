@@ -248,7 +248,6 @@ ENC_arm_raiders_cost_blocked: "£enc_weapons_red  §R300§!"
 ENC_send_spies_cost: "£manpower_texticon  §Y100§!"
 ENC_send_spies_cost_blocked: "£manpower_texticon  §R100§!"
 
-
 enc_bishop_in_NCR: "§YMr. Bishop§! is in the §YNew California Republic§!"
 assassinate_bishop_crisis: "§RAssassinate Mr. Bishop§!"
 assassinate_bishop_crisis_complete_effect: "§YMr. Bishop§! dies!"
@@ -293,6 +292,8 @@ ENC_restart_movie_industry:0 "Restart Movie Industry"
 ENC_restart_movie_industry_desc:0 "The American movie industry has been dead for a long time. Still, there are plenty of drive-in theaters that would not be too difficult to repair."
 ENC_war_movie:0 "Sponsor War Movie"
 ENC_war_movie_desc:0 "We don't have to directly tell our people that war is glorious if we can just show them instead."
+ENC_war_movie_cost: "£army_experience §Y75§!"
+ENC_war_movie_cost_blocked: "£army_experience  §R75§!"
 ENC_comedy_movie:0 "Sponsor Comedy Movie"
 ENC_comedy_movie_desc:0 "Everyone needs an escape. A movie that allows us to laugh together is great for relieving tensions."
 ENC_patriotic_movie:0 "Sponsor Patriotic Movie"
@@ -313,6 +314,8 @@ ENC_find_power_grid_desc: "There is a power grid ready to core a province, you j
 ###################################
 ENC_securing_borders:0 "Securing the Borders"
 
+
+ENC_misc: "[ERB.GetAdjective] soldiers"
 ################ special codes for special people ################################################################################################################
 
 # y§Yyellow§!
