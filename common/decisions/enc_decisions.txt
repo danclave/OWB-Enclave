@@ -497,7 +497,7 @@ ENC_NCR_hiding = {
 				intellectuals > 0.3
 			}
 			check_variable = {
-					var = enc_legitimacy
+					var = legitimacy
 					value > 0.299
 				}
 		}
