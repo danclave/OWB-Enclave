@@ -1,13 +1,13 @@
 buildings = {
 	civilian_power_grid = {
 		show_on_map = 0
-		base_cost = 7200
+		base_cost = 10800
 		icon_frame = 15
-		local_resources_electricity = -2
+		local_resources_electricity = -5
 		refinery = yes
 		max_level = 1
 		shares_slots = yes
-		value = 5
+		value = 1
 		infrastructure_construction_effect = yes
 	}
 }

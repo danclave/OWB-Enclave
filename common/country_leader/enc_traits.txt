@@ -194,5 +194,17 @@ leader_traits = {
 		stability_factor = -0.05
 		war_support_factor = -0.05
 	}
-
+	vice_president_dornan_trait = {
+		random = no
+		war_support_factor = 0.10
+	}
+	vice_president_hayes_trait = {
+		random = no
+		stability_factor = 0.10
+	}
+	vice_president_lynette_trait = {
+		random = no
+		war_support_factor = 0.05
+		stability_factor = 0.05
+	}
 }

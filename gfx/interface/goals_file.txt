@@ -34,6 +34,7 @@
 # GFX_goal_enc_bos_soldiers
 # GFX_goal_enc_cause_focus
 # GFX_goal_enc_cause_focus.png
+# GFX_goal_enc_citizenship_for_service
 # GFX_goal_enc_cloning
 # GFX_goal_enc_combined_arms
 # GFX_goal_enc_complete_integration
@@ -72,12 +73,14 @@
 # GFX_goal_enc_fear_uncertainty_and_doubt
 # GFX_goal_enc_fed
 # GFX_goal_enc_fighter
+# GFX_goal_enc_first_citizens
 # GFX_goal_enc_flags
 # GFX_goal_enc_forced_conscription
 # GFX_goal_enc_forced_deal
 # GFX_goal_enc_fort
 # GFX_goal_enc_fort_reformer
 # GFX_goal_enc_free_press
+# GFX_goal_enc_fruits_of_their_labors
 # GFX_goal_enc_geck
 # GFX_goal_enc_gecko_power_plant
 # GFX_goal_Enc_goal_flag_mexico
@@ -99,7 +102,6 @@
 # GFX_goal_enc_laser_weapons_reform
 # GFX_goal_enc_law
 # GFX_goal_enc_limited_army_reform
-# GFX_goal_enc_limited_integration
 # GFX_goal_enc_major_war
 # GFX_goal_enc_management
 # GFX_goal_enc_map_us
@@ -107,6 +109,7 @@
 # GFX_goal_enc_military_police
 # GFX_goal_enc_military_sphere
 # GFX_goal_enc_military_sphere_reform
+# GFX_goal_enc_model_communities
 # GFX_goal_enc_mutant_extinction
 # GFX_goal_enc_ncr_dollar
 # GFX_goal_enc_NCR_seak_allies
@@ -116,6 +119,7 @@
 # GFX_goal_enc_officers_by_loyalty_and_devotion
 # GFX_goal_enc_officers_by_merit_and_skill
 # GFX_goal_enc_old_remnant_officers
+# GFX_goal_enc_operation_babylon
 # GFX_goal_enc_out_with_the_old
 # GFX_goal_enc_owb_propaganda
 # GFX_goal_enc_pacific_commonwealth
@@ -176,6 +180,7 @@
 # GFX_goal_enc_salute_america
 # GFX_goal_enc_science_reform
 # GFX_goal_enc_scientists
+# GFX_goal_enc_screening
 # GFX_goal_enc_segregation
 # GFX_goal_enc_self_management
 # GFX_goal_enc_sign
@@ -187,6 +192,7 @@
 # GFX_goal_enc_smash
 # GFX_goal_enc_special_forces
 # GFX_goal_enc_stability_first
+# GFX_goal_enc_subsidized_lives
 # GFX_goal_enc_superhuman
 # GFX_goal_enc_super_soldier
 # GFX_goal_enc_support_armed_coup
@@ -195,6 +201,7 @@
 # GFX_goal_enc_take_reno
 # GFX_goal_enc_the_american_alliance-3
 # GFX_goal_enc_the_american_alliance
+# GFX_goal_enc_the_common_man
 # GFX_goal_enc_the_lucia_incident
 # GFX_goal_enc_the_Lucky_38
 # GFX_goal_enc_the_mutant_question
@@ -210,6 +217,7 @@
 # GFX_goal_enc_us_handshake
 # GFX_goal_enc_us_reborn
 # GFX_goal_enc_vac
+# GFX_goal_enc_vault_city_citizenship_protocols
 # GFX_goal_enc_vault_open
 # GFX_goal_enc_vault_tec
 # GFX_goal_enc_verti
@@ -218,6 +226,7 @@
 # GFX_goal_enc_veterans_call
 # GFX_goal_enc_vlt_power
 # GFX_goal_enc_weapon_factory
+# GFX_goal_enc_welcome_vlt_citizens
 # GFX_goal_enc_wip
 # GFX_goal_erbbos.pdn
 # GFX_goal_flag_burn_BOS
@@ -226,6 +235,7 @@
 # GFX_goal_pa_production
 # GFX_goal_poison_bear_reformer
 # GFX_goal_shield_enc_wip
+# GFX_goal_the_last_argument_of_presidents
 # GFX_goal_US_dock
 # GFX_goal_US_navy
 # GFX_goal_us_plane

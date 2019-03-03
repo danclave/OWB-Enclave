@@ -1246,7 +1246,9 @@ enc_reformers.300.dd: "Comply with their demands."
 enc_reformers.300.dd.tt: "§gProtests may happen again.§!\n\n"
 #############################################################################################################
 enc_reformers.301.t: "The [protesting_state.GetName] massacre"
-enc_reformers.301.d: "Efforts to contain the protests in [protesting_state.GetName] have gone out of control, resulting in a massacre."
+enc_reformers.301.d: "Sporadic protests have occurred in [protesting_state.GetName] for several days and the [ERB.GetName] has responded by sending in their armed forces to disperse the crowds. This move only escalated tensions as power armored forces clashed with protests in the streets of [protesting_state.GetName].\n\nA few hours later, an [ERB.GetAdjective] trooper reported sniper fire from the crowd and returned fire before receiving permission to engage. The resulting chaos caused the situation to spiral out of control, resulting in scores of civilian casualties with not a scratch on a soldier's power armor to prove the existence of this supposed sniper."
+enc_reformers.301.d.free_press: "The Free Press has already begun to refer to this day as the [protesting_state.GetName] massacre. It may haunt us for years to come."
+enc_reformers.301.d.no_free_press: "At least there is no free press to report on this event. But that doesn't mean that word of mouth won't spread across our country."
 enc_reformers.301.a: "A dark day for all mankind."
 enc_reformers.301.b: "Better shut down the press in advance."
 #############################################################################################################
@@ -1257,9 +1259,12 @@ enc_reformers.302.b: "This free press thing has gone far enough."
 enc_reformers.302.c: "That's not what our official channels are reporting."
 #############################################################################################################
 enc_reformers.303.t: "Candelight vigil in [protesting_state.GetName]"
-enc_reformers.303.d: "People have gathered in [protesting_state.GetName] to remember 1 year since the [protesting_state.GetName] massacre."
+enc_reformers.303.d.first_year: "People have gathered in [protesting_state.GetName] to remember 1 year since the [protesting_state.GetName] massacre."
+enc_reformers.303.d.later: "People have gathered in [protesting_state.GetName] to remember [?enc_years_since_massacre] years since the [protesting_state.GetName] massacre."
 enc_reformers.303.a: "Let them have their ceremony."
+enc_reformers.303.a.tt: "§gThe ceremony is allowed to continue§!.\n\n"
 enc_reformers.303.b: "Break it up."
+enc_reformers.303.b.tt: "§gThe ceremony is forcefully dispersed, ensuring they won't try this again next year§!.\n\n"
 #############################################################################################################
 enc_reformers.304.t: "Protests turn into riots in [protesting_state.GetName]!"
 enc_reformers.304.d: "Protests have gotten out of hand and turned into riots."
@@ -1279,5 +1284,24 @@ enc_reformers.306.d: "One of our commanders, [protesting_commander.GetName], has
 enc_reformers.306.a: "Accept his resignation."
 enc_reformers.306.b: "§MNone of us are Americans until we all are.§!"
 enc_reformers.306.b.reward: "Changes his mind.\n"
-
+#############################################################################################################
+enc_reformers.307.t: "The President and the People"
+enc_reformers.307.d: "TODO"
+enc_reformers.307.a: "It will take a strong people to bring peace to America."
+enc_reformers.307.b: "It will take a strong president to bring peace to America."
+#############################################################################################################
+enc_reformers.308.t: "Vice President Dornan"
+enc_reformers.308.d: "TODO"
+enc_reformers.308.a: "No man rules alone."
+enc_reformers.308.b: "I changed my mind."
+#############################################################################################################
+enc_reformers.309.t: "Vice President Hayes"
+enc_reformers.309.d: "TODO"
+enc_reformers.309.a: "No man rules alone."
+enc_reformers.309.b: "I changed my mind."
+#############################################################################################################
+enc_reformers.310.t: "Vice President Lynette"
+enc_reformers.310.d: "TODO"
+enc_reformers.310.a: "No man rules alone."
+enc_reformers.310.b: "I changed my mind."
 

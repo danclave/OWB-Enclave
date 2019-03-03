@@ -245,6 +245,14 @@ ENC_nevada_tribals = {
 }
 
 
+ENC_vice_president = {
+	priority = 1000
+	allowed = { original_tag = ERB }
+	available = {
+		has_country_flag = enc_select_vice_president
+	}
+	
+}
 # ##############################
 # ICONS
 # ##############################
