@@ -497,8 +497,7 @@ ENC_NCR_hiding = {
 				intellectuals > 0.3
 			}
 			check_variable = {
-					var = enc_legitimacy
-					value > 0.299
+					legitimacy > 0.249
 				}
 		}
 		complete_effect = {
@@ -1073,7 +1072,7 @@ ENC_render_unto_caesar = {
 		}
 		available = {
 			not = { country_exists = CES }
-			 }
+		}
 		cancel_trigger = {
 			CES = {
 				OR = {
@@ -1088,7 +1087,7 @@ ENC_render_unto_caesar = {
 		visible = {original_tag = ERB }
 		timeout_effect = { country_event = { id = enc_reformers.101 }}
 		complete_effect = { }
-		}
+	}
 		
 		
 	ENC_rise_slaves = {

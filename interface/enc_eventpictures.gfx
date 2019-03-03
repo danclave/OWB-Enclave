@@ -33,7 +33,11 @@ spriteTypes = {
             name = "GFX_event_enc_senate"
  		    texturefile = "gfx/event_pictures/event_enc_senate.tga"
  	    }
-
+		
+		SpriteType = {#event_Think_tank
+            name = "GFX_event_enc_think_tank"
+ 		    texturefile = "gfx/event_pictures/event_enc_think_tank.tga"
+ 	    }
         SpriteType = {#Thanksgiving
             name = "GFX_event_enc_thanksgiving"
  		    texturefile = "gfx/event_pictures/event_enc_thanksgiving.tga"
@@ -571,5 +575,9 @@ spriteTypes = {
 		SpriteType = {#event_enc_protests_ncr_flag
             name = "GFX_event_enc_protests_ncr_flag"
  		    texturefile = "gfx/event_pictures/event_enc_protests_ncr_flag.tga"
+ 	    }
+		SpriteType = {#enc_joshua_graham
+            name = "GFX_event_enc_joshua_graham"
+ 		    texturefile = "gfx/event_pictures/event_enc_joshua_graham.tga"
  	    }
 }

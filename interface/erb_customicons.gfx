@@ -18,7 +18,11 @@ spriteTypes = {
         SpriteType = {#america_goal_golden_gate
             name = "GFX_goal_america_goal_golden_gate"
  		    texturefile = "gfx/interface/goals/america_goal_golden_gate.dds"
- 	    } 
+ 	    }
+		SpriteType = {#america_goal_golden_gate
+            name = "GFX_goal_america_goal_golden_gate"
+ 		    texturefile = "gfx/interface/goals/america_goal_golden_gate.dds"
+ 	    } 		
         SpriteType = {#desktop.ini
             name = "GFX_goal_desktop.ini"
  		    texturefile = "gfx/interface/goals/desktop.ini.dds"
@@ -26,7 +30,15 @@ spriteTypes = {
         SpriteType = {#enc_accept_ghouls
             name = "GFX_goal_enc_accept_ghouls"
  		    texturefile = "gfx/interface/goals/enc_accept_ghouls.dds"
- 	    } 
+ 	    }
+		SpriteType = {#enc_nevada_reborn
+            name = "GFX_enc_nevada_reborn"
+ 		    texturefile = "gfx/interface/goals/enc_nevada_reborn.dds"
+ 	    }
+		SpriteType = {#enc_reform_the_tribes
+            name = "GFX_enc_reform_the_tribes"
+ 		    texturefile = "gfx/interface/goals/enc_reform_the_tribes.dds"
+ 	    } 		
         SpriteType = {#enc_accept_super_mutants
             name = "GFX_goal_enc_accept_super_mutants"
  		    texturefile = "gfx/interface/goals/enc_accept_super_mutants.dds"

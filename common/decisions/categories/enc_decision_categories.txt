@@ -237,6 +237,13 @@ ENC_securing_borders = {
 	icon = border_war
 	priority = 10
 }
+ENC_nevada_tribals = {
+	allowed = { tag = ERB }
+	icon = border_war
+	priority = 10
+	icon = category_usa_construction
+}
+
 
 # ##############################
 # ICONS

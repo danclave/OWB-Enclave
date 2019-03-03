@@ -115,6 +115,10 @@ purify_city: "Purify the city"
 ###################################
 # America Foreign Policy Decisions
 ###################################
+ENC_WBH_expansion: "Washington Brotherhood Expansion"
+ENC_WBH_expansion_desc: "With the collapse of the Troll Warren and the lack of opposition from New California, the Washington Brotherhood sets its sights on isolated communities..."
+ENC_CES_expansion: "The Legion Marches"
+ENC_CES_expansion_desc: "With the fall of New California and New Canaan, the greatest opponents of Legion lie in ashes. Who is going to stop Caesar in his bid to conquer the Wastes?"
 ENC_oppose_legion: "Aid to the Foes of the Legion"
 ENC_oppose_legion_desc: "The Reunited States aren't the only ones who stand against Caesar.  With some proper training, we can bleed him before he reaches America."
 erb_aid_foe_legion: "Aid to [From.GetName]"
@@ -141,7 +145,19 @@ erb_tribal_burden: "Develop the tribal lands of [From.GetName]"
 erb_tribal_burden_desc: "Look at the people of [From.GetName].  Their ancestors were regular Americans, but now they wallow in poverty and ignorance. Time to take up the Enclave's burden and bring them our peaceful ways... by force."
 erb_reunited_state_arroyo: "Send a Courier to Arroyo"
 erb_reunited_state_arroyo_desc: "Although things have been tense with the people of Arroyo, surely they will let bygones be bygones and join the Courier network?"
-
+ENC_nevada_tribals: "The Nevada Department of the Interior"
+ENC_nevada_tribals_desc: "We cannot truly call Nevada home unless we unite the peoples of this great state."
+erb_ruby_valley: "Incorporate the Ruby Valley Refuge"
+erb_eastport: "Annex Eastport"
+erb_shoshone: "Save the Shoshone"
+erb_shoshone_desc: "The Shoshone aren't using their land as efficiently as they should be."
+erb_RIP: "RIP the Riperult Raiders"
+erb_RIP_desc: "Press f to pay respects once we bring their leaders to justice."
+erb_MRA: "Support Mojave Rights Activists"
+erb_MRA_desc: "Let's cleanse the raiders who harass the good people of the Mojave."
+erb_MOJ: "Break the Mojave Brotherhood"
+erb_FIE: "Face the Fiends"
+WBH_reformer_crisis: "The Dark Brotherhood Marches South"
 ##############################
 # PROPAGANDA 
 ##############################
@@ -153,7 +169,8 @@ ENC_raise_stability: "Call for Order"
 remember_rig: "Remember The Rig"
 remember_navarro: "Remember Navarro"
 anti_bos_propaganda: "Anti Brotherhood Propaganda"
-
+ENC_anti_communist_propaganda: "Warn of the Red Menace"
+ENC_anti_communist_propaganda_desc: "My fellow Americans, we shall never fall to a Communist invasion..."
 ##############################
 # SHIFT POLICY 
 ##############################

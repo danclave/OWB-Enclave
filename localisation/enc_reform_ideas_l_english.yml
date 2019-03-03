@@ -3,6 +3,10 @@
 ###################################
 # REFORM IDEAS
 ###################################
+enc_radio_military_updgrade: "Upgraded Military Radio"
+enc_radio_civilian_upgrade: "Civilian Broadcasting"
+enc_civil_society_idea: "A Civil Society"
+TRL_debuff: "Ban on Trolling"
 enc_counterfeiting: "Counterfeiting"
 ENC_reform_officers: "Chiefs of Staff"
 ENC_reform_general_staff: "The Pentagon Reborn"
