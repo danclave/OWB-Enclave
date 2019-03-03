@@ -659,6 +659,7 @@ focus = {#RADIO - Red Menace
 		x = 0
 		y = 1
 		prerequisite = { focus = enc_radio } 
+		available = {has_country_flag = enc_red_menace_flag }
 		completion_reward = {
 			add_political_power = 150
 			add_stability = 0.05
@@ -722,7 +723,7 @@ focus = {#RADIO - Red Menace
 			swap_ideas = {
 				remove_idea = ENC_radio
 				add_idea = ENC_radio_civilian
-			}
+			}	
 		}
 		cost = 4.3 	
 	}
@@ -4184,8 +4185,7 @@ focus = {#Legion Border
 		x = -2.5
 		y = 3
 		completion_reward = {
-			add_research_slot = 1
-			add_ideas = ENC_follower_schools
+		add_ideas = ENC_follower_schools
 		}
 	}
 	focus = {#NEVADA - Refugees
@@ -4197,19 +4197,18 @@ focus = {#Legion Border
 		x = 0
 		y = 1
 		completion_reward = {
-			add_tech_bonus = {
-				name = chem_tech_bonus
-				bonus = 0.7
-				uses = 1
-				category = chem_tech
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
 			}
+			change_legitimacy = yes
 			add_ideas = agarianidyll
 		}
 	}
 	
 focus = {#NEVADA - REform Tribes
 		id = enc_reform_the_tribes
-		icon = GFX_goal_enc_reform_ant
+		icon = GFX_enc_reform_the_tribes
 		cost = 5.8 
 		prerequisite = { focus = enc_the_state_of_nevada}
 		relative_position_id = enc_the_state_of_nevada
@@ -4225,13 +4224,35 @@ focus = {#NEVADA - Agriculture
 		cost = 5.8 
 		prerequisite = { focus = enc_reform_the_tribes }
 		relative_position_id = enc_reform_the_tribes
-		x = -4.5
-		y = 3
+		x = 0
+		y = 1
 		completion_reward = {
-			add_ideas = KHA_idea_settle_the_wastes
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
 		}
 }
-	
+
+focus = {#NEVADA - End
+		id = enc_civil_society
+		icon = GFX_enc_nevada_reborn
+		cost = 5.8 
+		prerequisite = { focus = enc_settle_mormons }
+		prerequisite = { focus = enc_department_agriculture }
+		relative_position_id = enc_department_agriculture
+		x = 1
+		y = 1
+		completion_reward = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.07
+			}
+			change_legitimacy = yes
+			add_ideas = enc_civil_society_idea
+		}
+}	
 focus = {#NEVADA - second city
 		id = Enc_Second_City
 		icon = GFX_goal_enc_the_Lucky_38

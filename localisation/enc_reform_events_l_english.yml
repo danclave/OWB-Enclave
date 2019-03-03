@@ -1178,6 +1178,51 @@ enc_reformers.221.a: "We promise we'll build Dayglow a nice park when Reconstruc
 enc_reformers.221.a.tt: "Available because you selected §YSegregation§!"
 enc_reformers.221.b: "Oh crap, this is bad."
 enc_reformers.221.c: "Cancel the program!"
+#############################################################################################################
+enc_reformers.222.t: "Another Victim for the Washington Brotherhood!"
+enc_reformers.222.d: "With the fall of the Troll Warren, the raider faction under Paladin Rodriguez is eager for new plunder.  They have set their sights more isolated settlements, and it seems no one shall stop them..."
+enc_reformers.222.a: "Who could have Caused This?"
+#############################################################################################################
+enc_reformers.223.t: "The Legion Marches!"
+enc_reformers.223.d: "The Mormons hang from crosses like their god, Dog City has fallen, and now the Legion turns to clean up its flank.  The only remaining foe of the Legion are the Reunited States.  But many fear that it will fall like so many others before Caesar."
+enc_reformers.223.a: "Somebody should stop them!"
+#############################################################################################################
+enc_reformers.224.t: "Joshua Graham Enlists"
+enc_reformers.224.d: "Although New Canaan has fallen, some of their leaders have survived and made their way to America.  Among the most noteworthy is Joshua Graham, one of the Legion's founders.  Graham seeks vengeance against the Legion for its treatment of the Mormons, and will carry the fire of the holy spirit against our enemies until he stands before his Lord for judgement."
+enc_reformers.224.a: "Killing our enemies is just a chore like any other"
+#############################################################################################################
+enc_reformers.225.t: "The Menace from Washington"
+enc_reformers.225.d: "The Washington Brotherood, fresh from its conquests of the Troll Warren and others, lusts for more.  More resources, more slaves, more technology.  And with New California still bitterly divided, its extending its claws towards the Reunited States."
+enc_reformers.225.a: "Where are they even getting their powered armor?"
+enc_reformers.225.a.tt: "The §Y[WBH.GetName]§! prepare for war against you."
+#############################################################################################################
+enc_reformers.226.t: "Enclave Scientists in the North"
+enc_reformers.226.d: "To the extent members of the Enclave disliked our plan to 'Be nice to the mutants who killed their parents,' but did not want to become genocidal Purists, most fled to [CES.GetName], which could offer them great wealth and power.  But the Washington Brotherhood has power and wealth as well, for those who will tolerate its insane ruler.\n\nOne of our scientists defected with a weapon of great use against supermutants, which could cripple the Troll Warren. We are torn between annoyance at the fact he stole our superweapon and pleasure that rabid supermutants will likely die en masse, and see no way this will come back to hurt us." 
+enc_reformers.226.a: "Dead supermutants seems fine, really."
+#############################################################################################################
+enc_reformers.227.t: "Canadian Pirates Join the Brotherhood"
+enc_reformers.227.d: "To the north of the Washington lies the Broken Coast, where pirates bludgeon their prey to death with Canada's sacred clubs, their fearsome hockey sticks.  We hoped they'd serve as a nuisance to the Brotherhood and tie down their flanks, but now they've formed a blood pact with the Brotherhood to seize California, which can offer far more loot and slaves than the Northwest. Should war with the Washington Brotherhood break out, they may try to harass our coasts and supply lines. \n\nOf course, the United States Navy wet its teeth fighting pirates five hundred years ago. Perhaps it's time to pick up old habits." 
+enc_reformers.227.a: "Let them know we have not yet begun to fight"
+#############################################################################################################
+enc_reformers.228.t: "The Spectre of Communism"
+enc_reformers.228.d: "Like most children in the Enclave's vaults, Granite was raised with a fervent hatred of Communism.  Sadly, 200 years of Enclave propaganda and living in a Vault run under a command economy meant that he, and most other members of the Enclave were left with a vague understanding of what communism was. As such, Granite -"
+enc_reformers.228.a: "Knew all enemies of America must be Communist"
+enc_reformers.228.a.tt: "\nGranite's hatred of §RCommunism§! will play a role in future events and is necessary to unlock §M Anti-Communist Propaganda§!."
+enc_reformers.228.b: "Spent history class playing on his Pip Boy"
+#############################################################################################################
+enc_reformers.229.t: "Communist Sympathizer in the Press!"
+enc_reformers.229.d: "Granite has begun to suspect one of his more outspoken press critics of being a Communist in light of her opposition to Granite's proposed plan for a national baseball league. Granite has considered merely condeming her, or asking the Secret Service to investigate whether her opposition to government-sponsored sporting events is a sign of communist sympathies."
+enc_reformers.229.a: "Only a §RCommunist§! would oppose baseball!"
+enc_reformers.229.b: "The Secret Service begins a search for Communists"
+#############################################################################################################
+enc_reformers.230.t: "Communist Ghouls"
+enc_reformers.230.d: "Granite's anticommunist diatribes have become a subject of discussion, and it appears that one of the prewar ghouls, a political activist before the war, has offered to speak with Granite and explain Communism to him.  He's asked Granite to read a book called 'Das Kapital,' which she says was a communist work."
+enc_reformers.230.a: "Let's read it"
+enc_reformers.230.b: "Arrest the ghoul for owning §RCommunist§! propaganda!"
+#############################################################################################################
+enc_reformers.231.t: "Better Read"
+enc_reformers.231.d: "Granite gave up on Das Kapital after the first few pages, finding it incredibly tedious and completely incomprehensible to someone raised 200 years after a nuclear war. Still, at least he decided that it's simply unamerican to oppose baseball, but not a sign of Communist sympathies."
+enc_reformers.231.a: "...Okay, let's call it a win"
 ## START OF 300 ###
 #############################################################################################################
 enc_reformers.300.t: "Protests in [protesting_state.GetName]"

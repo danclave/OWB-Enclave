@@ -1769,9 +1769,9 @@ country_event = { #59 - Power grid sabotaged!
     is_triggered_only = no
 	allowed = { original_tag = ERB }
 	trigger = {		
-		or = {
-			has_idea = { enc_NCR_resistance }
-			has_idea = { enc_NCR_resistance2 }
+		OR = {
+			has_idea = enc_NCR_resistance 
+			has_idea = enc_NCR_resistance2 
 		}
 		any_owned_state = {
 			is_core_of = NCR
@@ -3434,8 +3434,6 @@ country_event = {#115 Axis of Evil
     option = {# Bringit
 		name = enc_reformers.115.a
 		custom_effect_tooltip = enc_reformers.115.a.tt	
-		CES = {give_guarantee = WBH } 
-		WBH = { give_guarantee = CES } 
 		CES = { give_guarantee = EHT } 
 		set_country_flag = ENC_axis_evil
 	}
@@ -5130,7 +5128,7 @@ country_event = { #178- Vertibird Crash
     fire_only_once = YES
     trigger = {
 		has_completed_focus = enc_reform
-		date > 2279.1.1
+		date > 2279.01.01
 			}		
 	mean_time_to_happen = {
 		days = 60
@@ -5400,20 +5398,20 @@ country_event = { #185 - Court Demands Elections
 		focus_progress = {
 			focus = enc_suspend_elections
 			progress > 0.1
-				}
+		}
 		
 		has_completed_focus = enc_judicial_branch 
-			}		
-	mean_time_to_happen = {
-		days = 3
-		}  
-    option = { # STOP
+	}		
+	mean_time_to_happen = {	days = 3 }  
+    option = { # 
         name = enc_reformers.185.a
 		set_country_flag = enc_court_ordered_elections
-		complete_national_focus = enc_local_elections
+		complete_national_focus = enc_empower_congress
 		add_stability = -0.20
-		}
-	option = { # STOP
+		add_ideas = enc_NCR_instability
+		
+	}
+	option = { # 
         name = enc_reformers.185.b
 		complete_national_focus = enc_order
 		complete_national_focus = enc_military_police
@@ -5423,8 +5421,8 @@ country_event = { #185 - Court Demands Elections
 			value = -0.20
 		}
 		change_legitimacy = yes
-		}   		
-    }
+	}   		
+}
 country_event = { #186 - Court Demands Freedom of Speech 
     id = enc_reformers.186
     title = enc_reformers.186.t
@@ -6366,7 +6364,6 @@ country_event = { #218 - Our New Capital
 		548 = { is_owned_by = ERB }	
 		}	
 	mean_time_to_happen = {	days = 50 }
-	is_triggered_only = yes	
 	option = { # Yea
 		name = enc_reformers.218.a
 		set_capital =  253
@@ -6433,7 +6430,7 @@ country_event = { #220- Congressional Criticism of Requisitions
 	option = { # Democracy doesn't like corruption
         name = enc_reformers.220.b
 		trigger = {has_completed_focus = enc_expand_human_definition }
-		stability = -0.25
+		add_stability = -0.25
 		set_temp_variable  = {
 			var = legitimacy_change_var
 			value = -0.20
@@ -6527,7 +6524,308 @@ country_event = { #221- Congressional Reaction to Labor Draft
 	}
 	
 }	
+country_event = {#222 - WBH Expansion
+	id = enc_reformers.222
+	title = enc_reformers.222.t
+	desc = enc_reformers.222.d
+	picture = GFX_event_BRK_raider4
+	
+	fire_only_once = no	
+    is_triggered_only = yes	
+	
+	
+	option = {# This is yoru fualt
+		name = enc_reformers.222.a
+		WBH = { 
+			random_neighbor_country = {
+				limit = {
+					is_in_faction = no
+					NOT = {
+						OR  = {
+							is_in_faction_with = WBH 
+							tag = ERB
+							WBH = {has_wargoal_against = PREV }
+						}
+					}
+				}
+				WBH = {
+					create_wargoal = { 
+						type = annex_everything 
+						target = PREV
+					} 
+				}	
+			}
+		}
+		set_variable = { WBH_food = PREV }
+	}	
+}
 
+
+country_event = {#223 - The Legion Marches
+	id = enc_reformers.223
+	title = enc_reformers.223.t
+	desc = enc_reformers.223.d
+	picture = GFX_event_CES_camp_2
+	
+	fire_only_once = no	
+    is_triggered_only = yes	
+	
+	
+	option = {# This is yoru fault
+		name = enc_reformers.223.a
+		CES = { 
+			random_neighbor_country = {
+				limit = {
+					is_in_faction = no
+					NOT = {
+						OR  = {
+							is_in_faction_with = CES 
+							tag = ERB
+							CES = {has_wargoal_against = PREV }
+						}
+					}
+				}
+				CES = {
+					create_wargoal = { 
+						type = annex_everything 
+						target = PREV
+					} 
+				}	
+			}
+		}
+		set_variable = { CES_food = PREV }
+		}	
+}
+
+
+country_event = {#224 - Graham Crackers
+	id = enc_reformers.224
+	title = enc_reformers.224.t
+	desc = enc_reformers.224.d
+	picture = GFX_event_enc_joshua_graham
+	fire_only_once = yes
+	is_triggered_only = no
+	mean_time_to_happen = {	days = 60 }
+	trigger = {
+		check_variable = { legitimacy > 0.749 }
+		NOT = { country_exists = NCN }
+		NOT = {has_completed_focus = enc_segregation }
+	}	
+	option = {#	Hi!
+		name = enc_reformers.224.a
+		create_corps_commander = {
+					name = "Joshua Graham"
+					portrait_path = "gfx/leaders/NCN/Portrait_Burned_Man.dds"
+					skill = 6
+					traits = { }
+					attack_skill = 7
+					defense_skill = 3
+					planning_skill = 5
+					logistics_skill = 4
+				}
+		CES = {add_war_support = -0.05 }		
+	}
+}
+
+country_event = {#225 - Washington Brotherhood Attacks!
+	id = enc_reformers.225
+	title = enc_reformers.225.t
+	desc = enc_reformers.225.d
+	picture = GFX_event_WBH_immortal
+	
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {	
+		tag = ERB 
+		has_completed_focus = enc_reform
+		is_neighbor_of = WBH
+			NOT = {
+				country_exists = NCR
+			}	
+		OR = {
+				NOT = {	country_exists = BEL }
+				NOT = {country_exists = YAK }
+		}	
+	}
+	mean_time_to_happen = {	days = 30 }	
+	
+	
+	option = {# Washington Menace
+		name = enc_reformers.225.a
+		custom_effect_tooltip = enc_reformers.225.a.tt
+		set_country_flag = ENC_WBH_menace
+	}
+}
+
+country_event = {#226 - WBH Buff
+	id = enc_reformers.226
+	title = enc_reformers.226.t
+	desc = enc_reformers.226.d
+	picture = GFX_event_enc_seattle
+	
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {	
+		tag = ERB 
+		has_completed_focus = enc_reform
+		WBH = { is_neighbor_of = TRL} 
+	}
+	mean_time_to_happen = {	days = 30 }	
+	option = {# Washington Menace
+		name = enc_reformers.226.a
+		WBH = { 
+				add_ideas = TRL_debuff
+				create_wargoal = {
+					type = annex_everything
+					target = TRL
+				}
+		}
+	}
+}
+
+country_event = {#227 - Broken Coast
+	id = enc_reformers.227
+	title = enc_reformers.227.t
+	desc = enc_reformers.227.d
+	picture = GFX_event_BRK_wasteland_boat_militia
+	
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {	has_country_flag = ENC_WBH_menace }
+	mean_time_to_happen = {	days = 30 }	
+	option = {# Canadians
+		name = enc_reformers.227.a
+		WBH = { 
+			if = {
+				limit = { is_in_faction = no }
+				create_faction = "The Iron Pact"
+				BRK = { 
+					if = { 
+						limit = { is_in_faction = yes } 
+						leave_faction = yes     
+					}
+				}
+				add_to_faction = BRK
+			}	
+			else_if = {
+				limit = { is_in_faction = yes }
+				BRK = { 
+					if = { 
+						limit = { is_in_faction = yes } 
+						leave_faction = yes     
+					}
+				}
+				add_to_faction = BRK
+			}
+		}
+		WBH = {
+					add_ai_strategy = {
+						type = alliance
+						id = "BRK"
+						value = 800
+					}
+				}
+		BRK = {
+					add_ai_strategy = {
+						type = alliance
+						id = "800"
+						value = 200
+					}
+				}
+	}
+}
+country_event = {#228 - Commie Start
+	id = enc_reformers.228
+	title = enc_reformers.228.t
+	desc = enc_reformers.228.d
+	picture = GFX_event_china_poster
+	fire_only_once = yes	
+    trigger = {
+		has_completed_focus = enc_reform
+	}
+	mean_time_to_happen = { days = 10 }
+	option = {#Afraid of Commies
+		name = enc_reformers.228.a
+		set_country_flag = enc_red_menace_flag
+		add_stability = 0.05
+		custom_effect_tooltip = enc_reformers.228.a.tt
+	}
+	option = {#  Sillly
+		name = enc_reformers.228.b
+	}
+}
+
+country_event = {#229 - Commie Criticisms
+	id = enc_reformers.229
+	title = enc_reformers.229.t
+	desc = enc_reformers.229.d
+	picture = GFX_event_china_poster
+	fire_only_once = yes	
+    trigger = {
+		has_completed_focus = enc_red_menace
+		OR = { 
+			has_idea = ENC_free_press
+			has_idea = ENC_free_press_2
+			}	
+	}
+	mean_time_to_happen = { days = 400 }
+	option = {#Afraid of Commies
+		name = enc_reformers.229.a
+		add_stability = -0.05
+		clr_country_flag = enc_red_menace_flag
+		set_country_flag = enc_commie_baseball
+	}
+	option = {#  Sillly
+		name = enc_reformers.229.b
+	# modify legitimacy
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.05
+		}
+		change_legitimacy = yes	
+		clr_country_flag = enc_red_menace_flag
+		set_country_flag = enc_commie_baseball
+	}
+}
+country_event = {#230 - Ghoul Literature
+	id = enc_reformers.230
+	title = enc_reformers.230.t
+	desc = enc_reformers.230.d
+	picture = GFX_event_china_poster
+	fire_only_once = yes	
+    trigger = {
+		has_country_flag = enc_commie_baseball
+		has_completed_focus = enc_accept_ghouls
+	}
+	mean_time_to_happen = { days = 60 }
+	option = {#Afraid of Commies
+		name = enc_reformers.230.a
+		clr_country_flag = enc_commie_baseball
+		country_event = { id = enc_reformers.231 }
+	}
+	option = {#  Silly
+		name = enc_reformers.230.b
+	# modify legitimacy
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.05
+		}
+		change_legitimacy = yes	
+		clr_country_flag = enc_commie_baseball
+	}
+}
+country_event = {#231 - Better Read 
+	id = enc_reformers.231
+	title = enc_reformers.231.t
+	desc = enc_reformers.231.d
+	picture = GFX_event_enc_4th_july
+	fire_only_once = yes	
+    is_triggered_only = yes	
+	option = {#Afraid of Commies
+		name = enc_reformers.231.a
+		add_political_power = 50
+	}
+}
 country_event = {#300 - state protests!
 	id = enc_reformers.300
 	title = enc_reformers.300.t

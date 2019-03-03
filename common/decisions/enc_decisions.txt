@@ -497,8 +497,7 @@ ENC_NCR_hiding = {
 				intellectuals > 0.3
 			}
 			check_variable = {
-					var = legitimacy
-					value > 0.299
+					legitimacy > 0.249
 				}
 		}
 		complete_effect = {
@@ -734,7 +733,6 @@ ENC_political_infighting = {
 	}
 }
 
-###############################
 # DEBUG
 ###############################
 

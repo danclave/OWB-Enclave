@@ -569,6 +569,22 @@ ideas = {
 			   encryption_factor = -0.10
 			}
 		}
+		enc_radio_civilian_upgrade = {  
+			picture = enc_radio
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   political_power_gain = 0.10
+			   decryption_factor = 0.10
+			   encryption_factor = -0.10
+			}
+		}
 		ENC_radio_civilian_old = {  
 			picture = enc_radio
 			allowed = { 
@@ -614,6 +630,22 @@ ideas = {
             removal_cost = -1
 			modifier = {
 			   political_power_gain = 0.20
+			   decryption_factor = 0.2
+			   encryption_factor = 0.10
+			}
+		}
+		
+		enc_radio_military_updgrade = {  
+			picture = enc_radio
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
 			   decryption_factor = 0.2
 			   encryption_factor = 0.10
 			}
@@ -1218,7 +1250,26 @@ ideas = {
 			}
 		}
 
-		
+		TRL_debuff = {
+			picture = MOJ_idea_settlements_raided_ncr # todo
+			allowed = { 
+				always = no
+            }
+			cancel = {
+				NOT = {
+					country_exists = TRL
+				}
+			}
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			targeted_modifier = { 
+				tag = TRL 
+				attack_bonus_against = 0.30
+				defense_bonus_against = 0.30 
+			}
+		}	
 		ENC_servitude = {  
 			picture = enc_slave_labour
 			allowed = { 
@@ -1376,6 +1427,19 @@ ideas = {
 			}
 		}
 		
+		enc_civil_society_idea = {
+			picture = salvaged_military_industry
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				monthly_population = 0.03
+			}
+		}
 		# Californian resistance
 		enc_NCR_resistance = {
 			picture = chi_war_of_resistance3
