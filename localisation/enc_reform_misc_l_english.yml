@@ -32,6 +32,10 @@ genius_pacifist: "Genius Pacifist"
 salvatore_puppet: "Reluctant Puppet"
 loyal_soldier: "Loyal Soldier"
 
+vice_president_dornan_trait:0 "Vice President Dornan"
+vice_president_hayes_trait:0 "Vice President Hayes"
+vice_president_lynette_trait:0 "Vice President Lynette"
+
 ###################################
 # REFORM UI
 ###################################

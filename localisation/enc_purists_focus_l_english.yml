@@ -328,25 +328,6 @@ ENC_presidential_powers: "Presidential Dictatorship"
 
 enc_silence_congress: "Silence Congress"
 enc_silence_congress_desc: "The Enclave president has always shared some power with a congress of representatives. While our equivalent was a symbolic institution at best, their word none the less carried some power and their suggestions were noted. It is high time they fall in line."
-###################################
-# MISC
-###################################
-
-
-enc_production_department:0 "US Department of Industry and Commerce"
-enc_production_department_desc:0 "TODO"
-
-enc_defence:0 "US Department of Defense"
-enc_defence_desc:0 "TODO"
-
-enc_consolidate_power:0 "Consolidate Power"
-enc_consolidate_power_desc:0 "TODO"
-
-enc_compromises: "Minor Compromises"
-enc_compromises_desc: "TODO"
-
-
-
 
 enc_assassinate_F:0 "Assassinate Dr. Anderson"
 

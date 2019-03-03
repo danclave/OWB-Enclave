@@ -112,6 +112,7 @@ change_legitimacy = {
 				has_country_flag = legitimacy_disabled
 			}
 		}
+		balance_legitimacy_gain = yes
 		add_to_variable  = {
 			var = legitimacy
 			value = legitimacy_change_var
@@ -143,7 +144,17 @@ has_more_legitimacy = {
 	# }
 }
 
-
+balance_legitimacy_gain = {
+	if = { # if positive legitimacy gain
+		limit = {
+			check_variable = { legitimacy_change_var > 0 }
+		}
+		multiply_temp_variable = { legitimacy_change_var = 0.8 }
+	}
+	else = { # if negative legitimacy gain
+		multiply_temp_variable = { legitimacy_change_var = 1.5 }		
+	}
+}
 
 ##################################
 # EFFECT

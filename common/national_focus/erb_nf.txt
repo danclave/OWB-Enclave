@@ -665,31 +665,15 @@ focus = {#RADIO - Red Menace
 		country_event = { id = enc_reformers.88 } 	
 		}
 		cost = 4.3
-	}	
-	focus = {#RADIO - Enclave military Radio
-		id = enc_radio_military
-		icon = GFX_goal_enc_radio_military
-		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_radio
-		x = -2
-		y = 1
-		prerequisite = { focus = enc_radio } 
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = ENC_radio
-				add_idea = ENC_radio_military
-			}		
-		}
-		cost = 4.3
 	}
 	focus = {#RADIO - crack_the_code
 		id = enc_crack_the_code
 		icon = GFX_goal_enc_crack_the_code
 		ai_will_do = { factor = 1 }
-		relative_position_id = enc_radio_military
-		x = 0
+		relative_position_id = enc_radio
+		x = -2
 		y = 1
-		prerequisite = { focus = enc_radio_military } 
+		prerequisite = { focus = enc_radio } 
 		completion_reward = {
 			add_ideas = { ENC_NCR_code_cracked }
 		}
@@ -815,7 +799,7 @@ focus = {#RADIO - Red Menace
 		}
 	}
 	focus = {#EXPANSION - YKZ - annex
-		id = enc_yakuza_annex_reform
+		id = enc_drive_out_the_yakuza 
 		icon = GFX_goal_enc_reform_annex_ykz
 		ai_will_do = { factor = 1 }
 		available = { has_war_support > 0.20 }
@@ -845,14 +829,14 @@ focus = {#RADIO - Red Menace
 		id = enc_yakuza_preserve_japanese_culture
 		icon = GFX_focus_jap_spiritual_mobilization
 		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_yakuza_annex_reform }
+		prerequisite = { focus = enc_drive_out_the_yakuza }
 		mutually_exclusive = { focus = enc_yakuza_enforce_american_culture }
 		available = {
 			has_full_control_of_state = 160
 			has_full_control_of_state = 284
 			has_full_control_of_state = 475
 		}
-		relative_position_id = enc_yakuza_annex_reform
+		relative_position_id = enc_drive_out_the_yakuza
 		x = -1
 		y = 1
 		cost = 4.3
@@ -865,14 +849,14 @@ focus = {#RADIO - Red Menace
 		id = enc_yakuza_enforce_american_culture
 		icon = GFX_goal_enc_us_handshake
 		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_yakuza_annex_reform }
+		prerequisite = { focus = enc_drive_out_the_yakuza }
 		mutually_exclusive = { focus = enc_yakuza_preserve_japanese_culture }
 		available = {
 			has_full_control_of_state = 160
 			has_full_control_of_state = 284
 			has_full_control_of_state = 475
 		}
-		relative_position_id = enc_yakuza_annex_reform
+		relative_position_id = enc_drive_out_the_yakuza
 		x = 1
 		y = 1
 		cost = 4.3
@@ -1053,8 +1037,8 @@ focus = {#RADIO - Red Menace
 		cost = 5.8
  }
 
-	focus = {#EXPANSION - ANT - annex
-		id = enc_ANT_annex_reform
+	focus = {#EXPANSION - ANT - break the tribe
+		id = enc_break_the_tribe
 		icon = GFX_goal_enc_reform_ant
 		ai_will_do = { factor = 1 } 
 		available = { has_war_support > 0.3 }
@@ -1084,10 +1068,10 @@ focus = {#RADIO - Red Menace
 		id = enc_ANT_civilization_by_force
 		icon = GFX_goal_enc_ANT_establish_tributaries
 		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_ANT_annex_reform
+		relative_position_id = enc_break_the_tribe
 		x = -1
 		y = 1
-		prerequisite = { focus = enc_ANT_annex_reform }
+		prerequisite = { focus = enc_break_the_tribe }
 		mutually_exclusive = { focus = enc_ANT_establish_tributaries }
 		available = {
 			has_full_control_of_state = 585
@@ -1109,12 +1093,12 @@ focus = {#RADIO - Red Menace
 	}
 	focus = {#EXPANSION - ANT - tributary
 		id = enc_ANT_establish_tributaries
-		icon = GFX_goal_enc_appointed_governors
+		icon = GFX_goal_enc_first_citizens
 		ai_will_do = { factor = 1 } 
-		relative_position_id = enc_ANT_annex_reform
+		relative_position_id = enc_break_the_tribe
 		x = 1
 		y = 1
-		prerequisite = { focus = enc_ANT_annex_reform }
+		prerequisite = { focus = enc_break_the_tribe }
 		mutually_exclusive = { focus = enc_ANT_civilization_by_force }
 		available = {
 			has_full_control_of_state = 585
@@ -1168,23 +1152,7 @@ focus = {#RADIO - Red Menace
 		}
 		cost = 5.8 
 		completion_reward = {
-			effect_tooltip = {
-				if = {
-					limit = {
-						has_country_flag = enc_promised_no_integration				
-					}
-					custom_effect_tooltip = enc_promised_no_integration_broken
-					add_popularity = { ideology = intellectuals popularity = -0.05 } 
-					add_stability = -0.15
-					add_war_support = -0.15
-					clr_country_flag = enc_promised_no_integration
-				}
-				add_ideas = {
-					ENC_begun_integration
-				}
-			}
-			hidden_effect = { set_country_flag = enc_wastelander_integration }	
-			
+			choose_integration = yes			
 		}
 	}
 
@@ -1208,6 +1176,7 @@ focus = {#RADIO - Red Menace
 		}
 		cost = 5.8
 		completion_reward = {
+		add_popularity = { ideology = people popularity = 0.05 } 
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = 0.05
@@ -1238,6 +1207,7 @@ focus = {#RADIO - Red Menace
 			}
 		}
 		completion_reward = {
+			add_popularity = { ideology = people popularity = 0.10 } 
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = 0.05
@@ -1269,6 +1239,7 @@ focus = {#RADIO - Red Menace
 			}
 		}
 		completion_reward = {
+			add_popularity = { ideology = people popularity = 0.05 } 
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = 0.05
@@ -1301,6 +1272,7 @@ focus = {#RADIO - Red Menace
 			}
 		}
 		completion_reward = {
+			add_popularity = { ideology = people popularity = 0.10 } 
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = 0.05
@@ -1435,29 +1407,13 @@ focus = {#RADIO - Red Menace
 		}
 		cost = 5.8 
 		completion_reward = {
-			add_ideas = enc_segregation_forever
-			effect_tooltip = { # effect is actually applied by event
-				set_temp_variable = {
-					var = legitimacy_change_var
-					value = -0.05
-				}
-				change_legitimacy = yes
-				add_popularity = { ideology = elites popularity = 0.05 } 
-				if = { # promised no integration
-					limit = {
-						has_country_flag = enc_promised_no_integration				
-					}
-					custom_effect_tooltip = enc_promised_no_integration_kept
-					add_stability = 0.05
-					clr_country_flag = enc_promised_no_integration
-				}	
-			}
+			choose_segregation = yes
 		}
 	}
 
-	focus = {#SEPERATION - institutionalize separation
-		id = enc_institutionalize_separation
-		icon = GFX_goal_enc_institutionalize_separation
+	focus = {#SEPERATION - welcome_vlt_citizens
+		id = enc_welcome_vlt_citizens
+		icon = GFX_goal_enc_welcome_vlt_citizens
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_segregation
 		prerequisite = { focus = enc_segregation }
@@ -1476,28 +1432,26 @@ focus = {#RADIO - Red Menace
 	}	
 	focus = {#SEPERATION - Weapons!
 		id = enc_fruits_of_their_labors
-		icon = GFX_goal_enc_laser_weapons_reform
+		icon = GFX_goal_enc_fruits_of_their_labors
 		ai_will_do = { factor = 1 }
-		relative_position_id = enc_institutionalize_separation
-		prerequisite = { focus = enc_institutionalize_separation }
+		relative_position_id = enc_welcome_vlt_citizens
+		prerequisite = { focus = enc_welcome_vlt_citizens }
 		x = 0
 		y = 1
 		cost = 5.8
 		completion_reward = {
 			add_popularity = { ideology = elites popularity = 0.05 } 
-					add_political_power = 50
-		set_technology = {
-			plasma_weaponry = 1
-			}
-		add_ideas = ENC_energy_production			
+			add_political_power = 50
+			set_technology = { plasma_weaponry = 1 }
+			add_ideas = ENC_energy_production			
 		}		
 	}
 	
-	focus = {#SEPERATION - limited integration
-		id = enc_limited_integration
-		icon = GFX_goal_enc_limited_integration
+	focus = {#SEPERATION - vault city citizenship protocols
+		id = enc_vault_city_citizenship_protocols
+		icon = GFX_goal_enc_vault_city_citizenship_protocols
 		ai_will_do = { factor = 1 }
-		relative_position_id = enc_segregation
+		relative_position_id = enc_segregation 
 		prerequisite = { focus = enc_segregation }
 		x = 1
 		y = 1
@@ -1508,47 +1462,29 @@ focus = {#RADIO - Red Menace
 			add_political_power = 50
 		}		
 	}	
-	focus = {#SEPERATION - limited army reform
+	focus = {#SEPERATION - citizenship for service
 		id = enc_citizenship_for_service 
-		icon = GFX_goal_enc_limited_army_reform
+		icon = GFX_goal_enc_citizenship_for_service
 		ai_will_do = { factor = 1 }
-		relative_position_id = enc_limited_integration
-		prerequisite = { focus = enc_limited_integration }
+		relative_position_id = enc_vault_city_citizenship_protocols
+		prerequisite = { focus = enc_vault_city_citizenship_protocols }
 		x = 0
 		y = 1
 		cost = 5.8
 		completion_reward = {
 			add_popularity = { ideology = elites popularity = 0.05 } 
+			add_popularity = { ideology = people popularity = 0.05 } 
 			add_ideas = {enc_seperate_but_equal}
 		}		
 	}
-	focus = {#SEPERATION - appointed governors
-		id = enc_appointed_governors
-		icon = GFX_goal_enc_appointed_governors
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_fruits_of_their_labors
-		prerequisite = { focus = enc_fruits_of_their_labors}
-		prerequisite = {focus = enc_citizenship_for_service  }
-		x = 1
-		y = 1 
-		cost = 5.8
-		completion_reward = {
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = -0.05
-			} 
-			change_legitimacy = yes
-			add_popularity = { ideology = elites popularity = 0.05 } 
-			add_ideas = {enc_technocrats}
-		}
-	}
 	focus = {#SEPERATION - screening
 		id = enc_screening
-		icon = GFX_goal_NEW_bio_med_gel_experiments
+		icon = GFX_goal_enc_screening
 		ai_will_do = { factor = 1 }
-		relative_position_id = enc_appointed_governors
-		prerequisite = { focus = enc_appointed_governors }
-		x = 0
+		relative_position_id = enc_fruits_of_their_labors
+		prerequisite = { focus = enc_fruits_of_their_labors }
+		prerequisite = { focus = enc_citizenship_for_service }
+		x = 1
 		y = 1 
 		cost = 5.8
 		completion_reward = {
@@ -1557,12 +1493,28 @@ focus = {#RADIO - Red Menace
 			add_war_support = 0.05
 		}
 	}
-	focus = {#SEPERATION - screening
-		id = enc_subsidized_lives
-		icon = GFX_goal_generic_recruitment_focus
+	focus = {#SEPERATION - appointed governors
+		id = enc_first_citizens
+		icon = GFX_goal_enc_first_citizens
 		ai_will_do = { factor = 1 }
-		relative_position_id = enc_appointed_governors
-		prerequisite = { focus = enc_appointed_governors }
+		relative_position_id = enc_screening
+		prerequisite = { focus = enc_screening}
+		x = 0
+		y = 1 
+		cost = 5.8
+		completion_reward = {
+			add_popularity = { ideology = elites popularity = 0.05 } 
+			set_temp_variable = { legitimacy_change_var = -0.05 }
+			change_legitimacy = yes
+			add_ideas = {enc_technocrats}
+		}
+	}
+	focus = {#SEPERATION - subsidized lives
+		id = enc_subsidized_lives
+		icon = GFX_goal_enc_subsidized_lives
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_screening
+		prerequisite = { focus = enc_screening }
 		x = 2
 		y = 1 
 		cost = 5.8
@@ -1570,15 +1522,16 @@ focus = {#RADIO - Red Menace
 			add_popularity = { ideology = elites popularity = 0.05 } 
 			swap_ideas = {
 				remove_idea = enc_technocrats
-				add_idea = enc_luxurious }
+				add_idea = enc_luxurious 
+			}
 		}
 	}
-	focus = {#SEPERATION - screening
+	focus = {#SEPERATION - monitor birth rate
 		id = enc_monitor_birth_rate
 		icon = GFX_goal_enc_vac
 		ai_will_do = { factor = 1 }
-		relative_position_id = enc_appointed_governors
-		prerequisite = { focus = enc_appointed_governors }
+		relative_position_id = enc_screening
+		prerequisite = { focus = enc_screening }
 		x = -2
 		y = 1 
 		cost = 5.8
@@ -1587,25 +1540,25 @@ focus = {#RADIO - Red Menace
 			add_ideas =  ENC_national_healthcare
 		}
 	}
-	focus = {#Military - quality - power armor integration
+	focus = { #SEPERATION - power armor
 		id = enc_power_armor_integration_segregation
 		icon = GFX_goal_enc_power_armor_integration
 		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_screening }
-		relative_position_id = enc_screening
+		prerequisite = {focus = enc_first_citizens }
+		relative_position_id = enc_first_citizens
 		x = -2
 		y = 1
 		cost = 5.8
 		completion_reward = { add_ideas = ENC_PA_production2 }
 	}
-	focus = {#NEVADA - area 52
+	focus = {#SEPERATION - fighter yets
 		id = enc_knights_sky
 		icon = GFX_goal_us_plane_advanced
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = {focus = enc_screening }
-		relative_position_id = enc_screening
+		prerequisite = {focus = enc_first_citizens }
+		relative_position_id = enc_first_citizens
 		x = 2
 		y = 1
 		cost = 5.8
@@ -1616,10 +1569,10 @@ focus = {#RADIO - Red Menace
 
 	focus = {#SEPERATION - Model Communities
 		id = enc_model_communities
-		icon = GFX_goal_enc_new_capital
+		icon = GFX_goal_enc_model_communities
 		ai_will_do = { factor = 1 }
-		relative_position_id = enc_screening
-		prerequisite = { focus = enc_screening }
+		relative_position_id = enc_first_citizens
+		prerequisite = { focus = enc_first_citizens }
 		x = 0
 		y = 1 
 		cost = 5.8
@@ -1657,9 +1610,6 @@ focus = {#RADIO - Red Menace
 		x = -17
 		y = 1
 		ai_will_do = { factor = 1 }
-		available = {
-			has_completed_focus = enc_americans_one_and_all
-		}
 		mutually_exclusive = { focus = enc_home_is_nevada }
 		prerequisite = { focus = enc_american_dream }
 		available = {
@@ -1726,7 +1676,7 @@ focus = {#RADIO - Red Menace
 			has_full_control_of_state = 253
 			NOT = {has_completed_focus = enc_a_nation_reborn }
 		}
-		completion_reward = {			
+		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = -0.05
@@ -1957,7 +1907,7 @@ focus = {#RADIO - Red Menace
 			swap_ideas = {
 				remove_idea = ENC_free_press
 				add_idea = ENC_free_press_2
-				}
+			}
 			custom_effect_tooltip = enc_free_press_tt
 		}
 	}
@@ -1989,14 +1939,7 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 4.5
 		completion_reward = {
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = -0.05
-			}
-			change_legitimacy = yes
-			add_stability = 0.10
-			add_ideas = { ENC_presidential_powers }
-			remove_ideas = enc_NCR_instability
+			choose_autocracy = yes
 		}
 	}
   	focus = {#REBUILDING - silence congress
@@ -2009,6 +1952,7 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 4.5
 		completion_reward = {
+			add_popularity = { ideology = ruler popularity = 0.05 } 
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = -0.05
@@ -2030,6 +1974,7 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 4.5
 		completion_reward = {
+			add_popularity = { ideology = ruler popularity = 0.05 } 
 			add_stability = -0.05
 			set_country_flag = legitimacy_disabled
 			custom_effect_tooltip = enc_suspend_elections_legitimacy_loss	
@@ -2058,14 +2003,8 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 7.2
 		completion_reward = {
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = 0.05
-			}
-			change_legitimacy = yes
-		country_event = { id = enc_reformers.219 } 
-			add_stability = 0.10
-		}		
+			choose_democracy = yes
+		}	
 	}
 	focus = {#REBUILDING - voting!
 		id = enc_voting_rights_act
@@ -2075,11 +2014,13 @@ focus = {#RADIO - Red Menace
 		prerequisite = { focus = enc_empower_congress }
 		available = { 
 			NOT = {has_completed_focus =  enc_silence_congress_reform }
-			}
+		}
 		x = 0
 		y = 1
 		cost = 7.2
 		completion_reward = {
+			set_temp_variable = { popularity_change = 0.05 }
+			add_popularity_to_opposition = yes
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = 0.10
@@ -2090,8 +2031,7 @@ focus = {#RADIO - Red Menace
 				add_idea = enc_NCR_instability2
 			}
 		}		
-	}
-	
+	}	
 	focus = {#REBUILDING - local elections
 		id = enc_local_elections
 		icon = GFX_goal_enc_presidential_elections
@@ -2099,13 +2039,12 @@ focus = {#RADIO - Red Menace
 		relative_position_id = enc_voting_rights_act
 		prerequisite = { focus = enc_voting_rights_act }
 		mutually_exclusive = { focus = enc_extend_presidential_powers_reform }
-		available = {
-			has_completed_focus = enc_expand_human_definition
-		}
 		x = 0
 		y = 1
 		cost = 7.2
 		completion_reward = {
+			set_temp_variable = { popularity_change = 0.05 }
+			add_popularity_to_opposition = yes
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = 0.05
@@ -2114,8 +2053,7 @@ focus = {#RADIO - Red Menace
 			remove_ideas = enc_NCR_instability2
 		}				
 	}
-	
-	
+		
 	focus = {#REBUILDING - Rebuilding California
 		id = enc_rebuilding_california
 		icon = GFX_goal_america_goal_golden_gate
@@ -2315,7 +2253,7 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 7.2
 		completion_reward = {
-			add_stability = 0.10
+			choose_law = yes
 		}
 	}
   	focus = {#REBUILDING - Judicial Branch
@@ -2328,6 +2266,8 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 7.2
 		completion_reward = {
+			set_temp_variable = { popularity_change = 0.05 }
+			add_popularity_to_opposition = yes
 			swap_ideas = {
 				remove_idea = enc_NCR_power_struggle
 				add_idea = enc_NCR_power_struggle2
@@ -2345,6 +2285,8 @@ focus = {#RADIO - Red Menace
 		available = { NOT = {has_completed_focus = enc_martial_law } }
 		cost = 7.2
 		completion_reward = {
+			set_temp_variable = { popularity_change = 0.05 }
+			add_popularity_to_opposition = yes
 			remove_ideas = enc_NCR_power_struggle2
 			add_stability = 0.10
 			remove_ideas = ENC_smuggling
@@ -2370,11 +2312,7 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 4.5
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = enc_NCR_power_struggle
-				add_idea = enc_NCR_power_struggle2
-				}
-			remove_ideas = ENC_smuggling
+			choose_order = yes
 		}		
 	}
 	focus = {#REBUILDING - Military Police
@@ -2387,8 +2325,9 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 4.5
 		completion_reward = {
+			add_popularity = { ideology = ruler popularity = 0.05 } 
 			remove_ideas = enc_NCR_power_struggle2
-			}		
+		}		
 	}
 	focus = {#REBUILDING - Martial Law
 		id = enc_martial_law
@@ -2399,19 +2338,18 @@ focus = {#RADIO - Red Menace
 		available = { 
 			NOT = {has_completed_focus = enc_fbi }
 			NOT = { has_country_flag = enc_free_press_by_court }
-				}
+		}
 		x = 0
 		y = 1
 		cost = 4.5
 		completion_reward = {
-		add_ideas = enc_martial_law_idea	
-		if = {
-				limit = {
-					has_completed_focus = enc_amnesty_for_service
-					}
+			add_popularity = { ideology = ruler popularity = 0.05 } 
+			add_ideas = enc_martial_law_idea	
+			if = {
+				limit = { has_completed_focus = enc_amnesty_for_service	}
 				swap_ideas = {
-				remove_idea = ENC_reno_police_corrupt
-				add_idea = ENC_underworld_ties
+					remove_idea = ENC_reno_police_corrupt
+					add_idea = ENC_underworld_ties
 				}
 			}
 		}		
@@ -2443,9 +2381,10 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 5.8
 		completion_reward = {
+			add_popularity = { ideology = ruler popularity = 0.05 } 
 			add_political_power = 100
 			add_ideas = { enc_broken_houses }
-			}
+		}
 	}
 	focus = {#REBUILDING - accept NCR dollar
 		id = enc_NCR_dollar
@@ -2458,6 +2397,7 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 5.8
 		completion_reward = {
+			add_popularity = { ideology = people popularity = 0.05 } 
 			add_political_power = 100
 			set_temp_variable = {
 				var = legitimacy_change_var
@@ -2479,7 +2419,7 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 5.8 
 		completion_reward = {
-		country_event = { id = enc_reformers.82 } 	
+			country_event = { id = enc_reformers.82 } 	
 		}
 	}
 	
@@ -2544,7 +2484,7 @@ focus = {#RADIO - Red Menace
 		}
 	}
 	
-focus = {#REBorN - Daytime
+	focus = {#Reborn - Daytime
 		id = enc_helios_two
 		icon = GFX_goal_moj_energy_boom
 		prerequisite = {focus = enc_department_of_energy}
@@ -2555,171 +2495,242 @@ focus = {#REBorN - Daytime
 		cost = 5.8 
 		completion_reward = {
 			add_resource = {
-				type = advanced_technology amount = 5 state = 350
-					}
-			add_resource = {
-				type = advanced_technology amount = 5 state = 253
-				}
-			add_resource = {
-				type = advanced_technology amount = 5 state = 253
-				}
-			add_resource = {
-				type = advanced_technology amount = 5 state = 285
-				}	
+				type = advanced_technology 
+				amount = 5 
+				state = 350
 			}
+			add_resource = {
+				type = advanced_technology 
+				amount = 5 
+				state = 253
+			}
+			add_resource = {
+				type = advanced_technology 
+				amount = 5 
+				state = 253
+			}
+			add_resource = {
+				type = advanced_technology 
+				amount = 5
+				state = 285
+			}	
+		}
 	}
-focus = {#REBorN - rebuilding america
-		 id = enc_rebuild_railway
-		 icon = GFX_goal_enc_construction_usa
-		 prerequisite = {focus = enc_helios_two}
-		 prerequisite = {focus = enc_automobiles}
-		 relative_position_id = enc_helios_two
-		 ai_will_do = { factor = 1 }
-		 available = { 84 = { is_owned_and_controlled_by = ERB }
-		 350 = { is_owned_and_controlled_by = ERB } }
-		 x = -1
-		 y = 1
-		 cost = 5.8 
-		 completion_reward = {
-		 custom_effect_tooltip = enc_rebuild_railway.tt
-		 hidden_effect = {350 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }
-		 396 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }
-		 258 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }
-		 64 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 558 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 243 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 104 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 463 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 474 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }
-		 216 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 340 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 39 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 353 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }
-		 340 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 39 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 353 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }	
-		 239 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 32 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 86 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }
-		 358 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 186 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }			
-		 192 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }
-		 23 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 7 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }
-		 556 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }
-		 61 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-		 84 = {add_building_construction = { 
-					 type = infrastructure 
-					 level = 2
-					 instant_build = yes 
-				 } }		
-				 }
-			 }
-	 }	
+	focus = { # REBorN - rebuilding america
+		id = enc_rebuild_railway
+		icon = GFX_goal_enc_construction_usa
+		prerequisite = {
+			focus = enc_helios_two
+		}
+		prerequisite = {
+			focus = enc_automobiles
+		}
+		relative_position_id = enc_helios_two
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			84 = { is_owned_and_controlled_by = ERB }
+			350 = {	is_owned_and_controlled_by = ERB }
+		}
+		x = -1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			custom_effect_tooltip = enc_rebuild_railway.tt
+			hidden_effect = {
+				350 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				396 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				258 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				64 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				558 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				243 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				104 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				463 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				474 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				216 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				340 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				39 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				353 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				340 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				39 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				353 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				239 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				32 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				86 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				358 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				186 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				192 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				23 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				7 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				556 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				61 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				84 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
 	focus = {#REBorN - Automobiles
 		id = enc_automobiles
 		icon = GFX_goal_NCR_Long15
@@ -2756,6 +2767,9 @@ focus = {#REBorN - rebuilding america
 		mutually_exclusive = { focus = enc_a_nation_remade }
 		prerequisite = { focus = enc_local_elections }
 		prerequisite = { focus = enc_fbi }
+		available = {
+			has_completed_focus = enc_americans_one_and_all
+		}
 		x = -1
 		y = 5
 		cost = 5.8
@@ -2784,8 +2798,8 @@ focus = {#REBorN - rebuilding america
 		}
 	}
 	focus = {# Nuclear option
-		id = enc_nuclear_option
-		icon = GFX_america_nuke
+		id = enc_the_last_argument_of_presidents
+		icon = GFX_goal_the_last_argument_of_presidents
 		ai_will_do = { factor = 1 }
 		relative_position_id =  enc_a_nation_remade
 		prerequisite = { 
@@ -2796,7 +2810,7 @@ focus = {#REBorN - rebuilding america
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			custom_effect_tooltip = enc_nuclear_option_tt
+			custom_effect_tooltip = enc_the_last_argument_of_presidents_tt
 			create_wargoal = {
 				type = annex_everything
 				target = ASH
@@ -4830,7 +4844,7 @@ focus = {#NEVADA - second city
 
 	focus = {#SS operation babylon
 		id = enc_operation_babylon
-		icon = GFX_goal_NCR_Bears_Roar 
+		icon = GFX_goal_enc_operation_babylon
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_american_dream}
 		prerequisite = { focus = enc_radio}
@@ -4848,6 +4862,9 @@ focus = {#NEVADA - second city
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_operation_babylon}
 		mutually_exclusive = { focus = enc_the_common_man }
+		allow_branch  = {
+			always = false # todo remove or rework branch
+		}
 		relative_position_id = enc_operation_babylon
 		x = -1
 		y = 1
@@ -4900,7 +4917,7 @@ focus = {#NEVADA - second city
 	}
 	focus = {#SS The common man
 		id = enc_the_common_man
-		icon = GFX_goal_NCR_Urban_Draft
+		icon = GFX_goal_enc_the_common_man
 		ai_will_do = { factor = 1 }
 		available = {
 			NCR = { exists = yes }
@@ -4915,7 +4932,7 @@ focus = {#NEVADA - second city
 		prerequisite = { focus = enc_operation_babylon}
 		mutually_exclusive = { focus = enc_the_barons }
 		relative_position_id = enc_operation_babylon
-		x = 1
+		x = 0
 		y = 1
 		cost = 5.8
 		completion_reward = { 
@@ -4940,7 +4957,7 @@ focus = {#NEVADA - second city
 	}
 	focus = {#SS-NCR-PEOPLE-WEAPONS
 		id = enc_organise_the_sympathizers
-		icon = GFX_goal_NCR_Weapon_Standardization
+		icon = GFX_goal_enc_NCR_seak_allies
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_fear_uncertainty_and_doubt}
 		relative_position_id = enc_fear_uncertainty_and_doubt
@@ -4960,17 +4977,17 @@ focus = {#NEVADA - second city
 	}
 	focus = {#SS-NCR-PEOPLE-UPRISING
 		id = enc_the_divided_state
-		icon = GFX_goal_poison_bear_reformer
+		icon = GFX_goal_enc_support_armed_coup
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_organise_the_sympathizers}
-		relative_position_id = enc_organise_the_sympathizers
 		available = {NCR = {exists = yes } }
+		relative_position_id = enc_organise_the_sympathizers
 		x = 0
 		y = 1
 		cost = 5.8
 		completion_reward = {
 			custom_effect_tooltip = enc_dayglow_proclamation
-		  }
+		}
 	}	
  
  	####################################
@@ -7145,7 +7162,7 @@ focus = {#NEVADA - second city
 # GFX_goal_enc_anti_bos
 # GFX_goal_enc_anti_ncr
 # GFX_goal_enc_ANT_establish_tributaries
-# GFX_goal_enc_appointed_governors
+# GFX_goal_enc_first_citizens
 # GFX_goal_enc_arizona
 # GFX_goal_enc_armed_militias
 # GFX_goal_enc_army_doctrine
@@ -7203,7 +7220,7 @@ focus = {#NEVADA - second city
 # GFX_goal_enc_improve_relations_reformer
 # GFX_goal_enc_infiltrate_ncr
 # GFX_goal_enc_infra
-# GFX_goal_enc_institutionalize_separation
+# GFX_goal_enc_welcome_vlt_citizens
 # GFX_goal_enc_integrate_officers
 # GFX_goal_enc_integrate_politicians
 # GFX_goal_enc_integrate_scientists
@@ -7213,7 +7230,7 @@ focus = {#NEVADA - second city
 # GFX_goal_enc_laser_weapons
 # GFX_goal_enc_laser_weapons_reform
 # GFX_goal_enc_limited_army_reform
-# GFX_goal_enc_limited_integration
+# GFX_goal_enc_vault_city_citizenship_protocols
 # GFX_goal_enc_major_war
 # GFX_goal_enc_management
 # GFX_goal_enc_mass_mobilization

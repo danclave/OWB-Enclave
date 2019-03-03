@@ -66,6 +66,9 @@ ENC_maintain_northern_control: "Fortify the North."
 ENC_maintain_northern_control_desc: "By deploying significant forces to Redding, we can crush resistance in the area."
 ENC_protect_coasts: "Protect California's Coasts"
 ENC_protect_coasts_desc: "With the fall of the NCR, the Broken Coast, tribals, and bandits from Mexico can raid America's seaboard.  Let's put a stop to that."
+ENC_ban_free_press: "Ban Free Press"
+ENC_ban_free_press_desc: "We cannot rebuild this great nation while malconents and anarchists spread vital state secrets over the papers and radio. For the good interest of all Americans, it is time for the press to fall in line."
+
 ##############################
 # WAR MEASURES 
 ##############################
@@ -284,10 +287,12 @@ ENC_blame_ghouls_desc:0 "We all know who is to blame for the current state of ou
 ENC_blame_communists:0 "Blame Communists"
 ENC_blame_communists_desc:0 "'Did you know, there are those amongst us who would shatter our hopes for peace, order, and security? America's oldest enemy, Communism, is alive and well. But not for long.'"
 ENC_recruitment_drive:0 "Recruitment Drive"
-ENC_recruitment_drive_desc:0 "'I want you for US army!'\n\nInspiring our citizens to show up at our recruiting centers without being dragged their in handcuffs could make life a lot easier for our military recruiters."
-ENC_boost_justification:0 "Boost Justification"
+ENC_recruitment_drive_desc:0 "'I want you for US army!'\n\nInspiring our citizens to show up at our recruiting centers without being dragged there in handcuffs could make life a lot easier for our military recruiters."
+ENC_boost_justification:0 "Justify Preemptive Attack"
 ENC_boost_justification_desc:0 "Our people might be ignorant of the true evils of our enemies, but we can educate them on why it's vital we strike first."
 ENC_boost_justification_req:0 "Currently justifying a war"
+ENC_promote_agenda: "Promote Our Agenda"
+ENC_promote_agenda_desc: "We will share our visions of a new America to all those that can listen, so our supporters are rallied and our enemies will know what they cannot prevent from happening."
 ENC_restart_movie_industry:0 "Restart Movie Industry"
 ENC_restart_movie_industry_desc:0 "The American movie industry has been dead for a long time. Still, there are plenty of drive-in theaters that would not be too difficult to repair."
 ENC_war_movie:0 "Sponsor War Movie"
@@ -314,7 +319,20 @@ ENC_find_power_grid_desc: "There is a power grid ready to core a province, you j
 ###################################
 ENC_securing_borders:0 "Securing the Borders"
 
+###################################
+# Our new vice president
+###################################
+ENC_vice_president: "Select Vice President"
+ENC_vice_president_desc: "TODO"
 
+
+ENC_vice_president_tooltip: "You will be asked to confirm."
+ENC_vice_president_dornan:0 "Vice President Dornan"
+ENC_vice_president_dornan_desc:0 "TODO"
+ENC_vice_president_hayes:0 "Vice President Hayes"
+ENC_vice_president_hayes_desc:0 "TODO"
+ENC_vice_president_lynette:0 "Vice President Lynette"
+ENC_vice_president_lynette_desc:0 "TODO"
 ###################################
 # MISC
 ###################################
