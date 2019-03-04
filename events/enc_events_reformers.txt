@@ -2006,7 +2006,7 @@ country_event = {#67 - Ghoul Marriage
 		name = enc_reformers.67.c
 		add_ideas = ENC_Marriage_Equality
 		}
-	}
+}
 
 country_event = {#68 - Slavery
 	id = enc_reformers.68
@@ -2628,11 +2628,13 @@ country_event = {#94 Flagstaff Liberated
     title = enc_reformers.94.t
      desc = {
         text = enc_reformers.94.d
-        trigger = {has_completed_focus = enc_segregation }
-	}
+        trigger = {
+			NOT = {has_country_flag = enc_flagstaff_nuked } 
+		}
+	}	
 	 desc = {
-        text = enc_reformers.220.d.integration
-        trigger = {has_completed_focus = enc_expand_human_definition }
+        text = enc_reformers.94.d.nuked
+        trigger = {has_country_flag = enc_flagstaff_nuked } 
 	}
 	desc = enc_reformers.94.d
     picture = GFX_event_enc_city
@@ -5531,7 +5533,7 @@ country_event = { #186 - Court Demands Freedom of Speech
 	mean_time_to_happen = { days = 3 }  
     option = { # STOP
         name = enc_reformers.186.a
-		add_stability = -0.25
+		add_stability = -0.10
 		set_country_flag = enc_free_press_by_court
 		custom_effect_tooltip = enc_reformers.186.a.tt
 		}
@@ -5711,8 +5713,9 @@ country_event = { #191 - Free Press Supports Democracy
     option = { # STOP
         name = enc_reformers.191.a
 		set_country_flag = enc_court_ordered_elections
-		complete_national_focus = enc_local_elections
-		add_stability = -0.15
+		complete_national_focus = enc_empower_congress
+		add_stability = -0.10
+		add_ideas = enc_NCR_instability
 		custom_effect_tooltip = enc_reformers.191.a.tt
 		}
 	option = { # Bye Speech
@@ -7028,6 +7031,120 @@ country_event = {#236 - Nevada Joke Event
 		add_stability = -0.10
 	}
 }
+country_event = {#237 - Ghoul Pride
+	id = enc_reformers.237
+	title = enc_reformers.237.t
+	desc = enc_reformers.237.d
+	picture = GFX_event_ENC_Ham
+	fire_only_once = yes	
+	trigger = {
+		has_completed_focus = enc_accept_ghouls
+		has_completed_focus = enc_judicial_branch
+		}
+	mean_time_to_happen = { days = 365 }
+	option = {# Court Rules for Vault City 
+		name = enc_reformers.237.a
+		add_stability = 0.05
+	}
+	option = {# Dig at Kennedy But Still Support Ghoul Marriage
+		name = enc_reformers.237.b
+		add_popularity = { ideology = people popularity = 0.05 }
+		add_stability = -0.05
+		custom_effect_tooltip = enc_reformers.237.b.tt
+	}
+}
+country_event = {#238 - Seattle
+    id = enc_reformers.238
+    title = enc_reformers.238.t
+    desc = enc_reformers.238.d
+	picture = GFX_event_enclave_flag_raising
+    fire_only_once = yes    
+    is_triggered_only = no    
+	mean_time_to_happen = { days = 5 }
+	trigger = { 
+		tag = ERB
+		ERB = { has_war_with = WBH }
+		84 = { is_controlled_by = ERB }
+	}
+    option = {# Wee!
+		name = enc_reformers.238.a
+		add_war_support = 0.05
+	}
+}	
+country_event = {#239 -Salt Lake City
+    id = enc_reformers.239
+    title = enc_reformers.239.t
+    desc = enc_reformers.239.d
+	picture = GFX_event_NCN_new_canaan
+    fire_only_once = yes    
+    is_triggered_only = no    
+	mean_time_to_happen = { days = 5 }
+	trigger = { 
+		tag = ERB
+		ERB = { has_war_with = CES }
+		551 = { is_controlled_by = ERB }
+	}
+    option = {# Wee!
+		name = enc_reformers.239.a
+		551 = {add_core_of = ERB }
+		266 = {add_core_of = ERB }
+	}
+}
+country_event = {#240 -The Old Country 
+    id = enc_reformers.240
+    title = enc_reformers.240.t
+    desc = enc_reformers.240.d
+	picture = GFX_event_enc_ghouls
+    fire_only_once = yes    
+    is_triggered_only = no
+	mean_time_to_happen = { days = 5 }
+	trigger = { 
+		ERB = { has_war_with = WBH }
+		has_completed_focus = enc_accept_ghouls
+		WBH = { surrender_progress > .3 }
+		TOC = { is_in_faction_with = WBH }
+	}
+    option = {# Wee!
+		name = enc_reformers.240.a
+		puppet = TOC
+	}
+}
+country_event = {#241 -The Sheriff of Primm
+    id = enc_reformers.241
+    title = enc_reformers.241.t
+    desc = enc_reformers.241.d
+	picture = GFX_event_enc_primm_sheriff
+    fire_only_once = yes    
+    is_triggered_only = no
+	mean_time_to_happen = { days = 100 }
+	trigger = { 
+		has_completed_focus = enc_the_state_of_nevada
+		419 = { is_owned_and_controlled_by = ERB }
+	}
+    option = {# Wee!
+		name = enc_reformers.241.a
+		add_political_power = 50
+		
+	}
+}
+country_event = {#242 -veronica
+    id = enc_reformers.242
+    title = enc_reformers.242.t
+    desc = enc_reformers.242.d
+	picture = GFX_event_enc_veronica
+    fire_only_once = yes    
+    is_triggered_only = no
+	mean_time_to_happen = { days = 100 }
+	trigger = { 
+		has_completed_focus = enc_follower_schooling_nevada
+		check_variable = { legitimacy > 0.249 }
+	}
+    option = {# Wee!
+		name = enc_reformers.242.a
+		custom_effect_tooltip = enc_reformers.241.a.tt
+		
+	}
+}						
 country_event = {#300 - state protests!
 	id = enc_reformers.300
 	title = enc_reformers.300.t

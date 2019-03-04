@@ -4169,7 +4169,7 @@ focus = {#Legion Border
 	focus = {#NEVADA - Follower Schooling
 		id = enc_follower_schooling_nevada
 		icon = GFX_goal_enc_education_by_followers
-		cost = 5.8 
+		cost = 3
 		prerequisite = { focus = enc_the_state_of_nevada}
 		relative_position_id = enc_the_state_of_nevada
 		x = -2.5
@@ -4181,9 +4181,9 @@ focus = {#Legion Border
 	focus = {#NEVADA - Refugees
 		id = enc_settle_mormons
 		icon = GFX_goal_NCN_Blessed_Are_The_Merciful
-		cost = 5.8 
-		prerequisite = { focus = enc_follower_schooling_nevada }
-		relative_position_id = enc_follower_schooling_nevada
+		cost = 3 
+		prerequisite = { focus = enc_department_agriculture }
+		relative_position_id = enc_department_agriculture
 		x = 0
 		y = 1
 		completion_reward = {
@@ -4213,8 +4213,9 @@ focus = {#NEVADA - Agriculture
 		icon = GFX_KHA_focus_farm_agriculture
 		cost = 5.8 
 		prerequisite = { focus = enc_reform_the_tribes }
+		prerequisite = { focus = enc_follower_schooling_nevada }
 		relative_position_id = enc_reform_the_tribes
-		x = 0
+		x = 1
 		y = 1
 		completion_reward = {
 			set_temp_variable = {
@@ -4230,10 +4231,10 @@ focus = {#NEVADA - End
 		icon = GFX_enc_nevada_reborn
 		cost = 5.8 
 		prerequisite = { focus = enc_settle_mormons }
-		prerequisite = { focus = enc_department_agriculture }
+		prerequisite = { focus = ENC_nevada_constitution}
 		relative_position_id = enc_department_agriculture
 		x = 1
-		y = 1
+		y = 2
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
@@ -4242,7 +4243,64 @@ focus = {#NEVADA - End
 			change_legitimacy = yes
 			add_ideas = enc_civil_society_idea
 		}
-}	
+}
+focus = {#NEVADA - Legislature
+		id = ENC_nevada_assembly
+		icon = GFX_goal_enc_presidential_elections
+		cost = 5
+		prerequisite = { focus = enc_the_state_of_nevada}
+		available = { 
+			has_full_control_of_state = 211
+		}
+		relative_position_id = enc_the_state_of_nevada
+		x = 0
+		y = 3
+		completion_reward = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+		}
+	}
+focus = {#NEVADA - Judiciary
+		id = ENC_judiciary_nevada
+		icon = GFX_goal_enc_judicial_branch
+		cost = 5
+		prerequisite = { focus = ENC_nevada_assembly }
+		available = { 
+			has_full_control_of_state = 211
+		}
+		relative_position_id = ENC_nevada_assembly
+		x = 0
+		y = 1
+		completion_reward = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+		}
+	}
+focus = {#NEVADA - Constitution
+		id = ENC_nevada_constitution
+		icon = GFX_goal_enc_president_reform
+		cost = 5
+		prerequisite = { focus = ENC_judiciary_nevada }
+		available = { 
+			has_full_control_of_state = 211
+		}
+		relative_position_id = ENC_judiciary_nevada
+		x = 0
+		y = 1
+		completion_reward = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+		}
+	}	
 focus = {#NEVADA - second city
 		id = Enc_Second_City
 		icon = GFX_goal_enc_the_Lucky_38
@@ -4252,7 +4310,7 @@ focus = {#NEVADA - second city
 			has_full_control_of_state = 211
 		}
 		relative_position_id = enc_the_state_of_nevada
-		x = 2
+		x = 4
 		y = 3
 		completion_reward = {
 			if = {
@@ -4753,9 +4811,46 @@ focus = {#NEVADA - second city
 		prerequisite = { focus = enc_the_american_alliance }
 		completion_reward = {
 		country_event = { id = enc_reformers.120 } 
-			KLA = { add_to_tech_sharing_group = Benjamin_Franklin_Society }
+		KLA = { add_to_tech_sharing_group = Benjamin_Franklin_Society }
+		hidden_effect = {
+			BEL = {
+				every_owned_state = {
+					add_core_of = KLA
+				}
 			}
+			TRL = {
+				every_owned_state = {
+					add_core_of = KLA
+				}
+			}
+			BPT = {
+				every_owned_state = {
+					add_core_of = KLA
+				}
+			}
+			ARR = {
+				every_owned_state = {
+					add_core_of = KLA
+				}
+			}
+			MLT = {
+				every_owned_state = {
+					add_core_of = KLA
+				}
+			}
+			MDT = {
+				every_owned_state = {
+					add_core_of = KLA
+				}
+			}
+			PMR = {
+				every_owned_state = {
+					add_core_of = KLA
+				}
+			}
+		}
 	}
+}
 	focus = {#Diplomacy - Northwest
 		id = enc_Wash_BOS
 		icon = GFX_goal_brk_seattles_exorcism

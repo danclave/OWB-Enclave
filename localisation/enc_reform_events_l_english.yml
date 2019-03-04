@@ -508,6 +508,7 @@ enc_reformers.93.a: "Cutting in line has unpleasant consequences."
 ################################################################################################################
 enc_reformers.94.t: "Flagstaff Liberated!"
 enc_reformers.94.d: "Vertibirds sweep overhead as Enclave soldiers trample the Legion's banners.  The City's slaves wait to learn whether they've found freedom or a new master, but the President can be proud to know that for the first time in two hundred years, the Stars and Stripes flies over Arizona."
+enc_reformers.94.d.nuked: "Vertibirds sweep over the ruins of Flagstaff, soldiers posing by its remaining buildings.  It's hard to hold a victory march when the city's center is molten glass."
 enc_reformers.94.a: "Sic Semper Tyrannis"
 ################################################################################################################
 enc_reformers.95.t: "Thanksgiving"
@@ -1248,6 +1249,33 @@ enc_reformers.235.b.tt: "§gRecognize that rebuilding America will work best thr
 enc_reformers.236.t: "Hayes Responds!"
 enc_reformers.236.d: "Mr. President, Hayes has regretfully expressed that whie he is committed to the American dream, his constituents did not elect him president to hand control of California over to a 2 year old government based out of New Reno.  He is, however, firmly comitted to working with us to promote free trade, free travel, and human rights." 
 enc_reformers.236.a: "How Rude!"
+#############################################################################################################
+enc_reformers.237.t: "Supreme Court Hears Case on Ghoul Pride Parade"
+enc_reformers.237.d: "With the integration of ghouls into the Great Experiment, more and more ghouls have moved to Vault City, their prewar skills commanding high salaries in the rapid boomtown.  But they face rampant discrimination from some of the older citizens, and they wish to hold a protest.  The ghouls seek to hold a "Ghoul Pride Parade," celebrating their contributions to American society and demanding equal treatment.  Vault City promptly denied their permit, and now the ghouls have brought suit. \n\nAlthough Mayor Lynette claims the denial merely reflects a Vault City preference against large parties, the denial clearly reflects discriminatory intent.  How the Supreme Court rules will affect how the court will view ghoul rights in future cases." 
+enc_reformers.237.a: "Why would anyone feel pride in being a ghoul?"
+enc_reformers.237.b: "They've got more to be proud of than you Lynette"
+enc_reformers.237.b.tt: "\n§gThe Court holds that ghouls are entitled to equal treatment under the law, and that they may hold their pride parade.§!"
+#############################################################################################################
+enc_reformers.238.t: "The Liberation of Seattle"
+enc_reformers.238.d: "The sun rises this morning over a Seattle back in American hands for the first time in two hundred years.  The Brotherhood's headquarters in the Space Needle has been toppled by an airstrike, and surviving members of the Cause are helping track down Brotherhood holdouts. And while the Broken Coast has asked for terms, the only thing we'll give them are more bullets." 
+enc_reformers.238.a: "On to Flagstaff!"
+#############################################################################################################
+enc_reformers.239.t: "The Liberation of Salt Lake City"
+enc_reformers.239.d: "This is Enclave Radio, bringing you the latest new from the front.  Yesterday the Reunited States drove Caesar and his tribal lackeys from Salt Lake City, known to some as New Canaan. \n\nTo our great surprise, during the fighting soldiers found the golden statue of the Angel Moroni, thought lost since the Great War. To many of Deseret, this is a sign from God that that America is back." 
+enc_reformers.239.a: "And so a people in darkness have seen a great light"
+#############################################################################################################
+enc_reformers.240.t: "The Old Country Rallies to the Flag"
+enc_reformers.240.d: "Although The Old Country was allied to the Brotherhood, thier relatoniship is more akin to a protection racket. The Old Country is, in fact, home to ghouls who believe in the American dream, and have kept its embers alive through the long dark age.  But now that our forces close in on the Brotherhood, they are ready to defect from the Legion."
+enc_reformers.240.a: "Welcome Back"
+#############################################################################################################
+enc_reformers.241.t: "The Greatest Sheriff of Nevada"
+enc_reformers.241.d: "Now that we've freed the Mojave from the threat of raiders, we've learned about the fine officer who kept Primm safe during the crisis, Primm Slimm.  Apparently a courier reprogrammed a protectron during the crisis to protect the town, and somehow it deterred raiders from harassing the fledgling community. Obviously, we need to thank this officer for his service."
+enc_reformers.241.a: "He's as heroic as he is handsome"
+#############################################################################################################
+enc_reformers.242.t: "A Mysterious Stranger"
+enc_reformers.242.d: "A young woman calling herself Veronica Mars has shown up at one of our schools, offering to teach for Nevada.  Despite being fairly tight lipped about her past, we think she used to be a member of the Mojave Chapter, and she's expressed an interest in doing research for Nevada. \n\nIt's unclear how much she could teach us, but perhaps we should take a chance on a naive young girl from California with stars in her eyes and a pneumatic gauntlet on her hand."
+enc_reformers.242.a: "Why not?"
+enc_reformers.241.a.tt: "\n§YVeronica§! joins Nevada"
 ## START OF 300 ###
 #############################################################################################################
 enc_reformers.300.t: "Protests in [protesting_state.GetName]"
