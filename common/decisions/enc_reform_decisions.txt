@@ -403,6 +403,21 @@ enc_executive_orders  = {
 		}
 		days_re_enable = 30
 	}
+	ENC_ban_free_press = {
+		icon = oppression
+		cost = 75
+		available = {
+			not = { has_completed_focus = enc_free_press }
+		}
+		visible = {
+			has_idea = ENC_free_press
+		}
+		complete_effect = {
+			remove_ideas = ENC_free_press
+			stability_loss_based_on_people_popularity = yes
+		}
+		
+	}
 }
 
 ENC_infiltrating_NCR = {
@@ -959,11 +974,11 @@ ENC_nation_building = {
 	ENC_vault_city_university = {
 		icon = decision_vault_boy
 		cost = 50
-		days_remove = 10
+		days_remove = 100
 		ai_will_do = {
 			factor = 10
 		}
-		fire_only_once = yes
+		fire_only_once = no
 		allowed = {
 			original_tag = ERB
 		}
@@ -979,7 +994,8 @@ ENC_nation_building = {
 				is_owned_and_controlled_by = ERB
 			}
 		}
-		complete_effect = {
+		complete_effect = {		
+			hidden_effect = { country_event = { days = 365 id = enc_reformers.173 }}
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = 0.05
@@ -2000,9 +2016,13 @@ ENC_deseret = {
 ENC_american_broadcasts = {
 	ENC_war_propaganda = {
 		icon = decision_enc_propaganda
-		cost = 75		
+		cost = 75
+		available = {
+			has_completed_focus = enc_propaganda_broadcasts
+			has_stability > 0.30
+		}
 		visible = {	
-			has_war_support < 0.5
+			not = { has_completed_focus = enc_entertainment_broadcasts } 
 		}
 		modifier = {
 			war_support_weekly = 0.0350
@@ -2061,20 +2081,6 @@ ENC_american_broadcasts = {
 		days_remove = 30
 		days_re_enable = 120
 	}
-	ENC_recruitment_drive = {
-		cost = 50
-		icon = decision_enc_propaganda
-		available = {
-			has_stability > 0.35
-			has_war_support > 0.50
-		}
-		modifier = {
-			war_support_weekly = -0.0175
-			mobilization_speed = 0.03
-		}
-		days_remove = 30
-		days_re_enable = 120
-	}
 	promises_of_peace = {
 		icon = generic_political_discourse
 			available = {
@@ -2111,8 +2117,14 @@ ENC_american_broadcasts = {
 	ENC_boost_justification = {
 		cost = 100
 		icon = decision_enc_propaganda
+		visible = { 
+			not = { has_completed_focus = enc_entertainment_broadcasts } 
+		}
 		available = {
-			has_war_support > 0.50
+			or = {
+				has_war_support > 0.50
+				has_completed_focus = enc_propaganda_broadcasts
+			}
 			custom_trigger_tooltip = {
 				tooltip = ENC_boost_justification_req
 				any_country = {
@@ -2128,11 +2140,42 @@ ENC_american_broadcasts = {
 		days_remove = 30
 		days_re_enable = 120
 	}
+	ENC_promote_agenda = {
+		cost = 50
+		icon = decision_enc_propaganda
+		available = { has_completed_focus = enc_propaganda_broadcasts }
+		visible = { 
+			not = { has_completed_focus = enc_entertainment_broadcasts } 
+		}
+		complete_effect = {
+			add_5_popularity_to_ruling_party = yes
+		}
+		days_re_enable = 120
+	}
+	ENC_recruitment_drive = {
+		cost = 50
+		icon = decision_enc_propaganda
+		available = {
+			or = {
+				has_war_support > 0.50
+				has_completed_focus = enc_propaganda_broadcasts
+			}
+			has_stability > 0.35
+		}
+		modifier = {
+			war_support_weekly = -0.0175
+			mobilization_speed = 0.30
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+
 	# movies!
 	ENC_restart_movie_industry = {
 		icon = decision_enc_movie
 		cost = 100		
 		fire_only_once = yes
+		
 		visible = {
 			not = { has_country_flag = enc_movie_industry }
 		}
@@ -2149,9 +2192,11 @@ ENC_american_broadcasts = {
 		days_remove = 80
 	}
 	ENC_war_movie = {
-		cost = 50
 		icon = decision_enc_movie
-		# cost war experience
+		custom_cost_trigger = {
+			has_army_experience > 75
+		}
+		custom_cost_text = ENC_war_movie_cost
 		visible = {
 			has_country_flag = enc_movie_industry
 		}
@@ -2162,6 +2207,9 @@ ENC_american_broadcasts = {
 			war_support_weekly = 0.0175
 			mobilization_speed = 0.25
 		}
+		complete_effect = {
+			army_experience = -75
+		}	
 		days_remove = 30
 		days_re_enable = 120
 	}
@@ -2203,6 +2251,53 @@ ENC_american_broadcasts = {
 		days_remove = 30
 		days_re_enable = 120
 	}
+
+	war_bonds = {
+
+    	icon = generic_industry
+        available = {
+            has_war = yes
+            OR = {
+                AND = {
+                    has_government = ruler
+                    has_war_support > 0.35
+                }
+                AND = {
+                    has_government = elites
+                    has_war_support > 0.50
+                }
+                AND = {
+                    has_government = intellectuals
+                    has_war_support > 0.65
+                }
+                AND = {
+                    has_government = people
+                    has_war_support > 0.75
+                }
+            }
+        }
+        visible = {
+			has_completed_focus = enc_american_broadcasting_department
+		}
+
+        fire_only_once = no
+
+		days_remove = 180
+
+		cost = 50
+
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_political_power < 150
+				factor = 0 #use as pp dump
+			}
+		}
+    }
 }
 
 ENC_securing_borders = {
@@ -2367,6 +2462,9 @@ ENC_CES_expansion = {
 	ENC_maintain_northern_control = { # fortify the noth
 		icon = generic_prepare_civil_war
 		priority = 10
+		allowed = {
+			always = no
+		}
 		available = {
 			divisions_in_state = {
 				state = 141	
@@ -2414,6 +2512,29 @@ ENC_CES_expansion = {
 	}	
 }
 
+ENC_vice_president = {
+	ENC_vice_president_dornan = {
+		available = { ruler > 0.30 }
+		complete_effect = {
+			country_event = { id = enc_reformers.308 }
+			custom_effect_tooltip = ENC_vice_president_tooltip
+		}
+	}
+	ENC_vice_president_hayes = {
+		available = { people > 0.30 }
+		complete_effect = {
+			country_event = { id = enc_reformers.308 }
+			custom_effect_tooltip = ENC_vice_president_tooltip
+		}
+	}
+	ENC_vice_president_lynette = {
+		available = { elites > 0.30 }
+		complete_effect = {
+			country_event = { id = enc_reformers.308 }
+			custom_effect_tooltip = ENC_vice_president_tooltip
+		}
+	}
+}
 ###############################
 # Diplomacy
 ###############################

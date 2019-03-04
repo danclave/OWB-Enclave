@@ -1,3 +1,148 @@
+##################################################
+### Add popularity to opposition ####
+##################################################
+
+add_popularity_to_opposition = {
+	if = {
+		limit = {
+			has_completed_focus = enc_segregation
+		}
+		add_popularity = {
+			ideology = elites
+			popularity = popularity_change
+		}
+		add_popularity = {
+			ideology = people
+			popularity = popularity_change
+		}
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = enc_expand_human_definition
+		}
+		add_popularity = {
+			ideology = people
+			popularity = popularity_change
+		}
+	}
+}
+
+add_5_popularity_to_opposition = {
+	set_temp_variable = { popularity_change = 0.05 }
+	add_popularity_to_oposition = yes
+}
+
+add_10_popularity_to_oposition = {
+	set_temp_variable = { popularity_change = 0.10 }
+	add_popularity_to_oposition = yes
+}
+
+add_15_popularity_to_oposition = {
+	set_temp_variable = { popularity_change = 0.15 }
+	add_popularity_to_oposition = yes
+}
+
+remove_5_popularity_from_oposition = {
+	set_temp_variable = { popularity_change = -0.05 }
+	add_popularity_to_oposition = yes
+}
+
+remove_10_popularity_from_oposition = {
+	set_temp_variable = { popularity_change = -0.10 }
+	add_popularity_to_oposition = yes
+}
+
+remove_15_popularity_from_oposition = {
+	set_temp_variable = { popularity_change = -0.15 }
+	add_popularity_to_oposition = yes
+}
+
+##################################################
+### Add popularity to Ruling ####
+##################################################
+
+add_popularity_to_ruling_party= {
+	if = {
+		limit = { has_government = elites }
+		add_popularity = {
+			ideology = elites
+			popularity = popularity_change
+		}
+	}
+	else_if = {
+		limit = { has_government = people }
+		add_popularity = {
+			ideology = people
+			popularity = popularity_change
+		}
+	}
+	else_if = {
+		limit = { has_government = intellectuals }
+		add_popularity = {
+			ideology = intellectuals
+			popularity = popularity_change
+		}
+	}
+	else_if = {
+		limit = { has_government = ruler }
+		add_popularity = {
+			ideology = ruler
+			popularity = popularity_change
+		}
+	}
+}
+
+add_5_popularity_to_ruling_party= {
+	set_temp_variable = { popularity_change = 0.05 }
+	add_popularity_to_ruling_party = yes
+}
+
+add_10_popularity_to_ruling_party= {
+	set_temp_variable = { popularity_change = 0.10 }
+	add_popularity_to_ruling_party = yes
+}
+
+add_15_popularity_to_ruling_party= {
+	set_temp_variable = { popularity_change = 0.15 }
+	add_popularity_to_ruling_party = yes
+}
+
+remove_5_popularity_from_ruling_party= {
+	set_temp_variable = { popularity_change = -0.05 }
+	add_popularity_to_ruling_party = yes
+}
+
+remove_10_popularity_from_ruling_party= {
+	set_temp_variable = { popularity_change = -0.10 }
+	add_popularity_to_ruling_party = yes
+}
+
+remove_15_popularity_from_ruling_party= {
+	set_temp_variable = { popularity_change = -0.15 }
+	add_popularity_to_ruling_party = yes
+}
+
+##################################################
+### War Support loss based on party popularity ####
+##################################################
+
+war_support_loss_based_on_elites_popularity = {
+	set_temp_variable = {
+		var = war_support_loss_var
+		value = party_popularity@elites
+	}
+	multiply_temp_variable = {
+		var = war_support_loss_var
+		value = -1
+	}
+	multiply_temp_variable = {
+		var = war_support_loss_var
+		value = 0.33
+	}
+	add_war_support = war_support_loss_var
+	custom_effect_tooltip = war_support_loss_based_on_elites_popularity
+}
+
 
 ##################################################
 ### Stability loss based on party popularity ####
@@ -53,26 +198,6 @@ stability_loss_based_on_intellectuals_popularity = {
 }
 
 ##################################################
-### War Support loss based on party popularity ####
-##################################################
-
-war_support_loss_based_on_elites_popularity = {
-	set_temp_variable = {
-		var = war_support_loss_var
-		value = party_popularity@elites
-	}
-	multiply_temp_variable = {
-		var = war_support_loss_var
-		value = -1
-	}
-	multiply_temp_variable = {
-		var = war_support_loss_var
-		value = 0.33
-	}
-	add_war_support = war_support_loss_var
-	custom_effect_tooltip = war_support_loss_based_on_elites_popularity
-}
-##################################################
 ### 		Adjust NCR suspicion 			   ###
 ##################################################
 
@@ -118,11 +243,115 @@ calculate_hiding_cost = {
 	add_to_variable = { var = ENC_hide_days value = 90}
 }
 
-##################################
-# EFFECT
-##################################
-# set_temp_variable = {
-	# var = suspicion_change_var
-	# value = 5
-# }
-# change_suspicion = YES
+##################################################
+### Major choices ####
+##################################################
+
+choose_segregation = {
+	add_popularity = { ideology = elites popularity = 0.05 } 
+	set_temp_variable = { legitimacy_change_var =  -0.10 }	
+	change_legitimacy = yes		
+	
+	add_ideas = enc_segregation_forever	
+	
+	if = { # promised no integration
+		limit = {
+			has_country_flag = enc_promised_no_integration				
+		}
+		custom_effect_tooltip = enc_promised_no_integration_kept
+		add_stability = 0.05
+		clr_country_flag = enc_promised_no_integration
+	}	
+}
+choose_integration = {
+	add_popularity = { ideology = people popularity = 0.10 } 
+	add_ideas =	ENC_begun_integration
+	set_country_flag = enc_wastelander_integration
+
+	if = { # check promise
+		limit = {
+			has_country_flag = enc_promised_no_integration				
+		}
+		custom_effect_tooltip = enc_promised_no_integration_broken
+		add_popularity = { ideology = intellectuals popularity = -0.05 } 
+		add_stability = -0.15
+		add_war_support = -0.15
+		clr_country_flag = enc_promised_no_integration
+	}		
+}
+
+choose_law = {
+	set_temp_variable = { popularity_change = 0.05 }
+	add_popularity_to_opposition = yes		
+	add_stability = 0.10
+}
+choose_order = {
+	add_popularity = { ideology = ruler popularity = 0.05 } 
+	swap_ideas = {
+		remove_idea = enc_NCR_power_struggle
+		add_idea = enc_NCR_power_struggle2
+	}
+	if = {
+		limit = {
+			has_idea = ENC_smuggling
+		}
+		remove_ideas = ENC_smuggling
+	}
+}
+
+choose_democracy = {
+	set_temp_variable = { popularity_change = 0.05 }
+	add_popularity_to_opposition = yes
+	set_temp_variable = {
+		var = legitimacy_change_var
+		value = 0.05
+	}
+	change_legitimacy = yes
+	country_event = { id = enc_reformers.219 } 
+	add_stability = 0.10
+}
+choose_autocracy = {
+	add_popularity = { ideology = ruler popularity = 0.05 } 
+	set_temp_variable = {
+		var = legitimacy_change_var
+		value = -0.05
+	}
+	change_legitimacy = yes
+	add_stability = 0.10
+	add_ideas = { ENC_presidential_powers }
+	remove_ideas = enc_NCR_instability
+}
+
+cancel_requisition_civilian_resources = {
+	clr_country_flag = enc_requisitioned_resources
+	if = {
+		limit = {
+			has_full_control_of_state = 253 # shady sands
+		}
+		add_resource = {
+			type = metal
+			amount = -20
+			state = 135
+		}
+		add_resource = {
+			type = advanced_technology
+			amount = -15
+			state = 25
+		}
+	}
+	if = {
+		limit = {
+			has_full_control_of_state = 135 # sac city
+		}
+		add_resource = {
+			type = electronics
+			amount = -20
+			state = 153
+		}
+		add_resource = {
+			type = fuel
+			amount = -25
+			state = 135
+		}
+	}
+}
