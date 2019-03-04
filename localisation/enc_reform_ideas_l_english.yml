@@ -3,6 +3,12 @@
 ###################################
 # REFORM IDEAS
 ###################################
+ENC_end_of_reformers: "End of the Reformers"
+ENC_terror_of_wastes: "Terror of the Wastes"
+enc_radio_military_updgrade: "Upgraded Military Radio"
+enc_radio_civilian_upgrade: "Civilian Broadcasting"
+enc_civil_society_idea: "A Civil Society"
+TRL_debuff: "Ban on Trolling"
 enc_counterfeiting: "Counterfeiting"
 ENC_reform_officers: "Chiefs of Staff"
 ENC_reform_general_staff: "The Pentagon Reborn"
@@ -142,7 +148,7 @@ enc_debug_tt: "electricity: [?resource@electricity]"
 
 more_than_5_electricity: "More than 5 §YElectricity§! available (§Y[?ROOT.resource@electricity]§!)"
 enc_seperate_but_equal:  "Service Guarantees Citizenship"
-enc_segregation_forever:  "Limit Military Service"
+enc_segregation_forever: "Separate But Peaceful"
 enc_wastelander_draft:  "Unwilling Volunteers"
 enc_technocrats:  "Technocratic Administration"
 enc_luxurious: "A High Standard of Living"
@@ -216,6 +222,8 @@ enc_scraping_the_barrel: "Scraping the Barrel"
 enc_collapsed_economy: "Collapsed Economy"
 collapsed_trade: "Collapsed Trade"
 collapsed_trade_desc: "Caravan routes lay idle, as merchants fear whether their dollars are worth the paper they're printed out.\n\n"
+hidden_economy: "Hidden Economy"
+hidden_economy_desc: "The Enclave does not trade with outside factions, as that could compromise their secrecy."
 ###################################
 # PEOPLE
 ###################################

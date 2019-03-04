@@ -2,6 +2,175 @@
 # REFORMER
 ###############################
 enc_executive_orders  = {
+	plunder_resources = {
+		icon = generic_scorched_earth
+		cost = 50
+		visible = {
+			has_war_with = ncr
+			not = { has_country_flag = enc_mid_game }
+		}
+		available = {
+			any_owned_state = { #we occupy a non core state which has += 10 water
+				is_core_of = NCR
+				not = { is_core_of = ROOT }
+				is_fully_controlled_by = ROOT
+				has_ROOT_at_least_1_div_in_current_state_scope = YES
+				has_resources_amount = {
+					resource = water
+					amount = 10
+					state = THIS
+				}				
+			}
+		}
+		modifier = { #moving cost (maybe use civ factories)
+			supply_consumption_factor = -0.50
+			no_supply_grace = 48
+		}
+		days_remove = 60
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_core_of = NCR
+					not = { is_core_of = ROOT }
+					is_fully_controlled_by = ROOT
+					has_ROOT_at_least_1_div_in_current_state_scope = YES
+					has_resources_amount = {
+						resource = water
+						amount = 10
+						state = THIS
+					}
+				}
+				set_temp_variable = { legitimacy_change_var = -0.10 }
+				change_legitimacy = yes
+				add_resource = {
+					type = water
+					amount = -10
+					state = THIS
+				}
+				add_state_flag = plundered_by_enc
+			}
+		}
+	}
+
+	plunder_equipment = {
+		icon = generic_scorched_earth
+		cost = 50
+		visible = {
+			has_war_with = ncr
+		}
+		available = {
+			any_owned_state = { #we occupy a non core state which has 3+ mil factories
+				is_core_of = NCR
+				is_fully_controlled_by = ROOT
+				has_ROOT_at_least_1_div_in_current_state_scope = YES
+				arms_factory > 2				
+			}
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_core_of = NCR
+					is_fully_controlled_by = ROOT
+					has_ROOT_at_least_1_div_in_current_state_scope = YES
+					arms_factory > 3
+				}
+				set_temp_variable = { legitimacy_change_var = -0.10 }
+				change_legitimacy = yes
+				remove_building = { 
+					type = arms_factory 
+					level = 3
+				}
+				add_state_flag = plundered_by_enc
+			}
+		}
+		remove_effect = {			
+			ROOT = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 600
+					producer = NCR
+				}
+			}
+		}
+	}
+
+	legitimacy_core_state = {
+		icon = generic_nationalism # todo
+		custom_cost_text = costs_10_legitimacy
+		visible = {
+			check_variable = { legitimacy > 89.9 }
+		}
+		custom_cost_trigger = {
+			check_variable = { legitimacy > 99.9 }
+		}
+		available = {
+			check_variable = { legitimacy > 99.9 }
+			any_owned_state = {
+				not = { is_core_of = ROOT }
+				has_population > 10000
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = { legitimacy_change_var = -0.10 }
+				change_legitimacy = yes
+			}
+			random_owned_state = {
+				limit = {
+					not = { is_core_of = ROOT }
+					has_population > 10000
+				}
+				add_core_of = ROOT
+			}
+		}	
+	}
+
+	ENC_opposition_to_segregation = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		activation = {
+			has_completed_focus = enc_segregation
+			OR = { 
+				has_idea = ENC_free_press
+				has_idea = ENC_free_press_2
+			}
+			people > 0.60			
+		}
+		available = {
+			NOT = { 
+				OR = { 
+					has_idea = ENC_free_press
+					has_idea = ENC_free_press_2
+				}		
+			}
+		}
+		days_mission_timeout = 400
+		cancel_trigger = {
+			people < 0.30
+		}
+		timeout_effect = { 
+			add_stability = -0.20
+			add_war_support = -0.15
+			add_political_power = -300
+		} 
+	}
+	ENC_anti_communist_propaganda = {
+		icon = decision_enc_propaganda
+		cost = 75		
+		visible = {	
+			has_completed_focus = enc_red_menace
+		}
+		modifier = {
+			war_support_weekly = 0.0350
+			stability_weekly = -0.0175
+		}
+		days_remove = 50
+		days_re_enable = 30
+		complete_effect = {
+			hidden_effect = { sound_effect = ERB_stripes_and_stars }
+		}
+	}
 	improved_worker_conditions = {
 
 			icon = generic_industry
@@ -125,7 +294,7 @@ enc_executive_orders  = {
 						has_full_control_of_state = 63 #Dayglow
 					}
 					ERB = {
-						create_wargoal = { type = annex_everything target = PREV transfer_troops = NO }
+						create_wargoal = { type = annex_everything target = PREV }
 						}
 					}
 				}
@@ -699,7 +868,7 @@ ENC_infiltrating_NCR = {
 	
 		visible = {
 			tag = ERB
-			has_completed_focus = enc_foreign_policy
+			has_completed_focus = enc_vlt_power_reform
 			has_country_flag = ncr_suspicious
 		}
 		complete_effect = {
@@ -2255,6 +2424,48 @@ ENC_american_broadcasts = {
 }
 
 ENC_securing_borders = {
+	WBH_reformer_crisis = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		activation = {
+			has_country_flag = ENC_WBH_menace
+			has_completed_focus = enc_reform
+			NOT = {
+				WBH = {
+					OR = {
+						exists = no
+						has_civil_war = YES
+						has_war_with = ERB #Enclave
+					}
+				}
+			}
+		}
+		available = {
+			NOT = { country_exists = WBH }
+			 }
+		cancel_trigger = {
+			WBH = {
+				OR = {
+					exists = no
+					has_civil_war = YES
+					has_war_with = ERB #Enclave
+				}
+			}
+		}
+		is_good = no
+		days_mission_timeout = 200
+		visible = {original_tag = ERB }
+		timeout_effect = { 
+			WBH = {
+				declare_war_on = {
+					target = ERB
+					type = annex_everything
+				}
+			}
+		}
+		complete_effect = { }
+	}
 	ENC_bandit_raids = {
 		icon = generic_scorched_earth
 		priority = 11
@@ -2284,7 +2495,48 @@ ENC_securing_borders = {
 			}
 		}
 	}
-	
+ENC_WBH_expansion = {
+	icon = generic_scorched_earth
+	priority = 11
+	available = {
+		NOT = { 
+			country_exists = WBH
+		}
+	}
+	activation = {
+		WBH = { has_war = no }
+		NOT = { country_exists = NCR}
+		NOT = { country_exists = TRL }
+		has_country_flag = enc_wbh_threat
+	}	
+	days_mission_timeout = 5
+	fire_only_once = no
+	is_good = no
+	timeout_effect = {
+		country_event = { id = enc_reformers.222 }
+	}
+}
+ENC_CES_expansion = {
+	icon = generic_scorched_earth
+	priority = 11
+	available = {
+		NOT = { 
+			country_exists = CES
+		}
+	}
+	days_mission_timeout = 5
+	activation = {
+		CES = { has_war = no }
+		NOT = { country_exists = NCR}
+		NOT = { country_exists = NCN }
+		has_country_flag = enc_ces_threat
+		}
+	fire_only_once = no
+	is_good = no
+	timeout_effect = {
+		country_event = { id = enc_reformers.223  }
+	}
+}
 	ENC_pacificy_northern_border = { # secure northern borders
 		icon = infiltrate_state
 		priority = 9
@@ -2416,7 +2668,128 @@ ENC_vice_president = {
 ###############################
 # Diplomacy
 ###############################
-
+ENC_nevada_tribals = { 
+	erb_ruby_valley = {
+		visible = {
+			has_completed_focus = enc_reform_the_tribes
+			country_exists = RUB
+		}
+	available = {
+			NOT = {
+				RUB = { is_puppet_of = ERB }
+				has_war_with = RUB
+			}	
+	}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+				}
+		days_remove = 70
+		remove_effect = {		
+			annex_country = { target = RUB transfer_troops = NO } 
+		}
+	}
+	erb_eastport = {
+		visible = {
+			has_completed_focus = enc_reform_the_tribes
+			country_exists = EAS
+		}
+		available = {
+			NOT = {
+				EAS = { is_puppet_of = ERB }
+				has_war_with = EAS
+			}	
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+				}
+		days_remove = 70
+		remove_effect = {		
+			annex_country = { target = EAS transfer_troops = NO } 
+		}
+	}
+	erb_shoshone = {
+		visible = {
+			has_completed_focus = enc_reform_the_tribes
+			country_exists = SHO
+		}
+		available = {
+			NOT = {
+				SHO = { is_puppet_of = ERB }
+				has_war_with = SHO
+			}	
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+				}
+		days_remove = 70
+		remove_effect = {		
+			create_wargoal = { type = annex_everything target = SHO }
+		}
+	}
+	erb_MRA = {
+		visible = {
+			has_completed_focus = enc_reform_the_tribes
+			country_exists = MRA
+		}
+		available = {
+			NOT = {
+				MRA = { is_puppet_of = ERB }
+				has_war_with = MRA
+				}	
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+				}
+		days_remove = 25
+		remove_effect = {		
+			create_wargoal = { type = annex_everything target = MRA }
+		}
+	}
+	erb_MOJ = {
+		visible = {
+			has_completed_focus = enc_reform_the_tribes
+			country_exists = MOJ
+		}
+		available = {
+			NOT = {
+				MRA = { is_puppet_of = ERB }
+				has_war_with = MOJ
+				}	
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+				}
+		days_remove = 25
+		remove_effect = {		
+			create_wargoal = { type = annex_everything target = MOJ }
+		}
+	}
+	erb_FIE = {
+		visible = {
+			has_completed_focus = enc_reform_the_tribes
+			country_exists = MOJ
+		}
+		available = {
+			NOT = {
+				FIE = { is_puppet_of = ERB }
+				has_war_with = FIE
+				}	
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+				}
+		days_remove = 25
+		remove_effect = {		
+			create_wargoal = { type = annex_everything target = FIE  }
+		}
+	}
+}
 ENC_gannon_doctrine = { 
 	erb_reunited_state = {
 		target_trigger = {

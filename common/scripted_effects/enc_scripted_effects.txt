@@ -323,6 +323,10 @@ choose_autocracy = {
 	remove_ideas = enc_NCR_instability
 }
 
+##################################################
+### MISC ####
+##################################################
+
 cancel_requisition_civilian_resources = {
 
 	clr_country_flag = enc_requisitioned_resources
@@ -420,4 +424,57 @@ people_start_revolt = {
 		target = NCR
 		type = annex_everything
 	}
+}
+
+##################################################
+### Change Douglas background ####
+##################################################
+
+transfer_leader_traits = {
+	if = {
+		limit = { has_country_flag = leader_ruthless }
+		add_country_leader_trait = ruthless
+	}
+	if = {
+		limit = { has_country_flag = leader_charismatic }
+		add_country_leader_trait = charismatic
+	}
+	if = {
+		limit = { has_country_flag = leader_mutant_sympathies }
+		add_country_leader_trait = mutant_sympathies
+	}
+	if = {
+		limit = { has_country_flag = enc_red_menace_flag }
+		add_country_leader_trait = communist_paranoia
+	}
+}
+
+change_douglas_portrait_to_half_usa = {
+	hidden_effect = {
+		create_country_leader  = {
+			name = "Douglas Granite"
+			desc = "Granite_desc"
+			picture = "gfx/leaders/portrait_b2.dds"
+			expire = "3000.1.1"
+			ideology = ROOT
+			traits = {}
+		}
+		transfer_leader_traits = yes	
+	}
+	# custom_effects_tooltip = enc_time_for_a_new_flag
+}
+
+change_douglas_portrait_to_full_usa = {
+	hidden_effect = {
+		create_country_leader  = {
+			name = "Douglas Granite"
+			desc = "Granite_desc"
+			picture = "gfx/leaders/portrait_b3.dds"
+			expire = "3000.1.1"
+			ideology = ROOT
+			traits = {}
+		}
+		transfer_leader_traits = yes
+	}
+	# custom_effects_tooltip = enc_time_for_a_new_flag
 }

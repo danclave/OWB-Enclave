@@ -497,8 +497,7 @@ ENC_NCR_hiding = {
 				intellectuals > 0.3
 			}
 			check_variable = {
-					var = legitimacy
-					value > 0.299
+					legitimacy > 0.249
 				}
 		}
 		complete_effect = {
@@ -734,7 +733,6 @@ ENC_political_infighting = {
 	}
 }
 
-###############################
 # DEBUG
 ###############################
 
@@ -750,6 +748,12 @@ ENC_debug = {
 		}
 	}
 	ENC_misc = {
+<<<<<<< HEAD
+=======
+		available = 
+			has_no_free_press = no
+		}
+>>>>>>> 2285266320bf764bb6083bca7bef855f55460905
 		complete_effect = {
 			set_temp_variable = { stability_loss_factor = 0.33 }
 			stability_loss_based_on_elites_popularity = yes
