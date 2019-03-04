@@ -2,6 +2,36 @@
 # REFORMER
 ###############################
 enc_executive_orders  = {
+	ENC_opposition_to_segregation = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		activation = {
+			has_completed_focus = enc_segregation
+			OR = { 
+				has_idea = ENC_free_press
+				has_idea = ENC_free_press_2
+			}
+			people > 0.60			
+		}
+		available = {
+			NOT = { 
+				OR = { 
+					has_idea = ENC_free_press
+					has_idea = ENC_free_press_2
+				}		
+			}
+		}
+		days_mission_timeout = 400
+		cancel_trigger = {
+			people < 0.30
+		}
+		timeout_effect = { 
+			add_stability = -0.20
+			add_war_support = -0.15
+			add_political_power = -300
+		} 
+	}
 	ENC_anti_communist_propaganda = {
 		icon = decision_enc_propaganda
 		cost = 75		
@@ -2255,17 +2285,13 @@ ENC_WBH_expansion = {
 			country_exists = WBH
 		}
 	}
-	days_mission_timeout = 90
-	visible = {
-		TRL = { exists = no }
-		NCR = { exists = no }
-		WBH = { has_war = no }
-	}
 	activation = {
 		WBH = { has_war = no }
-		TRL = { exists = no }
-		NCR = { exists = no }
+		NOT = { country_exists = NCR}
+		NOT = { country_exists = TRL }
+		has_country_flag = enc_wbh_threat
 	}	
+	days_mission_timeout = 5
 	fire_only_once = no
 	is_good = no
 	timeout_effect = {
@@ -2280,17 +2306,13 @@ ENC_CES_expansion = {
 			country_exists = CES
 		}
 	}
-	days_mission_timeout = 90
-	visible = {
-		CES = { has_war = no }
-		NCN = { exists = no }
-		TRL = { exists = no }
-	}
+	days_mission_timeout = 5
 	activation = {
 		CES = { has_war = no }
-		NCN = { exists = no }
-		TRL = { exists = no }
-	}	
+		NOT = { country_exists = NCR}
+		NOT = { country_exists = NCN }
+		has_country_flag = enc_ces_threat
+		}
 	fire_only_once = no
 	is_good = no
 	timeout_effect = {

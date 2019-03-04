@@ -2280,10 +2280,15 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			remove_ideas = { enc_NCR_resistance2}  
+			remove_ideas = { enc_NCR_resistance2}
+			if = {
+				limit = {
+					has_completed_focus = enc_segregation 
+				}
+				add_stability = -0.05
+			}
 		}
 	}
-
 	focus = {#REBUILDING - Law and Order
 		id = enc_law_and_order 
 		icon = GFX_goal_enc_justice

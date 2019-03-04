@@ -420,7 +420,7 @@ enc_local_elections: "Free Elections"
 enc_local_elections_desc: "Behold, the Reunited States are holding their first free elections in over two hundred years! Of course, just because they're free elections doesn't mean everyone can vote..."
 
 enc_voting_rights_act: "The Voting Rights Act"
-enc_voting_rights_act_desc: "Congress will do us little good if we don't safeguard the influence of every American in the electoral process. Vault City limited voting to its natural citizens, and the barons of the NCR ensured that only the powerful had a say.  Let's pass a law to ban literacy tests and open ballots. With our help, democracy will be non-negotiable."
+enc_voting_rights_act_desc: "Congress will do us little good if we don't safeguard the electoral process. Let's make sure that every citizen's voices are heard by barring any attempts to manipulate or pressure their vote."
 
 enc_expand_human_definition: "Expand the Definition of Human"
 enc_expand_human_definition_desc: "The American experiment is a history of progress.  Let's take one more step."
@@ -670,7 +670,7 @@ enc_bos_soldiers_desc: "Even if we don't honor the Brotherhood's history, many o
 enc_ncr_leadership: "NCR Leadership"
 enc_ncr_leadership_desc: "With malice toward none, with charity for all, with firmness in the right as God gives us to see the right, let us strive on to finish the work we are in, and bind up the nation's wounds.  Or not."
 enc_ncr_soldiers: "Incorporate the NCR Army"
-enc_ncr_soldiers_desc: "California's men and women can, with proper inducement, be persuaded to fight for America."
+enc_ncr_soldiers_desc: "California's men and women can, with proper inducement, be persuaded to fight for America.  Those of whom who are worth saving, anyway."
 enc_american_broadcasting_department: "American Broadcasting Department"
 enc_american_broadcasting_department_desc: ""Got lots of stuff goin' down in Post Apocalyptia these days. Here's some of the latest news."
 enc_american_broadcasting_department_tt: "\nUnlocks the §YAmerican Broadcasting Department§! decision category."

@@ -29,6 +29,8 @@ ENC_reveal_to_ncr_desc: "We cannot hide from the NCR forever, but we may be able
 ENC_reveal_to_ncr.tt: "\nRequires more than §Y30% legitimacy§!"
 
 # CRISIS
+ENC_opposition_to_segregation: "Demands for Equal Rights!"
+ENC_opposition_to_segregation_desc: "For some reason, the people of America do not understand that some will always be more equal than others, and are gathering power to change the shape of our country.  We need to silence them!"
 NCR_crisis: "§RTHE NCR IS ONTO US§!"
 NCR_crisis_flag: "§RThe NCR is unto us!§!"
 NCR_crisis_resources: "Cease resource extraction"
@@ -53,6 +55,7 @@ enc_rangers_defense_sabotage_tt: "Unlocks the §YSabotage Infrastructure§! deci
 ##############################
 # Executive Orders
 ##############################
+ENC_opposition_to_segregation: "As it turns out, the Wastelanders are revolting.  Unless we can reduce their power or suppress their ability to voice dissent, they will rise up against us."
 enc_executive_orders: "Executive Orders"
 enc_executive_orders_desc: "A series of powerful tools that fall within the purview of the Commander in Chief."
 infrastructure_building_slot1: "Sponsor a Railway"

@@ -2626,7 +2626,15 @@ country_event = {#93 Nuka-land
 country_event = {#94 Flagstaff Liberated
     id = enc_reformers.94
     title = enc_reformers.94.t
-    desc = enc_reformers.94.d
+     desc = {
+        text = enc_reformers.94.d
+        trigger = {has_completed_focus = enc_segregation }
+	}
+	 desc = {
+        text = enc_reformers.220.d.integration
+        trigger = {has_completed_focus = enc_expand_human_definition }
+	}
+	desc = enc_reformers.94.d
     picture = GFX_event_enc_city
     fire_only_once = yes    
     is_triggered_only = no    
@@ -3575,6 +3583,19 @@ country_event = {#119 NCR
 		add_war_support = 0.10
 		add_political_power = 200
 		custom_effect_tooltip = enc_reformers.119.b.reward
+		set_country_flag = enc_gannon_outraged
+	}
+	option = {# Desintegrate NCR leadership
+		name = enc_reformers.119.c
+		trigger = { has_completed_focus = enc_segregation }
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.05
+		}
+		change_legitimacy = yes
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 20
 		set_country_flag = enc_gannon_outraged
 	}
 }		
@@ -4645,8 +4666,8 @@ country_event = { #159 - Ghoul Libel
 		}
 		set_party_name = {
 			ideology = elites
-			long_name = "Human Rights Party"
-			name = "Human Rights Party"
+			long_name = "The League of Citizens"
+			name = "Citizens League"
 		}
 		create_country_leader = {
 			name = "First Citizen Lynette"
@@ -4671,8 +4692,8 @@ country_event = { #159 - Ghoul Libel
 		}
 		set_party_name = {
 			ideology = elites
-			long_name = "Human Rights Party"
-			name = "Human Rights Party"
+			long_name = "The League of Citizens"
+			name = "Citizens League"
 		}
 		create_country_leader = {
 			name = "First Citizen Lynette"
@@ -4699,8 +4720,8 @@ country_event = { #159 - Ghoul Libel
 		}
 		set_party_name = {
 			ideology = elites
-			long_name = "Human Rights Party"
-			name = "Human Rights Party"
+			long_name = "The League of Citizens"
+			name = "Citizens League"
 		}
 		create_country_leader = {
 			name = "First Citizen Lynette"
@@ -4879,17 +4900,21 @@ country_event = { #167  End of Reformers
 	desc = enc_reformers.167.d
 	picture = GFX_event_enc_4th_july
 	fire_only_once = yes
-	trigger = {	has_completed_focus = enc_local_elections } # todo segregation
-	mean_time_to_happen = {	days = 30 }				
+	trigger = {
+		has_completed_focus = enc_the_mutant_question
+		has_completed_focus = enc_rebuilding_a_nation
+	}
+	mean_time_to_happen = {days = 15 }
 	option = { # Great!
 		name = enc_reformers.167.a
 		set_party_name = {
                 ideology = intellectuals
-                long_name = "The Grand New Party"
-                name = "Americans"
+                long_name = "The Reconstruction Party"
+                name = "The Reconstruction Party"
            }
-		}
+		 add_timed_idea = { idea = ENC_end_of_reformers  days = 90 }
 	}
+}
 country_event = {
 	id = enc_reformers.168
 	title = enc_reformers.168.t
@@ -6640,7 +6665,7 @@ country_event = {#223 - The Legion Marches
 	id = enc_reformers.223
 	title = enc_reformers.223.t
 	desc = enc_reformers.223.d
-	picture = GFX_event_CES_camp_2
+	picture = GFX_event_enc_legion_conquest
 	
 	fire_only_once = no	
     is_triggered_only = yes	
@@ -6899,6 +6924,108 @@ country_event = {#231 - Better Read
 	option = {#Afraid of Commies
 		name = enc_reformers.231.a
 		add_political_power = 50
+	}
+}
+country_event = {#231 - Better Read 
+	id = enc_reformers.231
+	title = enc_reformers.231.t
+	desc = enc_reformers.231.d
+	picture = GFX_event_enc_4th_july
+	fire_only_once = yes	
+    is_triggered_only = yes	
+	option = {#Afraid of Commies
+		name = enc_reformers.231.a
+		add_political_power = 50
+	}
+}
+news_event = {#232 - Troll Warren Crushed
+	id = enc_reformers.232
+	title = enc_reformers.232.t
+	desc = enc_reformers.232.d
+	picture = GFX_event_BOS_super_mutant
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_reform
+		NOT = { country_exists = TRL }		
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = {# Now they're a threat 
+		name = enc_reformers.232.a
+		set_country_flag = enc_wbh_threat
+		WBH = { add_ideas = ENC_terror_of_wastes }
+		
+	}
+}
+news_event = {#233 - Legion Conquest of New Canaan
+	id = enc_reformers.233
+	title = enc_reformers.233.t
+	desc = enc_reformers.233.d
+	picture = GFX_event_enc_legion_conquest
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_reform
+		NOT = { country_exists = TRL }		
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = {# Now they're a threat 
+		name = enc_reformers.233.a
+		set_country_flag = enc_ces_threat
+		CES = { add_ideas = ENC_terror_of_wastes }
+		
+	}
+}
+news_event = {#234 - Vice President
+	id = enc_reformers.234
+	title = enc_reformers.234.t
+	desc = enc_reformers.234.d
+	picture = GFX_event_enc_vice_president
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_reform
+		NOT = { country_exists = TRL }		
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = {# Tough Call 
+		name = enc_reformers.234.a
+		custom_effect_tooltip = enc_reformers.234.a.tt
+		set_country_flag = enc_select_vice_president
+		
+	}
+}
+country_event = {#235 - Nevada Joke Event
+	id = enc_reformers.235
+	title = enc_reformers.235.t
+	desc = enc_reformers.235.d
+	picture = GFX_event_enc_nevada_short
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_our_new_ally
+	}
+	mean_time_to_happen =  { days = 30 } # quick
+	option = {# Let's Hope
+		name = enc_reformers.235.a
+		custom_effect_tooltip = enc_reformers.235.a.tt
+		country_event = { id = enc_reformers.236 }
+	}
+	option = {# No
+		name = enc_reformers.235.b
+		custom_effect_tooltip = enc_reformers.235.b.tt
+	}
+}
+country_event = {#236 - Nevada Joke Event
+	id = enc_reformers.236
+	title = enc_reformers.236.t
+	desc = enc_reformers.236.d
+	picture = GFX_event_enc_nevada_short
+	fire_only_once = yes	
+    is_triggered_only = yes
+	option = {# Oops
+		name = enc_reformers.236.a
+		add_stability = -0.10
 	}
 }
 country_event = {#300 - state protests!

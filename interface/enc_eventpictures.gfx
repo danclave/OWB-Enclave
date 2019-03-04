@@ -580,4 +580,13 @@ spriteTypes = {
             name = "GFX_event_enc_joshua_graham"
  		    texturefile = "gfx/event_pictures/event_enc_joshua_graham.tga"
  	    }
+		SpriteType = {#event_enc_legion_conquest
+            name = "GFX_event_enc_legion_conquest"
+ 		    texturefile = "gfx/event_pictures/event_enc_legion_conquest.tga"
+ 	    }
+		SpriteType = {#event_enc_vice_president
+            name = "GFX_event_enc_vice_president"
+ 		    texturefile = "gfx/event_pictures/event_enc_vice_president.tga"
+ 	    }
 }
+

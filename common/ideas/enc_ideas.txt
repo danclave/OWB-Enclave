@@ -602,6 +602,20 @@ ideas = {
 			   encryption_factor = -0.10
 			}
 		}
+		ENC_end_of_reformers = {  
+			picture = enc_radio
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   intellectuals_drift = -0.33				
+			   }
+		}
 		ENC_radio_civilian_new = {  
 			picture = enc_radio
 			allowed = { 
@@ -1229,6 +1243,30 @@ ideas = {
 			}
 		}
 		
+		ENC_terror_of_wastes = {
+			picture = MOJ_idea_settlements_raided_ncr # todo
+			allowed = { 
+				always = no
+            }
+			cancel = {
+				NOT = {
+					country_exists = NCR
+				}
+			}
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.20
+				army_defence_factor = 0.10 
+			}
+			targeted_modifier = { 
+				tag = ERB 
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.10 
+			}
+		}
 		ENC_NCR_code_cracked = {
 			picture = MOJ_idea_settlements_raided_ncr # todo
 			allowed = { 

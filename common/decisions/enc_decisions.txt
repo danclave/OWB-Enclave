@@ -1332,6 +1332,11 @@ ENC_debug = {
 		}
 	}
 	ENC_misc = {
+		available = {
+			WBH = { has_war = no }
+			NOT = { country_exists = NCR}
+			NOT = { country_exists = TRL }
+		}
 		complete_effect = {
 			remove_ideas = enc_NCR_power_struggle
 		}
