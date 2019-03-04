@@ -2385,27 +2385,34 @@ ENC_securing_borders = {
 
 ENC_vice_president = {
 	ENC_vice_president_dornan = {
+		icon = enc_helmet_color
 		available = { ruler > 0.30 }
 		complete_effect = {
 			country_event = { id = enc_reformers.308 }
-			custom_effect_tooltip = ENC_vice_president_tooltip
+			custom_effect_tooltip = ENC_vice_president_tooltip	
+			clr_country_flag = enc_select_vice_president
 		}
 	}
 	ENC_vice_president_hayes = {
+		icon = enc_hayes
 		available = { people > 0.30 }
 		complete_effect = {
-			country_event = { id = enc_reformers.308 }
+			country_event = { id = enc_reformers.309 }
 			custom_effect_tooltip = ENC_vice_president_tooltip
+			clr_country_flag = enc_select_vice_president
 		}
 	}
 	ENC_vice_president_lynette = {
+		icon = enc_lynette
 		available = { elites > 0.30 }
 		complete_effect = {
-			country_event = { id = enc_reformers.308 }
-			custom_effect_tooltip = ENC_vice_president_tooltip
+			country_event = { id = enc_reformers.310 }
+			custom_effect_tooltip = ENC_vice_president_tooltip	
+			clr_country_flag = enc_select_vice_president
 		}
 	}
 }
+
 ###############################
 # Diplomacy
 ###############################

@@ -450,7 +450,7 @@ enc_reformers.81.a: "Let us ban the NCR dollar"
 enc_reformers.81.b: "Allow for an orderly currency conversion"
 ################################################################################################################
 enc_reformers.82.t: "The End of bottle-caps"
-enc_reformers.82.d: "bottle-caps were an ingenious solution to the Wasteland's problems; how do you create a currency with no government?  The original bottle-caps were backed by potable water from the Hub, and because the bottle-caps could not be replicated in postwar conditions, they had a fixed store of value.  But as the Wasteland's economy grew, the limited supply of bottle-caps meant more goods were chasing less money, discouraging economic growth.  With the return of Old Glory to the Wastes, the Government can impose a rational currency worth whatever the government says it's worth."
+enc_reformers.82.d: "Bottle-caps were an ingenious solution to the Wasteland's problems; how do you create a currency with no government?  The original bottle-caps were backed by potable water from the Hub, and because the bottle-caps could not be replicated in postwar conditions, they had a fixed store of value.\n\nBut as the Wasteland's economy grew, the limited supply of bottle-caps meant more goods were chasing less money, discouraging economic growth.  With the return of Old Glory to the Wastes, the Government can impose a rational currency worth whatever the government says it's worth."
 enc_reformers.82.a: "Wait, isn't this why candy bars cost $1000 before the war?"
 ################################################################################################################
 enc_reformers.83.t: "The National Anthem"

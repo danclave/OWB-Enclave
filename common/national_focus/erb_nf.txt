@@ -1316,6 +1316,7 @@ focus = {#RADIO - Red Menace
 				add_war_support = -0.15
 				clr_country_flag = enc_promised_no_ghoul_integration
 			}
+			stability_loss_based_on_elites_popularity = yes
 		}		
 	}
 	focus = {#INTEGRATION - Reject Ghouls 
@@ -1364,6 +1365,7 @@ focus = {#RADIO - Red Menace
 				remove_idea = ENC_accepted_ghouls
 				add_idea = ENC_accepted_ghouls_and_super_mutants
 			}
+			stability_loss_based_on_elites_popularity = yes
 		}		
 	}
 	focus = {#INTEGRATION - A common enemy

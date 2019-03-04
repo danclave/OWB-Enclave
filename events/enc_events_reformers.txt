@@ -367,7 +367,7 @@ country_event = {#13 - Consolidating power
 	option = {# plasma grenade
 		name = enc_reformers.13.b
 		trigger = {
-			has_country_flag = leader_ruthless
+			# has_country_flag = leader_ruthless
 		}
 		custom_effect_tooltip = enc_reformers.13.b.tt
 		remove_ideas = {
@@ -1997,16 +1997,16 @@ country_event = {#67 - Ghoul Marriage
 		add_stability = 0.05
 		add_war_support = 0.02
 		add_political_power = 50
-		}
+	}
 	option = {# Equal Protection Argument
 		name = enc_reformers.67.b
 		add_ideas = ENC_Marriage_Equality
-		}
+	}
 	option = {# Dig at Kennedy But Still Support Ghoul Marriage
 		name = enc_reformers.67.c
 		add_ideas = ENC_Marriage_Equality
-		}
 	}
+}
 
 country_event = {#68 - Slavery
 	id = enc_reformers.68
@@ -4280,7 +4280,7 @@ country_event = {#142 Vault Tec
     id = enc_reformers.142
 	title = enc_reformers.142.t
 	desc = enc_reformers.142.d
-	picture =  GFX_event_enc_vault
+	picture =  GFX_event_ENC_secret
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {#	Yayy
@@ -6324,7 +6324,7 @@ country_event = {#216 - Deathclaws
 	}
 	option = {#OH WELL
 		name = enc_reformers.216.b
-		add_stability = 0.02
+		add_war_support = 0.02
 	}
 }
 country_event = {#217 - Counterfeiting
@@ -7070,7 +7070,7 @@ country_event = {#308 - Vice President Dornan
 	id = enc_reformers.308
 	title = enc_reformers.308.t
 	desc = enc_reformers.308.d
-	picture =  GFX_event_ENC_secret # todo
+	picture =  GFX_event_enc_vice_president # todo
 	
 	fire_only_once = no	
 	is_triggered_only = yes
@@ -7080,18 +7080,17 @@ country_event = {#308 - Vice President Dornan
 		add_country_leader_trait = vice_president_dornan_trait
 		add_popularity = { ideology = ruler popularity = 0.10 }
 		set_country_flag = vice_president_dornan_flag
-		clr_country_flag = enc_select_vice_president
 	}
 	option = { # Changed my mind
 		name = enc_reformers.308.b
-		# go back
+		set_country_flag = enc_select_vice_president
 	}
 }
 country_event = {#309 - Vice President hayes
 	id = enc_reformers.309
 	title = enc_reformers.309.t
 	desc = enc_reformers.309.d
-	picture =  GFX_event_ENC_secret # todo
+	picture =  GFX_event_enc_vice_president # todo
 	
 	fire_only_once = no	
 	is_triggered_only = yes
@@ -7101,18 +7100,17 @@ country_event = {#309 - Vice President hayes
 		add_country_leader_trait = vice_president_hayes_trait
 		add_popularity = { ideology = people popularity = 0.10 }
 		set_country_flag = vice_president_hayes_flag
-		clr_country_flag = enc_select_vice_president
 	}
 	option = { # Changed my mind
 		name = enc_reformers.309.b
-		# go back
+		set_country_flag = enc_select_vice_president
 	}
 }
 country_event = {#310 - Vice President lynette
 	id = enc_reformers.310
 	title = enc_reformers.310.t
 	desc = enc_reformers.310.d
-	picture =  GFX_event_ENC_secret # todo
+	picture =  GFX_event_enc_vice_president # todo
 	
 	fire_only_once = no	
 	is_triggered_only = yes
@@ -7122,11 +7120,10 @@ country_event = {#310 - Vice President lynette
 		add_country_leader_trait = vice_president_lynette_trait
 		add_popularity = { ideology = elites popularity = 0.10 }
 		set_country_flag = vice_president_lynette_flag
-		clr_country_flag = enc_select_vice_president
 	}
 	option = { # Changed my mind
 		name = enc_reformers.310.b
-		# go back
+		set_country_flag = enc_select_vice_president
 	}
 }
 #################

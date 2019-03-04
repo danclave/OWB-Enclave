@@ -322,9 +322,9 @@ ENC_securing_borders:0 "Securing the Borders"
 ###################################
 # Our new vice president
 ###################################
-ENC_vice_president: "Select Vice President"
+ENC_vice_president: "Vice President"
 ENC_vice_president_desc: "TODO"
-
+enc_select_vice_president: "Selecting Vice President"
 
 ENC_vice_president_tooltip: "You will be asked to confirm."
 ENC_vice_president_dornan:0 "Vice President Dornan"

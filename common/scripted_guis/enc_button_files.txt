@@ -310,9 +310,10 @@ scripted_gui = {
         visible = {
             is_owned_and_controlled_by = NCR
             ROOT =  { 
+				has_completed_flag = ncr_suspicious
 				has_completed_focus = enc_organise_the_sympathizers
             }
-			 NOT = {  
+			NOT = {  
                 has_state_flag = no_rebels_you_fucks
             }			
         }        

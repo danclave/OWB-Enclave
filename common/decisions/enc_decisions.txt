@@ -750,11 +750,14 @@ ENC_debug = {
 		}
 	}
 	ENC_misc = {
-		available = {
-			has_no_free_press = no
-		}
 		complete_effect = {
-			remove_5_popularity_from_ruling_party = yes
+			set_temp_variable = { stability_loss_factor = 0.33 }
+			stability_loss_based_on_elites_popularity = yes
+		}		
+	}
+	ENC_people_uprising = {
+		complete_effect = { 
+			people_start_revolt = yes
 		}
 	}
 	ENC_NCR_CES_war = {

@@ -160,7 +160,7 @@ leader_traits = {
 		random = no
 		stability_factor = 0.05
 		air_close_air_support_attack_factor = -0.05
-		intellectuals_drift = 0.30
+		intellectuals_drift = 0.20
 	}
 	enc_air_chief_cas = {
 		random = no
@@ -174,11 +174,11 @@ leader_traits = {
 		stability_factor = 0.05
 		army_morale_factor = -0.03
 		army_attack_factor = -0.05
-		intellectuals_drift = 0.30
+		intellectuals_drift = 0.20
 	}
 	enc_navy_chief_loyalist = {
 		random = no
-		intellectuals_drift = 0.30	
+		intellectuals_drift = 0.20	
 		stability_factor = 0.05
 		naval_coordination = -0.05
 	}
