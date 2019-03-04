@@ -9,12 +9,13 @@ ideas = {
 				not = {
 					has_idea = closed_economy
 					has_idea = enc_collapsed_economy
+					has_idea = hidden_economy
 				}
 			}
 			ai_will_do = {
 				factor = 10
 			}
-		}		
+		}
 		enc_grant_c_hayes = {					
 			picture = grant_c_hayes
 			allowed = { original_tag = ERB }
@@ -23,7 +24,16 @@ ideas = {
 			ai_will_do = {
 				factor = 10
 			}
-		}			
+		}
+		enc_lynette = { # todo complete
+			picture = lynette
+			allowed = { original_tag = ERB }
+			visible = { has_country_flag = erb_lynette_unlocked_flag }
+			traits = { first_citizen }
+			ai_will_do = {
+				factor = 10
+			}
+		}
 		enc_allgood_murphy = {				
 			picture = allgood_murphy					
 			allowed = { original_tag = ERB }
