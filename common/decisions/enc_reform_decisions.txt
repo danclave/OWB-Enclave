@@ -2,6 +2,129 @@
 # REFORMER
 ###############################
 enc_executive_orders  = {
+	plunder_resources = {
+		icon = generic_scorched_earth
+		cost = 50
+		visible = {
+			has_war_with = ncr
+			not = { has_country_flag = enc_mid_game }
+		}
+		available = {
+			any_owned_state = { #we occupy a non core state which has += 10 water
+				is_core_of = NCR
+				not = { is_core_of = ROOT }
+				is_fully_controlled_by = ROOT
+				has_ROOT_at_least_1_div_in_current_state_scope = YES
+				has_resources_amount = {
+					resource = water
+					amount = 10
+					state = THIS
+				}				
+			}
+		}
+		modifier = { #moving cost (maybe use civ factories)
+			supply_consumption_factor = -0.50
+			no_supply_grace = 48
+		}
+		days_remove = 60
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_core_of = NCR
+					not = { is_core_of = ROOT }
+					is_fully_controlled_by = ROOT
+					has_ROOT_at_least_1_div_in_current_state_scope = YES
+					has_resources_amount = {
+						resource = water
+						amount = 10
+						state = THIS
+					}
+				}
+				set_temp_variable = { legitimacy_change_var = -0.10 }
+				change_legitimacy = yes
+				add_resource = {
+					type = water
+					amount = -10
+					state = THIS
+				}
+				add_state_flag = plundered_by_enc
+			}
+		}
+	}
+
+	plunder_equipment = {
+		icon = generic_scorched_earth
+		cost = 50
+		visible = {
+			has_war_with = ncr
+		}
+		available = {
+			any_owned_state = { #we occupy a non core state which has 3+ mil factories
+				is_core_of = NCR
+				is_fully_controlled_by = ROOT
+				has_ROOT_at_least_1_div_in_current_state_scope = YES
+				arms_factory > 2				
+			}
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					is_core_of = NCR
+					is_fully_controlled_by = ROOT
+					has_ROOT_at_least_1_div_in_current_state_scope = YES
+					arms_factory > 3
+				}
+				set_temp_variable = { legitimacy_change_var = -0.10 }
+				change_legitimacy = yes
+				remove_building = { 
+					type = arms_factory 
+					level = 3
+				}
+				add_state_flag = plundered_by_enc
+			}
+		}
+		remove_effect = {			
+			ROOT = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 600
+					producer = NCR
+				}
+			}
+		}
+	}
+
+	legitimacy_core_state = {
+		icon = generic_nationalism # todo
+		custom_cost_text = costs_10_legitimacy
+		visible = {
+			check_variable = { legitimacy > 89.9 }
+		}
+		custom_cost_trigger = {
+			check_variable = { legitimacy > 99.9 }
+		}
+		available = {
+			check_variable = { legitimacy > 99.9 }
+			any_owned_state = {
+				not = { is_core_of = ROOT }
+				has_population > 10000
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = { legitimacy_change_var = -0.10 }
+				change_legitimacy = yes
+			}
+			random_owned_state = {
+				limit = {
+					not = { is_core_of = ROOT }
+					has_population > 10000
+				}
+				add_core_of = ROOT
+			}
+		}	
+	}
+
 	ENC_opposition_to_segregation = {
 		icon = generic_break_treaty
 		priority = 30		
