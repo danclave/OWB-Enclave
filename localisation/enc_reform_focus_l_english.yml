@@ -4,6 +4,12 @@ empty_line: " \n "
 ###################################
 # FOCUS TREE
 ###################################
+ENC_nevada_assembly: "Convene the Nevada Legislature"
+ENC_nevada_assembly_desc: "For the first time since the Great War, Nevada's legislature will convene to debate the issues of the day."
+ENC_judiciary_nevada: "Establish a Justice System"
+ENC_judiciary_nevada: "Nevada's people do believe in justice, but it's a bit of a rough and ready system. RElying on former Desert Rangers, personnel from Vault City, and perhaps even some Followers, we can take steps to form a real justice system."
+ENC_nevada_constitution: "The Constitution of Nevada"
+ENC_nevada_constitution_desc: "Nevada has a unique opportunity to act as a blank slate for the Wastes. We will build upon the best of America's ideas, and incorporate lessons from the last 200 years. We will never be as big as California, but watch us be far more successful."
 enc_civil_society: "Battle Born"
 enc_civil_society_desc: "Nevada was once a lawless frontier where people were prey to tribals, braiders, and petty tyrants in every town.  But by taking the resources of the Enclave remnants and forging the state of Nevada, Granite has achieved more than anyone dreamed possible, turning it into a model of peace, order, and good governance. Once more, battle born."
 enc_nuclear_option: "The Last Argument of Presidents"
@@ -428,7 +434,7 @@ enc_local_elections: "Free Elections"
 enc_local_elections_desc: "Behold, the Reunited States are holding their first free elections in over two hundred years! Of course, only eligable citizens of America can vote."
 
 enc_voting_rights_act: "The Voting Rights Act"
-enc_voting_rights_act_desc: "Congress will do us little good if we don't safeguard the influence of every American in the electoral process. Vault City limited voting to its natural citizens, and the barons of the NCR ensured that only the powerful had a say.  Let's pass a law to ban literacy tests and open ballots. With our help, democracy will be non-negotiable."
+enc_voting_rights_act_desc: "Congress will do us little good if we don't safeguard the electoral process. Let's make sure that every citizen's voices are heard by barring any attempts to manipulate or pressure their vote."
 
 enc_expand_human_definition: "Expand the Definition of Human"
 enc_expand_human_definition_desc: "The American experiment is a history of progress.  Let's take one more step."
@@ -678,7 +684,7 @@ enc_bos_soldiers_desc: "Even if we don't honor the Brotherhood's history, many o
 enc_ncr_leadership: "NCR Leadership"
 enc_ncr_leadership_desc: "With malice toward none, with charity for all, with firmness in the right as God gives us to see the right, let us strive on to finish the work we are in, and bind up the nation's wounds.  Or not."
 enc_ncr_soldiers: "Incorporate the NCR Army"
-enc_ncr_soldiers_desc: "California's men and women can, with proper inducement, be persuaded to fight for America."
+enc_ncr_soldiers_desc: "California's men and women can, with proper inducement, be persuaded to fight for America.  Those of whom who are worth saving, anyway."
 enc_american_broadcasting_department: "American Broadcasting Department"
 enc_american_broadcasting_department_desc: ""Got lots of stuff goin' down in Post Apocalyptia these days. Here's some of the latest news."
 enc_american_broadcasting_department_tt: "\nUnlocks the §YAmerican Broadcasting Department§! decision category."

@@ -2006,7 +2006,7 @@ country_event = {#67 - Ghoul Marriage
 		name = enc_reformers.67.c
 		add_ideas = ENC_Marriage_Equality
 		}
-	}
+}
 
 country_event = {#68 - Slavery
 	id = enc_reformers.68
@@ -2603,7 +2603,17 @@ country_event = {#93 Nuka-land
 country_event = {#94 Flagstaff Liberated
     id = enc_reformers.94
     title = enc_reformers.94.t
-    desc = enc_reformers.94.d
+     desc = {
+        text = enc_reformers.94.d
+        trigger = {
+			NOT = {has_country_flag = enc_flagstaff_nuked } 
+		}
+	}	
+	 desc = {
+        text = enc_reformers.94.d.nuked
+        trigger = {has_country_flag = enc_flagstaff_nuked } 
+	}
+	desc = enc_reformers.94.d
     picture = GFX_event_enc_city
     fire_only_once = yes    
     is_triggered_only = no    
@@ -3550,6 +3560,19 @@ country_event = {#119 NCR
 		add_war_support = 0.10
 		add_political_power = 200
 		custom_effect_tooltip = enc_reformers.119.b.reward
+		set_country_flag = enc_gannon_outraged
+	}
+	option = {# Desintegrate NCR leadership
+		name = enc_reformers.119.c
+		trigger = { has_completed_focus = enc_segregation }
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.05
+		}
+		change_legitimacy = yes
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 20
 		set_country_flag = enc_gannon_outraged
 	}
 }		
@@ -4620,8 +4643,8 @@ country_event = { #159 - Ghoul Libel
 		}
 		set_party_name = {
 			ideology = elites
-			long_name = "Human Rights Party"
-			name = "Human Rights Party"
+			long_name = "The League of Citizens"
+			name = "Citizens League"
 		}
 		create_country_leader = {
 			name = "First Citizen Lynette"
@@ -4645,8 +4668,8 @@ country_event = { #159 - Ghoul Libel
 		}
 		set_party_name = {
 			ideology = elites
-			long_name = "Human Rights Party"
-			name = "Human Rights Party"
+			long_name = "The League of Citizens"
+			name = "Citizens League"
 		}
 		create_country_leader = {
 			name = "First Citizen Lynette"
@@ -4673,8 +4696,8 @@ country_event = { #159 - Ghoul Libel
 		}
 		set_party_name = {
 			ideology = elites
-			long_name = "Human Rights Party"
-			name = "Human Rights Party"
+			long_name = "The League of Citizens"
+			name = "Citizens League"
 		}
 		create_country_leader = {
 			name = "First Citizen Lynette"
@@ -4853,17 +4876,21 @@ country_event = { #167  End of Reformers
 	desc = enc_reformers.167.d
 	picture = GFX_event_enc_4th_july
 	fire_only_once = yes
-	trigger = {	has_completed_focus = enc_local_elections } # todo segregation
-	mean_time_to_happen = {	days = 30 }				
+	trigger = {
+		has_completed_focus = enc_the_mutant_question
+		has_completed_focus = enc_rebuilding_a_nation
+	}
+	mean_time_to_happen = {days = 15 }
 	option = { # Great!
 		name = enc_reformers.167.a
 		set_party_name = {
                 ideology = intellectuals
-                long_name = "The Grand New Party"
-                name = "Americans"
+                long_name = "The Reconstruction Party"
+                name = "The Reconstruction Party"
            }
-		}
+		 add_timed_idea = { idea = ENC_end_of_reformers  days = 90 }
 	}
+}
 country_event = {
 	id = enc_reformers.168
 	title = enc_reformers.168.t
@@ -5439,7 +5466,7 @@ country_event = { #186 - Court Demands Freedom of Speech
 	mean_time_to_happen = { days = 3 }  
     option = { # STOP
         name = enc_reformers.186.a
-		add_stability = -0.25
+		add_stability = -0.10
 		set_country_flag = enc_free_press_by_court
 		custom_effect_tooltip = enc_reformers.186.a.tt
 		}
@@ -5613,8 +5640,9 @@ country_event = { #191 - Free Press Supports Democracy
     option = { # STOP
         name = enc_reformers.191.a
 		set_country_flag = enc_court_ordered_elections
-		complete_national_focus = enc_local_elections
-		add_stability = -0.15
+		complete_national_focus = enc_empower_congress
+		add_stability = -0.10
+		add_ideas = enc_NCR_instability
 		custom_effect_tooltip = enc_reformers.191.a.tt
 		}
 	option = { # Bye Speech
@@ -6565,7 +6593,7 @@ country_event = {#223 - The Legion Marches
 	id = enc_reformers.223
 	title = enc_reformers.223.t
 	desc = enc_reformers.223.d
-	picture = GFX_event_CES_camp_2
+	picture = GFX_event_enc_legion_conquest
 	
 	fire_only_once = no	
     is_triggered_only = yes	
@@ -6826,6 +6854,222 @@ country_event = {#231 - Better Read
 		add_political_power = 50
 	}
 }
+country_event = {#231 - Better Read 
+	id = enc_reformers.231
+	title = enc_reformers.231.t
+	desc = enc_reformers.231.d
+	picture = GFX_event_enc_4th_july
+	fire_only_once = yes	
+    is_triggered_only = yes	
+	option = {#Afraid of Commies
+		name = enc_reformers.231.a
+		add_political_power = 50
+	}
+}
+news_event = {#232 - Troll Warren Crushed
+	id = enc_reformers.232
+	title = enc_reformers.232.t
+	desc = enc_reformers.232.d
+	picture = GFX_event_BOS_super_mutant
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_reform
+		NOT = { country_exists = TRL }		
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = {# Now they're a threat 
+		name = enc_reformers.232.a
+		set_country_flag = enc_wbh_threat
+		WBH = { add_ideas = ENC_terror_of_wastes }
+		
+	}
+}
+news_event = {#233 - Legion Conquest of New Canaan
+	id = enc_reformers.233
+	title = enc_reformers.233.t
+	desc = enc_reformers.233.d
+	picture = GFX_event_enc_legion_conquest
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_reform
+		NOT = { country_exists = TRL }		
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = {# Now they're a threat 
+		name = enc_reformers.233.a
+		set_country_flag = enc_ces_threat
+		CES = { add_ideas = ENC_terror_of_wastes }
+		
+	}
+}
+news_event = {#234 - Vice President
+	id = enc_reformers.234
+	title = enc_reformers.234.t
+	desc = enc_reformers.234.d
+	picture = GFX_event_enc_vice_president
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_reform
+		NOT = { country_exists = TRL }		
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = {# Tough Call 
+		name = enc_reformers.234.a
+		custom_effect_tooltip = enc_reformers.234.a.tt
+		set_country_flag = enc_select_vice_president
+		
+	}
+}
+country_event = {#235 - Nevada Joke Event
+	id = enc_reformers.235
+	title = enc_reformers.235.t
+	desc = enc_reformers.235.d
+	picture = GFX_event_enc_nevada_short
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_our_new_ally
+	}
+	mean_time_to_happen =  { days = 30 } # quick
+	option = {# Let's Hope
+		name = enc_reformers.235.a
+		custom_effect_tooltip = enc_reformers.235.a.tt
+		country_event = { id = enc_reformers.236 }
+	}
+	option = {# No
+		name = enc_reformers.235.b
+		custom_effect_tooltip = enc_reformers.235.b.tt
+	}
+}
+country_event = {#236 - Nevada Joke Event
+	id = enc_reformers.236
+	title = enc_reformers.236.t
+	desc = enc_reformers.236.d
+	picture = GFX_event_enc_nevada_short
+	fire_only_once = yes	
+    is_triggered_only = yes
+	option = {# Oops
+		name = enc_reformers.236.a
+		add_stability = -0.10
+	}
+}
+country_event = {#237 - Ghoul Pride
+	id = enc_reformers.237
+	title = enc_reformers.237.t
+	desc = enc_reformers.237.d
+	picture = GFX_event_ENC_Ham
+	fire_only_once = yes	
+	trigger = {
+		has_completed_focus = enc_accept_ghouls
+		has_completed_focus = enc_judicial_branch
+		}
+	mean_time_to_happen = { days = 365 }
+	option = {# Court Rules for Vault City 
+		name = enc_reformers.237.a
+		add_stability = 0.05
+	}
+	option = {# Dig at Kennedy But Still Support Ghoul Marriage
+		name = enc_reformers.237.b
+		add_popularity = { ideology = people popularity = 0.05 }
+		add_stability = -0.05
+		custom_effect_tooltip = enc_reformers.237.b.tt
+	}
+}
+country_event = {#238 - Seattle
+    id = enc_reformers.238
+    title = enc_reformers.238.t
+    desc = enc_reformers.238.d
+	picture = GFX_event_enclave_flag_raising
+    fire_only_once = yes    
+    is_triggered_only = no    
+	mean_time_to_happen = { days = 5 }
+	trigger = { 
+		tag = ERB
+		ERB = { has_war_with = WBH }
+		84 = { is_controlled_by = ERB }
+	}
+    option = {# Wee!
+		name = enc_reformers.238.a
+		add_war_support = 0.05
+	}
+}	
+country_event = {#239 -Salt Lake City
+    id = enc_reformers.239
+    title = enc_reformers.239.t
+    desc = enc_reformers.239.d
+	picture = GFX_event_NCN_new_canaan
+    fire_only_once = yes    
+    is_triggered_only = no    
+	mean_time_to_happen = { days = 5 }
+	trigger = { 
+		tag = ERB
+		ERB = { has_war_with = CES }
+		551 = { is_controlled_by = ERB }
+	}
+    option = {# Wee!
+		name = enc_reformers.239.a
+		551 = {add_core_of = ERB }
+		266 = {add_core_of = ERB }
+	}
+}
+country_event = {#240 -The Old Country 
+    id = enc_reformers.240
+    title = enc_reformers.240.t
+    desc = enc_reformers.240.d
+	picture = GFX_event_enc_ghouls
+    fire_only_once = yes    
+    is_triggered_only = no
+	mean_time_to_happen = { days = 5 }
+	trigger = { 
+		ERB = { has_war_with = WBH }
+		has_completed_focus = enc_accept_ghouls
+		WBH = { surrender_progress > .3 }
+		TOC = { is_in_faction_with = WBH }
+	}
+    option = {# Wee!
+		name = enc_reformers.240.a
+		puppet = TOC
+	}
+}
+country_event = {#241 -The Sheriff of Primm
+    id = enc_reformers.241
+    title = enc_reformers.241.t
+    desc = enc_reformers.241.d
+	picture = GFX_event_enc_primm_sheriff
+    fire_only_once = yes    
+    is_triggered_only = no
+	mean_time_to_happen = { days = 100 }
+	trigger = { 
+		has_completed_focus = enc_the_state_of_nevada
+		419 = { is_owned_and_controlled_by = ERB }
+	}
+    option = {# Wee!
+		name = enc_reformers.241.a
+		add_political_power = 50
+		
+	}
+}
+country_event = {#242 -veronica
+    id = enc_reformers.242
+    title = enc_reformers.242.t
+    desc = enc_reformers.242.d
+	picture = GFX_event_enc_veronica
+    fire_only_once = yes    
+    is_triggered_only = no
+	mean_time_to_happen = { days = 100 }
+	trigger = { 
+		has_completed_focus = enc_follower_schooling_nevada
+		check_variable = { legitimacy > 0.249 }
+	}
+    option = {# Wee!
+		name = enc_reformers.242.a
+		custom_effect_tooltip = enc_reformers.241.a.tt
+		
+	}
+}						
 country_event = {#300 - state protests!
 	id = enc_reformers.300
 	title = enc_reformers.300.t

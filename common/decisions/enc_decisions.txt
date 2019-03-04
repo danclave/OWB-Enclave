@@ -748,7 +748,7 @@ ENC_debug = {
 		}
 	}
 	ENC_misc = {
-		available = {
+		available = 
 			has_no_free_press = no
 		}
 		complete_effect = {

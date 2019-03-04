@@ -508,6 +508,7 @@ enc_reformers.93.a: "Cutting in line has unpleasant consequences."
 ################################################################################################################
 enc_reformers.94.t: "Flagstaff Liberated!"
 enc_reformers.94.d: "Vertibirds sweep overhead as Enclave soldiers trample the Legion's banners.  The City's slaves wait to learn whether they've found freedom or a new master, but the President can be proud to know that for the first time in two hundred years, the Stars and Stripes flies over Arizona."
+enc_reformers.94.d.nuked: "Vertibirds sweep over the ruins of Flagstaff, soldiers posing by its remaining buildings.  It's hard to hold a victory march when the city's center is molten glass."
 enc_reformers.94.a: "Sic Semper Tyrannis"
 ################################################################################################################
 enc_reformers.95.t: "Thanksgiving"
@@ -638,6 +639,7 @@ enc_reformers.119.a.reward: "\n§MSeveral advisors of the [NCR.GetName] will bec
 enc_reformers.119.b:  "§RDisintegrate the NCR leaders.§!"
 enc_reformers.119.b.tt:  "§gAs Lincoln said: 'Do I not destroy my enemies when I make them ash?'§!\n\n"
 enc_reformers.119.b.reward: "\n§RSeveral advisors of the [NCR.GetName] will be executed.§!"
+enc_reformers.119.c:  "These primitive wastelanders can be put to use in reconstruction gangs."
 ###############################################################################################################
 enc_reformers.120.t: "The Conference at Klamath"
 enc_reformers.120.d: "Supporters of the dream of reviving the Pacific Commonwealth have slinked to the trading town of Klamath.  Far from the Warren and the Brotherhood, its leaders have agreed to sponsor our plan to liberate the region from tyranny and bring the into the Associated States of America.  The only question is whether we can persuade anyone else to join them..."
@@ -847,8 +849,8 @@ enc_reformers.158.t: "Rangers Lead The Way"
 enc_reformers.158.d: "It's another beautiful morning in New Vegas, dear listeners, although not as beautiful as you.  We've received reports that the Rangers, aided by a courier passing through, struck at a slavers' camp in the Eighties territory overnight.  Casualties were minimal for everyone but the raiders themselves, with reports of explosions lighting up the night after the Rangers departed with the slaves.   Ranger Boone has commented that the raid is a warning to all slavers, and that a shot from his gauss rifle would be the last thing they'll never see.  Slavery, folks:  Bad for the soul, and your life expectancy."
 enc_reformers.158.a: "We're making the world a better place"
 ###############################################################################################################
-enc_reformers.159.t: "The Human Rights Party"
-enc_reformers.159.d: "As it turns out, many Wastelanders have their own views of ghouls, mutants, and 'primitives'. First Citizen Lynette of Vault City has joined ranks with many Enclave centrists who think that civilized Wastelanders are real Americans, but that tribals need a firm, guiding hand, and mutants and ghouls need a plasma blast. Vault City is, to many members of the Enclave, a model town -peaceful and prosperous, and the comparison to the riff raff of New Reno or Shady Sands only bolsters her claim to lead the Reunited States. Lynnete and Enclave Centrists have formed the Human Rights Party, promising to rebuild all of America in Vault City's image."
+enc_reformers.159.t: "The League of Citizens"
+enc_reformers.159.d: "As it turns out, many Wastelanders have their own views of ghouls, mutants, and 'primitives'. First Citizen Lynette of Vault City has joined ranks with many Enclave moderates who think that civilized Wastelanders are real Americans, but that tribals need a firm, guiding hand, and mutants and ghouls need a plasma blast.\n\nTo many, Vault City is a model town, peaceful and prosperous, and the comparison to the riff raff of New Reno or Shady Sands only bolsters their views. Lynette has League of Citizens, promising to rebuild all of America in Vault City's image."
 enc_reformers.159.a: "Two steps forward, one step back."
 enc_reformers.159.a.tt: "§gPublically denounce this new party, driving many centrists and fence sitters to their side.§!\n\n"
 enc_reformers.159.b: "She has something of a point..."
@@ -897,8 +899,8 @@ enc_reformers.166.d: "The Legion was able to recover from Flagstaff's loss, but,
 enc_reformers.166.a: "War never changes"
 ##############################################################################################################
 enc_reformers.167.t: "The End of the Reformers"
-enc_reformers.167.d: "With the Enclave's rule expanding across Nevada, and the destruction of the die-hard purists, Granite has become a president in fact as well as name.  His supporters no longer call themselves 'Reformers,' for they are no longer just Enclave scientists and officers.  Granite speaks with brahmin barons, casino owners, caravaners, salvagers, vault dwellers, and even a few couriers.  His supporters are not Reformers; they are Americans from all walks of life."
-enc_reformers.167.a: "The title made this sound much worse"
+enc_reformers.167.d: "With the Enclave's rule expanding across Nevada, and the destruction of the die-hard purists, Granite has become a president in fact as well as name.  Granite's supporters no longer call themselves 'Reformers,' for they are no longer just Enclave scientists and officers, but include brahmin barons, casino owners, caravaners, salvagers, vault dwellers, and even a few couriers.\n\nThis is a problem.  All of these people have different dreams and visions for America.  Granite can keep them united for now by saying his priority is reconstruction, but this will not last forever. And if Granite stands for nothing, then what will he fall for?"
+enc_reformers.167.a: "Democracy seems a lot messier than the old books said"
 ##############################################################################################################
 enc_reformers.168.t: "The Fate of Vault 21"
 enc_reformers.168.d: "Vault 21 was a prewar experiment set up by Vault Tec to observe how a society based around gambling would function in isolation. Surprisingly, unlike numerous horror stories found in the wasteland, this Vault got by without complications. Due to its good condition some have suggested converting it into a nucleus for high tech industry in Vegas. Or turning it into a casino, but seriously, there are a dozen of those. Why do we need one more?"
@@ -1223,6 +1225,57 @@ enc_reformers.230.b: "Arrest the ghoul for owning §RCommunist§! propaganda!"
 enc_reformers.231.t: "Better Read"
 enc_reformers.231.d: "Granite gave up on Das Kapital after the first few pages, finding it incredibly tedious and completely incomprehensible to someone raised 200 years after a nuclear war. Still, at least he decided that it's simply unamerican to oppose baseball, but not a sign of Communist sympathies."
 enc_reformers.231.a: "...Okay, let's call it a win"
+#############################################################################################################
+enc_reformers.232.t: "The Fall of the Troll Warren"
+enc_reformers.232.d: "In fierce fighting, the Washington Brotherhood has seized the Troll Warren.  Those mutants who were not roasted by flamers or incinerated by laser guns will look forward to a new life of slavery for the Brotherhood.  The Brotherhood's ruthless conduct in this war against both the supermutants and their human slaves has terrified their neighbors, many of whom now fear that the Brotherhood's eyes will turn to them."
+enc_reformers.232.a: "I'm starting to wonder who was the worse neighbor"
+#############################################################################################################
+enc_reformers.233.t: "The Fall of New Canaan"
+enc_reformers.233.d: "New Canaan, the heart of the Mormon faith, has fallen to the Legion. [CES.GetName] has crucified several of their leaders in a vicious mockery of their faith and its inhabitants now face an uncertain future under [CES.GetName]. Utah now joins Arizona and New Mexico under the Red Banner.\n\nWith New California in disarray after the Enclave's conquest, and New Canaan in ashes, there is no one to stop the Legion from subduing the peaceful settlements on its fringes.  Unless the Republic of the Rio Grande wants to help?"
+enc_reformers.233.a: "By the rivers of Babylon, we wept when we remembered Zion"
+#############################################################################################################
+enc_reformers.234.t: "Our New Vice President"
+enc_reformers.234.d: "As part of the Reconstruction, Granite has decided to appoint a Vice President, a power reserved to the President pursuant to the 44th Amendment, to help manage the nation's divisions. \n\nLynette would help reach an accomodation with the Citizens League, and promote their dream of a 'managed' democracy where there is a place for everyone so long as they are in their place. \n\nCongressman Hayes would represent an accomodation with the New World Party, a promise that the Reunited States will continue to stumble towards greater equality and freedom for all Americans. \n\nBut in his darkest moments, Granite wonders if Americans are ready for democracy.  Perhaps the President should continue to manage the nation, with a firm partner at his side?  Sergeant Dornan has been invaluable since the fall of Navarro, and nobody would dare to challenge his orders."
+enc_reformers.234.a: "I Will Not Make this Decision Lightly"
+enc_reformers.234.a.tt: "Unlocks decisions to appoint the Vice President"
+#############################################################################################################
+enc_reformers.235.t: "Out of Many, One?"
+enc_reformers.235.d: "With the triumph of democracy in New California, some suggest Granite ask Hayes if he will agree to California's annexation by Nevada, and suggest that the two, working together, form the United States of America.  In this scenario, the more populous state of New California would surrender control of its military and economy to New Reno voluntarily, but Hayes would be granted a position as governor of the new state. \n\nOr Granite could stick to the original plan, which is to lead a league of independent but allied states together in some sort of American Union." 
+enc_reformers.235.a: "§gAsk Hayes to Be Annexed by Nevada§!"
+enc_reformers.235.a.tt: "Ask Hayes if he will form the United States of America!"
+enc_reformers.235.b: "Let us go forward together"
+enc_reformers.235.b.tt: "§gRecognize that rebuilding America will work best through gradual, incremental change over time, and that all guns should be pointed at Flagstaff.§!"
+#############################################################################################################
+enc_reformers.236.t: "Hayes Responds!"
+enc_reformers.236.d: "Mr. President, Hayes has regretfully expressed that whie he is committed to the American dream, his constituents did not elect him president to hand control of California over to a 2 year old government based out of New Reno.  He is, however, firmly comitted to working with us to promote free trade, free travel, and human rights." 
+enc_reformers.236.a: "How Rude!"
+#############################################################################################################
+enc_reformers.237.t: "Supreme Court Hears Case on Ghoul Pride Parade"
+enc_reformers.237.d: "With the integration of ghouls into the Great Experiment, more and more ghouls have moved to Vault City, their prewar skills commanding high salaries in the rapid boomtown.  But they face rampant discrimination from some of the older citizens, and they wish to hold a protest.  The ghouls seek to hold a "Ghoul Pride Parade," celebrating their contributions to American society and demanding equal treatment.  Vault City promptly denied their permit, and now the ghouls have brought suit. \n\nAlthough Mayor Lynette claims the denial merely reflects a Vault City preference against large parties, the denial clearly reflects discriminatory intent.  How the Supreme Court rules will affect how the court will view ghoul rights in future cases." 
+enc_reformers.237.a: "Why would anyone feel pride in being a ghoul?"
+enc_reformers.237.b: "They've got more to be proud of than you Lynette"
+enc_reformers.237.b.tt: "\n§gThe Court holds that ghouls are entitled to equal treatment under the law, and that they may hold their pride parade.§!"
+#############################################################################################################
+enc_reformers.238.t: "The Liberation of Seattle"
+enc_reformers.238.d: "The sun rises this morning over a Seattle back in American hands for the first time in two hundred years.  The Brotherhood's headquarters in the Space Needle has been toppled by an airstrike, and surviving members of the Cause are helping track down Brotherhood holdouts. And while the Broken Coast has asked for terms, the only thing we'll give them are more bullets." 
+enc_reformers.238.a: "On to Flagstaff!"
+#############################################################################################################
+enc_reformers.239.t: "The Liberation of Salt Lake City"
+enc_reformers.239.d: "This is Enclave Radio, bringing you the latest new from the front.  Yesterday the Reunited States drove Caesar and his tribal lackeys from Salt Lake City, known to some as New Canaan. \n\nTo our great surprise, during the fighting soldiers found the golden statue of the Angel Moroni, thought lost since the Great War. To many of Deseret, this is a sign from God that that America is back." 
+enc_reformers.239.a: "And so a people in darkness have seen a great light"
+#############################################################################################################
+enc_reformers.240.t: "The Old Country Rallies to the Flag"
+enc_reformers.240.d: "Although The Old Country was allied to the Brotherhood, thier relatoniship is more akin to a protection racket. The Old Country is, in fact, home to ghouls who believe in the American dream, and have kept its embers alive through the long dark age.  But now that our forces close in on the Brotherhood, they are ready to defect from the Legion."
+enc_reformers.240.a: "Welcome Back"
+#############################################################################################################
+enc_reformers.241.t: "The Greatest Sheriff of Nevada"
+enc_reformers.241.d: "Now that we've freed the Mojave from the threat of raiders, we've learned about the fine officer who kept Primm safe during the crisis, Primm Slimm.  Apparently a courier reprogrammed a protectron during the crisis to protect the town, and somehow it deterred raiders from harassing the fledgling community. Obviously, we need to thank this officer for his service."
+enc_reformers.241.a: "He's as heroic as he is handsome"
+#############################################################################################################
+enc_reformers.242.t: "A Mysterious Stranger"
+enc_reformers.242.d: "A young woman calling herself Veronica Mars has shown up at one of our schools, offering to teach for Nevada.  Despite being fairly tight lipped about her past, we think she used to be a member of the Mojave Chapter, and she's expressed an interest in doing research for Nevada. \n\nIt's unclear how much she could teach us, but perhaps we should take a chance on a naive young girl from California with stars in her eyes and a pneumatic gauntlet on her hand."
+enc_reformers.242.a: "Why not?"
+enc_reformers.241.a.tt: "\n§YVeronica§! joins Nevada"
 ## START OF 300 ###
 #############################################################################################################
 enc_reformers.300.t: "Protests in [protesting_state.GetName]"
