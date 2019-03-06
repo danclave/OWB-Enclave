@@ -1657,9 +1657,6 @@ focus = {#RADIO - Red Menace
 		x = -17
 		y = 1
 		ai_will_do = { factor = 1 }
-		available = {
-			has_completed_focus = enc_americans_one_and_all
-		}
 		mutually_exclusive = { focus = enc_home_is_nevada }
 		prerequisite = { focus = enc_american_dream }
 		available = {
@@ -2756,7 +2753,10 @@ focus = {#REBorN - rebuilding america
 		relative_position_id = enc_rebuilding_a_nation
 		mutually_exclusive = { focus = enc_a_nation_remade }
 		prerequisite = { focus = enc_local_elections }
-		prerequisite = { focus = enc_fbi }
+		prerequisite = { focus = enc_fbi }		
+		available = {
+			has_completed_focus = enc_americans_one_and_all
+		}
 		x = -1
 		y = 5
 		cost = 5.8
