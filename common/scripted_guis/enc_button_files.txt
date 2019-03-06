@@ -5,9 +5,9 @@ scripted_gui = {
 		parent_window_token = selected_state_view
 		
 		visible = {
-			is_controlled_by = ROOT
+			is_owned_and_controlled_by = ROOT
 			NOT = {
-				is_core_of = FROM
+				is_core_of = ROOT
 			}
 			OR = {
 				free_building_slots = {
@@ -85,7 +85,8 @@ scripted_gui = {
 		}
 		
 		visible = {
-			is_controlled_by = ROOT
+			is_owned_and_controlled_by = ROOT
+			is_fully_controlled_by = ROOT
 			ROOT =  {
 				has_completed_focus = enc_reno_police
 				has_completed_focus = enc_rebuild_the_power_grid

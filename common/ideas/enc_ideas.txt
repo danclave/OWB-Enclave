@@ -1283,7 +1283,7 @@ ideas = {
             removal_cost = -1
 			targeted_modifier = { 
 				tag = NCR 
-				attack_bonus_against = 0.2 
+				attack_bonus_against = 0.15
 				defense_bonus_against = 0.10 
 			}
 		}
@@ -1590,7 +1590,7 @@ ideas = {
 			}
 		}
 		enc_martial_law_idea = {  
-			picture = generic_constitutional_guarantee
+			picture = generic_constitutional_guarantees
 			allowed = { 
 				always = no
 			}
@@ -1607,7 +1607,7 @@ ideas = {
 			}
 		}		
 		ENC_Freedom_Silent= {  
-			picture = generic_constitutional_guarantee
+			picture = generic_constitutional_guarantees
 			allowed = { 
 				always = no
 			}
@@ -2846,7 +2846,7 @@ ideas = {
 			}
 		}
 		ENC_presidential_powers = {
-			picture = cze_planning_bonus
+			picture = triumphant_will
 			modifier = {
 				mobilization_laws_cost_factor = -0.30
 				economy_cost_factor = -0.30

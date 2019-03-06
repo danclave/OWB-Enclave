@@ -748,15 +748,18 @@ ENC_debug = {
 		}
 	}
 	ENC_misc = {
-<<<<<<< HEAD
-=======
-		available = 
-			has_no_free_press = no
-		}
->>>>>>> 2285266320bf764bb6083bca7bef855f55460905
 		complete_effect = {
-			set_temp_variable = { stability_loss_factor = 0.33 }
-			stability_loss_based_on_elites_popularity = yes
+			start_civil_war = {
+				ideology = elites
+				size = party_popularity@elites
+				only_own_territory = yes
+				capital = 159
+			}
+		}		
+	}
+	ENC_restore_douglas_portrait = {
+		complete_effect = {
+			change_douglas_portrait_to_nevada = yes
 		}		
 	}
 	ENC_people_uprising = {

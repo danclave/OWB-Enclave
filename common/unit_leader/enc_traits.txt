@@ -33,7 +33,10 @@ leader_traits = {
 	}
 	enc_demoted = { 
 		type = all
-		trait_type = personality_trait		
+		trait_type = personality_trait	
+		gain_xp = {
+			always = no # not gainable
+		}	
 		attack_skill = -1
 		defense_skill = -1
 		logistics_skill = -1

@@ -1,6 +1,7 @@
 ﻿l_english:
 
 breaklines:0 "\n----\n"
+breakline:0 "\n" 
 newline:0 "\n\n"
 available_because: "\nAvailable because we have:\n§Y"
 ################################## EVENTS ##############################################
@@ -12,7 +13,7 @@ enc_reformers.1.b:0 "Speaking of the Chosen One, let me tell you who your mother
 enc_reformers.1.c:0 "He didn't aid the Chosen One."
 #########################################################################################
 enc_reformers.2.t:0 "Douglas' first contact"
-enc_reformers.2.d:0 "When Douglas was a lieutenant of the Granite Defense Company, he was contacted by a party under attack by raiders. The call sounded desperate and came from..."
+enc_reformers.2.d:0 "When Douglas was 17 years old, the population of the Enclave vault reached the utter limits of it's life support systems. As a result, a large portion of the healthy and strong were ordered to leave the the safety of the vault to establish contact with the largest group of Enclave remnants, lead by an old Navarro Drill sargeant.\n\n Douglas, however, was quick to contact with his father's 'Granite Company' instead, slipping away from the rest unseen. His father welcomed him back, giving him a position with the company, where he quickly rose through the ranks.\n\nWhen Douglas was a lieutenant of the Granite Defense Company, he was contacted by a party under attack by raiders. The call sounded desperate and came from..."
 enc_reformers.2.a:0 "An NCR battalion fighting raiders"
 enc_reformers.2.b:0 "Brotherhood knights containing a prewar threat"
 enc_reformers.2.c:0 "Caesar's scouts seeking new lands"
@@ -594,8 +595,8 @@ enc_reformers.111.b:  "They can't stop the signal"
 enc_reformers.111.b.tt: "Available because you pursued military propaganda"
 ################################################################################################################
 enc_reformers.112.t: "The Californian Revolution!"
-enc_reformers.112.d: "Mayor Hayes' Supporters have been stymied at the ballot box, and riots have broken out throughout California.  This is probably our best chance to secure California for the Enclave."
-enc_reformers.112.a:  "We must protect democracy."
+enc_reformers.112.d: "While technically speaking more of an invasion, the support we have built up with the desperate and destitude in the New Californian Republic allows us to portray the event as a popular uprising. Our signal has been sent across the nation, it is time to take up arms against the corruption of the NCR regime.\n\nDown with the Bear, up with the stars!"
+enc_reformers.112.a:  "They will welcome us as liberators."
 ################################################################################################################
 enc_reformers.113.t: "Victory at the Ballot Box"
 enc_reformers.113.d: "For all the NCR's many flaws, it is the only democracy in the wastes; the only nation that aspires to the best of prewar America.  Mayor Hayes recognized its flaws, and the promise for something better.  By working with him and his party, we've persuaded the people of California to look to the past for a better world.  We may never rule California, but for the first time in 200 years, its leaders think of themselves as Americans."
@@ -971,10 +972,10 @@ enc_reformers.182.b: "Actually, we suspended the Constitution for the duration"
 ##############################################################################################################
 enc_reformers.183.t: "The Government Requisition Scandal!"
 enc_reformers.183.d: "The press has revealed some gross misconduct in connection with government requisitions near Sac City.  It appears that the Brahmin barons paid off local officers, causing them to seize supplies from small traders and farmers instead of the barons. The barons then bought up land and shops from desperate Americans, turning them into near serfs dependent on the barons.  The New World Party has demanded an investigation, and many are now challenging our reconstruction efforts."
-enc_reformers.183.a: "If sunlight is the best disinfectant, why does it sting so much?"
-enc_reformers.183.b: "Oh, you doesn't need to cover this story"
-enc_reformers.183.c: "Ride out the criticism"
-enc_reformers.183.e: "Those Wastelanders didn't need the resources anyway"
+enc_reformers.183.a: "Overturn the requisitioning of civilian resources."
+enc_reformers.183.b: "Speaking of requisitioning, we could use some new printing presses..."
+enc_reformers.183.c: "Ride out the criticism."
+enc_reformers.183.e: "Those Wastelanders didn't need the resources anyway."
 ##############################################################################################################
 enc_reformers.184.t: "Press Covers Mandatory Volunteers"
 enc_reformers.184.d: "To our great surprise, some meddling reporter has published a story regarding our mandatory volunteers, drafted from across California.  They've detailed numerous abuses, corruption, and the inevitable consequences of the power imbalances inherent in forced labor. The Progressive Party has called for protests through New California, and we have to decide what to do quickly."
@@ -1206,10 +1207,10 @@ enc_reformers.227.t: "Canadian Pirates Join the Brotherhood"
 enc_reformers.227.d: "To the north of the Washington lies the Broken Coast, where pirates bludgeon their prey to death with Canada's sacred clubs, their fearsome hockey sticks.  We hoped they'd serve as a nuisance to the Brotherhood and tie down their flanks, but now they've formed a blood pact with the Brotherhood to seize California, which can offer far more loot and slaves than the Northwest. Should war with the Washington Brotherhood break out, they may try to harass our coasts and supply lines. \n\nOf course, the United States Navy wet its teeth fighting pirates five hundred years ago. Perhaps it's time to pick up old habits." 
 enc_reformers.227.a: "Let them know we have not yet begun to fight"
 #############################################################################################################
-enc_reformers.228.t: "The Spectre of Communism"
-enc_reformers.228.d: "Like most children in the Enclave's vaults, Granite was raised with a fervent hatred of Communism.  Sadly, 200 years of Enclave propaganda and living in a Vault run under a command economy meant that he, and most other members of the Enclave were left with a vague understanding of what communism was. As such, Granite -"
+enc_reformers.228.t: "Douglas' Youth"
+enc_reformers.228.d: "After travelling around with his son for a brief few years, Granite senior established contact with one of the Enclave's civilian vaults. Set up as a contingency to repopulate the American mainland after the Enclave goverment cleansed it. Since president Dick Richard had lifted child rearing restrictions, the vault's population had exploded. None the less, it was a safer place for a child than the wasteland.\nThus, Douglas spent most of his youth in the safety of the vault.\n\nLike most children in the Enclave's vaults, Granite was raised with a fervent hatred of Communism.  Sadly, 200 years of Enclave propaganda and living in a Vault run under a command economy meant that he, and most other members of the Enclave were left with a vague understanding of what communism was. As such, Granite -"
 enc_reformers.228.a: "Knew all enemies of America must be Communist"
-enc_reformers.228.a.tt: "\nGranite's hatred of §RCommunism§! will play a role in future events and is necessary to unlock §M Anti-Communist Propaganda§!."
+enc_reformers.228.a.tt: "Granite's hatred of §RCommunism§! will play a role in future events and is necessary to unlock §M Anti-Communist Propaganda§!.\n\n"
 enc_reformers.228.b: "Spent history class playing on his Pip Boy"
 #############################################################################################################
 enc_reformers.229.t: "Communist Sympathizer in the Press!"
@@ -1279,7 +1280,7 @@ enc_reformers.241.a.tt: "\n§YVeronica§! joins Nevada"
 ## START OF 300 ###
 #############################################################################################################
 enc_reformers.300.t: "Protests in [protesting_state.GetName]"
-enc_reformers.300.d: "News from [protesting_state.GetName]:"
+enc_reformers.300.d: "In the city of [protesting_state.GetName], a crowd of people have formed. Too sudden and organized to be a spontaneous occurrence, especially considering the banners unfurled and slogans chanted. A brave few souls flying NCR flags as the crowd grows and marches on."
 enc_reformers.300.d.opening:0 "Protests have broken out in the ex-NCR state. Many have taken to the street, demanding "
 enc_reformers.300.d.enc_suspend_elections:0 "The return of elections, "
 enc_reformers.300.d.enc_requisition_of_resources:0 "the end of requisitioning civilian assets and their return to their rightful owners."
@@ -1294,7 +1295,7 @@ enc_reformers.300.a: "Break up the protests"
 enc_reformers.300.a.tt: "§gThings could get out of hand...\n\n§!"
 enc_reformers.300.b: "Let them tire themselves out"
 enc_reformers.300.b.tt: "§gProtests may happen again.§!\n\n"
-enc_reformers.300.c: "Vague and meaningful promises will do."
+enc_reformers.300.c: "§MVague and meaningful promises will do.§!"
 enc_reformers.300.dd: "Comply with their demands."
 enc_reformers.300.dd.tt: "§gProtests may happen again.§!\n\n"
 #############################################################################################################

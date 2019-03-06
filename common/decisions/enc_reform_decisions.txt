@@ -6,15 +6,15 @@ enc_executive_orders  = {
 		icon = generic_scorched_earth
 		cost = 50
 		visible = {
-			has_war_with = ncr
+			has_war_with = NCR
 			not = { has_country_flag = enc_mid_game }
 		}
 		available = {
-			any_owned_state = { #we occupy a non core state which has += 10 water
+			has_war_with = NCR
+			any_state = { #we occupy a non core state which has += 10 water
 				is_core_of = NCR
 				not = { is_core_of = ROOT }
-				is_fully_controlled_by = ROOT
-				has_ROOT_at_least_1_div_in_current_state_scope = YES
+				is_controlled_by = ROOT
 				has_resources_amount = {
 					resource = water
 					amount = 10
@@ -25,33 +25,35 @@ enc_executive_orders  = {
 		modifier = { #moving cost (maybe use civ factories)
 			supply_consumption_factor = -0.50
 			no_supply_grace = 48
+			heat_attrition_factor = -0.50
 		}
 		days_remove = 60
 		complete_effect = {
-			random_owned_state = {
+			set_temp_variable = { legitimacy_change_var = -0.10 }
+			change_legitimacy = yes
+			random_state = {
 				limit = {
 					is_core_of = NCR
 					not = { is_core_of = ROOT }
-					is_fully_controlled_by = ROOT
-					has_ROOT_at_least_1_div_in_current_state_scope = YES
+					is_controlled_by = ROOT
 					has_resources_amount = {
 						resource = water
 						amount = 10
 						state = THIS
 					}
 				}
-				set_temp_variable = { legitimacy_change_var = -0.10 }
-				change_legitimacy = yes
-				add_resource = {
-					type = water
-					amount = -10
-					state = THIS
+				custom_effect_tooltip = state_lose_10_water
+				hidden_effect = {
+					add_resource = {
+						type = water
+						amount = -10
+						state = THIS
+					}
 				}
 				add_state_flag = plundered_by_enc
 			}
 		}
 	}
-
 	plunder_equipment = {
 		icon = generic_scorched_earth
 		cost = 50
@@ -59,26 +61,27 @@ enc_executive_orders  = {
 			has_war_with = ncr
 		}
 		available = {
-			any_owned_state = { #we occupy a non core state which has 3+ mil factories
+			has_war_with = NCR
+			any_state = { #we occupy a non core state which has 1+ mil factories
 				is_core_of = NCR
 				is_fully_controlled_by = ROOT
-				has_ROOT_at_least_1_div_in_current_state_scope = YES
-				arms_factory > 2				
+				arms_factory > 0
 			}
 		}
 		complete_effect = {
-			random_owned_state = {
+			random_state = {			
+				ROOT = {							
+					multiply_temp_variable = { legitimacy_change_var = -0.05 }
+					change_legitimacy = yes
+				}
 				limit = {
 					is_core_of = NCR
 					is_fully_controlled_by = ROOT
-					has_ROOT_at_least_1_div_in_current_state_scope = YES
-					arms_factory > 3
+					arms_factory > 0
 				}
-				set_temp_variable = { legitimacy_change_var = -0.10 }
-				change_legitimacy = yes
 				remove_building = { 
 					type = arms_factory 
-					level = 3
+					level = 1
 				}
 				add_state_flag = plundered_by_enc
 			}
@@ -87,7 +90,7 @@ enc_executive_orders  = {
 			ROOT = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment
-					amount = 600
+					amount = 500
 					producer = NCR
 				}
 			}
@@ -160,6 +163,7 @@ enc_executive_orders  = {
 		cost = 75		
 		visible = {	
 			has_completed_focus = enc_red_menace
+			has_country_flag = enc_red_menace_flag
 		}
 		modifier = {
 			war_support_weekly = 0.0350
@@ -861,15 +865,16 @@ ENC_infiltrating_NCR = {
 		icon = decision_enc_propaganda
 		priority = 300
 		fire_only_once = yes
-
+	
 		available = {
 			has_completed_focus = enc_vlt_power_reform
-				}
+		}
 	
 		visible = {
 			tag = ERB
 			has_completed_focus = enc_vlt_power_reform
 			has_country_flag = ncr_suspicious
+			has_completed_focus = enc_home_is_nevada
 		}
 		complete_effect = {
 			set_temp_variable = {
@@ -1204,7 +1209,7 @@ ENC_nation_building = {
 			original_tag = ERB
 			has_completed_focus = enc_vlt_power_reform
 		}
-		remove_effect = {
+		remove_effect = { 
 			country_event = {
 				id = enc_reformers.107
 			}

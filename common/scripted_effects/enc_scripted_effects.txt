@@ -283,7 +283,8 @@ choose_integration = {
 
 choose_law = {
 	set_temp_variable = { popularity_change = 0.05 }
-	add_popularity_to_opposition = yes		
+	add_popularity_to_opposition = yes
+	set_country_flag = enc_has_law
 	add_stability = 0.10
 }
 choose_order = {
@@ -308,6 +309,7 @@ choose_democracy = {
 		value = 0.05
 	}
 	change_legitimacy = yes
+	set_country_flag = enc_empowered_congress
 	country_event = { id = enc_reformers.219 } 
 	add_stability = 0.10
 }
@@ -323,6 +325,23 @@ choose_autocracy = {
 	remove_ideas = enc_NCR_instability
 }
 
+revert_law = {
+	clr_country_flag = enc_has_law
+	clr_country_flag = enc_martial_law_blocked
+	complete_national_focus = enc_order
+	custom_effect_tooltip = newline
+	complete_national_focus = enc_military_police
+	custom_effect_tooltip = newline
+}
+
+revert_congress = {
+	complete_national_focus = enc_extend_presidential_powers_reform
+	clr_country_flag = enc_empowered_congress
+	clr_country_flag = enc_suspend_elections_blocked
+	custom_effect_tooltip = newline
+	complete_national_focus = enc_silence_congress_reform
+	custom_effect_tooltip = newline
+}
 ##################################################
 ### MISC ####
 ##################################################
@@ -449,19 +468,33 @@ transfer_leader_traits = {
 	}
 }
 
+change_douglas_portrait_to_enclave = {
+	hidden_effect = {
+		create_country_leader  = {
+			name = "Douglas Granite"
+			desc = "Granite_desc"
+			picture = "gfx/leaders/portrait_douglas_enclave.dds"
+			expire = "3000.1.1"
+			ideology = technocracy
+			traits = {}
+		}
+		transfer_leader_traits = yes	
+	}
+}
+
+
 change_douglas_portrait_to_half_usa = {
 	hidden_effect = {
 		create_country_leader  = {
 			name = "Douglas Granite"
 			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_b2.dds"
+			picture = "gfx/leaders/portrait_douglas_usa.dds"
 			expire = "3000.1.1"
-			ideology = ROOT
+			ideology = technocracy
 			traits = {}
 		}
 		transfer_leader_traits = yes	
 	}
-	# custom_effects_tooltip = enc_time_for_a_new_flag
 }
 
 change_douglas_portrait_to_full_usa = {
@@ -469,12 +502,28 @@ change_douglas_portrait_to_full_usa = {
 		create_country_leader  = {
 			name = "Douglas Granite"
 			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_b3.dds"
+			picture = "gfx/leaders/portrait_douglas_usa_2.dds"
 			expire = "3000.1.1"
-			ideology = ROOT
+			ideology = constitutional_republic
 			traits = {}
 		}
 		transfer_leader_traits = yes
 	}
 	# custom_effects_tooltip = enc_time_for_a_new_flag
 }
+
+change_douglas_portrait_to_nevada = {
+	hidden_effect = {
+		create_country_leader  = {
+			name = "Douglas Granite"
+			desc = "Granite_desc"
+			picture = "gfx/leaders/portrait_douglas_nevada.dds"
+			expire = "3000.1.1"
+			ideology = technocracy
+			traits = {}
+		}
+		transfer_leader_traits = yes
+	}
+	# custom_effects_tooltip = enc_time_for_a_new_flag
+}
+

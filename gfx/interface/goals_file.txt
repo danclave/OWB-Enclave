@@ -17,6 +17,7 @@
 # GFX_goal_enc_anti_ncr
 # GFX_goal_enc_ANT_establish_tributaries
 # GFX_goal_enc_appointed_governors
+# GFX_goal_enc_area_52
 # GFX_goal_enc_arizona
 # GFX_goal_enc_armed_militias
 # GFX_goal_enc_army_doctrine
@@ -29,6 +30,7 @@
 # GFX_goal_enc_ban_congress
 # GFX_goal_enc_beacon
 # GFX_goal_enc_big_MT
+# GFX_goal_enc_big_MT_restored_nevada
 # GFX_goal_enc_bos_flag_reform
 # GFX_goal_enc_bos_leadership
 # GFX_goal_enc_bos_soldiers
@@ -97,6 +99,7 @@
 # GFX_goal_enc_jaz
 # GFX_goal_enc_judicial_branch
 # GFX_goal_enc_judicial_branch_2
+# GFX_goal_enc_judiciary_nevada
 # GFX_goal_enc_justice
 # GFX_goal_enc_laser_weapons
 # GFX_goal_enc_laser_weapons_reform
@@ -113,6 +116,9 @@
 # GFX_goal_enc_mutant_extinction
 # GFX_goal_enc_ncr_dollar
 # GFX_goal_enc_NCR_seak_allies
+# GFX_goal_enc_nevada_assembly
+# GFX_goal_enc_nevada_constitution
+# GFX_goal_enc_nevada_reborn
 # GFX_goal_enc_new_capital
 # GFX_goal_enc_new_generation_officers
 # GFX_goal_enc_normalization
@@ -125,6 +131,7 @@
 # GFX_goal_enc_pacific_commonwealth
 # GFX_goal_enc_para
 # GFX_goal_enc_para_2
+# GFX_goal_enc_peaceful_usa
 # GFX_goal_enc_planning
 # GFX_goal_enc_poison_bear
 # GFX_goal_enc_poison_bull
@@ -159,6 +166,7 @@
 # GFX_goal_enc_reform3
 # GFX_goal_enc_reform_annex_ykz
 # GFX_goal_enc_reform_ant
+# GFX_goal_enc_reform_anti_bos_propaganda
 # GFX_goal_enc_reform_douglas
 # GFX_goal_enc_reform_forced_deal
 # GFX_goal_enc_reform_forced_deal_dark
@@ -167,12 +175,15 @@
 # GFX_goal_enc_reform_industry_1
 # GFX_goal_enc_reform_industry_2
 # GFX_goal_enc_reform_industry_3
+# GFX_goal_enc_reform_the_tribes
+# GFX_goal_enc_reform_the_tribes.png
 # GFX_goal_enc_reject_ghouls
 # GFX_goal_enc_reject_super_mutants
 # GFX_goal_enc_remember
 # GFX_goal_enc_remember_rig
 # GFX_goal_enc_requisition_of_resources
 # GFX_goal_enc_research
+# GFX_goal_enc_robco_reborn
 # GFX_goal_enc_rock
 # GFX_goal_enc_rocket_nevada
 # GFX_goal_enc_rocket_reform
@@ -221,10 +232,13 @@
 # GFX_goal_enc_vault_open
 # GFX_goal_enc_vault_tec
 # GFX_goal_enc_verti
+# GFX_goal_enc_verti_nevada
 # GFX_goal_enc_verti_o
 # GFX_goal_enc_verti_reform
 # GFX_goal_enc_veterans_call
 # GFX_goal_enc_vlt_power
+# GFX_goal_enc_warmonger_usa
+# GFX_goal_enc_war_with_bos_reform
 # GFX_goal_enc_weapon_factory
 # GFX_goal_enc_welcome_vlt_citizens
 # GFX_goal_enc_wip

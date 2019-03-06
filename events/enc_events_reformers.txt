@@ -7,26 +7,28 @@ country_event = {#1 - DOUGLAS PAST - STORIES
 	picture = GFX_event_enc_reform_origin
 	
 	fire_only_once = yes	
-    is_triggered_only = yes	
+    is_triggered_only = yes	 
 	
 	
 	option = {# He aided the Chosen One and after the Oil Rig Destruction went their seperate ways
 		name = enc_reformers.1.a
-		country_event = { id = enc_reformers.2 }
+		country_event = { id = enc_reformers.228 }
 		set_country_flag = enc_arroyo
+		set_country_flag = leader_mutant_sympathies
 		add_country_leader_trait = mutant_sympathies
 	}
 	option = {#  He aided the Chosen One and after he settled in Arroyo where he met and married a local woman 
 		name = enc_reformers.1.b
-		country_event = { id = enc_reformers.2 }
+		country_event = { id = enc_reformers.228 }
 		set_country_flag = enc_arroyo_mom
 		set_country_flag = enc_arroyo
 		add_country_leader_trait = mutant_sympathies
+		set_country_flag = leader_mutant_sympathies
 		add_stability = -0.05
 	}
 	option = {# He didn't aid the Chosen One 
 		name = enc_reformers.1.c
-		country_event = { id = enc_reformers.2 }
+		country_event = { id = enc_reformers.228 }
 		add_war_support = 0.05
 		add_stability = 0.05
 	}
@@ -61,8 +63,7 @@ country_event = {#3 - DOUGLAS PAST - END
 	id = enc_reformers.3
 	title = enc_reformers.3.t
 	desc = enc_reformers.3.d
-	picture = GFX_event_ENC_plasma_rifle
-	
+	picture = GFX_event_enc_urban_patrol
 	fire_only_once = yes	
     is_triggered_only = yes
 	
@@ -307,6 +308,7 @@ country_event = {#11 - Traitors officers
 	trigger = {	
 		has_completed_focus = enc_reform 
 		has_idea = ENC_officers
+		not = { has_completed_focus = enc_purge_officers }
 	}	
 	mean_time_to_happen = {	days = 30 }
 	
@@ -329,6 +331,7 @@ country_event = {#12 - Traitors scientists
 	trigger = {	
 		has_completed_focus = enc_reform
 		has_idea = ENC_scientists
+		not = { has_completed_focus = enc_purge_scientists }
 	}	
 	mean_time_to_happen = {	days = 30 }
 	
@@ -812,7 +815,7 @@ country_event = {#26 - Addressing concerns - 1 - NCR
 	id = enc_reformers.26
 	title = enc_reformers.26.t
 	desc = enc_reformers.26.d
-	picture = GFX_event_ENC_rebuilding
+	picture = GFX_event_enc_reform_propaganda
 	
 	fire_only_once = yes
     is_triggered_only = yes
@@ -837,7 +840,7 @@ country_event = {#27 - Addressing concerns - 2 - integration
 	id = enc_reformers.27
 	title = enc_reformers.27.t
 	desc = enc_reformers.27.d
-	picture = GFX_event_ENC_rebuilding
+	picture = GFX_event_enc_reform_propaganda
 	
 	fire_only_once = yes
     is_triggered_only = yes
@@ -1384,7 +1387,6 @@ news_event = {#47 - NCR falls
 		name = enc_reformers.47.a
 		add_stability = -0.20
 		add_war_support =  -0.20
-		custom_effect_tooltip = newline
 		NCR = {		
 			dismantle_faction = yes
 		}
@@ -1400,6 +1402,7 @@ news_event = {#47 - NCR falls
 				tag = ERB
 			}
 		}
+		country_event = { id = enc_reformers.170 }
 		hidden_effect = {
 			if = {
 				limit = {
@@ -2005,11 +2008,7 @@ country_event = {#67 - Ghoul Marriage
 	option = {# Dig at Kennedy But Still Support Ghoul Marriage
 		name = enc_reformers.67.c
 		add_ideas = ENC_Marriage_Equality
-<<<<<<< HEAD
 	}
-=======
-		}
->>>>>>> 2285266320bf764bb6083bca7bef855f55460905
 }
 
 country_event = {#68 - Slavery
@@ -2151,6 +2150,8 @@ country_event = {#75 - Civil War
     option = { #aid
         name = enc_reformers.75.a
         complete_national_focus = enc_our_new_ally
+		custom_effect_tooltip = newline
+		add_stability = -0.10
         if = {
             limit = { is_in_faction = no }
             create_faction = "The Enclave"
@@ -2202,6 +2203,7 @@ country_event = {#77 - mutant question
 	option = {#	Segregation
 		name = enc_reformers.77.a
 		complete_national_focus = enc_segregation
+		custom_effect_tooltip = newline
 		effect_tooltip = {
 			choose_segregation = yes
 		}
@@ -2209,6 +2211,7 @@ country_event = {#77 - mutant question
 	option = {#	Integration
 		name = enc_reformers.77.b
 		complete_national_focus = enc_expand_human_definition
+		custom_effect_tooltip = newline
 		effect_tooltip = {
 			choose_integration = yes
 		}
@@ -2939,7 +2942,8 @@ country_event = {#105 Brahmin Barons
 	option = {#	Work with them
 		name = enc_reformers.105.a
 		add_stability = -0.05
-		add_ideas = ENC_accepted_brahmin_barons 
+		add_ideas = ENC_accepted_brahmin_barons
+		add_popularity = { ideology = elites popularity = 0.05	}
 	}
 	option = {#	Cook them
 		name = enc_reformers.105.b
@@ -3242,18 +3246,18 @@ country_event = {#112 - Insurgency
 		# todo add option to do it later in cause player clicked it too early
 		option = {#	Declaration
 			name = enc_reformers.112.a
+			NCR = {
+				declare_war_on = {
+					target = ERB
+					type = annex_everything
+				}
+			}
 			every_state = {
 				limit = {
 					is_owned_by = NCR has_state_flag = enc_patriots_armed
 				}
 				ERB = {
 					transfer_state = PREV
-				}
-			}
-			NCR = {
-				declare_war_on = {
-					target = ERB
-					type = annex_everything
 				}
 			}
 			ERB = {
@@ -4890,7 +4894,7 @@ country_event = { #167  End of Reformers
 		set_party_name = {
                 ideology = intellectuals
                 long_name = "The Reconstruction Party"
-                name = "The Reconstruction Party"
+                name = "Reconstruction Party"
            }
 		 add_timed_idea = { idea = ENC_end_of_reformers  days = 90 }
 	}
@@ -4970,21 +4974,14 @@ news_event = { #170 - Dark Age
 		owns_state = 135
 		owns_state = 63
 		num_of_controlled_states > 40
-	}	
+	}
 	immediate = {	
 		hidden_effect = { sound_effect = ERB_us_anthem_sad1 } # oh say, can you see?
 	}
 	option = { # Damn it
 		name = enc_reformers.170.a
 		add_war_support = -0.50
-		# add_ideas = { 
-			# enc_NCR_resistance 
-			# enc_NCR_instability 
-			# enc_NCR_power_struggle 
-			# enc_disorganized_army 
-			# enc_collapsed_economy 
-			# collapsed_trade
-		# }
+		add_stability = -0.25
 		add_ideas = { enc_NCR_resistance }
 		add_ideas = { enc_NCR_instability }
 		add_ideas = { enc_NCR_power_struggle } 
@@ -5137,7 +5134,7 @@ country_event = { #177- Congressional Criticism
     fire_only_once = NO
     trigger = {
 		has_country_flag = california_atrocities
-		has_completed_focus = enc_empower_congress
+		has_country_flag = enc_empowered_congress
 			}		
 	mean_time_to_happen = {
 		days = 60
@@ -5393,30 +5390,31 @@ country_event = { #184 - Slave Labor Press Scandal
 		has_completed_focus =  enc_emergency_labour_draft 
 		has_free_press = yes
 		NOT = { has_completed_focus = enc_segregation }
-			}		
+	}		
 	mean_time_to_happen = {
 		days = 60
-		}  
-    option = { # STOP
+	}  
+    option = { # comply 
         name = enc_reformers.184.a
 		add_stability = -0.10
 		remove_ideas = ENC_slave_labour
 		remove_ideas = ENC_servitude
-		}
+	}
 	option = { # STOP
         name = enc_reformers.184.b
 		complete_national_focus = enc_propaganda_broadcasts
+		custom_effect_tooltip = newline
 		remove_ideas = ENC_free_press
 		# modify legitimacy
-		set_temp_variable  = {
-			var = legitimacy_change_var
-			value = -0.20
-		}
+		set_temp_variable  = { legitimacy_change_var = -0.15 }
 		change_legitimacy = yes
 		}
-		option = { # STOP
+	option = { # STOP
         name = enc_reformers.184.c
-		add_stability = -0.20 }	   		
+		add_stability = -0.10 
+		set_temp_variable  = { legitimacy_change_var = -0.10 }
+		change_legitimacy = yes
+		}	   		
     }
 	
 country_event = { #185 - Court Demands Elections
@@ -5424,28 +5422,20 @@ country_event = { #185 - Court Demands Elections
     title = enc_reformers.185.t
     desc = enc_reformers.185.d
     picture = GFX_event_enc_suspend_elections
-    fire_only_once = YES
-    trigger = {
-		focus_progress = {
-			focus = enc_suspend_elections
-			progress > 0.1
-		}
-		
-		has_completed_focus = enc_judicial_branch 
-	}		
-	mean_time_to_happen = {	days = 3 }  
-    option = { # 
+    fire_only_once = no
+	is_triggered_only = yes
+    option = { # comply
         name = enc_reformers.185.a
 		set_country_flag = enc_court_ordered_elections
 		complete_national_focus = enc_empower_congress
+		custom_effect_tooltip = newline
 		add_stability = -0.20
 		add_ideas = enc_NCR_instability
 		
 	}
-	option = { # 
+	option = { # get rid of courts
         name = enc_reformers.185.b
-		complete_national_focus = enc_order
-		complete_national_focus = enc_military_police
+		revert_law = yes
 		# modify legitimacy
 		set_temp_variable  = {
 			var = legitimacy_change_var
@@ -5468,16 +5458,15 @@ country_event = { #186 - Court Demands Freedom of Speech
 		has_completed_focus = enc_judicial_branch 
 			}		
 	mean_time_to_happen = { days = 3 }  
-    option = { # STOP
+    option = { # comply
         name = enc_reformers.186.a
 		add_stability = -0.10
 		set_country_flag = enc_free_press_by_court
 		custom_effect_tooltip = enc_reformers.186.a.tt
 		}
-	option = { # STOP
+	option = { # get rid of courts
         name = enc_reformers.186.b
-		complete_national_focus = enc_order
-		complete_national_focus = enc_military_police
+		revert_law = yes
 		# modify legitimacy
 		set_temp_variable  = {
 			var = legitimacy_change_var
@@ -5486,31 +5475,23 @@ country_event = { #186 - Court Demands Freedom of Speech
 		change_legitimacy = yes
 		}   		
     }		
-country_event = { #187 - Congress Supports Rule of Law
+country_event = { #187 - Congress blocks martial law
     id = enc_reformers.187
     title = enc_reformers.187.t
     desc = enc_reformers.187.d
     picture = GFX_event_radio_new_vegas
-    fire_only_once = YES
-    trigger = {
-		focus_progress = {
-			focus = enc_martial_law
-			progress > 0.1
-				}
-		has_completed_focus =  enc_empower_congress		
-			}		
-	mean_time_to_happen = {	days = 3 }  
+    fire_only_once = no
+	is_triggered_only = yes
     option = { # STOP
         name = enc_reformers.187.a
 		add_stability = -0.25
-		set_country_flag = enc_congress_supports_law
+		set_country_flag = enc_martial_law_blocked
 		complete_national_focus = enc_law
 		custom_effect_tooltip = enc_reformers.187.a.tt
-		}
+	}
 	option = { # Bye Congress
         name = enc_reformers.175.b
-		complete_national_focus = enc_extend_presidential_powers_reform
-		complete_national_focus = enc_silence_congress_reform
+		revert_congress = yes
 		# modify legitimacy
 		set_temp_variable  = {
 			var = legitimacy_change_var
@@ -5573,9 +5554,9 @@ country_event = { #189 - Congress demands freedom of speech
 		focus_progress = {
 			focus = enc_propaganda_broadcasts
 			progress > 0.1
-				}
-		has_completed_focus = enc_empower_congress
-			}		
+		}
+		has_country_flag = enc_empowered_congress
+	}		
 	mean_time_to_happen = { days = 3 }  
     option = { # STOP
         name = enc_reformers.189.a
@@ -5585,36 +5566,29 @@ country_event = { #189 - Congress demands freedom of speech
 		}
 	option = { # STOP
         name = enc_reformers.189.b
-		complete_national_focus = enc_extend_presidential_powers_reform
+		revert_congress = yes
 		# modify legitimacy
 		set_temp_variable  = {
 			var = legitimacy_change_var
 			value = -0.20
 		}
 		change_legitimacy = yes
-			}   		
+		}   		
     }
-country_event = { #190 - Free Press Supports rule of law
+country_event = { #190 - Free Press blocks martial law
     id = enc_reformers.190
     title = enc_reformers.190.t
     desc = enc_reformers.190.d
     picture = GFX_event_ENC_plasma_rifle
-    fire_only_once = YES
-    trigger = {
-		focus_progress = {
-			focus = enc_martial_law
-			progress > 0.1
-		}
-		has_free_press = yes
-	}		
-	mean_time_to_happen = {	days = 3 }  
+    fire_only_once = yes
+	is_triggered_only = yes
     option = { # STOP
         name = enc_reformers.190.a
 		add_stability = -0.25
-		set_country_flag = enc_congress_supports_law
+		set_country_flag = enc_martial_law_blocked
 		complete_national_focus = enc_law
 		custom_effect_tooltip = enc_reformers.190.a.tt
-		}
+	}
 	option = { # Bye Speech
         name = enc_reformers.190.b
 		remove_ideas = ENC_free_press
@@ -5626,29 +5600,22 @@ country_event = { #190 - Free Press Supports rule of law
 		change_legitimacy = yes
 		}   		
     }	
-
-country_event = { #191 - Free Press Supports Democracy
+country_event = { #191 - Free Press blocks suspend elections
     id = enc_reformers.191
     title = enc_reformers.191.t
     desc = enc_reformers.191.d
     picture = GFX_event_ENC_vertibird
-    fire_only_once = YES
-    trigger = {
-		focus_progress = {
-			focus = enc_martial_law
-			progress > 0.1
-		}
-		has_free_press = yes	
-	}		
-	mean_time_to_happen = {	days = 3 }  
+    fire_only_once = yes
+	is_triggered_only = yes
     option = { # STOP
         name = enc_reformers.191.a
-		set_country_flag = enc_court_ordered_elections
+		set_country_flag = enc_suspend_elections_blocked
 		complete_national_focus = enc_empower_congress
+		custom_effect_tooltip = newline
 		add_stability = -0.10
 		add_ideas = enc_NCR_instability
 		custom_effect_tooltip = enc_reformers.191.a.tt
-		}
+	}
 	option = { # Bye Speech
         name = enc_reformers.191.b
 		remove_ideas = ENC_free_press
@@ -5733,10 +5700,9 @@ country_event = {#193 - Free Speech
 	fire_only_once = YES
     trigger = { 	
 		has_completed_focus = enc_rebuilding_a_nation 
-		}
+	}
 
 	desc = enc_reformers.193.d				
-	mean_time_to_happen = { days = 7 }
 	option = {#  Shoot reporter
 		name = enc_reformers.193.a
 		add_ideas = ENC_free_press
@@ -5827,14 +5793,14 @@ country_event = {#200 -Police
 	id = enc_reformers.200
 	title = enc_reformers.200.t
 	desc = enc_reformers.200.d
-	picture = GFX_event_ENC_rebuilding
+	picture = GFX_event_enc_reform_propaganda
 	fire_only_once = yes	
     is_triggered_only = yes	
 	option = {# Amnesty
 		name = enc_reformers.200.a
 		complete_national_focus = enc_amnesty_for_service
+		custom_effect_tooltip = newline
 		effect_tooltip = {
-			custom_effect_tooltip = breaklines
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = -0.05
@@ -5850,8 +5816,9 @@ country_event = {#200 -Police
 	option = {#  Clean Trash
 		name = enc_reformers.200.b
 		complete_national_focus = enc_out_with_the_old
+		custom_effect_tooltip = newline
+		add_stability = -0.10
 		effect_tooltip = {
-			custom_effect_tooltip = breaklines
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = 0.05
@@ -5946,7 +5913,7 @@ country_event = {#201-Nation Remade
 	id = enc_reformers.201
 	title = enc_reformers.201.t
 	desc = enc_reformers.201.d
-	picture = GFX_event_ENC_rebuilding
+	picture = GFX_event_enc_reform_propaganda
 	fire_only_once = yes	
     is_triggered_only = yes	
 	option = {#
@@ -6071,6 +6038,8 @@ country_event = { #206 - Court Enjoins Labor Draft
 	option = { # STOP
         name = enc_reformers.206.b
 		complete_national_focus = enc_order
+		custom_effect_tooltip = newline
+		add_stability = -0.10
 		# modify legitimacy
 		set_temp_variable  = {
 			var = legitimacy_change_var
@@ -6443,7 +6412,7 @@ country_event = { #220- Congressional Criticism of Requisitions
     fire_only_once = YES
     trigger = {
 		has_completed_focus = enc_requisition_of_resources
-		has_completed_focus = enc_empower_congress
+		has_country_flag = enc_empowered_congress
 		has_country_flag = enc_requisition_of_resources_flag
 	}		
 	mean_time_to_happen = {
@@ -6521,7 +6490,7 @@ country_event = { #221- Congressional Reaction to Labor Draft
     fire_only_once = YES
     trigger = {
 		has_completed_focus = enc_emergency_labour_draft 
-		has_completed_focus = enc_empower_congress
+		has_country_flag = enc_empowered_congress
 		OR = {
 			has_idea = ENC_slave_labour
 			has_idea = ENC_servitude 
@@ -6593,7 +6562,7 @@ country_event = {#222 - WBH Expansion
 }
 
 
-country_event = {#223 - The Legion Marches
+news_event = {#223 - The Legion Marches
 	id = enc_reformers.223
 	title = enc_reformers.223.t
 	desc = enc_reformers.223.d
@@ -6647,7 +6616,7 @@ country_event = {#224 - Graham Crackers
 		name = enc_reformers.224.a
 		create_corps_commander = {
 					name = "Joshua Graham"
-					portrait_path = "gfx/leaders/NCN/Portrait_Burned_Man.dds"
+					portrait_path = "gfx/leaders/NCN/portrait_douglas_enclaveurned_Man.dds"
 					skill = 6
 					traits = { }
 					attack_skill = 7
@@ -6771,19 +6740,18 @@ country_event = {#228 - Commie Start
 	title = enc_reformers.228.t
 	desc = enc_reformers.228.d
 	picture = GFX_event_china_poster
-	fire_only_once = yes	
-    trigger = {
-		has_completed_focus = enc_reform
-	}
-	mean_time_to_happen = { days = 10 }
+	is_triggered_only = yes
+	fire_only_once = yes
 	option = {#Afraid of Commies
 		name = enc_reformers.228.a
 		set_country_flag = enc_red_menace_flag
-		add_stability = 0.05
+		add_country_leader_trait = red_scare
 		custom_effect_tooltip = enc_reformers.228.a.tt
+		country_event = { id = enc_reformers.2 }
 	}
 	option = {#  Sillly
 		name = enc_reformers.228.b
+		country_event = { id = enc_reformers.2 }
 	}
 }
 
@@ -7580,7 +7548,7 @@ country_event = {#307 - The ruler president
 			create_country_leader  = {
 				name = "Douglas Granite"
 				desc = "Granite_desc"
-				picture = "gfx/leaders/portrait_b.dds"
+				picture = "gfx/leaders/portrait_douglas_enclave.dds"
 				expire = "3000.1.1"
 				ideology = benevolent_dictatorship
 				traits = {}
@@ -7681,6 +7649,6 @@ country_event = {#310 - Vice President lynette
 #################
 # GFX_enc_ncr_rangers # GFX_event_ENC_3_troopers # GFX_event_ENC_assault_team # GFX_event_ENC_bloody_suit # GFX_event_ENC_cloning_failed # GFX_event_ENC_cloning_success # GFX_event_ENC_deathclaw 
 # GFX_event_ENC_door # GFX_event_ENC_double_flag # GFX_event_ENC_double_flag_long # GFX_event_ENC_mariposa1 # GFX_event_ENC_mariposa2 # GFX_event_ENC_mariposa3 # GFX_event_ENC_minigun 
-# GFX_event_ENC_new_reno # GFX_event_ENC_picture # GFX_event_ENC_plasma_pistol # GFX_event_ENC_plasma_rifle # GFX_event_ENC_president_only # GFX_event_ENC_rebuilding # GFX_event_ENC_ruined_city # GFX_event_ENC_secret 
+# GFX_event_ENC_new_reno # GFX_event_ENC_picture # GFX_event_ENC_plasma_pistol # GFX_event_ENC_plasma_rifle # GFX_event_ENC_president_only # GFX_event_enc_reform_propaganda # GFX_event_ENC_ruined_city # GFX_event_ENC_secret 
 # GFX_event_ENC_secret2 # GFX_event_ENC_secret3 # GFX_event_ENC_single_soldier
 
