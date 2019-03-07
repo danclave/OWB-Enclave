@@ -233,6 +233,9 @@ ideas = {
 			allowed = {
 				original_tag = ERB
 			}
+			visible = {
+				not = { has_completed_focus = enc_purge_opposition }
+			}
 			traits = { enc_army_chief_loyalist }
 			
 			ai_will_do = {
@@ -262,6 +265,9 @@ ideas = {
 			allowed = {
 				original_tag = ERB
 			}			
+			visible = {
+				not = { has_completed_focus = enc_purge_opposition }
+			}
 			traits = { enc_air_chief_loyalist }
 			
 			ai_will_do = {
@@ -292,7 +298,10 @@ ideas = {
 			cost = 100
 			allowed = {
 				original_tag = ERB
-			}			
+			}
+			visible = {
+				not = { has_completed_focus = enc_purge_opposition }
+			}
 			traits = { enc_navy_chief_loyalist }			
 			ai_will_do = {
 				factor = 1

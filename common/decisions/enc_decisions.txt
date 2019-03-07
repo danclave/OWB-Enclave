@@ -748,11 +748,23 @@ ENC_debug = {
 		}
 	}
 	ENC_misc = {
-		available = 
-			has_no_free_press = no
-		}
 		complete_effect = {
-			remove_5_popularity_from_ruling_party = yes
+			start_civil_war = {
+				ideology = elites
+				size = party_popularity@elites
+				only_own_territory = yes
+				capital = 159
+			}
+		}		
+	}
+	ENC_restore_douglas_portrait = {
+		complete_effect = {
+			change_douglas_portrait_to_nevada = yes
+		}		
+	}
+	ENC_people_uprising = {
+		complete_effect = { 
+			people_start_revolt = yes
 		}
 	}
 	ENC_NCR_CES_war = {

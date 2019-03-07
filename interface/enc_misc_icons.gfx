@@ -90,11 +90,23 @@ spriteTypes = {
 		spriteType = {
 			name = "GFX_decision_enc_helmet"
 			texturefile = "gfx/interface/icons/decision_enc_helmet.dds"
-		}		 
+		} 
+		spriteType = {
+			name = "GFX_decision_enc_helmet_color"
+			texturefile = "gfx/interface/icons/decision_enc_helmet_color.dds"
+		}	 
 		spriteType = {
 			name = "GFX_decision_enc_bear_head"
 			texturefile = "gfx/interface/icons/decision_enc_bear_head.dds"
 		}		 
+		spriteType = {
+			name = "GFX_decision_enc_hayes"
+			texturefile = "gfx/interface/icons/decision_enc_hayes.dds"
+		}	 
+		spriteType = {
+			name = "GFX_decision_enc_lynette"
+			texturefile = "gfx/interface/icons/decision_enc_lynette.dds"
+		}
 		spriteType = {
 			name = "GFX_decision_enc_bear_head_alert"
 			texturefile = "gfx/interface/icons/decision_enc_bear_head_alert.dds"

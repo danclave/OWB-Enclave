@@ -148,6 +148,7 @@ war_support_loss_based_on_elites_popularity = {
 ### Stability loss based on party popularity ####
 ##################################################
 
+
 stability_loss_based_on_elites_popularity = {
 	set_temp_variable = {
 		var = stability_loss_var
@@ -159,7 +160,7 @@ stability_loss_based_on_elites_popularity = {
 	}
 	multiply_temp_variable = {
 		var = stability_loss_var
-		value = 0.66
+		value = stability_loss_factor?0.66
 	}
 	add_stability = stability_loss_var
 	custom_effect_tooltip = stability_loss_based_on_elites_popularity
@@ -175,7 +176,7 @@ stability_loss_based_on_people_popularity = {
 	}
 	multiply_temp_variable = {
 		var = stability_loss_var
-		value = 0.66
+		value = stability_loss_factor?0.66
 	}
 	add_stability = stability_loss_var
 	custom_effect_tooltip = stability_loss_based_on_people_popularity
@@ -191,7 +192,7 @@ stability_loss_based_on_intellectuals_popularity = {
 	}
 	multiply_temp_variable = {
 		var = stability_loss_var
-		value = 0.66
+		value = stability_loss_factor?0.66
 	}
 	add_stability = stability_loss_var
 	custom_effect_tooltip = stability_loss_based_on_intellectuals_popularity_popularity
@@ -282,7 +283,8 @@ choose_integration = {
 
 choose_law = {
 	set_temp_variable = { popularity_change = 0.05 }
-	add_popularity_to_opposition = yes		
+	add_popularity_to_opposition = yes
+	set_country_flag = enc_has_law
 	add_stability = 0.10
 }
 choose_order = {
@@ -307,6 +309,7 @@ choose_democracy = {
 		value = 0.05
 	}
 	change_legitimacy = yes
+	set_country_flag = enc_empowered_congress
 	country_event = { id = enc_reformers.219 } 
 	add_stability = 0.10
 }
@@ -322,11 +325,29 @@ choose_autocracy = {
 	remove_ideas = enc_NCR_instability
 }
 
+revert_law = {
+	clr_country_flag = enc_has_law
+	clr_country_flag = enc_martial_law_blocked
+	complete_national_focus = enc_order
+	custom_effect_tooltip = newline
+	complete_national_focus = enc_military_police
+	custom_effect_tooltip = newline
+}
+
+revert_congress = {
+	complete_national_focus = enc_extend_presidential_powers_reform
+	clr_country_flag = enc_empowered_congress
+	clr_country_flag = enc_suspend_elections_blocked
+	custom_effect_tooltip = newline
+	complete_national_focus = enc_silence_congress_reform
+	custom_effect_tooltip = newline
+}
 ##################################################
 ### MISC ####
 ##################################################
 
 cancel_requisition_civilian_resources = {
+
 	clr_country_flag = enc_requisitioned_resources
 	if = {
 		limit = {
@@ -361,6 +382,70 @@ cancel_requisition_civilian_resources = {
 }
 
 ##################################################
+### PEOPLE UPRISING ####
+##################################################
+
+people_start_revolt = {
+	start_civil_war = {
+		ideology = people
+		size = 0.40
+		only_own_territory = no
+		states_filter = { 
+			is_core_of = NCR
+		}
+	}
+	random_enemy_country = {
+		limit = { civilwar_target = ROOT }
+		NCR = {
+			set_politics = {
+			parties = {
+					people = { popularity = 30 }
+					elites = { popularity = 0 }
+					intellectuals = { popularity = 70 }
+					ruler = { popularity = 0 }
+				}
+				ruling_party = intellectuals
+				elections_allowed = no
+			}
+			annex_country = {
+				target = PREV
+				transfer_troops = no
+			}
+			division_template = {
+				name = "Rebel Militia"
+				division_names_group = REBEL_INF_01
+				regiments = {
+					militia = {	x = 0 y = 0	}
+					militia = { x = 0 y = 1	}
+					militia = { x = 0 y = 2 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+					militia = { x = 1 y = 2 }
+					militia = { x = 1 y = 3 }
+				}
+				support = {}
+			}
+			every_owned_state = {
+				limit = { has_state_flag = enc_patriots_armed }
+				create_unit = { 
+					division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+					owner = NCR
+				}
+				create_unit = { 
+					division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+					owner = NCR
+				}
+			}
+		}
+		
+	}
+	declare_war_on = {
+		target = NCR
+		type = annex_everything
+	}
+}
+
+##################################################
 ### Change Douglas background ####
 ##################################################
 
@@ -383,19 +468,33 @@ transfer_leader_traits = {
 	}
 }
 
+change_douglas_portrait_to_enclave = {
+	hidden_effect = {
+		create_country_leader  = {
+			name = "Douglas Granite"
+			desc = "Granite_desc"
+			picture = "gfx/leaders/portrait_douglas_enclave.dds"
+			expire = "3000.1.1"
+			ideology = technocracy
+			traits = {}
+		}
+		transfer_leader_traits = yes	
+	}
+}
+
+
 change_douglas_portrait_to_half_usa = {
 	hidden_effect = {
 		create_country_leader  = {
 			name = "Douglas Granite"
 			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_b2.dds"
+			picture = "gfx/leaders/portrait_douglas_usa.dds"
 			expire = "3000.1.1"
-			ideology = ROOT
+			ideology = technocracy
 			traits = {}
 		}
 		transfer_leader_traits = yes	
 	}
-	# custom_effects_tooltip = enc_time_for_a_new_flag
 }
 
 change_douglas_portrait_to_full_usa = {
@@ -403,12 +502,28 @@ change_douglas_portrait_to_full_usa = {
 		create_country_leader  = {
 			name = "Douglas Granite"
 			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_b3.dds"
+			picture = "gfx/leaders/portrait_douglas_usa_2.dds"
 			expire = "3000.1.1"
-			ideology = ROOT
+			ideology = constitutional_republic
 			traits = {}
 		}
 		transfer_leader_traits = yes
 	}
 	# custom_effects_tooltip = enc_time_for_a_new_flag
 }
+
+change_douglas_portrait_to_nevada = {
+	hidden_effect = {
+		create_country_leader  = {
+			name = "Douglas Granite"
+			desc = "Granite_desc"
+			picture = "gfx/leaders/portrait_douglas_nevada.dds"
+			expire = "3000.1.1"
+			ideology = technocracy
+			traits = {}
+		}
+		transfer_leader_traits = yes
+	}
+	# custom_effects_tooltip = enc_time_for_a_new_flag
+}
+

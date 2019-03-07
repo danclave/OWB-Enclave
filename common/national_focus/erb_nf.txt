@@ -255,7 +255,6 @@ focus_tree = {
 			clr_country_flag = enc_demoted_scientists
 			remove_ideas = ENC_scientists_traitors_2
 			add_manpower = -300
-			
 			stability_loss_based_on_elites_popularity = yes
 		}		
 	}
@@ -271,7 +270,9 @@ focus_tree = {
 		bypass = {
 			NOT = {
 				has_idea = ENC_officers_traitors
-				has_idea = ENC_officers_traitors_2
+				hidden_trigger = {
+					has_idea = ENC_officers_traitors_2
+				}
 			}
 		}
 		available = {
@@ -1167,13 +1168,6 @@ focus = {#RADIO - Red Menace
 		y = 1
 		available = {
 			has_stability > 0.50 
-			custom_trigger_tooltip = {
-				tooltip = half_legitimacy		
-				check_variable = {
-					var = legitimacy
-					value > 0.499
-				}
-			}
 		}
 		cost = 5.8
 		completion_reward = {
@@ -1199,13 +1193,6 @@ focus = {#RADIO - Red Menace
 		cost = 5.8
 		available = {
 			has_stability > 0.50
-			custom_trigger_tooltip = {
-				tooltip = half_legitimacy		
-				check_variable = {
-					var = legitimacy
-					value > 0.499
-				}
-			}
 		}
 		completion_reward = {
 			add_popularity = { ideology = people popularity = 0.10 } 
@@ -1231,13 +1218,6 @@ focus = {#RADIO - Red Menace
 		cost = 5.8
 		available = {
 			has_stability > 0.50
-			custom_trigger_tooltip = {
-				tooltip = half_legitimacy		
-				check_variable = {
-					var = legitimacy
-					value > 0.499
-				}
-			}
 		}
 		completion_reward = {
 			add_popularity = { ideology = people popularity = 0.05 } 
@@ -1263,15 +1243,6 @@ focus = {#RADIO - Red Menace
 		x = 0
 		y = 1
 		cost = 5.8
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = 75_legitimacy		
-				check_variable = {
-					var = legitimacy
-					value > 0.749
-				}
-			}
-		}
 		completion_reward = {
 			add_popularity = { ideology = people popularity = 0.10 } 
 			set_temp_variable = {
@@ -1305,7 +1276,6 @@ focus = {#RADIO - Red Menace
 		cost = 5.8
 		completion_reward = {
 			country_event = { id = enc_reformers.67 }
-			add_stability = -0.05
 			add_ideas = { ENC_accepted_ghouls }
 			if = {
 				limit = {
@@ -1317,6 +1287,7 @@ focus = {#RADIO - Red Menace
 				add_war_support = -0.15
 				clr_country_flag = enc_promised_no_ghoul_integration
 			}
+			stability_loss_based_on_elites_popularity = yes
 		}		
 	}
 	focus = {#INTEGRATION - Reject Ghouls 
@@ -1346,6 +1317,7 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 5.8
 		completion_reward = {
+			add_stability = 0.05
 			add_political_power = 100
 		}		
 	}
@@ -1360,11 +1332,12 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_stability = -0.10
 			swap_ideas = {
 				remove_idea = ENC_accepted_ghouls
 				add_idea = ENC_accepted_ghouls_and_super_mutants
 			}
+			set_temp_variable = { stability_loss_factor = 1 } # 1 to 1 stability loss ratio
+			stability_loss_based_on_elites_popularity = yes
 		}		
 	}
 	focus = {#INTEGRATION - A common enemy
@@ -1637,7 +1610,8 @@ focus = {#RADIO - Red Menace
 					ERB = { add_opinion_modifier = { target = PREV modifier = rebels}}
 				}
 			}
-			custom_effect_tooltip = enc_rebuilding_a_nation_tt 
+			custom_effect_tooltip = enc_rebuilding_a_nation_tt
+			change_douglas_portrait_to_half_usa = yes
 		}
 	}
 	focus = {#REBUILDING - Emergency Labour Draft
@@ -1847,7 +1821,7 @@ focus = {#RADIO - Red Menace
 		relative_position_id = enc_american_broadcasting_department
 		available = { 
 			NOT = { has_country_flag = enc_free_press_by_court }
-			}
+		}
 		x = -1
 		y = 1
 		cost = 5.8
@@ -1968,11 +1942,30 @@ focus = {#RADIO - Red Menace
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_silence_congress_reform
 		prerequisite = { focus = enc_silence_congress_reform }
-		available = { 
+		available = {
 			NOT = { has_country_flag = enc_court_ordered_elections }
+			hidden_trigger = {
+				NOT = { has_country_flag = enc_suspend_elections_blocked }
 			}
+		}
 		x = 0
 		y = 1
+		select_effect = {
+			if = {
+				limit = {
+					has_country_flag = enc_has_law
+				}
+				#185 - Court Demands Elections
+				country_event = { id = enc_reformers.185 days = 3}
+			}
+			else_if = {
+				limit = {
+					has_free_press = yes 
+				}
+				#191 - Free Press blocks suspend elections
+				country_event = { id = enc_reformers.191 days = 3}
+			}
+		}
 		cost = 4.5
 		completion_reward = {
 			add_popularity = { ideology = ruler popularity = 0.05 } 
@@ -2013,12 +2006,12 @@ focus = {#RADIO - Red Menace
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_empower_congress
 		prerequisite = { focus = enc_empower_congress }
-		available = { 
-			NOT = {has_completed_focus =  enc_silence_congress_reform }
-		}
 		x = 0
 		y = 1
 		cost = 7.2
+		available = {
+			has_country_flag = enc_empowered_congress
+		}
 		completion_reward = {
 			set_temp_variable = { popularity_change = 0.05 }
 			add_popularity_to_opposition = yes
@@ -2039,11 +2032,13 @@ focus = {#RADIO - Red Menace
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_voting_rights_act
 		prerequisite = { focus = enc_voting_rights_act }
-		mutually_exclusive = { focus = enc_extend_presidential_powers_reform }
+		available = {
+			has_country_flag = enc_empowered_congress
+		}
 		x = 0
 		y = 1
 		cost = 7.2
-		completion_reward = {
+		completion_reward = { 
 			set_temp_variable = { popularity_change = 0.05 }
 			add_popularity_to_opposition = yes
 			set_temp_variable = {
@@ -2268,6 +2263,15 @@ focus = {#RADIO - Red Menace
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_law
 		prerequisite = { focus = enc_law }
+		available = {
+			if = {
+				limit = {
+					has_completed_focus = enc_law
+					not = { has_country_flag = enc_has_law }
+				}
+				has_country_flag = enc_has_law
+			}
+		}
 		x = 0
 		y = 1
 		cost = 7.2
@@ -2287,8 +2291,16 @@ focus = {#RADIO - Red Menace
 		relative_position_id = enc_judicial_branch
 		x = 0
 		y = 1
-		prerequisite = { focus = enc_judicial_branch }
-		available = { NOT = {has_completed_focus = enc_martial_law } }
+		prerequisite = { focus = enc_judicial_branch }		
+		available = {
+			if = {
+				limit = {
+					has_completed_focus = enc_law
+					not = { has_country_flag = enc_has_law }
+				}
+				has_country_flag = enc_has_law
+			}
+		}
 		cost = 7.2
 		completion_reward = {
 			set_temp_variable = { popularity_change = 0.05 }
@@ -2337,13 +2349,31 @@ focus = {#RADIO - Red Menace
 	}
 	focus = {#REBUILDING - Martial Law
 		id = enc_martial_law
-		icon = GFX_goal_enc_military_police
+		icon = GFX_goal_enc_military_police 
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_military_police
 		prerequisite = { focus = enc_military_police }
-		available = { 
-			NOT = {has_completed_focus = enc_fbi }
-			NOT = { has_country_flag = enc_free_press_by_court }
+		available = {
+			if = { # only visible when now allowed
+				limit = { has_country_flag = enc_martial_law_blocked }
+				not = { has_country_flag = enc_martial_law_blocked }
+			}
+		}
+		select_effect = {
+			if = {
+				limit = {
+					has_country_flag = enc_empowered_congress
+				}
+				#187 - Congress blocks martial law
+				country_event = { id = enc_reformers.187 days = 3}
+			}
+			else_if = {
+				limit = {
+					has_free_press = yes
+				}
+				#190 - Free Press blocks martial law
+				country_event = { id = enc_reformers.190 days = 3}			
+			}
 		}
 		x = 0
 		y = 1
@@ -2847,7 +2877,7 @@ focus = {#RADIO - Red Menace
 	}
 	focus = {#Reuniting States
 		id = enc_peaceful_usa
-		icon = GFX_goal_america_goal_eagle_deal
+		icon = GFX_goal_enc_peaceful_usa
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_reuniting_states
 		prerequisite = { focus = enc_reuniting_states }
@@ -2861,7 +2891,7 @@ focus = {#RADIO - Red Menace
 	}
 	focus = {#Reuniting States
 		id = enc_warmonger_usa
-		icon = GFX_goal_NCR_Mojave
+		icon = GFX_goal_enc_warmonger_usa
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_reuniting_states
 		prerequisite = { focus = enc_reuniting_states }
@@ -2876,10 +2906,10 @@ focus = {#RADIO - Red Menace
 	
 	focus = {#Diplomacy - NCR - seek allies
 		id = enc_NCR_seak_allies
-		icon = GFX_goal_enc_us_handshake
+		icon = GFX_goal_america_goal_eagle_deal
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_warmonger_usa
-		x = -4
+		x = -5
 		y = 1
 		cost = 5.8 
 		prerequisite = { 
@@ -2901,7 +2931,7 @@ focus = {#RADIO - Red Menace
 	
 	focus = {#Diplomacy - BOS - start
 		id = enc_BOS_start
-		icon = GFX_goal_bos_victory_or_death 
+		icon = GFX_goal_enc_bos_soldiers 
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_NCR_seak_allies
 		x = 3
@@ -3007,7 +3037,7 @@ focus = {#RADIO - Red Menace
 	}
 	focus = {#Reform - war with BOS
 		id = enc_war_with_bos_reform
-		icon = GFX_goal_flag_burn_BOS 
+		icon = GFX_goal_enc_war_with_bos_reform
 		ai_will_do = { factor = 1 } 
 		prerequisite = { focus = enc_BOS_start }
 		relative_position_id = enc_BOS_start
@@ -3032,7 +3062,7 @@ focus = {#RADIO - Red Menace
 	}
 	focus = {#Reform - anti bos propaganda
 		id = enc_reform_anti_bos_propaganda
-		icon = GFX_goal_enc_anti_bos
+		icon = GFX_goal_enc_reform_anti_bos_propaganda
 		ai_will_do = { factor = 1 } 
 		
 		prerequisite = { focus = enc_war_with_bos_reform		 }
@@ -3322,7 +3352,7 @@ focus = {#American Revolution
 			focus = enc_warmonger_usa
 			focus = enc_peaceful_usa
 					}
-		x = 4
+		x = 3
 		y = 1
 		cost = 5.8
 		completion_reward = {
@@ -3922,7 +3952,7 @@ focus = {#Legion Border
 	}
 	focus = {#NEVADA - area 51
 		id = enc_Area_51
-		icon = GFX_goal_enc_verti_reform
+		icon = GFX_goal_enc_verti_nevada
 		ai_will_do = {
 			factor = 1
 		}
@@ -3955,7 +3985,7 @@ focus = {#Legion Border
 	}
 	focus = {#NEVADA - area 52
 		id = enc_Area_52
-		icon = GFX_goal_us_plane_advanced
+		icon = GFX_goal_enc_area_52
 		ai_will_do = {
 			factor = 1
 		}
@@ -4214,7 +4244,7 @@ focus = {#Legion Border
 	
 focus = {#NEVADA - REform Tribes
 		id = enc_reform_the_tribes
-		icon = GFX_enc_reform_the_tribes
+		icon = GFX_goal_enc_reform_the_tribes
 		cost = 5.8 
 		prerequisite = { focus = enc_the_state_of_nevada}
 		relative_position_id = enc_the_state_of_nevada
@@ -4244,7 +4274,7 @@ focus = {#NEVADA - Agriculture
 
 focus = {#NEVADA - End
 		id = enc_civil_society
-		icon = GFX_enc_nevada_reborn
+		icon = GFX_goal_enc_nevada_reborn
 		cost = 5.8 
 		prerequisite = { focus = enc_settle_mormons }
 		prerequisite = { focus = ENC_nevada_constitution}
@@ -4262,7 +4292,7 @@ focus = {#NEVADA - End
 }
 focus = {#NEVADA - Legislature
 		id = ENC_nevada_assembly
-		icon = GFX_goal_enc_presidential_elections
+		icon = GFX_goal_enc_nevada_assembly
 		cost = 5
 		prerequisite = { focus = enc_the_state_of_nevada}
 		available = { 
@@ -4281,7 +4311,7 @@ focus = {#NEVADA - Legislature
 	}
 focus = {#NEVADA - Judiciary
 		id = ENC_judiciary_nevada
-		icon = GFX_goal_enc_judicial_branch
+		icon = GFX_goal_enc_judiciary_nevada
 		cost = 5
 		prerequisite = { focus = ENC_nevada_assembly }
 		available = { 
@@ -4300,7 +4330,7 @@ focus = {#NEVADA - Judiciary
 	}
 focus = {#NEVADA - Constitution
 		id = ENC_nevada_constitution
-		icon = GFX_goal_enc_president_reform
+		icon = GFX_goal_enc_nevada_constitution
 		cost = 5
 		prerequisite = { focus = ENC_judiciary_nevada }
 		available = { 
@@ -4438,7 +4468,7 @@ focus = {#NEVADA - second city
 
 	focus = {#NEVADA - Robco
 		id = Enc_Robco_Reborn
-		icon = GFX_goal_enc_eyebot_reform
+		icon = GFX_goal_enc_robco_reborn
 		ai_will_do = { factor = 1 } 
 		relative_position_id = Enc_Platinum_Chip
 		x = 0
@@ -4554,7 +4584,7 @@ focus = {#NEVADA - second city
 	
 	focus = {#NEVADA - BIG MT RESTORED
 		id = ENC_Big_MT_Restored
-		icon = GFX_goal_enc_science_reform
+		icon = GFX_goal_enc_big_MT_restored_nevada
 		relative_position_id = Enc_Big_MT
 		x = 0
 		y = 1
@@ -4971,7 +5001,7 @@ focus = {#NEVADA - second city
 		prerequisite = { focus = enc_american_dream}
 		prerequisite = { focus = enc_radio}
 		relative_position_id = enc_radio
-		x = -6
+		x = -7
 		y = 1
 		cost = 2.9
 		completion_reward = {

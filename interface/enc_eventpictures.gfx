@@ -56,6 +56,11 @@ spriteTypes = {
  		    texturefile = "gfx/event_pictures/event_enc_4th_july.tga"
  	    }
 
+        SpriteType = {#event_enc_vice_president
+            name = "GFX_event_enc_vice_president"
+ 		    texturefile = "gfx/event_pictures/event_enc_vice_president.tga"
+ 	    }
+
         SpriteType = {#event_enc_america_eternity
             name = "GFX_event_enc_america_eternity"
  		    texturefile = "gfx/event_pictures/event_enc_america_eternity.tga"
