@@ -29,6 +29,8 @@ ENC_reveal_to_ncr_desc: "We cannot hide from the NCR forever, but we may be able
 ENC_reveal_to_ncr.tt: "\nRequires more than §Y30% legitimacy§!"
 
 # CRISIS
+ENC_red_menace_crisis: "Communist Uprising!"
+ENC_red_menace_crisis_desc: "Unless we stop them, the §RCommunists§!  will rise up against America!"
 ENC_opposition_to_segregation: "Demands for Equal Rights!"
 ENC_opposition_to_segregation_desc: "For some reason, the people of America do not understand that some will always be more equal than others, and are gathering power to change the shape of our country.  We need to silence them!"
 NCR_crisis: "§RTHE NCR IS ONTO US§!"
@@ -55,6 +57,8 @@ enc_rangers_defense_sabotage_tt: "Unlocks the §YSabotage Infrastructure§! deci
 ##############################
 # Executive Orders
 ##############################
+ENC_steal_declaration_independence: "Reclaim the Declaration of Independence!"
+ENC_steal_declaration_independence_desc: "Lost since the Great War, the Declaratoin of Independence was stored in a lead-sealed vault in Washingotn DC.  We could send an expedition to return it to the government's hands."
 ENC_opposition_to_segregation: "As it turns out, the Wastelanders are revolting.  Unless we can reduce their power or suppress their ability to voice dissent, they will rise up against us."
 enc_executive_orders: "Executive Orders"
 enc_executive_orders_desc: "A series of powerful tools that fall within the purview of the Commander in Chief."
@@ -343,16 +347,16 @@ ENC_securing_borders:0 "Securing the Borders"
 # Our new vice president
 ###################################
 ENC_vice_president: "Select Vice President"
-ENC_vice_president_desc: "TODO"
+ENC_vice_president_desc: "We can select a vice president to curry favor with one of the nation's political parties."
 
 
 ENC_vice_president_tooltip: "You will be asked to confirm."
 ENC_vice_president_dornan:0 "Vice President Dornan"
-ENC_vice_president_dornan_desc:0 "TODO"
+ENC_vice_president_dornan_desc:0 "Select the Enclave's greatest soldier to guide America!"
 ENC_vice_president_hayes:0 "Vice President Hayes"
-ENC_vice_president_hayes_desc:0 "TODO"
+ENC_vice_president_hayes_desc:0 "Make concessions to the New World Party and make Hayes your vice president"
 ENC_vice_president_lynette:0 "Vice President Lynette"
-ENC_vice_president_lynette_desc:0 "TODO"
+ENC_vice_president_lynette_desc:0 "Remodel America to make every town as prosperous as Vault City!"
 ###################################
 # MISC
 ###################################

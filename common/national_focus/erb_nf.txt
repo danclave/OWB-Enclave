@@ -3242,36 +3242,37 @@ focus = {#RADIO - Red Menace
 							}
 						}
 		completion_reward = {
-			DES = {
-				if = {
-					limit = {
-						is_in_faction = yes
+				DES = {
+					if = {
+						limit = {
+							is_in_faction = yes
+						}
+						leave_faction = yes
 					}
-					leave_faction = yes
 				}
-			}
-			ERB = {
-				create_wargoal = {
-					type = annex_everything
-					target = DES
+				ERB = {
+					create_wargoal = {
+						type = annex_everything
+						target = DES
+					}
 				}
-			}
-				BOS = {
-				add_ai_strategy = {
-					type = ignore
-					id = "DES"
-					value = 200
+					BOS = {
+					add_ai_strategy = {
+						type = ignore
+						id = "DES"
+						value = 200
+					}
 				}
-			}
-			DES = {
-				add_ai_strategy = {
-					type = ignore
-					id = "BOS"
-					value = 200
+				DES = {
+					add_ai_strategy = {
+						type = ignore
+						id = "BOS"
+						value = 200
+					}
+					set_rule = { can_join_factions = no }	
 				}
 			}
 		}
-	}
 	focus = {#support_cause
 		id = enc_support_cause
 		icon = GFX_goal_enc_cause_focus

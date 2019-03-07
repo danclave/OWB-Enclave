@@ -1276,6 +1276,34 @@ enc_reformers.242.t: "A Mysterious Stranger"
 enc_reformers.242.d: "A young woman calling herself Veronica Mars has shown up at one of our schools, offering to teach for Nevada.  Despite being fairly tight lipped about her past, we think she used to be a member of the Mojave Chapter, and she's expressed an interest in doing research for Nevada. \n\nIt's unclear how much she could teach us, but perhaps we should take a chance on a naive young girl from California with stars in her eyes and a pneumatic gauntlet on her hand."
 enc_reformers.242.a: "Why not?"
 enc_reformers.241.a.tt: "\n§YVeronica§! joins Nevada"
+#############################################################################################################
+enc_reformers.243.t: "Communist Uprising!"
+enc_reformers.243.d: "To the President's great surprise, [GetDateText] saw no Communist uprising. Odd.  Perhaps the Communists are more devious than we feared."
+enc_reformers.243.a: "We'll be waiting, Commie scum"
+#############################################################################################################
+enc_reformers.244.t: "The Great Crusade"
+enc_reformers.244.d: "Not everyone welcomes the return of these United States.  Montana has largely been overrun by cultists known as Heaven's Gate, and their militant faith is obviously threatened by our growing power. Their leader seeks to ally with [CES.GetName], calling war against us a Great Crusade against atheism and idolatry. The fact that this will discourage [CES.GetName] from attacking Montana doubtless helps, of course."
+enc_reformers.244.a: "The First Amendment Wasn't Good Enough For You?"
+#############################################################################################################
+enc_reformers.245.t: "The Generalized Occupational Aptitude Test"
+enc_reformers.245.d: "To prepare for the future, Vault Tec devleoped the Generalized Occupational Aptitude Test ("GOAT"), designed to test every every citizen's worth to society after the bombs fell. Although we are currently screening for genetic damage, some observe that we could simply make all children take the GOAT when they turn 16.  Children who do well on this test are obviously genetically hardy stock, well suited to the reconstruction. \n\nOr their parents can afford to hire qualified tutors, but surely that just shows their parents are fine Americans?"
+enc_reformers.245.a: "Excellent Idea!"
+enc_reformers.245.b: "How can this possibly screen for genetic damage?"
+#############################################################################################################
+enc_reformers.246.t: "The Capital Wasteland"
+enc_reformers.246.d: "Our initial expedition to the Capital Wasteland reveals the damage was worse than we feared.  It looks like the region's water supply is contaminated, supermutants and raiders fight over the Washington Mall, and everything is in ruins.  We can stick with our original plan to just steal the Declaration of Independence, but we could also set up a humanitarian mission to help the people of the Wasteland.  What would be greater than seeing [Root.GetNameDef] troops occupying the Capital Wasteland?"
+enc_reformers.246.a: "We'll come back when we reunite the West."
+enc_reformers.246.b: "People of the Capital Wasteland, your saviors are here!"
+############################################################################################################
+enc_reformers.247.t: "Hayes Burns Genetic Test Results"
+enc_reformers.247.d: "Although Hayes is a member of the Enclave, and so of fine American stock, like everyone else he had to be screened for mutations.  Hayes has publicly burned his results in the streets of Dayglow along with dozens of other protestors.  \n\nShockingly, some of the protestors were seen waving New California flags behind Hayes as he shouted he would always fight for freedom."
+enc_reformers.247.a: "You are the worst Enclave member ever"
+############################################################################################################
+enc_reformers.248.t: "Brahmin Barons and Vault City Restrict Suffrage"
+enc_reformers.248.d: "As it turns out, to some Americans, democracy IS negotiable.  Vault City and parts of Northern California are trying to restrict the right to vote to long time inhabitants or requiring arcane citizenship tests.  Their hope is to control who their districts send to Congress and keep the unwashed masses from having a say."
+enc_reformers.248.a: "You are all terrible people"
+enc_reformers.248.b: "Let me explain why that's illegal"
+enc_reformers.248.b.tt: "\nBecause you implemented the §YVoting Rights Act§! Lynette can't play these little games."
 ## START OF 300 ###
 #############################################################################################################
 enc_reformers.300.t: "Protests in [protesting_state.GetName]"
@@ -1344,17 +1372,18 @@ enc_reformers.307.a: "It will take a strong people to bring peace to America."
 enc_reformers.307.b: "It will take a strong president to bring peace to America."
 #############################################################################################################
 enc_reformers.308.t: "Vice President Dornan"
-enc_reformers.308.d: "TODO"
-enc_reformers.308.a: "No man rules alone."
+enc_reformers.308.d: "America doesn't need a vice president.  It needs a firm hand, and the President needs men who will share his vision.  Dornan is a soldier, and he knows how to follow orders.  And he'll do whatever Granite thinks best to keep America safe. \n\nDon't step out of line."
+enc_reformers.308.a: "God Bless the Enclave"
+enc_reformers.308.a.tt: "\n§gDornan will keep the rank of being called sergeant in the United States Army, so no one need call him sir."
 enc_reformers.308.b: "I changed my mind."
 #############################################################################################################
 enc_reformers.309.t: "Vice President Hayes"
-enc_reformers.309.d: "TODO"
-enc_reformers.309.a: "No man rules alone."
+enc_reformers.309.d: "Hayes, for all his criticisms of  Enclave excesses, is a firm believer that America is the world's last best hope.  By appointing Hayes as vice president we will confirm that our faith in the Great Experiment, and that a government for the People, by the People, and of the People, shall not perish from this earth."
+enc_reformers.309.a: "God Bless America"
 enc_reformers.309.b: "I changed my mind."
 #############################################################################################################
 enc_reformers.310.t: "Vice President Lynette"
-enc_reformers.310.d: "TODO"
-enc_reformers.310.a: "No man rules alone."
+enc_reformers.310.d: "Lynette has guided her community through mutant threats, bandit attacks, and power grabs by the NCR.  Now we can apply her talents on a grander scale, separating the wheat from the chaff across a nation."
+enc_reformers.310.a: "Some will always be more equal than others"
 enc_reformers.310.b: "I changed my mind."
 

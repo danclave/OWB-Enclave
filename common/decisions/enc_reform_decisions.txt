@@ -2,6 +2,22 @@
 # REFORMER
 ###############################
 enc_executive_orders  = {
+	ENC_red_menace_crisis = {
+		icon = generic_scorched_earth
+		priority = 11
+		available = {
+		
+	}
+		activation = {
+			has_country_flag = enc_commie_baseball
+		}	
+		days_mission_timeout = 100
+		fire_only_once = no
+		is_good = no
+		timeout_effect = {
+		country_event = enc_reformers.243
+		}
+	}
 	plunder_resources = {
 		icon = generic_scorched_earth
 		cost = 50
@@ -169,6 +185,23 @@ enc_executive_orders  = {
 		days_re_enable = 30
 		complete_effect = {
 			hidden_effect = { sound_effect = ERB_stripes_and_stars }
+		}
+	}
+	ENC_steal_declaration_independence = {
+		icon = GFX_decision_enc_verti
+		cost = 75		
+		visible = {	
+			has_completed_focus = enc_rebuilding_a_nation
+		}
+		available = { 
+			has_equipment = { type = vb_gunship_equipment amount > 24 } 
+		}
+		days_remove = 50
+		days_re_enable = 30
+		complete_effect = {
+			hidden_effect = { sound_effect = ERB_stripes_and_stars }
+			country_event = enc_reformers.246
+			 add_equipment_to_stockpile = { type = vb_gunship_equipment amount = -25 producer = ERB }
 		}
 	}
 	improved_worker_conditions = {
@@ -757,7 +790,7 @@ ENC_infiltrating_NCR = {
 		icon = generic_political_discourse
 		priority = 10
 		cost = 80
-		fire_only_once = yes
+		fire_only_once = no
 		visible = {
 			has_country_flag = enc_ncr_spies
 		}
@@ -771,7 +804,7 @@ ENC_infiltrating_NCR = {
 			custom_effect_tooltip = ENC_desert_rangers_hate_tt
 			DES = {
 				add_opinion_modifier = { target = NCR modifier = sabotaged_relations }
-				if = {
+			if = {
 					limit = {
 						is_in_faction = yes 
 					} 
@@ -780,7 +813,22 @@ ENC_infiltrating_NCR = {
 				add_ai_strategy = {
 					type = alliance
 					id = NCR
-					value = -8000
+					value = -300
+				}
+			}
+			DES = { 
+				add_ai_strategy = {
+					type = ignore
+					id = NCR
+					value = 300
+				}
+				set_rule = { can_join_factions = no }	
+			}
+			NCR = { 
+				add_ai_strategy = {
+					type = ignore
+					id = DES
+					value = 300
 				}
 			}
 			NCR = {
@@ -788,7 +836,7 @@ ENC_infiltrating_NCR = {
 				add_ai_strategy = {
 					type = alliance
 					id = DES
-					value = -8800
+					value = -300
 				}
 			}	
 		}
@@ -817,7 +865,7 @@ ENC_infiltrating_NCR = {
 	
 		priority = 300
 		fire_only_once = yes
-
+		icon = decision_ncr_flag
 		available = {
 				}
 	
@@ -1212,6 +1260,7 @@ ENC_nation_building = {
 	}
 	ENC_enclavecalifornia_helios_two = {
 		cost = 25
+		icon = GFX_decision_generic_research
 		days_remove = 10
 		ai_will_do = {
 			factor = 10
@@ -1246,6 +1295,7 @@ ENC_nation_building = {
 	}
 	ENC_follower_school_system = {
 		cost = 50
+		icon = GFX_decision_generic_research
 		days_remove = 10
 		ai_will_do = {
 			factor = 10
@@ -1688,6 +1738,7 @@ ENC_pacific_commonwealth1 = {
 }
 ENC_treaty_hoover_dam = {
 	Enc_Cession_of_Helios_one = {
+	icon = GFX_decision_generic_research
 	priority = 300
 		fire_only_once = no
 		
@@ -1851,6 +1902,7 @@ ENC_california_reconstruction = {
 }
 ENC_northwest_reconstruction = {
 	ENC_hanford = {
+		icon = generic_construction
 		cost = 25
 		days_remove = 10
 		ai_will_do = { factor = 10 }
@@ -1864,6 +1916,7 @@ ENC_northwest_reconstruction = {
 		}
 	}
 	ENC_port_maw = {
+		icon = generic_construction
 		cost = 25
 		days_remove = 10
 		ai_will_do = { factor = 10 }
@@ -1899,6 +1952,7 @@ ENC_northwest_reconstruction = {
 		}
 		}
 	ENC_seattle = {
+		icon = generic_construction
 		cost = 25
 		days_remove = 10
 		ai_will_do = { factor = 10 }
@@ -2509,7 +2563,7 @@ ENC_WBH_expansion = {
 		NOT = { country_exists = TRL }
 		has_country_flag = enc_wbh_threat
 	}	
-	days_mission_timeout = 5
+	days_mission_timeout = 50
 	fire_only_once = no
 	is_good = no
 	timeout_effect = {
@@ -2524,7 +2578,7 @@ ENC_CES_expansion = {
 			country_exists = CES
 		}
 	}
-	days_mission_timeout = 5
+	days_mission_timeout = 90
 	activation = {
 		CES = { has_war = no }
 		NOT = { country_exists = NCR}
