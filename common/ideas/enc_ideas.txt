@@ -1823,6 +1823,7 @@ ideas = {
 			   justify_war_goal_time = 0.20
 			   encryption_factor = -0.05
 			   offensive_war_stability_factor = -0.20
+			   people_drift = 0.05
 			}
 		}
 		ENC_free_press_2 = {  
@@ -1839,6 +1840,7 @@ ideas = {
 			   justify_war_goal_time = 0.25
 			   encryption_factor = -0.10
 			   offensive_war_stability_factor = -0.30
+			   people_drift = 0.10
 			}
 		}
 		ENC_mandatory_patriotism = {
