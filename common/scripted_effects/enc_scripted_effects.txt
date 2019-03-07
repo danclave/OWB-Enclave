@@ -11,6 +11,7 @@ add_popularity_to_opposition = {
 			ideology = elites
 			popularity = popularity_change
 		}
+		multiply_temp_variable = { popularity_change = 0.20 }
 		add_popularity = {
 			ideology = people
 			popularity = popularity_change
@@ -325,23 +326,51 @@ choose_autocracy = {
 	remove_ideas = enc_NCR_instability
 }
 
-revert_law = {
+revert_law = { # from law to order
 	clr_country_flag = enc_has_law
 	clr_country_flag = enc_martial_law_blocked
 	complete_national_focus = enc_order
 	custom_effect_tooltip = newline
-	complete_national_focus = enc_military_police
+	if = {
+		limit = { 
+			not = { has_completed_focus = enc_military_police }
+		}
+		add_ideas = enc_NCR_power_struggle2
+	}
+}
+revert_order = { # from order to law
+	add_stability = -0.15
+	set_country_flag = enc_martial_law_blocked
+	complete_national_focus = enc_law
 	custom_effect_tooltip = newline
+	if = {
+		limit = { 
+			not = { has_completed_focus = enc_fbi }
+		}
+		add_ideas = enc_NCR_power_struggle2
+	}
+	else_if = {
+		limit = { 
+			not = { has_completed_focus = enc_judicial_branch }
+		}
+		add_ideas = enc_NCR_power_struggle
+	}
 }
 
-revert_congress = {
+revert_congress = { # from democracy to autocracy
+	# modify legitimacy
+	set_temp_variable  = {
+		var = legitimacy_change_var
+		value = -0.20
+	}
+	change_legitimacy = yes
 	complete_national_focus = enc_extend_presidential_powers_reform
+	custom_effect_tooltip = newline
+	show_ideas_tooltip = ENC_presidential_powers
 	clr_country_flag = enc_empowered_congress
 	clr_country_flag = enc_suspend_elections_blocked
-	custom_effect_tooltip = newline
-	complete_national_focus = enc_silence_congress_reform
-	custom_effect_tooltip = newline
 }
+
 ##################################################
 ### MISC ####
 ##################################################

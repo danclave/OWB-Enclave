@@ -449,8 +449,7 @@ enc_suspend_elections_legitimacy_loss: "§YLegitimacy§! is now capped at §R0§
 enc_suspend_elections_tt: "Remove negative effects of low §YLegitimacy§!.\n"
 
 enc_extend_presidential_powers_reform: "Extend Presidential Powers"
-enc_extend_presidential_powers_reform_desc: "The question has been raised as to just how I came to be elected to this most illustrious office. Or, whether or not I had been elected at all! To that I must answer: Of course! Of course I was elected, sweet America! Isn't the right to vote the very foundation of a democracy? Unfortunately, in the interest of national security, I'm not at liberty to discuss the details of the election."
-
+enc_extend_presidential_powers_reform_desc: "Our country is in chaos. The current government is caught completely unprepared for the situation. Drastic measures are necessary. We can expand the power of the Enclave president over every jurisdiction so that there is no question as to where the orders come from."
 enc_silence_congress_reform: "Silence Congress"
 enc_silence_congress_reform_desc: "Rest assured, I AM your President because the appropriate people of this great nation decided I should be! I AM your duly elected representative. And Congress voluntarily issued legislation giving me the powers of the legislature for the duration of the emergency."
 
@@ -488,7 +487,7 @@ enc_integrate_officers: "Integrate Officers"
 enc_integrate_officers_desc: "By integrating Wastelanders into our army, we unite the nation to our flag and give our enemies someone else to shoot at."
 
 enc_empower_congress: "Empower Congress"
-enc_empower_congress_desc: "Since the Great War, Congress has been an advisory body to the President.  But we can restore its power and lift martial law."
+enc_empower_congress_desc: "Ever since the Great War, Congress has been little more than an advisory body to the President.  But we perhaps time has come to restore the legislative branch of our government. Restoring the powers of Congress would be an important step to bringing back democracy from the ashes of the old world."
 
 enc_screening: "Genetic Screening"
 enc_screening_desc: "In the new America, we recognize that all men are created equal, but some are more equal than others."

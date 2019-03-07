@@ -995,9 +995,10 @@ enc_reformers.186.a.tt: "\n§gThe Supreme Court has upheld the First Amendment a
 enc_reformers.186.b: "Time to pull the plug on the Judiciary"
 ##############################################################################################################
 enc_reformers.187.t: "Congress Demands an End to Martial Law"
-enc_reformers.187.d: "Representative Hayes and the New World Party have threatened to oppose funding for the United States army unless we end martial law and allocate powers to the Supreme Court.  It's honestly becoming a pain in the tuckus.  How should we handle it?"
+enc_reformers.187.d: "Representative Hayes and the New World Party have threatened to oppose funding for the United States army unless we restore the rule of law and allocate judicial powers to a Supreme Court.  It looks like the senate we created will do whatever is in their power to prevent our attempt at declaring martial law. It's honestly becoming a pain in the tuckus.  How should we handle it?"
+enc_reformers.187.d.segregation: "Representative Lynette and the Citizens League have threatened to oppose funding for the United States army unless we allocate judicial powers to a Supreme Court. It looks like the senate we created will do whatever is in their power to prevent our attempt at declaring martial law. It's not a surprise the elite class of citizens we elevated to the senate is unwilling to give up their political privileges.  How should we handle it?"
 enc_reformers.187.a: "I can't believe we have to rely on Congress for funding"
-enc_reformers.187.a.tt: "\n§gCongress frustrates your plan for indefinite martial law. Jerks.§!"
+enc_reformers.187.a.tt: "\n§gCongress frustrates your plan for indefinite martial law.§!"
 enc_reformers.187.b: "Declare a State of Emergency and Suspend Congress"
 ##############################################################################################################
 enc_reformers.188.t: "God Bless You"
@@ -1169,7 +1170,7 @@ enc_reformers.219.b.tt: "This is the best option for those who §Ysegregated Ame
 enc_reformers.220.t: "Requisition Scandal Before Congress"
 enc_reformers.220.d.segregation: "An influential wastelander has asked the Senate to address concerns about the National Requisition Act. Although ordinarily the Senate's members would merely thank her for her contribution to the reconstruction effort, she has gained the influential ear of a senator and he has submitted a petition before Congress.  Apparently her caravan company was sabotaged by a rival, who persuaded a government officer to confiscate her assets and sell them to a United States citizen. Rather embarassing!"
 enc_reformers.220.d.integration: "Congress is rocked by a scandal.  Ms. Cassidy Rose of Vault City has appeared before Congress challenging the government's requisition of her caravan company's assets, claiming they've been granted to a rival caravan company.  A congressional inquiry has uncovered numerous other examples of cronyism, and the entire National Requisition Act is in doubt."
-enc_reformers.220.a: "How embarassing to learn our officials may be corrupt!"
+enc_reformers.220.a: "How embarrassing to learn our officials may be corrupt!"
 enc_reformers.220.a.tt: "Available because you selected §YSegregation§!"
 enc_reformers.220.b: "I can't believe government confiscations led to scandal!"
 enc_reformers.220.c: "Fine, cancel the program."

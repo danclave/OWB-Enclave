@@ -1463,11 +1463,12 @@ focus = {#RADIO - Red Menace
 		cost = 5.8
 		completion_reward = {
 			add_popularity = { ideology = elites popularity = 0.10 } 
-			add_stability = 0.05
-			add_war_support = 0.05
+			set_temp_variable = { legitimacy_change_var = -0.05 }
+			change_legitimacy = yes
+			add_ideas = {enc_technocrats}
 		}
 	}
-	focus = {#SEPERATION - appointed governors
+	focus = {#SEPERATION - first citizens
 		id = enc_first_citizens
 		icon = GFX_goal_enc_first_citizens
 		ai_will_do = { factor = 1 }
@@ -1478,9 +1479,8 @@ focus = {#RADIO - Red Menace
 		cost = 5.8
 		completion_reward = {
 			add_popularity = { ideology = elites popularity = 0.05 } 
-			set_temp_variable = { legitimacy_change_var = -0.05 }
-			change_legitimacy = yes
-			add_ideas = {enc_technocrats}
+			add_stability = 0.05
+			add_war_support = 0.05
 		}
 	}
 	focus = {#SEPERATION - subsidized lives
@@ -1610,6 +1610,7 @@ focus = {#RADIO - Red Menace
 					ERB = { add_opinion_modifier = { target = PREV modifier = rebels}}
 				}
 			}
+			country_event = { id = enc_reformers.307 }
 			custom_effect_tooltip = enc_rebuilding_a_nation_tt
 			change_douglas_portrait_to_half_usa = yes
 		}

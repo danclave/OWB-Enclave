@@ -5232,7 +5232,6 @@ country_event = { #181 - Courts Enjoin Requisitions
     picture = GFX_event_radio_new_vegas
     fire_only_once = YES
     trigger = {
-		has_completed_focus = enc_requisition_of_resources
 		has_completed_focus = enc_judicial_branch 
 		NOT = { has_completed_focus = enc_order }
 		has_country_flag = enc_requisitioned_resources
@@ -5308,17 +5307,15 @@ country_event = { #183 - Press Covers Requisitions
     picture = GFX_event_ENC_secret2
     fire_only_once = YES
     trigger = {
-		has_completed_focus = enc_requisition_of_resources
+		has_country_flag = enc_requisitioned_resources
 		has_free_press = yes
-		NOT = {has_country_flag = enc_stop_requisition} 
-			}		
 	mean_time_to_happen = {
 		days = 60
 		}  
     option = { # STOP
         name = enc_reformers.183.a
 		add_stability = -0.15
-		set_country_flag = enc_stop_requisition
+		clr_country_flag = enc_requisitioned_resources
 		if = {
 				limit = {
 					has_full_control_of_state = 253 # shady sands
@@ -5350,6 +5347,7 @@ country_event = { #183 - Press Covers Requisitions
 				}
 			}
         }
+	}
 	option = { # STOP
         name = enc_reformers.183.b
 		remove_ideas = ENC_free_press
@@ -5360,7 +5358,7 @@ country_event = { #183 - Press Covers Requisitions
 		}
 		change_legitimacy = yes
 	}
-	  option = { # STOP
+	option = { # STOP
         name = enc_reformers.183.c
 		add_stability = -0.10 
 	}
@@ -5375,7 +5373,7 @@ country_event = { #183 - Press Covers Requisitions
 		}
 		change_legitimacy = yes
 		add_popularity = { ideology = intellectuals popularity = 0.05 } 
-		set_country_flag = enc_stop_requisition
+		clr_country_flag = enc_requisitioned_resources
 	}   			
    		
 }	
@@ -5478,26 +5476,24 @@ country_event = { #186 - Court Demands Freedom of Speech
 country_event = { #187 - Congress blocks martial law
     id = enc_reformers.187
     title = enc_reformers.187.t
-    desc = enc_reformers.187.d
+    desc = {
+        trigger = { has_completed_focus = enc_segregation }
+		text = enc_reformers.187.d.segregation
+	}
+    desc = {
+		text = enc_reformers.187.d
+	}
     picture = GFX_event_radio_new_vegas
     fire_only_once = no
 	is_triggered_only = yes
-    option = { # STOP
+    option = { # Accept
         name = enc_reformers.187.a
-		add_stability = -0.25
-		set_country_flag = enc_martial_law_blocked
-		complete_national_focus = enc_law
+		revert_order = yes
 		custom_effect_tooltip = enc_reformers.187.a.tt
 	}
 	option = { # Bye Congress
-        name = enc_reformers.175.b
+        name = enc_reformers.187.b
 		revert_congress = yes
-		# modify legitimacy
-		set_temp_variable  = {
-			var = legitimacy_change_var
-			value = -0.20
-		}
-		change_legitimacy = yes
 		}   		
     }
 country_event = { #188 - Utah Plague
@@ -5584,9 +5580,7 @@ country_event = { #190 - Free Press blocks martial law
 	is_triggered_only = yes
     option = { # STOP
         name = enc_reformers.190.a
-		add_stability = -0.25
-		set_country_flag = enc_martial_law_blocked
-		complete_national_focus = enc_law
+		revert_order = yes
 		custom_effect_tooltip = enc_reformers.190.a.tt
 	}
 	option = { # Bye Speech
@@ -6379,7 +6373,7 @@ country_event = { #218 - Our New Capital
 		custom_effect_tooltip = enc_reformers.218.a.tt
 		}		
 	}
-country_event = {#219 House or Senate
+country_event = {#219 - House or Senate
 	id = enc_reformers.219
 	title = enc_reformers.219.t
 	desc = enc_reformers.219.d
@@ -6388,13 +6382,14 @@ country_event = {#219 House or Senate
 	is_triggered_only = yes	
 	option = {# Representative Congress
 		name = enc_reformers.219.a
-		custom_effect_tooltip = enc_reformers.219.a.tt
+		trigger = { has_completed_focus = enc_expand_human_definition }
+		add_popularity = { ideology = people popularity = 0.10 }
 	}
 	option = {# Advice and Consent
 		name = enc_reformers.219.b
-		trigger = { NOT = { has_completed_focus = enc_expand_human_definition } }
+		trigger = { has_completed_focus = enc_segregation }
+		add_popularity = { ideology = elites popularity = 0.10 }
 		set_country_flag = segregate_senate
-		custom_effect_tooltip = enc_reformers.219.b.tt
 	}
 }	
 country_event = { #220- Congressional Criticism of Requisitions
@@ -6402,21 +6397,20 @@ country_event = { #220- Congressional Criticism of Requisitions
     title = enc_reformers.220.t
     desc = {
         text = enc_reformers.220.d.segregation
-        trigger = {has_completed_focus = enc_segregation }
+        trigger = { has_completed_focus = enc_segregation }
 	}
-	 desc = {
+	desc = {
         text = enc_reformers.220.d.integration
-        trigger = {has_completed_focus = enc_expand_human_definition }
+        trigger = { has_completed_focus = enc_expand_human_definition }
 	}
     picture = GFX_event_enc_senate
-    fire_only_once = YES
+    fire_only_once = yes
     trigger = {
-		has_completed_focus = enc_requisition_of_resources
+		has_country_flag = enc_requisitioned_resources
 		has_country_flag = enc_empowered_congress
-		has_country_flag = enc_requisition_of_resources_flag
-	}		
+	}	
 	mean_time_to_happen = {
-		days = 100
+		days = 200
 	}  
     option = { # No big
         name = enc_reformers.220.a
@@ -6431,12 +6425,13 @@ country_event = { #220- Congressional Criticism of Requisitions
 	option = { # Democracy doesn't like corruption
         name = enc_reformers.220.b
 		trigger = {has_completed_focus = enc_expand_human_definition }
-		add_stability = -0.25
 		set_temp_variable  = {
 			var = legitimacy_change_var
-			value = -0.20
+			value = -0.10
 		}
 		change_legitimacy = yes
+		set_temp_variable = { stability_loss_factor = 0.33 } # mildly pissed off people
+		stability_loss_based_on_people_popularity = yes
 	}
 	option = { # Cancel program
         name = enc_reformers.220.c
@@ -7060,7 +7055,7 @@ country_event = {#300 - state protests!
 		# todo mandatory patriotism stops protests
 		not = { has_country_flag = enc_protests_over } 
 		OR = {
-			has_completed_focus = enc_requisition_of_resources
+			has_country_flag = enc_requisitioned_resources
 			has_idea = ENC_emergency_labour_draft
 			not = {
 				or = {
@@ -7174,7 +7169,7 @@ country_event = {#300 - state protests!
 		if = { # not recognized as human, please do so
 			limit = {
 				not = {
-					has_completed_focus = enc_the_mutant_question # todo check
+					has_completed_focus = enc_the_mutant_question
 				}
 			}
 			hidden_effect = {			
@@ -7548,7 +7543,7 @@ country_event = {#307 - The ruler president
 			create_country_leader  = {
 				name = "Douglas Granite"
 				desc = "Granite_desc"
-				picture = "gfx/leaders/portrait_douglas_enclave.dds"
+				picture = "gfx/leaders/portrait_douglas_usa.dds"
 				expire = "3000.1.1"
 				ideology = benevolent_dictatorship
 				traits = {}
