@@ -4857,6 +4857,7 @@ news_event = {#165 - Didn't Nuke Flagstaff
 		NOT = { country_exists = CES }
 		NOT = { country_exists = NCR }
 		NOT = { has_country_flag = enc_flagstaff_nuked }
+		owns_state = 520
 		has_completed_focus = enc_reform
 				} 
 	 mean_time_to_happen = { days = 5 }
@@ -5520,9 +5521,7 @@ country_event = { #188 - Utah Plague
 				NCN = { add_stability = -0.15
 					add_war_support = -0.10	
 					}
-				UIN = { add_stability = -0.15
-						add_war_support = -0.10
-					}
+				CES = { annex_country = { target = UIN } }
 				CRZ = { add_stability = -0.15
 						add_war_support = -0.10
 					}		
@@ -6572,7 +6571,7 @@ news_event = {#223 - The Legion Marches
     is_triggered_only = yes	
 	
 	
-	option = {# This is yoru fault
+	option = {# This is your fault
 		name = enc_reformers.223.a
 		CES = { 
 			random_neighbor_country = {
@@ -6593,9 +6592,13 @@ news_event = {#223 - The Legion Marches
 					} 
 				}	
 			}
+			add_ai_strategy = {
+				type = declare_war
+				id = PREV.PREV
+				value = 200
+			}
 		}
-		set_variable = { CES_food = PREV }
-		}	
+	}	
 }
 
 
@@ -7041,7 +7044,132 @@ country_event = {#242 -veronica
 		custom_effect_tooltip = enc_reformers.241.a.tt
 		
 	}
-}						
+}
+country_event = {#243 - Communist Uprising
+	id = enc_reformers.243
+	title = enc_reformers.243.t
+	desc = enc_reformers.243.d
+	picture = GFX_event_china_poster
+	fire_only_once = yes	
+    is_triggered_only = yes
+	option = {#Afraid of Commies
+		name = enc_reformers.243.a
+		add_stability = -0.05
+	}
+}
+country_event = {#244 - Heaven's Gates
+	id = enc_reformers.244
+	title = enc_reformers.244.t
+	desc = enc_reformers.244.d
+	picture = GFX_event_HEA_crusade
+	fire_only_once = yes	
+    is_triggered_only = no 
+	trigger = {
+		NOT = {
+			country_exists = NCN
+			country_exists = NCR 
+		}
+	}
+	mean_time_to_happen = { days = 400 }
+	option = {#More enemies!
+		name = enc_reformers.244.a
+		HEA = { 
+                if = { 
+                    limit = { is_in_faction = yes } 
+                    dismantle_faction = yes     
+                }
+		}
+		CES = {
+			add_to_faction = HEA 
+		}
+			
+	}
+}
+
+country_event = {#245 - GOAT
+	id = enc_reformers.245
+	title = enc_reformers.245.t
+	desc = enc_reformers.245.d
+	picture = GFX_event_enc_school
+	fire_only_once = yes	
+	trigger = {
+		has_completed_focus = enc_screening
+	}
+	mean_time_to_happen = { days = 35 }
+	option = {# Tests
+		name = enc_reformers.245.a
+		add_popularity = { ideology = elites popularity = 0.05 }
+		add_stability = -0.02
+	}
+	option = {# No Tests
+		name = enc_reformers.245.b
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = 0.05
+		}
+		change_legitimacy = yes
+	}
+}		
+
+country_event = {#246 - Stealing the Declaration of Independence
+	id = enc_reformers.246
+	title = enc_reformers.246.t
+	desc = enc_reformers.246.d
+	picture = GFX_event_enc_capitol_ruins
+	fire_only_once = yes	
+	is_triggered_only = yes 
+	option = {# Grab and Go
+		name = enc_reformers.246.a
+		add_war_support = 0.05	
+	}
+	option = {# Irony!
+		name = enc_reformers.246.b
+		add_manpower = -1000
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = 0.05
+		}
+		change_legitimacy = yes	
+	}	
+}		
+
+country_event = {#247 - Hayes Protests
+	id = enc_reformers.247
+	title = enc_reformers.247.t
+	desc = enc_reformers.247.d
+	picture = GFX_event_enc_protests_ncr_flag 
+	fire_only_once = yes	
+	trigger = { 
+		has_completed_focus = enc_screening
+	}
+	mean_time_to_happen = { days = 70 }
+	option = {# Come on
+		name = enc_reformers.247.a
+		add_popularity = { ideology = people popularity = 0.05 }
+	}
+}
+country_event = {#248 - Vote Rigging :(
+	id = enc_reformers.248
+	title = enc_reformers.248.t
+	desc = enc_reformers.248.d
+	picture = GFX_event_ENC_USA_flag
+	fire_only_once = yes	
+	trigger = { 
+		has_completed_focus = enc_expand_human_definition 
+		has_completed_focus = enc_empower_congress
+	}
+	mean_time_to_happen = { days = 70 }
+	option = {# Come on
+		name = enc_reformers.248.a
+		add_popularity = { ideology = elites popularity = 0.05 }
+	}
+		option = {# Come on
+		name = enc_reformers.248.b
+		add_political_power = 25
+		custom_effect_tooltip = enc_reformers.248.b.tt
+	}
+}												
+								
 country_event = {#300 - state protests!
 	id = enc_reformers.300
 	title = enc_reformers.300.t
@@ -7584,7 +7712,7 @@ country_event = {#308 - Vice President Dornan
 	id = enc_reformers.308
 	title = enc_reformers.308.t
 	desc = enc_reformers.308.d
-	picture =  GFX_event_enc_vice_president # todo
+	picture =  GFX_event_ENC_camp_navarro
 	
 	fire_only_once = no	
 	is_triggered_only = yes
@@ -7594,6 +7722,7 @@ country_event = {#308 - Vice President Dornan
 		add_country_leader_trait = vice_president_dornan_trait
 		add_popularity = { ideology = ruler popularity = 0.10 }
 		set_country_flag = vice_president_dornan_flag
+		custom_effect_tooltip = enc_reformers.308.a.tt
 	}
 	option = { # Changed my mind
 		name = enc_reformers.308.b
@@ -7604,7 +7733,7 @@ country_event = {#309 - Vice President hayes
 	id = enc_reformers.309
 	title = enc_reformers.309.t
 	desc = enc_reformers.309.d
-	picture =  GFX_event_enc_vice_president # todo
+	picture =  GFX_event_ENC_double_flag_long
 	
 	fire_only_once = no	
 	is_triggered_only = yes
@@ -7624,7 +7753,7 @@ country_event = {#310 - Vice President lynette
 	id = enc_reformers.310
 	title = enc_reformers.310.t
 	desc = enc_reformers.310.d
-	picture =  GFX_event_enc_vice_president # todo
+	picture =  GFX_event_ARR_arroyo
 	
 	fire_only_once = no	
 	is_triggered_only = yes
