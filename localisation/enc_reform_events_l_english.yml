@@ -242,9 +242,14 @@ enc_reformers.39.b.tt: "§gThe remnants are sent away, no doubt working out thei
 enc_reformers.39.c: "§GWe don't need raiders.\nTheir equipment, however...§!"
 enc_reformers.39.c.tt: "§gThe remnants are tricked into disarming, then executed as deserters, criminals and raiders.§!\n\n"
 ################################################################################################################ -<
-enc_reformers.40.t: "Province connected to our grid!"
-enc_reformers.40.d: "We have finished constructing a power grid in a state. It took a little longer for it too catch on, but before long many of the civilian centers have connected themselves to our grid. Bringing themselves literally and metaphorically in our power."
-enc_reformers.40.a: "And Eden said: 'let there be light!'"
+enc_reformers.40.t: "The Wastelanders"
+enc_reformers.40.d: "With the city of [285.GetName] now fully under our control, we are now governing over a signficant amount of wastelanders. Since we cannot install Enclave members to every single position of influence in the city, some wastelanders have begun exercising an amount of power within our borders."
+enc_reformers.40.a: "I suppose this was inevitable."
+enc_reformers.40.a.tt: "§gThe influence of wastelanders is allowed to increase.§!\n\n"
+enc_reformers.40.b: "Not on my watch, they don't."
+enc_reformers.40.b.tt: "§gMany low level administrative positions in the city are either scrapped or filled by members of the Enclave.§!\n\n"
+enc_reformers.40.c: "We should encourage this."
+enc_reformers.40.c.tt: "§gMore low level administrative positions are opened up for wastelanders.§!\n\n"
 ################################################################################################################ -<
 enc_reformers.41.t: "Our power grid is ready!"
 enc_reformers.41.d: "We are ready to begin connecting states to our power grid.\n From now on, we can connect any state neighboring to a core state to our grid by constructing a civilian power grid.\nOnce built, we will gain a core on that state by pressing the Connect To Grid button in that state's menu.\nShould we lose the Civilian Power Grid, we will soon lose the core.\nKeep in mind that every power grid requires 2 power to maintain."
