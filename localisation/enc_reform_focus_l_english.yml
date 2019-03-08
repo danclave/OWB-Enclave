@@ -527,8 +527,8 @@ enc_crack_the_code_desc: "The [NCR.GetName]§! may believe their rudimentary enc
 enc_model_communities: "Model Communities"
 enc_model_communities_desc: "We can construct settlements free of contamination for the best and brightest of America.  Wastelanders who seek to build this dream can apply for residential passes."
 
-enc_ss_ceasar_start:0 "Operation Brutus"
-enc_ss_ceasar_start_desc:0 "The Legion's ramshackle state was built over the last few decades through ruthless expansion. But Caesar hasn't had time to give it a lasting government... and won't, if we succeed."
+enc_operation_brutus:0 "Operation Brutus"
+enc_operation_brutus_desc:0 "The Legion's ramshackle state was built over the last few decades through ruthless expansion. But Caesar hasn't had time to give it a lasting government... and won't, if we succeed."
 enc_ss_ceasar_bottom:0 "From the Bottom Up"
 enc_ss_ceasar_bottom_desc:0 "The Legion's based upon the backs of men and women who labor under the tyrant's lash. With some encouragement we remind Caesar that Americans will always fight for freedom."
 enc_ss_ceasar_bottom_infiltrate:0 "Infiltrate the Slaves"

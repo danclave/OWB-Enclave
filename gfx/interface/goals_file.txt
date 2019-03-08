@@ -35,7 +35,6 @@
 # GFX_goal_enc_bos_leadership
 # GFX_goal_enc_bos_soldiers
 # GFX_goal_enc_cause_focus
-# GFX_goal_enc_cause_focus.png
 # GFX_goal_enc_citizenship_for_service
 # GFX_goal_enc_cloning
 # GFX_goal_enc_combined_arms
@@ -47,6 +46,7 @@
 # GFX_goal_enc_crack_the_code
 # GFX_goal_enc_defenders
 # GFX_goal_enc_demilitarize_government
+# GFX_goal_enc_department_of_commerce
 # GFX_goal_enc_department_of_defense
 # GFX_goal_enc_department_of_defense_2
 # GFX_goal_enc_department_of_homeland_security
@@ -176,7 +176,6 @@
 # GFX_goal_enc_reform_industry_2
 # GFX_goal_enc_reform_industry_3
 # GFX_goal_enc_reform_the_tribes
-# GFX_goal_enc_reform_the_tribes.png
 # GFX_goal_enc_reject_ghouls
 # GFX_goal_enc_reject_super_mutants
 # GFX_goal_enc_remember

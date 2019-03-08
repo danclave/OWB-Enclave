@@ -147,10 +147,6 @@ spriteTypes = {
             name = "GFX_goal_enc_cause_focus"
  		    texturefile = "gfx/interface/goals/enc_cause_focus.dds"
  	    } 
-        SpriteType = {#enc_cause_focus.png
-            name = "GFX_goal_enc_cause_focus.png"
- 		    texturefile = "gfx/interface/goals/enc_cause_focus.png.dds"
- 	    } 
         SpriteType = {#enc_citizenship_for_service
             name = "GFX_goal_enc_citizenship_for_service"
  		    texturefile = "gfx/interface/goals/enc_citizenship_for_service.dds"
@@ -194,6 +190,10 @@ spriteTypes = {
         SpriteType = {#enc_demilitarize_government
             name = "GFX_goal_enc_demilitarize_government"
  		    texturefile = "gfx/interface/goals/enc_demilitarize_government.dds"
+ 	    } 
+        SpriteType = {#enc_department_of_commerce
+            name = "GFX_goal_enc_department_of_commerce"
+ 		    texturefile = "gfx/interface/goals/enc_department_of_commerce.dds"
  	    } 
         SpriteType = {#enc_department_of_defense
             name = "GFX_goal_enc_department_of_defense"
@@ -710,10 +710,6 @@ spriteTypes = {
         SpriteType = {#enc_reform_the_tribes
             name = "GFX_goal_enc_reform_the_tribes"
  		    texturefile = "gfx/interface/goals/enc_reform_the_tribes.dds"
- 	    } 
-        SpriteType = {#enc_reform_the_tribes.png
-            name = "GFX_goal_enc_reform_the_tribes.png"
- 		    texturefile = "gfx/interface/goals/enc_reform_the_tribes.png.dds"
  	    } 
         SpriteType = {#enc_reject_ghouls
             name = "GFX_goal_enc_reject_ghouls"

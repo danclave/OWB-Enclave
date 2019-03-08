@@ -25,22 +25,6 @@ enc.3.a.tt:0 "§YFranklin Anderson§! of the §YPurist Faction§! becomes the ne
 enc.3.b:0 "Sergeant Dornan supports Douglas Granite."
 enc.3.b.tt:0 "Dornan decides Dr. Anderson is a §R'MO-RON'§! \n §YDouglas Granite§! of the §YReformer Faction§! becomes the new Enclave president."
 ########################################################################################
-enc.4.t:0 "Dealing with Wrights"
-enc.4.d:0 "Some say that the Wright family has spent the last few decades building with one hand and destroying with the other, but compared to the other families this makes them almost redeemable. Mr. Wright's vision of a more peaceful and stable New Reno is not entirely incompatible with our own..."
-enc.4.a:0 "Allow him go legit."
-enc.4.b:0 "There is no place for his kind here."
-########################################################################################
-enc.5.t:0 "Dealing with Bishops"
-enc.5.d:0 "TODO: dealing with the Bishops."
-enc.5.a:0 "Focus on capturing their assets."
-enc.5.b:0 "Focus on apprehending the leader."
-########################################################################################
-enc.6.t:0 "Dealing with Salvatores"
-enc.6.d:0 "TODO: dealing with the Salvatores."
-enc.6.a:0 "He can rule as a puppet."
-enc.6.b:0 "He can live under house arrest."
-enc.6.c:0 "We rule in New Reno now."
-########################################################################################
 enc.7.t:0 "Dealing with Mordinos"
 enc.7.d:0 "The Mordinos long represented the status quo of New Reno. That is to say, criminality, exploitation, drugs and misery. They had many allies but no friends and few are now willing to lay their lives down in defense of the drug lords. We may strike quickly and expect only limited resistance, but some have suggested that we should use the Mordinos to demonstrate we are serious about our Old World values."
 enc.7.a:0 "They will be tried in a court of law."

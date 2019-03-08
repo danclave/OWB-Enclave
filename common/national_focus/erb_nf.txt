@@ -611,6 +611,7 @@ focus_tree = {
 		cost = 2.9
 		ai_will_do = { factor = 1 }
 		available = {
+			has_country_flag = ncr_suspicious
 			has_country_flag = enc_ncr_connections_flag
 			custom_trigger_tooltip = {
 				tooltip = ncr_suspicion_higher_than_25
@@ -764,7 +765,8 @@ focus = {#RADIO - Red Menace
 	focus = {#RADIO - OWB propaganda
 		id = enc_owb_propaganda
 		icon = GFX_goal_enc_owb_propaganda
-		ai_will_do = { factor = 1 } 
+		ai_will_do = { factor = 1 }
+		available = { country_exists = NCR }
 		relative_position_id = enc_radio_civilian
 		x = 0
 		y = 2
@@ -775,9 +777,12 @@ focus = {#RADIO - Red Menace
 		cost = 4.3
 		completion_reward = {
 			NCR = {
-				add_ideas = { ENC_ncr_enclave_propaganda }
+				add_timed_idea  = { 
+					idea = ENC_ncr_enclave_propaganda
+					days = 365
+				}
 			}
-		}		
+		}
 	}	
 
 	####################################
@@ -2003,7 +2008,7 @@ focus = {#RADIO - Red Menace
 	}
 	focus = {#REBUILDING - voting!
 		id = enc_voting_rights_act
-		icon = GFX_goal_enc_presidential_elections
+		icon = GFX_goal_enc_expand_human_definition
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_empower_congress
 		prerequisite = { focus = enc_empower_congress }
@@ -2496,7 +2501,7 @@ focus = {#RADIO - Red Menace
 
 	focus = {#REBUILDING - Department of Commerce
 		id = enc_department_of_commerce
-		icon = GFX_goal_generic_trade
+		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = enc_rebuilding_a_nation }
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_epa
@@ -3420,10 +3425,11 @@ focus = {#Legion Border
 		}
 	}	
 	focus = {#SS-CER-START ---------
-		id = enc_ss_ceasar_start
+		id = enc_operation_brutus 
 		icon = GFX_goal_legion_generic_focus
 		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_axis_evil}
+		prerequisite = { focus = enc_axis_evil }
+		available = { country_exists = CES }
 		relative_position_id = enc_axis_evil
 		x = 3
 		y = 1
@@ -3438,12 +3444,13 @@ focus = {#Legion Border
 		mutually_exclusive = {focus = enc_ss_ceasar_bottom } 
 		icon = GFX_goal_legion_spqr
 		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_ss_ceasar_start}
-		relative_position_id = enc_ss_ceasar_start
+		prerequisite = { focus = enc_operation_brutus}
+		available = { country_exists = CES }
+		relative_position_id = enc_operation_brutus
 		x = -1
 		y = 1
 		cost = 5.8
-	completion_reward = {
+		completion_reward = {
 			country_event = { id = enc_reformers.60 } # the plot against Caesar		
 		}
 	}
@@ -3452,6 +3459,7 @@ focus = {#Legion Border
 		icon = GFX_goal_generic_data_focus
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_ss_ceasar_top}
+		available = { country_exists = CES }
 		relative_position_id = enc_ss_ceasar_top
 		x = 0
 		y = 1
@@ -3463,6 +3471,7 @@ focus = {#Legion Border
 		icon = GFX_goal_legion_immortal_empire
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_ss_ceasar_top_books}
+		available = { country_exists = CES }
 		relative_position_id = enc_ss_ceasar_top_books
 		x = 0
 		y = 1
@@ -3475,8 +3484,9 @@ focus = {#Legion Border
 		icon = GFX_goal_legion_slaves
 		mutually_exclusive = {focus = enc_ss_ceasar_top } 
 		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_ss_ceasar_start}
-		relative_position_id = enc_ss_ceasar_start
+		prerequisite = { focus = enc_operation_brutus}
+		available = { country_exists = CES }
+		relative_position_id = enc_operation_brutus
 		x = 1
 		y = 1
 		cost = 5.8
@@ -3491,7 +3501,10 @@ focus = {#Legion Border
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_ss_ceasar_bottom}
 		relative_position_id = enc_ss_ceasar_bottom
-		available = { has_equipment = { infantry_equipment > 1000 } }
+		available = { 
+			has_equipment = { infantry_equipment > 1000 }
+			country_exists = CES
+		}
 		x = 0
 		y = 1
 		cost = 5.8
@@ -3514,6 +3527,7 @@ focus = {#Legion Border
 		icon = GFX_goal_enc_poison_bull
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_ss_ceasar_bottom_weapons}
+		available = { country_exists = CES }
 		relative_position_id = enc_ss_ceasar_bottom_weapons
 		x = 0
 		y = 1
@@ -4176,7 +4190,7 @@ focus = {#Legion Border
 		}
 	focus = {#NEVADA - Tearing Down the HOuse 
 		id = Enc_Tearing_Down_House
-		icon = GFX_goal_VEG_The_Ultra-Luxe 
+		icon = GFX_goal_VEG_Assassinate_House
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_khan_job
 		x = 0
@@ -5001,6 +5015,7 @@ focus = {#NEVADA - second city
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_american_dream}
 		prerequisite = { focus = enc_radio}
+		available = { country_exists = NCR }
 		relative_position_id = enc_radio
 		x = -7
 		y = 1
@@ -5015,6 +5030,7 @@ focus = {#NEVADA - second city
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_operation_babylon}
 		mutually_exclusive = { focus = enc_the_common_man }
+		available = { country_exists = NCR }
 		allow_branch  = {
 			always = false # todo remove or rework branch
 		}
@@ -5031,6 +5047,7 @@ focus = {#NEVADA - second city
 		icon = GFX_goal_generic_intelligence_exchange
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_the_barons}
+		available = { country_exists = NCR }
 		relative_position_id = enc_the_barons
 		x = 0
 		y = 1
@@ -5047,6 +5064,7 @@ focus = {#NEVADA - second city
 		icon = GFX_goal_NCR_Mojave
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_secret_dealings}
+		available = { country_exists = NCR }
 		relative_position_id = enc_secret_dealings
 		x = 0
 		y = 1
@@ -5060,6 +5078,7 @@ focus = {#NEVADA - second city
 		icon = GFX_goal_generic_forceful_treaty
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_operation_carnaval}
+		available = { country_exists = NCR }
 		relative_position_id = enc_operation_carnaval
 		x = 0
 		y = 1
@@ -5101,7 +5120,7 @@ focus = {#NEVADA - second city
 		x = 0
 		y = 1
 		cost = 5.8
-		available = {NCR = {exists = yes } }
+		available = { country_exists = NCR }
 		completion_reward = {
 			NCR = {
 				add_ideas = ENC_NCR_demoralization_campaign

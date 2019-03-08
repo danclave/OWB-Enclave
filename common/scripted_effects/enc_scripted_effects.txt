@@ -511,7 +511,6 @@ change_douglas_portrait_to_enclave = {
 	}
 }
 
-
 change_douglas_portrait_to_half_usa = {
 	hidden_effect = {
 		create_country_leader  = {
@@ -556,3 +555,58 @@ change_douglas_portrait_to_nevada = {
 	# custom_effects_tooltip = enc_time_for_a_new_flag
 }
 
+comply_with_protests = {
+	if = { # not recognized as human, please do so
+		limit = {
+			not = {
+				has_completed_focus = enc_the_mutant_question
+			}
+		}
+		hidden_effect = {			
+			unlock_national_focus = enc_the_mutant_question
+		}
+		complete_national_focus = enc_expand_human_definition
+	}
+	else_if = { # labour draft exists, demand end of labour draft
+		limit = {
+			has_idea = ENC_emergency_labour_draft
+		}
+		remove_ideas = ENC_emergency_labour_draft
+	}
+	else_if = { # player has not chosen democracy, force change to democracy
+		limit = {
+			not = { has_completed_focus = enc_the_fate_of_our_democracy }
+		}
+		hidden_effect = {			
+			unlock_national_focus = enc_the_fate_of_our_democracy
+		}
+		complete_national_focus = enc_local_elections # todo bypass law_or_order
+	}
+	else_if = { # player has no free press, restore free press
+		limit = {
+			has_no_free_press = yes
+		}
+		add_ideas = { ENC_free_press }
+	}
+	else_if = { # player has taken resource requisition, undo requisition of resources
+		limit = {			
+			has_country_flag = enc_requisitioned_resources
+		}
+		cancel_requisition_civilian_resources = yes
+	}
+	else_if = { # player has not chosen between law or order, force change to law
+		limit = {
+			not = {
+				has_completed_focus = enc_law_and_order # todo check
+			}
+		}
+		hidden_effect = {			
+			unlock_national_focus = enc_law_and_order
+		}
+		complete_national_focus = enc_law # todo bypass law_or_order
+		custom_effect_tooltip = newline
+		effect_tooltip = { choose_law = yes }
+	}
+	add_stability = -0.05
+	add_political_power = -100
+}

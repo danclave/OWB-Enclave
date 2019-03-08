@@ -7294,88 +7294,7 @@ country_event = {#300 - state protests!
 	}
 	option = { # Meet their demands
 		name = enc_reformers.300.dd
-		if = { # not recognized as human, please do so
-			limit = {
-				not = {
-					has_completed_focus = enc_the_mutant_question
-				}
-			}
-			hidden_effect = {			
-				unlock_national_focus = enc_the_mutant_question
-			}
-			complete_national_focus = enc_expand_human_definition
-		}
-		else_if = { # labour draft exists, demand end of labour draft
-			limit = {
-				has_idea = ENC_emergency_labour_draft
-			}
-			removes_ideas = { ENC_emergency_labour_draft }
-		}
-		else_if = { # player has not chosen democracy, force change to democracy
-			limit = {
-				not = { has_completed_focus = enc_the_fate_of_our_democracy }
-			}
-			hidden_effect = {			
-				unlock_national_focus = enc_the_fate_of_our_democracy
-			}
-			complete_national_focus = enc_local_elections # todo bypass law_or_order
-		}
-		else_if = { # player has no free press, restore free press
-			limit = {
-				has_no_free_press = yes
-			}
-			add_ideas = { ENC_free_press }
-		}
-		else_if = { # player has taken resource requisition, undo requisition of resources
-			limit = {			
-				has_country_flag = enc_requisitioned_resources
-			}
-			clr_country_flag = enc_requisitioned_resources
-			if = {
-				limit = {
-					has_full_control_of_state = 253 # shady sands
-				}
-				add_resource = {
-					type = metal
-					amount = -20
-					state = 135
-				}
-				add_resource = {
-					type = advanced_technology
-					amount = -15
-					state = 135
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 135 # sac city
-				}
-				add_resource = {
-					type = electronics
-					amount = -20
-					state = 253
-				}
-				add_resource = {
-					type = fuel
-					amount = -25
-					state = 135
-				}
-			}
-		}
-		else_if = { # player has not chosen between law or order, force change to law
-			limit = {
-				not = {
-					has_completed_focus = enc_law_and_order # todo check
-				}
-			}
-			hidden_effect = {			
-				unlock_national_focus = enc_law_and_order
-			}
-			complete_national_focus = enc_law # todo bypass law_or_order
-		}
-		custom_effect_tooltip = "newline"
-		add_stability = -0.05
-		add_political_power = -100
+		comply_with_protests = yes
 	}
 	option = { # We have bigger problems, people!
 		name = enc_reformers.300.e
@@ -7417,7 +7336,7 @@ country_event = {#301 - state protest turns into massacre!
 	
 	option = {# damn it
 		name = enc_reformers.301.a
-		add_stability = -0.10
+		add_war_support = -0.10
 		hidden_effect = {
 			if = {
 				limit = {
@@ -7432,7 +7351,9 @@ country_event = {#301 - state protest turns into massacre!
 		trigger = {
 			has_idea = ENC_free_press
 		}
-		add_stability = -0.15
+		set_temp_variable = { legitimacy_change_var = -0.10 }
+		change_legitimacy = yes
+		add_stability = -0.05
 		remove_ideas = { ENC_free_press }
 	}
 	option = {# Spin this in the propaganda media
@@ -7691,6 +7612,17 @@ country_event = {#307 - The ruler president
 	option = { # A strong president
 		name = enc_reformers.307.b
 		add_popularity = { ideology = ruler popularity = 0.10 }
+		set_party_name = {
+			ideology = ruler
+			long_name = "Douglas Granite"
+			name = "The President"
+		}
+	}
+	option = { # anti communism
+		name = enc_reformers.307.c
+		trigger = { has_country_flag = enc_red_menace_flag }
+		add_popularity = { ideology = ruler popularity = 0.05 }
+		add_war_support = 0.05
 		set_party_name = {
 			ideology = ruler
 			long_name = "Douglas Granite"
