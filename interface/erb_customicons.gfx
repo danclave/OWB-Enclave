@@ -951,6 +951,10 @@ spriteTypes = {
             name = "GFX_goal_enc_vlt_power"
  		    texturefile = "gfx/interface/goals/enc_vlt_power.dds"
  	    } 
+        SpriteType = {#enc_voting_rights_act
+            name = "GFX_goal_enc_voting_rights_act"
+ 		    texturefile = "gfx/interface/goals/enc_voting_rights_act.dds"
+ 	    } 
         SpriteType = {#enc_warmonger_usa
             name = "GFX_goal_enc_warmonger_usa"
  		    texturefile = "gfx/interface/goals/enc_warmonger_usa.dds"

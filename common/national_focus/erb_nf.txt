@@ -2008,7 +2008,7 @@ focus = {#RADIO - Red Menace
 	}
 	focus = {#REBUILDING - voting!
 		id = enc_voting_rights_act
-		icon = GFX_goal_enc_expand_human_definition
+		icon = GFX_goal_enc_voting_rights_act
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_empower_congress
 		prerequisite = { focus = enc_empower_congress }

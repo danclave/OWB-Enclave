@@ -2251,7 +2251,7 @@ ENC_american_broadcasts = {
 		cost = 75
 		icon = decision_enc_propaganda
 		visible = {
-			# has taken propaganda focus?
+			has_country_flag = enc_red_menace_flag
 		}
 		available = {
 			has_stability < 0.50
@@ -2262,6 +2262,18 @@ ENC_american_broadcasts = {
 		}
 		days_remove = 30
 		days_re_enable = 120
+	}
+	ENC_silence_conspiracy_theorists = {
+		cost = 75
+		icon = decision_enc_propaganda
+		available = {
+			has_stability < 0.50
+		}
+		modifier = {
+			stability_weekly = 0.0350
+		}
+		days_remove = 30
+		fire_only_once = yes
 	}
 	promises_of_peace = {
 		icon = generic_political_discourse
