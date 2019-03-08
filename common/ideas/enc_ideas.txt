@@ -569,6 +569,22 @@ ideas = {
 			   encryption_factor = -0.10
 			}
 		}
+		enc_radio_civilian_upgrade = {  
+			picture = enc_radio
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   political_power_gain = 0.10
+			   decryption_factor = 0.10
+			   encryption_factor = -0.10
+			}
+		}
 		ENC_radio_civilian_old = {  
 			picture = enc_radio
 			allowed = { 
@@ -585,6 +601,20 @@ ideas = {
 			   decryption_factor = 0.10
 			   encryption_factor = -0.10
 			}
+		}
+		ENC_end_of_reformers = {  
+			picture = enc_radio
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   intellectuals_drift = -0.33				
+			   }
 		}
 		ENC_radio_civilian_new = {  
 			picture = enc_radio
@@ -614,6 +644,22 @@ ideas = {
             removal_cost = -1
 			modifier = {
 			   political_power_gain = 0.20
+			   decryption_factor = 0.2
+			   encryption_factor = 0.10
+			}
+		}
+		
+		enc_radio_military_updgrade = {  
+			picture = enc_radio
+			allowed = { 
+				always = no
+            }
+
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
 			   decryption_factor = 0.2
 			   encryption_factor = 0.10
 			}
@@ -1197,6 +1243,30 @@ ideas = {
 			}
 		}
 		
+		ENC_terror_of_wastes = {
+			picture = MOJ_idea_settlements_raided_ncr # todo
+			allowed = { 
+				always = no
+            }
+			cancel = {
+				NOT = {
+					country_exists = NCR
+				}
+			}
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.20
+				army_defence_factor = 0.10 
+			}
+			targeted_modifier = { 
+				tag = ERB 
+				attack_bonus_against = -0.20
+				defense_bonus_against = -0.10 
+			}
+		}
 		ENC_NCR_code_cracked = {
 			picture = MOJ_idea_settlements_raided_ncr # todo
 			allowed = { 
@@ -1213,12 +1283,31 @@ ideas = {
             removal_cost = -1
 			targeted_modifier = { 
 				tag = NCR 
-				attack_bonus_against = 0.2 
+				attack_bonus_against = 0.15
 				defense_bonus_against = 0.10 
 			}
 		}
 
-		
+		TRL_debuff = {
+			picture = MOJ_idea_settlements_raided_ncr # todo
+			allowed = { 
+				always = no
+            }
+			cancel = {
+				NOT = {
+					country_exists = TRL
+				}
+			}
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			targeted_modifier = { 
+				tag = TRL 
+				attack_bonus_against = 0.30
+				defense_bonus_against = 0.30 
+			}
+		}	
 		ENC_servitude = {  
 			picture = enc_slave_labour
 			allowed = { 
@@ -1377,6 +1466,19 @@ ideas = {
 			}
 		}
 		
+		enc_civil_society_idea = {
+			picture = salvaged_military_industry
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				monthly_population = 0.03
+			}
+		}
 		# Californian resistance
 		enc_NCR_resistance = {
 			picture = chi_war_of_resistance3
@@ -1489,7 +1591,7 @@ ideas = {
 			}
 		}
 		enc_martial_law_idea = {  
-			picture = generic_constitutional_guarantee
+			picture = generic_constitutional_guarantees
 			allowed = { 
 				always = no
 			}
@@ -1506,7 +1608,7 @@ ideas = {
 			}
 		}		
 		ENC_Freedom_Silent= {  
-			picture = generic_constitutional_guarantee
+			picture = generic_constitutional_guarantees
 			allowed = { 
 				always = no
 			}
@@ -1722,6 +1824,7 @@ ideas = {
 			   justify_war_goal_time = 0.20
 			   encryption_factor = -0.05
 			   offensive_war_stability_factor = -0.20
+			   people_drift = 0.05
 			}
 		}
 		ENC_free_press_2 = {  
@@ -1738,6 +1841,7 @@ ideas = {
 			   justify_war_goal_time = 0.25
 			   encryption_factor = -0.10
 			   offensive_war_stability_factor = -0.30
+			   people_drift = 0.10
 			}
 		}
 		ENC_mandatory_patriotism = {
@@ -2745,7 +2849,7 @@ ideas = {
 			}
 		}
 		ENC_presidential_powers = {
-			picture = cze_planning_bonus
+			picture = triumphant_will
 			modifier = {
 				mobilization_laws_cost_factor = -0.30
 				economy_cost_factor = -0.30

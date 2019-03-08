@@ -9,6 +9,21 @@ has_more_legitimacy = {
 	}
 }
 
+has_free_press = {
+	OR = {
+		has_idea = ENC_free_press
+		has_idea = ENC_free_press_2
+	}
+}
+
+has_no_free_press = {
+	not = {
+		OR = {
+			has_idea = ENC_free_press
+			has_idea = ENC_free_press_2
+		}
+	}
+}
 
 # set_temp_variable = {
 	# var = legitimacy_check_var

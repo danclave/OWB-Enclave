@@ -223,7 +223,7 @@ ENC_epilogue = {
 ENC_oppose_legion = {
 	icon = category_usa_flag
 	allowed = { tag = ERB }
-	visible = {	has_completed_focus = enc_ss_ceasar_start }	
+	visible = {	has_completed_focus = enc_operation_brutus }	
 }
 ENC_american_broadcasts = {
 	allowed = { tag = ERB }
@@ -236,6 +236,22 @@ ENC_securing_borders = {
 	allowed = { tag = ERB }
 	icon = border_war
 	priority = 10
+}
+ENC_nevada_tribals = {
+	allowed = { tag = ERB }
+	icon = border_war
+	priority = 10
+	icon = category_usa_construction
+}
+
+
+ENC_vice_president = {
+	priority = 1000
+	allowed = { original_tag = ERB }
+	visible = {
+		has_country_flag = enc_select_vice_president
+	}
+	
 }
 
 # ##############################

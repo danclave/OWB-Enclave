@@ -33,7 +33,11 @@ spriteTypes = {
             name = "GFX_event_enc_senate"
  		    texturefile = "gfx/event_pictures/event_enc_senate.tga"
  	    }
-
+		
+		SpriteType = {#event_Think_tank
+            name = "GFX_event_enc_think_tank"
+ 		    texturefile = "gfx/event_pictures/event_enc_think_tank.tga"
+ 	    }
         SpriteType = {#Thanksgiving
             name = "GFX_event_enc_thanksgiving"
  		    texturefile = "gfx/event_pictures/event_enc_thanksgiving.tga"
@@ -50,6 +54,11 @@ spriteTypes = {
         SpriteType = {#event_enc_4th_july
             name = "GFX_event_enc_4th_july"
  		    texturefile = "gfx/event_pictures/event_enc_4th_july.tga"
+ 	    }
+
+        SpriteType = {#event_enc_vice_president
+            name = "GFX_event_enc_vice_president"
+ 		    texturefile = "gfx/event_pictures/event_enc_vice_president.tga"
  	    }
 
         SpriteType = {#event_enc_america_eternity
@@ -572,4 +581,33 @@ spriteTypes = {
             name = "GFX_event_enc_protests_ncr_flag"
  		    texturefile = "gfx/event_pictures/event_enc_protests_ncr_flag.tga"
  	    }
+		SpriteType = {#enc_joshua_graham
+            name = "GFX_event_enc_joshua_graham"
+ 		    texturefile = "gfx/event_pictures/event_enc_joshua_graham.tga"
+ 	    }
+		SpriteType = {#event_enc_legion_conquest
+            name = "GFX_event_enc_legion_conquest"
+ 		    texturefile = "gfx/event_pictures/event_enc_legion_conquest.tga"
+ 	    }
+		SpriteType = {#event_enc_vice_president
+            name = "GFX_event_enc_vice_president"
+ 		    texturefile = "gfx/event_pictures/event_enc_vice_president.tga"
+ 	    }
+		SpriteType = {#event_enclave_flag_raising
+            name = "GFX_event_enclave_flag_raising"
+ 		    texturefile = "gfx/event_pictures/event_enclave_flag_raising.tga"
+ 	    }
+		SpriteType = {#event_enc_ghouls
+            name = "GFX_event_enc_ghouls"
+ 		    texturefile = "gfx/event_pictures/event_enc_ghouls.tga"
+ 	    }
+		SpriteType = {#event_enc_primm_sheriff
+            name = "GFX_event_enc_primm_sheriff"
+ 		    texturefile = "gfx/event_pictures/event_enc_primm_sheriff.tga"
+ 	    }
+		SpriteType = {#event_enc_veronica
+            name = "GFX_event_enc_veronica"
+ 		    texturefile = "gfx/event_pictures/event_enc_veronica".tga"
+ 	    }
 }
+

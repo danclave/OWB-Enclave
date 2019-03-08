@@ -328,25 +328,6 @@ ENC_presidential_powers: "Presidential Dictatorship"
 
 enc_silence_congress: "Silence Congress"
 enc_silence_congress_desc: "The Enclave president has always shared some power with a congress of representatives. While our equivalent was a symbolic institution at best, their word none the less carried some power and their suggestions were noted. It is high time they fall in line."
-###################################
-# MISC
-###################################
-
-
-enc_production_department:0 "US Department of Industry and Commerce"
-enc_production_department_desc:0 "TODO"
-
-enc_defence:0 "US Department of Defense"
-enc_defence_desc:0 "TODO"
-
-enc_consolidate_power:0 "Consolidate Power"
-enc_consolidate_power_desc:0 "TODO"
-
-enc_compromises: "Minor Compromises"
-enc_compromises_desc: "TODO"
-
-
-
 
 enc_assassinate_F:0 "Assassinate Dr. Anderson"
 
@@ -401,8 +382,7 @@ clayton_schultz: "Michael Schultz"
 clayton_schultz_desc: "Schultz traveled from the Raven Rock facility in the Capitol Wasteland on a suicide mission ordered by Colonel Autumn."
 #######################################DESC############################################################################################
 Anderson_desc:0 "Doctor Franklin is a former member of the Enclave's Chemical Corps and the current Enclave President. Formerly involved in several secret projects during the Presidency of Dick Richardson-notably the FEV Experiments of Mariposa and the creation of Frank Horrigan. He seeks to finish what he and his colleagues started four decades ago: the eradication of the mutant menace that dares to tread upon American soil. "
-Granite_desc:0 " Douglas Granite. Son of Sergeant George Granite and a California Caravaneer by the name of Molly, Douglas Granite represents the new Enclave. An Enclave dedicated to the rebuilding of America, and its ideals. Having grown up in the Wasteland amongst both children of the ECC his father once led, and the Wastelanders who they protect, he holds no illusions as to the perceived superiority of the "pure-blooded" over the majority of the Wasteland population. Indeed, due to the circumstances of his birth, he finds those that spout such rhetoric annoying at best, and dangerous at worst. Instilled with the ideals and stories of Old America by his Father, he dreams of the day when America is once again a reunited nation, from sea to shining sea with amber waves of grain and purple mountains majesty."
-
+Granite_desc:0 "Douglas Granite. Commander of Granite Company, named after his late father. The respect these divisions hold for him as been the key to his large amounts of influence within the Enclave, despite ideas about the Enclave's future some would call radical, others, treason."
 benjamin_curling: "Benjamin Curling"
 benjamin_curling_desc: "Benjamin Curling has followed in the footsteps of his father, an acclaimed Enclave researcher who worked for the US Chemical Corps four decaded ago."
 sargeant_dornan: "Arch Dornan"

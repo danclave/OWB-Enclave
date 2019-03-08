@@ -32,6 +32,11 @@ genius_pacifist: "Genius Pacifist"
 salvatore_puppet: "Reluctant Puppet"
 loyal_soldier: "Loyal Soldier"
 
+vice_president_dornan_trait:0 "Vice President Dornan"
+vice_president_hayes_trait:0 "Vice President Hayes"
+vice_president_lynette_trait:0 "Vice President Lynette"
+
+red_scare:0 "Anti Communist"
 ###################################
 # REFORM UI
 ###################################
@@ -85,6 +90,7 @@ ENC_rise_slaves_des: "It's time to remind Caesar that Americans will always figh
 ###################################
 # FLAGS
 ###################################
+enc_red_menace_flag: "Granite Must Be Afraid of The Red Menace"
 enc_court_ordered_elections: "Constitution Upheld by Checks and Balances!"
 enc_free_press_by_court: "Constitution Upheld by Checks and Balances!"
 enc_promised_no_peace_with_bos: "Promised no peace with the Brotherhood"
@@ -131,6 +137,11 @@ ncr_suspicious_clr_tt: "\n§MRemoves the need to hide from the [NCR.GetName]§!"
 costs_100_army_experience: "Costs 100 £army_experience\n"
 costs_50_army_experience: "Costs 50 £army_experience\n"
 costs_25_army_experience: "Costs 25 £army_experience\n"
+
+enc_martial_law_blocked: "Already attempted and failed."
+enc_suspend_elections_blocked: "Already attempted and failed."
+enc_has_law: "Rule of law respected."
+enc_empowered_congress: "Congress Exists"
 ###################################
 # DIPLOMACY
 ###################################
