@@ -1232,29 +1232,58 @@ country_event = {#39 - loyalists want to rejoin
 	}
 }
 
-country_event = {#40 - powered province! (LEGACY)
+country_event = {#40 The Wastelanders (people political party)
 	id = enc_reformers.40
 	title = enc_reformers.40.t
 	desc = enc_reformers.40.d
-	picture = GFX_event_enc_power_grid
-	fire_only_once = no	
+	picture = GFX_event_ENC_secret
+	fire_only_once = yes	
 	is_triggered_only = yes
-	# trigger = {
-		# original_tag = ERB
-		# any_owned_state = {
-			# NOT = { is_core_of = ERB }
-			# civilian_power_grid > 0
-		# }
-	# }
-	option = {# get cores
+	option = {# Let it happen
 		name = enc_reformers.40.a
-		every_owned_state = {
-			limit = {
-				civilian_power_grid > 0
-				NOT = { is_core_of = ERB }
-			}
-			add_core_of = ROOT
+		custom_effect_tooltip = enc_reformers.40.a.tt
+		add_war_support = -0.03
+		set_party_name = {
+			ideology = people 
+			long_name = ENC_people_party_wastelanders_long
+			name = ENC_people_party_wastelanders 
 		}
+		add_popularity = {
+			ideology = people
+			popularity = 0.10
+		}
+		
+	}	
+	option = {# Works against this
+		name = enc_reformers.40.b
+		custom_effect_tooltip = enc_reformers.40.b.tt
+		set_temp_variable = { legitimacy_change_var = -0.03 }
+		change_legitimacy = yes
+		set_party_name = {
+			ideology = people 
+			long_name = ENC_people_party_wastelanders_long
+			name = ENC_people_party_wastelanders 
+		}
+		add_popularity = {
+			ideology = people
+			popularity = 0.05
+		}		
+	}	
+	option = {# Support this
+		name = enc_reformers.40.c
+		custom_effect_tooltip = enc_reformers.40.c.tt
+		set_temp_variable = { legitimacy_change_var = 0.03 }
+		change_legitimacy = yes
+		add_war_support = -0.05
+		set_party_name = {
+			ideology = people 
+			long_name = ENC_people_party_wastelanders_long
+			name = ENC_people_party_wastelanders 
+		}
+		add_popularity = {
+			ideology = people
+			popularity = 0.15
+		}		
 	}	
 }
 
@@ -7646,6 +7675,8 @@ country_event = {#308 - Vice President Dornan
 	
 	option = { # No man rules alone
 		name = enc_reformers.308.a
+		set_politics = { ruling_party = ruler }
+		set_country_leader_ideology = ruler
 		add_country_leader_trait = vice_president_dornan_trait
 		add_popularity = { ideology = ruler popularity = 0.10 }
 		set_country_flag = vice_president_dornan_flag
@@ -7667,6 +7698,8 @@ country_event = {#309 - Vice President hayes
 	
 	option = { # No man rules alone
 		name = enc_reformers.309.a
+		set_politics = { ruling_party = people }
+		set_country_leader_ideology = people
 		add_country_leader_trait = vice_president_hayes_trait
 		add_popularity = { ideology = people popularity = 0.10 }
 		set_country_flag = vice_president_hayes_flag
@@ -7687,6 +7720,8 @@ country_event = {#310 - Vice President lynette
 	
 	option = { # No man rules alone
 		name = enc_reformers.310.a
+		set_politics = { ruling_party = elites }
+		set_country_leader_ideology = elites
 		add_country_leader_trait = vice_president_lynette_trait
 		add_popularity = { ideology = elites popularity = 0.10 }
 		set_country_flag = vice_president_lynette_flag

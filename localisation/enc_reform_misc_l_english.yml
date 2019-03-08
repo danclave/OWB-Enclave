@@ -159,6 +159,9 @@ sabotaged_relations: "Sabotaged Relations"
 # POLITICS
 ENC_elites_party_anti_integration: "Anti-Integrationists"
 ENC_elites_party_anti_integration_long: "The Anti Integration Party"
+
+ENC_people_party_wastelanders_long: "The Wastelanders"
+ENC_people_party_wastelanders: "The Wastelanders"
 ###################################
 # TECHNOLOGY
 ###################################

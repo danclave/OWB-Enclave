@@ -424,15 +424,15 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 4.3
-		completion_reward = {
-		
+		completion_reward = {		
 			add_state_core = 285
 			add_state_core = 184
 			add_state_core = 295
 			add_state_core = 614
 			set_capital = 285
 			add_stability = 0.05
-			country_event = { id = enc_reformers.68  }
+			country_event = { id = enc_reformers.68 }
+			country_event = { id = enc_reformers.40 }
 			custom_effect_tooltip = enc_reno_end.tt
 		}
 	}
