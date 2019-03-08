@@ -1239,6 +1239,21 @@ country_event = {#40 The Wastelanders (people political party)
 	picture = GFX_event_ENC_secret
 	fire_only_once = yes	
 	is_triggered_only = yes
+	# TODO
+	# immediate = {
+		# hidden_effect = {
+			# create_country_leader = {
+				# name = ENC_people_party_wastelanders_leader
+				# picture = # generic wastelander from OWB
+				# expire = "3000.1.1" # never
+				# ideology = despotism #  people ideology from OWB
+				# traits = {
+					
+				# }
+			# }
+		# }
+	# }
+	
 	option = {# Let it happen
 		name = enc_reformers.40.a
 		custom_effect_tooltip = enc_reformers.40.a.tt
