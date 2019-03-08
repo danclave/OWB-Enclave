@@ -2808,7 +2808,7 @@ focus = {#RADIO - Red Menace
 		relative_position_id = enc_rebuilding_a_nation
 		mutually_exclusive = { focus = enc_a_nation_remade }
 		prerequisite = { focus = enc_local_elections }
-		prerequisite = { focus = enc_fbi }
+		prerequisite = { focus = enc_fbi }		
 		available = {
 			has_completed_focus = enc_americans_one_and_all
 		}
