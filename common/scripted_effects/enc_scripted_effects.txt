@@ -555,6 +555,11 @@ change_douglas_portrait_to_nevada = {
 	# custom_effects_tooltip = enc_time_for_a_new_flag
 }
 
+
+##################################################
+### Change Douglas background ####
+##################################################
+
 comply_with_protests = {
 	if = { # not recognized as human, please do so
 		limit = {
@@ -580,7 +585,7 @@ comply_with_protests = {
 		hidden_effect = {			
 			unlock_national_focus = enc_the_fate_of_our_democracy
 		}
-		complete_national_focus = enc_local_elections # todo bypass law_or_order
+		complete_national_focus = enc_empowered_congress # todo bypass law_or_order
 	}
 	else_if = { # player has no free press, restore free press
 		limit = {
