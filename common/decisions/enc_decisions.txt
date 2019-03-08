@@ -497,7 +497,7 @@ ENC_NCR_hiding = {
 				intellectuals > 0.3
 			}
 			check_variable = {
-					legitimacy > 0.249
+					enc_legitimacy > 0.249
 				}
 		}
 		complete_effect = {

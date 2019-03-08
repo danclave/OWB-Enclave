@@ -3249,7 +3249,7 @@ focus = {#RADIO - Red Menace
 			custom_trigger_tooltip = {
 				tooltip = 50_legitimacy
 				check_variable = {
-					var = legitimacy
+					var = enc_legitimacy
 					value > 0.50
 				}
 			}
@@ -3708,7 +3708,7 @@ focus = {#Legion Border
 			custom_trigger_tooltip = {
 				tooltip = 25_legitimacy
 				check_variable = {
-					var = legitimacy
+					var = enc_legitimacy
 					value > 0.249
 				}
 			}
@@ -3796,7 +3796,7 @@ focus = {#Legion Border
 			custom_trigger_tooltip = {
 				tooltip = 25_legitimacy		
 				check_variable = {
-					var = legitimacy
+					var = enc_legitimacy
 					value > 0.249
 				}
 			}
@@ -5096,7 +5096,7 @@ focus = {#NEVADA - second city
 			custom_trigger_tooltip = {
 				tooltip = 25_legitimacy		
 				check_variable = {
-					var = legitimacy
+					var = enc_legitimacy
 					value > 0.299
 				}
 			}

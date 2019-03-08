@@ -147,7 +147,7 @@ scripted_gui = {
 			}
 		}
 	}
-	legitimacy = {
+	enc_legitimacy = {
 		context_type = player_context
 		
 		window_name = "legitimacy_container"

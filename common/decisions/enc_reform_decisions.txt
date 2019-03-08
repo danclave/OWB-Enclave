@@ -117,13 +117,13 @@ enc_executive_orders  = {
 		icon = generic_nationalism # todo
 		custom_cost_text = costs_10_legitimacy
 		visible = {
-			check_variable = { legitimacy > 89.9 }
+			check_variable = { enc_legitimacy > 89.9 }
 		}
 		custom_cost_trigger = {
-			check_variable = { legitimacy > 99.9 }
+			check_variable = { enc_legitimacy > 99.9 }
 		}
 		available = {
-			check_variable = { legitimacy > 99.9 }
+			check_variable = { enc_legitimacy > 99.9 }
 			any_owned_state = {
 				not = { is_core_of = ROOT }
 				has_population > 10000

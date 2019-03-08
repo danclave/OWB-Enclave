@@ -561,7 +561,7 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = 10_legitimacy		
 					check_variable =  {
-						var = legitimacy
+						var = enc_legitimacy
 						value > 0.099
 					}
 				}
@@ -632,7 +632,7 @@ ideas = {
 					custom_trigger_tooltip = {
 						tooltip = 20_legitimacy		
 						check_variable = {
-							var = legitimacy
+							var = enc_legitimacy
 							value > 0.199
 						}
 					}

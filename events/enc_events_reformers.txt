@@ -1239,20 +1239,19 @@ country_event = {#40 The Wastelanders (people political party)
 	picture = GFX_event_ENC_secret
 	fire_only_once = yes	
 	is_triggered_only = yes
-	# TODO
-	# immediate = {
-		# hidden_effect = {
-			# create_country_leader = {
-				# name = ENC_people_party_wastelanders_leader
-				# picture = # generic wastelander from OWB
-				# expire = "3000.1.1" # never
-				# ideology = despotism #  people ideology from OWB
-				# traits = {
+	immediate = {
+		hidden_effect = {
+			create_country_leader = {
+				name = "No One"
+				picture = gfx/leaders/Settler/Portrait_Settler_Generic_2.dds
+				expire = "3000.1.1" # never
+				ideology = commune
+				traits = {
 					
-				# }
-			# }
-		# }
-	# }
+				}
+			}
+		}
+	}
 	
 	option = {# Let it happen
 		name = enc_reformers.40.a
@@ -1575,7 +1574,7 @@ country_event = {#52 - Dr Henry returns
 	is_triggered_only = no
 	mean_time_to_happen = {	days = 60 }
 	trigger = {
-		check_variable = { legitimacy > 0.249 }
+		check_variable = { enc_legitimacy > 0.249 }
 		has_completed_focus = enc_reno_end
 	}	
 	option = {#	Welcome back!
@@ -1623,7 +1622,7 @@ country_event = {#54 - Moreno returns
 	is_triggered_only = no
 	mean_time_to_happen = {	days = 60 }
 	trigger = {
-		check_variable = { legitimacy > 0.249 }
+		check_variable = { enc_legitimacy > 0.249 }
 		has_completed_focus = enc_reno_end
 	}	
 	option = {#	Welcome back!
@@ -2271,7 +2270,7 @@ country_event = {#78 - Arcade Gannon returns
 	is_triggered_only = no
 	mean_time_to_happen = {	days = 30 }
 	trigger = {
-		check_variable = { legitimacy > 0.349 }
+		check_variable = { enc_legitimacy > 0.349 }
 		has_completed_focus = enc_reno_end
 	}	
 	option = {#	Arcade Games
@@ -2927,7 +2926,7 @@ country_event = {#104 - Followers of Apocolypse
     is_triggered_only = no
 	trigger = { 	
 		check_variable = {
-			var = legitimacy
+			var = enc_legitimacy
 			value > 0.50
 		}
 		has_completed_focus = enc_rebuilding_a_nation
@@ -6650,7 +6649,7 @@ country_event = {#224 - Graham Crackers
 	is_triggered_only = no
 	mean_time_to_happen = {	days = 60 }
 	trigger = {
-		check_variable = { legitimacy > 0.749 }
+		check_variable = { enc_legitimacy > 0.749 }
 		NOT = { country_exists = NCN }
 		NOT = {has_completed_focus = enc_segregation }
 	}	
@@ -7076,7 +7075,7 @@ country_event = {#242 -veronica
 	mean_time_to_happen = { days = 100 }
 	trigger = { 
 		has_completed_focus = enc_follower_schooling_nevada
-		check_variable = { legitimacy > 0.249 }
+		check_variable = { enc_legitimacy > 0.249 }
 	}
     option = {# Wee!
 		name = enc_reformers.242.a
@@ -7544,7 +7543,7 @@ country_event = {#305 - Whispers of hope
 	is_triggered_only = no
 	mean_time_to_happen = { days = 300 }
 	trigger = {
-		check_variable = { legitimacy > 0.60 }
+		check_variable = { enc_legitimacy > 0.60 }
 		has_country_flag = enc_mid_game
 		not = { has_completed_focus = enc_segregation }
 	}

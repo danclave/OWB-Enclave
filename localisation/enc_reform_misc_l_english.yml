@@ -61,7 +61,7 @@ install_police_force_tt: "Install Police Force"
 install_police_force: "Install Police Force (§Y100§! £manpower_texticon )"
 enc_police_force_installed: " Police force not already installed."
 
-legitimacy_TOOLTIP:0 "§HLegitimacy§! \n\nCurrent legitimacy: §Y[?legitimacy|%0]§!\n\nLegitimacy is capped at §H100%§!."
+legitimacy_TOOLTIP:0 "§HLegitimacy§! \n\nCurrent legitimacy: §Y[?enc_legitimacy|%0]§!\n\nLegitimacy is capped at §H100%§!."
 
 arm_rebels_tt: "Arm Rebels (§Y[?Root.enc_rebels_we_have_armed|H0]§! £pol_power))"
 arm_rebels_tt_delayed: "§YArm rebels in the state!§!\nWhen the time is right, they will rise up should their petition for independence fail.\n\n[!arm_rebels_click_enabled]"
@@ -162,7 +162,7 @@ ENC_elites_party_anti_integration_long: "The Anti Integration Party"
 
 ENC_people_party_wastelanders_long: "The Wastelanders"
 ENC_people_party_wastelanders: "The Wastelanders"
-ENC_people_party_wastelanders_leader: "no one"
+ENC_people_party_wastelanders_leader:0 "no one"
 ###################################
 # TECHNOLOGY
 ###################################

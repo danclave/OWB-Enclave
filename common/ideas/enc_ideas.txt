@@ -74,7 +74,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				research_time_factor = -0.03
+				research_speed_factor = 0.03
 			}
 		}
 		medtek = {
@@ -174,7 +174,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   research_time_factor = -0.10
+			   research_speed_factor = 0.10
 			   elites_drift = 0.05
 			}
 		}
@@ -198,7 +198,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   research_time_factor = -0.03
+			   research_speed_factor = 0.03
 			 	}
 		}
 		ENC_terraforming = {
@@ -222,7 +222,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   research_time_factor = -0.03
+			   research_speed_factor = 0.03
 			 
 			}
 		}
@@ -376,7 +376,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   research_time_factor = -0.05
+			   research_speed_factor = 0.05
 			}
 		}
 		ENC_EPA = {  
@@ -483,7 +483,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 				political_power_gain = 0.05
 				consumer_goods_factor = 0.05
 			}
@@ -499,7 +499,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-				research_time_factor = -0.08
+				research_speed_factor = 0.08
 				political_power_gain = 0.05
 				consumer_goods_factor = 0.05
 				production_factory_start_efficiency_factor = 0.10
@@ -516,7 +516,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-				research_time_factor = -0.03
+				research_speed_factor = 0.03
 				political_power_gain = 0.10
 				consumer_goods_factor = 0.05
 				conscription = 0.05
@@ -533,7 +533,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-				research_time_factor = -0.08
+				research_speed_factor = 0.08
 				political_power_gain = 0.05
 				consumer_goods_factor = 0.05
 			}
@@ -936,7 +936,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-				research_time_factor = +0.08
+				research_speed_factor = -0.08
 				political_power_gain = -0.20
 			}
 		}
@@ -967,7 +967,7 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				stability_factor = -0.05
-				research_time_factor = -0.05
+				research_speed_factor = 0.05
 				elites_drift = 0.10
 			}
 		}
@@ -982,7 +982,7 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				stability_factor = -0.05
-				research_time_factor = -0.03
+				research_speed_factor = 0.03
 				elites_drift = 0.05
 			}
 		}
@@ -1458,7 +1458,7 @@ ideas = {
 				industry_free_repair_factor = -0.75
 				stability_weekly = -0.005
 				offensive_war_stability_factor	= -0.20
-				research_time_factor = 0.05
+				research_speed_factor = -0.05
 				consumer_goods_factor = 0.20
 				army_org_factor = -0.30
 				army_attack_factor = -0.30
@@ -1531,7 +1531,7 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.005
 				political_power_gain = -1
-				industry_repair_factor	= -0.2 5
+				industry_repair_factor	= -0.25
 				stability_factor= -0.20
 				consumer_goods_factor = 0.105
 				industry_free_repair_factor = -0.75
@@ -1569,7 +1569,7 @@ ideas = {
 			modifier = {
 				stability_weekly = -0.005
 				offensive_war_stability_factor	= -0.20
-				research_time_factor = 0.05
+				research_speed_factor = -0.05
 				consumer_goods_factor = 0.20
 				justify_war_goal_time = 0.50
 			}
@@ -1585,7 +1585,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				offensive_war_stability_factor	= -0.10
-				research_time_factor = 0.02
+				research_speed_factor =  -0.02
 				consumer_goods_factor = 0.02
 				stability_weekly = -0.003
 			}
@@ -1637,7 +1637,7 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.03
 				consumer_goods_factor = -0.03
-				research_time_factor = -0.03
+				research_speed_factor = 0.03
 			}
 		}	
 		ENC_BOS_Connections = {  		
@@ -1651,7 +1651,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   research_time_factor = -0.03
+			   research_speed_factor = 0.03
 			}
 		}
 		ENC_CES_Wisdom = {  
@@ -1857,7 +1857,7 @@ ideas = {
 				conscription = 0.10
 				offensive_war_stability_factor = 0.50
 				justify_war_goal_time = -0.25
-				research_time_factor = 0.05
+				research_speed_factor = -0.05
 				MONTHLY_POPULATION = -0.10
 			}	
 		}
@@ -2561,7 +2561,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   research_time_factor = -0.2
+			   research_speed_factor = 0.2
 			   conscription = -0.005
 			   elites_drift = 0.2
 			}
@@ -2596,7 +2596,7 @@ ideas = {
 			modifier = {
 				conscription = 0.10
 				conscription_factor = 0.10
-				research_time_factor = 0.10
+				research_speed_factor = -0.10
 				industrial_capacity_factory = -0.10
 				mobilization_speed = 0.30
 			}

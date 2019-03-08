@@ -105,7 +105,7 @@ half_legitimacy: "More than §Y50%§! Legitimacy"
 
 available_because_half_legitimacy: "\nOccured because §Y+50%§! Legitimacy."
 
-has_legitimacy_tt: "[?legitimacy]/[?has_legitimacy_var] §Ylegitimacy§!"
+has_legitimacy_tt: "[?enc_legitimacy]/[?has_legitimacy_var] §Ylegitimacy§!"
 ENC_reno_police: "New Reno Police"
 ENC_reno_police_corrupt: "Corrupt New Reno Police"
 Enc_Justice: "Department of Justice"

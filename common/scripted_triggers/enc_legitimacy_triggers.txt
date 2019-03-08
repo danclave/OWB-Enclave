@@ -3,7 +3,7 @@ has_more_legitimacy = {
 	custom_trigger_tooltip = {
 		tooltip = has_legitimacy_tt		
 		check_variable = {
-			var = legitimacy
+			var = enc_legitimacy
 			value > legitimacy_check_var
 		}
 	}

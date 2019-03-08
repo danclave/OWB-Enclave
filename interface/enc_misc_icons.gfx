@@ -247,7 +247,7 @@ spriteTypes = {
 			texturefile = "gfx/interface/icons/decision_demote_officers.dds"
 		}
 		spriteType = {
-			name = "legitimacy"
+			name = "enc_legitimacy_icon"
 			texturefile = "gfx/interface/icons/legitimacy.dds"
 			legacy_lazy_load = no
 		}
