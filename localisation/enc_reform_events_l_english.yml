@@ -566,7 +566,7 @@ enc_reformers.105.c:  "A supermutant comes with a new idea..."
 enc_reformers.105.c.tt: "Available because you chose to integrate supermutant."
 ################################################################################################################
 enc_reformers.106.t: "Redding's Renaissance"
-enc_reformers.106.d: "During the Brotherhood-NCR War, paladins poisoned Redding's gold mines to cripple the NCR's currency.  But now that mutants are joining the Reunited States, a former supermutant miner, Marcus Jacobbson, has suggested we use our technology and mutant radiation resistance to restart the mines and open nearby uranium mines.  Redding's mineral wealth will break the barons once and for all.  Marcus proves that in America, the only color that matters is the color of your money."
+enc_reformers.106.d: "During the Brotherhood-NCR War, paladins poisoned Redding's gold mines to cripple the NCR's currency.  But now that mutants are joining the Reunited States, a former supermutant miner, Marcus Jacobson, has suggested we use our technology and mutant radiation resistance to restart the mines and open nearby uranium mines.  Redding's mineral wealth will break the barons once and for all and proves that in America, the only color that matters is the color of your money."
 enc_reformers.106.a:  "It's the American Dream!"
 ################################################################################################################
 enc_reformers.107.t: "Nuka Cola"
@@ -1306,6 +1306,15 @@ enc_reformers.248.d: "As it turns out, to some Americans, democracy IS negotiabl
 enc_reformers.248.a: "You are all terrible people"
 enc_reformers.248.b: "Let me explain why that's illegal"
 enc_reformers.248.b.tt: "\nBecause you implemented the §YVoting Rights Act§! Lynette can't play these little games."
+############################################################################################################
+enc_reformers.249.t: "The Barons' Grip Tightens"
+enc_reformers.249.d: "The Barons established order after the NCR's collapse, but it took them literally weeks to decide to subvert that order to their own end.  Across vast stretches of New California, the barons rule in their own name, siphoning taxes for their own ends and bribing government officials. This problem will only get worse until we tackle this head on."
+enc_reformers.249.a: "We're going to deal with this one day."
+############################################################################################################
+enc_reformers.250.t: "Barons Demand Autonomy"
+enc_reformers.250.d: "Cementing their authority, the barons now seek self government within the Reunited States.  This is really, really annoying."
+enc_reformers.250.a: "Fine..."
+enc_reformers.250.b: "You guys do realize we have powered armor, right?"
 ## START OF 300 ###
 #############################################################################################################
 enc_reformers.300.t: "Protests in [protesting_state.GetName]"
