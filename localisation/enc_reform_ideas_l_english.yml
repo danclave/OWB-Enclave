@@ -87,6 +87,7 @@ CES_plague_desc: "Enclave defectors helped Caesar create a modified form of FEV.
 enc_NCR__ces_resistance: "Legion Overextension"
 enc_NCR__ces_resistance_desc: "Although the Legion rapidly seized much of New Calfiornia, it has yet to develop the ability to rule it"
 
+enc_legitimacy_dynamic_modifier: "Legitimacy"
 ENC_legitimacy_none: "No Legitimacy"
 ENC_legitimacy_none_desc: "(0-25% legitimacy)\nDespite their claims, the Enclave is seen as little more than dangerous mad men claiming to be a goverment few remember and fewer want. "
 ENC_legitimacy_low: "Little Legitimacy"
@@ -121,6 +122,7 @@ ENC_smuggling: "Smuggling"
 ENC_NCR_smuggling: "Smuggling"
 
 ENC_NCR_demoralization_campaign: "Demoralization Campaign"
+ENC_NCR_demoralization_spies: "Further Demoralization"
 
 ENC_militias:0 "Armed Militias"
 ENC_militias_2:0 "Armed Militias"
@@ -229,11 +231,14 @@ hidden_economy_desc: "The Enclave does not trade with outside factions, as that 
 ###################################
 
 norman_wood:0 "Norman Wood"
+norman_wood_desc:0 "Wood's stern attitude never won him many friends in the Enclave, nor without. But give the man a job and he will get it done. Any task, as long as you don't ask any questions."
 dr_henry:0 "Dr. Henry"
 erb_hayes:0 "Grant C. Hayes"
 erb_wright:0 "Christopher Wright"
+erb_wright_desc:0 "Wright was a major figure in New Reno for years. He seems to have no shortage of connections and organizational skills."
 erb_salvatore:0 "Mason Salvatore"
-erb_salvatore_desc:0 "§WIncrease of NCR suspicion reduced to £pol_power §Y5§! from £pol_power §Y10§!.§!"
+erb_salvatore_desc:0 "Salvatore has finally achieved what he always wanted, to be in charge of New Reno. Sadly for him, he is only so in name, a puppet to throw the NCR off from the real rulers of New Reno."
+erb_salvatore_effect:0 "§WIncrease of NCR suspicion reduced by £pol_power §Y3§!.§!\n"
 erb_arcade_gannon:0 "Arcade Gannon"
 erb_orion_moreno:0 "Orion Moreno"
 army_chief_loyalist:0 "David M. Richardson"

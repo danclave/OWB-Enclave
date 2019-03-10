@@ -61,7 +61,13 @@ install_police_force_tt: "Install Police Force"
 install_police_force: "Install Police Force (§Y100§! £manpower_texticon )"
 enc_police_force_installed: " Police force not already installed."
 
-legitimacy_TOOLTIP:0 "§HLegitimacy§! \n\nCurrent legitimacy: §Y[?enc_legitimacy|%0]§!\n\nLegitimacy is capped at §H100%§!."
+legitimacy_TOOLTIP:0 "§YLegitimacy\nCurrently affected by:§!\nNon-Enclave population: [?enc_percentage_population_non_enclave|%Y]\nLegitimacy relevance: [?enc_legitimacy_relevance|%Y]\nEffects of legitimacy: [?legitimacy_modifier_var|%0+]\n\n§YEffects of current legitimacy:§!\nPolitical Power Gain: [?enc_legitimacy_political_power_factor|%2+]\nNon-core manpower: [?enc_legitimacy_non_core_manpower|%2+]\nMobilization speed: [?enc_legitimacy_mobilization_speed|%2+]"
+legitimacy_TOOLTIP_DELAYED:0 "Legitimacy represents how well we can defend our claim to be the government of the United States. As the non-enclave percentage of our population growth, it will be vital that we are seen as a legitimacy government or enact measures to make the opinions of our citizens less relevant."
+
+legitimacy_variable_details:0 "Total population: [?enc_total_population|Y0]\nEnclave population: [?enclave_population|Y0]\nPercentage population that is Enclave: [?enc_percentage_population_enclave|%Y]\nPercentage population that is not Enclave: [?enc_percentage_population_non_enclave|%Y]\nEffects of legitimacy: [?legitimacy_modifier_var|%0+]"
+legitimacy_variable_details2:0 "\n\n§YEffects of current legitimacy:§!\nPolitical Power Gain: [?enc_legitimacy_political_power_factor|%2+]"
+
+reduce_legitimacy_relevance_tt:0 "Reduce the §Mrelevance§! of legitimacy by §Y33%§!\n\n"
 
 arm_rebels_tt: "Arm Rebels (§Y[?Root.enc_rebels_we_have_armed|H0]§! £pol_power))"
 arm_rebels_tt_delayed: "§YArm rebels in the state!§!\nWhen the time is right, they will rise up should their petition for independence fail.\n\n[!arm_rebels_click_enabled]"

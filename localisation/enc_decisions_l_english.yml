@@ -186,6 +186,9 @@ remember_navarro: "Remember Navarro"
 anti_bos_propaganda: "Anti Brotherhood Propaganda"
 ENC_anti_communist_propaganda: "Warn of the Red Menace"
 ENC_anti_communist_propaganda_desc: "My fellow Americans, we shall never fall to a Communist invasion..."
+ENC_curb_wastelander_influence: "Curb Wastelander Influence"
+ENC_curb_wastelander_influence_desc:0 "Our rapid expansion has left a surprising amount of influence within our borders in the power of wastelanders. Regardless of our opinion towards them, we could consider pulling some power back into our hands."
+
 ##############################
 # SHIFT POLICY 
 ##############################
@@ -260,6 +263,11 @@ ENC_support_OWP: "Support the Old World Party"
 ENC_call_favours: "Call In Favours"
 ENC_send_spies: "Send Out Spies"
 ENC_extract_spies: "Extract Spies"
+ENC_reroute_caravans: "Reroute Crimson Caravans"
+ENC_reroute_caravans_desc:0 "By stealing and replacing documents at the nearby Crimson Caravan outposts, we can prevent the caravans from running into any of our patrols."
+ENC_reroute_caravans_reward: "Prevents any future Crimson Caravan encounters."
+ENC_demoralization:0 "Further Demoralization"
+ENC_demoralization:0 "Our spies can cause further chaos and despair by hijacking radio signals to send news of the imminent defeat of the NCR."
 ENC_desert_rangers_hate: "Sow Tension With the Desert Rangers"
 ENC_desert_rangers_hate_desc: "We can use our spies to sow tensions between the Desert Rangers and the NCR, making them break their alliance and ending any hope of support between them."
 ENC_desert_rangers_hate_tt: "Will give the §Y[DES.GetName]§! strategic reasons to leave or ignore an §YNCR§! alliance.\n\n"

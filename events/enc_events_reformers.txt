@@ -167,7 +167,7 @@ country_event = {#6 - Dealing with Salvatores
 	option = {# puppet
 		name = enc_reformers.6.a
 		custom_effect_tooltip = enc_reformers.6.a.tt
-		custom_effect_tooltip = erb_salvatore_desc
+		custom_effect_tooltip = erb_salvatore_effect
 		custom_effect_tooltip = breaklines
 		# modify legitimacy
 		set_temp_variable  = {
@@ -285,7 +285,7 @@ country_event = {#10 - Dealing with Bishops - assassination
 	id = enc_reformers.10
 	title = enc_reformers.10.t
 	desc = enc_reformers.10.d
-	picture = GFX_event_ENC_secret2
+	picture = GFX_event_ENC_bishop_dead
 	
 	fire_only_once = yes
     is_triggered_only = yes
@@ -370,7 +370,7 @@ country_event = {#13 - Consolidating power
 	option = {# plasma grenade
 		name = enc_reformers.13.b
 		trigger = {
-			# has_country_flag = leader_ruthless
+			has_country_flag = leader_ruthless
 		}
 		custom_effect_tooltip = enc_reformers.13.b.tt
 		remove_ideas = {
@@ -392,6 +392,8 @@ country_event = {#13 - Consolidating power
 				ENC_scientists_traitors_2
 				ENC_officers_traitors_2
 			}
+			unlock_national_focus = enc_purge_officers
+			unlock_national_focus = enc_purge_scientists
 		}
 		add_popularity = { ideology = elites popularity = -0.15 }
 		add_stability = -0.30
@@ -403,7 +405,7 @@ country_event = {#13 - Consolidating power
 		}
 		country_event = { id = enc_reformers.43}
 		custom_effect_tooltip = leader_ruthless_tt
-		set_country_flag = purists_purged
+		set_country_flag = 3
 		set_country_flag = douglas_plasma_grenade
 	}
 }
@@ -484,6 +486,10 @@ country_event = {#15 - Legitimacy turorial
 	
 	fire_only_once = yes
     is_triggered_only = yes
+	
+	immediate = {
+		set_variable = { enc_legitimacy_relevance = 1 }
+	}
 	
 	option = {# Interesting
 		name = enc_reformers.15.a
@@ -671,39 +677,40 @@ country_event = {#21 - Spies in NCR - caught
 	}	
 	mean_time_to_happen = {	days = 300 }
 	
+	immediate = {		
+		clr_country_flag = enc_ncr_spies
+	}
+	
 	option = {# send extraction team
 		name = enc_reformers.21.a
+		custom_effect_tooltip = enc_reformers.21.a.d
 		custom_effect_tooltip = enc_ncr_spies_clr
 		add_manpower = 100
-		clr_country_flag = enc_ncr_spies
 		add_stability = 0.05
 		set_temp_variable = {
 			var = suspicion_change_var
 			value = 10
 		}
 		change_suspicion = yes
-		custom_effect_tooltip = enc_reformers.21.a.d
 	}
 	option = {# give permission to retreat
 		name = enc_reformers.21.b
+		custom_effect_tooltip = enc_reformers.21.b.d
 		custom_effect_tooltip = enc_ncr_spies_clr
-		clr_country_flag = enc_ncr_spies
 		custom_effect_tooltip = enc_reformers.21.c.rs
 		random_list = {
 			20 = { country_event = { id = enc_reformers.22 days = 7 } }
 			80 = { country_event = { id = enc_reformers.31 days = 7 } }
 		}
-		custom_effect_tooltip = enc_reformers.21.b.d
 	}
 	option = {# They should stay
 		name = enc_reformers.21.c
-		custom_effect_tooltip = enc_ncr_spies_clr
+		custom_effect_tooltip = enc_reformers.21.c.d
 		custom_effect_tooltip = enc_reformers.21.c.rs
 		random_list = {
 			40 = { country_event = { id = enc_reformers.22 days = 7 } }
 			60 = { country_event = { id = enc_reformers.30 days = 7 } }
 		}
-		custom_effect_tooltip = enc_reformers.21.c.d
 	}
 }
 country_event = {#22 - Spies in NCR - contact lost
@@ -2291,7 +2298,8 @@ country_event = {#79 - Ulysses
 	trigger = {
 		tag = ERB
 		has_completed_focus = enc_americans_one_and_all
-		}
+		has_country_flag = enc_mid_game
+	}
 	mean_time_to_happen = {
 		days = 15
 	}
@@ -2909,6 +2917,8 @@ country_event = {#103 - Drugs
 	}
 	option = {# Heal The Sick
 		name = enc_reformers.103.c
+			set_temp_variable = { legitimacy_change_var = 0.03 }
+			change_legitimacy = yes
 			add_resource = { type = advanced_technology amount = 5 state = 285 }
 			add_resource = { type = electronics amount = 5 state = 285 }
 			set_country_flag = enc_healers
@@ -3030,7 +3040,7 @@ country_event = {#107 Nuka Cola
 	option = {#	Jet
 		name = enc_reformers.107.a
 		trigger = { has_country_flag = enc_drugs }
-		add_ideas = enc_nuka_cola
+		add_timed_idea = { idea = enc_nuka_cola days = 500 }
 		clr_country_flag = enc_drugs 
 		set_temp_variable  = {
 			var = legitimacy_change_var
@@ -4666,7 +4676,7 @@ country_event = { #158 - Rangers
 	}
 }										
 
-country_event = { #159 - Ghoul Libel
+country_event = { #159 - Citizens League
 	id = enc_reformers.159
 	title = enc_reformers.159.t
 	desc = enc_reformers.159.d
@@ -4689,8 +4699,9 @@ country_event = { #159 - Ghoul Libel
 			value = 0.05
 		}
 		change_legitimacy = yes
+		add_political_power = -100
 		add_popularity = {
-			ideology = elites popularity = 0.15
+			ideology = elites popularity = 0.10
 		}
 		set_party_name = {
 			ideology = elites
@@ -4709,13 +4720,15 @@ country_event = { #159 - Ghoul Libel
 	option = {#	Fair!
 		name = enc_reformers.159.b
 		custom_effect_tooltip = enc_reformers.159.b.tt
+		add_stability = 0.05
+		add_political_power = 100
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = -0.05
 		}
 		change_legitimacy = yes
 		add_popularity = {
-			ideology = elites popularity = 0.10
+			ideology = elites popularity = 0.15
 		}
 		set_party_name = {
 			ideology = elites
@@ -4759,6 +4772,30 @@ country_event = { #159 - Ghoul Libel
 			traits = {}
 		}
 		custom_effect_tooltip = leader_charismatic_tt
+	}
+	option = {#	Wall
+		name = enc_reformers.159.e
+		trigger = {
+			has_country_flag = leader_ruthless
+		}
+		custom_effect_tooltip = enc_reformers.159.e.tt
+		add_popularity = {
+			ideology = elites popularity = 0.05
+		}
+		set_party_name = {
+			ideology = elites
+			long_name = "The League of Citizens"
+			name = "Citizens League"
+		}
+		create_country_leader = {
+			name = "First Citizen Lynette"
+			desc = "POLITICS_CITIZEN_DESC"
+			picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
+			expire = "2500.1.1"
+			ideology = militarist_technocracy
+			traits = {}
+		}
+		custom_effect_tooltip = leader_ruthless_tt
 	}
 }
 		
@@ -6335,7 +6372,10 @@ country_event = {#215 - Red Menace
 	picture =  GFX_event_CES_vulpes
 	
 	fire_only_once = yes	
-	trigger = {	has_completed_focus = enc_red_menace }	
+	trigger = {	
+		has_completed_focus = enc_red_menace
+		has_country_flag = enc_mid_game
+	}	
 	mean_time_to_happen = {	days = 500 }
 	
 	option = {#OH WELL
@@ -6606,8 +6646,7 @@ news_event = {#223 - The Legion Marches
 	picture = GFX_event_enc_legion_conquest
 	
 	fire_only_once = no	
-    is_triggered_only = yes	
-	
+    is_triggered_only = yes		
 	
 	option = {# This is your fault
 		name = enc_reformers.223.a
@@ -6677,16 +6716,16 @@ country_event = {#225 - Washington Brotherhood Attacks!
 	
 	fire_only_once = yes	
     is_triggered_only = no
-	trigger = {	
-		tag = ERB 
+	trigger = {
+		original_tag = ERB 
 		has_completed_focus = enc_reform
 		is_neighbor_of = WBH
-			NOT = {
-				country_exists = NCR
-			}	
+		NOT = {
+			country_exists = NCR
+		}
 		OR = {
-				NOT = {	country_exists = BEL }
-				NOT = {country_exists = YAK }
+			NOT = {	country_exists = BEL }
+			NOT = {country_exists = YAK }
 		}	
 	}
 	mean_time_to_happen = {	days = 30 }	
@@ -6710,6 +6749,7 @@ country_event = {#226 - WBH Buff
 	trigger = {	
 		tag = ERB 
 		has_completed_focus = enc_reform
+		has_completed_focus = enc_purge_opposition
 		WBH = { is_neighbor_of = TRL} 
 	}
 	mean_time_to_happen = {	days = 30 }	
@@ -6790,8 +6830,9 @@ country_event = {#228 - Commie Start
 		custom_effect_tooltip = enc_reformers.228.a.tt
 		country_event = { id = enc_reformers.2 }
 	}
-	option = {#  Sillly
+	option = {#  Silly
 		name = enc_reformers.228.b
+		add_stability = 0.05
 		country_event = { id = enc_reformers.2 }
 	}
 }
@@ -6907,7 +6948,7 @@ news_event = {#233 - Legion Conquest of New Canaan
     is_triggered_only = no
 	trigger = {
 		has_completed_focus = enc_reform
-		NOT = { country_exists = TRL }		
+		NOT = { country_exists = NCN }		
 	}
 	mean_time_to_happen =  { days = 10 } # quick
 	option = {# Now they're a threat 
@@ -6925,10 +6966,9 @@ news_event = {#234 - Vice President
 	fire_only_once = yes	
     is_triggered_only = no
 	trigger = {
-		has_completed_focus = enc_reform
-		NOT = { country_exists = TRL }		
+		has_completed_focus = enc_rebuilding_a_nation
 	}
-	mean_time_to_happen =  { days = 10 } # quick
+	mean_time_to_happen =  { days = 30 } # quick
 	option = {# Tough Call 
 		name = enc_reformers.234.a
 		custom_effect_tooltip = enc_reformers.234.a.tt

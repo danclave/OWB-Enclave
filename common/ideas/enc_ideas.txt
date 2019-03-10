@@ -595,11 +595,11 @@ ideas = {
 				always = yes
             }
             removal_cost = -1
-			modifier = {
-			   intellectuals_drift = 0.1				
+			modifier = {			
 			   political_power_gain = 0.30
 			   decryption_factor = 0.10
 			   encryption_factor = -0.10
+			   consumer_goods_factor = -0.05
 			}
 		}
 		ENC_end_of_reformers = {  
@@ -1182,7 +1182,7 @@ ideas = {
 		}
 		
 		ENC_completed_integration = {
-			picture = generic_flexible_foreign_policy2
+			picture = enc_completed_integration
 			allowed = { 
 				always = no
             }
@@ -1242,7 +1242,20 @@ ideas = {
 				surrender_limit = -0.10
 			}
 		}
-		
+		ENC_NCR_demoralization_spies = {
+			picture = legacy_of_navarro
+			allowed = { 
+				always = no
+            }
+            allowed_civil_war = { 
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.05
+				surrender_limit = -0.10
+			}
+		}
 		ENC_terror_of_wastes = {
 			picture = MOJ_idea_settlements_raided_ncr # todo
 			allowed = { 

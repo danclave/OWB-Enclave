@@ -1,4 +1,4 @@
-update_legitimacy = {
+update_legitimacy = { # currently unused
 	clamp_variable = { # move this clamp
 		var = enc_legitimacy
 		min = 0
@@ -122,16 +122,15 @@ change_legitimacy = {
 				check_variable = { legitimacy_change_var < 0 }
 			}
 			custom_effect_tooltip = lose_legitimacy_tt
-			update_legitimacy = yes
 		}
 		else_if  = {
 			limit = {
 				check_variable = { legitimacy_change_var > 0 }
 			}
 			custom_effect_tooltip = gain_legitimacy_tt
-			update_legitimacy = yes
 		}	
 	}
+	advanced_update_legitimacy = yes
 }
 
 has_more_legitimacy = {
@@ -154,6 +153,96 @@ balance_legitimacy_gain = {
 	else = { # if negative legitimacy gain
 		multiply_temp_variable = { legitimacy_change_var = 1 }		
 	}
+}
+
+advanced_update_legitimacy = {
+	# our legitimacy_modifier_var will be a percentage between -100% and 100%
+	# it will be applied to a numner of specific modifiers, to determine their strength based on legitimacy
+	# the formula is (legitimacy - 50%) * 2. So that each percentage of legitimacy above and below 50% accounts for 2% of positive and negative modifier strength respectively
+
+	set_variable = { legitimacy_modifier_var = enc_legitimacy }
+	subtract_from_variable  = { legitimacy_modifier_var = 0.50 }
+	multiply_variable = { legitimacy_modifier_var = 2 }
+	# this IF block activates when the player has less than 50% legitimacy, IE the legitimacy_modifier_var is less than 0, IE the modifier effects will be negative
+	# currently, it calculates the amount of non-enclave population so that the negative effects of low legitimacy scale with non-enclave population
+	# the result is that low legitimacy early game is no problem, low legitimacy late is horrible
+
+	# impact of negative impact is decided by how much of your population is non-enclave ( 1 - (10k / total population))
+	set_variable = { enc_percentage_population_non_enclave = 1 } # start at 100%, then we subtract Enclave population
+	set_variable = { enclave_population = 159.state_population } # population of Siera Army Depot		
+	# calculate total population
+	hidden_effect = {
+		set_variable = { enc_total_population = 0 }
+		every_owned_state = { # calculate total population, MTG has a country var for this, I think.
+			# limit = { is_core_of = ROOT }
+			add_to_variable = { ROOT.enc_total_population = THIS.state_population }
+		}
+	}		
+	
+	# calculate percentage of population that is enclave by dividing enc pop by total pop
+	set_variable = { enc_percentage_population_enclave = enclave_population }
+	# enclave_population variable now represents the percentage of the population that is NON-enclave
+	divide_variable = { enc_percentage_population_enclave = enc_total_population } 	
+	# Now we multiply our legitimacy_modifier_var by the amount of non-enclave population. Since Enclave pops don't care about legitimacy.
+	subtract_from_variable = { enc_percentage_population_non_enclave = enc_percentage_population_enclave }
+	
+	# weigh Enclave population to be more important
+	set_temp_variable = { weighed_non_enclave_population = enc_percentage_population_enclave }
+	multiply_temp_variable = { weighed_non_enclave_population = 2 } # amount of weighing
+	set_temp_variable = { weighed_population_modifier = enc_percentage_population_non_enclave }	
+	subtract_from_temp_variable  = { weighed_population_modifier = weighed_non_enclave_population }
+	clamp_temp_variable = {	var = weighed_population_modifier min = 0 max = 1	}
+
+	# apply this all to the legitimacy_modifier_var
+	multiply_variable = { legitimacy_modifier_var = weighed_population_modifier }
+	
+	# Finally, we multiple the result by the enc_legitimacy_relevance (defaulting to 1 for no effect)
+	# the function of this variable is to be modified elsewhere by national focuses that make negative legitimacy less relevant (the segregationist / authoritarian ones)
+	multiply_variable = { legitimacy_modifier_var = enc_legitimacy_relevance?1 }
+
+	# time to set the variables that will affect our dynamic legitimacy modifier
+
+	# set political_power_factor bonus
+	set_variable = { enc_legitimacy_political_power_factor = 0.50 }
+	multiply_variable = { enc_legitimacy_political_power_factor = legitimacy_modifier_var }
+	
+	# set political_power_factor bonus
+	set_variable = { enc_legitimacy_non_core_manpower = 0.25 }
+	multiply_variable = { enc_legitimacy_non_core_manpower = legitimacy_modifier_var }
+	
+	# set political_power_factor bonus
+	set_variable = { enc_legitimacy_mobilization_speed = 0.30 }
+	multiply_variable = { enc_legitimacy_mobilization_speed = legitimacy_modifier_var }
+	
+	#custom_effect_tooltip = legitimacy_variable_details
+	#custom_effect_tooltip = legitimacy_variable_details2
+
+	# other suggested effects
+
+	# political_power_factor
+
+	# non_core_manpower
+	# conscription
+	# conscription_factor
+	# mobilization_speed
+
+	# army_core_attack_factor
+	# army_core_defence_factor
+	# army_org_factor
+	# army_morale_factor
+
+	# MONTHLY_POPULATION
+	# production_speed_civilian_power_grid_factor
+	# consumer_goods_factor
+	# industrial_capacity_factory
+	# production_speed_buildings_factor
+	# local_resources_factor
+}
+
+reduce_legitimacy_relevance = {
+	multiply_variable = { enc_legitimacy_relevance = enc_reduce_legitimacy_relevance_factor?0.66 }
+	custom_effect_tooltip = reduce_legitimacy_relevance_tt
+	hidden_effect = { advanced_update_legitimacy = yes }
 }
 
 ##################################
