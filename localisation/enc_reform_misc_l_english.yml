@@ -96,6 +96,8 @@ ENC_rise_slaves_des: "It's time to remind Caesar that Americans will always figh
 ###################################
 # FLAGS
 ###################################
+enc_barons1: "The Barons Have Established Order"
+enc_barons2: "Barons consolidate power"
 enc_red_menace_flag: "Granite Must Be Afraid of The Red Menace"
 enc_court_ordered_elections: "Constitution Upheld by Checks and Balances!"
 enc_free_press_by_court: "Constitution Upheld by Checks and Balances!"

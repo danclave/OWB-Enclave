@@ -1076,6 +1076,107 @@ ENC_infiltrating_NCR = {
 }
 
 ENC_nation_building = {
+	ENC_baron_crisis_1 = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		activation = {
+			has_country_flag = enc_barons1
+		}
+		available = {
+			OR = {
+				has_completed_focus = enc_martial_law 
+				AND = {
+					has_completed_focus = enc_fbi
+					has_completed_focus = enc_voting_rights_act
+					people > 0.5 
+				NOT = {has_country_flag = enc_barons1}
+				}
+			}
+		}	 
+		cancel_trigger = {	}
+		is_good = no
+		days_mission_timeout = 100
+		visible = {original_tag = ERB }
+		timeout_effect = { 
+			country_event = { id = enc_reformers.249 }
+			}
+	complete_effect = { }
+	}
+	ENC_baron_crisis_2 = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		activation = {
+			has_country_flag = enc_barons2
+		}
+		available = {
+			OR = {
+				has_completed_focus = enc_martial_law 
+				AND = {
+					has_completed_focus = enc_fbi
+					has_completed_focus = enc_voting_rights_act
+					people > 0.5 
+				NOT = { has_country_flag = enc_barons2 }
+				}
+			}
+		}	 
+		cancel_trigger = {	}
+		is_good = no
+		days_mission_timeout = 200
+		visible = {original_tag = ERB }
+		timeout_effect = { 
+			country_event = { id = enc_reformers.250 }
+		}
+		complete_effect = { }
+	}
+	ENC_dornan_barons = {
+		icon = enc_helmet_color
+		cost = 50
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		allowed = {
+			original_tag = ERB
+		}
+		available = {	
+		}
+		visible = {
+			OR = {
+				has_country_flag = enc_barons2
+			}
+		}
+		complete_effect = {
+			add_popularity = { ideology = ruler popularity = 0.10 }
+			clr_country_flag = enc_barons2
+			custom_effect_tooltip = ENC_dornan_barons.tt
+		}
+	}
+	ENC_marcus_barons = {
+		icon = decision_vault_boy
+		cost = 50
+		days_remove = 1
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		allowed = {
+			original_tag = ERB
+		}
+		available = {
+			has_completed_focus = enc_accept_super_mutants
+		}
+		visible = {
+			has_country_flag = enc_barons2
+		}
+		complete_effect = {
+			add_popularity = { ideology = people popularity = 0.05 }
+			clr_country_flag = enc_barons2
+			country_event = {id = enc_reformers.106 }
+		}
+	}
 	ENC_boost_civilian_economy = {
 		icon = decision_vault_boy
 		cost = 50

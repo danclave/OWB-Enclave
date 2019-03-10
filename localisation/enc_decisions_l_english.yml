@@ -29,6 +29,16 @@ ENC_reveal_to_ncr_desc: "We cannot hide from the NCR forever, but we may be able
 ENC_reveal_to_ncr.tt: "\nRequires more than §Y30% legitimacy§!"
 
 # CRISIS
+ENC_baron_crisis_1: "The Brahmin Barons Establish Order"
+ENC_baron_crisis_1_desc: "In the chaos following the NCR's fall, the Brahmin Barons have established themselves as a force to be reckoned with in northern California.  We'll have to take firm action to reestablish our authority..."
+ENC_baron_crisis_2: "The Barons' Grip Tightens"
+ENC_baron_crisis_2_desc: "Now that the Barons are Gaining Control of northern California, they are wondering why they pay any taxes to the United States at all.  We may have to teach each brahmin man why they must mind their Uncle Sam..."
+ENC_dornan_barons: "Send Dornan to Crush the Barons"
+ENC_dornan_barons_desc: "Allow Sergeant Dornan to demonstrate why the Brahmin Barons shouldn't play these games with the Enclave"
+ENC_dornan_barons.tt: "Sergeant Dornan's aggressive negotiations will persuade the survivors to stop playing games."
+ENC_marcus_barons: "Listen to Marcus"
+ENC_marcus_barons_desc: "One of our supermutant citizens has some ideas about breaking the barons' power.  What if we harnessed American engineering to supermutant labor, reviving the mines of Redding?"
+
 ENC_red_menace_crisis: "Communist Uprising!"
 ENC_red_menace_crisis_desc: "Unless we stop them, the §RCommunists§!  will rise up against America!"
 ENC_opposition_to_segregation: "Demands for Equal Rights!"
