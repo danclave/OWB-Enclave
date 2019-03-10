@@ -2981,28 +2981,16 @@ country_event = {#105 Brahmin Barons
 		tag = ERB
 		141 = { is_owned_by = ERB }
 		NOT = { country_exists = NCR }
-	}	
+		OR = {
+			has_completed_focus = enc_law
+			has_completed_focus = enc_order }
+	}
 	option = {#	Work with them
 		name = enc_reformers.105.a
+		add_timed_idea = { idea = ENC_accepted_brahmin_barons  days = 500 }
 		add_stability = -0.05
-		add_ideas = ENC_accepted_brahmin_barons
 		add_popularity = { ideology = elites popularity = 0.05	}
-	}
-	option = {#	Cook them
-		name = enc_reformers.105.b
-		add_manpower = -500
-		add_stability = -0.15
-		add_timed_idea = {
-			idea = ENC_rejected_brahmin_barons
-			days = 350 # 50 weeks
-		}
-		custom_effect_tooltip = enc_reformers.105.b.tt
-	}
-	option = {#	Easter Egg
-		name = enc_reformers.105.c
-		trigger = { has_completed_focus = enc_accept_super_mutants }
-		country_event = { id = enc_reformers.106 }
-		custom_effect_tooltip = enc_reformers.105.c.tt	
+		set_country_flag = enc_barons1
 	}
 }
 country_event = {#106 Redding
@@ -6907,7 +6895,7 @@ news_event = {#233 - Legion Conquest of New Canaan
     is_triggered_only = no
 	trigger = {
 		has_completed_focus = enc_reform
-		NOT = { country_exists = TRL }		
+		NOT = { country_exists = NCN }		
 	}
 	mean_time_to_happen =  { days = 10 } # quick
 	option = {# Now they're a threat 
@@ -7205,9 +7193,52 @@ country_event = {#248 - Vote Rigging :(
 		name = enc_reformers.248.b
 		add_political_power = 25
 		custom_effect_tooltip = enc_reformers.248.b.tt
+		trigger = { has_completed_focus = enc_voting_rights_act }
 	}
 }												
-								
+
+country_event = {#249 - Baron Control Intensifies
+	id = enc_reformers.249
+	title = enc_reformers.249.t
+	desc = enc_reformers.249.d
+	picture = GFX_event_ENC_barons
+	fire_only_once = yes	
+	is_triggered_only = yes 
+	option = {# Come on
+		name = enc_reformers.248.a
+		add_popularity = { ideology = elites popularity = 0.05 }
+		add_stability = -0.10
+		add_political_power = -50
+		clr_country_flag = enc_barons1
+		set_country_flag = enc_barons2
+	}
+}	
+
+
+country_event = {#250 - Baron Autonomy
+	id = enc_reformers.250
+	title = enc_reformers.250.t
+	desc = enc_reformers.250.d
+	picture = GFX_event_ENC_barons
+	fire_only_once = yes	
+	is_triggered_only = yes 
+	option = {# Come on
+		name = enc_reformers.250.a
+		add_popularity = { ideology = elites popularity = 0.05 }
+		add_stability = -0.10
+		add_political_power = -50
+		clr_country_flag = enc_barons2
+		release = BAR
+		puppet = BAR
+	}
+	option = {# Come on
+		name = enc_reformers.250.b
+		declare_war_on = {
+					target = BAR
+					type = annex_everything
+		}	
+	}	
+}									
 country_event = {#300 - state protests!
 	id = enc_reformers.300
 	title = enc_reformers.300.t

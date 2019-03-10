@@ -1694,7 +1694,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = 0.05
 				political_power_gain = -0.03
 			}
 		}
