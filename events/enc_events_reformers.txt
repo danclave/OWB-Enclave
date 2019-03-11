@@ -111,7 +111,7 @@ country_event = {#4 - Dealing with Wrights
 		name = enc_reformers.4.a
 		add_stability = 0.05
 		set_country_flag = enc_wrights_tolerated_flag
-		custom_effect_tooltip = enc_reformers.4.a.tt
+		custom_effect_tooltip = unlocks_as_advisor
 		show_ideas_tooltip = erb_wright
 	}
 	option = {#No place for him
@@ -528,7 +528,7 @@ country_event = {#16 - Assassination attempt!
 	option = {# keep this quiet
 		name = enc_reformers.16.b
 		add_country_leader_trait = enc_wounded_trait
-		add_political_power = -100
+		add_political_power = -50
 	}
 }
 country_event = {#17 - Fortunate son
@@ -966,6 +966,10 @@ country_event = {#32 - Addressing concerns - 4 - BOS
 		add_popularity = { ideology = intellectuals popularity = 0.01 } 
 	}
 }
+
+################################################
+## The Barons (no longer in use)
+################################################
 country_event = {#33 - The baron of barons
 	id = enc_reformers.33
 	title = enc_reformers.33.t
@@ -1054,7 +1058,6 @@ country_event = {#35 - The baron's petition succeeds
 			}
 		}
 	}
-
 country_event = {#36 - The baron's petition fails
 	id = enc_reformers.36
 	title = enc_reformers.36.t
@@ -1123,7 +1126,6 @@ country_event = {#36 - The baron's petition fails
 		country_event = { id = enc_reformers.37 }
 	}
 }
-
 country_event = {#37 - The baron calls for help
 	id = enc_reformers.37
 	title = enc_reformers.37.t
@@ -1668,6 +1670,7 @@ country_event = {#56 - Reno attacks
 	desc = enc_reformers.56.d
 	picture = GFX_event_enc_urban_patrol
 	fire_only_once = yes
+	is_triggered_only = no
 	trigger = {
 		has_full_control_of_state = 285
 		NOT = {
@@ -4669,6 +4672,9 @@ country_event = { #159 - Ghoul Libel
 	mean_time_to_happen = {
 		days = 90
 	}
+	immediate = {
+		set_country_flag = erb_lynette_unlocked_flag
+	}
 	option = {#	Denounce
 		name = enc_reformers.159.a
 		custom_effect_tooltip = enc_reformers.159.a.tt
@@ -4680,19 +4686,7 @@ country_event = { #159 - Ghoul Libel
 		add_popularity = {
 			ideology = elites popularity = 0.15
 		}
-		set_party_name = {
-			ideology = elites
-			long_name = "The League of Citizens"
-			name = "Citizens League"
-		}
-		create_country_leader = {
-			name = "First Citizen Lynette"
-			desc = "POLITICS_CITIZEN_DESC"
-			picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
-			expire = "2500.1.1"
-			ideology = militarist_technocracy
-			traits = {}
-		}
+		elites_become_citizens_league = yes
 	}
 	option = {#	Fair!
 		name = enc_reformers.159.b
@@ -4705,19 +4699,7 @@ country_event = { #159 - Ghoul Libel
 		add_popularity = {
 			ideology = elites popularity = 0.10
 		}
-		set_party_name = {
-			ideology = elites
-			long_name = "The League of Citizens"
-			name = "Citizens League"
-		}
-		create_country_leader = {
-			name = "First Citizen Lynette"
-			desc = "POLITICS_CITIZEN_DESC"
-			picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
-			expire = "2500.1.1"
-			ideology = militarist_technocracy
-			traits = {}
-		}
+		elites_become_citizens_league = yes
 	}
 	option = {#	Quote declaration of independence
 		name = enc_reformers.159.c
@@ -4733,19 +4715,7 @@ country_event = { #159 - Ghoul Libel
 		add_popularity = {
 			ideology = elites popularity = 0.05
 		}
-		set_party_name = {
-			ideology = elites
-			long_name = "The League of Citizens"
-			name = "Citizens League"
-		}
-		create_country_leader = {
-			name = "First Citizen Lynette"
-			desc = "POLITICS_CITIZEN_DESC"
-			picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
-			expire = "2500.1.1"
-			ideology = militarist_technocracy
-			traits = {}
-		}
+		elites_become_citizens_league = yes
 		custom_effect_tooltip = leader_charismatic_tt
 	}
 }
@@ -5014,6 +4984,8 @@ news_event = { #170 - Dark Age
 		name = enc_reformers.170.a
 		add_war_support = -0.50
 		add_stability = -0.25
+		set_temp_variable = { legitimacy_change_var = -0.25 }
+		change_legitimacy = yes
 		add_ideas = { enc_NCR_resistance }
 		add_ideas = { enc_NCR_instability }
 		add_ideas = { enc_NCR_power_struggle } 
@@ -5640,7 +5612,7 @@ country_event = { #191 - Free Press blocks suspend elections
 		add_ideas = enc_NCR_instability
 		custom_effect_tooltip = enc_reformers.191.a.tt
 	}
-	option = { # Bye Speech
+	option = { # Bye Free press
         name = enc_reformers.191.b
 		remove_ideas = ENC_free_press
 		# modify legitimacy
@@ -6645,7 +6617,7 @@ country_event = {#224 - Graham Crackers
 		name = enc_reformers.224.a
 		create_corps_commander = {
 					name = "Joshua Graham"
-					portrait_path = "gfx/leaders/NCN/portrait_douglas_enclaveurned_Man.dds"
+					portrait_path = "gfx/leaders/NCN/portrait_douglas_enclaveurned_Man.dds" # todo fix
 					skill = 6
 					traits = { }
 					attack_skill = 7
@@ -7705,9 +7677,9 @@ country_event = {#307 - The ruler president
 	}
 }
 
-#################
+########################
 ## VICE PRESIDENT
-#################
+########################
 
 country_event = {#308 - Vice President Dornan
 	id = enc_reformers.308

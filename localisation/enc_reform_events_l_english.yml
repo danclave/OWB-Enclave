@@ -4,6 +4,7 @@ breaklines:0 "\n----\n"
 breakline:0 "\n" 
 newline:0 "\n\n"
 available_because: "\nAvailable because we have:\n§Y"
+unlocks_as_advisor:0 "Unlocks as a political advisor: "
 ################################## EVENTS ##############################################
 enc_reformers.1.t:0 "Sins of the Father"
 enc_reformers.1.d:0 "Granite's past is a controversial subject in our mids, made all the more contentious by rumors spread by Purists. The cause is Granite's father and his relationship to the Chosen One. The Purists accuse Granite's father of treason for aiding the Chosen One and destroying the Oil Rig, but lack any evidence.\n\nDespite the fact that he will deny these allegations as nothing but political slander, Douglas remembers clearly what his father told him about that faithful day on the oil rig."

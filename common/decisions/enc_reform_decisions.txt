@@ -2667,7 +2667,7 @@ ENC_securing_borders = {
 			}
 		}
 	}
-ENC_WBH_expansion = {
+	ENC_WBH_expansion = {
 	icon = generic_scorched_earth
 	priority = 11
 	available = {
@@ -2688,7 +2688,7 @@ ENC_WBH_expansion = {
 		country_event = { id = enc_reformers.222 }
 	}
 }
-ENC_CES_expansion = {
+	ENC_CES_expansion = {
 	icon = generic_scorched_earth
 	priority = 11
 	available = {
@@ -2726,7 +2726,7 @@ ENC_CES_expansion = {
 		available = {
 			has_completed_focus = enc_rebuilding_a_nation
 			divisions_in_state = {
-				state = 141	
+				state = 141
 				size > 5
 			}
 		}

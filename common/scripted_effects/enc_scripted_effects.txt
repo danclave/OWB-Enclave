@@ -371,6 +371,16 @@ revert_congress = { # from democracy to autocracy
 	clr_country_flag = enc_suspend_elections_blocked
 }
 
+ban_free_press = {	
+	remove_ideas = ENC_free_press
+	# modify legitimacy
+	set_temp_variable  = {
+		var = legitimacy_change_var
+		value = -0.20
+	}
+	change_legitimacy = yes
+	stability_loss_based_on_people_popularity = yes
+}
 ##################################################
 ### MISC ####
 ##################################################
@@ -408,6 +418,24 @@ cancel_requisition_civilian_resources = {
 			state = 135
 		}
 	}
+}
+
+elites_become_citizens_league = {
+	set_party_name = {
+		ideology = elites
+		long_name = "The League of Citizens"
+		name = "Citizens League"
+	}
+	create_country_leader = {
+		name = "First Citizen Lynette"
+		desc = "POLITICS_CITIZEN_DESC"
+		picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
+		expire = "2500.1.1"
+		ideology = militarist_technocracy
+		traits = {}
+	}
+	custom_effect_tooltip = unlocks_as_advisor
+	custom_effect_tooltip = enc_lynette
 }
 
 ##################################################
@@ -475,7 +503,7 @@ people_start_revolt = {
 }
 
 ##################################################
-### Change Douglas background ####
+### Change Douglas  ####
 ##################################################
 
 transfer_leader_traits = {
@@ -496,8 +524,6 @@ transfer_leader_traits = {
 		add_country_leader_trait = communist_paranoia
 	}
 }
-
-
 
 change_douglas_to_people = {
 	hidden_effect = {
