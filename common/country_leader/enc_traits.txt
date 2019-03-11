@@ -218,4 +218,10 @@ leader_traits = {
 		random = no
 		war_support_factor = 0.05	
 	}
+	red_scare2 = {
+		random = no
+		war_support_factor = 0.10
+		stability_factor = -0.05
+		political_power_factor = -0.05
+	}
 }

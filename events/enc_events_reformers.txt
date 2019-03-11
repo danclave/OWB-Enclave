@@ -2488,9 +2488,10 @@ country_event = {#87 - Baseball
 	is_triggered_only = no
 	trigger = {
 		has_completed_focus = enc_reform
+		has_completed_focus = enc_reno_end
 	}
 	mean_time_to_happen = {
-		days = 600
+		days = 500
 	}
 	option = {#	Play Ball
 		name = enc_reformers.87.a
@@ -2503,7 +2504,7 @@ country_event = {#87 - Baseball
 	}
 	option = {#	back to work
 		name = enc_reformers.87.b
-		add_political_power = 50
+		add_political_power = 75
 	}
 
 }
@@ -2513,33 +2514,33 @@ country_event = {#88 - Mistakes
 	title = enc_reformers.88.t
 	desc = enc_reformers.88.d
 	picture = GFX_event_enc_capitol_ruins
+	
 	fire_only_once = yes
-	is_triggered_only = NO
-	trigger = {
-		has_completed_focus = enc_vlt_core_reform
-	}
-	mean_time_to_happen = {
-		days = 60
-	}
+	is_triggered_only = yes
+	
 	option = {#	Idolize
 		name = enc_reformers.88.a
-		add_stability = 0.05
+		add_political_power = 100
 		add_war_support = 0.05
 		set_temp_variable = {
 			var = legitimacy_change_var
-			value = -0.05
+			value = -0.02
 		}
 		change_legitimacy = yes
+		increase_red_menace = yes
 	}
 	option = {#	Honesty
 		name = enc_reformers.88.b
 		set_country_flag = enc_shi
-		add_stability = -0.05# modify legitimacy
+		add_stability = 0.02
+		add_war_support = -0.05
 		set_temp_variable = {
 			var = legitimacy_change_var
-			value = 0.05
+			value = 0.03
 		}
 		change_legitimacy = yes
+		set_temp_variable = { decrease_red_menace_var = 3 }
+		decrease_red_menace = yes
 	}
 }
 
@@ -6207,29 +6208,33 @@ country_event = {
 }
 		
 	
-country_event = { #212 Education
+country_event = { #212 - Education
     id = enc_reformers.212
     title = enc_reformers.212.t
     desc = enc_reformers.212.d
     picture = GFX_event_enc_4th_july
     fire_only_once = YES
 	is_triggered_only = YES
-	option = { # STOP
+	option = { # Embellish
         name = enc_reformers.212.a
+		custom_effect_tooltip = enc_reformers.212.a.tt
 		add_war_support = 0.05
-		add_stability = 0.05
+		add_political_power = 150
 		set_country_flag = enc_ghouls_know
 		country_event = { id = enc_reformers.214 }
 	}
-	option = { # STOP
+	option = { # Honest
         name = enc_reformers.212.b
-		add_political_power = 150
-		add_stability = -0.05
+		custom_effect_tooltip = enc_reformers.212.b.tt
+		set_temp_variable = { legitimacy_change_var = 0.02 }
+		change_legitimacy = yes
+		add_stability = 0.05
+		add_war_support = -0.10
 		country_event = { id = enc_reformers.214}
 	}   		
 }
 
-country_event = {#213 - Ghouls
+country_event = {#213 - Ghouls Discuss America's Flaws
 	id = enc_reformers.213
 	title = enc_reformers.213.t
 	desc = enc_reformers.213.d
@@ -6238,10 +6243,13 @@ country_event = {#213 - Ghouls
 	fire_only_once = yes	
 	trigger = {	has_country_flag = enc_ghouls_know }	
 	mean_time_to_happen = {	days = 500 }
+	immediate = {
+		clr_country_flag = enc_ghouls_know # cleanup
+	}
 	
-	option = {#OH WELL
+	option = {# OH WELL
 		name = enc_reformers.213.a
-		add_stability = -0.10
+		add_stability = -0.05
 		add_war_support = -0.10
 	}
 	option = {#Commie
@@ -6252,6 +6260,7 @@ country_event = {#213 - Ghouls
 			value = -0.05
 		}
 		change_legitimacy = yes
+		increase_red_menace = yes
 	}
 	option = {#Feral
 		name = enc_reformers.213.c
@@ -6276,15 +6285,22 @@ country_event = { #214 Enclave Education
     picture =  GFX_event_enc_oil_rig
     fire_only_once = YES
 	is_triggered_only = YES
-	option = { # STOP
+	option = { # The Enclave was devoted to saving America
         name = enc_reformers.214.a
+		custom_effect_tooltip = enc_reformers.214.a.tt
 		add_political_power = 25
-		
+		country_event = { id = enc_reformers.311 }
 	}
-	option = { # STOP
+	option = { # The Truth Will Set Us Free
         name = enc_reformers.214.b
+		custom_effect_tooltip = enc_reformers.214.b.tt
+		# this is a joke option that will reduce your legitimacy to 0%
+		set_temp_variable = { legitimacy_change_var = enc_legitimacy}
+		multiply_temp_variable = { legitimacy_change_var = -1 }
+		change_legitimacy = yes
 		add_stability = -0.25
 		add_war_support = -0.25
+		country_event = { id = enc_reformers.311 }
 	}   		
 }
 
@@ -6295,12 +6311,16 @@ country_event = {#215 - Red Menace
 	picture =  GFX_event_CES_vulpes
 	
 	fire_only_once = yes	
-	trigger = {	has_completed_focus = enc_red_menace }	
+	trigger = {	
+		has_completed_focus = enc_red_menace
+		check_variable = { enc_red_menace_var > 3 }
+	}	
 	mean_time_to_happen = {	days = 500 }
 	
 	option = {#OH WELL
 		name = enc_reformers.215.a
 		CES = { add_political_power = 25 }
+		increase_red_menace = yes
 	}
 }
 
@@ -6745,9 +6765,9 @@ country_event = {#228 - Commie Start
 	fire_only_once = yes
 	option = {#Afraid of Commies
 		name = enc_reformers.228.a
-		set_country_flag = enc_red_menace_flag
 		add_country_leader_trait = red_scare
 		custom_effect_tooltip = enc_reformers.228.a.tt
+		set_variable = { enc_red_menace_var = 2 }
 		country_event = { id = enc_reformers.2 }
 	}
 	option = {#  Sillly
@@ -6763,29 +6783,23 @@ country_event = {#229 - Commie Criticisms
 	picture = GFX_event_china_poster
 	fire_only_once = yes	
     trigger = {
-		has_completed_focus = enc_red_menace
-		OR = { 
-			has_idea = ENC_free_press
-			has_idea = ENC_free_press_2
-			}	
+		has_variable = enc_red_menace_var
+		has_free_press = yes
 	}
 	mean_time_to_happen = { days = 400 }
-	option = {#Afraid of Commies
+	option = { # That doesn't sound like communism to me
 		name = enc_reformers.229.a
-		add_stability = -0.05
-		clr_country_flag = enc_red_menace_flag
-		set_country_flag = enc_commie_baseball
+		add_war_support = -0.03
+		add_political_power = -50
+		decrease_red_menace = yes
 	}
-	option = {#  Sillly
+	option = { # Afraid of Commies
 		name = enc_reformers.229.b
-	# modify legitimacy
-		set_temp_variable  = {
-			var = legitimacy_change_var
-			value = -0.05
-		}
-		change_legitimacy = yes	
-		clr_country_flag = enc_red_menace_flag
-		set_country_flag = enc_commie_baseball
+		add_war_support = 0.05
+		# modify legitimacy
+		set_temp_variable  = { legitimacy_change_var = -0.03 }
+		change_legitimacy = yes
+		increase_red_menace = yes
 	}
 }
 country_event = {#230 - Ghoul Literature
@@ -6795,24 +6809,23 @@ country_event = {#230 - Ghoul Literature
 	picture = GFX_event_china_poster
 	fire_only_once = yes	
     trigger = {
-		has_country_flag = enc_commie_baseball
+		has_variable = enc_red_menace_var
 		has_completed_focus = enc_accept_ghouls
 	}
 	mean_time_to_happen = { days = 60 }
-	option = {#Afraid of Commies
+	option = {# Let's read it
 		name = enc_reformers.230.a
-		clr_country_flag = enc_commie_baseball
 		country_event = { id = enc_reformers.231 }
 	}
-	option = {#  Silly
+	option = {#  Arrest the ghoul
 		name = enc_reformers.230.b
-	# modify legitimacy
+		# modify legitimacy
 		set_temp_variable  = {
 			var = legitimacy_change_var
 			value = -0.05
 		}
 		change_legitimacy = yes	
-		clr_country_flag = enc_commie_baseball
+		increase_red_menace = yes
 	}
 }
 country_event = {#231 - Better Read 
@@ -6822,21 +6835,11 @@ country_event = {#231 - Better Read
 	picture = GFX_event_enc_4th_july
 	fire_only_once = yes	
     is_triggered_only = yes	
-	option = {#Afraid of Commies
+	option = {# Oh well
 		name = enc_reformers.231.a
 		add_political_power = 50
-	}
-}
-country_event = {#231 - Better Read 
-	id = enc_reformers.231
-	title = enc_reformers.231.t
-	desc = enc_reformers.231.d
-	picture = GFX_event_enc_4th_july
-	fire_only_once = yes	
-    is_triggered_only = yes	
-	option = {#Afraid of Commies
-		name = enc_reformers.231.a
-		add_political_power = 50
+		set_temp_variable = { decrease_red_menace_var = 20 }
+		decrease_red_menace = yes
 	}
 }
 news_event = {#232 - Troll Warren Crushed
@@ -7052,7 +7055,14 @@ country_event = {#243 - Communist Uprising
     is_triggered_only = yes
 	option = {#Afraid of Commies
 		name = enc_reformers.243.a
+		add_war_support = 0.05
 		add_stability = -0.05
+	}
+	option = {#Afraid of Commies
+		name = enc_reformers.243.b
+		add_stability = -0.05
+		add_war_support = -0.05
+		decrease_red_menace = yes
 	}
 }
 country_event = {#244 - Heaven's Gates
@@ -7666,7 +7676,7 @@ country_event = {#307 - The ruler president
 	}
 	option = { # anti communism
 		name = enc_reformers.307.c
-		trigger = { has_country_flag = enc_red_menace_flag }
+		trigger = { leader_has_red_scare = yes }
 		add_popularity = { ideology = ruler popularity = 0.05 }
 		add_war_support = 0.05
 		set_party_name = {
@@ -7674,6 +7684,7 @@ country_event = {#307 - The ruler president
 			long_name = "Douglas Granite"
 			name = "The President"
 		}
+		increase_red_menace = yes
 	}
 }
 
@@ -7746,6 +7757,27 @@ country_event = {#310 - Vice President lynette
 		set_country_flag = enc_select_vice_president
 	}
 }
+country_event = {#311 - Enclave Education - communism
+	id = enc_reformers.311
+	title = enc_reformers.311.t
+	desc = enc_reformers.311.d
+	picture =  GFX_event_china_poster
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # America's youth will be warned of the evils of communism
+		name = enc_reformers.311.a
+		add_war_support = 0.05
+		increase_red_menace = yes
+	}
+	option = { # Let the adults worry about these things.
+		name = enc_reformers.311.b
+		add_stability = 0.02
+		decrease_red_menace = yes			
+	}
+}
+
 #################
 ## IDEAS
 #################

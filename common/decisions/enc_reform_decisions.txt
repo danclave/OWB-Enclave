@@ -4,18 +4,21 @@
 enc_executive_orders  = {
 	ENC_red_menace_crisis = {
 		icon = generic_scorched_earth
-		priority = 11
+		priority = 99
 		available = {
 		
-	}
+		}
 		activation = {
-			has_country_flag = enc_commie_baseball
-		}	
+			has_country_leader_trait = red_scare2
+		}
+		cancel_trigger = {
+			not = { has_country_leader_trait = red_scare2 }
+		}
 		days_mission_timeout = 100
 		fire_only_once = no
 		is_good = no
 		timeout_effect = {
-		country_event = enc_reformers.243
+			country_event = enc_reformers.243
 		}
 	}
 	plunder_resources = {
@@ -179,7 +182,7 @@ enc_executive_orders  = {
 		cost = 75		
 		visible = {	
 			has_completed_focus = enc_red_menace
-			has_country_flag = enc_red_menace_flag
+			leader_has_red_scare = yes
 		}
 		modifier = {
 			war_support_weekly = 0.0350
@@ -188,6 +191,7 @@ enc_executive_orders  = {
 		days_remove = 50
 		days_re_enable = 30
 		complete_effect = {
+			increase_red_menace = yes
 			hidden_effect = { sound_effect = ERB_stripes_and_stars }
 		}
 	}
@@ -2352,7 +2356,7 @@ ENC_american_broadcasts = {
 		cost = 75
 		icon = decision_enc_propaganda
 		visible = {
-			has_country_flag = enc_red_menace_flag
+			leader_has_red_scare = yes
 		}
 		available = {
 			has_stability < 0.50
@@ -2363,6 +2367,9 @@ ENC_american_broadcasts = {
 		}
 		days_remove = 30
 		days_re_enable = 120
+		complete_effect = {
+			increase_red_menace = yes			
+		}
 	}
 	ENC_silence_conspiracy_theorists = {
 		cost = 75
