@@ -5013,23 +5013,26 @@ country_event = { #169 - Utah Plague
 	option = { # Damn it
 		name = enc_reformers.169.a
 		NCN = { add_ideas = CES_plague
-			}
-		UIN = { add_ideas = CES_plague
-			}
-		CRZ = { add_ideas = CES_plague
-			}		
-		TAR = { add_ideas = CES_plague
-			}
-		SOR = { add_ideas = CES_plague
-			}
-		CRZ = { add_ideas = CES_plague
-			}
-		LON = { add_ideas = CES_plague
-			}
-		MUR = { add_ideas = CES_plague
-			}	
 		}
+		UIN = { add_ideas = CES_plague
+		}
+		CRZ = { add_ideas = CES_plague
+		}		
+		TAR = { add_ideas = CES_plague
+		}
+		SOR = { add_ideas = CES_plague
+		}
+		CRZ = { add_ideas = CES_plague
+		}
+		LON = { add_ideas = CES_plague
+		}
+		MUR = { add_ideas = CES_plague
+		}	
+		DEA = { add_ideas = CES_plague
+		}
+		set_country_flag = enc_mormon_plague
 	}
+}
 
 news_event = { #170 - Dark Age
 	id = enc_reformers.170
@@ -6432,7 +6435,7 @@ country_event = { #218 - Our New Capital
 	title = enc_reformers.218.t
 	desc = enc_reformers.218.d
 	picture = GFX_event_ARR_arroyo
-	fire_only_once = NO
+	fire_only_once = YES
 	trigger = {	
 		OR = {
 			has_completed_focus = enc_a_nation_reborn
@@ -6918,9 +6921,20 @@ news_event = {#232 - Troll Warren Crushed
 	option = {# Now they're a threat 
 		name = enc_reformers.232.a
 		set_country_flag = enc_wbh_threat
-		WBH = { add_ideas = ENC_terror_of_wastes }
-		
-	}
+		hidden_effect = {
+			WBH = { 
+				add_ideas = ENC_terror_of_wastes 
+				create_wargoal = {
+					type = annex_everything
+					target = MTD
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KLA
+				}
+			}
+		}
+	}	
 }
 news_event = {#233 - Legion Conquest of New Canaan
 	id = enc_reformers.233

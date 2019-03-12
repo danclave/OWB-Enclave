@@ -1271,6 +1271,52 @@ ENC_nation_building = {
 			change_legitimacy = yes
 		}
 	}
+	ENC_sierra_madre_expedition = {
+		icon = decision_vault_boy
+		cost = 50
+		fire_only_once = no
+		allowed = {
+			original_tag = ERB
+		}
+		visible = {
+			has_completed_focus = enc_the_state_of_nevada
+		}
+		complete_effect = {		
+			set_country_flag = enc_sierra_madre 
+	custom_effect_tooltip = ENC_sierra_madre_expedition.tt
+		}
+			
+	}
+	ENC_sierra_madre_holograms = {
+		icon = decision_vault_boy
+		cost = 50
+		fire_only_once = no
+		allowed = {
+			original_tag = ERB
+		}
+		visible = {
+			has_completed_focus = enc_the_state_of_nevada
+			has_country_flag = enc_sierra_madre
+		}
+		complete_effect = {		
+		add_timed_idea = { idea = mojave_holograms  days = 50 }
+		}
+	}	
+	ENC_sierra_madre_gold = {
+		fire_only_once = no
+		allowed = {
+			original_tag = ERB
+		}
+		visible = {
+			has_completed_focus = enc_the_state_of_nevada
+			has_country_flag = enc_sierra_madre
+		}
+		days_remove = 180
+		cost = 50
+		modifier = {
+			consumer_goods_factor = -0.05
+		}	
+	}
 	ENC_water_supply = {
 		icon = decision_water_pump
 		cost = 25
@@ -2287,6 +2333,133 @@ ENC_deseret = {
 			}
 }
 
+ENC_nevada_broadcasts = {
+	ENC_nevada_war_propaganda = {
+		icon = decision_enc_propaganda
+		cost = 75
+		available = {
+			has_completed_focus = enc_the_state_of_nevada
+			has_stability > 0.30
+		}
+		visible = {	
+			not = { has_completed_focus = enc_entertainment_broadcasts } 
+		}
+		modifier = {
+			war_support_weekly = 0.0350
+			stability_weekly = -0.0175
+		}
+		days_remove = 20
+		days_re_enable = 30
+		complete_effect = {
+			hidden_effect = { sound_effect = ERB_stripes_and_stars }
+		}
+	}
+	ENC_nevada_raise_stability = {
+		cost = 75
+		icon = decision_enc_propaganda
+		visible = {	
+			has_stability < 0.5
+		}
+		available = {
+		}
+		modifier = {
+			stability_weekly = 0.0350
+			war_support_weekly = -0.0175
+		}
+		days_remove = 20
+		days_re_enable = 30
+	}
+	ENC_blame_ghouls_nevada = {
+		cost = 50
+		icon = decision_enc_propaganda
+		visible = {
+			has_completed_focus = enc_reject_ghouls
+		}
+		available = {
+			has_stability < 0.50
+		}
+		modifier = {
+			stability_weekly = 0.0350
+			war_support_weekly = 0.0175
+		}
+		days_remove = 20
+		days_re_enable = 90
+	}
+	ENC_blame_communists = {
+		cost = 75
+		icon = decision_enc_propaganda
+		visible = {
+			has_country_flag = enc_red_menace_flag
+		}
+		available = {
+			has_stability < 0.50
+		}
+		modifier = {
+			stability_weekly = 0.0350
+			war_support_weekly = 0.0175
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+	promises_of_peace = {
+		icon = generic_political_discourse
+			available = {
+				has_war = no
+				has_war_support > 0.2
+			}
+			visible = {
+				always = yes
+			}
+			remove_trigger = {
+				has_war = yes
+				has_war_support < 0.05
+			}
+			fire_only_once = no
+			modifier = {
+				stability_weekly = 0.005
+				war_support_weekly = -0.01
+				political_power_gain = -0.5
+			}
+			days_remove = 90
+			days_re_enable = 360
+			cost = 50
+			complete_effect = {
+			}
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 1
+					has_stability < 0.4
+				}
+			}
+		}
+	ENC_promote__nevada_agenda = {
+		cost = 50
+		icon = decision_enc_propaganda
+		visible = { 
+		}
+		complete_effect = {
+			add_5_popularity_to_ruling_party = yes
+		}
+		days_re_enable = 120
+	}
+	ENC_recruitment_drive_nevada = {
+		cost = 50
+		icon = decision_enc_propaganda
+		available = {
+			has_war_support > 0.50
+			has_stability > 0.35
+		}
+		modifier = {
+			war_support_weekly = -0.0175
+			mobilization_speed = 0.30
+		}
+		days_remove = 30
+		days_re_enable = 120
+	}
+	
+}
+
 ENC_american_broadcasts = {
 	ENC_war_propaganda = {
 		icon = decision_enc_propaganda
@@ -2590,6 +2763,33 @@ ENC_american_broadcasts = {
 }
 
 ENC_securing_borders = {
+	erb_plague_victim = {
+		icon = generic_scorched_earth
+		fire_only_once = YES
+		target_trigger = {
+			FROM = {
+					is_neighbor_of = CES
+					has_idea = CES_plague
+			}	
+		}
+		activation = { 
+			FROM = {
+				has_idea = CES_plague
+				exists = yes  
+			}
+		}	
+		available = {
+			FROM = { is_puppet_of = CES }
+		}
+		cancel_trigger = { 
+			FROM =  { exists = no }  
+		}
+		days_mission_timeout = 100
+		timeout_effect = {		
+			CES = { annex_country = { target = FROM transfer_troops = no } }
+		}
+		is_good = no
+	}
 	WBH_reformer_crisis = {
 		icon = generic_break_treaty
 		priority = 30		
