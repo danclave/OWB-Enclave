@@ -29,8 +29,20 @@ ENC_reveal_to_ncr_desc: "We cannot hide from the NCR forever, but we may be able
 ENC_reveal_to_ncr.tt: "\nRequires more than §Y30% legitimacy§!"
 
 # CRISIS
+erb_plague_victim: "[FROM.GetName] falls to the plague!"
+erb_plague_victim_desc: "The day may come when the courage of men shall fail, and for [FROM.GetName], that day came when it was hit with the Mormon Plague. They could only endure so much, but before they accepted Caesar's offer of peace in return for a cure."
+ENC_baron_crisis_1: "The Brahmin Barons Establish Order"
+ENC_baron_crisis_1_desc: "In the chaos following the NCR's fall, the Brahmin Barons have established themselves as a force to be reckoned with in northern California.  We'll have to take firm action to reestablish our authority..."
+ENC_baron_crisis_2: "The Barons' Grip Tightens"
+ENC_baron_crisis_2_desc: "Now that the Barons are Gaining Control of northern California, they are wondering why they pay any taxes to the United States at all.  We may have to teach each brahmin man why they must mind their Uncle Sam..."
+ENC_dornan_barons: "Send Dornan to Crush the Barons"
+ENC_dornan_barons_desc: "Allow Sergeant Dornan to demonstrate why the Brahmin Barons shouldn't play these games with the Enclave"
+ENC_dornan_barons.tt: "Sergeant Dornan's aggressive negotiations will persuade the survivors to stop playing games."
+ENC_marcus_barons: "Listen to Marcus"
+ENC_marcus_barons_desc: "One of our supermutant citizens has some ideas about breaking the barons' power.  What if we harnessed American engineering to supermutant labor, reviving the mines of Redding?"
+
 ENC_red_menace_crisis: "Communist Uprising!"
-ENC_red_menace_crisis_desc: "Unless we stop them, the §RCommunists§!  will rise up against America!"
+ENC_red_menace_crisis_desc: "Unless we stop them, the §RCommunists§! will rise up against America!"
 ENC_opposition_to_segregation: "Demands for Equal Rights!"
 ENC_opposition_to_segregation_desc: "For some reason, the people of America do not understand that some will always be more equal than others, and are gathering power to change the shape of our country.  We need to silence them!"
 NCR_crisis: "§RTHE NCR IS ONTO US§!"
@@ -81,6 +93,28 @@ plunder_resources_desc:0 "Our troops need supplies, sometimes more than what we 
 plunder_equipment:0 "Requisition Equipment"
 plunder_equipment_desc:0 "There is plenty of weaponry to be requisitioned from the NCR cities, though some collateral damage might be inflicted during this process."
 state_lose_10_water: "Permanently reduce production of §YWater§!£water_texticon by §R10§!.\n"
+#################################
+# Nevada Love
+#################################
+ENC_nevada_broadcasts: "Nevada Broadcasting"
+ENC_nevada_broadcasts_desc: "It's a cold, lonely night here in New Reno.  But it's a little less lonely with our next song, and a word from our sponsors."
+ENC_nevada_war_propaganda: "War Propaganda"
+ENC_nevada_war_propaganda_desc: "This is Nevada Public Radio, coming to you live from the New Canaan front."
+ENC_nevada_raise_stability: "Broadcast Sporting Events"
+ENC_nevada_raise_stability_desc: "Broadcasting sporting events in New Vegas and New Reno will not only unite Nevada, it will be fun! We promise."
+ENC_blame_ghouls_nevada: "Give Lynette a radio show"
+ENC_blame_ghouls_nevada_desc: "Thank you for listening to Yesterday's Tomorrow, live in Vault City.  I'd like to discuss the threat ghouls pose to your children!"
+ENC_sierra_madre_expedition: "The Expedition to the Sierra Madre"
+ENC_sierra_madre_expedition_desc: "The Sierra Madre is believed to nothing more than a Mojave legend, a fabled City of Gold, where fortune could be found.  Good thing we have a map."
+ENC_sierra_madre_expedition.tt: "Unlocks decisions to strip the §YSierra Madre§! for valuable resources!"
+ENC_sierra_madre_holograms: "Deploy the Holograms"
+ENC_sierra_madre_holograms_desc: "Although we can't replicate the greater than state of the art holographic technology that was for some reason used to defend a casino, we can deploy it for our own purposes."
+ENC_sierra_madre_gold: "Loot the Sierra Madre"
+ENC_sierra_madre_gold_desc: "The casino's vault contains a valuable stock of gold.  Well, now it's government property."
+ENC_promote__nevada_agenda: "Promote Support for Nevada"
+ENC_promote__nevada_agenda_desc: "There is the land that I love the best, \nFairer than all I can see. \nRight in the heart of the golden west, \nHome means Nevada to me."
+ENC_recruitment_drive_nevada: "Recruitment Drive"
+ENC_recruitment_drive_nevada: "Remind Nevada that not every people have as great a government as they do.  Playing some patriotic stories will encourage them to join the nation."
 ##############################
 # WAR MEASURES 
 ##############################
@@ -186,6 +220,11 @@ remember_navarro: "Remember Navarro"
 anti_bos_propaganda: "Anti Brotherhood Propaganda"
 ENC_anti_communist_propaganda: "Warn of the Red Menace"
 ENC_anti_communist_propaganda_desc: "My fellow Americans, we shall never fall to a Communist invasion..."
+ENC_curb_wastelander_influence: "Curb Wastelander Influence"
+ENC_curb_wastelander_influence_desc:0 "Our rapid expansion has left a surprising amount of influence within our borders in the power of wastelanders. Regardless of our opinion towards them, we could consider pulling some power back into our hands."
+
+ENC_curb_elite_influence: "Curb Elites Influence"
+ENC_curb_elite_influence_desc: "It appears that more and more power in our country is ending up in the hands of a select few individuals. And we are not one of them! We could risk antagonizing them by working to undermine their power and influence before it's too late."
 ##############################
 # SHIFT POLICY 
 ##############################
@@ -260,6 +299,11 @@ ENC_support_OWP: "Support the Old World Party"
 ENC_call_favours: "Call In Favours"
 ENC_send_spies: "Send Out Spies"
 ENC_extract_spies: "Extract Spies"
+ENC_reroute_caravans: "Reroute Crimson Caravans"
+ENC_reroute_caravans_desc:0 "By stealing and replacing documents at the nearby Crimson Caravan outposts, we can prevent the caravans from running into any of our patrols."
+ENC_reroute_caravans_reward: "Prevents any future Crimson Caravan encounters."
+ENC_demoralization:0 "Further Demoralization"
+ENC_demoralization:0 "Our spies can cause further chaos and despair by hijacking radio signals to send news of the imminent defeat of the NCR."
 ENC_desert_rangers_hate: "Sow Tension With the Desert Rangers"
 ENC_desert_rangers_hate_desc: "We can use our spies to sow tensions between the Desert Rangers and the NCR, making them break their alliance and ending any hope of support between them."
 ENC_desert_rangers_hate_tt: "Will give the §Y[DES.GetName]§! strategic reasons to leave or ignore an §YNCR§! alliance.\n\n"
@@ -292,14 +336,18 @@ ENC_deliver_petition: "Deliver Petition for Independence"
 ##############################
 # POLITICAL DECISIONS
 ##############################
+ENC_political_actions: "Political Actions"
 ENC_remove_emergency_draft: "Remove Emergency Draft"
 enc_emergency_draft_reform: "Institute an Emergency Draft"
 CES_crisis: "The Wrath of Caesar"
 ENC_render_unto_caesar: "Grabbing the Bull by the Horns"
 ENC_rise_slaves: "Issue the Second Emancipation Proclamation"
 ENC_rise_slaves_desc: "We can trigger the Second American Revolution by promising freedom to the Legion's slaves.  However, the Legion may treat our decision to give plasma guns to slaves in their territory as an act of war."
-CES_nuke: "Nuke Flagstaff"
-CES_nuke_desc: "When ready, we will nuke Flagstaff and decapitate Caesar.  Although you have to wonder of America will destroy itself by winning the war this way."
+ENC_nuke_arm: "Arming ICBM..."
+ENC_nuke: "Nuke Flagstaff"
+ENC_nuke_launch: "Launch ICBM at Flagstaff"
+flagstaff_is_nuked: "§RFlagstaf is nuked in 1 day§!\n"
+ENC_nuke_desc: "When ready, we will nuke Flagstaff and decapitate Caesar.  Although you have to wonder of America will destroy itself by winning the war this way."
 ENC_pacific_commonwealth1: "Rebuilding the Pacific Commonwealth"
 ENC_pacific_commonwealth1_desc: "The good people of Klamath will be the nucleus for a revived Pacific Commonwealth.  Because hey, compared to the Washington Brotherhood, even we look good."
 

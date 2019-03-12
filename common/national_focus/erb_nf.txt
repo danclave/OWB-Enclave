@@ -89,7 +89,7 @@ focus_tree = {
 				limit = {
 					has_completed_focus = enc_reform	
 				}
-				intellectuals > 0.80
+				elites < 0.10
 				has_completed_focus = enc_assassinate_F
 			}
 			else_if = {
@@ -155,7 +155,7 @@ focus_tree = {
 		cost = 5.8 
 		completion_reward = {
 			country_event = { id = enc_reformers.15 }
-			set_rule = { can_puppet = yes }
+			hidden_effect = { set_rule = { can_puppet = yes } }
 			custom_effect_tooltip = enc_reformers.tt
 			# set up variables for rebuilding America
 			set_variable = { enc_good_allignment = 0 }
@@ -235,19 +235,24 @@ focus_tree = {
 		icon = GFX_goal_enc_purge_scientists
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_consolidate_power
-		available = { intellectuals > 0.6	}
+		available = { elites > 0.3	}
 		x = -1
 		y = 1
 		prerequisite = { focus = enc_consolidate_power	}
 		bypass = {
 			NOT = {
 				has_idea = ENC_scientists_traitors
-				has_idea = ENC_scientists_traitors_2
+				hidden_trigger = {
+					has_idea = ENC_scientists_traitors_2
+				}
 			}
 		}
 		available = {
 			# has_idea = ENC_scientists_traitors_2
-			has_country_flag = enc_demoted_scientists
+			if = {
+				limit = { not = { has_country_flag = purists_purged }} 
+				has_country_flag = enc_demoted_scientists
+			}
 		}
 		cost = 4.3
 		completion_reward = {
@@ -263,7 +268,7 @@ focus_tree = {
 		icon = GFX_goal_enc_purge_officers
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_consolidate_power
-		available = { intellectuals > 0.6	}
+		available = { elites > 0.3	}
 		x = 1
 		y = 1
 		prerequisite = { focus = enc_consolidate_power	}
@@ -277,7 +282,10 @@ focus_tree = {
 		}
 		available = {
 			# has_idea = ENC_officers_traitors_2
-			has_country_flag = enc_demoted_officers
+			if = {
+				limit = { not = { has_country_flag = purists_purged }} 
+				has_country_flag = enc_demoted_officers
+			}
 		}
 		cost = 4.3
 		completion_reward = {
@@ -301,7 +309,7 @@ focus_tree = {
 		prerequisite = { focus = enc_purge_scientists }
 		prerequisite = { focus = enc_purge_officers }
 		available = { 
-			intellectuals > 0.7
+			elites < 0.15
 			not = { has_completed_focus = enc_purge_opposition }
 		}
 		relative_position_id = enc_consolidate_power
@@ -653,7 +661,7 @@ focus_tree = {
 		cost = 4.3
 	}
 	
-focus = {#RADIO - Red Menace
+	focus = {#RADIO - Red Menace
 		id = enc_red_menace
 		icon = GFX_goal_enc_threat_of_communism
 		ai_will_do = { factor = 1 } 
@@ -661,7 +669,7 @@ focus = {#RADIO - Red Menace
 		x = 0
 		y = 1
 		prerequisite = { focus = enc_radio } 
-		available = {has_country_flag = enc_red_menace_flag }
+		available = { leader_has_red_scare = yes }
 		completion_reward = {
 			add_political_power = 150
 			add_stability = 0.05
@@ -739,9 +747,12 @@ focus = {#RADIO - Red Menace
 		y = 1
 		prerequisite = { focus = enc_radio_civilian } 
 		completion_reward = {
-			remove_ideas = ENC_radio_civilian
-			add_timed_idea = { idea =  ENC_radio_civilian_old days = 600 }
+			add_political_power = 100
+			swap_ideas = {
+				remove_idea = ENC_radio_civilian
+				add_idea = ENC_radio_civilian_old
 			}
+		}
 		cost = 4.3
 	}
 	focus = {#RADIO - New World Tunes
@@ -916,7 +927,7 @@ focus = {#RADIO - Red Menace
 		mutually_exclusive = { focus = enc_VLT_raiders }
 		prerequisite = { focus = enc_expansion_reform }		
 		bypass = {
-			has_full_control_of_state = 291 
+			owns_state = 291 
 		}	
 		completion_reward = { 
 			custom_effect_tooltip = enc_vlt_annex_tt
@@ -1100,7 +1111,7 @@ focus = {#RADIO - Red Menace
 	}
 	focus = {#EXPANSION - ANT - tributary
 		id = enc_ANT_establish_tributaries
-		icon = GFX_goal_enc_first_citizens
+		icon = GFX_goal_enc_appointed_governors
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_break_the_tribe
 		x = 1
@@ -1139,6 +1150,7 @@ focus = {#RADIO - Red Menace
 		available = {
 			has_completed_focus = enc_reform
 			has_completed_focus = enc_purge_opposition
+			has_completed_focus = enc_reno_end
 		}
 		completion_reward = {
 			country_event = { id = enc_reformers.77 } 
@@ -1176,7 +1188,7 @@ focus = {#RADIO - Red Menace
 		}
 		cost = 5.8
 		completion_reward = {
-		add_popularity = { ideology = people popularity = 0.05 } 
+		add_popularity = { ideology = people popularity = 0.03 } 
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = 0.05
@@ -1200,7 +1212,7 @@ focus = {#RADIO - Red Menace
 			has_stability > 0.50
 		}
 		completion_reward = {
-			add_popularity = { ideology = people popularity = 0.10 } 
+			add_popularity = { ideology = people popularity = 0.05 } 
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = 0.05
@@ -1225,7 +1237,7 @@ focus = {#RADIO - Red Menace
 			has_stability > 0.50
 		}
 		completion_reward = {
-			add_popularity = { ideology = people popularity = 0.05 } 
+			add_popularity = { ideology = people popularity = 0.03 } 
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = 0.05
@@ -1249,7 +1261,7 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_popularity = { ideology = people popularity = 0.10 } 
+			add_popularity = { ideology = people popularity = 0.05 } 
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = 0.05
@@ -1400,7 +1412,7 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_popularity = { ideology = elites popularity = 0.05 } 
+			add_popularity = { ideology = elites popularity = 0.02 } 
 			set_temp_variable = {
 				var = legitimacy_change_var
 				value = -0.05
@@ -1419,7 +1431,7 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_popularity = { ideology = elites popularity = 0.05 } 
+			add_popularity = { ideology = elites popularity = 0.02 } 
 			add_political_power = 50
 			set_technology = { plasma_weaponry = 1 }
 			add_ideas = ENC_energy_production			
@@ -1436,7 +1448,7 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_popularity = { ideology = elites popularity = 0.05 } 
+			add_popularity = { ideology = elites popularity = 0.02 } 
 			add_stability = 0.05
 			add_political_power = 50
 		}		
@@ -1451,8 +1463,7 @@ focus = {#RADIO - Red Menace
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_popularity = { ideology = elites popularity = 0.05 } 
-			add_popularity = { ideology = people popularity = 0.05 } 
+			add_popularity = { ideology = people popularity = 0.03 } 
 			add_ideas = {enc_seperate_but_equal}
 		}		
 	}
@@ -1483,9 +1494,10 @@ focus = {#RADIO - Red Menace
 		y = 1 
 		cost = 5.8
 		completion_reward = {
-			add_popularity = { ideology = elites popularity = 0.05 } 
+			add_popularity = { ideology = elites popularity = 0.02 } 
 			add_stability = 0.05
 			add_war_support = 0.05
+			reduce_legitimacy_relevance = yes
 		}
 	}
 	focus = {#SEPERATION - subsidized lives
@@ -1498,7 +1510,7 @@ focus = {#RADIO - Red Menace
 		y = 1 
 		cost = 5.8
 		completion_reward = {
-			add_popularity = { ideology = elites popularity = 0.05 } 
+			add_popularity = { ideology = elites popularity = 0.02 } 
 			swap_ideas = {
 				remove_idea = enc_technocrats
 				add_idea = enc_luxurious 
@@ -1515,7 +1527,7 @@ focus = {#RADIO - Red Menace
 		y = 1 
 		cost = 5.8
 		completion_reward = {
-			add_popularity = { ideology = elites popularity = 0.05 } 
+			add_popularity = { ideology = elites popularity = 0.02 } 
 			add_ideas =  ENC_national_healthcare
 		}
 	}
@@ -1576,6 +1588,7 @@ focus = {#RADIO - Red Menace
 				}
 			}
 			random_owned_state = {	add_manpower = -500 }
+			reduce_legitimacy_relevance = yes
 		}
 	}
 
@@ -1989,8 +2002,9 @@ focus = {#RADIO - Red Menace
 					ENC_legitimacy_none				
 				}
 			}
-			country_event = { id = enc_reformers.72 } 
-		}		
+			country_event = { id = enc_reformers.72 }
+			reduce_legitimacy_relevance = yes
+		}
 	}
 	focus = {#REBUILDING - empower congress
 		id = enc_empower_congress
@@ -2394,6 +2408,7 @@ focus = {#RADIO - Red Menace
 					add_idea = ENC_underworld_ties
 				}
 			}
+			reduce_legitimacy_relevance = yes
 		}		
 	}
 
@@ -2424,6 +2439,7 @@ focus = {#RADIO - Red Menace
 		cost = 5.8
 		completion_reward = {
 			add_popularity = { ideology = ruler popularity = 0.05 } 
+			add_popularity = { ideology = elites popularity = -0.05 } 
 			add_political_power = 100
 			add_ideas = { enc_broken_houses }
 		}
@@ -2440,6 +2456,7 @@ focus = {#RADIO - Red Menace
 		cost = 5.8
 		completion_reward = {
 			add_popularity = { ideology = people popularity = 0.05 } 
+			add_popularity = { ideology = elites popularity = 0.05 } 
 			add_political_power = 100
 			set_temp_variable = {
 				var = legitimacy_change_var
@@ -2811,6 +2828,7 @@ focus = {#RADIO - Red Menace
 		prerequisite = { focus = enc_fbi }		
 		available = {
 			has_completed_focus = enc_americans_one_and_all
+			has_country_flag = vice_president_hayes_flag
 		}
 		x = -1
 		y = 5
@@ -2924,10 +2942,10 @@ focus = {#RADIO - Red Menace
 		completion_reward = {
 			if = {
 				limit = {
-					has_idea = closed_economy
+					has_idea = hidden_economy
 				}
 				swap_ideas = {
-					remove_idea = closed_economy
+					remove_idea = hidden_economy
 					add_idea = limited_exports
 				}
 			}
@@ -4319,7 +4337,7 @@ focus = {#NEVADA - Legislature
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 0.05
+				value = 0.15
 			}
 			change_legitimacy = yes
 		}
@@ -4338,7 +4356,7 @@ focus = {#NEVADA - Judiciary
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 0.05
+				value = 0.15
 			}
 			change_legitimacy = yes
 		}
@@ -4357,7 +4375,7 @@ focus = {#NEVADA - Constitution
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 0.05
+				value = 0.15
 			}
 			change_legitimacy = yes
 		}
@@ -5093,13 +5111,6 @@ focus = {#NEVADA - second city
 		ai_will_do = { factor = 1 }
 		available = {
 			NCR = { exists = yes }
-			custom_trigger_tooltip = {
-				tooltip = 25_legitimacy		
-				check_variable = {
-					var = enc_legitimacy
-					value > 0.299
-				}
-			}
 		}
 		prerequisite = { focus = enc_operation_babylon}
 		mutually_exclusive = { focus = enc_the_barons }

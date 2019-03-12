@@ -7,9 +7,24 @@ enc_executive_orders = {
 	allowed = { tag = ERB }
 	priority = 2
 }
+
+ENC_political_actions = {
+	icon = generic_political_actions
+	allowed = { tag = ERB }
+	priority = 1
+}
+
+
 ENC_shifts = {
 	icon = category_enc_shift
 	allowed = {original_tag = ERB}
+	available = {
+		if = {
+			limit = { has_completed_focus = enc_reform }
+			num_of_controlled_states > 30	
+		}
+	}
+	
 	visible = {
 		not = {
 			and = {
@@ -230,6 +245,13 @@ ENC_american_broadcasts = {
 	icon = category_tv
 	priority = 10
 	visible = {	has_completed_focus = enc_american_broadcasting_department }	
+}
+
+ENC_nevada_broadcasts = {
+	allowed = { tag = ERB }
+	icon = category_tv
+	priority = 10
+	visible = {	has_completed_focus = enc_the_state_of_nevada }	
 }
 
 ENC_securing_borders = {
