@@ -846,7 +846,9 @@ ENC_debug = {
 	}
 	ENC_misc = {
 		available = {
-			has_country_leader_with_trait = ruthless
+			has_dynamic_modifier = {
+				modifier = enc_legitimacy_dynamic_modifier
+			}
 		}
 		complete_effect = {
 			misc_effect_test = yes

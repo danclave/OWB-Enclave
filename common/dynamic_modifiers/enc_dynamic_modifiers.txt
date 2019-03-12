@@ -25,7 +25,7 @@
 #	will only updated daily, unless forced by force_update_dynamic_modifier effect
 
 enc_legitimacy_dynamic_modifier = {
-	icon = GFX_idea_ENC_legitimacy_low
+	# icon = GFX_idea_ENC_legitimacy_low
 	political_power_factor = enc_legitimacy_political_power_factor
 	non_core_manpower = enc_legitimacy_non_core_manpower
 	mobilization_speed = enc_legitimacy_mobilization_speed

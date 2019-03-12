@@ -70,7 +70,7 @@ country_event = {#3 - DOUGLAS PAST - END
 	
 	option = {#Wait
 		name = enc_reformers.3.b
-		set_country_flag = enc_ncr_connections_flag
+		clr_country_flag = enc_ncr_connections_flag
 		clr_country_flag = enc_bos_connections_flag
 		clr_country_flag = enc_ces_connections_flag
 		add_country_leader_trait = ruthless
