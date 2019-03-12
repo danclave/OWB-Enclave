@@ -5,14 +5,11 @@ enc_executive_orders  = {
 	ENC_red_menace_crisis = {
 		icon = generic_scorched_earth
 		priority = 99
-		available = {
-			has_country_leader_with_trait = red_scare2
-		}
 		activation = {
 			has_country_leader_with_trait = red_scare2
 		}
 		cancel_trigger = {
-			not = { has_country_leader_with_trait = red_scare2 }
+			not = { has_country_leader_with_trait = red_scare2 }		
 		}
 		days_mission_timeout = 100
 		fire_only_once = no

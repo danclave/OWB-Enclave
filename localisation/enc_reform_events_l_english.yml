@@ -1422,13 +1422,6 @@ enc_reformers.311.a.tt: "§gChildren will be taught that both deathclaws and bed
 enc_reformers.311.b: "Let the adults worry about these things."
 enc_reformers.311.b.tt: "§gAnti communism is kept out of the education.§!"
 #############################################################################################################
-enc_reformers.311.t: "Educating children about communism"
-enc_reformers.311.d: "Douglas was warned about the threat of communism in his youth. And a warned American is worth two. Should we pass these lessons onto America's children?"
-enc_reformers.311.a: "America's youth will be warned of the evils of communism!"
-enc_reformers.311.a.tt: "§gChildren will be taught that both deathclaws and bed times are communist inventions.§!"
-enc_reformers.311.b: "Let the adults worry about these things."
-enc_reformers.311.b.tt: "§gAnti communism is kept out of the education.§!"
-#############################################################################################################
 enc_reformers.312.t: "Nuke Armed and Ready-"
 enc_reformers.312.d: "The nuke is ready."
 enc_reformers.312.a: "Thumbs down, you son of a bitch."
@@ -1439,4 +1432,3 @@ enc_reformers.312.e.tt:0 "§gThe ICBM is aimed back towards it's original target
 ##################################################
 nuke_dropped.1.t:0 "Atomic Bombing of [From.From.GetName]"
 nuke_dropped.1.d:0 "For the first time in 2OO years, a nuclear bomb has been detonated in [From.From.GetName] as part of international warfare. The unprecedented destruction stands as a testament to the devastating power of this old weapon, which is feared not only for what it can do to its targets, but what implications it has for the one who deploys it and for humanity itself.\n\nThe world holds its breath waiting for what will come next. Will this force [From.From.Owner.GetName] to surrender to avoid further terror, or will it only strengthen their resolve to strike back against those who would resort to such measures?"
- 
