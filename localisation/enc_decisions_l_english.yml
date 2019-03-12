@@ -223,6 +223,8 @@ ENC_anti_communist_propaganda_desc: "My fellow Americans, we shall never fall to
 ENC_curb_wastelander_influence: "Curb Wastelander Influence"
 ENC_curb_wastelander_influence_desc:0 "Our rapid expansion has left a surprising amount of influence within our borders in the power of wastelanders. Regardless of our opinion towards them, we could consider pulling some power back into our hands."
 
+ENC_curb_elite_influence: "Curb Elites Influence"
+ENC_curb_elite_influence_desc: "It appears that more and more power in our country is ending up in the hands of a select few individuals. And we are not one of them! We could risk antagonizing them by working to undermine their power and influence before it's too late."
 ##############################
 # SHIFT POLICY 
 ##############################
@@ -334,6 +336,7 @@ ENC_deliver_petition: "Deliver Petition for Independence"
 ##############################
 # POLITICAL DECISIONS
 ##############################
+ENC_political_actions: "Political Actions"
 ENC_remove_emergency_draft: "Remove Emergency Draft"
 enc_emergency_draft_reform: "Institute an Emergency Draft"
 CES_crisis: "The Wrath of Caesar"

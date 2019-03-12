@@ -204,7 +204,7 @@ advanced_update_legitimacy = {
 	
 	# weigh Enclave population to be more important
 	set_temp_variable = { weighed_non_enclave_population = enc_percentage_population_enclave }
-	multiply_temp_variable = { weighed_non_enclave_population = 2 } # amount of weighing
+	multiply_temp_variable = { weighed_non_enclave_population = 3 } # amount of weighing
 	set_temp_variable = { weighed_population_modifier = enc_percentage_population_non_enclave }	
 	subtract_from_temp_variable  = { weighed_population_modifier = weighed_non_enclave_population }
 	clamp_temp_variable = {	var = weighed_population_modifier min = 0 max = 1	}

@@ -661,7 +661,7 @@ focus_tree = {
 		cost = 4.3
 	}
 	
-focus = {#RADIO - Red Menace
+	focus = {#RADIO - Red Menace
 		id = enc_red_menace
 		icon = GFX_goal_enc_threat_of_communism
 		ai_will_do = { factor = 1 } 
@@ -1497,6 +1497,7 @@ focus = {#RADIO - Red Menace
 			add_popularity = { ideology = elites popularity = 0.02 } 
 			add_stability = 0.05
 			add_war_support = 0.05
+			reduce_legitimacy_relevance = yes
 		}
 	}
 	focus = {#SEPERATION - subsidized lives
@@ -1587,6 +1588,7 @@ focus = {#RADIO - Red Menace
 				}
 			}
 			random_owned_state = {	add_manpower = -500 }
+			reduce_legitimacy_relevance = yes
 		}
 	}
 
@@ -2000,8 +2002,9 @@ focus = {#RADIO - Red Menace
 					ENC_legitimacy_none				
 				}
 			}
-			country_event = { id = enc_reformers.72 } 
-		}		
+			country_event = { id = enc_reformers.72 }
+			reduce_legitimacy_relevance = yes
+		}
 	}
 	focus = {#REBUILDING - empower congress
 		id = enc_empower_congress
@@ -2405,6 +2408,7 @@ focus = {#RADIO - Red Menace
 					add_idea = ENC_underworld_ties
 				}
 			}
+			reduce_legitimacy_relevance = yes
 		}		
 	}
 
@@ -2435,6 +2439,7 @@ focus = {#RADIO - Red Menace
 		cost = 5.8
 		completion_reward = {
 			add_popularity = { ideology = ruler popularity = 0.05 } 
+			add_popularity = { ideology = elites popularity = -0.05 } 
 			add_political_power = 100
 			add_ideas = { enc_broken_houses }
 		}
@@ -2451,6 +2456,7 @@ focus = {#RADIO - Red Menace
 		cost = 5.8
 		completion_reward = {
 			add_popularity = { ideology = people popularity = 0.05 } 
+			add_popularity = { ideology = elites popularity = 0.05 } 
 			add_political_power = 100
 			set_temp_variable = {
 				var = legitimacy_change_var

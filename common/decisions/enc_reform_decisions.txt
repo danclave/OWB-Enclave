@@ -2,191 +2,6 @@
 # REFORMER
 ###############################
 enc_executive_orders  = {
-	ENC_red_menace_crisis = {
-		icon = generic_scorched_earth
-		priority = 99
-		activation = {
-			# activated by enc_reformers.314
-			always = false 
-		}
-		cancel_trigger = {
-			not = { has_country_leader_with_trait = red_scare2 }		
-		}
-		days_mission_timeout = 100
-		fire_only_once = no
-		is_good = no
-		timeout_effect = {
-			country_event = enc_reformers.243
-		}
-	}
-	plunder_resources = {
-		icon = generic_scorched_earth
-		priority = 5
-		cost = 50
-		visible = {
-			has_war_with = NCR
-			not = { has_country_flag = enc_mid_game }
-		}
-		available = {
-			has_war_with = NCR
-			any_state = { #we occupy a non core state which has += 10 water
-				is_core_of = NCR
-				not = { is_core_of = ROOT }
-				is_controlled_by = ROOT
-				has_resources_amount = {
-					resource = water
-					amount = 10
-					state = THIS
-				}				
-			}
-		}
-		modifier = { #moving cost (maybe use civ factories)
-			supply_consumption_factor = -0.50
-			no_supply_grace = 48
-			heat_attrition_factor = -0.50
-		}
-		days_remove = 60
-		complete_effect = {
-			set_temp_variable = { legitimacy_change_var = -0.10 }
-			change_legitimacy = yes
-			random_state = {
-				limit = {
-					is_core_of = NCR
-					not = { is_core_of = ROOT }
-					is_controlled_by = ROOT
-					has_resources_amount = {
-						resource = water
-						amount = 10
-						state = THIS
-					}
-				}
-				custom_effect_tooltip = state_lose_10_water
-				hidden_effect = {
-					add_resource = {
-						type = water
-						amount = -10
-						state = THIS
-					}
-				}
-				add_state_flag = plundered_by_enc
-			}
-		}
-	}
-	plunder_equipment = {
-		icon = generic_scorched_earth
-		priority = 5
-		cost = 50
-		visible = {
-			has_war_with = ncr
-		}
-		available = {
-			has_war_with = NCR
-			any_state = { #we occupy a non core state which has 1+ mil factories
-				is_core_of = NCR
-				is_fully_controlled_by = ROOT
-				arms_factory > 0
-			}
-		}
-		complete_effect = {	
-			multiply_temp_variable = { legitimacy_change_var = -0.05 }
-			change_legitimacy = yes
-			random_state = {
-				limit = {
-					is_core_of = NCR
-					is_fully_controlled_by = ROOT
-					arms_factory > 0
-				}
-				remove_building = { 
-					type = arms_factory 
-					level = 1
-				}
-				add_state_flag = plundered_by_enc
-			}
-		}
-		remove_effect = {			
-			ROOT = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 500
-					producer = NCR
-				}
-			}
-		}
-	}
-
-	ENC_curb_wastelander_influence = {
-		icon = oppression
-		cost = 20
-		priority = 1
-		fire_only_once = no
-		visible = {
-			people > 0.20
-			has_completed_focus = enc_reno_end
-			not = { has_country_flag = enc_mid_game }
-		}
-		available = {
-			people > 0.30
-		}
-		days_re_enable = 50
-		days_remove = 90
-		modifier = {
-			people_drift = -0.30
-			intellectuals_drift = 0.20
-		}
-		complete_effect = {
-			set_temp_variable = { legitimacy_change_var = -0.03 }
-			change_legitimacy = yes
-		}
-	}
-
-	ENC_opposition_to_segregation = {
-		icon = generic_break_treaty
-		priority = 30		
-		fire_only_once = YES
-		activation = {
-			has_completed_focus = enc_segregation
-			OR = { 
-				has_idea = ENC_free_press
-				has_idea = ENC_free_press_2
-			}
-			people > 0.60			
-		}
-		available = {
-			NOT = { 
-				OR = { 
-					has_idea = ENC_free_press
-					has_idea = ENC_free_press_2
-				}		
-			}
-		}
-		days_mission_timeout = 400
-		cancel_trigger = {
-			people < 0.30
-		}
-		timeout_effect = { 
-			add_stability = -0.20
-			add_war_support = -0.15
-			add_political_power = -300
-		} 
-	}
-	ENC_anti_communist_propaganda = {
-		icon = decision_enc_propaganda
-		cost = 75		
-		visible = {	
-			has_completed_focus = enc_red_menace
-			leader_has_red_scare = yes
-		}
-		modifier = {
-			war_support_weekly = 0.0350
-			stability_weekly = -0.0175
-		}
-		days_remove = 50
-		days_re_enable = 30
-		complete_effect = {
-			increase_red_menace = yes
-			hidden_effect = { sound_effect = ERB_stripes_and_stars }
-		}
-	}
 	ENC_steal_declaration_independence = {
 		icon = GFX_decision_enc_verti
 		cost = 75		
@@ -204,43 +19,7 @@ enc_executive_orders  = {
 			 add_equipment_to_stockpile = { type = vb_gunship_equipment amount = -25 producer = ERB }
 		}
 	}
-	improved_worker_conditions = {
 
-			icon = generic_industry
-
-			available = {
-				
-			}
-
-			visible = {
-				always = yes 
-			}
-
-			fire_only_once = no
-
-			modifier = {
-				stability_weekly = 0.005
-				consumer_goods_factor = 0.05
-				industrial_capacity_factory = -0.1
-			}
-
-			days_remove = 180
-			days_re_enable = 540
-
-			cost = 100
-
-			complete_effect = {
-
-			}
-
-			ai_will_do = {
-				base = 0
-				modifier = {
-					add = 1
-					has_stability < 0.6
-				}
-			}
-		}
 	ENC_nuke_arm = {
 		icon = gfx_decision_nuke_flagstaff
 		priority = 30		
@@ -281,126 +60,6 @@ enc_executive_orders  = {
 			country_event = { id = enc_reformers.312 }
 		}
 	}
-	CES_california_crisis = {
-		icon = generic_break_treaty
-		priority = 30		
-		fire_only_once = YES
-		visible = { has_full_control_of_state = 285
-				}
-		activation = {
-			has_country_flag = ces_occupies_california
-			has_completed_focus = enc_reform
-			not = {
-				CES = {
-					OR = {
-						exists = no
-						has_civil_war = YES
-						has_war_with = ERB #Enclave
-					}
-				}
-			}
-		}
-		available = {
-			77 = { is_controlled_by = ERB}
-		}
-		cancel_trigger = {
-			CES = {
-				OR = {
-					exists = no
-					has_civil_war = YES
-					has_war_with = ERB #Enclave
-				}
-			}
-		}
-		is_good = no
-		days_mission_timeout = 400
-		timeout_effect = {
-			CES = {	remove_ideas = enc_NCR__ces_resistance }
-				}
-		complete_effect = { country_event = {id = enc_reformers.204 }
-		}
-	}
-	enc_NCR_seize_dayglow = {
-		icon = decision_plasma
-		priority = 300
-		fire_only_once = yes
-
-		available = {
-			has_completed_focus = enc_american_dream
-				}
-		visible = {
-			tag = ERB
-			NCR = {exists = no }
-			NOT = {has_full_control_of_state = 63} # Dayglow
-			}
-		complete_effect = {
-			custom_effect_tooltip = enc_NCR_seize_dayglow.tt
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						has_full_control_of_state = 63 #Dayglow
-					}
-					ERB = {
-						create_wargoal = { type = annex_everything target = PREV }
-						}
-					}
-				}
-			}	
-		}
-	enc_NCR_seize_shady_sands = {
-		icon = decision_plasma
-		priority = 300
-		fire_only_once = yes
-
-		available = {
-			has_completed_focus = enc_american_dream
-				}
-		visible = {
-			tag = ERB
-			NCR = {exists = no }
-			NOT = {has_full_control_of_state = 253} #shady sandsy
-			}
-		complete_effect = {
-			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						has_full_control_of_state = 253 # Shady Sands
-					}
-					ERB = {
-						create_wargoal = { type = annex_everything target = PREV }
-						}
-					}
-				}
-			}	
-		}
-	enc_NCR_seize_saccity = {
-		icon = decision_plasma
-		priority = 300
-		fire_only_once = yes
-
-		available = {
-			has_completed_focus = enc_american_dream
-		}
-		visible = {
-			tag = ERB
-			NCR = {exists = no }
-			NOT = {has_full_control_of_state = 135} #shady sandsy
-		}
-		complete_effect = {
-			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						has_full_control_of_state = 135 # Shady Sands
-					}
-					ERB = {
-						create_wargoal = { type = annex_everything target = PREV }
-						}
-					}
-				}
-			}	
-		}	
 
 	ENC_remove_emergency_draft = {
 		cost = 25
@@ -428,6 +87,7 @@ enc_executive_orders  = {
 		}
 		days_re_enable = 69
 	}
+
 	ENC_sabotage_ces_supply_lines = {
 		icon = generic_ignite_civil_war
 		cost = 100
@@ -478,6 +138,7 @@ enc_executive_orders  = {
 			clr_country_flag = enc_intervention_flag
 		}
 	}
+
 	convert_command_power = {      #reduced research for increased war support
 		icon = decision_enc_officer
 		allowed = {
@@ -497,7 +158,43 @@ enc_executive_orders  = {
 			experience_gain_army = 0.5
 		}
 	}
+	improved_worker_conditions = {
 
+			icon = generic_industry
+
+			available = {
+				
+			}
+
+			visible = {
+				always = yes 
+			}
+
+			fire_only_once = no
+
+			modifier = {
+				stability_weekly = 0.005
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.1
+			}
+
+			days_remove = 180
+			days_re_enable = 540
+
+			cost = 100
+
+			complete_effect = {
+
+			}
+
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 1
+					has_stability < 0.6
+				}
+			}
+		}
 	retool_machinery = {
 		icon = generic_industry
 		cost = 50
@@ -514,64 +211,25 @@ enc_executive_orders  = {
 		days_remove = 30
 		days_re_enable = 30
 	}
-	plunder_military_machinery = {
+}
+
+ENC_political_actions = {
+	ENC_red_menace_crisis = {
 		icon = generic_scorched_earth
-		visible = {
-			has_completed_focus = enc_purity
+		priority = 99
+		activation = {
+			# activated by enc_reformers.314
+			always = false 
 		}
-		cost = 50
-		available = {
-			num_of_available_civilian_factories > 5
-			any_owned_state = { #we occupy a non core state which has 3+ mil factories
-				not = { is_core_of = ERB }
-				has_ROOT_at_least_1_div_in_current_state_scope = YES
-				is_fully_controlled_by = ERB
-				arms_factory > 2
-			}
-			any_owned_state = { # we have a core ready to receive 2 factories
-				is_fully_controlled_by = ERB
-				is_core_of = ERB
-				free_building_slots = {
-					building = arms_factory
-					size > 2 
-					include_locked = YES 
-				}
-			}
+		cancel_trigger = {
+			not = { has_country_leader_with_trait = red_scare2 }		
 		}
-		modifier = { #moving cost (maybe use civ factories)
-			civilian_factory_use = 3
+		days_mission_timeout = 100
+		fire_only_once = no
+		is_good = no
+		timeout_effect = {
+			country_event = enc_reformers.243
 		}
-		days_remove = 30
-		remove_effect = { #remove 3 military factories from a non core occupied state
-			random_owned_state = {
-				limit = {
-					has_ROOT_at_least_1_div_in_current_state_scope = YES
-					not = { is_core_of = ERB }
-					arms_factory > 2
-				}
-				remove_building = { 
-					type = arms_factory 
-					level = 3 
-				}
-			}
-			random_owned_state = { #add 2 military factories to a core state
-				limit = {
-					is_core_of = ERB
-					free_building_slots = {
-						building = arms_factory
-						size > 1 
-						include_locked = yes 
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		days_re_enable = 30
 	}
 	ENC_ban_free_press = {
 		icon = oppression
@@ -588,6 +246,102 @@ enc_executive_orders  = {
 			stability_loss_based_on_people_popularity = yes
 		}
 		
+	}
+	ENC_opposition_to_segregation = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		activation = {
+			has_completed_focus = enc_segregation
+			OR = { 
+				has_idea = ENC_free_press
+				has_idea = ENC_free_press_2
+			}
+			people > 0.60			
+		}
+		available = {
+			NOT = { 
+				OR = { 
+					has_idea = ENC_free_press
+					has_idea = ENC_free_press_2
+				}		
+			}
+		}
+		days_mission_timeout = 400
+		cancel_trigger = {
+			people < 0.30
+		}
+		timeout_effect = { 
+			add_stability = -0.20
+			add_war_support = -0.15
+			add_political_power = -300
+		} 
+	}
+	ENC_anti_communist_propaganda = {
+		icon = decision_enc_propaganda
+		cost = 75		
+		visible = {	
+			has_completed_focus = enc_red_menace
+			leader_has_red_scare = yes
+		}
+		modifier = {
+			war_support_weekly = 0.0350
+			stability_weekly = -0.0175
+		}
+		days_remove = 50
+		days_re_enable = 30
+		complete_effect = {
+			increase_red_menace = yes
+			hidden_effect = { sound_effect = ERB_stripes_and_stars }
+		}
+	}
+
+	ENC_curb_wastelander_influence = {
+		icon = oppression
+		cost = 20
+		priority = 1
+		fire_only_once = no
+		visible = {
+			people > 0.20
+			has_completed_focus = enc_reno_end
+			not = { has_country_flag = enc_mid_game }
+		}
+		available = {
+			people > 0.30
+		}
+		days_re_enable = 50
+		days_remove = 90
+		modifier = {
+			people_drift = -0.30
+			intellectuals_drift = 0.20
+		}
+		complete_effect = {
+			set_temp_variable = { legitimacy_change_var = -0.03 }
+			change_legitimacy = yes
+		}
+	}
+	ENC_curb_elite_influence = {
+		icon = oppression
+		cost = 75
+		priority = 1
+		fire_only_once = no
+		visible = {
+			elites > 0.20
+			has_country_flag = enc_mid_game
+			has_completed_focus = enc_purge_opposition
+		}
+		available = {
+			elites > 0.30
+		}
+		days_re_enable = 50
+		days_remove = 90
+		modifier = {
+			elites_drift = -0.30
+		}
+		complete_effect = {
+			set_temp_variable = { stability_loss_factor = 0.20 }
+			stability_loss_based_on_elites_popularity = yes
+		}
 	}
 }
 
@@ -958,7 +712,7 @@ ENC_infiltrating_NCR = {
 				add_popularity = { ideology = elites popularity = 0.10 }
 		}
 	}
-	
+
 	enc_NCR_propaganda_tour = {
 		icon = decision_enc_propaganda
 		priority = 300
@@ -1060,6 +814,223 @@ ENC_infiltrating_NCR = {
 			clr_country_flag = ncr_suspicious
 		}
 	}
+
+	# war stuff
+	plunder_resources = {
+		icon = generic_scorched_earth
+		priority = 5
+		cost = 50
+		visible = {
+			has_war_with = NCR
+			not = { has_country_flag = enc_mid_game }
+		}
+		available = {
+			has_war_with = NCR
+			any_state = { #we occupy a non core state which has += 10 water
+				is_core_of = NCR
+				not = { is_core_of = ROOT }
+				is_controlled_by = ROOT
+				has_resources_amount = {
+					resource = water
+					amount = 10
+					state = THIS
+				}				
+			}
+		}
+		modifier = { #moving cost (maybe use civ factories)
+			supply_consumption_factor = -0.50
+			no_supply_grace = 48
+			heat_attrition_factor = -0.50
+		}
+		days_remove = 60
+		complete_effect = {
+			set_temp_variable = { legitimacy_change_var = -0.10 }
+			change_legitimacy = yes
+			random_state = {
+				limit = {
+					is_core_of = NCR
+					not = { is_core_of = ROOT }
+					is_controlled_by = ROOT
+					has_resources_amount = {
+						resource = water
+						amount = 10
+						state = THIS
+					}
+				}
+				custom_effect_tooltip = state_lose_10_water
+				hidden_effect = {
+					add_resource = {
+						type = water
+						amount = -10
+						state = THIS
+					}
+				}
+				add_state_flag = plundered_by_enc
+			}
+		}
+	}
+	plunder_equipment = {
+		icon = generic_scorched_earth
+		priority = 5
+		cost = 50
+		visible = {
+			has_war_with = ncr
+		}
+		available = {
+			has_war_with = NCR
+			any_state = { #we occupy a non core state which has 1+ mil factories
+				is_core_of = NCR
+				is_fully_controlled_by = ROOT
+				arms_factory > 0
+			}
+		}
+		complete_effect = {	
+			multiply_temp_variable = { legitimacy_change_var = -0.05 }
+			change_legitimacy = yes
+			random_state = {
+				limit = {
+					is_core_of = NCR
+					is_fully_controlled_by = ROOT
+					arms_factory > 0
+				}
+				remove_building = { 
+					type = arms_factory 
+					level = 1
+				}
+				add_state_flag = plundered_by_enc
+			}
+		}
+		remove_effect = {			
+			ROOT = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 500
+					producer = NCR
+				}
+			}
+		}
+	}
+	CES_california_crisis = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		visible = { has_full_control_of_state = 285
+				}
+		activation = {
+			has_country_flag = ces_occupies_california
+			has_completed_focus = enc_reform
+			not = {
+				CES = {
+					OR = {
+						exists = no
+						has_civil_war = YES
+						has_war_with = ERB #Enclave
+					}
+				}
+			}
+		}
+		available = {
+			77 = { is_controlled_by = ERB}
+		}
+		cancel_trigger = {
+			CES = {
+				OR = {
+					exists = no
+					has_civil_war = YES
+					has_war_with = ERB #Enclave
+				}
+			}
+		}
+		is_good = no
+		days_mission_timeout = 400
+		timeout_effect = {
+			CES = {	remove_ideas = enc_NCR__ces_resistance }
+				}
+		complete_effect = { country_event = {id = enc_reformers.204 }
+		}
+	}
+	enc_NCR_seize_dayglow = {
+		icon = decision_plasma
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = enc_american_dream
+				}
+		visible = {
+			tag = ERB
+			NCR = {exists = no }
+			NOT = {has_full_control_of_state = 63} # Dayglow
+			}
+		complete_effect = {
+			custom_effect_tooltip = enc_NCR_seize_dayglow.tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 63 #Dayglow
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+						}
+					}
+				}
+			}	
+		}
+	enc_NCR_seize_shady_sands = {
+		icon = decision_plasma
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = enc_american_dream
+				}
+		visible = {
+			tag = ERB
+			NCR = {exists = no }
+			NOT = {has_full_control_of_state = 253} #shady sandsy
+			}
+		complete_effect = {
+			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 253 # Shady Sands
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+						}
+					}
+				}
+			}	
+		}
+	enc_NCR_seize_saccity = {
+		icon = decision_plasma
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = enc_american_dream
+		}
+		visible = {
+			tag = ERB
+			NCR = {exists = no }
+			NOT = {has_full_control_of_state = 135} #shady sandsy
+		}
+		complete_effect = {
+			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 135 # Shady Sands
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+						}
+					}
+				}
+			}	
+		}	
+
 }
 
 ENC_nation_building = {
@@ -1120,6 +1091,7 @@ ENC_nation_building = {
 	ENC_dornan_barons = {
 		icon = enc_helmet_color
 		cost = 50
+		priority = 29
 		days_remove = 10
 		ai_will_do = {
 			factor = 10
@@ -1145,6 +1117,7 @@ ENC_nation_building = {
 	ENC_marcus_barons = {
 		icon = decision_vault_boy
 		cost = 50
+		priority = 29
 		days_remove = 1
 		ai_will_do = {
 			factor = 10
@@ -1674,7 +1647,7 @@ ENC_nation_building = {
 			}
 		}
 	ENC_find_power_grid = {
-		priority = 10
+		priority = 100
 		icon = GFX_icons_power
 		allowed = {
 			original_tag = ERB

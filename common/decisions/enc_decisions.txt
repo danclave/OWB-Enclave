@@ -734,6 +734,102 @@ ENC_political_infighting = {
 	}
 }
 
+ENC_render_unto_caesar = {
+	CES_crisis = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		activation = {
+			has_country_flag = ENC_CES_hostile
+			has_completed_focus = enc_purity
+			not = {
+				CES = {
+					OR = {
+						exists = no
+						has_civil_war = YES
+						has_war_with = ERB #Enclave
+					}
+				}
+			}
+		}
+		available = {
+			not = { country_exists = CES }
+		}
+		cancel_trigger = {
+			CES = {
+				OR = {
+					exists = no
+					has_civil_war = YES
+					has_war_with = ERB #Enclave
+				}
+			}
+		}
+		is_good = no
+		days_mission_timeout = 1068
+		timeout_effect = {
+			CES = {	
+				country_event = { id = enc.41 } # todo: change
+			}
+			clr_country_flag = ENC_CES_hostile
+		}
+		complete_effect = {
+			ERB = { country_event = {id = enc_reformers.101 } }
+		}
+	}
+	
+	CES_reformer_crisis = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		activation = {
+			has_country_flag = ENC_axis_evil
+			not = {
+				CES = {
+					OR = {
+						exists = no
+						has_civil_war = YES
+						has_war_with = ERB #Enclave
+					}
+				}
+			}
+		}
+		available = {
+			not = { country_exists = CES }
+		}
+		cancel_trigger = {
+			CES = {
+				OR = {
+					exists = no
+					has_civil_war = YES
+					has_war_with = ERB #Enclave
+				}
+			}
+		}
+		is_good = no
+		days_mission_timeout = 1068
+		visible = {original_tag = ERB }
+		timeout_effect = { country_event = { id = enc_reformers.101 }}
+		complete_effect = { }
+	}
+	ENC_rise_slaves = {
+	priority = 300
+		fire_only_once = yes
+		available = {
+			518 = {
+				has_state_flag = enc_slaves_armed
+			}
+		}
+	visible = {
+			tag = ERB
+			has_completed_focus = enc_ss_ceasar_bottom_uprising
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.65 }
+			}
+	}
+}	
+
+
 # DEBUG
 ###############################
 
