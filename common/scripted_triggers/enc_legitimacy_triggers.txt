@@ -25,6 +25,13 @@ has_no_free_press = {
 	}
 }
 
+congress_accepts_nuke = {
+	has_war_with = CES
+	has_country_flag = enc_nukes_unarmed
+	not = {has_country_flag = enc_nuke_arming }
+	surrender_progress > 0.3
+}
+
 leader_has_red_scare = {
 	OR = {
 		has_country_leader_with_trait = red_scare

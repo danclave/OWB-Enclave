@@ -11,7 +11,7 @@ country_event = {#1 - DOUGLAS PAST - STORIES
 	
 	
 	option = {# He aided the Chosen One and after the Oil Rig Destruction went their seperate ways
-		name = enc_reformers.1.a
+		name = enc_reformers.1.a.
 		country_event = { id = enc_reformers.228 }
 		set_country_flag = enc_arroyo
 		set_country_flag = leader_mutant_sympathies
@@ -4775,7 +4775,7 @@ country_event = {#160 - The Divide
 	}
 }		
 
-country_event = {#161 - Unification
+country_event = { #161 - The Silos
 	id = enc_reformers.161
 	title = enc_reformers.161.t
 	desc = enc_reformers.161.d
@@ -4783,34 +4783,38 @@ country_event = {#161 - Unification
 	fire_only_once = yes
 	is_triggered_only = no
 	trigger = {
-		has_completed_focus = enc_reform 
+		has_completed_focus = enc_reform
 		has_full_control_of_state = 13 # Divide
 		has_full_control_of_state = 592 # Divide
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	option = { # Wish we had codes
+		trigger = {
+			NOT = {
+				has_country_flag = enc_launch_codes
+			}
 		}
-	mean_time_to_happen = { days = 3 }
-	option = {#	Wish we had codes
-		trigger = { 
-				NOT = { has_country_flag = enc_launch_codes
-						}
-					}
-		custom_effect_tooltip = enc_reformers.161.a.tt	
+		custom_effect_tooltip = enc_reformers.161.a.tt
 		name = enc_reformers.161.a
 		set_country_flag = enc_nuke_silo
-		}
-	option = {#	Dismantle Nukes
-		custom_effect_tooltip = enc_reformers.161.b.tt	
-		name = enc_reformers.161.b
-		}	
-		
-	option = {#	NUKES
-		custom_effect_tooltip = enc_reformers.161.c.tt	
-		trigger = { has_country_flag = enc_launch_codes }
-		name = enc_reformers.161.c
-		set_country_flag = enc_nukes_armed
-		}	
 	}
+	option = { # Dismantle Nukes
+		custom_effect_tooltip = enc_reformers.161.b.tt
+		name = enc_reformers.161.b
+	}
+	option = { # NUKES
+		custom_effect_tooltip = enc_reformers.161.c.tt
+		trigger = {
+			has_country_flag = enc_launch_codes
+		}
+		name = enc_reformers.161.c
+		set_country_flag = enc_nukes_unarmed
+	}
+}
 
-country_event = {#162 - Navarro
+country_event = { #162 - Navarro
 	id = enc_reformers.162
 	title = enc_reformers.162.t
 	desc = enc_reformers.162.d
@@ -4818,25 +4822,28 @@ country_event = {#162 - Navarro
 	fire_only_once = yes
 	is_triggered_only = no
 	trigger = {
-		has_completed_focus = enc_reform 
+		has_completed_focus = enc_reform
 		has_full_control_of_state = 548 # Navarro
-		}
-	mean_time_to_happen = { days = 3 }
-	option = {#	Codes but no Ashton
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	option = { # Codes but no Ashton
 		trigger = {
-				NOT = { has_country_flag = enc_nuke_silo
-						}
-					}
+			NOT = {
+				has_country_flag = enc_nuke_silo
+			}
+		}
 		name = enc_reformers.162.a
 		set_country_flag = enc_launch_codes
-		}
-	option = {#	Have Ashton
+	}
+	option = { # Have Ashton
 		trigger = {
-				has_country_flag = enc_nuke_silo
-					}
-		name = enc_reformers.162.b
-		set_country_flag = enc_nukes_armed
+			has_country_flag = enc_nuke_silo
 		}
+		name = enc_reformers.162.b
+		set_country_flag = enc_nukes_unarmed
+	}
 }
 
 country_event = {#163 - The Lonesome Road
@@ -4846,34 +4853,44 @@ country_event = {#163 - The Lonesome Road
 	picture = GFX_event_CES_camp_1
 	fire_only_once = yes
 	is_triggered_only = no
-		trigger = {	
-			ERB = { has_war_with = CES }
-			has_completed_focus = enc_reform
-			has_country_flag = enc_nukes_armed
-		}
+	trigger = {	
+		ERB = { has_war_with = CES }
+		has_completed_focus = enc_reform
+		has_country_flag = enc_nukes_unarmed
+	}
 	mean_time_to_happen = { days = 3 }
-	option = {#	
+	option = {#	E Pluribus Uranium
 		name = enc_reformers.163.a
-		
 		trigger = {
 			not = { has_country_flag = enc_empowered_congress }
 		}
-		set_country_flag = enc_nuke_legion
+		set_country_flag = enc_nuke_arming
+		custom_effect_tooltip = enc_nuke_arming_set
 	}
-	option = {#	
+	option = {#	Dismantle it
 		name = enc_reformers.163.b
-		custom_effect_tooltip = enc_reformers.163.b.tt	
+		custom_effect_tooltip = enc_reformers.161.b.tt # intentionally shared with 161
 	}
-	option = {#	
+	option = {#	Arm it
 		trigger = {
-			has_country_flag = enc_empowered_congress
+			has_country_flag = enc_empowered_congress			
 		}
 		name = enc_reformers.163.c
-		custom_effect_tooltip = enc_reformers.163.c.tt	
+		if = {
+			limit = {
+				not = { congress_accepts_nuke = yes }
+			}
+			country_event = { id = enc_reformers.313 days = 3 }
+			custom_effect_tooltip = enc_reformers.163.c.tt
+		}
+		else = {
+			set_country_flag = enc_nuke_arming
+			custom_effect_tooltip = enc_nuke_arming_set
+		}
 	}			
-}		
+}
 	
-country_event = {#164 - Nuke Flagstaff
+country_event = {#164 - Nuked Flagstaff
 	id = enc_reformers.164
 	title = enc_reformers.164.t
 	desc = enc_reformers.164.d
@@ -4887,9 +4904,9 @@ country_event = {#164 - Nuke Flagstaff
 		CES = { remove_ideas = CES_BOS }
 		CES  = { add_ideas = ENC_nuke }
 		set_country_flag = enc_flagstaff_nuked 
-		clr_country_flag = enc_nuke_legion
+		clr_country_flag = enc_nuke_arming
 		clr_country_flag = enc_nuke_silo
-		clr_country_flag = enc_nukes_armed
+		clr_country_flag = enc_nukes_unarmed
 		hidden_effect = {
 			country_event = { id = enc_reformers.166 days = 70 } 
 		}
@@ -6041,21 +6058,14 @@ country_event = {#205 - The Lonesome Road II
 	picture = GFX_event_CES_camp_1
 	fire_only_once = yes
 	is_triggered_only = no
-		trigger = {	
-			ERB = { has_war_with = CES }
-			has_completed_focus = enc_reform
-			has_country_flag = enc_nukes_armed
-			not = {has_country_flag = enc_nuke_legion }
-			surrender_progress > 0.3 	
-		}
-	mean_time_to_happen = { days = 3 }
-	option = {#	
-		name = enc_reformers.163.a
-		set_country_flag = enc_nuke_legion
+	trigger = {
+		congress_accepts_nuke = yes	
 	}
-	option = {#	
-		name = enc_reformers.163.b
-		custom_effect_tooltip = enc_reformers.163.b.tt	
+	mean_time_to_happen = { days = 3 }
+	option = { # 
+		name = enc_reformers.205.a
+		set_country_flag = enc_nuke_arming
+		custom_effect_tooltip = enc_nuke_arming_set
 	}
 }			
 	
@@ -7836,7 +7846,7 @@ country_event = {#312 - Nuke Armed & ready
 	id = enc_reformers.312
 	title = enc_reformers.312.t
 	desc = enc_reformers.312.d
-	picture =  GFX_event_ENC_president_only
+	picture =  GFX_event_enc_the_silo
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -7892,7 +7902,28 @@ country_event = {#312 - Nuke Armed & ready
 		custom_effect_tooltip = vice_president_dornan_flag
 	}
 }
-
+country_event = {#313 - Congress blocks use of nuke
+	id = enc_reformers.313
+	title = enc_reformers.313.t
+	desc = enc_reformers.313.d
+	picture =  GFX_event_enc_senate
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # You people deserve Caeser.
+		name = enc_reformers.313.a
+		trigger = {
+			has_country_leader_with_trait = ruthless
+		}
+	}
+	option = { # Let us hope to God you are right.
+		name = enc_reformers.313.b
+		trigger = {
+			has_country_leader_with_trait = charismatic
+		}		
+	}
+}
 news_event = {
 	id = nuke_dropped.1
 	title = enc_reformers.312.t

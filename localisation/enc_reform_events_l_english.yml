@@ -1096,6 +1096,7 @@ enc_reformers.204.a: "We're going to be heroes, right?"
 #############################################################################################################
 enc_reformers.205.t: "Desparate Times, Desparate Measures"
 enc_reformers.205.d: "The United States Army has fallen back before the Legion, and many in Congress who once opposed the use of nukes are now willing to consider them, if the alternative is Legion victory."
+enc_reformers.205.a: "Things never should have come this far."
 #############################################################################################################
 enc_reformers.206.t: "And We'll Never Be Free Until We End Slavery"
 enc_reformers.206.d: "The Enclave tolerated (and practiced slavery) in Nevada, but the federal judiciary, composed of Enclave reformers and New California's attorneys, has a different view of that practice in light of the Constitution.\n\nThe Thirteenth Amendment states that "Neither slavery nor involuntary servitude . . . shall exist within the United States." As such, the Supreme Court has issued a ruling declaring that all slaves within the United States are free and that "attempts to call it indentured servitude are just slavery with extra steps."\n\nThis may hinder the government's plans for reconstruction, but has been hailed by the New World Party as a tremendous victory for the rights of every American."
@@ -1423,12 +1424,17 @@ enc_reformers.311.b: "Let the adults worry about these things."
 enc_reformers.311.b.tt: "§gAnti communism is kept out of the education.§!"
 #############################################################################################################
 enc_reformers.312.t: "Nuke Armed and Ready-"
-enc_reformers.312.d: "The nuke is ready."
+enc_reformers.312.d: "Our engineering team at the Ashton silo has confirmed that the nuclear device held there is ready for launch. An alternative target has been programmed and the payload has been fully armed. They warn us that further tempering or reprograming is ill-advised as the ancient super weapon is only still operational by a small miracle. All they are now waiting for is the confirmation of president [ERB.GetLeader]."
 enc_reformers.312.a: "Thumbs down, you son of a bitch."
 enc_reformers.312.b: "God forgive us."
 enc_reformers.312.c: "Hold off for now."
 enc_reformers.312.e: "§RFire it at Communist China instead§!"
 enc_reformers.312.e.tt:0 "§gThe ICBM is aimed back towards it's original target, Shanghai. We will never know if it hit a population center or barren wasteland.§!\n\n"
+#############################################################################################################
+enc_reformers.313.t: "Congress vetos use of nukes"
+enc_reformers.313.d: "It appears that we were unsuccesful in our attempts to sneak the arming and use of a nuclear missile past the legislative powers in our government. Congress has unanimously vetoed our decision to use a nuclear weapon on American soil. They claim the Legion can be brought down by conventional arms alone and that Flagstaff is just another city occupied by the standing army that is Caeser's Legion rather than an enemy capital city.\n\nIt is possible they might change their minds should [CES.GetLeader] prove more of a threat than they imagined."
+enc_reformers.313.a: "You people deserve [CES.GetLeader]."
+enc_reformers.313.b: "I hope to God you're right."
 ##################################################
 nuke_dropped.1.t:0 "Atomic Bombing of [From.From.GetName]"
 nuke_dropped.1.d:0 "For the first time in 2OO years, a nuclear bomb has been detonated in [From.From.GetName] as part of international warfare. The unprecedented destruction stands as a testament to the devastating power of this old weapon, which is feared not only for what it can do to its targets, but what implications it has for the one who deploys it and for humanity itself.\n\nThe world holds its breath waiting for what will come next. Will this force [From.From.Owner.GetName] to surrender to avoid further terror, or will it only strengthen their resolve to strike back against those who would resort to such measures?"
