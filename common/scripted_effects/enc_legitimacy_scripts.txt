@@ -113,10 +113,19 @@ change_legitimacy = {
 			}
 		}
 		balance_legitimacy_gain = yes
-		add_to_variable  = {
-			var = enc_legitimacy
-			value = legitimacy_change_var
+		
+		# add free stability if legitimacy past 100%
+		set_temp_variable = { legitimacy_overflow_buffer = enc_legitimacy }
+		add_to_temp_variable = { legitimacy_overflow_buffer = legitimacy_change_var }
+		subtract_from_temp_variable = { legitimacy_overflow_buffer = 1 }
+		if = {
+			limit = {
+				check_variable = { legitimacy_overflow_buffer > 0 }
+			}
+			subtract_from_temp_variable = { legitimacy_change_var = legitimacy_overflow_buffer}
 		}
+		
+		add_to_variable  = { enc_legitimacy = legitimacy_change_var	}
 		if = {
 			limit = {
 				check_variable = { legitimacy_change_var < 0 }
@@ -128,7 +137,14 @@ change_legitimacy = {
 				check_variable = { legitimacy_change_var > 0 }
 			}
 			custom_effect_tooltip = gain_legitimacy_tt
-		}	
+		}
+		if = {
+			limit = {
+				check_variable = { legitimacy_overflow_buffer > 0 }
+			}
+			custom_effect_tooltip = legitimacy_overflow_tt
+			add_stability = legitimacy_overflow_buffer
+		}
 	}
 	advanced_update_legitimacy = yes
 }
@@ -203,7 +219,7 @@ advanced_update_legitimacy = {
 	# time to set the variables that will affect our dynamic legitimacy modifier
 
 	# set political_power_factor bonus
-	set_variable = { enc_legitimacy_political_power_factor = 0.50 }
+	set_variable = { enc_legitimacy_political_power_factor = 0.30 }
 	multiply_variable = { enc_legitimacy_political_power_factor = legitimacy_modifier_var }
 	
 	# set political_power_factor bonus

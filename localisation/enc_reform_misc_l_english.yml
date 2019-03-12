@@ -37,6 +37,7 @@ vice_president_hayes_trait:0 "Vice President Hayes"
 vice_president_lynette_trait:0 "Vice President Lynette"
 
 red_scare:0 "Anti Communist"
+red_scare2:0 "Communism Paranoia"
 ###################################
 # REFORM UI
 ###################################
@@ -105,6 +106,7 @@ enc_promised_no_peace_with_bos: "Promised no peace with the Brotherhood"
 enc_ncr_connections_flag: "Connections in the §YNCR§!"
 enc_crackdown_justified: "§YCrackdown§! is justified"
 enc_crackdown_justified_tt: "We gain justifications for a §Ycrackdown§!"
+vice_president_hayes_flag: "Hayes is Vice President"
 
 ncr_suspicion_higher_than_5:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y5§! or higher"
 ncr_suspicion_higher_than_10:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y10§! or higher"
@@ -131,6 +133,7 @@ ENC_hiding_cost_increased_30_tt: "§YNCR suspicion§! will go up by §R30§! £p
 change_legitimacy_tt:0 "Modify §YLegitimacy§! by §+§![?legitimacy_change_var|+%]§!\n\n"
 lose_legitimacy_tt:0 "Lose §+§![?legitimacy_change_var|+%]§! §YLegitimacy§!\n\n"
 gain_legitimacy_tt:0 "Gain §+§![?legitimacy_change_var|+%]§! §YLegitimacy§!\n\n"
+legitimacy_overflow_tt: "§MExcess Legitimacy converted to Base Stability§!\n"
 
 lose_suspicion_tt:0 "§YNCR suspicion§! will go down by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
 gain_suspicion_tt:0 "§YNCR suspicion§! will go up by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
@@ -139,6 +142,7 @@ gannon_returns: "Arcade Ganon has returned to the Enclave"
 
 enc_salvatores_tolerated_flag: "Salvatores tolerated"
 enc_wrights_tolerated_flag: "Wrights tolerated"
+vice_president_dornan_flag: "Vice President Dornan"
 
 ncr_suspicious_clr_tt: "\n§MRemoves the need to hide from the [NCR.GetName]§!"
 

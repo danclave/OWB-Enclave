@@ -749,11 +749,11 @@ ENC_debug = {
 		}
 	}
 	ENC_misc = {
+		available = {
+			has_country_leader_with_trait = red_scare2
+		}
 		complete_effect = {
-			add_manpower = 1
-			add_dynamic_modifier = {
-				modifier = enc_legitimacy_dynamic_modifier
-			}
+			misc_effect_test = yes
 		}		
 	}
 	ENC_reduce_legitimacy_relevance = {
