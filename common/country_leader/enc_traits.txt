@@ -113,6 +113,16 @@ leader_traits = {
 		intellectuals_drift = 0.15
 		army_morale_factor = 0.10
 	}
+	corrupt_sycophant = {
+		random = no
+		political_power_factor = 0.15
+		consumer_goods_factor = 0.10
+	}
+	enc_man_of_the_people = {
+		random = no
+		people_drift = 0.15
+		political_power_factor = 0.10	
+	}
 	
 	# manufacturers
 	vertibird_aircraft_manufacturer = {
@@ -189,7 +199,8 @@ leader_traits = {
 
 	enc_disliked_pragmatist = {
 		random = no
-		non_core_manpower = 0.02
+		non_core_manpower = 0.05
+		consumer_goods_factor = -0.03
 		# construction speed?
 		stability_factor = -0.05
 		war_support_factor = -0.05

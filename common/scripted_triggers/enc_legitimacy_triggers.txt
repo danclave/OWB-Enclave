@@ -27,8 +27,8 @@ has_no_free_press = {
 
 leader_has_red_scare = {
 	OR = {
-		has_country_leader_trait = red_scare
-		has_country_leader_trait = red_scare2
+		has_country_leader_with_trait = red_scare
+		has_country_leader_with_trait = red_scare2
 	}
 }
 

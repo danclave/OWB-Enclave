@@ -25,37 +25,12 @@ add_popularity_to_opposition = {
 			ideology = people
 			popularity = popularity_change
 		}
+		multiply_temp_variable = { popularity_change = 0.40 }
+		add_popularity = {
+			ideology = elites
+			popularity = popularity_change
+		}
 	}
-}
-
-add_5_popularity_to_opposition = {
-	set_temp_variable = { popularity_change = 0.05 }
-	add_popularity_to_oposition = yes
-}
-
-add_10_popularity_to_oposition = {
-	set_temp_variable = { popularity_change = 0.10 }
-	add_popularity_to_oposition = yes
-}
-
-add_15_popularity_to_oposition = {
-	set_temp_variable = { popularity_change = 0.15 }
-	add_popularity_to_oposition = yes
-}
-
-remove_5_popularity_from_oposition = {
-	set_temp_variable = { popularity_change = -0.05 }
-	add_popularity_to_oposition = yes
-}
-
-remove_10_popularity_from_oposition = {
-	set_temp_variable = { popularity_change = -0.10 }
-	add_popularity_to_oposition = yes
-}
-
-remove_15_popularity_from_oposition = {
-	set_temp_variable = { popularity_change = -0.15 }
-	add_popularity_to_oposition = yes
 }
 
 ##################################################
@@ -91,36 +66,6 @@ add_popularity_to_ruling_party= {
 			popularity = popularity_change
 		}
 	}
-}
-
-add_5_popularity_to_ruling_party= {
-	set_temp_variable = { popularity_change = 0.05 }
-	add_popularity_to_ruling_party = yes
-}
-
-add_10_popularity_to_ruling_party= {
-	set_temp_variable = { popularity_change = 0.10 }
-	add_popularity_to_ruling_party = yes
-}
-
-add_15_popularity_to_ruling_party= {
-	set_temp_variable = { popularity_change = 0.15 }
-	add_popularity_to_ruling_party = yes
-}
-
-remove_5_popularity_from_ruling_party= {
-	set_temp_variable = { popularity_change = -0.05 }
-	add_popularity_to_ruling_party = yes
-}
-
-remove_10_popularity_from_ruling_party= {
-	set_temp_variable = { popularity_change = -0.10 }
-	add_popularity_to_ruling_party = yes
-}
-
-remove_15_popularity_from_ruling_party= {
-	set_temp_variable = { popularity_change = -0.15 }
-	add_popularity_to_ruling_party = yes
 }
 
 ##################################################
@@ -178,6 +123,11 @@ stability_loss_based_on_people_popularity = {
 	multiply_temp_variable = {
 		var = stability_loss_var
 		value = stability_loss_factor?0.66
+	}
+	clamp_temp_variable = { # move this clamp
+		var = stability_loss_var
+		min = stability_loss_max?-1
+		max = 0.25
 	}
 	add_stability = stability_loss_var
 	custom_effect_tooltip = stability_loss_based_on_people_popularity
@@ -253,8 +203,9 @@ choose_segregation = {
 	add_popularity = { ideology = elites popularity = 0.05 } 
 	set_temp_variable = { legitimacy_change_var =  -0.10 }	
 	change_legitimacy = yes		
-	
+	reduce_legitimacy_relevance = yes
 	add_ideas = enc_segregation_forever	
+	
 	
 	if = { # promised no integration
 		limit = {
@@ -262,11 +213,12 @@ choose_segregation = {
 		}
 		custom_effect_tooltip = enc_promised_no_integration_kept
 		add_stability = 0.05
+		add_political_power = 50
 		clr_country_flag = enc_promised_no_integration
 	}	
 }
 choose_integration = {
-	add_popularity = { ideology = people popularity = 0.10 } 
+	add_popularity = { ideology = people popularity = 0.05 } 
 	add_ideas =	ENC_begun_integration
 	set_country_flag = enc_wastelander_integration
 
@@ -275,9 +227,10 @@ choose_integration = {
 			has_country_flag = enc_promised_no_integration				
 		}
 		custom_effect_tooltip = enc_promised_no_integration_broken
-		add_popularity = { ideology = intellectuals popularity = -0.05 } 
-		add_stability = -0.15
-		add_war_support = -0.15
+		add_popularity = { ideology = intellectuals popularity = -0.05 }
+		add_political_power = -100
+		add_stability = -0.10
+		add_war_support = -0.05
 		clr_country_flag = enc_promised_no_integration
 	}		
 }
@@ -303,8 +256,6 @@ choose_order = {
 }
 
 choose_democracy = {
-	set_temp_variable = { popularity_change = 0.05 }
-	add_popularity_to_opposition = yes
 	set_temp_variable = {
 		var = legitimacy_change_var
 		value = 0.05
@@ -443,7 +394,7 @@ increase_red_menace = {
 	add_to_variable = { enc_red_menace_var = increase_red_menace_var?1 }
 	if = {
 		limit = {
-			has_country_leader_trait = red_scare
+			has_country_leader_with_trait = red_scare
 			check_variable = { enc_red_menace_var > 4 }
 		}
 		swap_ruler_traits = {
@@ -456,7 +407,7 @@ decrease_red_menace = {
 	subtract_from_variable = { enc_red_menace_var = decrease_red_menace_var?1 }	
 	if = {
 		limit = {
-			has_country_leader_trait = red_scare2
+			has_country_leader_with_trait = red_scare2
 			check_variable = { enc_red_menace_var < 4 }
 		}
 		swap_ruler_traits = {
@@ -519,7 +470,6 @@ people_start_revolt = {
 				support = {}
 			}
 			every_owned_state = {
-				limit = { has_state_flag = enc_patriots_armed }
 				create_unit = { 
 					division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
 					owner = NCR
@@ -535,6 +485,33 @@ people_start_revolt = {
 	declare_war_on = {
 		target = NCR
 		type = annex_everything
+	}
+}
+
+spawn_rebel_militia_in_every_state = {
+	division_template = {
+		name = "Rebel Militia"
+		division_names_group = REBEL_INF_01
+		regiments = {
+			militia = {	x = 0 y = 0	}
+			militia = { x = 0 y = 1	}
+			militia = { x = 0 y = 2 }
+			militia = { x = 1 y = 0 }
+			militia = { x = 1 y = 1 }
+			militia = { x = 1 y = 2 }
+			militia = { x = 1 y = 3 }
+		}
+		support = {}
+	}
+	every_owned_state = {
+		create_unit = { 
+			division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+			owner = THIS
+		}
+		create_unit = { 
+			division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+			owner = THIS
+		}
 	}
 }
 
@@ -655,6 +632,15 @@ change_douglas_portrait_to_nevada = {
 	# custom_effects_tooltip = enc_time_for_a_new_flag
 }
 
+
+##################################################
+### Change Douglas background ####
+##################################################
+misc_effect_test = {
+	set_temp_variable = { legitimacy_change_var = 0.30 }
+	change_legitimacy = yes
+}
+
 comply_with_protests = {
 	if = { # not recognized as human, please do so
 		limit = {
@@ -680,7 +666,7 @@ comply_with_protests = {
 		hidden_effect = {			
 			unlock_national_focus = enc_the_fate_of_our_democracy
 		}
-		complete_national_focus = enc_local_elections # todo bypass law_or_order
+		complete_national_focus = enc_empowered_congress # todo bypass law_or_order
 	}
 	else_if = { # player has no free press, restore free press
 		limit = {
