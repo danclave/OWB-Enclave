@@ -352,7 +352,7 @@ ENC_NCR_hiding = {
 				limit = {						
 					has_idea_with_trait = salvatore_puppet
 				}
-				add_to_variable = { var = ENC_hiding_cost value = 5}	
+				add_to_variable = { var = ENC_hiding_cost value = 7}	
 			}
 			else = {
 				add_to_variable = { var = ENC_hiding_cost value = 10}			
@@ -484,6 +484,7 @@ ENC_NCR_hiding = {
 		visible = {
 			has_completed_focus = enc_reform
 			has_country_flag = ncr_suspicious
+			not = { has_completed_focus = enc_american_dream }
 		}
 		available = {
 			has_completed_focus = enc_home_is_nevada
@@ -748,14 +749,17 @@ ENC_debug = {
 		}
 	}
 	ENC_misc = {
+		available = {
+			has_country_leader_with_trait = red_scare2
+		}
 		complete_effect = {
-			start_civil_war = {
-				ideology = elites
-				size = party_popularity@elites
-				only_own_territory = yes
-				capital = 159
-			}
+			misc_effect_test = yes
 		}		
+	}
+	ENC_reduce_legitimacy_relevance = {
+		complete_effect = {
+			reduce_legitimacy_relevance = yes
+		}
 	}
 	ENC_restore_douglas_portrait = {
 		complete_effect = {

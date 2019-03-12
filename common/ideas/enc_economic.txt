@@ -33,7 +33,10 @@ ideas = {
 			removal_cost = -1
 			allowed = {
 				always = no
-			}			
+			}
+			on_add = {
+				custom_effect_tooltip = closed_economy_TT
+			}
 			modifier = {
 				min_export = 0
 				local_resources_factor = -0.90
@@ -54,7 +57,10 @@ ideas = {
 			removal_cost = -1
 			allowed = {
 				always = no
-			}			
+			}
+			on_add = {
+				custom_effect_tooltip = closed_economy_TT
+			}		
 			modifier = {
 				min_export = 0
 				enemy_justify_war_goal_time = 1

@@ -4,22 +4,23 @@
 enc_executive_orders  = {
 	ENC_red_menace_crisis = {
 		icon = generic_scorched_earth
-		priority = 11
-		available = {
-		
-	}
+		priority = 99
 		activation = {
-			has_country_flag = enc_commie_baseball
-		}	
+			has_country_leader_with_trait = red_scare2
+		}
+		cancel_trigger = {
+			not = { has_country_leader_with_trait = red_scare2 }		
+		}
 		days_mission_timeout = 100
 		fire_only_once = no
 		is_good = no
 		timeout_effect = {
-		country_event = enc_reformers.243
+			country_event = enc_reformers.243
 		}
 	}
 	plunder_resources = {
 		icon = generic_scorched_earth
+		priority = 5
 		cost = 50
 		visible = {
 			has_war_with = NCR
@@ -72,6 +73,7 @@ enc_executive_orders  = {
 	}
 	plunder_equipment = {
 		icon = generic_scorched_earth
+		priority = 5
 		cost = 50
 		visible = {
 			has_war_with = ncr
@@ -84,12 +86,10 @@ enc_executive_orders  = {
 				arms_factory > 0
 			}
 		}
-		complete_effect = {
-			random_state = {			
-				ROOT = {							
-					multiply_temp_variable = { legitimacy_change_var = -0.05 }
-					change_legitimacy = yes
-				}
+		complete_effect = {	
+			multiply_temp_variable = { legitimacy_change_var = -0.05 }
+			change_legitimacy = yes
+			random_state = {
 				limit = {
 					is_core_of = NCR
 					is_fully_controlled_by = ROOT
@@ -143,6 +143,30 @@ enc_executive_orders  = {
 			}
 		}	
 	}
+	ENC_curb_wastelander_influence = {
+		icon = oppression
+		cost = 20
+		priority = 1
+		fire_only_once = no
+		visible = {
+			people > 0.20
+			has_completed_focus = enc_reno_end
+			not = { has_country_flag = enc_mid_game }
+		}
+		available = {
+			people > 0.30
+		}
+		days_re_enable = 50
+		days_remove = 90
+		modifier = {
+			people_drift = -0.30
+			intellectuals_drift = 0.20
+		}
+		complete_effect = {
+			set_temp_variable = { legitimacy_change_var = -0.03 }
+			change_legitimacy = yes
+		}
+	}
 
 	ENC_opposition_to_segregation = {
 		icon = generic_break_treaty
@@ -179,7 +203,7 @@ enc_executive_orders  = {
 		cost = 75		
 		visible = {	
 			has_completed_focus = enc_red_menace
-			has_country_flag = enc_red_menace_flag
+			leader_has_red_scare = yes
 		}
 		modifier = {
 			war_support_weekly = 0.0350
@@ -188,6 +212,7 @@ enc_executive_orders  = {
 		days_remove = 50
 		days_re_enable = 30
 		complete_effect = {
+			increase_red_menace = yes
 			hidden_effect = { sound_effect = ERB_stripes_and_stars }
 		}
 	}
@@ -245,30 +270,45 @@ enc_executive_orders  = {
 				}
 			}
 		}
-	CES_nuke = {
+	ENC_nuke_arm = {
 		icon = gfx_decision_nuke_flagstaff
 		priority = 30		
-		fire_only_once = YES
+		fire_only_once = yes
 		activation = {
 			country_exists = CES
-			has_country_flag = enc_nuke_legion
+			# has_country_flag = enc_nuke_legion
 			has_completed_focus = enc_reform
+			not = { 
+				has_country_flag = enc_flagstaff_nuked 
+				has_country_flag = enc_nuke_armed
+			}
 		}
-		visible = { has_full_control_of_state = 592	}
+		# visible = { has_full_control_of_state = 592	}
 		available = {
 			NOT = { country_exists = CES }
 		}
 		cancel_trigger = {
-			NOT = { has_full_control_of_state = 592 }
+			# NOT = { has_full_control_of_state = 592 }
 		}		
-		is_good = no
-		days_mission_timeout = 5#0
+		is_good = yes
+		days_mission_timeout = 5# 0
 		timeout_effect = {
-			# launch_nuke = { # MTG
-			   # province = 8951 #use either province or state. if state is used it will prefer enemies first while picking a province to nuke. otherwise it will pick one of the neutrals
-			   # use_nuke = no #will consume nuke if specified
-			# } 
-			country_event = { id = enc_reformers.164  }
+			set_country_flag = enc_nuke_armed
+		}
+	}
+	ENC_nuke_launch = {
+		icon = gfx_decision_nuke_flagstaff
+		priority = 30		
+		fire_only_once = no
+		visible = { 	
+			has_country_flag = enc_nuke_armed
+		}
+		available = {
+			has_country_flag = enc_nuke_armed
+			has_full_control_of_state = 592
+		}
+		complete_effect = {
+			country_event = { id = enc_reformers.312 }
 		}
 	}
 	CES_california_crisis = {
@@ -574,6 +614,7 @@ enc_executive_orders  = {
 		}
 		complete_effect = {
 			remove_ideas = ENC_free_press
+			set_temp_variable = { stability_loss_max = 0.25 }
 			stability_loss_based_on_people_popularity = yes
 		}
 		
@@ -789,16 +830,54 @@ ENC_infiltrating_NCR = {
 			add_manpower = 100
 		}
 	}
-
+	ENC_reroute_caravans = {
+		icon = generic_break_treaty
+		cost = 50
+		priority = 10
+		
+		available = {
+			has_country_flag = enc_ncr_spies
+		}
+		days_remove = 30
+		remove_effect = {
+			set_country_flag = enc_event_33_solved
+			custom_effect_tooltip = ENC_reroute_caravans_reward
+		}
+	}
+	ENC_demoralization = {
+		icon = decision_enc_propaganda
+		cost = 50
+		priority = 10
+		fire_only_once = yes
+		visible = {
+			has_war_with = NCR
+			not = { has_country_flag = enc_mid_game }
+		}
+		available = {
+			has_country_flag = enc_ncr_spies
+		}
+		complete_effect = {
+			NCR = {
+				add_timed_idea = { 
+					idea = ENC_NCR_demoralization_spies 
+					days = 200
+				}
+			}
+		}
+	}
 	ENC_desert_rangers_hate = {
 		icon = generic_political_discourse
 		priority = 10
 		cost = 80
 		fire_only_once = no
 		visible = {
-			has_country_flag = enc_ncr_spies
+			DES = {
+				is_in_faction_with = NCR
+				exists = yes 
+			} 
 		}
 		available = {
+			has_country_flag = enc_ncr_spies
 			DES = {
 				is_in_faction_with = NCR
 				exists = yes 
@@ -807,6 +886,7 @@ ENC_infiltrating_NCR = {
 		complete_effect = {
 			custom_effect_tooltip = ENC_desert_rangers_hate_tt
 			DES = {
+				set_cosmetic_tag = DES
 				add_opinion_modifier = { target = NCR modifier = sabotaged_relations }
 			if = {
 					limit = {
@@ -1078,7 +1158,8 @@ ENC_nation_building = {
 		allowed = {
 			original_tag = ERB
 		}
-		available = {	
+		available = {
+			has_country_flag = vice_president_dornan_flag
 		}
 		visible = {
 			OR = {
@@ -2525,7 +2606,7 @@ ENC_american_broadcasts = {
 		cost = 75
 		icon = decision_enc_propaganda
 		visible = {
-			has_country_flag = enc_red_menace_flag
+			leader_has_red_scare = yes
 		}
 		available = {
 			has_stability < 0.50
@@ -2536,6 +2617,9 @@ ENC_american_broadcasts = {
 		}
 		days_remove = 30
 		days_re_enable = 120
+		complete_effect = {
+			increase_red_menace = yes			
+		}
 	}
 	ENC_silence_conspiracy_theorists = {
 		cost = 75
@@ -2867,7 +2951,7 @@ ENC_securing_borders = {
 			}
 		}
 	}
-ENC_WBH_expansion = {
+	ENC_WBH_expansion = {
 	icon = generic_scorched_earth
 	priority = 11
 	available = {
@@ -2888,7 +2972,7 @@ ENC_WBH_expansion = {
 		country_event = { id = enc_reformers.222 }
 	}
 }
-ENC_CES_expansion = {
+	ENC_CES_expansion = {
 	icon = generic_scorched_earth
 	priority = 11
 	available = {
@@ -2926,7 +3010,7 @@ ENC_CES_expansion = {
 		available = {
 			has_completed_focus = enc_rebuilding_a_nation
 			divisions_in_state = {
-				state = 141	
+				state = 141
 				size > 5
 			}
 		}
