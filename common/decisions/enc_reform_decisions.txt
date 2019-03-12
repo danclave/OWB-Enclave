@@ -6,7 +6,8 @@ enc_executive_orders  = {
 		icon = generic_scorched_earth
 		priority = 99
 		activation = {
-			has_country_leader_with_trait = red_scare2
+			# activated by enc_reformers.314
+			always = false 
 		}
 		cancel_trigger = {
 			not = { has_country_leader_with_trait = red_scare2 }		
@@ -113,36 +114,6 @@ enc_executive_orders  = {
 		}
 	}
 
-	legitimacy_core_state = {
-		icon = generic_nationalism # todo
-		custom_cost_text = costs_10_legitimacy
-		visible = {
-			check_variable = { enc_legitimacy > 89.9 }
-		}
-		custom_cost_trigger = {
-			check_variable = { enc_legitimacy > 99.9 }
-		}
-		available = {
-			check_variable = { enc_legitimacy > 99.9 }
-			any_owned_state = {
-				not = { is_core_of = ROOT }
-				has_population > 10000
-			}
-		}
-		complete_effect = {
-			hidden_effect = {
-				set_temp_variable = { legitimacy_change_var = -0.10 }
-				change_legitimacy = yes
-			}
-			random_owned_state = {
-				limit = {
-					not = { is_core_of = ROOT }
-					has_population > 10000
-				}
-				add_core_of = ROOT
-			}
-		}	
-	}
 	ENC_curb_wastelander_influence = {
 		icon = oppression
 		cost = 20
@@ -410,12 +381,12 @@ enc_executive_orders  = {
 
 		available = {
 			has_completed_focus = enc_american_dream
-				}
+		}
 		visible = {
 			tag = ERB
 			NCR = {exists = no }
 			NOT = {has_full_control_of_state = 135} #shady sandsy
-			}
+		}
 		complete_effect = {
 			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
 			hidden_effect = {
@@ -1267,66 +1238,6 @@ ENC_nation_building = {
 			}
 		}
 	}
-
-	plunder_military_machinery = {
-		icon = generic_scorched_earth
-		visible = {
-			has_completed_focus = enc_purity
-		}
-		cost = 50
-		available = {
-			num_of_available_civilian_factories > 5
-			any_owned_state = { #we occupy a non core state which has 3+ mil factories
-				not = { is_core_of = ERB }
-				has_ROOT_at_least_1_div_in_current_state_scope = YES
-				is_fully_controlled_by = ERB
-				arms_factory > 2
-			}
-			any_owned_state = { # we have a core ready to receive 2 factories
-				is_fully_controlled_by = ERB
-				is_core_of = ERB
-				free_building_slots = {
-					building = arms_factory
-					size > 2 
-					include_locked = YES 
-				}
-			}
-		}
-		modifier = { #moving cost (maybe use civ factories)
-			civilian_factory_use = 3
-		}
-		days_remove = 30
-		remove_effect = { #remove 3 military factories from a non core occupied state
-			random_owned_state = {
-				limit = {
-					has_ROOT_at_least_1_div_in_current_state_scope = YES
-					not = { is_core_of = ERB }
-					arms_factory > 2
-				}
-				remove_building = { 
-					type = arms_factory 
-					level = 3 
-				}
-			}
-			random_owned_state = { #add 2 military factories to a core state
-				limit = {
-					is_core_of = ERB
-					free_building_slots = {
-						building = arms_factory
-						size > 1 
-						include_locked = yes 
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		days_re_enable = 30
-	}	
 	
 	ENC_vault_city_university = {
 		icon = decision_vault_boy

@@ -1435,6 +1435,10 @@ enc_reformers.313.t: "Congress vetos use of nukes"
 enc_reformers.313.d: "It appears that we were unsuccesful in our attempts to sneak the arming and use of a nuclear missile past the legislative powers in our government. Congress has unanimously vetoed our decision to use a nuclear weapon on American soil. They claim the Legion can be brought down by conventional arms alone and that Flagstaff is just another city occupied by the standing army that is Caeser's Legion rather than an enemy capital city.\n\nIt is possible they might change their minds should [CES.GetLeader] prove more of a threat than they imagined."
 enc_reformers.313.a: "You people deserve [CES.GetLeader]."
 enc_reformers.313.b: "I hope to God you're right."
+#############################################################################################################
+enc_reformers.314.t: "Communist uprising is brewing!"
+enc_reformers.314.d: "Douglas is sure of it. All the signs are there. Losing baseball teams, ... (can you finish this, Scott?)"
+enc_reformers.314.a: "We must be prepared for the §RRed Menace§!!"
 ##################################################
 nuke_dropped.1.t:0 "Atomic Bombing of [From.From.GetName]"
 nuke_dropped.1.d:0 "For the first time in 2OO years, a nuclear bomb has been detonated in [From.From.GetName] as part of international warfare. The unprecedented destruction stands as a testament to the devastating power of this old weapon, which is feared not only for what it can do to its targets, but what implications it has for the one who deploys it and for humanity itself.\n\nThe world holds its breath waiting for what will come next. Will this force [From.From.Owner.GetName] to surrender to avoid further terror, or will it only strengthen their resolve to strike back against those who would resort to such measures?"
