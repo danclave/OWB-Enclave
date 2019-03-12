@@ -4319,7 +4319,7 @@ focus = {#NEVADA - Legislature
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 0.05
+				value = 0.15
 			}
 			change_legitimacy = yes
 		}
@@ -4338,7 +4338,7 @@ focus = {#NEVADA - Judiciary
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 0.05
+				value = 0.15
 			}
 			change_legitimacy = yes
 		}
@@ -4357,7 +4357,7 @@ focus = {#NEVADA - Constitution
 		completion_reward = {
 			set_temp_variable = {
 				var = legitimacy_change_var
-				value = 0.05
+				value = 0.15
 			}
 			change_legitimacy = yes
 		}

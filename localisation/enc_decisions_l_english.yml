@@ -29,6 +29,8 @@ ENC_reveal_to_ncr_desc: "We cannot hide from the NCR forever, but we may be able
 ENC_reveal_to_ncr.tt: "\nRequires more than §Y30% legitimacy§!"
 
 # CRISIS
+erb_plague_victim: "[FROM.GetName] falls to the plague!"
+erb_plague_victim_desc: "The day may come when the courage of men shall fail, and for [FROM.GetName], that day came when it was hit with the Mormon Plague. They could only endure so much, but before they accepted Caesar's offer of peace in return for a cure."
 ENC_baron_crisis_1: "The Brahmin Barons Establish Order"
 ENC_baron_crisis_1_desc: "In the chaos following the NCR's fall, the Brahmin Barons have established themselves as a force to be reckoned with in northern California.  We'll have to take firm action to reestablish our authority..."
 ENC_baron_crisis_2: "The Barons' Grip Tightens"
@@ -91,6 +93,28 @@ plunder_resources_desc:0 "Our troops need supplies, sometimes more than what we 
 plunder_equipment:0 "Requisition Equipment"
 plunder_equipment_desc:0 "There is plenty of weaponry to be requisitioned from the NCR cities, though some collateral damage might be inflicted during this process."
 state_lose_10_water: "Permanently reduce production of §YWater§!£water_texticon by §R10§!.\n"
+#################################
+# Nevada Love
+#################################
+ENC_nevada_broadcasts: "Nevada Broadcasting"
+ENC_nevada_broadcasts_desc: "It's a cold, lonely night here in New Reno.  But it's a little less lonely with our next song, and a word from our sponsors."
+ENC_nevada_war_propaganda: "War Propaganda"
+ENC_nevada_war_propaganda_desc: "This is Nevada Public Radio, coming to you live from the New Canaan front."
+ENC_nevada_raise_stability: "Broadcast Sporting Events"
+ENC_nevada_raise_stability_desc: "Broadcasting sporting events in New Vegas and New Reno will not only unite Nevada, it will be fun! We promise."
+ENC_blame_ghouls_nevada: "Give Lynette a radio show"
+ENC_blame_ghouls_nevada_desc: "Thank you for listening to Yesterday's Tomorrow, live in Vault City.  I'd like to discuss the threat ghouls pose to your children!"
+ENC_sierra_madre_expedition: "The Expedition to the Sierra Madre"
+ENC_sierra_madre_expedition_desc: "The Sierra Madre is believed to nothing more than a Mojave legend, a fabled City of Gold, where fortune could be found.  Good thing we have a map."
+ENC_sierra_madre_expedition.tt: "Unlocks decisions to strip the §YSierra Madre§! for valuable resources!"
+ENC_sierra_madre_holograms: "Deploy the Holograms"
+ENC_sierra_madre_holograms_desc: "Although we can't replicate the greater than state of the art holographic technology that was for some reason used to defend a casino, we can deploy it for our own purposes."
+ENC_sierra_madre_gold: "Loot the Sierra Madre"
+ENC_sierra_madre_gold_desc: "The casino's vault contains a valuable stock of gold.  Well, now it's government property."
+ENC_promote__nevada_agenda: "Promote Support for Nevada"
+ENC_promote__nevada_agenda_desc: "There is the land that I love the best, \nFairer than all I can see. \nRight in the heart of the golden west, \nHome means Nevada to me."
+ENC_recruitment_drive_nevada: "Recruitment Drive"
+ENC_recruitment_drive_nevada: "Remind Nevada that not every people have as great a government as they do.  Playing some patriotic stories will encourage them to join the nation."
 ##############################
 # WAR MEASURES 
 ##############################

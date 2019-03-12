@@ -232,6 +232,13 @@ ENC_american_broadcasts = {
 	visible = {	has_completed_focus = enc_american_broadcasting_department }	
 }
 
+ENC_nevada_broadcasts = {
+	allowed = { tag = ERB }
+	icon = category_tv
+	priority = 10
+	visible = {	has_completed_focus = enc_the_state_of_nevada }	
+}
+
 ENC_securing_borders = {
 	allowed = { tag = ERB }
 	icon = border_war
