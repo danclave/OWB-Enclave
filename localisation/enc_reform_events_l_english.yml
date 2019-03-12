@@ -9,7 +9,6 @@ occurred_because:0 "\nOccurred because: §Y"
 ################################## EVENTS ##############################################
 enc_reformers.1.t:0 "Sins of the Father"
 enc_reformers.1.d:0 "Granite's past is a controversial subject in our mids, made all the more contentious by rumors spread by Purists. The cause is Granite's father and his relationship to the Chosen One. The Purists accuse Granite's father of treason for aiding the Chosen One and destroying the Oil Rig, but lack any evidence.\n\nDespite the fact that he will deny these allegations as nothing but political slander, Douglas remembers clearly what his father told him about that faithful day on the oil rig."
-# todo rewrite the above
 enc_reformers.1.a:0 "He aided the Chosen One and then went their separate ways."
 enc_reformers.1.b:0 "Speaking of the Chosen One, let me tell you who your mother was..."
 enc_reformers.1.c:0 "He didn't aid the Chosen One."
@@ -245,7 +244,7 @@ enc_reformers.39.c: "§RWe don't need raiders.\nTheir equipment, however...§!"
 enc_reformers.39.c.tt: "§gThe remnants are tricked into disarming, then executed as deserters, criminals and raiders.§!\n\n"
 ################################################################################################################ -<
 enc_reformers.40.t: "The Wastelanders"
-enc_reformers.40.d: "With the city of [285.GetName] now fully under our control, we are now governing over a signficant amount of wastelanders. Since we cannot install Enclave members to every single position of influence in the city, some wastelanders have begun exercising an amount of power within our borders."
+enc_reformers.40.d: "With the city of [285.GetName] now fully under our control, we are now governing over a significant amount of wastelanders. Since we cannot install Enclave members to every single position of influence in the city, some wastelanders have begun exercising an amount of power within our borders."
 enc_reformers.40.a: "I suppose this was inevitable."
 enc_reformers.40.a.tt: "§gThe influence of wastelanders is allowed to increase.§!\n\n"
 enc_reformers.40.b: "Not on my watch, they don't."
@@ -602,7 +601,7 @@ enc_reformers.111.b:  "They can't stop the signal"
 enc_reformers.111.b.tt: "Available because you pursued military propaganda"
 ################################################################################################################
 enc_reformers.112.t: "The Californian Revolution!"
-enc_reformers.112.d: "While technically speaking more of an invasion, the support we have built up with the desperate and destitude in the New Californian Republic allows us to portray the event as a popular uprising. Our signal has been sent across the nation, it is time to take up arms against the corruption of the NCR regime.\n\nDown with the Bear, up with the stars!"
+enc_reformers.112.d: "While technically speaking more of an invasion, the support we have built up with the desperate and destitute in the New Californian Republic allows us to portray the event as a popular uprising. Our signal has been sent across the nation, it is time to take up arms against the corruption of the NCR regime.\n\nDown with the Bear, up with the stars!"
 enc_reformers.112.a:  "They will welcome us as liberators."
 ################################################################################################################
 enc_reformers.113.t: "Victory at the Ballot Box"
@@ -1094,9 +1093,9 @@ enc_reformers.204.t: "The Treaty of New Vegas"
 enc_reformers.204.d: "We've driven the Legion out of California, but we lack the men and materials to march on Flagstaff.  As such, Mojave, and the lights of New Vegas, belong to the Legion.  For now. During this truce, we must address the fate of New California, a question we deferred during the emergency."
 enc_reformers.204.a: "We're going to be heroes, right?"
 #############################################################################################################
-enc_reformers.205.t: "Desparate Times, Desparate Measures"
+enc_reformers.205.t: "Desperate Times, Desperate Measures"
 enc_reformers.205.d: "The United States Army has fallen back before the Legion, and many in Congress who once opposed the use of nukes are now willing to consider them, if the alternative is Legion victory."
-enc_reformers.205.a: "Things never should have come this far."
+enc_reformers.205.a: "It should never have come this far."
 #############################################################################################################
 enc_reformers.206.t: "And We'll Never Be Free Until We End Slavery"
 enc_reformers.206.d: "The Enclave tolerated (and practiced slavery) in Nevada, but the federal judiciary, composed of Enclave reformers and New California's attorneys, has a different view of that practice in light of the Constitution.\n\nThe Thirteenth Amendment states that "Neither slavery nor involuntary servitude . . . shall exist within the United States." As such, the Supreme Court has issued a ruling declaring that all slaves within the United States are free and that "attempts to call it indentured servitude are just slavery with extra steps."\n\nThis may hinder the government's plans for reconstruction, but has been hailed by the New World Party as a tremendous victory for the rights of every American."
@@ -1108,7 +1107,7 @@ enc_reformers.207.d: "New Vegas is one of the richest cities of the waste, but i
 enc_reformers.207.a: "Granite has always considered himself a family man"
 enc_reformers.207.b: "Sergeant Dornan leads the police to break the families!"
 enc_reformers.207.b.tt: "Available because you selected §YOut With The Old§!.\n"
-enc_reformers.207.c: "The police and Families reach an accomodation"
+enc_reformers.207.c: "The police and Families reach an accommodation"
 enc_reformers.207.c.tt: "Available because you have §YGranted Amnesty§!.\n"
 enc_reformers.207.e: "The families, faced with the threat of the law, go legit."
 enc_reformers.207.e.tt: "Available because you have completed §Ythe Judicial Branch§!.\n"
@@ -1166,7 +1165,7 @@ enc_reformers.217.d: "With the collapse of New California's treasury, we are lef
 enc_reformers.217.a: "How come nobody counterfeits Caesar's coinage?"
 #############################################################################################################
 enc_reformers.218.t: "America's Capital"
-enc_reformers.218.d: "With the restoration of America, it's time to decide where to place our capital.  Some suggest we move to Shady Sands, the largest city of California, but others, fearful of the threat of protestors and dissidents, suggest we fortify Navarro.  But there is a third idea..."
+enc_reformers.218.d: "With the restoration of America, it's time to decide where to place our capital.  Some suggest we move to Shady Sands, the largest city of California, but others, fearful of the threat of protesters and dissidents, suggest we fortify Navarro.  But there is a third idea..."
 enc_reformers.218.a: "Shady Sands is the heart of the New America"
 enc_reformers.218.b: "Let's rule from the citadel at Navarro"
 enc_reformers.218.c: "New Reno will do until we free Washington"
@@ -1180,7 +1179,7 @@ enc_reformers.219.b: "Let us form an advisory senate selected by the best Americ
 enc_reformers.219.b.tt: "§gThe Senate and congress are stacked with those considered of good genetic stock. Mostly Enclave members, Vault City elites and brahmin barons who bribed their way in.§!!"
 ##############################################################################################################
 enc_reformers.220.t: "Requisition Scandal Before Congress"
-enc_reformers.220.d.segregation: "An influential wastelander has asked the Senate to address concerns about the National Requisition Act. Although ordinarily the Senate's members would merely thank her for her contribution to the reconstruction effort, she has gained the influential ear of a senator and he has submitted a petition before Congress.  Apparently her caravan company was sabotaged by a rival, who persuaded a government officer to confiscate her assets and sell them to a United States citizen. Rather embarassing!"
+enc_reformers.220.d.segregation: "An influential wastelander has asked the Senate to address concerns about the National Requisition Act. Although ordinarily the Senate's members would merely thank her for her contribution to the reconstruction effort, she has gained the influential ear of a senator and he has submitted a petition before Congress.  Apparently her caravan company was sabotaged by a rival, who persuaded a government officer to confiscate her assets and sell them to a United States citizen. Rather embarrassing!"
 enc_reformers.220.d.integration: "Congress is rocked by a scandal.  Ms. Cassidy Rose of Vault City has appeared before Congress challenging the government's requisition of her caravan company's assets, claiming they've been granted to a rival caravan company.  A congressional inquiry has uncovered numerous other examples of cronyism, and the entire National Requisition Act is in doubt."
 enc_reformers.220.a: "How embarrassing to learn our officials may be corrupt!"
 enc_reformers.220.a.tt: "Available because you selected §YSegregation§!"
@@ -1188,7 +1187,7 @@ enc_reformers.220.b: "I can't believe government confiscations led to scandal!"
 enc_reformers.220.c: "Fine, cancel the program."
 #############################################################################################################
 enc_reformers.221.t: "Congressional Criticism of Forced Labor"
-enc_reformers.221.d.segregation: "A member of Dayglow's delegation to the Senate has criticized the deployment of mandatory volunteers to outlying districts.  He argues we would be better served cleaning Dayglow's parks than improving the roads connecting farflung settlements to the Reunited States' core. Further, he has complained that Shady Sands gets preferential bidding rights on labor contracts, and said the system should favor blind bids." 
+enc_reformers.221.d.segregation: "A member of Dayglow's delegation to the Senate has criticized the deployment of mandatory volunteers to outlying districts.  He argues we would be better served cleaning Dayglow's parks than improving the roads connecting far flung settlements to the Reunited States' core. Further, he has complained that Shady Sands gets preferential bidding rights on labor contracts, and said the system should favor blind bids." 
 enc_reformers.221.d.integration: "Representative Hayes has stood before Congress, waving photos of widespread misconduct in our forced labor battalions. The photos show human rights violations you'd expect from the Legion, and he's entered into the Congressional Records stacks of letters from his constituents asking about missing loved ones.  It's not a good look, especially compared to his haircut."
 enc_reformers.221.a: "We promise we'll build Dayglow a nice park when Reconstruction ends"
 enc_reformers.221.a.tt: "Available because you selected §YSegregation§!"
@@ -1204,16 +1203,16 @@ enc_reformers.223.d: "The Mormons hang from crosses like their god, Dog City has
 enc_reformers.223.a: "Somebody should stop them!"
 #############################################################################################################
 enc_reformers.224.t: "Joshua Graham Enlists"
-enc_reformers.224.d: "Although New Canaan has fallen, some of their leaders have survived and made their way to America.  Among the most noteworthy is Joshua Graham, one of the Legion's founders.  Graham seeks vengeance against the Legion for its treatment of the Mormons, and will carry the fire of the holy spirit against our enemies until he stands before his Lord for judgement."
+enc_reformers.224.d: "Although New Canaan has fallen, some of their leaders have survived and made their way to America.  Among the most noteworthy is Joshua Graham, one of the Legion's founders.  Graham seeks vengeance against the Legion for its treatment of the Mormons, and will carry the fire of the holy spirit against our enemies until he stands before his Lord for judgment."
 enc_reformers.224.a: "Killing our enemies is just a chore like any other"
 #############################################################################################################
 enc_reformers.225.t: "The Menace from Washington"
-enc_reformers.225.d: "The Washington Brotherood, fresh from its conquests of the Troll Warren and others, lusts for more.  More resources, more slaves, more technology.  And with New California still bitterly divided, its extending its claws towards the Reunited States."
+enc_reformers.225.d: "The Washington Brotherhood, fresh from its conquests of the Troll Warren and others, lusts for more.  More resources, more slaves, more technology.  And with New California still bitterly divided, its extending its claws towards the Reunited States."
 enc_reformers.225.a: "Where are they even getting their powered armor?"
 enc_reformers.225.a.tt: "The §Y[WBH.GetName]§! prepare for war against you."
 #############################################################################################################
 enc_reformers.226.t: "Enclave Scientists in the North"
-enc_reformers.226.d: "To the extent members of the Enclave disliked our plan to 'Be nice to the mutants who killed their parents,' but did not want to become genocidal Purists, most fled to [CES.GetName], which could offer them great wealth and power.  But the Washington Brotherhood has power and wealth as well, for those who will tolerate its insane ruler.\n\nOne of our scientists defected with a weapon of great use against supermutants, which could cripple the Troll Warren. We are torn between annoyance at the fact he stole our superweapon and pleasure that rabid supermutants will likely die en masse, and see no way this will come back to hurt us." 
+enc_reformers.226.d: "To the extent members of the Enclave disliked our plan to 'Be nice to the mutants who killed their parents,' but did not want to become genocidal Purists, most fled to [CES.GetName], which could offer them great wealth and power.  But the Washington Brotherhood has power and wealth as well, for those who will tolerate its insane ruler.\n\nOne of our scientists defected with a weapon of great use against supermutants, which could cripple the Troll Warren. We are torn between annoyance at the fact he stole our super-weapon and pleasure that rabid supermutants will likely die en masse, and see no way this will come back to hurt us." 
 enc_reformers.226.a: "Dead supermutants seems fine, really."
 #############################################################################################################
 enc_reformers.227.t: "Canadian Pirates Join the Brotherhood"
@@ -1221,21 +1220,21 @@ enc_reformers.227.d: "To the north of the Washington lies the Broken Coast, wher
 enc_reformers.227.a: "Let them know we have not yet begun to fight"
 #############################################################################################################
 enc_reformers.228.t: "Douglas' Youth"
-enc_reformers.228.d: "After travelling around with his son for a brief few years, Granite senior established contact with one of the Enclave's civilian vaults. Set up as a contingency to repopulate the American mainland after the Enclave goverment cleansed it. Since president Dick Richard had lifted child rearing restrictions, the vault's population had exploded. None the less, it was a safer place for a child than the wasteland.\nThus, Douglas spent most of his youth in the safety of the vault.\n\nLike most children in the Enclave's vaults, Granite was raised with a fervent hatred of Communism.  Sadly, 200 years of Enclave propaganda and living in a Vault run under a command economy meant that he, and most other members of the Enclave were left with a vague understanding of what communism was. As such, Granite -"
+enc_reformers.228.d: "After traveling around with his son for a brief few years, Granite senior established contact with one of the Enclave's civilian vaults. Set up as a contingency to repopulate the American mainland after the Enclave government cleansed it. Since president Dick Richard had lifted child rearing restrictions, the vault's population had exploded. None the less, it was a safer place for a child than the wasteland.\nThus, Douglas spent most of his youth in the safety of the vault.\n\nLike most children in the Enclave's vaults, Granite was raised with a fervent hatred of Communism.  Sadly, 200 years of Enclave propaganda and living in a Vault run under a command economy meant that he, and most other members of the Enclave were left with a vague understanding of what communism was. As such, Granite -"
 enc_reformers.228.a: "Knew all enemies of America must be Communist"
 enc_reformers.228.a.tt: "Granite's hatred of §RCommunism§! will play a role in future events and is necessary to unlock §M Anti-Communist Propaganda§!.\n\n"
 enc_reformers.228.b: "Spent history class playing on his Pip Boy"
 #############################################################################################################
 enc_reformers.229.t: "Communist Sympathizer in the Press!"
-enc_reformers.229.d: "Granite has begun to suspect one of his more outspoken press critics of being a Communist in light of her opposition to Granite's proposed plan for a national baseball league. Granite has considered merely condeming her, or asking the Secret Service to investigate whether her opposition to government-sponsored sporting events is a sign of communist sympathies."
+enc_reformers.229.d: "Granite has begun to suspect one of his more outspoken press critics of being a Communist in light of her opposition to Granite's proposed plan for a national baseball league. Granite has considered merely condemning her, or asking the Secret Service to investigate whether her opposition to government-sponsored sporting events is a sign of communist sympathies."
 enc_reformers.229.a: "That doesn't sound like communism to me."
-enc_reformers.229.a.tt: "§gNot every critic is a communist, just un-namerican.§!"
+enc_reformers.229.a.tt: "§gNot every critic is a communist, just un-American.§!"
 enc_reformers.229.b: "Only a §RCommunist§! would oppose baseball!"
 enc_reformers.229.b.tt: "§The Secret Service begins a search for Communists.§!"
 #############################################################################################################
-enc_reformers.230.t: "Communist Ghouls"
-enc_reformers.230.d: "Granite's anticommunist diatribes have become a subject of discussion, and it appears that one of the prewar ghouls, a political activist before the war, has offered to speak with Granite and explain Communism to him.  He's asked Granite to read a book called 'Das Kapital,' which she says was a communist work."
-enc_reformers.230.a: "Let's read it"
+enc_reformers.230.t: "Communist Ghouls?"
+enc_reformers.230.d: "Granite's anticommunist diatribes have become a subject of discussion, and it appears that one of the prewar ghouls, a librarian before the war, has offered to speak with Granite and explain Communism to him.  He's asked Granite to read a book called 'Das Kapital,' which she says was a communist work."
+enc_reformers.230.a: "Fine. Let's read it."
 enc_reformers.230.b: "Arrest the ghoul for owning §RCommunist§! propaganda!"
 #############################################################################################################
 enc_reformers.231.t: "Better Read"
@@ -1437,8 +1436,10 @@ enc_reformers.313.a: "You people deserve [CES.GetLeader]."
 enc_reformers.313.b: "I hope to God you're right."
 #############################################################################################################
 enc_reformers.314.t: "Communist uprising is brewing!"
-enc_reformers.314.d: "Douglas is sure of it. All the signs are there. Losing baseball teams, ... (can you finish this, Scott?)"
+enc_reformers.314.d: "Douglas is sure of it. All the signs are there. baseball games being rained out, overcooked Brahmin steaks, crop circles,legion spies all across the reunited states... what else could this be but the beginnings of a red plot?
 enc_reformers.314.a: "We must be prepared for the §RRed Menace§!!"
 ##################################################
 enc_nuke_dropped.1.t:0 "Atomic Bombing of [From.From.GetName]"
 enc_nuke_dropped.1.d:0 "For the first time in 2OO years, a nuclear bomb has been detonated in [From.From.GetName] as part of international warfare. The unprecedented destruction stands as a testament to the devastating power of this old weapon, which is feared not only for what it can do to its targets, but what implications it has for the one who deploys it and for humanity itself.\n\nThe world holds its breath waiting for what will come next. Will this force [From.From.Owner.GetName] to surrender to avoid further terror, or will it only strengthen their resolve to strike back against those who would resort to such measures?"
+enc_nuke_dropped.1.a:0 ""
+enc_nuke_dropped.1.b:0 ""

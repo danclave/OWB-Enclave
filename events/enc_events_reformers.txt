@@ -11,7 +11,7 @@ country_event = {#1 - DOUGLAS PAST - STORIES
 	
 	
 	option = {# He aided the Chosen One and after the Oil Rig Destruction went their seperate ways
-		name = enc_reformers.1.a.
+		name = enc_reformers.1.a
 		country_event = { id = enc_reformers.228 }
 		set_country_flag = enc_arroyo
 		set_country_flag = leader_mutant_sympathies
@@ -2784,8 +2784,9 @@ country_event = {#100 Christmas
 	mean_time_to_happen = {	days = 3 }
 	trigger = {	
 		has_completed_focus = enc_reform
-		date > 2280.11.30
-		date < 2281.01.01
+		not = { has_war = yes }
+		date > 2281.11.30
+		date < 2282.01.01
 	}	    
     option = {# Loved Ones!
 		name = enc_reformers.100.a
@@ -3599,7 +3600,7 @@ country_event = {#119 NCR
 			if = {
 				limit = {
 					any_army_leader = {
-						not = { has_trait = enc_reformer }
+						has_trait = enc_reformer
 					}					
 				}
 				country_event = { id = enc_reformers.306 }
@@ -4880,7 +4881,7 @@ country_event = {#163 - The Lonesome Road
 			limit = {
 				not = { congress_accepts_nuke = yes }
 			}
-			country_event = { id = enc_reformers.313 days = 3 }
+			country_event = { id = enc_reformers.313 }
 			custom_effect_tooltip = enc_reformers.163.c.tt
 		}
 		else = {
@@ -6058,7 +6059,7 @@ country_event = {#205 - The Lonesome Road II
 	id = enc_reformers.205
 	title = enc_reformers.205.t
 	desc = enc_reformers.205.d
-	picture = GFX_event_CES_camp_1
+	picture = GFX_event_enc_senate
 	fire_only_once = yes
 	is_triggered_only = no
 	trigger = {
@@ -6316,6 +6317,9 @@ country_event = {#213 - Ghouls Discuss America's Flaws
 	}
 	option = {#Commie
 		name = enc_reformers.213.b
+		trigger = {
+			has_variable = enc_red_menace_var
+		}
 		# modify legitimacy
 		set_temp_variable  = {
 			var = legitimacy_change_var
@@ -7673,14 +7677,14 @@ country_event = {#306 - Protesting commander
 	is_triggered_only = yes
 	trigger = {
 		any_army_leader = {
-			not = { has_trait = enc_reformer }
+			has_trait = enc_reformer
 		}		
 	}
 	immediate = {
 		hidden_effect = {
 			random_army_leader = {
 				limit = {
-					not = { has_trait = enc_reformer }
+					has_trait = enc_reformer
 				}
 				save_event_target_as = protesting_commander 
 			}
@@ -7922,19 +7926,19 @@ country_event = {#313 - Congress blocks use of nuke
 	desc = enc_reformers.313.d
 	picture =  GFX_event_enc_senate
 	
-	fire_only_once = yes
+	fire_only_once = no
 	is_triggered_only = yes
 	
-	option = { # You people deserve Caeser.
+	option = { # You people deserve Caesar.
 		name = enc_reformers.313.a
 		trigger = {
-			has_country_leader_with_trait = ruthless
+			has_country_flag = leader_ruthless
 		}
 	}
 	option = { # Let us hope to God you are right.
 		name = enc_reformers.313.b
 		trigger = {
-			has_country_leader_with_trait = charismatic
+			has_country_flag = leader_charismatic
 		}		
 	}
 }
@@ -7948,7 +7952,7 @@ country_event = {#314 - Communism paranoia turns into crisis
 	is_triggered_only = no
 	
 	trigger = {
-		has_country_leader_with_trait = red_scare2
+		check_variable = { enc_red_menace_var > 4 }
 	}
 	
 	option = { # We will stop the communist threat!

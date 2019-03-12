@@ -846,7 +846,7 @@ ENC_debug = {
 	}
 	ENC_misc = {
 		available = {
-			has_country_leader_with_trait = red_scare2
+			has_country_leader_with_trait = ruthless
 		}
 		complete_effect = {
 			misc_effect_test = yes

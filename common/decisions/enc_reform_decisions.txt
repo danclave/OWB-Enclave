@@ -221,8 +221,8 @@ ENC_political_actions = {
 			# activated by enc_reformers.314
 			always = false 
 		}
-		cancel_trigger = {
-			not = { has_country_leader_with_trait = red_scare2 }		
+		available = {
+			has_country_flag = enc_communism_defeated_joke_flag
 		}
 		days_mission_timeout = 100
 		fire_only_once = no
