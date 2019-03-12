@@ -7958,14 +7958,18 @@ country_event = {#314 - Communism paranoia turns into crisis
 }
 news_event = {
 	id = nuke_dropped.1
-	title = enc_reformers.312.t
-	desc = enc_reformers.312.d
+	title = enc_nuke_dropped.1.t
+	desc = enc_nuke_dropped.1.d
 	picture =  GFX_event_ENC_president_only
 	fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = no
+	trigger = {
+		always = no
+	}
 	
 	option = { 
-	
+		name = enc_reformers.314.a
+		activate_mission = ENC_red_menace_crisis
 	}
 }
 
