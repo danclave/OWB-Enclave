@@ -5253,7 +5253,7 @@ country_event = { #179- New New Vegas
     title = enc_reformers.179.t
     desc = enc_reformers.179.d
     picture = GFX_event_VEG_strip
-    fire_only_once = NO
+    fire_only_once = yes
     trigger = {
 		original_tag = ERB
 		date > 2279.01.01

@@ -16,7 +16,7 @@ enc_executive_orders  = {
 		complete_effect = {
 			hidden_effect = { sound_effect = ERB_stripes_and_stars }
 			country_event = enc_reformers.246
-			 add_equipment_to_stockpile = { type = vb_gunship_equipment amount = -25 producer = ERB }
+			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = -25 producer = ERB }
 		}
 	}
 
@@ -1047,17 +1047,17 @@ ENC_nation_building = {
 					has_completed_focus = enc_fbi
 					has_completed_focus = enc_voting_rights_act
 					people > 0.5 
-				NOT = {has_country_flag = enc_barons1}
 				}
+				NOT = {has_country_flag = enc_barons1}
 			}
 		}	 
 		cancel_trigger = {	}
 		is_good = no
-		days_mission_timeout = 100
+		days_mission_timeout = 200
 		visible = {original_tag = ERB }
 		timeout_effect = { 
 			country_event = { id = enc_reformers.249 }
-			}
+		}
 	complete_effect = { }
 	}
 	ENC_baron_crisis_2 = {
@@ -1074,13 +1074,13 @@ ENC_nation_building = {
 					has_completed_focus = enc_fbi
 					has_completed_focus = enc_voting_rights_act
 					people > 0.5 
-				NOT = { has_country_flag = enc_barons2 }
 				}
+				NOT = { has_country_flag = enc_barons2 }
 			}
 		}	 
 		cancel_trigger = {	}
 		is_good = no
-		days_mission_timeout = 200
+		days_mission_timeout = 300
 		visible = {original_tag = ERB }
 		timeout_effect = { 
 			country_event = { id = enc_reformers.250 }
