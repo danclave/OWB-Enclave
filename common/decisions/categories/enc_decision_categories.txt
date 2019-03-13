@@ -21,7 +21,7 @@ ENC_shifts = {
 	available = {
 		if = {
 			limit = { has_completed_focus = enc_reform }
-			num_of_controlled_states > 30	
+			num_of_controlled_states < 30	
 		}
 	}
 	

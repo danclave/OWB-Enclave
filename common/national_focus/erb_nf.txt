@@ -235,7 +235,7 @@ focus_tree = {
 		icon = GFX_goal_enc_purge_scientists
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_consolidate_power
-		available = { elites > 0.3	}
+		available = { elites < 0.3	}
 		x = -1
 		y = 1
 		prerequisite = { focus = enc_consolidate_power	}
@@ -268,7 +268,7 @@ focus_tree = {
 		icon = GFX_goal_enc_purge_officers
 		ai_will_do = { factor = 1 } 
 		relative_position_id = enc_consolidate_power
-		available = { elites > 0.3	}
+		available = { elites < 0.3	}
 		x = 1
 		y = 1
 		prerequisite = { focus = enc_consolidate_power	}

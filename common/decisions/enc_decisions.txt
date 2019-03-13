@@ -43,7 +43,7 @@ ENC_shifts = {
 		}
 		modifier = {
 			war_support_weekly = -0.01125#total = 5%
-			research_time_factor = -0.2
+			research_speed_factor = 0.2
 		}
 	}
 	extend_administrative_shifts = {      #reduced research for increased war support
@@ -111,7 +111,7 @@ ENC_shifts = {
 
 		modifier = {
 			war_support_weekly = 0.01125#total = 5%
-			research_time_factor = 0.2
+			research_speed_factor = -0.20
 		}
 	}
 	reduce_administrative_shifts = {      #reduced research for increased war support
@@ -652,7 +652,7 @@ ENC_political_infighting = {
 			has_stability > 0.50
 		}
 		modifier = {
-			research_time_factor = +0.20
+			research_speed_factor = -0.20
 		}
 		days_remove = 200
 		complete_effect  = {

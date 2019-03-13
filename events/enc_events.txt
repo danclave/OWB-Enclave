@@ -716,7 +716,7 @@ country_event = { #33 - Crimson Caravan Encounter
 			limit = {
 				has_completed_focus = enc_reform			
 			}
-			set_temp_variable = { legitimacy_change_var = 0.2 }
+			set_temp_variable = { legitimacy_change_var = -0.02 }
 			change_legitimacy = yes
 		}
 		else = {
