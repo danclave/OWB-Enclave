@@ -2875,7 +2875,7 @@ focus = {#RADIO - Red Menace
 		relative_position_id = enc_rebuilding_a_nation
 		available = {has_completed_focus = enc_rebuilding_a_nation}
 		x = 0
-		y = 8
+		y = 7
 		cost = 5.8
 		completion_reward = {
 			add_political_power = 100
@@ -3780,6 +3780,7 @@ focus = {#Legion Border
 		y = 1
 		completion_reward = {
 			custom_effect_tooltip = enc_contact_old_world_party_tt
+			set_global_flag = NCR_civil_war_disabled
 		}
 	}
 	
@@ -4177,17 +4178,17 @@ focus = {#Legion Border
 			KHA = { exists = NO }
 		}	
 		completion_reward = { 
-		every_other_country = {
+			every_other_country = {
 					limit = {
 						has_full_control_of_state = 106 # Bittersprings
 					}
 					ERB = {
 						create_wargoal = { type = annex_everything target = PREV }
 					}
-				}
 			}
-		
+		KHA = { set_rule = { can_join_factions = no } }	
 		}
+	}
 	focus = {#NEVADA - Tearing Down the HOuse 
 		id = Enc_Tearing_Down_House
 		icon = GFX_goal_VEG_Assassinate_House
@@ -4213,6 +4214,7 @@ focus = {#Legion Border
 					leave_faction = yes 
 				}	
 			}
+			VEG = { set_rule = { can_join_factions = no } }
 			NCR = {
 				diplomatic_relation = {
 					country = VEG

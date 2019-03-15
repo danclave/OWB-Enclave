@@ -12,6 +12,20 @@ operations: "Operations"
 
 ENC_calling_the_remnants:0 "Call the Remnants"
 #################################
+# Hayes Plots
+#################################
+NCR_hayes_plots: "Enclave Influence in California"
+NCR_hayes_plots_desc: "Mayor Hayes of DayGlow will work with the Enclave to boost American nostalgia, and will try to ride that to the presidency."
+enc_ncr_appear_on_radio: "Hayes Speaks on New California Public Radio"
+enc_hayes_shi: "Claim San Francisco"
+enc_hayes_shi_desc: "Hayes points out that San Francisco was once a great American, and Californian city, whipping up patriotism."
+ENC_hayes_recognize_nevada: "Recognize Nevada"
+ENC_hayes_recognize_nevada_desc: "Hayes will lobby for the NCR to recognize the State of Nevada as a legitimate government."
+ENC_nevada_trade_ncr: "Trade With Nevada"
+ENC_nevada_trade_ncr_desc: "Favorable trade agreements with Nevada will stimulate our economy, but grant them a greater influence in our nation."
+ENC_ncr_power_grid: "Nevada Helps with Electrification"
+ENC_ncr_power_grid_desc: "With Nevada's help, we will create a thousand points of light."
+#################################
 # HIDING FROM THE NCR
 #################################
 ENC_NCR_hiding: "In The Lair of the Bear (£pol_power [?Root.ENC_hiding_cost_total|H0])"
@@ -69,6 +83,8 @@ enc_rangers_defense_sabotage_tt: "Unlocks the §YSabotage Infrastructure§! deci
 ##############################
 # Executive Orders
 ##############################
+enc_epilogue: "Who Lives Who Dies Who Tells Your Story"
+enc_epilogue_desc: "Trigger the epilogue, detailing the fate of America."
 ENC_steal_declaration_independence: "Reclaim the Declaration of Independence!"
 ENC_steal_declaration_independence_desc: "Lost since the Great War, the Declaratoin of Independence was stored in a lead-sealed vault in Washingotn DC.  We could send an expedition to return it to the government's hands."
 ENC_opposition_to_segregation: "As it turns out, the Wastelanders are revolting.  Unless we can reduce their power or suppress their ability to voice dissent, they will rise up against us."

@@ -3635,7 +3635,7 @@ country_event = {#120 PNW
 			}			
 		KLA = { annex_country = { target = ARR } }
 			ERB = { 
-			add_to_faction = Kla
+			add_to_faction = KLA
 			}
 		KLA = {
 					add_ai_strategy = {
@@ -4758,6 +4758,7 @@ country_event = {#160 - The Divide
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {#	Cool
+	name = enc_reformers.160.a
 		set_country_flag = border_divide
 	}
 }		
@@ -7198,7 +7199,7 @@ country_event = {#248 - Vote Rigging :(
 		has_completed_focus = enc_expand_human_definition 
 		has_completed_focus = enc_empower_congress
 	}
-	mean_time_to_happen = { days = 70 }
+	mean_time_to_happen = { days = 140 }
 	option = {# Come on
 		name = enc_reformers.248.a
 		add_popularity = { ideology = elites popularity = 0.05 }
@@ -7247,12 +7248,33 @@ country_event = {#250 - Baron Autonomy
 	}
 	option = {# Come on
 		name = enc_reformers.250.b
+		release = BAR
 		declare_war_on = {
 					target = BAR
 					type = annex_everything
 		}	
 	}	
-}									
+}
+country_event = {#251 - coop
+	id = enc_reformers.251
+	title = enc_reformers.251.t
+	desc = enc_reformers.251.d
+	picture = GFX_event_ENC_double_flag_long
+	fire_only_once = yes	
+	is_triggered_only = yes 
+	trigger = { 
+		tag = NCR
+		ERB = {has_completed_focus = enc_reform }
+		is_ai = no
+	}
+	mean_time_to_happen = {days = 30 } 
+	option = {# Come on
+		name = enc_reformers.251.a
+		add_popularity = { ideology = intellectuals popularity = 0.05 }
+		set_country_flag = enc_hayes_plots
+		custom_effect_tooltip = enc_reformers.251.a.tt
+	}	
+}										
 country_event = {#300 - state protests!
 	id = enc_reformers.300
 	title = enc_reformers.300.t

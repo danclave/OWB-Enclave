@@ -564,7 +564,7 @@ enc_reformers.104.c.tt: "§gBy distributing medical supplies to the Followers, w
 ################################################################################################################
 enc_reformers.105.t: "The Brahmin Barons"
 enc_reformers.105.d: "Even after crushing the rebels in the NCR, the brahmin barons' wealth and power gives them a stranglehold on Northern California.  Some suggest we spend men and laser guns to break their power, while others suggest we cement their position in the Reunited States at great cost to our popularity. Some wonder if there's a third option, out there."
-enc_reformers.105.a:  "The Barons can be our loyal allies."
+enc_reformers.105.a:  "Too bad we can't give them to Caesar"
 enc_reformers.105.b:  "We will cook their brahmin with our plasma guns"
 enc_reformers.105.b.tt:  "(total: §Y22.5%§! £stability_texticon )"
 enc_reformers.105.c:  "A supermutant comes with a new idea..."
@@ -620,7 +620,7 @@ enc_reformers.114.h:  "Marcus, the Mayor of Redding!"
 # todo segregation
 enc_reformers.115.t: "A World of Tyranny and Serfdom"
 enc_reformers.115.d: "With the liberation of California, America's cause seems brighter than it has in two hundred years.  But there are those opposed to the belief that all men are created equal.  [CES.GetName] and the Brotherhood, guided by unholy contempt for the human race, have formed an alliance against us.  They know that if left unchecked, the Reunited States will save this country.  And so they've asked for war."
-enc_reformers.115.d.seg: "WWith the liberation of California, America's cause seems brighter than it has in two hundred years.  But there are those opposed the restoration of the United States. [CES.GetName] and the Washington Brotherhood, guided by unholy contempt for America, have formed an alliance against us.  They know that if left unchecked, the Reunited States will reclaim this country.  And so they've asked for war."
+enc_reformers.115.d.seg: "With the liberation of California, America's cause seems brighter than it has in two hundred years.  But there are those opposed the restoration of the United States. [CES.GetName] and the Washington Brotherhood, guided by unholy contempt for America, have formed an alliance against us.  They know that if left unchecked, the Reunited States will reclaim this country.  And so they've asked for war."
 enc_reformers.115.a:  "And they're going to get it."
 enc_reformers.115.a.tt: "The enemies of America have begun to gather against you.  They will prepare to solidify their alliance and move upon you!\n\n"
 ################################################################################################################
@@ -1320,6 +1320,11 @@ enc_reformers.250.t: "Barons Demand Autonomy"
 enc_reformers.250.d: "Cementing their authority, the barons now seek self government within the Reunited States.  This is really, really annoying."
 enc_reformers.250.a: "Fine..."
 enc_reformers.250.b: "You guys do realize we have powered armor, right?"
+############################################################################################################
+enc_reformers.251.t: "A Fine Upstanding Man"
+enc_reformers.251.d: "Not all in New California hate and fear the Enclave.  Some recognize that they could be a powerful force for reconstructing America, and some are actually descended from Enclave officers who fled after the fall of Navarro.  Grant C. Hayes, Dayglow's Mayor, is one such person.  He will be happy to work with the Enclave to promote their cause in New California, so long as they understand he is nobody's puppet."
+enc_reformers.251.a: "Tell me more about being President"
+enc_reformers.251.a.tt: "\nUnlocks decisions to help Hayes become the President of the NCR\n"
 ## START OF 300 ###
 #############################################################################################################
 enc_reformers.300.t: "Protests in [protesting_state.GetName]"
