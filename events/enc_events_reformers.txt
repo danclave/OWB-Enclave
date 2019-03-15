@@ -3998,7 +3998,8 @@ country_event = {# Home is Nevada
 	mean_time_to_happen = {	days = 30 }
 	option = {#
 		name = enc_reformers.131.a
-		custom_effect_tooltip = enc_reformers.131.tt
+		change_douglas_portrait_to_nevada = yes
+		custom_effect_tooltip = enc_reformers.131.a.tt
 	}	
 }
 country_event = {# Rocket's Red Glare
@@ -5214,12 +5215,13 @@ country_event = { #179- New New Vegas
     title = enc_reformers.179.t
     desc = enc_reformers.179.d
     picture = GFX_event_VEG_strip
-    fire_only_once = NO
+    fire_only_once = YES
     trigger = {
 		date > 2279.01.01
         people > 0.40
         has_completed_focus = enc_rebuilding_a_nation 
 		tag = ERB
+		country_exists = VEG
 			}		
 	mean_time_to_happen = {
 		days = 40
@@ -6886,19 +6888,6 @@ news_event = {#232 - Troll Warren Crushed
 	option = {# Now they're a threat 
 		name = enc_reformers.232.a
 		set_country_flag = enc_wbh_threat
-		hidden_effect = {
-			WBH = { 
-				add_ideas = ENC_terror_of_wastes 
-				create_wargoal = {
-					type = annex_everything
-					target = MTD
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = KLA
-				}
-			}
-		}
 	}	
 }
 news_event = {#233 - Legion Conquest of New Canaan
@@ -7605,7 +7594,7 @@ country_event = {#305 - Whispers of hope
 	id = enc_reformers.305
 	title = enc_reformers.305.t
 	picture = GFX_event_ENC_secret
-	fire_only_once = no
+	fire_only_once = YES
 	desc = enc_reformers.305.d
 	is_triggered_only = no
 	mean_time_to_happen = { days = 300 }

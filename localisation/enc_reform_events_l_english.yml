@@ -712,7 +712,7 @@ enc_reformers.130.a: "Wait, why did they take the FEV?"
 enc_reformers.131.t: "The Birth of Nevada"
 enc_reformers.131.d: "Welcome back to New Vegas radio, the show with, if I may say so, the best looking audience around.  We've received reports from northern Nevada that New Reno united the local tribals, raiders, and Vault City and is now calling itself the 'Commonwealth of Nevada'. Ain't that cute. Some folks say this is an Enclave plot, but Governor Granite said Nevada merely welcomed all who wish to live in peace within its borders and to please report the location of any Enclave spies to his offices."
 enc_reformers.131.a: "No Enclave here!"
-enc_reformers.131.a.tt: "Remove negative relationship modifiers with all countries except our oldest enemies, which are still somewhat suspicious of this new nation."
+enc_reformers.131.a.tt: "\nCheck out the new flag!"
 ###############################################################################################################
 enc_reformers.132.t: "By the Rocket's Red Glare"
 enc_reformers.132.d: "With the liberation of the Bloomfield Space Center, we could use one of the prewar shuttles to send someone into orbit and reactivate the Eagle Eye orbital platform. Some scientists question whether a one off propaganda event is worth doing, but this could also let us reactivate the spy satellites the Enclave placed over America before the war."
