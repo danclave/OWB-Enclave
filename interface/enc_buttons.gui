@@ -4,10 +4,10 @@ guiTypes = {
 		position = {x=90 y=58}
 		
 		fade_time = 50
-		fade_type = linear
+		fade_type = linear 
 		moveable = no 
 		
-		buttonType = {
+		buttonType = { 
 			name = connect_to_power
 			spriteType = GFX_icons_power 
 			pdx_tooltip = connect_to_power_tt 
@@ -108,7 +108,7 @@ guiTypes = {
 		}
 		
 		iconType = {
-			name ="legitimacy_icon"
+			name ="legitimacy_icon" 
 			spriteType = "enc_legitimacy_icon"
 			position = { x = 4 y = -1 }
 			scale = 0.8

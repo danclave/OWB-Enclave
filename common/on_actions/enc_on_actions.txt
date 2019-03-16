@@ -154,10 +154,11 @@ on_actions = {
 	on_state_control_changed = {		
 		effect = {
 			if = {
-				limit = {
+				limit = {	
 					original_tag = ERB
 				}
 				calculate_hiding_cost = yes
+				advanced_update_legitimacy = yes
 			}
 		}
 	}

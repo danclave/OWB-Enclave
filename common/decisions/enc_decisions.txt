@@ -43,7 +43,7 @@ ENC_shifts = {
 		}
 		modifier = {
 			war_support_weekly = -0.01125#total = 5%
-			research_time_factor = -0.2
+			research_speed_factor = 0.2
 		}
 	}
 	extend_administrative_shifts = {      #reduced research for increased war support
@@ -111,7 +111,7 @@ ENC_shifts = {
 
 		modifier = {
 			war_support_weekly = 0.01125#total = 5%
-			research_time_factor = 0.2
+			research_speed_factor = -0.20
 		}
 	}
 	reduce_administrative_shifts = {      #reduced research for increased war support
@@ -352,7 +352,7 @@ ENC_NCR_hiding = {
 				limit = {						
 					has_idea_with_trait = salvatore_puppet
 				}
-				add_to_variable = { var = ENC_hiding_cost value = 5}	
+				add_to_variable = { var = ENC_hiding_cost value = 7}	
 			}
 			else = {
 				add_to_variable = { var = ENC_hiding_cost value = 10}			
@@ -484,6 +484,7 @@ ENC_NCR_hiding = {
 		visible = {
 			has_completed_focus = enc_reform
 			has_country_flag = ncr_suspicious
+			not = { has_completed_focus = enc_american_dream }
 		}
 		available = {
 			has_completed_focus = enc_home_is_nevada
@@ -651,7 +652,7 @@ ENC_political_infighting = {
 			has_stability > 0.50
 		}
 		modifier = {
-			research_time_factor = +0.20
+			research_speed_factor = -0.20
 		}
 		days_remove = 200
 		complete_effect  = {
@@ -733,6 +734,102 @@ ENC_political_infighting = {
 	}
 }
 
+ENC_render_unto_caesar = {
+	CES_crisis = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		activation = {
+			has_country_flag = ENC_CES_hostile
+			has_completed_focus = enc_purity
+			not = {
+				CES = {
+					OR = {
+						exists = no
+						has_civil_war = YES
+						has_war_with = ERB #Enclave
+					}
+				}
+			}
+		}
+		available = {
+			not = { country_exists = CES }
+		}
+		cancel_trigger = {
+			CES = {
+				OR = {
+					exists = no
+					has_civil_war = YES
+					has_war_with = ERB #Enclave
+				}
+			}
+		}
+		is_good = no
+		days_mission_timeout = 1068
+		timeout_effect = {
+			CES = {	
+				country_event = { id = enc.41 } # todo: change
+			}
+			clr_country_flag = ENC_CES_hostile
+		}
+		complete_effect = {
+			ERB = { country_event = {id = enc_reformers.101 } }
+		}
+	}
+	
+	CES_reformer_crisis = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		activation = {
+			has_country_flag = ENC_axis_evil
+			not = {
+				CES = {
+					OR = {
+						exists = no
+						has_civil_war = YES
+						has_war_with = ERB #Enclave
+					}
+				}
+			}
+		}
+		available = {
+			not = { country_exists = CES }
+		}
+		cancel_trigger = {
+			CES = {
+				OR = {
+					exists = no
+					has_civil_war = YES
+					has_war_with = ERB #Enclave
+				}
+			}
+		}
+		is_good = no
+		days_mission_timeout = 1068
+		visible = {original_tag = ERB }
+		timeout_effect = { country_event = { id = enc_reformers.101 }}
+		complete_effect = { }
+	}
+	ENC_rise_slaves = {
+	priority = 300
+		fire_only_once = yes
+		available = {
+			518 = {
+				has_state_flag = enc_slaves_armed
+			}
+		}
+	visible = {
+			tag = ERB
+			has_completed_focus = enc_ss_ceasar_bottom_uprising
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.65 }
+			}
+	}
+}	
+
+
 # DEBUG
 ###############################
 
@@ -748,14 +845,19 @@ ENC_debug = {
 		}
 	}
 	ENC_misc = {
-		complete_effect = {
-			start_civil_war = {
-				ideology = elites
-				size = party_popularity@elites
-				only_own_territory = yes
-				capital = 159
+		available = {
+			has_dynamic_modifier = {
+				modifier = enc_legitimacy_dynamic_modifier
 			}
+		}
+		complete_effect = {
+			misc_effect_test = yes
 		}		
+	}
+	ENC_reduce_legitimacy_relevance = {
+		complete_effect = {
+			reduce_legitimacy_relevance = yes
+		}
 	}
 	ENC_restore_douglas_portrait = {
 		complete_effect = {

@@ -78,7 +78,7 @@ ideas = {
 				original_tag = ERB
 			}		
 			traits = { 
-				reformer_2
+				corrupt_sycophant
 			}		
 			ai_will_do = {
 				factor = 1
@@ -172,7 +172,10 @@ ideas = {
 			}
 		}
 		erb_salvatore = {
-			picture = enc_salvatore		
+			picture = enc_salvatore					
+			on_add = {
+				custom_effect_tooltip = erb_salvatore_effect
+			}
 			allowed = {
 				tag = ERB  
 			}

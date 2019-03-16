@@ -314,7 +314,7 @@ country_event = { #19 - Cafetaria incident
 	
 	trigger = {
 		tag = ERB
-		num_of_controlled_states > 20 # enclave is still small
+		num_of_controlled_states < 20 # enclave is still small
 	}
 	mean_time_to_happen = {
 		days = 400
@@ -712,7 +712,16 @@ country_event = { #33 - Crimson Caravan Encounter
 	}
 	option = { # no witnesses
 		name = enc.33.b
-		add_stability = -0.02
+		if = {
+			limit = {
+				has_completed_focus = enc_reform			
+			}
+			set_temp_variable = { legitimacy_change_var = -0.02 }
+			change_legitimacy = yes
+		}
+		else = {
+			add_stability = -0.02
+		}
 	}
 	option = { # resourceful option
 		name = enc.33.c
