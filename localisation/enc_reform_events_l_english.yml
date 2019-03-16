@@ -727,7 +727,7 @@ enc_reformers.134.t: "The City of Angels"
 enc_reformers.134.d: "The Boneyard seems like a graveyard that stretches for miles under the hot sun.  But Americans find a way, and the Boneyard has prospered as part of the NCR. Hayes intends to set up set up a Department of Public Art and Entertainment in the City to serve as a nucleus of the America's entertainment industry. But as part of that development, we need to decide whether to change the city's name." 
 enc_reformers.134.a: "Welcome to Los Angeles"
 enc_reformers.134.b: "It's been called the Boneyard for over 200 years"
-enc_reformers.134.c: "The City of Angels, who didn't make it and those who keep trying to."
+enc_reformers.134.c: "The City of Angels, for those who didn't make it and those who keep trying to."
 ###############################################################################################################
 enc_reformers.135.t: "Vengeance for Navarro?"
 enc_reformers.135.d: "The Brotherhood is clearly guilty of a range of crimes, including destruction of federal property, theft of federal property, and attacks on members of the United States Government. But a trial for the Brotherhood could be messy, as some Americans will point out their service raiders and supermutants, and they may try to slander us with false statements about our research at Navarro.  Further, given that the Brotherhood is descended from prewar military, and we never actually did make an effort to cooperate, maybe there are alternative solutions? Or we could just do a show trial."
@@ -1325,6 +1325,11 @@ enc_reformers.251.t: "A Fine Upstanding Man"
 enc_reformers.251.d: "Not all in New California hate and fear the Enclave.  Some recognize that they could be a powerful force for reconstructing America, and some are actually descended from Enclave officers who fled after the fall of Navarro.  Grant C. Hayes, Dayglow's Mayor, is one such person.  He will be happy to work with the Enclave to promote their cause in New California, so long as they understand he is nobody's puppet."
 enc_reformers.251.a: "Tell me more about being President"
 enc_reformers.251.a.tt: "\nUnlocks decisions to help Hayes become the President of the NCR\n"
+############################################################################################################
+enc_reformers.252.t: "End of Legion Guerillas"
+enc_reformers.252.d: "With the Legion's collapse, guerilla raids on American forces come to an end.  On to Chicago!"
+enc_reformers.252.a: "We're going to deal with this one day."
+############################################################################################################
 ## START OF 300 ###
 #############################################################################################################
 enc_reformers.300.t: "Protests in [protesting_state.GetName]"

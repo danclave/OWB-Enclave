@@ -2580,7 +2580,6 @@ focus = {#RADIO - Red Menace
 		cost = 5.8
 		completion_reward = {
 			custom_effect_tooltip = enc_rebuild_railway.tt
-			hidden_effect = {
 				350 = {
 					add_building_construction = {
 						type = infrastructure
@@ -2770,7 +2769,6 @@ focus = {#RADIO - Red Menace
 						instant_build = yes
 					}
 				}
-			}
 		}
 	}
 	focus = {#REBorN - Automobiles
@@ -3346,7 +3344,10 @@ focus = {#American Revolution
 		cost = 5.8
 		completion_reward = {
 			add_ideas =  enc_manifest_destiny
+			every_state = {
+				add_claim_by = ERB
 			}
+		}
 	}	
 	
 	focus = {#Axis of Evil
