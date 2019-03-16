@@ -394,8 +394,8 @@ ENC_infiltrating_NCR = {
 		}
 		custom_cost_text = ENC_arm_raiders_cost
 		visible = {
-			has_completed_focus = enc_stage_raider_attacks
 			has_country_flag = ncr_suspicious
+			has_country_flag = enc_stage_raider_attacks_flag
 		}
 		available = {
 			has_country_flag = enc_ncr_spies 
@@ -1647,6 +1647,36 @@ ENC_nation_building = {
 		}
 	ENC_find_power_grid = {
 		priority = 100
+		icon = GFX_icons_power
+		allowed = {
+			original_tag = ERB
+		}
+		fire_only_once = no		
+		visible = {
+			any_owned_state = {
+				civilian_power_grid > 0
+				not = { is_core_of = ERB }
+				any_neighbor_state = {
+					is_core_of = ERB
+				}
+			}			
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					civilian_power_grid > 0
+					not = { is_core_of = ERB }
+					any_neighbor_state = {
+						is_core_of = ERB
+					}
+				}
+				ROOT = {
+					goto_state = PREV
+				}
+			}
+		}
+	}ENC_power_all__power_grids = {
+		priority = 110
 		icon = GFX_icons_power
 		allowed = {
 			original_tag = ERB

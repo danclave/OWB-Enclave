@@ -265,7 +265,7 @@ country_event = {#9 - Promotion
 	}
 	option = {#Most loyal man
 		name = enc_reformers.9.b
-		add_5_popularity_to_ruling_party = yes
+		add_popularity_to_ruling_party = yes
 		create_corps_commander = {
 			name = "Thomas 'Rimmy' Rim"
 			portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_9.dds"
@@ -489,6 +489,11 @@ country_event = {#15 - Legitimacy turorial
 	
 	immediate = {
 		set_variable = { enc_legitimacy_relevance = 1 }		
+		clamp_variable = { # move this clamp
+			var = enc_legitimacy
+			min = 0
+			max = 1
+		}
 		add_dynamic_modifier = {
 			modifier = enc_legitimacy_dynamic_modifier
 		}
@@ -553,7 +558,7 @@ country_event = {#17 - Fortunate son
 		has_country_flag = enc_music_found
 		country_exists = NCR
 		NOT = { has_completed_focus = enc_our_new_ally }
-		}	
+	}	
 	option = {# crack down on this behaviour
 		name = enc_reformers.17.a
 		add_popularity = { ideology = intellectuals popularity = -0.02 }
@@ -651,6 +656,10 @@ country_event = {#20 - Dealing with Bishops - escape
 	
 	fire_only_once = yes
     is_triggered_only = yes
+	
+	trigger = {
+		country_exists = NCR
+	}
 	
 	option = {# Oh well
 		name = enc_reformers.20.a
@@ -1177,6 +1186,7 @@ country_event = {#38 - weapon cache located
 	trigger = {	
 		original_tag = ERB
 		has_country_flag = enc_ncr_spies
+		country_exists = NCR
 	}	
 	mean_time_to_happen = {	days = 200 }
 	
@@ -7635,7 +7645,18 @@ country_event = {#305 - Whispers of hope
 	title = enc_reformers.305.t
 	picture = GFX_event_ENC_secret
 	fire_only_once = no
-	desc = enc_reformers.305.d
+    desc = {
+        text = eenc_reformers.305.d
+        trigger = {
+			NOT = { has_completed_focus = enc_a_nation_reborn } 
+		}
+	}	
+	 desc = {
+        text = enc_reformers.305.d.later
+        trigger = {
+			has_completed_focus = enc_a_nation_reborn
+		}
+	}
 	is_triggered_only = no
 	mean_time_to_happen = { days = 300 }
 	trigger = {
@@ -7976,6 +7997,29 @@ news_event = {
 		activate_mission = ENC_red_menace_crisis
 	}
 }
+
+country_event = {#316 - Arming raiders?
+	id = enc_reformers.316
+	title = enc_reformers.316.t
+	desc = enc_reformers.316.d
+	picture =  GFX_event_generic_raider_1
+	
+	fire_only_once = no	
+	is_triggered_only = yes
+	
+	option = { # plenty of bullets to spare
+		name = enc_reformers.316.a
+		change_legitimacy = yes
+		add_war_support = 0.05
+		add_political_power = 100
+	}
+	option = { # Lets arm the raiders
+		name = enc_reformers.316.b
+		custom_effect_tooltip = enc_stage_raider_attacks_tt	
+		set_country_flag = enc_stage_raider_attacks_flag
+	}
+}
+
 
 #################
 ## IDEAS
