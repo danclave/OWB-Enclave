@@ -147,7 +147,7 @@ ENC_render_unto_caesar = {
 ENC_debug = {
 	priority = 100
 	visible = {
-		# always = false
+		always = false
 		not = {
 			has_country_flag = enc_debug_disabled
 		}

@@ -5016,6 +5016,7 @@ country_event = { #169 - Utah Plague
 	trigger = {
 		NCN = { has_war_with = CES }
 		NOT = { country_exists = NCR }
+		has_completed_focus = enc_reform
 		tag = ERB	
 	}
 	mean_time_to_happen = {
@@ -5053,6 +5054,7 @@ news_event = { #170 - Dark Age
 	fire_only_once = YES
 	trigger = {
 		NOT = { country_exists = NCR }
+		has_completed_focus = enc_reform
 		owns_state = 253
 		owns_state = 135
 		owns_state = 63
@@ -6013,6 +6015,7 @@ news_event = { #202 - Overextended Legion
 			CES = { owns_state = 301 }
 			}
 		tag = ERB
+		has_completed_focus = enc_reform
 		not = {has_completed_focus = enc_rebuilding_a_nation }
 			}	
 	mean_time_to_happen = {
@@ -7478,7 +7481,7 @@ country_event = {#301 - state protest turns into massacre!
 			set_variable = { enc_years_since_massacre = 1 }
 			country_event = { # Candle vigil one year layer
 				id = enc_reformers.303
-				days = 3#65 # todo make 365
+				days = 365 # todo make 365
 			}
 		}
 	}
@@ -7574,7 +7577,7 @@ country_event = {#303 - Candle vigil
 		add_to_variable = { enc_years_since_massacre = 1 }
 		country_event = { # Candle vigil one year layer
 			id = enc_reformers.303
-			days = 3#65 # todo make 365
+			days = 365
 		}
 	}
 	option = {# shut it down
