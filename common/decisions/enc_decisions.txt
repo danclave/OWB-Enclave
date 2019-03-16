@@ -806,7 +806,7 @@ ENC_render_unto_caesar = {
 			}
 		}
 		is_good = no
-		days_mission_timeout = 1068
+		days_mission_timeout = 1268
 		visible = {original_tag = ERB }
 		timeout_effect = { country_event = { id = enc_reformers.101 }}
 		complete_effect = { }

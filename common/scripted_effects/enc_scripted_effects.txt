@@ -38,32 +38,33 @@ add_popularity_to_opposition = {
 ##################################################
 
 add_popularity_to_ruling_party= {
+	set_temp_variable = { popularity_change = 0.03 }
 	if = {
 		limit = { has_government = elites }
 		add_popularity = {
 			ideology = elites
-			popularity = popularity_change
+			popularity = popularity_change?0.05
 		}
 	}
 	else_if = {
 		limit = { has_government = people }
 		add_popularity = {
 			ideology = people
-			popularity = popularity_change
+			popularity = popularity_change?0.05
 		}
 	}
 	else_if = {
 		limit = { has_government = intellectuals }
 		add_popularity = {
 			ideology = intellectuals
-			popularity = popularity_change
+			popularity = popularity_change?0.05
 		}
 	}
 	else_if = {
 		limit = { has_government = ruler }
 		add_popularity = {
 			ideology = ruler
-			popularity = popularity_change
+			popularity = popularity_change?0.05
 		}
 	}
 }
