@@ -7644,7 +7644,7 @@ country_event = {#305 - Whispers of hope
 	picture = GFX_event_ENC_secret
 	fire_only_once = no
     desc = {
-        text = eenc_reformers.305.d
+        text = enc_reformers.305.d
         trigger = {
 			NOT = { has_completed_focus = enc_a_nation_reborn } 
 		}
