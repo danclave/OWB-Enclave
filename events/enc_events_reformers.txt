@@ -3665,7 +3665,7 @@ country_event = {#120 PNW
 			}			
 		KLA = { annex_country = { target = ARR } }
 			ERB = { 
-			add_to_faction = Kla
+			add_to_faction = KLA
 			}
 		KLA = {
 					add_ai_strategy = {
@@ -3867,7 +3867,7 @@ country_event = {#125
     id = enc_reformers.125
     title = enc_reformers.125.t
     desc = enc_reformers.125.d
-    picture = GFX_event_event_enc_sierra
+    picture = GFX_event_enc_sierra
     fire_only_once = yes    
     is_triggered_only = yes
 	    option = {# Golden Ending
@@ -3984,17 +3984,16 @@ country_event = {# Repconn
 			}
 			add_manpower = -100
 			}
-option = {#	
+	option = {#	
 		name = enc_reformers.129.e
 		181= { # New Reno
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = {
+			remove_building = {
 				type = arms_factory
-				level = -1
+				level = 1
 				instant_build = yes
 			}
 		}
-				}			
+	}			
 }	
 
 country_event = {# Enclave to Legion
@@ -4028,7 +4027,8 @@ country_event = {# Home is Nevada
 	mean_time_to_happen = {	days = 30 }
 	option = {#
 		name = enc_reformers.131.a
-		custom_effect_tooltip = enc_reformers.131.tt
+		change_douglas_portrait_to_nevada = yes
+		custom_effect_tooltip = enc_reformers.131.a.tt
 	}	
 }
 country_event = {# Rocket's Red Glare
@@ -4782,6 +4782,7 @@ country_event = {#160 - The Divide
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {#	Cool
+	name = enc_reformers.160.a
 		set_country_flag = border_divide
 	}
 }		
@@ -4919,7 +4920,8 @@ country_event = {#164 - Nuked Flagstaff
 		clr_country_flag = enc_nuke_silo
 		clr_country_flag = enc_nukes_unarmed
 		hidden_effect = {
-			country_event = { id = enc_reformers.166 days = 70 } 
+			country_event = { id = enc_reformers.166 days = 90 } }
+		  520 = { add_manpower = -15000 }		
 		}
 		520 = { add_manpower = -15000 }		
 	}
@@ -5265,10 +5267,13 @@ country_event = { #179- New New Vegas
     picture = GFX_event_VEG_strip
     fire_only_once = yes
     trigger = {
-		original_tag = ERB
-		date > 2279.01.01
-        people > 0.60
-        has_completed_focus = enc_a_nation_reborn
+      original_tag = ERB
+      date > 2279.01.01
+      people > 0.60
+      has_completed_focus = enc_a_nation_reborn
+      tag = ERB
+      country_exists = VEG
+    }		
 	}		
 	mean_time_to_happen = {
 		days = 100
@@ -6713,7 +6718,7 @@ country_event = {#224 - Graham Crackers
 		name = enc_reformers.224.a
 		create_corps_commander = {
 					name = "Joshua Graham"
-					portrait_path = "gfx/leaders/NCN/portrait_douglas_enclaveurned_Man.dds" # todo fix
+					portrait_path = "gfx/leaders/NCN/Portrait_Burned_Man.dds"
 					skill = 6
 					traits = { }
 					attack_skill = 7
@@ -6935,19 +6940,6 @@ news_event = {#232 - Troll Warren Crushed
 	option = {# Now they're a threat 
 		name = enc_reformers.232.a
 		set_country_flag = enc_wbh_threat
-		hidden_effect = {
-			WBH = { 
-				add_ideas = ENC_terror_of_wastes 
-				create_wargoal = {
-					type = annex_everything
-					target = MTD
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = KLA
-				}
-			}
-		}
 	}	
 }
 news_event = {#233 - Legion Conquest of New Canaan
@@ -7255,7 +7247,7 @@ country_event = {#248 - Vote Rigging :(
 		has_completed_focus = enc_expand_human_definition 
 		has_completed_focus = enc_empower_congress
 	}
-	mean_time_to_happen = { days = 70 }
+	mean_time_to_happen = { days = 140 }
 	option = {# Come on
 		name = enc_reformers.248.a
 		add_popularity = { ideology = elites popularity = 0.05 }
@@ -7313,7 +7305,47 @@ country_event = {#250 - Baron Autonomy
 			type = annex_everything
 		}	
 	}	
-}									
+}
+
+country_event = {#251 - coop
+	id = enc_reformers.251
+	title = enc_reformers.251.t
+	desc = enc_reformers.251.d
+	picture = GFX_event_ENC_double_flag_long
+	fire_only_once = yes	
+	is_triggered_only = yes 
+	trigger = { 
+		tag = NCR
+		ERB = {has_completed_focus = enc_reform }
+		is_ai = no
+	}
+	mean_time_to_happen = {days = 30 } 
+	option = {# Come on
+		name = enc_reformers.251.a
+		add_popularity = { ideology = intellectuals popularity = 0.05 }
+		set_country_flag = enc_hayes_plots
+		custom_effect_tooltip = enc_reformers.251.a.tt
+	}	
+}										
+
+country_event = {#252 - End Guerillas
+	id = enc_reformers.252
+	title = enc_reformers.252.t
+	desc = enc_reformers.252.d
+	picture = GFX_event_ENC_double_flag_long
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = { 
+		NOT = { country_exists = CES }
+		has_idea = guerilla_raids
+	} 
+	 mean_time_to_happen = { days = 50 }
+	option = {#	
+		name = enc_reformers.252.a
+		remove_ideas = guerilla_raids
+			}
+	}
+
 country_event = {#300 - state protests!
 	id = enc_reformers.300
 	title = enc_reformers.300.t
@@ -7657,7 +7689,6 @@ country_event = {#305 - Whispers of hope
 			has_completed_focus = enc_a_nation_reborn
 		}
 	}
-	is_triggered_only = no
 	mean_time_to_happen = { days = 300 }
 	trigger = {
 		check_variable = { enc_legitimacy > 0.60 }
