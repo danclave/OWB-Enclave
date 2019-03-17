@@ -1,4 +1,11 @@
+New features:
+	- added optional decisions for NCR players in multiplayer if they want to go Hayes to ally with Nevada
+	- added some more epilogue events
 Bug fixes:
-	-fixed legitimacy going under 0%
-	-fixed suspend elections
-	-fixed stealing the declaration of independence
+	- minor fixes
+	- USA now properly changes color to blue
+	- getting stuck with post-ncr modifiers if you didn't own Dayglow
+	- Fixed the American Brotherhood
+	- Rejecting Ghouls now Rejects super Mutants automatically
+	- Fixed some typos
+	- Plasma and Tesla designers now reduce all infantry equipment cost.

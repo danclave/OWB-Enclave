@@ -2820,6 +2820,7 @@ focus_tree = {
 		y = 5
 		cost = 5.8
 		completion_reward = {
+			hidden_effect = { drop_cosmetic_tag = yes }
 			set_cosmetic_tag = ERB_USA
 			country_event = { id = enc_reformers.50 }
 		}
@@ -2839,6 +2840,7 @@ focus_tree = {
 		y = 0
 		cost = 5.8
 		completion_reward = {
+			hidden_effect = { drop_cosmetic_tag = yes }
 			set_cosmetic_tag = ERB_enclaveamerica
 			country_event = { id = enc_reformers.201 }
 		}
