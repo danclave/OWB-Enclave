@@ -269,9 +269,16 @@ ENC_vice_president = {
 	visible = {
 		has_country_flag = enc_select_vice_president
 	}
-	
 }
 
+NCR_hayes_plots = {
+	priority = 1000
+	icon = category_usa_flag
+	allowed = { original_tag = NCR }
+	visible = {
+		has_country_flag = enc_hayes_plots
+	}
+}
 # ##############################
 # ICONS
 # ##############################
