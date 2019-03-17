@@ -147,12 +147,8 @@ ENC_render_unto_caesar = {
 ENC_debug = {
 	priority = 100
 	visible = {
-		always = false
-		not = {
-			has_country_flag = enc_debug_disabled
-		}
+		has_country_flag = enc_debug_enabled
 	}
-
 }
 
 ENC_pacific_commonwealth1 = {

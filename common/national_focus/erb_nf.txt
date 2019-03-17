@@ -1989,20 +1989,7 @@ focus_tree = {
 		cost = 4.5
 		completion_reward = {
 			add_popularity = { ideology = ruler popularity = 0.05 } 
-			add_stability = -0.05
-			set_country_flag = legitimacy_disabled
-			custom_effect_tooltip = enc_suspend_elections_legitimacy_loss	
-			custom_effect_tooltip = enc_suspend_elections_tt
-			
-			hidden_effect = {
-
-				remove_ideas = {
-					ENC_legitimacy_high
-					ENC_legitimacy_medium
-					ENC_legitimacy_low
-					ENC_legitimacy_none				
-				}
-			}
+			add_stability = -0.05			
 			country_event = { id = enc_reformers.72 }
 			reduce_legitimacy_relevance = yes
 		}

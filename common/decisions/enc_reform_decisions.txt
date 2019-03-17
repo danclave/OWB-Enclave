@@ -9,7 +9,7 @@ enc_executive_orders  = {
 			has_completed_focus = enc_rebuilding_a_nation
 		}
 		available = { 
-			has_equipment = { type = vb_gunship_equipment amount > 24 } 
+			has_equipment = { vb_gunship_equipment > 24 } 
 		}
 		days_remove = 50
 		days_re_enable = 30
@@ -1680,6 +1680,7 @@ ENC_nation_building = {
 		icon = GFX_icons_power
 		allowed = {
 			original_tag = ERB
+			always = no # wip
 		}
 		fire_only_once = no		
 		visible = {

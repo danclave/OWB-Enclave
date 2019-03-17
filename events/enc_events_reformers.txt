@@ -489,11 +489,6 @@ country_event = {#15 - Legitimacy turorial
 	
 	immediate = {
 		set_variable = { enc_legitimacy_relevance = 1 }		
-		clamp_variable = { # move this clamp
-			var = enc_legitimacy
-			min = 0
-			max = 1
-		}
 		add_dynamic_modifier = {
 			modifier = enc_legitimacy_dynamic_modifier
 		}
@@ -6362,8 +6357,8 @@ country_event = { #214 Enclave Education
     title = enc_reformers.214.t
     desc = enc_reformers.214.d
     picture =  GFX_event_enc_oil_rig
-    fire_only_once = YES
-	is_triggered_only = YES
+    fire_only_once = yes
+	is_triggered_only = yes
 	option = { # The Enclave was devoted to saving America
         name = enc_reformers.214.a
 		custom_effect_tooltip = enc_reformers.214.a.tt
@@ -7143,7 +7138,7 @@ country_event = {#243 - Communist Uprising
 	desc = enc_reformers.243.d
 	picture = GFX_event_china_poster
 	fire_only_once = yes	
-  is_triggered_only = yes
+	is_triggered_only = yes
     
 	option = {#Afraid of Commies
 		name = enc_reformers.243.a
@@ -7481,7 +7476,7 @@ country_event = {#301 - state protest turns into massacre!
 			set_variable = { enc_years_since_massacre = 1 }
 			country_event = { # Candle vigil one year layer
 				id = enc_reformers.303
-				days = 365 # todo make 365
+				days = 365
 			}
 		}
 	}
@@ -7593,7 +7588,7 @@ country_event = {#303 - Candle vigil
 country_event = {#304 - State protests turns into riot!
 	id = enc_reformers.304
 	title = enc_reformers.304.t
-	picture = GFX_event_enc_protests_ncr_flag # todo
+	picture = GFX_event_enc_protests_ncr_flag
 	fire_only_once = no
 	desc = enc_reformers.304.d
 	is_triggered_only = yes
@@ -7872,6 +7867,10 @@ country_event = {#311 - Enclave Education - communism
 	
 	fire_only_once = yes
 	is_triggered_only = yes
+	
+	trigger = {
+		has_variable = enc_red_menace_var		
+	}
 	
 	option = { # America's youth will be warned of the evils of communism
 		name = enc_reformers.311.a

@@ -1147,9 +1147,9 @@ enc_reformers.213.c.tt: "\n Available because you have not §YAccepted Ghouls.§
 enc_reformers.214.t: "Enclave Education"
 enc_reformers.214.d: "We can also use public schooling to teach the world about the Enclave's noble goal of restoring America, a tale of how we shepherded our strength until we were ready to act.  Some idealists have suggested we air our dirty laundry about that time President Richardson tried to kill all mutants, but really, why bother?"
 enc_reformers.214.a: "The Enclave was devoted to saving America"
-enc_reformers.214.a.tt: "§gThe shameful truth of the Enclave's past sunk to the bottom of the ocean after the destruction of the Rig. Let's keep it there.?§!"
+enc_reformers.214.a.tt: "§gThe shameful truth of the Enclave's past sunk to the bottom of the ocean after the destruction of the Rig. Let's keep it there.\n\n§!"
 enc_reformers.214.b: "The Truth Will Set Us Free"
-enc_reformers.214.b.tt: "§gWhat's the worst that could happen?§!"
+enc_reformers.214.b.tt: "§gWhat's the worst that could happen?\n\n§!"
 #############################################################################################################
 enc_reformers.215.t: "The Red Menace"
 enc_reformers.215.d: "One unfortunate consequence of our anti-communist education is that some of our enemies have claimed the mantle of Communism for themselves.  Although it's not clear these Commie bastards even know who Marx is, they've flocked to the  banner of the Legion, forming a "Popular Front" against "American imperialism."  No worries, they'll find out soon enough why it's better to be dead than red."

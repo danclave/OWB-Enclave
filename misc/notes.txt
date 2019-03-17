@@ -1,27 +1,4 @@
-SHOULD
-1. update legitimacy mechanic tutorial event
-2. more legitimacy based decisions
-3. More icons
-4. finish advisors for hayes, moreno
-
-COULD
-1. More interactions with Anderson
-4. Add custom effect for increasing/decreasing purist popularity (inverse red/green)
-5. More descriptions for events / advisors / decisions
-6. consequences for enc_reformers.13.c
-7. Expand on charismatic vs ruthless options
-8. expand on punishment for being outnumbered by purists 
-9. expand on assassination + wound
-
-DONE:
-1. Finish arm rebel mechanic
-2. Finish coring mechanic
-    a) fix localization error
-3. Flavor event for assassinating Anderson
-4. Finish currency decisions
-5. buff human choice in event 1
-6. consequence for enc_reformers.39.c
-6. added advisors for wright, salvatore
-7. Expand on "shaped explosives" choice
-8. Finish Nevada route
-9. Make the cost of spawning rebels scale.
+Bug fixes:
+	-fixed legitimacy going under 0%
+	-fixed suspend elections
+	-fixed stealing the declaration of independence
