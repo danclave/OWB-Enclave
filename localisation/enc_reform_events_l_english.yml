@@ -14,7 +14,7 @@ enc_reformers.1.b:0 "Speaking of the Chosen One, let me tell you who your mother
 enc_reformers.1.c:0 "He didn't aid the Chosen One."
 #########################################################################################
 enc_reformers.2.t:0 "Douglas' first contact"
-enc_reformers.2.d:0 "When Douglas was 17 years old, the population of the Enclave vault reached the utter limits of it's life support systems. As a result, a large portion of the healthy and strong were ordered to leave the the safety of the vault to establish contact with the largest group of Enclave remnants, lead by an old Navarro Drill sargeant.\n\nDouglas, however, was quick to contact with his father's 'Granite Company' instead, slipping away from the rest unseen. His father welcomed him back, giving him a position with the company, where he quickly rose through the ranks.\n\nWhen Douglas was a lieutenant of the Granite Defense Company, he was contacted by a party under attack by raiders. The call sounded desperate and came from..."
+enc_reformers.2.d:0 "When Douglas was 17 years old, the population of the Enclave vault reached the utter limits of it's life support systems. As a result, a large portion of the healthy and strong were ordered to leave the safety of the vault to establish contact with the largest group of Enclave remnants, lead by an old Navarro Drill sargeant.\n\nDouglas, however, was quick to contact with his father's 'Granite Company' instead, slipping away from the rest unseen. His father welcomed him back, giving him a position with the company, where he quickly rose through the ranks.\n\nWhen Douglas was a lieutenant of the Granite Defense Company, he was contacted by a party under attack by raiders. The call sounded desperate and came from..."
 enc_reformers.2.a:0 "An NCR battalion fighting raiders"
 enc_reformers.2.b:0 "Brotherhood knights containing a prewar threat"
 enc_reformers.2.c:0 "Caesar's scouts seeking new lands"
@@ -207,7 +207,7 @@ enc_reformers.32.c: "The Brotherhood could be pitted against the NCR."
 available_because_enc_promised_no_peace_with_bos: "/nAvailable because you promised there would be no peace with the §YNCR§!"
 ################################################################################################################ -<
 enc_reformers.33.t: "The Barons"
-enc_reformers.33.d: "Our success in escaping the notice of the NCR may be in part duo to their low level of control over their own northern regions. Instead, there lands are ruled by the brahmin barons, wealthy merchants with only situational loyalty to the NCR government.\n\nWe believe that, with the right encouragement, the Barons could successfully petition for independence from Shady Sands and the rest of the NCR."
+enc_reformers.33.d: "Our success in escaping the notice of the NCR may be in part due to their low level of control over their own northern regions. Instead, there lands are ruled by the brahmin barons, wealthy merchants with only situational loyalty to the NCR government.\n\nWe believe that, with the right encouragement, the Barons could successfully petition for independence from Shady Sands and the rest of the NCR."
 enc_reformers.33.a: "Let's get to work."
 ################################################################################################################ -<
 enc_reformers.34.t: "The Barons' Petition"
@@ -234,7 +234,7 @@ enc_reformers.38.a: "Excavate what we can."
 enc_reformers.38.b: "Cover our tracks instead."
 ################################################################################################################ -<
 enc_reformers.39.t: "Remnants wish to return!"
-enc_reformers.39.d: "We have been contacted by the leader of a size-able company of Enclave remnants. They have survived the decades as raiders, greatly feared duo to their advanced tactics and technology. Having heard rumors of the return of the Enclave, they are asking to be reinstated into our armed forces.\n\nWhile the extra manpower could be very useful, their disdain for the mutants rival that of Anderson and his ilk. We must therefore consider the political consequences of accepting them into our ranks."
+enc_reformers.39.d: "We have been contacted by the leader of a size-able company of Enclave remnants. They have survived the decades as raiders, greatly feared due to their advanced tactics and technology. Having heard rumors of the return of the Enclave, they are asking to be reinstated into our armed forces.\n\nWhile the extra manpower could be very useful, their disdain for the mutants rival that of Anderson and his ilk. We must therefore consider the political consequences of accepting them into our ranks."
 enc_reformers.39.a: "The prodigal sons have returned."
 enc_reformers.39.a.tt2: "§gThe remnants are accepted as a new division and quickly join the Purists.§!\n\n"
 enc_reformers.39.a.tt: "1 §YEnclave Veterans§! and 2 §YVeteran Auxiliaries§! appear in §YSierra Army Depot§! state.\n\n"
@@ -548,7 +548,7 @@ enc_reformers.102.a:  "I forgot that the Chosen One had a high charisma."
 enc_reformers.102.b:  "Mom, you're embarrassing me!"
 ################################################################################################################
 enc_reformers.103.t: "The Chem Trade"
-enc_reformers.103.d: "Control of New Reno and Vault City has given the Enclave control over the the West's 'pharmaceutical industry'.  Some suggest the Enclave revive old ties with criminal syndicates and seize the Wastes' chem trade.  Others suggest we legalize the chem trade in our territory and take a cut.  But some reformers claim we'd do better to turn out Mentats and antibiotics instead of Jet and trade for rare goods.  But they're probably huffing brahmin shit."
+enc_reformers.103.d: "Control of New Reno and Vault City has given the Enclave control over the West's 'pharmaceutical industry'.  Some suggest the Enclave revive old ties with criminal syndicates and seize the Wastes' chem trade.  Others suggest we legalize the chem trade in our territory and take a cut.  But some reformers claim we'd do better to turn out Mentats and antibiotics instead of Jet and trade for rare goods.  But they're probably huffing brahmin shit."
 enc_reformers.103.a:  "Seize the chem trade for fun and profit"
 enc_reformers.103.b:  "Legalizing jet is a swing issue for today's youth"
 enc_reformers.103.c:  "Let us heal the nation's wounds"
@@ -756,7 +756,7 @@ enc_reformers.138.c: "§MUse them to revive the United States Merchant Machine§
 ###############################################################################################################
 enc_reformers.139.t: "The Supermutant Question"
 enc_reformers.139.d: "The Troll Warren has given rise to an odd conundrum. Although obviously we'll execute the war criminals, a supermutant who used to live in Vault Six, 'Betty,' has claimed that she and many of the supermutants are victims of circumstance, and they treated humans under their rule no worse than neighboring tribes would have.  Betty, based on her Vault education, has invoked constitutional claims on behalf of her and the other supermutants and demands a place in the Reunited States.  And of course, a captive population of supermutants could have economic applications."
-enc_reformers.139.a: "§MHonest labor will make them honest, err, men§!"
+enc_reformers.139.a: "\n§MHonest labor will make them honest, err, men§!\n"
 enc_reformers.139.tt: "Available because you chose to integrate mutants"
 enc_reformers.139.b: "Cute, but no reason to deviate from standard procedures"
 enc_reformers.139.c: "§RCan she wear this collar?§!"
@@ -842,7 +842,7 @@ enc_reformers.155.d: "This is New California Public Radio, bringing you news of 
 enc_reformers.155.a: "Fantastic"
 ###############################################################################################################
 enc_reformers.156.t: "The Reservation"
-enc_reformers.156.d: "Los Alamos was a major nuclear facility before the Great War, and Caesar's men had shown little interest in it given that it was still radioactive from Chinese nukes.  Caesar was content to trade slaves for limited supplies of high technology, but we have bigger plans.   The locals call the it the 'The Reservation' and have complained that with the Legion's fall the the Ghouls are raiding surrounding settlements for slaves."
+enc_reformers.156.d: "Los Alamos was a major nuclear facility before the Great War, and Caesar's men had shown little interest in it given that it was still radioactive from Chinese nukes.  Caesar was content to trade slaves for limited supplies of high technology, but we have bigger plans.   The locals call the it the 'The Reservation' and have complained that with the Legion's fall the Ghouls are raiding surrounding settlements for slaves."
 enc_reformers.156.a: "Well, we can't have slaving ghouls"
 ###############################################################################################################
 enc_reformers.157.t: "Wait, Why Did They Need Slaves?"
