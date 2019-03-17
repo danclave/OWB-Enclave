@@ -38,7 +38,7 @@ enc_bloomfield_desc: "Somehow, a prewar space facility has survived time and nuc
 enc_bloomfield.tt: "Pick the §MReunited States of America's§! first Astronaut!
 enc_rebuild_railway: "Starlight Express"
 enc_rebuild_railway_desc: "Before the Great War, the Coast Starlight railway connected the cities of the west coast.  It can do so again."
-enc_rebuild_railway.tt: "Constructs a railway between the Boneyard and Seattle."
+enc_rebuild_railway.tt: "Constructs a railway between the Boneyard and Seattle.\n"
 enc_khan_job: "Khan Job"
 enc_khan_job_desc: "The Great Khans block our access to New Vegas. But not for long."
 ERB_vault21: "Vault 21"

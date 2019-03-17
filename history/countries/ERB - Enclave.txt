@@ -125,7 +125,7 @@ create_corps_commander = { # Jacob 'Dwemer' Freeman
 	portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_11.dds"
 	skill = 3
 	traits = {
-		enc_purist
+		enc_reformer
 	}
 	attack_skill = 2
 	defense_skill = 3
