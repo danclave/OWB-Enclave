@@ -76,7 +76,7 @@ enc_executive_orders  = {
 		available = { 
 		}
 		days_remove = 50
-		days_re_enable = 30
+		fire_only_once = yes
 		complete_effect = {
 			hidden_effect = { sound_effect = ERB_stripes_and_stars }
 			country_event = enc_reformers.246
@@ -653,6 +653,7 @@ ENC_infiltrating_NCR = {
 	
 		visible = {
 			has_country_flag = enc_ncr_spies
+			country_exists = NCR 
 		}
 		complete_effect = {
 			clr_country_flag = enc_ncr_spies
@@ -671,6 +672,7 @@ ENC_infiltrating_NCR = {
 		available = {
 			has_country_flag = enc_ncr_spies
 		}
+		visible = {country_exists = NCR }
 		days_remove = 30
 		remove_effect = {
 			set_country_flag = enc_event_33_solved
@@ -813,6 +815,7 @@ ENC_infiltrating_NCR = {
 		visible = {
 			tag = ERB
 			has_completed_focus = enc_owb_propaganda
+			country_exists = NCR 
 		}
 		complete_effect = {
 			NCR = {
@@ -1028,6 +1031,7 @@ ENC_infiltrating_NCR = {
 		activation = {
 			has_country_flag = ces_occupies_california
 			has_completed_focus = enc_reform
+			NOT = { country_exists = NCR }
 			not = {
 				CES = {
 					OR = {
@@ -1041,14 +1045,6 @@ ENC_infiltrating_NCR = {
 		available = {
 			77 = { is_controlled_by = ERB}
 		}
-		complete_effect = {
-			NCR = {
-				add_popularity = { ideology = intellectuals popularity = 0.10 }
-			}
-			add_popularity = { ideology = elites popularity = 0.10 }
-			set_temp_variable = {
-				var = suspicion_change_var
-				value = -0.05
 		cancel_trigger = {
 			CES = {
 				OR = {
@@ -3386,8 +3382,8 @@ good_tribal_handling = {
 				has_war_with = FROM
 				}	
 			}
-		days_remove = 50
-		cost = 50
+		days_remove = 100
+		cost = 2
 		ai_will_do = {
 			factor = 100
 				}
@@ -3417,7 +3413,7 @@ erb_good_reservations = {
 				has_war_with = FROM
 				}	
 			}
-		days_remove = 50
+		days_remove = 100
 		cost = 100
 		ai_will_do = {
 			factor = 100
@@ -3433,13 +3429,18 @@ erb_good_reservations = {
 		}
 erb_tribals_become_civilized = {
 		target_trigger = {
-			FROM = { has_country_flag = erb_civilizing }	
-				}
-	visible = {
+			FROM = {
+				has_country_flag = erb_civilizing
+			}	
+		}
+		visible = {
 			if = {
 				has_completed_focus = enc_reform
 				}
-			FROM = { exists = yes }		
+			FROM = { 
+				exists = yes 
+				NOT = { has_idea = settler_nation }
+			}		
 			}
 		available = {
 			NOT = {
@@ -3453,12 +3454,13 @@ erb_tribals_become_civilized = {
 			factor = 100
 				}
 		remove_effect = { 
-			FROM = {  remove_ideas = tribal_nation
-					add_ideas = settler_nation
-					clr_country_flag = erb_teachers
-					clr_country_flag = erb_civilizing
-					}
-		}
+			FROM = { 
+				swap_ideas = {
+					remove_idea = tribal_nation
+					add_idea = settler_nation
+				}
+			}
+		}	
 	}
 }
 ENC_granite_doctrine = { 

@@ -130,7 +130,6 @@ ENC_infiltrating_NCR = {
 			has_completed_focus = enc_infiltrate_ncr
 			has_country_flag = enc_bishop_in_NCR
 		}
-		NCR = { exists = YES }
 	}
 }
 

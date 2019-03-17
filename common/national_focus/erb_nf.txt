@@ -1319,6 +1319,7 @@ focus_tree = {
 		cost = 5.8
 		completion_reward = {
 			add_political_power = 100
+			complete_national_focus = enc_reject_super_mutants
 		}		
 	}
 	focus = {#INTEGRATION - reject super mutants
@@ -1611,6 +1612,7 @@ focus_tree = {
 			num_of_controlled_states > 40
 			controls_state = 253
 			controls_state = 135
+			has_country_flag = enc_mid_game
 		}
 		cost = 5.8
 		completion_reward = {
@@ -3047,15 +3049,16 @@ focus_tree = {
 			}		
 		}
 		completion_reward = { 
-		puppet = BOS
-		transfer_state  = 548
-		transfer_state = 216 
-		transfer_state = 474
-		country_event = { id = enc_reformers.196 } 
-		hidden_effect = {
+			puppet = BOS
+			transfer_state  = 548
+			transfer_state = 216 
+			transfer_state = 474
+			country_event = { id = enc_reformers.196 } 
+			hidden_effect = {
 				load_oob = "enc_bos_recruits_2"
 			}
-	custom_effect_tooltip = enc_BOS_vengeance.tt		}			
+			custom_effect_tooltip = enc_BOS_vengeance.tt
+		}			
 	}
 	focus = {#Reform - war with BOS
 		id = enc_war_with_bos_reform
