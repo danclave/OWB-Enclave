@@ -145,8 +145,9 @@ leader_traits = {
 	enclave_plasma_equipment_manufacturer = {
 		random = no
 		equipment_bonus = {
-			plasma_weaponry = {
+			infantry_equipment = {
 				build_cost_ic = -0.10
+				instant = yes
 			}
 		}		
 		ai_will_do = {
@@ -156,10 +157,11 @@ leader_traits = {
 	enclave_tesla_equipment_manufacturer = {
 		random = no
 		equipment_bonus = {
-			tesla_equipment_1 = {
+			infantry_equipment = {
 				build_cost_ic = -0.10
+				instant = yes
 			}
-		}		
+		}	
 		ai_will_do = {
 			factor = 1
 		}

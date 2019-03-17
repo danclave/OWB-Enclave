@@ -1923,15 +1923,9 @@ country_event = {#61 - Operation Augustus
 				ideology = ruler
 				size = 0.25
 				capital = 522
-				states_filter = {
-					owner = { original_tag = CES }
-					is_CES_civil_war_non_eligable = no
-				}
-				keep_unit_leaders = { 1003 1002 1004 }
 		}
 		hidden_effect = {
 			remove_unit_leader = 1001
-			CES = { set_country_flag = legion_had_civil_war }
 		}
 		random_country = {
 			limit = {
@@ -5270,7 +5264,7 @@ country_event = { #179- New New Vegas
       has_completed_focus = enc_a_nation_reborn
       tag = ERB
       country_exists = VEG
-    }		
+	  VEG = { is_puppet_of = ERB }
 	}		
 	mean_time_to_happen = {
 		days = 100
@@ -5809,7 +5803,7 @@ country_event = {#196 - Brotherhood Reformers
 	is_triggered_only = yes	
 	option = {#  Shoot reporter
 		name = enc_reformers.196.a
-		D01 = { set_cosmetic_tag = ERB_BOS }
+		BOS = { set_cosmetic_tag = ERB_BOS }
 		add_ideas = maxsonsbulwark
 		set_country_flag = integrate_brotherhood
 	}
@@ -6315,7 +6309,6 @@ country_event = {#213 - Ghouls Discuss America's Flaws
 	title = enc_reformers.213.t
 	desc = enc_reformers.213.d
 	picture =  GFX_event_enc_4th_july
-	
 	fire_only_once = yes	
 	trigger = {	has_country_flag = enc_ghouls_know }	
 	mean_time_to_happen = {	days = 500 }
@@ -6388,7 +6381,6 @@ country_event = {#215 - Red Menace
 	title = enc_reformers.215.t
 	desc = enc_reformers.215.d
 	picture =  GFX_event_CES_vulpes
-	
 	fire_only_once = yes	
 	trigger = {	
 		has_country_flag = enc_mid_game
