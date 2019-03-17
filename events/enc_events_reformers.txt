@@ -265,7 +265,7 @@ country_event = {#9 - Promotion
 	}
 	option = {#Most loyal man
 		name = enc_reformers.9.b
-		add_5_popularity_to_ruling_party = yes
+		add_popularity_to_ruling_party = yes
 		create_corps_commander = {
 			name = "Thomas 'Rimmy' Rim"
 			portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_9.dds"
@@ -553,7 +553,7 @@ country_event = {#17 - Fortunate son
 		has_country_flag = enc_music_found
 		country_exists = NCR
 		NOT = { has_completed_focus = enc_our_new_ally }
-		}	
+	}	
 	option = {# crack down on this behaviour
 		name = enc_reformers.17.a
 		add_popularity = { ideology = intellectuals popularity = -0.02 }
@@ -651,6 +651,10 @@ country_event = {#20 - Dealing with Bishops - escape
 	
 	fire_only_once = yes
     is_triggered_only = yes
+	
+	trigger = {
+		country_exists = NCR
+	}
 	
 	option = {# Oh well
 		name = enc_reformers.20.a
@@ -1177,6 +1181,7 @@ country_event = {#38 - weapon cache located
 	trigger = {	
 		original_tag = ERB
 		has_country_flag = enc_ncr_spies
+		country_exists = NCR
 	}	
 	mean_time_to_happen = {	days = 200 }
 	
@@ -5002,6 +5007,7 @@ country_event = { #169 - Utah Plague
 	trigger = {
 		NCN = { has_war_with = CES }
 		NOT = { country_exists = NCR }
+		has_completed_focus = enc_reform
 		tag = ERB	
 	}
 	mean_time_to_happen = {
@@ -5039,6 +5045,7 @@ news_event = { #170 - Dark Age
 	fire_only_once = YES
 	trigger = {
 		NOT = { country_exists = NCR }
+		has_completed_focus = enc_reform
 		owns_state = 253
 		owns_state = 135
 		owns_state = 63
@@ -5249,7 +5256,7 @@ country_event = { #179- New New Vegas
     title = enc_reformers.179.t
     desc = enc_reformers.179.d
     picture = GFX_event_VEG_strip
-    fire_only_once = YES
+    fire_only_once = yes
     trigger = {
       original_tag = ERB
       date > 2279.01.01
@@ -6002,6 +6009,7 @@ news_event = { #202 - Overextended Legion
 			CES = { owns_state = 301 }
 			}
 		tag = ERB
+		has_completed_focus = enc_reform
 		not = {has_completed_focus = enc_rebuilding_a_nation }
 			}	
 	mean_time_to_happen = {
@@ -6347,8 +6355,8 @@ country_event = { #214 Enclave Education
     title = enc_reformers.214.t
     desc = enc_reformers.214.d
     picture =  GFX_event_enc_oil_rig
-    fire_only_once = YES
-	is_triggered_only = YES
+    fire_only_once = yes
+	is_triggered_only = yes
 	option = { # The Enclave was devoted to saving America
         name = enc_reformers.214.a
 		custom_effect_tooltip = enc_reformers.214.a.tt
@@ -7114,7 +7122,7 @@ country_event = {#243 - Communist Uprising
 	desc = enc_reformers.243.d
 	picture = GFX_event_china_poster
 	fire_only_once = yes	
-  is_triggered_only = yes
+	is_triggered_only = yes
     
 	option = {#Afraid of Commies
 		name = enc_reformers.243.a
@@ -7492,7 +7500,7 @@ country_event = {#301 - state protest turns into massacre!
 			set_variable = { enc_years_since_massacre = 1 }
 			country_event = { # Candle vigil one year layer
 				id = enc_reformers.303
-				days = 3#65 # todo make 365
+				days = 365
 			}
 		}
 	}
@@ -7588,7 +7596,7 @@ country_event = {#303 - Candle vigil
 		add_to_variable = { enc_years_since_massacre = 1 }
 		country_event = { # Candle vigil one year layer
 			id = enc_reformers.303
-			days = 3#65 # todo make 365
+			days = 365
 		}
 	}
 	option = {# shut it down
@@ -7604,7 +7612,7 @@ country_event = {#303 - Candle vigil
 country_event = {#304 - State protests turns into riot!
 	id = enc_reformers.304
 	title = enc_reformers.304.t
-	picture = GFX_event_enc_protests_ncr_flag # todo
+	picture = GFX_event_enc_protests_ncr_flag
 	fire_only_once = no
 	desc = enc_reformers.304.d
 	is_triggered_only = yes
@@ -7658,9 +7666,19 @@ country_event = {#305 - Whispers of hope
 	id = enc_reformers.305
 	title = enc_reformers.305.t
 	picture = GFX_event_ENC_secret
-	fire_only_once = YES
-	desc = enc_reformers.305.d
-	is_triggered_only = no
+	fire_only_once = no
+    desc = {
+        text = enc_reformers.305.d
+        trigger = {
+			NOT = { has_completed_focus = enc_a_nation_reborn } 
+		}
+	}	
+	 desc = {
+        text = enc_reformers.305.d.later
+        trigger = {
+			has_completed_focus = enc_a_nation_reborn
+		}
+	}
 	mean_time_to_happen = { days = 300 }
 	trigger = {
 		check_variable = { enc_legitimacy > 0.60 }
@@ -7873,6 +7891,10 @@ country_event = {#311 - Enclave Education - communism
 	fire_only_once = yes
 	is_triggered_only = yes
 	
+	trigger = {
+		has_variable = enc_red_menace_var		
+	}
+	
 	option = { # America's youth will be warned of the evils of communism
 		name = enc_reformers.311.a
 		add_war_support = 0.05
@@ -8000,6 +8022,29 @@ news_event = {
 		activate_mission = ENC_red_menace_crisis
 	}
 }
+
+country_event = {#316 - Arming raiders?
+	id = enc_reformers.316
+	title = enc_reformers.316.t
+	desc = enc_reformers.316.d
+	picture =  GFX_event_generic_raider_1
+	
+	fire_only_once = no	
+	is_triggered_only = yes
+	
+	option = { # plenty of bullets to spare
+		name = enc_reformers.316.a
+		change_legitimacy = yes
+		add_war_support = 0.05
+		add_political_power = 100
+	}
+	option = { # Lets arm the raiders
+		name = enc_reformers.316.b
+		custom_effect_tooltip = enc_stage_raider_attacks_tt	
+		set_country_flag = enc_stage_raider_attacks_flag
+	}
+}
+
 
 #################
 ## IDEAS

@@ -1,10 +1,5 @@
 update_legitimacy = { # currently unused
 	hidden_effect = {
-		clamp_variable = { # move this clamp
-			var = enc_legitimacy
-			min = 0
-			max = 1
-		}
 		# we cannot use a non temp variable for trigger comparisons
 		set_temp_variable = {
 			var = legitimacy_change_var
@@ -104,7 +99,7 @@ update_legitimacy = { # currently unused
 clear_legitimacy = {
 	
 }
-change_legitimacy = {
+change_legitimacy = {	
 	if = {
 		limit = {
 			not = {
@@ -146,6 +141,11 @@ change_legitimacy = {
 		}
 	}
 	advanced_update_legitimacy = yes
+	clamp_variable = { # move this clamp
+		var = enc_legitimacy
+		min = 0
+		max = 1
+	}
 }
 
 has_more_legitimacy = {

@@ -152,7 +152,7 @@ focus_tree = {
 				name = "Douglas Granite"
 			}
 		}
-		cost = 5.8 
+		cost = 2.9
 		completion_reward = {
 			country_event = { id = enc_reformers.15 }
 			hidden_effect = { set_rule = { can_puppet = yes } }
@@ -610,6 +610,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = enc_infiltrate_ncr }
 		completion_reward = {
+			country_event = { id = enc_reformers.316 }
 			custom_effect_tooltip = enc_stage_raider_attacks_tt
 		}
 	}
@@ -1990,20 +1991,7 @@ focus_tree = {
 		cost = 4.5
 		completion_reward = {
 			add_popularity = { ideology = ruler popularity = 0.05 } 
-			add_stability = -0.05
-			set_country_flag = legitimacy_disabled
-			custom_effect_tooltip = enc_suspend_elections_legitimacy_loss	
-			custom_effect_tooltip = enc_suspend_elections_tt
-			
-			hidden_effect = {
-
-				remove_ideas = {
-					ENC_legitimacy_high
-					ENC_legitimacy_medium
-					ENC_legitimacy_low
-					ENC_legitimacy_none				
-				}
-			}
+			add_stability = -0.05			
 			country_event = { id = enc_reformers.72 }
 			reduce_legitimacy_relevance = yes
 		}
@@ -3827,6 +3815,7 @@ focus = {#Legion Border
 		completion_reward = {
 			country_event = { id = enc_reformers.131}
 			set_cosmetic_tag = ERB_nevada
+			change_douglas_portrait_to_nevada = yes
 			custom_effect_tooltip = new_reclaimnevada_tt
 			NCR = { custom_effect_tooltip = relations_increased_30 }
 			hidden_effect = {			

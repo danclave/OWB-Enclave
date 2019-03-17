@@ -73,14 +73,15 @@ enc_executive_orders  = {
 		visible = {	
 			has_completed_focus = enc_rebuilding_a_nation
 		}
-		available = { 
+		available = {
+			has_equipment = { vb_gunship_equipment > 24 } 
 		}
 		days_remove = 50
 		fire_only_once = yes
 		complete_effect = {
 			hidden_effect = { sound_effect = ERB_stripes_and_stars }
 			country_event = enc_reformers.246
-			 add_equipment_to_stockpile = { type = vb_gunship_equipment amount = -25 producer = ERB }
+			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = -25 producer = ERB }
 		}
 	}
 
@@ -504,8 +505,8 @@ ENC_infiltrating_NCR = {
 		}
 		custom_cost_text = ENC_arm_raiders_cost
 		visible = {
-			has_completed_focus = enc_stage_raider_attacks
 			has_country_flag = ncr_suspicious
+			has_country_flag = enc_stage_raider_attacks_flag
 		}
 		available = {
 			has_country_flag = enc_ncr_spies 
@@ -668,7 +669,7 @@ ENC_infiltrating_NCR = {
 		icon = generic_break_treaty
 		cost = 50
 		priority = 10
-		
+		fire_only_once = yes
 		available = {
 			has_country_flag = enc_ncr_spies
 		}
@@ -914,12 +915,12 @@ ENC_infiltrating_NCR = {
 		}
 		fire_only_once = yes
 		available = {
-			has_completed_focus = enc_the_divided_state
-		}
-		visible = {
 			any_state = {
 				has_state_flag = enc_patriots_armed
 			}
+		}
+		visible = {
+			has_completed_focus = enc_the_divided_state
 		}
 		complete_effect = {
 			country_event = { id = enc_reformers.112 }
@@ -1161,17 +1162,17 @@ ENC_nation_building = {
 					has_completed_focus = enc_fbi
 					has_completed_focus = enc_voting_rights_act
 					people > 0.5 
-				NOT = {has_country_flag = enc_barons1}
 				}
+				NOT = {has_country_flag = enc_barons1}
 			}
 		}	 
 		cancel_trigger = {	}
 		is_good = no
-		days_mission_timeout = 100
+		days_mission_timeout = 200
 		visible = {original_tag = ERB }
 		timeout_effect = { 
 			country_event = { id = enc_reformers.249 }
-			}
+		}
 	complete_effect = { }
 	}
 	ENC_baron_crisis_2 = {
@@ -1188,13 +1189,13 @@ ENC_nation_building = {
 					has_completed_focus = enc_fbi
 					has_completed_focus = enc_voting_rights_act
 					people > 0.5 
-				NOT = { has_country_flag = enc_barons2 }
 				}
+				NOT = { has_country_flag = enc_barons2 }
 			}
 		}	 
 		cancel_trigger = {	}
 		is_good = no
-		days_mission_timeout = 200
+		days_mission_timeout = 300
 		visible = {original_tag = ERB }
 		timeout_effect = { 
 			country_event = { id = enc_reformers.250 }
@@ -1764,6 +1765,37 @@ ENC_nation_building = {
 		icon = GFX_icons_power
 		allowed = {
 			original_tag = ERB
+		}
+		fire_only_once = no		
+		visible = {
+			any_owned_state = {
+				civilian_power_grid > 0
+				not = { is_core_of = ERB }
+				any_neighbor_state = {
+					is_core_of = ERB
+				}
+			}			
+		}
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					civilian_power_grid > 0
+					not = { is_core_of = ERB }
+					any_neighbor_state = {
+						is_core_of = ERB
+					}
+				}
+				ROOT = {
+					goto_state = PREV
+				}
+			}
+		}
+	}ENC_power_all__power_grids = {
+		priority = 110
+		icon = GFX_icons_power
+		allowed = {
+			original_tag = ERB
+			always = no # wip
 		}
 		fire_only_once = no		
 		visible = {

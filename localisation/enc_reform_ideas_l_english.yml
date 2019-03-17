@@ -75,7 +75,7 @@ ENC_air_force_best_man: "competent Chief Of Airforce."
 ENC_air_force_best_man_desc: "Enclave leadership has seen fit to promote their best candidate as their Chief of Staff of the Enclave Air Force."
 ENC_dept_education: "Department of Education"
 ENC_dept_education_civilian: "Department of Education"
-ENC_dept_education_military: "Department of Education"
+ENC_dept_education_military: "Military Department of Education"
 ENC_EPA: "The Environmental Protection Agency"
 ENC_EPA_desc:  "Cleaning the environment will cost time and money, it's well worth it."
 ENC_infighting_2: "Civil War"
@@ -274,7 +274,8 @@ enc_zachariah_rigby_desc:0 "As head of the Gunrunners, Rigby can make our arms m
 enc_julie_farkas:0 "Julie Farkas"
 enc_julie_farkas_desc:0 "Julie is a sweetheart, and her organization will happily improve our infrastructure and healthcare free of charge; but the more people that take the ideals of the Followers into their hearts, the less that are willing to die for the republic."
 
-
+enc_lynette: "First Citizen Lynette"
+first_citizen: "First Citizen"
 # NCR - Chief of army
 ###################################
 enc_big_jim_chief_of_army:0 "James 'Big Jim' Marshal"

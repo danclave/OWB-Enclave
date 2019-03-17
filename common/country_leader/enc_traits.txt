@@ -18,7 +18,7 @@ leader_traits = {
 	}	
 	respectedByScientists = {
 		random = no
-		research_time_factor = -0.05
+		research_speed_factor = 0.05
 	}	
 	resourceful = {
 		random = no
@@ -223,7 +223,7 @@ leader_traits = {
 	first_citizen = {
 		random = no
 		elites_drift = 0.10
-		research_speed_factor = -0.08
+		research_speed_factor = 0.08
 		war_support_factor = 0.05
 		justify_war_goal_time = -0.25
 	}
