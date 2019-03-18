@@ -1611,8 +1611,9 @@ focus_tree = {
 				country_exists = NCR
 			}
 			num_of_controlled_states > 40
-			controls_state = 253
-			controls_state = 135
+			owns_state = 253
+			owns_state = 135
+			owns_state = 63
 			has_country_flag = enc_mid_game
 		}
 		cost = 5.8
