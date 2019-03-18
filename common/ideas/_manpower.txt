@@ -336,8 +336,11 @@ ideas = {
 			}
 
 			available = {			
-			  original_tag = ERB
-				NOT = { 285 = { is_core_of = ERB }}
+				original_tag = ERB
+				or = {
+					has_completed_focus = enc_segregation
+					NOT = { 285 = { is_core_of = ERB }}
+				}
 				OR = {
 					AND = {
 						has_war = yes
@@ -553,8 +556,7 @@ ideas = {
 			level = 5
 			allowed = {
 				original_tag = ERB			
-			}
-			
+			}			
 			available = {
 				original_tag = ERB
 				elites < 0.30
@@ -579,10 +581,8 @@ ideas = {
 			modifier = {
 				conscription = 0.07
 				non_core_manpower = 0.05
-			}
-			
-			default = yes
-			
+			}			
+			default = yes			
 			cancel_if_invalid = no
 		}		
 		

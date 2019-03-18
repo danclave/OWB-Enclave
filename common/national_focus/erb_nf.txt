@@ -1611,8 +1611,9 @@ focus_tree = {
 				country_exists = NCR
 			}
 			num_of_controlled_states > 40
-			controls_state = 253
-			controls_state = 135
+			owns_state = 253
+			owns_state = 135
+			owns_state = 63
 			has_country_flag = enc_mid_game
 		}
 		cost = 5.8
@@ -2834,6 +2835,7 @@ focus_tree = {
 			focus = enc_suspend_elections
 			focus = enc_martial_law
 			focus = enc_mandatory_patriotism
+			focus = enc_model_communities
 		}
 		mutually_exclusive = { focus = enc_a_nation_reborn }
 		ai_will_do = { factor = 1 }
