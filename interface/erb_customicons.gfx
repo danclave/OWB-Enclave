@@ -974,11 +974,7 @@ spriteTypes = {
         SpriteType = {#enc_wip
             name = "GFX_goal_enc_wip"
  		    texturefile = "gfx/interface/goals/enc_wip.dds"
- 	    } 
-        SpriteType = {#erbbos.pdn
-            name = "GFX_goal_erbbos.pdn"
- 		    texturefile = "gfx/interface/goals/erbbos.pdn.dds"
- 	    } 
+ 	    }
         SpriteType = {#flag_burn_BOS
             name = "GFX_goal_flag_burn_BOS"
  		    texturefile = "gfx/interface/goals/flag_burn_BOS.dds"
