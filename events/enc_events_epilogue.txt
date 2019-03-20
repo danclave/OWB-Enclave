@@ -129,6 +129,7 @@ news_event = {#6 - Elections
 		name = enc_events_epilogue.6.a
 		country_event = { id = enc_events_epilogue.7 }
 		}
+}
 news_event = {#7 - Integration
 	id = enc_events_epilogue.7
 	title = enc_events_epilogue.7.t

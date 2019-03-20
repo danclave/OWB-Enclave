@@ -2,8 +2,7 @@ scripted_gui = {
 	connect_to_power = {	
 		context_type = selected_state_context		
 		window_name = "connect_to_power_container"		
-		parent_window_token = selected_state_view		
-		allowed = { original_tag = ERB }
+		parent_window_token = selected_state_view
 		visible = {
 			is_owned_and_controlled_by = ROOT
 			NOT = { 
@@ -67,9 +66,6 @@ scripted_gui = {
 		context_type = selected_state_context		
 		window_name = "connected_to_power_container"		
 		parent_window_token = selected_state_view
-		allowed = {
-			tag = ERB		
-		}
 		visible = {
 			is_core_of = ROOT
 			civilian_power_grid > 0
@@ -78,12 +74,7 @@ scripted_gui = {
 	install_police_force = {	
 		context_type = selected_state_context		
 		window_name = "install_police_force_container"
-		parent_window_token = selected_state_view
-		
-		allowed = {
-			tag = ERB		
-		}
-		
+		parent_window_token = selected_state_view		
 		visible = {
 			is_owned_and_controlled_by = ROOT
 			is_fully_controlled_by = ROOT
@@ -308,7 +299,6 @@ scripted_gui = {
         context_type = selected_state_context
         window_name = arm_patriots_container
         parent_window_token = selected_state_view
-		allowed = { original_tag = ERB }
         visible = {
             is_owned_and_controlled_by = NCR
             ROOT =  { 
