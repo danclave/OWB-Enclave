@@ -2834,7 +2834,11 @@ focus_tree = {
 			focus = enc_suspend_elections
 			focus = enc_martial_law
 			focus = enc_mandatory_patriotism
-			focus = enc_model_communities
+			focus = enc_local_elections
+			focus = enc_fbi
+		}
+		available = {
+			has_completed_focus = enc_model_communities
 		}
 		mutually_exclusive = { focus = enc_a_nation_reborn }
 		ai_will_do = { factor = 1 }
