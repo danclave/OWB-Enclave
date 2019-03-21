@@ -3532,7 +3532,7 @@ country_event = {#117 Helios One
 			}
 		}	
 		
-				}
+}
 		
 country_event = {#118 Legion Propaganda
     id = enc_reformers.118
@@ -5043,6 +5043,7 @@ news_event = { #170 - Dark Age
 	desc = enc_reformers.170.d
 	picture = GFX_event_enc_bloody_NCR
 	fire_only_once = yes
+	is_triggered_only = no
 	trigger = {
 		NOT = { 
 			country_exists = NCR
@@ -6286,8 +6287,8 @@ country_event = { #212 - Education
     title = enc_reformers.212.t
     desc = enc_reformers.212.d
     picture = GFX_event_enc_4th_july
-    fire_only_once = YES
-	is_triggered_only = YES
+    fire_only_once = yes
+	is_triggered_only = yes
 	option = { # Embellish
         name = enc_reformers.212.a
 		custom_effect_tooltip = enc_reformers.212.a.tt
@@ -6351,7 +6352,7 @@ country_event = {#213 - Ghouls Discuss America's Flaws
 		}
 		change_legitimacy = yes
 		custom_effect_tooltip = enc_reformers.213.c.tt
-		}	
+	}
 }
 country_event = { #214 Enclave Education
     id = enc_reformers.214
@@ -8048,6 +8049,20 @@ country_event = {#316 - Arming raiders?
 	}
 }
 
+country_event = {#317 - Arm patriot tutorial
+	id = enc_reformers.317
+	title = enc_reformers.317.t
+	desc = enc_reformers.317.d
+	picture =  GFX_event_enc_arm_patriot_tutorial
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Good to know
+		name = enc_reformers.317.a
+		add_political_power = 5
+	}
+}
 
 #################
 ## IDEAS

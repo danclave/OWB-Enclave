@@ -1459,3 +1459,7 @@ enc_reformers.316.t: "Arming raiders"
 enc_reformers.316.d: "It has been suggested that we arm the raider factions bordering on the [NCR.GetName]. This would encourage them to attack NCR border towns, drawing the attention from the bear away from us."
 enc_reformers.316.a: "We have no guns to spare for raiders, but plenty of bullets."
 enc_reformers.316.b: "Let's arm the raiders."
+#############################################################################################################
+enc_reformers.317.t: "Arming Patriots"
+enc_reformers.317.d: "To arm an uprising in an NCR state, click on any of their states and then click on the 'arm patriots' button. The cost will increase each time you use it."
+enc_reformers.317.a: "Americans will always fight for freedom."
