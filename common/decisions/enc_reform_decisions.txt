@@ -74,7 +74,7 @@ enc_executive_orders  = {
 			has_completed_focus = enc_rebuilding_a_nation
 		}
 		available = {
-			has_equipment = { vb_gunship_equipment > 24 } 
+			has_equipment = { vb_transport_plane_equipment > 24 }
 		}
 		days_remove = 50
 		fire_only_once = yes
@@ -695,7 +695,7 @@ ENC_infiltrating_NCR = {
 		complete_effect = {
 			custom_effect_tooltip = ENC_desert_rangers_hate_tt
 			DES = {
-				set_cosmetic_tag = DES
+				drop_cosmetic_tag = yes
 				add_opinion_modifier = { target = NCR modifier = sabotaged_relations }
 			if = {
 					limit = {

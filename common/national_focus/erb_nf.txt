@@ -2823,6 +2823,7 @@ focus_tree = {
 		y = 5
 		cost = 5.8
 		completion_reward = {
+			hidden_effect = { drop_cosmetic_tag = yes }
 			set_cosmetic_tag = ERB_USA
 			country_event = { id = enc_reformers.50 }
 		}
@@ -2851,6 +2852,7 @@ focus_tree = {
 		y = 0
 		cost = 5.8
 		completion_reward = {
+			hidden_effect = { drop_cosmetic_tag = yes }
 			set_cosmetic_tag = ERB_enclaveamerica
 			country_event = { id = enc_reformers.201 }
 		}
@@ -6257,7 +6259,6 @@ focus = {#NEVADA - second city
 	}
 	focus = {#Purity - war with BOS
 		id = enc_war_with_bos
-		available = { has_completed_focus = enc_purity}
 		icon = GFX_goal_flag_burn_BOS 
 		ai_will_do = { factor = 1 } 
 		
@@ -6265,10 +6266,16 @@ focus = {#NEVADA - second city
 		x = 2
 		y = 2
 		
-		available = { is_neighbor_of = BOS }
+		available = { 
+			is_neighbor_of = BOS
+			hidden_trigger = {
+				has_completed_focus = enc_purity			
+			}
+		}
 		bypass = { 
+			has_completed_focus = enc_purity
 			NOT = {
-					country_exists = BOS
+				country_exists = BOS
 			}
 		}
 
@@ -6288,16 +6295,19 @@ focus = {#NEVADA - second city
 		ai_will_do = { factor = 1 } 
 		
 		prerequisite = { focus = enc_war_with_bos }
-		available = { has_completed_focus = enc_purity}
 		relative_position_id = enc_war_with_bos		
 		x = 1
 		y = 1
 		available = {
 			has_war_with = BOS
+			hidden_trigger = {
+				has_completed_focus = enc_purity			
+			}
 		}
 		bypass = { 
+			has_completed_focus = enc_purity		
 			NOT = {
-					country_exists = BOS
+				country_exists = BOS
 			}
 		}
 		cost = 2.9 

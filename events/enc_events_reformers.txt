@@ -3372,8 +3372,8 @@ country_event = { #114 - Election!
 	picture = GFX_event_enc_election
 	trigger = {
 		has_completed_focus = enc_presidential_elections
-		date > 2284.10 .04
-		date < 2284.12 .30
+		date > 2284.10.04
+		date < 2284.12.30
 	}
 	is_triggered_only = no
 	fire_only_once = yes
@@ -3784,7 +3784,7 @@ country_event = {#121
 		country_event = { id = enc_reformers.122 }	
 			}	
 	 }
-			
+
 country_event = {#122
     id = enc_reformers.122
     title = enc_reformers.122.t
@@ -4059,9 +4059,8 @@ country_event = {# Space Station
 		name = enc_reformers.133.a
 		add_ideas = ENC_satellites
 	}	
-	}
-country_event = {
-    # The Boneyard
+}
+country_event = {# 134 The Boneyard    
     id = enc_reformers.134
     title = enc_reformers.134.t
     desc = enc_reformers.134.d
@@ -4094,6 +4093,7 @@ country_event = {
     }
     option = {
         name = enc_reformers.134.c
+		custom_effect_tooltip = enc_reformers.134.c.tt
         350 = {
             set_state_name = "The City of Angels"
             add_building_construction = {
@@ -4150,7 +4150,7 @@ country_event = {#136 Helios_two
     id = enc_reformers.136
 	title = enc_reformers.136.t
 	desc = enc_reformers.136.d
-	picture = GFX_event_enc_Helios_one
+	picture = GFX_event_enc_helios_one
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {#	Yayy
@@ -4921,10 +4921,9 @@ country_event = {#164 - Nuked Flagstaff
 		clr_country_flag = enc_nukes_unarmed
 		hidden_effect = {
 			country_event = { id = enc_reformers.166 days = 90 } }
-		  520 = { add_manpower = -15000 }		
+			520 = { add_manpower = -15000 }			
 		}
-		520 = { add_manpower = -15000 }		
-	}
+}
 	
 
 news_event = {#165 - Didn't Nuke Flagstaff
@@ -4946,6 +4945,7 @@ news_event = {#165 - Didn't Nuke Flagstaff
 		name = enc_reformers.165.a
 	}
 }
+
 country_event = {#166 - Legion Recovers
 	id = enc_reformers.166
 	title = enc_reformers.166.t
@@ -5245,11 +5245,11 @@ country_event = { #178- Vertibird Crash
     title = enc_reformers.178.t
     desc = enc_reformers.178.d
     picture = GFX_event_enc_vertibird_crash
-    fire_only_once = YES
+    fire_only_once = yes
     trigger = {
 		has_completed_focus = enc_reform
 		date > 2279.01.01
-			}		
+	}		
 	mean_time_to_happen = {
 		days = 60
 		}  
@@ -5443,7 +5443,6 @@ country_event = { #183 - Press Covers Requisitions
 				}
 			}
         }
-	}
 	option = { # STOP
         name = enc_reformers.183.b
 		remove_ideas = ENC_free_press
@@ -5470,9 +5469,8 @@ country_event = { #183 - Press Covers Requisitions
 		change_legitimacy = yes
 		add_popularity = { ideology = intellectuals popularity = 0.05 } 
 		clr_country_flag = enc_requisitioned_resources
-	}   			
-   		
-
+	}
+}
 	
 country_event = { #184 - Slave Labor Press Scandal
     id = enc_reformers.184
@@ -6298,8 +6296,8 @@ country_event = { #212 - Education
     title = enc_reformers.212.t
     desc = enc_reformers.212.d
     picture = GFX_event_enc_4th_july
-    fire_only_once = YES
-	is_triggered_only = YES
+    fire_only_once = yes
+	is_triggered_only = yes
 	option = { # Embellish
         name = enc_reformers.212.a
 		custom_effect_tooltip = enc_reformers.212.a.tt
@@ -6371,12 +6369,15 @@ country_event = { #214 Enclave Education
     desc = enc_reformers.214.d
     picture =  GFX_event_enc_oil_rig
     fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = yes 
 	option = { # The Enclave was devoted to saving America
         name = enc_reformers.214.a
 		custom_effect_tooltip = enc_reformers.214.a.tt
 		add_political_power = 25
-		country_event = { id = enc_reformers.311 }
+		if = {
+			limit = { has_variable = enc_red_menace_var }
+			country_event = { id = enc_reformers.311 }			
+		}
 	}
 	option = { # The Truth Will Set Us Free
         name = enc_reformers.214.b
@@ -6387,7 +6388,10 @@ country_event = { #214 Enclave Education
 		change_legitimacy = yes
 		add_stability = -0.25
 		add_war_support = -0.25
-		country_event = { id = enc_reformers.311 }
+		if = {
+			limit = { has_variable = enc_red_menace_var }
+			country_event = { id = enc_reformers.311 }			
+		}
 	}   		
 }
 
