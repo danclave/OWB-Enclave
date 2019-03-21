@@ -1,3 +1,5 @@
 Bug fixes:
-	- minor fixes
-	- changes to requirements of "a nation remade" to avoid ugly line
+	- multiple events fixed
+	- steal declaration of independence fixed for real this time
+	- some purity focuses no longer get bypasses when playing reformer
+	- add tutorial event for arming patriots

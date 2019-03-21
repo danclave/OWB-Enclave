@@ -5154,6 +5154,7 @@ focus = {#NEVADA - second city
 		y = 1
 		cost = 5.8
 		completion_reward = {
+			country_event = { id = enc_reformers.317 }
 			add_equipment_to_stockpile = { type = infantry_equipment amount = -1000 }
 			custom_effect_tooltip = unlock_arm_patriots
 			add_political_power = 50
