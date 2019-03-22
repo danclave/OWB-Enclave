@@ -1,4 +1,5 @@
 Bug fixes:
-	-fixed legitimacy going under 0%
-	-fixed suspend elections
-	-fixed stealing the declaration of independence
+	- multiple events fixed
+	- steal declaration of independence fixed for real this time
+	- some purity focuses no longer get bypasses when playing reformer
+	- add tutorial event for arming patriots

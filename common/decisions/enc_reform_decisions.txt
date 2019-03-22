@@ -74,7 +74,7 @@ enc_executive_orders  = {
 			has_completed_focus = enc_rebuilding_a_nation
 		}
 		available = {
-			has_equipment = { vb_gunship_equipment > 24 } 
+			has_equipment = { vb_transport_plane_equipment > 24 }
 		}
 		days_remove = 50
 		fire_only_once = yes
@@ -142,33 +142,6 @@ enc_executive_orders  = {
 		country_event = enc_events_epilogue.2	
 		}	
 	}	
-	enc_NCR_seize_saccity = {
-		icon = decision_plasma
-		priority = 300
-		fire_only_once = yes
-
-		available = {
-			has_completed_focus = enc_american_dream
-				}
-		visible = {
-			tag = ERB
-			NCR = {exists = no }
-			NOT = {has_full_control_of_state = 135} #shady sandsy
-			}
-		complete_effect = {
-			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						has_full_control_of_state = 135 # Shady Sands
-					}
-					ERB = {
-						create_wargoal = { type = annex_everything target = PREV }
-						}
-					}
-				}
-			}	
-		}	
 	}
 
 	ENC_remove_emergency_draft = {
@@ -329,7 +302,7 @@ ENC_political_actions = {
 		priority = 99
 		activation = {
 			# activated by enc_reformers.314
-			always = false 
+			always = no
 		}
 		available = {
 			has_country_flag = enc_communism_defeated_joke_flag
@@ -722,7 +695,7 @@ ENC_infiltrating_NCR = {
 		complete_effect = {
 			custom_effect_tooltip = ENC_desert_rangers_hate_tt
 			DES = {
-				set_cosmetic_tag = DES
+				drop_cosmetic_tag = yes
 				add_opinion_modifier = { target = NCR modifier = sabotaged_relations }
 			if = {
 					limit = {
@@ -978,7 +951,7 @@ ENC_infiltrating_NCR = {
 						state = THIS
 					}
 				}
-				add_state_flag = plundered_by_enc
+				set_state_flag = plundered_by_enc
 			}
 		}
 	}
@@ -1010,7 +983,7 @@ ENC_infiltrating_NCR = {
 					type = arms_factory 
 					level = 1
 				}
-				add_state_flag = plundered_by_enc
+				set_state_flag = plundered_by_enc
 			}
 		}
 		remove_effect = {			
@@ -2557,7 +2530,7 @@ ENC_nevada_broadcasts = {
 		visible = { 
 		}
 		complete_effect = {
-			add_5_popularity_to_ruling_party = yes
+			add_popularity_to_ruling_party = yes
 		}
 		days_re_enable = 120
 	}
@@ -2728,7 +2701,7 @@ ENC_american_broadcasts = {
 			not = { has_completed_focus = enc_entertainment_broadcasts } 
 		}
 		complete_effect = {
-			add_5_popularity_to_ruling_party = yes
+			add_popularity_to_ruling_party = yes
 		}
 		days_re_enable = 120
 	}
@@ -3024,6 +2997,7 @@ ENC_securing_borders = {
 	ENC_pacificy_northern_border = { # secure northern borders
 		icon = infiltrate_state
 		priority = 9
+		cost = 0
 		activation = {
 			OR = {
 				has_idea = enc_NCR_power_struggle2

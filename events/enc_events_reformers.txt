@@ -3365,115 +3365,128 @@ country_event = {#113 - President Hayes
 	}
 }
 
-country_event = {#114 - Election!
+country_event = { #114 - Election!
     id = enc_reformers.114
 	title = enc_reformers.114.t
 	desc = enc_reformers.114.d
 	picture = GFX_event_enc_election
-	  trigger = {	
+	trigger = {
 		has_completed_focus = enc_presidential_elections
 		date > 2284.10.04
 		date < 2284.12.30
-			}	    
-    is_triggered_only = no
-	fire_only_once = yes
-	option = {#	King
-		name = enc_reformers.114.a
-		trigger = { has_completed_focus = enc_americans_one_and_all }
-		create_country_leader  = {
-	name = "The King"
-	desc = "THE_KING_DESC"
-	picture = "gfx/leaders/VEG/Portrait_King.dds"
-	expire = "3000.1.1"
-	ideology = ideocracy
-	traits = {
-		popular_figurehead
-		smooth_talking_charmer
-		}
-		}
-		}
-	option = {#	House
-		name = enc_reformers.114.b
-	trigger = { has_completed_focus = enc_NEW_puppet }
-	create_country_leader  = {
-		name = "Mr House"
-		desc = "MR_HOUSE_DESC"
-		picture = "gfx/leaders/VEG/Portrait_House.dds"
-		expire = "3000.1.1"
-		ideology = ideocracy
-		traits = { dislikes_legion }
-							}
-			}	
-	option = {#	Hayes
-	name = enc_reformers.114.c
-	trigger = { controls_state   = 253 }
-	create_country_leader = {
-		name = "Grant C. Hayes"
-		desc = "Hayes_DESC"
-		picture = "gfx/leaders/Portrait_Hayes.dds"
-		expire = "3000.1.1"
-		ideology = ideocracy
-			traits = {	}		
-}
-}
-option = {#	Lynette
-	name = enc_reformers.114.e
-	create_country_leader = {
-	name = "First Citizen Lynette"
-	id = 910
-	desc = "POLITICS_CITIZEN_DESC"
-	picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
-	expire = "3000.1.1"
-	ideology = ideocracy
-	traits = {
 	}
-}
-}
-option = {#	Gannon
+	is_triggered_only = no
+	fire_only_once = yes
+	option = { # King
+		name = enc_reformers.114.a
+		trigger = {
+			has_completed_focus = enc_americans_one_and_all
+		}
+		create_country_leader = {
+			name = "The King"
+			desc = "THE_KING_DESC"
+			picture = "gfx/leaders/VEG/Portrait_King.dds"
+			expire = "3000.1.1"
+			ideology = ideocracy
+			traits = {
+				popular_figurehead
+				smooth_talking_charmer
+			}
+		}
+	}
+	option = { # House
+		name = enc_reformers.114.b
+		trigger = {
+			has_completed_focus = enc_NEW_puppet
+		}
+		create_country_leader = {
+			name = "Mr House"
+			desc = "MR_HOUSE_DESC"
+			picture = "gfx/leaders/VEG/Portrait_House.dds"
+			expire = "3000.1.1"
+			ideology = ideocracy
+			traits = {
+				dislikes_legion
+			}
+		}
+	}
+	option = { # Hayes
+		name = enc_reformers.114.c
+		trigger = {
+			controls_state = 253
+		}
+		create_country_leader = {
+			name = "Grant C. Hayes"
+			desc = "Hayes_DESC"
+			picture = "gfx/leaders/Portrait_Hayes.dds"
+			expire = "3000.1.1"
+			ideology = ideocracy
+			traits = {}
+		}
+	}
+	option = { # Lynette
+		name = enc_reformers.114.e
+		create_country_leader = {
+			name = "First Citizen Lynette"
+			id = 910
+			desc = "POLITICS_CITIZEN_DESC"
+			picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
+			expire = "3000.1.1"
+			ideology = ideocracy
+			traits = {}
+		}
+	}
+	option = { # Gannon
 		name = enc_reformers.114.f
-	trigger = { has_country_flag = enc_followers }
-	create_country_leader  = {
-	name = "Arcade Gannon"
-	desc = "THE_KING_DESC"
-	picture = "gfx/leaders/VEG/Portrait_Arcade.dds"
-	expire = "3000.1.1"
-	ideology = ideocracy
-	traits = {
-		popular_figurehead
-		smooth_talking_charmer
+		trigger = {
+			has_country_flag = enc_followers
 		}
+		create_country_leader = {
+			name = "Arcade Gannon"
+			desc = "THE_KING_DESC"
+			picture = "gfx/leaders/VEG/Portrait_Arcade.dds"
+			expire = "3000.1.1"
+			ideology = ideocracy
+			traits = {
+				popular_figurehead
+				smooth_talking_charmer
+			}
 		}
-		}
-option = {#	Courier
+	}
+	option = { # Courier
 		name = enc_reformers.114.g
-	trigger = { controls_state = 252}
-	create_country_leader  = {
-	name = "The Courier"
-	desc = "THE_KING_DESC"
-	picture = "gfx/leaders/ERB/Portrait_CourierNew.dds"
-	expire = "3000.1.1"
-	ideology = ideocracy
-	traits = {
-		popular_figurehead
-		smooth_talking_charmer
+		trigger = {
+			controls_state = 252
 		}
+		create_country_leader = {
+			name = "The Courier"
+			desc = "THE_KING_DESC"
+			picture = "gfx/leaders/ERB/Portrait_CourierNew.dds"
+			expire = "3000.1.1"
+			ideology = ideocracy
+			traits = {
+				popular_figurehead
+				smooth_talking_charmer
+			}
 		}
-		}
-option = {#	Marcus
+	}
+	option = { # Marcus
 		name = enc_reformers.114.h
-		trigger = {has_country_flag = enc_redding }
-		create_country_leader  = {
-	name = "Marcus"
-	desc = "THE_KING_DESC"
-	picture = "gfx/leaders/Supermutant/Portrait_Supermutant_Generic_4.dds"
-	expire = "3000.1.1"
-	ideology = ideocracy
-	traits = {
-		popular_figurehead
-		smooth_talking_charmer
+		trigger = {
+			has_country_flag = enc_redding
 		}
+		create_country_leader = {
+			name = "Marcus"
+			desc = "THE_KING_DESC"
+			picture = "gfx/leaders/Supermutant/Portrait_Supermutant_Generic_4.dds"
+			expire = "3000.1.1"
+			ideology = ideocracy
+			traits = {
+				popular_figurehead
+				smooth_talking_charmer
+			}
 		}
-		}			
+	}
 }
 
 country_event = {#115 Axis of Evil
@@ -3522,16 +3535,15 @@ country_event = {#117 Helios One
 			name = enc_reformers.117.a
 		417 = {
 			add_resource = {
-					type = fuel
-					amount = 15
-				}	
-				add_resource = {
-					type = electricity
-					amount = 15
-				}				  
-			}
-		}	
-		
+				type = fuel
+				amount = 15
+			}	
+			add_resource = {
+				type = electricity
+				amount = 15
+			}				  
+		}
+	}	
 }
 		
 country_event = {#118 Legion Propaganda
@@ -3772,7 +3784,7 @@ country_event = {#121
 		country_event = { id = enc_reformers.122 }	
 			}	
 	 }
-			
+
 country_event = {#122
     id = enc_reformers.122
     title = enc_reformers.122.t
@@ -3979,7 +3991,6 @@ country_event = {# Repconn
 			remove_building = {
 				type = arms_factory
 				level = 1
-				instant_build = yes
 			}
 		}
 	}			
@@ -4048,9 +4059,8 @@ country_event = {# Space Station
 		name = enc_reformers.133.a
 		add_ideas = ENC_satellites
 	}	
-	}
-country_event = {
-    # The Boneyard
+}
+country_event = {# 134 The Boneyard    
     id = enc_reformers.134
     title = enc_reformers.134.t
     desc = enc_reformers.134.d
@@ -4083,6 +4093,7 @@ country_event = {
     }
     option = {
         name = enc_reformers.134.c
+		custom_effect_tooltip = enc_reformers.134.c.tt
         350 = {
             set_state_name = "The City of Angels"
             add_building_construction = {
@@ -4139,7 +4150,7 @@ country_event = {#136 Helios_two
     id = enc_reformers.136
 	title = enc_reformers.136.t
 	desc = enc_reformers.136.d
-	picture = GFX_event_enc_Helios_one
+	picture = GFX_event_enc_helios_one
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {#	Yayy
@@ -4910,11 +4921,10 @@ country_event = {#164 - Nuked Flagstaff
 		clr_country_flag = enc_nukes_unarmed
 		hidden_effect = {
 			country_event = { id = enc_reformers.166 days = 90 } }
-		  520 = { add_manpower = -15000 }		
+			520 = { add_manpower = -15000 }			
 		}
-		520 = { add_manpower = -15000 }		
-	}
-}				
+}
+	
 
 news_event = {#165 - Didn't Nuke Flagstaff
 	id = enc_reformers.165
@@ -4935,6 +4945,7 @@ news_event = {#165 - Didn't Nuke Flagstaff
 		name = enc_reformers.165.a
 	}
 }
+
 country_event = {#166 - Legion Recovers
 	id = enc_reformers.166
 	title = enc_reformers.166.t
@@ -5235,11 +5246,11 @@ country_event = { #178- Vertibird Crash
     title = enc_reformers.178.t
     desc = enc_reformers.178.d
     picture = GFX_event_enc_vertibird_crash
-    fire_only_once = YES
+    fire_only_once = yes
     trigger = {
 		has_completed_focus = enc_reform
 		date > 2279.01.01
-			}		
+	}		
 	mean_time_to_happen = {
 		days = 60
 		}  
@@ -5394,9 +5405,10 @@ country_event = { #183 - Press Covers Requisitions
     trigger = {
 		has_country_flag = enc_requisitioned_resources
 		has_free_press = yes
+	}
 	mean_time_to_happen = {
 		days = 60
-		}  
+	}  
     option = { # STOP
         name = enc_reformers.183.a
 		add_stability = -0.15
@@ -5432,7 +5444,6 @@ country_event = { #183 - Press Covers Requisitions
 				}
 			}
         }
-	}
 	option = { # STOP
         name = enc_reformers.183.b
 		remove_ideas = ENC_free_press
@@ -5459,9 +5470,8 @@ country_event = { #183 - Press Covers Requisitions
 		change_legitimacy = yes
 		add_popularity = { ideology = intellectuals popularity = 0.05 } 
 		clr_country_flag = enc_requisitioned_resources
-	}   			
-   		
-}	
+	}
+}
 	
 country_event = { #184 - Slave Labor Press Scandal
     id = enc_reformers.184
@@ -6360,12 +6370,15 @@ country_event = { #214 Enclave Education
     desc = enc_reformers.214.d
     picture =  GFX_event_enc_oil_rig
     fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = yes 
 	option = { # The Enclave was devoted to saving America
         name = enc_reformers.214.a
 		custom_effect_tooltip = enc_reformers.214.a.tt
 		add_political_power = 25
-		country_event = { id = enc_reformers.311 }
+		if = {
+			limit = { has_variable = enc_red_menace_var }
+			country_event = { id = enc_reformers.311 }			
+		}
 	}
 	option = { # The Truth Will Set Us Free
         name = enc_reformers.214.b
@@ -6376,7 +6389,10 @@ country_event = { #214 Enclave Education
 		change_legitimacy = yes
 		add_stability = -0.25
 		add_war_support = -0.25
-		country_event = { id = enc_reformers.311 }
+		if = {
+			limit = { has_variable = enc_red_menace_var }
+			country_event = { id = enc_reformers.311 }			
+		}
 	}   		
 }
 
@@ -6781,55 +6797,67 @@ country_event = {#226 - WBH Buff
 	}
 }
 
-country_event = {#227 - Broken Coast
+country_event = { #227 - Broken Coast
 	id = enc_reformers.227
 	title = enc_reformers.227.t
 	desc = enc_reformers.227.d
 	picture = GFX_event_BRK_wasteland_boat_militia
-	
-	fire_only_once = yes	
-    is_triggered_only = no
-	trigger = {	has_country_flag = ENC_WBH_menace }
-	mean_time_to_happen = {	days = 30 }	
-	option = {# Canadians
+
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_country_flag = ENC_WBH_menace
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	option = {	#Canadians
 		name = enc_reformers.227.a
-		WBH = { 
+		WBH = {
 			if = {
-				limit = { is_in_faction = no }
+				limit = {
+					is_in_faction = no
+				}
 				create_faction = "The Iron Pact"
-				BRK = { 
-					if = { 
-						limit = { is_in_faction = yes } 
-						leave_faction = yes     
+				BRK = {
+					if = {
+						limit = {
+							is_in_faction = yes
+						}
+						leave_faction = yes
 					}
 				}
 				add_to_faction = BRK
-			}	
+			}
 			else_if = {
-				limit = { is_in_faction = yes }
-				BRK = { 
-					if = { 
-						limit = { is_in_faction = yes } 
-						leave_faction = yes     
+				limit = {
+					is_in_faction = yes
+				}
+				BRK = {
+					if = {
+						limit = {
+							is_in_faction = yes
+						}
+						leave_faction = yes
 					}
 				}
 				add_to_faction = BRK
 			}
 		}
 		WBH = {
-					add_ai_strategy = {
-						type = alliance
-						id = "BRK"
-						value = 800
-					}
-				}
+			add_ai_strategy = {
+				type = alliance
+				id = "BRK"
+				value = 800
+			}
+		}
 		BRK = {
-					add_ai_strategy = {
-						type = alliance
-						id = "800"
-						value = 200
-					}
-				}
+			add_ai_strategy = {
+				type = alliance
+				id = "WBH"
+				value = 200
+			}
+		}
 	}
 }
 country_event = {#228 - Commie Start
@@ -7474,7 +7502,7 @@ country_event = {#300 - state protests!
 	option = { # We have bigger problems, people!
 		name = enc_reformers.300.e
 		trigger = {
-			always = false # todo change
+			always = no # todo change
 			# war with legion?
 			# FEV plague?
 			# major war?
@@ -8049,14 +8077,13 @@ country_event = {#316 - Arming raiders?
 	}
 }
 
-country_event = {#317 - Arm patriot tutorial
+country_event = {#317 - Arming patriots
 	id = enc_reformers.317
 	title = enc_reformers.317.t
 	desc = enc_reformers.317.d
-	picture =  GFX_event_enc_arm_patriot_tutorial
-	
+	picture =  GFX_event_enc_arm_patriots	
 	fire_only_once = yes
-	is_triggered_only = yes
+	is_triggered_only = yes	
 	
 	option = { # Good to know
 		name = enc_reformers.317.a

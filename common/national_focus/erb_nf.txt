@@ -1044,7 +1044,7 @@ focus_tree = {
 				limit = {
 					is_core_of = ERB
 				}
-				add_state_flag = needs_civilian_power_grid
+				set_state_flag = needs_civilian_power_grid
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = civilian_power_grid
@@ -2823,6 +2823,7 @@ focus_tree = {
 		y = 5
 		cost = 5.8
 		completion_reward = {
+			hidden_effect = { drop_cosmetic_tag = yes }
 			set_cosmetic_tag = ERB_USA
 			country_event = { id = enc_reformers.50 }
 		}
@@ -2838,7 +2839,11 @@ focus_tree = {
 			focus = enc_fbi
 		}
 		available = {
-			has_completed_focus = enc_model_communities
+			or = {
+				has_completed_focus = enc_model_communities
+				has_completed_focus = enc_martial_law
+				has_completed_focus = enc_suspend_elections				
+			}
 		}
 		mutually_exclusive = { focus = enc_a_nation_reborn }
 		ai_will_do = { factor = 1 }
@@ -2847,6 +2852,7 @@ focus_tree = {
 		y = 0
 		cost = 5.8
 		completion_reward = {
+			hidden_effect = { drop_cosmetic_tag = yes }
 			set_cosmetic_tag = ERB_enclaveamerica
 			country_event = { id = enc_reformers.201 }
 		}
@@ -5051,7 +5057,7 @@ focus = {#NEVADA - second city
 		mutually_exclusive = { focus = enc_the_common_man }
 		available = { country_exists = NCR }
 		allow_branch  = {
-			always = false # todo remove or rework branch
+			always = no # todo remove or rework branch
 		}
 		relative_position_id = enc_operation_babylon
 		x = -1
@@ -5150,6 +5156,7 @@ focus = {#NEVADA - second city
 		y = 1
 		cost = 5.8
 		completion_reward = {
+			country_event = { id = enc_reformers.317 }
 			add_equipment_to_stockpile = { type = infantry_equipment amount = -1000 }
 			custom_effect_tooltip = unlock_arm_patriots
 			add_political_power = 50
@@ -6252,7 +6259,6 @@ focus = {#NEVADA - second city
 	}
 	focus = {#Purity - war with BOS
 		id = enc_war_with_bos
-		available = { has_completed_focus = enc_purity}
 		icon = GFX_goal_flag_burn_BOS 
 		ai_will_do = { factor = 1 } 
 		
@@ -6260,10 +6266,16 @@ focus = {#NEVADA - second city
 		x = 2
 		y = 2
 		
-		available = { is_neighbor_of = BOS }
+		available = { 
+			is_neighbor_of = BOS
+			hidden_trigger = {
+				has_completed_focus = enc_purity			
+			}
+		}
 		bypass = { 
+			has_completed_focus = enc_purity
 			NOT = {
-					country_exists = BOS
+				country_exists = BOS
 			}
 		}
 
@@ -6283,16 +6295,19 @@ focus = {#NEVADA - second city
 		ai_will_do = { factor = 1 } 
 		
 		prerequisite = { focus = enc_war_with_bos }
-		available = { has_completed_focus = enc_purity}
 		relative_position_id = enc_war_with_bos		
 		x = 1
 		y = 1
 		available = {
 			has_war_with = BOS
+			hidden_trigger = {
+				has_completed_focus = enc_purity			
+			}
 		}
 		bypass = { 
+			has_completed_focus = enc_purity		
 			NOT = {
-					country_exists = BOS
+				country_exists = BOS
 			}
 		}
 		cost = 2.9 

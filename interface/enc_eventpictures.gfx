@@ -19,6 +19,11 @@ spriteTypes = {
  		    texturefile = "gfx/event_pictures/enc_moreno_returns.tga"
  	    }
 
+        SpriteType = {#enc_arm_patriots
+            name = "GFX_event_enc_arm_patriots"
+ 		    texturefile = "gfx/event_pictures/enc_arm_patriots.tga"
+ 	    }
+
         SpriteType = {#enc_ncr_rangers
             name = "GFX_enc_ncr_rangers"
  		    texturefile = "gfx/event_pictures/enc_ncr_rangers.tga"
