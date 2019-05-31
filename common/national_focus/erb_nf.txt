@@ -6502,7 +6502,7 @@ focus = {#NEVADA - second city
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				ahead_reduction = 1
+				ahead_reduction = 3
 				uses = 3
 				category = hospital_tech
 			}
@@ -6846,12 +6846,12 @@ focus = {#NEVADA - second city
 				tesla_weaponry = 1
 			}
 			add_tech_bonus = {
-				ahead_reduction = 0.8
+				ahead_reduction = 2
 				uses = 2
 				category = energy_weaponry_tech
 			}
 			add_tech_bonus = {
-				ahead_reduction = 0.8
+				ahead_reduction = 2
 				uses = 1
 				category = industry
 			}
