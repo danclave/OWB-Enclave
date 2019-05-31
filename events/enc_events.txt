@@ -374,7 +374,7 @@ country_event = { #21 - unlicensed mutie hunt
 			var = suspicion_change_var
 			value = 10
 		}
-		change_suspicion = YES
+		change_suspicion = yes
 		add_manpower = -100
 		add_stability = -0.05
 		add_war_support = -0.10
@@ -386,7 +386,7 @@ country_event = { #21 - unlicensed mutie hunt
 			var = suspicion_change_var
 			value = 10
 		}
-		change_suspicion = YES
+		change_suspicion = yes
 		add_war_support = -0.05
 		add_political_power = -20
 		custom_effect_tooltip = enc.21.b.tt
@@ -400,7 +400,7 @@ country_event = { #21 - unlicensed mutie hunt
 			var = suspicion_change_var
 			value = 10
 		}
-		change_suspicion = YES
+		change_suspicion = yes
 		add_popularity = { ideology = elites popularity = 0.05 }
 		add_war_support = 0.10
 		hidden_effect = { # it happens again quickly
@@ -708,7 +708,7 @@ country_event = { #33 - Crimson Caravan Encounter
 			var = suspicion_change_var
 			value = 5
 		}
-		change_suspicion = YES	
+		change_suspicion = yes	
 	}
 	option = { # no witnesses
 		name = enc.33.b
@@ -733,7 +733,7 @@ country_event = { #33 - Crimson Caravan Encounter
 			var = suspicion_change_var
 			value = -10
 		}
-		change_suspicion = YES
+		change_suspicion = yes
 		custom_effect_tooltip = wont_happen_again
 		#custom_effect_tooltip = available_because_resourceful
 	}
@@ -904,7 +904,7 @@ country_event = { #39 - Reduce plague if Desert rangers not allied with NCR
 	title = enc.39.t
 	desc = enc.39.d
 	picture = GFX_event_FAV_plague
-	fire_only_once = YES
+	fire_only_once = yes
 	
 	trigger = {
 		NCR = {

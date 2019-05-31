@@ -4,6 +4,11 @@ spriteTypes = {
  		    texturefile = "gfx/event_pictures/enc_crashed_station.tga"
  	    }
 
+        SpriteType = {#enc_arm_patriot_tutorial
+            name = "GFX_event_enc_arm_patriot_tutorial"
+ 		    texturefile = "gfx/event_pictures/enc_arm_patriot_tutorial.tga"
+ 	    }
+
         SpriteType = {#enc_henry_returns
             name = "GFX_enc_henry_returns"
  		    texturefile = "gfx/event_pictures/enc_henry_returns.tga"
