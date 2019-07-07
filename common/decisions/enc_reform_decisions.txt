@@ -604,6 +604,7 @@ ENC_infiltrating_NCR = {
 			}
 		}
 		visible = {
+			country_exists = NCR
 			not = {
 				has_country_flag = enc_ncr_spies
 			}
