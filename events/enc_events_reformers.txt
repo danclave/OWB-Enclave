@@ -3493,10 +3493,26 @@ country_event = { #114 - Election!
 country_event = {#115 Axis of Evil
     id = enc_reformers.115
     title = enc_reformers.115.t
+    desc = { # neutral stance
+        text = enc_reformers.115.d.nowbs
+        trigger = { 
+			has_completed_focus = enc_expand_human_definition
+			NOT = { country_exists = WBH }
+		}
+	}
 	desc = {  # integration stance
         text = enc_reformers.115.d
         trigger = { has_completed_focus = enc_expand_human_definition }
     }
+    desc = { # neutral stance
+        text = enc_reformers.115.d.seg.nowbs
+        trigger = { 
+			not = { 
+				has_completed_focus = enc_expand_human_definition 
+				country_exists = WBH 
+			}
+		}
+	}
     desc = { # neutral stance
         text = enc_reformers.115.d.seg
         trigger = { not = { has_completed_focus = enc_expand_human_definition } }
