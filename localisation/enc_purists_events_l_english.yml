@@ -223,6 +223,10 @@ enc.42.d: "With the NCR and its allies vanquished, we are able to catch our brea
 enc.42.a: "Out of the frying pan..."
 enc.42.a.tt: "§YCaesar's Legion§! will declare war in §R3 years§!"
 ################################################################################################################ -<
+enc.43.t: "A Viral Prodigy"
+enc.43.d: "One of our younger researchers in the Chemical Corps, known by his nickname 'Pravus', has found great acclaim for his ability to successfully create a multitude of lethal pathogens in their Viral Simulation computer program.\n\nReportedly, the scientist is flooded with requests from his colleagues to test their own hypothetical plagues and has been working night and day to fulfill their wishes."
+enc.43.a: "These are the minds that will help rebuild America."
+################################################################################################################ -<
 enc.45.t: "Anderson Holds a Speech"
 enc.45.d: "Despite his near defeat in the recent elections, Franklin Anderson has been working tirelessly to rouse his supporters against the new administration. Though he carefully chooses his words to avoid anything openly treasonous, most believe the only real reason he is alive and allowed to speak is that his numerous supporters may be driven to open revolt otherwise."
 enc.45.a: "A man must know when he is beaten."

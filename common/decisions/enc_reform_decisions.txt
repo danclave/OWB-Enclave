@@ -1043,12 +1043,12 @@ ENC_infiltrating_NCR = {
 
 		available = {
 			has_completed_focus = enc_american_dream
-				}
+		}
 		visible = {
 			tag = ERB
 			NCR = {exists = no }
 			NOT = {has_full_control_of_state = 63} # Dayglow
-			}
+		}
 		complete_effect = {
 			custom_effect_tooltip = enc_NCR_seize_dayglow.tt
 			hidden_effect = {
@@ -1057,12 +1057,15 @@ ENC_infiltrating_NCR = {
 						has_full_control_of_state = 63 #Dayglow
 					}
 					ERB = {
-						create_wargoal = { type = annex_everything target = PREV }
+						create_wargoal = { 
+							type = annex_everything 
+							target = PREV 
 						}
 					}
 				}
-			}	
-		}
+			}
+		}	
+	}
 	enc_NCR_seize_shady_sands = {
 		icon = decision_plasma
 		priority = 300
