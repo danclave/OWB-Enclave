@@ -460,7 +460,7 @@ ENC_infiltrating_NCR = {
 		timeout_effect = {			
 			set_temp_variable = {
 				var = suspicion_change_var
-				value = 25
+				value = 35
 			}
 			change_suspicion = YES
 			clr_country_flag = enc_bishop_in_NCR
@@ -523,7 +523,7 @@ ENC_infiltrating_NCR = {
 			}
 			set_temp_variable = {
 				var = suspicion_change_var
-				value = -20
+				value = -10
 			}
 			change_suspicion = YES
 		}	

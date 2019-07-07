@@ -359,9 +359,9 @@ ENC_NCR_hiding = {
 			}
 			set_variable = { ENC_hiding_cost_total = ENC_hiding_cost }
 			
-			# make it 3 more expensive for every controlled state
+			# make it 5 more expensive for every controlled state
 			set_variable = { var = ENC_hiding_cost_states value = num_controlled_states }			
-			multiply_variable = { ENC_hiding_cost_states = 3 }			
+			multiply_variable = { ENC_hiding_cost_states = 5 }			
 			add_to_variable = { var = ENC_hiding_cost_total value = ENC_hiding_cost_states}
 			
 			# set duration of safety based on how quickly the player used the decision
@@ -827,7 +827,7 @@ ENC_render_unto_caesar = {
 			country_event = { id = enc_reformers.65 }
 			}
 	}
-}	
+}
 
 
 # DEBUG

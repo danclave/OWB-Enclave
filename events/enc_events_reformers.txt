@@ -1756,6 +1756,7 @@ country_event = {#57 - Purist commander
 			}
 		}
 		add_war_support = -0.05
+		add_popularity = { ideology = elites popularity = -0.02 }
 		custom_effect_tooltip = leader_ruthless_tt
 	}
 	option = { # time for an demotion

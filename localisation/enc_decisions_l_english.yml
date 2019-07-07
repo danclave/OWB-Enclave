@@ -29,7 +29,7 @@ ENC_ncr_power_grid_desc: "With Nevada's help, we will create a thousand points o
 # HIDING FROM THE NCR
 #################################
 ENC_NCR_hiding: "In The Lair of the Bear (£pol_power [?Root.ENC_hiding_cost_total|H0])"
-ENC_NCR_hiding_desc:0 "COST:                              TIME: [?Root.ENC_hiding_cost|H0]                  |                STATES (x3): [?Root.ENC_hiding_cost_states|H0]"
+ENC_NCR_hiding_desc:0 "COST:                              TIME: [?Root.ENC_hiding_cost|H0]                  |                STATES (x5): [?Root.ENC_hiding_cost_states|H0]"
 
 ncr_suspicious: "§YNew California Republic§! is unaware of §YThe Enclave§!"
 
