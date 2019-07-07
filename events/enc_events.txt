@@ -1013,6 +1013,31 @@ country_event = {#42 - On the border of the bull
 	}
 }
 
+country_event = {#43 - Pravus gaming reference
+	id = enc.43
+	title = enc.43.t
+	desc = enc.43.d
+	picture = GFX_event_FAV_plague
+	
+	fire_only_once = yes	
+    is_triggered_only = no
+	trigger = {	
+		date < 2280.01.01
+	}
+	mean_time_to_happen = {	days = 30 }	
+	
+	
+	option = {# good
+		name = enc.43.a
+		add_political_power = 25
+		add_tech_bonus = {
+			bonus = 0.3
+			uses = 1
+			category = electronics
+		}
+	}
+}
+
 #################
 ## IDEAS
 #################

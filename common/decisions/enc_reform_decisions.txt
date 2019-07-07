@@ -3579,6 +3579,700 @@ ENC_vice_president = {
         }
     }
 }
+ENC_infiltrating_NCR = {
+	assassinate_bishop_crisis = {
+		icon = decision_enc_bishop
+		priority = 30		
+		fire_only_once = YES
+		selectable_mission = YES	
+		activation = {
+			has_country_flag = enc_bishop_in_NCR
+			has_country_flag = ncr_suspicious
+			not = {
+				NCR = {
+					OR = {
+						exists = no
+						has_war_with = ERB #Enclave
+					}
+				}
+			}
+		}
+		available = {
+			has_country_flag = enc_ncr_spies
+		}
+		cancel_trigger = {
+			not = {
+				has_country_flag = enc_bishop_in_NCR
+				has_country_flag = ncr_suspicious
+			}
+		}
+		is_good = no
+		days_mission_timeout = 200
+		timeout_effect = {			
+			set_temp_variable = {
+				var = suspicion_change_var
+				value = 25
+			}
+			change_suspicion = YES
+			clr_country_flag = enc_bishop_in_NCR
+		}
+		complete_effect = {
+				country_event = { id = enc_reformers.10 }			
+		}
+	}
+	ENC_arm_raiders = {
+		icon = generic_prepare_civil_war
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 299
+			}
+		}
+		custom_cost_text = ENC_arm_raiders_cost
+		visible = {
+			has_country_flag = ncr_suspicious
+			has_country_flag = enc_stage_raider_attacks_flag
+		}
+		available = {
+			has_country_flag = enc_ncr_spies 
+			has_equipment = {
+				infantry_equipment > 299
+			}
+			custom_trigger_tooltip = { 
+				tooltip = ENC_NCR_neighbours_raiders		
+				NCR = {
+					any_neighbor_country = {
+						is_raider_nation = yes 
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = ncr_suspicion_higher_than_20			
+				check_variable = { ENC_hiding_cost > 19.99 }
+			}
+		}
+		complete_effect = {
+			clr_country_flag = enc_ncr_spies		
+		}
+		days_remove = 30
+		days_re_enable = 70
+		remove_effect = {
+			random_country = {
+				limit = {
+					is_raider_nation = yes
+					is_neighbor_of = NCR
+				}
+				custom_effect_tooltip = ENC_arm_raiders_tt
+				hidden_effect = {
+					ERB = {
+						send_equipment = {
+							equipment = infantry_equipment
+							amount = 300
+							target = PREV
+						}
+					}
+				}		
+			}
+			set_temp_variable = {
+				var = suspicion_change_var
+				value = -20
+			}
+			change_suspicion = YES
+		}	
+	}
+	ENC_Civil_War= {
+		icon = generic_prepare_civil_war
+		fire_only_once = YES
+		visible = {
+			has_completed_focus = enc_support_armed_coup
+		}
+		available = {
+			NCR = {	intellectuals > 0.25 }
+			NOT = {has_war_with = NCR }
+			}
+		complete_effect = {
+			country_event = { id = enc_reformers.74 } 
+		}
+		}		
+	ENC_support_OWP = {
+		icon = decision_enc_agreement
+		cost = 25
+		visible = {
+			has_completed_focus = enc_support_old_world_party
+		}
+		available = {
+			has_country_flag = enc_ncr_spies
+		}
+		complete_effect = {
+			clr_country_flag = enc_ncr_spies
+			NCR = {
+				add_popularity = { ideology = intellectuals popularity = 0.05 }
+			}
+		}
+		days_re_enable = 100
+	}
+	ENC_call_favours = {
+		icon = generic_political_discourse
+		cost = 25
+		visible = {
+			has_completed_focus = enc_support_old_world_party
+		}
+		available = {
+			NCR = {
+				intellectuals > 0.25
+			}
+			custom_trigger_tooltip = {
+				tooltip = ncr_suspicion_higher_than_10				
+				check_variable = { ENC_hiding_cost > 9.99 }
+			}
+		}
+		complete_effect = {
+			clr_country_flag = enc_ncr_spies
+			set_temp_variable = {
+				var = suspicion_change_var
+				value = -10
+			}
+			change_suspicion = YES
+			NCR = {
+				add_popularity = { ideology = intellectuals popularity = -0.05 }
+			}
+			
+		}
+		days_re_enable = 100
+	}
+	ENC_send_spies = {
+		icon = decision_enc_espionage
+		priority = 10
+		custom_cost_trigger = {
+			has_manpower > 100
+		}
+		custom_cost_text = ENC_send_spies_cost
+		
+		available = {
+			has_completed_focus = enc_infiltrate_ncr
+			has_manpower > 100
+			custom_trigger_tooltip = {
+				tooltip = enc_ncr_spies_not		
+			}
+		}
+		visible = {
+			not = {
+				has_country_flag = enc_ncr_spies
+			}
+			or = {
+				has_completed_focus = enc_infiltrate_ncr
+				has_country_flag = enc_bishop_in_NCR
+			}
+		}
+		complete_effect = {
+			add_manpower = -100
+		}
+		days_remove = 60
+		remove_effect = {
+			set_country_flag = enc_ncr_spies
+			custom_effect_tooltip = ENC_send_spies_tt		
+		}
+	}
+	ENC_extract_spies = {
+		icon = GFX_decision_enc_verti
+		priority = 10
+	
+		visible = {
+			has_country_flag = enc_ncr_spies
+			country_exists = NCR 
+		}
+		complete_effect = {
+			clr_country_flag = enc_ncr_spies
+			custom_effect_tooltip = enc_ncr_spies_clr	
+		}
+		days_remove = 60
+		remove_effect = {
+			add_manpower = 100
+		}
+	}
+	ENC_reroute_caravans = {
+		icon = generic_break_treaty
+		cost = 50
+		priority = 10
+		fire_only_once = yes
+		available = {
+			has_country_flag = enc_ncr_spies
+		}
+		visible = {country_exists = NCR }
+		days_remove = 30
+		remove_effect = {
+			set_country_flag = enc_event_33_solved
+			custom_effect_tooltip = ENC_reroute_caravans_reward
+		}
+	}
+	ENC_demoralization = {
+		icon = decision_enc_propaganda
+		cost = 50
+		priority = 10
+		fire_only_once = yes
+		visible = {
+			has_war_with = NCR
+			not = { has_country_flag = enc_mid_game }
+		}
+		available = {
+			has_country_flag = enc_ncr_spies
+		}
+		complete_effect = {
+			NCR = {
+				add_timed_idea = { 
+					idea = ENC_NCR_demoralization_spies 
+					days = 200
+				}
+			}
+		}
+	}
+	ENC_desert_rangers_hate = {
+		icon = generic_political_discourse
+		priority = 10
+		cost = 80
+		fire_only_once = no
+		visible = {
+			DES = {
+				is_in_faction_with = NCR
+				exists = yes 
+			} 
+		}
+		available = {
+			has_country_flag = enc_ncr_spies
+			DES = {
+				is_in_faction_with = NCR
+				exists = yes 
+			} 
+		}
+		complete_effect = {
+			custom_effect_tooltip = ENC_desert_rangers_hate_tt
+			DES = {
+				drop_cosmetic_tag = yes
+				add_opinion_modifier = { target = NCR modifier = sabotaged_relations }
+			if = {
+					limit = {
+						is_in_faction = yes 
+					} 
+					leave_faction = yes 
+				}	
+				add_ai_strategy = {
+					type = alliance
+					id = NCR
+					value = -300
+				}
+			}
+			DES = { 
+				add_ai_strategy = {
+					type = ignore
+					id = NCR
+					value = 300
+				}
+				set_rule = { can_join_factions = no }	
+			}
+			NCR = { 
+				add_ai_strategy = {
+					type = ignore
+					id = DES
+					value = 300
+				}
+			}
+			NCR = {
+				add_opinion_modifier = { target = DES modifier = sabotaged_relations }
+				add_ai_strategy = {
+					type = alliance
+					id = DES
+					value = -300
+				}
+			}	
+		}
+	}
+	ENC_deliver_petition = {
+	
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+			135 = {
+				has_state_flag = enc_rebels_armed
+			}
+		}
+	
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_petition_for_independence
+		}
+		complete_effect = {
+			country_event = { id = enc_reformers.34 }
+			set_country_flag = enc_petition_delivered
+		}
+	}
+	enc_embassy = {
+	
+		priority = 300
+		fire_only_once = yes
+		icon = decision_ncr_flag
+		available = {
+				}
+	
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_the_state_of_nevada
+		}
+		complete_effect = {
+			NCR = {
+				add_popularity = { ideology = intellectuals popularity = 0.05 }
+			}
+			add_popularity = { ideology = elites popularity = 0.10 }
+			set_temp_variable = {
+				var = suspicion_change_var
+				value = -0.05
+			}
+			change_suspicion = yes
+		}
+	}
+	enc_NCR_radio = {
+	
+		priority = 300
+		fire_only_once = yes
+		icon = decision_ncr_flag
+		available = {
+				}
+	
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_owb_propaganda
+			country_exists = NCR 
+		}
+		complete_effect = {
+			NCR = {
+				add_popularity = { ideology = intellectuals popularity = 0.05 }
+			}
+				add_popularity = { ideology = elites popularity = 0.10 }
+		}
+	}
+
+	enc_NCR_propaganda_tour = {
+		icon = decision_enc_propaganda
+		priority = 300
+		fire_only_once = yes
+	
+		available = {
+			has_completed_focus = enc_vlt_power_reform
+		}
+	
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_vlt_power_reform
+			has_country_flag = ncr_suspicious
+			has_completed_focus = enc_home_is_nevada
+		}
+		complete_effect = {
+			set_temp_variable = {
+				var = suspicion_change_var
+				value = -15
+			}
+			change_suspicion = YES
+				add_popularity = { ideology = elites popularity = 0.05 }
+		}
+	}
+	ENC_the_lucia_incident = {
+		icon = decision_enc_espionage
+		priority = 10
+		fire_only_once = yes
+		available = {
+			has_country_flag = enc_ncr_spies			
+		}
+		visible = {
+			has_completed_focus = enc_the_lucia_incident
+		}
+		complete_effect = {
+
+		}
+		fire_only_once = yes
+		days_remove = 30
+		remove_effect = {
+			BOS = {
+				declare_war_on = {
+					target = NCR
+					type = annex_everything
+				}
+			}	
+		}	
+	}
+	ENC_the_bishop_incident = {
+		icon = decision_enc_espionage
+		priority = 10
+		fire_only_once = yes
+		available = {
+			has_country_flag = enc_ncr_spies			
+		}
+		visible = {
+			has_completed_focus = enc_the_bishop_incident
+		}
+		fire_only_once = yes
+		complete_effect = {
+
+		}
+		days_remove = 30
+		remove_effect = {
+			DES = { 
+				if = {
+					limit = {
+						is_in_faction = yes 
+					} 
+					leave_faction = yes 
+				}	
+			}
+			DES = {
+				declare_war_on = {
+					target = NCR
+					type = annex_everything
+				}
+			}	
+		}	
+	}
+	
+	ENC_rise_rebellion = {
+		priority = 900
+		icon = GFX_decision_revolt
+		allowed = {			
+			tag = ERB
+		}
+		fire_only_once = yes
+		available = {
+			any_state = {
+				has_state_flag = enc_patriots_armed
+			}
+		}
+		visible = {
+			has_completed_focus = enc_the_divided_state
+		}
+		complete_effect = {
+			country_event = { id = enc_reformers.112 }
+			clr_country_flag = ncr_suspicious
+		}
+	}
+
+	# war stuff
+	plunder_resources = {
+		icon = generic_scorched_earth
+		priority = 5
+		cost = 50
+		visible = {
+			has_war_with = NCR
+			not = { has_country_flag = enc_mid_game }
+		}
+		available = {
+			has_war_with = NCR
+			any_state = { #we occupy a non core state which has += 10 water
+				is_core_of = NCR
+				not = { is_core_of = ROOT }
+				is_controlled_by = ROOT
+				has_resources_amount = {
+					resource = water
+					amount = 10
+					state = THIS
+				}				
+			}
+		}
+		modifier = { #moving cost (maybe use civ factories)
+			supply_consumption_factor = -0.50
+			no_supply_grace = 48
+			heat_attrition_factor = -0.50
+		}
+		days_remove = 60
+		complete_effect = {
+			set_temp_variable = { legitimacy_change_var = -0.10 }
+			change_legitimacy = yes
+			random_state = {
+				limit = {
+					is_core_of = NCR
+					not = { is_core_of = ROOT }
+					is_controlled_by = ROOT
+					has_resources_amount = {
+						resource = water
+						amount = 10
+						state = THIS
+					}
+				}
+				custom_effect_tooltip = state_lose_10_water
+				hidden_effect = {
+					add_resource = {
+						type = water
+						amount = -10
+						state = THIS
+					}
+				}
+				set_state_flag = plundered_by_enc
+			}
+		}
+	}
+	plunder_equipment = {
+		icon = generic_scorched_earth
+		priority = 5
+		cost = 50
+		visible = {
+			has_war_with = ncr
+		}
+		available = {
+			has_war_with = NCR
+			any_state = { #we occupy a non core state which has 1+ mil factories
+				is_core_of = NCR
+				is_fully_controlled_by = ROOT
+				arms_factory > 0
+			}
+		}
+		complete_effect = {	
+			multiply_temp_variable = { legitimacy_change_var = -0.05 }
+			change_legitimacy = yes
+			random_state = {
+				limit = {
+					is_core_of = NCR
+					is_fully_controlled_by = ROOT
+					arms_factory > 0
+				}
+				remove_building = { 
+					type = arms_factory 
+					level = 1
+				}
+				set_state_flag = plundered_by_enc
+			}
+		}
+		remove_effect = {			
+			ROOT = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 500
+					producer = NCR
+				}
+			}
+		}
+	}
+	CES_california_crisis = {
+		icon = generic_break_treaty
+		priority = 30		
+		fire_only_once = YES
+		visible = { has_full_control_of_state = 285
+				}
+		activation = {
+			has_country_flag = ces_occupies_california
+			has_completed_focus = enc_reform
+			NOT = { country_exists = NCR }
+			not = {
+				CES = {
+					OR = {
+						exists = no
+						has_civil_war = YES
+						has_war_with = ERB #Enclave
+					}
+				}
+			}
+		}
+		available = {
+			77 = { is_controlled_by = ERB}
+		}
+		cancel_trigger = {
+			CES = {
+				OR = {
+					exists = no
+					has_civil_war = YES
+					has_war_with = ERB #Enclave
+				}
+			}
+		}
+		is_good = no
+		days_mission_timeout = 400
+		timeout_effect = {
+			CES = {	remove_ideas = enc_NCR__ces_resistance }
+				}
+		complete_effect = { country_event = {id = enc_reformers.204 }
+		}
+	}
+	enc_NCR_seize_dayglow = {
+		icon = decision_plasma
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = enc_american_dream
+		}
+		visible = {
+			tag = ERB
+			NCR = {exists = no }
+			NOT = {has_full_control_of_state = 63} # Dayglow
+		}
+		complete_effect = {
+			custom_effect_tooltip = enc_NCR_seize_dayglow.tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 63 #Dayglow
+					}
+					ERB = {
+						create_wargoal = { 
+							type = annex_everything 
+							target = PREV 
+						}
+					}
+				}
+			}
+		}	
+	}
+	enc_NCR_seize_shady_sands = {
+		icon = decision_plasma
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = enc_american_dream
+				}
+		visible = {
+			tag = ERB
+			NCR = {exists = no }
+			NOT = {has_full_control_of_state = 253} #shady sandsy
+			}
+		complete_effect = {
+			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 253 # Shady Sands
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+						}
+					}
+				}
+			}	
+		}
+	enc_NCR_seize_saccity = {
+		icon = decision_plasma
+		priority = 300
+		fire_only_once = yes
+
+		available = {
+			has_completed_focus = enc_american_dream
+		}
+		visible = {
+			tag = ERB
+			NCR = {exists = no }
+			NOT = {has_full_control_of_state = 135} #shady sandsy
+		}
+		complete_effect = {
+			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						has_full_control_of_state = 135 # Shady Sands
+					}
+					ERB = {
+						create_wargoal = { type = annex_everything target = PREV }
+						}
+					}
+				}
+			}	
+		}	
+
+}
 
  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  ##  #
  # Diplomacy

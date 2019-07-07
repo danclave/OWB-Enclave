@@ -1173,7 +1173,7 @@ enc_reformers.218.c: "New Reno will do until we free Washington"
 enc_reformers.218.a.tt: "\n Please rise for the §MNational Anthem§!, and we'll see you if they ever get to the east coast!"
 #############################################################################################################
 enc_reformers.219.t: "The New Congress"
-enc_reformers.219.d: "Although Granite has decided to restore democracy, there are still many who express concern about giving everyone a say in their government.  After all, look at the morass the NCR was! Vault City's mayor has suggested suffrage be granted only to Americans who can something like their old citizenship test, or those with a clean genetic history.  These wise citizens could select representatives who advise the President. \n\n Alternatively, we could adopt the old view of every man a vote!" 
+enc_reformers.219.d: "Although Granite has decided to restore democracy, there are still many who express concern about giving everyone a say in their government.  After all, look at the morass the NCR was! Vault City's mayor has suggested suffrage be granted only to Americans who can pass something like their old citizenship test, or those with a clean genetic history.  These wise citizens could select representatives who advise the President. \n\n Alternatively, we could adopt the old view of every man a vote!" 
 enc_reformers.219.a: "What part of democracy are you not getting?"
 enc_reformers.219.a.tt: "§gThe senate and congress are populated with American citizens, though generally those of higher standing and influence.§!"
 enc_reformers.219.b: "Let us form an advisory senate selected by the best Americans"
