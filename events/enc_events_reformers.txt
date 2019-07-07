@@ -6670,7 +6670,6 @@ country_event = {#222 - WBH Expansion
 	}	
 }
 
-
 news_event = {#223 - The Legion Marches
 	id = enc_reformers.223
 	title = enc_reformers.223.t
@@ -6957,6 +6956,8 @@ news_event = {#232 - Troll Warren Crushed
 	trigger = {
 		has_completed_focus = enc_reform
 		NOT = { country_exists = TRL }		
+		country_exists = WBH
+		# todo WBH controls TRL territory?
 	}
 	mean_time_to_happen =  { days = 10 } # quick
 	option = {# Now they're a threat 
@@ -7074,7 +7075,7 @@ country_event = {#238 - Seattle
 		add_war_support = 0.05
 	}
 }	
-country_event = {#239 -Salt Lake City
+country_event = {#239 - Salt Lake City
     id = enc_reformers.239
     title = enc_reformers.239.t
     desc = enc_reformers.239.d
@@ -7093,7 +7094,7 @@ country_event = {#239 -Salt Lake City
 		266 = {add_core_of = ERB }
 	}
 }
-country_event = {#240 -The Old Country 
+country_event = {#240 - The Old Country 
     id = enc_reformers.240
     title = enc_reformers.240.t
     desc = enc_reformers.240.d
@@ -7112,7 +7113,7 @@ country_event = {#240 -The Old Country
 		puppet = TOC
 	}
 }
-country_event = {#241 -The Sheriff of Primm
+country_event = {#241 - The Sheriff of Primm
     id = enc_reformers.241
     title = enc_reformers.241.t
     desc = enc_reformers.241.d
@@ -7130,7 +7131,7 @@ country_event = {#241 -The Sheriff of Primm
 		
 	}
 }
-country_event = {#242 -veronica
+country_event = {#242 - veronica
     id = enc_reformers.242
     title = enc_reformers.242.t
     desc = enc_reformers.242.d
@@ -7259,7 +7260,7 @@ country_event = {#247 - Hayes Protests
 		add_popularity = { ideology = people popularity = 0.05 }
 	}
 }
-country_event = {#248 - Vote Rigging :(
+country_event = {#248 - Vote Rigging :
 	id = enc_reformers.248
 	title = enc_reformers.248.t
 	desc = enc_reformers.248.d
@@ -7279,9 +7280,8 @@ country_event = {#248 - Vote Rigging :(
 		add_political_power = 25
 		custom_effect_tooltip = enc_reformers.248.b.tt
 		trigger = { has_completed_focus = enc_voting_rights_act }
-	}
-}												
-
+	}											
+}
 country_event = {#249 - Baron Control Intensifies
 	id = enc_reformers.249
 	title = enc_reformers.249.t
@@ -7478,7 +7478,6 @@ country_event = {#300 - state protests!
 			50 = {} # todo add tooltip
 			50 = {
 				country_event = { id = enc_reformers.304 } # state protest turns into riot!}
-			}
 		}
 	}
 	option = { # Meaningless placation
@@ -7490,7 +7489,7 @@ country_event = {#300 - state protests!
 		random_list = {
 			75 = {} # todo add tooltip
 			25 = {
-				country_event = { id = enc_reformers.304 } # state protest turns into riot!}
+				country_event = { id = enc_reformers.304 } # state protest turns into riot!
 			}
 		}
 		custom_effect_tooltip = leader_charismatic_tt
@@ -8038,7 +8037,7 @@ country_event = {#314 - Communism paranoia turns into crisis
 		activate_mission = ENC_red_menace_crisis
 	}
 }
-news_event = {
+news_event = { # nuke dropped override
 	id = nuke_dropped.1
 	title = enc_nuke_dropped.1.t
 	desc = enc_nuke_dropped.1.d

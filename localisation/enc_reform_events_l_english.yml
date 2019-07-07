@@ -1448,7 +1448,7 @@ enc_reformers.313.a: "You people deserve [CES.GetLeader]."
 enc_reformers.313.b: "I hope to God you're right."
 #############################################################################################################
 enc_reformers.314.t: "Communist uprising is brewing!"
-enc_reformers.314.d: "Douglas is sure of it. All the signs are there. baseball games being rained out, overcooked Brahmin steaks, crop circles,legion spies all across the reunited states... what else could this be but the beginnings of a red plot?
+enc_reformers.314.d: "Douglas is sure of it. All the signs are there. baseball games being rained out, overcooked Brahmin steaks, crop circles,legion spies all across the reunited states... what else could this be but the beginnings of a red plot?"
 enc_reformers.314.a: "We must be prepared for the §RRed Menace§!!"
 ##################################################
 enc_nuke_dropped.1.t:0 "Atomic Bombing of [From.From.GetName]"
