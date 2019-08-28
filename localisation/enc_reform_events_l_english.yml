@@ -1,7 +1,7 @@
 ﻿l_english:
 
 breaklines:0 "\n----\n"
-nextline:0 " \n" 
+nextline:0 " \n"
 newline:0 "\n\n"
 available_because: "\nAvailable because we have:\n§Y"
 unlocks_as_advisor:0 "Unlocks as a political advisor: "
@@ -332,7 +332,7 @@ enc_reformers.55.a: "Some soldier he is."
 enc_reformers.55.a.tt: "§YOrion Moreno§! leaves the Enclave!\n"
 ################################################################################################################ -<
 enc_reformers.56.t: "Patrolling New Reno"
-enc_reformers.56.d: "For the first time in the Enclave's history, we have reclaimed an American city. However, New Reno's population does not yet see it this way. While some are hopeful that the gangster are being pushed out, others fear and distrust the power armored strangers patrolling their streets.\n\nMinor acts of resistance such as thrown rocks or insults are not uncommon as unsavory types test the limits of our troops patience. If we appear weak, small arms fire may soon follow." 
+enc_reformers.56.d: "For the first time in the Enclave's history, we have reclaimed an American city. However, New Reno's population does not yet see it this way. While some are hopeful that the gangster are being pushed out, others fear and distrust the power armored strangers patrolling their streets.\n\nMinor acts of resistance such as thrown rocks or insults are not uncommon as unsavory types test the limits of our troops patience. If we appear weak, small arms fire may soon follow."
 enc_reformers.56.a: "Teach them not to mess with the Enclave."
 enc_reformers.56.a.tt: "§gThose that keep their heads down, keep their heads. The others, not so much.§!\n\n"
 enc_reformers.56.b: "Establish strict rules of engagement."
@@ -394,50 +394,50 @@ enc_reformers.66.a: "'This is fine'"
 enc_reformers.67.t: "Ghoul Marriage"
 enc_reformers.67.d: "Since we've decided to recognize ghouls as US citizens, an odd situation has come up.  A wastelander from New Reno has demanded we recognize his marriage to a ghoul.  Although we don't interfere with what consenting adults do in their bedrooms (and really don't want to know what these two do in theirs) they have brought a challenge to the new Supreme Court to hear their constitutional challenge.  Although one justice asked whether this was a priority in this grim post-nuclear wasteland, another member of the court has argued that civil rights are always important.  The court has three options before it.  The first is to say that the we find ghoul marriage gross and we can deny rights to Americans based on our dislike so long as we aren't imprisoning or executing people.  The second is to note that the 14th Amendment guarantees all US citizens 'the equal protection of the laws' and rule that banning ghoul marriage violates the equal protection clause.  Or we can issue a rambling decision that doesn't give anyone a clear standard to follow in future cases but let's us say 'love is love' and get quoted at weddings."
 enc_reformers.67.a: "Adam and Eve not Atom and Eve!"
-enc_reformers.67.b: "Adopt an Equal Protection Argument." 
-enc_reformers.67.c: "Let's go with a decision crafted to be used at weddings!" 
+enc_reformers.67.b: "Adopt an Equal Protection Argument."
+enc_reformers.67.c: "Let's go with a decision crafted to be used at weddings!"
 ################################################################################################################ -<
 enc_reformers.68.t: "New Reno's Slaves"
 enc_reformers.68.d: "During the liberation of New Reno we've come across a large population of slaves, triggering off a debate as to whether we should allow the practice of slavery in these United States.  Although there are those who say slavery is unamerican, others point out that a captive workforce could be a boon to our economy and has historical precedent.  As an compromise we could adopt Vault City's servitude system, providing food, protection, and medical care in exchange for involuntary servitude.  But others say that seems like slavery with extra steps."
 enc_reformers.68.a: "Slavery, a boon to our economy."
-enc_reformers.68.b: "Vault City's servitude is reasonable." 
-enc_reformers.68.c: "If they wanted slavery they'd have elected Anderson." 
+enc_reformers.68.b: "Vault City's servitude is reasonable."
+enc_reformers.68.c: "If they wanted slavery they'd have elected Anderson."
 ################################################################################################################ -<
 enc_reformers.70.t: "The Fate of Our Democracy"
 enc_reformers.70.d: "New Reno prospers under our rule, but we must decide how to govern the United States.  Douglas's rule has been successful and he's brought us back from the brink.  The nation has been under martial law since the War, and he could cement his power and (frankly better than we could hope) rule. Or he could aim to restore the United States, risking losing control of the Enclave in 'elections' and giving power to the natives."
 enc_reformers.70.a: "Extend Presidential powers."
-enc_reformers.70.b: "It's time for elections." 
-################################################################################################################ 
+enc_reformers.70.b: "It's time for elections."
+################################################################################################################
 enc_reformers.71.t: "The New Reno Address"
 enc_reformers.71.d: "Standing before the podium as the first freely chosen president of America in over 200 years, Douglas' words are carried from Arroyo to the Commonwealth by radio. 'Our nation, conceived in liberty, has staggered under a great many blows, and we are bloody and bruised.  But we are unbowed, unbent, and unbroken.  Let us hereby resolve that this nation, under God, shall have a new birth of freedom - and that government of the people, by the people, for the people, shall not perish from this Earth.'"
 enc_reformers.71.a: "God Bless America!"
-################################################################################################################ 
+################################################################################################################
 enc_reformers.72.t: "The Iron President"
 enc_reformers.72.d: "Douglas did his best.  But this wasn't the fat and happy world of prewar America.  He had to guide his nation through a nuclear wasteland.  He had no time to listen to whining barons from California, councilors from Vault City, or ministers from New Canaan.  Only blood and iron would save America.  But without liberty, Douglas was sifting through the shell of dead America, one more victim of Old World Blues."
 enc_reformers.72.a: "God Bless the Enclave!"
-################################################################################################################ 
+################################################################################################################
 enc_reformers.73.t: "The Forgotten Men and Women"
 enc_reformers.73.d: "Although the NCR is a democracy, it's highly flawed.  Brahmin barons run the northern territories like feudal holdings, crushing small farmers and factory workers.  The caravans buy and sell senators for bottle-caps, and ethnic tensions simmer beneath the surface.  A leader who promised to restore Prewar America's ideals and rally the forgotten people of New California could be very successful.  With our aid."
 enc_reformers.73.a: "We will remember those who have been forgotten."
-################################################################################################################ 
+################################################################################################################
 enc_reformers.74.t: "The Failure at Shady Sands"
 enc_reformers.74.d: "Mayor Hayes of Day Glow has called for a constitutional convention, with petitions from across the NCR. But the NCR's Congress has refused to hear it, claiming he's in league with the remnants of the Enclave.  At a protest in Boneyard, shots have been fired... and war was beginning."
 enc_reformers.74.a: "The NCR is going HAYEwire!"
-################################################################################################################ 
+################################################################################################################
 enc_reformers.75.t: "Operation Californian Freedom"
 enc_reformers.75.d: "The Civil War in the NCR gives us the opportunity to support freedom and remove the NCR's taint from California.  And perhaps with a change of regime we'll have a pro-American voice in the Wastes..."
 enc_reformers.75.a: "They will welcome us as liberators."
-################################################################################################################ 
+################################################################################################################
 enc_reformers.76.t: "The State of California"
 enc_reformers.76.d: "With the victory of the Old World Party and support for the Enclave at an all time high, it's time to restore California to the Union."
 enc_reformers.76.a: "Out of Many, One."
-################################################################################################################ 
+################################################################################################################
 enc_reformers.77.t: "The Mutant Question"
 enc_reformers.77.d: "The Enclave of old barely recognized the mutated denizens of the wasteland as human. Many among us still don't, desiring clear lines to be drawn between purebred human and wastelander mutants.\n\nThe official stance of our government towards our mutated subjects must be made clear to those within and without the Enclave."
 enc_reformers.77.d.promise: "Of course, we must take into account the fact that we promised our constituents that we had no intention of integrating the mutants into our ranks. Breaking this promise will not go unanswered."
 enc_reformers.77.a: "The mutants will have a place in America, but not at the top."
 enc_reformers.77.b: "We fight not to enslave, but to set a country free."
-################################################################################################################ 
+################################################################################################################
 enc_reformers.78.t: "The Return of Arcade Gannon"
 enc_reformers.78.d: "Since the Enclave's reform and integration of American citizens, some of those who fled after the fall of Navarro have returned to us.  Among those is the scientist Arcade Gannon. The son of an Enclave Officer who later joined the Followers of the Apocalypse. Inspired by our promises of a better life for the people of the Wastes, he's willing to return to the Enclave's ranks."
 enc_reformers.78.a: "I love a man in uniform."
@@ -525,7 +525,7 @@ enc_reformers.95.b: "The Enclave, for protecting friends and family"
 enc_reformers.95.c: "Low, low prices from the Crimson Caravan!"
 ################################################################################################################
 enc_reformers.96.t: "She Looks Pretty Good for Five Hundred"
-enc_reformers.96.d: "America's five hundredth birthday is approaching, and some would say she's showing her age.  The land is scoured by mutants and raiders, and the Enclave, America's last great hope, is a shadow of its former self.  But to Granite, this is just a cause to redouble his efforts.  Americans, he declares on the radio, have never bowed to a despot and never will. Things may look bleak now, but America will survive for the next five hundred years, and well beyond that.  Because:"  
+enc_reformers.96.d: "America's five hundredth birthday is approaching, and some would say she's showing her age.  The land is scoured by mutants and raiders, and the Enclave, America's last great hope, is a shadow of its former self.  But to Granite, this is just a cause to redouble his efforts.  Americans, he declares on the radio, have never bowed to a despot and never will. Things may look bleak now, but America will survive for the next five hundred years, and well beyond that.  Because:"
 enc_reformers.96.a: "The Enclave will always fight a better world!"
 enc_reformers.96.b: "Americans will always fight for freedom!"
 ################################################################################################################
@@ -582,11 +582,11 @@ enc_reformers.107.a.tt: "\nAvailable because you chose to support the chem trade
 enc_reformers.107.b:  "That fizz tastes like freedom!"
 ################################################################################################################
 enc_reformers.108.t: "The Fall of Hoover Dam"
-enc_reformers.108.d: "The NCR's apogee brought it to the Colorado River and the conquest of Hoover Dam.  But with the outbreak of civil war, the NCR's garrison was called home.  The Legion seized the facility in short order, and the Secret Service fears they will soon march on New Vegas and points west."  
+enc_reformers.108.d: "The NCR's apogee brought it to the Colorado River and the conquest of Hoover Dam.  But with the outbreak of civil war, the NCR's garrison was called home.  The Legion seized the facility in short order, and the Secret Service fears they will soon march on New Vegas and points west."
 enc_reformers.108.a:  "Dam it"
 ################################################################################################################
 enc_reformers.109.t: "The Liberation of Hoover Dam"
-enc_reformers.109.d: "This is Enclave Radio, bringing you the latest news from the front.  Our boys in black have driven the Legion from Hoover Dam, aided by survivors from Navarro who hid in the Mojave, and our flamers are burning Praetorians out of their nests even as we speak. An American flag has been draped over the side of the dam, and soon its power will serve you, dear listeners.  And a special thanks to that Courier who rallied local partisans to our aid."   
+enc_reformers.109.d: "This is Enclave Radio, bringing you the latest news from the front.  Our boys in black have driven the Legion from Hoover Dam, aided by survivors from Navarro who hid in the Mojave, and our flamers are burning Praetorians out of their nests even as we speak. An American flag has been draped over the side of the dam, and soon its power will serve you, dear listeners.  And a special thanks to that Courier who rallied local partisans to our aid."
 enc_reformers.109.a:  "This is not how we saw New Vegas ending"
 ################################################################################################################
 enc_reformers.110.t: "The Midwestern Brotherhood Aids the Legion!"
@@ -595,7 +595,7 @@ enc_reformers.110.a:  "We'll deal with those guys one day"
 enc_reformers.110.a.tt: "The  §YMidwestern Brotherhood§! has sent technology and men to aid the Legion against you. Jerks."
 ################################################################################################################
 enc_reformers.111.t: "Enclave Radio Busted!"
-enc_reformers.111.d: "As tensions skyrocket in the NCR between progressives who support the Old Deal and the NCR's elite, the NCR's 'president' has cracked down our message.  The Senate has banned Enclave radio, and NCR rangers destroy our transmitters wherever they find them. We can continue to support our cause within the Republic, but it will require more overt measures." 
+enc_reformers.111.d: "As tensions skyrocket in the NCR between progressives who support the Old Deal and the NCR's elite, the NCR's 'president' has cracked down our message.  The Senate has banned Enclave radio, and NCR rangers destroy our transmitters wherever they find them. We can continue to support our cause within the Republic, but it will require more overt measures."
 enc_reformers.111.a:  "Now we see the violence inherent in the system"
 enc_reformers.111.b:  "They can't stop the signal"
 enc_reformers.111.b.tt: "Available because you pursued military propaganda"
@@ -725,7 +725,7 @@ enc_reformers.133.d: "Mr. President, several hours ago our astronaut's space shi
 enc_reformers.133.a: "Wait what did he find on up there?"
 ###############################################################################################################
 enc_reformers.134.t: "The City of Angels"
-enc_reformers.134.d: "The Boneyard seems like a graveyard that stretches for miles under the hot sun.  But Americans find a way, and the Boneyard has prospered as part of the NCR. Hayes intends to set up set up a Department of Public Art and Entertainment in the City to serve as a nucleus of the America's entertainment industry. But as part of that development, we need to decide whether to change the city's name." 
+enc_reformers.134.d: "The Boneyard seems like a graveyard that stretches for miles under the hot sun.  But Americans find a way, and the Boneyard has prospered as part of the NCR. Hayes intends to set up set up a Department of Public Art and Entertainment in the City to serve as a nucleus of the America's entertainment industry. But as part of that development, we need to decide whether to change the city's name."
 enc_reformers.134.a: "Welcome to Los Angeles"
 enc_reformers.134.b: "It's been called the Boneyard for over 200 years"
 enc_reformers.134.c: "The City of Angels"
@@ -903,7 +903,7 @@ enc_reformers.165.d: "In his darkest hour, before his election, Granite asked, "
 enc_reformers.165.a: "God Bless the Enclave"
 ##############################################################################################################
 enc_reformers.166.t: "The History You Burned In The Earth"
-enc_reformers.166.d: "The Legion was able to recover from Flagstaff's loss, but, many of its Brotherhood and Enclave 'advisors' were in City at the time.  And while some might have regret that nukes fell on America once again, Granite knew that, as they say..."  
+enc_reformers.166.d: "The Legion was able to recover from Flagstaff's loss, but, many of its Brotherhood and Enclave 'advisors' were in City at the time.  And while some might have regret that nukes fell on America once again, Granite knew that, as they say..."
 enc_reformers.166.a: "War never changes"
 ##############################################################################################################
 enc_reformers.167.t: "The End of the Reformers"
@@ -919,7 +919,7 @@ enc_reformers.169.d: "Mr. President, it turns out that the Utah Flu is actually 
 enc_reformers.169.a: "What sort of monsters use a bioweapon?"
 ##############################################################################################################
 enc_reformers.170.t: "Be Careful What You Wish For"
-enc_reformers.170.d: "The destruction of the New California Republic has left our army overextended, with raiders and supermutants attacking outlying towns.  The people of the NCR are bitterly divided between those who hope for a better future, and those who fear the power armor marching through their towns.  NCR Loyalists have taken to the hills, sniping at our men and supply convoys. Factories and caravan routes lay idle, as merchants fear whether their dollars are worth the paper they're printed out.  And California's leadership await their fate, wondering if they can work with the Reunited States or if they will end their days at a camp in the Mojave. The Enclave has won; but time will tell if, in destroying the NCR, America has lost." 
+enc_reformers.170.d: "The destruction of the New California Republic has left our army overextended, with raiders and supermutants attacking outlying towns.  The people of the NCR are bitterly divided between those who hope for a better future, and those who fear the power armor marching through their towns.  NCR Loyalists have taken to the hills, sniping at our men and supply convoys. Factories and caravan routes lay idle, as merchants fear whether their dollars are worth the paper they're printed out.  And California's leadership await their fate, wondering if they can work with the Reunited States or if they will end their days at a camp in the Mojave. The Enclave has won; but time will tell if, in destroying the NCR, America has lost."
 enc_reformers.170.a: "But I was told they would welcome us as Liberators!"
 ##############################################################################################################
 enc_reformers.171.t: "The Arroyo Courier"
@@ -936,13 +936,13 @@ enc_reformers.173.d: "The first class of Vault City is graduating, and this incl
 enc_reformers.173.a: "Maybe the Reform Path was a mistake"
 ##############################################################################################################
 enc_reformers.175.t: "Law or Order?"
-enc_reformers.175.d: "Since the NCR's collapse, New California has been rife with banditry, corruption, and brutality.  The NCR's ramshackle bureaucracy, already overstretched, has all but collapsed despite the Enclave Reconstruction Authority efforts to keep it in place.  Gangs and barons rule as they please, and to get the state up and running again will require substantial effort. Some idealists in the New California Republic believe we need to restore a faith in an impartial judiciary; a law that protects the salvager and the brahmin baron alike.  Others think we should work with New California's elite, and crush dissent quickly and efficiently.  After all, a strict constitutional scholar might question how Granite even became president..." 
+enc_reformers.175.d: "Since the NCR's collapse, New California has been rife with banditry, corruption, and brutality.  The NCR's ramshackle bureaucracy, already overstretched, has all but collapsed despite the Enclave Reconstruction Authority efforts to keep it in place.  Gangs and barons rule as they please, and to get the state up and running again will require substantial effort. Some idealists in the New California Republic believe we need to restore a faith in an impartial judiciary; a law that protects the salvager and the brahmin baron alike.  Others think we should work with New California's elite, and crush dissent quickly and efficiently.  After all, a strict constitutional scholar might question how Granite even became president..."
 enc_reformers.175.a: "To the Republic, a government of laws and not of men"
 enc_reformers.175.b: "Lawyers won't stop the Legion"
 enc_reformers.175.c: "We need soldiers, not lawyers."
 ##############################################################################################################
 enc_reformers.176.t: "Californian Partisans"
-enc_reformers.176.d: "Although the NCR has fallen, not everyone in California is willing to give up the fight.  Brotherhood paladins strike with NCR rebels and continue to be a pain.  Some suggest we adopt enhanced interrogation techniques to snuff these cells out, but that could prove problematic if we ever allow anyone to voice opposition to our just rule." 
+enc_reformers.176.d: "Although the NCR has fallen, not everyone in California is willing to give up the fight.  Brotherhood paladins strike with NCR rebels and continue to be a pain.  Some suggest we adopt enhanced interrogation techniques to snuff these cells out, but that could prove problematic if we ever allow anyone to voice opposition to our just rule."
 enc_reformers.176.a: "What did we ever do to you?"
 enc_reformers.176.b: "Tell us where the rebel base is!"
 enc_reformers.176.b.tt: "Because you value order, you can used enhanced interrogation to find the partisan stronghold."
@@ -1010,7 +1010,7 @@ enc_reformers.187.b: "Declare a State of Emergency and Suspend Congress"
 ##############################################################################################################
 enc_reformers.188.t: "God Bless You"
 enc_reformers.188.d: "A sniffle, a sneeze, a fever. Horrible, horrible bleeding. Since the outbreak of war with the Legion, the people of New Canaan and their tribal allies have been getting sick with a plague called the Utah Flu which seems somehow familiar. It's not surprising that a plague broke out among a Wasteland army, but it's rather surprising that it doesn't affect Caesar's men..."
-enc_reformers.188.tt.a: "\n§gI wonder if we can protect our own troops against it.§!"  
+enc_reformers.188.tt.a: "\n§gI wonder if we can protect our own troops against it.§!"
 enc_reformers.188.a: "Are our troops safe?"
 ##############################################################################################################
 enc_reformers.189.t: "Congressional Opposition Questions Propaganda Department"
@@ -1060,11 +1060,11 @@ enc_reformers.196.d: "The Brotherhood sergeant stood before the men and women wh
 enc_reformers.196.a: "Ad Victoriam!"
 #############################################################################################################
 enc_reformers.197.t: "FEV Fizzles"
-enc_reformers.197.d: "At Dr. Gannon's urging, the Reunited States pursued a costly vaccination program.  This paid off when the Legion tried to use FEV against us, promising to 'bring the ghosts of the pasts to their knees' with... no effect. But it's good to know we can add attempted genocide to the charges against Caesar at the war crimes tribunal."  
+enc_reformers.197.d: "At Dr. Gannon's urging, the Reunited States pursued a costly vaccination program.  This paid off when the Legion tried to use FEV against us, promising to 'bring the ghosts of the pasts to their knees' with... no effect. But it's good to know we can add attempted genocide to the charges against Caesar at the war crimes tribunal."
 enc_reformers.197.a: "Maybe Caesar should invest in some modern medicine"
 #############################################################################################################
 enc_reformers.198.t: "FEV Outbreak"
-enc_reformers.198.d: "Even though the Legion used FEV against its enemies to the east, and we have the ability to synthesize a vaccine, we chose to spend our time pursuing other matters.  Now the Legion has deployed FEV against our military to great effect.  We can listen to Dr. Gannon and vaccinate our population, but it will not be ready for some time."  
+enc_reformers.198.d: "Even though the Legion used FEV against its enemies to the east, and we have the ability to synthesize a vaccine, we chose to spend our time pursuing other matters.  Now the Legion has deployed FEV against our military to great effect.  We can listen to Dr. Gannon and vaccinate our population, but it will not be ready for some time."
 enc_reformers.198.a: "But I thought vaccines turned you into a ghoul!"
 enc_reformers.198.a.tt: "\nSeriously, §Mvaccinations§! save lives.\n"
 #############################################################################################################
@@ -1139,7 +1139,7 @@ enc_reformers.212.b: "Tell kids about the mistakes that led to the Great War"
 enc_reformers.212.b.tt:0 "He who does not learn from history is doomed to repeat it. And I don't think we'll get lucky a second time.\n\n"
 #############################################################################################################
 enc_reformers.213.t: "Ghouls Discuss America's Flaws"
-enc_reformers.213.d: "It turns out some ghouls remember the martial law, rationing, and general societal collapse that preceded the Great War. As such, they are rather critical of our attempts to paint America as a City on the Hill.  One's published a book entitled "Lies Your Teacher Told You.""    
+enc_reformers.213.d: "It turns out some ghouls remember the martial law, rationing, and general societal collapse that preceded the Great War. As such, they are rather critical of our attempts to paint America as a City on the Hill.  One's published a book entitled "Lies Your Teacher Told You.""
 enc_reformers.213.a: "Why don't we ever great a break?"
 enc_reformers.213.b: "This ghoul sounds a bit like a Communist."
 enc_reformers.213.c: "§RSounds like he's gone feral!§\n"
@@ -1173,7 +1173,7 @@ enc_reformers.218.c: "New Reno will do until we free Washington"
 enc_reformers.218.a.tt: "\n Please rise for the §MNational Anthem§!, and we'll see you if they ever get to the east coast!"
 #############################################################################################################
 enc_reformers.219.t: "The New Congress"
-enc_reformers.219.d: "Although Granite has decided to restore democracy, there are still many who express concern about giving everyone a say in their government.  After all, look at the morass the NCR was! Vault City's mayor has suggested suffrage be granted only to Americans who can pass something like their old citizenship test, or those with a clean genetic history.  These wise citizens could select representatives who advise the President. \n\n Alternatively, we could adopt the old view of every man a vote!" 
+enc_reformers.219.d: "Although Granite has decided to restore democracy, there are still many who express concern about giving everyone a say in their government.  After all, look at the morass the NCR was! Vault City's mayor has suggested suffrage be granted only to Americans who can pass something like their old citizenship test, or those with a clean genetic history.  These wise citizens could select representatives who advise the President. \n\n Alternatively, we could adopt the old view of every man a vote!"
 enc_reformers.219.a: "What part of democracy are you not getting?"
 enc_reformers.219.a.tt: "§gThe senate and congress are populated with American citizens, though generally those of higher standing and influence.§!"
 enc_reformers.219.b: "Let us form an advisory senate selected by the best Americans"
@@ -1188,7 +1188,7 @@ enc_reformers.220.b: "I can't believe government confiscations led to scandal!"
 enc_reformers.220.c: "Fine, cancel the program."
 #############################################################################################################
 enc_reformers.221.t: "Congressional Criticism of Forced Labor"
-enc_reformers.221.d.segregation: "A member of Dayglow's delegation to the Senate has criticized the deployment of mandatory volunteers to outlying districts.  He argues we would be better served cleaning Dayglow's parks than improving the roads connecting far flung settlements to the Reunited States' core. Further, he has complained that Shady Sands gets preferential bidding rights on labor contracts, and said the system should favor blind bids." 
+enc_reformers.221.d.segregation: "A member of Dayglow's delegation to the Senate has criticized the deployment of mandatory volunteers to outlying districts.  He argues we would be better served cleaning Dayglow's parks than improving the roads connecting far flung settlements to the Reunited States' core. Further, he has complained that Shady Sands gets preferential bidding rights on labor contracts, and said the system should favor blind bids."
 enc_reformers.221.d.integration: "Representative Hayes has stood before Congress, waving photos of widespread misconduct in our forced labor battalions. The photos show human rights violations you'd expect from the Legion, and he's entered into the Congressional Records stacks of letters from his constituents asking about missing loved ones.  It's not a good look, especially compared to his haircut."
 enc_reformers.221.a: "We promise we'll build Dayglow a nice park when Reconstruction ends"
 enc_reformers.221.a.tt: "Available because you selected §YSegregation§!"
@@ -1213,11 +1213,11 @@ enc_reformers.225.a: "Where are they even getting their powered armor?"
 enc_reformers.225.a.tt: "The §Y[WBH.GetName]§! prepare for war against you."
 #############################################################################################################
 enc_reformers.226.t: "Enclave Scientists in the North"
-enc_reformers.226.d: "To the extent members of the Enclave disliked our plan to 'Be nice to the mutants who killed their parents,' but did not want to become genocidal Purists, most fled to [CES.GetName], which could offer them great wealth and power.  But the Washington Brotherhood has power and wealth as well, for those who will tolerate its insane ruler.\n\nOne of our scientists defected with a weapon of great use against supermutants, which could cripple the Troll Warren. We are torn between annoyance at the fact he stole our super-weapon and pleasure that rabid supermutants will likely die en masse, and see no way this will come back to hurt us." 
+enc_reformers.226.d: "To the extent members of the Enclave disliked our plan to 'Be nice to the mutants who killed their parents,' but did not want to become genocidal Purists, most fled to [CES.GetName], which could offer them great wealth and power.  But the Washington Brotherhood has power and wealth as well, for those who will tolerate its insane ruler.\n\nOne of our scientists defected with a weapon of great use against supermutants, which could cripple the Troll Warren. We are torn between annoyance at the fact he stole our super-weapon and pleasure that rabid supermutants will likely die en masse, and see no way this will come back to hurt us."
 enc_reformers.226.a: "Dead supermutants seems fine, really."
 #############################################################################################################
 enc_reformers.227.t: "Canadian Pirates Join the Brotherhood"
-enc_reformers.227.d: "To the north of the Washington lies the Broken Coast, where pirates bludgeon their prey to death with Canada's sacred clubs, their fearsome hockey sticks.  We hoped they'd serve as a nuisance to the Brotherhood and tie down their flanks, but now they've formed a blood pact with the Brotherhood to seize California, which can offer far more loot and slaves than the Northwest. Should war with the Washington Brotherhood break out, they may try to harass our coasts and supply lines. \n\nOf course, the United States Navy wet its teeth fighting pirates five hundred years ago. Perhaps it's time to pick up old habits." 
+enc_reformers.227.d: "To the north of the Washington lies the Broken Coast, where pirates bludgeon their prey to death with Canada's sacred clubs, their fearsome hockey sticks.  We hoped they'd serve as a nuisance to the Brotherhood and tie down their flanks, but now they've formed a blood pact with the Brotherhood to seize California, which can offer far more loot and slaves than the Northwest. Should war with the Washington Brotherhood break out, they may try to harass our coasts and supply lines. \n\nOf course, the United States Navy wet its teeth fighting pirates five hundred years ago. Perhaps it's time to pick up old habits."
 enc_reformers.227.a: "Let them know we have not yet begun to fight"
 #############################################################################################################
 enc_reformers.228.t: "Douglas' Youth"
@@ -1258,28 +1258,28 @@ enc_reformers.234.a: "I Will Not Make this Decision Lightly"
 enc_reformers.234.a.tt: "Unlocks decisions to appoint the Vice President"
 #############################################################################################################
 enc_reformers.235.t: "Out of Many, One?"
-enc_reformers.235.d: "With the triumph of democracy in New California, some suggest Granite ask Hayes if he will agree to California's annexation by Nevada, and suggest that the two, working together, form the United States of America.  In this scenario, the more populous state of New California would surrender control of its military and economy to New Reno voluntarily, but Hayes would be granted a position as governor of the new state. \n\nOr Granite could stick to the original plan, which is to lead a league of independent but allied states together in some sort of American Union." 
+enc_reformers.235.d: "With the triumph of democracy in New California, some suggest Granite ask Hayes if he will agree to California's annexation by Nevada, and suggest that the two, working together, form the United States of America.  In this scenario, the more populous state of New California would surrender control of its military and economy to New Reno voluntarily, but Hayes would be granted a position as governor of the new state. \n\nOr Granite could stick to the original plan, which is to lead a league of independent but allied states together in some sort of American Union."
 enc_reformers.235.a: "§gAsk Hayes to Be Annexed by Nevada§!"
 enc_reformers.235.a.tt: "Ask Hayes if he will form the United States of America!"
 enc_reformers.235.b: "Let us go forward together"
 enc_reformers.235.b.tt: "§gRecognize that rebuilding America will work best through gradual, incremental change over time, and that all guns should be pointed at Flagstaff.§!"
 #############################################################################################################
 enc_reformers.236.t: "Hayes Responds!"
-enc_reformers.236.d: "Mr. President, Hayes has regretfully expressed that whie he is committed to the American dream, his constituents did not elect him president to hand control of California over to a 2 year old government based out of New Reno.  He is, however, firmly comitted to working with us to promote free trade, free travel, and human rights." 
+enc_reformers.236.d: "Mr. President, Hayes has regretfully expressed that whie he is committed to the American dream, his constituents did not elect him president to hand control of California over to a 2 year old government based out of New Reno.  He is, however, firmly comitted to working with us to promote free trade, free travel, and human rights."
 enc_reformers.236.a: "How Rude!"
 #############################################################################################################
 enc_reformers.237.t: "Supreme Court Hears Case on Ghoul Pride Parade"
-enc_reformers.237.d: "With the integration of ghouls into the Great Experiment, more and more ghouls have moved to Vault City, their prewar skills commanding high salaries in the rapid boomtown.  But they face rampant discrimination from some of the older citizens, and they wish to hold a protest.  The ghouls seek to hold a "Ghoul Pride Parade," celebrating their contributions to American society and demanding equal treatment.  Vault City promptly denied their permit, and now the ghouls have brought suit. \n\nAlthough Mayor Lynette claims the denial merely reflects a Vault City preference against large parties, the denial clearly reflects discriminatory intent.  How the Supreme Court rules will affect how the court will view ghoul rights in future cases." 
+enc_reformers.237.d: "With the integration of ghouls into the Great Experiment, more and more ghouls have moved to Vault City, their prewar skills commanding high salaries in the rapid boomtown.  But they face rampant discrimination from some of the older citizens, and they wish to hold a protest.  The ghouls seek to hold a "Ghoul Pride Parade," celebrating their contributions to American society and demanding equal treatment.  Vault City promptly denied their permit, and now the ghouls have brought suit. \n\nAlthough Mayor Lynette claims the denial merely reflects a Vault City preference against large parties, the denial clearly reflects discriminatory intent.  How the Supreme Court rules will affect how the court will view ghoul rights in future cases."
 enc_reformers.237.a: "Why would anyone feel pride in being a ghoul?"
 enc_reformers.237.b: "They've got more to be proud of than you Lynette"
 enc_reformers.237.b.tt: "\n§gThe Court holds that ghouls are entitled to equal treatment under the law, and that they may hold their pride parade.§!"
 #############################################################################################################
 enc_reformers.238.t: "The Liberation of Seattle"
-enc_reformers.238.d: "The sun rises this morning over a Seattle back in American hands for the first time in two hundred years.  The Brotherhood's headquarters in the Space Needle has been toppled by an airstrike, and surviving members of the Cause are helping track down Brotherhood holdouts. And while the Broken Coast has asked for terms, the only thing we'll give them are more bullets." 
+enc_reformers.238.d: "The sun rises this morning over a Seattle back in American hands for the first time in two hundred years.  The Brotherhood's headquarters in the Space Needle has been toppled by an airstrike, and surviving members of the Cause are helping track down Brotherhood holdouts. And while the Broken Coast has asked for terms, the only thing we'll give them are more bullets."
 enc_reformers.238.a: "On to Flagstaff!"
 #############################################################################################################
 enc_reformers.239.t: "The Liberation of Salt Lake City"
-enc_reformers.239.d: "This is Enclave Radio, bringing you the latest new from the front.  Yesterday the Reunited States drove Caesar and his tribal lackeys from Salt Lake City, known to some as New Canaan. \n\nTo our great surprise, during the fighting soldiers found the golden statue of the Angel Moroni, thought lost since the Great War. To many of Deseret, this is a sign from God that that America is back." 
+enc_reformers.239.d: "This is Enclave Radio, bringing you the latest new from the front.  Yesterday the Reunited States drove Caesar and his tribal lackeys from Salt Lake City, known to some as New Canaan. \n\nTo our great surprise, during the fighting soldiers found the golden statue of the Angel Moroni, thought lost since the Great War. To many of Deseret, this is a sign from God that that America is back."
 enc_reformers.239.a: "And so a people in darkness have seen a great light"
 #############################################################################################################
 enc_reformers.240.t: "The Old Country Rallies to the Flag"
@@ -1464,3 +1464,14 @@ enc_reformers.316.b: "Let's arm the raiders."
 enc_reformers.317.t: "Arming Patriots Tutorial"
 enc_reformers.317.d: "We have gained the ability to arm patriots. To do so, click on an NCR state and press the 'arm patriots' button from the state menu. States that have armed patriots will flip to our side and spawn militia units when we decide to start the Californian uprising. Arming patriots costs more political power each time it is used."
 enc_reformers.317.a: "Americans will always fight for freedom."
+#############################################################################################################
+enc_reformers.318.t: "Down Mexico Way"
+enc_reformers.318.d: "Mr. President, before the Great War America's reconstruction forces in Mexico operated under the aid of a powerful AI known as 'Tlaloc'. Although sadly the AI has never accepted our claim to be the legitimate US authority (doubtless due to a programming error), Tlaloc has lately broadcasted signals suggesting he is malfunctioning. Perhaps we should explore this?"
+enc_reformers.318.a: "Is Tlaloc not federal property?"
+enc_reformers.318.a.tt:0 "\n§lThe Enclave will send an expedition to recover data and resources from Mexico, but the results may be unpleasant...§!\n"
+enc_reformers.318.b:0 "Let sleeping gods lie."
+#############################################################################################################
+enc_reformers.319.t: "The Saviour of Mexico"
+enc_reformers.319.d: "Much of Mexico has fallen to Santa Anna.  His securitrons march through a cowed Gloria; his human soldiers threaten the coast of the Yucatan; and his AI is firmly emplaced in Tlaloc's Lair. \n\nBut the people of Mexico will not give up! And the threat from the mad AI has inspired many of them to come together for the first time in almost two centuries. Admiral Kinkaid, one of the few survivors of the Aztlan Empire, has taken command of resistance forces across Mexico to form what he has jokingly called the Mexican Navy. With Granite's urging, he flies the Mexican flag in defiance of the mad general."
+enc_reformers.319.a: "Mexicans, at the cry of war!"
+enc_reformers.319.a.tt:0 "\n§gDue to America's high Legitimacy, it can support Mexican resistance to Santa Anna!\n"

@@ -109,6 +109,7 @@ plunder_resources_desc:0 "Our troops need supplies, sometimes more than what we 
 plunder_equipment:0 "Requisition Equipment"
 plunder_equipment_desc:0 "There is plenty of weaponry to be requisitioned from the NCR cities, though some collateral damage might be inflicted during this process."
 state_lose_10_water: "Permanently reduce production of §YWater§!£water_texticon by §R10§!.\n"
+promises_of_peace_enclave:0 "The Reunited States will bring peace to everyone. eventually."
 #################################
 # Nevada Love
 #################################
@@ -132,7 +133,7 @@ ENC_promote__nevada_agenda_desc: "There is the land that I love the best, \nFair
 ENC_recruitment_drive_nevada: "Recruitment Drive"
 ENC_recruitment_drive_nevada: "Remind Nevada that not every people have as great a government as they do.  Playing some patriotic stories will encourage them to join the nation."
 ##############################
-# WAR MEASURES 
+# WAR MEASURES
 ##############################
 less_rations: "Reduce Rations"
 more_rations: "Increase Rations"
@@ -159,7 +160,7 @@ recover_travis_air_force_base_: "Secure the Travis Air Force Base"
 recover_vandenberg_air_force_base: "Secure the Vandenberg Air Force Base"
 FEV_mutation_crisis: "§RFEV PLAGUE MUTATION!§!"
 ##############################
-# RANGERS 
+# RANGERS
 ##############################
 ENC_rangers: "The Rangers Front"
 sabotage_infrastructure: "Sabotage Infrastructure"
@@ -171,7 +172,7 @@ enc_rangers_defense_plan_tt: "Unlocks the §YAnti-Ranger Defense Plan§! decisio
 enc_rangers_attack_plan_tt: "Unlocks the §YAnti-Ranger attack Plan§! decision."
 
 ##############################
-# RENO 
+# RENO
 ##############################
 kill_graffs: "Deal with the Van Graffs"
 spare_graffs: "Make a deal with the Van Graffs"
@@ -190,7 +191,7 @@ erb_aid_foe_legion: "Aid to [From.GetName]"
 ENC_gannon_doctrine: "Extending a Helping Hand"
 ENC_gannon_doctrine_desc: "By building economic ties to the people of the Waste, and protecting them from Raiders, we can gradually persuade them to rejoin the Continuing Experiment."
 ENC_granite_doctrine: "Taking Out the Trash"
-ENC_granite_doctrine_desc: "By taking down the raiders and tribals, we are defending Life, Liberty, and the Pursuit of Happiness."  
+ENC_granite_doctrine_desc: "By taking down the raiders and tribals, we are defending Life, Liberty, and the Pursuit of Happiness."
 erb_reunited_state: "Send Couriers to [From.GetName]"
 erb_reunited_state_desc: "Like all survivors in the Wasteland, the people of [From.GetName] feel cut off and alone.  Adding them to the Courier network is the first step in tying [From.GetNameDef] into our Great Society, reminding them of where they truly belong."
 ENC_couriers_tt: "§M[From.GetName]§! is integrated into the American economy and cultural sphere, and we can begin negotiations for them to reenter the Union."
@@ -224,7 +225,7 @@ erb_MOJ: "Break the Mojave Brotherhood"
 erb_FIE: "Face the Fiends"
 WBH_reformer_crisis: "The Dark Brotherhood Marches South"
 ##############################
-# PROPAGANDA 
+# PROPAGANDA
 ##############################
 ENC_radio_broadcasts: "Enclave Radio Broadcasts"
 ENC_radio_broadcasts__tt: "Unlocks the §YEnclave Radio Broadcasts§! decisions."
@@ -242,7 +243,7 @@ ENC_curb_wastelander_influence_desc:0 "Our rapid expansion has left a surprising
 ENC_curb_elite_influence: "Curb Elites Influence"
 ENC_curb_elite_influence_desc: "It appears that more and more power in our country is ending up in the hands of a select few individuals. And we are not one of them! We could risk antagonizing them by working to undermine their power and influence before it's too late."
 ##############################
-# SHIFT POLICY 
+# SHIFT POLICY
 ##############################
 extend_production_shifts: "Extend Production Shifts"
 extend_construction_shifts: "Extend Construction Shifts"
@@ -262,21 +263,21 @@ stability_5_or_more: "£stability_texticon §Y5§!"
 stability_5_or_more_blocked: "£stability_texticon §R5§!"
 
 ##############################
-# PRODUCTION 
+# PRODUCTION
 ##############################
 economy_decisions: "Economy Decisions"
 retool_machinery: "Retool Machinery"
 plunder_military_machinery: "Plunder Military Machinery"
 
 ##############################
-# CLONING 
+# CLONING
 ##############################
 build_cloning_facility: "Build cloning facility"
 cloning_experiment: "Cloning experiment"
 cloning_project: "Cloning project"
 
 ##############################
-# POLITICAL INFIGHTING 
+# POLITICAL INFIGHTING
 ##############################
 ENC_political_crisis: "§RPURISTS OUTNUMBER US!§!"
 
@@ -297,7 +298,7 @@ ENC_reform_wild_promises: "Wild Promises"
 ENC_reform_wild_promises_desc: "If all else fails, wild yet vague promises can buy us time. But in the long run they will hurt our credibility."
 
 ##############################
-# NCR INFILTRATION 
+# NCR INFILTRATION
 ##############################
 ENC_boost_civilian_economy: "Boost the Civilian Economy"
 ENC_boost_civilian_economy_desc: "By turning military workshops over to civilian use, we can turn, if not swords into plowshares, then laser guns into mining equipment."

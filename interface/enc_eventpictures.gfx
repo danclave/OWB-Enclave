@@ -1,4 +1,4 @@
-spriteTypes = {        
+spriteTypes = {
 	    SpriteType = {#enc_crashed_station
             name = "GFX_enc_crashed_station"
  		    texturefile = "gfx/event_pictures/enc_crashed_station.tga"
@@ -43,7 +43,7 @@ spriteTypes = {
             name = "GFX_event_enc_senate"
  		    texturefile = "gfx/event_pictures/event_enc_senate.tga"
  	    }
-		
+
 		SpriteType = {#event_Think_tank
             name = "GFX_event_enc_think_tank"
  		    texturefile = "gfx/event_pictures/event_enc_think_tank.tga"
@@ -245,7 +245,7 @@ spriteTypes = {
             name = "GFX_event_ENC_escape"
  		    texturefile = "gfx/event_pictures/event_ENC_escape.tga"
  	    }
-		
+
         SpriteType = {#event_enc_fiat_money
             name = "GFX_event_enc_fiat_money"
  		    texturefile = "gfx/event_pictures/event_enc_fiat_money.tga"
@@ -617,7 +617,10 @@ spriteTypes = {
  	    }
 		SpriteType = {#event_enc_veronica
             name = "GFX_event_enc_veronica"
- 		    texturefile = "gfx/event_pictures/event_enc_veronica".tga"
+ 		    texturefile = "gfx/event_pictures/event_enc_veronica.tga"
+ 	    }
+		SpriteType = {#mexico
+            name = "GFX_event_enc_mexico_pyramids"
+ 		    texturefile = "gfx/event_pictures/event_enc_mexico_pyramids.tga"
  	    }
 }
-

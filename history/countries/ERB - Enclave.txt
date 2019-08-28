@@ -8,25 +8,36 @@ oob = "ERB_2265"
 
 add_research_slot = 1
 set_technology = {
-    standard_weaponry_tech = 1
-	blunt_weaponry = 1j
-    tribal_civilization = 1
-    settled_civilization = 1
-    scientific_civilization = 1
-	destroyer_tech = 1
-	cruiser_tech = 1
-	battleship_tech = 1 
-	heavy_cruiser_tech = 1
-	basic_laser_weaponry = 1
-	improved_laser_weaponry  = 1
-	power_armour = 1
-	power_armour_t45d = 1 # scavanging reasons
-	power_armour_t51b = 1 # scavanging reasons
-	power_armour_enclave1 = 1
-	vertiberd_gunship = 1 
-	vertiberd_transport1 = 1 
-	support_weaponry = 1
-	security_protectron_tech = 1 	
+	elite_army = 1
+	standard_weaponry_tech = 1
+	melee_weaponry_tech_1 = 1
+	ballistic_weaponry_tech_1 = 1
+	tribal_civilization = 1
+	settled_civilization = 1
+	scientific_civilization = 1
+	nautics_tech_1 = 1
+	energy_weaponry_tech_1 = 1
+	energy_weaponry_tech_2 = 1
+	spec_ops_equipment_tech_1 = 1
+	spec_ops_equipment_tech_2 = 1
+	hardening_armour_tech = 1
+	simple_servo_tech = 1
+	stripped_pa_tech = 1
+	scav_pa_tech = 1
+	light_navy_hull_tech_1 = 1
+	waterproof_sealing_tech = 1
+	medium_navy_hull_tech_1 = 1
+	multi_deck_construction_tech = 1
+	heavy_navy_hull_tech_1 = 1
+	naval_module_tech = 1
+	naval_weapons_module_tech = 1
+	naval_support_module_tech = 1
+	naval_armour_tech_1 = 1
+	naval_communications_module_tech_1 = 1
+	robot_makeshift_automatons_tech  = 1
+	power_armour_enclave_1 = 1
+	vertibird_tech = 1
+	vertibird_cas_tech =1
 }
 
 set_country_flag = not_allowed_to_core_flag
@@ -73,7 +84,7 @@ set_rule = { can_join_factions = no }
 ###############################
 create_country_leader  = {
 	name = "Franklin Anderson"
-	desc = "Anderson_desc" 
+	desc = "Anderson_desc"
 	picture = "gfx/leaders/portrait_Anderson.dds"
 	expire = "3000.1.1"
 	ideology = militarist_technocracy
@@ -87,24 +98,24 @@ create_country_leader  = {
 	expire = "3000.1.1"
 	ideology = technocracy
 	traits = {}
-}		
+}
 
 create_country_leader = {
 	name = "Sergeant Dornan"
 	desc = Dornan_DESC
 	picture = "gfx/leaders/portrait_sarge.dds"
 	expire = "3000.1.1"
-	ideology = benevolent_dictatorship			
+	ideology = benevolent_dictatorship
 	traits = {
 		drill_sargeant
 	}
-}		
+}
 create_country_leader = {
 	name = "Chief Engineer R. Bishop"
 	desc = "Dornan_DESC"
 	picture = "gfx/leaders/ENC/Portrait_Enclave_Generic.dds"
 	expire = "3000.1.1"
-	ideology = town_hall_democracy			
+	ideology = town_hall_democracy
 	traits = {}
 }
 
@@ -221,15 +232,15 @@ add_ideas = the_remnants
 add_manpower = 500
 
 # 4rth of july
-country_event = { id = enc_reformers.23 days = 25 } 
+country_event = { id = enc_reformers.23 days = 25 }
 
- set_variable = { 
+ set_variable = {
 	var = enc_rebels_we_have_armed
 	value = 0
  }
- 
+
  # AI Strategies to guide the Enclave story
- 
+
  # we don't want this ever
  NCR = {
     add_ai_strategy = {

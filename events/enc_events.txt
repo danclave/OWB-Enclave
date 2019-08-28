@@ -1,5 +1,5 @@
 ﻿add_namespace = enc
- 
+
 country_event = {#1 - OUR ESCAPE
     id = enc.1
     title = enc.1.t
@@ -31,7 +31,7 @@ country_event = {#2 - unused
 	picture = GFX_event_ENC_secret
 
     is_triggered_only = yes
-    
+
 	option = { #looked for others
 		name = enc.2.a
 	}
@@ -43,9 +43,9 @@ country_event = {#3 - OUR CHOICE
 	picture = GFX_event_ENC_double_flag
 
     is_triggered_only = yes
-    
+
 	option = { # purists
-		name = enc.3.a 
+		name = enc.3.a
 		custom_effect_tooltip = enc.3.a.tt
 		hidden_effect = { # Purists take over
 			set_politics = {
@@ -57,10 +57,10 @@ country_event = {#3 - OUR CHOICE
 				}
 				ruling_party = elites
 				elections_allowed = no
-			}	
-		}			
-	}	
-	option = { # reformers 
+			}
+		}
+	}
+	option = { # reformers
 		name = enc.3.b
 		# trigger = {
 			# has_completed_focus = enc_reform #enable for releases
@@ -86,10 +86,10 @@ country_event = {#9   - FRANKLIN PAST - YOUTH
 	title = enc.9.t
 	desc = enc.9.d
 	picture = GFX_event_ENC_secret
-	
-	fire_only_once = yes	
+
+	fire_only_once = yes
     is_triggered_only = yes
-	
+
 	option = {#Stared down FH
 		name = enc.9.a
 		add_country_leader_trait = unbreakable_will
@@ -116,11 +116,11 @@ country_event = {#901 -	FRANKLIN PAST - TORTURE (UNUSED)
 	title = enc.901.t
 	desc = enc.901.d
 	picture = GFX_event_ENC_secret
-	
-	fire_only_once = yes	
+
+	fire_only_once = yes
     is_triggered_only = yes
-	
-	
+
+
 	option = {#Wrong callsign
 		name = enc.901.a
 		hidden_effect = {country_event = { id = enc.10 }}
@@ -139,11 +139,11 @@ country_event = {#10  - FRANKLIN PAST - SOLD
 	title = enc.10.t
 	desc = enc.10.d
 	picture = GFX_event_ENC_secret
-	
-	fire_only_once = yes	
+
+	fire_only_once = yes
     is_triggered_only = yes
-	
-	
+
+
 	option = {#CHEMULT
 		name = enc.10.a
 		create_wargoal = {
@@ -154,10 +154,10 @@ country_event = {#10  - FRANKLIN PAST - SOLD
 			name = enc_research_medicine
 			bonus = 0.5
 			uses = 1
-			category = hospital_tech
+			category = support_medical_tech_category
 		}
 		hidden_effect = {country_event = { id = enc.11 }} #next part
-		
+
 	}
 	option = {#EIGHTIES
 		name = enc.10.b
@@ -169,7 +169,7 @@ country_event = {#10  - FRANKLIN PAST - SOLD
 			name = motorized_bonus
 			bonus = 0.75
 			uses = 3
-			category = vehicle_tech
+			category = vehicle_tech_category
 		}
 		hidden_effect = {country_event = { id = enc.11 }}
 
@@ -180,11 +180,11 @@ country_event = {#11  - FRANKLIN PAST - ESCAPE
 	title = enc.11.t
 	desc = enc.11.d
 	picture = GFX_event_ENC_secret
-	
-	fire_only_once = yes	
-    is_triggered_only = yes	
-	
-	
+
+	fire_only_once = yes
+    is_triggered_only = yes
+
+
 	option = {# Revolt
 		name = enc.11.a
 		add_country_leader_trait = inspiring
@@ -204,22 +204,22 @@ country_event = {#15 - DOUGLAS DESERTS
 	title = enc.15.t
 	desc = enc.15.d
 	picture = GFX_event_ENC_vertibird
-	
-	fire_only_once = yes	
+
+	fire_only_once = yes
     is_triggered_only = no
 	trigger = {
 		has_completed_focus = enc_purity
-		focus_progress = { 
-			focus = enc_purge_opposition progress > 0.5 
-		} 
-	}	
-	mean_time_to_happen = {	days = 1 }	
-	
-	
+		focus_progress = {
+			focus = enc_purge_opposition progress > 0.5
+		}
+	}
+	mean_time_to_happen = {	days = 1 }
+
+
 	option = {#Good riddance
 		name = enc.15.a
 		add_manpower = -50
-		add_popularity = { ideology = intellectuals popularity = -0.2 } 
+		add_popularity = { ideology = intellectuals popularity = -0.2 }
 		create_country_leader  = {
 			name = "Adam Tailor"
 			desc = "Granite_desc" #placeholder
@@ -236,20 +236,20 @@ country_event = {#16 - In the Lair of the Bear
 	title = enc.16.t
 	desc = enc.16.d
 	picture = GFX_event_ENC_dark
-	
-	fire_only_once = yes	
+
+	fire_only_once = yes
     is_triggered_only = no
-	trigger = {	
-		tag = ERB 
+	trigger = {
+		tag = ERB
 		country_exists = NCR
 		NOT = {
 			is_ai = yes
 			has_country_flag = NCR_suspicious
 		}
 	}
-	mean_time_to_happen = {	days = 10 }	
-	
-	
+	mean_time_to_happen = {	days = 10 }
+
+
 	option = {#Better be careful
 		name = enc.16.a
 		custom_effect_tooltip = enc.16.a.tt
@@ -261,18 +261,18 @@ country_event = {#17 - NCR failsafe - unused
 	title = enc.17.t
 	desc = enc.17.d
 	picture = GFX_event_ENC_secret
-	
+
 	fire_only_once = no
     is_triggered_only = yes
-		
+
 	option = {#Pay up, son
 		name = enc.17.a
 		add_political_power = ROOT.ENC_hiding_cost
 	}
-	
+
 	option = { #WAR
 		name = enc.17.b
-		NCR = {declare_war_on = { target = ERB type = annex_everything }}	
+		NCR = {declare_war_on = { target = ERB type = annex_everything }}
 	}
 }
 country_event = {#18 - Reformer sympathies
@@ -280,12 +280,12 @@ country_event = {#18 - Reformer sympathies
 	title = enc.18.t
 	desc = enc.18.d
 	picture = GFX_event_ENC_secret
-	
-	fire_only_once = yes	
+
+	fire_only_once = yes
     is_triggered_only = no
-	trigger = {	has_completed_focus = enc_purity}	
+	trigger = {	has_completed_focus = enc_purity}
 	mean_time_to_happen = {	days = 40 }
-	
+
 	option = {#Make a show of finding and punishing
 		name = enc.18.a
 		add_manpower = -250
@@ -311,7 +311,7 @@ country_event = { #19 - Cafetaria incident
 	desc = enc.19.d
 	picture = GFX_event_ENC_secret
 	fire_only_once = yes
-	
+
 	trigger = {
 		tag = ERB
 		num_of_controlled_states < 20 # enclave is still small
@@ -337,7 +337,7 @@ country_event = { #20 - Disloyalty
 	desc = enc.20.d
 	picture = GFX_event_ENC_president_only
 	fire_only_once = no
-	
+
 	trigger = {
 		has_completed_focus = enc_purity
 		NOT = {
@@ -426,7 +426,7 @@ country_event = { #22 - Half mutant
 	desc = enc.22.d
 	picture = GFX_event_ENC_picture
 	fire_only_once = yes
-	
+
 	trigger = {
 		has_completed_focus = enc_purity
 	}
@@ -453,7 +453,7 @@ country_event = { #23 - Half mutant - sabotage
 	desc = enc.23.d
 	picture = GFX_event_ENC_picture
 	fire_only_once = yes
-	
+
 	trigger = {
 		has_country_flag = ignored_half_mutant
 		has_war_with = NCR
@@ -475,10 +475,10 @@ country_event = { #24 - super mutants spotted
 	title = enc.24.t
 	desc = enc.24.d
 	picture = GFX_event_ENC_mariposa2
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { # capture them
 		name = enc.24.a
 		add_manpower = -100
@@ -500,10 +500,10 @@ country_event = { #25 - FEV encountered
 	title = enc.25.t
 	desc = enc.25.d
 	picture = GFX_event_ENC_mariposa3
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { # Bring only pure sample
 		name = enc.25.a
 		add_political_power = 25
@@ -524,10 +524,10 @@ country_event = { #26 - Cloning succes
 	title = enc.26.t
 	desc = enc.26.d
 	picture = GFX_event_ENC_cloning_success
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { # Eureka!
 		name = enc.26.a
 		set_country_flag = enc_cloning_available_flag
@@ -539,10 +539,10 @@ country_event = { #27 - Cloning failure
 	title = enc.27.t
 	desc = enc.27.d
 	picture = GFX_event_ENC_cloning_failed
-	
+
 	is_triggered_only = yes
 	fire_only_once = no
-	
+
 	option = { # Damn!
 		name = enc.27.a
 		custom_effect_tooltip = enc.27.a.tt
@@ -573,27 +573,27 @@ country_event = { #28 - Mariposa landing
 	title = enc.28.t
 	desc = enc.28.d
 	picture = GFX_event_ENC_mariposa1
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = { # We go in
 		name = enc.28.a
 		hidden_effect = { country_event = { id = enc.24 } }
 	}
 }
 country_event = { #29 - fire mutie hunt event
-	id = enc.29 
-	hidden = yes 
+	id = enc.29
+	hidden = yes
 	fire_only_once = yes
-	
-	trigger = {	
+
+	trigger = {
 		tag = ERB
 		has_completed_focus = enc_purity
 		any_owned_state = {
 			NOT = { is_core_of = ERB }
 		}
-	}	
+	}
 	mean_time_to_happen = {
 		days = 300
 	}
@@ -613,7 +613,7 @@ country_event = { #30 - Fall of Sack city
 	desc = enc.30.d
 	picture = GFX_event_NCR_battle
 	fire_only_once = yes
-	
+
 	trigger = {
 		tag = ERB
 		controls_state = 135 # Sac City
@@ -637,7 +637,7 @@ country_event = { #31 - Fall of Shady Sands
 	desc = enc.31.d
 	picture = GFX_event_NCR_battle
 	fire_only_once = yes
-	
+
 	trigger = {
 		tag = ERB
 		controls_state   = 253 # Shady Sands
@@ -662,7 +662,7 @@ country_event = { #32 - Soldier out of uniform
 	desc = enc.32.d
 	picture = GFX_event_ENC_secret
 	fire_only_once = yes
-	
+
 	trigger = {
 		tag = ERB
 		has_idea = sargeant_dornan
@@ -680,7 +680,7 @@ country_event = { #32 - Soldier out of uniform
 		name = enc.32.b
 		add_war_support = -0.05
 		add_stability = 0.05
-	} 
+	}
 }
 country_event = { #33 - Crimson Caravan Encounter
 	id = enc.33
@@ -688,7 +688,7 @@ country_event = { #33 - Crimson Caravan Encounter
 	desc = enc.33.d
 	picture = GFX_event_ENC_secret # change
 	fire_only_once = no
-	
+
 	trigger = {
 		tag = ERB
 		has_country_flag = NCR_suspicious
@@ -708,13 +708,13 @@ country_event = { #33 - Crimson Caravan Encounter
 			var = suspicion_change_var
 			value = 5
 		}
-		change_suspicion = yes	
+		change_suspicion = yes
 	}
 	option = { # no witnesses
 		name = enc.33.b
 		if = {
 			limit = {
-				has_completed_focus = enc_reform			
+				has_completed_focus = enc_reform
 			}
 			set_temp_variable = { legitimacy_change_var = -0.02 }
 			change_legitimacy = yes
@@ -745,7 +745,7 @@ country_event = { #34 - remnants of Sack city
 	desc = enc.34.d
 	picture = GFX_event_ENC_secret
 	fire_only_once = yes
-	
+
 	trigger = {
 		tag = ERB
 		controls_state   = 135 # Sac City
@@ -778,7 +778,7 @@ country_event = { #35 - remnants of Shady Sands
 	desc = enc.35.d
 	picture = GFX_event_ARR_arroyo
 	fire_only_once = yes
-	
+
 	trigger = {
 		tag = ERB
 		controls_state   = 253 # Shady Sands
@@ -811,7 +811,7 @@ country_event = { #36 - remnants of the boneyard
 	desc = enc.36.d
 	picture = GFX_event_ENC_secret
 	fire_only_once = yes
-	
+
 	trigger = {
 		tag = ERB
 		controls_state   = 350 # Shady Sands
@@ -845,7 +845,7 @@ country_event = { #37 - Vengeance against Arroyo
 	desc = enc.37.d
 	picture = GFX_event_ENC_bloody_suit
 	fire_only_once = yes
-	
+
 	trigger = {
 		tag = ERB
 		controls_state   = 337 # Arroyo
@@ -867,13 +867,13 @@ country_event = { #38 - ANTI PUPPET
 	desc = enc.38.d
 	picture = GFX_event_ENC_president_only
 	fire_only_once = no
-	
+
 	trigger = {
 		ERB = {
 			has_completed_focus = enc_purity
 			num_subjects > 0
 		}
-		
+
 	}
 	mean_time_to_happen = {
 		days = 3
@@ -884,7 +884,7 @@ country_event = { #38 - ANTI PUPPET
 			limit = {
 				is_subject_of  = ERB
 			}
-			ERB = { 
+			ERB = {
 				annex_country = { target = PREV }
 			}
 		}
@@ -905,26 +905,26 @@ country_event = { #39 - Reduce plague if Desert rangers not allied with NCR
 	desc = enc.39.d
 	picture = GFX_event_FAV_plague
 	fire_only_once = yes
-	
+
 	trigger = {
 		NCR = {
 			has_idea = ENC_plague
 			OR = {
-				NOT = { 
+				NOT = {
 					is_in_faction_with = DES
 					is_in_faction_with = BOS
 				}
 				has_war_with = CES
-				has_civil_war = yes 
+				has_civil_war = yes
 			}
-		}		
+		}
 	}
 	mean_time_to_happen = {
 		days = 100
 		modifier = {
 			factor = 0.5 # If true multiply 500 by 0.4 = 200
 			NCR = { surrender_progress > 0.25 }
-		}		
+		}
 	}
 	option = { # Damn it
 		name = enc.39.a
@@ -944,7 +944,7 @@ country_event = { #40 - Hidden event to remove ncr_suspicious
 	picture = GFX_event_ENC_secret3
 	fire_only_once = yes
 	hidden = yes
-	
+
 	trigger = {
 		tag = ERB
 		ERB = { has_war_with = NCR}
@@ -966,7 +966,7 @@ country_event = { #41 - NCR finds out
 	picture = GFX_event_ENC_bloody_suit
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+
 	option = { # WAR noW!
 		name = enc.41.a
 		declare_war_on = { target = ERB type = annex_everything }
@@ -988,11 +988,11 @@ country_event = {#42 - On the border of the bull
 	title = enc.42.t
 	desc = enc.42.d
 	picture = GFX_event_CES_caesar
-	
-	fire_only_once = yes	
+
+	fire_only_once = yes
     is_triggered_only = no
-	trigger = {	
-		tag = ERB 
+	trigger = {
+		tag = ERB
 		has_completed_focus = enc_purity
 		is_neighbor_of = CES
 		strength_ratio = {
@@ -1003,9 +1003,9 @@ country_event = {#42 - On the border of the bull
 			country_exists = NCR
 		}
 	}
-	mean_time_to_happen = {	days = 30 }	
-	
-	
+	mean_time_to_happen = {	days = 30 }
+
+
 	option = {# Out of the frying pan...
 		name = enc.42.a
 		custom_effect_tooltip = enc.42.a.tt
@@ -1018,15 +1018,15 @@ country_event = {#43 - Pravus gaming reference
 	title = enc.43.t
 	desc = enc.43.d
 	picture = GFX_event_FAV_plague
-	
-	fire_only_once = yes	
+
+	fire_only_once = yes
     is_triggered_only = no
-	trigger = {	
+	trigger = {
 		date < 2280.01.01
 	}
-	mean_time_to_happen = {	days = 30 }	
-	
-	
+	mean_time_to_happen = {	days = 30 }
+
+
 	option = {# good
 		name = enc.43.a
 		add_political_power = 25
@@ -1049,24 +1049,24 @@ country_event = {#43 - Pravus gaming reference
 #################
 ## PICTURES
 #################
-# GFX_enc_ncr_rangers 
-# GFX_event_ENC_3_troopers 
-# GFX_event_ENC_assault_team 
-# GFX_event_ENC_bloody_suit 
-# GFX_event_ENC_cloning_failed 
-# GFX_event_ENC_cloning_success 
-# GFX_event_ENC_deathclaw 
+# GFX_enc_ncr_rangers
+# GFX_event_ENC_3_troopers
+# GFX_event_ENC_assault_team
+# GFX_event_ENC_bloody_suit
+# GFX_event_ENC_cloning_failed
+# GFX_event_ENC_cloning_success
+# GFX_event_ENC_deathclaw
 # GFX_event_ENC_double_flag
-# GFX_event_ENC_double_flag_long 
-# GFX_event_ENC_mariposa1 
-# GFX_event_ENC_mariposa2 
-# GFX_event_ENC_mariposa3 
-# GFX_event_ENC_minigun 
-# GFX_event_ENC_new_reno 
-# GFX_event_ENC_picture 
-# GFX_event_ENC_president_only 
-# GFX_event_ENC_rebuilding 
-# GFX_event_ENC_ruined_city 
-# GFX_event_ENC_secret 
-# GFX_event_ENC_secret2 
+# GFX_event_ENC_double_flag_long
+# GFX_event_ENC_mariposa1
+# GFX_event_ENC_mariposa2
+# GFX_event_ENC_mariposa3
+# GFX_event_ENC_minigun
+# GFX_event_ENC_new_reno
+# GFX_event_ENC_picture
+# GFX_event_ENC_president_only
+# GFX_event_ENC_rebuilding
+# GFX_event_ENC_ruined_city
+# GFX_event_ENC_secret
+# GFX_event_ENC_secret2
 # GFX_event_ENC_secret3
