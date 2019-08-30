@@ -3146,8 +3146,10 @@ ENC_nevada_tribals = {
 	}
 	erb_MOJ = {
 		visible = {
-			has_completed_focus = enc_reform_the_tribes
-			country_exists = MOJ
+			AND = {
+				has_completed_focus = enc_reform_the_tribes
+				country_exists = MOJ
+			}
 		}
 		available = {
 			NOT = {

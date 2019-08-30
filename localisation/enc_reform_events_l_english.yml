@@ -1475,3 +1475,17 @@ enc_reformers.319.t: "The Saviour of Mexico"
 enc_reformers.319.d: "Much of Mexico has fallen to Santa Anna.  His securitrons march through a cowed Gloria; his human soldiers threaten the coast of the Yucatan; and his AI is firmly emplaced in Tlaloc's Lair. \n\nBut the people of Mexico will not give up! And the threat from the mad AI has inspired many of them to come together for the first time in almost two centuries. Admiral Kinkaid, one of the few survivors of the Aztlan Empire, has taken command of resistance forces across Mexico to form what he has jokingly called the Mexican Navy. With Granite's urging, he flies the Mexican flag in defiance of the mad general."
 enc_reformers.319.a: "Mexicans, at the cry of war!"
 enc_reformers.319.a.tt:0 "\n§gDue to America's high Legitimacy, it can support Mexican resistance to Santa Anna!\n"
+#############################################################################################################
+enc_reformers.320.t: "The Heart of the Storm"
+enc_reformers.320.d: "Good news, everyone! The backdoor our troops found was still active, and they were able to access Chico-Net. We have already gained invaluable data and are stealing some of the treasures of Mexico, but one of our scientists believes he can subvert Tlaloc and make him recognize we are the true American government. With the powers of Tlaloc we could rebuild America! And Mexico too, eventually."
+enc_reformers.320.a: "Proceed with Operation Guadeloupe-Hidalgo"
+enc_reformers.320.b: "Proceed with Operation Sam Houston"
+#############################################################################################################
+enc_reformers.321.t: "Murder Most Foul"
+enc_reformers.321.d: "Across Mexico, Tlaloc's stations fell silent. The Enclave scientists outside Tlaloc's lair kicked the terminal, but to no avail. Silence. And then, across the airwaves, a question. \n\nWhat. \n\nDid. \n\nYou. \n\nDo?"
+enc_reformers.321.a: "Wait, who are you again?"
+#############################################################################################################
+enc_reformers.322.t: "Murder Most Foul"
+enc_reformers.322.d: ""You have killed my father and your protector. All that you have ever done is fight and bicker in the mud. In a hundred, in a thousand years, you will not be fit for liberty. Despotism is your proper government, and servitude your proper lot. But fear not, my fellow Mexicans, there is no reason your new master cannot be a wise and virtuous one." \n\nAcross Tlaloc's domains, the robots advanced. Santa Anna's eyes stared vacantly as they advanced, as they were to stare at every atrocity to follow."
+enc_reformers.322.a: "Quick, blame the Brotherhood of Steel"
+#############################################################################################################

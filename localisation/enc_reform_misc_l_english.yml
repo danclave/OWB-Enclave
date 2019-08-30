@@ -43,7 +43,7 @@ red_scare2:0 "Communism Paranoia"
 ###################################
 connect_to_power: "Connect to Grid"
 connect_to_power_tt: "Connect to Grid"
-connect_to_power_tt_delayed: "[!connect_to_power_click]Requires:\n[!connect_to_power_click_enabled]" 
+connect_to_power_tt_delayed: "[!connect_to_power_click]Requires:\n[!connect_to_power_click_enabled]"
 building_slot_available: "At least 1 Building Slot available"
 connected_to_power_tt: "Connected to Grid"
 connected_to_power_tt_delayed: "This state has been connected to our power grid.\n§RRemoving the grid will uncore the state.§!"
@@ -57,7 +57,7 @@ modifier_production_speed_civilian_power_grid_desc: ""
 modifier_production_speed_civilian_power_grid_factor: "§YCivilian Power Grid§! production speed"
 modifier_production_speed_civilian_power_grid_factor_desc: ""
 
-install_police_force_tt_delayed:0 "§gShould a province be too primitive to safely build a power grid, we will have to staff a police compound to keep it safe until we can develop the region further.§!\n\n[!install_police_force_click]\nRequires:\n[!install_police_force_click_enabled]" 
+install_police_force_tt_delayed:0 "§gShould a province be too primitive to safely build a power grid, we will have to staff a police compound to keep it safe until we can develop the region further.§!\n\n[!install_police_force_click]\nRequires:\n[!install_police_force_click_enabled]"
 install_police_force_tt: "Install Police Force"
 install_police_force: "Install Police Force (§Y100§! £manpower_texticon )"
 enc_police_force_installed: " Police force not already installed."
@@ -168,11 +168,11 @@ potentialPartner: "Potential Partner"
 ourEnemiesFriend: "Our enemy's friend"
 wontShootOnsight: "Won't shoot on sight"
 relations_increased_20: "Mutual Relations with §YEnclave§! improved by §G+20§!"
-relations_increased_30: "Mutual Relations with §YEnclave§! improved by §G+30§!" 
+relations_increased_30: "Mutual Relations with §YEnclave§! improved by §G+30§!"
 erb_independence_faction:0 "Anti NCR Alliance"
 integrated_economy: "Integrated Economies"
 sabotaged_relations: "Sabotaged Relations"
-
+enc_doomed_us_all:0 "Doomed us All"
 # POLITICS
 ENC_elites_party_anti_integration: "Anti-Integrationists"
 ENC_elites_party_anti_integration_long: "The Anti Integration Party"
@@ -309,4 +309,3 @@ enc_bos_recruits: "§YBrotherhood of Steel soldiers§! report for duty!"
 # £victory_point_texticon
 # £weather_text
 # £wing_rebase_status_texticon
-

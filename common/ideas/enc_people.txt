@@ -40,7 +40,7 @@ ideas = {
 				factor = 1
 			}
 		}
-		paladin_myers = {
+		paladin_myers1 = {
 			picture = BOS_generic6
 
 			allowed = {

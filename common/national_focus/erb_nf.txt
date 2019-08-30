@@ -781,6 +781,26 @@ focus_tree = {
 			change_suspicion = yes
 		}
 	}
+	focus = {#RADIO - Enclave Radio
+		id = enc_radio
+		icon = GFX_goal_enc_radio_reform
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_infiltrate_ncr
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_infiltrate_ncr }
+		completion_reward = {
+			add_ideas = { ENC_radio }
+			159 = {
+				add_building_construction = {
+					type = radar_station
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		cost = 4.3
+	}
 	focus = {#SUSPICION - stage raider attacks
 		id = enc_stage_raider_attacks
 		icon = GFX_goal_NCR_Mojave
@@ -828,26 +848,7 @@ focus_tree = {
 	}
 
 
- 	focus = {#RADIO - Enclave Radio
-		id = enc_radio
-		icon = GFX_goal_enc_radio_reform
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_infiltrate_ncr
-		x = 0
-		y = 1
-		prerequisite = { focus = enc_infiltrate_ncr }
-		completion_reward = {
-			add_ideas = { ENC_radio }
-			159 = {
-				add_building_construction = {
-					type = radar_station
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		cost = 4.3
-	}
+
 
 	focus = {#RADIO - Red Menace
 		id = enc_red_menace
@@ -1149,19 +1150,19 @@ focus_tree = {
 			VLT = {
 				or = {
 					has_country_leader = {
-						id = 910
+						id = 10041
 						ruling_only = yes
 						name = "First Citizen Lynette"
 					}
 					has_country_leader = {
-						id = 912
+						id = 10043
 						ruling_only = yes
 						name = "Security Chief Wallace"
 					}
 					and = {
 						ERB = { has_completed_focus = enc_accept_ghouls }
 						has_country_leader = {
-							id = 911
+							id = 10042
 							ruling_only = yes
 							name = "Festus"
 						}
@@ -4457,6 +4458,36 @@ focus = {#Legion Border
 		add_ideas = ENC_follower_schools
 		}
 	}
+	focus = {#NEVADA - Follower Schooling
+		id = enc_reform_the_tribes
+		icon = GFX_goal_enc_reform_the_tribes
+		cost = 3
+		prerequisite = { focus = enc_the_state_of_nevada}
+		relative_position_id = enc_the_state_of_nevada
+		x = -4.5
+		y = 3
+		completion_reward = {
+		custom_effect_tooltip = enc_reform_the_tribes_tt
+		}
+	}
+
+	focus = {#NEVADA - Agriculture
+		id = enc_department_agriculture
+		icon = GFX_KHA_focus_farm_agriculture
+		cost = 5.8
+		prerequisite = { focus = enc_reform_the_tribes }
+		prerequisite = { focus = enc_follower_schooling_nevada }
+		relative_position_id = enc_reform_the_tribes
+		x = 1
+		y = 1
+		completion_reward = {
+			set_temp_variable = {
+				var = legitimacy_change_var
+				value = 0.05
+			}
+			change_legitimacy = yes
+		}
+	}
 	focus = {#NEVADA - Refugees
 		id = enc_settle_mormons
 		icon = GFX_goal_NCN_Blessed_Are_The_Merciful
@@ -4475,35 +4506,6 @@ focus = {#Legion Border
 		}
 	}
 
-focus = {#NEVADA - REform Tribes
-		id = enc_reform_the_tribes
-		icon = GFX_goal_enc_reform_the_tribes
-		cost = 5.8
-		prerequisite = { focus = enc_the_state_of_nevada}
-		relative_position_id = enc_the_state_of_nevada
-		x = -4.5
-		y = 3
-		completion_reward = {
-			custom_effect_tooltip = enc_reform_the_tribes_tt
-		}
-	}
-focus = {#NEVADA - Agriculture
-		id = enc_department_agriculture
-		icon = GFX_KHA_focus_farm_agriculture
-		cost = 5.8
-		prerequisite = { focus = enc_reform_the_tribes }
-		prerequisite = { focus = enc_follower_schooling_nevada }
-		relative_position_id = enc_reform_the_tribes
-		x = 1
-		y = 1
-		completion_reward = {
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = 0.05
-			}
-			change_legitimacy = yes
-		}
-}
 
 focus = {#NEVADA - End
 		id = enc_civil_society
@@ -4694,7 +4696,7 @@ focus = {#NEVADA - second city
 		available = { has_full_control_of_state = 211 }
 		prerequisite = { focus = Enc_Second_City }
 		completion_reward = {
-		set_technology = { securitron_2_tech = 1 }
+		set_technology = { robot_securitron_tech_2  = 1 }
 		add_ideas = securitron2
 			}
 		}
@@ -6028,7 +6030,7 @@ focus = {#NEVADA - second city
 			add_political_power = 100
 		}
 	}
-		focus = {#Purity - protectors of humanity
+	focus = {#Purity - protectors of humanity
 		id = enc_protectors
 		icon = GFX_goal_shield_enc_wip
 		ai_will_do = { factor = 1 }
@@ -6046,8 +6048,21 @@ focus = {#NEVADA - second city
 			}
 		}
 		cost = 5.8
-
- }
+	 }
+	focus = {#Purist - Remember Navarro
+		id = enc_remember_navarro
+		icon = GFX_goal_enc_remember
+		prerequisite = { focus = enc_protectors }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_protectors
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_war_support = 0.1
+			add_political_power = 100
+		}
+	 }
   	focus = {#Purity - God Bless the Enclave
 		id = enc_god_bless
 		icon = GFX_goal_enc_sword_cross
@@ -6138,22 +6153,147 @@ focus = {#NEVADA - second city
 			swap_ideas = {remove_idea = ENC_radio add_idea = ENC_radio_eyebots}
 		}
 	}
-
- 	focus = {#Purist - Remember Navarro
-		id = enc_remember_navarro
-		icon = GFX_goal_enc_remember
-		prerequisite = { focus = enc_protectors }
+	focus = {#SIERRA ------------------------ THE SIERA ARMY DEPOT ------------------------------
+		id = enc_depot_start
+		icon =GFX_goal_generic_walls_focus
+		prerequisite = { focus = enc_purity }
 		ai_will_do = { factor = 1 }
-		relative_position_id = enc_protectors
-		x = 0
+		relative_position_id = enc_purity
+		x = -13
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_war_support = 0.1
 			add_political_power = 100
+			159 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {#SIERRA - Rebuild the airstrip
+		id = enc_depot_airport
+		icon = GFX_goal_enc_verti
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_depot_start}
+		relative_position_id = enc_depot_start
+		x = -3
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			159 = {
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = { type = vb_transport_plane_equipment amount = 50 producer = ERB }
+			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 100 producer = ERB }
 		}
 	}
 
+
+	focus = {#SIERRA - reprogram robot defences
+		id = enc_depot_robot
+		icon = GFX_goal_generic_robots_focus
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_depot_start}
+		relative_position_id = enc_depot_start
+		x = -1
+		y = 1
+		cost = 5.8
+
+		completion_reward = {
+			custom_effect_tooltip = enc_depot_robot_tt
+
+			add_tech_bonus = {
+				name = robotics_armour_bonus
+				bonus = 0.5
+				uses = 1
+				category = robotics_tech_category
+			}
+			hidden_effect = {
+				set_technology = { robot_protectron_tech_1 = 1 }
+				load_oob = enc_robots
+			}
+		}
+	}
+	focus = {#SIERRA - Excevate the lower departments
+		id = enc_depot_lower
+		icon = GFX_goal_generic_construction2
+		prerequisite = {focus = enc_depot_start}
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_depot_start
+		x = 1
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 600 producer = ERB }
+			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 400 producer = ERB }
+			add_resource = { type = advanced amount = 16 state = 159 }
+			add_resource = { type = circuitry amount = 30 state = 159 }
+		}
+	}
+	focus = {#SIERRA - The Archives
+		id = enc_depot_research
+		icon = GFX_goal_generic_data_focus
+		prerequisite = {focus = enc_depot_start}
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_depot_start
+		x = 3
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			set_technology = {
+				gauss_weaponry_1 = 1
+			}
+			add_tech_bonus = {
+				ahead_reduction = 2
+				uses = 2
+				category = energy_weaponry_tech_category
+			}
+			add_tech_bonus = {
+				ahead_reduction = 2
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+
+	focus = {#SIERRA - Our Base of Operations
+		id = enc_depot_end
+		icon = GFX_goal_enc_fort
+		prerequisite = {focus = enc_depot_research}
+		prerequisite = {focus = enc_depot_lower}
+		prerequisite = {focus = enc_depot_robot}
+		prerequisite = {focus = enc_depot_airport}
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_depot_start
+		x = 0
+		y = 2
+		cost = 5.8
+		completion_reward = {
+			add_stability = 0.2
+			159 = { #black rock
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 8478 #Black Rock
+					level = 6
+					instant_build = yes
+				}
+			}
+		}
+	}
 	focus = {#SIERRA - 2- PA
 		id = enc_depot_armor
 		icon = GFX_goal_enc_power_armor_focus
@@ -6816,143 +6956,6 @@ focus = {#NEVADA - second city
 		cost = 8.6
 		completion_reward = {
 			custom_effect_tooltip = enc_cloning_tt
-		}
-	}
-	focus = {#SIERRA ------------------------ THE SIERA ARMY DEPOT ------------------------------
-		id = enc_depot_start
-		icon =GFX_goal_generic_walls_focus
-		prerequisite = { focus = enc_purity }
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_purity
-		x = -13
-		y = 1
-		cost = 5.8
-		completion_reward = {
-			add_political_power = 100
-			159 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 4
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {#SIERRA - Rebuild the airstrip
-		id = enc_depot_airport
-		icon = GFX_goal_enc_verti
-		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_depot_start}
-		relative_position_id = enc_depot_start
-		x = -3
-		y = 1
-		cost = 5.8
-		completion_reward = {
-			159 = {
-				add_building_construction = {
-					type = air_base
-					level = 4
-					instant_build = yes
-				}
-			}
-			add_equipment_to_stockpile = { type = vb_transport_plane_equipment amount = 50 producer = ERB }
-			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 100 producer = ERB }
-		}
-	}
-	focus = {#SIERRA - reprogram robot defences
-		id = enc_depot_robot
-		icon = GFX_goal_generic_robots_focus
-		ai_will_do = { factor = 1 }
-		prerequisite = {focus = enc_depot_start}
-		relative_position_id = enc_depot_start
-		x = -1
-		y = 1
-		cost = 5.8
-
-		completion_reward = {
-			custom_effect_tooltip = enc_depot_robot_tt
-
-			add_tech_bonus = {
-				name = robotics_armour_bonus
-				bonus = 0.5
-				uses = 1
-				category = robotics_tech_category
-			}
-			hidden_effect = {
-				set_technology = { robot_protectron_tech_1 = 1 }
-				load_oob = enc_robots
-			}
-		}
-	}
-	focus = {#SIERRA - Excevate the lower departments
-		id = enc_depot_lower
-		icon = GFX_goal_generic_construction2
-		prerequisite = {focus = enc_depot_start}
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_depot_start
-		x = 1
-		y = 1
-		cost = 5.8
-		completion_reward = {
-			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 600 producer = ERB }
-			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 400 producer = ERB }
-			add_resource = { type = advanced amount = 16 state = 159 }
-			add_resource = { type = circuitry amount = 30 state = 159 }
-		}
-	}
-	focus = {#SIERRA - The Archives
-		id = enc_depot_research
-		icon = GFX_goal_generic_data_focus
-		prerequisite = {focus = enc_depot_start}
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_depot_start
-		x = 3
-		y = 1
-		cost = 5.8
-		completion_reward = {
-			set_technology = {
-				gauss_weaponry_1 = 1
-			}
-			add_tech_bonus = {
-				ahead_reduction = 2
-				uses = 2
-				category = energy_weaponry_tech_category
-			}
-			add_tech_bonus = {
-				ahead_reduction = 2
-				uses = 1
-				category = industry
-			}
-		}
-	}
-	focus = {#SIERRA - Our Base of Operations
-		id = enc_depot_end
-		icon = GFX_goal_enc_fort
-		prerequisite = {focus = enc_depot_research}
-		prerequisite = {focus = enc_depot_lower}
-		prerequisite = {focus = enc_depot_robot}
-		prerequisite = {focus = enc_depot_airport}
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_depot_start
-		x = 0
-		y = 2
-		cost = 5.8
-		completion_reward = {
-			add_stability = 0.2
-			159 = { #black rock
-				add_extra_state_shared_building_slots = 6
-				add_building_construction = {
-					type = arms_factory
-					level = 4
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					province = 8478 #Black Rock
-					level = 6
-					instant_build = yes
-				}
-			}
 		}
 	}
 

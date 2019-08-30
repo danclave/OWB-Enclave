@@ -817,7 +817,9 @@ country_event = {#25 - NCR - CES War
 		}
 	}
 	fire_only_once = no
-
+	mean_time_to_happen = {
+		days = 10
+	}
 	option = {# We could intervene
 		name = enc_reformers.25.a
 		custom_effect_tooltip = enc_reformers.25.a.tt
@@ -1831,8 +1833,10 @@ country_event = { #59 - Power grid sabotaged!
     title = enc_reformers.59.t
     desc = enc_reformers.59.d
     picture = GFX_event_enc_power_grid
-    is_triggered_only = no
-	allowed = { original_tag = ERB }
+	is_triggered_only = no
+	mean_time_to_happen = {
+		days = 60
+	}
 	trigger = {
 		OR = {
 			has_idea = enc_NCR_resistance
@@ -2415,6 +2419,9 @@ country_event = {#84 - Unpowered province!
 			has_state_flag = needs_civilian_power_grid
 			civilian_power_grid < 1
 		}
+	}
+	mean_time_to_happen = {
+		days = 15
 	}
 	option = {# Oh well
 		name = enc_reformers.84.a
@@ -3180,81 +3187,69 @@ country_event = {#110 - BOS Legionaries
 		name = enc_reformers.110.a
 		custom_effect_tooltip = enc_reformers.110.a.tt
 		hidden_effect = {
-				CES = {
-					set_technology = {
-							power_armour = 1
-							servo_motors = 1
-							mounted_cooler = 1
-							anti_tank_tech = 1
-							anti_tank_tech_2 = 1
-							anti_tank_tech_3 = 1
-							anti_tank_tech_4 = 1
-							laser_tech = 1
-							laser_tech_2 = 1
-							laser_tech_3 = 1
-							laser_tech_4 = 1
-					}
-						division_template = { name = "Brotherhood Expeditionary Force"
-								division_names_group = Power_ARMOR_01
-								regiments = {
-									power_armour = { x = 0 y = 0 }
-									power_armour = { x = 0 y = 1 }
-									power_armour = { x = 0 y = 2 }
-									power_armour  = { x = 1 y = 0 }
-									power_armour  = { x = 1 y = 1 }
-									power_armour  = { x = 1 y = 2 }
-									power_armour  = { x = 1 y = 3 }
-										}
-								support = {
-									anti_tank_company = { x = 0 y = 0 }
-									laser_company = { x = 0 y = 1 }
-									}
-								}
+			CES = {
+				set_technology = {
+					simple_servo_tech = 1
+					stripped_pa_tech = 1
+					scav_pa_tech = 1
 				}
-				215 = {
-					create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
-							owner = CES
-							}
-					create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
-						owner = CES
-							}
-					create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
-						owner = CES
-							}
-					create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
-						owner = CES
-							}
-					create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
-						owner = CES
-							}
-					create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
-						owner = CES
-							}
-					create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
-						owner = CES
-						}
-					create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
-						owner = CES
-						}
-					create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
-						owner = CES
-						}
-					create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
-						owner = CES
-						}
-					create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
-						owner = CES
-						}
-					create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
-						owner = CES
-						}
-					create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
-						owner = CES
-						}
-					}
+			division_template = { name = "Brotherhood Expeditionary Force"
+				division_names_group = Power_ARMOR_01
+				regiments = {
+					power_armour = { x = 0 y = 0 }
+					power_armour = { x = 0 y = 1 }
+					power_armour = { x = 0 y = 2 }
+					power_armour  = { x = 1 y = 0 }
+					power_armour  = { x = 1 y = 1 }
+					power_armour  = { x = 1 y = 2 }
+					power_armour  = { x = 1 y = 3 }
+				}
+			}
+			215 = {
+				create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
+					owner = CES
+				}
+				create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
+					owner = CES
+				}
+				create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
+					owner = CES
+				}
+				create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
+					owner = CES
+				}
+				create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
+					owner = CES
+				}
+				create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
+					owner = CES
+				}
+				create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
+					owner = CES
+				}
+				create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
+					owner = CES
+				}
+				create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
+					owner = CES
+				}
+				create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
+					owner = CES
+				}
+				create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
+					owner = CES
+				}
+				create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
+					owner = CES
+				}
+				create_unit = { division = "name = \"Midwestern Expedition\"  division_template = \"Brotherhood Expeditionary Force\"  start_experience_factor = 0.28"
+				owner = CES
+				}
+			}
 				}
 			}
 		}
+	}
 country_event = {#111 Turn Off Radio
 	id = enc_reformers.111
 	title = enc_reformers.111.t
@@ -3800,15 +3795,14 @@ country_event = {#122
 	add_stability = -0.05
 		}
 	 option = {# Nice
-	name = enc_reformers.122.b
-	trigger = { has_country_flag = leader_charismatic 	}
-	add_tech_bonus = {
-				name = electronics_bonus
-				bonus = 0.5
-				uses = 2
-				category = electronics
-			}
-
+		name = enc_reformers.122.b
+		trigger = { has_country_flag = leader_charismatic 	}
+		add_tech_bonus = {
+			name = electronics_bonus
+			bonus = 0.5
+			uses = 2
+			category = electronics
+		}
  		}
 	option = {# Evil
 	name = enc_reformers.122.c
@@ -4253,7 +4247,7 @@ option = {#	Yayy
 				name = naval_doc_bonus
 				bonus = 0.5
 				uses = 2
-				category = naval_doctrine
+				category = cat_naval_doctrine
 			}
 		}
 option = {#	Yayy
@@ -5261,7 +5255,7 @@ country_event = { #178- Vertibird Crash
 				name = air_bonus
 				bonus = 0.5
 				uses = 2
-				category = air_equipment
+				category = air_equipment_tech_category
 				}
 			}
 		}
@@ -7336,12 +7330,6 @@ country_event = {#251 - coop
 	picture = GFX_event_ENC_double_flag_long
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		tag = NCR
-		ERB = {has_completed_focus = enc_reform }
-		is_ai = no
-	}
-	mean_time_to_happen = {days = 30 }
 	option = {# Come on
 		name = enc_reformers.251.a
 		add_popularity = { ideology = intellectuals popularity = 0.05 }
@@ -8100,10 +8088,11 @@ country_event = {#318 - The Mexican Expedition
 		has_completed_focus = enc_reform
 		date > 2276.01.01
 	}
-	option = { # Good to know
+	option = { # Whee
 		name = enc_reformers.318.a
 		add_political_power = -5
 		custom_effect_tooltip = enc_reformers.318.a.tt
+		country_event = { id = enc_reformers.320 }
 	}
 	option = { # Good to know
 		name = enc_reformers.318.b
@@ -8122,7 +8111,94 @@ country_event = {#319 - The United States of Mexico!
 		custom_effect_tooltip = enc_reformers.319.a.tt
 	}
 }
+country_event = {#320 - The Mexican Expedition
+	id = enc_reformers.320
+	title = enc_reformers.320.t
+	desc = enc_reformers.320.d
+	picture =  GFX_event_enc_mexico_pyramids
+	is_triggered_only = yes
 
+	option = { # Good to know
+		name = enc_reformers.320.a
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 4
+			category = robotics_tech_category
+		}
+		hidden_effect = {
+			scoped_sound_effect = deathscream
+			country_event = { id = enc_reformers.321 }
+			goto_state = 769
+		}
+	}
+	option = { # Good to know
+		name = enc_reformers.320.b
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 4
+			category = robotics_tech_category
+		}
+		hidden_effect =  {
+			scoped_sound_effect = deathscream
+			country_event = { id = enc_reformers.321 }
+			goto_state = 769
+		}
+	 }
+}
+
+country_event = {#321 - Mad General
+	id = enc_reformers.321
+	title = enc_reformers.321.t
+	desc = enc_reformers.321.d
+	is_triggered_only = YES
+
+	option = { # Good to know
+		name = enc_reformers.321.a
+		TLA = {
+			every_owned_state = {
+				add_core_of = ARM
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = TLA
+				}
+				set_state_flag = do_not_decimate
+			}
+		}
+		ARM = {
+			annex_country = { target = TLA  transfer_troops = yes }
+		}
+		country_event = { id = enc_reformers.322 }
+	}
+}
+country_event = {#322 - Mad General
+	id = enc_reformers.322
+	title = enc_reformers.322.t
+	desc = enc_reformers.322.d
+	is_triggered_only = YES
+	picture = GFX_event_robots_3
+	option = { # Good to know
+		name = enc_reformers.322.a
+		ARM = {
+			every_other_country = {
+				limit = {
+					is_mexican = yes
+				}
+				create_wargoal = { type = annex_everything target = ROOT }
+			}
+		}
+		every_country = {
+			limit = {
+				is_mexican = yes
+				not = { tag = ARM }
+			}
+			add_opinion_modifier = { modifier = enc_doomed_us_all target = BOS }
+		}
+
+	}
+}
 #################
 ## IDEAS
 #################
