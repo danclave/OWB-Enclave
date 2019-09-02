@@ -97,7 +97,7 @@ ENC_rise_slaves_des: "It's time to remind Caesar that Americans will always figh
 ###################################
 # FLAGS
 ###################################
-enc_mid_game: "The NCR has been occupied for a while."
+enc_mid_game: "Some time has passed since the occupation."
 enc_barons1: "The Barons Have Established Order"
 enc_barons2: "Barons consolidate power"
 enc_red_menace_flag: "Granite Must Be Afraid of The Red Menace"

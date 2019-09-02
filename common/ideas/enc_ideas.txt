@@ -484,7 +484,6 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.05
-				political_power_gain = 0.05
 				consumer_goods_factor = 0.05
 			}
 		}
@@ -500,7 +499,6 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.08
-				political_power_gain = 0.05
 				consumer_goods_factor = 0.05
 				production_factory_start_efficiency_factor = 0.10
 			}
@@ -517,7 +515,7 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.03
-				political_power_gain = 0.10
+				political_power_gain = 0.05
 				consumer_goods_factor = 0.05
 				conscription = 0.05
 			}
@@ -534,7 +532,7 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.08
-				political_power_gain = 0.05
+				political_power_gain = -0.05
 				consumer_goods_factor = 0.05
 			}
 		}
@@ -549,7 +547,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   political_power_gain = 0.20
+			   political_power_gain = 0.10
 			   decryption_factor = 0.2
 			}
 		}
@@ -564,7 +562,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   political_power_gain = 0.30
+			   political_power_gain = 0.15
 			   decryption_factor = 0.10
 			   encryption_factor = -0.10
 			}
@@ -580,7 +578,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   political_power_gain = 0.10
+			   political_power_gain = 0.20
 			   decryption_factor = 0.10
 			   encryption_factor = -0.10
 			}
@@ -596,7 +594,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {			
-			   political_power_gain = 0.30
+			   political_power_gain = 0.20
 			   decryption_factor = 0.10
 			   encryption_factor = -0.10
 			   consumer_goods_factor = -0.05
@@ -616,7 +614,7 @@ ideas = {
 			   intellectuals_drift = -0.33				
 			   }
 		}
-		ENC_radio_civilian_new = {  
+		ENC_radio_civilian_new = {
 			picture = enc_radio
 			allowed = { 
 				always = no
@@ -627,7 +625,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   political_power_gain = 0.40
+			   political_power_gain = 0.25
 			   decryption_factor = 0.10
 			   encryption_factor = -0.10
 			}
@@ -643,12 +641,11 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   political_power_gain = 0.20
+			   political_power_gain = 0.15
 			   decryption_factor = 0.2
 			   encryption_factor = 0.10
 			}
-		}
-		
+		}		
 		enc_radio_military_updgrade = {  
 			picture = enc_radio
 			allowed = { 
@@ -675,7 +672,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   political_power_gain = 0.20
+			   political_power_gain = 0.15
 			   decryption_factor = 0.2
 			   encryption_factor = 0.20
 			}
@@ -780,7 +777,6 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				conscription_factor = -0.10
-				political_power_gain = 0.10
 				enemy_partisan_effect = -0.1
 				stability_factor = 0.05
 			}
@@ -813,6 +809,7 @@ ideas = {
 			modifier = {
 				conscription_factor = -0.05
 				enemy_partisan_effect = -0.1
+				political_power_gain = 0.10
 			}
 		}
 		ENC_underworld_ties = {  
@@ -1757,7 +1754,6 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				conscription_factor = -0.10
-				political_power_gain = 0.10
 				enemy_partisan_effect = -0.1
 				stability_factor = 0.05
 			}
@@ -2207,7 +2203,7 @@ ideas = {
 				stability_factor = 0.10
 			}
 		} 
-		Enc_Hacking = {  
+		enc_hacking = {  
 			picture = enc_radio
 			allowed = { 
 				always = no
@@ -2218,7 +2214,7 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   political_power_gain = 0.20
+			   political_power_gain = 0.10
 			   decryption_factor = 0.2
 			}
 		}
@@ -2447,7 +2443,7 @@ ideas = {
 				army_org_factor = -0.3
 				army_attack_factor = -0.3
 				army_defence_factor = -0.3
-				}
+			}
 		}
 		ENC_nuke = {  
 			picture = ENG_the_war_to_end_all_wars

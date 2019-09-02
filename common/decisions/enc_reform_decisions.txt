@@ -1037,6 +1037,7 @@ ENC_infiltrating_NCR = {
 		complete_effect = { country_event = {id = enc_reformers.204 }
 		}
 	}
+	
 	enc_NCR_seize_dayglow = {
 		icon = decision_plasma
 		priority = 300
@@ -1053,7 +1054,7 @@ ENC_infiltrating_NCR = {
 		complete_effect = {
 			custom_effect_tooltip = enc_NCR_seize_dayglow.tt
 			hidden_effect = {
-				every_other_country = {
+				random_country = {
 					limit = {
 						has_full_control_of_state = 63 #Dayglow
 					}
@@ -1074,7 +1075,7 @@ ENC_infiltrating_NCR = {
 
 		available = {
 			has_completed_focus = enc_american_dream
-				}
+		}
 		visible = {
 			tag = ERB
 			NCR = {exists = no }
@@ -1083,7 +1084,7 @@ ENC_infiltrating_NCR = {
 		complete_effect = {
 			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
 			hidden_effect = {
-				every_other_country = {
+				random_country = {
 					limit = {
 						has_full_control_of_state = 253 # Shady Sands
 					}
@@ -1110,7 +1111,7 @@ ENC_infiltrating_NCR = {
 		complete_effect = {
 			custom_effect_tooltip = enc_NCR_seize_shady_sands.tt
 			hidden_effect = {
-				every_other_country = {
+				random_country = {
 					limit = {
 						has_full_control_of_state = 135 # Shady Sands
 					}

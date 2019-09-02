@@ -33,7 +33,7 @@ enc_reformers.4.b:0 "There is no place for his kind here."
 enc_reformers.4.a.tt:0 "Unlocks as a political advisor: "
 ########################################################################################
 enc_reformers.5.t:0 "Dealing with Bishops"
-enc_reformers.5.d:0 "The Bishops may have been the most powerful family in New Reno, a dangerous man for many reasons, one of which are his numerous political connections in the NCR. Mr. Bishop's gangsters were loyal enough to face down the other families, but the sight of X-01 power armor sent them scattered. He has retreated to his mansion, accompanied by only his closest and most loyal, surrounded by our forces and trapped."
+enc_reformers.5.d:0 "The Bishops may have been the most powerful family in New Reno. Mr. Bishop himself is a dangerous man for many reasons, one of which are his numerous political connections in the NCR. The crime lord's gangsters were loyal enough to face down the other families, but the sight of X-01 power armor sent them scattered. He has retreated to his mansion, accompanied by only his closest and most loyal, surrounded by our forces and trapped."
 enc_reformers.5.a:0 "Focus on capturing their assets."
 enc_reformers.5.b:0 "Focus on apprehending the leader."
 ########################################################################################
@@ -485,7 +485,7 @@ enc_reformers.87.a: "Play Ball!"
 enc_reformers.87.b: "Back to work."
 ################################################################################################################
 enc_reformers.88.t: "Cause of the Great War."
-enc_reformers.88.d: "As most Americans know, this world wasn't always a grim-dark land inhabited by raiders and deathclaws.  As we reunite the nation, many are still wondering who caused the Great War. The President could blame the Chinese to build up support, but most intelligent Americans recognize we made mistakes to.  When asked, the President said . . ."
+enc_reformers.88.d: "As most Americans know, this world wasn't always a grim-dark land inhabited by raiders and deathclaws.  As we reunite the nation, many are still wondering who caused the Great War. The President could blame the Chinese to build up support, but most intelligent Americans recognize we made mistakes too.  When asked, the President said . . ."
 enc_reformers.88.a: "We will never forgive the Chinese."
 enc_reformers.88.b: "We will never repeat the mistakes of the past."
 ################################################################################################################
@@ -1068,7 +1068,7 @@ enc_reformers.197.a: "Maybe Caesar should invest in some modern medicine"
 enc_reformers.198.t: "FEV Outbreak"
 enc_reformers.198.d: "Even though the Legion used FEV against its enemies to the east, and we have the ability to synthesize a vaccine, we chose to spend our time pursuing other matters.  Now the Legion has deployed FEV against our military to great effect.  We can listen to Dr. Gannon and vaccinate our population, but it will not be ready for some time."  
 enc_reformers.198.a: "But I thought vaccines turned you into a ghoul!"
-enc_reformers.198.a.tt: "\nSeriously, §Mvaccinations§! save lives.\n"
+enc_reformers.198.a.tt: "\nThe §YVaccinations§! focus will remove the plague.\n"
 #############################################################################################################
 enc_reformers.199.t: "Remember the Oil Rig"
 enc_reformers.199.d: "Across the nation, flags are at half mast today in honor of President Richardson and the brave men and women of the Enclave whose lives were taken in a tragic terrorist attack in on the United States government's redoubt on the Poseidon Oil Rig. A center of biological research and aid programs, the oil rig was cruelly destroyed by a terrorist who blew up its clean, efficient nuclear reactor. President Granite has decreed today Remembrance Day, a national holiday to mourn those among us whose lives were cruelly taken by raiders, vandals, and terrorists.  This is Enclave Radio, promising you that they are gone, but not forgotten."

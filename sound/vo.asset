@@ -279,193 +279,193 @@ soundeffect = {
 sound = 
 {
 	name = "ERB_Idle_01"
-	file = "ERB/ERB_Idle_01.wav"
+	file = "erb/ERB_Idle_01.wav"
 }
 sound = 
 {
 	name = "ERB_Idle_02"
-	file = "ERB/ERB_Idle_02.wav"
+	file = "erb/ERB_Idle_02.wav"
 }
 sound = 
 {
 	name = "ERB_Idle_03"
-	file = "ERB/ERB_Idle_03.wav"
+	file = "erb/ERB_Idle_03.wav"
 }
 sound = 
 {
 	name = "ERB_Idle_04"
-	file = "ERB/ERB_Idle_04.wav"
+	file = "erb/ERB_Idle_04.wav"
 }
 sound = 
 {
 	name = "ERB_Idle_05"
-	file = "ERB/ERB_Idle_05.wav"
+	file = "erb/ERB_Idle_05.wav"
 }
 sound = 
 {
 	name = "ERB_Idle_06"
-	file = "ERB/ERB_Idle_06.wav"
+	file = "erb/ERB_Idle_06.wav"
 }
 sound = 
 {
 	name = "ERB_Winning_01"
-	file = "ERB/ERB_Winning_01.wav"
+	file = "erb/ERB_Winning_01.wav"
 }
 sound = 
 {
 	name = "ERB_Winning_02"
-	file = "ERB/ERB_Winning_02.wav"
+	file = "erb/ERB_Winning_02.wav"
 }
 sound = 
 {
 	name = "ERB_Winning_03"
-	file = "ERB/ERB_Winning_03.wav"
+	file = "erb/ERB_Winning_03.wav"
 }
 sound = 
 {
 	name = "ERB_Winning_04"
-	file = "ERB/ERB_Winning_04.wav"
+	file = "erb/ERB_Winning_04.wav"
 }
 sound = 
 {
 	name = "ERB_Winning_05"
-	file = "ERB/ERB_Winning_05.wav"
+	file = "erb/ERB_Winning_05.wav"
 }
 
 sound = 
 {
 	name = "ERB_Retreat_01"
-	file = "ERB/ERB_Retreat_01.wav"
+	file = "erb/ERB_Retreat_01.wav"
 }
 sound = 
 {
 	name = "ERB_Retreat_02"
-	file = "ERB/ERB_Retreat_02.wav"
+	file = "erb/ERB_Retreat_02.wav"
 }
 sound = 
 {
 	name = "ERB_Retreat_03"
-	file = "ERB/ERB_Retreat_03.wav"
+	file = "erb/ERB_Retreat_03.wav"
 }
 sound = 
 {
 	name = "ERB_Retreat_04"
-	file = "ERB/ERB_Retreat_04.wav"
+	file = "erb/ERB_Retreat_04.wav"
 }
 sound = 
 {
 	name = "ERB_Retreat_05"
-	file = "ERB/ERB_Retreat_05.wav"
+	file = "erb/ERB_Retreat_05.wav"
 }
 
 sound = 
 {
 	name = "ERB_Combat_01"
-	file = "ERB/ERB_Combat_01.wav"
+	file = "erb/ERB_Combat_01.wav"
 }
 sound = 
 {
 	name = "ERB_Combat_02"
-	file = "ERB/ERB_Combat_02.wav"
+	file = "erb/ERB_Combat_02.wav"
 }
 sound = 
 {
 	name = "ERB_Combat_03"
-	file = "ERB/ERB_Combat_03.wav"
+	file = "erb/ERB_Combat_03.wav"
 }
 sound = 
 {
 	name = "ERB_Combat_04"
-	file = "ERB/ERB_Combat_04.wav"
+	file = "erb/ERB_Combat_04.wav"
 }
 
 sound = 
 {
 	name = "ERB_Move_01"
-	file = "ERB/ERB_Move_01.wav"
+	file = "erb/ERB_Move_01.wav"
 }
 sound = 
 {
 	name = "ERB_Move_02"
-	file = "ERB/ERB_Move_02.wav"
+	file = "erb/ERB_Move_02.wav"
 }
 sound = 
 {
 	name = "ERB_Move_03"
-	file = "ERB/ERB_Move_03.wav"
+	file = "erb/ERB_Move_03.wav"
 }
 sound = 
 {
 	name = "ERB_Move_04"
-	file = "ERB/ERB_Move_04.wav"
+	file = "erb/ERB_Move_04.wav"
 }
 sound = 
 {
 	name = "ERB_Move_05"
-	file = "ERB/ERB_Move_05.wav"
+	file = "erb/ERB_Move_05.wav"
 }
 sound = 
 {
 	name = "ERB_Move_06"
-	file = "ERB/ERB_Move_06.wav"
+	file = "erb/ERB_Move_06.wav"
 }
 sound = 
 {
 	name = "ERB_Move_07"
-	file = "ERB/ERB_Move_07.wav"
+	file = "erb/ERB_Move_07.wav"
 }
 
 sound = 
 {
 	name = "ERB_Christmas1"
-	file = "ERB/ERB_Christmas.wav"
+	file = "erb/ERB_Christmas.wav"
 }
 sound = 
 {
 	name = "ERB_us_anthem1"
-	file = "ERB/ERB_us_anthem.wav"
+	file = "erb/ERB_us_anthem.wav"
 }
 sound = 
 {
 	name = "ERB_us_anthem_simple1"
-	file = "ERB/ERB_us_anthem_simple.wav"
+	file = "erb/ERB_us_anthem_simple.wav"
 }
 sound = 
 {
 	name = "ERB_us_anthem_sad1"
-	file = "ERB/ERB_us_anthem_sad.wav"
+	file = "erb/ERB_us_anthem_sad.wav"
 }
 sound = 
 {
 	name = "ERB_us_anthem_sad2"
-	file = "ERB/ERB_us_anthem_sad2.wav"
+	file = "erb/ERB_us_anthem_sad2.wav"
 }
 
 sound = 
 {
 	name = "ERB_us_anthem_creepy1"
-	file = "ERB/ERB_us_anthem_creepy.wav"
+	file = "erb/ERB_us_anthem_creepy.wav"
 }
 sound = 
 {
 	name = "ERB_battle_hymn1"
-	file = "ERB/ERB_battle_hymn.wav"
+	file = "erb/ERB_battle_hymn.wav"
 }
 sound = 
 {
 	name = "ERB_typewriter1"
-	file = "ERB/ERB_typewriter.wav"
+	file = "erb/ERB_typewriter.wav"
 }
 sound = 
 {
 	name = "ERB_electric1"
-	file = "ERB/ERB_electric.wav"
+	file = "erb/ERB_electric.wav"
 }
 sound = {
 	name = "ERB_police1"
-	file = "ERB/ERB_police.wav"
+	file = "erb/ERB_police.wav"
 }
 sound = {
 	name = "ERB_stripes_and_stars1"
-	file = "ERB/ERB_stripes_and_stars.wav"
+	file = "erb/ERB_stripes_and_stars.wav"
 }

@@ -50,7 +50,19 @@ focus_tree = {
 		x = 0
 		y = 1
 		prerequisite = { focus = enc_ourchoice} 
-		cost = 1   
+		cost = 1
+		available = {
+		OR = {
+				has_country_leader = {
+					ruling_only = yes
+					name = "Douglas Granite"
+				}
+				has_country_leader = {
+					ruling_only = yes
+					name = "Franklin Anderson"
+				}
+			}
+		}
 		completion_reward = {
 			if = {
 				limit = {
@@ -961,23 +973,11 @@ focus_tree = {
 			strength_ratio = { tag = VLT ratio > 2 }
 			VLT = {
 				or = {
-					has_country_leader = {
-						id = 910
-						ruling_only = yes
-						name = "First Citizen Lynette"
-					}
-					has_country_leader = {
-						id = 912
-						ruling_only = yes 
-						name = "Security Chief Wallace"
-					}
+					is_lynette_leader = yes
+					is_wallace_leader = yes
 					and = {
 						ERB = { has_completed_focus = enc_accept_ghouls }
-						has_country_leader = {
-							id = 911
-							ruling_only = yes
-							name = "Festus"
-						}
+						is_festus_leader = yes
 					}
 				}
 				exists = yes
@@ -1812,6 +1812,10 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
+			if = {
+				limit = { has_idea = CES_plague }
+				remove_ideas = CES_plague 
+			}			
 			add_ideas = { ENC_vaccinations }
 			add_tech_bonus = {
 				bonus = 0.5
@@ -5334,7 +5338,6 @@ focus = {#NEVADA - second city
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_military_equipment}
 		prerequisite = {focus = enc_wartime_draft}
-		available = { has_army_experience > 30 }
 		mutually_exclusive = { focus = enc_advanced_training }
 		relative_position_id = enc_wartime_draft
 		x = 0

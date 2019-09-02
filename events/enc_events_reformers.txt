@@ -672,7 +672,7 @@ country_event = {#20 - Dealing with Bishops - escape
 	}
 }
 
-country_event = {#21 - Spies in NCR - caught
+country_event = {#21 - Spies in NCR - caught compromised 
 	id = enc_reformers.21
 	title = enc_reformers.21.t
 	desc = enc_reformers.21.d
@@ -680,7 +680,10 @@ country_event = {#21 - Spies in NCR - caught
 	
 	trigger = {	
 		has_country_flag = enc_ncr_spies
-		country_exists = NCR
+		NCR = {
+			exists = yes
+			has_capitulated = no
+		}
 	}	
 	mean_time_to_happen = {	days = 300 }
 	
@@ -2617,7 +2620,7 @@ country_event = {#91 - Computer Network
 	}
 	option = {#	Spooky!
 		name = enc_reformers.91.a
-		add_ideas = Enc_Hacking
+		add_ideas = enc_hacking
 		add_stability = 0.1
 	}
 	option = {#	Okay
@@ -5847,7 +5850,8 @@ country_event = {#197 - War with Caesar and FEV
 	desc = enc_reformers.197.d				
 	trigger = { 
 		has_completed_focus = enc_vacinations
-		has_war_with = CES }
+		has_war_with = CES 
+	}
 	mean_time_to_happen = {	days = 30 }
 	option = {#  Sucker
 		name = enc_reformers.197.a
@@ -5855,8 +5859,8 @@ country_event = {#197 - War with Caesar and FEV
 		CES = {add_stability = -0.05 }
 		if = {
 			limit = { has_idea = CES_plague }
-			remove_ideas = CES_plague }
-			
+			remove_ideas = CES_plague 
+		}			
 	}
 }
 country_event = {#198 - War with Caesar and FEV No Vaccine

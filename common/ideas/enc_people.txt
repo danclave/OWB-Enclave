@@ -198,6 +198,18 @@ ideas = {
 				genius_pacifist
 			}
 		}
+		erb_veronica = {
+			picture = erb_veronica		
+			allowed = {
+				tag = ERB  
+			}
+			visible = {
+				has_country_flag = gannon_returns
+			}	
+			traits = {
+				genius_pacifist
+			}
+		}
 	}	
 
 	army_chief = {
