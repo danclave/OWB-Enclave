@@ -43,7 +43,7 @@ set_technology = {
 set_country_flag = not_allowed_to_core_flag
 set_country_flag = generic_decisions_disabled
 set_country_flag = no_generic_manufacturer
-set_country_flag = no_generic_advisor
+set_country_flag = coring_button_hidden
 set_variable = { enc_good_allignment = 0 }
 set_variable = { enc_evil_allignment = 0 }
 
