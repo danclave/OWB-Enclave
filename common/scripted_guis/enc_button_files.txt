@@ -1,11 +1,11 @@
 scripted_gui = {
-	connect_to_power = {	
-		context_type = selected_state_context		
-		window_name = "connect_to_power_container"		
+	connect_to_power = {
+		context_type = selected_state_context
+		window_name = "connect_to_power_container"
 		parent_window_token = selected_state_view
 		visible = {
 			is_owned_and_controlled_by = ROOT
-			NOT = { 
+			NOT = {
 				is_core_of = ROOT
 			}
 			OR = {
@@ -22,8 +22,8 @@ scripted_gui = {
 				# electricity_generator > 0
 				# metal_generator > 0
 			}
-		}		
-		effects = {  
+		}
+		effects = {
 			connect_to_power_click = {
 				hidden_effect = { sound_effect = ERB_electric }
 				set_state_flag = needs_civilian_power_grid
@@ -31,29 +31,29 @@ scripted_gui = {
 			}
 		}
 		triggers = {
-			connect_to_power_click_enabled = {			
+			connect_to_power_click_enabled = {
 				civilian_power_grid > 0
 				custom_trigger_tooltip = {
-					tooltip = more_than_5_electricity						
-					ROOT = { 
+					tooltip = more_than_5_electricity
+					ROOT = {
 						check_variable = {
-							var = resource@electricity
+							var = resource@energy
 							value = 5
 							compare = greater_than_or_equals
 						}
-					}  
+					}
 				}
 				any_neighbor_state = {
 					is_core_of = ROOT
 				}
 			}
 		}
-		        
+
 		ai_check = {
 			# check_variable = { ROOT.political_power > 99.99 }
 			check_variable = { ai_random > 0.55 }
 		}
-		
+
 		ai_weights = {
 			connect_to_power_click = {
 				ai_will_do = {
@@ -62,19 +62,19 @@ scripted_gui = {
 			}
 		}
 	}
-	connected_to_power = {	
-		context_type = selected_state_context		
-		window_name = "connected_to_power_container"		
+	connected_to_power = {
+		context_type = selected_state_context
+		window_name = "connected_to_power_container"
 		parent_window_token = selected_state_view
 		visible = {
 			is_core_of = ROOT
 			civilian_power_grid > 0
 		}
 	}
-	install_police_force = {	
-		context_type = selected_state_context		
+	install_police_force = {
+		context_type = selected_state_context
 		window_name = "install_police_force_container"
-		parent_window_token = selected_state_view		
+		parent_window_token = selected_state_view
 		visible = {
 			is_owned_and_controlled_by = ROOT
 			is_fully_controlled_by = ROOT
@@ -82,10 +82,10 @@ scripted_gui = {
 				has_completed_focus = enc_reno_police
 				has_completed_focus = enc_rebuild_the_power_grid
 			}
-			NOT = { 
+			NOT = {
 				is_core_of = FROM
 				civilian_power_grid > 0
-			}			
+			}
 			free_building_slots = {
 				building = civilian_power_grid
 				size < 1
@@ -98,12 +98,12 @@ scripted_gui = {
 			# electricity_generator < 1
 			# metal_generator < 1
 		}
-		
+
 		effects = {
-			install_police_force_click = {   
+			install_police_force_click = {
 				hidden_effect = {
 					sound_effect = ERB_police
-					ROOT = { 
+					ROOT = {
 						add_manpower = -100
 					}
 				}
@@ -124,12 +124,12 @@ scripted_gui = {
 				}
 			}
 		}
-		        
+
 		ai_check = {
 			check_variable = { ROOT.political_power > 49.99 }
 			check_variable = { ai_random > 0.55 }
 		}
-		
+
 		ai_weights = {
 			install_police_force_click = {
 				ai_will_do = {
@@ -140,44 +140,44 @@ scripted_gui = {
 	}
 	enc_legitimacy = {
 		context_type = player_context
-		
+
 		window_name = "legitimacy_container"
-		
+
 		visible = {
 			original_tag = ERB
 			has_completed_focus = enc_reform
 		}
-		
+
 		effects = {
 			legitimacy_bg_click = {
 				# nothing
 			}
 		}
 	}
-	arm_rebels = {	
+	arm_rebels = {
 		context_type = selected_state_context
-		
+
 		window_name = arm_rebels_container
 		parent_window_token = selected_state_view
-		
+
 		visible = {
 			is_core_of = BAR
-			ROOT =  {  
+			ROOT =  {
 				has_completed_focus = enc_operation_carnaval
 				NOT = {
 					has_country_flag = enc_petition_delivered
 				}
-			}			
-		}		
-		effects = { 
+			}
+		}
+		effects = {
 			arm_rebels_click = {
-                ROOT = { 
+                ROOT = {
                     hidden_effect = {
 						set_temp_variable = { click_cost = 0 }
 						subtract_from_temp_variable = { click_cost = enc_rebels_we_have_armed}
-						
+
                         add_political_power = click_cost?-25
-                    }    
+                    }
                 }
 				set_state_flag = enc_rebels_armed
 				if = {
@@ -196,7 +196,7 @@ scripted_gui = {
 		}
 		triggers = {
 			arm_rebels_click_enabled = {
-                ROOT = { 
+                ROOT = {
 					custom_trigger_tooltip = {
 						tooltip = arm_rebels_tt_cost
 						check_variable = {
@@ -211,10 +211,10 @@ scripted_gui = {
 				}
 			}
 		}
-		        
+
 		ai_check = {
 			check_variable = { ai_random > 0.55 }
-		}		
+		}
 		ai_weights = {
 			arm_rebels_click = {
 				ai_will_do = {
@@ -223,32 +223,32 @@ scripted_gui = {
 			}
 		}
 	}
-	arm_slaves = {    
+	arm_slaves = {
         context_type = selected_state_context
         window_name = arm_slaves_container
         parent_window_token = selected_state_view
-        
+
         visible = {
             is_owned_and_controlled_by = CES
             NOT = {
                 has_state_flag = no_rebels_you_fucks
             }
-			ROOT =  { 
+			ROOT =  {
 				has_completed_focus = enc_ss_ceasar_bottom_weapons
                 NOT = {
                     has_country_flag = enc_ss_ceasar_top_raiding
                 }
-            }            
-        }        
-        effects = { 
+            }
+        }
+        effects = {
             arm_slaves_click = {
-                ROOT = {     
+                ROOT = {
                     hidden_effect = {
 						set_temp_variable = { click_cost = 0 }
 						subtract_from_temp_variable = { click_cost = enc_slaves_we_have_armed}
-						
+
                         add_political_power = click_cost?-25
-                    }    
+                    }
                 }
                 set_state_flag = enc_slaves_armed
                 if = {
@@ -267,7 +267,7 @@ scripted_gui = {
         }
         triggers = {
             arm_slaves_click_enabled = {
-                ROOT = { 
+                ROOT = {
 					custom_trigger_tooltip = {
 						tooltip = arm_slaves_tt_cost
 						check_variable = {
@@ -282,11 +282,11 @@ scripted_gui = {
                 }
             }
         }
-                
+
         ai_check = {
             check_variable = { ai_random > 0.55 }
         }
-        
+
         ai_weights = {
             arm_slaves_click = {
                 ai_will_do = {
@@ -295,29 +295,29 @@ scripted_gui = {
             }
         }
     }
-	arm_patriots = {    
+	arm_patriots = {
         context_type = selected_state_context
         window_name = arm_patriots_container
         parent_window_token = selected_state_view
         visible = {
             is_owned_and_controlled_by = NCR
-            ROOT =  { 
+            ROOT =  {
 				has_country_flag = ncr_suspicious
 				has_completed_focus = enc_organise_the_sympathizers
             }
-			NOT = {  
+			NOT = {
                 has_state_flag = no_rebels_you_fucks
-            }			
-        }        
-        effects = { 
+            }
+        }
+        effects = {
             arm_patriots_click = {
-                ROOT = { 
+                ROOT = {
                     hidden_effect = {
 						set_temp_variable = { click_cost = 0 }
 						# click cost becomes negative value of enc_p_w_h_a
-						subtract_from_temp_variable = { click_cost = enc_patriots_we_have_armed}						
+						subtract_from_temp_variable = { click_cost = enc_patriots_we_have_armed}
                         add_political_power = click_cost?-25
-                    }    
+                    }
                 }
                 set_state_flag = enc_patriots_armed
                 if = {
@@ -336,7 +336,7 @@ scripted_gui = {
         }
         triggers = {
             arm_patriots_click_enabled = {
-                ROOT = { 
+                ROOT = {
 					custom_trigger_tooltip = {
 						tooltip = arm_patriots_tt_cost
 						check_variable = {
@@ -351,11 +351,11 @@ scripted_gui = {
                 }
             }
         }
-                
+
         ai_check = {
             check_variable = { ai_random > 0.55 }
         }
-        
+
         ai_weights = {
             arm_patriots_click = {
                 ai_will_do = {
@@ -363,6 +363,5 @@ scripted_gui = {
                 }
             }
         }
-    }			
+    }
 }
-

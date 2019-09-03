@@ -1490,4 +1490,5 @@ enc_reformers.321.a: "Wait, who are you again?"
 enc_reformers.322.t: "Murder Most Foul"
 enc_reformers.322.d: ""You have killed my father and your protector. All that you have ever done is fight and bicker in the mud. In a hundred, in a thousand years, you will not be fit for liberty. Despotism is your proper government, and servitude your proper lot. But fear not, my fellow Mexicans, there is no reason your new master cannot be a wise and virtuous one." \n\nAcross Tlaloc's domains, the robots advanced. Santa Anna's eyes stared vacantly as they advanced, as they were to stare at every atrocity to follow."
 enc_reformers.322.a: "Quick, blame the Brotherhood of Steel"
+ERB_grant_claims_on_all_of_mexico.tt:0 "\n§gSanta Anna will set out to reunite Mexico.§!\n"
 #############################################################################################################

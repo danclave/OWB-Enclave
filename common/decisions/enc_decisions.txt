@@ -69,12 +69,12 @@ ENC_shifts = {
 		icon = decision_enc_production_down
 		cost = 25
 		days_remove = 56 # 8 weeks
-		
+
 		available = {
 			num_of_military_factories > 10
 			not = { has_decision = extend_production_shifts }
 		}
-		
+
 		days_re_enable = 30
 		modifier = {
 			war_support_weekly = 0.01125#total = 10%
@@ -86,7 +86,7 @@ ENC_shifts = {
 		cost = 25
 		days_remove = 56 # 8 weeks
 		days_re_enable = 30
-		
+
 		available = {
 			num_of_civilian_factories > 5
 			not = { has_decision = extend_construction_shifts }
@@ -103,7 +103,7 @@ ENC_shifts = {
 		cost = 25
 		days_remove = 56 # 8 weeks
 		days_re_enable = 30
-		
+
 		available = {
 			amount_research_slots > 2
 			not = { has_decision = extend_research_shifts }
@@ -157,7 +157,7 @@ ENC_reno = {
         }
         available = {}
 
-        complete_effect = {        
+        complete_effect = {
             add_equipment_to_stockpile = {
                 type = energy_equipment_2
                 amount = 500
@@ -187,11 +187,26 @@ ENC_reno = {
 		}
 	}
 }
+ENC_down_mexico_way = {
+    ENC_expeditionary_force = {
+        icon = decision_enc_propaganda
+        cost = 75
+        visible = {
+            has_war_support > 0.2
+        }
+        available = {
+            ARM = {exists = yes }
+        }
+        complete_effect = {
+            set_rule = { can_send_volunteers = yes }
+        }
+	}
+}
 ENC_radio_broadcasts = {
 	ENC_raise_war_support = {
 		icon = decision_enc_propaganda
-		cost = 75		
-		visible = {	
+		cost = 75
+		visible = {
 			has_war_support < 0.5
 		}
 		available = {
@@ -208,7 +223,7 @@ ENC_radio_broadcasts = {
 	ENC_raise_stability = {
 		cost = 75
 		icon = decision_enc_propaganda
-		visible = {	
+		visible = {
 			has_stability < 0.5
 			not = { has_decision = ENC_raise_war_support }
 		}
@@ -231,7 +246,7 @@ ENC_radio_broadcasts = {
 			country_exists = NCR
 		}
 		available = {
-			has_war_with = NCR          # At war with NICR		
+			has_war_with = NCR          # At war with NICR
 		}
 		modifier = {
 			war_support_weekly = 0.0225 # total = 10%
@@ -241,7 +256,7 @@ ENC_radio_broadcasts = {
 		icon = decision_enc_propaganda
 		cost = 75
 		fire_only_once = yes
-		visible = {			
+		visible = {
 			has_completed_focus = enc_anti_ncr_propaganda
 			country_exists = NCR
 		}
@@ -274,7 +289,7 @@ ENC_radio_broadcasts = {
 		cost = 75
 		fire_only_once = yes
 		visible = {
-			OR = { 
+			OR = {
 				has_completed_focus = enc_anti_bos_propaganda
 				has_completed_focus = enc_reform_anti_bos_propaganda
 				}
@@ -288,7 +303,7 @@ ENC_radio_broadcasts = {
 		}
 	}
 
-	
+
 }
 
 ENC_NCR_hiding = {
@@ -297,12 +312,12 @@ ENC_NCR_hiding = {
 		icon = GFX_decision_enc_bear_head #infiltration
 		is_good = no
 		priority = 10
-		#--------------------------		
+		#--------------------------
 		activation  = {
 			is_neighbor_of = NCR
 			has_country_flag = ncr_suspicious	# when ncr is suspicious
-			not = { 
-				has_war_with = NCR 
+			not = {
+				has_war_with = NCR
 				has_country_flag = NCR_crisis_flag
 				# any of the crisis solutions are active
 				has_decision = NCR_crisis_construction
@@ -310,7 +325,7 @@ ENC_NCR_hiding = {
 				has_decision = NCR_crisis_resources
 			}
 		}
-		available = {		
+		available = {
 			is_neighbor_of = NCR
 		}
 		#--------------------------
@@ -349,21 +364,20 @@ ENC_NCR_hiding = {
 			}
 			# now, we increase the cost by 5 if salvatore is a minister and 10 otherwise
 			if = {
-				limit = {						
+				limit = {
 					has_idea_with_trait = salvatore_puppet
 				}
-				add_to_variable = { var = ENC_hiding_cost value = 7}	
+				add_to_variable = { var = ENC_hiding_cost value = 7}
 			}
 			else = {
-				add_to_variable = { var = ENC_hiding_cost value = 10}			
+				add_to_variable = { var = ENC_hiding_cost value = 10}
 			}
 			set_variable = { ENC_hiding_cost_total = ENC_hiding_cost }
 			
 			# make it 5 more expensive for every controlled state
 			set_variable = { var = ENC_hiding_cost_states value = num_controlled_states }			
-			multiply_variable = { ENC_hiding_cost_states = 5 }			
-			add_to_variable = { var = ENC_hiding_cost_total value = ENC_hiding_cost_states}
-			
+			multiply_variable = { ENC_hiding_cost_states = 10 }			
+
 			# set duration of safety based on how quickly the player used the decision
 			set_variable = { ENC_hide_days = days_mission_timeout@ENC_hide_activity }
 			add_to_variable = { var = ENC_hide_days value = 90}
@@ -425,7 +439,7 @@ ENC_NCR_hiding = {
 			clr_country_flag = NCR_crisis_flag
 		}
 	}
-# SOLUTIONS	
+# SOLUTIONS
 	NCR_crisis_resources = {
 		icon = decision_enc_resources
 		fire_only_once = YES
@@ -442,7 +456,7 @@ ENC_NCR_hiding = {
 		cancel_trigger  = {
 			has_war_with = NCR
 		}
-	}	
+	}
 	NCR_crisis_laylow = {
 		icon = generic_prepare_civil_war
 		fire_only_once = YES
@@ -477,7 +491,7 @@ ENC_NCR_hiding = {
 			has_war_with = NCR
 		}
 	}
-	
+
 	ENC_reveal_to_ncr = {
 		priority = 5
 		icon = generic_political_discourse
@@ -491,7 +505,7 @@ ENC_NCR_hiding = {
 			ic_ratio = {
 				tag = NCR
 				ratio > 0.3
-			}			
+			}
 			strength_ratio = { tag = NCR ratio > 0.3 }
 			NCR = {
 				is_neighbor_of = CES
@@ -509,13 +523,13 @@ ENC_NCR_hiding = {
 		}
 	}
 }
-	
+
 ENC_political_infighting = {
 # CRISIS
 	ENC_political_crisis = {
 		icon = revolt
 		priority = 300
-		activation = {			
+		activation = {
 			has_completed_focus = enc_reform
 			intellectuals < party_popularity@elites
 			NOT = {
@@ -547,10 +561,10 @@ ENC_political_infighting = {
 		cost = 50
 		priority = 100
 		allowed = { tag = ERB }
-		visible = {		
+		visible = {
 			OR = {
 				has_completed_focus = enc_reform
-				has_completed_focus = enc_purity				
+				has_completed_focus = enc_purity
 			}
 		}
 		available = {
@@ -564,8 +578,8 @@ ENC_political_infighting = {
 			clr_country_flag = enc_crackdown_justified
 			if = {
 				limit = {
-					has_completed_focus = enc_reform					
-				}				
+					has_completed_focus = enc_reform
+				}
 				add_manpower = -50
 				add_stability = -0.05
 				add_popularity = { ideology = elites popularity = -0.05 }
@@ -582,8 +596,8 @@ ENC_political_infighting = {
 			}
 			else_if = { #purity version
 				limit = {
-					has_completed_focus = enc_purity					
-				}				
+					has_completed_focus = enc_purity
+				}
 				add_manpower = -100
 				add_stability = -0.10
 				add_popularity = { ideology = intellectuals popularity = -0.05 }
@@ -672,13 +686,13 @@ ENC_political_infighting = {
 		complete_effect = {
 			if = {
 				limit = {
-					has_completed_focus = enc_reform					
+					has_completed_focus = enc_reform
 				}
-				add_popularity = { ideology = intellectuals popularity = 0.03 }				
+				add_popularity = { ideology = intellectuals popularity = 0.03 }
 			}
 			else_if = {
 				limit = {
-					has_completed_focus = enc_purity					
+					has_completed_focus = enc_purity
 				}
 				add_popularity = { ideology = elites popularity = 0.03 }
 			}
@@ -693,14 +707,14 @@ ENC_political_infighting = {
 		complete_effect = {
 			if = {
 				limit = {
-					has_completed_focus = enc_reform					
+					has_completed_focus = enc_reform
 				}
 				add_popularity = { ideology = elites popularity = -0.03 }
 				add_manpower = -1
 			}
 			else_if = {
 				limit = {
-					has_completed_focus = enc_purity					
+					has_completed_focus = enc_purity
 				}
 				add_popularity = { ideology = intellectuals popularity = -0.03 }
 				add_manpower = -1
@@ -727,7 +741,7 @@ ENC_political_infighting = {
 			intellectuals_drift = -0.1
 		}
 		remove_effect = {
-			add_popularity = { ideology = intellectuals popularity = -0.10 }		
+			add_popularity = { ideology = intellectuals popularity = -0.10 }
 		}
 		days_remove = 90
 		days_re_enable = 100
@@ -737,7 +751,7 @@ ENC_political_infighting = {
 ENC_render_unto_caesar = {
 	CES_crisis = {
 		icon = generic_break_treaty
-		priority = 30		
+		priority = 30
 		fire_only_once = YES
 		activation = {
 			has_country_flag = ENC_CES_hostile
@@ -767,7 +781,7 @@ ENC_render_unto_caesar = {
 		is_good = no
 		days_mission_timeout = 1068
 		timeout_effect = {
-			CES = {	
+			CES = {
 				country_event = { id = enc.41 } # todo: change
 			}
 			clr_country_flag = ENC_CES_hostile
@@ -776,10 +790,10 @@ ENC_render_unto_caesar = {
 			ERB = { country_event = {id = enc_reformers.101 } }
 		}
 	}
-	
+
 	CES_reformer_crisis = {
 		icon = generic_break_treaty
-		priority = 30		
+		priority = 30
 		fire_only_once = YES
 		activation = {
 			has_country_flag = ENC_axis_evil
@@ -852,7 +866,7 @@ ENC_debug = {
 		}
 		complete_effect = {
 			misc_effect_test = yes
-		}		
+		}
 	}
 	ENC_reduce_legitimacy_relevance = {
 		complete_effect = {
@@ -862,16 +876,16 @@ ENC_debug = {
 	ENC_restore_douglas_portrait = {
 		complete_effect = {
 			change_douglas_portrait_to_nevada = yes
-		}		
+		}
 	}
 	ENC_people_uprising = {
-		complete_effect = { 
+		complete_effect = {
 			people_start_revolt = yes
 		}
 	}
 	ENC_NCR_CES_war = {
 		complete_effect = {
-			CES = {				
+			CES = {
 				declare_war_on = {
 					target = NCR
 					type = annex_everything
@@ -890,7 +904,7 @@ ENC_debug = {
 		}
 	}
 	ENC_debug_enc_civil_war = {
-		complete_effect = 	{		
+		complete_effect = 	{
 			NCR = {
 				# Enclave
 				start_civil_war = {
@@ -899,7 +913,7 @@ ENC_debug = {
 					capital = 63
 					states = { 63 583 4 205 80 }
 					states_filter = {
-						
+
 					}
 					keep_unit_leaders = { 1522 }
 				}
@@ -920,7 +934,7 @@ ENC_debug = {
 		}
 	}
 	ENC_debug_kill_purists = {
-		complete_effect = 	{	
+		complete_effect = 	{
 			every_army_leader = {
 				limit = {
 					has_trait = enc_purist
@@ -937,4 +951,3 @@ ENC_debug = {
 	}
 
 }
-
