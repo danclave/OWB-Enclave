@@ -18,6 +18,9 @@ ENC_reform_desc:0 "The Enclave has elected Douglas Granite, who means to reform 
 ENC_scientists:0 "Enclave Scientists"
 ENC_scientists_desc:0 "Enclave scientists are among the most educated and well funded in the post-war world. Many have not forgotten about the defeat at Navarro and are eager to pick up where the Enclave left off."
 
+ENC_special_forces:0 "Power Armour Expertise"
+ENC_special_forces_desc:0 "Unlike much of the Wasteland, the Enclave can afford to equip significant number of power armor divisions.  However, it can only do so if its army is a small elite force. Should that ever change..."
+
 ENC_scientists_purged:0 "Enclave Scientists"
 ENC_scientists_purged_desc:0 "Enclave scientists are among the most educated and well funded in the post-war world."
 
@@ -41,7 +44,7 @@ ENC_education:0 "Basic Education"
 ENC_education_desc:0 "The Enclave has made education mandatory from 6 years old to 12 years old. Home education is not allowed."
 
 ENC_radio:0 "Enclave Radio"
-ENC_radio_desc:0 "The Enclave is back, America! And no, not just on your radio! These fine men and women have one mission: the restoration of American peace and order." 
+ENC_radio_desc:0 "The Enclave is back, America! And no, not just on your radio! These fine men and women have one mission: the restoration of American peace and order."
 
 ENC_wastelanders:0 "Reformist"
 ENC_wastelanders_desc:0 "The Enclave has elected to accept wastelanders volunteers into their armed forces. Expanding their pool of manpower but causing friction in the Enclave government and military."
@@ -81,6 +84,9 @@ ENC_PA_quality: "Quality PA Team"
 enclave_naval_manufacturer: "Naval Research Team"
 
 contactthehardliners_tt: "3 divisions of §YEnclave Veterans§! appear at the §YSierra Army Depot§!"
+
+## Leader
+paladin_myers1:0 "Paladin Myers"
 
 # traits
 

@@ -1,11 +1,11 @@
 ideas = {
 	political_advisor = {
-		sargeant_dornan = {			
+		sargeant_dornan = {
 			cost = 200
 			allowed = {
 				original_tag = ERB
 			}
-			available = {				
+			available = {
 				NOT = {
 					has_country_leader = {
 						ruling_only = yes
@@ -15,24 +15,24 @@ ideas = {
 			}
 			traits = {
 				drill_sargeant
-			}		
+			}
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		benjamin_curling = {		
+		benjamin_curling = {
 			picture = generic_political_advisor_europe_1
-			
+
 			allowed = {
 				original_tag = ERB
-			}		
-			traits = { 
+			}
+			traits = {
 				respectedByScientists
 				purist
 			}
 			visible = {
-				NOT = { 
-					has_country_flag = purists_purged 
+				NOT = {
+					has_country_flag = purists_purged
 					has_completed_focus = enc_purge_scientists
 				}
 			}
@@ -40,87 +40,87 @@ ideas = {
 				factor = 1
 			}
 		}
-		paladin_myers = {	
+		paladin_myers1 = {
 			picture = BOS_generic6
-			
+
 			allowed = {
 				original_tag = ERB
 			}
 		visible = {
-				has_country_flag = integrate_brotherhood 
+				has_country_flag = integrate_brotherhood
 				}
-			traits = { 
+			traits = {
 				veteran_paladin
 			}
-		
+
 			ai_will_do = {
 				factor = 10
 			}
 		}
-		boris_t = {			
+		boris_t = {
 			allowed = {
 				original_tag = ERB
-			}		
-			traits = { 
+			}
+			traits = {
 				reformer
-			}		
+			}
 			ai_will_do = {
 				factor = 1
-			}			
+			}
 			visible = {
 				NOT = { has_country_flag = reformers_purged }
 			}
 		}
-		generic_reformer_2 = {		
+		generic_reformer_2 = {
 			picture = generic_political_advisor_europe_2
-			
+
 			allowed = {
 				original_tag = ERB
-			}		
-			traits = { 
+			}
+			traits = {
 				corrupt_sycophant
-			}		
+			}
 			ai_will_do = {
 				factor = 1
-			}			
+			}
 			visible = {
 				NOT = { has_country_flag = reformers_purged }
 			}
 		}
 
-		felix_grayson = {		
+		felix_grayson = {
 			picture = generic_political_advisor_europe_3
-			
+
 			allowed = {
 				original_tag = ERB
-			}		
-			traits = { 
+			}
+			traits = {
 				attorney_general
-			}		
+			}
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		lt_kolyis = {		
+		lt_kolyis = {
 			picture = generic_political_advisor_europe_3
-			
+
 			allowed = {
 				original_tag = ERB
-			}		
-			visible = {			
+			}
+			visible = {
 				NOT = { has_country_flag = reformers_purged }
 			}
-			traits = { 
+			traits = {
 				EPA_director
-			}		
+			}
 			ai_will_do = {
 				factor = 1
 			}
 		}
 
-		col_wilkins = {		
+		col_wilkins = {
 			picture = generic_political_advisor_europe_4
-			
+
 			allowed = {
 				original_tag = ERB
 			}
@@ -130,7 +130,7 @@ ideas = {
 			traits = {
 				suppressor
 				purist_2
-			}		
+			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -138,19 +138,19 @@ ideas = {
 		norman_wood = {
 			picture = generic_army_europe_1
 			allowed = {
-				tag = ERB  
+				tag = ERB
 			}
 			available = {
 				has_completed_focus = enc_reform
 			}
 			traits = {
-				enc_disliked_pragmatist  
+				enc_disliked_pragmatist
 			}
 		}
 		dr_henry = {
 			picture = d_henry
 			allowed = {
-				tag = ERB  
+				tag = ERB
 			}
 			visible = {
 				has_country_flag = dr_henry_returns
@@ -160,40 +160,40 @@ ideas = {
 			}
 		}
 		erb_wright = {
-			picture = enc_wright		
+			picture = enc_wright
 			allowed = {
-				tag = ERB  
+				tag = ERB
 			}
 			visible = {
 				has_country_flag = enc_wrights_tolerated_flag
-			}	
+			}
 			traits = {
 				captain_of_industry # todo change?
 			}
 		}
 		erb_salvatore = {
-			picture = enc_salvatore					
+			picture = enc_salvatore
 			on_add = {
 				custom_effect_tooltip = erb_salvatore_effect
 			}
 			allowed = {
-				tag = ERB  
+				tag = ERB
 			}
 			visible = {
 				has_country_flag = enc_salvatores_tolerated_flag
-			}	
+			}
 			traits = {
 				salvatore_puppet
 			}
 		}
 		erb_arcade_gannon = {
-			picture = arcade_gannon		
+			picture = arcade_gannon
 			allowed = {
-				tag = ERB  
+				tag = ERB
 			}
 			visible = {
 				has_country_flag = gannon_returns
-			}	
+			}
 			traits = {
 				genius_pacifist
 			}
@@ -211,40 +211,41 @@ ideas = {
 			}
 		}
 	}	
+	}
 
 	army_chief = {
 		enc_offensive = {
 			cost = 250
 			picture = generic_army_europe_1
-			
+
 			allowed = {
 				original_tag = ERB
 			}
 			traits = { army_chief_offensive_3 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 
 		enc_paratroopers = {
-			cost = 250			
+			cost = 250
 			picture = generic_army_europe_2
-			
+
 			allowed = {
 				original_tag = ERB
 			}
 			traits = { enc_paratroopers_commander }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 
 		army_chief_loyalist = {
-			cost = 100			
+			cost = 100
 			picture = generic_army_europe_3
-			
+
 			allowed = {
 				original_tag = ERB
 			}
@@ -252,7 +253,7 @@ ideas = {
 				not = { has_completed_focus = enc_purge_opposition }
 			}
 			traits = { enc_army_chief_loyalist }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -261,38 +262,38 @@ ideas = {
 
 	air_chief = {
 		enc_air_combat = {
-			
+
 			picture = generic_army_europe_1
-			
+
 			allowed = {
 				original_tag = ERB
-			}			
+			}
 			traits = { air_air_combat_training_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		enc_people_air_loyalist = {
-			
+
 			picture = generic_army_europe_2
 			cost = 100
 			allowed = {
 				original_tag = ERB
-			}			
+			}
 			visible = {
 				not = { has_completed_focus = enc_purge_opposition }
 			}
 			traits = { enc_air_chief_loyalist }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		clayton_schultz = {
-		
+
 			cost = 200
-			
+
 			allowed = {
 				original_tag = ERB
 			}
@@ -300,15 +301,15 @@ ideas = {
 				has_country_flag = exiles_arrived
 			}
 			traits = { air_close_air_support_3 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-	}				
+	}
 
 	navy_chief = {
-		navy_chief_loyalist = {		
+		navy_chief_loyalist = {
 			picture = generic_army_europe_2
 			cost = 100
 			allowed = {
@@ -317,41 +318,41 @@ ideas = {
 			visible = {
 				not = { has_completed_focus = enc_purge_opposition }
 			}
-			traits = { enc_navy_chief_loyalist }			
+			traits = { enc_navy_chief_loyalist }
 			ai_will_do = {
 				factor = 1
 			}
 		}
 
 	}
-	
+
 	theorist = {
 		enc_bomber_guy = {
 			picture = generic_army_europe_4
 			allowed = {
 				original_tag = ERB
 			}
-			
+
 			research_bonus = {
 				cat_battlefield_support = 0.10
 			}
-			
+
 			traits = { air_chief_ground_support_2 }
 		}
-		
+
 		enc_fighter_guy = {
-			picture = generic_army_europe_5		
-			
+			picture = generic_army_europe_5
+
 			allowed = {
 				original_tag = ERB
 			}
-			
 
-			
+
+
 			research_bonus = {
-				air_doctrine = 0.07
+				cat_air_doctrine = 0.07
 			}
-			
+
 			traits = { air_warfare_theorist }
 		}
 	}
@@ -361,31 +362,31 @@ ideas = {
 			picture = generic_army_europe_1
 			allowed = {
 				original_tag = ERB
-			}				
+			}
 			traits = { air_chief_ground_support_3 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		army_chief_reform_3_guy = {
-			picture = generic_army_europe_2	
+			picture = generic_army_europe_2
 			allowed = {
 				original_tag = ERB
-			}				
+			}
 			traits = { army_chief_reform_3 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 		army_entrenchment_3_guy = {
-			picture = generic_army_europe_3		
+			picture = generic_army_europe_3
 			allowed = {
 				original_tag = ERB
-			}				
+			}
 			traits = { army_entrenchment_3 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -393,11 +394,11 @@ ideas = {
 		erb_orion_moreno = {
 			picture = orion_moreno_erb
 			allowed = {
-				tag = ERB  
+				tag = ERB
 			}
 			visible = {
 				has_country_flag = moreno_returns
-			}	
+			}
 			traits = {
 				loyal_soldier
 			}

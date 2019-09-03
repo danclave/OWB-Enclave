@@ -187,6 +187,8 @@ calculate_hiding_cost = {
 	# calculate state cost
 	set_variable = { var = ENC_hiding_cost_states value = num_controlled_states }			
 	multiply_variable = { ENC_hiding_cost_states = 10 }	
+	set_variable = { var = ENC_hiding_cost_states value = num_controlled_states }
+	multiply_variable = { ENC_hiding_cost_states = 3 }
 	# add state cost to total
 	add_to_variable = { var = ENC_hiding_cost_total value = ENC_hiding_cost_states}
 	# set duration of safety
@@ -199,31 +201,31 @@ calculate_hiding_cost = {
 ##################################################
 
 choose_segregation = {
-	add_popularity = { ideology = elites popularity = 0.05 } 
-	set_temp_variable = { legitimacy_change_var =  -0.10 }	
-	change_legitimacy = yes		
+	add_popularity = { ideology = elites popularity = 0.05 }
+	set_temp_variable = { legitimacy_change_var =  -0.10 }
+	change_legitimacy = yes
 	reduce_legitimacy_relevance = yes
-	add_ideas = enc_segregation_forever	
-	
-	
+	add_ideas = enc_segregation_forever
+
+
 	if = { # promised no integration
 		limit = {
-			has_country_flag = enc_promised_no_integration				
+			has_country_flag = enc_promised_no_integration
 		}
 		custom_effect_tooltip = enc_promised_no_integration_kept
 		add_stability = 0.05
 		add_political_power = 50
 		clr_country_flag = enc_promised_no_integration
-	}	
+	}
 }
 choose_integration = {
-	add_popularity = { ideology = people popularity = 0.05 } 
+	add_popularity = { ideology = people popularity = 0.05 }
 	add_ideas =	ENC_begun_integration
 	set_country_flag = enc_wastelander_integration
 
 	if = { # check promise
 		limit = {
-			has_country_flag = enc_promised_no_integration				
+			has_country_flag = enc_promised_no_integration
 		}
 		custom_effect_tooltip = enc_promised_no_integration_broken
 		add_popularity = { ideology = intellectuals popularity = -0.05 }
@@ -231,7 +233,7 @@ choose_integration = {
 		add_stability = -0.10
 		add_war_support = -0.05
 		clr_country_flag = enc_promised_no_integration
-	}		
+	}
 }
 
 choose_law = {
@@ -241,7 +243,7 @@ choose_law = {
 	add_stability = 0.10
 }
 choose_order = {
-	add_popularity = { ideology = ruler popularity = 0.05 } 
+	add_popularity = { ideology = ruler popularity = 0.05 }
 	swap_ideas = {
 		remove_idea = enc_NCR_power_struggle
 		add_idea = enc_NCR_power_struggle2
@@ -261,11 +263,11 @@ choose_democracy = {
 	}
 	change_legitimacy = yes
 	set_country_flag = enc_empowered_congress
-	country_event = { id = enc_reformers.219 } 
+	country_event = { id = enc_reformers.219 }
 	add_stability = 0.10
 }
 choose_autocracy = {
-	add_popularity = { ideology = ruler popularity = 0.05 } 
+	add_popularity = { ideology = ruler popularity = 0.05 }
 	set_temp_variable = {
 		var = legitimacy_change_var
 		value = -0.05
@@ -282,7 +284,7 @@ revert_law = { # from law to order
 	complete_national_focus = enc_order
 	custom_effect_tooltip = newline
 	if = {
-		limit = { 
+		limit = {
 			not = { has_completed_focus = enc_military_police }
 		}
 		add_ideas = enc_NCR_power_struggle2
@@ -294,13 +296,13 @@ revert_order = { # from order to law
 	complete_national_focus = enc_law
 	custom_effect_tooltip = newline
 	if = {
-		limit = { 
+		limit = {
 			not = { has_completed_focus = enc_fbi }
 		}
 		add_ideas = enc_NCR_power_struggle2
 	}
 	else_if = {
-		limit = { 
+		limit = {
 			not = { has_completed_focus = enc_judicial_branch }
 		}
 		add_ideas = enc_NCR_power_struggle
@@ -321,7 +323,7 @@ revert_congress = { # from democracy to autocracy
 	clr_country_flag = enc_suspend_elections_blocked
 }
 
-ban_free_press = {	
+ban_free_press = {
 	remove_ideas = ENC_free_press
 	# modify legitimacy
 	set_temp_variable  = {
@@ -349,7 +351,7 @@ cancel_requisition_civilian_resources = {
 			state = 135
 		}
 		add_resource = {
-			type = advanced_technology
+			type = advanced
 			amount = -15
 			state = 25
 		}
@@ -359,12 +361,12 @@ cancel_requisition_civilian_resources = {
 			has_full_control_of_state = 135 # sac city
 		}
 		add_resource = {
-			type = electronics
+			type = circuitry
 			amount = -20
 			state = 153
 		}
 		add_resource = {
-			type = fuel
+			type = energy
 			amount = -25
 			state = 135
 		}
@@ -403,7 +405,7 @@ increase_red_menace = {
 	}
 }
 decrease_red_menace = {
-	subtract_from_variable = { enc_red_menace_var = decrease_red_menace_var?1 }	
+	subtract_from_variable = { enc_red_menace_var = decrease_red_menace_var?1 }
 	if = {
 		limit = {
 			has_country_leader_with_trait = red_scare2
@@ -433,7 +435,7 @@ people_start_revolt = {
 		ideology = people
 		size = 0.40
 		only_own_territory = no
-		states_filter = { 
+		states_filter = {
 			is_core_of = NCR
 		}
 	}
@@ -469,17 +471,17 @@ people_start_revolt = {
 				support = {}
 			}
 			every_owned_state = {
-				create_unit = { 
-					division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+				create_unit = {
+					division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28"
 					owner = NCR
 				}
-				create_unit = { 
-					division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+				create_unit = {
+					division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28"
 					owner = NCR
 				}
 			}
 		}
-		
+
 	}
 	declare_war_on = {
 		target = NCR
@@ -503,12 +505,12 @@ spawn_rebel_militia_in_every_state = {
 		support = {}
 	}
 	every_owned_state = {
-		create_unit = { 
-			division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+		create_unit = {
+			division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28"
 			owner = THIS
 		}
-		create_unit = { 
-			division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28" 
+		create_unit = {
+			division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28"
 			owner = THIS
 		}
 	}
@@ -583,7 +585,7 @@ change_douglas_portrait_to_enclave = {
 			ideology = technocracy
 			traits = {}
 		}
-		transfer_leader_traits = yes	
+		transfer_leader_traits = yes
 	}
 }
 
@@ -597,7 +599,7 @@ change_douglas_portrait_to_half_usa = {
 			ideology = technocracy
 			traits = {}
 		}
-		transfer_leader_traits = yes	
+		transfer_leader_traits = yes
 	}
 }
 
@@ -650,7 +652,7 @@ comply_with_protests = {
 				has_completed_focus = enc_the_mutant_question
 			}
 		}
-		hidden_effect = {			
+		hidden_effect = {
 			unlock_national_focus = enc_the_mutant_question
 		}
 		complete_national_focus = enc_expand_human_definition
@@ -665,7 +667,7 @@ comply_with_protests = {
 		limit = {
 			not = { has_completed_focus = enc_the_fate_of_our_democracy }
 		}
-		hidden_effect = {			
+		hidden_effect = {
 			unlock_national_focus = enc_the_fate_of_our_democracy
 		}
 		complete_national_focus = enc_empowered_congress # todo bypass law_or_order
@@ -677,7 +679,7 @@ comply_with_protests = {
 		add_ideas = { ENC_free_press }
 	}
 	else_if = { # player has taken resource requisition, undo requisition of resources
-		limit = {			
+		limit = {
 			has_country_flag = enc_requisitioned_resources
 		}
 		cancel_requisition_civilian_resources = yes
@@ -688,7 +690,7 @@ comply_with_protests = {
 				has_completed_focus = enc_law_and_order # todo check
 			}
 		}
-		hidden_effect = {			
+		hidden_effect = {
 			unlock_national_focus = enc_law_and_order
 		}
 		complete_national_focus = enc_law # todo bypass law_or_order
