@@ -3811,9 +3811,7 @@ focus = {#Legion Border
 		icon = GFX_goal_Enc_goal_flag_mexico
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_broken_coast
-		prerequisite = {
-			focus = enc_broken_coast
-					}
+
 		x = 0
 		y = 1
 		cost = 5.8

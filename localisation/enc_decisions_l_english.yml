@@ -403,6 +403,13 @@ ENC_patriotic_movie_desc:0 "Too some of our citizens, America is still a long lo
 ###################################
 # Nation Building
 ###################################
+ENC_down_mexico_way:0 "Down Mexico Way"
+ENC_down_mexico_way_desc:0 "Mexico's people need American guidance once again. Faced by mad robot armies and fanatic cultists, it is time for Uncle Sam to lend a hand again."
+ENC_expeditionary_force:0 "Send an Expeditionary Force"
+ENC_expeditionary_force_desc:0 "Although we lack the ability to fight Mexico's oppressors just yet, Mexico's people will welcome our assistance against Santa Anna!"
+###################################
+# Nation Building
+###################################
 ENC_prioritize_civilian_relief: "Prioritize Civilian Relief"
 ENC_prioritize_civilian_relief_desc: "The war has left many of our new citizens in dire straights. Let us prove ourselves as a benevolent government by prioritizing their needs over heavy industry."
 ENC_rebuild_infrastructure:0 "Rebuild Infrastructure"

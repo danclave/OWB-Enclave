@@ -227,6 +227,11 @@ ENC_epilogue = {
 	allowed = { tag = ERB }
 	visible = {	has_completed_focus = enc_reno_end }
 }
+ENC_down_mexico_way = {
+	icon = GFX_decision_category_USM_decision
+	allowed = { tag = ERB }
+	visible = {	has_completed_focus = enc_mexico_invasion }
+}
 
 ENC_oppose_legion = {
 	icon = category_usa_flag
