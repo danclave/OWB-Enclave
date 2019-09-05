@@ -758,7 +758,7 @@ enc_reformers.138.c: "§MUse them to revive the United States Merchant Machine§
 enc_reformers.139.t: "The Supermutant Question"
 enc_reformers.139.d: "The Troll Warren has given rise to an odd conundrum. Although obviously we'll execute the war criminals, a supermutant who used to live in Vault Six, 'Betty,' has claimed that she and many of the supermutants are victims of circumstance, and they treated humans under their rule no worse than neighboring tribes would have.  Betty, based on her Vault education, has invoked constitutional claims on behalf of her and the other supermutants and demands a place in the Reunited States.  And of course, a captive population of supermutants could have economic applications."
 enc_reformers.139.a: "\n§MHonest labor will make them honest, err, men§!\n"
-enc_reformers.139.tt: "Available because you chose to integrate mutants"
+enc_reformers.139.tt: "Available because you chose to integrate mutants\n"
 enc_reformers.139.b: "Cute, but no reason to deviate from standard procedures"
 enc_reformers.139.c: "§RCan she wear this collar?§!"
 ###############################################################################################################

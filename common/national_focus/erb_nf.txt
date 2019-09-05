@@ -3418,8 +3418,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-		country_event = { id = enc_reformers.66 }
-		puppet = VEG }
+			country_event = { id = enc_reformers.66 }
+			puppet = VEG
+			hidden_effect = {
+				VEGR = { set_politics = { ruling_party = elites }
+			}
+	 	}
 	}
 	focus = {#Diplomacy - Minor Good Guys
 		id = enc_the_little_people
@@ -5553,7 +5557,7 @@ focus = {#NEVADA - second city
 			add_stability = 0.05
 			create_field_marshal = {
 				name = "General Judah Kreger"
-				portrait_path = "gfx/leaders/ENC/Portrait_ENC_Generic_3.dds"
+				portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_3.dds"
 				skill = 5
 				attack_skill = 5
 				defense_skill = 4
