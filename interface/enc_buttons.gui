@@ -1,119 +1,119 @@
 guiTypes = {
 	containerWindowType = { # connect_to_power
-		name = connect_to_power_container 
+		name = connect_to_power_container
 		position = {x=90 y=58}
-		
+
 		fade_time = 50
-		fade_type = linear 
-		moveable = no 
-		
-		buttonType = { 
+		fade_type = linear
+		moveable = no
+
+		buttonType = {
 			name = connect_to_power
-			spriteType = GFX_icons_power 
-			pdx_tooltip = connect_to_power_tt 
-			pdx_tooltip_delayed = connect_to_power_tt_delayed 
+			spriteType = GFX_icons_power
+			pdx_tooltip = connect_to_power_tt
+			pdx_tooltip_delayed = connect_to_power_tt_delayed
 			scale = 1
 		}
 	}
 	containerWindowType = { # connect_to_power
-		name = connected_to_power_container 
+		name = connected_to_power_container
 		position = {x=90 y=58}
-		
+
 		fade_time = 50
 		fade_type = linear
-		moveable = no 
-		
+		moveable = no
+
 		buttonType = {
 			name = connected_to_power
 			spriteType = GFX_icons_powered
-			pdx_tooltip = connected_to_power_tt 
-			pdx_tooltip_delayed = connected_to_power_tt_delayed 
+			pdx_tooltip = connected_to_power_tt
+			pdx_tooltip_delayed = connected_to_power_tt_delayed
 			scale = 1
 		}
 	}
-	containerWindowType = { # install_police_force 
+	containerWindowType = { # install_police_force
 		name = install_police_force_container
 		position = { x = 92 y = 58 }
-		
+
 		fade_time = 50
-		fade_type = linear 
+		fade_type = linear
 		moveable = no
-		
+
 		buttonType = {
 			name = install_police_force
-			spriteType = GFX_icons_police 
-			pdx_tooltip = install_police_force 
-			pdx_tooltip_delayed = install_police_force_tt_delayed 
+			spriteType = GFX_icons_police
+			pdx_tooltip = install_police_force
+			pdx_tooltip_delayed = install_police_force_tt_delayed
 			scale = 1
 		}
 	}
 	containerWindowType = { # arm_rebels
 		name = arm_rebels_container
 		position = {x=90 y=58}
-		
+
 		fade_time = 1
 		fade_type = linear
 		moveable = no
-		
-		buttonType = { 
-			name = arm_rebels 
-			spriteType = GFX_resistance_icon 
+
+		buttonType = {
+			name = arm_rebels
+			spriteType = GFX_resistance_icon
 			pdx_tooltip = arm_rebels_tt
 			pdx_tooltip_delayed = arm_rebels_tt_delayed
-			scale = 1.2 
+			scale = 1.2
 		}
 	}
 	containerWindowType = { # arm_slaves
 		name = arm_slaves_container
 		position = {x=90 y=58}
-		
+
 		fade_time = 1
 		fade_type = linear
 		moveable = no
-		
-		buttonType = { 
-			name = arm_slaves 
-			spriteType = GFX_resistance_icon 
+
+		buttonType = {
+			name = arm_slaves
+			spriteType = GFX_resistance_icon
 			pdx_tooltip = arm_slaves_tt
 			pdx_tooltip_delayed = arm_slaves_tt_delayed
-			scale = 1.2 
+			scale = 1.2
 		}
 	}
 	containerWindowType = { # arm_patriots
 		name = arm_patriots_container
 
 		position = {x=90 y=58}
-		
+
 		fade_time = 1
 		fade_type = linear
 		moveable = no
-		
-		buttonType = { 
+
+		buttonType = {
 			name = arm_patriots
-			spriteType = GFX_resistance_icon 
+			spriteType = GFX_resistance_icon
 			pdx_tooltip = arm_patriots_tt
 			pdx_tooltip_delayed = arm_patriots_tt_delayed
-			scale = 1.2 
+			scale = 1.2
 		}
 	}
 	containerWindowType = { # legitimacy
 		name = "legitimacy_container"
 		position = { x = 885 y = 4 }
-		
+
 		buttonType ={
 			name ="legitimacy_bg"
 			spriteType = "GFX_generic_box_smallest"
 			position = { x=0 y=0 }
 			shortcut = "ctrl+k"
 		}
-		
+
 		iconType = {
-			name ="legitimacy_icon" 
+			name ="legitimacy_icon"
 			spriteType = "enc_legitimacy_icon"
 			position = { x = 4 y = -1 }
 			scale = 0.8
 		}
-		
+
 		instantTextBoxType = {
 			name ="legitimacy_text"
 			position = { x = 22 y = 4 }
@@ -123,10 +123,52 @@ guiTypes = {
 			maxWidth = 46
 			maxHeight = 24
 			fixedsize = yes
-			
+
 			pdx_tooltip = "legitimacy_TOOLTIP"
 			pdx_tooltip_delayed = "legitimacy_TOOLTIP_DELAYED"
 		}
 	}
+	containerWindowType = {
+		name = "erb_screen_power_grid_scripted_gui"
+		position = { x = 90 y = 58 }
+		fade_time = 300
+		fade_type = linear
+		buttonType = {
+		name = "erb_power_grid_window"
+			spriteType = "GFX_icons_core"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "ADD_CORE_TT"
+			pdx_tooltip_delayed = "ADD_CORE_TT_DELAYED"
+			scale = 0.95
+		}
+	}
+	containerWindowType = {
+		name = "power_grid_screen_container"
+		position = { x = 0 y = 0 }
+		size = { width = 500 height = 210 }
+
+		containerWindowType = {
+			name = "entry_window"
+			position = { x = 10 y = 10 }
+			size = { width = 100%% height = 100%% }
+			margin = { left = 10 right = 0 top = 5 bottom = 5 }
+			verticalScrollbar = "right_vertical_sliderno_bg"
+
+			background = {
+				name = "background"
+				spriteType = "GFX_mini_tooltip"
+			}
+
+			gridboxtype = {
+				name = "erb_screen_power_grid_scripted_gui_gridbox"
+				position = { x = 0 y = 0 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 230 height = 40 }
+				add_horizontal = yes
+				max_slots_horizontal = 2
+				format = "UPPER_LEFT"
+			}
+		}
+	}
+
 }
-	
