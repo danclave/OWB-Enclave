@@ -8198,6 +8198,20 @@ country_event = {#322 - Mad General
 			}
 			add_opinion_modifier = { modifier = enc_doomed_us_all target = BOS }
 		}
+	}
+}
+	news_event = {#323 - Fall of Rio
+	id = enc_reformers.323
+	title = enc_reformers.323.t
+	desc = enc_reformers.323.d
+	trigger = {
+		has_completed_focus = enc_reform
+		ARM = { controls_state = 746 } #Gloria
+		tag = ERB
+	}
+	picture = GFX_event_rrg_ruins
+	option = { # Good to know
+		name = enc_reformers.323.a
 
 	}
 }

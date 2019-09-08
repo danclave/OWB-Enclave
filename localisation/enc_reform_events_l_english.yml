@@ -1490,3 +1490,8 @@ enc_reformers.322.d: ""You have killed my father and your protector. All that yo
 enc_reformers.322.a: "Quick, blame the Brotherhood of Steel"
 ERB_grant_claims_on_all_of_mexico.tt:0 "\n§gSanta Anna will set out to reunite Mexico.§!\n"
 #############################################################################################################
+enc_reformers.323.t: "Sic Transit Gloria"
+enc_reformers.323.d: "The heroes of [RRG.GetName] have fallen. Mora died buying time for refugees along the Rio Grande.  Guerra fell defending the Capital Building, his wife's locket on his neck. Rosado died last of them all, her efforts to cripple the General's army to no avail against the steel legions. Now an army of conscripts and robots marches through a ruined city, triumphantly informing the people they are part of the Republic of Mexico. An orphan named Veronica watches in silence through hooded eyes. The General, she swears, will regret letting her live."
+enc_reformers.323.a: "Santa Anna bestrides the Rio Grande once more."
+
+#############################################################################################################

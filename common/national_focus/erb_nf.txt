@@ -3421,7 +3421,7 @@ focus_tree = {
 			country_event = { id = enc_reformers.66 }
 			puppet = VEG
 			hidden_effect = {
-				VEGR = { set_politics = { ruling_party = elites }
+				VEG = { set_politics = { ruling_party = elites } }
 			}
 	 	}
 	}
@@ -6310,6 +6310,21 @@ focus = {#NEVADA - second city
 			add_ideas = ENC_PA_production
 		}
 	}
+	focus = {#Purity - FEV experiments
+		id = enc_FEV_experiments
+		icon = GFX_goal_enc_experiments
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_depot_lab
+		x = 2
+		y = 1
+		prerequisite = { focus = openthevaults}
+		prerequisite = { focus = enc_depot_lab}
+		cost = 5.8
+		completion_reward = {
+			add_stability = -0.10
+		}
+	}
+
 	focus = {#SIERRA - 2- Intensify efforts
 		id = enc_depot_lab_buff
 		icon = GFX_goal_enc_research
@@ -6337,6 +6352,7 @@ focus = {#NEVADA - second city
 			add_research_slot = 1
 		}
 	}
+
 	focus = {#SIERRA - 2- weapons
 		id = enc_depot_plasma
 		icon = GFX_goal_enc_laser_weapons
@@ -6415,20 +6431,7 @@ focus = {#NEVADA - second city
 		}
 
  }
-	focus = {#Purity - FEV experiments
-		id = enc_FEV_experiments
-		icon = GFX_goal_enc_experiments
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_depot_lab
-		x = 2
-		y = 1
-		prerequisite = { focus = openthevaults}
-		prerequisite = { focus = enc_depot_lab}
-		cost = 5.8
-		completion_reward = {
-			add_stability = -0.10
-		}
- }
+
 	focus = {#Purity - Human improvement
 		id = enc_perfect_human
 		icon = GFX_goal_enc_super_soldier

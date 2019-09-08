@@ -1,9 +1,9 @@
 ﻿l_english:
-ERB_high_fighter_tech _equipment: "F-85 Fighter"
-ERB_high_fighter_tech _equipment_short: "F-85 Fighter"
-ERB_high_fighter_tech _equipment_desc: ""
-ERB_high_fighter_tech :0 "F-85 Fighter"
-ERB_high_fighter_tech _desc:0 ""
+ERB_high_fighter_tech_equipment: "F-85 Fighter"
+ERB_high_fighter_tech_equipment_short: "F-85 Fighter"
+ERB_high_fighter_tech_equipment_desc: ""
+ERB_high_fighter_tech:0 "F-85 Fighter"
+ERB_high_fighter_tech_desc:0 ""
 
 enclave_light_aircraft_manufacturer: "Fighter Design Team"
 enclave_medium_aircraft_manufacturer: "Vertibird Design Team"
