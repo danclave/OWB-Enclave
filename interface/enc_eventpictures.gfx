@@ -622,5 +622,9 @@ spriteTypes = {
 		SpriteType = {#mexico
             name = "GFX_event_enc_mexico_pyramids"
  		    texturefile = "gfx/event_pictures/event_enc_mexico_pyramids.tga"
- 	    }
+		 }
+		 SpriteType = {#mexico
+		 name = "GFX_event_enc_baja_poster"
+		  texturefile = "gfx/event_pictures/baja_poster.tga"
+	  }
 }

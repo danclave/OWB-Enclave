@@ -3441,31 +3441,79 @@ ENC_granite_doctrine = {
 		}
 erb_fire_and_blood = {
 		target_trigger = {
-			FROM = {
-					AND = {
-						is_neighbor_of = ERB
-						has_idea = raider_nation
-						NOT = { has_country_flag = erb_couriers }
-						}
+		FROM = {
+				AND = {
+					is_neighbor_of = ERB
+					has_idea = raider_nation
+					NOT = { has_country_flag = erb_couriers }
 					}
 				}
-	visible = {
+		}
+		visible = {
 			has_completed_focus = enc_reform
 			FROM = { exists = yes }
-				}
+		}
 		available = {
-			NOT = {
-				FROM = { is_puppet_of = ERB }
-				has_war_with = FROM
-				}
+		NOT = {
+			FROM = { is_puppet_of = ERB }
+			has_war_with = FROM
 			}
+		}
 		days_remove = 5
 		cost = 50
 		ai_will_do = {
 			factor = 100
-				}
+		}
 		complete_effect = {
 			create_wargoal = { type = annex_everything target = FROM }
-				}
 		}
+	}
+}
+ENC_down_mexico_way = {
+    ENC_expeditionary_force = {
+        icon = decision_enc_propaganda
+        cost = 75
+        visible = {
+            has_war_support > 0.2
+        }
+        available = {
+            ARM = {exists = yes }
+        }
+        complete_effect = {
+            set_rule = { can_send_volunteers = yes }
+        }
+	}
+	ENC_release_baja= {
+        icon = decision_enc_propaganda
+        cost = 75
+        visible = {
+			has_stability > 0.3
+        }
+        available = {
+            owns_state = 176
+        }
+        complete_effect = {
+            country_event = { id = enc_reformers.326 }
+        }
+	}
+	ENC_flying_deathclaws = {
+        icon = decision_enc_propaganda
+        cost = 75
+        visible = {
+			has_stability > 0.3
+        }
+        available = {
+            ITZ = { has_war_with = ARM }
+        }
+        complete_effect = {
+		add_equipment_to_stockpile = { type = vb_gunship_equipment amount = -25 producer = ERB }
+		  ITZ = {
+			set_technology = {
+				vertibird_cas_tech = 1
+				vertibird_tech = 1
+			}
+			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 25  }
+		  }
+        }
+	}
 }

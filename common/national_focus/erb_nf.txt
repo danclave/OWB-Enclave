@@ -3820,27 +3820,10 @@ focus = {#Legion Border
 		y = 1
 		cost = 5.8
 		completion_reward = {
-		custom_effect_tooltip = enc_new_mexico_tt
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						has_full_control_of_state = 22 # Libertad
-					}
-					ERB = {
-						create_wargoal = { type = annex_everything target = PREV }
-					}
-				}
-				every_other_country = {
-					limit = {
-						has_full_control_of_state = 41 # Colonet
-					}
-					ERB = {
-						create_wargoal = { type = annex_everything target = PREV }
-					}
-				}
-			}
+			custom_effect_tooltip = enc_new_mexico_tt
+			set_variable = { mexico_legitimacy_value = 25 }
 		}
-		}
+	}
 
 	####################################
 	# DIPLOMACY

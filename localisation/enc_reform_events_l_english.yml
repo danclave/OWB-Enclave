@@ -1493,5 +1493,16 @@ ERB_grant_claims_on_all_of_mexico.tt:0 "\n§gSanta Anna will set out to reunite 
 enc_reformers.323.t: "Sic Transit Gloria"
 enc_reformers.323.d: "The heroes of [RRG.GetName] have fallen. Mora died buying time for refugees along the Rio Grande.  Guerra fell defending the Capital Building, his wife's locket on his neck. Rosado died last of them all, her efforts to cripple the General's army to no avail against the steel legions. Now an army of conscripts and robots marches through a ruined city, triumphantly informing the people they are part of the Republic of Mexico. An orphan named Veronica watches in silence through hooded eyes. The General, she swears, will regret letting her live."
 enc_reformers.323.a: "Santa Anna bestrides the Rio Grande once more."
-
+#############################################################################################################
+enc_reformers.324.t: "Armageddon Station"
+enc_reformers.324.d: "[748.GetName] has been abandoned since the Great War, fallen into disuse.  But with control of both Gloria and [748.GetName], Santa Anna can gain now seize open the facility. Old systems quiet since the Great War flicker on, the flickering lights of a protracted and sinister science. And may God have mercy on us all."
+enc_reformers.324.a: "Santa Anna bestrides the Rio Grande once more."
+#############################################################################################################
+enc_reformers.325.t: "The General's Eagle"
+enc_reformers.325.d: "Many in [ATE.GetCapital] feared that Santa Anna's conquest was only a matter of time, but there were those who thought Nueva Aztlan could hold out along the mountain ranges that divided Mexico. America's robots had done little good in the Sierra Madre Orientales, and there was no reason to expect better from Santa Anna. \n\n But those courtiers did not realize one of them would rather reign in hell than serve in heaven.  The Eagle would rationalize his treachery, later, by claiming he tried to spare Aztlan another nuclear bombardment from a mad god. But his treachery would open southern Mexico to the General, exposing the Empire's Beating Heart."
+enc_reformers.325.a: "More like a turkey, am I right?"
+#############################################################################################################
+enc_reformers.326.t: "Baja Blues"
+enc_reformers.326.d: "The Baja penninsula was spared the worst of the Enclave's conquests. With little of value and occupied as the NCR was already collapsing the Enclave's liberation passed its sleepy towns and villages by. Ranger Riley 'Skip' Almiron was of such little note that the Enclave only sent a request that he surrender for reprocessing by courier. Needless to say, they had declined.  \n\nAnd so Almiron was even more surprised to get a request from the President to oversee the 'Mexican Reclamation Zone,' designed to support those fleeing Santa Anna's conquests. But really, who else was going to do it?"
+enc_reformers.326.a: "Honestly, we just like his music."
 #############################################################################################################

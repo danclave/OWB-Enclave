@@ -8191,7 +8191,8 @@ country_event = {#322 - Mad General
 					add_claim_by = ARM
 				}
 			}
-		every_country = {
+		ARM = { set_country_flag = ARM_tlaloc }
+			every_country = {
 			limit = {
 				is_mexican = yes
 				not = { tag = ARM }
@@ -8200,7 +8201,7 @@ country_event = {#322 - Mad General
 		}
 	}
 }
-	news_event = {#323 - Fall of Rio
+news_event = {#323 - Fall of Rio
 	id = enc_reformers.323
 	title = enc_reformers.323.t
 	desc = enc_reformers.323.d
@@ -8209,12 +8210,153 @@ country_event = {#322 - Mad General
 		ARM = { controls_state = 746 } #Gloria
 		tag = ERB
 	}
+	mean_time_to_happen = {	days = 5 }
 	picture = GFX_event_rrg_ruins
 	option = { # Good to know
 		name = enc_reformers.323.a
-
 	}
 }
+news_event = {#324 - Armageddon Station
+	id = enc_reformers.324
+	title = enc_reformers.324.t
+	desc = enc_reformers.324.d
+	mean_time_to_happen = {	days = 15 }
+	trigger = {
+		ARM = {
+			has_country_flag = ARM_tlaloc
+			 controls_state = 748
+			controls_state = 746
+		}
+		tag = ERB
+	}
+	picture = GFX_event_BOS_bunker_door
+	option = { #RIP
+		name = enc_reformers.324.a
+		ARM = {
+			set_technology = { scientific_civilization = 1 }
+			add_research_slot = 1
+		}
+	}
+}
+news_event = {#325 - Aztlan Plot
+	id = enc_reformers.325
+	title = enc_reformers.325.t
+	desc = enc_reformers.325.d
+	mean_time_to_happen = {	days = 100 }
+	trigger = {
+		ARM = { has_country_flag = ARM_tlaloc }
+		ARM = { has_war_with = ATE }
+		tag = ERB
+	}
+	picture = GFX_event_BOS_bunker_door
+	option = { #RIP
+		name = enc_reformers.325.a
+		ATE= {
+			start_civil_war = {
+				ideology = elites
+				size =  0.30
+				states = { 783 786 785 800 804 801 787 806 802 }
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					original_tag = ATE
+					has_government = elites
+				}
+				set_cosmetic_tag = ATS
+				set_variable = { global.aztec_breakaway = THIS.id }
+				ARM = {
+					puppet = PREV
+				}
+			}
+		}
+	}
+}
+
+news_event = {#326 - Baja Blues
+	id = enc_reformers.326
+	title = enc_reformers.326.t
+	desc = enc_reformers.326.d
+	is_triggered_only = yes
+	picture = GFX_event_enc_baja_poster
+	option = { #RIP
+		name = enc_reformers.326.a
+		hidden_effect = {
+			BJS = {
+				transfer_state = 97
+				transfer_state = 325
+				transfer_state = 176
+				transfer_state = 136
+				transfer_state = 481
+				transfer_state = 158
+				transfer_state = 174
+				transfer_state = 650
+				transfer_state = 651
+				transfer_state = 41
+				transfer_state = 4
+				if = {
+					limit = {
+						ROOT = {
+							owns_state = 107
+							owns_state = 469
+						}
+					}
+					transfer_state = 107
+					transfer_state = 469
+				}
+				every_owned_state = {
+					add_core_of = BJS
+				}
+			}
+		}
+		ROOT = {
+			puppet = BJS
+		}
+		BJS = {
+			set_capital = 176
+			hidden_effect = {
+				set_research_slots = 4
+			}
+			add_political_power = 70
+			create_country_leader = {
+				name = "Ranger Skip"
+				desc = "rs_ranger_skip_desc"
+				picture = "gfx/leaders/Portrait_skip.dds"
+				expire = "3000.1.1"
+				ideology = ideocracy
+				traits = {
+					rs_secret_loyalist
+					rs_musician
+				}
+			}
+			set_politics = {
+				ruling_party = intellectuals
+				elections_allowed = no
+			}
+			set_popularities = {
+				people= 30
+				elites= 5
+				intellectuals= 60
+				ruler= 5
+			}
+			create_corps_commander = {
+				name = "Ranger Piks"
+				portrait_path = "gfx/leaders/ortrait_skip.dds"
+				skill = 3
+				traits = { desert_fox cute
+				}
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 4
+			}
+			set_cosmetic_tag = BJS_ERB
+		}
+		add_to_variable = { mexico_legitimacy_value = 5 }
+	}
+}
+
 #################
 ## IDEAS
 #################
