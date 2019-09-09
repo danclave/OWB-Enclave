@@ -1198,7 +1198,11 @@ country_event = {#38 - weapon cache located
 			value = 10
 		}
 		change_suspicion = yes
-		add_equipment_to_stockpile = { type = scav_pa_tech amount = 400 producer = ERB }
+		add_equipment_to_stockpile = { 
+			type = power_armor_equipment_2
+			amount = 400 
+			producer = ERB 
+		}
 
 	}
 	option = {# It's too risky
@@ -1248,8 +1252,8 @@ country_event = {#39 - loyalists want to rejoin
 		add_stability = -0.10
 		add_equipment_to_stockpile = { type = vb_transport_plane_equipment amount = 50 producer = ERB }
         add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 50 producer = ERB }
-		add_equipment_to_stockpile = { type = scav_pa_tech amount = 300 producer = ERB }
-		add_equipment_to_stockpile = { type = energy_weapons_3 amount = 500 producer = ERB }
+		add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 300 producer = ERB }
+		add_equipment_to_stockpile = { type = energy_equipment_2 amount = 500 producer = ERB }
 		custom_effect_tooltip = leader_ruthless_tt
 	}
 }
