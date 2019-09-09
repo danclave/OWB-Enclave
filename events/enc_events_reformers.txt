@@ -8200,8 +8200,7 @@ country_event = {#322 - Mad General
 			add_opinion_modifier = { modifier = enc_doomed_us_all target = BOS }
 		}
 		ARM = {
-			set_technology = { scientific_civilization = 1 }
-			add_research_slot = 1
+			complete_national_focus = arm_advanced_standardization
 		}
 	}
 }
@@ -8214,6 +8213,7 @@ news_event = {#323 - Fall of Rio
 		ARM = { controls_state = 746 } #Gloria
 		tag = ERB
 	}
+	fire_only_once = yes
 	mean_time_to_happen = {	days = 5 }
 	picture = GFX_event_rrg_ruins
 	option = { # Good to know
@@ -8233,6 +8233,7 @@ news_event = {#324 - Armageddon Station
 		}
 		tag = ERB
 	}
+	fire_only_once = yes
 	picture = GFX_event_BOS_bunker_door
 	option = { #RIP
 		name = enc_reformers.324.a
