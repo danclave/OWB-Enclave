@@ -335,5 +335,9 @@ spriteTypes = {
 			name = "GFX_decision_category_USM_decision"
 			texturefile = "gfx/interface/icons/USM_decision.dds"
 		}
+		spriteType = {
+			name = "GFX_backboard_bright"
+			texturefile = "gfx/interface/icons/backboard_bright.dds"
+		}
 	}
 }

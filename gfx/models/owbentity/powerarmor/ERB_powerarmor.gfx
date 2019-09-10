@@ -1,0 +1,37 @@
+objectTypes = {
+	####paradox mesh
+	pdxmesh = {
+		### name referenced by .asset file
+		name = "powerarmor_x01_mesh"
+		###absolute file path from mod folder
+		file = "gfx/models/owbentity/powerarmor/x01/x01_powerarmor.mesh"
+		### scale of the mesh
+		scale = 1.0
+		#### binding animations to the mesh with an internal reference and an state id(can be anything)
+		animation = { id = "march_move"			type = "owb_infantry_rifle_march" }
+		animation = { id = "aim_exercise"			type = "owb_infantry_rifle_aim_exercise" }
+		animation = { id = "attack"			type = "owb_infantry_rifle_attack_stand" }
+		animation = { id = "support_attack"			type = "owb_infantry_rifle_attack_crouch" }
+		animation = { id = "charge_rifle"			type = "owb_infantry_rifle_charge" }
+		animation = { id = "charge_rifle_shoot"			type = "owb_infantry_rifle_charge_shoot" }
+		animation = { id = "guard_rifle"			type = "owb_infantry_rifle_guard" }
+		animation = { id = "idle"			type = "owb_infantry_rifle_idle" }
+		animation = { id = "training"			type = "owb_infantry_rifle_training_idle" }
+		animation = { id = "jumping_jacks"			type = "owb_infantry_rifle_training_jumping" }
+		animation = { id = "pushup"			type = "owb_infantry_rifle_training_pushup" }
+		animation = { id = "long_idle01"			type = "owb_infantry_rifle_long_idle_1" }
+		animation = { id = "long_idle02"			type = "owb_infantry_rifle_long_idle_2" }
+		animation = { id = "long_idle03"			type = "owb_infantry_rifle_long_idle_3" }
+		animation = { id = "long_idle04"			type = "owb_infantry_rifle_long_idle_4" }
+		animation = { id = "long_idle05"			type = "owb_infantry_rifle_long_idle_5" }
+		animation = { id = "retreat"			type = "owb_infantry_rifle_retreat" }
+		animation = { id = "move"			type = "owb_infantry_rifle_move" }
+		animation = { id = "death"			type = "owb_infantry_rifle_death" }
+
+		meshsettings = {
+			texture_diffuse = "x01_d.dds"
+			texture_normal = "x01_n.dds"
+			texture_specular = "x01_s.dds"
+			shader = PdxMeshAdvanced
+	}
+}

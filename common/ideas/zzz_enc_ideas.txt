@@ -21,7 +21,6 @@ ideas = {
 			allowed = {}
 			removal_cost = 1
 			modifier = {
-				special_forces_cap = 0.50
 				max_fuel_factor = 0.5
 				fuel_gain_factor = 0.2
 				special_forces_min = 50

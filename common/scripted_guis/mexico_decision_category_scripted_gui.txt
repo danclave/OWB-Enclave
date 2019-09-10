@@ -1,0 +1,6 @@
+scripted_gui = {
+	mexico_decision_category1 = {
+		context_type = decision_category
+		window_name = "mexico_decision_category_scripted_gui"
+	}
+}

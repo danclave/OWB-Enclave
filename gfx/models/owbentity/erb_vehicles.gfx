@@ -4,15 +4,15 @@ objectTypes = {
 	############################
 		pdxmesh = {
 		name = "ERB_generic_motorized_mesh"
-		file = "gfx/OWBEntity/infantry/ERB/vehicle/ERB_motorized.mesh"
-		
+		file = "gfx/models/owbentity/infantry/ERB/vehicle/ERB_motorized.mesh"
+
 		animation = { id = "idle"			type = "generic_motorized_01_idle_animation" }
 		animation = { id = "move"			type = "generic_motorized_01_move_animation" }
 	}
 	pdxmesh = {
 		name = "ERB_mechanized_mesh"
-		file = "gfx/OWBEntity/infantry/ERB/vehicle/ERB_mechanized.mesh"
-		
+		file = "gfx/models/owbentity/infantry/ERB/vehicle/ERB_mechanized.mesh"
+
 		animation = { id = "idle"			type = "US_mechanized_01_idle_animation" }
 		animation = { id = "move"			type = "US_mechanized_01_move_animation" }
 		animation = { id = "attack"			type = "US_mechanized_01_attack_animation" }
@@ -22,7 +22,7 @@ objectTypes = {
 	############################
 		pdxmesh = {
 		name = "ERB_tank_medium_mesh"
-		file = "gfx/OWBEntity/infantry/ERB/vehicle/ERB_tank_medium.mesh"
+		file = "gfx/models/owbentity/infantry/ERB/vehicle/ERB_tank_medium.mesh"
 
 		animation = { id = "attack"			type = "USA_tank_medium_attack_animation" }
 		animation = { id = "idle"			type = "USA_tank_medium_idle_animation" }

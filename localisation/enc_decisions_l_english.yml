@@ -398,15 +398,19 @@ ENC_war_movie_cost_blocked: "£army_experience  §R75§!"
 ENC_comedy_movie:0 "Sponsor Comedy Movie"
 ENC_comedy_movie_desc:0 "Everyone needs an escape. A movie that allows us to laugh together is great for relieving tensions."
 ENC_patriotic_movie:0 "Sponsor Patriotic Movie"
-ENC_patriotic_movie_desc:0 "Too some of our citizens, America is still a long lost abstraction. How can we explain such a thing in words alone? We can't, so we need a movie."
+ENC_patriotic_movie_desc:0 "To some of our citizens, America is still a long lost abstraction. How can we explain such a thing in words alone? We can't, so we need a movie."
 
 ###################################
 # Nation Building
 ###################################
 ENC_down_mexico_way:0 "Down Mexico Way"
-ENC_down_mexico_way_desc:0 "Mexico's people need American guidance once again. Faced by mad robot armies and fanatic cultists, it is time for Uncle Sam to lend a hand again."
+ENC_down_mexico_way_desc:0 "For whatever reason, the people of Mexico are more inclined to obey a robot despot than work with the nation that occupied them before the Great War. It will require time and resources to persuade Mexico that we have nothing but good intentions . . . for now."
 ENC_expeditionary_force:0 "Send an Expeditionary Force"
 ENC_expeditionary_force_desc:0 "Although we lack the ability to fight Mexico's oppressors just yet, Mexico's people will welcome our assistance against Santa Anna!"
+ENC_release_baja:0 "The Mexico Reclamation Zone"
+ENC_release_baja_desc:0 "We could support the opponents of Santa Anna by providing them with a nominally independent territory from which to harass the General. Better them than us."
+ENC_flying_deathclaws:0 "The Flying Deathclaws"
+ENC_flying_deathclaws_desc:0 "Although the Reunited States cannot reach [ITZ.GetName] directly, its vertibirds still command the skies and are ready, willing, and able to defend the Itzans."
 ###################################
 # Nation Building
 ###################################

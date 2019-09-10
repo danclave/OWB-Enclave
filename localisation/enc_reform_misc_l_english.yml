@@ -184,14 +184,38 @@ ENC_people_party_wastelanders_leader:0 "no one"
 # TECHNOLOGY
 ###################################
 enc_civilian_power_grid_tech: "Civilian Power Grid"
+##############
+#Baja
+#############
+rs_puppet_master:0 "Puppet Master"
+rs_puppet_master_desc:0 "Puppets are Cool!"
 
+cute:0 "Cute"
+cute_desc:0 "I'm not cute, I'm deadly!"
 
+dashingly_handsome:0 "Dashingly Handsome"
+dashingly_handsome_desc:0 "I don't think this guy knows how to fight at all, but damn if he can't make that uniform work."
+
+rs_musician:0 "Musician"
+
+rs_ranger_skip_desc:0 "While not a career politician, Ranger Riley 'Skip' Almiron is willing to use their popularity to support a good cause. Especially when Horrigan told Skip what the alternative was."
+
+rs_local_sympathiser:0 "Local Sympathiser"
+
+rs_bandito_king:0 "Bandito King"
+
+rs_baja_blitz:0 "Baja Blitz"
+
+rs_secret_loyalist:0 "Secret Loyalist"
 ###########################################
 # OOB
 ###########################################
 enc_tribals_tt: "2 §Ytribal infantry§! and 4 §Ytribal militias§! appear in §YAntelope Reservation§! state."
 enc_bos_recruits: "§YBrotherhood of Steel soldiers§! report for duty!"
-
+###### Mexico
+resistance_support_mexico:0 "§Y[?mexico_legitimacy_value]%§! Resistance Support"
+mexico_legitimacy_TT:0 "Mexican Resistance"
+mexico_legitimacy_TT_DELAYED:0 "For some reason, many people in Mexico are unwilling to fight for Uncle Sam against Santa Anna. It will take time and effort to persuade Mexico to trust that we have their best interests at heart, especially once we demand resource concessions."
 ################ special codes for special people ################################################################################################################
 
 # yellow§Ytext§!

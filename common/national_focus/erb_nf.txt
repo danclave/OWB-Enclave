@@ -3422,8 +3422,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-		country_event = { id = enc_reformers.66 }
-		puppet = VEG }
+			country_event = { id = enc_reformers.66 }
+			puppet = VEG
+			hidden_effect = {
+				VEG = { set_politics = { ruling_party = elites } }
+			}
+	 	}
 	}
 	focus = {#Diplomacy - Minor Good Guys
 		id = enc_the_little_people
@@ -3820,27 +3824,10 @@ focus = {#Legion Border
 		y = 1
 		cost = 5.8
 		completion_reward = {
-		custom_effect_tooltip = enc_new_mexico_tt
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						has_full_control_of_state = 22 # Libertad
-					}
-					ERB = {
-						create_wargoal = { type = annex_everything target = PREV }
-					}
-				}
-				every_other_country = {
-					limit = {
-						has_full_control_of_state = 41 # Colonet
-					}
-					ERB = {
-						create_wargoal = { type = annex_everything target = PREV }
-					}
-				}
-			}
+			custom_effect_tooltip = enc_new_mexico_tt
+			set_variable = { mexico_legitimacy_value = 25 }
 		}
-		}
+	}
 
 	####################################
 	# DIPLOMACY
@@ -5556,7 +5543,7 @@ focus = {#NEVADA - second city
 			add_stability = 0.05
 			create_field_marshal = {
 				name = "General Judah Kreger"
-				portrait_path = "gfx/leaders/ENC/Portrait_ENC_Generic_3.dds"
+				portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_3.dds"
 				skill = 5
 				attack_skill = 5
 				defense_skill = 4
@@ -6309,6 +6296,21 @@ focus = {#NEVADA - second city
 			add_ideas = ENC_PA_production
 		}
 	}
+	focus = {#Purity - FEV experiments
+		id = enc_FEV_experiments
+		icon = GFX_goal_enc_experiments
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_depot_lab
+		x = 2
+		y = 1
+		prerequisite = { focus = openthevaults}
+		prerequisite = { focus = enc_depot_lab}
+		cost = 5.8
+		completion_reward = {
+			add_stability = -0.10
+		}
+	}
+
 	focus = {#SIERRA - 2- Intensify efforts
 		id = enc_depot_lab_buff
 		icon = GFX_goal_enc_research
@@ -6336,6 +6338,7 @@ focus = {#NEVADA - second city
 			add_research_slot = 1
 		}
 	}
+
 	focus = {#SIERRA - 2- weapons
 		id = enc_depot_plasma
 		icon = GFX_goal_enc_laser_weapons
@@ -6414,20 +6417,7 @@ focus = {#NEVADA - second city
 		}
 
  }
-	focus = {#Purity - FEV experiments
-		id = enc_FEV_experiments
-		icon = GFX_goal_enc_experiments
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_depot_lab
-		x = 2
-		y = 1
-		prerequisite = { focus = openthevaults}
-		prerequisite = { focus = enc_depot_lab}
-		cost = 5.8
-		completion_reward = {
-			add_stability = -0.10
-		}
- }
+
 	focus = {#Purity - Human improvement
 		id = enc_perfect_human
 		icon = GFX_goal_enc_super_soldier

@@ -187,21 +187,7 @@ ENC_reno = {
 		}
 	}
 }
-ENC_down_mexico_way = {
-    ENC_expeditionary_force = {
-        icon = decision_enc_propaganda
-        cost = 75
-        visible = {
-            has_war_support > 0.2
-        }
-        available = {
-            ARM = {exists = yes }
-        }
-        complete_effect = {
-            set_rule = { can_send_volunteers = yes }
-        }
-	}
-}
+
 ENC_radio_broadcasts = {
 	ENC_raise_war_support = {
 		icon = decision_enc_propaganda

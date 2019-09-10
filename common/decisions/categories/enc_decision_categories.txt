@@ -229,7 +229,7 @@ ENC_epilogue = {
 }
 ENC_down_mexico_way = {
 	icon = GFX_decision_category_USM_decision
-	allowed = { tag = ERB }
+	scripted_gui = mexico_decision_category1
 	visible = {	has_completed_focus = enc_mexico_invasion }
 }
 
