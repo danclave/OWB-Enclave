@@ -369,6 +369,7 @@ scripted_gui = {
 		parent_window_token = politics_tab
 		visible = {
 			tag = ERB
+			has_completed_focus = enc_rebuild_the_power_grid
 		}
 		window_name = "erb_screen_power_grid_scripted_gui"
 
@@ -382,6 +383,34 @@ scripted_gui = {
 				}
 				else = {
 					set_variable = { power_grid_screen = 1 }
+					hidden_effect = { ROOT = { sound_effect = ERB_electric } }
+				}
+				if = {
+					limit = {
+						check_variable = { power_grid_screen = 1}
+					}
+					clear_array = erb_power_grid_array
+				}
+				if = {
+					limit = {
+						any_owned_state = {
+							NOT = { is_core_of = ROOT }
+							NOT = { is_in_array = { ROOT.erb_power_grid_array = THIS.id } }
+						}
+					}
+					every_owned_state = {
+						limit = {
+							NOT = {
+								is_core_of = ROOT
+							}
+						civilian_power_grid > 0
+						any_neighbor_state = {
+							is_core_of = ROOT
+						}
+						NOT = { is_in_array = { ROOT.erb_power_grid_array = THIS.id } }
+					}
+						add_to_array = { ROOT.erb_power_grid_array = THIS.id }
+					}
 				}
 			}
 		}
@@ -399,36 +428,59 @@ scripted_gui = {
 			close_button_click = {
 				clear_variable = power_grid_screen
 			}
-			connect_to_power_click = {
+			connect_to_power_grid1_click = {
+				visible = {
+					NOT = {
+						is_core_of = ROOT
+					}
+					OR = {
+						free_building_slots = {
+							building = civilian_power_grid
+							size > 0
+							include_locked  = no
+						}
+						civilian_power_grid > 0
+						# something to delete
+						# industrial_complex > 0
+						# arms_factory > 0
+						# water_generator > 0
+						# electricity_generator > 0
+						# metal_generator > 0
+					}
+				}
+				triggers = {
+					connect_to_power_click_enabled = {
+						civilian_power_grid > 0
+						custom_trigger_tooltip = {
+							tooltip = more_than_5_electricity
+							ROOT = {
+								check_variable = {
+									var = resource@energy
+									value = 5
+									compare = greater_than_or_equals
+								}
+							}
+						}
+						any_neighbor_state = {
+							is_core_of = ROOT
+						}
+					}
+				}
 				hidden_effect = { root = { sound_effect = ERB_electric } }
 				set_state_flag = needs_civilian_power_grid
 				add_core_of = root
 			}
-		}
 
-		triggers = {
-			connect_to_power_click_enabled = {
-				civilian_power_grid > 0
-				custom_trigger_tooltip = {
-					tooltip = more_than_5_electricity
-					ROOT = {
-						check_variable = {
-							var = resource@energy
-							value = 5
-							compare = greater_than_or_equals
-						}
-					}
-				}
-				any_neighbor_state = {
-					is_core_of = ROOT
+			entry_bg_button1_click = {
+				ROOT = {
+					goto_state = PREV
 				}
 			}
 		}
-
 		dynamic_lists = {
-			erb_power_grid_screen_scripted_gui_gridbox = {
-				array = owned_states
-				entry_container = connect_to_power_grid_scripted_gui_entry
+			erb_screen_power_grid_scripted_gui_gridbox = {
+				array = erb_power_grid_array
+				entry_container = erb_power_grid_screen_scripted_gui_entry
 				change_scope = yes
 			}
 		}

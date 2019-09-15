@@ -44,12 +44,14 @@ red_scare2:0 "Communism Paranoia"
 connect_to_power: "Connect to Grid"
 connect_to_power_tt: "Connect to Grid"
 connect_to_power_tt_delayed: "[!connect_to_power_click]Requires:\n[!connect_to_power_click_enabled]"
+army_corps_of_engineers_tt: "§YThe Army Corps of Engineers!§!"
+army_corps_of_engineers_tt_delayed:0 "Tired of a state by state approach to restoring the power grid, President Granite has authorized the Corps of Engineers to come up with a simple list for the Reconstruction Authority."
 building_slot_available: "At least 1 Building Slot available"
 connected_to_power_tt: "Connected to Grid"
 connected_to_power_tt_delayed: "This state has been connected to our power grid.\n§RRemoving the grid will uncore the state.§!"
 
-connect_to_power_ttt: " - costs 2 §YElectricity§! to maintain."
-
+connect_to_power_ttt: " - costs 2 §YEnergy§! to maintain."
+connect_to_power_engineering_tt: "Costs 2 §YEnergy§! to maintain."
 civilian_power_grid: "Civilian Power Grid"
 civilian_power_grid_desc: "Allows a state to be §GCored§!"
 modifier_production_speed_civilian_power_grid: "§YCivilian Power Grid§! production speed"
@@ -216,6 +218,7 @@ enc_bos_recruits: "§YBrotherhood of Steel soldiers§! report for duty!"
 resistance_support_mexico:0 "§Y[?mexico_legitimacy_value]%§! Resistance Support"
 mexico_legitimacy_TT:0 "Mexican Resistance"
 mexico_legitimacy_TT_DELAYED:0 "For some reason, many people in Mexico are unwilling to fight for Uncle Sam against Santa Anna. It will take time and effort to persuade Mexico to trust that we have their best interests at heart, especially once we demand resource concessions."
+electric_grid_core_button:0 "Electrify"
 ################ special codes for special people ################################################################################################################
 
 # yellow§Ytext§!

@@ -53,7 +53,7 @@ CES_BOS:  "Brotherhood Remnants"
 enc_nuka_cola:  "Nuka Cola Addiction"
 Enc_Construction_nuka:  "Building Nuka World"
 enc_hacking:0 "Monitoring the Computer Networks"
-enc_NCR_radio: "NCR Radio" 
+enc_NCR_radio: "NCR Radio"
 enc_NCR_radio_desc: "Our New California Radio will play high brow, subtly pro-Enclave pieces that also criticize Shady Sands.  But some within the Enclave might get angry that we're spending time and resources to win hearts and minds instead of building more plasma guns."
 enc_NCR_propaganda_tour: "Propaganda Tour"
 enc_NCR_propaganda_tour_desc: "With control of the Gecko Power Plant, and immigration from the Wastes, Vault City hums with progress, while Reno's murder rate has gone down significantly (even including deaths from plasma burns). The 'Nevada Reclamation Authority' can welcome NCR delegates and show we are certainly not planning to descend from their skies in vertibirds. Playing nice will, of course, anger some Purists."
@@ -79,7 +79,7 @@ ENC_dept_education_military: "Military Department of Education"
 ENC_EPA: "The Environmental Protection Agency"
 ENC_EPA_desc:  "Cleaning the environment will cost time and money, it's well worth it."
 ENC_infighting_2: "Civil War"
-ENC_Dept_Energy:  "Department of Energy" 
+ENC_Dept_Energy:  "Department of Energy"
 ENC_ncr_enclave_propaganda: "Enclave Propaganda"
 ENC_electrification:  "Rural Electrification"
 CES_plague: "The Utah Plague"
@@ -182,6 +182,8 @@ ENC_emergency_labour_draft: "Emergency Labour Draft"
 
 ENC_accepted_brahmin_barons: "Brahmin Barons"
 ENC_rejected_brahmin_barons: "Brahmin Barons Evicted"
+ffi_dornan_advice:0 "La Cucaracha"
+ffi_dornan_advice_desc:0 "Sergeant Dornan's training methods have become a little unorthodox, but, well, who are we to criticize?"
 ###################################
 # MANPOWER
 ###################################
@@ -196,7 +198,7 @@ the_final_line: "The Final Line"
 the_final_line_desc: "This is the final line of defense of America's future against the mutant menace.\nNo Compromise, no mercy.\n"
 enclave_military: "Enclave Military"
 enclave_military_desc: "The Enclave Military has been fully mobilized."
-expanded_enclave_military: "Expanded Forces" 
+expanded_enclave_military: "Expanded Forces"
 expanded_enclave_military_desc: "The Enclave Military has been fully mobilized and all security personel has been added to the armed forces."
 all_non_essential: "All Non-Essentials"
 all_non_essential_desc: "The Enclave Military has been fully mobilized and all non essential personel from other departments has been added to the armed forces."
@@ -208,7 +210,7 @@ The_Army_of_the_Free_desc: "We can't engage in widespread conscription, because 
 american_revolution: "The US Revolution"
 american_revolution_desc: "These are the times that try men's souls. The summer soldier and the sunshine patriot will, in this crisis, shrink from the service of their country; but he that stands by it now, deserves the love and thanks of man and woman. Tyranny, like hell, is not easily conquered; yet we have this consolation with us, that the harder the conflict, the more glorious the triumph."
 burnished_rows_of_steel: "The Rows of Steel"
-burnished_rows_of_steel_desc: "President Granite's undisputed control of the Enclave will let him mobilize our nation for war.  Time to show that son of a bitch in Flagstaff who's the real American Caesar." 
+burnished_rows_of_steel_desc: "President Granite's undisputed control of the Enclave will let him mobilize our nation for war.  Time to show that son of a bitch in Flagstaff who's the real American Caesar."
 
 enc_disorganized_army: "Disorganized Army"
 enc_disorganized_army_desc: "After the collapse of the NCR, our armed forces fell into complete disarray. Stretched out hopelessly among thousands of unwilling civilians.\n"
@@ -247,7 +249,7 @@ navy_chief_loyalist: "Daniel Shepherd"
 
 ###################################
 # NCR - PEOPLE
-#################################### 
+####################################
 
 # NCR - High Command
 ###################################
@@ -283,4 +285,3 @@ enc_big_jim_chief_of_army_desc:0 "Big Jim knows how to succeed at war, and succe
 
 enc_drummund_chief_of_army:0 "General Alexander Drummund"
 enc_drummund_chief_of_army_desc:0 "Drummund has years of experience with which to back up his appointment, and it shows in his capacity for planning, both in speed and brilliance. However, he is unpopular among the people, and his appointment will weaken the republic's standing."
- 

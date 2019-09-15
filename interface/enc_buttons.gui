@@ -15,7 +15,7 @@ guiTypes = {
 			scale = 1
 		}
 	}
-	containerWindowType = { # connect_to_power
+	containerWindowType = 	{ # connect_to_power
 		name = connected_to_power_container
 		position = {x=90 y=58}
 
@@ -33,7 +33,7 @@ guiTypes = {
 	}
 	containerWindowType = { # install_police_force
 		name = install_police_force_container
-		position = { x = 92 y = 58 }
+		position = { x = 94 y = 58 }
 
 		fade_time = 50
 		fade_type = linear
@@ -130,22 +130,22 @@ guiTypes = {
 	}
 	containerWindowType = {
 		name = "erb_screen_power_grid_scripted_gui"
-		position = { x = 90 y = 58 }
+		position = { x = 480 y = 250 }
 		fade_time = 300
 		fade_type = linear
 		buttonType = {
 		name = "erb_power_grid_window"
-			spriteType = "GFX_icons_core"
+			spriteType = "GFX_icons_power"
 			position = { x = 0 y = 0 }
-			pdx_tooltip = "ADD_CORE_TT"
-			pdx_tooltip_delayed = "ADD_CORE_TT_DELAYED"
+			pdx_tooltip = "army_corps_of_engineers_tt"
+			pdx_tooltip_delayed = "army_corps_of_engineers_tt_delayed"
 			scale = 0.95
 		}
 	}
 	containerWindowType = {
 		name = "power_grid_screen_container"
-		position = { x = 0 y = 0 }
-		size = { width = 500 height = 210 }
+		position = { x = 600 y = 400 }
+		size = { width = 800 height = 210 }
 
 		containerWindowType = {
 			name = "entry_window"
@@ -158,17 +158,69 @@ guiTypes = {
 				name = "background"
 				spriteType = "GFX_mini_tooltip"
 			}
-
 			gridboxtype = {
 				name = "erb_screen_power_grid_scripted_gui_gridbox"
-				position = { x = 0 y = 0 }
+				position = { x = 0 y = 60 }
 				size = { width = 100%% height = 100%% }
-				slotsize = { width = 230 height = 40 }
+				slotsize = { width = 100 height = 40 }
 				add_horizontal = yes
 				max_slots_horizontal = 2
 				format = "UPPER_LEFT"
 			}
 		}
-	}
+		containerWindowType = {
+			name = "header_entry_army_corps_of_engineers"
+			size = { width = 200 height = 30 }
+			clipping = no
 
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_window_transparent"
+				clicksound = click_default
+			}
+			instantTextboxType = {
+				name = "title"
+				position = { x = 170 y = 14 }
+				font = "hoi_36header"
+				text = "The Army Corps of Engineers"
+				maxWidth = 600
+				maxHeight = 20
+				fixedsize = yes
+			}
+		}
+	}
+	containerWindowType = {
+		name = "erb_power_grid_screen_scripted_gui_entry"
+		position = { x = 0 y = 5 }
+		size = { width = 100 height = 30 }
+
+		buttonType = {
+			name = "entry_bg_button1"
+			spriteType = "GFX_tiled_header_1"
+			position = { x = 0 y = 0 }
+			size = { x = 514 y = 30 }
+			pdx_tooltip = "FALLOUT_GO_TO_STATE_TT"
+		}
+		instantTextboxType = {
+			name = "connect_to_power_grid"
+			position = { x = 10 y = 6 }
+			text = "Civilize [This.GetName]"
+			font = "hoi_18mbs"
+			format = left
+			maxWidth = 250
+			multiline = no
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "connect_to_power_grid1"
+			spriteType = "GFX_tiling_sort_button_2frames"
+			frame = 1
+			buttonFont = "hoi_16mbs"
+			buttonText = "electric_grid_core_button"
+			position = { x = 150 y = 3 }
+			size = { x = 75 y = 25 }
+			pdx_tooltip = "connect_to_power_tt"
+			pdx_tooltip_delayed = "connect_to_power_engineering_tt"
+		}
+	}
 }

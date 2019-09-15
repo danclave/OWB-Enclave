@@ -20,6 +20,14 @@ NCR_hayes_plots = {
 			create_wargoal = { type = annex_everything target = SHI }
 		}
 	}
+	set_variable = { caf.border.state = any_random_state = {
+			limit = {
+				is_owned_by = CAF
+				is_neighbor_of = ARM
+			}
+		}
+	}
+
 	ENC_hayes_recognize_nevada= {
 		cost = 50
 		icon = decision_enc_propaganda
@@ -1035,7 +1043,7 @@ ENC_infiltrating_NCR = {
 		complete_effect = { country_event = {id = enc_reformers.204 }
 		}
 	}
-	
+
 	enc_NCR_seize_dayglow = {
 		icon = decision_plasma
 		priority = 300
@@ -2894,47 +2902,68 @@ ENC_securing_borders = {
 		}
 	}
 	ENC_WBH_expansion = {
-	icon = generic_scorched_earth
-	priority = 11
-	available = {
-		NOT = {
-			country_exists = WBH
+		icon = generic_scorched_earth
+		priority = 11
+		available = {
+			NOT = {
+				country_exists = WBH
+			}
+		}
+		activation = {
+			WBH = { has_war = no }
+			NOT = { country_exists = NCR}
+			NOT = { country_exists = TRL }
+			has_country_flag = enc_wbh_threat
+		}
+		days_mission_timeout = 50
+		fire_only_once = no
+		is_good = no
+		timeout_effect = {
+			country_event = { id = enc_reformers.222 }
 		}
 	}
-	activation = {
-		WBH = { has_war = no }
-		NOT = { country_exists = NCR}
-		NOT = { country_exists = TRL }
-		has_country_flag = enc_wbh_threat
+	ENC_TRLexpansion = {
+		icon = generic_scorched_earth
+		priority = 11
+		available = {
+			NOT = {
+				country_exists = TRL
+			}
+		}
+		activation = {
+			TRL = { has_war = no }
+			NOT = { country_exists = NCR}
+			NOT = { country_exists = WBH }
+			has_country_flag = enc_trl_threat
+		}
+		days_mission_timeout = 50
+		fire_only_once = no
+		is_good = no
+		timeout_effect = {
+			country_event = { id = enc_reformers.222 }
+		}
 	}
-	days_mission_timeout = 50
-	fire_only_once = no
-	is_good = no
-	timeout_effect = {
-		country_event = { id = enc_reformers.222 }
-	}
-}
 	ENC_CES_expansion = {
-	icon = generic_scorched_earth
-	priority = 11
-	available = {
-		NOT = {
-			country_exists = CES
+		icon = generic_scorched_earth
+		priority = 11
+		available = {
+			NOT = {
+				country_exists = CES
+			}
+		}
+		days_mission_timeout = 90
+		activation = {
+			CES = { has_war = no }
+			NOT = { country_exists = NCR}
+			NOT = { country_exists = NCN }
+			has_country_flag = enc_ces_threat
+			}
+		fire_only_once = no
+		is_good = no
+		timeout_effect = {
+			country_event = { id = enc_reformers.223  }
 		}
 	}
-	days_mission_timeout = 90
-	activation = {
-		CES = { has_war = no }
-		NOT = { country_exists = NCR}
-		NOT = { country_exists = NCN }
-		has_country_flag = enc_ces_threat
-		}
-	fire_only_once = no
-	is_good = no
-	timeout_effect = {
-		country_event = { id = enc_reformers.223  }
-	}
-}
 	ENC_pacificy_northern_border = { # secure northern borders
 		icon = infiltrate_state
 		priority = 9
@@ -3193,14 +3222,14 @@ ENC_gannon_doctrine = {
 	erb_reunited_state = {
 		target_trigger = {
 			FROM = {
-					is_neighbor_of = ERB
-					has_idea = settler_nation
-					NOT = {tag = ARR}
-					is_in_faction = no
-					is_mexican = NO
-					}
-				}
-	visible = {
+				is_neighbor_of = ERB
+				has_idea = settler_nation
+				NOT = {tag = ARR}
+				is_in_faction = no
+				not = { is_mexican = yes }
+			}
+		}
+		visible = {
 			if = {
 				has_completed_focus = enc_reform
 				FROM = {
@@ -3208,13 +3237,13 @@ ENC_gannon_doctrine = {
 					NOT = { has_country_flag = erb_couriers }
 				}
 			}
-	}
+		}
 		available = {
 			NOT = {
 				FROM = { is_puppet_of = ERB }
 				has_war_with = FROM
-				}
 			}
+		}
 		cost = 100
 		ai_will_do = {
 			factor = 100
@@ -3223,8 +3252,8 @@ ENC_gannon_doctrine = {
 		remove_effect = {
 			FROM = {set_country_flag = erb_couriers }
 			custom_effect_tooltip = ENC_couriers_tt
-				}
-		}
+			}
+	}
 	erb_reunited_state_arroyo = {
 		visible = {
 			is_neighbor_of = ARR
@@ -3485,10 +3514,11 @@ ENC_down_mexico_way = {
             set_rule = { can_send_volunteers = yes }
         }
 	}
-	ENC_release_baja= {
+	ENC_release_baja = {
         icon = decision_enc_propaganda
         cost = 75
-        visible = {
+		fire_only_once = yes
+		visible = {
 			has_stability > 0.3
         }
         available = {
@@ -3497,6 +3527,176 @@ ENC_down_mexico_way = {
         complete_effect = {
             country_event = { id = enc_reformers.326 }
         }
+	}
+	ENC_aid_baja = {
+        icon = decision_enc_propaganda
+        cost = 75
+        visible = {
+			has_stability > 0.3
+		}
+		fire_only_once = yes
+		target_trigger = {
+			FROM = {
+				TAG = BJS
+			}
+		}
+        complete_effect = {
+            random_owned_state  = {
+				remove_building  = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_state  = {
+				remove_building  = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_state  = {
+				remove_building  = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			BJS = {
+				random_owned_state  = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_state  = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_to_variable = { mexico_legitimacy_value = 5 }
+			custom_effect_tooltip = ENC_aid_baja_tt
+        }
+	}
+	ENC_aid_baja_infrastructure = {
+        icon = decision_enc_propaganda
+        cost = 75
+        visible = {
+			has_stability > 0.3
+		}
+		fire_only_once = yes
+		target_trigger = {
+			FROM = {
+				TAG = BJS
+			}
+		}
+		days_remove = 180
+		cost = 50
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+        complete_effect = {
+			BJS = {
+				random_owned_state  = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_state  = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			add_to_variable = { mexico_legitimacy_value = 5 }
+			custom_effect_tooltip = ENC_aid_baja_tt
+        }
+	}
+	ENC_send_dornan_to_Free_fighters = {
+        icon = decision_enc_propaganda
+        cost = 75
+        visible = {
+			FFI = {exists = yes }
+		}
+		fire_only_once = yes
+
+		days_remove = 50
+        complete_effect = {
+            country_event = { id = enc_reformers.329 }
+        }
+	}
+	ENC_approach_the_baron  = {
+        icon = caf_trade_mission
+        cost = 75
+        visible = {
+			CAF = {exists = yes }
+		}
+		fire_only_once = yes
+
+		days_remove = 50
+        complete_effect = {
+			country_event = { id = enc_reformers.330 }
+			set_country_flag = enc_approach_baron
+        }
+	}
+
+	ENC_baron_is_asshole = {
+		icon = caf_trade_mission
+		priority = 30
+		fire_only_once = no
+		allowed = { tag = ERB }
+		available = { has_war_with = ARM }
+		activation = {
+			has_country_flag = baron_alliance
+			CAF = {
+				all_owned_state = {
+					OR = {
+						ROOT = {
+							divisions_in_state = {
+								state = PREV
+								size < 5
+							}
+						}
+						NOT = {
+							any_neighbor_state = {
+								is_owned_by = ARM
+							}
+						}
+					}
+				}
+			}
+		}
+		cancel_trigger = {
+			CAF = {
+				all_owned_state = {
+					OR = {
+						ROOT = {
+							divisions_in_state = {
+								state = PREV
+								size > 5
+							}
+						}
+						NOT = {
+							any_neighbor_state = {
+								is_owned_by = ARM
+							}
+						}
+					}
+				}
+			}
+		}
+		is_good = no
+		days_mission_timeout = 50
+		timeout_effect = {
+			news_event = enc_reformers.332
+		}
 	}
 	ENC_flying_deathclaws = {
         icon = decision_enc_propaganda
@@ -3508,14 +3708,61 @@ ENC_down_mexico_way = {
             ITZ = { has_war_with = ARM }
         }
         complete_effect = {
-		add_equipment_to_stockpile = { type = vb_gunship_equipment amount = -25 producer = ERB }
-		  ITZ = {
-			set_technology = {
-				vertibird_cas_tech = 1
-				vertibird_tech = 1
+			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = -25 producer = ERB }
+			ITZ = {
+				set_technology = {
+					vertibird_cas_tech = 1
+					vertibird_tech = 1
+				}
+				add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 25  }
 			}
-			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 25  }
-		  }
-        }
+    	}
 	}
+	ENC_pan_american_alliance= {
+        icon = decision_enc_propaganda
+        cost = 75
+        visible = {
+			has_stability > 0.3
+        }
+        available = {
+			has_war_with = ARM
+
+			custom_trigger_tooltip = {
+				tooltip = ENC_pan_american_alliance_tt
+				check_variable = { mexico_legitimacy_value > 60 }
+			}
+        }
+        complete_effect = {
+			country_event = enc_reformers.341
+			custom_effect_tooltip = ENC_pan_american_alliance_tt_final
+    	}
+	}
+	ENC_invite_to_pan_american_alliance = {
+		target_trigger = {
+			FROM = {
+				NOT = { tag = CAF }
+				NOT = { tag = ARM }
+				is_in_faction = no
+				is_mexican = yes
+			 }
+		}
+		visible = {
+			has_country_flag = mexican_allies
+		}
+		available = {
+			NOT = {
+				FROM = { is_puppet_of = ERB }
+				has_war_with = FROM
+			}
+		}
+		cost = 100
+		ai_will_do = {
+			factor = 100
+				}
+		days_remove = 30
+		remove_effect = {
+			add_to_faction = FROM
+		}
+	}
+
 }

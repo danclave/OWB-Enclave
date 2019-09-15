@@ -672,7 +672,7 @@ country_event = {#20 - Dealing with Bishops - escape
 	}
 }
 
-country_event = {#21 - Spies in NCR - caught compromised 
+country_event = {#21 - Spies in NCR - caught compromised
 	id = enc_reformers.21
 	title = enc_reformers.21.t
 	desc = enc_reformers.21.d
@@ -1198,10 +1198,10 @@ country_event = {#38 - weapon cache located
 			value = 10
 		}
 		change_suspicion = yes
-		add_equipment_to_stockpile = { 
+		add_equipment_to_stockpile = {
 			type = power_armor_equipment_2
-			amount = 400 
-			producer = ERB 
+			amount = 400
+			producer = ERB
 		}
 
 	}
@@ -2825,67 +2825,81 @@ country_event = {#101 Axis of Evil
 					limit = { is_in_faction = yes }
 					leave_faction = yes
 				}
-				}
+			}
 			PMR = {
 				if = {
 					limit = { is_in_faction = yes }
 					leave_faction = yes
 				}
-				}
+			}
 			TOC = {
 				if = {
 					limit = { is_in_faction = yes }
 					leave_faction = yes
 				}
-				}
+			}
 		CES = {
-			add_to_faction = WBH
+			if = {
+				limit = { country_exists = WBH }
+				add_to_faction = WBH
+			}
+			if = {
+				limit = { country_exists = TRL }
+				add_to_faction = TRL
+			}
 			add_to_faction = EHT
 			add_to_faction = CHE
 			add_to_faction = PMR
 			add_to_faction = TOC
-			}
+		}
 		WBH = {
-					add_ai_strategy = {
-						type = alliance
-						id = "CES"
-						value = 200
-					}
-				}
+			add_ai_strategy = {
+				type = alliance
+				id = "CES"
+				value = 200
+			}
+		}
 		EHT = {
-					add_ai_strategy = {
-						type = alliance
-						id = "CES"
-						value = 200
-					}
-				}
+			add_ai_strategy = {
+				type = alliance
+				id = "CES"
+				value = 200
+			}
+		}
 		CHE = {
-					add_ai_strategy = {
-						type = alliance
-						id = "CES"
-						value = 200
-					}
-				}
+			add_ai_strategy = {
+				type = alliance
+				id = "CES"
+				value = 200
+			}
+		}
 		PMR = {
-					add_ai_strategy = {
-						type = alliance
-						id = "CES"
-						value = 200
-					}
-				}
+			add_ai_strategy = {
+				type = alliance
+				id = "CES"
+				value = 200
+			}
+		}
 		TOC = {
-					add_ai_strategy = {
-						type = alliance
-						id = "CES"
-						value = 200
-					}
-				}
-
-	CES = { declare_war_on = {
-					target = ERB
-					type = annex_everything
-			} }
-
+			add_ai_strategy = {
+				type = alliance
+				id = "CES"
+				value = 200
+			}
+		}
+		TRL = {
+			add_ai_strategy = {
+				type = alliance
+				id = "CES"
+				value = 200
+			}
+		}
+		CES = {
+			declare_war_on = {
+				target = ERB
+				type = annex_everything
+			}
+		}
 	}
 }
 
@@ -2947,7 +2961,6 @@ country_event = {#103 - Drugs
 			add_resource = { type = circuitry amount = 5 state = 285 }
 			set_country_flag = enc_healers
 		}
-
 	}
 
 country_event = {#104 - Followers of Apocolypse
@@ -3186,7 +3199,8 @@ country_event = {#110 - BOS Legionaries
 		tag = ERB
 		is_neighbor_of = CES
 		CES = { has_war_with = ERB }
-		CES = { surrender_progress > .2 }
+		CES = { surrender_progress > 0.2 }
+		not = { country_exists = ARM }
 	}
 	mean_time_to_happen = {
 		days = 3
@@ -3497,7 +3511,7 @@ country_event = {#115 Axis of Evil
     title = enc_reformers.115.t
     desc = { # neutral stance
         text = enc_reformers.115.d.nowbs
-        trigger = { 
+        trigger = {
 			has_completed_focus = enc_expand_human_definition
 			NOT = { country_exists = WBH }
 		}
@@ -3508,10 +3522,10 @@ country_event = {#115 Axis of Evil
     }
     desc = { # neutral stance
         text = enc_reformers.115.d.seg.nowbs
-        trigger = { 
-			not = { 
-				has_completed_focus = enc_expand_human_definition 
-				country_exists = WBH 
+        trigger = {
+			not = {
+				has_completed_focus = enc_expand_human_definition
+				country_exists = WBH
 			}
 		}
 	}
@@ -5848,7 +5862,7 @@ country_event = {#197 - War with Caesar and FEV
 	desc = enc_reformers.197.d
 	trigger = {
 		has_completed_focus = enc_vacinations
-		has_war_with = CES 
+		has_war_with = CES
 	}
 	mean_time_to_happen = {	days = 30 }
 	option = {#  Sucker
@@ -5857,7 +5871,7 @@ country_event = {#197 - War with Caesar and FEV
 		CES = {add_stability = -0.05 }
 		if = {
 			limit = { has_idea = CES_plague }
-			remove_ideas = CES_plague 
+			remove_ideas = CES_plague
 		}
 	}
 }
@@ -8253,7 +8267,7 @@ news_event = {#324 - Armageddon Station
 	trigger = {
 		ARM = {
 			has_country_flag = ARM_tlaloc
-			 controls_state = 748
+			controls_state = 748
 			controls_state = 746
 		}
 		tag = ERB
@@ -8265,7 +8279,7 @@ news_event = {#324 - Armageddon Station
 		ARM = { add_nuclear_bombs = 1 }
 	}
 }
-news_event = {#325 - Aztlan Plot
+news_event = {#325 - Baron Plot
 	id = enc_reformers.325
 	title = enc_reformers.325.t
 	desc = enc_reformers.325.d
@@ -8276,28 +8290,17 @@ news_event = {#325 - Aztlan Plot
 		tag = ERB
 	}
 	fire_only_once = yes
-	picture = GFX_event_BOS_bunker_door
+	picture = GFX_event_ATE_xochicalco
 	option = { #RIP
 		name = enc_reformers.325.a
-		ATE= {
-			start_civil_war = {
-				ideology = elites
-				size =  0.30
-				states = { 783 786 785 800 804 801 787 806 802 }
-			}
+		ATE = {
+			end_puppet = CAF
 		}
-		hidden_effect = {
-			random_country = {
-				limit = {
-					original_tag = ATE
-					has_government = elites
-				}
-				set_cosmetic_tag = ATS
-				set_variable = { global.aztec_breakaway = THIS.id }
-				ARM = {
-					puppet = PREV
-				}
-			}
+		ARM = {
+			white_peace = CAF
+		}
+		CAF = {
+			remove_ideas = CAF_oaxaca
 		}
 	}
 }
@@ -8372,7 +8375,7 @@ news_event = {#326 - Baja Blues
 				name = "Ranger Piks"
 				portrait_path = "gfx/leaders/ortrait_skip.dds"
 				skill = 3
-				traits = { desert_fox cute
+				traits = { desert_fox
 				}
 				attack_skill = 4
 				defense_skill = 2
@@ -8382,9 +8385,501 @@ news_event = {#326 - Baja Blues
 			set_cosmetic_tag = BJS_ERB
 		}
 		add_to_variable = { mexico_legitimacy_value = 5 }
+		set_country_flag = erb_skip_online
+	}
+}
+news_event = {#327 - Fall of Aztlan Capital
+	id = enc_reformers.327
+	title = enc_reformers.327.t
+	desc = enc_reformers.327.d
+	mean_time_to_happen = {	days = 15 }
+	trigger = {
+		ARM = {
+			has_country_flag = ARM_tlaloc
+			controls_state = 863
+		}
+		tag = ERB
+	}
+	fire_only_once = yes
+	picture = GFX_event_ATE_xochicalco
+	option = { #RIP
+		name = enc_reformers.327.a
+		ARM = { add_manpower = -5 }
+		863 = { # Aztlan
+			remove_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+	}
+}
+country_event = {#328 - Kinkaid is back baby!
+	id = enc_reformers.328
+	title = enc_reformers.328.t
+	desc = enc_reformers.328.d
+	mean_time_to_happen = {	days = 30 }
+	trigger = {
+		ARM = {
+			has_country_flag = ARM_tlaloc
+			controls_state = 863
+		}
+		ATE = {exists = no }
+		has_country_flag = erb_skip_online
+	}
+	fire_only_once = yes
+	picture = GFX_event_enc_ship
+	option = { #Kinkaid
+		name = enc_reformers.328.a
+		set_country_flag = kinkaid_spport
+		add_to_variable = { mexican_legitimacy = 10 }
+		custom_effect_tooltip = enc_reformers.328.a.tt
+		add_war_support = -0.05
+		create_navy_leader = {
+			name = "Gale Kinkaid"
+			desc = "KINKAID_DESC"
+			picture = "portrait_gail_kinkaid.dds"
+			traits = { naval_lineage }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 4
+			coordination_skill = 1
+		}
+	}
+	option = { #Ocelotl
+		name = enc_reformers.328.b
+		load_oob = enc_jaguar_knight_Refugees
+		add_war_support = -0.05
+	}
+	option = { #RIP
+		name = enc_reformers.328.c
+
+	}
+}
+news_event = {#329 - Dornan in Mexico
+	id = enc_reformers.329
+	title = enc_reformers.329.t
+	desc = enc_reformers.329.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_radio_new_vegas
+	option = { #RIP
+		name = enc_reformers.329.a
+		FFI = { add_ideas = ffi_dornan_advice }
+	}
+}
+country_event = {#330 - Baron's Brew
+	id = enc_reformers.330
+	title = enc_reformers.330.t
+	immediate = {
+		if = { # ghouls exist
+			limit = {
+				has_completed_focus = enc_accept_ghouls
+			}
+			custom_effect_tooltip = enc_reformers.330.d.integrate
+		}
+		else_if = { # ghouls don't
+			limit = {
+				not = {
+					has_completed_focus = enc_accept_ghouls
+					}
+				}
+			custom_effect_tooltip =  enc_reformers.330.d.segregate
+			}
+		}
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_coffee_can
+	option = { #RIP
+		name = enc_reformers.330.a
+		add_to_variable = { mexican_legitimacy = 5 }
+		custom_effect_tooltip = enc_reformers.330.a_tt
+		hidden_effect = {
+			country_event = enc_reformers.331
+		}
+	}
+	option = { #RIP
+		trigger = {
+			has_country_flag = enc_drugs
+		}
+		name = enc_reformers.330.b
+		custom_effect_tooltip = enc_reformers.330.b_tt
+		subtract_from_variable = { mexican_legitimacy = 5 }
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.05
+		}
+		change_legitimacy = yes
+		set_country_flag = enc_mexican_coffee_trade
+		country_event = nf_erb.331
+
+	}
+	option = { #RIP
+		trigger = {
+			has_country_flag = leader_charismatic
+			has_completed_focus = enc_accept_ghouls
+		}
+		name = enc_reformers.330.c
+		custom_effect_tooltip = enc_reformers.330.c_tt
+		country_event = nf_erb.331
+	}
+}
+country_event = {#330 - Baron's Brew
+	id = enc_reformers.330
+	title = enc_reformers.330.t
+	immediate = {
+		if = { # ghouls exist
+			limit = {
+				has_completed_focus = enc_accept_ghouls
+			}
+			custom_effect_tooltip = enc_reformers.330.d.integrate
+		}
+		else_if = { # ghouls don't
+			limit = {
+				not = {
+					has_completed_focus = enc_accept_ghouls
+					}
+				}
+			custom_effect_tooltip =  enc_reformers.330.d.segregate
+			}
+		}
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_coffee_can
+	option = { #RIP
+		name = enc_reformers.330.a
+		add_to_variable = { mexican_legitimacy = 5 }
+		custom_effect_tooltip = enc_reformers.330.a_tt
+		hidden_effect = {
+			country_event = enc_reformers.331
+		}
+	}
+	option = { #RIP
+		trigger = {
+			has_country_flag = enc_drugs
+		}
+		name = enc_reformers.330.b
+		custom_effect_tooltip = enc_reformers.330.b_tt
+		subtract_from_variable = { mexican_legitimacy = 5 }
+		set_temp_variable  = {
+			var = legitimacy_change_var
+			value = -0.05
+		}
+		change_legitimacy = yes
+		set_country_flag = enc_mexican_coffee_trade
+		country_event = nf_erb.331
+
+	}
+	option = { #RIP
+		trigger = {
+			has_country_flag = leader_charismatic
+			has_completed_focus = enc_accept_ghouls
+		}
+		name = enc_reformers.330.c
+		custom_effect_tooltip = enc_reformers.330.c_tt
+		country_event = nf_erb.331
+	}
+}
+country_event = {#331 - Baron's Brew 2
+	id = enc_reformers.331
+	title = enc_reformers.331.t
+	desc = enc_reformers.331.d
+	is_triggered_only = yes
+	picture = GFX_event_coffee_can
+	option = { #RIP
+		name = enc_reformers.331.a
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+	option = { #RIP
+		name = enc_reformers.331.b
+		custom_effect_tooltip = enc_reformers.331.b_tt
+		set_country_flag = baron_alliance
+		add_to_faction = CAF
+		CAF = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ERB"
+				value = 400
+			}
+		}
+		random_state = {
+			limit = {
+				any_neighbor_state = {
+				}
+				is_owned_and_controlled_by = CAF
+			}
+			ROOT = { set_variable = { cafborderstate = PREV } }
+		  }
+		}
+	}
+
+
+news_event = {#332 - Baron Bends the Knee
+	id = enc_reformers.332
+	title = enc_reformers.332.t
+	desc = enc_reformers.332.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_radio_new_vegas
+	option = { #RIP
+		name = enc_reformers.332.a
+		ARM = { puppet = CAF }
 	}
 }
 
+news_event = {#333
+	id = enc_reformers.333
+	title = enc_reformers.333.t
+	desc = enc_reformers.333.d
+	picture = GFX_event_enc_legion_conquest
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = ERB
+		CES  = {
+			is_neighbor_of = ARM
+		}
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	option = { #RIP
+		name = enc_reformers.333.a
+		ARM = {
+			diplomatic_relation = {
+				country = CES
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+}
+country_event = {#334
+	id = enc_reformers.334
+	title = enc_reformers.334.t
+	desc = enc_reformers.334.d
+	picture = GFX_event_ARR_arroyo
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_mexico_invasion
+		has_country_flag = erb_lynette_unlocked_flag
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	option = { #RIP
+		name = enc_reformers.334.a
+		add_war_support = -0.05
+		add_popularity = { ideology = elites popularity = 0.05 }
+	}
+	option = { #RIP
+		name = enc_reformers.334.b
+		subtract_from_variable = { mexican_legitimacy = 5 }
+		custom_effect_tooltip = enc_reformers.334.b_tt
+	}
+	option = {# Speech
+		name = enc_reformers.334.c
+		trigger = {
+			has_country_flag = leader_charismatic
+		}
+		add_popularity = { ideology = elites popularity = 0.10 }
+		custom_effect_tooltip = enc_reformers.334.c_tt
+	}
+	option = { #RIP
+		name = enc_reformers.334.e
+		trigger = {
+			has_country_flag = leader_ruthless
+		}
+		custom_effect_tooltip = enc_reformers.334.e_tt
+		add_manpower = 2000
+		add_stability = -0.05
+	}
+}
+news_event = {#335 - WBH Crushed
+	id = enc_reformers.335
+	title = enc_reformers.335.t
+	desc = enc_reformers.335.d
+	picture = GFX_event_BOS_super_mutant
+	fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		has_completed_focus = enc_reform
+		NOT = { country_exists = WBH }
+		country_exists = TRL
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = {# Now they're a threat
+		name = enc_reformers.335.a
+		set_country_flag = enc_trl_threat
+		TRL = {
+			set_technology = { settled_civilization = 1}
+		}
+	}
+}
+country_event = {#336 - TRL Expansion
+	id = enc_reformers.336
+	title = enc_reformers.336.t
+	desc = enc_reformers.336.d
+	picture = GFX_event_BOS_super_mutant
+
+	fire_only_once = no
+    is_triggered_only = yes
+
+
+	option = {# This is yoru fualt
+		name = enc_reformers.336.a
+		TRL = {
+			random_neighbor_country = {
+				limit = {
+					is_in_faction = no
+					NOT = {
+						OR  = {
+							is_in_faction_with = TRL
+							tag = ERB
+							TRL = {has_wargoal_against = PREV }
+						}
+					}
+				}
+				TRL = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
+		set_variable = { TRL_food = PREV }
+	}
+}
+country_event = {#337 - Free Mexico
+	id = enc_reformers.337
+	title = enc_reformers.337.t
+	desc = enc_reformers.337.d
+	picture = GFX_event_mex_flag_2
+	fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		check_variable = { mexico_legitimacy_value > 50 }
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = { # UMMM
+		name = enc_reformers.337.a
+		BJS = {
+			set_cosmetic_tag = BJS_FRE
+		}
+		custom_effect_tooltip = enc_reformers.337.a_tt
+	}
+	option = { # UMMM
+		name = enc_reformers.337.b
+	}
+}
+news_event = {#338 - Santa Muerte
+	id = enc_reformers.338
+	title = enc_reformers.338.t
+	desc = enc_reformers.338.d
+	picture = GFX_event_rrg_adelitas
+	fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		check_variable = { mexico_legitimacy_value > 40 }
+		has_country_flag = mexican_expedition
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = { # UMMM
+		add_popularity = { ideology = people popularity = 0.05 }
+		name = enc_reformers.338.a
+		custom_effect_tooltip = enc_reformers.338.a_tt
+	}
+}
+news_event = {#339 - Halls of Montezuma
+	id = enc_reformers.339
+	title = enc_reformers.339.t
+	desc = enc_reformers.339.d
+	picture = GFX_event_mecha_aztec_calendar
+	fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		ARM = { controls_state = 803 }
+		has_country_flag = mexican_expedition
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = { # UMMM
+	name = enc_reformers.339.a
+		803 = {
+			add_core_of = ARM
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			set_state_name = "Tenochtitlan"
+		}
+		set_province_name = {
+			id = 10451
+			name = "Tenochtitlan"
+		}
+	}
+}
+news_event = {#340 - The Devils
+	id = enc_reformers.340
+	title = enc_reformers.340.t
+	desc = enc_reformers.340.d
+	picture = GFX_event_robots_3
+	fire_only_once = yes
+	trigger = {
+		tag = ERB
+		CES = { has_war_with = ERB }
+		CES = { surrender_progress > 0.1 }
+
+	}
+	mean_time_to_happen = {
+		days = 3
+	}
+	option = { #shiit
+	name = enc_reformers.340.a
+		CES = {
+			if = {
+				limit = { country_exists = ARM }
+				add_to_faction = ARM
+				}
+			}
+		ARM = {
+			add_ai_strategy = {
+				type = alliance
+				id = "CES"
+				value = 200
+			}
+		}
+		CES = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ARM"
+				value = 200
+			}
+		}
+	}
+}
+
+news_event = {#341 - Pan American League
+	id = enc_reformers.341
+	title = enc_reformers.341.t
+	desc = enc_reformers.341.d
+	picture = GFX_event_enc_mexican_alliance
+	fire_only_once = yes
+    is_triggered_only = yes
+	option = {#Oh thank god some good news
+		name = enc_reformers.341.a
+		create_faction = "Pan-American Alliance"
+		set_country_flag = mexican_allies
+	}
+}
 #################
 ## IDEAS
 #################
