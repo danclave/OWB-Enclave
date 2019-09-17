@@ -1331,14 +1331,14 @@ ideas = {
 			}
 		}
 
-		TRL_debuff = {
+		WBH_debuff = {
 			picture = MOJ_idea_settlements_raided_ncr # todo
 			allowed = {
 				always = no
             }
 			cancel = {
 				NOT = {
-					country_exists = TRL
+					country_exists = WBH
 				}
 			}
             allowed_civil_war = {
@@ -1346,7 +1346,7 @@ ideas = {
             }
             removal_cost = -1
 			targeted_modifier = {
-				tag = TRL
+				tag = WBH
 				attack_bonus_against = 0.30
 				defense_bonus_against = 0.30
 			}

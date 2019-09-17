@@ -6,7 +6,7 @@ oob = "ERB_2265"
 # TECHNOLOGY
 ###############################
 
-add_research_slot = 1
+add_research_slot = 2
 set_technology = {
 	elite_army = 1
 	standard_weaponry_tech = 1

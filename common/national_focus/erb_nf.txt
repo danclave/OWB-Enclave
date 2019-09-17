@@ -1210,6 +1210,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_resource = { type = energy amount = 30 state = 291 } #VLT city
+			add_ideas = tla_efficiency_code
 		}
 		cost = 4.3
  }

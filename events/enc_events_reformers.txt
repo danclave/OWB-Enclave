@@ -6803,30 +6803,45 @@ country_event = {#225 - Washington Brotherhood Attacks!
 	}
 }
 
-country_event = {#226 - WBH Buff
+country_event = {#226 - TRL Buff
 	id = enc_reformers.226
 	title = enc_reformers.226.t
 	desc = enc_reformers.226.d
-	picture = GFX_event_enc_seattle
+	picture = GFX_event_BOS_super_mutant
 
 	fire_only_once = yes
     is_triggered_only = no
 	trigger = {
 		tag = ERB
 		has_completed_focus = enc_reform
-		has_completed_focus = enc_purge_opposition
-		WBH = { is_neighbor_of = TRL}
+		has_full_control_of_state = 285
 	}
 	mean_time_to_happen = {	days = 30 }
 	option = {# Washington Menace
 		name = enc_reformers.226.a
-		WBH = {
-				add_ideas = TRL_debuff
-				create_wargoal = {
-					type = annex_everything
-					target = TRL
+		TRL = {
+			add_ideas = WBH_debuff
+			add_research_slot = 1
+			set_technology = { reno_mastersnewarmy = 1 }
+			set_technology = { super_mutant_aux_infantry_tech = 1 }
+			set_technology = { support_weaponry = 1 }
+			set_technology = { fireteam_weaponry_tech = 1 }
+			set_technology = { maintenance_company_tech_1 = 1 }
+			load_oob = thraddlegion1
+			create_corps_commander = {
+				name = "Thradd"
+				portrait_path = "gfx/leaders/NEW/portrait_thradd.dds"
+				skill = 4
+				traits = {
+
 				}
+				attack_skill = 5
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+			}
 		}
+		set_country_flag = super_troll_warren
 	}
 }
 
@@ -8208,6 +8223,17 @@ country_event = {#321 - Mad General
 		}
 		ARM = {
 			annex_country = { target = TLA  transfer_troops = yes }
+			set_technology = {
+				glider_tech = 1
+				aerodynamics_tech_1 = 1
+				fighter_tech_1 = 1
+				cas_bomber_tech_1 = 1
+				strat_bomber_tech_1 = 1
+				cargo_plane_tech_1 = 1
+			}
+			add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 300 producer = ARM }
+			add_equipment_to_stockpile = { type = cas_equipment_1 amount = 50 producer = ARM }
+			add_ideas = ENC_ARM_river_crossing
 		}
 		country_event = { id = enc_reformers.322 }
 	}
@@ -8878,6 +8904,62 @@ news_event = {#341 - Pan American League
 		name = enc_reformers.341.a
 		create_faction = "Pan-American Alliance"
 		set_country_flag = mexican_allies
+	}
+}
+news_event = {#342 - To War With Brotherhood
+	id = enc_reformers.342
+	title = enc_reformers.342.t
+	desc = enc_reformers.342.d
+	picture = GFX_event_rrg_adelitas
+	fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		TRL = { is_neighbor_of = WBH }
+		has_country_flag = super_troll_warren
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = { # UMMM
+		TRL = {
+			create_wargoal = {
+				type = annex_everything
+				target = WBH
+			}
+		}
+	}
+}
+news_event = {#343 - Eagle surrenderss
+	id = enc_reformers.343
+	title = enc_reformers.343.t
+	desc = enc_reformers.343.d
+	picture = GFX_event_ATE_xochicalco
+	fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		ATE = { has_war_with = ARM }
+	}
+	mean_time_to_happen =  { days = 200 } # quick
+	option = { # UMMM
+	name = enc_reformers.325.a
+		ATE= {
+			start_civil_war = {
+				ideology = elites
+				size =  0.30
+				states = { 783 786 785 800 804 801 787 806 802 }
+			}
+		}
+		hidden_effect = {
+			random_country = {
+				limit = {
+					original_tag = ATE
+					has_government = elites
+				}
+				set_cosmetic_tag = ATS
+				set_variable = { global.aztec_breakaway = THIS.id }
+				ARM = {
+					puppet = PREV
+				}
+			}
+		}
 	}
 }
 #################

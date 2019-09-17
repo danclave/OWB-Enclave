@@ -1214,9 +1214,9 @@ enc_reformers.225.d: "The Washington Brotherhood, fresh from its conquests of th
 enc_reformers.225.a: "Where are they even getting their powered armor?"
 enc_reformers.225.a.tt: "The §Y[WBH.GetName]§! prepare for war against you."
 #############################################################################################################
-enc_reformers.226.t: "Enclave Scientists in the North"
-enc_reformers.226.d: "To the extent members of the Enclave disliked our plan to 'Be nice to the mutants who killed their parents,' but did not want to become genocidal Purists, most fled to [CES.GetName], which could offer them great wealth and power.  But the Washington Brotherhood has power and wealth as well, for those who will tolerate its insane ruler.\n\nOne of our scientists defected with a weapon of great use against supermutants, which could cripple the Troll Warren. We are torn between annoyance at the fact he stole our super-weapon and pleasure that rabid supermutants will likely die en masse, and see no way this will come back to hurt us."
-enc_reformers.226.a: "Dead supermutants seems fine, really."
+enc_reformers.226.t: "Thradd Defects to the Troll Warren"
+enc_reformers.226.d: "The [ERB.GetName]'s liberation of New Reno has chase much of the city's riff raff to the ends of the earth. Among those who fled is Thradd the Immortal, one fo the Master's greatest warriors. He has defected to [TRL.GEtName], where he he has rapidly risen in [TRL.GetLeader]'s ranks.  These reinforcements will give the Troll Warren a powerful tool against the Washington Brotherhood, who is already overextended oppressing its neighbors."
+enc_reformers.226.a: "Well, this seems like a Brotherhood problem."
 #############################################################################################################
 enc_reformers.227.t: "Canadian Pirates Join the Brotherhood"
 enc_reformers.227.d: "To the north of the Washington lies the Broken Coast, where pirates bludgeon their prey to death with Canada's sacred clubs, their fearsome hockey sticks.  We hoped they'd serve as a nuisance to the Brotherhood and tie down their flanks, but now they've formed a blood pact with the Brotherhood to seize California, which can offer far more loot and slaves than the Northwest. Should war with the Washington Brotherhood break out, they may try to harass our coasts and supply lines. \n\nOf course, the United States Navy wet its teeth fighting pirates five hundred years ago. Perhaps it's time to pick up old habits."
@@ -1587,3 +1587,10 @@ enc_reformers.341.t: "The Pan American Alliance"
 enc_reformers.341.d: "Resistance to Santa Anna has had the perverse effect of uniting the peoples of Mexico for the first time in centuries, and American support has reduced opposition to the Norteamericanos. Accordingly, Mexico's leaders have sent delegates to Baja to meet with the [ERB.GetName]'s leadership to discuss a new alliance to safeguard their independence."
 enc_reformers.341.a: "Unidos Hoy, Unidos Siempre!"
 #############################################################################################################
+enc_reformers.342.t: "The Troll Warren Heads North"
+enc_reformers.342.d : "At long last, Thradd is preparing for the final conquest. With the capture of the Seattle, the Mutants will have a new home in the north."
+enc_reformers.342.a:  "Ooops."
+############################################################################################################
+enc_reformers.343.t: "The Eagle's Clipped Wings"
+enc_reformers.343.d:  "The Aztlan can endure only so much. Now the Eagle is willing to surrender to [ARM.GetLeader] in exchange for preserving some semblance of authority. If only for himself."
+enc_reformers.343.a: "I hate this guy."
