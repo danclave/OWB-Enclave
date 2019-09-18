@@ -12,4 +12,30 @@ technologies = {
             level = 1
         }
 	}
+
+	tlaloc_underwater_robots = {
+
+		support_robot = {
+			max_organisation = 1
+            river = {
+                attack = 0.15
+                defence = 0.10
+            }
+			amphibious = {
+				attack = 0.08
+                defence = 0.08
+            }
+        }
+		combat_robot = {
+			max_organisation = 1
+            river = {
+                attack = 0.15
+                defence = 0.10
+            }
+			amphibious = {
+				attack = 0.10
+                defence = 0.10
+            }
+        }
+	}
 }

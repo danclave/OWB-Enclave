@@ -8145,6 +8145,7 @@ country_event = {#318 - The Mexican Expedition
 	option = { # Whee
 		name = enc_reformers.318.a
 		add_political_power = -5
+		add_ideas = ENC_efficient_energy
 		custom_effect_tooltip = enc_reformers.318.a.tt
 		country_event = { id = enc_reformers.320 days = 30 }
 	}
@@ -8192,6 +8193,7 @@ country_event = {#320 - The Mexican Expedition
 			uses = 4
 			category = robotics_tech_category
 		}
+
 		hidden_effect =  {
 			scoped_sound_effect = deathscream
 			country_event = { id = enc_reformers.321 }
@@ -8233,7 +8235,6 @@ country_event = {#321 - Mad General
 			}
 			add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 300 producer = ARM }
 			add_equipment_to_stockpile = { type = cas_equipment_1 amount = 50 producer = ARM }
-			add_ideas = ENC_ARM_river_crossing
 		}
 		country_event = { id = enc_reformers.322 }
 	}
@@ -8251,7 +8252,14 @@ country_event = {#322 - Mad General
 				every_state = {
 					limit = {
 						NOT = { is_owned_by = ARM }
-						is_mexico_state = yes
+						is_core_of = RRG
+					}
+					add_claim_by = ARM
+				}
+				every_state = {
+					limit = {
+						NOT = { is_owned_by = ARM }
+						is_core_of = TVR
 					}
 					add_claim_by = ARM
 				}
@@ -8266,6 +8274,7 @@ country_event = {#322 - Mad General
 		}
 		ARM = {
 			complete_national_focus = arm_advanced_standardization
+			news_event = enc_reformers.345
 		}
 	}
 }
@@ -8283,6 +8292,22 @@ news_event = {#323 - Fall of Rio
 	picture = GFX_event_rrg_ruins
 	option = { # Good to know
 		name = enc_reformers.323.a
+		ATE = {
+			if = {
+				limit = {
+					ATE = {
+						exists = yes
+					}
+				}
+				create_wargoal = { type = annex_everything target = ATE } # normal wargoal
+				else = {
+					activate_targeted_decision = {
+						target = ATE
+						decision = demand_stolen_territory
+					}
+				}
+			}
+		}
 	}
 }
 news_event = {#324 - Armageddon Station
@@ -8422,7 +8447,13 @@ news_event = {#327 - Fall of Aztlan Capital
 	trigger = {
 		ARM = {
 			has_country_flag = ARM_tlaloc
-			controls_state = 863
+			OR = {
+				controls_state = 863
+				any_other_country = {
+					controls_state = 863
+					is_subject_of = ARM
+				}
+			}
 		}
 		tag = ERB
 	}
@@ -8430,7 +8461,20 @@ news_event = {#327 - Fall of Aztlan Capital
 	picture = GFX_event_ATE_xochicalco
 	option = { #RIP
 		name = enc_reformers.327.a
-		ARM = { add_manpower = -5 }
+		ARM = {
+			add_manpower = -5
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						is_mexican = yes
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+		}
 		863 = { # Aztlan
 			remove_building = {
 				type = arms_factory
@@ -8919,6 +8963,7 @@ news_event = {#342 - To War With Brotherhood
 	}
 	mean_time_to_happen =  { days = 10 } # quick
 	option = { # UMMM
+		name = enc_reformers.342.a
 		TRL = {
 			create_wargoal = {
 				type = annex_everything
@@ -8933,13 +8978,12 @@ news_event = {#343 - Eagle surrenderss
 	desc = enc_reformers.343.d
 	picture = GFX_event_ATE_xochicalco
 	fire_only_once = yes
-    is_triggered_only = no
-	trigger = {
+    trigger = {
 		ATE = { has_war_with = ARM }
 	}
 	mean_time_to_happen =  { days = 200 } # quick
 	option = { # UMMM
-	name = enc_reformers.325.a
+	name = enc_reformers.343.a
 		ATE= {
 			start_civil_war = {
 				ideology = elites
@@ -8958,6 +9002,51 @@ news_event = {#343 - Eagle surrenderss
 				ARM = {
 					puppet = PREV
 				}
+			}
+		}
+	}
+}
+
+country_event = {#344 - Mexican Territory
+	id = enc_reformers.344
+	title = enc_reformers.344.t
+	desc = enc_reformers.344.d
+	picture = GFX_event_rrg_adelitas
+	fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		check_variable = { mexico_legitimacy_value > 55 }
+		owns_state = 4
+		owns_state = 80
+		owns_state = 866
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = { # UMMM
+		name = enc_reformers.344.a
+		BJS = {
+				transfer_state = 4
+				transfer_state = 80
+				transfer_state = 866
+			}
+			add_stability = -0.05
+	}
+	option = { # UMMM
+		name = enc_reformers.344.b
+		subtract_from_variable = { mexico_legitimacy_value = 5 }
+		custom_effect_tooltip = enc_reformers.344.b_tt
+	}
+}
+news_event = {#345 - Underwater Robots
+	id = enc_reformers.345
+	title = enc_reformers.345.t
+	desc = enc_reformers.345.d
+	picture = GFX_event_robots_2
+    is_triggered_only = yes
+	option = { # UMMM
+		name = enc_reformers.345.a
+		ARM = {
+			set_technology = {
+				tlaloc_underwater_robots = 1
 			}
 		}
 	}

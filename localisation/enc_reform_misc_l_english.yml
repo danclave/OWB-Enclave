@@ -218,9 +218,10 @@ thraddlegion1:0 "Thradd's Refugees"
 ###### Mexico
 resistance_support_mexico:0 "§Y[?mexico_legitimacy_value]%§! Resistance Support"
 mexico_legitimacy_TT:0 "Mexican Resistance"
-mexico_legitimacy_TT_DELAYED:0 "For some reason, many people in Mexico are unwilling to fight for Uncle Sam against Santa Anna. It will take time and effort to persuade Mexico to trust that we have their best interests at heart, especially once we demand resource concessions."
+mexico_legitimacy_TT_DELAYED:0 "For some reason, many people in Mexico are unwilling to fight for Uncle Sam against Santa Anna. It will take time and effort to persuade Mexico to trust that we have their best interests at heart, especially once we demand resource concessions.  \n\n§Y[?mexico_legitimacy_value]%§! of Mexico opposes Santa Anna."
 electric_grid_core_button:0 "Electrify"
-ENC_ARM_river_crossing:0 "Underwater Robots"
+tlaloc_underwater_robots:0 "Underwater Robots"
+
 
 ################ special codes for special people ################################################################################################################
 

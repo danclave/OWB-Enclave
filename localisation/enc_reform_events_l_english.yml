@@ -1468,7 +1468,7 @@ enc_reformers.317.d: "We have gained the ability to arm patriots. To do so, clic
 enc_reformers.317.a: "Americans will always fight for freedom."
 #############################################################################################################
 enc_reformers.318.t: "Down Mexico Way"
-enc_reformers.318.d: "Mr. President, before the Great War America's reconstruction forces in Mexico operated under the aid of a powerful AI known as 'Tlaloc'. Although sadly the AI has never accepted our claim to be the legitimate US authority (doubtless due to a programming error), Tlaloc has lately broadcasted signals suggesting he is malfunctioning. Perhaps we should explore this?"
+enc_reformers.318.d: "Mr. President, before the Great War America's reconstruction forces in Mexico operated under the aid of a powerful AI known as 'Tlaloc'. Although sadly the AI has never accepted our claim to be the legitimate US authority (doubtless due to a programming error), Tlaloc has lately broadcasted signals suggesting he is malfunctioning. Perhaps we should explore this?  One tool that would be invaluable is understanding just how Tlaloc's robots keep going without running out of fuel immediately."
 enc_reformers.318.a: "Is Tlaloc not federal property?"
 enc_reformers.318.a.tt:0 "\n§lThe Enclave will send an expedition to recover data and resources from Mexico, but the results may be unpleasant...§!\n"
 enc_reformers.318.b:0 "Let sleeping gods lie."
@@ -1581,16 +1581,26 @@ enc_reformers.339.a: "Even Caesar would be appalled."
 enc_reformers.340.t: "Supping with the Devil"
 enc_reformers.340.d: "Against all odds, [ERB.GetName]'s forces have turned the tide against the Legion and march to liberate the peoples held in bondage. But [ARM.GetLeader] is no fool, and knows he cannot face the power of the Reunited States of America. He has offered to support the Legion's war efforts, providing men and material to bolster the Legion's forces.  Although mighty Caesar has nothing but contempt for a robot army, Lanius's counsel, that it's better to lose a neighbor's robot than your own soldiers, prevails.  \n\nOnce more, the General marches north, to snuff out the cause of freedom."
 enc_reformers.340.a: "We beat him once before, we'll do it again!"
-enc_reformers.340.a_tt:0 ""\n§gAlthough Santa Anna is now marching north, perhaps this is time to formally reach out to the people of Mexico."§!"
+enc_reformers.340.a_tt:0 "\n§gAlthough Santa Anna is now marching north, perhaps this is time to formally reach out to the people of Mexico."§!"
 #############################################################################################################
 enc_reformers.341.t: "The Pan American Alliance"
 enc_reformers.341.d: "Resistance to Santa Anna has had the perverse effect of uniting the peoples of Mexico for the first time in centuries, and American support has reduced opposition to the Norteamericanos. Accordingly, Mexico's leaders have sent delegates to Baja to meet with the [ERB.GetName]'s leadership to discuss a new alliance to safeguard their independence."
 enc_reformers.341.a: "Unidos Hoy, Unidos Siempre!"
 #############################################################################################################
 enc_reformers.342.t: "The Troll Warren Heads North"
-enc_reformers.342.d : "At long last, Thradd is preparing for the final conquest. With the capture of the Seattle, the Mutants will have a new home in the north."
+enc_reformers.342.d: "At long last, Thradd is preparing for the final conquest. With the capture of the Seattle, the Mutants will have a new home in the north."
 enc_reformers.342.a:  "Ooops."
 ############################################################################################################
 enc_reformers.343.t: "The Eagle's Clipped Wings"
 enc_reformers.343.d:  "The Aztlan can endure only so much. Now the Eagle is willing to surrender to [ARM.GetLeader] in exchange for preserving some semblance of authority. If only for himself."
 enc_reformers.343.a: "I hate this guy."
+############################################################################################################
+enc_reformers.344.t: "The Tijauna Troubles"
+enc_reformers.344.d:  "Although the NCR has ruled Tiajuana for years, the territory has always been somewhat lawless, and it has fared little better under [ERB.GetName]. [BJSGetName] has offered to take control of the region, citing the historic ties to Mexico. More importantly, the cities would give the [BJS.GetName] direct access to Mexican territory, which may prove useful in the wars to come..."
+enc_reformers.344.a: "Well, I guess we don't need it."
+enc_reformers.344.b: "The Stars and Stripes shall never retreat!"
+enc_reformers.344.b_tt: "\n§gThis will anger the [BJS.GEtName]'s leaders, who will feel you do not treat them seriously."
+############################################################################################################
+enc_reformers.345.t: "The Underwater Robots"
+enc_reformers.345.d:  "Deep within Tlaloc's databanks, Santa Anna found an interesting prewar research. Apparently America's robots struggled across the rivers and jungles of Mexico. To combat this, they planned to deploy robots that could travel underwater. \n\nApparently Santa Anna is already converting his designs to exploit this technology."
+enc_reformers.345.a: "Remind me what divides America and Mexico, again?"
