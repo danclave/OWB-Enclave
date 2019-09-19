@@ -359,10 +359,10 @@ ENC_NCR_hiding = {
 				add_to_variable = { var = ENC_hiding_cost value = 10}
 			}
 			set_variable = { ENC_hiding_cost_total = ENC_hiding_cost }
-			
+
 			# make it 5 more expensive for every controlled state
-			set_variable = { var = ENC_hiding_cost_states value = num_controlled_states }			
-			multiply_variable = { ENC_hiding_cost_states = 10 }			
+			set_variable = { var = ENC_hiding_cost_states value = num_controlled_states }
+			multiply_variable = { ENC_hiding_cost_states = 10 }
 
 			# set duration of safety based on how quickly the player used the decision
 			set_variable = { ENC_hide_days = days_mission_timeout@ENC_hide_activity }
@@ -776,6 +776,47 @@ ENC_render_unto_caesar = {
 			ERB = { country_event = {id = enc_reformers.101 } }
 		}
 	}
+	MEX_crisis = {
+		icon = generic_break_treaty
+		priority = 30
+		fire_only_once = YES
+		activation = {
+			has_country_flag = purist_mexico_timer
+			has_completed_focus = enc_purity
+			not = {
+				RRG = {
+					OR = {
+						exists = no
+						has_civil_war = YES
+						has_war_with = ERB #Enclave
+					}
+				}
+			}
+		}
+		available = {
+			not = { country_exists = RRG }
+		}
+		cancel_trigger = {
+			RRG = {
+				OR = {
+					exists = no
+					has_civil_war = YES
+					has_war_with = ERB #Enclave
+				}
+			}
+		}
+		is_good = no
+		days_mission_timeout = 800
+		timeout_effect = {
+			RRG = {
+				country_event = { id = enc.41 } # todo: change
+			}
+			clr_country_flag = purist_mexico_timer
+		}
+		complete_effect = {
+		}
+	}
+
 
 	CES_reformer_crisis = {
 		icon = generic_break_treaty

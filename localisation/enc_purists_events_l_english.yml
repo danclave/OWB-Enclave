@@ -88,7 +88,7 @@ enc.16.d:0 "We are on the very borders of the NCR, a rogue nation occupying Amer
 enc.16.a:0 "Our time will come soon."
 enc.16.a.tt:0 "Unlocks the §YHide Activities from NCR§! decision.\nThis allows you to spend £pol_power §YPolitical Power§! to keep the NCR from mobilizing against you.\nThe cost of this decision will increase by 10 £pol_power §YPolitical Power§! every time you use it!"
 #########################################################################################
-enc.17.t:0 "NCR Suspicious!" 
+enc.17.t:0 "NCR Suspicious!"
 enc.17.d:0 ""  .
 enc.17.a:0 "We are on the very borders of the NCR, a rogue nation occupying American soil.
 #########################################################################################
@@ -147,7 +147,7 @@ enc.25.b.tt: "§YThese may come in handy...§!"
 ################################################################################################################ -<
 enc.26.t: "Cloning Success!"
 enc.26.d: "Our most recent experimentation in creating human clones has resulted in a resounding succes! Almost all clones have survived the process and passed physical and psychological evaluations. They have been imprinted with artificial memories and will soon be capable of fulfilling any role their government needs them to."
-enc.26.a: "Eureka!" 
+enc.26.a: "Eureka!"
 ################################################################################################################ -<
 enc.27.t: "Cloning Failure!"
 enc.27.d: "Our most recent experimentation in creating human clones has resulted in a less than ideal outcome. The resulting specimens have been terminated and we will need to start back from scratch. We have also been recommended to put both the science team and clean up crew involved on administrative leave until they pass psychological evaluation."
@@ -231,3 +231,8 @@ enc.45.t: "Anderson Holds a Speech"
 enc.45.d: "Despite his near defeat in the recent elections, Franklin Anderson has been working tirelessly to rouse his supporters against the new administration. Though he carefully chooses his words to avoid anything openly treasonous, most believe the only real reason he is alive and allowed to speak is that his numerous supporters may be driven to open revolt otherwise."
 enc.45.a: "A man must know when he is beaten."
 enc.45.b: "Make sure it's not broadcast at least."
+################################################################################################################ -<
+enc.46.t: "A Day May Come When the Courage of Men Fails"
+enc.46.d: "The Bull is dead, its slaves under a new, far more efficient master. The NCR's resistance has been crushed and the mutant processing centers are beginning their great work. But there are some who still oppose the Enclave's dream to save the world. \n\nTo the south, the peoples of Mexico have united under three powerful mutants.  The lady of Rio, Valentina Rosado, turns American technology against us. The psychic freak of [ATE.GetName] plans to see her people through the storm. And the tribes of the Yucatan have rallied under Clara Guzman.  And they are not alone. From the ghoulish drug lords of the south to the tribals in wrestling gear to the west, a vast horde is marshaling to descend upon America.\n\nBut let them come! We will slit their bellies as they crawl to safety! For the Enclave!"
+enc.46.a: "God Bless the Enclave."
+enc.46.a_tt: "Get ready for the final show down."

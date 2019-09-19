@@ -1038,6 +1038,42 @@ country_event = {#43 - Pravus gaming reference
 	}
 }
 
+country_event = {#46 - Mexico Challenge
+	id = enc.46
+	title = enc.46.t
+	desc = enc.46.d
+	picture = GFX_event_enc_courage_of_men
+
+	fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		date < 2280.01.01
+		NOT = {country_exists = CES }
+		has_completed_focus = enc_purity
+
+	}
+	mean_time_to_happen = {	days = 30 }
+
+
+	option = {# good
+		name = enc.46.a
+		set_country_flag = purist_mexico_timer
+		if = {
+			limit = {country_exists = RRG }
+			RRG = {
+				create_faction = "The United States of Mexico"
+				add_to_faction = ATE
+				add_to_faction = ITZ
+				add_to_faction = FFI
+				puppet = ARM
+				set_technology = { scientific_civilization = 1 }
+				add_research_slot = 1
+			}
+		}
+	}
+}
+
+
 #################
 ## IDEAS
 #################

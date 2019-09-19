@@ -261,7 +261,6 @@ country_event = {#9 - Promotion
 			planning_skill = 3
 			logistics_skill = 4
 		}
-
 	}
 	option = {#Most loyal man
 		name = enc_reformers.9.b
@@ -8345,7 +8344,7 @@ news_event = {#325 - Baron Plot
 	option = { #RIP
 		name = enc_reformers.325.a
 		ATE = {
-			end_puppet = CAF
+			release_subject = CAF
 		}
 		ARM = {
 			white_peace = CAF
@@ -8361,7 +8360,7 @@ news_event = {#326 - Baja Blues
 	title = enc_reformers.326.t
 	desc = enc_reformers.326.d
 	is_triggered_only = yes
-	picture = GFX_event_enc_baja_poster
+	picture = GFX_event_baja_poster
 	option = { #RIP
 		name = enc_reformers.326.a
 		hidden_effect = {
@@ -8934,6 +8933,7 @@ news_event = {#340 - The Devils
 				value = 200
 			}
 		}
+		custom_effect_tooltip = enc_reformers.340.a_tt
 	}
 }
 
@@ -8946,8 +8946,16 @@ news_event = {#341 - Pan American League
     is_triggered_only = yes
 	option = {#Oh thank god some good news
 		name = enc_reformers.341.a
+		if = {
+			limit = { is_in_faction = yes }
+		dismantle_faction = yes
 		create_faction = "Pan-American Alliance"
 		set_country_flag = mexican_allies
+		add_to_faction = BJS
+		}
+		else = {
+			create_faction = "Pan-American Alliance"
+		}
 	}
 }
 news_event = {#342 - To War With Brotherhood
@@ -9049,6 +9057,137 @@ news_event = {#345 - Underwater Robots
 				tlaloc_underwater_robots = 1
 			}
 		}
+	}
+}
+news_event = {#346 - Raul
+	id = enc_reformers.346
+	title = enc_reformers.346.t
+	desc = enc_reformers.346.d
+	picture = GFX_event_raul_helps_mexico
+	fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		check_variable = { mexico_legitimacy_value > 35 }
+		country_exists = BJS
+		has_completed_focus = enc_accept_ghouls
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = { # UMMM
+		name = enc_reformers.346.a
+		BJS = {
+			create_corps_commander = { # Raul
+				name = "Raul Alfonso Tejada"
+				portrait_path = "gfx/leaders/ghoul_mexico/portrait_ghoul_mexico_generic_3.dds"
+				skill = 4
+				traits = {
+					old_guard
+				}
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 4
+			}
+		}
+	}
+}
+country_event = {#347 - Ranger Skip Attacks Cartles
+	id = enc_reformers.347
+	title = enc_reformers.347.t
+	desc = enc_reformers.347.d
+	picture = GFX_event_enc_drugs
+	fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		check_variable = { mexico_legitimacy_value > 30 }
+		countryexists = BJS
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = { # UMMM
+		name = enc_reformers.347.a
+		BLO = {add_ideas =  enc_war_on_drugs }
+		SIN = { add_ideas = enc_war_on_drugs }
+		add_to_variable = { mexico_legitimacy_value = 5 }
+		custom_effect_tooltip = enc_reformers.347.a_tt
+
+	}
+	option = { # UMMM
+		name = enc_reformers.347.b
+		subtract_from_variable = { mexico_legitimacy_value = 5 }
+		custom_effect_tooltip = enc_reformers.347.b_tt
+	}
+	option = { # UMMM
+		name = enc_reformers.347.c
+		add_to_variable = { mexico_legitimacy_value = 10 }
+		custom_effect_tooltip = enc_reformers.347.c_tt
+		add_war_support = -0.05
+	}
+}
+country_event = {#348 - Tohono Coup
+	id = enc_reformers.348
+	title = enc_reformers.348.t
+	desc = enc_reformers.348.d
+	picture = GFX_event_generic_raider_1
+	fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		check_variable = { mexico_legitimacy_value > 30 }
+		countryexists = BJS
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = { # UMMM
+		name = enc_reformers.348.a
+		BLO = {add_ideas =  enc_war_on_drugs }
+		SIN = { add_ideas = enc_war_on_drugs }
+		add_to_variable = { mexico_legitimacy_value = 5 }
+		custom_effect_tooltip = enc_reformers.347.a_tt
+
+	}
+	option = { # UMMM
+		name = enc_reformers.347.b
+		subtract_from_variable = { mexico_legitimacy_value = 5 }
+		custom_effect_tooltip = enc_reformers.344.b_tt
+	}
+}
+country_event = {#349 - Free Mexico
+	id = enc_reformers.349
+	title = enc_reformers.349.t
+	desc = enc_reformers.349.d
+	picture = GFX_event_enc_mexico_reborn
+	fire_only_once = yes
+    is_triggered_only = no
+	trigger = {
+		check_variable = { mexico_legitimacy_value > 75 }
+	}
+	mean_time_to_happen =  { days = 10 } # quick
+	option = { # UMMM
+		name = enc_reformers.349.a
+		release_subject = BJS
+		if  = {
+			limit = { is_in_faction = yes }
+			add_to_faction = BJS
+		}
+		else = {
+			create_faction = "The Enclave"
+			add_to_faction = BJS
+		}
+		BJS = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ERB"
+				value = ERB
+			}
+			every_state = {
+				limit = {
+					is_mexico_state = yes
+				}
+				add_core_of = BJS
+			set_cosmetic_tag = BJS_MEX
+			}
+		}
+		add_stability = -0.05
+	}
+	option = { # UMMM
+		name = enc_reformers.349.b
 	}
 }
 #################

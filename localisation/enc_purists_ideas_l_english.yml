@@ -84,7 +84,9 @@ ENC_PA_quality: "Quality PA Team"
 enclave_naval_manufacturer: "Naval Research Team"
 
 contactthehardliners_tt: "3 divisions of §YEnclave Veterans§! appear at the §YSierra Army Depot§!"
-
+enc_purist_special_forces_cap: "Enclave Efficiency"
+enc_purist_special_forces_cap_desc: "The foolish Reformers think America's future is in the hands of mutants. We think it's in the hand of our boys in black."
+enc_boost_special_forces_tt: "\nBoosts your power armor cap.\n"
 ## Leader
 paladin_myers1:0 "Paladin Myers"
 

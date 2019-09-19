@@ -627,4 +627,21 @@ spriteTypes = {
 			name = "GFX_event_enc_mexican_alliance"
 			texturefile = "gfx/event_pictures/event_enc_mexican_alliance.tga"
 		}
+		SpriteType = {#mexico
+			name = "GFX_event_raul_helps_mexico"
+			texturefile = "gfx/event_pictures/raul_helps_mexico.tga"
+		}
+		SpriteType = {#mexico
+			name = "GFX_event_baja_poster"
+			texturefile = "gfx/event_pictures/baja_poster.tga"
+		}
+		SpriteType = {#mexico
+			name = "GFX_event_enc_courage_of_men"
+			texturefile = "gfx/event_pictures/enc_courage_of_men.tga"
+		}
+		SpriteType = {#mexico
+			name = "GFX_event_enc_mexico_reborn"
+			texturefile = "gfx/event_pictures/event_enc_mexico_reborn.tga"
+		}
+}
 }

@@ -43,4 +43,9 @@ ERB_SHI = {
 	color = rgb { 67 123 237 } # base game blue
 	color_ui = rgb { 255 255 255 }
 }
+BJS_ERB = {
+	color = rgb { 67 123 237 } # base game blue
+	color_ui = rgb { 255 255 255 }
+}
 
+BJS_ERB

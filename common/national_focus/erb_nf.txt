@@ -5920,9 +5920,14 @@ focus = {#NEVADA - second city
 		cost = 5.8
 		completion_reward = {
 			add_ideas = ENC_purist
+			add_dynamic_modifier = {
+				modifier = enc_purist_special_forces_cap
+			}
+			add_to_variable = { special_forces_cap_variable = 0.10 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = enc_boost_special_forces_tt
 		}
-
- }
+	 }
 	focus = {#Purity - Radio
 		id = enc_radio_purity
 		icon = GFX_goal_enc_radio
@@ -5956,8 +5961,12 @@ focus = {#NEVADA - second city
 		cost = 5.8
 		completion_reward = {
 			custom_effect_tooltip = calling_the_remnants_tt
-			}
+			add_to_variable = { special_forces_cap_variable = 0.10 }
+
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = enc_boost_special_forces_tt
 		}
+	}
 	focus = {#Purity - Contact the Veterans
 		id = enc_call_veterans
 		icon = GFX_goal_enc_veterans_call
@@ -5971,6 +5980,9 @@ focus = {#NEVADA - second city
 			army_experience = 100
 			custom_effect_tooltip = enc_call_veterans_tt
 			hidden_effect = { load_oob = enc_hardliners } #ugly tooltip
+			add_to_variable = { special_forces_cap_variable = 0.10 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = enc_boost_special_forces_tt
 		}
 
 }
@@ -6063,7 +6075,12 @@ focus = {#NEVADA - second city
 		y = 1
 		prerequisite = { focus = enc_remember_navarro }
 		cost = 5.8
-		completion_reward = {swap_ideas = {add_idea = ENC_purist3 remove_idea = ENC_purist2}}
+		completion_reward = {
+			swap_ideas = {add_idea = ENC_purist3 remove_idea = ENC_purist2}
+			add_to_variable = { special_forces_cap_variable = 0.10 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = enc_boost_special_forces_tt
+		}
  }
  	focus = {#Purity - Reorganize the troops
 		id = enc_mobilize_manpower
@@ -6084,6 +6101,9 @@ focus = {#NEVADA - second city
 			}
 			add_ideas = enclave_military
 			division_template = { name = "Enclave Troops" regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } } }
+			add_to_variable = { special_forces_cap_variable = 0.15 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = enc_boost_special_forces_tt
 		}
 	}
  	focus = {#Purity - Reorganize the engineers
@@ -6280,6 +6300,9 @@ focus = {#NEVADA - second city
 					instant_build = yes
 				}
 			}
+			add_to_variable = { special_forces_cap_variable = 0.05 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = enc_boost_special_forces_tt
 		}
 	}
 	focus = {#SIERRA - 2- PA
@@ -6294,6 +6317,9 @@ focus = {#NEVADA - second city
 		cost = 5.8
 		completion_reward = {
 			add_ideas = ENC_PA_production
+			add_to_variable = { special_forces_cap_variable = 0.05 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = enc_boost_special_forces_tt
 		}
 	}
 	focus = {#Purity - FEV experiments
@@ -7183,6 +7209,9 @@ focus = {#NEVADA - second city
 				uses = 1
 				category = cat_land_doctrine
 			}
+			add_to_variable = { special_forces_cap_variable = 0.05 }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = enc_boost_special_forces_tt
 		}
 	}
 	focus = {# STRIKE TEAMS

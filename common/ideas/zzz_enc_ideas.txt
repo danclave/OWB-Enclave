@@ -339,9 +339,29 @@ ideas = {
 				}
 			}
 		}
-		ffi_dornan_advice = {
+		enc_war_on_drugs = {
 
 			picture = caesar'enc_pa_production
+
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = -0.10
+				army_speed_factor = -0.05
+				attrition = 0.10
+				army_defence_factor = -0.10
+			}
+		}
+		ffi_dornan_advice = {
+
+			picture = enc_pa_production
 
 			allowed = {
 			}
