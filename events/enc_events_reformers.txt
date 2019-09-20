@@ -1993,8 +1993,8 @@ country_event = {#65 - The Emancipation Proclamations
 		name = enc_reformers.65.a
 		sound_effect = ERB_battle_hymn
 		every_state = {
-		limit = { is_owned_by = CES has_state_flag = enc_slaves_armed }
-		ERB = {transfer_state = PREV }
+			limit = { is_owned_by = CES has_state_flag = enc_slaves_armed }
+			ERB = {transfer_state = PREV }
 		}
 		CES = {
 		declare_war_on = {
@@ -8422,8 +8422,8 @@ news_event = {#326 - Baja Blues
 				ruler= 5
 			}
 			create_corps_commander = {
-				name = "Ranger Piks"
-				portrait_path = "gfx/leaders/ortrait_skip.dds"
+				name = "Ranger Skip"
+				portrait_path = "gfx/leaders/Portrait_skip.dds"
 				skill = 3
 				traits = { desert_fox
 				}
@@ -8460,19 +8460,12 @@ news_event = {#327 - Fall of Aztlan Capital
 	picture = GFX_event_ATE_xochicalco
 	option = { #RIP
 		name = enc_reformers.327.a
-		ARM = {
-			add_manpower = -5
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						is_mexican = yes
-					}
-					create_wargoal = {
-						type = annex_everything
-						target = PREV
-					}
-				}
+		every_state = {
+			limit = {
+				NOT = { is_owned_by = ARM }
+				is_mexico_state = yes
 			}
+			add_claim_by = ARM
 		}
 		863 = { # Aztlan
 			remove_building = {
@@ -8519,6 +8512,7 @@ country_event = {#328 - Kinkaid is back baby!
 		name = enc_reformers.328.b
 		load_oob = enc_jaguar_knight_Refugees
 		add_war_support = -0.05
+		set_country_flag = jaguar_support
 	}
 	option = { #RIP
 		name = enc_reformers.328.c
@@ -8680,6 +8674,12 @@ country_event = {#331 - Baron's Brew 2
 			}
 			ROOT = { set_variable = { cafborderstate = PREV } }
 		  }
+		  ARM = {
+			remove_state_claim = 830
+			remove_state_claim = 829
+			remove_state_claim = 827
+			remove_state_claim = 828
+			}
 		}
 	}
 
@@ -8839,6 +8839,7 @@ country_event = {#337 - Free Mexico
 			set_cosmetic_tag = BJS_FRE
 		}
 		custom_effect_tooltip = enc_reformers.337.a_tt
+		country_event = enc_reformers.350
 	}
 	option = { # UMMM
 		name = enc_reformers.337.b
@@ -9090,7 +9091,7 @@ news_event = {#346 - Raul
 		}
 	}
 }
-country_event = {#347 - Ranger Skip Attacks Cartles
+country_event = {#347 - Ranger Skip Attacks Cartels
 	id = enc_reformers.347
 	title = enc_reformers.347.t
 	desc = enc_reformers.347.d
@@ -9190,6 +9191,178 @@ country_event = {#349 - Free Mexico
 		name = enc_reformers.349.b
 	}
 }
+
+country_event = {#350 New Leader
+	id = enc_reformers.350
+	title = enc_reformers.350.t
+	desc = enc_reformers.350.d
+	picture = GFX_event_enc_mexico_reborn
+	fire_only_once = yes
+    is_triggered_only = yes
+	option = { # UMMM
+		name = enc_reformers.350.a
+		BJS = {
+			set_politics = { ruling_party = intellectuals }
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Veronica Guerra"
+				desc = "VERONICA_DESC1"
+				picture = "gfx/leaders/RRG/portrait_veronica_guerra.dds"
+				expire = "3000.1.1"
+				ideology = ideocracy
+			}
+		}
+	}
+	option = { # UMMM
+		name = enc_reformers.350.b
+		trigger = { has_completed_focus = enc_accept_ghouls }
+		BJS = {
+			set_politics = { ruling_party = intellectuals }
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Raul Alfonso Tejada"
+				picture = "gfx/leaders/ghoul_mexico/portrait_ghoul_mexico_generic_3.dds"
+				desc = "RAUL_DESC1"
+				expire = "3000.1.1"
+				ideology = ideocracy
+			}
+		}
+	}
+	option = { # UMMM
+		name = enc_reformers.350.c
+		trigger = { has_country_flag = kinkaid_spport }
+		BJS = {
+			set_politics = { ruling_party = intellectuals }
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Gail Kinkaid"
+				desc = "KINKAID_DESC"
+				picture = "gfx/leaders/ATE/portrait_gail_kinkaid.dds"
+				expire = "3000.1.1"
+				ideology = ideocracy
+			}
+		}
+	}
+	option = { # UMMM
+		name = enc_reformers.350.e
+		trigger = { has_country_flag = jaguar_support }
+		BJS = {
+			set_politics = { ruling_party = intellectuals }
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Armando Ocēlōtl"
+				desc = "ARMANDO_DESC"
+				picture = "gfx/leaders/ATE/portrait_armando_ocelotl.dds"
+				expire = "3000.1.1"
+				ideology = ideocracy
+			}
+		}
+	}
+}
+
+country_event = {#351 - Mexican Turkey
+	id = enc_reformers.351
+	title = enc_reformers.351.t
+	desc = enc_reformers.351.d
+	picture = GFX_event_enc_mexico_pyramids
+	trigger = {
+		has_completed_focus = enc_reform
+		has_war_with = ARM
+		ARM = {surrender_progress > 0.25 }
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 10
+	}
+	option = {# MMM
+		name = enc_reformers.351.a
+		every_state = {
+			limit = {
+				is_core_of = PET
+			}
+			add_claim_by = ERB
+		}
+		769 = {
+			add_claim_by = ERB
+		}
+		set_country_flag = enc_annoyed_mexico
+	}
+	option = {# MMM
+		name = enc_reformers.351.b
+		set_country_flag = enc_angry_mexico
+		custom_effect_tooltip = enc_reformers.351.b_tt
+	}
+	option = {# MMM
+		name = enc_reformers.351.c
+		set_country_flag = enc_angry_mexico
+		custom_effect_tooltip = enc_reformers.351.c_tt
+	}
+}
+country_event = {#351 - Mexican Protests
+	id = enc_reformers.352
+	title = enc_reformers.352.t
+	desc = enc_reformers.352.d
+	picture = GFX_event_enc_mexico_pyramids
+	trigger = {
+		NOT = { country_exists = ARM }
+		OR = {
+			has_country_flag = enc_annoyed_mexico
+			has_country_flag = enc_angry_mexico
+		}
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 50
+	}
+	option = {# MMM
+		trigger = { has_country_flag = enc_annoyed_mexico }
+		name = enc_reformers.352.a
+		add_stability = -0.15
+		add_war_support = -0.15
+		clr_country_flag = enc_annoyed_mexico
+		set_country_flag = enc_even_more_annoyed_mexico
+	}
+	option = {# MMM
+		name = enc_reformers.352.b
+		trigger = { has_country_flag = enc_angry_mexico }
+		add_stability = -0.25
+		add_war_support = -0.25
+		clr_country_flag = enc_angry_mexico
+		set_country_flag = enc_even_angrier_mexico
+
+	}
+}
+country_event = {#353 - Mexican Protests
+	id = enc_reformers.353
+	title = enc_reformers.353.t
+	desc = enc_reformers.353.d
+	picture = GFX_event_enc_mexico_pyramids
+	trigger = {
+		NOT = { country_exists = ARM }
+		OR = {
+			has_country_flag = enc_annoyed_mexico
+			has_country_flag = enc_angry_mexico
+		}
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 50
+	}
+	option = {# MMM
+		name = enc_reformers.352.a
+		add_stability = -0.15
+		add_war_support = -0.15
+	}
+	option = {# MMM
+		name = enc_reformers.352.b
+		add_stability = -0.05
+		every_state = {
+		limit = {
+			is_owned_by = ERB
+			is_mexico_state = yes
+		}
+		BJS = {transfer_state = PREV }
+	}
 #################
 ## IDEAS
 #################
