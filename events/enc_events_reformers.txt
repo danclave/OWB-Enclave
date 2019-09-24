@@ -8494,7 +8494,7 @@ country_event = {#328 - Kinkaid is back baby!
 	option = { #Kinkaid
 		name = enc_reformers.328.a
 		set_country_flag = kinkaid_spport
-		add_to_variable = { mexican_legitimacy = 10 }
+		add_to_variable = { mexico_legitimacy_value = 10 }
 		custom_effect_tooltip = enc_reformers.328.a.tt
 		add_war_support = -0.05
 		create_navy_leader = {
@@ -8530,6 +8530,7 @@ news_event = {#329 - Dornan in Mexico
 	option = { #RIP
 		name = enc_reformers.329.a
 		FFI = { add_ideas = ffi_dornan_advice }
+		add_to_variable = { mexico_legitimacy_value = 10 }
 	}
 }
 country_event = {#330 - Baron's Brew
@@ -8556,7 +8557,7 @@ country_event = {#330 - Baron's Brew
 	picture = GFX_event_coffee_can
 	option = { #RIP
 		name = enc_reformers.330.a
-		add_to_variable = { mexican_legitimacy = 5 }
+		add_to_variable = { mexico_legitimacy_value =  = 5 }
 		custom_effect_tooltip = enc_reformers.330.a_tt
 		hidden_effect = {
 			country_event = enc_reformers.331
@@ -8568,7 +8569,7 @@ country_event = {#330 - Baron's Brew
 		}
 		name = enc_reformers.330.b
 		custom_effect_tooltip = enc_reformers.330.b_tt
-		subtract_from_variable = { mexican_legitimacy = 5 }
+		subtract_from_variable = { mexico_legitimacy_value = 5 }
 		set_temp_variable  = {
 			var = legitimacy_change_var
 			value = -0.05
@@ -8612,7 +8613,7 @@ country_event = {#330 - Baron's Brew
 	picture = GFX_event_coffee_can
 	option = { #RIP
 		name = enc_reformers.330.a
-		add_to_variable = { mexican_legitimacy = 5 }
+		add_to_variable = { mexico_legitimacy_value = 5 }
 		custom_effect_tooltip = enc_reformers.330.a_tt
 		hidden_effect = {
 			country_event = enc_reformers.331
@@ -8624,7 +8625,7 @@ country_event = {#330 - Baron's Brew
 		}
 		name = enc_reformers.330.b
 		custom_effect_tooltip = enc_reformers.330.b_tt
-		subtract_from_variable = { mexican_legitimacy = 5 }
+		subtract_from_variable = { mexico_legitimacy_value = 5 }
 		set_temp_variable  = {
 			var = legitimacy_change_var
 			value = -0.05
@@ -8746,7 +8747,7 @@ country_event = {#334
 	}
 	option = { #RIP
 		name = enc_reformers.334.b
-		subtract_from_variable = { mexican_legitimacy = 5 }
+		subtract_from_variable = { mexico_legitimacy_value = 5 }
 		custom_effect_tooltip = enc_reformers.334.b_tt
 	}
 	option = {# Speech
