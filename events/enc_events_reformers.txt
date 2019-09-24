@@ -3695,11 +3695,11 @@ country_event = {#120 PNW
 			every_owned_state = {
 				add_core_of = KLA
 			}
-			}
+		}
 		KLA = { annex_country = { target = ARR } }
 			ERB = {
 			add_to_faction = KLA
-			}
+		}
 		KLA = {
 					add_ai_strategy = {
 						type = alliance
@@ -3714,8 +3714,9 @@ country_event = {#120 PNW
 		KLA = { set_cosmetic_tag = ERB_KLA }
 		BEL = {
 			every_owned_state = {
-				add_core_of = KLA}
-			 }
+				add_core_of = KLA
+			}
+		}
 		KLA = { annex_country = { target = BEL } }
 			ERB = {
 			add_to_faction = KLA
@@ -7402,12 +7403,12 @@ country_event = {#252 - End Guerillas
 		NOT = { country_exists = CES }
 		has_idea = guerilla_raids
 	}
-	 mean_time_to_happen = { days = 50 }
+	mean_time_to_happen = { days = 50 }
 	option = {#
 		name = enc_reformers.252.a
 		remove_ideas = guerilla_raids
-			}
 	}
+}
 
 country_event = {#300 - state protests!
 	id = enc_reformers.300
@@ -8344,7 +8345,7 @@ news_event = {#325 - Baron Plot
 	option = { #RIP
 		name = enc_reformers.325.a
 		ATE = {
-			release_subject = CAF
+			release_puppet = CAF
 		}
 		ARM = {
 			white_peace = CAF
@@ -9100,7 +9101,7 @@ country_event = {#347 - Ranger Skip Attacks Cartels
     is_triggered_only = no
 	trigger = {
 		check_variable = { mexico_legitimacy_value > 30 }
-		countryexists = BJS
+		country_exists = BJS
 	}
 	mean_time_to_happen =  { days = 10 } # quick
 	option = { # UMMM
@@ -9132,7 +9133,7 @@ country_event = {#348 - Tohono Coup
     is_triggered_only = no
 	trigger = {
 		check_variable = { mexico_legitimacy_value > 30 }
-		countryexists = BJS
+		country_exists = BJS
 	}
 	mean_time_to_happen =  { days = 10 } # quick
 	option = { # UMMM
@@ -9162,7 +9163,7 @@ country_event = {#349 - Free Mexico
 	mean_time_to_happen =  { days = 10 } # quick
 	option = { # UMMM
 		name = enc_reformers.349.a
-		release_subject = BJS
+		release_puppet = BJS
 		if  = {
 			limit = { is_in_faction = yes }
 			add_to_faction = BJS
@@ -9175,15 +9176,15 @@ country_event = {#349 - Free Mexico
 			add_ai_strategy = {
 				type = alliance
 				id = "ERB"
-				value = ERB
+				value = 500
 			}
 			every_state = {
 				limit = {
 					is_mexico_state = yes
 				}
 				add_core_of = BJS
-			set_cosmetic_tag = BJS_MEX
 			}
+			set_cosmetic_tag = BJS_MEX
 		}
 		add_stability = -0.05
 	}
@@ -9298,7 +9299,7 @@ country_event = {#351 - Mexican Turkey
 		custom_effect_tooltip = enc_reformers.351.c_tt
 	}
 }
-country_event = {#351 - Mexican Protests
+country_event = {#352 - Mexican Protests
 	id = enc_reformers.352
 	title = enc_reformers.352.t
 	desc = enc_reformers.352.d
@@ -9312,7 +9313,7 @@ country_event = {#351 - Mexican Protests
 	}
 	fire_only_once = yes
 	mean_time_to_happen = {
-		days = 50
+		days = 100
 	}
 	option = {# MMM
 		trigger = { has_country_flag = enc_annoyed_mexico }
@@ -9323,25 +9324,131 @@ country_event = {#351 - Mexican Protests
 		set_country_flag = enc_even_more_annoyed_mexico
 	}
 	option = {# MMM
+		name = enc_reformers.352.a
+		trigger = { has_country_flag = enc_angry_mexico }
+		add_stability = -0.25
+		add_war_support = -0.25
+		clr_country_flag = enc_angry_mexico
+		set_country_flag = enc_even_angrier_mexico
+	}
+	option = {# MMM
 		name = enc_reformers.352.b
 		trigger = { has_country_flag = enc_angry_mexico }
 		add_stability = -0.25
 		add_war_support = -0.25
 		clr_country_flag = enc_angry_mexico
 		set_country_flag = enc_even_angrier_mexico
-
+	}
+	option = {# MMM
+		name = enc_reformers.352.c
+		every_state = {
+			limit = {
+				is_owned_by = ERB
+				is_mexico_state = yes
+			}
+			BJS = {transfer_state = PREV }
+		}
+		give_resource_rights = { receiver = ERB state = 776 }
+	}
+	option = {# MMM
+		name = enc_reformers.352.e
+		limit = {
+			any_owned_state = {
+				is_core_of = ARM
+			}
+			add_core_of = RRG
+		}
+		limit = {
+			any_owned_state = {
+				is_core_of = TLA
+			}
+			add_core_of = RRG
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = BLO }
+				any_owned_state = {
+					is_core_of = BLO
+				}
+			}
+			release = BLO
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = FFI }
+				any_owned_state = {
+					is_core_of = FFI
+				}
+			}
+			release = FFI
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = GDH }
+				any_owned_state = {
+					is_core_of = GDS
+				}
+			}
+			release = GDH
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = LGS }
+				any_owned_state = {
+					is_core_of = LGS
+				}
+			}
+			release = LGS
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = PET }
+				any_owned_state = {
+					is_core_of = PET
+				}
+			}
+			release = PET
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = RRG }
+				any_owned_state = {
+					is_core_of = RRG
+				}
+			}
+			release = RRG
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = SIN }
+				any_owned_state = {
+					is_core_of = SIN
+				}
+			}
+			release = SIN
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = TVR }
+				any_owned_state = {
+					is_core_of = TVR
+				}
+			}
+			release = TVR
+		}
 	}
 }
 country_event = {#353 - Mexican Protests
 	id = enc_reformers.353
 	title = enc_reformers.353.t
 	desc = enc_reformers.353.d
-	picture = GFX_event_enc_mexico_pyramids
+	picture = GFX_event_mexican_enclave
 	trigger = {
+		check_variable = { mexico_legitimacy_value > 60 }
 		NOT = { country_exists = ARM }
 		OR = {
-			has_country_flag = enc_annoyed_mexico
-			has_country_flag = enc_angry_mexico
+			has_country_flag = enc_even_more_annoyed_mexico
+			has_country_flag = enc_even_angrier_mexico
 		}
 	}
 	fire_only_once = yes
@@ -9349,20 +9456,292 @@ country_event = {#353 - Mexican Protests
 		days = 50
 	}
 	option = {# MMM
-		name = enc_reformers.352.a
+		name = enc_reformers.353.a
 		add_stability = -0.15
 		add_war_support = -0.15
+		clr_country_flag = enc_even_more_annoyed_mexico
+		clr_country_flag = enc_even_angrier_mexico
+		set_country_flag = mexican_crisis
+
 	}
 	option = {# MMM
-		name = enc_reformers.352.b
+		trigger = { country_exists = BJS }
+		name = enc_reformers.353.b
 		add_stability = -0.05
 		every_state = {
-		limit = {
-			is_owned_by = ERB
-			is_mexico_state = yes
+			limit = {
+				is_owned_by = ERB
+				is_mexico_state = yes
+			}
+			BJS = {transfer_state = PREV }
 		}
-		BJS = {transfer_state = PREV }
+		clr_country_flag = enc_even_angrier_mexico
+		clr_country_flag = enc_even_more_annoyed_mexico
 	}
+	option = {# MMM
+		name = enc_reformers.353.c
+		every_owned_state = {
+			limit = {
+				is_core_of = ARM
+			}
+			add_core_of = RRG
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = TLA
+			}
+			add_core_of = RRG
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = BLO }
+				any_owned_state = {
+					is_core_of = BLO
+				}
+			}
+			release = BLO
+			BLO = {
+				load_oob = BLO_2275
+			}
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = FFI }
+				any_owned_state = {
+					is_core_of = FFI
+				}
+			}
+			release = FFI
+			FFI = {
+				load_oob = FFI_2275
+			}
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = GDH }
+				any_owned_state = {
+					is_core_of = GDH
+				}
+			}
+			release = GDH
+			GDH = { load_oob = GDH_2275 }
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = LGS }
+				any_owned_state = {
+					is_core_of = LGS
+				}
+			}
+			release = LGS
+			LGS = { load_oob = LGS_2275 }
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = PET }
+				any_owned_state = {
+					is_core_of = PET
+				}
+			}
+			release = PET
+			PET = { load_oob = PET_2275 }
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = RRG }
+				any_owned_state = {
+					is_core_of = RRG
+				}
+			}
+			release = RRG
+			RRG = { load_oob = RRG_2275 }
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = SIN }
+				any_owned_state = {
+					is_core_of = SIN
+				}
+			}
+			release = SIN
+			SIN = { load_oob = SIN_2275 }
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = TVR }
+				any_owned_state = {
+					is_core_of = TVR
+				}
+			}
+			release = TVR
+			TVR = { load_oob = TVR_2275 }
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = ATE }
+				any_owned_state = {
+					is_core_of = ATE
+				}
+			}
+			release = ATE
+			ATE = { load_oob = ATE_2275 }
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = ITZ }
+				any_owned_state = {
+					is_core_of = ITZ
+				}
+			}
+			release = ITZ
+			ITZ = { load_oob = ITZ_2275 }
+		}
+	}
+}
+
+country_event = {#354 - The War of Independence
+	id = enc_reformers.354
+	title = enc_reformers.354.t
+	desc = enc_reformers.354.d
+	picture = GFX_event_mexican_enclave
+	is_triggered_only = yes
+	option = {# AHH
+		name = enc_reformers.354.a
+		add_stability = -0.15
+		every_owned_state = {
+			limit = {
+				is_core_of = ARM
+			}
+			add_core_of = RRG
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = TLA
+			}
+			add_core_of = RRG
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = BLO }
+				any_owned_state = {
+					is_core_of = BLO
+				}
+			}
+			release = BLO
+			BLO = {
+				load_oob = BLO_2275
+			}
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = FFI }
+				any_owned_state = {
+					is_core_of = FFI
+				}
+			}
+			release = FFI
+			FFI = {
+				load_oob = FFI_2275
+			}
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = GDH }
+				any_owned_state = {
+					is_core_of = GDH
+				}
+			}
+			release = GDH
+			GDH = { load_oob = GDH_2275 }
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = LGS }
+				any_owned_state = {
+					is_core_of = LGS
+				}
+			}
+			release = LGS
+			LGS = { load_oob = LGS_2275 }
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = PET }
+				any_owned_state = {
+					is_core_of = PET
+				}
+			}
+			release = PET
+			PET = { load_oob = PET_2275 }
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = RRG }
+				any_owned_state = {
+					is_core_of = RRG
+				}
+			}
+			release = RRG
+			RRG = { load_oob = RRG_2275 }
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = SIN }
+				any_owned_state = {
+					is_core_of = SIN
+				}
+			}
+			release = SIN
+			SIN = { load_oob = SIN_2275 }
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = TVR }
+				any_owned_state = {
+					is_core_of = TVR
+				}
+			}
+			release = TVR
+			TVR = { load_oob = TVR_2275 }
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = ATE }
+				any_owned_state = {
+					is_core_of = ATE
+				}
+			}
+			release = ATE
+			ATE = { load_oob = ATE_2275 }
+		}
+		if = {
+			limit = {
+				NOT = { country_exists = ITZ }
+				any_owned_state = {
+					is_core_of = ITZ
+				}
+			}
+			release = ITZ
+			ITZ = { load_oob = ITZ_2275 }
+		}
+		every_other_country = {
+			limit = {
+				is_mexican = yes
+			}
+			if = {
+				limit = {
+					is_in_faction = yes
+				}
+				leave_faction = yes
+			}
+			declare_war_on = {
+				target = ERB
+				type = annex_everything
+			}
+		}
+	}
+}
+
 #################
 ## IDEAS
 #################

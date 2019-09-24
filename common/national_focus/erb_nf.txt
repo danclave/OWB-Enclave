@@ -467,7 +467,7 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_ideas = {ENC_reno_police}
+			add_ideas = ENC_reno_police
 			country_event = { id = enc_reformers.200 }
 		}
 	}
@@ -3818,10 +3818,13 @@ focus = {#Legion Border
 		id = enc_mexico_invasion
 		icon = GFX_goal_Enc_goal_flag_mexico
 		ai_will_do = { factor = 1 }
-		relative_position_id = enc_broken_coast
-
+		relative_position_id = enc_reuniting_states
+		prerequisite = {
+			focus = enc_peaceful_usa
+			focus = enc_warmonger_usa
+		}
 		x = 0
-		y = 1
+		y = 2
 		cost = 5.8
 		completion_reward = {
 			custom_effect_tooltip = enc_new_mexico_tt
@@ -4127,8 +4130,9 @@ focus = {#Legion Border
 				intellectuals > 0.3
 			}
 		}
-		completion_reward = { custom_effect_tooltip = enc_Civil_War.tt
-		set_rule = {can_be_called_to_war = yes}
+		completion_reward = {
+			custom_effect_tooltip = enc_Civil_War.tt
+			set_rule = { can_be_called_to_war = yes}
 
 		}
 	}
@@ -5474,7 +5478,7 @@ focus = {#NEVADA - second city
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_department_of_defense
 		prerequisite = { focus = enc_department_of_defense }
-		x = 5
+		x = 7
 		y = 1
 		available = {
 			custom_trigger_tooltip = {
@@ -5726,7 +5730,6 @@ focus = {#NEVADA - second city
 		}
 	}
 
-
 	focus = {#Military - Air Force
 		id = enc_air_force_reform
 		icon = GFX_goal_us_plane
@@ -5738,6 +5741,36 @@ focus = {#NEVADA - second city
 		cost = 5.8
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.5 uses = 2 category = cat_air_doctrine }
+		}
+	}
+	focus = {#Military - Air Force Efficiency
+		id = enc_air_force_efficiency
+		icon = GFX_goal_enc_verti_reform
+		ai_will_do = { factor = 1 }
+		available = { has_idea = ENC_efficient_energy }
+		relative_position_id = enc_air_force_reform
+		prerequisite = { focus = enc_air_force_reform }
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ENC_efficient_energy
+				add_idea = ENC_efficient_energy2
+			}
+		}
+	}
+	focus = {#Robot Parade
+		id = enc_robot_reform
+		icon = GFX_goal_enc_robot_mex
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_department_of_defense
+		prerequisite = { focus = enc_department_of_defense }
+		x = 5
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			add_ideas = { tla_efficiency_code2 }
 		}
 	}
 	####################################
@@ -6362,6 +6395,19 @@ focus = {#NEVADA - second city
 		cost = 8.6
 		completion_reward = {
 			add_research_slot = 1
+		}
+	}
+	focus = {#SIERRA - 3 - Mexican Robots
+		id = enc_depot_mexican_robots
+		icon = GFX_goal_enc_eyebot_mex_purity
+		prerequisite = {focus = enc_depot_end}
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_depot_lab
+		x = 0
+		y = 1
+		cost = 8.6
+		completion_reward = {
+			add_ideas = tla_efficiency_code2
 		}
 	}
 

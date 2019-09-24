@@ -2351,7 +2351,7 @@ ENC_deseret = {
 				}
 			fire_only_once = yes
 			complete_effect = {
-				NCN = {set_cosmetic_tag = ncn_deseret }
+				NCN = {set_cosmetic_tag = NCN_deseret }
 			custom_effect_tooltip = form_deseret_cores_tt
 			every_state = { # Adds a core on every state in the Utah region
 					limit = {
@@ -3226,7 +3226,6 @@ ENC_gannon_doctrine = {
 				has_idea = settler_nation
 				NOT = {tag = ARR}
 				is_in_faction = no
-				not = { is_mexican = yes }
 			}
 		}
 		visible = {
@@ -3235,6 +3234,7 @@ ENC_gannon_doctrine = {
 				FROM = {
 					exists = yes
 					NOT = { has_country_flag = erb_couriers }
+					not = { is_mexican = yes }
 				}
 			}
 		}
@@ -3267,6 +3267,7 @@ ENC_gannon_doctrine = {
 			}
 		days_remove = 5
 		cost = 100
+		fire_only_once = yes
 		ai_will_do = {
 			factor = 100
 				}
@@ -3448,6 +3449,7 @@ ENC_granite_doctrine = {
 						is_neighbor_of = ERB
 						has_idea = tribal_nation
 						NOT = { has_country_flag = erb_couriers }
+						NOT = {has_country_flag = erb_target_for_conquest }
 						}
 					}
 				}
@@ -3468,6 +3470,7 @@ ENC_granite_doctrine = {
 				}
 		complete_effect = {
 			create_wargoal = { type = annex_everything target = FROM }
+			FROM = { set_country_flag = erb_target_for_congress }
 				}
 		}
 erb_fire_and_blood = {
@@ -3477,6 +3480,7 @@ erb_fire_and_blood = {
 					is_neighbor_of = ERB
 					has_idea = raider_nation
 					NOT = { has_country_flag = erb_couriers }
+					NOT = { has_country_flag = erb_target_for_conquest }
 					}
 				}
 		}
@@ -3495,13 +3499,108 @@ erb_fire_and_blood = {
 		ai_will_do = {
 			factor = 100
 		}
+
 		complete_effect = {
 			create_wargoal = { type = annex_everything target = FROM }
+			FROM = { set_country_flag = erb_target_for_conquest }
 		}
 	}
 }
 ENC_down_mexico_way = {
-    ENC_expeditionary_force = {
+	mexico_crisis = {
+		icon = propaganda
+		priority = 30
+		fire_only_once = yes
+		selectable_mission = yes
+		activation = {
+			has_country_flag = mexican_crisis
+		}
+		available = {
+			NOT = { country_exists = ERB }
+		}
+		cancel_trigger = {
+		}
+		is_good = no
+		days_mission_timeout = 100
+		timeout_effect = {
+			country_event = enc_reformers.354
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { country_exists = BLO }
+					any_owned_state = {
+						is_core_of = BLO
+					}
+				}
+				release = BLO
+			}
+			if = {
+				limit = {
+					NOT = { country_exists = FFI }
+					any_owned_state = {
+						is_core_of = FFI
+					}
+				}
+				release = FFI
+			}
+			if = {
+				limit = {
+					NOT = { country_exists = GDS }
+					any_owned_state = {
+						is_core_of = GDS
+					}
+				}
+				release = GDS
+			}
+			if = {
+				limit = {
+					NOT = { country_exists = LGS }
+					any_owned_state = {
+						is_core_of = LGS
+					}
+				}
+				release = LGS
+			}
+			if = {
+				limit = {
+					NOT = { country_exists = PET }
+					any_owned_state = {
+						is_core_of = PET
+					}
+				}
+				release = PET
+			}
+			if = {
+				limit = {
+					NOT = { country_exists = RRG }
+					any_owned_state = {
+						is_core_of = RRG
+					}
+				}
+				release = RRG
+			}
+			if = {
+				limit = {
+					NOT = { country_exists = SIN }
+					any_owned_state = {
+						is_core_of = SIN
+					}
+				}
+				release = SIN
+			}
+			if = {
+				limit = {
+					NOT = { country_exists = TVR }
+					any_owned_state = {
+						is_core_of = TVR
+					}
+				}
+				release = TVR
+			}
+		}
+	}
+	ENC_expeditionary_force = {
         icon = decision_enc_propaganda
         cost = 75
         visible = {
@@ -3514,6 +3613,7 @@ ENC_down_mexico_way = {
             set_rule = { can_send_volunteers = yes }
         }
 	}
+
 	ENC_release_baja = {
         icon = decision_enc_propaganda
         cost = 75

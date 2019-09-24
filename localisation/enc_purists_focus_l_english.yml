@@ -34,7 +34,7 @@ enc_ourescape:0 "Our Escape"
 enc_ourescape_desc:0 "Years ago, we managed to escape from the destruction of the main Enclave forces at Navarro. The manner in which we survived can still be felt today."
 
 enc_ourchoice:0 "Our Choice"
-enc_ourchoice.tt:0 "§YThe Enclave§! holds elections." 
+enc_ourchoice.tt:0 "§YThe Enclave§! holds elections."
 enc_ourchoice_desc:0 "Sergeant Dornan is well respected by both the Reformer and Purist factions within the Enclave. The Enclave needs a president, however. And the Sarge expressed disinterest in being called a 'sir' for the rest of his career. He works for a living, damn it!"
 
 enc_ourpresident:0 "Our President"
@@ -140,7 +140,7 @@ enc_depot_research_desc:0 "Much of our research was lost at Navarro, Poseidon an
 
 enc_depot_lower:0 "Excavating the Lower levels"
 enc_depot_lower_desc:0 "Our military codes give us access to parts of the depot that are almost entirely untouched. Let us open the old armoury and maintenance storage and salvage what we can."
- 
+
 enc_depot_end:0 "Our New Base of Operations"
 enc_depot_end_desc:0 "While parts of the base remain in disrepair, we have found ourselves an excellent base of operations for now. We can dedicate some of the machinery left here towards producing equipment."
 
@@ -457,6 +457,8 @@ ENC_water_contaminated: "FEV contaminated water"
 ENC_radio_eyebots: "Eyebot Radio"
 
 ENC_emergency_draft: "Emergency Draft"
+enc_depot_mexican_robots: "Tlaloc's Designs"
+enc_depot_mexican_robots_desc: "Although sadly the man who proposed to hack Tlaloc was a reformer who suffered a plasma grenade-related accident, we can still emulate Tlaloc's robots designs. In a way, he's more human than many of the mutants who infest America."
 ################ DECISIONS!!! ################################################################################################################################
 
 ENC_calling_the_remnants:0 "Call the Remnants"

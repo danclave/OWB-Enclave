@@ -85,7 +85,7 @@ enc_rangers_defense_sabotage_tt: "Unlocks the §YSabotage Infrastructure§! deci
 # Executive Orders
 ##############################
 enc_epilogue: "Who Lives Who Dies Who Tells Your Story"
-enc_epilogue_desc: "Trigger the epilogue, detailing the fate of America."
+enc_epilogue_desc: "Trigger the epilogue, detailing the fate of America.  Note that for best results, you should finish the election, press, and segregation trees."
 ENC_steal_declaration_independence: "Reclaim the Declaration of Independence!"
 ENC_steal_declaration_independence_desc: "Lost since the Great War, the Declaratoin of Independence was stored in a lead-sealed vault in Washingotn DC.  We could send an expedition to return it to the government's hands."
 ENC_opposition_to_segregation: "As it turns out, the Wastelanders are revolting.  Unless we can reduce their power or suppress their ability to voice dissent, they will rise up against us."
@@ -427,6 +427,8 @@ ENC_pan_american_alliance_tt_final:0 "\n§Although we can light the fire of Mexi
 ENC_pan_american_alliance_tt:0 "§Y60%§! or more of Mexico must support resistance to Santa Anna!"
 ENC_invite_to_pan_american_alliance:0 "[FROM.GetName] joins the PAA!"
 ENC_invite_to_pan_american_alliance_desc:0 "[FROM.GetLeader] has recognized that it is better for us all to hang together than to hang separately. Viva Mexico! Viva Los Estados Unidos!""
+mexico_crisis: "The Mexican War of Independence"
+mexico_crisis_desc: "It appears that arming the people of Mexico to oppose Santa Anna means they will now oppose our occupation as well. Ingrates."
 ###################################
 # Nation Building
 ###################################

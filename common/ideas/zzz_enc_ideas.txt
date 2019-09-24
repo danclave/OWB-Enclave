@@ -26,8 +26,8 @@ ideas = {
 				special_forces_min = 50
 			}
 		}
-		ENC_efficient_energy= {
-			picture = enc_pa_production
+		ENC_efficient_energy = {
+			picture = tla_memory_failure
 			allowed = {}
 			removal_cost = 1
 			modifier = {
@@ -36,11 +36,34 @@ ideas = {
 				equipment_bonus = {
 					power_armor_equipment = {
 						instant = yes
-						fuel_consumption = -0.05
+						fuel_consumption_factor = -0.05
 					}
 				}
 			}
 		}
+		ENC_efficient_energy2 = {
+            picture = tla_memory_failure
+            allowed = {}
+            removal_cost = 1
+            modifier = {
+                max_fuel_factor = 0.3
+                fuel_gain_factor = 0.1
+            }
+            equipment_bonus = {
+                power_armor_equipment = {
+                    instant = yes
+                    fuel_consumption = -0.07
+                }
+                cargo_plane_equipment = {
+                    instant = yes
+                    fuel_consumption = -0.10
+                }
+                cas_equipment = {
+                    instant = yes
+                    fuel_consumption = -0.10
+                }
+            }
+        }
 		ENC_PA_production2= {
 			picture = enc_pa_production
 			allowed = { always = no }
@@ -2095,93 +2118,90 @@ ideas = {
 			}
 		}
 		enc_military_equipment= {
-					picture = enc_pa_production
-					allowed = { always = no }
-					allowed_civil_war = { always = yes }
-					removal_cost = -1
-					equipment_bonus = {
-						power_armor_equipment = { #enclave_power_armour_equipment_1
-							build_cost_ic = -0.10
-							instant = yes
-						}
-						}
-		equipment_bonus = {
-						infantry_equipment = { #enclave_power_armour_equipment_1
-							build_cost_ic = -0.10
-							instant = yes
-						}
-						}
-						}
+			picture = enc_pa_production
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			equipment_bonus = {
+				power_armor_equipment = { #enclave_power_armour_equipment_1
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+			equipment_bonus = {
+				infantry_equipment = { #enclave_power_armour_equipment_1
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
 		enc_disciplined_soldiers = {
-					picture = sargeant_dornan
-					allowed = { always = no	}
-					allowed_civil_war = { always = yes }
-					removal_cost = -1
-					modifier = {
-					   army_attack_factor = 0.05
-					   army_defence_factor = 0.05
-					   political_power_gain = 0.05
-					}
-				}
+			picture = sargeant_dornan
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+			   army_attack_factor = 0.05
+			   army_defence_factor = 0.05
+			   political_power_gain = 0.05
+			}
+		}
 		enc_rank_and_file_infantry = {
-					picture = ncr_ranger_idea
-					allowed = { always = no	}
-					allowed_civil_war = { always = yes }
-					removal_cost = -1
-					modifier = {
-						conscription_factor = 0.02
-						army_morale_factor = 0.1
-						army_org_Factor = 0.05
-						planning_speed = -0.05
-					}
-				}
+			picture = ncr_ranger_idea
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.02
+				army_morale_factor = 0.1
+				army_org_Factor = 0.05
+				planning_speed = 0.05
+			}
+		}
 		enc_power_armor_integration = {
-					picture = sargeant_dornan
-					allowed = { always = no	}
-					allowed_civil_war = { always = yes }
-					removal_cost = -1
-					modifier = {
-					   army_attack_factor = 0.03
-					   army_org_factor = 0.04
-					   army_speed_factor = 0.04
-					}
-				}
+			picture = sargeant_dornan
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+			   army_attack_factor = 0.03
+		   		army_org_factor = 0.04
+			   army_speed_factor = 0.04
+			   special_forces_cap = 0.02
+			}
+		}
 		enc_advanced_training = {
-					picture = wartime_recruits
-					allowed = { always = no	}
-					allowed_civil_war = { always = yes }
-					removal_cost = -1
-					modifier = {
-						conscription_factor = -0.05
-						army_morale_factor = 0.05
-						army_org_Factor = 0.10
-						planning_speed = -0.05
-						army_attack_factor = 0.025
-
-					}
-				}
+			picture = wartime_recruits
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.05
+				army_morale_factor = 0.05
+				army_org_Factor = 0.10
+				planning_speed = -0.05
+				army_attack_factor = 0.025
+			}
+		}
 		enc_the_new_american_army = {
-					picture = idea_enc_designer_verti
-					allowed = { always = no	}
-					allowed_civil_war = { always = yes }
-					removal_cost = -1
-					modifier = {
-						army_attack_factor = 0.05
-						army_artillery_attack_factor = 0.05
-						army_artillery_defence_factor = 0.05
-						conscription_factor = 0.02
-						army_morale_factor = 0.1
-						planning_speed = 0.05
-						army_speed_factor = 0.06
-
-					}
-				}
-
+			picture = idea_enc_designer_verti
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_artillery_attack_factor = 0.05
+				army_artillery_defence_factor = 0.05
+				conscription_factor = 0.02
+				army_morale_factor = 0.1
+				planning_speed = 0.05
+				army_speed_factor = 0.06
+			}
+		}
 		ENC_Influence = {
 			picture = enc_radio
 			allowed = { always = no }
 		    allowed_civil_war = { always = yes }
-
 		   removal_cost = -1
 			modifier = { intellectuals_drift = 0.10 }
 		}
@@ -2196,6 +2216,26 @@ ideas = {
 				stability_factor = -0.10
 				army_attack_factor = -0.05
 				army_morale_factor = -0.10
+			}
+		}
+		tla_efficiency_code2 = {
+			picture = tla_memory_failure
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				max_fuel_factor = 0.05
+			}
+			equipment_bonus = {
+				combat_robot_equipment = {
+					instant = yes
+					fuel_consumption = -0.20
+				}
+				support_robot_equipment = {
+					instant = yes
+					fuel_consumption = -0.20
+				}
 			}
 		}
 		enc_enclave_advisors = {

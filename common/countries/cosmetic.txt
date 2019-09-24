@@ -13,7 +13,7 @@ ERB_enclaveamerica = {
 	color_ui = rgb { 0 45 106 }
 }
 
-ERB_USA = { 
+ERB_USA = {
 	color = rgb { 67 123 237 } # base game blue
 	color_ui = rgb { 255 255 255 }
 }
@@ -48,4 +48,7 @@ BJS_ERB = {
 	color_ui = rgb { 255 255 255 }
 }
 
-BJS_ERB
+BJS_MEX = {
+	color = rgb { 0 127 70 }
+	color_ui = rgb { 92 96 215 }
+}
