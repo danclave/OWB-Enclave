@@ -2940,7 +2940,7 @@ ENC_securing_borders = {
 		fire_only_once = no
 		is_good = no
 		timeout_effect = {
-			country_event = { id = enc_reformers.222 }
+			country_event = { id = enc_reformers.336 }
 		}
 	}
 	ENC_CES_expansion = {

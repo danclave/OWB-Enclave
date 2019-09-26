@@ -8347,6 +8347,9 @@ news_event = {#325 - Baron Plot
 		ATE = {
 			release_puppet = CAF
 		}
+		hidden_effect = {
+			CAF = { set_politics = { ruling_party = elites } }
+		}
 		ARM = {
 			white_peace = CAF
 		}
@@ -8576,7 +8579,7 @@ country_event = {#330 - Baron's Brew
 		}
 		change_legitimacy = yes
 		set_country_flag = enc_mexican_coffee_trade
-		country_event = nf_erb.331
+		country_event = nenc_reformers.331
 
 	}
 	option = { #RIP
@@ -8586,7 +8589,7 @@ country_event = {#330 - Baron's Brew
 		}
 		name = enc_reformers.330.c
 		custom_effect_tooltip = enc_reformers.330.c_tt
-		country_event = nf_erb.331
+		country_event = enc_reformers.331
 	}
 }
 country_event = {#330 - Baron's Brew
@@ -8965,7 +8968,7 @@ news_event = {#342 - To War With Brotherhood
 	id = enc_reformers.342
 	title = enc_reformers.342.t
 	desc = enc_reformers.342.d
-	picture = GFX_event_rrg_adelitas
+	picture = GFX_event_BOS_super_mutant
 	fire_only_once = yes
     is_triggered_only = no
 	trigger = {
@@ -9125,32 +9128,7 @@ country_event = {#347 - Ranger Skip Attacks Cartels
 		add_war_support = -0.05
 	}
 }
-country_event = {#348 - Tohono Coup
-	id = enc_reformers.348
-	title = enc_reformers.348.t
-	desc = enc_reformers.348.d
-	picture = GFX_event_generic_raider_1
-	fire_only_once = yes
-    is_triggered_only = no
-	trigger = {
-		check_variable = { mexico_legitimacy_value > 30 }
-		country_exists = BJS
-	}
-	mean_time_to_happen =  { days = 10 } # quick
-	option = { # UMMM
-		name = enc_reformers.348.a
-		BLO = {add_ideas =  enc_war_on_drugs }
-		SIN = { add_ideas = enc_war_on_drugs }
-		add_to_variable = { mexico_legitimacy_value = 5 }
-		custom_effect_tooltip = enc_reformers.347.a_tt
 
-	}
-	option = { # UMMM
-		name = enc_reformers.347.b
-		subtract_from_variable = { mexico_legitimacy_value = 5 }
-		custom_effect_tooltip = enc_reformers.344.b_tt
-	}
-}
 country_event = {#349 - Free Mexico
 	id = enc_reformers.349
 	title = enc_reformers.349.t
