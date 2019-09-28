@@ -265,7 +265,7 @@ entity = {
 ####	ERB ROBOTS          ####
 ################################
 entity = {
-	name = "ERB_light_robot_entity"
+	name = "ERB_support_robot_entity"
 	pdxmesh = "ERB_protectron_mesh"
 
 	default_state = "idle"
