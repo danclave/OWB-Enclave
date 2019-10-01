@@ -8159,7 +8159,7 @@ country_event = {#319 - The United States of Mexico!
 	title = enc_reformers.319.t
 	desc = enc_reformers.319.d
 	picture =  GFX_event_mex_flag_1
-	is_triggered_only = YES
+	is_triggered_only = yes
 
 	option = { # Good to know
 		name = enc_reformers.319.a
@@ -8206,7 +8206,7 @@ country_event = {#321 - Mad General
 	id = enc_reformers.321
 	title = enc_reformers.321.t
 	desc = enc_reformers.321.d
-	is_triggered_only = YES
+	is_triggered_only = yes
 
 	option = { # Good to know
 		name = enc_reformers.321.a
@@ -8243,7 +8243,7 @@ country_event = {#322 - Mad General
 	id = enc_reformers.322
 	title = enc_reformers.322.t
 	desc = enc_reformers.322.d
-	is_triggered_only = YES
+	is_triggered_only = yes
 	picture = GFX_event_robots_3
 	option = { # Good to know
 		name = enc_reformers.322.a
