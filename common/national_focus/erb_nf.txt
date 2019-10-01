@@ -776,10 +776,19 @@ focus_tree = {
 		cost = 4.3
 		ai_will_do = { factor = 1 }
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = ncr_suspicion_higher_than_35
-				check_variable = { ENC_hiding_cost > 34.99 }
+			if = {
+				limit = {
+					has_country_flag = enc_bishop_in_NCR
+				}
+				has_country_flag = enc_bishop_in_NCR
 			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = ncr_suspicion_higher_than_35
+					check_variable = { ENC_hiding_cost > 34.99 }
+				}
+			}
+			
 		}
 		relative_position_id = enc_american_dream
 		x = 9
@@ -872,9 +881,9 @@ focus_tree = {
 		prerequisite = { focus = enc_radio }
 		available = { leader_has_red_scare = yes }
 		completion_reward = {
-			add_political_power = 150
+			add_political_power = 75
 			add_stability = 0.05
-		country_event = { id = enc_reformers.88 }
+			country_event = { id = enc_reformers.88 }
 		}
 		cost = 4.3
 	}
@@ -1377,11 +1386,8 @@ focus_tree = {
 		}
 		cost = 5.8
 		completion_reward = {
-		add_popularity = { ideology = people popularity = 0.03 }
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = 0.05
-			}
+			add_popularity = { ideology = people popularity = 0.03 }
+			set_temp_variable = { legitimacy_change_var =  0.03	}
 			change_legitimacy = yes
 			add_ideas = {
 				ENC_integrating_officers
@@ -1402,10 +1408,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_popularity = { ideology = people popularity = 0.05 }
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = 0.05
-			}
+			set_temp_variable = { legitimacy_change_var =  0.03	}
 			change_legitimacy = yes
 
 			add_ideas = {
@@ -1427,10 +1430,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_popularity = { ideology = people popularity = 0.03 }
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = 0.05
-			}
+			set_temp_variable = { legitimacy_change_var =  0.03	}
 			change_legitimacy = yes
 			add_ideas = {
 				ENC_integrating_scientists

@@ -218,8 +218,10 @@ choose_segregation = {
 		clr_country_flag = enc_promised_no_integration
 	}
 }
-choose_integration = {
-	add_popularity = { ideology = people popularity = 0.05 }
+choose_integration = {		
+	add_popularity = { ideology = people popularity = 0.05 }	
+	set_temp_variable = { legitimacy_change_var =  0.05	}
+	change_legitimacy = yes
 	add_ideas =	ENC_begun_integration
 	set_country_flag = enc_wastelander_integration
 

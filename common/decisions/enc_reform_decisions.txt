@@ -87,7 +87,6 @@ enc_executive_orders  = {
 		days_remove = 50
 		fire_only_once = yes
 		complete_effect = {
-			hidden_effect = { sound_effect = ERB_stripes_and_stars }
 			country_event = enc_reformers.246
 			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = -25 producer = ERB }
 		}
@@ -384,7 +383,7 @@ ENC_political_actions = {
 		days_re_enable = 30
 		complete_effect = {
 			increase_red_menace = yes
-			hidden_effect = { sound_effect = ERB_stripes_and_stars }
+			hidden_effect = { sound_effect = ERB_communism }
 		}
 	}
 

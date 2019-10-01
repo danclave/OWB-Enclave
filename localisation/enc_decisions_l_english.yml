@@ -35,6 +35,7 @@ ENC_NCR_hiding_desc:0 "COST:                              TIME: [?Root.ENC_hidin
 ncr_suspicious: "§YNew California Republic§! is unaware of §YThe Enclave§!"
 
 ENC_hide_activity:0 "Hide Activities from NCR"
+ENC_hide_activity_by_event:0 "Hide Activities from NCR"
 ENC_hide_activity_desc:0 "The Bear may be blind, but as time goes by it will take more and more effort to escape its notice."
 ENC_hide_activity_days_tt:0 "Hide from the §YNCR§! for §Y90 days§!"
 ENC_hide_activity_bonus_tt:0 " + [?Root.days_mission_timeout@ENC_hide_activity|H0] §Gbonus§! days"

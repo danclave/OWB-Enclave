@@ -25,7 +25,7 @@ ideas = {
 				factor = 10
 			}
 		}
-		enc_lynette = { # todo complete
+		enc_lynette = {
 			picture = lynette
 			allowed = { original_tag = ERB }
 			visible = { has_country_flag = erb_lynette_unlocked_flag }
@@ -130,7 +130,7 @@ ideas = {
 		enc_drummund_chief_of_army = {			
 			picture = drummund_chief
 			allowed = {	original_tag = ERB }
-			visible = { has_country_flag = enc_accepted_ncr_leaders } # todo change for army
+			visible = { has_country_flag = enc_accepted_ncr_leaders }
 			traits = { unpopular_genius }
 			available = {
 				custom_trigger_tooltip = {

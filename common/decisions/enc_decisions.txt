@@ -158,6 +158,13 @@ ENC_reno = {
         available = {}
 
         complete_effect = {
+			if = {
+				limit = {
+					has_completed_focus = enc_reform
+				}
+				set_temp_variable = { legitimacy_change_var = -0.03 }
+				change_legitimacy = yes
+			}
             add_equipment_to_stockpile = {
                 type = energy_equipment_2
                 amount = 500
@@ -182,8 +189,16 @@ ENC_reno = {
 		complete_effect = {
 		   add_equipment_to_stockpile = { type = energy_equipment_2 amount = 300 producer = ERB }
 		   set_country_flag = enc_graffs_completed
-		   add_war_support = -0.10
-		   add_stability = -0.05
+		   if = {
+				limit = {
+					has_completed_focus = enc_reform
+				}
+				add_stability = -0.03
+		   }
+		   else = {
+			   add_war_support = -0.10
+			   add_stability = -0.05		   
+		   }
 		}
 	}
 }
@@ -309,6 +324,7 @@ ENC_NCR_hiding = {
 				has_decision = NCR_crisis_construction
 				has_decision = NCR_crisis_laylow
 				has_decision = NCR_crisis_resources
+				has_decision = ENC_hide_activity_by_event
 			}
 		}
 		available = {
@@ -344,9 +360,61 @@ ENC_NCR_hiding = {
 			# set or increase hiding cost
 			if = { # if the cost is lower than 15, set to 10. AKA if it's still 0, set to 10
 				limit = {
-					check_variable = { var = ENC_hiding_cost value = 15 compare = less_than }
+					check_variable = { var = ENC_hiding_cost value = 0 compare = less_than }
 				}
-				set_variable = { var = ENC_hiding_cost value = 10 }
+				set_variable = { var = ENC_hiding_cost value = 0 }
+			}
+			# now, we increase the cost by 5 if salvatore is a minister and 10 otherwise
+			if = {
+				limit = {
+					has_idea_with_trait = salvatore_puppet
+				}
+				add_to_variable = { var = ENC_hiding_cost value = 7}
+			}
+			else = {
+				add_to_variable = { var = ENC_hiding_cost value = 10}
+			} 
+			set_variable = { ENC_hiding_cost_total = ENC_hiding_cost }
+
+			# make it 5 more expensive for every controlled state
+			set_variable = { var = ENC_hiding_cost_states value = num_controlled_states }
+			multiply_variable = { ENC_hiding_cost_states = 10 }
+
+			# set duration of safety based on how quickly the player used the decision
+			set_variable = { ENC_hide_days = days_mission_timeout@ENC_hide_activity }
+			add_to_variable = { var = ENC_hide_days value = 90}
+			add_to_variable = { ENC_hiding_cost_total = ENC_hiding_cost_states }
+		} 
+		#--------------------------
+		days_mission_timeout = 60
+		timeout_effect = {
+			# custom_effect_tooltip = ENC_hide_activity_crisis
+			country_event = { id = enc.2 }
+		}
+		#--------------------------
+		ai_will_do = {
+			factor = 200 #do or die
+		}
+	}
+	ENC_hide_activity_by_event = {
+		icon = GFX_decision_enc_bear_head #infiltration
+		is_good = no
+		priority = 10
+		#--------------------------		
+		days_remove = ENC_hide_days
+		visible = {
+			always = false
+		}
+		complete_effect = { 
+			# tooltips
+			custom_effect_tooltip = ENC_hide_activity_days_tt
+			custom_effect_tooltip = ENC_hide_activity_bonus_tt
+			# set or increase hiding cost
+			if = { # if the cost is lower than 15, set to 10. AKA if it's still 0, set to 10
+				limit = {
+					check_variable = { var = ENC_hiding_cost value = 0 compare = less_than }
+				}
+				set_variable = { var = ENC_hiding_cost value = 0 }
 			}
 			# now, we increase the cost by 5 if salvatore is a minister and 10 otherwise
 			if = {
@@ -367,12 +435,7 @@ ENC_NCR_hiding = {
 			# set duration of safety based on how quickly the player used the decision
 			set_variable = { ENC_hide_days = days_mission_timeout@ENC_hide_activity }
 			add_to_variable = { var = ENC_hide_days value = 90}
-		}
-		#--------------------------
-		days_mission_timeout = 60
-		timeout_effect = {
-			custom_effect_tooltip = ENC_hide_activity_crisis
-			set_country_flag = NCR_crisis_flag
+			add_to_variable = { ENC_hiding_cost_total = ENC_hiding_cost_states }
 		}
 		#--------------------------
 		ai_will_do = {
@@ -410,7 +473,7 @@ ENC_NCR_hiding = {
 					exists = no
 					has_civil_war = YES
 					has_war_with = ERB #Enclave
-						}
+				}
 			}
 		}
 		is_good = no
@@ -423,6 +486,7 @@ ENC_NCR_hiding = {
 		}
 		complete_effect = {
 			clr_country_flag = NCR_crisis_flag
+			set_variable = { ENC_emergency_days = days_mission_timeout@NCR_crisis }
 		}
 	}
 # SOLUTIONS
@@ -768,7 +832,7 @@ ENC_render_unto_caesar = {
 		days_mission_timeout = 1068
 		timeout_effect = {
 			CES = {
-				country_event = { id = enc.41 } # todo: change
+				country_event = { id = enc.41 }
 			}
 			clr_country_flag = ENC_CES_hostile
 		}
@@ -809,7 +873,7 @@ ENC_render_unto_caesar = {
 		days_mission_timeout = 800
 		timeout_effect = {
 			RRG = {
-				country_event = { id = enc.41 } # todo: change
+				country_event = { id = enc.41 }
 			}
 			clr_country_flag = purist_mexico_timer
 		}

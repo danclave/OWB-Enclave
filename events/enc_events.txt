@@ -32,8 +32,50 @@ country_event = {#2 - unused
 
     is_triggered_only = yes
 
-	option = { #looked for others
+	option = { # the time has come
 		name = enc.2.a
+		NCR = {
+			country_event = { id = enc.41 }
+		}
+		clr_country_flag = ncr_suspicious
+	}
+	option = { # spend PP		
+		trigger = {
+			has_political_power > ENC_hiding_cost_total
+		}
+		name = enc.2.b
+		set_temp_variable = { PP_cost = ENC_hiding_cost_total }
+		multiply_temp_variable = { PP_cost = -1 }
+		add_political_power = PP_cost
+		activate_decision = ENC_hide_activity_by_event
+		hidden_effect = {
+			activate_mission = ENC_hide_activity
+			remove_mission = ENC_hide_activity
+		}
+	}
+	option = { # No resources
+		trigger = {
+			has_country_flag = ERB_can_NCR_crisis_resources
+		}
+		name = enc.2.c
+		activate_decision = NCR_crisis_resources
+		clr_country_flag = ERB_can_NCR_crisis_resources
+	}
+	option = { # No attack
+		trigger = {
+			has_country_flag = ERB_can_NCR_crisis_laylow
+		}
+		name = enc.2.e
+		activate_decision = NCR_crisis_laylow
+		clr_country_flag = ERB_can_NCR_crisis_laylow
+	}
+	option = { # No construction
+		trigger = {
+			has_country_flag = ERB_can_NCR_crisis_construction
+		}
+		name = enc.2.f
+		activate_decision = NCR_crisis_construction
+		clr_country_flag = ERB_can_NCR_crisis_construction
 	}
 }
 country_event = {#3 - OUR CHOICE
@@ -254,6 +296,9 @@ country_event = {#16 - In the Lair of the Bear
 		name = enc.16.a
 		custom_effect_tooltip = enc.16.a.tt
 		set_country_flag = NCR_suspicious
+		set_country_flag = ERB_can_NCR_crisis_laylow
+		set_country_flag = ERB_can_NCR_crisis_construction
+		set_country_flag = ERB_can_NCR_crisis_resources
 	}
 }
 country_event = {#17 - NCR failsafe - unused

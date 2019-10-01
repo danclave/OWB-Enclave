@@ -1345,7 +1345,7 @@ ideas = {
 			}
 		}
 		ENC_terror_of_wastes = {
-			picture = MOJ_idea_settlements_raided_ncr # todo
+			picture = MOJ_idea_settlements_raided_ncr
 			allowed = {
 				always = no
             }
@@ -1369,7 +1369,7 @@ ideas = {
 			}
 		}
 		ENC_NCR_code_cracked = {
-			picture = MOJ_idea_settlements_raided_ncr # todo
+			picture = MOJ_idea_settlements_raided_ncr
 			allowed = {
 				always = no
             }
@@ -1390,7 +1390,7 @@ ideas = {
 		}
 
 		WBH_debuff = {
-			picture = MOJ_idea_settlements_raided_ncr # todo
+			picture = MOJ_idea_settlements_raided_ncr
 			allowed = {
 				always = no
             }

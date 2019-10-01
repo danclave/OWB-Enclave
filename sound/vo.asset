@@ -35,6 +35,7 @@ category =
 		ERB_typewriter
 		ERB_police
 		ERB_stripes_and_stars
+		ERB_communism
 	}
  compressor = 
  {
@@ -214,6 +215,19 @@ soundeffect =
 }
 soundeffect = 
 {
+    name = "ERB_communism"
+    sounds = {
+        sound = ERB_communism
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+soundeffect = 
+{
     name = "ERB_battle_hymn"
     sounds = {
         sound = ERB_battle_hymn1
@@ -267,7 +281,7 @@ soundeffect = {
     }
 	max_audible = 1
 	max_audible_behaviour = fail
-	volume = 0.6
+	volume = 1
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 	fade_out = 0.01
@@ -305,6 +319,11 @@ sound =
 {
 	name = "ERB_Idle_06"
 	file = "erb/ERB_Idle_06.wav"
+}
+sound = 
+{
+	name = "ERB_communism"
+	file = "erb/ERB_communism.wav"
 }
 sound = 
 {
