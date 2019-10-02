@@ -31,7 +31,7 @@ objectTypes = {
 	}
 	pdxmesh = {
         name = "ERB_protectron_mesh"
-        file = "gfx/models/owbentity/infantry/ERB/robots/ERB_protectron.mesh"
+        file = "gfx/models/owbentity/infantry/ERB/robot/ERB_protectron.mesh"
         scale = 0.45
 
         animation = { id = "idle"            type = "protectron_idle_anim" }
