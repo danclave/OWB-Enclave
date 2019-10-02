@@ -20,7 +20,7 @@ objectTypes = {
 	############################
 	####	ERB Tank		####
 	############################
-		pdxmesh = {
+	pdxmesh = {
 		name = "ERB_tank_medium_mesh"
 		file = "gfx/models/owbentity/infantry/ERB/vehicle/ERB_tank_medium.mesh"
 
@@ -29,4 +29,24 @@ objectTypes = {
 		animation = { id = "move"			type = "USA_tank_medium_moving_animation" }
 		scale = 0.5
 	}
+	pdxmesh = {
+        name = "ERB_protectron_mesh"
+        file = "gfx/models/owbentity/infantry/ERB/robots/ERB_protectron.mesh"
+        scale = 0.45
+
+        animation = { id = "idle"            type = "protectron_idle_anim" }
+        animation = { id = "idle2"            type = "protectron_idle_2_anim" }
+        animation = { id = "attack"            type = "protectron_attack_anim" }
+        animation = { id = "move"            type = "protectron_walk_anim" }
+        animation = { id = "retreat"        type = "protectron_retreat_anim" }
+
+        meshsettings = {
+            name = "jorodoxShape"
+            index = 0
+            texture_diffuse = "ERB_protectron_diffuse.dds"
+            texture_normal = "ERB_protectron_normal.dds"
+            texture_specular = "ERB_protectron_specular.dds"
+            shader = PdxMeshAdvanced
+        }
+    }
 }
