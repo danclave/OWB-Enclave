@@ -1623,7 +1623,10 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = { ideology = elites popularity = 0.02 }
 			add_political_power = 50
-			set_technology = { plasma_weaponry_1  = 1 }
+			set_technology = {
+				plasma_weaponry_1  = 1
+				plasma_unlock_tech = 1
+			}
 			add_ideas = ENC_energy_production
 		}
 	}
@@ -6290,6 +6293,7 @@ focus = {#NEVADA - second city
 		completion_reward = {
 			set_technology = {
 				gauss_weaponry_1 = 1
+				gauss_unlock_tech = 1
 			}
 			add_tech_bonus = {
 				ahead_reduction = 2
@@ -6422,7 +6426,10 @@ focus = {#NEVADA - second city
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			set_technology = { plasma_weaponry_1 = 1 }
+			set_technology = {
+				plasma_weaponry_1 = 1
+				plasma_unlock_tech = 1
+			}
 			add_ideas = ENC_energy_production
 		}
 	}
