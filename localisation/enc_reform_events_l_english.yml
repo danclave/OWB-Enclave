@@ -317,7 +317,7 @@ enc_reformers.52.a: "Welcome back, doc!"
 enc_reformers.52.a.tt: "Dr. Henry is now available as a §YPolitical Advisor§!."
 ################################################################################################################ -<
 enc_reformers.53.t: "Dr. Henry Leaves the Enclave"
-enc_reformers.53.d: "Dr. Henry was never a political figure, but even he could not ignore"
+enc_reformers.53.d: "Dr. Henry was never a political figure, but even he could not ignore the widespread atrocities."
 enc_reformers.53.a: "This is no place for the naive."
 enc_reformers.53.a.tt: "§YDr. Henry§! leaves the Enclave!\n"
 ################################################################################################################ -<

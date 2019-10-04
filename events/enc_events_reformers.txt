@@ -2587,8 +2587,10 @@ country_event = {#89 - Supreme Court
 		name = enc_reformers.89.a
 		add_stability = 0.05
 		add_political_power = 50
-		country_event = {
-			id = enc_reformers.90 days = 360
+		hidden_effect = {
+			country_event = {
+				id = enc_reformers.90 days = 360
+			}
 		}
 	}
 	option = {#	Honesty
