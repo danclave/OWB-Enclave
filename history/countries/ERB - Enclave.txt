@@ -8,6 +8,7 @@ oob = "ERB_2265"
 
 add_research_slot = 2
 set_technology = {
+	enclave_pa_unlock_tech = 1
 	elite_army = 1
 	standard_weaponry_tech = 1
 	melee_weaponry_tech_1 = 1
