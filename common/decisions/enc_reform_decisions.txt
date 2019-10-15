@@ -3737,9 +3737,9 @@ ENC_down_mexico_way = {
 						amount = 5
 					}
 				}
+			}
 				add_to_variable = { mexico_legitimacy_value = 5 }
 				custom_effect_tooltip = ENC_aid_baja_tt
-			}
 		}
 	}
 	ENC_aid_baja_infrastructure = {
@@ -3923,14 +3923,29 @@ ENC_down_mexico_way = {
 		days_remove = 60
 		complete_effect = {
 			add_war_support = -0.05
-		}
-		modifier = {
 			RRG = {
-				army_defence_factor = 0.05
-				army_attack_factor = 0.05
+				add_timed_idea = { idea = ERB_resistance_to_santa_anna days = 60 }
 			}
 		}
 	}
+	ENC_promote_mexican_guerillas = {
+		visible = {
+			country_exists = ARM
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+				}
+		days_remove = 60
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+		complete_effect = {
+			add_to_variable = { mexico_legitimacy_value = 10 }
+			custom_effect_tooltip = ENC_aid_baja_tt
+		}
+	}
+
 	ENC_invite_to_pan_american_alliance = {
 		target_trigger = {
 			FROM = {
