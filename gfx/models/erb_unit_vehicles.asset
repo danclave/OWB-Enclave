@@ -52,40 +52,40 @@ entity = {
 ####	ERB MECHANIZED	####
 ############################
 ###MECHANIZED
-entity = {
-	name = "ncr_gfx_apc_entity"
-	clone = "owb_mechanized_1_entity"
-	attach = { 	name = "infantry"			infantry = "ncr_gfx_infantry_5_entity" }
-	attach = { 	name = "vehicle"			vehicle = "ncr_gfx_apc_vehicle_1_entity" }
-}
-entity = {
-name = "ncr_gfx_apc_vehicle_1_entity"
-clone = "owb_apc_entity"
-attach = { name = "infantry_right" infantry_right = "ncr_gfx_mech_1_infantry" }
-attach = { name = "infantry_left" infantry_left = "ncr_gfx_mech_1_infantry" }
-}
-entity = {
-name = "ncr_gfx_mech_1_infantry"
-clone = "infantry_mech_unit_entity"
-pdxmesh = "ncr_trooper_mesh"
-}
-entity = {
-	name = "ncr_gfx_apc_2_entity"
-	clone = "owb_mechanized_2_entity"
-	attach = { 	name = "infantry"			infantry = "ncr_gfx_infantry_5_entity" }
-}
-entity = {
-	name = "ncr_gfx_apc_3_entity"
-	clone = "owb_mechanized_3_entity"
-	attach = { 	name = "infantry"			infantry = "ncr_gfx_infantry_5_entity" }
-}
-entity = {
-	name = "ncr_gfx_apc_4_entity"
-	clone = "owb_mechanized_4_entity"
-	attach = { 	name = "infantry"			infantry = "ncr_gfx_infantry_5_entity" }
-}
-entity = {
-	name = "ncr_gfx_apc_5_entity"
-	clone = "owb_mechanized_5_entity"
-	attach = { 	name = "infantry"			infantry = "ncr_gfx_infantry_5_entity" }
-}
+	entity = {
+		name = "erb_gfx_apc_entity"
+		clone = "owb_mechanized_1_entity"
+		attach = { 	name = "infantry"			infantry = "ERB_infantry_5_entity" }
+		attach = { 	name = "vehicle"			vehicle = "owb_apc_entity" }
+	}
+	entity = {
+		name = "_gfx_apc_vehicle_1_entity"
+		clone = "owb_apc_entity"
+		attach = { name = "infantry_right" infantry_right = "erb_gfx_mech_1_infantry" }
+		attach = { name = "infantry_left" infantry_left = "erb_gfx_mech_1_infantry" }
+	}
+	entity = {
+		name = "erb_gfx_mech_1_infantry"
+		clone = "infantry_mech_unit_entity"
+		pdxmesh = "ncr_trooper_mesh"
+	}
+	entity = {
+		name = "erb_gfx_apc_2_entity"
+		clone = "owb_mechanized_2_entity"
+		attach = { 	name = "infantry"			infantry = "ERB_infantry_5_entity" }
+	}
+	entity = {
+		name = "erb_gfx_apc_3_entity"
+		clone = "owb_mechanized_3_entity"
+		attach = { 	name = "infantry"			infantry = "ERB_infantry_5_entity" }
+	}
+	entity = {
+		name = "erb_gfx_apc_4_entity"
+		clone = "owb_mechanized_4_entity"
+		attach = { 	name = "infantry"			infantry = "ERB_infantry_5_entity" }
+	}
+	entity = {
+		name = "erb_gfx_apc_5_entity"
+		clone = "owb_mechanized_5_entity"
+		attach = { 	name = "infantry"			infantry = "ERB_infantry_5_entity" }
+	}

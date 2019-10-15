@@ -1,7 +1,7 @@
 objectTypes = {
 	pdxmesh = {
 		name = "ERB_powerarmor_t51_mesh"
-		file = "gfx/models/infantry/ERB/power_armor/ERB_t51.mesh"
+		file = "gfx/models/power_armor/ERB_t51.mesh"
 		scale = 0.5
 
 		animation = { id = "move"			type = "fo4_t51_walk_anim" }

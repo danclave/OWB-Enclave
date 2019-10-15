@@ -3695,7 +3695,8 @@ ENC_down_mexico_way = {
 			}
 		}
         complete_effect = {
-            random_owned_state  = {
+			add_war_support = -0.05
+			random_owned_state  = {
 				remove_building  = {
 					type = industrial_complex
 					level = 2
@@ -3727,6 +3728,7 @@ ENC_down_mexico_way = {
 						amount = -10
 					}
 				}
+			}
 			BJS = {
 				random_owned_state  = {
 					add_extra_state_shared_building_slots = 2
@@ -3735,9 +3737,10 @@ ENC_down_mexico_way = {
 						amount = 5
 					}
 				}
-			add_to_variable = { mexico_legitimacy_value = 5 }
-			custom_effect_tooltip = ENC_aid_baja_tt
-        }
+				add_to_variable = { mexico_legitimacy_value = 5 }
+				custom_effect_tooltip = ENC_aid_baja_tt
+			}
+		}
 	}
 	ENC_aid_baja_infrastructure = {
         icon = decision_enc_propaganda
@@ -3896,6 +3899,38 @@ ENC_down_mexico_way = {
 			custom_effect_tooltip = ENC_pan_american_alliance_tt_final
     	}
 	}
+	ENC_send_lend_lease = {
+		target_trigger = {
+			FROM = {
+				NOT = { tag = CAF }
+				NOT = { tag = ARM }
+				has_war_with = ARM
+				is_mexican = yes
+			 }
+		}
+		available = {
+			NOT = {
+				FROM = { is_puppet_of = ERB }
+				has_war_with = FROM
+			}
+		}
+		visible = {
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+				}
+		days_remove = 60
+		complete_effect = {
+			add_war_support = -0.05
+		}
+		modifier = {
+			RRG = {
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+	}
 	ENC_invite_to_pan_american_alliance = {
 		target_trigger = {
 			FROM = {
@@ -3923,5 +3958,6 @@ ENC_down_mexico_way = {
 			add_to_faction = FROM
 		}
 	}
+
 
 }

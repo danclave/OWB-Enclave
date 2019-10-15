@@ -421,7 +421,8 @@ ENC_approach_the_baron_desc:0 "The Baron may be a son of a bitch, but ideally he
 ENC_baron_is_asshole:0 "Protect the Baron"
 ENC_baron_is_asshole_desc:0 "Unless we guard the Baron's borders, he will defect to [ARM.GetLeader]. Why are we helping him again?"
 ENC_aid_baja:0 "Economic Aid to [BJS.GetName]"
-ENC_aid_baja_infrastructure:0 "Improve [BJS.GetName]'s infrasturcture."
+ENC_aid_baja_resources:0 "Humanitarian Relief to [BJS.GetName]"
+ENC_aid_baja_infrastructure:0 "Improve [BJS.GetName]'s Infrastructure"
 ENC_aid_baja_tt:0 "\n§gProviding economic assistance to [BJS.GetName] will be costly, but it will boost our image among the Mexican resistance.§!\n"
 ENC_pan_american_alliance:0 "Form the Pan American Alliance"
 ENC_pan_american_alliance_desc:0 "Now that Santa Anna is at war with us, our efforts to build support and resistance in Mexico have paid off. We can propose a formal alliance to defeat the General and the Bull."
@@ -431,6 +432,8 @@ ENC_invite_to_pan_american_alliance:0 "[FROM.GetName] joins the PAA!"
 ENC_invite_to_pan_american_alliance_desc:0 "[FROM.GetLeader] has recognized that it is better for us all to hang together than to hang separately. Viva Mexico! Viva Los Estados Unidos!""
 mexico_crisis: "The Mexican War of Independence"
 mexico_crisis_desc: "It appears that arming the people of Mexico to oppose Santa Anna means they will now oppose our occupation as well. Ingrates."
+ENC_send_lend_lease: "Lend Lease to [FROM.GetName]"
+ENC_send_lend_lease_desc: "We can send assistance to [FROM.GetName], but Lynette will continue to criticize our actions."
 ###################################
 # Nation Building
 ###################################
