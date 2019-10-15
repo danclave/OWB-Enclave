@@ -34,11 +34,11 @@ scripted_gui = {
 			connect_to_power_click_enabled = {
 				civilian_power_grid > 0
 				custom_trigger_tooltip = {
-					tooltip = more_than_5_electricity
+					tooltip = more_than_2_electricity
 					ROOT = {
 						check_variable = {
 							var = resource@energy
-							value = 5
+							value = 2
 							compare = greater_than_or_equals
 						}
 					}
@@ -455,7 +455,7 @@ scripted_gui = {
 					connect_to_power_click_enabled = {
 						civilian_power_grid > 0
 						custom_trigger_tooltip = {
-							tooltip = more_than_5_electricity
+							tooltip = more_than_2_electricity
 							ROOT = {
 								check_variable = {
 									var = resource@energy

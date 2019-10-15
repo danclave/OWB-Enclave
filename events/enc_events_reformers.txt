@@ -4728,7 +4728,7 @@ country_event = { #159 - Citizens League
 		has_completed_focus = enc_purge_opposition
 		has_full_control_of_state = 291
 		has_completed_focus = enc_reform
-		291 = { is_owned_and_controlled_by = ERB }
+		291 = { is_owned_by = ERB }
 	}
 	mean_time_to_happen = {
 		days = 90
@@ -7023,7 +7023,10 @@ news_event = {#233 - Legion Conquest of New Canaan
     is_triggered_only = no
 	trigger = {
 		has_completed_focus = enc_reform
-		NOT = { country_exists = NCN }
+		or = {
+			551 = { is_owned_and_controlled_by = CES }
+			551 = { is_owned_and_controlled_by = WHT }
+		}
 	}
 	mean_time_to_happen =  { days = 10 } # quick
 	option = {# Now they're a threat
@@ -8347,7 +8350,7 @@ news_event = {#325 - Baron Plot
 	option = { #RIP
 		name = enc_reformers.325.a
 		ATE = {
-			release_puppet = CAF
+			end_puppet = CAF
 		}
 		hidden_effect = {
 			CAF = { set_politics = { ruling_party = elites } }
@@ -8988,40 +8991,7 @@ news_event = {#342 - To War With Brotherhood
 		}
 	}
 }
-news_event = {#343 - Eagle surrenderss
-	id = enc_reformers.343
-	title = enc_reformers.343.t
-	desc = enc_reformers.343.d
-	picture = GFX_event_ATE_xochicalco
-	fire_only_once = yes
-    trigger = {
-		ATE = { has_war_with = ARM }
-	}
-	mean_time_to_happen =  { days = 200 } # quick
-	option = { # UMMM
-	name = enc_reformers.343.a
-		ATE= {
-			start_civil_war = {
-				ideology = elites
-				size =  0.30
-				states = { 783 786 785 800 804 801 787 806 802 }
-			}
-		}
-		hidden_effect = {
-			random_country = {
-				limit = {
-					original_tag = ATE
-					has_government = elites
-				}
-				set_cosmetic_tag = ATS
-				set_variable = { global.aztec_breakaway = THIS.id }
-				ARM = {
-					puppet = PREV
-				}
-			}
-		}
-	}
-}
+
 
 country_event = {#344 - Mexican Territory
 	id = enc_reformers.344
@@ -9315,10 +9285,13 @@ country_event = {#352 - Mexican Protests
 	option = {# MMM
 		name = enc_reformers.352.b
 		trigger = { has_country_flag = enc_angry_mexico }
-		add_stability = -0.25
-		add_war_support = -0.25
-		clr_country_flag = enc_angry_mexico
-		set_country_flag = enc_even_angrier_mexico
+		every_state = {
+			limit = {
+				is_owned_by = ERB
+				is_mexico_state = yes
+			}
+			BJS = {transfer_state = PREV }
+		}
 	}
 	option = {# MMM
 		name = enc_reformers.352.c
