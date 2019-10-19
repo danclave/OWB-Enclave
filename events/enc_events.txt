@@ -24,7 +24,7 @@ country_event = {#1 - OUR ESCAPE
         add_manpower = 3000
     }
 }
-country_event = {#2 - unused
+country_event = {#2 - Operational Security Compromised! 
 	id = enc.2
 	title = enc.2.t
 	desc = enc.2.d
@@ -1066,10 +1066,7 @@ country_event = {#43 - Pravus gaming reference
 
 	fire_only_once = yes
     is_triggered_only = no
-	trigger = {
-		date < 2280.01.01
-	}
-	mean_time_to_happen = {	days = 30 }
+	mean_time_to_happen = {	days = 600 }
 
 
 	option = {# good

@@ -9723,6 +9723,25 @@ country_event = {#354 - The War of Independence
 	}
 }
 
+# country_event = {#355 - War with Caesar Speech
+	# id = enc_reformers.355
+	# title = enc_reformers.355.t
+	# desc = enc_reformers.355.d
+	# picture = GFX_event_enc_vertibird_squad
+	# fire_only_once = yes
+    # is_triggered_only = no
+	# trigger = {
+		# original_tag = ERB
+		# has_war_with = CES
+		# always = no
+		# }
+	# option = { # 
+		# name = enc_reformers.355.a
+	# }
+	# option = { # 
+		# name = enc_reformers.355.b
+	# }
+# }
 #################
 ## IDEAS
 #################
