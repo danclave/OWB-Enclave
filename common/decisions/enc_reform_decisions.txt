@@ -3601,7 +3601,8 @@ ENC_down_mexico_way = {
 	}
 	ENC_expeditionary_force = {
         icon = decision_enc_propaganda
-        cost = 75
+		cost = 75
+		fire_only_once = yes
         visible = {
             has_war_support > 0.2
         }
@@ -3679,6 +3680,66 @@ ENC_down_mexico_way = {
 			add_to_variable = { mexico_legitimacy_value = 5 }
 			custom_effect_tooltip = ENC_aid_baja_tt
         }
+	}
+	ENC_aid_baja_resources = {
+        icon = decision_enc_propaganda
+        cost = 75
+        visible = {
+			has_stability > 0.3
+		}
+		fire_only_once = yes
+		target_trigger = {
+			FROM = {
+				TAG = BJS
+			}
+		}
+        complete_effect = {
+			add_war_support = -0.05
+			random_owned_state  = {
+				remove_building  = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_state  = {
+				remove_building  = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_state  = {
+				remove_building  = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			random_owned_state = {
+				limit = {
+					has_resources_amount = {
+						resource = water
+						amount = 10
+					}
+				}
+				custom_effect_tooltip = state_lose_10_water
+				hidden_effect = {
+					add_resource = {
+						type = water
+						amount = -10
+					}
+				}
+			}
+			BJS = {
+				random_owned_state  = {
+					add_extra_state_shared_building_slots = 2
+					add_resource = {
+						type = water
+						amount = 5
+					}
+				}
+			}
+				add_to_variable = { mexico_legitimacy_value = 5 }
+				custom_effect_tooltip = ENC_aid_baja_tt
+		}
 	}
 	ENC_aid_baja_infrastructure = {
         icon = decision_enc_propaganda
@@ -3802,7 +3863,8 @@ ENC_down_mexico_way = {
         cost = 75
         visible = {
 			has_stability > 0.3
-        }
+		}
+		fire_only_once = yes
         available = {
             ITZ = { has_war_with = ARM }
         }
@@ -3836,6 +3898,53 @@ ENC_down_mexico_way = {
 			custom_effect_tooltip = ENC_pan_american_alliance_tt_final
     	}
 	}
+	ENC_send_lend_lease = {
+		target_trigger = {
+			FROM = {
+				NOT = { tag = CAF }
+				NOT = { tag = ARM }
+				has_war_with = ARM
+				is_mexican = yes
+			 }
+		}
+		available = {
+			NOT = {
+				FROM = { is_puppet_of = ERB }
+				has_war_with = FROM
+			}
+		}
+		visible = {
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+				}
+		days_remove = 60
+		complete_effect = {
+			add_war_support = -0.05
+			RRG = {
+				add_timed_idea = { idea = ERB_resistance_to_santa_anna days = 60 }
+			}
+		}
+	}
+	ENC_promote_mexican_guerillas = {
+		visible = {
+			country_exists = ARM
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+				}
+		days_remove = 60
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+		complete_effect = {
+			add_to_variable = { mexico_legitimacy_value = 10 }
+			custom_effect_tooltip = ENC_aid_baja_tt
+		}
+	}
+
 	ENC_invite_to_pan_american_alliance = {
 		target_trigger = {
 			FROM = {
@@ -3863,5 +3972,6 @@ ENC_down_mexico_way = {
 			add_to_faction = FROM
 		}
 	}
+
 
 }

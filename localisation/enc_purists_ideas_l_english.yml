@@ -58,6 +58,8 @@ ENC_officers_purged:0 "Enclave Officers"
 ENC_officers_purged_desc:0 "The few Enclave Officers that remain are both well trained and experienced leaders."
 
 enc_sac_city:0"Old Promises"
+ERB_resistance_to_santa_anna: "Resistance to Santa Anna"
+ENC_promote_mexican_guerillas: "Fund the Guerillas"
 
 ENC_enc_new_patriotismriotism:0 "New Patriotism"
 ENC_americans_one_and_all:0 "New Patriotism"

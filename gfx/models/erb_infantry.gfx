@@ -2,9 +2,9 @@ objectTypes = {
 	#############
 	# ERB_infantry
 	##############
-		pdxmesh = {
+	pdxmesh = {
 		name = "ERB_infantry_rifle_mesh"
-		file = "gfx/models/owbentity/infantry/ERB/ERB_infantry.mesh"
+		file = "gfx/models/ERB_infantry.mesh"
 
 		animation = { id = "idle"			type = "GER_infantry_rifle_idle_animation" }
 		animation = { id = "attack"			type = "GER_infantry_rifle_attack_animation" }
@@ -27,14 +27,13 @@ objectTypes = {
 		animation = { id = "pushup"			type = "GER_infantry_pushup_animation" }
 		animation = { id = "guard_rifle"	type = "GER_infantry_guard_rifle_animation" }
 		animation = { id = "aim_exercise"	type = "GER_infantry_aim_exercise_animation" }
-
 	}
 	#############
 	# ERB_Motorized_infantry
 	##############
 		pdxmesh = {
 		name = "ERB_infantry_motorized_rifle_mesh"
-		file = "gfx/models/owbentity/infantry/ERB/ERB_infantry_Motorized.mesh"
+		file = "gfx/models/ERB_infantry_Motorized.mesh"
 
 		animation = { id = "idle"			type = "GER_infantry_rifle_idle_animation" }
 		animation = { id = "attack"			type = "GER_infantry_rifle_attack_animation" }

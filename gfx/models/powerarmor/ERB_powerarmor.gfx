@@ -4,7 +4,7 @@ objectTypes = {
 		### name referenced by .asset file
 		name = "powerarmor_x01_mesh"
 		###absolute file path from mod folder
-		file = "gfx/models/owbentity/powerarmor/x01/x01_powerarmor.mesh"
+		file = "gfx/models/powerarmor/x01/x01_powerarmor.mesh"
 		### scale of the mesh
 		scale = 1.0
 		#### binding animations to the mesh with an internal reference and an state id(can be anything)

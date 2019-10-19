@@ -149,9 +149,9 @@ enc_rebuild_the_power_grid: "Rebuild The Power Grid"
 enc_rebuild_the_power_grid_desc: "Gaining popular support through rule of law and democracy is nice, but ensuring an adequate power supply will show that our enemies have always been in the dark."
 enc_rebuild_the_power_grid_tt: "Allows you to build §YCivilian Power Grid§!, connecting the local populations to your power grid and your control."
 
-enc_debug_tt: "electricity: [?resource@electricity]"
+enc_debug_tt: "electricity: [?resource@energy]"
 
-more_than_5_electricity: "More than 5 §YElectricity§! available (§Y[?ROOT.resource@electricity]§!)"
+more_than_2_electricity: "More than 2 §YEnergy§! available (§Y[?ROOT.resource@energy]§!)"
 enc_seperate_but_equal:  "Service Guarantees Citizenship"
 enc_segregation_forever: "Separate But Peaceful"
 enc_wastelander_draft:  "Unwilling Volunteers"

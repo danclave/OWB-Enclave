@@ -382,6 +382,26 @@ ideas = {
 				army_defence_factor = -0.10
 			}
 		}
+		ERB_resistance_to_santa_anna = {
+			picture = enc_pa_production
+			allowed = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+				army_core_defence_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry = {
+					instant = yes
+					hard_attack = 0.05
+				}
+			}
+		}
+
 		ffi_dornan_advice = {
 
 			picture = enc_pa_production
