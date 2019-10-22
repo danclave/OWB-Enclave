@@ -3054,6 +3054,7 @@ ENC_securing_borders = {
 			has_completed_focus = enc_rebuilding_a_nation
 			has_idea = enc_NCR_instability
 		}
+		fire_only_once = yes
 		is_good = yes
 		complete_effect = {
 			add_stability = 0.05
