@@ -3924,7 +3924,7 @@ ENC_down_mexico_way = {
 		days_remove = 60
 		complete_effect = {
 			add_war_support = -0.05
-			RRG = {
+			FROM = {
 				add_timed_idea = { idea = ERB_resistance_to_santa_anna days = 60 }
 			}
 		}
