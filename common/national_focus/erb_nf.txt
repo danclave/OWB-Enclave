@@ -3671,7 +3671,7 @@ focus = {#Legion Border
 	focus = {#SS-CER-TOP-START
 		id = enc_ss_ceasar_top
 		mutually_exclusive = {focus = enc_ss_ceasar_bottom }
-		icon = GFX_goal_legion_spqr
+		icon = GFX_goal_CES_spqr
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_operation_brutus}
 		available = { country_exists = CES }

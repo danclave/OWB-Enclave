@@ -1801,8 +1801,10 @@ country_event = {#57 - Purist commander
 		random_list = {
 			25 = { # moderate success
 				custom_effect_tooltip = enc_reformers.57.e.success
-				event_target:purist_commander = { remove_unit_leader_trait = enc_purist }
-				event_target:purist_commander = { unit_leader_event = { id = enc_reformers.57.success }}
+				event_target:purist_commander = {
+					remove_unit_leader_trait = enc_purist
+					unit_leader_event = { id = enc_reformers.256 }
+				}
 			}
 			25 = { # strong success
 				custom_effect_tooltip = enc_reformers.57.e.success2
@@ -1810,45 +1812,48 @@ country_event = {#57 - Purist commander
 					event_target:purist_commander = {
 						remove_unit_leader_trait = enc_purist
 						add_unit_leader_trait = enc_reformer
+						unit_leader_event = { id = enc_reformers.257  }
 					}
 				}
-				event_target:purist_commander = { unit_leader_event = { id = enc_reformers.57.success2 }}
 			}
 			50 = { # failure
 				add_popularity = { ideology = intellectuals popularity = -0.10 }
-				event_target:purist_commander = { unit_leader_event = { id = enc_reformers.57.failure }}
+				event_target:purist_commander = { unit_leader_event = { id = enc_reformers.258 }}
 			}
 		custom_effect_tooltip = leader_charismatic_tt
 		}	
 	}
 }
 
-leader_event = { #57.success - leader convinced!
-    id = enc_reformers.57.success
+unit_leader_event = { #256.success - leader convinced!
+    id = enc_reformers.256
     title = enc_reformers.57.success.t
     desc = enc_reformers.57.success.d
     is_triggered_only = yes
     option = { # 
+		name = enc_reformers.57.success.a
 		custom_effect_tooltip = enc_reformers.57.e.success
 	}
 }
 
-leader_event = { #57.success2 - leader convinced!
-    id = enc_reformers.57.success2
+unit_leader_event = { #257.success2 - leader convinced!
+    id = enc_reformers.257
     title = enc_reformers.57.success2.t
     desc = enc_reformers.57.success2.d
     is_triggered_only = yes
     option = { # 
+		name = enc_reformers.57.success2.a
 		custom_effect_tooltip = enc_reformers.57.e.success
 	}
 }
 
-leader_event = { #57.failure - leader unconvinced!
-    id = enc_reformers.57.failure
+unit_leader_event = { #258.failure - leader unconvinced!
+    id = enc_reformers.258
     title = enc_reformers.57.failure.t
     desc = enc_reformers.57.failure.d
     is_triggered_only = yes
     option = { # 
+		name = enc_reformers.57.failure.a
 		effect_tooltip = { # already applied above, repeated for clarity
 			add_popularity = { ideology = intellectuals popularity = -0.10 }
 		}
@@ -7456,12 +7461,15 @@ country_event = { # 253 - NCR loyalist sabotage - commander assassinated
 	id = enc_reformers.253
 	title = enc_reformers.253.t
 	desc = enc_reformers.253.d
-	picture = GFX_report_event_generic_train # change
+	picture = GFX_event_ENC_secret # change
 	fire_only_once = no
 	is_triggered_only = no
 	trigger = {
 		original_tag = ERB
 		has_idea = enc_NCR_resistance
+		any_army_leader = {
+			is_leading_army = yes
+		}
 	}
 	mean_time_to_happen = { days = 200 }
 	
@@ -7469,37 +7477,45 @@ country_event = { # 253 - NCR loyalist sabotage - commander assassinated
 		hidden_effect = {
 			random_army_leader = {
 				save_event_target_as = assassinated_commander
+				limit = {
+					is_leading_army = yes
+				}
 			}
 		}
 	}
 
 	option = { # let them go
 		name = enc_reformers.253.a
-		custom_effect_tooltip = enc_reformers.253.a.tt
+		custom_effect_tooltip = enc_reformers.253.tt
+		custom_effect_tooltip = newline
 		hidden_effect = {
 			event_target:assassinated_commander = {
 				retire = yes
 			}
-			add_war_support = -0.05
-			add_stability = -0.02
 		}
-		
-		
+		add_war_support = -0.05
+		add_stability = -0.02
 	}
 	option = { # reprisals!
-		name = enc_reformers.253.a
-		custom_effect_tooltip = enc_reformers.253.a.tt
+		name = enc_reformers.253.b
+		custom_effect_tooltip = enc_reformers.253.tt
+		custom_effect_tooltip = newline
 		hidden_effect = {
 			event_target:assassinated_commander = {
 				retire = yes
 			}
-			set_variable = { legitimacy_change_var = -0.3 }
-			add_stability = -0.05
 		}
+		set_variable = { legitimacy_change_var = -0.3 }
+		add_stability = -0.05
 	}
 }
 
 
+# 254 reserved
+# 255 reserved
+# 256 reserved
+# 257 reserved
+# 258 reserved
 
 ########################
 ## 300 and up
@@ -7647,6 +7663,7 @@ country_event = {#300 - state protests!
 		}
 		# todo add complete effect with minor effects
 	}
+}
 }
 country_event = {#301 - state protest turns into massacre!
 	id = enc_reformers.301
@@ -7917,12 +7934,12 @@ country_event = {#306 - Protesting commander
 				event_target:protesting_commander = {
 					custom_effect_tooltip = enc_reformers.306.b.reward
 					add_unit_leader_trait = enc_reformer
-					leader_event = { id = enc_reformers.306.success }
+					unit_leader_event = { id = enc_reformers.254 }
 				}
 			}
 			50 = { # failure				
 				event_target:protesting_commander = { 
-					leader_event = { id = enc_reformers.306.success }
+					unit_leader_event = { id = enc_reformers.255 }
 					retire = yes 				
 				}
 				add_war_support = -0.10
@@ -7932,13 +7949,14 @@ country_event = {#306 - Protesting commander
 	}
 }
 
-leader_event = { #306.success - convinced commander to stay
-	id = enc_reformers.306.success
+unit_leader_event = { #254.success - convinced commander to stay
+	id = enc_reformers.254
 	title = enc_reformers.306.success.t
 	desc = enc_reformers.306.success.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = { # Great!
+		name = enc_reformers.306.success.a
 		effect_tooltip = {
 			event_target:protesting_commander = {
 				custom_effect_tooltip = enc_reformers.306.b.reward
@@ -7948,13 +7966,14 @@ leader_event = { #306.success - convinced commander to stay
 	}
 }
 
-leader_event = { #306.failure - commander leaves
-	id = enc_reformers.306.failure
+unit_leader_event = { #255.failure - commander leaves
+	id = enc_reformers.255
 	title = enc_reformers.306.failure.t
 	desc = enc_reformers.306.failure.d
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = { # Damn!
+		name = enc_reformers.306.failure.a
 		effect_tooltip = {			
 			event_target:protesting_commander = { 
 				retire = yes 				

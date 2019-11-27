@@ -1,10 +1,10 @@
 Current changes for patch 2.0.14
 TESTED
-- 
+- island states are now coreable (but only single islands)
+- enc_reformers.253 added (NCR loyalists assassinate commander)
+- raider sabotage now destroys rather than damages factory
 
 NEEDS TESTING
-- island states are now coreable
-- raider sabotage now destroys rather than damages factory
-- enc_reformers.253 added (NCR loyalists assassinate commander)
+
 - success, great success or failure event after talking to purist commander
 - success or failure after talking to commander threatening to leave
