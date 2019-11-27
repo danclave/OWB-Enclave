@@ -168,7 +168,7 @@ ideas = {
 				has_country_flag = enc_wrights_tolerated_flag
 			}
 			traits = {
-				captain_of_industry # todo change?
+				captain_of_industry
 			}
 		}
 		erb_salvatore = {

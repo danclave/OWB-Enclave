@@ -15,12 +15,6 @@ scripted_gui = {
 					include_locked  = no
 				}
 				civilian_power_grid > 0
-				# something to delete
-				# industrial_complex > 0
-				# arms_factory > 0
-				# water_generator > 0
-				# electricity_generator > 0
-				# metal_generator > 0
 			}
 		}
 		effects = {
@@ -43,8 +37,13 @@ scripted_gui = {
 						}
 					}
 				}
-				any_neighbor_state = {
-					is_core_of = ROOT
+				OR = {
+					# any neighbour is cored
+					any_neighbor_state = {
+						is_core_of = ROOT
+					}
+					# or its an island
+					is_island_state = yes
 				}
 			}
 		}

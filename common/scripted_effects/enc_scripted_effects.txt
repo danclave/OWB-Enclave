@@ -670,7 +670,7 @@ comply_with_protests = {
 		hidden_effect = {
 			unlock_national_focus = enc_the_fate_of_our_democracy
 		}
-		complete_national_focus = enc_empower_congress # todo bypass law_or_order
+		complete_national_focus = enc_empower_congress
 	}
 	else_if = { # player has no free press, restore free press
 		limit = {
@@ -687,7 +687,7 @@ comply_with_protests = {
 	else_if = { # player has not chosen between law or order, force change to law
 		limit = {
 			not = {
-				has_completed_focus = enc_law_and_order # todo check
+				has_completed_focus = enc_law_and_order
 			}
 		}
 		hidden_effect = {
