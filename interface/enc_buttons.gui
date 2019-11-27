@@ -161,7 +161,7 @@ guiTypes = {
 			gridboxtype = {
 				name = "erb_screen_power_grid_scripted_gui_gridbox"
 				position = { x = 0 y = 60 }
-				size = { width = 100%% height = 100%% }
+				size = { width = 100% height = 100%% }
 				slotsize = { width = 100 height = 40 }
 				add_horizontal = yes
 				max_slots_horizontal = 2
@@ -184,7 +184,7 @@ guiTypes = {
 				font = "hoi_36header"
 				text = "The Army Corps of Engineers"
 				maxWidth = 600
-				maxHeight = 20
+				maxHeight = 200
 				fixedsize = yes
 			}
 		}

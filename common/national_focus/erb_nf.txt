@@ -2699,6 +2699,8 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 80
 			country_event = { id = enc_reformers.80 }
+			add_to_variable = { geck_count = 4}
+			custom_effect_tooltip = enc_geck_tooltip_tt
 		}
 	}
 

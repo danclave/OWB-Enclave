@@ -351,6 +351,18 @@ enc_reformers.57.e: "§MSpeak to him personally.§!"
 enc_reformers.57.e.tt: "§gDouglas always had a way with words, this wouldn't be the first purist hardliner he brought to his side.§!\n\n"
 enc_reformers.57.e.success: "§Y[purist_commander.GetName]§! loses §YPurist§!"
 enc_reformers.57.e.success2: "§Y[purist_commander.GetName]§! becomes §YReformer§!"
+#######################################
+enc_reformers.57.success.t: "§Y[purist_commander.GetName]§! placated"
+enc_reformers.57.success.d: "Expecting some sort of reprisal for his recent comments, §Y[purist_commander.GetName]§! was surprised to be invited to the President's personal bunker suite for dinner instead. After a lengthy conversation over roasted Deathclaw and scotch, it appears that §Y[purist_commander.GetName]§! has relented somewhat in his previous convictions. While Douglas may not have made a staunch reformer out of the commander, it appears this may be the end of any such outbursts."
+enc_reformers.57.success.a: "It will have to do"
+########################################
+enc_reformers.57.success2.t: "§Y[purist_commander.GetName]§! converted!"
+enc_reformers.57.success2.d: "Expecting some sort of reprisal for his recent comments, §Y[purist_commander.GetName]§! was surprised to be invited to the President's personal bunker suite for dinner instead. After a lengthy conversation over roasted Deathclaw and scotch, it appears that §Y[purist_commander.GetName]§! has come to see things in a different light! After a discussion that lasted deep into the night, the commander left satisfied and with a new perspective on what it means to be an American. It appears the Reformers have gained a staunch supporter in a night!
+enc_reformers.57.success2.a: "Lincoln would be proud"
+#######################################
+enc_reformers.57.failure.t: "§Y[purist_commander.GetName]§! unconvinced"
+enc_reformers.57.failure.d: "Expecting some sort of reprisal for his recent comments, §Y[purist_commander.GetName]§! was surprised to be invited to the President's personal bunker suite for dinner instead. After a lengthy conversation over roasted Deathclaw and scotch, it appears that §Y[purist_commander.GetName]§! has remained steadfast in his convictions. Yielding not an inch, he left shortly after dinner was over. It appears Granite has only invigorated an enemy of the Reformers and now appears weak as a result."
+enc_reformers.57.failure.a: "He had his chance"
 ################################################################################################################ -<
 enc_reformers.58.t: "[VEG.GetLeader] sues for peace"
 enc_reformers.58.d: "[VEG.GetLeader] is no fool. Without the support of the [NCR.GetName], the war has turned against [VEG.GetName]. A Securitron model with the image of a jovial cowboy glowing on his monitor has approached our borders with a white flag and an offer to let bygones be bygones. This could be a good opportunity, considering an invasion into [VEG.GetName] could be a costly affair."
@@ -1343,6 +1355,13 @@ enc_reformers.251.a.tt: "\nUnlocks decisions to help Hayes become the President 
 enc_reformers.252.t: "End of Legion Guerillas"
 enc_reformers.252.d: "With the Legion's collapse, guerilla raids on American forces come to an end.  On to Chicago!"
 enc_reformers.252.a: "We're going to deal with this one day."
+
+############################################################################################################ 
+enc_reformers.253.t: "NCR loyalists assassinate commander!"
+enc_reformers.253.d: "This morning, the body of [assassinated_commander.GetName] was discovered in his forward outpost. The commander was shot at point blank several times with a small arms weapon. The local Enclave forces suspect NCR loyalists to be behind the cowardly assassination. They have arrested the NCR civilians that had been tasked with maintaining the base, though no one has come forward and confessed. Our forces in the area are restless and eager to find a culprit, not doing so would certainly harm morale."
+enc_reformers.253.a: "We have no evidence on the cleaning crew, release them."
+enc_reformers.253.b: "Looks like its time we set some examples."
+enc_reformers.253.tt: "§R[assassinated_commander.GetName] dies!§!"
 ############################################################################################################
 ## START OF 300 ###
 #############################################################################################################
@@ -1406,6 +1425,17 @@ enc_reformers.306.d: "One of our commanders, [protesting_commander.GetName], has
 enc_reformers.306.a: "Accept his resignation."
 enc_reformers.306.b: "§MNone of us are Americans until we all are.§!"
 enc_reformers.306.b.reward: "Changes his mind.\n"
+
+#############################################################################################################
+enc_reformers.306.success.t: "[protesting_commander.GetName] Convinced"
+enc_reformers.306.success.d: "It appears [protesting_commander.GetName] has retracted his resignation after being invited to a lengthy conversation about American values with the president himself."
+enc_reformers.306.success.a: "It matters not where we stood 40 years ago."
+
+#############################################################################################################
+enc_reformers.306.failure.t: "[protesting_commander.GetName] Unconvinced"
+enc_reformers.306.failure.d: "It appears [protesting_commander.GetName] has remained steadfast in his decision to leave, despite Douglas' best attempts to change his mind."
+enc_reformers.306.failure.a: "Accept his resignation."
+
 #############################################################################################################
 enc_reformers.307.t: "The President and the People"
 enc_reformers.307.d: "For over 200 years, the Enclave president has wielded a great amount of power within the organization, if not all. With a congress only given an advisory role and lacking any true power as the Legislative branch. But times have changed rapidly, we are no longer a limited military organization but a government. How will the role of the president change in the future?"

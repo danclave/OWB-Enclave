@@ -1799,11 +1799,12 @@ country_event = {#57 - Purist commander
 		}
 		custom_effect_tooltip = enc_reformers.57.e.tt
 		random_list = {
-			25 = {
+			25 = { # moderate success
 				custom_effect_tooltip = enc_reformers.57.e.success
 				event_target:purist_commander = { remove_unit_leader_trait = enc_purist }
+				event_target:purist_commander = { unit_leader_event = { id = enc_reformers.57.success }}
 			}
-			25 = {
+			25 = { # strong success
 				custom_effect_tooltip = enc_reformers.57.e.success2
 					hidden_effect = {
 					event_target:purist_commander = {
@@ -1811,11 +1812,46 @@ country_event = {#57 - Purist commander
 						add_unit_leader_trait = enc_reformer
 					}
 				}
+				event_target:purist_commander = { unit_leader_event = { id = enc_reformers.57.success2 }}
 			}
-			50 = { add_popularity = { ideology = intellectuals popularity = -0.05 }}
-
-		}
+			50 = { # failure
+				add_popularity = { ideology = intellectuals popularity = -0.10 }
+				event_target:purist_commander = { unit_leader_event = { id = enc_reformers.57.failure }}
+			}
 		custom_effect_tooltip = leader_charismatic_tt
+		}	
+	}
+}
+
+leader_event = { #57.success - leader convinced!
+    id = enc_reformers.57.success
+    title = enc_reformers.57.success.t
+    desc = enc_reformers.57.success.d
+    is_triggered_only = yes
+    option = { # 
+		custom_effect_tooltip = enc_reformers.57.e.success
+	}
+}
+
+leader_event = { #57.success2 - leader convinced!
+    id = enc_reformers.57.success2
+    title = enc_reformers.57.success2.t
+    desc = enc_reformers.57.success2.d
+    is_triggered_only = yes
+    option = { # 
+		custom_effect_tooltip = enc_reformers.57.e.success
+	}
+}
+
+leader_event = { #57.failure - leader unconvinced!
+    id = enc_reformers.57.failure
+    title = enc_reformers.57.failure.t
+    desc = enc_reformers.57.failure.d
+    is_triggered_only = yes
+    option = { # 
+		effect_tooltip = { # already applied above, repeated for clarity
+			add_popularity = { ideology = intellectuals popularity = -0.10 }
+		}
 	}
 }
 
@@ -1871,7 +1907,7 @@ country_event = { #59 - Power grid sabotaged!
 		custom_effect_tooltip = enc_NCR_resistance
 	}
 }
-#
+
 country_event = {#60 - From the Top Down
 	id = enc_reformers.60
 	title = enc_reformers.60.t
@@ -4528,7 +4564,7 @@ country_event = {#149 No Shi-Peace
 			country_event = { id = enc_reformers.146 }
 		}
 }
-country_event = {#150
+country_event = {#150 terraforming
     id = enc_reformers.150
 	title = enc_reformers.150.t
 	desc = enc_reformers.150.d
@@ -4536,10 +4572,10 @@ country_event = {#150
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {#	Yayy
-			name = enc_reformers.150.a
-					trigger = { has_country_flag = leader_charismatic }
-					add_ideas = ENC_terraforming
-		}
+		name = enc_reformers.150.a
+			trigger = { has_country_flag = leader_charismatic }
+			add_ideas = ENC_terraforming
+	}
 	option = {#	Yayy
 			name = enc_reformers.150.b
 			308 = {
@@ -5015,6 +5051,7 @@ country_event = { #167  End of Reformers
 		 add_timed_idea = { idea = ENC_end_of_reformers  days = 90 }
 	}
 }
+
 country_event = {
 	id = enc_reformers.168
 	title = enc_reformers.168.t
@@ -6255,7 +6292,7 @@ country_event = {#208- Reno 911
 		custom_effect_tooltip = enc_out_with_the_old
 	}
 }
-country_event = {
+country_event = { # 209
 	id = enc_reformers.209
 	title = enc_reformers.209.t
 	desc = enc_reformers.209.d
@@ -6278,8 +6315,8 @@ country_event = {
 	}
 }
 
-#Bandit sabotage - civilian factory sabotaged
-country_event = {
+
+country_event = { # 210 - RAIDERS - civilian factory sabotaged
 	id = enc_reformers.210
 	title = enc_reformers.210.t
 	desc = enc_reformers.210.d
@@ -6294,16 +6331,16 @@ country_event = {
 				is_fully_controlled_by = ROOT
 				arms_factory > 0
 			}
-			damage_building = {
+			remove_building = {
 				type = industrial_complex
-				damage = 0.6
+				level = 1
 			}
 		}
 	}
 }
 
-#Bandit sabotage - bridge blown
-country_event = {
+
+country_event = { # 211 - RAIDERS - bridge blown
 	id = enc_reformers.211
 	title = enc_reformers.211.t
 	desc = enc_reformers.211.d
@@ -6318,9 +6355,9 @@ country_event = {
 				is_fully_controlled_by = ROOT
 				arms_factory > 0
 			}
-			damage_building = {
+			remove_building = {
 				type = infrastructure
-				damage = 1
+				level = 1
 			}
 		}
 	}
@@ -6494,7 +6531,7 @@ country_event = {#217 - Counterfeiting
 	}
 
 }
-country_event = { #218 - Our New Capital
+country_event = {#218 - Our New Capital
 	id = enc_reformers.218
 	title = enc_reformers.218.t
 	desc = enc_reformers.218.d
@@ -6541,7 +6578,7 @@ country_event = {#219 - House or Senate
 		set_country_flag = segregate_senate
 	}
 }
-country_event = { #220- Congressional Criticism of Requisitions
+country_event = {#220- Congressional Criticism of Requisitions
     id = enc_reformers.220
     title = enc_reformers.220.t
     desc = {
@@ -6997,7 +7034,7 @@ country_event = {#231 - Better Read
 		decrease_red_menace = yes
 	}
 }
-news_event = {#232 - Troll Warren Crushed
+news_event = {	#232 - Troll Warren Crushed
 	id = enc_reformers.232
 	title = enc_reformers.232.t
 	desc = enc_reformers.232.d
@@ -7312,7 +7349,7 @@ country_event = {#247 - Hayes Protests
 		add_popularity = { ideology = people popularity = 0.05 }
 	}
 }
-country_event = {#248 - Vote Rigging :(
+country_event = {#248 - Vote Rigging 
 	id = enc_reformers.248
 	title = enc_reformers.248.t
 	desc = enc_reformers.248.d
@@ -7414,6 +7451,59 @@ country_event = {#252 - End Guerillas
 		remove_ideas = guerilla_raids
 	}
 }
+
+country_event = { # 253 - NCR loyalist sabotage - commander assassinated
+	id = enc_reformers.253
+	title = enc_reformers.253.t
+	desc = enc_reformers.253.d
+	picture = GFX_report_event_generic_train # change
+	fire_only_once = no
+	is_triggered_only = no
+	trigger = {
+		original_tag = ERB
+		has_idea = enc_NCR_resistance
+	}
+	mean_time_to_happen = { days = 200 }
+	
+	immediate = {
+		hidden_effect = {
+			random_army_leader = {
+				save_event_target_as = assassinated_commander
+			}
+		}
+	}
+
+	option = { # let them go
+		name = enc_reformers.253.a
+		custom_effect_tooltip = enc_reformers.253.a.tt
+		hidden_effect = {
+			event_target:assassinated_commander = {
+				retire = yes
+			}
+			add_war_support = -0.05
+			add_stability = -0.02
+		}
+		
+		
+	}
+	option = { # reprisals!
+		name = enc_reformers.253.a
+		custom_effect_tooltip = enc_reformers.253.a.tt
+		hidden_effect = {
+			event_target:assassinated_commander = {
+				retire = yes
+			}
+			set_variable = { legitimacy_change_var = -0.3 }
+			add_stability = -0.05
+		}
+	}
+}
+
+
+
+########################
+## 300 and up
+########################
 
 country_event = {#300 - state protests!
 	id = enc_reformers.300
@@ -7522,11 +7612,11 @@ country_event = {#300 - state protests!
 		add_stability = -0.05
 		add_war_support = -0.05
 		random_list = {
-			50 = {} # todo add tooltip
-			50 = {
-				country_event = { id = enc_reformers.304 } # state protest turns into riot!}
-			}
+		50 = {} # todo add tooltip
+		50 = {
+			country_event = { id = enc_reformers.304 } # state protest turns into riot!}
 		}
+		
 	}
 	option = { # Meaningless placation
 		name = enc_reformers.300.c
@@ -7537,7 +7627,7 @@ country_event = {#300 - state protests!
 		random_list = {
 			75 = {} # todo add tooltip
 			25 = {
-				country_event = { id = enc_reformers.304 } # state protest turns into riot!}
+				country_event = { id = enc_reformers.304 } # state protest turns into riot!
 			}
 		}
 		custom_effect_tooltip = leader_charismatic_tt
@@ -7823,18 +7913,54 @@ country_event = {#306 - Protesting commander
 			has_country_flag = leader_charismatic
 		}
 		random_list = {
-			50 = {
-				event_target:protesting_commander = { retire = yes }
-				add_war_support = -0.10
-			}
-			50 = {
+			50 = { # success!
 				event_target:protesting_commander = {
 					custom_effect_tooltip = enc_reformers.306.b.reward
 					add_unit_leader_trait = enc_reformer
+					leader_event = { id = enc_reformers.306.success }
 				}
+			}
+			50 = { # failure				
+				event_target:protesting_commander = { 
+					leader_event = { id = enc_reformers.306.success }
+					retire = yes 				
+				}
+				add_war_support = -0.10
 			}
 		}
 		custom_effect_tooltip = leader_charismatic_tt
+	}
+}
+
+leader_event = { #306.success - convinced commander to stay
+	id = enc_reformers.306.success
+	title = enc_reformers.306.success.t
+	desc = enc_reformers.306.success.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { # Great!
+		effect_tooltip = {
+			event_target:protesting_commander = {
+				custom_effect_tooltip = enc_reformers.306.b.reward
+				add_unit_leader_trait = enc_reformer
+			}
+		}	
+	}
+}
+
+leader_event = { #306.failure - commander leaves
+	id = enc_reformers.306.failure
+	title = enc_reformers.306.failure.t
+	desc = enc_reformers.306.failure.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { # Damn!
+		effect_tooltip = {			
+			event_target:protesting_commander = { 
+				retire = yes 				
+			}
+			add_war_support = -0.10
+		}	
 	}
 }
 
@@ -8085,7 +8211,7 @@ country_event = {#314 - Communism paranoia turns into crisis
 		activate_mission = ENC_red_menace_crisis
 	}
 }
-news_event = {
+news_event = { # NuKE DROPPED
 	id = nuke_dropped.1
 	title = enc_nuke_dropped.1.t
 	desc = enc_nuke_dropped.1.d
@@ -8119,6 +8245,10 @@ country_event = {#316 - Arming raiders?
 	}
 	option = { # Lets arm the raiders
 		name = enc_reformers.316.b
+		set_temp_variable  = {
+			legitimacy_change_var = -0.03
+		}
+		change_legitimacy = yes
 		custom_effect_tooltip = enc_stage_raider_attacks_tt
 		set_country_flag = enc_stage_raider_attacks_flag
 	}
@@ -8297,7 +8427,7 @@ news_event = {#323 - Fall of Rio
 	picture = GFX_event_rrg_ruins
 	option = { # Good to know
 		name = enc_reformers.323.a
-		ATE = {
+		RRG = {
 			if = {
 				limit = {
 					ATE = {
@@ -9696,6 +9826,7 @@ country_event = {#354 - The War of Independence
 	}
 }
 
+
 # country_event = {#355 - War with Caesar Speech
 	# id = enc_reformers.355
 	# title = enc_reformers.355.t
@@ -9726,3 +9857,4 @@ country_event = {#354 - The War of Independence
 # GFX_event_ENC_door # GFX_event_ENC_double_flag # GFX_event_ENC_double_flag_long # GFX_event_ENC_mariposa1 # GFX_event_ENC_mariposa2 # GFX_event_ENC_mariposa3 # GFX_event_ENC_minigun
 # GFX_event_ENC_new_reno # GFX_event_ENC_picture # GFX_event_ENC_plasma_pistol # GFX_event_ENC_plasma_rifle # GFX_event_ENC_president_only # GFX_event_enc_reform_propaganda # GFX_event_ENC_ruined_city # GFX_event_ENC_secret
 # GFX_event_ENC_secret2 # GFX_event_ENC_secret3 # GFX_event_ENC_single_soldier
+

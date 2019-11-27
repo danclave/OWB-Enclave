@@ -1089,6 +1089,7 @@ country_event = {#46 - Mexico Challenge
 	fire_only_once = yes
     is_triggered_only = no
 	trigger = {
+		always = no
 		date < 2280.01.01
 		NOT = {country_exists = CES }
 		has_completed_focus = enc_purity

@@ -52,40 +52,44 @@ entity = {
 ####	ERB MECHANIZED	####
 ############################
 ###MECHANIZED
-	entity = {
-		name = "erb_gfx_apc_entity"
-		clone = "owb_mechanized_1_entity"
-		attach = { 	name = "infantry"			infantry = "ERB_infantry_5_entity" }
-		attach = { 	name = "vehicle"			vehicle = "owb_apc_entity" }
-	}
-	entity = {
-		name = "_gfx_apc_vehicle_1_entity"
-		clone = "owb_apc_entity"
-		attach = { name = "infantry_right" infantry_right = "erb_gfx_mech_1_infantry" }
-		attach = { name = "infantry_left" infantry_left = "erb_gfx_mech_1_infantry" }
-	}
-	entity = {
-		name = "erb_gfx_mech_1_infantry"
-		clone = "infantry_mech_unit_entity"
-		pdxmesh = "ncr_trooper_mesh"
-	}
-	entity = {
-		name = "erb_gfx_apc_2_entity"
-		clone = "owb_mechanized_2_entity"
-		attach = { 	name = "infantry"			infantry = "ERB_infantry_5_entity" }
-	}
-	entity = {
-		name = "erb_gfx_apc_3_entity"
-		clone = "owb_mechanized_3_entity"
-		attach = { 	name = "infantry"			infantry = "ERB_infantry_5_entity" }
-	}
-	entity = {
-		name = "erb_gfx_apc_4_entity"
-		clone = "owb_mechanized_4_entity"
-		attach = { 	name = "infantry"			infantry = "ERB_infantry_5_entity" }
-	}
-	entity = {
-		name = "erb_gfx_apc_5_entity"
-		clone = "owb_mechanized_5_entity"
-		attach = { 	name = "infantry"			infantry = "ERB_infantry_5_entity" }
-	}
+entity = {
+    name = "erb_gfx_mechanized_1_entity"
+    pdxmesh = "motorized_frame_mesh"
+
+    state = { name = "idle"                animation = "idle"                     animation_blend_time = 0.3 animation_speed = 1.0 }
+    state = { name = "retreat"            animation = "move"                      animation_blend_time = 0.3 animation_speed = 1.0 }
+    state = { name = "training"            animation = "idle"                     animation_blend_time = 0.3 animation_speed = 1.0 }
+    state = { name = "death"            animation = "idle"                     animation_blend_time = 0.3 animation_speed = 1.0 }
+    state = { name = "support_attack"    animation = "attack"                     animation_blend_time = 0.3 animation_speed = 1.0 }
+    state = { name = "attack"            animation = "attack"                     animation_blend_time = 0.3 animation_speed = 1.0 }
+    state = { name = "defend"            animation = "attack"                     animation_blend_time = 0.3 animation_speed = 1.0 }
+    state = { name = "move"                animation = "move"                     animation_blend_time = 0.3 animation_speed = 1.0 }
+    scale = 1.0
+
+    attach = {     name = "vehicle"            vehicle = "owb_apc_entity" }
+    attach = {     name = "infantry"            infantry = "ERB_infantry_5_entity" }
+}
+entity = {
+    name = "erb_gfx_mechanized_2_entity"
+   clone = "erb_gfx_mechanized_1_entity"
+    attach = {     name = "vehicle"            vehicle = "owb_apc_2_entity" }
+    attach = {     name = "infantry"            infantry = "ERB_infantry_5_entity" }
+}
+entity = {
+    name = "erb_gfx_mechanized_3_entity"
+   clone = "erb_gfx_mechanized_1_entity"
+    attach = {     name = "vehicle"            vehicle = "owb_apc_3_entity" }
+    attach = {     name = "infantry"            infantry = "ERB_infantry_5_entity" }
+}
+entity = {
+    name = "erb_gfx_mechanized_4_entity"
+   clone = "erb_gfx_mechanized_1_entity"
+    attach = {     name = "vehicle"            vehicle = "owb_apc_4_entity" }
+    attach = {     name = "infantry"            infantry = "ERB_infantry_5_entity" }
+}
+entity = {
+    name = "erb_gfx_mechanized_5_entity"
+   clone = "erb_gfx_mechanized_1_entity"
+    attach = {     name = "vehicle"            vehicle = "owb_apc_5_entity" }
+    attach = {     name = "infantry"            infantry = "ERB_infantry_5_entity" }
+}

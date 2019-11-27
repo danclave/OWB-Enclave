@@ -55,10 +55,12 @@ NCR_hayes_plots = {
 	ENC_ncr_power_grid = {
 		icon = generic_construction
 		fire_only_once = no
-		available = { ERB = {
-						has_completed_focus = enc_the_state_of_nevada
-						has_completed_focus = enc_rebuild_the_power_grid
-							} }
+		available = { 
+			ERB = {
+				has_completed_focus = enc_the_state_of_nevada
+				has_completed_focus = enc_rebuild_the_power_grid
+			}
+		}
 		visible = {
 
 		}
@@ -74,6 +76,7 @@ NCR_hayes_plots = {
 		}
 	}
 }
+
 enc_executive_orders  = {
 	ENC_steal_declaration_independence = {
 		icon = GFX_decision_enc_verti
@@ -1773,7 +1776,8 @@ ENC_nation_building = {
 				}
 			}
 		}
-	}ENC_power_all__power_grids = {
+	}
+	ENC_power_all__power_grids = {
 		priority = 110
 		icon = GFX_icons_power
 		allowed = {
@@ -3053,6 +3057,7 @@ ENC_securing_borders = {
 			has_completed_focus = enc_rebuilding_a_nation
 			has_idea = enc_NCR_instability
 		}
+		fire_only_once = yes
 		is_good = yes
 		complete_effect = {
 			add_stability = 0.05
@@ -3922,7 +3927,7 @@ ENC_down_mexico_way = {
 		days_remove = 60
 		complete_effect = {
 			add_war_support = -0.05
-			RRG = {
+			FROM = {
 				add_timed_idea = { idea = ERB_resistance_to_santa_anna days = 60 }
 			}
 		}

@@ -322,6 +322,7 @@ Enc_Nevada_Railway: "Build a Nevada railway"
 Enc_Nevada_Railway_desc: "California is the only place in America that's been building railways since the end of the Great War.  But our rule over Nevada will give us the change to tie its citizens together. No longer will Nevadans dependent on brahmin caravans or couriers. They're going places with the Enclave."
 enc_geck:0 "The GECK Project"
 enc_geck_desc:0 "The Garden of Eden Creation Kit was designed to help revive the Wastes after a nuclear war.  The Reunited States can use this technology on a national level to turn the Deadwood forests into Redwood forests once again."
+enc_geck_tooltip_tt: "Unlocks several §YGECKs§! for America.  The Enclave, rebuilding your country, one town at a time."
 
 enc_accept_ghouls:0 "Accept Ghouls"
 enc_accept_ghouls_desc:0 "Contrary to popular belief, not all ghouls are feral. Many of them are just like the rest of us, people struggling to thrive in the unforgiving wastes. Some are old enough to remember when America was a country and not a Wasteland. \nLet us reach out our hand and invite them to help us rebuild what they once knew."

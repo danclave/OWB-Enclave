@@ -1,5 +1,10 @@
-Bug fixes:
-	- multiple events fixed
-	- steal declaration of independence fixed for real this time
-	- some purity focuses no longer get bypasses when playing reformer
-	- add tutorial event for arming patriots
+Current changes for patch 2.0.14
+TESTED
+- 
+
+NEEDS TESTING
+- island states are now coreable
+- raider sabotage now destroys rather than damages factory
+- enc_reformers.253 added (NCR loyalists assassinate commander)
+- success, great success or failure event after talking to purist commander
+- success or failure after talking to commander threatening to leave
