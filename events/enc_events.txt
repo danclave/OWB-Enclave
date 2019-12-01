@@ -16,8 +16,8 @@ country_event = {#1 - OUR ESCAPE
     }
     option = { # Escaped using Vertibirds
         name = enc.1.b
-        add_equipment_to_stockpile = { type = vb_transport_plane_equipment amount = 200 producer = ERB }
-        add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 400 producer = ERB }
+        add_equipment_to_stockpile = { type = vb_transport_plane_equipment amount = 100 producer = ERB }
+        add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 100 producer = ERB }
     }
     option = { #Deserted before the fighting got bad
         name = enc.1.c
