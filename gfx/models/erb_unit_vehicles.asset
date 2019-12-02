@@ -5,49 +5,45 @@
 ####	ERB MOTORIZED	####
 ############################
 entity = {
-		name = "ERB_motorized_vehicle_entity"
-		pdxmesh = "ERB_generic_motorized_mesh"
+    name = "erb_gfx_motorized_entity"
+    pdxmesh = "motorized_frame_mesh"
 
-		state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "retreat"			animation = "move" 	 				animation_blend_time = 0.3 animation_speed = 1.0
-			event = { time = 0 node="left_wheel" particle = "tank_moving_tracks_particle"  keep_particle = no trigger_once = yes}
-			event = { time = 0 node="right_wheel" particle = "tank_moving_tracks_particle"  keep_particle = no trigger_once = yes}
-			event = { trigger_once = yes sound = { soundeffect = "motorized_unit_move_animation" } }
-		}
-		state = { name = "training"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "death"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "support_attack"	animation = "idle" 	animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "attack"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0
-			event = { time = 0 node="left_wheel" particle = "tank_moving_tracks_particle"  keep_particle = no trigger_once = yes}
-			event = { time = 0 node="right_wheel" particle = "tank_moving_tracks_particle"  keep_particle = no trigger_once = yes}
-			event = { trigger_once = yes sound = { soundeffect = "motorized_unit_move_animation" } }
-		}
-		state = { name = "defend"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0
-			event = { time = 0 node="left_wheel" particle = "tank_moving_tracks_particle"  keep_particle = no trigger_once = yes}
-			event = { time = 0 node="right_wheel" particle = "tank_moving_tracks_particle"  keep_particle = no trigger_once = yes}
-			event = { trigger_once = yes sound = { soundeffect = "motorized_unit_move_animation" } }
-		}
-		scale = 0.6
+    state = { name = "idle"                animation = "idle"                     animation_blend_time = 0.3 animation_speed = 1.0 }
+    state = { name = "retreat"            animation = "move"                      animation_blend_time = 0.3 animation_speed = 1.0 }
+    state = { name = "training"            animation = "idle"                     animation_blend_time = 0.3 animation_speed = 1.0 }
+    state = { name = "death"            animation = "idle"                     animation_blend_time = 0.3 animation_speed = 1.0 }
+    state = { name = "support_attack"    animation = "attack"                     animation_blend_time = 0.3 animation_speed = 1.0 }
+    state = { name = "attack"            animation = "attack"                     animation_blend_time = 0.3 animation_speed = 1.0 }
+    state = { name = "defend"            animation = "attack"                     animation_blend_time = 0.3 animation_speed = 1.0 }
+    state = { name = "move"                animation = "move"                     animation_blend_time = 0.3 animation_speed = 1.0 }
+    scale = 1.0
+
+    attach = {     name = "vehicle"            vehicle = "owb_motorized_vehicle_1_entity" }
+    attach = {     name = "infantry"            infantry = "ERB_infantry_5_entity" }
 }
 entity = {
-		clone = "owb_motorized_entity"
-		name = "ERB_motorized_entity"
-		pdxmesh = "motorized_frame_mesh"
-
-		state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "retreat"			animation = "move" 	 				animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "training"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "death"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "support_attack"	animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "attack"			animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "defend"			animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
-		scale = 1.0
-
-
-		attach = { 	name = "vehicle"			vehicle = "ERB_motorized_vehicle_entity" }
-		attach = { 	name = "infantry"			infantry = "ERB_Motorized_infantry_entity" }
+    name = "erb_gfx_motorized_2_entity"
+   clone = "erb_gfx_motorized_entity"
+    attach = {     name = "vehicle"            vehicle = "owb_motorized_vehicle_2_entity" }
+    attach = {     name = "infantry"            infantry = "ERB_infantry_5_entity" }
+}
+entity = {
+    name = "erb_gfx_motorized_3_entity"
+   clone = "erb_gfx_motorized_entity"
+    attach = {     name = "vehicle"            vehicle = "owb_motorized_vehicle_3_entity" }
+    attach = {     name = "infantry"            infantry = "ERB_infantry_5_entity" }
+}
+entity = {
+    name = "erb_gfx_motorized_4_entity"
+   clone = "erb_gfx_motorized_entity"
+    attach = {     name = "vehicle"            vehicle = "owb_motorized_vehicle_4_entity" }
+    attach = {     name = "infantry"            infantry = "ERB_infantry_5_entity" }
+}
+entity = {
+    name = "erb_gfx_motorized_5_entity"
+   clone = "erb_gfx_motorized_entity"
+    attach = {     name = "vehicle"            vehicle = "owb_motorized_vehicle_5_entity" }
+    attach = {     name = "infantry"            infantry = "ERB_infantry_5_entity" }
 }
 ####	ERB MECHANIZED	####
 ############################
