@@ -98,7 +98,7 @@ leader_traits = {
 		stability_factor = 0.10
 		consumer_goods_factor = 0.05
 	}
-	genius_pacifist = {
+	genius_idealist = {
 		random = no
 		war_support_weekly = -0.005
 		army_attack_factor = -0.10

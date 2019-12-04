@@ -582,7 +582,7 @@ focus_tree = {
 
 		}
 	}
-####################################
+	####################################
 	# NO PEACE
 	####################################
 	focus = {# American Dream
@@ -3186,6 +3186,7 @@ focus_tree = {
 		icon = GFX_goal_generic_advanced_technology_focus
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_BOS_start
+		mutually_exclusive = { focus = enc_war_with_bos }
 		x = 1
 		y = 1
 		cost = 5.8

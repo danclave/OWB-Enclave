@@ -195,7 +195,7 @@ ideas = {
 				has_country_flag = gannon_returns
 			}
 			traits = {
-				genius_pacifist
+				genius_idealist
 			}
 		}
 		erb_veronica = {
@@ -207,7 +207,7 @@ ideas = {
 				has_country_flag = gannon_returns
 			}	
 			traits = {
-				genius_pacifist
+				genius_idealist
 			}
 		}
 	}	

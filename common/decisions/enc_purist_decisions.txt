@@ -12,29 +12,45 @@ ENC_call_remnants = {
 		days_remove = 20
 		visible = {
 			has_completed_focus = enc_remnants
-			check_variable = { var = enc_remnants_reward value = 100 compare = not_equals }
+			check_variable = {
+				var = enc_remnants_reward
+				value = 100
+				compare = not_equals
+			}
 		}
 		remove_effect = {
-		   add_manpower = enc_remnants_reward?1000
-
+			add_manpower = enc_remnants_reward?1000
 			if = {
 				limit = {
-					check_variable = { var = enc_remnants_reward value = 0 compare = equals }
+					check_variable = {
+						var = enc_remnants_reward
+						value = 0
+						compare = equals
+					}
 				}
-				set_variable = { var = enc_remnants_reward value = 1000 }
+				set_variable = {
+					var = enc_remnants_reward
+					value = 1000
+				}
 			}
-			subtract_from_variable = { enc_remnants_reward = uses value = 300}
+			subtract_from_variable = {
+				enc_remnants_reward = uses
+				value = 300
+			}
 		}
 		days_re_enable = 30
 	}
 	ENC_field_veterans = {
 		icon = GFX_decision_enc_helmet
-		allowed = { tag = ERB }
+		allowed = {
+			tag = ERB
+		}
 		cost = 50
 		days_remove = 5
 		visible = {
 			has_completed_focus = enc_call_veterans
-			check_variable = { # enc_veterans_var < 3
+			check_variable = {
+				# enc_veterans_var < 3
 				var = enc_veterans_var
 				value = 3
 				compare = not_equals
@@ -55,15 +71,14 @@ ENC_call_remnants = {
 		}
 	}
 }
+
 ENC_cloning = {
 	cloning_project = {
 		icon = decision_enc_cloning
 		cost = 50
-
 		visible = {
 			has_country_flag = enc_cloning_available_flag
 		}
-
 		complete_effect = {
 			random_owned_state = {
 				limit = {
@@ -72,18 +87,17 @@ ENC_cloning = {
 				set_state_flag = has_cloning_facility_occupied_flag
 			}
 		}
-
 		available = {
 			any_owned_state = {
 				has_state_flag = has_cloning_facility_flag
-				not = { has_state_flag = has_cloning_facility_occupied_flag }
+				not = {
+					has_state_flag = has_cloning_facility_occupied_flag
+				}
 			}
 		}
-
 		days_remove = 100
 		remove_effect = {
 			add_manpower = amount_cloned
-
 			random_owned_state = {
 				limit = {
 					has_state_flag = has_cloning_facility_occupied_flag
@@ -95,11 +109,11 @@ ENC_cloning = {
 	cloning_experiment = {
 		icon = decision_enc_cloning
 		cost = 50
-
 		visible = {
-			not = { has_country_flag = enc_cloning_available_flag }
+			not = {
+				has_country_flag = enc_cloning_available_flag
+			}
 		}
-
 		complete_effect = {
 			random_owned_state = {
 				limit = {
@@ -108,83 +122,161 @@ ENC_cloning = {
 				set_state_flag = has_cloning_facility_occupied_flag
 			}
 		}
-
 		available = {
 			any_owned_state = {
 				has_state_flag = has_cloning_facility_flag
-				not = { has_state_flag = has_cloning_facility_occupied_flag }
+				not = {
+					has_state_flag = has_cloning_facility_occupied_flag
+				}
 			}
 		}
-
 		days_remove = 100
 		remove_effect = {
 			if = {
 				limit = {
-					check_variable = { enc_cloning_chance > 6 }
+					check_variable = {
+						enc_cloning_chance > 6
+					}
 				}
 				random_list = {
-					0 = { country_event = { id = enc.27 } }
-					100 = { country_event = { id = enc.26 } }
+					0 = {
+						country_event = {
+							id = enc.27
+						}
+					}
+					100 = {
+						country_event = {
+							id = enc.26
+						}
+					}
 				}
 			}
 			else_if = {
 				limit = {
-					check_variable = { enc_cloning_chance > 5 }
+					check_variable = {
+						enc_cloning_chance > 5
+					}
 				}
 				random_list = {
-					10 = { country_event = { id = enc.27 } }
-					90 = { country_event = { id = enc.26 } }
+					10 = {
+						country_event = {
+							id = enc.27
+						}
+					}
+					90 = {
+						country_event = {
+							id = enc.26
+						}
+					}
 				}
 			}
 			else_if = {
 				limit = {
-					check_variable = { enc_cloning_chance > 4 }
+					check_variable = {
+						enc_cloning_chance > 4
+					}
 				}
 				random_list = {
-					20 = { country_event = { id = enc.27 } }
-					80 = { country_event = { id = enc.26 } }
+					20 = {
+						country_event = {
+							id = enc.27
+						}
+					}
+					80 = {
+						country_event = {
+							id = enc.26
+						}
+					}
 				}
 			}
 			else_if = {
 				limit = {
-					check_variable = { enc_cloning_chance > 3 }
+					check_variable = {
+						enc_cloning_chance > 3
+					}
 				}
 				random_list = {
-					30 = { country_event = { id = enc.27 } }
-					70 = { country_event = { id = enc.26 } }
+					30 = {
+						country_event = {
+							id = enc.27
+						}
+					}
+					70 = {
+						country_event = {
+							id = enc.26
+						}
+					}
 				}
 			}
 			else_if = {
 				limit = {
-					check_variable = { enc_cloning_chance > 2 }
+					check_variable = {
+						enc_cloning_chance > 2
+					}
 				}
 				random_list = {
-					40 = { country_event = { id = enc.27 } }
-					60 = { country_event = { id = enc.26 } }
+					40 = {
+						country_event = {
+							id = enc.27
+						}
+					}
+					60 = {
+						country_event = {
+							id = enc.26
+						}
+					}
 				}
 			}
 			else_if = {
 				limit = {
-					check_variable = { enc_cloning_chance > 1 }
+					check_variable = {
+						enc_cloning_chance > 1
+					}
 				}
 				random_list = {
-					50 = { country_event = { id = enc.27 } }
-					50 = { country_event = { id = enc.26 } }
+					50 = {
+						country_event = {
+							id = enc.27
+						}
+					}
+					50 = {
+						country_event = {
+							id = enc.26
+						}
+					}
 				}
 			}
 			else_if = {
 				limit = {
-					check_variable = { enc_cloning_chance > 0 }
+					check_variable = {
+						enc_cloning_chance > 0
+					}
 				}
 				random_list = {
-					60 = { country_event = { id = enc.27 } }
-					40 = { country_event = { id = enc.26 } }
+					60 = {
+						country_event = {
+							id = enc.27
+						}
+					}
+					40 = {
+						country_event = {
+							id = enc.26
+						}
+					}
 				}
 			}
 			else = {
 				random_list = {
-					70 = { country_event = { id = enc.27 } }
-					30 = { country_event = { id = enc.26 } }
+					70 = {
+						country_event = {
+							id = enc.27
+						}
+					}
+					30 = {
+						country_event = {
+							id = enc.26
+						}
+					}
 				}
 			}
 			random_owned_state = {
@@ -198,7 +290,6 @@ ENC_cloning = {
 	build_cloning_facility = {
 		icon = generic_construction
 		cost = 200
-
 		available = {
 			num_of_available_civilian_factories > 5
 			any_owned_state = {
@@ -206,19 +297,25 @@ ENC_cloning = {
 					resource = energy
 					amount > 29
 				}
-				not = { has_state_flag = has_cloning_facility_flag }
+				not = {
+					has_state_flag = has_cloning_facility_flag
+				}
 			}
 		}
-
 		modifier = {
 			civilian_factory_use = 5
 		}
-
 		days_remove = 100
 		complete_effect = {
 			# add building
-			add_to_variable = { var = num_cloning_facilities value = 1 }
-			add_to_variable = { var = amount_cloned value = 500 }
+			add_to_variable = {
+				var = num_cloning_facilities
+				value = 1
+			}
+			add_to_variable = {
+				var = amount_cloned
+				value = 500
+			}
 			random_owned_state = {
 				limit = {
 					has_resources_amount = {
@@ -231,8 +328,6 @@ ENC_cloning = {
 		}
 	}
 }
-
-
 
 ENC_rangers = {
 	sabotage_infrastructure = {
@@ -250,7 +345,10 @@ ENC_rangers = {
 							is_controlled_by = ROOT
 						}
 					}
-					damage_building = { type = infrastructure damage = 0.5 }
+					damage_building = {
+						type = infrastructure
+						damage = 0.5
+					}
 				}
 			}
 		}
@@ -263,7 +361,10 @@ ENC_rangers = {
 			has_completed_focus = enc_rangers_offense_plan
 		}
 		complete_effect = {
-			add_timed_idea = { idea = ENC_rangers_plan_attack days = 50 }
+			add_timed_idea = {
+				idea = ENC_rangers_plan_attack
+				days = 50
+			}
 		}
 	}
 	defense_plan = {
@@ -274,7 +375,10 @@ ENC_rangers = {
 			has_completed_focus = enc_rangers_defense_plan
 		}
 		complete_effect = {
-			add_timed_idea = { idea = ENC_rangers_plan_defense days = 50 }
+			add_timed_idea = {
+				idea = ENC_rangers_plan_defense
+				days = 50
+			}
 		}
 	}
 }
@@ -283,41 +387,46 @@ ENC_oppose_legion = {
 	erb_aid_foe_legion = {
 		target_trigger = {
 			FROM = {
-					AND = {
-						is_neighbor_of = CES
-						has_idea = settler_nation
-						}
-					}
+				AND = {
+					is_neighbor_of = CES
+					has_idea = settler_nation
 				}
-	visible = {
+			}
+		}
+		visible = {
 			has_completed_focus = enc_reform
 			FROM = {
 				exists = yes
-				NOT = { has_idea = enc_enclave_advisors }
-					}
-				}
-		available = {
-			NOT = {
-				FROM = { is_puppet_of = ERB }
-				has_war_with = FROM
+				NOT = {
+					has_idea = enc_enclave_advisors
 				}
 			}
+		}
+		available = {
+			NOT = {
+				FROM = {
+					is_puppet_of = ERB
+				}
+				has_war_with = FROM
+			}
+		}
 		days_remove = 5
 		cost = 100
 		ai_will_do = {
 			factor = 100
-				}
+		}
 		complete_effect = {
 			FROM = {
 				add_ideas = enc_enclave_advisors
 				add_opinion_modifier = {
-				    target = ERB
-				    modifier = enc_support_opinion
-					}
+					target = ERB
+					modifier = enc_support_opinion
 				}
 			}
+		}
+	}
 }
-}
+
 ENC_war_with_NCR = {
 	FEV_mutation_crisis = {
 		icon = generic_research
@@ -352,16 +461,19 @@ ENC_war_with_NCR = {
 			has_country_flag = enc_dirty_FEV_flag
 			country_exists = NCR
 		}
-
 		available = {
 			has_war_with = NCR
-			controls_state  = 543 # Marysville ranch
+			controls_state = 543			# Marysville ranch
 			has_country_flag = enc_dirty_FEV_flag
 		}
-
 		days_remove = 20
 		remove_effect = {
-			NCR = { add_timed_idea  = { idea = ENC_water_contaminated days = 50 }}
+			NCR = {
+				add_timed_idea = {
+					idea = ENC_water_contaminated
+					days = 50
+				}
+			}
 			clr_country_flag = enc_dirty_FEV_flag
 		}
 	}
@@ -372,77 +484,126 @@ ENC_war_with_NCR = {
 		visible = {
 			has_completed_focus = enc_reclaim_cashes
 		}
-		highlight_states = { state = 543 }
-		available = {
-			controls_state  = 543 # Marysville ranch
-			divisions_in_state = { size > 0 state = 543 }
+		highlight_states = {
+			state = 543
 		}
-
+		available = {
+			controls_state = 543			# Marysville ranch
+			divisions_in_state = {
+				size > 0
+				state = 543
+			}
+		}
 		days_remove = 20
 		remove_effect = {
-			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 300 producer = ERB }
-			add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 300 producer = ERB }
+			add_equipment_to_stockpile = {
+				type = power_armor_equipment_2
+				amount = 300
+				producer = ERB
+			}
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_2
+				amount = 300
+				producer = ERB
+			}
 		}
 	}
-	recover_edwards_air_force_base  = {
+	recover_edwards_air_force_base = {
 		icon = generic_construction
 		cost = 10
 		fire_only_once = yes
 		visible = {
 			has_completed_focus = enc_reclaim_cashes
 		}
-		highlight_states = { state = 19 }
+		highlight_states = {
+			state = 19
+		}
 		available = {
-			controls_state  = 19 # Saint Gabrielle
+			controls_state = 19			# Saint Gabrielle
 			divisions_in_state = {
 				state = 19
 				size > 0
 			}
 		}
-
 		days_remove = 20
 		remove_effect = {
-			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 300 producer = ERB }
-			add_equipment_to_stockpile = { type = power_armor_equipment_3 amount = 500 producer = ERB }
+			add_equipment_to_stockpile = {
+				type = energy_equipment_2
+				amount = 300
+				producer = ERB
+			}
+			add_equipment_to_stockpile = {
+				type = power_armor_equipment_3
+				amount = 500
+				producer = ERB
+			}
 		}
 	}
-	recover_los_angeles_air_force_base  = {
+	recover_los_angeles_air_force_base = {
 		icon = generic_construction
 		cost = 10
 		fire_only_once = yes
 		visible = {
 			has_completed_focus = enc_reclaim_cashes
 		}
-		highlight_states = { state = 350 }
-		available = {
-			controls_state  = 350 # The boneyard
-			divisions_in_state = { size > 0  state = 350}
+		highlight_states = {
+			state = 350
 		}
-
+		available = {
+			controls_state = 350			# The boneyard
+			divisions_in_state = {
+				size > 0
+				state = 350
+			}
+		}
 		days_remove = 20
 		remove_effect = {
-			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 200 producer = ERB }
-			add_equipment_to_stockpile = { type = fighter_equipment_3 amount = 300 producer = ERB }
-			add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 400 producer = ERB }
+			add_equipment_to_stockpile = {
+				type = vb_gunship_equipment
+				amount = 200
+				producer = ERB
+			}
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_3
+				amount = 300
+				producer = ERB
+			}
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_2
+				amount = 400
+				producer = ERB
+			}
 		}
 	}
-	recover_march_air_reserve_base  = {
+	recover_march_air_reserve_base = {
 		icon = generic_construction
 		cost = 10
 		fire_only_once = yes
 		visible = {
 			has_completed_focus = enc_reclaim_cashes
 		}
-		highlight_states = { state = 591 }
-		available = {
-			controls_state  = 591 # Diana Point
-			divisions_in_state = { size > 0 state = 591 }
+		highlight_states = {
+			state = 591
 		}
-
+		available = {
+			controls_state = 591			# Diana Point
+			divisions_in_state = {
+				size > 0
+				state = 591
+			}
+		}
 		days_remove = 20
 		remove_effect = {
-			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 500 producer = ERB }
-			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 300 producer = ERB }
+			add_equipment_to_stockpile = {
+				type = energy_equipment_2
+				amount = 500
+				producer = ERB
+			}
+			add_equipment_to_stockpile = {
+				type = power_armor_equipment_2
+				amount = 300
+				producer = ERB
+			}
 		}
 	}
 	recover_travis_air_force_base_ = {
@@ -452,37 +613,64 @@ ENC_war_with_NCR = {
 		visible = {
 			has_completed_focus = enc_reclaim_cashes
 		}
-		highlight_states = { state = 511 }
-		available = {
-			controls_state  = 511 # Point Green
-			divisions_in_state = { size > 0 state = 511 }
+		highlight_states = {
+			state = 511
 		}
-
+		available = {
+			controls_state = 511			# Point Green
+			divisions_in_state = {
+				size > 0
+				state = 511
+			}
+		}
 		days_remove = 20
 		remove_effect = {
-			add_equipment_to_stockpile = { type = energy_equipment_1 amount = 600 producer = ERB }
-			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 600 producer = ERB }
+			add_equipment_to_stockpile = {
+				type = energy_equipment_1
+				amount = 600
+				producer = ERB
+			}
+			add_equipment_to_stockpile = {
+				type = power_armor_equipment_2
+				amount = 600
+				producer = ERB
+			}
 		}
 	}
 	recover_vandenberg_air_force_base = {
 		cost = 10
 		icon = generic_construction
 		fire_only_once = yes
-		highlight_states = { state = 64 }
+		highlight_states = {
+			state = 64
+		}
 		visible = {
 			has_completed_focus = enc_reclaim_cashes
 		}
-
 		available = {
-			controls_state  = 64 # Santa Maria
-			divisions_in_state = { size > 0 state = 64 }
+			controls_state = 64			# Santa Maria
+			divisions_in_state = {
+				size > 0
+				state = 64
+			}
 		}
-
 		days_remove = 20
 		remove_effect = {
-			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 100 producer = ERB }
-			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 600 producer = ERB }
-			add_equipment_to_stockpile = { type = power_armor_equipment_3 amount = 200 producer = ERB }
+			add_equipment_to_stockpile = {
+				type = vb_gunship_equipment
+				amount = 100
+				producer = ERB
+			}
+			add_equipment_to_stockpile = {
+				type = energy_equipment_2
+				amount = 600
+				producer = ERB
+			}
+			add_equipment_to_stockpile = {
+				type = power_armor_equipment_3
+				amount = 200
+				producer = ERB
+			}
 		}
 	}
 }

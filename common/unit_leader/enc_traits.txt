@@ -13,9 +13,7 @@ leader_traits = {
 		modifier = {
 			army_attack_factor = 0.05
 		}
-		new_commander_weight = {
-			factor = 0 # Only added for 5 commander
-		}
+		random = no
 	}
 	enc_reformer = {
 		type = all
@@ -27,11 +25,10 @@ leader_traits = {
 		modifier = {
 			army_morale_factor = 0.05
 		}
-		new_commander_weight = {
-			factor = 0 # Only added for 5 commander
-		}
+		random = no
 	}
 	enc_demoted = { 
+		random = no
 		type = all
 		trait_type = personality_trait	
 		gain_xp = {
