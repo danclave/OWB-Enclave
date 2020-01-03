@@ -2,33 +2,172 @@ objectTypes = {
 	############################
 	####	ERB Motorized	####
 	############################
-		pdxmesh = {
-		name = "ERB_generic_motorized_mesh"
-		file = "gfx/models/vehicle/ERB_motorized.mesh"
 
-		animation = { id = "idle"			type = "generic_motorized_01_idle_animation" }
-		animation = { id = "move"			type = "generic_motorized_01_move_animation" }
+	pdxmesh = {
+		name = "ERB_moto_salvaged_mesh"
+		file = "gfx/models/vehicles/ERB_moto_2.mesh"
+		animation = { id = "idle"			type = "moto_idle_anim" }
+		animation = { id = "move"			type = "moto_move_anim" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_moto_2_diffuse.dds"
+			texture_normal = "ERB_moto_2_normal.dds"
+			texture_specular = "ERB_moto_2_specular.dds"
+		}
 	}
 	pdxmesh = {
-		name = "ERB_mechanized_mesh"
-		file = "gfx/models//vehicle/ERB_mechanized.mesh"
-
+		name = "ERB_corvega_mesh"
+		file = "gfx/models/vehicles/ERB_corvega.mesh"
 		animation = { id = "idle"			type = "US_mechanized_01_idle_animation" }
 		animation = { id = "move"			type = "US_mechanized_01_move_animation" }
-		animation = { id = "attack"			type = "US_mechanized_01_attack_animation" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_corvega_diffuse.dds"
+			texture_normal = "ERB_corvega_normal.dds"
+			texture_specular = "ERB_corvega_specular.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ERB_highwayman_mesh"
+		file = "gfx/models/vehicles/ERB_highwayman.mesh"
+		animation = { id = "idle"			type = "US_mechanized_01_idle_animation" }
+		animation = { id = "move"			type = "US_mechanized_01_move_animation" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_highwayman_diffuse.dds"
+			texture_normal = "ERB_highwayman_normal.dds"
+			texture_specular = "ERB_highwayman_specular.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ERB_humvee_mesh"
+		file = "gfx/models/vehicles/ERB_humvee.mesh"
+		animation = { id = "idle"			type = "US_mechanized_01_idle_animation" }
+		animation = { id = "move"			type = "US_mechanized_01_move_animation" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_humvee_diffuse.dds"
+			texture_normal = "ERB_humvee_normal.dds"
+			texture_specular = "ERB_humvee_specular.dds"
+		}
+	}
+	############################
+	####	ERB APC			####
+	############################
+
+	pdxmesh = {
+		name = "ERB_apc_1_mesh"
+		file = "gfx/models/vehicles/ERB_apc_1.mesh"
+		animation = { id = "move"			type = "apc_1_move_anim" }
+		animation = { id = "idle"			type = "apc_1_idle_anim" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_apc_1_diffuse.dds"
+			texture_normal = "ERB_apc_1_normal.dds"
+			texture_specular = "ERB_apc_1_specular.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ERB_apc_2_mesh"
+		file = "gfx/models/vehicles/ERB_apc_2.mesh"
+		animation = { id = "idle"			type = "apc_2_idle_anim" }
+		animation = { id = "move"			type = "apc_2_move_anim" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_apc_2_diffuse.dds"
+			texture_normal = "ERB_apc_2_normal.dds"
+			texture_specular = "ERB_apc_2_specular.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ERB_apc_3_mesh"
+		file = "gfx/models/vehicles/ERB_apc_3.mesh"
+		animation = { id = "idle"			type = "apc_3_idle_anim" }
+		animation = { id = "move"			type = "apc_3_move_anim" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_apc_3_diffuse.dds"
+			texture_normal = "ERB_apc_3_normal.dds"
+			texture_specular = "ERB_apc_3_specular.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ERB_apc_4_mesh"
+		file = "gfx/models/vehicles/ERB_apc_4.mesh"
+		animation = { id = "idle"			type = "apc_4_idle_anim" }
+		animation = { id = "move"			type = "apc_4_move_anim" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_apc_4_diffuse.dds"
+			texture_normal = "ERB_apc_4_normal.dds"
+			texture_specular = "ERB_apc_4_specular.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ERB_apc_5_mesh"
+		file = "gfx/models/vehicles/ERB_apc_5.mesh"
+		animation = { id = "idle"			type = "apc_5_idle_anim" }
+		animation = { id = "move"			type = "apc_5_move_anim" }
+		animation = { id = "attack"			type = "apc_5_attack_anim" }
+		animation = { id = "defend"			type = "apc_5_defend_anim" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_apc_5_diffuse.dds"
+			texture_normal = "ERB_apc_5_normal.dds"
+			texture_specular = "ERB_apc_5_specular.dds"
+		}
 	}
 	############################
 	####	ERB Tank		####
 	############################
 	pdxmesh = {
+		name = "ERB_tank_light_mesh"
+		file = "gfx/models/vehicles/ERB_tank_light.mesh"
+
+		animation = { id = "attack"			type = "USA_tank_light_attack_animation" }
+		animation = { id = "idle"			type = "USA_tank_light_idle_animation" }
+		animation = { id = "move"			type = "USA_tank_light_moving_animation" }
+		scale = 0.5
+
+		meshsettings = {
+			texture_diffuse = "ERB_tank_light_diffuse.dds"
+			texture_normal = "ERB_tank_light_normal.dds"
+			texture_specular = "ERB_tank_light_specular.dds"
+		}
+	}
+	pdxmesh = {
 		name = "ERB_tank_medium_mesh"
-		file = "gfx/models/vehicle/ERB_tank_medium.mesh"
+		file = "gfx/models/vehicles/ERB_tank_medium.mesh"
 
 		animation = { id = "attack"			type = "USA_tank_medium_attack_animation" }
 		animation = { id = "idle"			type = "USA_tank_medium_idle_animation" }
 		animation = { id = "move"			type = "USA_tank_medium_moving_animation" }
 		scale = 0.5
+
+		meshsettings = {
+			texture_diffuse = "ERB_tank_medium_diffuse.dds"
+			texture_normal = "ERB_tank_medium_normal.dds"
+			texture_specular = "ERB_tank_medium_spec.dds"
+		}
 	}
+	pdxmesh = {
+		name = "ERB_tank_heavy_mesh"
+		file = "gfx/models/vehicles/ERB_tank_heavy.mesh"
+
+		animation = { id = "attack"			type = "USA_tank_heavy_attack_animation" }
+		animation = { id = "idle"			type = "USA_tank_heavy_idle_animation" }
+		animation = { id = "move"			type = "USA_tank_heavy_moving_animation" }
+		scale = 0.5
+
+		meshsettings = {
+			texture_diffuse = "ERB_tank_heavy_diffuse.dds"
+			texture_normal = "ERB_tank_heavy_normal.dds"
+			texture_specular = "ERB_tank_heavy_specular.dds"
+		}
+	}
+	############################
+	####	ERB Robot		####
+	############################
 	pdxmesh = {
         name = "ERB_protectron_mesh"
         file = "gfx/models/robot/ERB_protectron.mesh"
@@ -49,5 +188,108 @@ objectTypes = {
             shader = PdxMeshAdvanced
         }
 	}
+	pdxmesh = {
+		name = "ERB_mr_handy_mesh"
+		file = "gfx/models/robots/ERB_mr_handy.mesh"
+		scale = 0.45
 
+		animation = { id = "idle"			type = "handy_idle_anim" }
+		animation = { id = "move"			type = "handy_move_anim" }
+		animation = { id = "charge"			type = "handy_charge_anim" }
+		animation = { id = "charge_flamer"			type = "handy_charge_flamer_anim" }
+		animation = { id = "charge_saw"			type = "handy_charge_saw_anim" }
+		animation = { id = "charge_pincher"			type = "handy_charge_pincher_anim" }
+		animation = { id = "support_idle"			type = "handle_support_idle_anim" }
+		animation = { id = "support_saw"			type = "handle_support_saw_anim" }
+		animation = { id = "support_flamer"			type = "handle_support_flamer_anim" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_mr_handy_diffuse.dds"
+			texture_normal = "ERB_mr_handy_normal.dds"
+			texture_specular = "ERB_mr_handy_specular.dds"
+			shader = PdxMeshAdvanced
+		}
+	}
+	pdxmesh = {
+		name = "ERB_securitron_mesh"
+		file = "gfx/models/robots/ERB_securitron.mesh"
+		scale = 1.7
+
+		animation = { id = "idle"			type = "securitron_idle_anim" }
+		animation = { id = "idle2"			type = "securitron_idle_2_anim" }
+		animation = { id = "idle3"			type = "securitron_idle_3_anim" }
+		animation = { id = "idle4"			type = "securitron_idle_4_anim" }
+		animation = { id = "attack"			type = "securitron_attack_anim" }
+		animation = { id = "move"			type = "securitron_move_anim" }
+		animation = { id = "defend"		type = "securitron_defend_anim" }
+		animation = { id = "support"		type = "securitron_support_anim" }
+
+		meshsettings = {
+			name = "jorodoxShape"
+			index = 0
+			texture_diffuse = "ERB_securitron_diffuse.dds"
+			texture_normal = "ERB_securitron_normal.dds"
+			texture_specular = "ERB_securitron_specular.dds"
+			shader = PdxMeshAdvanced
+		}
+	}
+	############################
+	####	ERB Aircraft	####
+	############################
+	pdxmesh = {
+		name = "ERB_plane_light_biplane_mesh"
+		file = "/gfx/models/planes/ERB_plane_light_biplane.mesh"
+		scale = 1.0
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_plane_light_biplane_diffuse.dds"
+			texture_normal = "ERB_plane_light_biplane_normal.dds"
+			texture_specular = "ERB_plane_light_biplane_specular.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ERB_plane_light_mesh"
+		file = "gfx/models/planes/ERB_plane_light.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_plane_light_diffuse.dds"
+			texture_normal = "ERB_plane_light_normal.dds"
+			texture_specular = "ERB_plane_light_specular.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ERB_plane_medium_mesh"
+		file = "gfx/models/planes/ERB_plane_medium.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_plane_medium_diffuse.dds"
+			texture_normal = "ERB_plane_medium_normal.dds"
+			texture_specular = "ERB_plane_medium_specular.dds"
+		}
+	}
+	pdxmesh = {
+		name = "ERB_plane_heavy_mesh"
+		file = "gfx/models/planes/ERB_blimp.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_blimp_diffuse.dds"
+			texture_normal = "ERB_blimp_normal.dds"
+			texture_specular = "ERB_blimp_specular.dds"
+		}
+	}
+		pdxmesh = {
+		name = "ERB_plane_jet_mesh"
+		file = "gfx/models/planes/ERB_plane_jet.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+
+		meshsettings = {
+			texture_diffuse = "ERB_plane_jet_diffuse.dds"
+			texture_normal = "ERB_plane_jet_normal.dds"
+			texture_specular = "ERB_plane_jet_specular.dds"
+		}
+	}
 }
