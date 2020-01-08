@@ -571,9 +571,8 @@ enc_reformers.104.a:  "You clearly didn't study our prewar history.  No anarchis
 enc_reformers.104.a.tt: "§gWe will ban the organization of these pot-stirring anarchists in our fair country.§!\n\n"
 enc_reformers.104.a.tt.warning: "\n§RThis will bar us from future support for the followers!§!"
 enc_reformers.104.b:  "The Constitution guarantees their right to assemble."
-enc_reformers.104.b.tt: "§gThe Followers are informed that their presence in our borders will be tolerated, but not much more than that.§!\n\n"
-enc_reformers.104.c:  "Subsidize the Followers' efforts."
-enc_reformers.104.c.tt: "§gBy distributing medical supplies to the Followers, we can create a thousand points of light in the dark of the Wastes.§!\n\n"
+enc_reformers.104.b.tt: "§gThe Followers are informed that their presence in our borders will be tolerated.  Hippies.§!\n\n"
+
 ################################################################################################################
 enc_reformers.105.t: "The Brahmin Barons"
 enc_reformers.105.d: "Even after crushing the rebels in the NCR, the brahmin barons' wealth and power gives them a stranglehold on Northern California.  Some suggest we spend men and laser guns to break their power, while others suggest we cement their position in the Reunited States at great cost to our popularity. Some wonder if there's a third option, out there."
@@ -1356,7 +1355,7 @@ enc_reformers.252.t: "End of Legion Guerillas"
 enc_reformers.252.d: "With the Legion's collapse, guerilla raids on American forces come to an end.  On to Chicago!"
 enc_reformers.252.a: "We're going to deal with this one day."
 
-############################################################################################################ 
+############################################################################################################
 enc_reformers.253.t: "NCR loyalists assassinate commander!"
 enc_reformers.253.d: "This morning, the body of [assassinated_commander.GetName] was discovered in his forward outpost. The commander was shot at point blank several times with a small arms weapon. The local Enclave forces suspect NCR loyalists to be behind the cowardly assassination. They have arrested the NCR civilians that had been tasked with maintaining the base, though no one has come forward and confessed. Our forces in the area are restless and eager to find a culprit, not doing so would certainly harm morale."
 enc_reformers.253.a: "We have no evidence on the cleaning crew, release them."
@@ -1690,3 +1689,8 @@ enc_reformers.355.t: "TODO WAR SPEECH"
 enc_reformers.355.d: "TODO DESC"
 enc_reformers.355.a: "TODO A"
 enc_reformers.355.a: "TODO B"
+
+############################################################################################################enc_reformers.346.t: "El Vaquero"
+enc_reformers.356.t: "These American States"
+enc_reformers.356.d: "Although [NCR.GetName] may have fallen, its people intend to hold [ERB.GetLeader]  to hispromises. Since the Great War the people of New California have developed independent cultures which do not necessarily agree with one another and are reluctant to give all of their power over to [ERB.GetGapital.GetName].  It will take time and effort to woo New California to the Reunited States."
+enc_reformers.356.a: "We shall bind up the nation's wounds."

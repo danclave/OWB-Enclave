@@ -788,7 +788,7 @@ focus_tree = {
 					check_variable = { ENC_hiding_cost > 34.99 }
 				}
 			}
-			
+
 		}
 		relative_position_id = enc_american_dream
 		x = 9
@@ -1167,22 +1167,32 @@ focus_tree = {
 		mutually_exclusive = { focus = enc_VLT_force }
 		prerequisite = { focus = enc_expansion_reform }
 		available = {
-			strength_ratio = { tag = VLT ratio > 2 }
-			VLT = {
-				or = {
-					is_lynette_leader = yes
-					is_wallace_leader = yes
-					and = {
-						ERB = { has_completed_focus = enc_accept_ghouls }
-						is_festus_leader = yes
+			OR ={
+				AND = {
+					set_temp_variable = { caps_diff = COST }
+					get_caps_difference = yes
+					check_variable = { caps_display_temp > 300 }
+				}
+				AND = {
+					strength_ratio = { tag = VLT ratio > 2 }
+					VLT = {
+						or = {
+							is_lynette_leader = yes
+							is_wallace_leader = yes
+							and = {
+								ERB = { has_completed_focus = enc_accept_ghouls }
+								is_festus_leader = yes
+							}
+						}
+					exists = yes
 					}
 				}
-				exists = yes
 			}
-
 		}
 		completion_reward = {
 			annex_country = { target = VLT }
+			set_temp_variable = { caps_to_add = -300 }
+				add_caps = yes
 		}
 	}
    	focus = {#EXPANSION - VLT - core
@@ -1336,6 +1346,120 @@ focus_tree = {
 	####################################
 	# The Mutant Question
 	####################################
+	focus = {#Purists - The Mutant Question
+		id = enc_the_mutant_question_purists
+		icon = GFX_goal_enc_justice
+		x = 9
+		y = 1
+		ai_will_do = { factor = 1 }
+		prerequisite = {  }
+		relative_position_id = enc_vlt_power
+		cost = 1.45
+		available = {
+			has_completed_focus = enc_purity
+			has_completed_focus = enc_purge_opposition
+			has_completed_focus = enc_poison_bear
+			NCR = { exists = NO }
+		}
+		completion_reward = {
+			country_event = { id = enc_reformers.77 }
+		}
+	}
+	focus = {#Purists - Subjugate
+		id = enc_subjugation
+		icon = GFX_goal_enc_purity
+		x = -3
+		y = 1
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_the_mutant_question_purists }
+		relative_position_id = enc_the_mutant_question_purists
+		mutually_exclusive = {
+			focus = enc_expand_human_definition
+		}
+		mutually_exclusive = {
+			focus = enc_segregation
+		}
+		cost = 1.45
+		completion_reward = {
+			country_event = { id = enc_reformers.77 }
+		}
+	}
+	focus = {#Purists - Vitamins
+		id = enc_vitamins
+		icon = GFX_goal_generic_mentats
+		x = -1
+		y = 1
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_subjugation }
+		relative_position_id = enc_subjugation
+		cost = 1.45
+		completion_reward = {
+			country_event = { id = enc_reformers.77 }
+		}
+	}
+	focus = {#Mesmetron
+		id = enc_mesmerizing
+		icon = GFX_goal_generic_mesmetron
+		x = 0
+		y = 1
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_vitamins }
+		relative_position_id = enc_vitamins
+		cost = 1.45
+
+		completion_reward = {
+
+		}
+	}
+	focus = {#Purists - Papers Please
+		id = enc_documents
+		icon = GFX_goal_enc_sign
+		x = 1
+		y = 1
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_subjugation }
+		relative_position_id = enc_subjugation
+		cost = 1.45
+		completion_reward = {
+			country_event = { id = enc_reformers.77 }
+		}
+	}
+	focus = {#Purists - Eyebot Spies
+		id = enc_eyebots_everywhere
+		icon = GFX_goal_enc_eyebot
+		x = 0
+		y = 1
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_documents }
+		relative_position_id = enc_documents
+		cost = 1.45
+		completion_reward = {
+			country_event = { id = enc_reformers.77 }
+		}
+	}
+
+
+	focus = {#Purists - Solutions
+	id = enc_solution_to_mutant_question
+	icon = GFX_goal_NEW_the_old_world
+	x = -1
+	y = 1
+	ai_will_do = { factor = 1 }
+	prerequisite = { focus = enc_eyebots_everywhere }
+	prerequisite = { focus = enc_mesmerizing }
+	relative_position_id = enc_eyebots_everywhere
+
+	cost = 1.45
+	completion_reward = {
+		country_event = { id = enc_reformers.77 }
+	}
+}
+
+
+
+	####################################
+	# The Mutant Question
+	####################################
 	focus = {#INTEGRATION - The Mutant Question
 		id = enc_the_mutant_question
 		icon = GFX_goal_enc_justice
@@ -1362,6 +1486,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_the_mutant_question
 		mutually_exclusive = { focus = enc_segregation }
+		mutually_exclusive = { focus = enc_subjugation }
 		x = 3
 		y = 1
 		prerequisite = {
@@ -1583,8 +1708,12 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = enc_expand_human_definition
 		}
+		mutually_exclusive = {
+			focus = enc_subjugation
+		}
 		prerequisite = {
 			focus = enc_the_mutant_question
+			focus = enc_the_mutant_question_purists
 		}
 		cost = 5.8
 		completion_reward = {
