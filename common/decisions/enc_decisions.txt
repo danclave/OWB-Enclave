@@ -939,6 +939,18 @@ ENC_render_unto_caesar = {
 ###############################
 
 ENC_debug = {
+	ENC_kill_ncr = {
+		complete_effect = {
+			annex_country = {
+				target = NCR
+			}			
+			release_puppet = BAR
+			BAR = {
+				establish_EAZ = yes
+			}
+		}
+
+	}
 	ENC_add_legitimacy = {
 		complete_effect = {
 			set_country_flag = no_generic_manufacturer

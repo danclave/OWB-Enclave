@@ -172,7 +172,7 @@ change_suspicion = {
 	else = {
 		custom_effect_tooltip = gain_suspicion_tt
 	}
-	calculate_hiding_cost = YES
+	calculate_hiding_cost = yes
 }
 
 calculate_hiding_cost = {
@@ -187,8 +187,6 @@ calculate_hiding_cost = {
 	# calculate state cost
 	set_variable = { var = ENC_hiding_cost_states value = num_controlled_states }
 	multiply_variable = { ENC_hiding_cost_states = 10 }
-	set_variable = { var = ENC_hiding_cost_states value = num_controlled_states }
-	multiply_variable = { ENC_hiding_cost_states = 3 }
 	# add state cost to total
 	add_to_variable = { var = ENC_hiding_cost_total value = ENC_hiding_cost_states}
 	# set duration of safety
@@ -701,4 +699,67 @@ comply_with_protests = {
 	}
 	add_stability = -0.05
 	add_political_power = -100
+}
+
+
+##################################################
+###    Set up Enclave Administration Zone     ####
+##################################################
+establish_EAZ = {
+	set_cosmetic_tag = EAZ_BAR
+	add_ideas = ENC_idea_puppet
+	load_focus_tree = erb_eaz_nf
+
+	create_country_leader  = {
+		name = "enclave_governer_name"
+		desc = "enclave_governer_desc"
+		picture = "gfx/leaders/portrait_sarge.dds"
+		expire = "3000.1.1"
+		ideology = militarist_technocracy
+	}	
+	create_country_leader  = {
+		name = "enclave_governer_name"
+		desc = "enclave_governer_desc"
+		picture = "gfx/leaders/portrait_sarge.dds"
+		expire = "3000.1.1"
+		ideology = technocracy
+	}	
+	create_country_leader = {
+		name = "enclave_governer_name"
+		desc = "enclave_governer_desc"
+		picture = "gfx/leaders/portrait_sarge.dds"
+		expire = "3000.1.1"
+		ideology = benevolent_dictatorship
+	}
+	create_country_leader = {
+		name = "enclave_governer_name"
+		desc = "enclave_governer_desc"
+		picture = "gfx/leaders/portrait_sarge.dds"
+		expire = "3000.1.1"
+		ideology = town_hall_democracy
+	}
+	division_template = {
+		name = "Slave Militia"
+		division_names_group = REBEL_INF_01
+		regiments = {
+			militia = {	x = 0 y = 0	}
+			militia = { x = 0 y = 1	}
+			militia = { x = 0 y = 2 }
+			militia = { x = 1 y = 0 }
+			militia = { x = 1 y = 1 }
+			militia = { x = 1 y = 2 }
+			militia = { x = 1 y = 3 }
+		}
+		support = {}
+	}
+	every_owned_state = {
+		create_unit = {
+			division = "name = \"Slave Militia\"  division_template = \"Slave Militia\"  start_experience_factor = 0.28"
+			owner = THIS
+		}
+		create_unit = {
+			division = "name = \"Slave Militia\"  division_template = \"Slave Militia\"  start_experience_factor = 0.28"
+			owner = THIS
+		}
+	}
 }

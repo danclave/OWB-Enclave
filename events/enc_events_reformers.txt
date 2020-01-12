@@ -5477,7 +5477,7 @@ country_event = { #159 - Citizens League
 	immediate = {
 		set_country_flag = erb_lynette_unlocked_flag
 	}
-	option = { #	Denounce
+	option = { # Denounce
 		name = enc_reformers.159.a
 		custom_effect_tooltip = enc_reformers.159.a.tt
 		set_temp_variable = {
@@ -5485,30 +5485,29 @@ country_event = { #159 - Citizens League
 			value = 0.05
 		}
 		change_legitimacy = yes
-		add_political_power = -100
+		add_stability = -0.07
 		add_popularity = {
 			ideology = elites
-			popularity = 0.1
+			popularity = 0.10
 		}
 		elites_become_citizens_league = yes
 	}
-	option = { #	Fair!
+	option = { # Fair!
 		name = enc_reformers.159.b
 		custom_effect_tooltip = enc_reformers.159.b.tt
-		add_stability = 0.05
-		add_political_power = 100
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = -0.05
 		}
 		change_legitimacy = yes
+		add_political_power = 100
 		add_popularity = {
 			ideology = elites
 			popularity = 0.15
 		}
 		elites_become_citizens_league = yes
 	}
-	option = { #	Quote declaration of independence
+	option = { # Quote declaration of independence
 		name = enc_reformers.159.c
 		trigger = {
 			has_country_flag = leader_charismatic

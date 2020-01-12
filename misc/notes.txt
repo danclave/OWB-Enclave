@@ -1,11 +1,2 @@
-Patch 2.0.14
-- island states are now coreable (but only single islands)
-- enc_reformers.253 added (NCR loyalists assassinate commander)
-- raider sabotage now destroys rather than damages factory
-- success, great success or failure event after talking to purist commander
-- success or failure after talking to commander threatening to leave
-- peace with bos can no longer be taken after taking war with bos
-- commanders can no longer get "demoted" as a random trait upon recruitment
-- troll warren crushed event (enc_reformers.232) won't fire unless WBH exists, but will still be innacurate if WBH did not conquer them
-- fixed localization for Communist Uprising Event
-- Patrolling New Reno (enc_reformers.56) will no longer fire for other nations
+Patch 2.0.15
+- balance tweaks for leaders

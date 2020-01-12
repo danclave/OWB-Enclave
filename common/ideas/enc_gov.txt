@@ -1,0 +1,133 @@
+ideas = {
+
+	officer_training_laws = {
+		law = yes
+
+		officer_law_enclave_officers = {
+
+			cost = 100
+			removal_cost = -1
+			level = 1
+			picture = officer_academy
+			available = {
+				original_tag = ERB
+			}
+			visible = {
+				original_tag = ERB
+			}
+			modifier = {
+				special_forces_cap = 0.08
+				max_command_power = 25
+				political_power_gain = -0.10
+				army_leader_start_level = 2
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_planning_level = 1
+				army_leader_start_logistics_level = 1
+				army_org_Factor = 0.02
+			}
+			cancel_if_invalid = no
+		}
+
+	}
+
+
+	army_training_laws = {
+		law = yes
+
+		training_law_navarro_veterans = {
+
+			cost = 100
+			removal_cost = -1
+			level = 2
+			picture = training_law_veterans
+			available = {
+				original_tag = ERB
+			}
+			visible = {
+				original_tag = ERB
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = -9999
+					has_game_rule = {
+						rule = caps_system_toggle
+						option = ENABLED
+					}
+					check_variable = { caps_daily < 15 }
+				}
+			}
+
+			modifier = {
+				army_org_Factor = 0.05
+				justify_war_goal_time = -0.1
+				training_time_factor = 0.10
+			}
+
+			cancel_if_invalid = no
+		}
+
+		training_law_enclave_academy = {
+
+			cost = 100
+			removal_cost = -1
+			level = 1
+			picture = training_law_military_academy
+
+			available = {
+				original_tag = ERB
+			}
+			visible = {
+				original_tag = ERB
+			}
+			modifier = {
+				army_org_Factor = 0.08
+				justify_war_goal_time = -0.15
+				training_time_factor = 0.20
+			}
+
+			cancel_if_invalid = no
+		}
+
+	}
+
+	press_laws = {
+		law = yes
+		enc_press_reformer_propaganda = {
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				# has_completed_focus = enc_reform
+			}
+			cost = 100
+			removal_cost = -1
+			level = 2
+			modifier = {
+				political_power_gain = -0.10
+				intellectuals_drift = 0.20
+			}
+			cancel_if_invalid = no
+			default = yes
+		}
+		enc_press_purist_propaganda = {
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				# has_completed_focus = enc_purity
+			}
+			cost = 100
+			removal_cost = -1
+			level = 2
+			modifier = {
+				political_power_gain = -0.10
+				elites_drift = 0.20
+			}
+			cancel_if_invalid = no
+			default = yes
+		}
+	}
+}

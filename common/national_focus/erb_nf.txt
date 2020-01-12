@@ -1,5 +1,5 @@
 focus_tree = {
-	id = 'erb_nf'
+	id = erb_nf
 	country = {
 		factor= 0
 		modifier = {
@@ -6162,7 +6162,7 @@ focus = {#NEVADA - second city
 				uses = 1
 				category = industry
 			}
-			add_ideas = war_economy
+			add_ideas = enc_reorganized_economy
 		}
 	}
  	focus = {#Purity - Buff radio

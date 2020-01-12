@@ -1,0 +1,19 @@
+focus_tree = {
+	id = erb_eaz_nf
+	country = {
+		factor= 0
+	}
+	default = no
+
+	focus = {# placeholder
+		id = enc_placeholder
+		icon = GFX_goal_enc_verti
+		ai_will_do = { factor = 1 }
+		x = 20
+		y = 0
+		cost = 1
+		completion_reward = {
+			add_political_power = 1
+		}
+	}
+}

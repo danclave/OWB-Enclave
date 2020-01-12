@@ -34,4 +34,5 @@ objectTypes = {
 			texture_specular = "x01_s.dds"
 			shader = PdxMeshAdvanced
 	}
+	}
 }
