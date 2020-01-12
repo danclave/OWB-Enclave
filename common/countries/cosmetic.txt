@@ -38,7 +38,6 @@ ERB_BOS = {
 	color_ui = rgb { 64 46 176 }
 }
 
-
 ERB_SHI = {
 	color = rgb { 67 123 237 } # base game blue
 	color_ui = rgb { 255 255 255 }
@@ -51,4 +50,11 @@ BJS_ERB = {
 BJS_MEX = {
 	color = rgb { 0 127 70 }
 	color_ui = rgb { 92 96 215 }
+}
+
+# Enclave Administrative Zones
+
+EAZ_BAR = {
+	color = rgb { 0 45 50 }
+	color_ui = rgb { 0 45 50 }
 }

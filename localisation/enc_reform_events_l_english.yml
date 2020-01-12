@@ -1226,7 +1226,7 @@ enc_reformers.225.a: "Where are they even getting their powered armor?"
 enc_reformers.225.a.tt: "The §Y[WBH.GetName]§! prepare for war against you."
 #############################################################################################################
 enc_reformers.226.t: "Thradd Defects to the Troll Warren"
-enc_reformers.226.d: "The [ERB.GetName]'s liberation of New Reno has chase much of the city's riff raff to the ends of the earth. Among those who fled is Thradd the Immortal, one fo the Master's greatest warriors. He has defected to [TRL.GEtName], where he he has rapidly risen in [TRL.GetLeader]'s ranks.  These reinforcements will give the Troll Warren a powerful tool against the Washington Brotherhood, who is already overextended oppressing its neighbors."
+enc_reformers.226.d: "The [ERB.GetName]'s liberation of New Reno has chased much of the city's riff raff to the ends of the earth. Among those who fled is Thradd the Immortal, one fo the Master's greatest warriors. He has defected to [TRL.GEtName], where he he has rapidly risen in [TRL.GetLeader]'s ranks.  These reinforcements will give the Troll Warren a powerful tool against the Washington Brotherhood, who is already overextended oppressing its neighbors."
 enc_reformers.226.a: "Well, this seems like a Brotherhood problem."
 #############################################################################################################
 enc_reformers.227.t: "Canadian Pirates Join the Brotherhood"

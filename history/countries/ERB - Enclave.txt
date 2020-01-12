@@ -41,13 +41,17 @@ set_technology = {
 	vertibird_cas_tech =1
 }
 
-set_country_flag = manpower_laws_hidden
 set_country_flag = not_allowed_to_core_flag
 set_country_flag = generic_decisions_disabled
 set_country_flag = no_generic_manufacturer
 set_country_flag = coring_button_hidden
 set_country_flag = slavery_allowed
 set_country_flag = enclave_nation
+set_country_flag = manpower_laws_hidden
+set_country_flag = economic_laws_hidden
+set_country_flag = trade_laws_hidden
+
+
 set_variable = { enc_good_allignment = 0 }
 set_variable = { enc_evil_allignment = 0 }
 
@@ -231,9 +235,16 @@ every_country = {
 add_ideas = ENC_infighting
 add_ideas = enc_scientists
 add_ideas = ENC_officers
-add_ideas = hidden_economy
-add_ideas = the_remnants
 add_ideas = ENC_special_forces
+
+add_ideas = the_remnants
+add_ideas = outsider_law_none
+add_ideas = hidden_economy
+add_ideas = enc_disorganized_economy
+add_ideas = political_effort_state_press
+add_ideas = officer_law_enclave_officers
+add_ideas = training_law_navarro_veterans
+
 add_manpower = 500
 
 # 4rth of july

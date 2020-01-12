@@ -228,10 +228,8 @@ enc_all_adults_serve: "All Adults Serve"
 enc_scraping_the_barrel: "Scraping the Barrel"
 
 enc_collapsed_economy: "Collapsed Economy"
-collapsed_trade: "Collapsed Trade"
 collapsed_trade_desc: "Caravan routes lay idle, as merchants fear whether their dollars are worth the paper they're printed out.\n\n"
-hidden_economy: "Hidden Economy"
-hidden_economy_desc: "The Enclave does not trade with outside factions, as that could compromise their secrecy."
+
 ###################################
 # PEOPLE
 ###################################
@@ -283,6 +281,7 @@ enc_julie_farkas_desc:0 "Julie is a sweetheart, and her organization will happil
 enc_lynette: "First Citizen Lynette"
 first_citizen: "First Citizen"
 enc_war_on_drugs: "The War on Drugs"
+
 # NCR - Chief of army
 ###################################
 enc_big_jim_chief_of_army:0 "James 'Big Jim' Marshal"

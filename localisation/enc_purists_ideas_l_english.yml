@@ -57,7 +57,7 @@ ENC_officers_desc:0 "The few Enclave Officers that remain are both well trained 
 ENC_officers_purged:0 "Enclave Officers"
 ENC_officers_purged_desc:0 "The few Enclave Officers that remain are both well trained and experienced leaders."
 
-enc_sac_city:0"Old Promises"
+enc_sac_city:0 "Old Promises"
 ERB_resistance_to_santa_anna: "Resistance to Santa Anna"
 ENC_promote_mexican_guerillas: "Fund the Guerillas"
 
@@ -100,3 +100,26 @@ enc_reformer: "Reformer"
 enc_reformer_desc: "§gThis commander is loyal to Granite.§!"
 enc_demoted: "Demoted"
 enc_demoted_desc: "A demotion saps this commander's motivation. Undoing it will be difficult."
+
+
+ENC_idea_puppet:0 "Enclave Administration Zone"
+enclave_governer_name:0 "Enclave Governer"
+enclave_governer_desc:0 "The Enclave has set up a governer to oversee this region."
+
+
+# GOV
+officer_law_enclave_officers: "Enclave Officers"
+training_law_navarro_veterans: "Navarro Veterans"
+training_law_enclave_academy: "Enclave Academy"
+
+enc_reorganized_economy: "Reorganized Engineers"
+
+enc_disorganized_economy: "Disorganized Engineers"
+enc_disorganized_economy_desc: "Having only recently rallied around the same flag, the engineers of the Enclave lack a definitive command structure. This hinders their efforts considerably.""
+collapsed_trade: "Collapsed Trade"
+
+hidden_economy: "Hidden Economy"
+hidden_economy_desc: "The Enclave does not trade with outside factions, as that could compromise their secrecy."
+
+enc_press_reformer_propaganda: "Reformer Propaganda"
+enc_press_purist_propaganda: "Purist Propaganda"
