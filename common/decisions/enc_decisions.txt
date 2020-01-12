@@ -197,7 +197,7 @@ ENC_reno = {
 		   }
 		   else = {
 			   add_war_support = -0.10
-			   add_stability = -0.05		   
+			   add_stability = -0.05
 		   }
 		}
 	}
@@ -373,7 +373,7 @@ ENC_NCR_hiding = {
 			}
 			else = {
 				add_to_variable = { var = ENC_hiding_cost value = 10}
-			} 
+			}
 			set_variable = { ENC_hiding_cost_total = ENC_hiding_cost }
 
 			# make it 5 more expensive for every controlled state
@@ -384,7 +384,7 @@ ENC_NCR_hiding = {
 			set_variable = { ENC_hide_days = days_mission_timeout@ENC_hide_activity }
 			add_to_variable = { var = ENC_hide_days value = 90}
 			add_to_variable = { ENC_hiding_cost_total = ENC_hiding_cost_states }
-		} 
+		}
 		#--------------------------
 		days_mission_timeout = 60
 		timeout_effect = {
@@ -400,12 +400,12 @@ ENC_NCR_hiding = {
 		icon = GFX_decision_enc_bear_head #infiltration
 		is_good = no
 		priority = 10
-		#--------------------------		
+		#--------------------------
 		days_remove = ENC_hide_days
 		visible = {
 			always = false
 		}
-		complete_effect = { 
+		complete_effect = {
 			# tooltips
 			custom_effect_tooltip = ENC_hide_activity_days_tt
 			custom_effect_tooltip = ENC_hide_activity_bonus_tt

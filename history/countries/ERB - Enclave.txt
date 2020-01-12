@@ -41,10 +41,13 @@ set_technology = {
 	vertibird_cas_tech =1
 }
 
+set_country_flag = manpower_laws_hidden
 set_country_flag = not_allowed_to_core_flag
 set_country_flag = generic_decisions_disabled
 set_country_flag = no_generic_manufacturer
 set_country_flag = coring_button_hidden
+set_country_flag = slavery_allowed
+set_country_flag = enclave_nation
 set_variable = { enc_good_allignment = 0 }
 set_variable = { enc_evil_allignment = 0 }
 

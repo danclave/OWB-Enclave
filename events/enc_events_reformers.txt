@@ -258,7 +258,7 @@ country_event = { #9 - Promotion
 			portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_2.dds"
 			skill = 4
 			traits = {
-				old_guard
+				charismatic_trait local_leader_trait
 			}
 			attack_skill = 4
 			defense_skill = 3
@@ -275,7 +275,7 @@ country_event = { #9 - Promotion
 			skill = 2
 			traits = {
 				enc_reformer
-				bearer_of_artillery
+				perceptive_trait enduring_trait
 			}
 			attack_skill = 2
 			defense_skill = 2
@@ -2062,7 +2062,7 @@ unit_leader_event = { #256.success - leader convinced!
 	title = enc_reformers.57.success.t
 	desc = enc_reformers.57.success.d
 	is_triggered_only = yes
-	option = { # 
+	option = { #
 		name = enc_reformers.57.success.a
 		custom_effect_tooltip = enc_reformers.57.e.success
 	}
@@ -2073,7 +2073,7 @@ unit_leader_event = { #257.success2 - leader convinced!
 	title = enc_reformers.57.success2.t
 	desc = enc_reformers.57.success2.d
 	is_triggered_only = yes
-	option = { # 
+	option = { #
 		name = enc_reformers.57.success2.a
 		custom_effect_tooltip = enc_reformers.57.e.success
 	}
@@ -2084,7 +2084,7 @@ unit_leader_event = { #258.failure - leader unconvinced!
 	title = enc_reformers.57.failure.t
 	desc = enc_reformers.57.failure.d
 	is_triggered_only = yes
-	option = { # 
+	option = { #
 		name = enc_reformers.57.failure.a
 		effect_tooltip = { # already applied above, repeated for clarity
 			add_popularity = {
@@ -2409,12 +2409,72 @@ country_event = { #68 - Slavery
 			value = -0.05
 		}
 		change_legitimacy = yes
+		if = {
+			limit = { has_idea = slavery_outlawed }
+			swap_ideas = {
+				remove_idea = slavery_outlawed
+				add_idea = slavers_idea_2
+			}
+		}
+		if = {
+			limit = { has_idea = indentured_servitude }
+			swap_ideas = {
+				remove_idea = indentured_servitude
+				add_idea = slavers_idea_2
+			}
+		}
+		clr_country_flag = slavery_allowed
 	}
 	option = { # Servitude
 		name = enc_reformers.68.b
 		add_ideas = ENC_servitude
 		set_country_flag = enc_freedom
 		set_country_flag = enc_indentured
+		if = {
+			limit = { has_idea = slavery_outlawed }
+			swap_ideas = {
+				remove_idea = slavery_outlawed
+				add_idea = indentured_servitude
+			}
+		}
+		if = {
+			limit = { has_idea = slavers_idea_2 }
+			swap_ideas = {
+				remove_idea = slavers_idea_2
+				add_idea = indentured_servitude
+			}
+		}
+		if = {
+			limit = { has_idea = slavers_idea_3 }
+			swap_ideas = {
+				remove_idea = slavers_idea_3
+				add_idea = indentured_servitude
+			}
+		}
+		if = {
+			limit = { has_idea = slavers_idea_4 }
+			swap_ideas = {
+				remove_idea = indentured_servitude
+				add_idea = slavery_outlawed
+			}
+		}
+		if = {
+			limit = { has_idea = slavers_idea_5 }
+			swap_ideas = {
+				remove_idea = slavery_outlawed
+				add_idea = indentured_servitude
+			}
+		}
+		if = {
+			limit = { has_idea = slavers_idea_5 }
+			swap_ideas = {
+				remove_idea = slavers_idea_5
+				add_idea = indentured_servitude
+			}
+		}
+		else_if = {
+			add_ideas = indentured_servitude
+		}
 	}
 	option = { # Let Freedom Ring!
 		name = enc_reformers.68.c
@@ -2424,6 +2484,44 @@ country_event = { #68 - Slavery
 		}
 		change_legitimacy = yes
 		set_country_flag = enc_freedom
+		if = {
+			limit = { has_idea = slavers_idea_1 }
+			swap_ideas = {
+				remove_idea = slavers_idea_1
+				add_idea = slavery_outlawed
+			}
+		}
+		if = {
+			limit = { has_idea = slavers_idea_2 }
+			swap_ideas = {
+				remove_idea = slavers_idea_2
+				add_idea = slavery_outlawed
+			}
+		}
+		if = {
+			limit = { has_idea = slavers_idea_3 }
+			swap_ideas = {
+				remove_idea = slavers_idea_3
+				add_idea = slavery_outlawed
+			}
+		}
+		if = {
+			limit = { has_idea = slavers_idea_4 }
+			swap_ideas = {
+				remove_idea = slavers_idea_4
+				add_idea = slavery_outlawed
+			}
+		}
+		if = {
+			limit = { has_idea = slavers_idea_5 }
+			swap_ideas = {
+				remove_idea = slavers_idea_5
+				add_idea = slavery_outlawed
+			}
+		}
+		else_if = {
+			add_ideas = slavery_outlawed
+		}
 	}
 }
 
@@ -2690,12 +2788,23 @@ country_event = { #81 - Economic Policy
 			value = -0.05
 		}
 		change_legitimacy = yes
+		set_global_flag = us_dollar_available
+		set_country_flag = accept_usdollar
+		swap_ideas = {
+			remove_idea = currencygenericcap
+			add_idea = currencyusd
+		}
 	}
 	option = { #	NCRD
 		name = enc_reformers.81.b
 		complete_national_focus = enc_NCR_dollar
 		custom_effect_tooltip = newline
 		add_stability = 0.05
+		set_country_flag = currencyncrdollar
+		swap_ideas = {
+			remove_idea = currencygenericcap
+			add_idea = currencyncrdollar
+		}
 	}
 }
 
@@ -3301,7 +3410,11 @@ country_event = { #103 - Drugs
 			value = -0.1
 		}
 		change_legitimacy = yes
-		set_country_flag = enc_drugs
+		clr_country_flag = bans_drugs
+		swap_ideas = {
+			remove_idea = chems_banned
+			add_idea = chems_legalised
+		}
 	}
 	option = { # Legalization
 		name = enc_reformers.103.b
@@ -3353,14 +3466,56 @@ country_event = { #104 - Followers of Apocolypse
 		}
 		has_completed_focus = enc_rebuilding_a_nation
 	}
-	option = { # Capture Operations
+	immediate = {
+		hidden_effect = {
+			set_country_flag = followers_spreading
+			set_variable = {
+				var = follower_mission_days
+				value = num_controlled_states
+			}
+			multiply_variable = {
+				var = follower_mission_days
+				value = 5
+			}
+			set_variable = {
+				var = fol_md_temp
+				value = stability
+			}
+			add_to_variable = {
+				var = fol_md_temp
+				value = 0.25
+			}
+			divide_variable = {
+				var = follower_mission_days
+				value = fol_md_temp
+			}
+			set_variable = {
+				var = fol_md_temp
+				value = follower_mission_days
+			}
+			divide_variable = {
+				var = fol_md_temp
+				value = 2
+			}
+			#country_event = { id = followers.3 days = var:fol_md_temp random = 10 }
+			clear_variable = fol_md_temp
+			set_variable = {
+				var = followers_attitude
+				value = 4
+			}
+			activate_mission = followers_established_countdown
+		}
+	}
+	option = { # Oppose
 		name = enc_reformers.104.a
 		custom_effect_tooltip = enc_reformers.104.a.tt
 		add_war_support = 0.05
 		add_stability = 0.05
 		custom_effect_tooltip = enc_reformers.104.a.tt.warning
+		set_country_flag = followers_discoraged
+		add_ideas = followers_rejected_idea
 	}
-	option = { # Legalization
+	option = { # OKay?
 		name = enc_reformers.104.b
 		custom_effect_tooltip = enc_reformers.104.b.tt
 		set_country_flag = enc_followers
@@ -3370,30 +3525,8 @@ country_event = { #104 - Followers of Apocolypse
 		}
 		change_legitimacy = yes
 		add_war_support = -0.05
-	}
-	option = { # Heal The Sick
-		name = enc_reformers.104.c
-		custom_effect_tooltip = enc_reformers.104.c.tt
-		# modify legitimacy
-		set_temp_variable = {
-			var = legitimacy_change_var
-			value = 0.05
-		}
-		change_legitimacy = yes
-		add_war_support = -0.1
-		add_resource = {
-			type = advanced
-			amount = -5
-			state = 285
-		}
-		add_resource = {
-			type = circuitry
-			amount = -5
-			state = 285
-		}
-		clr_country_flag = enc_healers
-		add_ideas = Enc_Followers
-		set_country_flag = enc_followers
+		set_country_flag = followers_encouraged
+		add_ideas = followers_spreading_idea
 	}
 }
 
@@ -3474,7 +3607,6 @@ country_event = { #107 Nuka Cola
 			idea = enc_nuka_cola
 			days = 500
 		}
-		clr_country_flag = enc_drugs
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = -0.03
@@ -5260,7 +5392,8 @@ country_event = { #150 terraforming
 		trigger = {
 			has_country_flag = leader_charismatic
 		}
-		add_ideas = ENC_terraforming
+		add_to_variable = { geck_count = 4}
+		custom_effect_tooltip = enc_geck_tooltip_tt
 	}
 	option = { #	Yayy
 		name = enc_reformers.150.b
@@ -5272,13 +5405,16 @@ country_event = { #150 terraforming
 				instant_build = yes
 			}
 		}
+		add_to_variable = { geck_count = 2 }
+		custom_effect_tooltip = enc_geck_tooltip_tt
 	}
 	option = { #	Yayy
 		name = enc_reformers.150.c
 		trigger = {
 			has_country_flag = leader_ruthless
 		}
-		add_ideas = ENC_terraforming
+		add_to_variable = { geck_count = 4}
+		custom_effect_tooltip = enc_geck_tooltip_tt
 	}
 }
 
@@ -8472,7 +8608,7 @@ country_event = { #247 - Hayes Protests
 	}
 }
 
-country_event = { #248 - Vote Rigging 
+country_event = { #248 - Vote Rigging
 	id = enc_reformers.248
 	title = enc_reformers.248.t
 	desc = enc_reformers.248.d
@@ -9134,7 +9270,7 @@ country_event = { #306 - Protesting commander
 				}
 			}
 			50 = {
-				# failure				
+				# failure
 				event_target:protesting_commander = {
 					unit_leader_event = {
 						id = enc_reformers.255
@@ -10568,7 +10704,7 @@ news_event = { #346 - Raul
 				portrait_path = "gfx/leaders/ghoul_mexico/portrait_ghoul_mexico_generic_3.dds"
 				skill = 4
 				traits = {
-					old_guard
+					charismatic_trait local_leader_trait
 				}
 				attack_skill = 4
 				defense_skill = 3
@@ -11354,6 +11490,33 @@ country_event = { #354 - The War of Independence
 	}
 }
 
+country_event = { #356 - Now I have to Eat The Bloody thing?
+	id = enc_reformers.356
+	title = enc_reformers.356.t
+	desc = enc_reformers.356.d
+	picture = GFX_event_enc_bloody_NCR
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #What now
+		name = enc_reformers.356.a
+		release_autonomy = {
+			target = BAR
+			autonomy_state = autonomy_enclave_state
+			freedom_level = 0.5
+		}
+		release_autonomy = {
+			target = DAY
+			autonomy_state = autonomy_enclave_state
+			freedom_level = 0.5
+		}
+		release_autonomy = {
+			target = BON
+			autonomy_state = autonomy_enclave_state
+			freedom_level = 0.5
+		}
+	}
+
+}
 # country_event = {#355 - War with Caesar Speech
 # id = enc_reformers.355
 # title = enc_reformers.355.t
@@ -11366,10 +11529,10 @@ country_event = { #354 - The War of Independence
 # has_war_with = CES
 # always = no
 # }
-# option = { # 
+# option = { #
 # name = enc_reformers.355.a
 # }
-# option = { # 
+# option = { #
 # name = enc_reformers.355.b
 # }
 # }

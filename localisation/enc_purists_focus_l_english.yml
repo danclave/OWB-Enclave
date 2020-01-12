@@ -305,6 +305,25 @@ enc_fighters_desc: "For decades the Enclave rules the skies uncontested. In our 
 enc_drop_training: "Drop Training"
 enc_drop_training_desc: "Dropping into hot landing zones has always been a risky venture. But with the right preparation and training, a well executed airial assault could be even more devestating than convential attacks"
 
+enc_the_mutant_question_purists: "The Mutant Question"
+enc_the_mutant_question_purists_desc: "With the destruction of New California and slave collars fitted upon the necks of the savages' 'leaders', the time has come to decide the fate of the mutant population of California. Although hardliners call for their enslavement and extermination, some within the Enclave think that with proper genetic testing, we may yet save them.  And even the hardliner purists admit we have a ready labour force..."
+
+enc_mesmerizing: "Mesmerizing the Mutants"
+enc_mesmerizing_desc: "A pre-war experimental mind control device can be used to lull the population of the Wastes into compliance. Sadly, some of the mutants will suffer from what the medics call spontaneous cranial combustion."
+enc_vitamins: "Vitamins for the Plague Victims"
+enc_vitamins_desc: "Even we need a labor supply for the New World we will build. We can offer the mutants of New California vitamins to get better... along with other effects."
+
+enc_subjugation: "Cleanse the Wasteland"
+enc_subjugation_desc: "There can be no compromise with the peoples of the Wastes.  Even if some of them ape intelligence, they are no more clever than a Deathclaw; and just as dangerous."
+
+enc_documents: "Internal Passes"
+enc_documents_desc: "Do you let rats wander unchecked? Why then should we let the mutants? A new system of internal controls will keep them where they shall stay."
+
+enc_eyebots_everywhere: "Eyebots Everywhere"
+enc_eyebots_everywhere_desc: "Eyebots aren't just good for jaunty marching tunes. They will also help us find any dens of mutant guerillas."
+
+enc_solution_to_mutant_question: "A Better World"
+enc_solution_to_mutant_question_desc: "Part of the president's job is to make the tough decisions. A lot of near-humans will sacrifice their lives for the return of humanity. Humans will prevail!"
 ###################################
 # TODO - WIP
 ###################################
