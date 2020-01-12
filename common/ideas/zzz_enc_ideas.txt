@@ -248,16 +248,6 @@ ideas = {
 			   research_speed_factor = 0.03
 			 	}
 		}
-		ENC_terraforming = {
-			picture = vault_open_bonus
-			allowed = { always = no
-			}
-			removal_cost = -1
-			modifier = {
-				consumer_goods_factor = 0.05
-				conscription = 0.05
-			}
-		}
 		Enc_Think_Tank = {
 			picture = enc_scientists
 			allowed = {
@@ -1060,7 +1050,7 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				political_power_gain = -0.30
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.03
 			}
 		}
 
@@ -1891,10 +1881,10 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   political_power_gain = 0.15
-			   war_support_factor = 0.10
-			   offensive_war_stability_factor = 0.40
-			   defensive_war_stability_factor = 0.40
+		  		political_power_gain = 0.15
+				war_support_factor = 0.10
+				offensive_war_stability_factor = 0.40
+				defensive_war_stability_factor = 0.40
 			}
 		}
 		ENC_american_broadcasting_department_entertainment = {
@@ -1907,9 +1897,9 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   political_power_gain = 0.15
-			   encryption_factor = -0.05
-			   	consumer_goods_factor = -0.05
+				political_power_gain = 0.15
+				encryption_factor = -0.05
+				consumer_goods_factor = -0.05
 			}
 		}
 		ENC_free_press = {
@@ -1922,11 +1912,11 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   production_factory_max_efficiency_factor = 0.05
-			   justify_war_goal_time = 0.20
-			   encryption_factor = -0.05
-			   offensive_war_stability_factor = -0.20
-			   people_drift = 0.05
+			production_factory_max_efficiency_factor = 0.05
+				justify_war_goal_time = 0.20
+				encryption_factor = -0.05
+				offensive_war_stability_factor = -0.20
+				people_drift = 0.05
 			}
 		}
 		ENC_free_press_2 = {
@@ -1939,11 +1929,11 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-			   production_factory_max_efficiency_factor = 0.10
-			   justify_war_goal_time = 0.25
-			   encryption_factor = -0.10
-			   offensive_war_stability_factor = -0.30
-			   people_drift = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				justify_war_goal_time = 0.25
+				encryption_factor = -0.10
+				offensive_war_stability_factor = -0.30
+			    people_drift = 0.10
 			}
 		}
 		ENC_mandatory_patriotism = {

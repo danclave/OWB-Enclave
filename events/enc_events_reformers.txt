@@ -3410,7 +3410,11 @@ country_event = { #103 - Drugs
 			value = -0.1
 		}
 		change_legitimacy = yes
-		set_country_flag = enc_drugs
+		clr_country_flag = bans_drugs
+		swap_ideas = {
+			remove_idea = chems_banned
+			add_idea = chems_legalised
+		}
 	}
 	option = { # Legalization
 		name = enc_reformers.103.b
@@ -3603,7 +3607,6 @@ country_event = { #107 Nuka Cola
 			idea = enc_nuka_cola
 			days = 500
 		}
-		clr_country_flag = enc_drugs
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = -0.03
@@ -5389,7 +5392,8 @@ country_event = { #150 terraforming
 		trigger = {
 			has_country_flag = leader_charismatic
 		}
-		add_ideas = ENC_terraforming
+		add_to_variable = { geck_count = 4}
+		custom_effect_tooltip = enc_geck_tooltip_tt
 	}
 	option = { #	Yayy
 		name = enc_reformers.150.b
@@ -5401,13 +5405,16 @@ country_event = { #150 terraforming
 				instant_build = yes
 			}
 		}
+		add_to_variable = { geck_count = 2 }
+		custom_effect_tooltip = enc_geck_tooltip_tt
 	}
 	option = { #	Yayy
 		name = enc_reformers.150.c
 		trigger = {
 			has_country_flag = leader_ruthless
 		}
-		add_ideas = ENC_terraforming
+		add_to_variable = { geck_count = 4}
+		custom_effect_tooltip = enc_geck_tooltip_tt
 	}
 }
 

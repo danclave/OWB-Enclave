@@ -25,10 +25,6 @@ ENC_shifts = {
 		available = {
 			has_war_support > 0.4
 			not = { has_decision = reduce_construction_shifts }
-			set_temp_variable = { caps_diff = COST }
-			get_caps_difference = yes
-			check_variable = { caps_display_temp > 25 }
-
 		}
 		modifier = {
 			war_support_weekly = -0.01125 #1,125% per week

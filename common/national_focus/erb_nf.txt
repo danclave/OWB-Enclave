@@ -491,7 +491,10 @@ focus_tree = {
 				remove_idea = ENC_reno_police
 				add_idea = ENC_reno_police_corrupt
 			}
+			set_temp_variable = { caps_to_add = 200 }
+			add_caps = yes
 		}
+
 	}
 	focus = {#RENO - New Reno Police - no amnesty
 		id = enc_out_with_the_old
@@ -1169,9 +1172,9 @@ focus_tree = {
 		available = {
 			OR ={
 				AND = {
-					set_temp_variable = { caps_diff = COST }
+					set_temp_variable = { caps_diff = 300 }
 					get_caps_difference = yes
-					check_variable = { caps_display_temp > 300 }
+					check_variable = { caps_display_temp > 299 }
 				}
 				AND = {
 					strength_ratio = { tag = VLT ratio > 2 }
@@ -1191,8 +1194,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			annex_country = { target = VLT }
-			set_temp_variable = { caps_to_add = -300 }
+			if = {
+				limit = {
+					set_temp_variable = { caps_diff = 300 }
+					get_caps_difference = yes
+					check_variable = { caps_display_temp > 299 }
+				 }
+				set_temp_variable = { caps_to_add = -300 }
 				add_caps = yes
+			}
 		}
 	}
    	focus = {#EXPANSION - VLT - core
