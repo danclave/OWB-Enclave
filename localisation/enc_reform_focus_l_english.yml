@@ -824,7 +824,7 @@ enc_anti_bos_propaganda_tt: "Unlocks the §YAnti Brotherhood Propaganda§! decis
 enc_reform_take_down_mojave_desc: "Helios One is federal property.  Come to think of it, so are the suits of power armor the Mojave chapter wears."
 enc_BOS_start:0 "The Brotherhood of Steel"
 enc_BOS_start_desc: "To many, the Brotherhood of Steel are the bastards who destroyed Navarro, and the Brotherhood is frankly terrified that California and Nevada are under the control of a faction with technology rivaling their own.  But many within the Brotherhood remember when the Wastes looked to them as heroes, and we remember their origins in the United States Army.  Perhaps we can reach a compromise?"
-enc_BOS_tech:"Learning from Each Other"
+enc_BOS_tech: "Learning from Each Other"
 enc_BOS_tech_desc: "As a show of our good faith, we can offer the Brotherhood vertibird plans. In return, the Brotherhood can give us powered armor and allow members of the Brotherhood to travel through the Reunited States."
 enc_BOS_peace:0 "Promote The Exchange of Ideas"
 enc_BOS_peace_desc:0 "Although the modern Brotherhood presents itself as aloof and indifferent to the concerns of the Wastes, in the past it has supported Wastelanders in containing raiders, mutant threats, and outbreaks of plague.  By working with Brotherhood liberals we can encourage ties with the Reunited States."

@@ -653,7 +653,7 @@ enc_reformers.118.c.tt:0 "...Man, even we think that's Ruthless"
 ################################################################################################################
 enc_reformers.119.t: "Ruling California"
 enc_reformers.119.d: "Now that the dust raised by the fall of the NCR is settling, the time has come to decide how to govern the newly liberated Californians.\nGrant C. Hayes, previously Mayor of Dayglow under the NCR, has asked an audience with [ERB.GetLeader]. He claims to be a descendant of Enclave members who escaped Navarro and integrated into the NCR.\n\nHayes believes we should appoint him to a top position in our Reconstruction Authority and bar anyone who took up arms against us from office. Many of our older Enclave officers balk at the idea of working with our old enemies and demand that any NCR politicians we come across be executed."
-enc_reformers.119.a:  "§MIntegrate the NCR leader.§!"
+enc_reformers.119.a:  "§MIntegrate the NCR leaders.§!"
 enc_reformers.119.a.tt:  "§gAs Lincoln said: 'Do I not destroy my enemies when I make them friends?'§!\n\n§gThe ex-NCR leadership selected by Hayes are restored to their former positions. The few that haven't fled a long time ago, at least.§!\n\n"
 enc_reformers.119.a.reward: "\n§MSeveral advisors of the [NCR.GetName] will become available to us.§!\n"
 enc_reformers.119.b:  "§RDisintegrate the NCR leaders.§!"

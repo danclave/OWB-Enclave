@@ -1,6 +1,6 @@
 ideas = {
 	country = {
-		ENC_idea_puppet= {
+		ENC_idea_eaz= {
 			picture = ENC_legitimacy_none
 			allowed = { always = no }
 			removal_cost = -1

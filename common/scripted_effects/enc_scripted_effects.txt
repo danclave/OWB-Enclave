@@ -707,7 +707,10 @@ comply_with_protests = {
 ##################################################
 establish_EAZ = {
 	set_cosmetic_tag = EAZ_BAR
-	add_ideas = ENC_idea_puppet
+	set_rule = {
+		units_deployed_to_overlord = yes
+	}
+	add_ideas = ENC_idea_eaz
 	load_focus_tree = erb_eaz_nf
 
 	create_country_leader  = {

@@ -41,29 +41,17 @@ ideas = {
 			removal_cost = -1
 			level = 2
 			picture = training_law_veterans
-			available = {
+			allowed = {
 				original_tag = ERB
 			}
 			visible = {
-				original_tag = ERB
-			}
-
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = -9999
-					has_game_rule = {
-						rule = caps_system_toggle
-						option = ENABLED
-					}
-					check_variable = { caps_daily < 15 }
-				}
 			}
 
 			modifier = {
 				army_org_Factor = 0.05
 				justify_war_goal_time = -0.1
-				training_time_factor = 0.10
+				training_time_factor = 0.10				
+				elites_drift = 0.20
 			}
 
 			cancel_if_invalid = no
@@ -84,8 +72,8 @@ ideas = {
 			}
 			modifier = {
 				army_org_Factor = 0.08
-				justify_war_goal_time = -0.15
 				training_time_factor = 0.20
+				minimum_training_level = 0.5
 			}
 
 			cancel_if_invalid = no
@@ -110,7 +98,7 @@ ideas = {
 				intellectuals_drift = 0.20
 			}
 			cancel_if_invalid = no
-			default = yes
+			default = no
 		}
 		enc_press_purist_propaganda = {
 			allowed = {
@@ -125,6 +113,39 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.10
 				elites_drift = 0.20
+			}
+			cancel_if_invalid = no
+			default = yes
+		}
+		enc_press_entertainment = {
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				# has_completed_focus = enc_purity
+			}
+			cost = 100
+			removal_cost = -1
+			level = 2
+			modifier = {
+				stability_factor = 0.05
+				army_morale_factor = 0.10
+				consumer_goods_factor = 0.05
+			}
+			cancel_if_invalid = no
+			default = no
+		}
+		enc_press_none = {
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				# has_completed_focus = enc_purity
+			}
+			cost = 100
+			removal_cost = -1
+			level = 1
+			modifier = {
 			}
 			cancel_if_invalid = no
 			default = yes

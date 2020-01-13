@@ -102,7 +102,7 @@ enc_demoted: "Demoted"
 enc_demoted_desc: "A demotion saps this commander's motivation. Undoing it will be difficult."
 
 
-ENC_idea_puppet:0 "Enclave Administration Zone"
+ENC_idea_eaz:0 "Enclave Administration Zone"
 enclave_governer_name:0 "Enclave Governer"
 enclave_governer_desc:0 "The Enclave has set up a governer to oversee this region."
 
@@ -110,7 +110,9 @@ enclave_governer_desc:0 "The Enclave has set up a governer to oversee this regio
 # GOV
 officer_law_enclave_officers: "Enclave Officers"
 training_law_navarro_veterans: "Navarro Veterans"
+training_law_navarro_veterans_desc: "By appointing respected veterans that survived the fall of Navarro as instructors, we can use their experience to train a new generation of soldiers. Bare in mind that they will pass on their views as well as their skills."
 training_law_enclave_academy: "Enclave Academy"
+training_law_enclave_academy_desc: "A specialized department will ensure that a new generation of Enclave soldiers will be the finest in the wastes."
 
 enc_reorganized_economy: "Reorganized Engineers"
 
