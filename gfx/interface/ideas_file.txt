@@ -11,6 +11,7 @@
 # GFX_idea_enc_ew_production
 # GFX_idea_enc_free_press
 # GFX_idea_enc_hayes
+# GFX_idea_enc_idea_economy_disorganized
 # GFX_idea_enc_idea_eyebots
 # GFX_idea_enc_idea_infighting
 # GFX_idea_enc_idea_manpower_1
@@ -36,6 +37,10 @@
 # GFX_idea_enc_pa_production
 # GFX_idea_enc_plague
 # GFX_idea_enc_police
+# GFX_idea_enc_press_entertainment
+# GFX_idea_enc_press_none
+# GFX_idea_enc_press_purist_propaganda
+# GFX_idea_enc_press_reformer_propaganda
 # GFX_idea_enc_purity_1
 # GFX_idea_enc_purity_2
 # GFX_idea_enc_purity_3
@@ -50,6 +55,7 @@
 # GFX_idea_enc_vaccinations
 # GFX_idea_enc_wright
 # GFX_idea_enc__idea_fist
+# GFX_idea_erb_veronica
 # GFX_idea_idea_enc_atomic_commision
 # GFX_idea_idea_enc_chemical_corps
 # GFX_idea_idea_enc_designer_fighter
@@ -59,6 +65,9 @@
 # GFX_idea_idea_enc_designer_plasma
 # GFX_idea_idea_enc_designer_tesla
 # GFX_idea_idea_enc_designer_verti
+# GFX_idea_lynette
 # GFX_idea_orion_moreno
 # GFX_idea_sargeant_dornan
+# GFX_idea_training_law_enclave_academy
+# GFX_idea_training_law_navarro_veterans
 # GFX_idea_verti_production

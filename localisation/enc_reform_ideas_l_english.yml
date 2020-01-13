@@ -230,6 +230,9 @@ enc_scraping_the_barrel: "Scraping the Barrel"
 enc_collapsed_economy: "Collapsed Economy"
 collapsed_trade_desc: "Caravan routes lay idle, as merchants fear whether their dollars are worth the paper they're printed out.\n\n"
 
+enc_press_entertainment: "Entertainment Stations"
+enc_press_none: "No broadcasts"
+
 ###################################
 # PEOPLE
 ###################################

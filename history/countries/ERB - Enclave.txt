@@ -241,7 +241,7 @@ add_ideas = the_remnants
 add_ideas = outsider_law_none
 add_ideas = hidden_economy
 add_ideas = enc_disorganized_economy
-add_ideas = political_effort_state_press
+add_ideas = enc_press_none
 add_ideas = officer_law_enclave_officers
 add_ideas = training_law_navarro_veterans
 
