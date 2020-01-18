@@ -268,3 +268,5 @@ country_event = { id = enc_reformers.23 days = 25 }
         value = -8000
     }
 }
+
+set_variable = { caps_expense_modifier = 0.0 }

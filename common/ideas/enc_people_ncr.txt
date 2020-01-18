@@ -1,10 +1,10 @@
 ideas = {
-	political_advisor = {		
-		enc_alice_mclafferty = {					
+	cultural_advisor = {
+		enc_alice_mclafferty = {
 			picture = alice_mclafferty
 			allowed = { original_tag = ERB }
 			visible = { has_country_flag = enc_accepted_ncr_leaders }
-			traits = { ruthless_capitalist }	
+			traits = { ruthless_capitalist }
 			available = {
 				not = {
 					has_idea = closed_economy
@@ -16,11 +16,11 @@ ideas = {
 				factor = 10
 			}
 		}
-		enc_grant_c_hayes = {					
+		enc_grant_c_hayes = {
 			picture = grant_c_hayes
 			allowed = { original_tag = ERB }
 			visible = { has_country_flag = erb_hayes_unlocked_flag }
-			traits = { old_world_blues }				
+			traits = { old_world_blues }
 			ai_will_do = {
 				factor = 10
 			}
@@ -34,19 +34,19 @@ ideas = {
 				factor = 10
 			}
 		}
-		enc_allgood_murphy = {				
-			picture = allgood_murphy					
+		enc_allgood_murphy = {
+			picture = allgood_murphy
 			allowed = { original_tag = ERB }
 			visible = { has_country_flag = enc_accepted_ncr_leaders }
 			available = {
 				has_full_control_of_state = 350
 			}
-			traits = { peaceful_foreman }			
+			traits = { peaceful_foreman }
 			ai_will_do = {
 				factor = 10
 			}
-		}		
-		enc_zachariah_rigby = {			
+		}
+		enc_zachariah_rigby = {
 			picture = zachariah_rigby
 			allowed = { original_tag = ERB }
 			visible = { has_country_flag = enc_accepted_ncr_leaders }
@@ -54,11 +54,11 @@ ideas = {
 			available = {
 				has_idea = ENC_gunrun
 			}
-			
+
 			ai_will_do = {
 				factor = 10
 			}
-		}			
+		}
 		enc_julie_farkas = {
 			picture = julie_farkas
 			allowed = { original_tag = ERB }
@@ -73,41 +73,41 @@ ideas = {
 		}
 	}
 	high_command = {
-		
-		enc_colonel_royez = {			
+
+		enc_colonel_royez = {
 			picture = colonel_royez
 			allowed = {	original_tag = ERB }
 			visible = { has_country_flag = enc_accepted_ncr_leaders }
 			traits = { all_american_badass }
 			available = {
 				custom_trigger_tooltip = {
-					tooltip = 75_legitimacy		
+					tooltip = 75_legitimacy
 					check_variable = {
 						var = enc_legitimacy
 						value > 0.749
 					}
 				}
 			}
-			
+
 			ai_will_do = {
 				factor = 10
 			}
-		}		
-		enc_colonel_hsu = {			
+		}
+		enc_colonel_hsu = {
 			picture = colonel_hsu
 			allowed = {	original_tag = ERB }
 			visible = { has_country_flag = enc_accepted_ncr_leaders }
 			traits = { calm_leader }
 			available = {
 				custom_trigger_tooltip = {
-					tooltip = half_legitimacy		
+					tooltip = half_legitimacy
 					check_variable = {
 						var = enc_legitimacy
 						value > 0.499
 					}
 				}
 			}
-			
+
 			ai_will_do = {
 				factor = 10
 			}
@@ -116,32 +116,32 @@ ideas = {
 	army_chief = {
 		# for baron players
 		enc_big_jim_chief_of_army = {
-			
+
 			picture = bigjim_chief
 			allowed = {	original_tag = ERB }
 			visible = { has_country_flag = enc_accepted_ncr_leaders }
 			traits = { the_baron }
-			
+
 			ai_will_do = {
 				factor = 10
 			}
 		}
-		
-		enc_drummund_chief_of_army = {			
+
+		enc_drummund_chief_of_army = {
 			picture = drummund_chief
 			allowed = {	original_tag = ERB }
 			visible = { has_country_flag = enc_accepted_ncr_leaders }
 			traits = { unpopular_genius }
 			available = {
 				custom_trigger_tooltip = {
-					tooltip = 75_legitimacy		
+					tooltip = 75_legitimacy
 					check_variable = {
 						var = enc_legitimacy
 						value > 0.749
 					}
 				}
 			}
-			
+
 			ai_will_do = {
 				factor = 10
 			}

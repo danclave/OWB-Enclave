@@ -2795,7 +2795,7 @@ ideas = {
 		}
 	}
 
-	naval_manufacturer = {
+	navy_restoration_advisor = {
 
 		designer = yes
 
@@ -2821,7 +2821,7 @@ ideas = {
 		}
 	}
 
-	aircraft_manufacturer = {
+	aircraft_restoration_advisor = {
 
 		designer = yes
 
@@ -2912,8 +2912,8 @@ ideas = {
 		}
 	}
 
-	materiel_manufacturer = {
-		designer = no
+	engineering_firm = {
+		designer = yes
 		enclave_plasma_equipment_manufacturer = {
 
 			picture = enc_designer_plasma

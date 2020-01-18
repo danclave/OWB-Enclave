@@ -6057,7 +6057,9 @@ news_event = { #170 - Dark Age
 		add_ideas = {
 			collapsed_trade
 		}
+		add_to_variable = { caps_expense_modifier = 1 }
 		set_country_flag = enc_mid_game
+		custom_effect_tooltip = enc_reformers.170.a_tt
 	}
 }
 
@@ -11489,8 +11491,22 @@ country_event = { #354 - The War of Independence
 	}
 }
 
-country_event = { #356 - Now I have to Eat The Bloody thing?
+news_event = { #356 - Taxes
 	id = enc_reformers.356
+	title = enc_reformers.356.t
+	desc = enc_reformers.356.d
+	picture = GFX_event_enc_currency
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #What now
+		name = enc_reformers.356.a
+		add_to_variable = { caps_expense_modifier = 1 }
+		custom_effect_Tooltip = enc_reformers.356.a_tt
+	}
+}
+
+country_event = { #356 - Now I have to Eat The Bloody thing?
+	id = enc_reformers.456
 	title = enc_reformers.356.t
 	desc = enc_reformers.356.d
 	picture = GFX_event_enc_bloody_NCR
@@ -11514,7 +11530,6 @@ country_event = { #356 - Now I have to Eat The Bloody thing?
 			freedom_level = 0.5
 		}
 	}
-
 }
 # country_event = {#355 - War with Caesar Speech
 # id = enc_reformers.355
