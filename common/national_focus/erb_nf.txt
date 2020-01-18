@@ -1617,7 +1617,7 @@ focus_tree = {
 		cost = 5.8
 		completion_reward = {
 			country_event = { id = enc_reformers.67 }
-			add_ideas = { ENC_accepted_ghouls }
+			add_ideas = { enc_mutant_law_ghoul }
 			if = {
 				limit = {
 					has_country_flag = enc_promised_no_ghoul_integration
@@ -1675,8 +1675,8 @@ focus_tree = {
 		cost = 5.8
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = ENC_accepted_ghouls
-				add_idea = ENC_accepted_ghouls_and_super_mutants
+				remove_idea = enc_mutant_law_ghoul
+				add_idea = enc_mutant_law_both
 			}
 			set_temp_variable = { stability_loss_factor = 1 } # 1 to 1 stability loss ratio
 			stability_loss_based_on_elites_popularity = yes
@@ -5641,7 +5641,9 @@ focus = {#NEVADA - second city
 		}
 		select_effect  = { army_experience = -100 }
 		cost = 5.8
-		completion_reward = { add_ideas = ENC_reform_officers }
+		completion_reward = { 
+			# todo description
+		}
 	}
 	focus = {#Military - staff - enc_new_generation_officers
 		id = enc_new_generation_officers
@@ -5800,10 +5802,7 @@ focus = {#NEVADA - second city
 	y = 1
 	cost = 5.8
 	completion_reward = {
-		swap_ideas = {
-		remove_idea = ENC_reform_officers
-		add_idea = ENC_reform_general_staff
-		}
+		
 	}
 }
 

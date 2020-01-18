@@ -1,13 +1,26 @@
 bookmarks = {
 	bookmark = {
-		name = "OWB_NAME"
-		desc = "OWB_DESC"
+		name = "WC_NAME"
+		desc = "WC_DESC"
 		date = 2275.1.1.12
-		picture = "GFX_select_date_1936"
-		default_country = "NCR"
+		picture = "GFX_bookmark_selection_entry_west_coast"
+		default_country = "VEG"
 		default = yes
 
-		NCR = {
+		"VEG" = {
+			history = "VEG_OWB_DESC"
+			ideology = ruler
+			ideas = {
+				robotics_genius
+			}
+			focuses = {
+				veg_architect
+				veg_peoplesvegas
+				veg_checkereddevil
+			}
+		}
+
+		"NCR" = {
 			history = "NCR_OWB_DESC"
 			ideology = people
 			ideas = {
@@ -20,7 +33,8 @@ bookmarks = {
 				ncr_emergency
 			}
 		}
-		CES = {
+
+		"CES" = {
 			history = "CES_OWB_DESC"
 			ideology = ruler
 			ideas = {
@@ -33,43 +47,35 @@ bookmarks = {
 				ces_the_white_leg_petition
 			}
 		}
-		BOS = {
-			history = "BOS_OWB_DESC"
-			ideology = intellectuals
-			ideas = {
-				bunkerblues
-				oldguard
-			}
-			focuses = {
-				bos_wastelandconscripts
-				bos_shichapter
-				bos_hangars
-			}
-		}
-		VEG = {
-			history = "VEG_OWB_DESC"
-			ideology = ruler
-			ideas = {
 
-			}
-			focuses = {
-				veg_architect
-				veg_peoplesvegas
-				veg_checkereddevil
-			}
-		}
-		NCN = {
+		"NCN" = {
 			history = "NCN_OWB_DESC"
 			ideology = people
 			ideas = {
-				wastelandmilitias
+				ncn_idea_utah_caravan_profits
+				ncn_idea_church_education
+				ncn_idea_religious_immigrants
 			}
 			focuses = {
-				lds_josh
-				lds_merciful
-				lds_paradise
+				NCN_canaan_in_flames
+				NCN_decadence_clutches
+				NCN_canaan_in_glory
 			}
 		}
+
+		"WHT" = {
+			history = "WHT_OWB_DESC"
+			ideology = elites
+			ideas = {
+				WHT_savages
+			}
+			focuses = {
+				wht_glories_caeasar
+				wht_mormon_slaves
+				wht_strong_arms_white_legs
+			}
+		}
+
 		"ERB"={
 			history = "ERB_OWB_DESC"
 			ideology = ruler
@@ -82,113 +88,450 @@ bookmarks = {
 				enc_reform
 			}
 		}	
-		NEW = {
-			history = "NEW_OWB_DESC"
-			ideology = people
-			ideas = {
-			}
-			focuses = {
-				new_topdog
-				new_klamathdeal
-				new_mercmilitary
-			}
-		}
-		"HEA"={
-			minor = yes
-			history = "HEA_OWB_DESC"
+
+		"KHA" = {
+			history = "KHA_OWB_DESC"
 			ideology = ruler
 			ideas = {
-				hea_divided_leadership
-				hea_steam_power
-				hea_theocratic_elite_good_1
+				KHA_idea_khan_culture
+				KHA_idea_khan_warbands
+				khan_culture_mobilisation
 			}
 			focuses = {
-				hea_nf_age_of_steam
-				hea_nf_grand_cathedral
-				hea_nf_innocence_lost_deal
+				KHA_focus_avenge_bittersprings
+				KHA_focus_the_secrets_of_vault_22
+				KHA_focus_join_the_legion
 			}
 		}
-		"MOJ"={
+
+#		"BOS" = {
+#			minor = yes
+#			history = "BOS_OWB_DESC"
+#			ideology = intellectuals
+#			ideas = {
+#				bunkerblues
+#				paladins
+#			}
+#			focuses = {
+#				bos_wastelandconscripts
+#				bos_shichapter
+#				bos_hangars
+#			}
+#		}
+#
+#		"DES" = {
+#			minor = yes
+#			history = "DES_OWB_DESC"
+#			ideology = ruler
+#			ideas = {
+#				desertrangers
+#			}
+#			focuses = {
+#				des_steel
+#				des_pact
+#				des_treaty
+#			}
+#		}
+#
+#		"NEW" = {
+#			minor = yes
+#			history = "NEW_OWB_DESC"
+#			ideology = people
+#			ideas = {
+#			}
+#			focuses = {
+#				new_topdog
+#				new_klamathdeal
+#				new_mercmilitary
+#			}
+#		}
+#
+#		"VLT" = {
+#			minor = yes
+#			history = "VLT_OWB_DESC"
+#			ideology = intellectuals
+#			ideas = {
+#				courtyard
+#				vaultmed
+#				utopia
+#			}
+#			focuses = {
+#				vault_brain_4b
+#				vault_first_1
+#				vault_festus_1
+#			}
+#		}
+#
+#		"MOJ" = {
+#			minor = yes
+#			history = "MOJ_OWB_DESC"
+#			ideology = intellectuals
+#			ideas = {
+#				bunkerblues
+#			}
+#			focuses = {
+#				MOJ_what_remains
+#				MOJ_technology_raids
+#				MOJ_ncr_alliance
+#			}
+#		}
+#
+#		"WBH" = {
+#			minor = yes
+#			history = "WBH_OWB_DESC"
+#			ideology = elites
+#			ideas = {
+#				bunkerblues
+#			}
+#			focuses = {
+#				WBH_within_the_blizzard
+#				WBH_eradicate_the_mutants
+#				WBH_alaskan_expedition
+#			}
+#		}
+#
+#		"BRK" = {
+#			minor = yes
+#			history = "BRK_OWB_DESC"
+#			ideology = ruler
+#			ideas = {
+#				brk_raider_society
+#				brk_coastal_terror
+#			}
+#			focuses = {
+#				brk_nf_ruler_pol
+#				brk_nf_grand_moot
+#				brk_nf_elites_pol
+#			}
+#		}
+#
+#		"HEA" = {
+#			minor = yes
+#			history = "HEA_OWB_DESC"
+#			ideology = ruler
+#			ideas = {
+#				hea_divided_leadership
+#				hea_steam_power
+#				hea_theocratic_elite_good_1
+#			}
+#			focuses = {
+#				hea_nf_age_of_steam
+#				hea_nf_grand_cathedral
+#				hea_nf_innocence_lost_deal
+#			}
+#		}
+
+		"HGH" = {
 			minor = yes
-			history = "MOJ_OWB_DESC"
+			history = "HGH_OWB_DESC"
 			ideology = intellectuals
 			ideas = {
-				bunkerblues
+				utah_dirty_waters
 			}
 			focuses = {
-				MOJ_what_remains
-				MOJ_technology_raids
-				MOJ_ncr_alliance
+				utah_HGH_unique
+				utah_HGH_heaven_contested
+				utah_HGH_war_in_heaven
 			}
 		}
-		"WBH"={
+
+		"HAM" = {
 			minor = yes
-			history = "WBH_OWB_DESC"
-			ideology = elites
+			history = "HAM_OWB_DESC"
+			ideology = intellectuals
 			ideas = {
-				bunkerblues
+				utah_HAM_glass_production
 			}
 			focuses = {
-				WBH_within_the_blizzard
-				WBH_eradicate_the_mutants
-				WBH_alaskan_expedition
+				utah_HAM_unique
+				utah_HAM_supply_and_demand
+				utah_HAM_reward_loyal_customer
 			}
 		}
-		"BRK"={
+
+		"ANO" = {
 			minor = yes
-			history = "BRK_OWB_DESC"
-			ideology = ruler
+			history = "ANO_OWB_DESC"
+			ideology = intellectuals
 			ideas = {
-				brk_raider_society
-				brk_coastal_terror
+				utah_schism
 			}
 			focuses = {
-				brk_nf_ruler_pol
-				brk_nf_grand_moot
-				brk_nf_elites_pol
+				utah_ANO_unique
+				utah_ANO_galilee_fleet
+				utah_ANO_crusade_against_MUR
 			}
 		}
-		"TRL"={
+
+		"MUR" = {
+			minor = yes
+			history = "MUR_OWB_DESC"
+			ideology = people
+			ideas = {
+				utah_schism
+			}
+			focuses = {
+				utah_MUR_unique
+				utah_MUR_the_highest_chapel
+				utah_MUR_debate_of_ideas
+			}
+		}
+
+		"TRL" = {
 			minor = yes
 			history = "TRL_OWB_DESC"
 			ideology = ruler
 			ideas = {
+				trl_warband_without_a_home
+			}
+			focuses = {
+				trl_war_for_supremacy
+				trl_vengeancemaster
+				trl_mariposareborn
+			}
+		}
+
+		"MDT" = {
+			minor = yes
+			history = "MDT_OWB_DESC"
+			ideology = ruler
+			ideas = {
+				oregon_cannibal_widespread_cannibalism
+				mdt_artefacts_of_control
+			}
+			focuses = {
+				mdt_rise_of_the_gorgons
+				mdt_hypnotised_gecko_warriors
+				mdt_crowning_of_the_gorgon_queen
+			}
+		}
+
+		"BDT" = {
+			minor = yes
+			history = "BDT_OWB_DESC"
+			ideology = ruler
+			ideas = {
+				oregon_cannibal_widespread_cannibalism
+				bdt_odious_king
+				bdt_seraph_pilgrims
+			}
+			focuses = {
+				bdt_hail_to_the_king
+				bdt_road_warriors_of_the_eighty_four
+				bdt_listen_to_the_pilgrims
+			}
+		}
+
+		"MLT" = {
+			minor = yes
+			history = "MLT_OWB_DESC"
+			ideology = elites
+			ideas = {
+				mire_the_coral_court
+			}
+			focuses = {
+				mlt_sanity_lost
+				mlt_sanity_found
+				mlt_the_coral_court
+			}
+		}
+
+
+
+		"---" = {
+			history = "OTHER_OWB_DESC"
+		}
+
+		effect = {
+			randomize_weather = 12345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+	bookmark = {
+		name = "MEX_NAME"
+		desc = "MEX_DESC"
+		date = 2275.1.1.12
+		picture = "GFX_bookmark_selection_entry_mexico"
+		default_country = "RRG"
+		default = no
+
+		RRG = {
+			history = "RRG_OWB_DESC"
+			ideology = people
+			ideas = {
+				rrg_idea_texas_arms_fams
+				rrg_idea_paullus_raiders
+				rrg_idea_vencedores_night
+			}
+			focuses = {
+				rrg_mexican_unity
+				rrg_vindicta
+				rrg_tlaloc_broken_heart
+			}
+		}
+
+		ARM = {
+			history = "ARM_OWB_DESC"
+			ideology = ruler
+			ideas = {
+				arm_cartel_blues
+				arm_steps_towards_unity_1
+				arm_militia_blues
+			}
+			focuses = {
+				arm_northern_rivals
+				arm_order_from_chaos
+				arm_the_southern_threat
+			}
+		}
+
+		ATE = {
+			history = "ATE_OWB_DESC"
+			ideology = elites
+			ideas = {
+				aztlan_warfare
+				flw_the_flower_wars
+				aztlan_land_distribution
+			}
+			focuses = {
+				ate_jaguar_hunts
+				ate_speaker_people
+				ate_eagle_strikes
+			}
+		}
+
+		ITZ = {
+			history = "ITZ_OWB_DESC"
+			ideology = ruler
+			ideas = {
+				itz_idea_ejercito_factories
+				flw_the_flower_wars
+				itz_idea_secret_police
+			}
+			focuses = {
+				itz_death_or_glory
+				itz_awake_and_angry
+				itz_the_schemers_longevity
+			}
+		}
+
+		FFI = {
+			history = "FFI_OWB_DESC"
+			ideology = people
+			ideas = {
+				ffi_looking_for_fight
+				ffi_origin_idea
+			}
+			focuses = {
+				FFI_suneater_calls
+				FFI_great_rematch
+				FFI_war_mask
+			}
+		}
+
+		TLA = {
+			history = "TLA_OWB_DESC"
+			ideology = ruler
+			ideas = {
+				tla_the_guarantees
+
+				tla_memory_loss_idea
+			}
+			focuses = {
+				tla_prodigal_son
+				tla_putting_affairs_in_order
+				tla_final_acts
+			}
+		}
+
+		CAF = {
+			history = "CAF_OWB_DESC"
+			ideology = elites
+			ideas = {
+				caf_coffee_kings_idea
+				caf_ate_puppet_idea
+				caf_drugged_population_heavy_idea
 
 			}
 			focuses = {
-				firstholotape
-				warrenstirs
-				callofthefirst
+				caf_expand_our_operations
+				caf_negotiating_table
+				caf_business
 			}
 		}
-		"VLT"={
+
+		GDH = {
+			history = "GDH_OWB_DESC"
 			minor = yes
-			history = "VLT_OWB_DESC"
-			ideology = intellectuals
-			ideas = {
-				courtyard
-				vaultmed
-				utopia
-			}
-			focuses = {
-				vault_brain_4b
-				vault_first_1
-				vault_festus_1
-			}
-		}
-		DES = {
-			minor = yes
-			history = "DES_OWB_DESC"
 			ideology = ruler
 			ideas = {
-				desertrangers
 			}
 			focuses = {
-				des_steel
-				des_pact
-				des_treaty
 			}
 		}
+
+		BLO = {
+			history = "BLO_OWB_DESC"
+			minor = yes
+			ideology = ruler
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		GRH = {
+			history = "GRH_OWB_DESC"
+			minor = yes
+			ideology = ruler
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		PET = {
+			history = "PET_OWB_DESC"
+			minor = yes
+			ideology = ruler
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		SIN = {
+			history = "SIN_OWB_DESC"
+			minor = yes
+			ideology = ruler
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		TDT = {
+			history = "TDT_OWB_DESC"
+			minor = yes
+			ideology = people
+			ideas = {
+				tdt_idea_survivor_of_titans
+				tdt_idea_religious_freedoms
+			}
+			focuses = {
+			}
+		}
+
+		TVR = {
+			history = "TVR_OWB_DESC"
+			minor = yes
+			ideology = ruler
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
 		"---"={
 			history = "OTHER_OWB_DESC"
 		}
@@ -199,3 +542,4 @@ bookmarks = {
 		}
 	}
 }
+# vim: set ft=pdx ts=2 sw=2 tw=79 :

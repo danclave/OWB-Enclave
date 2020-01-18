@@ -263,68 +263,11 @@ ideas = {
 
 			}
 		}
-		ENC_officers = {
-			picture = enc_officers
-			allowed = {
-				always = no
-            }
 
-            allowed_civil_war = {
-				always = yes
-            }
-            removal_cost = -1
-			modifier = {
-				elites_drift = 0.05
-				max_planning = 0.2
-				army_leader_start_level = 2
-				army_leader_start_attack_level = 2
-				army_leader_start_planning_level = 2
-				army_leader_start_defense_level = 1
-				army_leader_start_logistics_level = 2
-				military_leader_cost_factor = 1
-			}
-		}
 
 ####################################################
 # REFORM
 ####################################################
-		ENC_reform_officers = {
-			picture = enc_officers
-			allowed = {
-				always = no
-            }
-
-            allowed_civil_war = {
-				always = yes
-            }
-            removal_cost = -1
-			modifier = {
-				max_planning = 0.1
-				army_leader_start_level = 1
-				army_leader_start_attack_level = 1
-				army_leader_start_planning_level = 1
-				army_leader_start_defense_level = 1
-				army_leader_start_logistics_level = 1
-				military_leader_cost_factor = 0.50
-			}
-		}
-		ENC_reform_general_staff = {
-			picture = enc_officers
-            removal_cost = -1
-			modifier = {
-				army_leader_start_level = 2
-				army_org_factor = 0.20
-				max_planning = 0.25
-				supply_consumption_factor = -0.10
-				max_command_power = 30
-					army_leader_start_level = 2
-				army_leader_start_attack_level = 2
-				army_leader_start_planning_level = 2
-				army_leader_start_defense_level = 2
-				army_leader_start_logistics_level = 2
-				military_leader_cost_factor = 1
-			}
-		}
 		atrocities = {
 
 			picture = caesar's_legacy_2
@@ -822,21 +765,6 @@ ideas = {
 			   intellectuals_drift = 0.1
 			}
 		}
-		ENC_officers_purged = {
-			picture = enc_officers
-			allowed = {
-				always = no
-            }
-
-            allowed_civil_war = {
-				always = yes
-            }
-            removal_cost = -1
-			modifier = {
-			   max_planning = 0.1
-			   army_leader_start_level = 1
-			}
-		}
 		ENC_new_patriotism = {
 			picture = victors_of_the_great_war #FIX
 			allowed = {
@@ -1084,48 +1012,7 @@ ideas = {
 				elites_drift = 0.05
 			}
 		}
-		ENC_officers_traitors = {
-			picture = enc_officers_traitors
-			allowed = {
-				always = no
-            }
 
-            allowed_civil_war = {
-				always = yes
-            }
-            removal_cost = -1
-			modifier = {
-				stability_factor = -0.05
-				elites_drift = 0.10
-				max_planning = 0.05
-				army_leader_start_level = 1
-				army_leader_start_attack_level = 1
-				army_leader_start_planning_level = 1
-				army_leader_start_defense_level = 1
-				army_leader_start_logistics_level = 1
-				military_leader_cost_factor = 1.5
-			}
-		}
-		ENC_officers_traitors_2 = {
-			picture = enc_officers_traitors
-			allowed = {
-				always = no
-            }
-
-            allowed_civil_war = {
-				always = yes
-            }
-            removal_cost = -1
-			modifier = {
-				stability_factor = -0.05
-				elites_drift = 0.05
-				max_planning = 0.03
-				army_leader_start_level = 1
-				army_leader_start_defense_level = 1
-				army_leader_start_logistics_level = 1
-				military_leader_cost_factor = 1
-			}
-		}
 
 		ENC_ncr_enclave_propaganda = {
 			picture = enc_radio
@@ -1223,23 +1110,7 @@ ideas = {
 
 			}
 		}
-
-		ENC_accepted_ghouls = {
-			picture = generic_research_bonus
-			allowed = {
-				always = no
-            }
-            allowed_civil_war = {
-				always = yes
-            }
-            removal_cost = -1
-			modifier = {
-				stability_factor = -0.05
-				war_support_factor = -0.05
-				conscription_factor = 0.05
-			}
-		}
-		ENC_accepted_ghouls_and_super_mutants = {
+		enc_mutant_law_both = {
 			picture = generic_research_bonus
 			allowed = {
 				always = no
@@ -2651,11 +2522,9 @@ ideas = {
             }
             removal_cost = -1
 			modifier = {
-					army_attack_factor = 0.25
+					army_attack_factor = 0.10
 					army_defence_factor = 0.10
-					army_org_factor = 0.20
-					army_morale_factor = 0.20
-					army_speed_factor = 0.2
+					army_org_factor = 0.15
 			}
 		}
 		ENC_scientists_buffed = {
@@ -2832,83 +2701,7 @@ ideas = {
 				defense_bonus_against = 0.2
 			}
 		}
-		ENC_officers_central = {
-			picture = enc_officers
-            removal_cost = -1
-			modifier = {
-				elites_drift = 0.1
-				army_leader_start_level = 3
-				# new
-				army_org_factor = 0.2
-				max_planning = 0.3
-				max_command_power = 15
-				army_leader_start_level = 2
-				army_leader_start_attack_level = 2
-				army_leader_start_planning_level = 3
-				army_leader_start_defense_level = 1
-				army_leader_start_logistics_level = 2
-				military_leader_cost_factor = 1
-			}
-		}
-		ENC_officers_central_2 = {
-			picture = enc_officers
-            removal_cost = -1
-			modifier = {
-				elites_drift = 0.1
-				army_leader_start_level = 3
-				# new
-				army_org_factor = 0.30
-				max_planning = 0.40
-				supply_consumption_factor = -0.15
-				max_command_power = 30
 
-				army_leader_start_level = 2
-				army_leader_start_attack_level = 3
-				army_leader_start_planning_level = 3
-				army_leader_start_defense_level = 1
-				army_leader_start_logistics_level = 2
-
-				military_leader_cost_factor = 1
-			}
-		}
-		ENC_officers_local = {
-			picture = enc_officers
-            removal_cost = -1
-			modifier = {
-				elites_drift = 0.1
-				max_planning = 0.1
-				army_leader_start_level = 3
-				# new
-				planning_speed = 0.25
-				army_speed_factor = 0.15
-
-				army_leader_start_level = 2
-				army_leader_start_attack_level = 2
-				army_leader_start_planning_level = 2
-				army_leader_start_defense_level = 1
-				army_leader_start_logistics_level = 3
-				military_leader_cost_factor = 0.50
-
-			}
-		}
-		ENC_officers_local_2 = {
-			picture = enc_officers
-            removal_cost = -1
-			modifier = {
-				elites_drift = 0.1
-				army_leader_start_level = 3
-				# new
-				planning_speed = 0.50
-				army_speed_factor = 0.15
-
-				army_leader_start_level = 2
-				army_leader_start_attack_level = 2
-				army_leader_start_planning_level = 2
-				army_leader_start_defense_level = 2
-				army_leader_start_logistics_level = 3
-				military_leader_cost_factor = 0.50
-			}
-		}
 		ENC_drop_training = {
 			picture = generic_air_bonus
             removal_cost = -1

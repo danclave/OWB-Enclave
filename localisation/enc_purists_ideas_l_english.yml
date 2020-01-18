@@ -108,9 +108,9 @@ enclave_governer_desc:0 "The Enclave has set up a governer to oversee this regio
 
 
 # GOV
-officer_law_enclave_officers: "Enclave Officers"
+officer_law_enclave_officers: "Veteran Officers"
 training_law_navarro_veterans: "Navarro Veterans"
-training_law_navarro_veterans_desc: "By appointing respected veterans that survived the fall of Navarro as instructors, we can use their experience to train a new generation of soldiers. Bare in mind that they will pass on their views as well as their skills."
+training_law_navarro_veterans_desc: "By appointing respected veterans that survived the fall of Navarro as instructors, we can use their experience to train a new generation of soldiers. Bare in mind that they will pass on their views as well as their skills.\n"
 training_law_enclave_academy: "Enclave Academy"
 training_law_enclave_academy_desc: "A specialized department will ensure that a new generation of Enclave soldiers will be the finest in the wastes."
 
@@ -125,3 +125,14 @@ hidden_economy_desc: "The Enclave does not trade with outside factions, as that 
 
 enc_press_reformer_propaganda: "Reformer Propaganda"
 enc_press_purist_propaganda: "Purist Propaganda"
+
+enc_mutant_law_none: "No Mutants Allowed"
+enc_mutant_law_none_desc: "The wasteland is pockmarked with the presence of those shaped and changed by radiation or other foul, militant sciences. For the purposes of our army, they must be considered unsafe and degenerate, and be denied service without exception. To do otherwise would be to put our whole army at risk.\n"
+
+enc_mutant_law_ghoul: "Ghouls Allowed"
+enc_mutant_law_ghoul_desc: "While many ghouls are feral creatures, there are those that are no less sentient than the rest of us. Considering their long lifespan, we should not ignore the possibility that some ghouls grew up and lived before the great war! Their extensive experience and expertise could benefit our nation greatly.\n"
+
+enc_mutant_law_both: "All Mutants Allowed"
+enc_mutant_law_both_desc: "While we have already declared ghouls American citizens, the step to accept their gargantuan cousins will be even more of a challenge. Still, their formiddable strength can certainly be used in the rebuilding of America.\n"
+
+officer_law_loyal_enclave_officers: "Loyal Officers"

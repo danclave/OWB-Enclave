@@ -47,10 +47,13 @@ set_country_flag = no_generic_manufacturer
 set_country_flag = coring_button_hidden
 set_country_flag = slavery_allowed
 set_country_flag = enclave_nation
-set_country_flag = manpower_laws_hidden
+
+set_country_flag = gov_unique_manpower_law
 set_country_flag = economic_laws_hidden
 set_country_flag = trade_laws_hidden
-
+set_country_flag = default_press_laws_banned 
+set_country_flag = default_slave_laws_banned
+set_country_flag = default_drug_laws
 
 set_variable = { enc_good_allignment = 0 }
 set_variable = { enc_evil_allignment = 0 }
@@ -242,8 +245,8 @@ add_ideas = outsider_law_none
 add_ideas = hidden_economy
 add_ideas = enc_disorganized_economy
 add_ideas = enc_press_none
-add_ideas = officer_law_enclave_officers
 add_ideas = training_law_navarro_veterans
+add_ideas = currency_none
 
 add_manpower = 500
 

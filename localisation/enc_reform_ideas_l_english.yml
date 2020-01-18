@@ -10,8 +10,8 @@ enc_radio_civilian_upgrade: "Civilian Broadcasting"
 enc_civil_society_idea: "A Civil Society"
 WBH_debuff: "Trolling Your Neighbors"
 enc_counterfeiting: "Counterfeiting"
-ENC_reform_officers: "Chiefs of Staff"
-ENC_reform_general_staff: "The Pentagon Reborn"
+enc_chiefs_of_staff: "Chiefs of Staff"
+enc_pentagon_reborn: "The Pentagon Reborn"
 enc_NCR_resistance: "Californian Resistance"
 enc_NCR_resistance2: "Reluctance to Serve"
 enc_NCR_power_struggle: "Anarchy"
@@ -114,8 +114,8 @@ ENC_reno_police: "New Reno Police"
 ENC_reno_police_corrupt: "Corrupt New Reno Police"
 Enc_Justice: "Department of Justice"
 ENC_FBI: "The Federal Bureau of Investigations"
-ENC_accepted_ghouls_and_super_mutants:0 "Accepted Ghouls and Super Mutants"
-ENC_accepted_ghouls: "Accepted Ghouls"
+enc_mutant_law_both:0 "Accepted Ghouls and Super Mutants"
+enc_mutant_law_ghoul: "Accepted Ghouls"
 
 ENC_begun_integration: "Begun Integration"
 
@@ -233,6 +233,13 @@ collapsed_trade_desc: "Caravan routes lay idle, as merchants fear whether their 
 enc_press_entertainment: "Entertainment Stations"
 enc_press_none: "No broadcasts"
 
+enc_limited_stimulants: "Limited Stimulants"
+enc_limited_stimulants_desc: "The use of carefully managed combat stimulants can help our troops fight more fiercly, if at the cost of some brain cells."
+
+enc_heavy_stimulants: "Heavy Stimulants"
+enc_heavy_stimulants_desc: "These FEV based combat drugs will help us push our soldiers to the limit of human strength, speed and ferocity."
+
+currency_none: "No Currency"
 ###################################
 # PEOPLE
 ###################################

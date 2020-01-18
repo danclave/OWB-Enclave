@@ -203,12 +203,12 @@ enc_break_the_tribe_desc:0 "Hard as it may to believe, these tribals are America
 ENC_scientists_traitors:0 "Treacherous Scientists"
 ENC_scientists_traitors_desc:0 "Many of our best and brightest were once part of the secret projects performed at Navarro and the rig. For this, they were persecuted relentlessly after the fall of Navarro. None of them have forgotten this, few have forgiven it."
 ENC_officers_traitors:0 "Treacherous Officers"
-ENC_officers_traitors_desc:0 "The Purists have many dedicated loyalists in the ranks of our mid to high level military leadership. We must tread carefully."
+ENC_officers_traitors_desc: "The Purists have many dedicated loyalists in the ranks of our mid to high level military leadership. We must tread carefully.\n"
 
 ENC_scientists_traitors_2:0 "Treacherous Scientists"
 ENC_scientists_traitors_2_desc:0 "Many of our best and brightest were once part of the secret projects performed at Navarro and the rig. For this, they were persecuted relentlessly after the fall of Navarro. None of them have forgotten this, few have forgiven it."
 ENC_officers_traitors_2:0 "Treacherous Officers"
-ENC_officers_traitorss_2_desc:0 "The Purists have many dedicated loyalists in the ranks of our mid to high level military leadership. We must tread carefully."
+ENC_officers_traitorss_2_desc: "The Purists have many dedicated loyalists in the ranks of our mid to high level military leadership. We must tread carefully.\n"
 
 enc_yakuza_enforce_american_culture:0 "Enforce American Culture"
 enc_yakuza_enforce_american_culture_desc:0 "The Yakuza ape a vanished Nippon, but we know they're really Americans.  They just need to be... reminded."

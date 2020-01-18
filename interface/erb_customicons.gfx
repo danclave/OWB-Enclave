@@ -983,10 +983,6 @@ spriteTypes = {
             name = "GFX_goal_enc_wip"
  		    texturefile = "gfx/interface/goals/enc_wip.dds"
  	    } 
-        SpriteType = {#erbbos.pdn
-            name = "GFX_goal_erbbos.pdn"
- 		    texturefile = "gfx/interface/goals/erbbos.pdn.dds"
- 	    } 
         SpriteType = {#flag_burn_BOS
             name = "GFX_goal_flag_burn_BOS"
  		    texturefile = "gfx/interface/goals/flag_burn_BOS.dds"
@@ -1070,6 +1066,10 @@ spriteTypes = {
         SpriteType = {#enc_broadcasting
             name = "GFX_idea_enc_broadcasting"
  		    texturefile = "gfx/interface/ideas/enc_broadcasting.dds"
+ 	    } 
+        SpriteType = {#enc_chiefs_of_staff
+            name = "GFX_idea_enc_chiefs_of_staff"
+ 		    texturefile = "gfx/interface/ideas/enc_chiefs_of_staff.dds"
  	    } 
         SpriteType = {#enc_completed_integration
             name = "GFX_idea_enc_completed_integration"
@@ -1175,6 +1175,10 @@ spriteTypes = {
             name = "GFX_idea_enc_manpower_remnants_disorganized"
  		    texturefile = "gfx/interface/ideas/enc_manpower_remnants_disorganized.dds"
  	    } 
+        SpriteType = {#enc_no_currency
+            name = "GFX_idea_enc_no_currency"
+ 		    texturefile = "gfx/interface/ideas/enc_no_currency.dds"
+ 	    } 
         SpriteType = {#enc_nuka_cola
             name = "GFX_idea_enc_nuka_cola"
  		    texturefile = "gfx/interface/ideas/enc_nuka_cola.dds"
@@ -1190,6 +1194,10 @@ spriteTypes = {
         SpriteType = {#enc_pa_production
             name = "GFX_idea_enc_pa_production"
  		    texturefile = "gfx/interface/ideas/enc_pa_production.dds"
+ 	    } 
+        SpriteType = {#enc_pentagon
+            name = "GFX_idea_enc_pentagon"
+ 		    texturefile = "gfx/interface/ideas/enc_pentagon.dds"
  	    } 
         SpriteType = {#enc_plague
             name = "GFX_idea_enc_plague"
@@ -1314,6 +1322,14 @@ spriteTypes = {
         SpriteType = {#lynette
             name = "GFX_idea_lynette"
  		    texturefile = "gfx/interface/ideas/lynette.dds"
+ 	    } 
+        SpriteType = {#officer_law_enclave_officers
+            name = "GFX_idea_officer_law_enclave_officers"
+ 		    texturefile = "gfx/interface/ideas/officer_law_enclave_officers.dds"
+ 	    } 
+        SpriteType = {#officer_law_loyal_enclave_officers
+            name = "GFX_idea_officer_law_loyal_enclave_officers"
+ 		    texturefile = "gfx/interface/ideas/officer_law_loyal_enclave_officers.dds"
  	    } 
         SpriteType = {#orion_moreno
             name = "GFX_idea_orion_moreno"

@@ -343,5 +343,25 @@ spriteTypes = {
 			looping = yes
 			play_on_show = yes
 		}
+
+		################################
+		# IDEOLOGY
+		################################
+		spriteType = {
+			name = "GFX_ideology_ERB_people_group"
+			texturefile = "gfx/interface/ideologies/ERB_people.dds"
+		}
+		spriteType = {
+			name = "GFX_ideology_ERB_intellectuals_group"
+			texturefile = "gfx/interface/ideologies/ERB_intellectuals.dds"
+		}
+		spriteType = {
+			name = "GFX_ideology_ERB_elites_group"
+			texturefile = "gfx/interface/ideologies/ERB_elites.dds"
+		}
+		spriteType = {
+			name = "GFX_ideology_ERB_ruler_group"
+			texturefile = "gfx/interface/ideologies/ERB_ruler.dds"
+		}
 	}
 }

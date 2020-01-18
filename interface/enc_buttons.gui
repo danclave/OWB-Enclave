@@ -98,7 +98,7 @@ guiTypes = {
 	}
 	containerWindowType = { # legitimacy
 		name = "legitimacy_container"
-		position = { x = 885 y = 4 }
+		position = { x = 1073 y = 4 }
 
 		buttonType ={
 			name ="legitimacy_bg"
