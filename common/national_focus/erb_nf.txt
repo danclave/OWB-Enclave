@@ -1456,7 +1456,7 @@ focus_tree = {
 
 	focus = {#Purists - Solutions
 	id = enc_solution_to_mutant_question
-	icon = GFX_goal_NEW_the_old_world
+	icon = GFX_goal_generic_focus_magazine_gunsandbullets_doomsday
 	x = -1
 	y = 1
 	ai_will_do = { factor = 1 }
@@ -2755,6 +2755,8 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = 100
 			country_event = { id = enc_reformers.81 }
+			set_variable = { caps_expense_modifier = 1 }
+			custom_effect_tooltip = enc_federal_reserve_tt
 		}
 	}
 	focus = {#REBUILDING - The US dollar
@@ -5646,7 +5648,7 @@ focus = {#NEVADA - second city
 		}
 		select_effect  = { army_experience = -100 }
 		cost = 5.8
-		completion_reward = { 
+		completion_reward = {
 			# todo description
 		}
 	}
@@ -5807,7 +5809,7 @@ focus = {#NEVADA - second city
 	y = 1
 	cost = 5.8
 	completion_reward = {
-		
+
 	}
 }
 
@@ -6558,6 +6560,7 @@ focus = {#NEVADA - second city
 		cost = 8.6
 		completion_reward = {
 			add_ideas = tla_efficiency_code2
+			add_ideas = robotic_army_purist
 		}
 	}
 

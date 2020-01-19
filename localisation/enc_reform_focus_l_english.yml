@@ -293,6 +293,7 @@ enc_radio_civilian_music_desc:0 "'Country roads, take me home, to the place I be
 
 enc_federal_reserve:0 "Revive The Federal Reserve"
 enc_federal_reserve_desc:0 "The Reunited States is strong enough to pursue something unheard of since the Great War... a monetary policy."
+enc_federal_reserve_tt: "\n§MReduces your expenses as you restore the economy.§!"
 
 enc_epa:0 "Fund The EPA"
 enc_epa_desc:0 "We need to preserve what remains of our nature and preserve the planet for future generations.  Plus, we'll gain popular support doing so."
