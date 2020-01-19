@@ -2794,6 +2794,9 @@ country_event = { #81 - Economic Policy
 			remove_idea = currencygenericcap
 			add_idea = currencyusd
 		}
+		hidden_effect = {
+			news_event = { id = enc_reformers.357 days = 100 }
+		}
 	}
 	option = { #	NCRD
 		name = enc_reformers.81.b
@@ -8909,49 +8912,50 @@ country_event = { #300 - state protests!
 		}
 		add_stability = -0.05
 		add_war_support = -0.05
-		random_list = {
-			50 = {
-			}			# todo add tooltip
-			50 = {
-				country_event = {
-					id = enc_reformers.304
-				}				# state protest turns into riot!}
-			}
-		}
-		option = { # Meaningless placation
-			name = enc_reformers.300.c
-			custom_effect_tooltip = enc_reformers.300.b.tt
-			trigger = {
-				has_country_flag = leader_charismatic
-			}
 			random_list = {
-				75 = {
-				}				# todo add tooltip
-				25 = {
+				50 = {
+				}			# todo add tooltip
+				50 = {
 					country_event = {
 						id = enc_reformers.304
-					}					# state protest turns into riot!
+					}				# state protest turns into riot!}
 				}
 			}
-			custom_effect_tooltip = leader_charismatic_tt
+	}
+	option = { # Meaningless placation
+		name = enc_reformers.300.c
+		custom_effect_tooltip = enc_reformers.300.b.tt
+		trigger = {
+			has_country_flag = leader_charismatic
 		}
-		option = { # Meet their demands
-			name = enc_reformers.300.dd
-			comply_with_protests = yes
-		}
-		option = { # We have bigger problems, people!
-			name = enc_reformers.300.e
-			trigger = {
-				always = no				# todo change
-				# war with legion?
-				# FEV plague?
-				# major war?
-				# todo unlock law? Make promise to take law next? In the form of a timed decision?
+		random_list = {
+			75 = {
+			}				# todo add tooltip
+			25 = {
+				country_event = {
+					id = enc_reformers.304
+				}					# state protest turns into riot!
 			}
-			# todo add complete effect with minor effects
 		}
+		custom_effect_tooltip = leader_charismatic_tt
+	}
+	option = { # Meet their demands
+		name = enc_reformers.300.dd
+		comply_with_protests = yes
+	}
+	option = { # We have bigger problems, people!
+		name = enc_reformers.300.e
+		trigger = {
+			always = no				# todo change
+			# war with legion?
+			# FEV plague?
+			# major war?
+			# todo unlock law? Make promise to take law next? In the form of a timed decision?
+		}
+		# todo add complete effect with minor effects
 	}
 }
+
 
 country_event = { #301 - state protest turns into massacre!
 	id = enc_reformers.301
@@ -11502,6 +11506,33 @@ news_event = { #356 - Taxes
 		name = enc_reformers.356.a
 		add_to_variable = { caps_expense_modifier = 1 }
 		custom_effect_Tooltip = enc_reformers.356.a_tt
+	}
+}
+news_event = { #357 - The Dollar is Back
+	id = enc_reformers.357
+	title = enc_reformers.357.t
+	desc = enc_reformers.357.d
+	picture = GFX_event_prewar_money
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = { #wooo
+		name = enc_reformers.357.a
+		every_country = {
+			limit = {
+				is_mexican = no
+				not = {
+					tag = CES
+
+				}
+				has_government = people
+			}
+			set_country_flag = accept_usdollar
+			swap_ideas = {
+				remove_idea = currencygenericcap
+				add_idea = currencyusd
+			}
+			add_opinion_modifier = { target = ERB modifier = dollarization }
+		}
 	}
 }
 

@@ -1480,7 +1480,7 @@ ENC_nation_building = {
 			}
 			change_legitimacy = yes
 			set_temp_variable = { caps_to_add = -300 }
-				add_caps = yes
+			add_caps = yes
 		}
 	}
 	ENC_sierra_madre_expedition = {
@@ -2044,10 +2044,10 @@ ENC_pacific_commonwealth1 = {
 		visible = {
 			tag = ERB
 			has_completed_focus = enc_pacific_commonwealth
-			country_exists = BPT
+			country_exists = BDT
 		}
 		complete_effect = {
-			BPT = {
+			BDT = {
 				every_owned_state = {
 					add_core_of = KLA
 				}
@@ -2056,7 +2056,7 @@ ENC_pacific_commonwealth1 = {
 			ERB = {
 				create_wargoal = {
 					type = annex_everything
-					target = BPT
+					target = BDT
 				}
 			}
 		}
@@ -2389,6 +2389,11 @@ ENC_california_reconstruction = {
 		allowed = {
 			original_tag = ERB
 		}
+		available = {
+			set_temp_variable = { caps_diff = COST }
+			get_caps_difference = yes
+			check_variable = { caps_display_temp > 299 }
+		}
 		visible = {
 			153 = {
 				is_fully_controlled_by = ERB
@@ -2396,6 +2401,8 @@ ENC_california_reconstruction = {
 		}
 		complete_effect = {
 			add_ideas = Enc_Irrigation
+			set_temp_variable = { caps_to_add = -300 }
+			add_caps = yes
 		}
 	}
 	ENC_new_dayglow = {
@@ -2409,6 +2416,11 @@ ENC_california_reconstruction = {
 		allowed = {
 			original_tag = ERB
 		}
+		available = {
+			set_temp_variable = { caps_diff = COST }
+			get_caps_difference = yes
+			check_variable = { caps_display_temp > 299 }
+		}
 		visible = {
 			63 = {
 				is_fully_controlled_by = ERB
@@ -2418,9 +2430,12 @@ ENC_california_reconstruction = {
 			country_event = {
 				id = enc_reformers.136
 			}
+			set_temp_variable = { caps_to_add = -300 }
+			add_caps = yes
 		}
 	}
 }
+
 
 ENC_northwest_reconstruction = {
 	ENC_hanford = {
@@ -2435,6 +2450,12 @@ ENC_northwest_reconstruction = {
 			351 = {
 				is_owned_and_controlled_by = ERB
 			}
+			set_temp_variable = { caps_diff = COST }
+			get_caps_difference = yes
+			check_variable = { caps_display_temp > 199 }
+		}
+		available = {
+
 		}
 		visible = {
 			original_tag = ERB
@@ -2443,6 +2464,8 @@ ENC_northwest_reconstruction = {
 			country_event = {
 				id = enc_reformers.137
 			}
+			set_temp_variable = { caps_to_add = -200 }
+			add_caps = yes
 		}
 	}
 	ENC_port_maw = {
@@ -2457,6 +2480,9 @@ ENC_northwest_reconstruction = {
 			37 = {
 				is_owned_and_controlled_by = ERB
 			}
+			set_temp_variable = { caps_diff = COST }
+			get_caps_difference = yes
+			check_variable = { caps_display_temp > 99 }
 		}
 		visible = {
 			original_tag = ERB
@@ -2473,6 +2499,8 @@ ENC_northwest_reconstruction = {
 					instant_build = yes
 				}
 			}
+			set_temp_variable = { caps_to_add = -100 }
+			add_caps = yes
 		}
 	}
 	ENC_troll_warren = {
@@ -2508,6 +2536,9 @@ ENC_northwest_reconstruction = {
 			84 = {
 				is_owned_and_controlled_by = ERB
 			}
+			set_temp_variable = { caps_diff = COST }
+			get_caps_difference = yes
+			check_variable = { caps_display_temp > 99 }
 		}
 		visible = {
 			original_tag = ERB
@@ -2516,6 +2547,8 @@ ENC_northwest_reconstruction = {
 			country_event = {
 				id = enc_reformers.140
 			}
+			set_temp_variable = { caps_to_add = -100 }
+			add_caps = yes
 			84 = {
 				set_state_name = "Seattle"
 				add_building_construction = {
@@ -2561,6 +2594,9 @@ ENC_rockies_reconstruction = {
 			44 = {
 				is_owned_and_controlled_by = ERB
 			}
+			set_temp_variable = { caps_diff = COST }
+			get_caps_difference = yes
+			check_variable = { caps_display_temp > 99 }
 		}
 		visible = {
 			original_tag = ERB
@@ -2569,6 +2605,9 @@ ENC_rockies_reconstruction = {
 			country_event = {
 				id = enc_reformers.157
 			}
+			set_temp_variable = { caps_diff = COST }
+			get_caps_difference = yes
+			check_variable = { caps_display_temp > 99 }
 		}
 	}
 	ENC_mormons = {
@@ -2634,38 +2673,7 @@ ENC_starting_companies = {
 			add_ideas = medtek
 		}
 	}
-	ENC_crimson_trucking = { # unused
-		cost = 25
-		days_remove = 10
-		ai_will_do = {
-			factor = 10
-		}
-		fire_only_once = yes
-		available = {
-			has_completed_focus = enc_automobiles
-		}
-		visible = {
-			original_tag = ERB
-		}
-		complete_effect = {
-			add_ideas = enc_crimson_truckers			# used for crimson event
-		}
-	}
-	ENC_gunrunners = {
-		icon = decision_plasma
-		cost = 25
-		days_remove = 10
-		ai_will_do = {
-			factor = 10
-		}
-		fire_only_once = yes
-		visible = {
-			original_tag = ERB
-		}
-		complete_effect = {
-			add_ideas = ENC_gunrun
-		}
-	}
+
 }
 
 ENC_deseret = {

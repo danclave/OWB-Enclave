@@ -1361,114 +1361,114 @@ focus_tree = {
 	####################################
 	# The Mutant Question
 	####################################
-	focus = {#Purists - The Mutant Question
-		id = enc_the_mutant_question_purists
-		icon = GFX_goal_enc_justice
-		x = 9
-		y = 1
-		ai_will_do = { factor = 1 }
-		prerequisite = {  }
-		relative_position_id = enc_vlt_power
-		cost = 1.45
-		available = {
-			has_completed_focus = enc_purity
-			has_completed_focus = enc_purge_opposition
-			has_completed_focus = enc_poison_bear
-			NCR = { exists = NO }
-		}
-		completion_reward = {
-			country_event = { id = enc_reformers.77 }
-		}
-	}
-	focus = {#Purists - Subjugate
-		id = enc_subjugation
-		icon = GFX_goal_enc_purity
-		x = -3
-		y = 1
-		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_the_mutant_question_purists }
-		relative_position_id = enc_the_mutant_question_purists
-		mutually_exclusive = {
-			focus = enc_expand_human_definition
-		}
-		mutually_exclusive = {
-			focus = enc_segregation
-		}
-		cost = 1.45
-		completion_reward = {
-			country_event = { id = enc_reformers.77 }
-		}
-	}
-	focus = {#Purists - Vitamins
-		id = enc_vitamins
-		icon = GFX_goal_generic_mentats
-		x = -1
-		y = 1
-		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_subjugation }
-		relative_position_id = enc_subjugation
-		cost = 1.45
-		completion_reward = {
-			country_event = { id = enc_reformers.77 }
-		}
-	}
-	focus = {#Mesmetron
-		id = enc_mesmerizing
-		icon = GFX_goal_generic_mesmetron
-		x = 0
-		y = 1
-		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_vitamins }
-		relative_position_id = enc_vitamins
-		cost = 1.45
+#	focus = {#Purists - The Mutant Question
+#		id = enc_the_mutant_question_purists
+#		icon = GFX_goal_enc_justice
+#		x = 9
+#		y = 1
+#		ai_will_do = { factor = 1 }
+#		prerequisite = {  }
+#		relative_position_id = enc_vlt_power
+#		cost = 1.45
+##		available = {
+#			has_completed_focus = enc_purity
+#			has_completed_focus = enc_purge_opposition
+#			has_completed_focus = enc_poison_bear
+#			NCR = { exists = NO }
+#		}
+#		completion_reward = {
+#			country_event = { id = enc_reformers.77 }
+#####		}
+#	}
+##	focus = {#Purists - Subjugate
+#		id = enc_subjugation
+#		icon = GFX_goal_enc_purity
+#		x = -3
+#		y = 1
+#		ai_will_do = { factor = 1 }
+#		prerequisite = { focus = enc_the_mutant_question_purists }
+#		relative_position_id = enc_the_mutant_question_purists
+#		mutually_exclusive = {
+#			focus = enc_expand_human_definition
+#		}
+##		mutually_exclusive = {
+#			focus = enc_segregation
+#		}
+#		cost = 1.45
+#		completion_reward = {
+###			country_event = { id = enc_reformers.77 }
+#		}
+#	}
+#	focus = {#Purists - Vitamins
+#		id = enc_vitamins
+#		icon = GFX_goal_generic_mentats
+#		x = -1
+#		y = 1
+##		ai_will_do = { factor = 1 }
+#		prerequisite = { focus = enc_subjugation }
+#		relative_position_id = enc_subjugation
+#		cost = 1.45
+#		completion_reward = {
+#			country_event = { id = enc_reformers.77 }
+#		}
+#	}
+#	focus = {#Mesmetron
+#		id = enc_mesmerizing
+#		icon = GFX_goal_generic_mesmetron
+#		x = 0
+#		y = 1
+#		ai_will_do = { factor = 1 }
+#		prerequisite = { focus = enc_vitamins }
+##		relative_position_id = enc_vitamins
+##		cost = 1.45
+#
+#		completion_reward = {
+###
+#		}
+#	}
+#	focus = {#Purists - Papers Please
+#		id = enc_documents
+#		icon = GFX_goal_enc_sign
+##		x = 1
+#		y = 1
+#		ai_will_do = { factor = 1 }
+##		prerequisite = { focus = enc_subjugation }
+#		relative_position_id = enc_subjugation
+##		cost = 1.45
+#		completion_reward = {
+#			country_event = { id = enc_reformers.77 }
+#		}
+##	}
+#	focus = {#Purists - Eyebot Spies
+#		id = enc_eyebots_everywhere
+#		icon = GFX_goal_enc_eyebot
+#		x = 0
+##		y = 1
+#		ai_will_do = { factor = 1 }
+#		prerequisite = { focus = enc_documents }
+##		relative_position_id = enc_documents
+#		cost = 1.45
+#		completion_reward = {
+#			country_event = { id = enc_reformers.77 }
+##		}
+#	}
 
-		completion_reward = {
 
-		}
-	}
-	focus = {#Purists - Papers Please
-		id = enc_documents
-		icon = GFX_goal_enc_sign
-		x = 1
-		y = 1
-		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_subjugation }
-		relative_position_id = enc_subjugation
-		cost = 1.45
-		completion_reward = {
-			country_event = { id = enc_reformers.77 }
-		}
-	}
-	focus = {#Purists - Eyebot Spies
-		id = enc_eyebots_everywhere
-		icon = GFX_goal_enc_eyebot
-		x = 0
-		y = 1
-		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_documents }
-		relative_position_id = enc_documents
-		cost = 1.45
-		completion_reward = {
-			country_event = { id = enc_reformers.77 }
-		}
-	}
-
-
-	focus = {#Purists - Solutions
-	id = enc_solution_to_mutant_question
-	icon = GFX_goal_generic_focus_magazine_gunsandbullets_doomsday
-	x = -1
-	y = 1
-	ai_will_do = { factor = 1 }
-	prerequisite = { focus = enc_eyebots_everywhere }
-	prerequisite = { focus = enc_mesmerizing }
-	relative_position_id = enc_eyebots_everywhere
-
-	cost = 1.45
-	completion_reward = {
-		country_event = { id = enc_reformers.77 }
-	}
-}
+#	focus = {#Purists - Solutions
+#	id = enc_solution_to_mutant_question
+#	icon = GFX_goal_generic_focus_magazine_gunsandbullets_doomsday
+###	x = -1
+#	y = 1
+#	ai_will_do = { factor = 1 }
+#	prerequisite = { focus = enc_eyebots_everywhere }
+#	prerequisite = { focus = enc_mesmerizing }
+#	relative_position_id = enc_eyebots_everywhere
+##
+#	cost = 1.45
+###	completion_reward = {
+#		country_event = { id = enc_reformers.77 }
+#	}
+#}
 
 
 
@@ -3964,6 +3964,25 @@ focus = {#Legion Border
 			}
 		}
 	}
+	focus = {#Broken Coast
+		id = enc_into_texas
+		icon = GFX_goal_texclave
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_broken_coast
+		prerequisite = {
+			focus = enc_broken_coast
+					}
+		x = 0
+		y = 1
+		cost = 5.8
+		completion_reward = {
+			TAA = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
 
 
 	focus = {#Mexico
@@ -4284,7 +4303,6 @@ focus = {#Legion Border
 		}
 		completion_reward = {
 			custom_effect_tooltip = enc_Civil_War.tt
-			set_rule = { can_be_called_to_war = yes}
 
 		}
 	}
@@ -4647,7 +4665,7 @@ focus = {#Legion Border
 				value = 0.05
 			}
 			change_legitimacy = yes
-			add_ideas = agarianidyll
+			add_ideas = ncn_idea_economic_growth
 		}
 	}
 
@@ -4686,9 +4704,9 @@ focus = {#NEVADA - Legislature
 				var = legitimacy_change_var
 				value = 0.15
 			}
-			change_legitimacy = yes
-		}
+		change_legitimacy = yes
 	}
+}
 focus = {#NEVADA - Judiciary
 		id = ENC_judiciary_nevada
 		icon = GFX_goal_enc_judiciary_nevada
@@ -5249,7 +5267,7 @@ focus = {#NEVADA - second city
 					add_core_of = KLA
 				}
 			}
-			BPT = {
+			BDT = {
 				every_owned_state = {
 					add_core_of = KLA
 				}
@@ -5708,7 +5726,7 @@ focus = {#NEVADA - second city
 				planning_skill = 3
 				logistics_skill = 4
 				traits = {
-					offensive_doctrine old_guard
+					strong_trait rooted_trait savage_leader_trait
 				}
 			}
 		}

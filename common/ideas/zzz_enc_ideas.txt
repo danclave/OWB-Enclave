@@ -2759,7 +2759,7 @@ ideas = {
 		}
 	}
 
-	tank_manufacturer = {
+	vehicle_restoration_advisor = {
 		ENC_PA_quanitity = {
 			picture = enc_designer_PA_2
 			allowed = {
@@ -2868,8 +2868,10 @@ ideas = {
 		}
 	}
 
-	industrial_concern = {
 
+
+	engineering_firm = {
+		designer = yes
 		enclave_industrial_concern = {
 
 			picture = enc_chemical_corps
@@ -2908,12 +2910,8 @@ ideas = {
 				electronics = 0.10
 			}
 
-			traits = { electronics_concern }
+			traits = { electronics_concern_pre_war }
 		}
-	}
-
-	engineering_firm = {
-		designer = yes
 		enclave_plasma_equipment_manufacturer = {
 
 			picture = enc_designer_plasma

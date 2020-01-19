@@ -15,4 +15,5 @@ opinion_modifiers = {
 	enc_support_opinion = { value = 80 }
 	sabotaged_relations = { value = -400 }
 	enc_doomed_us_all = { value = -50 }
+	dollarization = { value = 50 trade = yes }
 }
