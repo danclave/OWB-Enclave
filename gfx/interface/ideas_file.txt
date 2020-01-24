@@ -6,6 +6,7 @@
 # GFX_idea_d_henry
 # GFX_idea_enc_broadcasting
 # GFX_idea_enc_chiefs_of_staff
+# GFX_idea_enc_civilian_economy
 # GFX_idea_enc_completed_integration
 # GFX_idea_enc_economy_collapsed
 # GFX_idea_enc_education
@@ -29,6 +30,7 @@
 # GFX_idea_ENC_legitimacy_low
 # GFX_idea_ENC_legitimacy_medium
 # GFX_idea_ENC_legitimacy_none
+# GFX_idea_enc_low_economic_mobilisation
 # GFX_idea_enc_mandatory_patriotism
 # GFX_idea_enc_manpower_final_line
 # GFX_idea_enc_manpower_remnants_disorganized
@@ -36,6 +38,7 @@
 # GFX_idea_enc_nuka_cola
 # GFX_idea_enc_officers
 # GFX_idea_enc_officers_traitors
+# GFX_idea_enc_partial_economic_mobilisation
 # GFX_idea_enc_pa_production
 # GFX_idea_enc_pentagon
 # GFX_idea_enc_plague
@@ -55,7 +58,9 @@
 # GFX_idea_enc_slave_labour
 # GFX_idea_enc_smugging
 # GFX_idea_enc_super_soldiers
+# GFX_idea_enc_tot_economic_mobilisation
 # GFX_idea_enc_vaccinations
+# GFX_idea_enc_war_economy
 # GFX_idea_enc_wright
 # GFX_idea_enc__idea_fist
 # GFX_idea_erb_veronica

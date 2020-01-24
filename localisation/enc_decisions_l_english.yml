@@ -44,6 +44,9 @@ ENC_reveal_to_ncr: "Reveal Ourselves to the NCR"
 ENC_reveal_to_ncr_desc: "We cannot hide from the NCR forever, but we may be able to prevent war by revealing us at an opportune time. With an army of mad men on their borders, they may think twice about attacking us if we are strong enough. A few sympathetic voices in their government could also help.  Of course, we'll have to renounce our claim to be the United States government in order to forge a peace."
 ENC_reveal_to_ncr.tt: "\nRequires more than §Y30% legitimacy§!"
 
+ENC_bribe_NCR_officials: "Bribe NCR officials"
+ENC_bribe_NCR_officials: "Our operatives can grease a few palms in order to ensure reports of suspicious activity in the Nevada desert don't reach the upper levels of NCR government."
+
 # CRISIS
 erb_plague_victim: "[FROM.GetName] falls to the plague!"
 erb_plague_victim_desc: "The day may come when the courage of men shall fail, and for [FROM.GetName], that day came when it was hit with the Mormon Plague. They could only endure so much, but before they accepted Caesar's offer of peace in return for a cure."

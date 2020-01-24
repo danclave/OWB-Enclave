@@ -1,3 +1,4 @@
+@BRIBE_COST = 200
 ###############################
 # SHARED
 ###############################
@@ -571,6 +572,34 @@ ENC_NCR_hiding = {
 			custom_effect_tooltip = ncr_suspicious_clr_tt
 			custom_effect_tooltip = ENC_reveal_to_ncr.tt
 		}
+	}
+	ENC_bribe_NCR_officials = {	
+		icon = generic_political_discourse
+		cost = 0
+		allowed = {
+			original_tag = ERB
+		}
+		visible = {
+			has_country_flag = ncr_suspicious
+		}
+		available = {
+			set_temp_variable = { caps_diff = @BRIBE_COST }
+			multiply_temp_variable = {
+				caps_diff = -1
+			}
+			get_caps_difference = yes
+			check_variable = { caps_display_temp > 0 }
+		}
+		complete_effect = {
+			set_temp_variable = {
+				suspicion_change_var = -10
+			}
+			change_suspicion = YES
+			set_temp_variable = { caps_to_add = @BRIBE_COST }
+			multiply_temp_variable = { caps_to_add = -1 }
+			add_caps = yes
+		} 
+		days_re_enable = 160
 	}
 }
 

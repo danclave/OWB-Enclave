@@ -578,7 +578,7 @@ ENC_infiltrating_NCR = {
 				var = suspicion_change_var
 				value = -10
 			}
-			change_suspicion = YES
+			change_suspicion = YES 
 		}
 	}
 	ENC_Civil_War = {

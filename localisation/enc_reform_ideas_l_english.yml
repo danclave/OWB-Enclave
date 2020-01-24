@@ -240,6 +240,14 @@ enc_heavy_stimulants: "Heavy Stimulants"
 enc_heavy_stimulants_desc: "These FEV based combat drugs will help us push our soldiers to the limit of human strength, speed and ferocity."
 
 currency_none: "No Currency"
+
+
+enc_civilian_economy: "Civilian Economy"
+enc_low_economic_mobilisation: "Early Mobilization"
+enc_partial_economic_mobilisation: "Partial Mobilization"
+enc_war_economy: "War Economy"
+enc_tot_economic_mobilisation: "Total Mobilization"
+
 ###################################
 # PEOPLE
 ###################################
