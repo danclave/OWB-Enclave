@@ -3452,86 +3452,7 @@ country_event = { #103 - Drugs
 	}
 }
 
-country_event = { #104 - Followers of Apocolypse
-	id = enc_reformers.104
-	title = enc_reformers.104.t
-	desc = enc_reformers.104.d
-	picture = GFX_event_enc_followers
-	mean_time_to_happen = {
-		days = 80
-	}
-	fire_only_once = yes
-	is_triggered_only = no
-	trigger = {
-		check_variable = {
-			var = enc_legitimacy
-			value > 0.5
-		}
-		has_completed_focus = enc_rebuilding_a_nation
-	}
-	immediate = {
-		hidden_effect = {
-			set_country_flag = followers_spreading
-			set_variable = {
-				var = follower_mission_days
-				value = num_controlled_states
-			}
-			multiply_variable = {
-				var = follower_mission_days
-				value = 5
-			}
-			set_variable = {
-				var = fol_md_temp
-				value = stability
-			}
-			add_to_variable = {
-				var = fol_md_temp
-				value = 0.25
-			}
-			divide_variable = {
-				var = follower_mission_days
-				value = fol_md_temp
-			}
-			set_variable = {
-				var = fol_md_temp
-				value = follower_mission_days
-			}
-			divide_variable = {
-				var = fol_md_temp
-				value = 2
-			}
-			#country_event = { id = followers.3 days = var:fol_md_temp random = 10 }
-			clear_variable = fol_md_temp
-			set_variable = {
-				var = followers_attitude
-				value = 4
-			}
-			activate_mission = followers_established_countdown
-		}
-	}
-	option = { # Oppose
-		name = enc_reformers.104.a
-		custom_effect_tooltip = enc_reformers.104.a.tt
-		add_war_support = 0.05
-		add_stability = 0.05
-		custom_effect_tooltip = enc_reformers.104.a.tt.warning
-		set_country_flag = followers_discoraged
-		add_ideas = followers_rejected_idea
-	}
-	option = { # OKay?
-		name = enc_reformers.104.b
-		custom_effect_tooltip = enc_reformers.104.b.tt
-		set_country_flag = enc_followers
-		set_temp_variable = {
-			var = legitimacy_change_var
-			value = 0.03
-		}
-		change_legitimacy = yes
-		add_war_support = -0.05
-		set_country_flag = followers_encouraged
-		add_ideas = followers_spreading_idea
-	}
-}
+
 
 country_event = { #105 Brahmin Barons
 	id = enc_reformers.105
@@ -10604,32 +10525,6 @@ news_event = { #341 - Pan American League
 	}
 }
 
-news_event = { #342 - To War With Brotherhood
-	id = enc_reformers.342
-	title = enc_reformers.342.t
-	desc = enc_reformers.342.d
-	picture = GFX_event_BOS_super_mutant
-	fire_only_once = yes
-	is_triggered_only = no
-	trigger = {
-		TRL = {
-			is_neighbor_of = WBH
-		}
-		has_country_flag = super_troll_warren
-	}
-	mean_time_to_happen = {
-		days = 10
-	}	# quick
-	option = { # UMMM
-		name = enc_reformers.342.a
-		TRL = {
-			create_wargoal = {
-				type = annex_everything
-				target = WBH
-			}
-		}
-	}
-}
 
 country_event = { #344 - Mexican Territory
 	id = enc_reformers.344
@@ -11535,6 +11430,97 @@ news_event = { #357 - The Dollar is Back
 		}
 	}
 }
+news_event = { #358 - Mariposa
+	id = enc_reformers.358
+	title = enc_reformers.358.t
+	desc = enc_reformers.358.d
+	picture = GFX_event_TRL_mariposa_reborn
+	fire_only_once = yes
+	trigger = {
+		TRL = {has_cosmetic_tag =  NEW_mariposa }
+		tag = ERB
+	}
+	option = { #wooo
+		name = enc_reformers.358.a
+		set_country_flag = enc_supermutant_paranoia
+	}
+}
+
+
+country_event = { #359 - Green menace
+	id = enc_reformers.359
+	title = enc_reformers.359.t
+	desc = enc_reformers.359.d
+	picture = GFX_event_enc_Marcus
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = enc_supermutant_paranoia
+		has_country_flag = erb_lynette_unlocked_flag
+	}
+	option = { #expel
+	name = enc_reformers.359.a
+		if = {
+			limit = {  NOT = { has_completed_focus =  enc_accept_super_mutants } }
+			add_stability = 0.07
+			add_popularity = {
+				ideology = elites
+				popularity = 0.10
+			}
+			custom_effect_tooltip = enc_reformers.359.a_tt
+			set_country_flag = enc_expel_supermutants
+		}
+		if = {
+			limit = {  has_completed_focus =  enc_accept_super_mutants }
+			add_stability = -0.07
+			add_popularity = {
+				ideology = elites
+				popularity = 0.10
+			}
+			custom_effect_tooltip = enc_reformers.359.ab_tt
+ 			set_country_flag = enc_expel_supermutants
+		}
+	}
+	option = { #love
+		name = enc_reformers.359.b
+		trigger = {
+			has_completed_focus = enc_accept_super_mutants
+			not = { has_completed_focus = enc_judicial_branch }
+		}
+		add_stability = -0.07
+		add_popularity = {
+			ideology = people
+			popularity = 0.10
+		}
+			custom_effect_tooltip = enc_reformers.359.b_tt
+ 			set_country_flag = enc_love_mutants
+	}
+	option = { #court
+	name = enc_reformers.359.c
+		trigger = {
+			has_completed_focus = enc_accept_super_mutants
+			has_completed_focus = enc_judicial_branch
+		}
+		add_stability = 0.03
+		add_popularity = {
+			ideology = people
+			popularity = 0.03
+		}
+			custom_effect_tooltip = enc_reformers.359.c_tt
+			set_country_flag = enc_love_mutants
+	}
+	option = { #hem and Haw
+	name = enc_reformers.359.e
+		trigger = {
+			has_completed_focus = enc_accept_super_mutants
+			has_completed_focus = enc_judicial_branch
+		}
+		add_stability = -0.03
+		add_war_support = -0.03
+		set_country_flag = enc_mutant_sabotage
+	}
+
+}
+
 
 country_event = { #356 - Now I have to Eat The Bloody thing?
 	id = enc_reformers.456

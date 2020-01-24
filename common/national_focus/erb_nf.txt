@@ -1678,6 +1678,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 5.8
+		available = {
+			NOT = { has_country_flag = enc_expel_supermutants }
+		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = enc_mutant_law_ghoul
@@ -2125,16 +2128,13 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_department_of_education_civilian
 		available = {
-			has_idea = Enc_Followers
+			has_country_flag = followers_established
 		}
 		x = 0
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = Enc_Followers
-				add_idea = ENC_follower_schools
-			}
+			add_ideas = ENC_follower_schools
 		}
 	}
 	focus = {#REBUILDING - Vacinations
