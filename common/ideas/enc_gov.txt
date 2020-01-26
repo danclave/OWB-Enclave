@@ -517,6 +517,7 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = enc_accept_super_mutants
+				NOT = { has_country_flag = enc_expel_supermutants }
 			}
 
 			cost = 100

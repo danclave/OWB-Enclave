@@ -5982,6 +5982,9 @@ news_event = { #170 - Dark Age
 		add_ideas = {
 			collapsed_trade
 		}
+		delete_unit_template_and_units = {
+			division_template = "Rebel Militia"
+		}
 		add_to_variable = { caps_expense_modifier = 1 }
 		set_country_flag = enc_mid_game
 		custom_effect_tooltip = enc_reformers.170.a_tt
@@ -10307,17 +10310,14 @@ news_event = { #335 - WBH Crushed
 	is_triggered_only = no
 	trigger = {
 		has_completed_focus = enc_reform
-		NOT = {
-			country_exists = WBH
-		}
-		country_exists = TRL
+		TRL = { owns_state = 84 }
 	}
 	mean_time_to_happen = {
 		days = 10
 	}	# quick
 	option = { # Now they're a threat
 		name = enc_reformers.335.a
-		set_country_flag = enc_trl_threat
+
 		TRL = {
 			set_technology = {
 				settled_civilization = 1
@@ -11438,12 +11438,24 @@ news_event = { #358 - Mariposa
 	picture = GFX_event_TRL_mariposa_reborn
 	fire_only_once = yes
 	trigger = {
-		TRL = {has_cosmetic_tag =  NEW_mariposa }
+		TRL = { has_cosmetic_tag =  NEW_mariposa }
 		tag = ERB
 	}
 	option = { #wooo
 		name = enc_reformers.358.a
 		set_country_flag = enc_supermutant_paranoia
+		TRL = {
+			ARR = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+			KLA = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
 	}
 }
 
@@ -11511,10 +11523,6 @@ country_event = { #359 - Green menace
 	}
 	option = { #hem and Haw
 	name = enc_reformers.359.e
-		trigger = {
-			has_completed_focus = enc_accept_super_mutants
-			has_completed_focus = enc_judicial_branch
-		}
 		add_stability = -0.03
 		add_war_support = -0.03
 		set_country_flag = enc_mutant_sabotage
