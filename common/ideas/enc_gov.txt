@@ -179,11 +179,11 @@ ideas = {
 			}
 			cancel_if_invalid = no
 		}
-		
+
 		####################################################
 		# REFORM
 		####################################################
-		
+
 		ENC_officers_purged = {
 			picture = enc_officers
 			allowed = {
@@ -282,7 +282,7 @@ ideas = {
 			modifier = {
 				army_org_Factor = 0.05
 				justify_war_goal_time = -0.1
-				training_time_factor = 0.10				
+				training_time_factor = 0.10
 				elites_drift = 0.20
 			}
 
@@ -537,4 +537,29 @@ ideas = {
 			}
 			cancel_if_invalid = yes
 		}
+		robotic_army_purist = {
+			available = {
+				has_completed_focus = enc_depot_mexican_robots
+			}
+			cost = 100
+			removal_cost = -1
+			level = 1
+			picture = robotic_army
+			equipment_bonus = {
+				support_robot_equipment = {
+					build_cost_ic = -0.20
+					instant = yes
+				}
+				combat_robot_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+
+			ai_will_do = {
+				factor = 0.1
+			}
+			cancel_if_invalid = yes
+		}
+
 }

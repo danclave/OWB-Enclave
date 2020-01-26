@@ -643,5 +643,8 @@ spriteTypes = {
 			name = "GFX_event_enc_mexico_reborn"
 			texturefile = "gfx/event_pictures/event_enc_mexico_reborn.tga"
 		}
-}
+		SpriteType = {#mexico
+			name = "GFX_event_prewar_money"
+			texturefile = "gfx/event_pictures/prewar_money.tga"
+		}
 }

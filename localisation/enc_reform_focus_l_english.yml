@@ -293,6 +293,7 @@ enc_radio_civilian_music_desc:0 "'Country roads, take me home, to the place I be
 
 enc_federal_reserve:0 "Revive The Federal Reserve"
 enc_federal_reserve_desc:0 "The Reunited States is strong enough to pursue something unheard of since the Great War... a monetary policy."
+enc_federal_reserve_tt: "\n§MReduces your expenses as you restore the economy.§!"
 
 enc_epa:0 "Fund The EPA"
 enc_epa_desc:0 "We need to preserve what remains of our nature and preserve the planet for future generations.  Plus, we'll gain popular support doing so."
@@ -849,6 +850,8 @@ enc_support_cause: "Support Cause Partisans"
 enc_support_cause_desc: "Abraham Lincoln once said that America was the Cause of All Nations.  This may not be true, but our dream of freedom certainly aligns with the goals of the resistance to the Washington Brotherhood."
 enc_second_american_revolution: "Masters of the Wasteland"
 enc_second_american_revolution_desc: "With the defeat of the Legion, the New California Republic, and the Washington Brotherhood, is is time to remind everyone that America's original motto was 'Join or Die'"
+enc_into_texas: " The 'Texclave'"
+enc_into_texas_desc: "Texas is menaced by another Brotherhood chapter, Santa Anna, supermutants, and the Legion. Perhaps we can build local support to stand up for democracy. Until then, we can use the lands of the Texas Arms Association as a jumping off point."
 # yellow§Ytext§!
 # £air_experience_20x20
 # £army_experience_20x20
