@@ -3686,7 +3686,7 @@ ENC_gannon_doctrine = {
 		target_trigger = {
 			FROM = {
 				is_neighbor_of = ERB
-				has_idea = settler_nation
+				is_settler_nation = yes
 				NOT = {
 					tag = ARR
 				}
@@ -3831,7 +3831,7 @@ ENC_gannon_doctrine = {
 			FROM = {
 				AND = {
 					is_neighbor_of = ERB
-					has_idea = tribal_nation
+					is_tribal_nation = yes
 					NOT = {
 						has_country_flag = erb_teachers
 					}
@@ -3934,7 +3934,7 @@ ENC_gannon_doctrine = {
 			FROM = {
 				exists = yes
 				NOT = {
-					has_idea = settler_nation
+					is_settler_nation = yes
 				}
 			}
 		}
@@ -3954,8 +3954,8 @@ ENC_gannon_doctrine = {
 		remove_effect = {
 			FROM = {
 				swap_ideas = {
-					remove_idea = tribal_nation
-					add_idea = settler_nation
+					set_country_flag = not_a_tribal_nation
+					set_country_flag = is_settler_nation
 				}
 			}
 		}
@@ -3968,7 +3968,7 @@ ENC_granite_doctrine = {
 			FROM = {
 				AND = {
 					is_neighbor_of = ERB
-					has_idea = tribal_nation
+					is_tribal_nation = yes
 					NOT = {
 						has_country_flag = erb_couriers
 					}
