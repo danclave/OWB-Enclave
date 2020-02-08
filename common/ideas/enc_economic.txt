@@ -79,6 +79,7 @@ ideas = {
 			cancel_if_invalid = no
 		}
 		enc_low_economic_mobilisation = {
+			picture = low_economic_mobilisation
 			allowed = {
 				original_tag = ERB
 			}
@@ -106,6 +107,7 @@ ideas = {
 			cancel_if_invalid = no
 		}
 		enc_partial_economic_mobilisation = {
+			picture = partial_economic_mobilisation
 			allowed = {
 				original_tag = ERB
 			}
@@ -133,6 +135,7 @@ ideas = {
 			}
 		}
 		enc_war_economy = {
+			picture = war_economy
 			allowed = {
 				original_tag = ERB
 			}
@@ -160,6 +163,7 @@ ideas = {
 			}
 		}
 		enc_tot_economic_mobilisation = {
+			picture = tot_economic_mobilisation
 			allowed = {
 				original_tag = ERB
 			}
