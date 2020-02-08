@@ -3953,10 +3953,8 @@ ENC_gannon_doctrine = {
 		}
 		remove_effect = {
 			FROM = {
-				swap_ideas = {
-					set_country_flag = not_a_tribal_nation
-					set_country_flag = is_settler_nation
-				}
+				set_country_flag = not_a_tribal_nation
+				set_country_flag = is_settler_nation
 			}
 		}
 	}
