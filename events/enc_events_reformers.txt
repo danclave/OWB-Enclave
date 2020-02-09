@@ -6695,8 +6695,8 @@ country_event = { #192 - War Crimes
 		any_enemy_country = {
 			has_defensive_war_with = ERB
 			OR = {
-				has_idea = settler_nation
-				has_idea = tribal_nation
+				is_settler_nation = yes
+				is_tribal_nation = yes
 			}
 			any_owned_state = {
 				# enclave controlls their stuff
