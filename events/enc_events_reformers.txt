@@ -5988,6 +5988,7 @@ news_event = { #170 - Dark Age
 		add_to_variable = { caps_expense_modifier = 1 }
 		set_country_flag = enc_mid_game
 		custom_effect_tooltip = enc_reformers.170.a_tt
+		clr_country_flag = trade_laws_hidden
 	}
 }
 

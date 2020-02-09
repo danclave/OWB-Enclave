@@ -1486,7 +1486,7 @@ ENC_nation_building = {
 	ENC_sierra_madre_expedition = {
 		icon = decision_vault_boy
 		cost = 50
-		fire_only_once = no
+		fire_only_once = yes
 		allowed = {
 			original_tag = ERB
 		}
@@ -3384,10 +3384,11 @@ ENC_securing_borders = {
 			}
 		}
 	}
-	ENC_pacificy_northern_border = { # secure northern borders
+	ENC_pacificy_northern_border = { # secure northern borders ( DISABLED ) 
 		icon = infiltrate_state
 		priority = 9
 		activation = {
+			always = no
 			OR = {
 				has_idea = enc_NCR_power_struggle2
 				has_idea = enc_NCR_power_struggle
