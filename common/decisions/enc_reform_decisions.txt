@@ -1486,7 +1486,7 @@ ENC_nation_building = {
 	ENC_sierra_madre_expedition = {
 		icon = decision_vault_boy
 		cost = 50
-		fire_only_once = no
+		fire_only_once = yes
 		allowed = {
 			original_tag = ERB
 		}
