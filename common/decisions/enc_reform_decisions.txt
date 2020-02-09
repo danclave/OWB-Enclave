@@ -1456,9 +1456,9 @@ ENC_nation_building = {
 			original_tag = ERB
 		}
 		available = {
-			set_temp_variable = { caps_diff = COST }
+			set_temp_variable = { caps_diff = 300 }
 			get_caps_difference = yes
-			check_variable = { caps_display_temp > 299 }
+			check_variable = { caps_display_temp > 0 }
 		}
 
 		visible = {
@@ -3336,6 +3336,7 @@ ENC_securing_borders = {
 		activation = {
 			TRL = {
 				has_war = no
+				has_cosmetic_flag =
 			}
 			NOT = {
 				country_exists = NCR
@@ -4561,6 +4562,7 @@ ENC_down_mexico_way = {
 				}
 				is_in_faction = no
 				is_mexican = yes
+				exists = yes
 			}
 		}
 		visible = {

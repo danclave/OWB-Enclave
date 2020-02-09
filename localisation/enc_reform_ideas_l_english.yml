@@ -116,6 +116,7 @@ Enc_Justice: "Department of Justice"
 ENC_FBI: "The Federal Bureau of Investigations"
 enc_mutant_law_both:0 "Accepted Ghouls and Super Mutants"
 enc_mutant_law_ghoul: "Accepted Ghouls"
+enc_expel_supermutants: "Supermutants Expelled!"
 
 ENC_begun_integration: "Begun Integration"
 
