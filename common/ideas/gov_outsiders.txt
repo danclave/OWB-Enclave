@@ -1,0 +1,185 @@
+ideas = {
+
+	outsider_recruitment_laws = {
+		law = yes
+
+		enc_outsider_law_none = {
+			picture = no_outsiders
+			available = {
+			}
+			allowed = {
+				original_tag = ERB
+			}
+			cost = 100
+			removal_cost = -1
+			level = 4
+
+			modifier = {
+				non_core_manpower = -0.02
+				stability_factor = 0.02
+				war_support_factor = 0.02
+			}
+
+			ai_will_do = {
+				factor = 0
+			}
+			cancel_if_invalid = no
+			default = yes
+		}
+
+		enc_outsider_law_volunteers = {
+			picture = outsider_battalions
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				# has_completed_focus = enc_reform
+			}
+			default = no
+			cost = 100
+			removal_cost = -1
+			level = 3
+			modifier = {
+				non_core_manpower = 0.02
+				planning_speed = -0.02
+			}
+
+			ai_will_do = {
+				factor = 0
+
+			}
+			cancel_if_invalid = no
+			on_add = {
+				if = {
+					not = { has_completed_focus = enc_purge_opposition }
+				}
+				set_temp_variable = {
+					stability_loss_factor = 0.2
+				}
+				stability_loss_based_on_elites_popularity = yes
+			}
+		}		
+		# overrides, remove when able		
+		outsider_law_none = {
+			picture = no_outsiders
+			available = {
+			}
+			allowed = {
+			}
+			visible = {
+				not = { has_country_flag = gov_outsiders_hidden }
+			}
+			cost = 100
+			removal_cost = -1
+			level = 4
+
+			modifier = {
+				non_core_manpower = -0.02
+				stability_factor = 0.02
+				war_support_factor = 0.02
+			}
+
+			ai_will_do = {
+				factor = 0
+
+			}
+			cancel_if_invalid = no
+			#default = yes
+		}
+
+		outsider_law_volunteers = {
+			allowed = {
+				not = {
+					is_brotherhood_nation_proper = yes
+				}
+			}
+			visible = {
+				not = {
+					is_brotherhood_nation_proper = yes
+					has_country_flag = gov_outsiders_hidden
+				}
+			}
+			default = yes
+			picture = volunteer_outsiders
+			cost = 100
+			removal_cost = -1
+			level = 3
+			modifier = {
+				non_core_manpower = 0.02
+				planning_speed = -0.02
+			}
+
+			ai_will_do = {
+				factor = 0
+
+			}
+			cancel_if_invalid = no
+		}
+
+		outsider_law_auxiliaries = {
+			allowed = {
+				not = {
+					is_brotherhood_nation_proper = yes
+				}
+			}
+			visible = {
+				not = {
+					is_brotherhood_nation_proper = yes
+					has_country_flag = gov_outsiders_hidden
+				}
+			}
+			available = {
+
+			}
+			picture = auxiliary_outsiders
+			cost = 100
+			removal_cost = -1
+			level = 2
+
+			modifier = {
+				non_core_manpower = 0.04
+				stability_factor = -0.01
+				planning_speed = -0.04
+			}
+
+			ai_will_do = {
+				factor = 0
+
+			}
+			cancel_if_invalid = no
+		}
+
+		outsider_law_batallions = {
+			available = {
+			}
+			allowed = {
+				not = {
+					is_brotherhood_nation_proper = yes
+				}
+			}
+			visible = {
+				not = {
+					is_brotherhood_nation_proper = yes
+					has_country_flag = gov_outsiders_hidden
+				}
+			}
+			picture = outsider_battalions
+			cost = 100
+			removal_cost = -1
+			level = 1
+
+			modifier = {
+				non_core_manpower = 0.06
+				stability_factor = -0.02
+				planning_speed = -0.06
+			}
+
+			ai_will_do = {
+				factor = 0
+
+			}
+			cancel_if_invalid = no
+		}
+	
+
+}

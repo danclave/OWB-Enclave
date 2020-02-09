@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
 
 # GOV
 officer_law_enclave_officers: "Enclave Officers"
@@ -15,3 +15,5 @@ hidden_economy: "Hidden Economy"
 hidden_economy_desc: "The Enclave does not trade with outside factions, as that could compromise their secrecy."
 
 enc_press_reformer_propaganda: "Reformer Propaganda"
+enc_outsider_law_none: "Enclave Members Only"
+enc_outsider_law_volunteers: "Outsider Volunteers"

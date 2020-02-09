@@ -5988,6 +5988,7 @@ news_event = { #170 - Dark Age
 		add_to_variable = { caps_expense_modifier = 1 }
 		set_country_flag = enc_mid_game
 		custom_effect_tooltip = enc_reformers.170.a_tt
+		clr_country_flag = trade_laws_hidden
 	}
 }
 
@@ -6694,8 +6695,8 @@ country_event = { #192 - War Crimes
 		any_enemy_country = {
 			has_defensive_war_with = ERB
 			OR = {
-				has_idea = settler_nation
-				has_idea = tribal_nation
+				is_settler_nation = yes
+				is_tribal_nation = yes
 			}
 			any_owned_state = {
 				# enclave controlls their stuff

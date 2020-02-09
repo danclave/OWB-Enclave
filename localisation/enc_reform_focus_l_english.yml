@@ -393,11 +393,11 @@ are_purged:0 " are §Rexecuted§! on false charges!\n"
 is_purged:0 "is §Rexecuted§! on false charges!\n"
 enc_purge_officers_desc:0 "The time has come to rid ourselves of the most stubborn Purist elements within our officer corps. We cannot let such an essential part of the Enclave be infested with traitors and saboteurs. Demotions, banishments or executions. One way or another, our officers will be loyal."
 
-stability_loss_based_on_elites_popularity: "\n§MStability loss is based on popularity of§! §YElites Faction§!"
-stability_loss_based_on_people_popularity: "\n§MStability loss is based on popularity of§! §YPeople Faction§!"
-stability_loss_based_on_intellectuals_popularity: "\n§MStability loss is based on popularity of§! §YIntellectuals Faction§!"
+stability_loss_based_on_elites_popularity: "\n§MStability loss is based on popularity of§! §YElites Faction§!\n"
+stability_loss_based_on_people_popularity: "\n§MStability loss is based on popularity of§! §YPeople Faction§!\n"
+stability_loss_based_on_intellectuals_popularity: "\n§MStability loss is based on popularity of§! §YIntellectuals Faction§!\n"
 
-war_support_loss_based_on_elites_popularity: "\n§MWar Support loss is based on popularity of§! §YElites Faction§!"
+war_support_loss_based_on_elites_popularity: "\n§MWar Support loss is based on popularity of§! §YElites Faction§!\n"
 
 enc_infiltrate_ncr:0 "Infiltrate the NCR"
 enc_infiltrate_ncr_t_tt:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is higher than §Y25§!"

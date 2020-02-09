@@ -55,6 +55,8 @@ set_country_flag = trade_laws_hidden
 set_country_flag = default_press_laws_banned
 set_country_flag = default_slave_laws_banned
 set_country_flag = default_drug_laws
+set_country_flag = gov_outsiders_hidden
+set_country_flag = default_officer_laws
 
 set_variable = { enc_good_allignment = 0 }
 set_variable = { enc_evil_allignment = 0 }
@@ -242,7 +244,7 @@ add_ideas = ENC_officers
 add_ideas = ENC_special_forces
 
 add_ideas = the_remnants
-add_ideas = outsider_law_none
+add_ideas = enc_outsider_law_none
 add_ideas = hidden_economy
 add_ideas = enc_disorganized_economy
 add_ideas = enc_press_none

@@ -13,7 +13,9 @@ leader_traits = {
 		modifier = {
 			army_attack_factor = 0.05
 		}
-		random = no
+		new_commander_weight = {
+			factor = 0
+		}
 	}
 	enc_reformer = {
 		type = all
@@ -25,10 +27,12 @@ leader_traits = {
 		modifier = {
 			army_morale_factor = 0.05
 		}
-		random = no
+		new_commander_weight = {
+			factor = 0
+		}
 	}
 	enc_demoted = { 
-		random = no
+		new_commander_weight = 0
 		type = all
 		trait_type = personality_trait	
 		gain_xp = {
@@ -38,7 +42,9 @@ leader_traits = {
 		defense_skill = -1
 		logistics_skill = -1
 		planning_skill = -1
-		
+		new_commander_weight = {
+			factor = 0
+		}
 		non_shared_modifier = {
 			experience_gain_factor = -0.10
 			promote_cost_factor = 10
