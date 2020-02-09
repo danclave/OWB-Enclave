@@ -1075,10 +1075,10 @@ spriteTypes = {
             name = "GFX_idea_enc_chiefs_of_staff"
  		    texturefile = "gfx/interface/ideas/enc_chiefs_of_staff.dds"
  	    } 
-#        SpriteType = {#enc_civilian_economy
-#            name = "GFX_idea_enc_civilian_economy"
-# 		    texturefile = "gfx/interface/ideas/enc_civilian_economy.dds"
-# 	    } 
+        SpriteType = {#enc_civilian_economy
+            name = "GFX_idea_enc_civilian_economy"
+ 		    texturefile = "gfx/interface/ideas/enc_civilian_economy.dds"
+ 	    } 
         SpriteType = {#enc_completed_integration
             name = "GFX_idea_enc_completed_integration"
  		    texturefile = "gfx/interface/ideas/enc_completed_integration.dds"
@@ -1171,10 +1171,10 @@ spriteTypes = {
             name = "GFX_idea_ENC_legitimacy_none"
  		    texturefile = "gfx/interface/ideas/ENC_legitimacy_none.dds"
  	    } 
-#        SpriteType = {#enc_low_economic_mobilisation
-#            name = "GFX_idea_enc_low_economic_mobilisation"
-# 		    texturefile = "gfx/interface/ideas/enc_low_economic_mobilisation.dds"
-# 	    } 
+        SpriteType = {#enc_low_economic_mobilisation
+            name = "GFX_idea_enc_low_economic_mobilisation"
+ 		    texturefile = "gfx/interface/ideas/enc_low_economic_mobilisation.dds"
+ 	    } 
         SpriteType = {#enc_mandatory_patriotism
             name = "GFX_idea_enc_mandatory_patriotism"
  		    texturefile = "gfx/interface/ideas/enc_mandatory_patriotism.dds"
@@ -1203,10 +1203,10 @@ spriteTypes = {
             name = "GFX_idea_enc_officers_traitors"
  		    texturefile = "gfx/interface/ideas/enc_officers_traitors.dds"
  	    } 
-#        SpriteType = {#enc_partial_economic_mobilisation
-#            name = "GFX_idea_enc_partial_economic_mobilisation"
-# 		    texturefile = "gfx/interface/ideas/enc_partial_economic_mobilisation.dds"
-# 	    } 
+        SpriteType = {#enc_partial_economic_mobilisation
+            name = "GFX_idea_enc_partial_economic_mobilisation"
+ 		    texturefile = "gfx/interface/ideas/enc_partial_economic_mobilisation.dds"
+ 	    } 
         SpriteType = {#enc_pa_production
             name = "GFX_idea_enc_pa_production"
  		    texturefile = "gfx/interface/ideas/enc_pa_production.dds"
@@ -1284,17 +1284,17 @@ spriteTypes = {
  		    texturefile = "gfx/interface/ideas/enc_super_soldiers.dds"
 <<<<<<< HEAD
  	    } 
-#        SpriteType = {#enc_tot_economic_mobilisation
-#            name = "GFX_idea_enc_tot_economic_mobilisation"
-# 		    texturefile = "gfx/interface/ideas/enc_tot_economic_mobilisation.dds"
-# 	    } 
+        SpriteType = {#enc_tot_economic_mobilisation
+            name = "GFX_idea_enc_tot_economic_mobilisation"
+ 		    texturefile = "gfx/interface/ideas/enc_tot_economic_mobilisation.dds"
+ 	    } 
         SpriteType = {#enc_vaccinations
             name = "GFX_idea_enc_vaccinations"
  		    texturefile = "gfx/interface/ideas/enc_vaccinations.dds"
  	    } 
-#        SpriteType = {#enc_war_economy
-#            name = "GFX_idea_enc_war_economy"
-# 		    texturefile = "gfx/interface/ideas/enc_war_economy.dds"
+        SpriteType = {#enc_war_economy
+            name = "GFX_idea_enc_war_economy"
+ 		    texturefile = "gfx/interface/ideas/enc_war_economy.dds"
  	    } 
         SpriteType = {#enc_vaccinations
             name = "GFX_idea_enc_vaccinations"
