@@ -34,18 +34,7 @@ ideas = {
 				factor = 10
 			}
 		}
-		enc_allgood_murphy = {
-			picture = allgood_murphy
-			allowed = { original_tag = ERB }
-			visible = { has_country_flag = enc_accepted_ncr_leaders }
-			available = {
-				has_full_control_of_state = 350
-			}
-			traits = { peaceful_foreman }
-			ai_will_do = {
-				factor = 10
-			}
-		}
+
 		enc_zachariah_rigby = {
 			picture = zachariah_rigby
 			allowed = { original_tag = ERB }
@@ -142,6 +131,28 @@ ideas = {
 				}
 			}
 
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	economic_advisors = {
+		joseph_dodge1 = {
+			picture = generic_political_advisor_europe_3
+			allowed = {
+				original_tag = ERB
+			}
+			visible = { has_country_flag = enc_accepted_ncr_leaders }
+			traits = { armaments_organizer }
+		}
+		enc_allgood_murphy = {
+			picture = allgood_murphy
+			allowed = { original_tag = ERB }
+			visible = { has_country_flag = enc_accepted_ncr_leaders }
+			available = {
+				has_full_control_of_state = 350
+			}
+			traits = { peaceful_foreman }
 			ai_will_do = {
 				factor = 10
 			}
