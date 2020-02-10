@@ -285,6 +285,10 @@ ideas = {
 						value > 0.099
 					}
 				}
+				custom_trigger_tooltip = {
+					tooltip = has_idea_enc_outsider_law_volunteers
+					has_idea = enc_outsider_law_volunteers
+				}
 			}
 			visible = {
 				has_completed_focus = enc_reform
