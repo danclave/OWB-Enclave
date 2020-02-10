@@ -27,6 +27,8 @@ not_allowed_to_core: "§Y Enclave§!"
 ERB_OWB_DESC: "Four decades ago Navarro was destroyed by NCR and Brotherhood forces in a joint strike to finish off the final bastion of the Enclave. Demoralized, leaderless and homeless, their remnants scattered to the wind, never to be seen again. At least that's what most believed.\n \n Under the nose of the sleeping NCR, Sargent Dornan has been working tirelessly to unite the Enclave remnants under his banner. Contacting the many hidden civilian bases of the Enclave to integrate a new generation of America's finest."
 
 enc_research_medicine: "Medicine"
+
+break_line: "\n\n"
 ###################################
 # COMMON
 ###################################

@@ -12,7 +12,7 @@ enc_disorganized_economy_desc: "Having only recently rallied around the same fla
 collapsed_trade: "Collapsed Trade"
 
 hidden_economy: "Hidden Economy"
-hidden_economy_desc: "The Enclave does not trade with outside factions, as that could compromise their secrecy."
+hidden_economy_desc: "The Enclave does not trade with outside factions, as that could compromise their secrecy.\n"
 
 enc_press_reformer_propaganda: "Reformer Propaganda"
 enc_outsider_law_none: "Enclave Members Only"

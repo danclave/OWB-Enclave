@@ -299,6 +299,8 @@ country_event = {#16 - In the Lair of the Bear
 		set_country_flag = ERB_can_NCR_crisis_laylow
 		set_country_flag = ERB_can_NCR_crisis_construction
 		set_country_flag = ERB_can_NCR_crisis_resources
+		set_temp_variable = { suspicion_change_var = 10 }
+		hidden_effect = { change_suspicion = yes }
 	}
 }
 country_event = {#17 - NCR failsafe - unused

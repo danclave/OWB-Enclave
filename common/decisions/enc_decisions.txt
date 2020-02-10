@@ -970,27 +970,7 @@ ENC_render_unto_caesar = {
 ENC_debug = {
 	ENC_kill_ncr = {
 		complete_effect = {
-			159 = {
-				add_state_modifier = {
-					modifier = {
-						local_non_core_manpower = 1 # works
-						local_factory_sabotage = 1 # works						
-						local_manpower = 1 # works
-						local_supplies = 10 # works						
-						local_building_slots = 1 # works
-						local_building_slots_factor = 2 # works
-						
-						resistance_tick = 1 # does not work on colony states
-						resistance_tick_auto = 1 # does not work on colony states
-						local_intel_to_enemies = 1 # unconfirmed
-						
-						local_resources_factor = 5 # does not work
-						local_resources = 2.0 # does not work
-						local_factories = 10 # does not work
-						local_org_regain = -1 # does not work
-					}
-				}
-			}
+			add_ideas = currencyusd
 		}
 	}
 	ENC_add_legitimacy = {

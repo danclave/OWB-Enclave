@@ -117,11 +117,8 @@ training_law_enclave_academy_desc: "A specialized department will ensure that a 
 enc_reorganized_economy: "Reorganized Engineers"
 
 enc_disorganized_economy: "Disorganized Engineers"
-enc_disorganized_economy_desc: "Having only recently rallied around the same flag, the engineers of the Enclave lack a definitive command structure. This hinders their efforts considerably.""
+enc_disorganized_economy_desc: "Having only recently rallied around the same flag, the engineers of the Enclave lack a definitive command structure. This hinders their efforts considerably.\n"
 collapsed_trade: "Collapsed Trade"
-
-hidden_economy: "Hidden Economy"
-hidden_economy_desc: "The Enclave does not trade with outside factions, as that could compromise their secrecy."
 
 enc_press_reformer_propaganda: "Reformer Propaganda"
 enc_press_purist_propaganda: "Purist Propaganda"

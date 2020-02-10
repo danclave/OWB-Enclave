@@ -249,7 +249,6 @@ add_ideas = hidden_economy
 add_ideas = enc_disorganized_economy
 add_ideas = enc_press_none
 add_ideas = training_law_navarro_veterans
-add_ideas = currency_none
 
 add_manpower = 500
 

@@ -3,9 +3,6 @@
 ###################################
 # Seek Allies
 ###################################
-
-
-
 enc_CES_start:0 "The Legion"
 enc_CES_start_desc:0 "The Legion could be a powerful ally for our cause.  "
 enc_CES_cache:0 "Render unto Ceasar"
@@ -145,8 +142,8 @@ lose_legitimacy_tt:0 "Lose §+§![?legitimacy_change_var|+%]§! §YLegitimacy§!
 gain_legitimacy_tt:0 "Gain §+§![?legitimacy_change_var|+%]§! §YLegitimacy§!\n\n"
 legitimacy_overflow_tt: "§MExcess Legitimacy converted to Base Stability§!\n"
 
-lose_suspicion_tt:0 "§YNCR suspicion§! will go down by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
-lose_suspicion_tt:0 "YRSome suspicion loss will be wasted after it reaches 0§!"
+lose_suspicion_tt:0 "§YNCR suspicion§! will go down by §+§![?suspicion_change_var|-0]§! £pol_power \n(Currently §+§![?ENC_hiding_cost|-0]§!£pol_power )\n\n"
+lose_suspicion_wasted_tt:0 "§RSome suspicion loss will be wasted!§!\n"
 gain_suspicion_tt:0 "§YNCR suspicion§! will go up by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
 
 gannon_returns: "Arcade Ganon has returned to the Enclave"

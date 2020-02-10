@@ -61,7 +61,7 @@ ideas = {
 		}
 		enc_civilian_economy = {
 			allowed = {
-				# original_tag = ERB
+				original_tag = ERB
 			}
 			visible = {
 				has_completed_focus = enc_reform
