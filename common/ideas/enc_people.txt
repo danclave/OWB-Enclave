@@ -427,15 +427,15 @@ ideas = {
 		aaron_chapman = {
 			#tourist
 
-			picture = grant_stone_advisor
+			picture = USA_walter_krueger
 
 			allowed = { original_tag = ERB }
 			available = {
-				has_completed_focus = enc_purist
+				has_completed_focus = enc_purity
 			}
 
 			traits = {
-				foreign_capitalist_trait
+				armaments_organizer
 			}
 
 			ai_will_do = {
