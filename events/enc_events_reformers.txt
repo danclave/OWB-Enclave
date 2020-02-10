@@ -7835,7 +7835,7 @@ news_event = { #223 - The Legion Marches
 							tag = ERB
 							tag = ARM
 							CES = {
-								has_wargoal_against = PREV
+								has_annex_war_goal = PREV
 							}
 						}
 					}
@@ -8414,6 +8414,7 @@ country_event = { #242 -veronica
 	option = { # Wee!
 		name = enc_reformers.242.a
 		custom_effect_tooltip = enc_reformers.241.a.tt
+		set_country_flag = veronica_returns
 	}
 }
 

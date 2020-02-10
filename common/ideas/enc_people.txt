@@ -120,7 +120,7 @@ ideas = {
 		dr_henry = {
 			picture = d_henry
 			allowed = {
-				tag = ERB
+				original_tag = ERB
 			}
 			visible = {
 				has_country_flag = dr_henry_returns
@@ -136,7 +136,7 @@ ideas = {
 				custom_effect_tooltip = erb_salvatore_effect
 			}
 			allowed = {
-				tag = ERB
+				original_tag = ERB
 			}
 			visible = {
 				has_country_flag = enc_salvatores_tolerated_flag
@@ -149,13 +149,14 @@ ideas = {
 		erb_veronica = {
 			picture = erb_veronica
 			allowed = {
-				tag = ERB
+				original_tag = ERB
 			}
 			visible = {
-				has_country_flag = gannon_returns
+				has_country_flag = veronica_returns
 			}
 			traits = {
-				genius_idealist
+				engineering_prodigy
+				rebellious
 			}
 		}
 	}
@@ -307,7 +308,7 @@ ideas = {
 			picture = generic_army_europe_4
 
 			visible = {
-				tag = ERB
+				original_tag = ERB
 			}
 
 			research_bonus = {
@@ -354,7 +355,7 @@ ideas = {
 		erb_orion_moreno = {
 			picture = orion_moreno_erb
 			allowed = {
-				tag = ERB
+				original_tag = ERB
 			}
 			visible = {
 				has_country_flag = moreno_returns
@@ -389,7 +390,7 @@ ideas = {
 		norman_wood = {
 			picture = generic_army_europe_1
 			allowed = {
-				tag = ERB
+				original_tag = ERB
 			}
 			available = {
 				has_completed_focus = enc_reform
@@ -401,7 +402,7 @@ ideas = {
 		erb_wright = {
 			picture = enc_wright
 			allowed = {
-				tag = ERB
+				original_tag = ERB
 			}
 			visible = {
 				has_country_flag = enc_wrights_tolerated_flag
@@ -413,7 +414,7 @@ ideas = {
 		erb_arcade_gannon = {
 			picture = arcade_gannon
 			allowed = {
-				tag = ERB
+				original_tag = ERB
 			}
 			visible = {
 				has_country_flag = gannon_returns

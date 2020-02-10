@@ -104,6 +104,16 @@ leader_traits = {
 		army_attack_factor = -0.10
 		political_power_factor = 0.25
 	}
+	engineering_prodigy = {
+		random = no
+		production_speed_industrial_complex_factor = 0.10
+		production_factory_efficiency_gain_factor = 0.05
+	}
+	rebellious = {
+		random = no	
+		political_power_cost = 0.10
+		stability_factor = -0.05
+	}
 	salvatore_puppet = {
 		random = no
 		political_power_factor = -0.05
@@ -122,6 +132,12 @@ leader_traits = {
 		random = no
 		people_drift = 0.15
 		political_power_factor = 0.10
+	}
+	interventionist = {
+		random = no
+		war_support_factor = 0.05
+		send_volunteers_tension = -0.25
+		send_volunteer_size = 5
 	}
 
 	# manufacturers
