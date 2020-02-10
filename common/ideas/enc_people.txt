@@ -19,26 +19,7 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
-		}
-		benjamin_curling = {
-			picture = generic_political_advisor_europe_1
 
-			allowed = {
-				original_tag = ERB
-			}
-			traits = {
-				respectedByScientists
-				purist
-			}
-			visible = {
-				NOT = {
-					has_country_flag = purists_purged
-					has_completed_focus = enc_purge_scientists
-				}
-			}
-			ai_will_do = {
-				factor = 1
-			}
 		}
 		paladin_myers1 = {
 			picture = BOS_generic6
@@ -135,22 +116,11 @@ ideas = {
 				factor = 1
 			}
 		}
-		norman_wood = {
-			picture = generic_army_europe_1
-			allowed = {
-				tag = ERB
-			}
-			available = {
-				has_completed_focus = enc_reform
-			}
-			traits = {
-				enc_disliked_pragmatist
-			}
-		}
+
 		dr_henry = {
 			picture = d_henry
 			allowed = {
-				tag = ERB
+				original_tag = ERB
 			}
 			visible = {
 				has_country_flag = dr_henry_returns
@@ -159,25 +129,14 @@ ideas = {
 				compassionate_doctor
 			}
 		}
-		erb_wright = {
-			picture = enc_wright
-			allowed = {
-				tag = ERB
-			}
-			visible = {
-				has_country_flag = enc_wrights_tolerated_flag
-			}
-			traits = {
-				captain_of_industry
-			}
-		}
+
 		erb_salvatore = {
 			picture = enc_salvatore
 			on_add = {
 				custom_effect_tooltip = erb_salvatore_effect
 			}
 			allowed = {
-				tag = ERB
+				original_tag = ERB
 			}
 			visible = {
 				has_country_flag = enc_salvatores_tolerated_flag
@@ -186,28 +145,18 @@ ideas = {
 				salvatore_puppet
 			}
 		}
-		erb_arcade_gannon = {
-			picture = arcade_gannon
-			allowed = {
-				tag = ERB
-			}
-			visible = {
-				has_country_flag = gannon_returns
-			}
-			traits = {
-				genius_idealist
-			}
-		}
+
 		erb_veronica = {
 			picture = erb_veronica
 			allowed = {
-				tag = ERB
+				original_tag = ERB
 			}
 			visible = {
-				has_country_flag = gannon_returns
+				has_country_flag = veronica_returns
 			}
 			traits = {
-				genius_idealist
+				engineering_prodigy
+				rebellious
 			}
 		}
 	}
@@ -354,6 +303,19 @@ ideas = {
 
 			traits = { air_warfare_theorist }
 		}
+		land_doctrine_guy = {
+
+			picture = generic_army_europe_4
+
+			visible = {
+				original_tag = ERB
+			}
+
+			research_bonus = {
+				cat_land_doctrine = 0.10
+			}
+			traits = { military_theorist }
+		}
 	}
 
 	high_command = {
@@ -393,13 +355,91 @@ ideas = {
 		erb_orion_moreno = {
 			picture = orion_moreno_erb
 			allowed = {
-				tag = ERB
+				original_tag = ERB
 			}
 			visible = {
 				has_country_flag = moreno_returns
 			}
 			traits = {
 				loyal_soldier
+			}
+		}
+	}
+
+	economic_advisor = {
+
+		benjamin_curling = {
+			picture = generic_political_advisor_europe_1
+
+			allowed = {
+				original_tag = ERB
+			}
+			traits = {
+				respectedByScientists
+				purist
+			}
+			visible = {
+				NOT = {
+					has_country_flag = purists_purged
+					has_completed_focus = enc_purge_scientists
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		norman_wood = {
+			picture = generic_army_europe_1
+			allowed = {
+				original_tag = ERB
+			}
+			available = {
+				has_completed_focus = enc_reform
+			}
+			traits = {
+				enc_disliked_pragmatist
+			}
+		}
+		erb_wright = {
+			picture = enc_wright
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_country_flag = enc_wrights_tolerated_flag
+			}
+			traits = {
+				captain_of_industry
+			}
+		}
+		erb_arcade_gannon = {
+			picture = arcade_gannon
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_country_flag = gannon_returns
+			}
+			traits = {
+				genius_idealist
+			}
+		}
+		aaron_chapman = {
+			#tourist
+
+			picture = USA_walter_krueger
+
+			allowed = { original_tag = ERB }
+			available = {
+				has_completed_focus = enc_purity
+			}
+
+			traits = {
+				armaments_organizer
+			}
+
+			ai_will_do = {
+				factor = 10
 			}
 		}
 	}

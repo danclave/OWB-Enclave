@@ -466,7 +466,9 @@ enc_reformers.80.a: "Great.  Now give them lasers."
 enc_reformers.81.t: "The New Economic Policy"
 enc_reformers.81.d: "Now that we have reestablished the Federal Reserve, there's some debate about fate of New California's currency.  If we declare the NCR dollar to be worthless, we can bankrupt some of our greatest foes and distribute their assets to the Enclave's friends and comrades. Or we can allow people to convert their NCR currency into American dollars, ensuring an orderly transition."
 enc_reformers.81.a: "Let us ban the NCR dollar"
+enc_reformers.81.a_tt: "/nRestoring a currency will reduce your quarterly cap expenses, letting you prepare for the Great Crusade!/n"
 enc_reformers.81.b: "Allow for an orderly currency conversion"
+enc_reformers.81.a_tt: "/nRestoring a currency will reduce your quarterly cap expenses, letting you prepare for the Great Crusade!/n"
 ################################################################################################################
 enc_reformers.82.t: "The End of bottle-caps"
 enc_reformers.82.d: "Bottle-caps were an ingenious solution to the Wasteland's problems; how do you create a currency with no government?  The original bottle-caps were backed by potable water from the Hub, and because the bottle-caps could not be replicated in postwar conditions, they had a fixed store of value.\n\nBut as the Wasteland's economy grew, the limited supply of bottle-caps meant more goods were chasing less money, discouraging economic growth.  With the return of Old Glory to the Wastes, the Government can impose a rational currency worth whatever the government says it's worth."
@@ -1566,7 +1568,7 @@ enc_reformers.330.c_tt:0 "§gAvailable because you accepted ghouls and Granite's
 enc_reformers.332.t:0 "The Baron Bends the Knee"
 #############################################################################################################
 enc_reformers.333.t:0 "The Deal with the Devil"
-enc_reformers.333.d:0 "Vulpes stood on the banks of the Rio Grande, his mask hiding his true feelings as he stepped onto the boat. Rumors from the west spoke of a dying eagle that sank its talons into the bear. And to the south, one of the gods of Mexico stormed forth to avenge his father, screaming of bloody vengeance. \n\n As the ghoul silently rowed Vulpes' boat across the river, he thought of Great Caesar's words. Caesar predicted that a computer could never surpass a man, and so the real threat lay to the west. And the god's servants spoke of trade, and a treaty, a promise of assistance should the 'United States Army' ever march. But as Vulpes looked at the battalion of assaultrons, scanning without movement, he wondered if Caesar was right."
+enc_reformers.333.d:0 "Vulpes stood on the banks of the Rio Grande, his mask hiding his true feelings as he stepped onto the boat. Rumors from the west spoke of a dying eagle that sank its talons into the bear. And to the south, one of the gods of Mexico stormed forth to avenge his father, screaming of bloody vengeance. \n\nAs the ghoul silently rowed Vulpes' boat across the river, he thought of Great Caesar's words. Caesar predicted that a computer could never surpass a man, and so the real threat lay to the west. And the god's servants spoke of trade, and a treaty, a promise of assistance should the 'United States Army' ever march. But as Vulpes looked at the battalion of assaultrons, scanning without movement, he wondered if Caesar was right."
 enc_reformers.333.a:0 "Ave!"
 #############################################################################################################
 enc_reformers.331.t:0 "He's Our Son of a Bitch?"

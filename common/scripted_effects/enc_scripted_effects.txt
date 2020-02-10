@@ -168,6 +168,15 @@ change_suspicion = {
 			}
 		}
 		custom_effect_tooltip =  lose_suspicion_tt
+		# warn player of wasted loss
+		limit = {
+			check_variable = {
+				var = ENC_hiding_cost
+				value = suspicion_change_var
+				compare = less_than
+			}
+			custom_effect_tooltip =  lose_suspicion_wasted_tt
+		}
 	}
 	else = {
 		custom_effect_tooltip = gain_suspicion_tt
@@ -179,9 +188,9 @@ calculate_hiding_cost = {
 	# set up if it's 0
 	if = {
 		limit = {
-			check_variable = { var = ENC_hiding_cost value = 5 compare = less_than }
+			check_variable = { var = ENC_hiding_cost value = 0 compare = less_than }
 		}
-		set_variable = { var = ENC_hiding_cost value = 10 }
+		set_variable = { var = ENC_hiding_cost value = 0 }
 	}
 	set_variable = { ENC_hiding_cost_total = ENC_hiding_cost }
 	# calculate state cost

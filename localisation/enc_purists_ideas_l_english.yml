@@ -52,7 +52,7 @@ ENC_wastelanders2:0 "Reformist"
 ENC_wastelanders2_desc:0 "The Enclave has succesfully integrated wastelander soldiers into their armed forces. Though the integration is limited to the lower rungs of the military."
 
 ENC_officers:0 "Enclave Officers"
-ENC_officers_desc:0 "The few Enclave Officers that remain are both well trained and experienced leaders. Many of them have plenty of comrades to avenge."
+ENC_officers_desc:0 "The few Enclave Officers that remain are both well trained and experienced leaders. Many of them have plenty of comrades to avenge.\n"
 
 ENC_officers_purged:0 "Enclave Officers"
 ENC_officers_purged_desc:0 "The few Enclave Officers that remain are both well trained and experienced leaders."

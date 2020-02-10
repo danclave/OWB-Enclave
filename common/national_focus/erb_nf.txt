@@ -1161,7 +1161,7 @@ focus_tree = {
 			}
 		}
 	}
-  	focus = {#EXPANSION - VLT - annex diplo
+  	focus = {#EXPANSION - VLT - bribing raiders
 		id = enc_VLT_raiders
 		icon = GFX_goal_NCR_Mojave
 		cost = 5.8
@@ -1192,7 +1192,7 @@ focus_tree = {
 								is_festus_leader = yes
 							}
 						}
-					exists = yes
+						exists = yes
 					}
 				}
 			}

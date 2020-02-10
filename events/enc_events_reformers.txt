@@ -2798,6 +2798,8 @@ country_event = { #81 - Economic Policy
 		hidden_effect = {
 			news_event = { id = enc_reformers.357 days = 100 }
 		}
+		subtract_from_variable = { caps_expense_modifier = -0.25 }
+		custom_effect_tooltip = enc_reformers.81.a_tt
 	}
 	option = { #	NCRD
 		name = enc_reformers.81.b
@@ -2809,6 +2811,7 @@ country_event = { #81 - Economic Policy
 			remove_idea = currencygenericcap
 			add_idea = currencyncrdollar
 		}
+		subtract_from_variable = { caps_expense_modifier = -0.25 }
 	}
 }
 
@@ -7830,8 +7833,9 @@ news_event = { #223 - The Legion Marches
 						OR = {
 							is_in_faction_with = CES
 							tag = ERB
+							tag = ARM
 							CES = {
-								has_wargoal_against = PREV
+								has_annex_war_goal = PREV
 							}
 						}
 					}
@@ -8410,6 +8414,7 @@ country_event = { #242 -veronica
 	option = { # Wee!
 		name = enc_reformers.242.a
 		custom_effect_tooltip = enc_reformers.241.a.tt
+		set_country_flag = veronica_returns
 	}
 }
 

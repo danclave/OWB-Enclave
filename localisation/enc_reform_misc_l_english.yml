@@ -31,6 +31,7 @@ compassionate_doctor: "Compassionate Doctor"
 genius_idealist: "Genius Idealist"
 salvatore_puppet: "Reluctant Puppet"
 loyal_soldier: "Loyal Soldier"
+engineering_prodigy: "Engineering Prodigy"
 
 vice_president_dornan_trait:0 "Vice President Dornan"
 vice_president_hayes_trait:0 "Vice President Hayes"
@@ -145,6 +146,7 @@ gain_legitimacy_tt:0 "Gain §+§![?legitimacy_change_var|+%]§! §YLegitimacy§!
 legitimacy_overflow_tt: "§MExcess Legitimacy converted to Base Stability§!\n"
 
 lose_suspicion_tt:0 "§YNCR suspicion§! will go down by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
+lose_suspicion_tt:0 "YRSome suspicion loss will be wasted after it reaches 0§!"
 gain_suspicion_tt:0 "§YNCR suspicion§! will go up by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
 
 gannon_returns: "Arcade Ganon has returned to the Enclave"

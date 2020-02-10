@@ -578,7 +578,7 @@ ENC_infiltrating_NCR = {
 				var = suspicion_change_var
 				value = -10
 			}
-			change_suspicion = YES 
+			change_suspicion = YES
 		}
 	}
 	ENC_Civil_War = {
@@ -3835,6 +3835,7 @@ ENC_gannon_doctrine = {
 					is_tribal_nation = yes
 					NOT = {
 						has_country_flag = erb_teachers
+						tag = WHT
 					}
 					NOT = {
 						has_country_flag = erb_civilizing
@@ -3955,6 +3956,7 @@ ENC_gannon_doctrine = {
 		remove_effect = {
 			FROM = {
 				set_country_flag = not_a_tribal_nation
+				remove_ideas = tribal_nation
 				set_country_flag = is_settler_nation
 			}
 		}
