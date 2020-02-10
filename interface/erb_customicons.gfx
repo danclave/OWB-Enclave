@@ -1287,6 +1287,10 @@ spriteTypes = {
             name = "GFX_idea_enc_vaccinations"
              texturefile = "gfx/interface/ideas/enc_vaccinations.dds"
          } 
+        SpriteType = {#enc_vlt
+            name = "GFX_idea_enc_vlt"
+             texturefile = "gfx/interface/ideas/enc_vlt.dds"
+         } 
         SpriteType = {#enc_war_economy
             name = "GFX_idea_enc_war_economy"
              texturefile = "gfx/interface/ideas/enc_war_economy.dds"

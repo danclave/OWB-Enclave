@@ -2778,7 +2778,7 @@ focus_tree = {
 			add_popularity = { ideology = ruler popularity = 0.05 }
 			add_popularity = { ideology = elites popularity = -0.05 }
 			add_political_power = 100
-			add_ideas = { enc_broken_houses }
+			add_timed_idea  = { idea = enc_broken_houses days = 365 }
 		}
 	}
 	focus = {#REBUILDING - accept NCR dollar

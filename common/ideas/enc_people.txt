@@ -145,20 +145,6 @@ ideas = {
 				salvatore_puppet
 			}
 		}
-
-		erb_veronica = {
-			picture = erb_veronica
-			allowed = {
-				original_tag = ERB
-			}
-			visible = {
-				has_country_flag = veronica_returns
-			}
-			traits = {
-				engineering_prodigy
-				rebellious
-			}
-		}
 	}
 
 	army_chief = {
@@ -367,6 +353,20 @@ ideas = {
 	}
 
 	economic_advisor = {
+
+		erb_veronica = {
+			picture = erb_veronica
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_country_flag = veronica_returns
+			}
+			traits = {
+				engineering_prodigy
+				rebellious
+			}
+		}
 
 		benjamin_curling = {
 			picture = generic_political_advisor_europe_1
