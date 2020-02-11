@@ -8162,7 +8162,9 @@ news_event = { #232 - Troll Warren Crushed
 		NOT = {
 			country_exists = TRL
 		}
-		country_exists = WBH
+		WBH = {
+			owns_state = 235
+		}
 	}
 	mean_time_to_happen = {
 		days = 10
