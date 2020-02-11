@@ -182,7 +182,8 @@ enc_rangers_attack_plan_tt: "Unlocks the §YAnti-Ranger attack Plan§! decision.
 kill_graffs: "Deal with the Van Graffs"
 spare_graffs: "Make a deal with the Van Graffs"
 purify_city: "Purify the city"
-
+graffs_flee: "Van Graffs flee New Reno"
+enc_graffs_completed: "Deal with the Van Graffs, one way or another."
 ###################################
 # America Foreign Policy Decisions
 ###################################

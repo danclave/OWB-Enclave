@@ -2391,11 +2391,17 @@ country_event = { #67 - Ghoul Marriage
 	}
 	option = { # Equal Protection Argument
 		name = enc_reformers.67.b
-		add_ideas = ENC_Marriage_Equality
+		add_timed_idea = {
+			idea = ENC_Marriage_Equality
+			days = 365
+		}
 	}
 	option = { # Dig at Kennedy But Still Support Ghoul Marriage
 		name = enc_reformers.67.c
-		add_ideas = ENC_Marriage_Equality
+		add_timed_idea = {
+			idea = ENC_Marriage_Equality
+			days = 365
+		}
 	}
 }
 
