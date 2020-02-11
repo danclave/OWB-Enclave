@@ -1047,7 +1047,7 @@ country_event = { #31 - Spies in NCR - escaped successfully
 	is_triggered_only = yes
 	option = { # Good news
 		name = enc_reformers.31.a
-		custom_effect_tooltip = enc_ncr_spies_set
+		add_manpower = 100
 	}
 }
 
@@ -8167,7 +8167,9 @@ news_event = { #232 - Troll Warren Crushed
 		NOT = {
 			country_exists = TRL
 		}
-		country_exists = WBH
+		WBH = {
+			owns_state = 235
+		}
 	}
 	mean_time_to_happen = {
 		days = 10

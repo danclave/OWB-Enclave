@@ -1071,6 +1071,7 @@ ENC_debug = {
 	ENC_hide_debug = {
 		complete_effect = {
 			set_country_flag = enc_debug_disabled
+			clr_country_flag = enc_debug_enabled
 		}
 	}
 
