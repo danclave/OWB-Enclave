@@ -1501,7 +1501,7 @@ ENC_nation_building = {
 	ENC_sierra_madre_holograms = {
 		icon = decision_vault_boy
 		cost = 50
-		fire_only_once = no
+		fire_only_once = yes
 		allowed = {
 			original_tag = ERB
 		}
@@ -1517,7 +1517,7 @@ ENC_nation_building = {
 		}
 	}
 	ENC_sierra_madre_gold = {
-		fire_only_once = no
+		fire_only_once = yes
 		allowed = {
 			original_tag = ERB
 		}

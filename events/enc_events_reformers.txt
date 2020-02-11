@@ -146,7 +146,10 @@ country_event = { #5 - Dealing with Bishops
 				level = 3
 				instant_build = yes
 			}
-		}
+		}		
+		set_temp_variable = { caps_to_add = 200 }
+		add_caps = yes
+		
 		hidden_effect = {
 			country_event = {
 				id = enc_reformers.20
@@ -211,6 +214,8 @@ country_event = { #7 - Dealing with Mordinos
 		name = enc_reformers.7.b
 		custom_effect_tooltip = enc_reformers.7.b.tt
 		add_political_power = 100
+		set_temp_variable = { caps_to_add = 150 }
+		add_caps = yes
 	}
 }
 
@@ -1042,7 +1047,7 @@ country_event = { #31 - Spies in NCR - escaped successfully
 	is_triggered_only = yes
 	option = { # Good news
 		name = enc_reformers.31.a
-		custom_effect_tooltip = enc_ncr_spies_set
+		add_manpower = 100
 	}
 }
 
@@ -2386,11 +2391,17 @@ country_event = { #67 - Ghoul Marriage
 	}
 	option = { # Equal Protection Argument
 		name = enc_reformers.67.b
-		add_ideas = ENC_Marriage_Equality
+		add_timed_idea = {
+			idea = ENC_Marriage_Equality
+			days = 365
+		}
 	}
 	option = { # Dig at Kennedy But Still Support Ghoul Marriage
 		name = enc_reformers.67.c
-		add_ideas = ENC_Marriage_Equality
+		add_timed_idea = {
+			idea = ENC_Marriage_Equality
+			days = 365
+		}
 	}
 }
 
@@ -8162,7 +8173,9 @@ news_event = { #232 - Troll Warren Crushed
 		NOT = {
 			country_exists = TRL
 		}
-		country_exists = WBH
+		WBH = {
+			owns_state = 235
+		}
 	}
 	mean_time_to_happen = {
 		days = 10
