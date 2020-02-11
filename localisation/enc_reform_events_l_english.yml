@@ -1299,7 +1299,7 @@ enc_reformers.239.d: "This is Enclave Radio, bringing you the latest new from th
 enc_reformers.239.a: "And so a people in darkness have seen a great light"
 #############################################################################################################
 enc_reformers.240.t: "The Old Country Rallies to the Flag"
-enc_reformers.240.d: "Although The Old Country was allied to the Brotherhood, thier relatoniship is more akin to a protection racket. The Old Country is, in fact, home to ghouls who believe in the American dream, and have kept its embers alive through the long dark age.  But now that our forces close in on the Brotherhood, they are ready to defect from the Legion."
+enc_reformers.240.d: "Although The Old Country was allied to the Brotherhood, their relationship is more akin to a protection racket. The Old Country is, in fact, home to ghouls who believe in the American dream, and have kept its embers alive through the long dark age.  But now that our forces close in on the Brotherhood, they are ready to defect from the Legion."
 enc_reformers.240.a: "Welcome Back"
 #############################################################################################################
 enc_reformers.241.t: "The Greatest Sheriff of Nevada"
@@ -1307,7 +1307,7 @@ enc_reformers.241.d: "Now that we've freed the Mojave from the threat of raiders
 enc_reformers.241.a: "He's as heroic as he is handsome"
 #############################################################################################################
 enc_reformers.242.t: "A Mysterious Stranger"
-enc_reformers.242.d: "A young woman calling herself Veronica Mars has shown up at one of our schools, offering to teach for Nevada.  Despite being fairly tight lipped about her past, we think she used to be a member of the Mojave Chapter, and she's expressed an interest in doing research for Nevada. \n\nIt's unclear how much she could teach us, but perhaps we should take a chance on a naive young girl from California with stars in her eyes and a pneumatic gauntlet on her hand."
+enc_reformers.242.d: "A young woman calling herself Veronica Mars has shown up at one of our schools, offering to teach for [ERB.GetNameDef].  Despite being fairly tight lipped about her past, we think she used to be a member of the Mojave Chapter, and she's expressed an interest in doing research for Nevada. \n\nIt's unclear how much she could teach us, but perhaps we should take a chance on a naive young girl from California with stars in her eyes and a pneumatic gauntlet on her hand."
 enc_reformers.242.a: "Why not?"
 enc_reformers.241.a.tt: "\n§YVeronica§! joins Nevada"
 #############################################################################################################
@@ -1321,7 +1321,7 @@ enc_reformers.244.d: "Not everyone welcomes the return of these United States.  
 enc_reformers.244.a: "The First Amendment Wasn't Good Enough For You?"
 #############################################################################################################
 enc_reformers.245.t: "The Generalized Occupational Aptitude Test"
-enc_reformers.245.d: "To prepare for the future, Vault Tec devleoped the Generalized Occupational Aptitude Test ("GOAT"), designed to test every every citizen's worth to society after the bombs fell. Although we are currently screening for genetic damage, some observe that we could simply make all children take the GOAT when they turn 16.  Children who do well on this test are obviously genetically hardy stock, well suited to the reconstruction. \n\nOr their parents can afford to hire qualified tutors, but surely that just shows their parents are fine Americans?"
+enc_reformers.245.d: "To prepare for the future, Vault Tec developed the Generalized Occupational Aptitude Test ("GOAT"), designed to test every every citizen's worth to society after the bombs fell. Although we are currently screening for genetic damage, some observe that we could simply make all children take the GOAT when they turn 16.  Children who do well on this test are obviously genetically hardy stock, well suited to the reconstruction. \n\nOr their parents can afford to hire qualified tutors, but surely that just shows their parents are fine Americans?"
 enc_reformers.245.a: "Excellent Idea!"
 enc_reformers.245.b: "How can this possibly screen for genetic damage?"
 #############################################################################################################

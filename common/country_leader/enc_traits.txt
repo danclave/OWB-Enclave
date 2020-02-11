@@ -104,6 +104,16 @@ leader_traits = {
 		army_attack_factor = -0.10
 		political_power_factor = 0.25
 	}
+	engineering_prodigy = {
+		random = no
+		production_speed_industrial_complex_factor = 0.10
+		production_factory_efficiency_gain_factor = 0.05
+	}
+	rebellious = {
+		random = no	
+		political_power_cost = 0.10
+		stability_factor = -0.05
+	}
 	salvatore_puppet = {
 		random = no
 		political_power_factor = -0.05
@@ -123,8 +133,53 @@ leader_traits = {
 		people_drift = 0.15
 		political_power_factor = 0.10
 	}
-
+	
+	interventionist = {
+		random = no
+		war_support_factor = 0.05
+		send_volunteers_tension = -0.25
+		send_volunteer_size = 5
+	}
+	enc_fuel_expert = {
+		random = no
+		fuel_gain_factor = 0.15
+		max_fuel_factor = 0.10
+		army_fuel_consumption_factor = -0.10
+		consumer_goods_factor = 0.05
+	}	
+	desert_fighter = {
+		random = no
+		heat_attrition_factor = -0.10
+		acclimatization_hot_climate_gain_factor = 0.20
+	}
+	winter_fighter = {
+		random = no
+		winter_attrition_factor = -0.10
+		acclimatization_cold_climate_gain_factor = 0.20	
+	}
+	hates_ncr = {
+		random = no
+		war_support_factor = 0.10
+		targeted_modifier = {
+			tag = NCR
+			attack_bonus_against = 0.15
+		}
+	}
+	politically_connected = {
+		random = no
+		political_advisor_cost_factor = -0.10
+		army_chief_cost_factor = -0.10
+		air_chief_cost_factor = -0.10
+		navy_chief_cost_factor = -0.10
+		high_command_cost_factor = -0.10
+		theorist_cost_factor = -0.10
+		economy_cot_factor = -0.10
+		trade_laws_cost_factor = -0.10
+	}
+	
+    ###############################
 	# manufacturers
+	###############################
 	vertibird_aircraft_manufacturer = {
 		random = no
 		equipment_bonus = {
