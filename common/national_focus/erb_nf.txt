@@ -4350,7 +4350,10 @@ focus = {#Legion Border
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_electoral_victory
 		available = {
-			# success
+			NCR = { 
+				has_civil_war = no 
+				has_government = intellectuals
+			}
 		}
 		x = -1
 		y = 1
