@@ -992,8 +992,17 @@ ENC_render_unto_caesar = {
 ENC_debug = {
 	ENC_kill_ncr = {
 		complete_effect = {
-			add_ideas = currencyusd
+			every_state = {
+				ERB = {
+					launch_nuke = {
+						state = PREV
+						use_nuke = no
+					}
+				}
+			}
 		}
+    }
+}
 	}
 	ENC_add_legitimacy = {
 		complete_effect = {
