@@ -1908,7 +1908,7 @@ country_event = { #56 - Reno attacks
 	is_triggered_only = no
 	trigger = {
 		original_tag = ERB
-		has_full_control_of_state = 285
+		has_full_control_of_state = 285 # New Reno
 		NOT = {
 			has_completed_focus = enc_reno_end
 		}
@@ -3456,12 +3456,12 @@ country_event = { #103 - Drugs
 		add_resource = {
 			type = advanced
 			amount = 5
-			state = 285
+			state = 285 # New Reno
 		}
 		add_resource = {
 			type = circuitry
 			amount = 5
-			state = 285
+			state = 285 # New Reno
 		}
 		set_country_flag = enc_healers
 	}
@@ -7843,6 +7843,8 @@ news_event = { #223 - The Legion Marches
 					NOT = {
 						OR = {
 							is_in_faction_with = CES
+							has_non_aggression_pact_with = CES
+							is_guaranteed_by = CES
 							tag = ERB
 							tag = ARM
 							CES = {
@@ -7884,9 +7886,7 @@ country_event = { #224 - Graham Crackers
 		NOT = {
 			country_exists = NCN
 		}
-		NOT = {
-			has_completed_focus = enc_segregation
-		}
+		has_completed_focus = enc_expand_human_definition
 	}
 	option = { #	Hi!
 		name = enc_reformers.224.a
@@ -7950,7 +7950,7 @@ country_event = { #226 - TRL Buff
 	trigger = {
 		tag = ERB
 		has_completed_focus = enc_reform
-		has_full_control_of_state = 285
+		has_full_control_of_state = 235 # the Warrens
 	}
 	mean_time_to_happen = {
 		days = 30

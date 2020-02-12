@@ -27,9 +27,9 @@ ideas = {
 			allowed = {
 				original_tag = ERB
 			}
-		visible = {
+			visible = {
 				has_country_flag = integrate_brotherhood
-				}
+			}
 			traits = {
 				veteran_paladin
 			}
@@ -52,6 +52,7 @@ ideas = {
 				NOT = { has_country_flag = reformers_purged }
 			}
 		}
+		
 		generic_reformer_2 = {
 			picture = generic_political_advisor_europe_2
 

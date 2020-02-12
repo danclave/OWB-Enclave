@@ -1180,7 +1180,7 @@ focus_tree = {
 		mutually_exclusive = { focus = enc_VLT_force }
 		prerequisite = { focus = enc_expansion_reform }
 		available = {
-			AND ={
+			AND = {
 				AND = {
 					set_temp_variable = { caps_diff = 300 }
 					get_caps_difference = yes
