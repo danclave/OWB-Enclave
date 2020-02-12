@@ -1899,7 +1899,7 @@ country_event = { #55 - Dr. Moreno leaves
 	}
 }
 
-country_event = { #56 - Reno attacks
+country_event = { #56 - Patrolling New Reno
 	id = enc_reformers.56
 	title = enc_reformers.56.t
 	desc = enc_reformers.56.d
@@ -1909,6 +1909,7 @@ country_event = { #56 - Reno attacks
 	trigger = {
 		original_tag = ERB
 		has_full_control_of_state = 285 # New Reno
+		has_completed_focus = enc_reform
 		NOT = {
 			has_completed_focus = enc_reno_end
 		}
