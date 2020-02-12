@@ -8543,6 +8543,7 @@ country_event = { #247 - Hayes Protests
 	fire_only_once = yes
 	trigger = {
 		has_completed_focus = enc_screening
+		has_completed_focus = enc_rebuilding_a_nation
 	}
 	mean_time_to_happen = {
 		days = 70
