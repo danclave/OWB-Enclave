@@ -1961,6 +1961,7 @@ country_event = { #57 - Purist commander
 	}
 	trigger = {
 		has_completed_focus = enc_reform
+		not = { has_completed_focus = enc_assassinate_F }
 		any_unit_leader = {
 			has_trait = enc_purist
 			is_assigned = yes
