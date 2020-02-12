@@ -113,6 +113,10 @@ training_law_navarro_veterans: "Navarro Veterans"
 training_law_navarro_veterans_desc: "By appointing respected veterans that survived the fall of Navarro as instructors, we can use their experience to train a new generation of soldiers. Bare in mind that they will pass on their views as well as their skills.\n"
 training_law_enclave_academy: "Enclave Academy"
 training_law_enclave_academy_desc: "A specialized department will ensure that a new generation of Enclave soldiers will be the finest in the wastes."
+enc_training_law_none: "No Formal Training"
+enc_training_law_none_desc: "We can leave the training of new recruits to their respective divisions, but such a lack of standards will not do well for organization or morale."
+enc_training_law_reformer_indoctrination: "Political Indoctrination"
+enc_training_law_reformer_indoctrination_desc: "An Enclave soldier must be trained in more than warfare. We will ensure that the men we field understand our goals and aspirations, or get filtered out before they are handed a plasma rifle."
 
 enc_reorganized_economy: "Reorganized Engineers"
 
