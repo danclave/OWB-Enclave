@@ -443,6 +443,17 @@ ideas = {
 				factor = 10
 			}
 		}
+		dShakey = {
+			picture = USA_joseph_mccarthy
+
+			allowed = { original_tag = ERB }
+			traits = {
+				enc_fuel_expert
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
 	}
 }
 

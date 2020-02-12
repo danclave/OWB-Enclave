@@ -358,7 +358,10 @@ ideas = {
 				original_tag = ERB
 			}
 			visible = {
-				# has_completed_focus = enc_reform
+				not = { has_completed_focus = enc_purity }
+			}
+			available = {
+				has_completed_focus = enc_reform
 			}
 			cost = 100
 			removal_cost = -1
@@ -375,7 +378,10 @@ ideas = {
 				original_tag = ERB
 			}
 			visible = {
-				# has_completed_focus = enc_purity
+				not = { has_completed_focus = enc_reform }
+			}
+			available = {
+				has_completed_focus = enc_reform
 			}
 			cost = 100
 			removal_cost = -1
@@ -383,6 +389,27 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.10
 				elites_drift = 0.20
+			}
+			cancel_if_invalid = no
+			default = yes
+		}
+		enc_press_seggregationist_propaganda = {
+			picture = enc_press_purist_propaganda
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_country_flag = enc_mid_game
+			}
+			available = {
+				has_completed_focus = enc_segregation
+			}
+			cost = 100
+			removal_cost = -1
+			level = 2
+			modifier = {
+				political_power_cost = 0.10
+				elites_drift = 0.10
 			}
 			cancel_if_invalid = no
 			default = yes
@@ -419,6 +446,47 @@ ideas = {
 			}
 			cancel_if_invalid = no
 			default = yes
+		}
+		
+		ENC_free_press = {
+			picture = enc_free_press
+			allowed = {
+				always = no
+            }
+            allowed_civil_war = {
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			production_factory_max_efficiency_factor = 0.05
+				justify_war_goal_time = 0.20
+				encryption_factor = -0.05
+				offensive_war_stability_factor = -0.20
+				people_drift = 0.05
+			}
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		ENC_free_press_2 = {
+			picture = enc_free_press
+			allowed = {
+				always = no
+            }
+            allowed_civil_war = {
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				justify_war_goal_time = 0.25
+				encryption_factor = -0.10
+				offensive_war_stability_factor = -0.30
+			    people_drift = 0.10
+			}
+			allowed_to_remove = {
+				always = no
+			}
 		}
 	}
 	drug_laws = {
@@ -504,6 +572,7 @@ ideas = {
 		enc_mutant_law_none = {
 			allowed = {
 				original_tag = ERB
+				always = no
 			}
 
 			cost = 100
@@ -511,7 +580,7 @@ ideas = {
 			level = 3
 			picture = tolerance_ghouls_banned
 			modifier = {
-				stability_factor = 0.02
+				stability_factor = 0.03
 			}
 
 			ai_will_do = {

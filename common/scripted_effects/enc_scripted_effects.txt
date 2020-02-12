@@ -168,12 +168,14 @@ change_suspicion = {
 			}
 		}
 		custom_effect_tooltip =  lose_suspicion_tt
-		# warn player of wasted loss
+		# warn player of wasted loss		
+		set_temp_variable = { suspicion_change_var_absolute = suspicion_change_var }
+		multiply_temp_variable = { suspicion_change_var_absolute = -1 }
 		if = {
 			limit = {
 				check_variable = {
-					var = suspicion_change_var
-					value = ENC_hiding_cost
+					var = ENC_hiding_cost
+					value = suspicion_change_var_absolute
 					compare = less_than
 				}
 			}

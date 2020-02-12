@@ -129,6 +129,7 @@ ENC_shifts = {
 		}
 	}
 }
+
 ENC_reno = {
 	purify_city = {
 		icon = generic_scorched_earth
@@ -149,6 +150,28 @@ ENC_reno = {
 			}
 		}
 	}
+	graffs_flee = {
+		icon = eng_blackshirt_march
+		priority = 30
+		activation = {
+            NOT = { has_country_flag = enc_graffs_completed }
+            has_full_control_of_state = 285 #NEW RENO			
+		}
+		available = {
+			has_country_flag = enc_graffs_completed
+		}
+		cancel_trigger = {
+			not = {				
+				has_full_control_of_state = 285 #NEW RENO		
+			}
+		}
+		is_good = no
+		days_mission_timeout = 2
+		timeout_effect = {
+			set_country_flag = enc_graffs_completed
+		}
+	}
+
 	kill_graffs = {
         icon = generic_prepare_civil_war
         cost = 50
@@ -177,7 +200,7 @@ ENC_reno = {
         }
     }
 	spare_graffs = {
-		icon = generic_political_discourse
+		icon = hol_attract_foreign_investors
 		cost = 50
 		visible = {
 			not = {
@@ -962,7 +985,6 @@ ENC_render_unto_caesar = {
 			}
 	}
 }
-
 
 # DEBUG
 ###############################
