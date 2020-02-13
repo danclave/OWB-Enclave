@@ -31,8 +31,7 @@ leader_traits = {
 			factor = 0
 		}
 	}
-	enc_demoted = { 
-		new_commander_weight = 0
+	enc_demoted = { 		
 		type = all
 		trait_type = personality_trait	
 		gain_xp = {
@@ -45,6 +44,9 @@ leader_traits = {
 		new_commander_weight = {
 			factor = 0
 		}
+		gain_xp = {
+			always = no
+		}	
 		non_shared_modifier = {
 			experience_gain_factor = -0.10
 			promote_cost_factor = 10

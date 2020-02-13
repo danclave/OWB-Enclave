@@ -3206,7 +3206,8 @@ country_event = { #95 Thanksgiving
 	}
 	option = { # Sponsors
 		name = enc_reformers.95.c
-		add_political_power = 100
+		set_temp_variable = { caps_to_add = 200 }
+		add_caps = yes
 	}
 }
 

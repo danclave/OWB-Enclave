@@ -2,6 +2,7 @@
 ###############################
 # SHARED
 ###############################
+
 ENC_shifts = {
 	extend_production_shifts = {	#increased production for reduced war support
 		icon = decision_enc_production_up
@@ -1005,6 +1006,23 @@ ENC_render_unto_caesar = {
 	}
 }
 
+scavenge_resources = {
+	enc_reject_scavenging = {
+		cost = 50
+		fire_only_once = yes
+		
+		allowed = {
+			original_tag = ERB
+		}
+		visible = {
+			has_country_flag = enabled_scavenging
+		}
+		complete_effect = {
+			clr_country_flag = enabled_scavenging
+		}
+		
+	}
+}
 # DEBUG
 ###############################
 
