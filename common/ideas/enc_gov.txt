@@ -278,8 +278,8 @@ ideas = {
 				training_time_factor = -0.1
 				war_support_factor = -0.10
 				experience_loss_factor = 0.10
-				minimum_training_level - 0.05
-				army_org_Factor = - 0.05
+				minimum_training_level -0.05
+				army_org_Factor = -0.05
 			}
 			default = yes
 
@@ -329,10 +329,9 @@ ideas = {
 		}
 		enc_training_law_reformer_indoctrination = {
 			picture = enc_idea_manpower_3
-			cost = 150
+			cost = 100
 			removal_cost = -1
 			level = 4
-			picture = training_law_none
 			visible = {
 				not = { has_completed_focus = enc_purity }
 			}
@@ -342,7 +341,7 @@ ideas = {
 			modifier = {
 				training_time_factor = 0.25
 				experience_loss_factor = 0.10
-				army_org_Factor = - 0.05
+				army_org_Factor = -0.05
 				intellectuals_drift = 0.15
 				conscription_factor = -0.15
 			}

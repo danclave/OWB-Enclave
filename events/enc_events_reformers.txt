@@ -8546,6 +8546,7 @@ country_event = { #247 - Hayes Protests
 	fire_only_once = yes
 	trigger = {
 		has_completed_focus = enc_screening
+		has_completed_focus = enc_rebuilding_a_nation
 	}
 	mean_time_to_happen = {
 		days = 70
@@ -9465,7 +9466,7 @@ country_event = { #312 - Nuke Armed & ready
 		name = enc_reformers.312.b
 		custom_effect_tooltip = flagstaff_is_nuked
 		trigger = {
-			has_country_flag = leader_charismatic
+			not = { has_country_flag = leader_ruthless }
 		}
 		launch_nuke = {
 			province = 8951
