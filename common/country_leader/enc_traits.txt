@@ -185,10 +185,12 @@ leader_traits = {
 			vb_gunship_equipment = {
 				build_cost_ic = -0.10
 				reliability = 0.20
+				instant = yes
 			}
 			vb_transport_plane_equipment = {
 				build_cost_ic = -0.10
 				reliability = 0.2
+				instant = yes
 			}
 		}
 

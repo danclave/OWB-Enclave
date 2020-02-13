@@ -151,14 +151,27 @@ on_actions = {
 	}
 
 	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
-	on_state_control_changed = {		
+	on_state_control_changed = {	
 		effect = {
 			if = {
 				limit = {	
 					original_tag = ERB
 				}
 				calculate_hiding_cost = yes
-				advanced_update_legitimacy = yes
+				if = {
+					limit = {
+						has_completed_focus = enc_reform
+					}
+					advanced_update_legitimacy = yes
+				}
+				else_if  = {
+					limit = {
+						has_completed_focus = enc_purity
+					}
+					LLW = {
+						set_state_controller = FROM.FROM
+					}
+				}
 			}
 		}
 	}

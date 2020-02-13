@@ -792,30 +792,12 @@ focus_tree = {
 		icon = GFX_goal_enc_infiltrate_ncr
 		cost = 4.3
 		ai_will_do = { factor = 1 }
-		available = {
-			if = {
-				limit = {
-					has_country_flag = enc_bishop_in_NCR
-				}
-				has_country_flag = enc_bishop_in_NCR
-			}
-			else = {
-				custom_trigger_tooltip = {
-					tooltip = ncr_suspicion_higher_than_35
-					check_variable = { ENC_hiding_cost > 34.99 }
-				}
-			}
-
-		}
 		relative_position_id = enc_american_dream
 		x = 9
 		y = 1
 		prerequisite = { focus = enc_reform }
 		completion_reward = {
-			set_temp_variable = {
-				var = suspicion_change_var
-				value = -35
-			}
+			set_temp_variable = { suspicion_change_var = -35 }
 			change_suspicion = yes
 		}
 	}
