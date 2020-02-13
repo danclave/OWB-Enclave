@@ -1,0 +1,88 @@
+﻿capital = 159
+set_war_support = 0
+set_stability = 0
+
+set_country_flag = not_allowed_to_core_flag
+set_country_flag = generic_decisions_disabled
+set_country_flag = no_generic_manufacturer
+set_country_flag = coring_button_hidden
+set_country_flag = enclave_nation
+set_country_flag = no_mutants_allowed
+
+set_country_flag = gov_unique_manpower_law
+set_country_flag = economic_laws_hidden
+set_country_flag = trade_laws_hidden
+set_country_flag = default_press_laws_banned
+set_country_flag = default_slave_laws_banned
+set_country_flag = default_drug_laws
+set_country_flag = gov_outsiders_hidden
+set_country_flag = default_officer_laws
+
+
+###############################
+# POLITICS
+###############################
+# set_party_name = { ideology = intellectuals long_name = ERB_intellectuals_party name = ERB_intellectuals_party_long }
+# set_party_name = { ideology = elites long_name = ERB_elites_party name = ERB_elites_party_long }
+# set_party_name = { ideology = ruler long_name = ERB_ruler_party name = ERB_ruler_party_long }
+# set_party_name = { ideology = people long_name = ERB_people_party name = ERB_people_party_long }
+
+set_politics = {
+	ruling_party = elites
+	elections_allowed = no
+}
+
+set_popularities = {
+	people = 20
+	elites = 40
+	intellectuals = 30
+	ruler = 10
+}
+
+###############################
+# RULES
+###############################
+set_rule = { can_force_government = no }
+set_rule = { can_send_volunteers = no }
+set_rule = { can_puppet = no }
+set_rule = { can_lower_tension = no }
+set_rule = { can_only_justify_war_on_threat_country = no }
+set_rule = { can_guarantee_other_ideologies = no }
+set_rule = { can_join_factions = no }
+
+###############################
+# LEADERS
+###############################
+create_country_leader  = {
+	name = "Raiders"
+	picture = "gfx/leaders/portrait_Anderson.dds"
+	expire = "3000.1.1"
+	ideology = militarist_technocracy
+	traits = {}
+}
+create_country_leader  = {
+	name = "Elders"
+	picture = "gfx/leaders/portrait_douglas_enclave.dds"
+	expire = "3000.1.1"
+	ideology = technocracy
+	traits = {}
+}
+create_country_leader = {
+	name = "Tyrants"
+	picture = "gfx/leaders/portrait_sarge.dds"
+	expire = "3000.1.1"
+	ideology = benevolent_dictatorship
+	traits = {
+		drill_sargeant
+	}
+}
+create_country_leader = {
+	name = "Survivors"
+	picture = "gfx/leaders/ENC/Portrait_Enclave_Generic.dds"
+	expire = "3000.1.1"
+	ideology = town_hall_democracy
+	traits = {}
+}
+
+# IDEAS
+add_ideas = enc_idea_lawless_wasteland
