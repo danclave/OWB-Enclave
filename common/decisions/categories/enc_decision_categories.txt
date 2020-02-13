@@ -103,7 +103,7 @@ ENC_political_infighting = {
 	icon = category_enc_political_infighting
 	priority = { base = 10 }
 	allowed = {
-		tag = ERB
+		original_tag = ERB
 	}
 	visible = {
 		OR = {
