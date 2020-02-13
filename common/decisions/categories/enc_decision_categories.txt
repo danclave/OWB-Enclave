@@ -281,6 +281,13 @@ NCR_hayes_plots = {
 		has_country_flag = enc_hayes_plots
 	}
 }
+
+ENC_exploiting_wasteland = {
+	priority = 0
+	icon = category_usa_flag
+	allowed = { original_tag = ERB }
+}
+
 # ##############################
 # ICONS
 # ##############################

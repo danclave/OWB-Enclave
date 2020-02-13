@@ -918,7 +918,7 @@ country_event = { #38 - ANTI PUPPET
 	trigger = {
 		ERB = {
 			has_completed_focus = enc_purity
-			num_subjects > 0
+			num_subjects > 1
 		}
 
 	}

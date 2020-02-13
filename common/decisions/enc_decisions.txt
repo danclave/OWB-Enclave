@@ -167,7 +167,7 @@ ENC_reno = {
 			}
 		}
 		is_good = no
-		days_mission_timeout = 2
+		days_mission_timeout = 150
 		timeout_effect = {
 			set_country_flag = enc_graffs_completed
 		}
@@ -228,7 +228,7 @@ ENC_reno = {
 	}
 }
 
-ENC_radio_broadcasts = {
+ENC_radio_broadcasts = { 
 	ENC_raise_war_support = {
 		icon = decision_enc_propaganda
 		cost = 75
@@ -1027,113 +1027,11 @@ scavenge_resources = {
 ###############################
 
 ENC_debug = {
-	ENC_kill_ncr = {
-		complete_effect = {
-			every_state = {
-				ERB = {
-					launch_nuke = {
-						state = PREV
-						use_nuke = no
-					}
-				}
-			}
-		}
-    }
-}
-	}
-	ENC_add_legitimacy = {
-		complete_effect = {
-			set_country_flag = no_generic_manufacturer
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = 0.10
-			}
-			change_legitimacy = yes
-		}
-	}
 	ENC_misc = {
-		available = {
-			has_dynamic_modifier = {
-				modifier = enc_legitimacy_dynamic_modifier
-			}
-		}
 		complete_effect = {
-			misc_effect_test = yes
-		}
-	}
-	ENC_reduce_legitimacy_relevance = {
-		complete_effect = {
-			reduce_legitimacy_relevance = yes
-		}
-	}
-	ENC_restore_douglas_portrait = {
-		complete_effect = {
-			change_douglas_portrait_to_nevada = yes
-		}
-	}
-	ENC_people_uprising = {
-		complete_effect = {
-			people_start_revolt = yes
-		}
-	}
-	ENC_NCR_CES_war = {
-		complete_effect = {
-			CES = {
-				declare_war_on = {
-					target = NCR
-					type = annex_everything
-				}
-			}
-		}
-	}
-	ENC_reduce_legitimacy = {
-		complete_effect = {
-			set_temp_variable = {
-				var = legitimacy_change_var
-				value = -0.10
-			}
-			change_legitimacy = yes
-			custom_effect_tooltip = enc_debug_tt
-		}
-	}
-	ENC_debug_enc_civil_war = {
-		complete_effect = 	{
-			NCR = {
-				# Enclave
-				start_civil_war = {
-					ideology = intellectuals
-					size = 0.5
-					capital = 63
-					states = { 63 583 4 205 80 }
-					states_filter = {
-
-					}
-					keep_unit_leaders = { 1522 }
-				}
-			}
-			random_country = {
-				limit = {
-					original_tag = NCR
-					has_government = intellectuals
-				}
-				set_cosmetic_tag = ENC
-				global_every_army_leader = {
-					limit = {
-						has_id = 1522
-					}
-					set_nationality = ENC
-				}
-			}
-		}
-	}
-	ENC_debug_kill_purists = {
-		complete_effect = 	{
-			every_army_leader = {
-				limit = {
-					has_trait = enc_purist
-				}
-				custom_effect_tooltip = are_purged
-				retire = yes
+			add_manpower = 1
+			LLW = {
+				load_focus_tree = erb_eaz_nf
 			}
 		}
 	}
@@ -1143,5 +1041,74 @@ ENC_debug = {
 			clr_country_flag = enc_debug_enabled
 		}
 	}
-
+	ENC_exploiting_wasteland_arms_factories = {
+		cost = 25
+		icon = generic_construction
+		fire_only_once = yes
+		highlight_states = {
+			state = 64
+			state = 
+		}
+		visible = {
+		# 	has_completed_focus = enc_purity
+		}
+		available = {
+			LLW = {
+				any_state = {
+					arms_factory > 0
+				}
+			}
+		}
+		days_remove = 20
+		remove_effect = {
+			LLW = {
+				random_owned_state = {
+					limit = {
+						arms_factory > 0
+					}
+					set_temp_variable = { ENC_exploiting_wasteland_amount_arms_factory_removed = arms_factory_level }
+					remove_building = {
+						type = arms_factory
+						level = ENC_exploiting_wasteland_amount_arms_factory_removed
+					}
+				}
+			}
+			random_owned_state = {
+				add_offsite_building = { type = arms_factory level = ENC_exploiting_wasteland_amount_arms_factory_removed }
+			}
+		}	
+	}
+	ENC_exploiting_wasteland_industrial_complex = {
+		cost = 25
+		icon = generic_construction
+		fire_only_once = no
+		visible = {
+		# 	has_completed_focus = enc_purity
+		}
+		available = {
+			LLW = {
+				any_state = {
+					industrial_complex > 0
+				}
+			}
+		}
+		days_remove = 20
+		remove_effect = {
+			LLW = {
+				random_owned_state = {
+					limit = {
+						industrial_complex > 0
+					}
+					set_temp_variable = { ENC_exploiting_wasteland_amount_industrial_complex_removed = industrial_complex_level }
+					remove_building = {
+						type = industrial_complex
+						level = ENC_exploiting_wasteland_amount_industrial_complex_removed
+					}
+				}
+			}
+			random_owned_state = {
+				add_offsite_building = { type = industrial_complex level = ENC_exploiting_wasteland_amount_industrial_complex_removed }
+			}
+		}	
+	}
 }

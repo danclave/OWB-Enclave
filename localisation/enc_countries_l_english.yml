@@ -52,8 +52,6 @@ ERB_BOS_people:0 "American Brotherhood"
 ERB_BOS_people_DEF:0 "American Brotherhood"
 ERB_BOS_people_ADJ:0 "American Brotherhood"
 
-
-
 ERB_nevada_ruler:0 "Nevada"
 ERB_nevada_ruler_DEF:0 "The State of Nevada"
 ERB_nevada_ruler_ADJ:0 "Nevadan"
@@ -188,3 +186,18 @@ EAZ_BAR_people_ADJ:0 "Enclave Administration Zone"
 EAZ_BAR_ruler:0 "Enclave Administration Zone"
 EAZ_BAR_ruler_DEF:0 "Enclave Administration Zone"
 EAZ_BAR_ruler_ADJ:0 "Enclave Administration Zone"
+
+LLW_intellectuals:0 "Lawless Wasteland"
+LLW_intellectuals_DEF:0 "Wasteland"
+LLW_intellectuals_ADJ:0 "Wastelander"
+LLW_ruler:0 "Lawless Wasteland"
+LLW_ruler_DEF:0 "Wasteland"
+LLW_ruler_ADJ:0 "Wastelander"
+LLW_people:0 "Lawless Wasteland"
+LLW_people_DEF:0 "Wasteland"
+LLW_people_ADJ:0 "Wastelander"
+LLW_elites:0 "Lawless Wasteland"
+LLW_elites__DEF:0 "Wasteland"
+LLW_elites__ADJ:0 "Wastelander"
+
+autonomy_enclave_influenced_region: "Enclave Influenced Region"

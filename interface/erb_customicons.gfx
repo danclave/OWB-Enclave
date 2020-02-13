@@ -1,1378 +1,1382 @@
 spriteTypes = {
         SpriteType = {#america_brotherhood_faction
             name = "GFX_goal_america_brotherhood_faction"
-             texturefile = "gfx/interface/goals/america_brotherhood_faction.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/america_brotherhood_faction.dds"
+ 	    } 
         SpriteType = {#america_forts
             name = "GFX_goal_america_forts"
-             texturefile = "gfx/interface/goals/america_forts.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/america_forts.dds"
+ 	    } 
         SpriteType = {#america_goal_eagle
             name = "GFX_goal_america_goal_eagle"
-             texturefile = "gfx/interface/goals/america_goal_eagle.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/america_goal_eagle.dds"
+ 	    } 
         SpriteType = {#america_goal_eagle_deal
             name = "GFX_goal_america_goal_eagle_deal"
-             texturefile = "gfx/interface/goals/america_goal_eagle_deal.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/america_goal_eagle_deal.dds"
+ 	    } 
         SpriteType = {#america_goal_golden_gate
             name = "GFX_goal_america_goal_golden_gate"
-             texturefile = "gfx/interface/goals/america_goal_golden_gate.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/america_goal_golden_gate.dds"
+ 	    } 
         SpriteType = {#desktop.ini
             name = "GFX_goal_desktop.ini"
-             texturefile = "gfx/interface/goals/desktop.ini.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/desktop.ini.dds"
+ 	    } 
         SpriteType = {#enc_accept_ghouls
             name = "GFX_goal_enc_accept_ghouls"
-             texturefile = "gfx/interface/goals/enc_accept_ghouls.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_accept_ghouls.dds"
+ 	    } 
         SpriteType = {#enc_accept_super_mutants
             name = "GFX_goal_enc_accept_super_mutants"
-             texturefile = "gfx/interface/goals/enc_accept_super_mutants.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_accept_super_mutants.dds"
+ 	    } 
         SpriteType = {#enc_accept_wastelanders
             name = "GFX_goal_enc_accept_wastelanders"
-             texturefile = "gfx/interface/goals/enc_accept_wastelanders.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_accept_wastelanders.dds"
+ 	    } 
         SpriteType = {#enc_advanced_fighter
             name = "GFX_goal_enc_advanced_fighter"
-             texturefile = "gfx/interface/goals/enc_advanced_fighter.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_advanced_fighter.dds"
+ 	    } 
         SpriteType = {#enc_agreement
             name = "GFX_goal_enc_agreement"
-             texturefile = "gfx/interface/goals/enc_agreement.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_agreement.dds"
+ 	    } 
         SpriteType = {#enc_air_production
             name = "GFX_goal_enc_air_production"
-             texturefile = "gfx/interface/goals/enc_air_production.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_air_production.dds"
+ 	    } 
         SpriteType = {#enc_amnesty_for_service
             name = "GFX_goal_enc_amnesty_for_service"
-             texturefile = "gfx/interface/goals/enc_amnesty_for_service.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_amnesty_for_service.dds"
+ 	    } 
         SpriteType = {#enc_annex_ykz
             name = "GFX_goal_enc_annex_ykz"
-             texturefile = "gfx/interface/goals/enc_annex_ykz.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_annex_ykz.dds"
+ 	    } 
         SpriteType = {#enc_ant
             name = "GFX_goal_enc_ant"
-             texturefile = "gfx/interface/goals/enc_ant.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_ant.dds"
+ 	    } 
         SpriteType = {#enc_anti_bos
             name = "GFX_goal_enc_anti_bos"
-             texturefile = "gfx/interface/goals/enc_anti_bos.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_anti_bos.dds"
+ 	    } 
         SpriteType = {#enc_anti_ncr
             name = "GFX_goal_enc_anti_ncr"
-             texturefile = "gfx/interface/goals/enc_anti_ncr.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_anti_ncr.dds"
+ 	    } 
         SpriteType = {#enc_ANT_establish_tributaries
             name = "GFX_goal_enc_ANT_establish_tributaries"
-             texturefile = "gfx/interface/goals/enc_ANT_establish_tributaries.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_ANT_establish_tributaries.dds"
+ 	    } 
         SpriteType = {#enc_appointed_governors
             name = "GFX_goal_enc_appointed_governors"
-             texturefile = "gfx/interface/goals/enc_appointed_governors.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_appointed_governors.dds"
+ 	    } 
         SpriteType = {#enc_area_52
             name = "GFX_goal_enc_area_52"
-             texturefile = "gfx/interface/goals/enc_area_52.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_area_52.dds"
+ 	    } 
         SpriteType = {#enc_arizona
             name = "GFX_goal_enc_arizona"
-             texturefile = "gfx/interface/goals/enc_arizona.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_arizona.dds"
+ 	    } 
         SpriteType = {#enc_armed_militias
             name = "GFX_goal_enc_armed_militias"
-             texturefile = "gfx/interface/goals/enc_armed_militias.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_armed_militias.dds"
+ 	    } 
         SpriteType = {#enc_army_doctrine
             name = "GFX_goal_enc_army_doctrine"
-             texturefile = "gfx/interface/goals/enc_army_doctrine.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_army_doctrine.dds"
+ 	    } 
         SpriteType = {#enc_army_reserves
             name = "GFX_goal_enc_army_reserves"
-             texturefile = "gfx/interface/goals/enc_army_reserves.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_army_reserves.dds"
+ 	    } 
         SpriteType = {#enc_arrows2
             name = "GFX_goal_enc_arrows2"
-             texturefile = "gfx/interface/goals/enc_arrows2.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_arrows2.dds"
+ 	    } 
         SpriteType = {#ENC_assasinate
             name = "GFX_goal_ENC_assasinate"
-             texturefile = "gfx/interface/goals/ENC_assasinate.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/ENC_assasinate.dds"
+ 	    } 
         SpriteType = {#enc_a_common_enemy
             name = "GFX_goal_enc_a_common_enemy"
-             texturefile = "gfx/interface/goals/enc_a_common_enemy.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_a_common_enemy.dds"
+ 	    } 
         SpriteType = {#enc_a_nation_reborn
             name = "GFX_goal_enc_a_nation_reborn"
-             texturefile = "gfx/interface/goals/enc_a_nation_reborn.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_a_nation_reborn.dds"
+ 	    } 
         SpriteType = {#enc_a_nation_remade
             name = "GFX_goal_enc_a_nation_remade"
-             texturefile = "gfx/interface/goals/enc_a_nation_remade.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_a_nation_remade.dds"
+ 	    } 
         SpriteType = {#enc_ban_congress
             name = "GFX_goal_enc_ban_congress"
-             texturefile = "gfx/interface/goals/enc_ban_congress.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_ban_congress.dds"
+ 	    } 
         SpriteType = {#enc_beacon
             name = "GFX_goal_enc_beacon"
-             texturefile = "gfx/interface/goals/enc_beacon.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_beacon.dds"
+ 	    } 
         SpriteType = {#enc_big_MT
             name = "GFX_goal_enc_big_MT"
-             texturefile = "gfx/interface/goals/enc_big_MT.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_big_MT.dds"
+ 	    } 
         SpriteType = {#enc_big_MT_restored_nevada
             name = "GFX_goal_enc_big_MT_restored_nevada"
-             texturefile = "gfx/interface/goals/enc_big_MT_restored_nevada.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_big_MT_restored_nevada.dds"
+ 	    } 
         SpriteType = {#enc_bos_flag_reform
             name = "GFX_goal_enc_bos_flag_reform"
-             texturefile = "gfx/interface/goals/enc_bos_flag_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_bos_flag_reform.dds"
+ 	    } 
         SpriteType = {#enc_bos_leadership
             name = "GFX_goal_enc_bos_leadership"
-             texturefile = "gfx/interface/goals/enc_bos_leadership.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_bos_leadership.dds"
+ 	    } 
         SpriteType = {#enc_bos_soldiers
             name = "GFX_goal_enc_bos_soldiers"
-             texturefile = "gfx/interface/goals/enc_bos_soldiers.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_bos_soldiers.dds"
+ 	    } 
         SpriteType = {#enc_cause_focus
             name = "GFX_goal_enc_cause_focus"
-             texturefile = "gfx/interface/goals/enc_cause_focus.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_cause_focus.dds"
+ 	    } 
         SpriteType = {#enc_citizenship_for_service
             name = "GFX_goal_enc_citizenship_for_service"
-             texturefile = "gfx/interface/goals/enc_citizenship_for_service.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_citizenship_for_service.dds"
+ 	    } 
         SpriteType = {#enc_cloning
             name = "GFX_goal_enc_cloning"
-             texturefile = "gfx/interface/goals/enc_cloning.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_cloning.dds"
+ 	    } 
         SpriteType = {#enc_combined_arms
             name = "GFX_goal_enc_combined_arms"
-             texturefile = "gfx/interface/goals/enc_combined_arms.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_combined_arms.dds"
+ 	    } 
         SpriteType = {#enc_complete_integration
             name = "GFX_goal_enc_complete_integration"
-             texturefile = "gfx/interface/goals/enc_complete_integration.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_complete_integration.dds"
+ 	    } 
         SpriteType = {#enc_construction
             name = "GFX_goal_enc_construction"
-             texturefile = "gfx/interface/goals/enc_construction.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_construction.dds"
+ 	    } 
         SpriteType = {#enc_construction_nev
             name = "GFX_goal_enc_construction_nev"
-             texturefile = "gfx/interface/goals/enc_construction_nev.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_construction_nev.dds"
+ 	    } 
         SpriteType = {#enc_construction_usa
             name = "GFX_goal_enc_construction_usa"
-             texturefile = "gfx/interface/goals/enc_construction_usa.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_construction_usa.dds"
+ 	    } 
         SpriteType = {#enc_construct_mil_factory
             name = "GFX_goal_enc_construct_mil_factory"
-             texturefile = "gfx/interface/goals/enc_construct_mil_factory.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_construct_mil_factory.dds"
+ 	    } 
         SpriteType = {#enc_crack_the_code
             name = "GFX_goal_enc_crack_the_code"
-             texturefile = "gfx/interface/goals/enc_crack_the_code.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_crack_the_code.dds"
+ 	    } 
         SpriteType = {#enc_defenders
             name = "GFX_goal_enc_defenders"
-             texturefile = "gfx/interface/goals/enc_defenders.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_defenders.dds"
+ 	    } 
         SpriteType = {#enc_demilitarize_government
             name = "GFX_goal_enc_demilitarize_government"
-             texturefile = "gfx/interface/goals/enc_demilitarize_government.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_demilitarize_government.dds"
+ 	    } 
         SpriteType = {#enc_department_of_commerce
             name = "GFX_goal_enc_department_of_commerce"
-             texturefile = "gfx/interface/goals/enc_department_of_commerce.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_department_of_commerce.dds"
+ 	    } 
         SpriteType = {#enc_department_of_defense
             name = "GFX_goal_enc_department_of_defense"
-             texturefile = "gfx/interface/goals/enc_department_of_defense.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_department_of_defense.dds"
+ 	    } 
         SpriteType = {#enc_department_of_defense_2
             name = "GFX_goal_enc_department_of_defense_2"
-             texturefile = "gfx/interface/goals/enc_department_of_defense_2.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_department_of_defense_2.dds"
+ 	    } 
         SpriteType = {#enc_department_of_homeland_security
             name = "GFX_goal_enc_department_of_homeland_security"
-             texturefile = "gfx/interface/goals/enc_department_of_homeland_security.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_department_of_homeland_security.dds"
+ 	    } 
         SpriteType = {#enc_die
             name = "GFX_goal_enc_die"
-             texturefile = "gfx/interface/goals/enc_die.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_die.dds"
+ 	    } 
         SpriteType = {#enc_die_dark
             name = "GFX_goal_enc_die_dark"
-             texturefile = "gfx/interface/goals/enc_die_dark.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_die_dark.dds"
+ 	    } 
         SpriteType = {#enc_draft_wastelanders
             name = "GFX_goal_enc_draft_wastelanders"
-             texturefile = "gfx/interface/goals/enc_draft_wastelanders.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_draft_wastelanders.dds"
+ 	    } 
         SpriteType = {#enc_Economic_Miracle
             name = "GFX_goal_enc_Economic_Miracle"
-             texturefile = "gfx/interface/goals/enc_Economic_Miracle.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_Economic_Miracle.dds"
+ 	    } 
         SpriteType = {#enc_education
             name = "GFX_goal_enc_education"
-             texturefile = "gfx/interface/goals/enc_education.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_education.dds"
+ 	    } 
         SpriteType = {#enc_education_by_followers
             name = "GFX_goal_enc_education_by_followers"
-             texturefile = "gfx/interface/goals/enc_education_by_followers.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_education_by_followers.dds"
+ 	    } 
         SpriteType = {#enc_education_civilian
             name = "GFX_goal_enc_education_civilian"
-             texturefile = "gfx/interface/goals/enc_education_civilian.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_education_civilian.dds"
+ 	    } 
         SpriteType = {#enc_education_military
             name = "GFX_goal_enc_education_military"
-             texturefile = "gfx/interface/goals/enc_education_military.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_education_military.dds"
+ 	    } 
         SpriteType = {#enc_election
             name = "GFX_goal_enc_election"
-             texturefile = "gfx/interface/goals/enc_election.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_election.dds"
+ 	    } 
         SpriteType = {#enc_elections_reform
             name = "GFX_goal_enc_elections_reform"
-             texturefile = "gfx/interface/goals/enc_elections_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_elections_reform.dds"
+ 	    } 
         SpriteType = {#enc_electoral_victory
             name = "GFX_goal_enc_electoral_victory"
-             texturefile = "gfx/interface/goals/enc_electoral_victory.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_electoral_victory.dds"
+ 	    } 
         SpriteType = {#enc_electricity
             name = "GFX_goal_enc_electricity"
-             texturefile = "gfx/interface/goals/enc_electricity.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_electricity.dds"
+ 	    } 
         SpriteType = {#enc_emergency_labour_draft
             name = "GFX_goal_enc_emergency_labour_draft"
-             texturefile = "gfx/interface/goals/enc_emergency_labour_draft.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_emergency_labour_draft.dds"
+ 	    } 
         SpriteType = {#enc_empower_congress
             name = "GFX_goal_enc_empower_congress"
-             texturefile = "gfx/interface/goals/enc_empower_congress.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_empower_congress.dds"
+ 	    } 
         SpriteType = {#enc_encryption
             name = "GFX_goal_enc_encryption"
-             texturefile = "gfx/interface/goals/enc_encryption.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_encryption.dds"
+ 	    } 
         SpriteType = {#enc_epa
             name = "GFX_goal_enc_epa"
-             texturefile = "gfx/interface/goals/enc_epa.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_epa.dds"
+ 	    } 
         SpriteType = {#enc_expand_human_definition
             name = "GFX_goal_enc_expand_human_definition"
-             texturefile = "gfx/interface/goals/enc_expand_human_definition.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_expand_human_definition.dds"
+ 	    } 
         SpriteType = {#enc_expansion_reform
             name = "GFX_goal_enc_expansion_reform"
-             texturefile = "gfx/interface/goals/enc_expansion_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_expansion_reform.dds"
+ 	    } 
         SpriteType = {#enc_experiments
             name = "GFX_goal_enc_experiments"
-             texturefile = "gfx/interface/goals/enc_experiments.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_experiments.dds"
+ 	    } 
         SpriteType = {#enc_eyebot
             name = "GFX_goal_enc_eyebot"
-             texturefile = "gfx/interface/goals/enc_eyebot.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_eyebot.dds"
+ 	    } 
         SpriteType = {#enc_eyebot_mex_purity
             name = "GFX_goal_enc_eyebot_mex_purity"
-             texturefile = "gfx/interface/goals/enc_eyebot_mex_purity.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_eyebot_mex_purity.dds"
+ 	    } 
         SpriteType = {#enc_eyebot_reform
             name = "GFX_goal_enc_eyebot_reform"
-             texturefile = "gfx/interface/goals/enc_eyebot_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_eyebot_reform.dds"
+ 	    } 
         SpriteType = {#enc_FBI
             name = "GFX_goal_enc_FBI"
-             texturefile = "gfx/interface/goals/enc_FBI.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_FBI.dds"
+ 	    } 
         SpriteType = {#enc_fear_uncertainty_and_doubt
             name = "GFX_goal_enc_fear_uncertainty_and_doubt"
-             texturefile = "gfx/interface/goals/enc_fear_uncertainty_and_doubt.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_fear_uncertainty_and_doubt.dds"
+ 	    } 
         SpriteType = {#enc_fed
             name = "GFX_goal_enc_fed"
-             texturefile = "gfx/interface/goals/enc_fed.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_fed.dds"
+ 	    } 
         SpriteType = {#enc_fighter
             name = "GFX_goal_enc_fighter"
-             texturefile = "gfx/interface/goals/enc_fighter.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_fighter.dds"
+ 	    } 
         SpriteType = {#enc_first_citizens
             name = "GFX_goal_enc_first_citizens"
-             texturefile = "gfx/interface/goals/enc_first_citizens.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_first_citizens.dds"
+ 	    } 
         SpriteType = {#enc_flags
             name = "GFX_goal_enc_flags"
-             texturefile = "gfx/interface/goals/enc_flags.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_flags.dds"
+ 	    } 
         SpriteType = {#enc_forced_conscription
             name = "GFX_goal_enc_forced_conscription"
-             texturefile = "gfx/interface/goals/enc_forced_conscription.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_forced_conscription.dds"
+ 	    } 
         SpriteType = {#enc_forced_deal
             name = "GFX_goal_enc_forced_deal"
-             texturefile = "gfx/interface/goals/enc_forced_deal.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_forced_deal.dds"
+ 	    } 
         SpriteType = {#enc_fort
             name = "GFX_goal_enc_fort"
-             texturefile = "gfx/interface/goals/enc_fort.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_fort.dds"
+ 	    } 
         SpriteType = {#enc_fort_reformer
             name = "GFX_goal_enc_fort_reformer"
-             texturefile = "gfx/interface/goals/enc_fort_reformer.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_fort_reformer.dds"
+ 	    } 
         SpriteType = {#enc_free_press
             name = "GFX_goal_enc_free_press"
-             texturefile = "gfx/interface/goals/enc_free_press.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_free_press.dds"
+ 	    } 
         SpriteType = {#enc_fruits_of_their_labors
             name = "GFX_goal_enc_fruits_of_their_labors"
-             texturefile = "gfx/interface/goals/enc_fruits_of_their_labors.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_fruits_of_their_labors.dds"
+ 	    } 
         SpriteType = {#enc_geck
             name = "GFX_goal_enc_geck"
-             texturefile = "gfx/interface/goals/enc_geck.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_geck.dds"
+ 	    } 
         SpriteType = {#enc_gecko_power_plant
             name = "GFX_goal_enc_gecko_power_plant"
-             texturefile = "gfx/interface/goals/enc_gecko_power_plant.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_gecko_power_plant.dds"
+ 	    } 
         SpriteType = {#Enc_goal_flag_mexico
             name = "GFX_goal_Enc_goal_flag_mexico"
-             texturefile = "gfx/interface/goals/Enc_goal_flag_mexico.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/Enc_goal_flag_mexico.dds"
+ 	    } 
         SpriteType = {#enc_guerrilla_warfare
             name = "GFX_goal_enc_guerrilla_warfare"
-             texturefile = "gfx/interface/goals/enc_guerrilla_warfare.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_guerrilla_warfare.dds"
+ 	    } 
         SpriteType = {#enc_home_is_nevada
             name = "GFX_goal_enc_home_is_nevada"
-             texturefile = "gfx/interface/goals/enc_home_is_nevada.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_home_is_nevada.dds"
+ 	    } 
         SpriteType = {#enc_improve_relations_reformer
             name = "GFX_goal_enc_improve_relations_reformer"
-             texturefile = "gfx/interface/goals/enc_improve_relations_reformer.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_improve_relations_reformer.dds"
+ 	    } 
         SpriteType = {#enc_infiltrate_ncr
             name = "GFX_goal_enc_infiltrate_ncr"
-             texturefile = "gfx/interface/goals/enc_infiltrate_ncr.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_infiltrate_ncr.dds"
+ 	    } 
         SpriteType = {#enc_infra
             name = "GFX_goal_enc_infra"
-             texturefile = "gfx/interface/goals/enc_infra.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_infra.dds"
+ 	    } 
         SpriteType = {#enc_institutionalize_separation
             name = "GFX_goal_enc_institutionalize_separation"
-             texturefile = "gfx/interface/goals/enc_institutionalize_separation.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_institutionalize_separation.dds"
+ 	    } 
         SpriteType = {#enc_integrate_officers
             name = "GFX_goal_enc_integrate_officers"
-             texturefile = "gfx/interface/goals/enc_integrate_officers.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_integrate_officers.dds"
+ 	    } 
         SpriteType = {#enc_integrate_politicians
             name = "GFX_goal_enc_integrate_politicians"
-             texturefile = "gfx/interface/goals/enc_integrate_politicians.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_integrate_politicians.dds"
+ 	    } 
         SpriteType = {#enc_integrate_scientists
             name = "GFX_goal_enc_integrate_scientists"
-             texturefile = "gfx/interface/goals/enc_integrate_scientists.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_integrate_scientists.dds"
+ 	    } 
         SpriteType = {#enc_integration
             name = "GFX_goal_enc_integration"
-             texturefile = "gfx/interface/goals/enc_integration.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_integration.dds"
+ 	    } 
         SpriteType = {#enc_jaz
             name = "GFX_goal_enc_jaz"
-             texturefile = "gfx/interface/goals/enc_jaz.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_jaz.dds"
+ 	    } 
         SpriteType = {#enc_judicial_branch
             name = "GFX_goal_enc_judicial_branch"
-             texturefile = "gfx/interface/goals/enc_judicial_branch.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_judicial_branch.dds"
+ 	    } 
         SpriteType = {#enc_judicial_branch_2
             name = "GFX_goal_enc_judicial_branch_2"
-             texturefile = "gfx/interface/goals/enc_judicial_branch_2.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_judicial_branch_2.dds"
+ 	    } 
         SpriteType = {#enc_judiciary_nevada
             name = "GFX_goal_enc_judiciary_nevada"
-             texturefile = "gfx/interface/goals/enc_judiciary_nevada.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_judiciary_nevada.dds"
+ 	    } 
         SpriteType = {#enc_justice
             name = "GFX_goal_enc_justice"
-             texturefile = "gfx/interface/goals/enc_justice.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_justice.dds"
+ 	    } 
         SpriteType = {#enc_laser_weapons
             name = "GFX_goal_enc_laser_weapons"
-             texturefile = "gfx/interface/goals/enc_laser_weapons.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_laser_weapons.dds"
+ 	    } 
         SpriteType = {#enc_laser_weapons_reform
             name = "GFX_goal_enc_laser_weapons_reform"
-             texturefile = "gfx/interface/goals/enc_laser_weapons_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_laser_weapons_reform.dds"
+ 	    } 
         SpriteType = {#enc_law
             name = "GFX_goal_enc_law"
-             texturefile = "gfx/interface/goals/enc_law.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_law.dds"
+ 	    } 
         SpriteType = {#enc_limited_army_reform
             name = "GFX_goal_enc_limited_army_reform"
-             texturefile = "gfx/interface/goals/enc_limited_army_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_limited_army_reform.dds"
+ 	    } 
         SpriteType = {#enc_major_war
             name = "GFX_goal_enc_major_war"
-             texturefile = "gfx/interface/goals/enc_major_war.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_major_war.dds"
+ 	    } 
         SpriteType = {#enc_management
             name = "GFX_goal_enc_management"
-             texturefile = "gfx/interface/goals/enc_management.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_management.dds"
+ 	    } 
         SpriteType = {#enc_map_us
             name = "GFX_goal_enc_map_us"
-             texturefile = "gfx/interface/goals/enc_map_us.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_map_us.dds"
+ 	    } 
         SpriteType = {#enc_mass_mobilization
             name = "GFX_goal_enc_mass_mobilization"
-             texturefile = "gfx/interface/goals/enc_mass_mobilization.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_mass_mobilization.dds"
+ 	    } 
         SpriteType = {#enc_military_police
             name = "GFX_goal_enc_military_police"
-             texturefile = "gfx/interface/goals/enc_military_police.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_military_police.dds"
+ 	    } 
         SpriteType = {#enc_military_sphere
             name = "GFX_goal_enc_military_sphere"
-             texturefile = "gfx/interface/goals/enc_military_sphere.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_military_sphere.dds"
+ 	    } 
         SpriteType = {#enc_military_sphere_reform
             name = "GFX_goal_enc_military_sphere_reform"
-             texturefile = "gfx/interface/goals/enc_military_sphere_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_military_sphere_reform.dds"
+ 	    } 
         SpriteType = {#enc_model_communities
             name = "GFX_goal_enc_model_communities"
-             texturefile = "gfx/interface/goals/enc_model_communities.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_model_communities.dds"
+ 	    } 
         SpriteType = {#enc_mutant_extinction
             name = "GFX_goal_enc_mutant_extinction"
-             texturefile = "gfx/interface/goals/enc_mutant_extinction.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_mutant_extinction.dds"
+ 	    } 
         SpriteType = {#enc_ncr_dollar
             name = "GFX_goal_enc_ncr_dollar"
-             texturefile = "gfx/interface/goals/enc_ncr_dollar.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_ncr_dollar.dds"
+ 	    } 
         SpriteType = {#enc_NCR_seak_allies
             name = "GFX_goal_enc_NCR_seak_allies"
-             texturefile = "gfx/interface/goals/enc_NCR_seak_allies.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_NCR_seak_allies.dds"
+ 	    } 
         SpriteType = {#enc_nevada_assembly
             name = "GFX_goal_enc_nevada_assembly"
-             texturefile = "gfx/interface/goals/enc_nevada_assembly.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_nevada_assembly.dds"
+ 	    } 
         SpriteType = {#enc_nevada_constitution
             name = "GFX_goal_enc_nevada_constitution"
-             texturefile = "gfx/interface/goals/enc_nevada_constitution.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_nevada_constitution.dds"
+ 	    } 
         SpriteType = {#enc_nevada_reborn
             name = "GFX_goal_enc_nevada_reborn"
-             texturefile = "gfx/interface/goals/enc_nevada_reborn.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_nevada_reborn.dds"
+ 	    } 
         SpriteType = {#enc_new_capital
             name = "GFX_goal_enc_new_capital"
-             texturefile = "gfx/interface/goals/enc_new_capital.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_new_capital.dds"
+ 	    } 
         SpriteType = {#enc_new_generation_officers
             name = "GFX_goal_enc_new_generation_officers"
-             texturefile = "gfx/interface/goals/enc_new_generation_officers.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_new_generation_officers.dds"
+ 	    } 
         SpriteType = {#enc_normalization
             name = "GFX_goal_enc_normalization"
-             texturefile = "gfx/interface/goals/enc_normalization.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_normalization.dds"
+ 	    } 
         SpriteType = {#enc_officers_by_loyalty_and_devotion
             name = "GFX_goal_enc_officers_by_loyalty_and_devotion"
-             texturefile = "gfx/interface/goals/enc_officers_by_loyalty_and_devotion.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_officers_by_loyalty_and_devotion.dds"
+ 	    } 
         SpriteType = {#enc_officers_by_merit_and_skill
             name = "GFX_goal_enc_officers_by_merit_and_skill"
-             texturefile = "gfx/interface/goals/enc_officers_by_merit_and_skill.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_officers_by_merit_and_skill.dds"
+ 	    } 
         SpriteType = {#enc_old_remnant_officers
             name = "GFX_goal_enc_old_remnant_officers"
-             texturefile = "gfx/interface/goals/enc_old_remnant_officers.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_old_remnant_officers.dds"
+ 	    } 
         SpriteType = {#enc_operation_babylon
             name = "GFX_goal_enc_operation_babylon"
-             texturefile = "gfx/interface/goals/enc_operation_babylon.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_operation_babylon.dds"
+ 	    } 
         SpriteType = {#enc_out_with_the_old
             name = "GFX_goal_enc_out_with_the_old"
-             texturefile = "gfx/interface/goals/enc_out_with_the_old.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_out_with_the_old.dds"
+ 	    } 
         SpriteType = {#enc_owb_propaganda
             name = "GFX_goal_enc_owb_propaganda"
-             texturefile = "gfx/interface/goals/enc_owb_propaganda.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_owb_propaganda.dds"
+ 	    } 
         SpriteType = {#enc_pacific_commonwealth
             name = "GFX_goal_enc_pacific_commonwealth"
-             texturefile = "gfx/interface/goals/enc_pacific_commonwealth.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_pacific_commonwealth.dds"
+ 	    } 
         SpriteType = {#enc_para
             name = "GFX_goal_enc_para"
-             texturefile = "gfx/interface/goals/enc_para.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_para.dds"
+ 	    } 
         SpriteType = {#enc_para_2
             name = "GFX_goal_enc_para_2"
-             texturefile = "gfx/interface/goals/enc_para_2.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_para_2.dds"
+ 	    } 
         SpriteType = {#enc_peaceful_usa
             name = "GFX_goal_enc_peaceful_usa"
-             texturefile = "gfx/interface/goals/enc_peaceful_usa.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_peaceful_usa.dds"
+ 	    } 
         SpriteType = {#enc_planning
             name = "GFX_goal_enc_planning"
-             texturefile = "gfx/interface/goals/enc_planning.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_planning.dds"
+ 	    } 
         SpriteType = {#enc_poison_bear
             name = "GFX_goal_enc_poison_bear"
-             texturefile = "gfx/interface/goals/enc_poison_bear.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_poison_bear.dds"
+ 	    } 
         SpriteType = {#enc_poison_bull
             name = "GFX_goal_enc_poison_bull"
-             texturefile = "gfx/interface/goals/enc_poison_bull.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_poison_bull.dds"
+ 	    } 
         SpriteType = {#enc_poison_bull_reformer
             name = "GFX_goal_enc_poison_bull_reformer"
-             texturefile = "gfx/interface/goals/enc_poison_bull_reformer.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_poison_bull_reformer.dds"
+ 	    } 
         SpriteType = {#enc_police
             name = "GFX_goal_enc_police"
-             texturefile = "gfx/interface/goals/enc_police.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_police.dds"
+ 	    } 
         SpriteType = {#enc_police_officer
             name = "GFX_goal_enc_police_officer"
-             texturefile = "gfx/interface/goals/enc_police_officer.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_police_officer.dds"
+ 	    } 
         SpriteType = {#enc_position_armies
             name = "GFX_goal_enc_position_armies"
-             texturefile = "gfx/interface/goals/enc_position_armies.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_position_armies.dds"
+ 	    } 
         SpriteType = {#enc_power_armor_focus
             name = "GFX_goal_enc_power_armor_focus"
-             texturefile = "gfx/interface/goals/enc_power_armor_focus.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_power_armor_focus.dds"
+ 	    } 
         SpriteType = {#enc_power_armor_focus2
             name = "GFX_goal_enc_power_armor_focus2"
-             texturefile = "gfx/interface/goals/enc_power_armor_focus2.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_power_armor_focus2.dds"
+ 	    } 
         SpriteType = {#enc_power_armor_integration
             name = "GFX_goal_enc_power_armor_integration"
-             texturefile = "gfx/interface/goals/enc_power_armor_integration.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_power_armor_integration.dds"
+ 	    } 
         SpriteType = {#enc_president
             name = "GFX_goal_enc_president"
-             texturefile = "gfx/interface/goals/enc_president.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_president.dds"
+ 	    } 
         SpriteType = {#enc_presidential_elections
             name = "GFX_goal_enc_presidential_elections"
-             texturefile = "gfx/interface/goals/enc_presidential_elections.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_presidential_elections.dds"
+ 	    } 
         SpriteType = {#enc_president_p
             name = "GFX_goal_enc_president_p"
-             texturefile = "gfx/interface/goals/enc_president_p.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_president_p.dds"
+ 	    } 
         SpriteType = {#enc_president_purity
             name = "GFX_goal_enc_president_purity"
-             texturefile = "gfx/interface/goals/enc_president_purity.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_president_purity.dds"
+ 	    } 
         SpriteType = {#enc_president_reform
             name = "GFX_goal_enc_president_reform"
-             texturefile = "gfx/interface/goals/enc_president_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_president_reform.dds"
+ 	    } 
         SpriteType = {#enc_purge
             name = "GFX_goal_enc_purge"
-             texturefile = "gfx/interface/goals/enc_purge.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_purge.dds"
+ 	    } 
         SpriteType = {#enc_purge_officers
             name = "GFX_goal_enc_purge_officers"
-             texturefile = "gfx/interface/goals/enc_purge_officers.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_purge_officers.dds"
+ 	    } 
         SpriteType = {#enc_purge_scientists
             name = "GFX_goal_enc_purge_scientists"
-             texturefile = "gfx/interface/goals/enc_purge_scientists.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_purge_scientists.dds"
+ 	    } 
         SpriteType = {#enc_purify
             name = "GFX_goal_enc_purify"
-             texturefile = "gfx/interface/goals/enc_purify.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_purify.dds"
+ 	    } 
         SpriteType = {#enc_purity
             name = "GFX_goal_enc_purity"
-             texturefile = "gfx/interface/goals/enc_purity.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_purity.dds"
+ 	    } 
         SpriteType = {#enc_radio
             name = "GFX_goal_enc_radio"
-             texturefile = "gfx/interface/goals/enc_radio.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_radio.dds"
+ 	    } 
         SpriteType = {#enc_radio_2
             name = "GFX_goal_enc_radio_2"
-             texturefile = "gfx/interface/goals/enc_radio_2.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_radio_2.dds"
+ 	    } 
         SpriteType = {#enc_radio_civilian
             name = "GFX_goal_enc_radio_civilian"
-             texturefile = "gfx/interface/goals/enc_radio_civilian.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_radio_civilian.dds"
+ 	    } 
         SpriteType = {#enc_radio_military
             name = "GFX_goal_enc_radio_military"
-             texturefile = "gfx/interface/goals/enc_radio_military.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_radio_military.dds"
+ 	    } 
         SpriteType = {#enc_radio_reform
             name = "GFX_goal_enc_radio_reform"
-             texturefile = "gfx/interface/goals/enc_radio_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_radio_reform.dds"
+ 	    } 
         SpriteType = {#enc_rangers
             name = "GFX_goal_enc_rangers"
-             texturefile = "gfx/interface/goals/enc_rangers.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_rangers.dds"
+ 	    } 
         SpriteType = {#enc_rangers_agreement
             name = "GFX_goal_enc_rangers_agreement"
-             texturefile = "gfx/interface/goals/enc_rangers_agreement.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_rangers_agreement.dds"
+ 	    } 
         SpriteType = {#enc_rangers_planning
             name = "GFX_goal_enc_rangers_planning"
-             texturefile = "gfx/interface/goals/enc_rangers_planning.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_rangers_planning.dds"
+ 	    } 
         SpriteType = {#enc_rangers_start
             name = "GFX_goal_enc_rangers_start"
-             texturefile = "gfx/interface/goals/enc_rangers_start.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_rangers_start.dds"
+ 	    } 
         SpriteType = {#enc_rebuild_the_power_grid
             name = "GFX_goal_enc_rebuild_the_power_grid"
-             texturefile = "gfx/interface/goals/enc_rebuild_the_power_grid.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_rebuild_the_power_grid.dds"
+ 	    } 
         SpriteType = {#enc_reform
             name = "GFX_goal_enc_reform"
-             texturefile = "gfx/interface/goals/enc_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reform.dds"
+ 	    } 
         SpriteType = {#enc_reform3
             name = "GFX_goal_enc_reform3"
-             texturefile = "gfx/interface/goals/enc_reform3.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reform3.dds"
+ 	    } 
         SpriteType = {#enc_reform_annex_ykz
             name = "GFX_goal_enc_reform_annex_ykz"
-             texturefile = "gfx/interface/goals/enc_reform_annex_ykz.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reform_annex_ykz.dds"
+ 	    } 
         SpriteType = {#enc_reform_ant
             name = "GFX_goal_enc_reform_ant"
-             texturefile = "gfx/interface/goals/enc_reform_ant.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reform_ant.dds"
+ 	    } 
         SpriteType = {#enc_reform_anti_bos_propaganda
             name = "GFX_goal_enc_reform_anti_bos_propaganda"
-             texturefile = "gfx/interface/goals/enc_reform_anti_bos_propaganda.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reform_anti_bos_propaganda.dds"
+ 	    } 
         SpriteType = {#enc_reform_douglas
             name = "GFX_goal_enc_reform_douglas"
-             texturefile = "gfx/interface/goals/enc_reform_douglas.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reform_douglas.dds"
+ 	    } 
         SpriteType = {#enc_reform_forced_deal
             name = "GFX_goal_enc_reform_forced_deal"
-             texturefile = "gfx/interface/goals/enc_reform_forced_deal.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reform_forced_deal.dds"
+ 	    } 
         SpriteType = {#enc_reform_forced_deal_dark
             name = "GFX_goal_enc_reform_forced_deal_dark"
-             texturefile = "gfx/interface/goals/enc_reform_forced_deal_dark.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reform_forced_deal_dark.dds"
+ 	    } 
         SpriteType = {#enc_reform_general_staff
             name = "GFX_goal_enc_reform_general_staff"
-             texturefile = "gfx/interface/goals/enc_reform_general_staff.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reform_general_staff.dds"
+ 	    } 
         SpriteType = {#enc_reform_hayes
             name = "GFX_goal_enc_reform_hayes"
-             texturefile = "gfx/interface/goals/enc_reform_hayes.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reform_hayes.dds"
+ 	    } 
         SpriteType = {#enc_reform_industry_1
             name = "GFX_goal_enc_reform_industry_1"
-             texturefile = "gfx/interface/goals/enc_reform_industry_1.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reform_industry_1.dds"
+ 	    } 
         SpriteType = {#enc_reform_industry_2
             name = "GFX_goal_enc_reform_industry_2"
-             texturefile = "gfx/interface/goals/enc_reform_industry_2.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reform_industry_2.dds"
+ 	    } 
         SpriteType = {#enc_reform_industry_3
             name = "GFX_goal_enc_reform_industry_3"
-             texturefile = "gfx/interface/goals/enc_reform_industry_3.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reform_industry_3.dds"
+ 	    } 
         SpriteType = {#enc_reform_the_tribes
             name = "GFX_goal_enc_reform_the_tribes"
-             texturefile = "gfx/interface/goals/enc_reform_the_tribes.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reform_the_tribes.dds"
+ 	    } 
         SpriteType = {#enc_reject_ghouls
             name = "GFX_goal_enc_reject_ghouls"
-             texturefile = "gfx/interface/goals/enc_reject_ghouls.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reject_ghouls.dds"
+ 	    } 
         SpriteType = {#enc_reject_super_mutants
             name = "GFX_goal_enc_reject_super_mutants"
-             texturefile = "gfx/interface/goals/enc_reject_super_mutants.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_reject_super_mutants.dds"
+ 	    } 
         SpriteType = {#enc_remember
             name = "GFX_goal_enc_remember"
-             texturefile = "gfx/interface/goals/enc_remember.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_remember.dds"
+ 	    } 
         SpriteType = {#enc_remember_rig
             name = "GFX_goal_enc_remember_rig"
-             texturefile = "gfx/interface/goals/enc_remember_rig.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_remember_rig.dds"
+ 	    } 
         SpriteType = {#enc_requisition_of_resources
             name = "GFX_goal_enc_requisition_of_resources"
-             texturefile = "gfx/interface/goals/enc_requisition_of_resources.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_requisition_of_resources.dds"
+ 	    } 
         SpriteType = {#enc_research
             name = "GFX_goal_enc_research"
-             texturefile = "gfx/interface/goals/enc_research.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_research.dds"
+ 	    } 
         SpriteType = {#enc_robco_reborn
             name = "GFX_goal_enc_robco_reborn"
-             texturefile = "gfx/interface/goals/enc_robco_reborn.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_robco_reborn.dds"
+ 	    } 
         SpriteType = {#enc_robot_mex
             name = "GFX_goal_enc_robot_mex"
-             texturefile = "gfx/interface/goals/enc_robot_mex.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_robot_mex.dds"
+ 	    } 
         SpriteType = {#enc_rock
             name = "GFX_goal_enc_rock"
-             texturefile = "gfx/interface/goals/enc_rock.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_rock.dds"
+ 	    } 
         SpriteType = {#enc_rocket_nevada
             name = "GFX_goal_enc_rocket_nevada"
-             texturefile = "gfx/interface/goals/enc_rocket_nevada.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_rocket_nevada.dds"
+ 	    } 
         SpriteType = {#enc_rocket_reform
             name = "GFX_goal_enc_rocket_reform"
-             texturefile = "gfx/interface/goals/enc_rocket_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_rocket_reform.dds"
+ 	    } 
         SpriteType = {#enc_sabotage
             name = "GFX_goal_enc_sabotage"
-             texturefile = "gfx/interface/goals/enc_sabotage.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_sabotage.dds"
+ 	    } 
         SpriteType = {#enc_salute_america
             name = "GFX_goal_enc_salute_america"
-             texturefile = "gfx/interface/goals/enc_salute_america.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_salute_america.dds"
+ 	    } 
         SpriteType = {#enc_science_reform
             name = "GFX_goal_enc_science_reform"
-             texturefile = "gfx/interface/goals/enc_science_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_science_reform.dds"
+ 	    } 
         SpriteType = {#enc_scientists
             name = "GFX_goal_enc_scientists"
-             texturefile = "gfx/interface/goals/enc_scientists.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_scientists.dds"
+ 	    } 
         SpriteType = {#enc_screening
             name = "GFX_goal_enc_screening"
-             texturefile = "gfx/interface/goals/enc_screening.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_screening.dds"
+ 	    } 
         SpriteType = {#enc_segregation
             name = "GFX_goal_enc_segregation"
-             texturefile = "gfx/interface/goals/enc_segregation.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_segregation.dds"
+ 	    } 
         SpriteType = {#enc_self_management
             name = "GFX_goal_enc_self_management"
-             texturefile = "gfx/interface/goals/enc_self_management.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_self_management.dds"
+ 	    } 
         SpriteType = {#enc_sign
             name = "GFX_goal_enc_sign"
-             texturefile = "gfx/interface/goals/enc_sign.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_sign.dds"
+ 	    } 
         SpriteType = {#enc_silence_congress_reform
             name = "GFX_goal_enc_silence_congress_reform"
-             texturefile = "gfx/interface/goals/enc_silence_congress_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_silence_congress_reform.dds"
+ 	    } 
         SpriteType = {#enc_slave_labour
             name = "GFX_goal_enc_slave_labour"
-             texturefile = "gfx/interface/goals/enc_slave_labour.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_slave_labour.dds"
+ 	    } 
         SpriteType = {#enc_slave_labour_collars
             name = "GFX_goal_enc_slave_labour_collars"
-             texturefile = "gfx/interface/goals/enc_slave_labour_collars.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_slave_labour_collars.dds"
+ 	    } 
         SpriteType = {#enc_slave_labour_mutants
             name = "GFX_goal_enc_slave_labour_mutants"
-             texturefile = "gfx/interface/goals/enc_slave_labour_mutants.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_slave_labour_mutants.dds"
+ 	    } 
         SpriteType = {#enc_small_arms
             name = "GFX_goal_enc_small_arms"
-             texturefile = "gfx/interface/goals/enc_small_arms.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_small_arms.dds"
+ 	    } 
         SpriteType = {#enc_smash
             name = "GFX_goal_enc_smash"
-             texturefile = "gfx/interface/goals/enc_smash.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_smash.dds"
+ 	    } 
         SpriteType = {#enc_special_forces
             name = "GFX_goal_enc_special_forces"
-             texturefile = "gfx/interface/goals/enc_special_forces.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_special_forces.dds"
+ 	    } 
         SpriteType = {#enc_stability_first
             name = "GFX_goal_enc_stability_first"
-             texturefile = "gfx/interface/goals/enc_stability_first.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_stability_first.dds"
+ 	    } 
         SpriteType = {#enc_subsidized_lives
             name = "GFX_goal_enc_subsidized_lives"
-             texturefile = "gfx/interface/goals/enc_subsidized_lives.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_subsidized_lives.dds"
+ 	    } 
         SpriteType = {#enc_superhuman
             name = "GFX_goal_enc_superhuman"
-             texturefile = "gfx/interface/goals/enc_superhuman.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_superhuman.dds"
+ 	    } 
         SpriteType = {#enc_super_soldier
             name = "GFX_goal_enc_super_soldier"
-             texturefile = "gfx/interface/goals/enc_super_soldier.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_super_soldier.dds"
+ 	    } 
         SpriteType = {#enc_support_armed_coup
             name = "GFX_goal_enc_support_armed_coup"
-             texturefile = "gfx/interface/goals/enc_support_armed_coup.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_support_armed_coup.dds"
+ 	    } 
         SpriteType = {#enc_suspend_elections
             name = "GFX_goal_enc_suspend_elections"
-             texturefile = "gfx/interface/goals/enc_suspend_elections.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_suspend_elections.dds"
+ 	    } 
         SpriteType = {#enc_sword_cross
             name = "GFX_goal_enc_sword_cross"
-             texturefile = "gfx/interface/goals/enc_sword_cross.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_sword_cross.dds"
+ 	    } 
         SpriteType = {#enc_take_reno
             name = "GFX_goal_enc_take_reno"
-             texturefile = "gfx/interface/goals/enc_take_reno.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_take_reno.dds"
+ 	    } 
         SpriteType = {#enc_the_american_alliance-3
             name = "GFX_goal_enc_the_american_alliance-3"
-             texturefile = "gfx/interface/goals/enc_the_american_alliance-3.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_the_american_alliance-3.dds"
+ 	    } 
         SpriteType = {#enc_the_american_alliance
             name = "GFX_goal_enc_the_american_alliance"
-             texturefile = "gfx/interface/goals/enc_the_american_alliance.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_the_american_alliance.dds"
+ 	    } 
         SpriteType = {#enc_the_common_man
             name = "GFX_goal_enc_the_common_man"
-             texturefile = "gfx/interface/goals/enc_the_common_man.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_the_common_man.dds"
+ 	    } 
         SpriteType = {#enc_the_lucia_incident
             name = "GFX_goal_enc_the_lucia_incident"
-             texturefile = "gfx/interface/goals/enc_the_lucia_incident.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_the_lucia_incident.dds"
+ 	    } 
         SpriteType = {#enc_the_Lucky_38
             name = "GFX_goal_enc_the_Lucky_38"
-             texturefile = "gfx/interface/goals/enc_the_Lucky_38.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_the_Lucky_38.dds"
+ 	    } 
         SpriteType = {#enc_the_mutant_question
             name = "GFX_goal_enc_the_mutant_question"
-             texturefile = "gfx/interface/goals/enc_the_mutant_question.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_the_mutant_question.dds"
+ 	    } 
         SpriteType = {#enc_the_state_of_nevada
             name = "GFX_goal_enc_the_state_of_nevada"
-             texturefile = "gfx/interface/goals/enc_the_state_of_nevada.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_the_state_of_nevada.dds"
+ 	    } 
         SpriteType = {#enc_threat_of_communism
             name = "GFX_goal_enc_threat_of_communism"
-             texturefile = "gfx/interface/goals/enc_threat_of_communism.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_threat_of_communism.dds"
+ 	    } 
         SpriteType = {#enc_tools
             name = "GFX_goal_enc_tools"
-             texturefile = "gfx/interface/goals/enc_tools.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_tools.dds"
+ 	    } 
         SpriteType = {#enc_tools_reform
             name = "GFX_goal_enc_tools_reform"
-             texturefile = "gfx/interface/goals/enc_tools_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_tools_reform.dds"
+ 	    } 
         SpriteType = {#enc_troop
             name = "GFX_goal_enc_troop"
-             texturefile = "gfx/interface/goals/enc_troop.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_troop.dds"
+ 	    } 
         SpriteType = {#enc_troop_call
             name = "GFX_goal_enc_troop_call"
-             texturefile = "gfx/interface/goals/enc_troop_call.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_troop_call.dds"
+ 	    } 
         SpriteType = {#enc_uncle_sam
             name = "GFX_goal_enc_uncle_sam"
-             texturefile = "gfx/interface/goals/enc_uncle_sam.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_uncle_sam.dds"
+ 	    } 
         SpriteType = {#enc_us_dollar
             name = "GFX_goal_enc_us_dollar"
-             texturefile = "gfx/interface/goals/enc_us_dollar.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_us_dollar.dds"
+ 	    } 
         SpriteType = {#enc_us_flags
             name = "GFX_goal_enc_us_flags"
-             texturefile = "gfx/interface/goals/enc_us_flags.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_us_flags.dds"
+ 	    } 
         SpriteType = {#enc_us_handshake
             name = "GFX_goal_enc_us_handshake"
-             texturefile = "gfx/interface/goals/enc_us_handshake.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_us_handshake.dds"
+ 	    } 
         SpriteType = {#enc_us_reborn
             name = "GFX_goal_enc_us_reborn"
-             texturefile = "gfx/interface/goals/enc_us_reborn.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_us_reborn.dds"
+ 	    } 
         SpriteType = {#enc_vac
             name = "GFX_goal_enc_vac"
-             texturefile = "gfx/interface/goals/enc_vac.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_vac.dds"
+ 	    } 
         SpriteType = {#enc_vault_city_citizenship_protocols
             name = "GFX_goal_enc_vault_city_citizenship_protocols"
-             texturefile = "gfx/interface/goals/enc_vault_city_citizenship_protocols.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_vault_city_citizenship_protocols.dds"
+ 	    } 
         SpriteType = {#enc_vault_open
             name = "GFX_goal_enc_vault_open"
-             texturefile = "gfx/interface/goals/enc_vault_open.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_vault_open.dds"
+ 	    } 
         SpriteType = {#enc_vault_tec
             name = "GFX_goal_enc_vault_tec"
-             texturefile = "gfx/interface/goals/enc_vault_tec.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_vault_tec.dds"
+ 	    } 
         SpriteType = {#enc_verti
             name = "GFX_goal_enc_verti"
-             texturefile = "gfx/interface/goals/enc_verti.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_verti.dds"
+ 	    } 
         SpriteType = {#enc_verti_nevada
             name = "GFX_goal_enc_verti_nevada"
-             texturefile = "gfx/interface/goals/enc_verti_nevada.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_verti_nevada.dds"
+ 	    } 
         SpriteType = {#enc_verti_o
             name = "GFX_goal_enc_verti_o"
-             texturefile = "gfx/interface/goals/enc_verti_o.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_verti_o.dds"
+ 	    } 
         SpriteType = {#enc_verti_reform
             name = "GFX_goal_enc_verti_reform"
-             texturefile = "gfx/interface/goals/enc_verti_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_verti_reform.dds"
+ 	    } 
         SpriteType = {#enc_veterans_call
             name = "GFX_goal_enc_veterans_call"
-             texturefile = "gfx/interface/goals/enc_veterans_call.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_veterans_call.dds"
+ 	    } 
         SpriteType = {#enc_vlt_power
             name = "GFX_goal_enc_vlt_power"
-             texturefile = "gfx/interface/goals/enc_vlt_power.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_vlt_power.dds"
+ 	    } 
         SpriteType = {#enc_voting_rights_act
             name = "GFX_goal_enc_voting_rights_act"
-             texturefile = "gfx/interface/goals/enc_voting_rights_act.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_voting_rights_act.dds"
+ 	    } 
         SpriteType = {#enc_warmonger_usa
             name = "GFX_goal_enc_warmonger_usa"
-             texturefile = "gfx/interface/goals/enc_warmonger_usa.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_warmonger_usa.dds"
+ 	    } 
         SpriteType = {#enc_war_with_bos_reform
             name = "GFX_goal_enc_war_with_bos_reform"
-             texturefile = "gfx/interface/goals/enc_war_with_bos_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_war_with_bos_reform.dds"
+ 	    } 
         SpriteType = {#enc_weapon_factory
             name = "GFX_goal_enc_weapon_factory"
-             texturefile = "gfx/interface/goals/enc_weapon_factory.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_weapon_factory.dds"
+ 	    } 
         SpriteType = {#enc_welcome_vlt_citizens
             name = "GFX_goal_enc_welcome_vlt_citizens"
-             texturefile = "gfx/interface/goals/enc_welcome_vlt_citizens.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_welcome_vlt_citizens.dds"
+ 	    } 
         SpriteType = {#enc_wip
             name = "GFX_goal_enc_wip"
-             texturefile = "gfx/interface/goals/enc_wip.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/enc_wip.dds"
+ 	    } 
         SpriteType = {#flag_burn_BOS
             name = "GFX_goal_flag_burn_BOS"
-             texturefile = "gfx/interface/goals/flag_burn_BOS.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/flag_burn_BOS.dds"
+ 	    } 
         SpriteType = {#goal_card_tricks
             name = "GFX_goal_goal_card_tricks"
-             texturefile = "gfx/interface/goals/goal_card_tricks.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/goal_card_tricks.dds"
+ 	    } 
         SpriteType = {#PAP_legionary_spirit
             name = "GFX_goal_PAP_legionary_spirit"
-             texturefile = "gfx/interface/goals/PAP_legionary_spirit.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/PAP_legionary_spirit.dds"
+ 	    } 
         SpriteType = {#pa_production
             name = "GFX_goal_pa_production"
-             texturefile = "gfx/interface/goals/pa_production.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/pa_production.dds"
+ 	    } 
         SpriteType = {#poison_bear_reformer
             name = "GFX_goal_poison_bear_reformer"
-             texturefile = "gfx/interface/goals/poison_bear_reformer.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/poison_bear_reformer.dds"
+ 	    } 
         SpriteType = {#shield_enc_wip
             name = "GFX_goal_shield_enc_wip"
-             texturefile = "gfx/interface/goals/shield_enc_wip.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/shield_enc_wip.dds"
+ 	    } 
         SpriteType = {#texclave
             name = "GFX_goal_texclave"
-             texturefile = "gfx/interface/goals/texclave.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/texclave.dds"
+ 	    } 
         SpriteType = {#the_last_argument_of_presidents
             name = "GFX_goal_the_last_argument_of_presidents"
-             texturefile = "gfx/interface/goals/the_last_argument_of_presidents.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/the_last_argument_of_presidents.dds"
+ 	    } 
         SpriteType = {#training_law_navarro_veterans
             name = "GFX_goal_training_law_navarro_veterans"
-             texturefile = "gfx/interface/goals/training_law_navarro_veterans.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/training_law_navarro_veterans.dds"
+ 	    } 
         SpriteType = {#US_dock
             name = "GFX_goal_US_dock"
-             texturefile = "gfx/interface/goals/US_dock.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/US_dock.dds"
+ 	    } 
         SpriteType = {#US_navy
             name = "GFX_goal_US_navy"
-             texturefile = "gfx/interface/goals/US_navy.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/US_navy.dds"
+ 	    } 
         SpriteType = {#us_plane
             name = "GFX_goal_us_plane"
-             texturefile = "gfx/interface/goals/us_plane.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/us_plane.dds"
+ 	    } 
         SpriteType = {#us_plane_advanced
             name = "GFX_goal_us_plane_advanced"
-             texturefile = "gfx/interface/goals/us_plane_advanced.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/us_plane_advanced.dds"
+ 	    } 
         SpriteType = {#vault_tec
             name = "GFX_goal_vault_tec"
-             texturefile = "gfx/interface/goals/vault_tec.dds"
-         } 
+ 		    texturefile = "gfx/interface/goals/vault_tec.dds"
+ 	    } 
         SpriteType = {#vault_tec_reform
             name = "GFX_goal_vault_tec_reform"
-             texturefile = "gfx/interface/goals/vault_tec_reform.dds"
-         }
+ 		    texturefile = "gfx/interface/goals/vault_tec_reform.dds"
+ 	    }
         SpriteType = {#arcade_gannon
             name = "GFX_idea_arcade_gannon"
-             texturefile = "gfx/interface/ideas/arcade_gannon.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/arcade_gannon.dds"
+ 	    } 
         SpriteType = {#boris_t
             name = "GFX_idea_boris_t"
-             texturefile = "gfx/interface/ideas/boris_t.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/boris_t.dds"
+ 	    } 
         SpriteType = {#clayton_schultz
             name = "GFX_idea_clayton_schultz"
-             texturefile = "gfx/interface/ideas/clayton_schultz.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/clayton_schultz.dds"
+ 	    } 
         SpriteType = {#daisy_whitman
             name = "GFX_idea_daisy_whitman"
-             texturefile = "gfx/interface/ideas/daisy_whitman.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/daisy_whitman.dds"
+ 	    } 
         SpriteType = {#d_henry
             name = "GFX_idea_d_henry"
-             texturefile = "gfx/interface/ideas/d_henry.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/d_henry.dds"
+ 	    } 
         SpriteType = {#enc_broadcasting
             name = "GFX_idea_enc_broadcasting"
-             texturefile = "gfx/interface/ideas/enc_broadcasting.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_broadcasting.dds"
+ 	    } 
         SpriteType = {#enc_chiefs_of_staff
             name = "GFX_idea_enc_chiefs_of_staff"
-             texturefile = "gfx/interface/ideas/enc_chiefs_of_staff.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_chiefs_of_staff.dds"
+ 	    } 
         SpriteType = {#enc_civilian_economy
             name = "GFX_idea_enc_civilian_economy"
-             texturefile = "gfx/interface/ideas/enc_civilian_economy.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_civilian_economy.dds"
+ 	    } 
         SpriteType = {#enc_completed_integration
             name = "GFX_idea_enc_completed_integration"
-             texturefile = "gfx/interface/ideas/enc_completed_integration.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_completed_integration.dds"
+ 	    } 
         SpriteType = {#enc_economy_collapsed
             name = "GFX_idea_enc_economy_collapsed"
-             texturefile = "gfx/interface/ideas/enc_economy_collapsed.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_economy_collapsed.dds"
+ 	    } 
         SpriteType = {#enc_education
             name = "GFX_idea_enc_education"
-             texturefile = "gfx/interface/ideas/enc_education.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_education.dds"
+ 	    } 
         SpriteType = {#enc_ew_production
             name = "GFX_idea_enc_ew_production"
-             texturefile = "gfx/interface/ideas/enc_ew_production.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_ew_production.dds"
+ 	    } 
         SpriteType = {#enc_free_press
             name = "GFX_idea_enc_free_press"
-             texturefile = "gfx/interface/ideas/enc_free_press.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_free_press.dds"
+ 	    } 
         SpriteType = {#enc_hayes
             name = "GFX_idea_enc_hayes"
-             texturefile = "gfx/interface/ideas/enc_hayes.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_hayes.dds"
+ 	    } 
         SpriteType = {#enc_idea_economy_disorganized
             name = "GFX_idea_enc_idea_economy_disorganized"
-             texturefile = "gfx/interface/ideas/enc_idea_economy_disorganized.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_idea_economy_disorganized.dds"
+ 	    } 
         SpriteType = {#enc_idea_eyebots
             name = "GFX_idea_enc_idea_eyebots"
-             texturefile = "gfx/interface/ideas/enc_idea_eyebots.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_idea_eyebots.dds"
+ 	    } 
         SpriteType = {#enc_idea_infighting
             name = "GFX_idea_enc_idea_infighting"
-             texturefile = "gfx/interface/ideas/enc_idea_infighting.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_idea_infighting.dds"
+ 	    } 
+        SpriteType = {#enc_idea_lawless_wasteland
+            name = "GFX_idea_enc_idea_lawless_wasteland"
+ 		    texturefile = "gfx/interface/ideas/enc_idea_lawless_wasteland.dds"
+ 	    } 
         SpriteType = {#enc_idea_manpower_1
             name = "GFX_idea_enc_idea_manpower_1"
-             texturefile = "gfx/interface/ideas/enc_idea_manpower_1.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_1.dds"
+ 	    } 
         SpriteType = {#enc_idea_manpower_2
             name = "GFX_idea_enc_idea_manpower_2"
-             texturefile = "gfx/interface/ideas/enc_idea_manpower_2.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_2.dds"
+ 	    } 
         SpriteType = {#enc_idea_manpower_3
             name = "GFX_idea_enc_idea_manpower_3"
-             texturefile = "gfx/interface/ideas/enc_idea_manpower_3.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_3.dds"
+ 	    } 
         SpriteType = {#enc_idea_manpower_4
             name = "GFX_idea_enc_idea_manpower_4"
-             texturefile = "gfx/interface/ideas/enc_idea_manpower_4.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_4.dds"
+ 	    } 
         SpriteType = {#enc_idea_manpower_5
             name = "GFX_idea_enc_idea_manpower_5"
-             texturefile = "gfx/interface/ideas/enc_idea_manpower_5.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_5.dds"
+ 	    } 
         SpriteType = {#enc_idea_manpower_disorganized
             name = "GFX_idea_enc_idea_manpower_disorganized"
-             texturefile = "gfx/interface/ideas/enc_idea_manpower_disorganized.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_disorganized.dds"
+ 	    } 
         SpriteType = {#enc_idea_manpower_remnants
             name = "GFX_idea_enc_idea_manpower_remnants"
-             texturefile = "gfx/interface/ideas/enc_idea_manpower_remnants.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_remnants.dds"
+ 	    } 
         SpriteType = {#enc_idea_manpower_remnants_2
             name = "GFX_idea_enc_idea_manpower_remnants_2"
-             texturefile = "gfx/interface/ideas/enc_idea_manpower_remnants_2.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_remnants_2.dds"
+ 	    } 
         SpriteType = {#enc_idea_manpower_remnants_3
             name = "GFX_idea_enc_idea_manpower_remnants_3"
-             texturefile = "gfx/interface/ideas/enc_idea_manpower_remnants_3.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_idea_manpower_remnants_3.dds"
+ 	    } 
         SpriteType = {#enc_jingoism
             name = "GFX_idea_enc_jingoism"
-             texturefile = "gfx/interface/ideas/enc_jingoism.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_jingoism.dds"
+ 	    } 
         SpriteType = {#ENC_legitimacy_high
             name = "GFX_idea_ENC_legitimacy_high"
-             texturefile = "gfx/interface/ideas/ENC_legitimacy_high.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/ENC_legitimacy_high.dds"
+ 	    } 
         SpriteType = {#ENC_legitimacy_low
             name = "GFX_idea_ENC_legitimacy_low"
-             texturefile = "gfx/interface/ideas/ENC_legitimacy_low.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/ENC_legitimacy_low.dds"
+ 	    } 
         SpriteType = {#ENC_legitimacy_medium
             name = "GFX_idea_ENC_legitimacy_medium"
-             texturefile = "gfx/interface/ideas/ENC_legitimacy_medium.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/ENC_legitimacy_medium.dds"
+ 	    } 
         SpriteType = {#ENC_legitimacy_none
             name = "GFX_idea_ENC_legitimacy_none"
-             texturefile = "gfx/interface/ideas/ENC_legitimacy_none.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/ENC_legitimacy_none.dds"
+ 	    } 
         SpriteType = {#enc_low_economic_mobilisation
             name = "GFX_idea_enc_low_economic_mobilisation"
-             texturefile = "gfx/interface/ideas/enc_low_economic_mobilisation.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_low_economic_mobilisation.dds"
+ 	    } 
         SpriteType = {#enc_mandatory_patriotism
             name = "GFX_idea_enc_mandatory_patriotism"
-             texturefile = "gfx/interface/ideas/enc_mandatory_patriotism.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_mandatory_patriotism.dds"
+ 	    } 
         SpriteType = {#enc_manpower_final_line
             name = "GFX_idea_enc_manpower_final_line"
-             texturefile = "gfx/interface/ideas/enc_manpower_final_line.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_manpower_final_line.dds"
+ 	    } 
         SpriteType = {#enc_manpower_remnants_disorganized
             name = "GFX_idea_enc_manpower_remnants_disorganized"
-             texturefile = "gfx/interface/ideas/enc_manpower_remnants_disorganized.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_manpower_remnants_disorganized.dds"
+ 	    } 
         SpriteType = {#enc_no_currency
             name = "GFX_idea_enc_no_currency"
-             texturefile = "gfx/interface/ideas/enc_no_currency.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_no_currency.dds"
+ 	    } 
         SpriteType = {#enc_nuka_cola
             name = "GFX_idea_enc_nuka_cola"
-             texturefile = "gfx/interface/ideas/enc_nuka_cola.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_nuka_cola.dds"
+ 	    } 
         SpriteType = {#enc_officers
             name = "GFX_idea_enc_officers"
-             texturefile = "gfx/interface/ideas/enc_officers.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_officers.dds"
+ 	    } 
         SpriteType = {#enc_officers_traitors
             name = "GFX_idea_enc_officers_traitors"
-             texturefile = "gfx/interface/ideas/enc_officers_traitors.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_officers_traitors.dds"
+ 	    } 
         SpriteType = {#enc_partial_economic_mobilisation
             name = "GFX_idea_enc_partial_economic_mobilisation"
-             texturefile = "gfx/interface/ideas/enc_partial_economic_mobilisation.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_partial_economic_mobilisation.dds"
+ 	    } 
         SpriteType = {#enc_pa_production
             name = "GFX_idea_enc_pa_production"
-             texturefile = "gfx/interface/ideas/enc_pa_production.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_pa_production.dds"
+ 	    } 
         SpriteType = {#enc_pentagon
             name = "GFX_idea_enc_pentagon"
-             texturefile = "gfx/interface/ideas/enc_pentagon.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_pentagon.dds"
+ 	    } 
         SpriteType = {#enc_plague
             name = "GFX_idea_enc_plague"
-             texturefile = "gfx/interface/ideas/enc_plague.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_plague.dds"
+ 	    } 
         SpriteType = {#enc_police
             name = "GFX_idea_enc_police"
-             texturefile = "gfx/interface/ideas/enc_police.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_police.dds"
+ 	    } 
         SpriteType = {#enc_press_entertainment
             name = "GFX_idea_enc_press_entertainment"
-             texturefile = "gfx/interface/ideas/enc_press_entertainment.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_press_entertainment.dds"
+ 	    } 
         SpriteType = {#enc_press_none
             name = "GFX_idea_enc_press_none"
-             texturefile = "gfx/interface/ideas/enc_press_none.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_press_none.dds"
+ 	    } 
         SpriteType = {#enc_press_purist_propaganda
             name = "GFX_idea_enc_press_purist_propaganda"
-             texturefile = "gfx/interface/ideas/enc_press_purist_propaganda.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_press_purist_propaganda.dds"
+ 	    } 
         SpriteType = {#enc_press_reformer_propaganda
             name = "GFX_idea_enc_press_reformer_propaganda"
-             texturefile = "gfx/interface/ideas/enc_press_reformer_propaganda.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_press_reformer_propaganda.dds"
+ 	    } 
         SpriteType = {#enc_purity_1
             name = "GFX_idea_enc_purity_1"
-             texturefile = "gfx/interface/ideas/enc_purity_1.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_purity_1.dds"
+ 	    } 
         SpriteType = {#enc_purity_2
             name = "GFX_idea_enc_purity_2"
-             texturefile = "gfx/interface/ideas/enc_purity_2.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_purity_2.dds"
+ 	    } 
         SpriteType = {#enc_purity_3
             name = "GFX_idea_enc_purity_3"
-             texturefile = "gfx/interface/ideas/enc_purity_3.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_purity_3.dds"
+ 	    } 
         SpriteType = {#enc_radio
             name = "GFX_idea_enc_radio"
-             texturefile = "gfx/interface/ideas/enc_radio.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_radio.dds"
+ 	    } 
         SpriteType = {#enc_reform
             name = "GFX_idea_enc_reform"
-             texturefile = "gfx/interface/ideas/enc_reform.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_reform.dds"
+ 	    } 
         SpriteType = {#enc_salvatore
             name = "GFX_idea_enc_salvatore"
-             texturefile = "gfx/interface/ideas/enc_salvatore.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_salvatore.dds"
+ 	    } 
         SpriteType = {#enc_scientists
             name = "GFX_idea_enc_scientists"
-             texturefile = "gfx/interface/ideas/enc_scientists.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_scientists.dds"
+ 	    } 
         SpriteType = {#enc_scientists_traitors
             name = "GFX_idea_enc_scientists_traitors"
-             texturefile = "gfx/interface/ideas/enc_scientists_traitors.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_scientists_traitors.dds"
+ 	    } 
         SpriteType = {#enc_slave_labour
             name = "GFX_idea_enc_slave_labour"
-             texturefile = "gfx/interface/ideas/enc_slave_labour.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_slave_labour.dds"
+ 	    } 
         SpriteType = {#enc_smugging
             name = "GFX_idea_enc_smugging"
-             texturefile = "gfx/interface/ideas/enc_smugging.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_smugging.dds"
+ 	    } 
         SpriteType = {#enc_super_soldiers
             name = "GFX_idea_enc_super_soldiers"
-             texturefile = "gfx/interface/ideas/enc_super_soldiers.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_super_soldiers.dds"
+ 	    } 
         SpriteType = {#enc_tot_economic_mobilisation
             name = "GFX_idea_enc_tot_economic_mobilisation"
-             texturefile = "gfx/interface/ideas/enc_tot_economic_mobilisation.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_tot_economic_mobilisation.dds"
+ 	    } 
         SpriteType = {#enc_vaccinations
             name = "GFX_idea_enc_vaccinations"
-             texturefile = "gfx/interface/ideas/enc_vaccinations.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_vaccinations.dds"
+ 	    } 
         SpriteType = {#enc_vlt
             name = "GFX_idea_enc_vlt"
-             texturefile = "gfx/interface/ideas/enc_vlt.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_vlt.dds"
+ 	    } 
         SpriteType = {#enc_war_economy
             name = "GFX_idea_enc_war_economy"
-             texturefile = "gfx/interface/ideas/enc_war_economy.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_war_economy.dds"
+ 	    } 
         SpriteType = {#enc_wright
             name = "GFX_idea_enc_wright"
-             texturefile = "gfx/interface/ideas/enc_wright.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc_wright.dds"
+ 	    } 
         SpriteType = {#enc__idea_fist
             name = "GFX_idea_enc__idea_fist"
-             texturefile = "gfx/interface/ideas/enc__idea_fist.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/enc__idea_fist.dds"
+ 	    } 
         SpriteType = {#erb_veronica
             name = "GFX_idea_erb_veronica"
-             texturefile = "gfx/interface/ideas/erb_veronica.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/erb_veronica.dds"
+ 	    } 
         SpriteType = {#idea_enc_atomic_commision
             name = "GFX_idea_idea_enc_atomic_commision"
-             texturefile = "gfx/interface/ideas/idea_enc_atomic_commision.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/idea_enc_atomic_commision.dds"
+ 	    } 
         SpriteType = {#idea_enc_chemical_corps
             name = "GFX_idea_idea_enc_chemical_corps"
-             texturefile = "gfx/interface/ideas/idea_enc_chemical_corps.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/idea_enc_chemical_corps.dds"
+ 	    } 
         SpriteType = {#idea_enc_designer_fighter
             name = "GFX_idea_idea_enc_designer_fighter"
-             texturefile = "gfx/interface/ideas/idea_enc_designer_fighter.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_fighter.dds"
+ 	    } 
         SpriteType = {#Idea_enc_designer_misc
             name = "GFX_idea_Idea_enc_designer_misc"
-             texturefile = "gfx/interface/ideas/Idea_enc_designer_misc.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/Idea_enc_designer_misc.dds"
+ 	    } 
         SpriteType = {#idea_enc_designer_PA
             name = "GFX_idea_idea_enc_designer_PA"
-             texturefile = "gfx/interface/ideas/idea_enc_designer_PA.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_PA.dds"
+ 	    } 
         SpriteType = {#idea_enc_designer_PA_2
             name = "GFX_idea_idea_enc_designer_PA_2"
-             texturefile = "gfx/interface/ideas/idea_enc_designer_PA_2.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_PA_2.dds"
+ 	    } 
         SpriteType = {#idea_enc_designer_plasma
             name = "GFX_idea_idea_enc_designer_plasma"
-             texturefile = "gfx/interface/ideas/idea_enc_designer_plasma.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_plasma.dds"
+ 	    } 
         SpriteType = {#idea_enc_designer_tesla
             name = "GFX_idea_idea_enc_designer_tesla"
-             texturefile = "gfx/interface/ideas/idea_enc_designer_tesla.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_tesla.dds"
+ 	    } 
         SpriteType = {#idea_enc_designer_verti
             name = "GFX_idea_idea_enc_designer_verti"
-             texturefile = "gfx/interface/ideas/idea_enc_designer_verti.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/idea_enc_designer_verti.dds"
+ 	    } 
         SpriteType = {#lynette
             name = "GFX_idea_lynette"
-             texturefile = "gfx/interface/ideas/lynette.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/lynette.dds"
+ 	    } 
         SpriteType = {#officer_law_enclave_officers
             name = "GFX_idea_officer_law_enclave_officers"
-             texturefile = "gfx/interface/ideas/officer_law_enclave_officers.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/officer_law_enclave_officers.dds"
+ 	    } 
         SpriteType = {#officer_law_loyal_enclave_officers
             name = "GFX_idea_officer_law_loyal_enclave_officers"
-             texturefile = "gfx/interface/ideas/officer_law_loyal_enclave_officers.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/officer_law_loyal_enclave_officers.dds"
+ 	    } 
         SpriteType = {#orion_moreno
             name = "GFX_idea_orion_moreno"
-             texturefile = "gfx/interface/ideas/orion_moreno.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/orion_moreno.dds"
+ 	    } 
         SpriteType = {#sargeant_dornan
             name = "GFX_idea_sargeant_dornan"
-             texturefile = "gfx/interface/ideas/sargeant_dornan.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/sargeant_dornan.dds"
+ 	    } 
         SpriteType = {#training_law_enclave_academy
             name = "GFX_idea_training_law_enclave_academy"
-             texturefile = "gfx/interface/ideas/training_law_enclave_academy.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/training_law_enclave_academy.dds"
+ 	    } 
         SpriteType = {#training_law_navarro_veterans
             name = "GFX_idea_training_law_navarro_veterans"
-             texturefile = "gfx/interface/ideas/training_law_navarro_veterans.dds"
-         } 
+ 		    texturefile = "gfx/interface/ideas/training_law_navarro_veterans.dds"
+ 	    } 
         SpriteType = {#verti_production
             name = "GFX_idea_verti_production"
-             texturefile = "gfx/interface/ideas/verti_production.dds"
-         }    
+ 		    texturefile = "gfx/interface/ideas/verti_production.dds"
+ 	    }    
 }

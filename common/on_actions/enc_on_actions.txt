@@ -163,13 +163,13 @@ on_actions = {
 						has_completed_focus = enc_reform
 					}
 					advanced_update_legitimacy = yes
-				}
-				else_if  = {
-					limit = {
-						has_completed_focus = enc_purity
-					}
-					LLW = {
-						set_state_controller = FROM.FROM
+					else_if  = {
+						limit = {
+							# has_completed_focus = enc_purity
+						}
+						LLW = {
+							transfer_state = FROM.FROM
+						}
 					}
 				}
 			}
