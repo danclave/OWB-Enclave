@@ -32,7 +32,6 @@ leader_traits = {
 		}
 	}
 	enc_demoted = { 
-		new_commander_weight = 0
 		type = all
 		trait_type = personality_trait	
 		gain_xp = {
