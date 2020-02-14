@@ -8,19 +8,19 @@ unlocks_as_advisor:0 "Unlocks as a political advisor: "
 occurred_because:0 "\nOccurred because: §Y"
 ################################## EVENTS ##############################################
 enc_reformers.1.t:0 "Sins of the Father"
-enc_reformers.1.d:0 "Granite's past is a controversial subject in our mids, made all the more contentious by rumors spread by Purists. The cause is Granite's father and his relationship to the Chosen One. The Purists accuse Granite's father of treason for aiding the Chosen One and destroying the Oil Rig, but lack any evidence.\n\nDespite the fact that he will deny these allegations as nothing but political slander, Douglas remembers clearly what his father told him about that faithful day on the oil rig."
+enc_reformers.1.d:0 "Granite's past is a controversial subject in our midst, made all the more contentious by rumors spread by Purists. The cause is Granite's father and his relationship to the Chosen One. The Purists accuse Granite's father of treason for aiding the Chosen One and destroying the Oil Rig, but lack any evidence.\n\nDespite the fact that he will deny these allegations as nothing but political slander, Douglas remembers clearly what his father told him about that faithful day on the oil rig."
 enc_reformers.1.a:0 "He aided the Chosen One and then went their separate ways."
 enc_reformers.1.b:0 "Speaking of the Chosen One, let me tell you who your mother was..."
 enc_reformers.1.c:0 "He didn't aid the Chosen One."
 #########################################################################################
 enc_reformers.2.t:0 "Douglas' first contact"
-enc_reformers.2.d:0 "When Douglas was 17 years old, the population of the Enclave vault reached the utter limits of it's life support systems. As a result, a large portion of the healthy and strong were ordered to leave the safety of the vault to establish contact with the largest group of Enclave remnants, lead by an old Navarro Drill sargeant.\n\nDouglas, however, was quick to contact with his father's 'Granite Company' instead, slipping away from the rest unseen. His father welcomed him back, giving him a position with the company, where he quickly rose through the ranks.\n\nWhen Douglas was a lieutenant of the Granite Defense Company, he was contacted by a party under attack by raiders. The call sounded desperate and came from..."
+enc_reformers.2.d:0 "When Douglas was 17 years old, the population of the Enclave vault reached the utter limits of it's life support systems. As a result, a large portion of the healthy and strong were ordered to leave the safety of the vault to establish contact with the largest group of Enclave remnants, lead by an old Navarro Drill sargeant.\n\nDouglas, however, was quick to contact with his father's 'Granite Company' instead, slipping away from the rest unseen. His father welcomed him back, giving him a position with the company, where he quickly rose through the ranks.\n\nWhen Douglas was a lieutenant of the Granite Defense Company, he received an emergency distress signal. The message sounded desperate and came from..."
 enc_reformers.2.a:0 "An NCR battalion fighting raiders"
 enc_reformers.2.b:0 "Brotherhood knights containing a prewar threat"
 enc_reformers.2.c:0 "Caesar's scouts seeking new lands"
 #########################################################################################
 enc_reformers.3.t:0 "Douglas' Decision"
-enc_reformers.3.d:0 "When Douglas arrived with his team, the situation of the defenders had grown more dire. Their battered defenses crumbling quickly under a determined but almost equally attritioned raider party. Looking over the sad state of both parties, Douglas decided to... "
+enc_reformers.3.d:0 "When Douglas arrived with his team, the situation of the defenders had grown more dire. Their battered defenses crumbling quickly under a determined but almost equally bloodied raider gang. Looking over the sad state of both parties, Douglas decided to... "
 enc_reformers.3.a:0 "Help take down the raiders"
 enc_reformers.3.a.tt: "This will give us a connection with this faction."
 enc_reformers.3.b:0 "Wipe them out lest they reveal the Enclave's survival."
@@ -280,7 +280,7 @@ enc_reformers.46.a.tt: "The §YHide Activities From the NCR§! decision is no lo
 enc_reformers.46.a: "No more hiding."
 ################################################################################################################ -<
 enc_reformers.47.t: "The Fall of The New California Republic"
-enc_reformers.47.d: "Yesterday, in the bombed out capitol building of Shady Sands, the NCR officials we could scrounge together signed the unconditional surrender of their republic. Enclave troops have gone from fighting pockets of resistance to policing the many newly annexed Americans.\n\nIt is shocking news to the entire west coast to see the previous greatest power brought low. The future of its citizens is uncertain. Though some of them have already taken to the message of their new government, others remember the stories of what the Enclave once planned for those they considered 'mutants'."
+enc_reformers.47.d: "Yesterday, in the bombed out capitol building of Shady Sands, the NCR officials we could scrounge together signed the unconditional surrender of their republic. Enclave troops have gone from fighting pockets of resistance to policing the many newly annexed Americans.\n\nIt is shocking news to the entire West Coast to see the previous greatest power brought low. The future of its citizens is uncertain. Though some of them have already taken to the message of their new government, others remember the stories of what the Enclave once planned for those they considered 'mutants'."
 enc_reformers.47.a: "God bless the Enclave."
 enc_reformers.47.a.tt: "Any nations we are still at war with but don't border us will be signing a white peace.\n"
 ################################################################################################################ -<
@@ -1250,7 +1250,7 @@ enc_reformers.229.b: "Only a §RCommunist§! would oppose baseball!"
 enc_reformers.229.b.tt: "§The Secret Service begins a search for Communists.§!"
 #############################################################################################################
 enc_reformers.230.t: "Communist Ghouls?"
-enc_reformers.230.d: "Granite's anticommunist diatribes have become a subject of discussion, and it appears that one of the prewar ghouls, a librarian before the war, has offered to speak with Granite and explain Communism to him.  He's asked Granite to read a book called 'Das Kapital,' which she says was a communist work."
+enc_reformers.230.d: "Granite's anticommunist diatribes have become a subject of discussion, and it appears that one of the prewar ghouls, a librarian before the war, has offered to speak with Granite and explain Communism to him.  She's asked Granite to read a book called 'Das Kapital,' which she says was a communist work."
 enc_reformers.230.a: "Fine. Let's read it."
 enc_reformers.230.b: "Arrest the ghoul for owning §RCommunist§! propaganda!"
 #############################################################################################################

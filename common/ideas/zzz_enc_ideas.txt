@@ -1676,6 +1676,62 @@ ideas = {
 				stability_weekly = 0.0045
 			}
 		}
+
+		enc_segregationist_growth = {
+			picture = enc_smugging
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				elites_drift = 0.10
+			}
+		}
+		
+		enc_segregationist_growth_2 = {
+			picture = enc_smugging
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				elites_drift = 0.20
+			}			
+		}
+		
+		enc_democracy_growth = {
+			picture = enc_smugging
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				people_drift = 0.10
+			}		
+		}
+		
+		enc_democracy_growth_2 = {
+			picture = enc_smugging
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				people_drift = 0.20
+			}		
+		}
 ####################################################
 # REFORM - REBUILDING A NATION
 ####################################################
@@ -2510,7 +2566,7 @@ ideas = {
 			}
 		}
 		ENC_water_contaminated = {
-			picture = generic_research_bonus #TODO
+			picture = enc_plague
 			allowed = {
 				always = no
             }
@@ -2833,8 +2889,6 @@ ideas = {
 			traits = { vertibird_aircraft_manufacturer }
 		}
 	}
-
-
 
 	engineering_firm = {
 		designer = yes

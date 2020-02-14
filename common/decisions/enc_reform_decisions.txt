@@ -3629,6 +3629,7 @@ ENC_nevada_tribals = {
 		}
 	}
 	erb_MOJ = {
+		fire_only_once = yes
 		visible = {
 			AND = {
 				has_completed_focus = enc_reform_the_tribes
@@ -3658,7 +3659,7 @@ ENC_nevada_tribals = {
 	erb_FIE = {
 		visible = {
 			has_completed_focus = enc_reform_the_tribes
-			country_exists = MOJ
+			country_exists = FIE
 		}
 		available = {
 			NOT = {
@@ -3668,6 +3669,7 @@ ENC_nevada_tribals = {
 				has_war_with = FIE
 			}
 		}
+		fire_only_once = yes
 		cost = 50
 		ai_will_do = {
 			factor = 100

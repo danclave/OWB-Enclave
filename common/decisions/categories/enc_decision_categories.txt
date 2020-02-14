@@ -103,7 +103,7 @@ ENC_political_infighting = {
 	icon = category_enc_political_infighting
 	priority = { base = 10 }
 	allowed = {
-		tag = ERB
+		original_tag = ERB
 	}
 	visible = {
 		OR = {
@@ -144,7 +144,7 @@ ENC_render_unto_caesar = {
 ENC_debug = {
 	priority = 100
 	visible = {
-		has_country_flag = enc_debug_enabled
+		# has_country_flag = enc_debug_enabled
 	}
 }
 

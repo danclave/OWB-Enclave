@@ -244,6 +244,7 @@ ideas = {
 			modifier = {
 				min_export = 0
 				enemy_justify_war_goal_time = 1
+				trade_opinion_factor = -1
 			}
 			allowed_to_remove = {
 				or = {

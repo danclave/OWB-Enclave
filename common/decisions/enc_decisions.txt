@@ -2,6 +2,7 @@
 ###############################
 # SHARED
 ###############################
+
 ENC_shifts = {
 	extend_production_shifts = {	#increased production for reduced war support
 		icon = decision_enc_production_up
@@ -848,6 +849,25 @@ ENC_political_infighting = {
 		days_remove = 90
 		days_re_enable = 100
 	}
+	ENC_military_exercise = {
+		icon = generic_prepare_civil_war
+		priority = 0
+		custom_cost_text = command_power_max
+		custom_cost_trigger = {
+			command_power > 99.9
+		}
+		complete_effect = {
+			add_popularity = { ideology = intellectuals popularity = 0.10 }
+			hidden_effect = {
+				add_command_power = -100
+			}
+		}
+		remove_effect = {
+			set_temp_variable = { popularity_change = 0.05 }
+			add_popularity_to_ruling_party = yes
+		}
+		days_re_enable = 100		
+	}
 }
 
 ENC_render_unto_caesar = {
@@ -986,14 +1006,40 @@ ENC_render_unto_caesar = {
 	}
 }
 
+scavenge_resources = {
+	enc_reject_scavenging = {
+		cost = 50
+		fire_only_once = yes
+		
+		allowed = {
+			original_tag = ERB
+		}
+		visible = {
+			has_country_flag = enabled_scavenging
+		}
+		complete_effect = {
+			clr_country_flag = enabled_scavenging
+		}
+		
+	}
+}
 # DEBUG
 ###############################
 
 ENC_debug = {
 	ENC_kill_ncr = {
 		complete_effect = {
-			add_ideas = currencyusd
+			every_state = {
+				ERB = {
+					launch_nuke = {
+						state = PREV
+						use_nuke = no
+					}
+				}
+			}
 		}
+    }
+}
 	}
 	ENC_add_legitimacy = {
 		complete_effect = {

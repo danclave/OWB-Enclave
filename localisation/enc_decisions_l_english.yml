@@ -305,6 +305,8 @@ enc_demoted_scientists: "Purist Scientists demoted by §Ydecision§!"
 ENC_reform_wild_promises: "Wild Promises"
 ENC_reform_wild_promises_desc: "If all else fails, wild yet vague promises can buy us time. But in the long run they will hurt our credibility."
 
+ENC_military_exercise: "Military Exercises"
+ENC_military_exercise_desc: "Distracting Enclave personel with a military exercise can buy us valuable time to undermine the efforts of our enemies. Additionally, those that oppose us tend to be especially prone to unfortunate accidents during these activities."
 ##############################
 # NCR INFILTRATION
 ##############################
