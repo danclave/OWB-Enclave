@@ -1029,9 +1029,16 @@ scavenge_resources = {
 ENC_debug = {
 	ENC_misc = {
 		complete_effect = {
-			add_manpower = 1
 			LLW = {
-				load_focus_tree = erb_eaz_nf
+				remove_ideas = political_effort_censorship
+				remove_ideas = chems_banned
+				remove_ideas = outsider_law_volunteers
+				remove_ideas = slavery_outlawed
+				remove_ideas = training_law_none
+				remove_ideas = limited_exports
+				remove_ideas = mutant_law_none
+				remove_ideas = officer_law_local_heroes
+				remove_ideas = undesirables_law_none
 			}
 		}
 	}

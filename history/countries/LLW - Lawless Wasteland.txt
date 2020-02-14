@@ -95,3 +95,14 @@ create_country_leader = {
 
 # IDEAS
 add_ideas = enc_idea_lawless_wasteland
+add_ideas = chems_legalised
+
+remove_ideas = political_effort_censorship
+remove_ideas = chems_banned
+remove_ideas = outsider_law_volunteers
+remove_ideas = slavery_outlawed
+remove_ideas = training_law_none
+remove_ideas = limited_exports
+remove_ideas = mutant_law_none
+remove_ideas = officer_law_local_heroes
+remove_ideas = undesirables_law_none

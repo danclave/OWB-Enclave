@@ -46,8 +46,12 @@ ideas = {
 				political_power_factor = -10
 				local_resources_factor = -10
 				autonomy_gain_global_factor = -1
-			}
-			
+				
+				elites_acceptance = -100
+				ruler_acceptance = -100
+				people_acceptance = -100
+				intellectuals_acceptance = -100
+			}			
 		}
 	}
 }
