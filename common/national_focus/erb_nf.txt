@@ -459,6 +459,8 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = enc_reformers.356 days = 20 }
 			}
+			# followers can now appear
+			clr_country_flag = do_not_spread_followers
 		}
 	}
 

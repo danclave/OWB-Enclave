@@ -857,7 +857,6 @@ ENC_political_infighting = {
 			command_power > 99.9
 		}
 		complete_effect = {
-			add_popularity = { ideology = intellectuals popularity = 0.10 }
 			hidden_effect = {
 				add_command_power = -100
 			}

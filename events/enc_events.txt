@@ -914,17 +914,6 @@ country_event = { #38 - ANTI PUPPET
 	desc = enc.38.d
 	picture = GFX_event_ENC_president_only
 	fire_only_once = no
-
-	trigger = {
-		ERB = {
-			has_completed_focus = enc_purity
-			num_subjects > 0
-		}
-
-	}
-	mean_time_to_happen = {
-		days = 3
-	}
 	option = { # ANNEX!
 		name = enc.38.a
 		every_other_country = {
