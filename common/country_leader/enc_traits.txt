@@ -156,26 +156,34 @@ leader_traits = {
 		winter_attrition_factor = -0.10
 		acclimatization_cold_climate_gain_factor = 0.20	
 	}
-	hates_ncr = {
+	enc_politically_connected = {
 		random = no
-		war_support_factor = 0.10
-		targeted_modifier = {
-			tag = NCR
-			attack_bonus_against = 0.15
-		}
+		political_advisor_cost_factor = -0.20
+		army_chief_cost_factor = -0.20
+		air_chief_cost_factor = -0.20
+		navy_chief_cost_factor = -0.20
+		high_command_cost_factor = -0.20
+		theorist_cost_factor = -0.20
+		economy_cost_factor = -0.20
+		trade_laws_cost_factor = -0.20
 	}
-	politically_connected = {
+	swords_to_ploughshares = {
 		random = no
-		political_advisor_cost_factor = -0.10
-		army_chief_cost_factor = -0.10
-		air_chief_cost_factor = -0.10
-		navy_chief_cost_factor = -0.10
-		high_command_cost_factor = -0.10
-		theorist_cost_factor = -0.10
-		economy_cot_factor = -0.10
-		trade_laws_cost_factor = -0.10
+		conversion_cost_mil_to_civ_factor = -0.25
+		conversion_cost_civ_to_mil_factor = 0.15
+		industrial_capacity_factory = -0.15
+		production_speed_industrial_complex_factor = 0.15
+		production_speed_infrastructure_factor = 0.10
+		war_support_factor = -0.05
+		stability_factor = 0.03
+		conscription_factor = -0.15
+	}
+	democratic_leanings = {
+		random = no
+		people_drift = 0.03
 	}
 	
+
     ###############################
 	# manufacturers
 	###############################
@@ -227,8 +235,15 @@ leader_traits = {
 	enc_air_chief_loyalist = {
 		random = no
 		stability_factor = 0.05
-		air_close_air_support_attack_factor = -0.05
 		intellectuals_drift = 0.20
+	}
+	enc_incompetent_airman = {
+		random = no
+		air_close_air_support_attack_factor = -0.10
+		experience_gain_air_factor = -0.25
+		research_bonus = {
+			cat_air_doctrine = -0.10
+		}	
 	}
 	enc_air_chief_cas = {
 		random = no
@@ -240,19 +255,30 @@ leader_traits = {
 	enc_army_chief_loyalist = {
 		random = no
 		stability_factor = 0.05
-		army_morale_factor = -0.03
-		army_attack_factor = -0.05
 		intellectuals_drift = 0.20
+	}
+	enc_incompetent_general = {
+		random = no
+		army_morale_factor = -0.03
+		army_attack_factor = -0.05	
 	}
 	enc_navy_chief_loyalist = {
 		random = no
-		intellectuals_drift = 0.20
+		intellectuals_drift = 0.15
 		stability_factor = 0.05
-		naval_coordination = -0.05
 	}
 	enc_wounded_trait = {
 		random = no
 		political_power_factor = -0.10
+	}
+	enc_incompetent_admiral = {
+		random = no		
+		naval_coordination = -0.05
+		naval_hit_chance = -0.05
+		experience_gain_navy_factor = -0.25
+		research_bonus = {
+			cat_naval_doctrine = -0.15
+		}
 	}
 
 	enc_disliked_pragmatist = {

@@ -49,10 +49,30 @@ ideas = {
 				factor = 1
 			}
 			visible = {
+				NOT = { 
+					has_country_flag = reformers_purged 
+					has_country_flag = enc_boris_t_democratic_flag
+					has_completed_focus = enc_purge_opposition
+				}
+			
+			}
+		}
+		boris_t_democratic = {
+			picture = boris_t
+			allowed = {
+				original_tag = ERB
+			}
+			traits = {
+				democratic_leanings
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = enc_boris_t_democratic_flag
 				NOT = { has_country_flag = reformers_purged }
 			}
 		}
-		
 		generic_reformer_2 = {
 			picture = generic_political_advisor_europe_2
 
@@ -143,6 +163,18 @@ ideas = {
 				salvatore_puppet
 			}
 		}
+		enc_jerome_chipman = {
+			cost = 100
+			picture = generic_army_south_america_4
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { politically_connected }
+
+			ai_will_do = {
+				factor = 1
+			}		
+		}
 	}
 
 	army_chief = {
@@ -176,7 +208,7 @@ ideas = {
 
 		army_chief_loyalist = {
 			cost = 100
-			picture = generic_army_europe_3
+			picture = generic_army_europe_6
 
 			allowed = {
 				original_tag = ERB
@@ -184,12 +216,29 @@ ideas = {
 			visible = {
 				not = { has_completed_focus = enc_purge_opposition }
 			}
-			traits = { enc_army_chief_loyalist }
+			traits = { 
+				enc_army_chief_loyalist
+				enc_incompetent_general
+			}
 
 			ai_will_do = {
 				factor = 1
 			}
 		}
+		
+		enc_indy_neidell = {
+			cost = 100
+			picture = enc_indy_neidell
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { desert_fighter }
+
+			ai_will_do = {
+				factor = 1
+			}		
+		}	
+
 	}
 
 	air_chief = {
@@ -208,7 +257,7 @@ ideas = {
 		}
 		enc_people_air_loyalist = {
 
-			picture = generic_army_europe_2
+			picture = generic_air_europe_3
 			cost = 100
 			allowed = {
 				original_tag = ERB
@@ -216,7 +265,10 @@ ideas = {
 			visible = {
 				not = { has_completed_focus = enc_purge_opposition }
 			}
-			traits = { enc_air_chief_loyalist }
+			traits = { 
+				enc_air_chief_loyalist
+				enc_incompetent_airman
+			}
 
 			ai_will_do = {
 				factor = 1
@@ -242,7 +294,7 @@ ideas = {
 
 	navy_chief = {
 		navy_chief_loyalist = {
-			picture = generic_army_europe_2
+			picture = generic_navy_arab_3
 			cost = 100
 			allowed = {
 				original_tag = ERB
@@ -250,7 +302,10 @@ ideas = {
 			visible = {
 				not = { has_completed_focus = enc_purge_opposition }
 			}
-			traits = { enc_navy_chief_loyalist }
+			traits = { 
+				enc_navy_chief_loyalist
+				enc_incompetent_admiral
+			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -348,6 +403,19 @@ ideas = {
 				loyal_soldier
 			}
 		}
+		enc_BrenRadNeo = {
+			picture = generic_political_advisor_europe_6
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+					# has_completed_focus = enc_reform
+			}
+			traits = {
+				interventionist
+			}
+			
+		}
 	}
 
 	economic_advisor = {
@@ -365,7 +433,6 @@ ideas = {
 				rebellious
 			}
 		}
-
 		benjamin_curling = {
 			picture = generic_political_advisor_europe_1
 
@@ -420,19 +487,12 @@ ideas = {
 			}
 		}
 		aaron_chapman = {
-			#tourist
-
 			picture = USA_walter_krueger
 
 			allowed = { original_tag = ERB }
-			available = {
-				has_completed_focus = enc_purity
-			}
-
 			traits = {
 				armaments_organizer
 			}
-
 			ai_will_do = {
 				factor = 10
 			}
@@ -445,8 +505,27 @@ ideas = {
 				enc_fuel_expert
 			}
 			ai_will_do = {
-				factor = 10
+				factor = 1
 			}
+		}
+		enc_john_jaeger = {
+			picture = generic_political_advisor_south_america_3
+
+			allowed = { original_tag = ERB }
+			visible = {
+				not = {
+					has_country_flag = reformers_purged
+				}
+			}
+			available = {
+				has_completed_focus = enc_rebuilding_a_nation
+			}
+			traits = {
+				swords_to_ploughshares
+			}
+			ai_will_do = {
+				factor = 1
+			}		
 		}
 	}
 }

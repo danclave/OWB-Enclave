@@ -1147,6 +1147,10 @@ spriteTypes = {
             name = "GFX_idea_enc_idea_manpower_remnants_3"
  		    texturefile = "gfx/interface/ideas/enc_idea_manpower_remnants_3.dds"
  	    } 
+        SpriteType = {#enc_indy_neidell
+            name = "GFX_idea_enc_indy_neidell"
+ 		    texturefile = "gfx/interface/ideas/enc_indy_neidell.dds"
+ 	    } 
         SpriteType = {#enc_jingoism
             name = "GFX_idea_enc_jingoism"
  		    texturefile = "gfx/interface/ideas/enc_jingoism.dds"

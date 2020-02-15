@@ -51,12 +51,14 @@ ideas = {
 			cancel_if_invalid = no
 			on_add = {
 				if = {
-					not = { has_completed_focus = enc_purge_opposition }
+					limit = {
+						not = { has_completed_focus = enc_purge_opposition }
+					}
+					set_temp_variable = {
+						stability_loss_factor = 0.2
+					}
+					stability_loss_based_on_elites_popularity = yes
 				}
-				set_temp_variable = {
-					stability_loss_factor = 0.2
-				}
-				stability_loss_based_on_elites_popularity = yes
 			}
 		}		
 		
