@@ -111,7 +111,22 @@ on_actions = {
 	
 	on_release_as_puppet = {
 		effect = {
-			
+			if = {
+				limit = {
+					original_tag = ERB
+					not = { has_completed_focus = enc_reform }
+				}
+				FROM = {
+					every_other_country = {
+						limit = {
+							is_subject_of = ERB
+						}
+						ERB = {
+							annex_country = { target = PREV }
+						}
+					}
+				}
+			}
 		}
 	}
 	

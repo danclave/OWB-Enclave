@@ -1592,7 +1592,7 @@ ideas = {
 			}
 		}
 		ENC_Marriage_Equality = {
-			picture = generic_constitutional_guarantee
+			picture = ROM_king_carol_ii_hedonist
 			allowed = {
 				always = no
             }

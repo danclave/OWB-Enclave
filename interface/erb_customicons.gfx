@@ -1151,6 +1151,10 @@ spriteTypes = {
             name = "GFX_idea_enc_idea_manpower_remnants_3"
  		    texturefile = "gfx/interface/ideas/enc_idea_manpower_remnants_3.dds"
  	    } 
+        SpriteType = {#enc_indy_neidell
+            name = "GFX_idea_enc_indy_neidell"
+ 		    texturefile = "gfx/interface/ideas/enc_indy_neidell.dds"
+ 	    } 
         SpriteType = {#enc_jingoism
             name = "GFX_idea_enc_jingoism"
  		    texturefile = "gfx/interface/ideas/enc_jingoism.dds"
@@ -1258,6 +1262,10 @@ spriteTypes = {
         SpriteType = {#enc_reform
             name = "GFX_idea_enc_reform"
  		    texturefile = "gfx/interface/ideas/enc_reform.dds"
+ 	    } 
+        SpriteType = {#enc_reorganized_economy
+            name = "GFX_idea_enc_reorganized_economy"
+ 		    texturefile = "gfx/interface/ideas/enc_reorganized_economy.dds"
  	    } 
         SpriteType = {#enc_salvatore
             name = "GFX_idea_enc_salvatore"
