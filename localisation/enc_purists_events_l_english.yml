@@ -125,7 +125,7 @@ enc.21.dd: "§G(Inspiring)§! Adress the soldiers personally"
 available_because_inspiring: "Available because you are §Ginspiring§!\n"
 ################################################################################################################ -<
 enc.22.t: "Rumors of half-mutant"
-enc.22.d: "Rumors have begun spreading that a respected administrator of ours is half mutant. Like many of our younger personel, he was born years after the fall of Navarro to a surviving Enclave soldier and a mysteriously absent mother. If these allegations are true, he may be a serious risk to our security. "
+enc.22.d: "Rumors have begun spreading that a respected administrator of ours is half mutant. Like many of our younger personnel, he was born years after the fall of Navarro to a surviving Enclave soldier and a mysteriously absent mother. If these allegations are true, he may be a serious risk to our security. "
 enc.22.a: "No compromise, no mercy"
 enc.22.b: "Arrange a blood test to determine the truth"
 enc.22.c: "They are just rumors"
