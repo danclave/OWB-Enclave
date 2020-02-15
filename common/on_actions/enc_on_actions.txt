@@ -59,7 +59,23 @@ on_actions = {
 	#FROM is war target
 	on_declare_war = {
 		effect = {
-			
+# tied to get LLW to automally declare war with you, but this code doesn't work
+#			if = {
+#				
+#				limit = {
+#					AND = {
+#						original_tag = ERB
+#						has_completed_focus = enc_purity
+#					}
+#				}
+#				LLW = {
+#					add_to_war = { 
+#						targeted_alliance = ERB 
+#						enemy = FROM 
+#					}
+#				}
+
+			}
 		}
 	}
 	
@@ -180,10 +196,15 @@ on_actions = {
 					advanced_update_legitimacy = yes
 					else_if  = {
 						limit = {
-							# has_completed_focus = enc_purity
+							AND = {
+								#has_completed_focus = enc_purity
+								FROM = {
+									num_owned_states > 1
+								}
+							}
 						}
 						LLW = {
-							transfer_state = FROM.FROM
+							set_state_owner = FROM.FROM
 						}
 					}
 				}
