@@ -37,14 +37,20 @@ ideas = {
 			}
 			
 			allowed_to_remove = {
-				always = no
+				# always = no
 			}		
 			cancel_if_invalid = no
 		}
 		enc_reorganized_economy = {
-			picture = great_depression
+			picture = enc_reorganized_economy
 			allowed = {
-				always = no
+				original_tag = ERB
+			}
+			available = {
+				# has_completed_focus = enc_mobilize_economy
+			}
+			visible = {
+				not = { has_completed_focus = enc_reform }
 			}
 			removal_cost = -1		
 			modifier = {
@@ -52,8 +58,7 @@ ideas = {
 				production_speed_arms_factory_factor = 0.2
 				conversion_cost_civ_to_mil_factor= -0.2
 				conversion_cost_mil_to_civ_factor = -0.2
-			}
-			
+			}			
 			allowed_to_remove = {
 				always = no
 			}		

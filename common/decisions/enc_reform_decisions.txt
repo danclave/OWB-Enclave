@@ -545,18 +545,9 @@ ENC_infiltrating_NCR = {
 					}
 				}
 			}
-			custom_trigger_tooltip = {
-				tooltip = ncr_suspicion_higher_than_20
-				check_variable = {
-					ENC_hiding_cost > 19.99
-				}
-			}
-		}
-		complete_effect = {
-			clr_country_flag = enc_ncr_spies
 		}
 		days_remove = 30
-		days_re_enable = 70
+		days_re_enable = 100
 		remove_effect = {
 			random_country = {
 				limit = {

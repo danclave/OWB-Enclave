@@ -411,15 +411,7 @@ sargeant_dornan_desc: "Arch Dornan was mostly known as a hard ass drill sergeant
 resourceful: "Resourceful"
 arcade_gannon:  "Arcade Gannon"
 
-felix_grayson: "Felix Grayson"
-felix_grayson_desc: "While it's true that the Enclave has sometimes bend the limits of written law, it is still a vital tool in keeping a society standing. Grayson knows this."
-col_wilkins: "Col. T.M. Wilkins"
-lt_kolyis: "Lt. Kolyis"
-lt_kolyis_desc: "Head of the EPA, and also its only current member. Kolyis has retired from the front lines to advocate for an agency focused on protecting what little green America has left.\n\nWhile no doubt intelligent, Kolyis seems to have a soft spot for some species' that would eat his entrails without a second thought."
-boris_t: "Boris T."
-boris_t_desc: "Nicknamed 'The Tsar', due to Noble Eastern European heritage, Boris nonetheless has been a vocal proponent of reform and democracy within the Enclave."
-generic_reformer_2: "Joshua Morgan"
-generic_reformer_2_Desc: "He'll get you anything with a smile, just don't ask how he got it."
+
 
 charismatic: "Charismatic"
 leader_charismatic_tt: "\nAvailable because you are §MCharismatic§!"

@@ -2903,8 +2903,9 @@ country_event = { #85 - Shi
 	fire_only_once = yes
 	is_triggered_only = no
 	trigger = {
-		tag = ERB
+		original_tag = ERB
 		is_neighbor_of = SHI
+		has_completed_focus = enc_reform
 	}
 	mean_time_to_happen = {
 		days = 3

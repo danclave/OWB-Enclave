@@ -23,6 +23,7 @@ ideas = {
 				army_leader_start_defense_level = 1
 				army_leader_start_logistics_level = 1
 				military_leader_cost_factor = 1.5
+				equipment_capture_factor = -1
 			}
 		}
 		ENC_officers_traitors_2 = {
@@ -46,6 +47,7 @@ ideas = {
 				army_leader_start_defense_level = 1
 				army_leader_start_logistics_level = 1
 				military_leader_cost_factor = 1
+				equipment_capture_factor = -0.5
 			}
 		}
 		ENC_officers_central = {
@@ -156,6 +158,7 @@ ideas = {
 				army_leader_start_defense_level = 1
 				army_leader_start_logistics_level = 2
 				military_leader_cost_factor = 1
+				equipment_capture_factor = -1
 			}
 		}
 		officer_law_enclave_officers = {
@@ -380,7 +383,7 @@ ideas = {
 				not = { has_completed_focus = enc_reform }
 			}
 			available = {
-				has_completed_focus = enc_reform
+				has_completed_focus = enc_purity
 			}
 			cost = 100
 			removal_cost = -1
