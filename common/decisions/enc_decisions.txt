@@ -1026,6 +1026,49 @@ scavenge_resources = {
 ###############################
 
 ENC_debug = {
+	ENC_annex_New_Reno = {
+		complete_effect = {
+			LLW = {
+				annex_country = {
+					target = NEW
+					transfer_troops = no
+				}
+			}
+		}
+	}
+
+	ENC_transfer_states = {
+		complete_effect = {
+			for_each_loop = {
+				array = NEW.owned_states
+				LLW = {
+					#set_state_owner = v
+					transfer_state = v
+				}
+			}
+		}
+	}
+
+	ENC_declare_war_on_New_Reno = {
+		complete_effect = {
+			declare_war_on = {
+				target = NEW
+				type = annex_everything
+			}
+		}
+	}
+
+	LLW_declare_war_on_New_Reno = {
+		complete_effect = {
+			LLW = {
+				declare_war_on = {
+					target = NEW
+					type = annex_everything
+				}
+			}
+		}
+	}
+
 	ENC_misc = {
 		complete_effect = {
 			LLW = {

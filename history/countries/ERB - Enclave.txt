@@ -66,6 +66,12 @@ set_variable = { enc_good_allignment = 0 }
 set_variable = { enc_evil_allignment = 0 }
 
 ###############################
+# Diplomacy
+###############################
+
+create_faction = "The Enclave"
+
+###############################
 # POLITICS
 ###############################
 set_party_name = { ideology = intellectuals long_name = ERB_intellectuals_party name = ERB_intellectuals_party_long }

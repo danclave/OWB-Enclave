@@ -23,7 +23,7 @@ set_country_flag = default_officer_laws
 # Diplomacy
 ###############################
 
-add_to_faction = IRE
+add_to_faction = "The Enclave"
 
 ###############################
 # POLITICS

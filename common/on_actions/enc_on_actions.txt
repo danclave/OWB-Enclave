@@ -256,54 +256,62 @@ on_actions = {
 								}
 							}
 						}
-						for_each_loop = {
-							array = FROM.owned_controlled_states
-							LLW = {
-								#set_state_owner = v
-								transfer_state = v
-							}
-						}
-					}					
-					#else = {
+#
 					#	LLW = {
-					#		#set_state_controller = FROM.FROM
-					#		#set_state_owner = FROM.FROM
-					#		transfer_state = FROM.FROM
-					#		#annex_country = {
-					#		#	target = FROM
-    				#		#	transfer_troops = no	
-					#		#}
-					#		
-					#	}
-					#}
-					#else_if  = {
-					#	limit = {
-					#		FROM.num_controlled_states = 0
-					#	}
-					#	for_each_loop = {
-					#		array = FROM.owned_states
-					#		LLW = {
-					#			#set_state_owner = v
-					#			transfer_state = v
+					#		annex_country = {
+					#			target = FROM
+					#			transfer_troops = no
 					#		}
 					#	}
-					#	#else = {
-					#	#	LLW = {
-					#	#		#set_state_controller = FROM.FROM
-					#	#		set_state_owner = FROM.FROM
-					#	#		##transfer_state = FROM.FROM
-					#	#		#annex_country = {
-					#	#		#	target = FROM
-    				#	#		#	transfer_troops = no	
-					#	#		#}
-					#	#		
-					#	#	}
-					#	#}
-					#	##LLW = {
-					#	#	transfer_state = FROM.FROM
-					#	#	#set_state_controller = FROM.FROM
-					#	#}
-					#}
+#
+					##	for_each_loop = {
+					##		array = FROM.owned_controlled_states
+					##		LLW = {
+					##			#set_state_owner = v
+					##			transfer_state = v
+					##		}
+					##	}
+					##}					
+					###else = {
+					###	LLW = {
+					###		#set_state_controller = FROM.FROM
+					###		#set_state_owner = FROM.FROM
+					###		transfer_state = FROM.FROM
+					###		#annex_country = {
+					###		#	target = FROM
+    				###		#	transfer_troops = no	
+					###		#}
+					###		
+					###	}
+					###}
+					###else_if  = {
+					###	limit = {
+					###		FROM.num_controlled_states = 0
+					###	}
+					###	for_each_loop = {
+					###		array = FROM.owned_states
+					###		LLW = {
+					###			#set_state_owner = v
+					###			transfer_state = v
+					###		}
+					###	}
+					###	#else = {
+					###	#	LLW = {
+					###	#		#set_state_controller = FROM.FROM
+					###	#		set_state_owner = FROM.FROM
+					###	#		##transfer_state = FROM.FROM
+					###	#		#annex_country = {
+					###	#		#	target = FROM
+    				###	#		#	transfer_troops = no	
+					###	#		#}
+					###	#		
+					###	#	}
+					###	#}
+					###	##LLW = {
+					###	#	transfer_state = FROM.FROM
+					###	#	#set_state_controller = FROM.FROM
+					###	#}
+					}
 				}
 			}
 		}
