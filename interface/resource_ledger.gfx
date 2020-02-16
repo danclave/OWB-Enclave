@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_resource_ledger_entry_bg"
+		texturefile = "gfx/interface/resource_ledger_entry_bg.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+}

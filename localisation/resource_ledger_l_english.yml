@@ -1,7 +1,7 @@
 ﻿l_english:
   # GUI:
   RESOURCE_LEDGER_TITLE: "Resource Ledger"
-  #PUPPET_LEDGER_ENTRY_FLAG_TT: "§GClick§! to centre the map on their capital state (§Y[This.Capital.GetName]§!)."
+  RESOURCE_LEDGER_ENTRY_FLAG_TT: "§GClick§! to centre the map on their capital state (§Y[This.Capital.GetName]§!)."
   #PUPPET_LEDGER_PP_TT: "§YPolitical Power§! \nPower Change: [?political_power_daily|2+] per day. \nBase value: §Y2.00§!"
   #PUPPET_LEDGER_STABILITY_TT: "§YStability§! \nCurrent Stability: [This.GetPuppetLedgerStabilityColor][?stability|2%]§!"
   #PUPPET_LEDGER_WAR_SUPPORT_TT: "§YWar Support§! \nCurrent War Support: [This.GetPuppetLedgerWarSupportColor][?has_war_support|2%]§!"

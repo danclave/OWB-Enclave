@@ -48,13 +48,13 @@ scripted_gui = {
 		#	}
 		#}
 #
-		#dynamic_lists = {
-		#	resource_ledger_gridbox = {
-		#		array = subjects
-		#		entry_container = resource_ledger_entry
-		#		change_scope = yes
-		#	}
-		#}
+		dynamic_lists = {
+			resource_ledger_gridbox = {
+				array = subjects
+				entry_container = resource_ledger_entry
+				change_scope = yes
+			}
+		}
 #
 		#properties = {
 		#	entry_flag = {

@@ -29,46 +29,46 @@ guiTypes = {
 			shortcut = "ESCAPE"
 		}
 
-		#containerWindowType = {
-		#	name = "list"
-		#	position = { x = 0 y = 40 }
-		#	size = { width = 615 height = 400 }
-		#	verticalScrollbar = "right_vertical_slider"
-		#	margin = { top = 14 bottom = 13 }
+		containerWindowType = {
+			name = "list"
+			position = { x = 0 y = 40 }
+			size = { width = 615 height = 400 }
+			verticalScrollbar = "right_vertical_slider"
+			margin = { top = 14 bottom = 13 }
 
-		#	background = {
-		#		name = "background"
-		#		spriteType = "GFX_tiled_window_1b_border"
-		#	}
+			background = {
+				name = "background"
+				spriteType = "GFX_tiled_window_1b_border"
+			}
 
-		#	gridboxtype = {
-		#		name = "puppet_ledger_gridbox"
-		#		position = { x = 13 y = 0 }
-		#		size = { width = 578 height = 100% }
-		#		slotsize = { width = 578 height = 1 }
-		#		add_horizontal = no
-		#		max_slots_horizontal = 1
-		#		format = "UPPER_LEFT"
-		#	}
-		#}
+			gridboxtype = {
+				name = "resource_ledger_gridbox"
+				position = { x = 13 y = 0 }
+				size = { width = 578 height = 100% }
+				slotsize = { width = 578 height = 1 }
+				add_horizontal = no
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+		}
 	}
 
-	#conainerWindowType = {
-		#name = "puppet_ledger_entry"
-		#position = { x = 0 y = 0 }
-		#size = { width = 578 height = 75 }
+	conainerWindowType = {
+		name = "resource_ledger_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 578 height = 75 }
 
-		#background = {
-		#	name = "background"
-		#	spriteType = "GFX_puppet_ledger_entry_bg"
-		#}
+		background = {
+			name = "background"
+			spriteType = "GFX_resource_ledger_entry_bg"
+		}
 
-		#buttonType = {
-		#	name = "entry_flag"
-		#	quadTextureSprite = "GFX_flag_small2"
-		#	position = { x = 10 y = 4 }
-		#	pdx_tooltip = "PUPPET_LEDGER_ENTRY_FLAG_TT"
-		#}
+		buttonType = {
+			name = "entry_flag"
+			quadTextureSprite = "GFX_flag_small2"
+			position = { x = 10 y = 4 }
+			pdx_tooltip = "RESOURCE_LEDGER_ENTRY_FLAG_TT"
+		}
 
 		#iconType = {
 		#	name = "entry_flag_border"
