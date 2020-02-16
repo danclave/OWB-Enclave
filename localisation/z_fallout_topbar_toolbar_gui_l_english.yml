@@ -1,0 +1,27 @@
+﻿l_english:
+  # GUI:
+  FALLOUT_TOOLBAR_DROP_DOWN_BUTTON_TT: "§YMiscellaneous Tabs§!\nClick to show or hide the drop down menu for the other tabs."
+  FALLOUT_TOOLBAR_DROP_DOWN_BUTTON_TT_DELAYED: "[This.GetToolbarDropDownButtonTooltipDelayed]"
+  
+  FALLOUT_TOOLBAR_TAB_BUTTON_TT: "[This.GetToolbarTabButtonTooltip]"
+
+  # Scripted Localisation:
+  string_fallout_toolbar_drop_down_button_tt_invalid: "§RWe do not have any other tabs available.§!"
+  
+  string_fallout_tab_button_tt_1: "§Y[This.GetCoringTabTitle]§! \n[This.GetCoringTabDesc]"
+  string_fallout_coring_tab_title: "Uncored States"
+  string_fallout_coring_tab_desc: "See states that aren't your core states and core them, if possible."
+  string_fallout_tlaloc_coring_tab_title: "Restore the power grid"
+  string_fallout_tlaloc_coring_tab_desc: "See states that aren't connected to Chico-Net and connect them, if possible."
+  
+  string_fallout_tab_button_tt_2: "§YEconomics§! \nFind details on your country's economic situation and spend your treasures."
+  
+  string_fallout_tab_button_tt_3: "§YPuppet Ledger§! \nSee details about all your subjects, including their current political power, manpower and conscription law situation."
+  
+  string_fallout_tab_button_tt_4: "§Y[This.GetSenateTabTitle]§! \n[This.GetSenateTabDesc]"
+  string_fallout_default_senate_tab_title: "Parliament"
+  string_fallout_default_senate_tab_desc: "See your parliament and possible interactions with it."
+  string_fallout_rrg_senate_tab_title: "[RRG.GetAdjective] Senate"
+  string_fallout_rrg_senate_tab_desc: "See the [RRG.GetAdjective] Senate and thus the opinions of all senators and deputies of the election candidates or laws."
+  
+  string_fallout_tab_button_tt_5: "§YResource Ledger§!"

@@ -49,18 +49,18 @@ scripted_gui = {
 		}
 
 		dynamic_lists = {
-			#resource_ledger_gridbox = {
-			#	#array = LLW.controlled_states
-			#	array = subjects
-			#	entry_container = resource_ledger_entry
-			#	change_scope = yes
-			#}
-			puppet_ledger_gridbox = {
+			resource_ledger_gridbox = {
 				#array = LLW.controlled_states
 				array = subjects
-				entry_container = puppet_ledger_entry
+				entry_container = resource_ledger_entry
 				change_scope = yes
 			}
+			#puppet_ledger_gridbox = {
+			#	#array = LLW.controlled_states
+			#	array = subjects
+			#	entry_container = puppet_ledger_entry
+			#	change_scope = yes
+			#}
 		}
 
 		properties = {

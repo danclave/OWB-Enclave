@@ -42,8 +42,7 @@ guiTypes = {
 			}
 
 			gridboxtype = {
-				#name = "resource_ledger_gridbox"
-				name = "puppet_ledger_gridbox"
+				name = "resource_ledger_gridbox"
 				position = { x = 13 y = 0 }
 				size = { width = 578 height = 100% }
 				slotsize = { width = 578 height = 1 }
@@ -54,15 +53,13 @@ guiTypes = {
 		}
 	}
 
-	conainerWindowType = {
-		#name = "resource_ledger_entry"
-		name = "puppet_ledger_entry"
+	containerWindowType = {
+		name = "resource_ledger_entry"
 		position = { x = 0 y = 0 }
 		size = { width = 578 height = 75 }
 
 		background = {
 			name = "background"
-			#spriteType = "GFX_resource_ledger_entry_bg"
 			spriteType = "GFX_puppet_ledger_entry_bg"
 		}
 
@@ -70,7 +67,6 @@ guiTypes = {
 			name = "entry_flag"
 			quadTextureSprite = "GFX_flag_small2"
 			position = { x = 10 y = 4 }
-			#pdx_tooltip = "RESOURCE_LEDGER_ENTRY_FLAG_TT"
 			pdx_tooltip = "PUPPET_LEDGER_ENTRY_FLAG_TT"
 		}
 
