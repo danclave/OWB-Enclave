@@ -914,6 +914,7 @@ country_event = { #38 - ANTI PUPPET
 	desc = enc.38.d
 	picture = GFX_event_ENC_president_only
 	fire_only_once = no
+	is_triggered_only = yes
 	option = { # ANNEX!
 		name = enc.38.a
 		every_other_country = {
