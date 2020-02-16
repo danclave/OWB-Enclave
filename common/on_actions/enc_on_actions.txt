@@ -59,23 +59,48 @@ on_actions = {
 	#FROM is war target
 	on_declare_war = {
 		effect = {
-# tied to get LLW to automally declare war with you, but this code doesn't work
-#			if = {
-#				
-#				limit = {
-#					AND = {
-#						original_tag = ERB
-#						has_completed_focus = enc_purity
-#					}
-#				}
-#				LLW = {
-#					add_to_war = { 
-#						targeted_alliance = ERB 
-#						enemy = FROM 
-#					}
-#				}
-
-			}
+			#if = {
+			#	# if ERB is the war target
+			#	#limit = {
+			#	#	AND = {
+			#	#		original_tag = ERB
+			#	#		has_completed_focus = enc_purity
+			#	#	}
+			#	#}
+			#	#LLW = {
+			#	#	add_to_war = { 
+			#	#		targeted_alliance = ERB 
+			#	#		enemy = FROM
+			#	#	}
+			#	#}
+##
+			#	#for_each_loop = {
+			#	#	array = FROM.owned_states
+			#	#	LLW = {
+			#	#		#set_state_owner = v
+			#	#		#set_state_controller = v
+			#	#		add_state_core = v
+			#	#	}
+			#	#}
+#
+			#	#else_if = {
+			#	#	# if ERB declares war on someone else
+			#	#	limit = {
+			#	#		ROOT = {
+			#	#			AND = {
+			#	#				original_tag = ERB
+			#	#				has_completed_focus = enc_purity
+			#	#			}
+			#	#		}
+			#	#	}
+			#	#	LLW = {
+			#	#		add_to_war = { 
+			#	#			targeted_alliance = ERB 
+			#	#			enemy = FROM 
+			#	#		}
+			#	#	}
+			#	#}
+			#}
 		}
 	}
 	
@@ -88,6 +113,34 @@ on_actions = {
 	
 	# ROOT is capitulated country, FROM is winner
 	on_capitulation  = {
+		#for_each_loop = {
+		#	array = ROOT.owned_states
+		#	LLW = {
+		#		#set_state_owner = v
+		#		transfer_state = v
+		#	}
+		#}
+		#if = {
+		#	limit = {
+		#		OR = {
+		#			FROM = {
+		#				AND = {
+		#					original_tag = ERB
+		#					has_completed_focus = enc_purity
+		#				}
+		#			}
+		#			FROM = {
+		#				original_tag = LLW
+		#			}
+		#		}
+		#	}
+		#	LLW = {
+		#		annex_country = {
+		#			target = ROOT
+    	#			transfer_troops = no	
+		#		}
+		#	}
+		#}
 	}
 
 	# ROOT is previously capitulated country
@@ -194,19 +247,63 @@ on_actions = {
 						has_completed_focus = enc_reform
 					}
 					advanced_update_legitimacy = yes
-					else_if  = {
+					else_if = {
 						limit = {
-							AND = {
-								#has_completed_focus = enc_purity
-								FROM = {
-									num_owned_states > 1
+							FROM = {
+								OR = {
+									num_controlled_states < 2
+									surrender_progress > 0.99
 								}
 							}
 						}
-						LLW = {
-							set_state_owner = FROM.FROM
+						for_each_loop = {
+							array = FROM.owned_controlled_states
+							LLW = {
+								#set_state_owner = v
+								transfer_state = v
+							}
 						}
-					}
+					}					
+					#else = {
+					#	LLW = {
+					#		#set_state_controller = FROM.FROM
+					#		#set_state_owner = FROM.FROM
+					#		transfer_state = FROM.FROM
+					#		#annex_country = {
+					#		#	target = FROM
+    				#		#	transfer_troops = no	
+					#		#}
+					#		
+					#	}
+					#}
+					#else_if  = {
+					#	limit = {
+					#		FROM.num_controlled_states = 0
+					#	}
+					#	for_each_loop = {
+					#		array = FROM.owned_states
+					#		LLW = {
+					#			#set_state_owner = v
+					#			transfer_state = v
+					#		}
+					#	}
+					#	#else = {
+					#	#	LLW = {
+					#	#		#set_state_controller = FROM.FROM
+					#	#		set_state_owner = FROM.FROM
+					#	#		##transfer_state = FROM.FROM
+					#	#		#annex_country = {
+					#	#		#	target = FROM
+    				#	#		#	transfer_troops = no	
+					#	#		#}
+					#	#		
+					#	#	}
+					#	#}
+					#	##LLW = {
+					#	#	transfer_state = FROM.FROM
+					#	#	#set_state_controller = FROM.FROM
+					#	#}
+					#}
 				}
 			}
 		}

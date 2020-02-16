@@ -19,6 +19,11 @@ set_country_flag = default_drug_laws
 set_country_flag = gov_outsiders_hidden
 set_country_flag = default_officer_laws
 
+###############################
+# Diplomacy
+###############################
+
+add_to_faction = IRE
 
 ###############################
 # POLITICS
