@@ -1026,6 +1026,12 @@ scavenge_resources = {
 ###############################
 
 ENC_debug = {
+	ENC_gimmie_GECK = {
+		complete_effect = {
+			add_to_variable = { geck_count = 1 }
+		}
+	}
+
 	ENC_annex_New_Reno = {
 		complete_effect = {
 			LLW = {
