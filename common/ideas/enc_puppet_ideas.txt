@@ -44,7 +44,7 @@ ideas = {
 				industrial_capacity_dockyard = -1
 				surrender_limit = 1
 				political_power_factor = -10
-				local_resources_factor = -10
+				#local_resources_factor = -10
 				autonomy_gain_global_factor = -1
 				
 				elites_acceptance = -100
