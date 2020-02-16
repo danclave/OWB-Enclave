@@ -1,0 +1,20 @@
+﻿l_english:
+  # GUI:
+  RESOURCE_LEDGER_TITLE: "Resource Ledger"
+  #PUPPET_LEDGER_ENTRY_FLAG_TT: "§GClick§! to centre the map on their capital state (§Y[This.Capital.GetName]§!)."
+  #PUPPET_LEDGER_PP_TT: "§YPolitical Power§! \nPower Change: [?political_power_daily|2+] per day. \nBase value: §Y2.00§!"
+  #PUPPET_LEDGER_STABILITY_TT: "§YStability§! \nCurrent Stability: [This.GetPuppetLedgerStabilityColor][?stability|2%]§!"
+  #PUPPET_LEDGER_WAR_SUPPORT_TT: "§YWar Support§! \nCurrent War Support: [This.GetPuppetLedgerWarSupportColor][?has_war_support|2%]§!"
+  #PUPPET_LEDGER_MANPOWER_TT: "§YManpower§! \nFree Manpower: §Y[This.GetPuppetLedgerManpower]§! \nUsed Manpower: §Y[This.GetPuppetLedgerUsedManpower]§! \n   - In Training: §Y[This.GetPuppetLedgerManpowerInTraining]§! \n\nTotal Manpower: §Y[This.GetPuppetLedgerMaxAvailableManpower]§! \n§Y[?modifier@conscription|2%]§! of Eligible Core Population available (§Y[This.GetPuppetLedgerMaxManpower]§!) [This.GetPuppetLedgerConscriptionFactor]"
+  #PUPPET_LEDGER_INDUSTRIAL_CAPACITY_TT: "§YFactories§! \nArms Workshops in use: §Y[?military_factories_in_use|0]§!/§Y[?num_of_military_factories|0]§! \nNaval Dockyards in use: §Y[?naval_factories_in_use|0]§!/§Y[?num_of_naval_factories|0]§! \nCivilian Workshops in use: §Y[?civilian_factories_in_use|0]§!/§Y[?num_of_civilian_factories|0]§!"
+  #PUPPET_LEDGER_FUEL_TT: "§YEnergy Cells§!"
+  #PUPPET_LEDGER_NAVY_TT: "§YNavy§! \nCurrent amount of ships: §Y[?num_of_ships|0]§!"
+  #PUPPET_LEDGER_CONSCRIPTION_LAW_TT: "§YConscription Law§! \nThe current conscription law is §Y[This.GetConscriptionLawName]§! which conscripts §Y[This.GetConscriptionLawPercentage]§! of the core population."
+  #legion_vassal: "Tribal Subject"
+
+  # Scripted Localisation:
+  string_green: "§G"
+  string_yellow: "§Y"
+  string_red: "§R"
+
+  #string_puppet_ledger_conscription_factor: "\n\nEffective Total Manpower modified to §Y[?conscription_factor_temp|0%]§!."
