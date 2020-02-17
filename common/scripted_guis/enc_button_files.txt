@@ -487,4 +487,67 @@ scripted_gui = {
 			}
 		}
 	}
+	
+	# harvesting resources
+	harvest_resources = {
+        context_type = selected_state_context
+        window_name = harvest_resources_container
+        parent_window_token = selected_state_view
+        visible = {
+            is_owned_and_controlled_by = LLW
+			NOT = {
+                has_state_flag = LLW_harvest_resources_active
+            }
+			or = { 
+				has_resources_amount = { resource = water			amount > 0 }
+				has_resources_amount = { resource = energy			amount > 0 }
+				has_resources_amount = { resource = metal			amount > 0 }
+				has_resources_amount = { resource = composites		amount > 0 }
+				has_resources_amount = { resource = circuitry		amount > 0 }
+				has_resources_amount = { resource = advanced		amount > 0 }				
+			}
+        }
+        effects = {
+            harvest_resources_click = {
+				ROOT = {
+					add_manpower = -100
+				}
+				set_state_flag = LLW_harvest_resources_active
+				LLW = { give_resource_rights = { receiver = ERB state = PREV } }
+            }
+        }
+        triggers = {
+            harvest_resources_click_enabled = { 
+                ROOT = {
+					custom_trigger_tooltip = {
+						tooltip = harvest_resources_tt_cost 
+						has_manpower > 99.99
+					}
+				}
+            }
+        } 
+	} 
+	harvest_resources_recall = {
+        context_type = selected_state_context
+        window_name = harvest_resources_recall_container
+        parent_window_token = selected_state_view
+        visible = {
+            is_owned_and_controlled_by = LLW
+            has_state_flag = LLW_harvest_resources_active
+        }
+        effects = {
+            harvest_resources_recall_click = { 
+				clr_state_flag = LLW_harvest_resources_active
+				ERB = { 
+					remove_resource_rights = PREV 
+					add_manpower = 100
+				}
+            }
+        }
+		triggers = {
+			harvest_resources_recall_click_enabled = {
+			
+			}
+		}
+	}
 }

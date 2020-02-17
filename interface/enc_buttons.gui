@@ -3,10 +3,6 @@ guiTypes = {
 		name = connect_to_power_container
 		position = {x=90 y=58}
 
-		fade_time = 50
-		fade_type = linear
-		moveable = no
-
 		buttonType = {
 			name = connect_to_power
 			spriteType = GFX_icons_power
@@ -18,10 +14,6 @@ guiTypes = {
 	containerWindowType = 	{ # connect_to_power
 		name = connected_to_power_container
 		position = {x=90 y=58}
-
-		fade_time = 50
-		fade_type = linear
-		moveable = no
 
 		buttonType = {
 			name = connected_to_power
@@ -35,10 +27,6 @@ guiTypes = {
 		name = install_police_force_container
 		position = { x = 94 y = 58 }
 
-		fade_time = 50
-		fade_type = linear
-		moveable = no
-
 		buttonType = {
 			name = install_police_force
 			spriteType = GFX_icons_police
@@ -50,10 +38,6 @@ guiTypes = {
 	containerWindowType = { # arm_rebels
 		name = arm_rebels_container
 		position = {x=90 y=58}
-
-		fade_time = 1
-		fade_type = linear
-		moveable = no
 
 		buttonType = {
 			name = arm_rebels
@@ -67,10 +51,6 @@ guiTypes = {
 		name = arm_slaves_container
 		position = {x=90 y=58}
 
-		fade_time = 1
-		fade_type = linear
-		moveable = no
-
 		buttonType = {
 			name = arm_slaves
 			spriteType = GFX_resistance_icon
@@ -81,12 +61,7 @@ guiTypes = {
 	}
 	containerWindowType = { # arm_patriots
 		name = arm_patriots_container
-
 		position = {x=90 y=58}
-
-		fade_time = 1
-		fade_type = linear
-		moveable = no
 
 		buttonType = {
 			name = arm_patriots
@@ -128,7 +103,7 @@ guiTypes = {
 			pdx_tooltip_delayed = "legitimacy_TOOLTIP_DELAYED"
 		}
 	}
-	containerWindowType = {
+	containerWindowType = { # power grid non-functional
 		name = "erb_screen_power_grid_scripted_gui"
 		position = { x = 480 y = 250 }
 		fade_time = 300
@@ -142,7 +117,7 @@ guiTypes = {
 			scale = 0.95
 		}
 	}
-	containerWindowType = {
+	containerWindowType = { # power grid non-functional
 		name = "power_grid_screen_container"
 		position = { x = 600 y = 400 }
 		size = { width = 800 height = 210 }
@@ -189,7 +164,7 @@ guiTypes = {
 			}
 		}
 	}
-	containerWindowType = {
+	containerWindowType = { # power grid non-functional
 		name = "erb_power_grid_screen_scripted_gui_entry"
 		position = { x = 0 y = 5 }
 		size = { width = 100 height = 30 }
@@ -221,6 +196,30 @@ guiTypes = {
 			size = { x = 75 y = 25 }
 			pdx_tooltip = "connect_to_power_tt"
 			pdx_tooltip_delayed = "connect_to_power_engineering_tt"
+		}
+	}
+	
+	# Resource Harvesting for Purists
+	containerWindowType = { # harvest_resources
+		name = harvest_resources_container
+		position = { x = 65 y = 225 }
+		buttonType = {
+			name = harvest_resources
+			spriteType = GFX_topbar_trade_button
+			pdx_tooltip = harvest_resources_tt
+			pdx_tooltip_delayed = harvest_resources_tt_delayed
+			scale = 0.9
+		}
+	}
+	containerWindowType = { # harvest_resources_recall
+		name = harvest_resources_recall_container
+		position = { x = 65 y = 225 }
+		buttonType = {
+			name = harvest_resources_recall
+			spriteType = GFX_cancel_import_button
+			pdx_tooltip = harvest_resources_recall_tt
+			pdx_tooltip_delayed = harvest_resources_recall_tt_delayed
+			scale = 1.2
 		}
 	}
 }

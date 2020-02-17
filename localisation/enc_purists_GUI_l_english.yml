@@ -1,0 +1,8 @@
+﻿l_english:
+
+harvest_resources: "Harvest Resources"
+harvest_resources_tt: "Harvest Resources"
+harvest_resources_tt_delayed: "By sending in ground forces to establish and protect resource extraction, we can harvest this states resources.\n\nRequires:\n[!harvest_resources_click_enabled]"
+
+harvest_resources_tt_cost: "£manpower_texticon §Y100§!"
+LLW_harvest_resources_active: "Already Harvesting Resources"
