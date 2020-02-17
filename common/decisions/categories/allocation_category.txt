@@ -1,0 +1,10 @@
+allocation_decision_category = {
+	picture = GFX_decision_category_geck
+	scripted_gui = allocation_decision_category_scripted_gui
+	visible = {
+		OR = {
+			check_variable = { geck_count > 0 }
+			has_variable = geck_in_use
+		}
+	}
+}

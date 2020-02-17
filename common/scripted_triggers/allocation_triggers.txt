@@ -1,0 +1,19 @@
+is_too_developed_for_geck = {
+	NOT = {
+		OR = {
+			has_state_category = wasteland
+			has_state_category = tiny_island
+			has_state_category = enclave
+			has_state_category = small_island
+			has_state_category = rural
+			has_state_category = pastoral
+			has_state_category = shanty
+		}
+	}
+}
+
+can_use_geck_in_state = {
+	is_too_developed_for_geck = no
+	NOT = { has_state_flag = is_impassable }
+}
+# vim: set ft=pdx ts=2 sw=2 tw=79 :

@@ -1,0 +1,107 @@
+# State
+defined_text = {
+	name = GetGECKUsabilityTooltip
+
+	text = {
+		trigger = {
+			OWNER = {
+				check_variable = { geck_in_use = 1 }
+			}
+		}
+		localization_key = GECK_IN_USE_TOOLTIP
+	}
+	text = {
+		trigger = {
+			is_too_developed_for_geck = no
+			NOT = { has_state_flag = is_impassable }
+			OWNER = {
+				check_variable = { geck_in_use = 0 }
+			}
+		}
+		localization_key = GECK_USABLE_TOOLTIP
+	}
+	text = {
+		trigger = {
+			has_state_flag = is_impassable
+			OWNER = {
+				check_variable = { geck_in_use = 0 }
+			}
+		}
+		localization_key = GECK_IMPASSABLE_TOOLTIP
+	}
+	text = {
+		trigger = {
+			is_too_developed_for_geck = yes
+			OWNER = {
+				check_variable = { geck_in_use = 0 }
+			}
+		}
+		localization_key = GECK_TOO_DEVELOPED_TOOLTIP
+	}
+}
+
+defined_text = {
+	name = GetGECKUsabilityColoredName
+
+	text = {
+		trigger = {
+			can_use_geck_in_state = yes
+			OWNER = {
+				NOT = { check_variable = { geck_target_state = PREV } }
+				check_variable = { geck_in_use = 0 }
+			}
+		}
+		localization_key = GECK_USABLE_NAME
+	}
+	text = {
+		trigger = {
+			OR = {
+				can_use_geck_in_state = no
+				AND = {
+					can_use_geck_in_state = yes
+					OWNER = {
+						NOT = { check_variable = { geck_target_state = PREV } }
+						check_variable = { geck_in_use = 1 }
+					}
+				}
+			}
+		}
+		localization_key = GECK_UNUSABLE_NAME
+	}
+	text = {
+		trigger = {
+			OWNER = {
+				check_variable = { geck_target_state = PREV }
+				check_variable = { geck_in_use = 1 }
+			}
+		}
+		localization_key = GECK_SELECTED_DISABLED_NAME
+	}
+	text = {
+		trigger = {
+			OWNER = {
+				check_variable = { geck_target_state = PREV }
+				check_variable = { geck_in_use = 0 }
+			}
+		}
+		localization_key = GECK_SELECTED_NAME
+	}
+}
+
+defined_text = {
+	name = GetDeployGeckDecisionName
+
+	text = {
+		trigger = {
+			has_variable = geck_target_state
+		}
+		localization_key = GECK_DECSION_NAME_WITH_TARGET
+	}
+	text = {
+		trigger = {
+			NOT = { has_variable = geck_target_state }
+		}
+		localization_key = GECK_DECSION_NAME_WITHOUT_TARGET
+	}
+}
+# vim: set ft=pdx ts=2 sw=2 tw=79 :

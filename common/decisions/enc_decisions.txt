@@ -1032,6 +1032,15 @@ ENC_debug = {
 		}
 	}
 
+	ENC_gimmie_New_Reno = {
+		complete_effect = {
+			annex_country = {
+				target = NEW
+				transfer_troops = no
+			}
+		}
+	}
+
 	ENC_annex_New_Reno = {
 		complete_effect = {
 			LLW = {
