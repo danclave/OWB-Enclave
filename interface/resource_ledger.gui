@@ -56,8 +56,8 @@ guiTypes = {
 	containerWindowType = {
 		name = "resource_ledger_entry"
 		position = { x = 0 y = 0 }
-		size = { width = 578 height = 75 }
-		#size = { width = 578 height = 35 }
+		#size = { width = 578 height = 75 }
+		size = { width = 578 height = 35 }
 
 		background = {
 			name = "background"
@@ -89,216 +89,234 @@ guiTypes = {
 			multiline = no
 		}
 
-
-
-		containerWindowType = {
-			name = "information"
-			position = { x = -4 y = 36 }
-			size = { width = 578 height = 40 }
-
-			buttonType = {
-				name = "metal_icon"
-				spriteType = "GFX_resources_strip"
-				position = { x = 10 y = 2 }
-				frame = 5
-				#pdx_tooltip = "PUPPET_LEDGER_PP_TT"
-				#pdx_tooltip_delayed = "POLITICAL_POWER_DESC"
-			}
-#
-		#	iconType = {
-		#		name = "pol_power_icon"
-		#		spriteType = "GFX_pol_power_icon"
-		#		position = { x = 14 y = 3 }
-		#		alwaystransparent = yes
-		#	}
-#
-			#instantTextBoxType = {
-			#	name = "pol_power"
-			#	position = { x = 37 y = 9 }
-			#	font = "hoi_18mbs"
-			#	text = "Hello World"
-			#	format = center
-			#	maxWidth = 40
-			#	maxHeight = 24
-			#	fixedsize = yes
-			#	alwaystransparent = yes
-			#}
-
-			instantTextBoxType = {
-				name = "metal_value"
-				position = { x = 37 y = 5 }
-				font = "hoi_18mbs"
-				borderSize = { x = 0 y = 0 }
-#				text = "[This.resources.water]"
-				text = "[This.GetManpower]"
-				#text = "999"
-				format = left
-				maxWidth = 50
-				maxHeight = 20
-				fixedsize = yes
-				#alwaystransparent = yes
-			}
-#
-		#	iconType = {
-		#		name = "stability_value_bg"
-		#		spriteType = "GFX_generic_box_smallest"
-		#		position = { x = 85 y = 5 }
-		#		pdx_tooltip = "PUPPET_LEDGER_STABILITY_TT"
-		#		pdx_tooltip_delayed = "STABILITY_DESC"
-		#	}
-#
-		#	iconType = {
-		#		name = "stability_icon"
-		#		spriteType = "GFX_stability_icon"
-		#		position = { x = 87 y = 5 }
-		#		alwaystransparent = yes
-		#	}
-#
-		#	instantTextBoxType = {
-		#		name = "stability"
-		#		position = { x = 94 y = 9 }
-		#		font = "hoi_18mbs"
-		#		text = "[?stability|%0]"
-		#		format = right
-		#		maxWidth = 57
-		#		maxHeight = 24
-		#		fixedsize = yes
-		#		alwaystransparent = yes
-		#	}
-#
-		#	iconType = {
-		#		name = "war_support_value_bg"
-		#		spriteType = "GFX_generic_box_smallest"
-		#		position = { x = 160 y = 5 }
-		#		pdx_tooltip = "PUPPET_LEDGER_WAR_SUPPORT_TT"
-		#		pdx_tooltip_delayed = "WAR_SUPPORT_DESC"
-		#	}
-#
-		#	iconType = {
-		#		name = "war_support_icon"
-		#		spriteType = "GFX_war_support_icon"
-		#		position = { x = 162 y = 6 }
-		#		alwaystransparent = yes
-		#	}
-#
-		#	instantTextBoxType = {
-		#		name = "war_support"
-		#		position = { x = 167 y = 9 }
-		#		font = "hoi_18mbs"
-		#		text = "[?has_war_support|%0]"
-		#		format = right
-		#		maxWidth = 57
-		#		maxHeight = 24
-		#		fixedsize = yes
-		#		alwaystransparent = yes
-		#	}
-#
-		#	iconType = {
-		#		name = "manpower_value_bg"
-		#		spriteType = "GFX_generic_box_96"
-		#		position = { x = 233 y = 5 }
-		#		pdx_tooltip = "PUPPET_LEDGER_MANPOWER_TT"
-		#		pdx_tooltip_delayed = "MANPOWER_DESC"
-		#	}
-#
-		#	iconType = {
-		#		name = "manpower_icon"
-		#		spriteType = "GFX_manpower_icon"
-		#		position = { x = 235 y = 3 }
-		#		alwaystransparent = yes
-		#	}
-#
-		#	instantTextBoxType = {
-		#		name = "manpower"
-		#		position = { x = 264 y = 9 }
-		#		font = "hoi_18mbs"
-		#		text = "[This.GetPuppetLedgerManpower]"
-		#		format = center
-		#		maxWidth = 57
-		#		maxHeight = 24
-		#		fixedsize = yes
-		#		alwaystransparent = yes
-		#	}
-#
-		#	iconType = {
-		#		name = "industrial_capacity_bg"
-		#		spriteType = "GFX_generic_box_smallest"
-		#		position = { x = 332 y = 5 }
-		#		pdx_tooltip = "PUPPET_LEDGER_INDUSTRIAL_CAPACITY_TT"
-		#		pdx_tooltip_delayed = "INDUSTRIAL_CAPACITY_DESC"
-		#	}
-#
-		#	iconType = {
-		#		name = "industrial_capacity_icon"
-		#		spriteType = "GFX_industrial_capacity_icon"
-		#		position = { x = 334 y = 3 }
-		#		alwaystransparent = yes
-		#	}
-#
-		#	instantTextBoxType = {
-		#		name = "industrial_capacity"
-		#		position = { x = 347 y = 9 }
-		#		font = "hoi_18mbs"
-		#		text = "[?num_of_factories|0]"
-		#		format = center
-		#		maxWidth = 66
-		#		maxHeight = 24
-		#		fixedsize = yes
-		#		alwaystransparent = yes
-		#	}
-#
-		#	iconType = {
-		#		name = "navy_value_bg"
-		#		spriteType = "GFX_generic_box_80"
-		#		position = { x = 405 y = 5 }
-		#		pdx_tooltip = "PUPPET_LEDGER_NAVY_TT"
-		#	}
-#
-		#	iconType = {
-		#		name = "navy_icon"
-		#		spriteType = "GFX_topbar_convoys"
-		#		position = { x = 407 y = 9 }
-		#		alwaystransparent = yes
-		#	}
-#
-		#	instantTextBoxType = {
-		#		name = "navy_value"
-		#		position = { x = 427 y = 8 }
-		#		font = "hoi_18mbs"
-		#		text = "[?num_of_ships|0]"
-		#		format = center
-		#		maxWidth = 59
-		#		maxHeight = 24
-		#		fixedsize = yes
-		#		alwaystransparent = yes
-		#	}
-#
-		#	iconType = {
-		#		name = "conscription_law_text_bg"
-		#		spriteType = "GFX_generic_box_small"
-		#		position = { x = 488 y = 5 }
-		#		pdx_tooltip = "PUPPET_LEDGER_CONSCRIPTION_LAW_TT"
-		#	}
-#
-		#	iconType = {
-		#		name = "conscription_law_icon"
-		#		spriteType = "GFX_idea_scraping_the_barrel"
-		#		scale = 0.4
-		#		position = { x = 490 y = 6 }
-		#		alwaystransparent = yes
-		#	}
-#
-		#	instantTextBoxType = {
-		#		name = "conscription_law"
-		#		position = { x = 524 y = 8 }
-		#		font = "hoi_18mbs"
-		#		text = "[This.GetConscriptionLawPercentage]"
-		#		format = center
-		#		maxWidth = 44
-		#		maxHeight = 24
-		#		fixedsize = yes
-		#		alwaystransparent = yes
-		#	}
+		buttonType = {
+			name = harvest_resources
+			spriteType = GFX_topbar_trade_button
+			position = { x = 150 y = 4 }
+			pdx_tooltip = harvest_resources_tt_delayed
+			scale = 0.9
 		}
+
+		buttonType = {
+			name = harvest_resources_recall
+			spriteType = GFX_cancel_import_button
+			position = { x = 200 y = 4 }
+			pdx_tooltip = harvest_resources_recall_tt_delayed
+			scale = 1.2
+		}
+
+
+
+
+
+		#containerWindowType = {
+		#	name = "information"
+		#	position = { x = -4 y = 36 }
+		#	size = { width = 578 height = 40 }
+#
+		#	buttonType = {
+		#		name = "metal_icon"
+		#		spriteType = "GFX_resources_strip"
+		#		position = { x = 10 y = 2 }
+		#		frame = 5
+		#		#pdx_tooltip = "PUPPET_LEDGER_PP_TT"
+		#		#pdx_tooltip_delayed = "POLITICAL_POWER_DESC"
+		#	}
+##
+		##	iconType = {
+		##		name = "pol_power_icon"
+		##		spriteType = "GFX_pol_power_icon"
+		##		position = { x = 14 y = 3 }
+		##		alwaystransparent = yes
+		##	}
+##
+		#	#instantTextBoxType = {
+		#	#	name = "pol_power"
+		#	#	position = { x = 37 y = 9 }
+		#	#	font = "hoi_18mbs"
+		#	#	text = "Hello World"
+		#	#	format = center
+		#	#	maxWidth = 40
+		#	#	maxHeight = 24
+		#	#	fixedsize = yes
+		#	#	alwaystransparent = yes
+		#	#}
+#
+		#	instantTextBoxType = {
+		#		name = "metal_value"
+		#		position = { x = 37 y = 5 }
+		#		font = "hoi_18mbs"
+		#		borderSize = { x = 0 y = 0 }
+#		#		text = "[This.resources.water]"
+		#		text = "[This.GetManpower]"
+		#		#text = "999"
+		#		format = left
+		#		maxWidth = 50
+		#		maxHeight = 20
+		#		fixedsize = yes
+		#		#alwaystransparent = yes
+		#	}
+##
+		##	iconType = {
+		##		name = "stability_value_bg"
+		##		spriteType = "GFX_generic_box_smallest"
+		##		position = { x = 85 y = 5 }
+		##		pdx_tooltip = "PUPPET_LEDGER_STABILITY_TT"
+		##		pdx_tooltip_delayed = "STABILITY_DESC"
+		##	}
+##
+		##	iconType = {
+		##		name = "stability_icon"
+		##		spriteType = "GFX_stability_icon"
+		##		position = { x = 87 y = 5 }
+		##		alwaystransparent = yes
+		##	}
+##
+		##	instantTextBoxType = {
+		##		name = "stability"
+		##		position = { x = 94 y = 9 }
+		##		font = "hoi_18mbs"
+		##		text = "[?stability|%0]"
+		##		format = right
+		##		maxWidth = 57
+		##		maxHeight = 24
+		##		fixedsize = yes
+		##		alwaystransparent = yes
+		##	}
+##
+		##	iconType = {
+		##		name = "war_support_value_bg"
+		##		spriteType = "GFX_generic_box_smallest"
+		##		position = { x = 160 y = 5 }
+		##		pdx_tooltip = "PUPPET_LEDGER_WAR_SUPPORT_TT"
+		##		pdx_tooltip_delayed = "WAR_SUPPORT_DESC"
+		##	}
+##
+		##	iconType = {
+		##		name = "war_support_icon"
+		##		spriteType = "GFX_war_support_icon"
+		##		position = { x = 162 y = 6 }
+		##		alwaystransparent = yes
+		##	}
+##
+		##	instantTextBoxType = {
+		##		name = "war_support"
+		##		position = { x = 167 y = 9 }
+		##		font = "hoi_18mbs"
+		##		text = "[?has_war_support|%0]"
+		##		format = right
+		##		maxWidth = 57
+		##		maxHeight = 24
+		##		fixedsize = yes
+		##		alwaystransparent = yes
+		##	}
+##
+		##	iconType = {
+		##		name = "manpower_value_bg"
+		##		spriteType = "GFX_generic_box_96"
+		##		position = { x = 233 y = 5 }
+		##		pdx_tooltip = "PUPPET_LEDGER_MANPOWER_TT"
+		##		pdx_tooltip_delayed = "MANPOWER_DESC"
+		##	}
+##
+		##	iconType = {
+		##		name = "manpower_icon"
+		##		spriteType = "GFX_manpower_icon"
+		##		position = { x = 235 y = 3 }
+		##		alwaystransparent = yes
+		##	}
+##
+		##	instantTextBoxType = {
+		##		name = "manpower"
+		##		position = { x = 264 y = 9 }
+		##		font = "hoi_18mbs"
+		##		text = "[This.GetPuppetLedgerManpower]"
+		##		format = center
+		##		maxWidth = 57
+		##		maxHeight = 24
+		##		fixedsize = yes
+		##		alwaystransparent = yes
+		##	}
+##
+		##	iconType = {
+		##		name = "industrial_capacity_bg"
+		##		spriteType = "GFX_generic_box_smallest"
+		##		position = { x = 332 y = 5 }
+		##		pdx_tooltip = "PUPPET_LEDGER_INDUSTRIAL_CAPACITY_TT"
+		##		pdx_tooltip_delayed = "INDUSTRIAL_CAPACITY_DESC"
+		##	}
+##
+		##	iconType = {
+		##		name = "industrial_capacity_icon"
+		##		spriteType = "GFX_industrial_capacity_icon"
+		##		position = { x = 334 y = 3 }
+		##		alwaystransparent = yes
+		##	}
+##
+		##	instantTextBoxType = {
+		##		name = "industrial_capacity"
+		##		position = { x = 347 y = 9 }
+		##		font = "hoi_18mbs"
+		##		text = "[?num_of_factories|0]"
+		##		format = center
+		##		maxWidth = 66
+		##		maxHeight = 24
+		##		fixedsize = yes
+		##		alwaystransparent = yes
+		##	}
+##
+		##	iconType = {
+		##		name = "navy_value_bg"
+		##		spriteType = "GFX_generic_box_80"
+		##		position = { x = 405 y = 5 }
+		##		pdx_tooltip = "PUPPET_LEDGER_NAVY_TT"
+		##	}
+##
+		##	iconType = {
+		##		name = "navy_icon"
+		##		spriteType = "GFX_topbar_convoys"
+		##		position = { x = 407 y = 9 }
+		##		alwaystransparent = yes
+		##	}
+##
+		##	instantTextBoxType = {
+		##		name = "navy_value"
+		##		position = { x = 427 y = 8 }
+		##		font = "hoi_18mbs"
+		##		text = "[?num_of_ships|0]"
+		##		format = center
+		##		maxWidth = 59
+		##		maxHeight = 24
+		##		fixedsize = yes
+		##		alwaystransparent = yes
+		##	}
+##
+		##	iconType = {
+		##		name = "conscription_law_text_bg"
+		##		spriteType = "GFX_generic_box_small"
+		##		position = { x = 488 y = 5 }
+		##		pdx_tooltip = "PUPPET_LEDGER_CONSCRIPTION_LAW_TT"
+		##	}
+##
+		##	iconType = {
+		##		name = "conscription_law_icon"
+		##		spriteType = "GFX_idea_scraping_the_barrel"
+		##		scale = 0.4
+		##		position = { x = 490 y = 6 }
+		##		alwaystransparent = yes
+		##	}
+##
+		##	instantTextBoxType = {
+		##		name = "conscription_law"
+		##		position = { x = 524 y = 8 }
+		##		font = "hoi_18mbs"
+		##		text = "[This.GetConscriptionLawPercentage]"
+		##		format = center
+		##		maxWidth = 44
+		##		maxHeight = 24
+		##		fixedsize = yes
+		##		alwaystransparent = yes
+		##	}
+		#}
 	}
 }
