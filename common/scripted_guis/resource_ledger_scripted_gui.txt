@@ -50,8 +50,8 @@ scripted_gui = {
 
 		dynamic_lists = {
 			resource_ledger_gridbox = {
-				#array = LLW.controlled_states
-				array = subjects
+				array = LLW.controlled_states
+				#array = subjects
 				entry_container = resource_ledger_entry
 				change_scope = yes
 			}
@@ -63,13 +63,13 @@ scripted_gui = {
 			#}
 		}
 
-		properties = {
-			entry_flag = {
-				image = "[This.GetFlag]"
-			}
-			conscription_law_icon = {
-				image = "[This.GetConscriptionLawIcon]"
-			}
-		}
+		#properties = {
+		#	entry_flag = {
+		#		image = "[This.GetFlag]"
+		#	}
+		#	conscription_law_icon = {
+		#		image = "[This.GetConscriptionLawIcon]"
+		#	}
+		#}
 	}
 }
