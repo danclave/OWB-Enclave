@@ -1097,8 +1097,11 @@ ENC_debug = {
 		}
 		available = {
 			LLW = {
-				any_state = {
-					arms_factory > 0
+				AND = {
+					num_of_controlled_states > 0
+					any_state = {
+						arms_factory > 0
+					}
 				}
 			}
 		}
@@ -1130,8 +1133,11 @@ ENC_debug = {
 		}
 		available = {
 			LLW = {
-				any_state = {
-					industrial_complex > 0
+				AND = {
+					num_of_controlled_states > 0
+					any_state = {
+						industrial_complex > 0
+					}
 				}
 			}
 		}
