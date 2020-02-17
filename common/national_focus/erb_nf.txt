@@ -537,7 +537,7 @@ focus_tree = {
 		relative_position_id = enc_reno_end
 		x = -2
 		y = 1
-		cost = 4.3		
+		cost = 4.3
 		completion_reward = {
 			285 = {
 				add_extra_state_shared_building_slots = 4
@@ -560,8 +560,8 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = enc_disorganized_economy
 					add_idea = enc_civilian_economy
-				} 
-			}	
+				}
+			}
 		}
 	}
 	focus = {#RENO - Military factories
@@ -1352,7 +1352,142 @@ focus_tree = {
 		}
 	}
 
+####################################
+	# Upgraidng the AI
+###################################
+	focus = {#Purists - Upgrade ZAX
+		id = enc_ZAX_upgrades
+		icon = GFX_goal_ARM_mechanical_computing
+		x = 6
+		y = 1
+		ai_will_do = { factor = 1 }
 
+		relative_position_id = enc_vlt_power
+		available = {
+			ZAX = {
+				exists = yes
+			}
+		}
+		cost = 1.45
+		completion_reward = {
+			if = {
+				limit = {
+					ZAX = {exists = yes }
+				}
+				ZAX = {
+					add_research_slot = 1
+				}
+			}
+		}
+	}
+	focus = {#Purists - Give More States
+		id = enc_ZAX_factories
+		icon = GFX_goal_ARM_robco_factory_rearmament
+		x = 0
+		y = 1
+		ai_will_do = { factor = 1 }
+		prerequisite = {
+			focus = enc_ZAX_upgrades
+		}
+		relative_position_id = enc_ZAX_upgrades
+		available = {
+			ZAX = {
+				exists = yes
+			}
+		}
+		cost = 1.45
+		completion_reward = {
+			custom_effect_tooltip = enc_ZAX_factories_tt
+		}
+	}
+	focus = {#Purists - Go for the SHI
+		id = enc_shi_conquest
+		icon = GFX_goal_shi_focus_golden_dragon
+		x = -2
+		y = 1
+		ai_will_do = { factor = 1 }
+		prerequisite = {
+			focus = enc_ZAX_factories
+		}
+		relative_position_id = enc_ZAX_factories
+		available = {
+			ZAX = {
+				exists = yes
+			}
+		}
+		cost = 1.45
+		completion_reward = {
+			SHI = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+			custom_effect_tooltip = enc_shi_conquest_tt
+		}
+	}
+	focus = {#Purists - Go for Area 51
+	id = enc_sky_conquests
+	icon = GFX_goal_area_51
+	x = 0
+	y = 1
+	ai_will_do = { factor = 1 }
+	prerequisite = {
+		focus = enc_ZAX_factories
+	}
+	relative_position_id = enc_ZAX_factories
+	available = {
+		ZAX = {
+			exists = yes
+		}
+	}
+	cost = 1.45
+	completion_reward = {
+		SKY = {
+			ROOT = {
+				grant_wargoals_on_core_states_of_prev = yes
+			}
+		}
+		custom_effect_tooltip = enc_sky_conquest_tt
+	}
+}
+focus = {#Purists - Go to Vegas
+	id = enc_vegas_conquest
+	icon = GFX_goal_VEG_The_Platinum_Chip
+	x = 2
+	y = 1
+	ai_will_do = { factor = 1 }
+	prerequisite = {
+		focus = enc_ZAX_factories
+	}
+	relative_position_id = enc_ZAX_factories
+	available = {
+		ZAX = {
+			exists = yes
+		}
+	}
+	cost = 1.45
+	completion_reward = {
+		if = {
+			limit = {
+				VEG = {
+					AND = {
+						exists = yes
+						has_country_leader = {id = 10021 }
+					}
+				}
+			}
+			country_event = enc_pur_robots.3
+		}
+		else = {
+			VEG = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+
+}
 	####################################
 	# The Mutant Question
 	####################################
@@ -4281,7 +4416,7 @@ focus = {#Legion Border
 				add_state_core = 210
 				add_state_core = 573
 			}
-			
+
 			custom_effect_tooltip = break_line
 			if = {
 				limit = {
@@ -4290,7 +4425,7 @@ focus = {#Legion Border
 				swap_ideas = {
 					remove_idea = enc_disorganized_economy
 					add_idea = enc_civilian_economy
-				} 
+				}
 			}
 		}
 	}
@@ -4340,8 +4475,8 @@ focus = {#Legion Border
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_electoral_victory
 		available = {
-			NCR = { 
-				has_civil_war = no 
+			NCR = {
+				has_civil_war = no
 				has_government = intellectuals
 			}
 		}
@@ -4834,8 +4969,8 @@ focus = {#NEVADA - second city
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
-					instant_build = yes 
-				} 
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -7213,7 +7348,7 @@ focus = {#NEVADA - second city
 		}
 
 		relative_position_id = enc_vlt_power
-		x = 0
+		x = -1
 		y = 2
 
 		completion_reward = {

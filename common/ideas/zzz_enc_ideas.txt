@@ -1690,7 +1690,7 @@ ideas = {
 				elites_drift = 0.10
 			}
 		}
-		
+
 		enc_segregationist_growth_2 = {
 			picture = enc_smugging
 			allowed = {
@@ -1702,9 +1702,9 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				elites_drift = 0.20
-			}			
+			}
 		}
-		
+
 		enc_democracy_growth = {
 			picture = enc_smugging
 			allowed = {
@@ -1716,9 +1716,9 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				people_drift = 0.10
-			}		
+			}
 		}
-		
+
 		enc_democracy_growth_2 = {
 			picture = enc_smugging
 			allowed = {
@@ -1730,7 +1730,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				people_drift = 0.20
-			}		
+			}
 		}
 ####################################################
 # REFORM - REBUILDING A NATION
@@ -2779,6 +2779,20 @@ ideas = {
 				political_advisor_cost_factor = -0.15
 			}
 		}
+		shi_emperor = {
+
+			picture = generic_production_bonus
+
+			allowed = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				decryption_factor = 0.4
+			}
+		}
 	}
 
 	vehicle_restoration_advisor = {
@@ -2974,6 +2988,8 @@ ideas = {
 	}
 
 }
+
+
 	# GFX_idea_boris_t
 # GFX_idea_enc_education
 # GFX_idea_enc_ew_production
