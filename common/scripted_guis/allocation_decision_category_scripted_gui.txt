@@ -38,7 +38,7 @@ scripted_gui = {
 
 		dynamic_lists = {
 			geck_decision_category_scripted_gui_gridbox = {
-				array = owned_states
+				array = LLW.controlled_states
 				entry_container = geck_decision_category_scripted_gui_entry
 				change_scope = yes
 			}

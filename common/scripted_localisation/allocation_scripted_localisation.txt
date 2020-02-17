@@ -12,11 +12,11 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			is_too_developed_for_geck = no
+			#is_too_developed_for_geck = no
 			NOT = { has_state_flag = is_impassable }
-			OWNER = {
-				check_variable = { geck_in_use = 0 }
-			}
+			#OWNER = {
+			#	check_variable = { geck_in_use = 0 }
+			#}
 		}
 		localization_key = GECK_USABLE_TOOLTIP
 	}
@@ -30,12 +30,12 @@ defined_text = {
 		localization_key = GECK_IMPASSABLE_TOOLTIP
 	}
 	text = {
-		trigger = {
-			is_too_developed_for_geck = yes
-			OWNER = {
-				check_variable = { geck_in_use = 0 }
-			}
-		}
+		#trigger = {
+		#	#is_too_developed_for_geck = yes
+		#	OWNER = {
+		#		check_variable = { geck_in_use = 0 }
+		#	}
+		#}
 		localization_key = GECK_TOO_DEVELOPED_TOOLTIP
 	}
 }

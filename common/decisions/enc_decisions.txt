@@ -1026,6 +1026,14 @@ scavenge_resources = {
 ###############################
 
 ENC_debug = {
+	ENC_LLW_New_Reno_resources = {
+		complete_effect = {
+			LLW = {
+				give_resource_rights = { receiver = ERB state = 285 }
+			}
+		}
+	}
+
 	ENC_gimmie_GECK = {
 		complete_effect = {
 			add_to_variable = { geck_count = 1 }
