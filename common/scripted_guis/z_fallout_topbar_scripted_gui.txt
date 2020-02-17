@@ -259,7 +259,6 @@ scripted_gui = {
 					AND = {
 						check_variable = { v = 5 }
 						set_temp_variable = { tab_number = LLW.num_of_controlled_states }
-						#set_temp_variable = { tab_number = num_subjects }
 					}
 				}
 				check_variable = { tab_number > 0 }

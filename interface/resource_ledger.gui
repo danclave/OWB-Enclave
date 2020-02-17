@@ -57,6 +57,7 @@ guiTypes = {
 		name = "resource_ledger_entry"
 		position = { x = 0 y = 0 }
 		size = { width = 578 height = 75 }
+		#size = { width = 578 height = 35 }
 
 		background = {
 			name = "background"
@@ -79,7 +80,8 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "entry_name"
-			position = { x = 70 y = 8 }
+			#position = { x = 70 y = 8 }
+			position = { x = 10 y = 8 }
 			text = "[This.GetName]"
 			font = "hoi_18mbs"
 			format = left
@@ -87,18 +89,21 @@ guiTypes = {
 			multiline = no
 		}
 
-		#containerWindowType = {
-		#	name = "information"
-		#	position = { x = -4 y = 36 }
-		#	size = { width = 578 height = 40 }
-#
-		#	iconType = {
-		#		name = "pol_power_value_bg"
-		#		spriteType = "GFX_generic_box_smallest"
-		#		position = { x = 10 y = 5 }
-		#		pdx_tooltip = "PUPPET_LEDGER_PP_TT"
-		#		pdx_tooltip_delayed = "POLITICAL_POWER_DESC"
-		#	}
+
+
+		containerWindowType = {
+			name = "information"
+			position = { x = -4 y = 36 }
+			size = { width = 578 height = 40 }
+
+			buttonType = {
+				name = "metal_icon"
+				spriteType = "GFX_resources_strip"
+				position = { x = 10 y = 2 }
+				frame = 5
+				#pdx_tooltip = "PUPPET_LEDGER_PP_TT"
+				#pdx_tooltip_delayed = "POLITICAL_POWER_DESC"
+			}
 #
 		#	iconType = {
 		#		name = "pol_power_icon"
@@ -107,17 +112,32 @@ guiTypes = {
 		#		alwaystransparent = yes
 		#	}
 #
-		#	instantTextBoxType = {
-		#		name = "pol_power"
-		#		position = { x = 37 y = 9 }
-		#		font = "hoi_18mbs"
-		#		text = "[?political_power|0]"
-		#		format = center
-		#		maxWidth = 40
-		#		maxHeight = 24
-		#		fixedsize = yes
-		#		alwaystransparent = yes
-		#	}
+			#instantTextBoxType = {
+			#	name = "pol_power"
+			#	position = { x = 37 y = 9 }
+			#	font = "hoi_18mbs"
+			#	text = "Hello World"
+			#	format = center
+			#	maxWidth = 40
+			#	maxHeight = 24
+			#	fixedsize = yes
+			#	alwaystransparent = yes
+			#}
+
+			instantTextBoxType = {
+				name = "metal_value"
+				position = { x = 37 y = 5 }
+				font = "hoi_18mbs"
+				borderSize = { x = 0 y = 0 }
+#				text = "[This.resources.water]"
+				text = "[This.GetManpower]"
+				#text = "999"
+				format = left
+				maxWidth = 50
+				maxHeight = 20
+				fixedsize = yes
+				#alwaystransparent = yes
+			}
 #
 		#	iconType = {
 		#		name = "stability_value_bg"
@@ -279,6 +299,6 @@ guiTypes = {
 		#		fixedsize = yes
 		#		alwaystransparent = yes
 		#	}
-		#}
+		}
 	}
 }
