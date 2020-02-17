@@ -35,7 +35,7 @@ allocation_decision_category = {
 			LLW = {
 				give_resource_rights = { 
 					receiver = ERB 
-					state = var:geck_target_state 
+					state = ERB.geck_target_state 
 				}
 			}
 			if = {
