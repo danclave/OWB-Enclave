@@ -507,22 +507,25 @@ scripted_gui = {
 				has_resources_amount = { resource = advanced		amount > 0 }				
 			}
         }
-        effects = {
+        effects = { 
             harvest_resources_click = {
+				set_variable = { harvest_resources_manpower_used = state_population_k }
+				multiply_variable = { harvest_resources_manpower_used = 10 }
+				set_temp_variable = { harvest_resources_cost = harvest_resources_manpower_used }
+				multiply_temp_variable = { harvest_resources_cost = -1 }
 				ROOT = {
-					add_manpower = -100
+					add_manpower = harvest_resources_cost?25
 				}
 				set_state_flag = LLW_harvest_resources_active
 				LLW = { give_resource_rights = { receiver = ERB state = PREV } }
             }
         }
         triggers = {
-            harvest_resources_click_enabled = { 
+            harvest_resources_click_enabled = {
+				set_temp_variable = { harvest_resources_manpower_used_temp = state_population_k }
+				multiply_temp_variable = { harvest_resources_manpower_used_temp = 10 }
                 ROOT = {
-					custom_trigger_tooltip = {
-						tooltip = harvest_resources_tt_cost 
-						has_manpower > 99.99
-					}
+					has_manpower > harvest_resources_manpower_used_temp?25
 				}
             }
         } 
@@ -540,13 +543,13 @@ scripted_gui = {
 				clr_state_flag = LLW_harvest_resources_active
 				ERB = { 
 					remove_resource_rights = PREV 
-					add_manpower = 100
+					add_manpower = PREV.harvest_resources_manpower_used?75
 				}
             }
         }
 		triggers = {
 			harvest_resources_recall_click_enabled = {
-			
+				
 			}
 		}
 	}

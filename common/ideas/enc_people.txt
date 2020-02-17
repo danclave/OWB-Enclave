@@ -169,7 +169,7 @@ ideas = {
 			allowed = {
 				original_tag = ERB
 			}
-			traits = { politically_connected }
+			traits = { enc_politically_connected } 
 
 			ai_will_do = {
 				factor = 1
@@ -510,7 +510,6 @@ ideas = {
 		}
 		enc_john_jaeger = {
 			picture = generic_political_advisor_south_america_3
-
 			allowed = { original_tag = ERB }
 			visible = {
 				not = {

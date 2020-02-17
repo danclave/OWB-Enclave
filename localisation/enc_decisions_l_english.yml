@@ -264,6 +264,8 @@ convert_command_power: "Hold Military Theory Committee"
 convert_command_power_desc: "In times of relative peace, it would be better to have our generals meet to discuss and document military theory than to let them collect dust."
 command_power_max: "£command_power §Y100§!"
 command_power_max_blocked: "£command_power §R100§!"
+command_power_25: "£command_power §Y25§!"
+command_power_25_blocked: "£command_power §R25§!"
 
 extend_administrative_shifts: "Extend Administrative Shifts"
 reduce_administrative_shifts: "Reduce Administrative Shifts"
