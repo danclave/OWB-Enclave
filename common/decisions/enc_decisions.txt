@@ -1078,16 +1078,53 @@ ENC_debug = {
 	ENC_misc = {
 		complete_effect = {
 			LLW = {
-				remove_ideas = political_effort_censorship
-				remove_ideas = chems_banned
-				remove_ideas = outsider_law_volunteers
-				remove_ideas = slavery_outlawed
-				remove_ideas = training_law_none
-				remove_ideas = limited_exports
-				remove_ideas = mutant_law_none
-				remove_ideas = officer_law_local_heroes
-				remove_ideas = undesirables_law_none
+				division_template = {
+					name = "Rebel Militia"
+					division_names_group = REBEL_INF_01
+					regiments = {
+						militia = {
+							x = 0
+							y = 0
+						}
+						militia = {
+							x = 0
+							y = 1
+						}
+						militia = {
+							x = 0
+							y = 2
+						}
+						militia = {
+							x = 1
+							y = 0
+						}
+						militia = {
+							x = 1
+							y = 1
+						}
+						militia = {
+							x = 1
+							y = 2
+						}
+						militia = {
+							x = 1
+							y = 3
+						}
+					}
+					support = {
+					}
+				}				
 			}
+			184 = {
+					create_unit = {
+						division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28"
+						owner = LLW
+					}
+					create_unit = {
+						division = "name = \"Rebel Militia\"  division_template = \"Rebel Militia\"  start_experience_factor = 0.28"
+						owner = LLW
+					}
+				}
 		}
 	}
 	ENC_hide_debug = {
