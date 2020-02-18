@@ -402,7 +402,9 @@ enc_air_chief_cas: "Air Support Specialist"
 clayton_schultz: "Michael Schultz"
 clayton_schultz_desc: "Schultz traveled from the Raven Rock facility in the Capitol Wasteland on a suicide mission ordered by Colonel Autumn."
 #######################################DESC############################################################################################
-Anderson_desc:0 "Doctor Franklin is a former member of the Enclave's Chemical Corps and the current Enclave President. Formerly involved in several secret projects during the Presidency of Dick Richardson-notably the FEV Experiments of Mariposa and the creation of Frank Horrigan. He seeks to finish what he and his colleagues started four decades ago: the eradication of the mutant menace that dares to tread upon American soil. "
+Anderson_desc:0 "Doctor Franklin is a former member of the Enclave's Chemical Corps and the current Enclave President. Formerly involved in several secret projects during the Presidency of Dick Richardson-notably the FEV Experiments of Mariposa and the creation of Frank Horrigan. He seeks to finish what he and his colleagues started four decades ago: the eradication of the mutant menace that dares to tread upon American soil."
+ZAX_desc: "The ZAX series of supercomputers date back to the mid-21st century and Vault-Tec attempts to create a comprehensive solution for Vault governance. The first prototype, called ZAX 1.0, was activated in 2054 as a prototype of these comprehensive governance systems. It was soon given to the United States government to help the Department of Energy collect resource data. A year later, in 2055, the prototype was handed over to the military to aid in biological warfare and combat tactical research. These computers are well suited to managing complex tasks and resource extraction."
+
 Granite_desc:0 "Douglas Granite. Commander of Granite Company, named after his late father. The respect these divisions hold for him has been the key to his large amounts of influence within the Enclave, despite ideas about the Enclave's future some would call radical, others, treason."
 benjamin_curling: "Benjamin Curling"
 benjamin_curling_desc: "Benjamin Curling has followed in the footsteps of his father, an acclaimed Enclave researcher who worked for the US Chemical Corps four decades ago."
@@ -472,6 +474,21 @@ ENC_radio_eyebots: "Eyebot Radio"
 ENC_emergency_draft: "Emergency Draft"
 enc_depot_mexican_robots: "Tlaloc's Designs"
 enc_depot_mexican_robots_desc: "Although sadly the man who proposed to hack Tlaloc was a reformer who suffered a plasma grenade-related accident, we can still emulate Tlaloc's robots designs. In a way, he's more human than many of the mutants who infest America."
+
+### AI Upgrades ###
+enc_ZAX_upgrades: "Construct Additional Databanks"
+enc_ZAX_upgrades_desc: "[ZAX.GetLeader] requires additional resources to act at his highest capacity. We can easily provide these to him."
+enc_ZAX_factories: "Turn Over the Wasteland to [ZAX.GetLeader]"
+enc_ZAX_factories_desc: "This will give us the option to give [ZAX.GetLeader] control over a select few factories in the Wasteland. The mutants were tricky, clever folks. So it's possible to automate their equipment. And ZAX won't mind the additional work."
+enc_ZAX_factories_tt: "ZAX will gain increased autonomy, but you will reduce the cost of sending forces into the Wasteland. Further, ZAX will take over three industrial facilities of your choice."
+enc_shi_conquest: "The Secrets of the Shi"
+enc_shi_conquest_desc: "[163.GetName] suffers doubly under the yoke of mutants who ape the Chinese of old. They have managed to construct an advanced society that in some ways approaches our own, which is clearly impossible absent outside help. Perhaps there is something the Shi have that we can use..."
+enc_shi_conquest_tt: "Conquering the §Y[SHI.GetNamewithFlag]§! will unlock a way to advance §Y[ZAX.getName]§! and turn the state over to his control. I mean it's."
+enc_sky_conquests: "The Secrets of Area 51"
+enc_sky_conquests_desc: "[389.Owner] are squatting on the ruins of greatness. Area 51 was one of the Enclave's greatest facilities before the war, and has . . . fresh perspectives that [ZAX.GetName] could benefit from."
+enc_sky_conquest_tt: "Conquering the §Y[SKY.GetNamewithFlag]§! will unlock a way to advance §Y[ZAX.getName]§! and turn the state over to his control."
+enc_vegas_conquest: "The Lights are Going Out in Vegas"
+enc_vegas_conquest_desc: "Vegas is one of the greatest mutant hives, a cesspool of vice, drugs, and disease. But security, such as it is, is kept by an army of securitrons and the city is led by Mr. House, one of the last pure humans of the Wastes."
 ################ DECISIONS!!! ################################################################################################################################
 
 ENC_calling_the_remnants:0 "Call the Remnants"
@@ -602,3 +619,4 @@ ncr_suspicion_plus_10:0 "§YNCR suspicion§! is increased by £pol_power §R10§
 # £victory_point_texticon
 # £weather_text
 # £wing_rebase_status_texticon
+
