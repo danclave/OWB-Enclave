@@ -1,7 +1,0 @@
-ZAX_control_states_category = {
-	scripted_gui = ZAX_decision_category_control_states_scripted_GUI
-	visible = {
-		ZAX = { exists = yes }
-		tag = ERB
-	}
-}

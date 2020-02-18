@@ -46,6 +46,7 @@ set_country_flag = generic_decisions_disabled
 set_country_flag = no_generic_manufacturer
 set_country_flag = coring_button_hidden
 set_country_flag = slavery_allowed
+set_country_flag = enclave_nation
 set_country_flag = no_mutants_allowed
 
 # law flags
