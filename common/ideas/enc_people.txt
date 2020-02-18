@@ -169,7 +169,7 @@ ideas = {
 			allowed = {
 				original_tag = ERB
 			}
-			traits = { politically_connected }
+			traits = { enc_politically_connected }
 
 			ai_will_do = {
 				factor = 1
