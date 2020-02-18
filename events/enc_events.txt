@@ -24,7 +24,7 @@ country_event = {#1 - OUR ESCAPE
         add_manpower = 3000
     }
 }
-country_event = {#2 - Operational Security Compromised!
+country_event = {#2 - Operational Security Compromised! 
 	id = enc.2
 	title = enc.2.t
 	desc = enc.2.d
@@ -39,7 +39,7 @@ country_event = {#2 - Operational Security Compromised!
 		}
 		clr_country_flag = ncr_suspicious
 	}
-	option = { # spend PP
+	option = { # spend PP		
 		trigger = {
 			has_political_power > ENC_hiding_cost_total
 		}
@@ -1083,7 +1083,7 @@ country_event = {#46 - Mexico Challenge
 	trigger = {
 		always = no
 		date < 2280.01.01
-		NOT = { country_exists = CES }
+		NOT = {country_exists = CES }
 		has_completed_focus = enc_purity
 
 	}
@@ -1107,6 +1107,7 @@ country_event = {#46 - Mexico Challenge
 		}
 	}
 }
+
 
 #################
 ## IDEAS

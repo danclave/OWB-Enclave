@@ -674,6 +674,7 @@ ENC_war_with_NCR = {
 		}
 	}
 }
+<<<<<<< HEAD
 
 ENC_exploiting_wasteland = {
 	ENC_exploiting_wasteland_arms_factories = {
@@ -772,4 +773,3 @@ ENC_exploiting_wasteland = {
 		}	
 	}
 }
-
