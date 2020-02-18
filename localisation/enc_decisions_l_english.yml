@@ -476,6 +476,11 @@ ENC_vice_president_lynette_desc:0 "Remodel America to make every town as prosper
 add_popularity_to_ruling_party_tt: "Change in popularity of §GGetRulingParty§!: [?popularity_change|%2+].\n"
 add_popularity_to_reformers_good:  "Change in popularity of §GReformers§!: [?popularity_change|%2+].\n"
 
+### Purist AI ###
+ZAX_control_states_category: "Automation"
+ZAX_control_states_category_desc: "[ZAX.GetNameWithFlag] can be granted control of a select number of states.  Given our current resources, we can turn §g[statesavailable] states§! over to him."
+
+
 ################ special codes for special people ################################################################################################################
 
 # y§Yyellow§!
