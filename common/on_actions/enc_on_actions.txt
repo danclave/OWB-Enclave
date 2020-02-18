@@ -214,14 +214,22 @@ on_actions = {
 								limit = {
 									num_of_controlled_states = 0
 								}
-								fires too often
 								# country_event = { id = enc_pur_llw.1 }
 								add_to_war = { 
 									targeted_alliance = ERB 
 									enemy = FROM								
 								}
 							}
-							transfer_state = FROM.FROM
+							if = {
+								limit = {
+									FROM.FROM = {
+										not = {
+											has_state_flag = LLW_outpost_active
+										}
+									}
+								}
+								transfer_state = FROM.FROM
+							}
 						}
 					}
 				}

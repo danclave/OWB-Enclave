@@ -674,13 +674,12 @@ ENC_war_with_NCR = {
 		}
 	}
 }
-<<<<<<< HEAD
 
 ENC_exploiting_wasteland = {
 	ENC_exploiting_wasteland_arms_factories = {
 		icon = generic_construction
-		fire_only_once = no
-		custom_cost_text = command_power_25
+		fire_only_once = no 
+		custom_cost_text = command_power_25  
 		custom_cost_trigger = {
 			command_power > 24.9
 		}

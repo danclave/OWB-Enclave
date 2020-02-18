@@ -7,5 +7,19 @@ harvest_resources_tt_delayed: "By sending in ground forces to establish and prot
 harvest_resources_tt_cost: "£manpower_texticon §Y100§!"
 LLW_harvest_resources_active: "Already Harvesting Resources"
 
-harvest_resources_recall_tt: "Recall Resource Extraction Team ( §Y[?harvest_resources_manpower_used|0]§! £manpower_texticon )"
+harvest_resources_recall_tt: "Recall Resource Extraction Team ( §G[?harvest_resources_manpower_used|0]§! £manpower_texticon )"
 harvest_resources_recall_tt_delayed: "Command the forces in the state to return to base.\n\nReturns:\n§Y[?harvest_resources_manpower_used|0]§! £manpower_texticon"
+
+steal_military_industry_tt: "Salvage Military Industry (§Y25§! £command_power )"
+steal_military_industry_tt_delayed: "\n[!steal_military_industry_click]\nRequires all of the below:\n[!steal_military_industry_click_enabled]"
+
+steal_civilian_industry_tt: "Salvage Civilian Industry (§Y25§! £command_power )"
+steal_civilian_industry_tt_delayed: "\n[!steal_civilian_industry_click]\nRequires all of the below:\n[!steal_civilian_industry_click_enabled]"
+
+establish_outpost_tt: "Establish Outpost (§Y[?harvest_resources_manpower_used_temp|0]§! £manpower_texticon )"
+establish_outpost_tt_delayed: "Establish an Enclave Outpost in this state, bringing it under our direct control\n\nEffects:\n[!establish_outpost_click]\n\nRequires:\n[!establish_outpost_click_enabled]"
+
+abandon_outpost_tt: "Abandon Outpost (§G[?harvest_resources_manpower_used_temp]§! £manpower_texticon )"
+abandon_outpost_tt_delayed: "Abandon the Enclave Outpost in this state, recovering the manpower there.\n\nEffects:\n[!abandon_outpost_click]\n\nRequires:\n[!abandon_outpost_click_enabled]"
+
+free_building_slots_for_amount_arms_factory_removed: "Can build §Y[?amount_arms_factory_removed]§! more Arms Workshops"
