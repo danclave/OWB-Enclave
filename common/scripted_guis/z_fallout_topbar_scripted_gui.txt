@@ -189,6 +189,30 @@ scripted_gui = {
 						clear_variable = show_resource_ledger
 					}
 					else = {
+
+							ERB = {
+								clear_array = state_list
+							}
+							for_each_scope_loop = {
+								array = LLW.controlled_states
+								if = {
+									limit = {
+										OR = {
+											has_resources_amount = { resource = water			amount > 0 }
+											has_resources_amount = { resource = energy			amount > 0 }
+											has_resources_amount = { resource = metal			amount > 0 }
+											has_resources_amount = { resource = composites		amount > 0 }
+											has_resources_amount = { resource = circuitry		amount > 0 }
+											has_resources_amount = { resource = advanced		amount > 0 }
+										}
+									}
+									ERB = {
+										add_to_array = { state_list = PREV }
+									}
+								}
+							}
+
+						}
 						set_variable = { show_resource_ledger = 1 }
 					}
 				}
