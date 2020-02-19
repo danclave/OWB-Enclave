@@ -1,0 +1,71 @@
+###########################################
+####### SCRIPTED DIPLOMATIC ACTIONS #######
+###########################################
+scripted_diplomatic_actions = {
+	enc_diplomatic_test = {
+		allowed = {
+			original_tag = ERB
+		}
+		visible = {
+			always = yes
+		}
+		selectable = {
+			ROOT = {
+				# You must not hate the leader.
+				check_variable = { opinion@PREV > 0 }
+			}
+			# The leader must not hate you.
+			check_variable = { opinion@ROOT > 0 }
+		}
+
+		requires_acceptance = no
+
+		send_description = enc_diplomatic_test_send_desc
+		accept_title = enc_diplomatic_test_accept
+		accept_description = enc_diplomatic_test_accept_desc
+		reject_title = enc_diplomatic_test_reject
+		reject_description = enc_diplomatic_test_reject_desc
+
+		on_sent_effect = {
+		}
+
+		reject_effect = {
+			ROOT = {
+				every_country = {
+					limit = { is_boneyard_brotherhood_member = yes }
+					ROOT = {
+						remove_opinion_modifier = {
+							target = PREV
+							modifier = refused_entry_to_boneyard_brotherhood
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = refused_entry_to_boneyard_brotherhood
+						}
+					}
+				}
+				if = {
+					limit = { has_idea = refused_entry_to_boneyard_brotherhood }
+					modify_timed_idea = {
+						idea = refused_entry_to_boneyard_brotherhood
+						days = 90
+					}
+				}
+				else = {
+					add_timed_idea = {
+						idea = refused_entry_to_boneyard_brotherhood
+						days = 90
+					}
+				}
+				news_event = { id = boneyard_brotherhood_faction_events.3 }
+			}
+		}
+
+		complete_effect = {
+			
+		ai_desire = {
+			base = 0
+		}
+	}
+}
+# vim: set ft=pdx tw=79 :
