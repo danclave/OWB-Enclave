@@ -1031,4 +1031,13 @@ ENC_debug = {
 			boris_t_becomes_democratic = yes
 		}
     }
+
+	ENC_gimmie_New_Reno = {
+		complete_effect = {
+			annex_country = {
+				target = NEW
+				transfer_troops = no
+			}
+		}
+	}
 }
