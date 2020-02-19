@@ -579,7 +579,7 @@ scripted_gui = {
 						limit = {
 							free_building_slots = {
 								building = arms_factory
-								size > amount_arms_factory_removed
+								size > FROM.amount_arms_factory_removed
 								include_locked = yes 
 							}
 						}
@@ -607,7 +607,7 @@ scripted_gui = {
 							tooltip = free_building_slots_for_amount_arms_factory_removed
 							free_building_slots = {
 								building = arms_factory
-								size > amount_arms_factory_removed
+								size > FROM.amount_arms_factory_removed
 								include_locked = yes
 							}
 						}
