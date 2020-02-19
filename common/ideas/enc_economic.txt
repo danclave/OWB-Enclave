@@ -47,7 +47,7 @@ ideas = {
 				original_tag = ERB
 			}
 			available = {
-				# has_completed_focus = enc_mobilize_economy
+				has_completed_focus = enc_mobilize_economy
 			}
 			visible = {
 				not = { has_completed_focus = enc_reform }

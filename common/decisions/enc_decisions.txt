@@ -167,7 +167,7 @@ ENC_reno = {
 			}
 		}
 		is_good = no
-		days_mission_timeout = 2
+		days_mission_timeout = 100
 		timeout_effect = {
 			set_country_flag = enc_graffs_completed
 		}
@@ -1031,4 +1031,13 @@ ENC_debug = {
 			boris_t_becomes_democratic = yes
 		}
     }
+
+	ENC_gimmie_New_Reno = {
+		complete_effect = {
+			annex_country = {
+				target = NEW
+				transfer_troops = no
+			}
+		}
+	}
 }
