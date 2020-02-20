@@ -831,6 +831,9 @@ change_slaves_in_state = {
 	# 	- the max slavery ratio is 25%
 	
 	set_variable = { current_slave_ratio = current_slave_ratio?0 } # current ratio is 10%
+	
+	custom_effect_tooltip = "test"
+	
 	set_temp_variable = { actual_slavery_change = current_slave_ratio } actual change is 100 right now%	
 	
 	clamp_variable = { current_slave_ratio = ERB.max_slave_ratio } # current ratio cannot go above 25%

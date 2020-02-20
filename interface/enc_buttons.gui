@@ -264,4 +264,72 @@ guiTypes = {
 			scale = 1.2
 		}
 	}
+	containerWindowType = { # add_slaves
+		name = add_slaves_container
+		position = { x = 300  y = 495 } 
+		buttonType = { 
+			name = add_slaves
+			spriteType = GFX_add_10
+			pdx_tooltip = add_slaves_tt
+			pdx_tooltip_delayed = add_slaves_tt_delayed
+			scale = 1.2
+		}
+
+		instantTextBoxType = {
+			name ="test_text"
+			position = { x = 35 y = 6 }
+			font = "hoi_18mbs"
+			text = "hello!"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+
+			pdx_tooltip = "test"
+			pdx_tooltip_delayed = "test_delayed"
+		}
+	}
+	containerWindowType = { # LLW_state_container
+		name = "LLW_state_container"
+		position = { x = -115 y = -218 }
+		scale = 0.91
+		
+		containerWindowType = { # background
+			name = "entry_window"
+			position = { x = -10 y = -170 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_pol_goal_popup_bg"
+				scale = 1
+			}
+		}
+		containerWindowType = { # title
+			name = "header_entry_LLW_state_container"
+			size = { width = 200 height = 30 }
+			clipping = no
+			instantTextboxType = { # title
+				name = "title"
+				position = { x = 95 y = -148  }
+				font = "hoi_36header" 
+				text = "Resource Outpost" 
+				maxWidth = 600
+				maxHeight = 200
+				fixedsize = yes
+			}
+		}
+		containerWindowType = { # title
+			name = "manpower_window"
+			size = { width = 200 height = 30 } 
+			clipping = no
+			instantTextboxType = { # title
+				name = "manpower"
+				position = { x = 0 y = 0 }
+				font = "hoi_36header" 
+				text = "Manpower used:" 
+				maxWidth = 600
+				maxHeight = 200
+				fixedsize = yes
+			}
+		}
 }
