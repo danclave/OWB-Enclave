@@ -687,7 +687,7 @@ scripted_gui = {
             }
         } 
 	} 
-	abandon_outpost = { 
+	abandon_outpost = {
         context_type = selected_state_context
         window_name = abandon_outpost_container
         parent_window_token = selected_state_view
@@ -712,5 +712,49 @@ scripted_gui = {
             }
         } 
 	} 
-
+	add_slaves = {
+		context_type = selected_state_context
+        window_name = add_slaves_container
+        parent_window_token = selected_state_view
+        visible = { 
+			# has completed slavery focus
+        }
+        effects = { 
+            add_slaves_click = {
+				set_temp_variable = { slavery_change = 0.10 }
+				change_slaves_in_state = yes
+            }
+			add_slaves_shift_click = {
+				set_temp_variable = { slavery_change = 1 }
+				change_slaves_in_state = yes				
+			}
+        }
+        triggers = {
+            add_slaves_click_enabled = {
+				check_variable = { slave_number_display > 0 }
+            }
+			add_slaves_shift_click_enabled = {
+				check_variable = { slave_number_display > 0 }
+			}
+        }
+	}
 }
+
+#	new_button = {
+#		context_type = selected_state_context
+#        window_name = new_button_container
+#        parent_window_token = selected_state_view
+#        visible = { 
+#		
+#        }
+#        effects = { 
+#            new_button_click = {
+#				
+#            }
+#        }
+#        triggers = {
+#            new_button_click_enabled = {
+#			
+#            }
+#        }
+#	}
