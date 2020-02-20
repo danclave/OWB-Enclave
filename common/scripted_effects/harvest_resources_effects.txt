@@ -1,0 +1,11 @@
+harvest_resources_effects = {
+    set_variable = { harvest_resources_manpower_used = state_population_k }
+	multiply_variable = { harvest_resources_manpower_used = 10 }
+	set_temp_variable = { harvest_resources_cost = harvest_resources_manpower_used }
+	multiply_temp_variable = { harvest_resources_cost = -1 }
+	ROOT = {
+		add_manpower = harvest_resources_cost?25
+	}
+	set_state_flag = LLW_harvest_resources_active
+	LLW = { give_resource_rights = { receiver = ERB state = PREV } }
+}

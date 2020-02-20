@@ -1,0 +1,20 @@
+steal_military_industry_click_enabled_trigger = {
+    set_temp_variable = { amount_arms_factory_removed = arms_factory_level }
+	ROOT = {
+		custom_trigger_tooltip  = {
+			tooltip = command_power_25
+			command_power > 24.9
+		}
+		any_owned_state = {
+			custom_trigger_tooltip = {
+				tooltip = free_building_slots_for_amount_arms_factory_removed
+				free_building_slots = {
+					building = arms_factory
+					size > FROM.amount_arms_factory_removed
+					include_locked = yes
+				}
+			}
+		}
+    }
+	arms_factory > 0
+}

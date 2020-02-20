@@ -1,0 +1,26 @@
+steal_military_industry_effect = {
+    set_temp_variable = { amount_arms_factory_removed = arms_factory_level }
+	remove_building = {
+		type = arms_factory
+		level = amount_arms_factory_removed
+	}
+	prioritize = { 159 } # sierra army depot
+	ROOT = {
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > FROM.amount_arms_factory_removed
+					include_locked = yes 
+				}
+			}
+			prioritize = { 159 } # sierra army depot
+			add_extra_state_shared_building_slots = amount_arms_factory_removed
+			add_building_construction = {
+				type = arms_factory
+				level = amount_arms_factory_removed
+				instant_build = yes
+			}				
+		}
+	}
+}

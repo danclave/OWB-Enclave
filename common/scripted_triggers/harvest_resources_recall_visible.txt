@@ -1,0 +1,4 @@
+harvest_resources_recall_visible = {
+    is_owned_and_controlled_by = LLW
+    has_state_flag = LLW_harvest_resources_active
+}

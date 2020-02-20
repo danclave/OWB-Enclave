@@ -1,0 +1,10 @@
+abandon_outpost_effect = {
+    set_temp_variable = { harvest_resources_manpower_used_temp = harvest_resources_manpower_used }
+	clr_state_flag = LLW_outpost_active	
+	ROOT = {
+		add_manpower = harvest_resources_manpower_used_temp?25	
+	}
+	LLW = { 
+		transfer_state = PREV				
+	}
+}

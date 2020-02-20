@@ -1,0 +1,4 @@
+establish_outpost_visible = {
+    has_state_flag = LLW_harvest_resources_active
+	not = { has_state_flag = LLW_outpost_active}
+}

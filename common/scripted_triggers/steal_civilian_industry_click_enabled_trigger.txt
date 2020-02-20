@@ -1,0 +1,9 @@
+steal_civilian_industry_click_enabled_trigger = {
+    ROOT = {				
+		custom_trigger_tooltip  = {
+			tooltip = command_power_25
+			command_power > 24.9
+		}
+	}
+	industrial_complex > 0
+}

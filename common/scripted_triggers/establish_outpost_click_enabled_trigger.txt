@@ -1,0 +1,7 @@
+establish_outpost_click_enabled_trigger = {
+    set_temp_variable = { harvest_resources_manpower_used_temp = state_population_k }
+	multiply_temp_variable = { harvest_resources_manpower_used_temp = 10 }
+    ROOT = {
+		has_manpower > harvest_resources_manpower_used_temp?25
+	}	
+}
