@@ -381,40 +381,67 @@ scripted_gui = {
 					limit = {
 						has_variable = power_grid_screen
 					}
+
+					if = {
+						limit = { has_global_flag = debug_logs }
+						log = "[GetDateText]: closing power grid screen"
+					}
+
 					clear_variable = power_grid_screen
 				}
 				else = {
+
+					if = {
+						limit = { has_global_flag = debug_logs }
+						log = "[GetDateText]: opening power grid screen"
+					}
+
 					set_variable = { power_grid_screen = 1 }
-					hidden_effect = { ROOT = { sound_effect = ERB_electric } }
+					hidden_effect = { ERB = { sound_effect = ERB_electric } }
 				}
 				if = {
 					limit = {
 						check_variable = { power_grid_screen = 1}
 					}
-					clear_array = erb_power_grid_array
+
+					if = {
+						limit = { has_global_flag = debug_logs }
+						log = "[GetDateText]: clearing power grid array"
+					}
+
+					clear_array = ERB.power_grid_array
 				}
 				if = {
 					limit = {
 						any_owned_state = {
-							NOT = { is_core_of = ROOT }
-							NOT = { is_in_array = { ROOT.erb_power_grid_array = THIS.id } }
+							NOT = { is_core_of = ERB }
+							NOT = { is_in_array = { ERB.power_grid_array = THIS } }
 						}
 					}
+
+					if = {
+						limit = { has_global_flag = debug_logs }
+						log = "[GetDateText]: checking every state"
+					}
+
 					every_owned_state = {
 						limit = {
 							NOT = {
-								is_core_of = ROOT
+								is_core_of = ERB
 							}
-						civilian_power_grid > 0
-						free_building_slots = {
-							size > 0
+							civilian_power_grid > 0
+							any_neighbor_state = {
+								is_core_of = ERB
+							}
+							NOT = { is_in_array = { ERB.power_grid_array = THIS } }
 						}
-						any_neighbor_state = {
-							is_core_of = ROOT
+
+						if = {
+							limit = { has_global_flag = debug_logs }
+							log = "[GetDateText]: [THIS.GetName] added to power grid array"
 						}
-						NOT = { is_in_array = { ROOT.erb_power_grid_array = THIS.id } }
-					}
-						add_to_array = { ROOT.erb_power_grid_array = THIS.id }
+
+						add_to_array = { ERB.power_grid_array = THIS }
 					}
 				}
 			}
@@ -484,7 +511,7 @@ scripted_gui = {
 		}
 		dynamic_lists = {
 			erb_screen_power_grid_scripted_gui_gridbox = {
-				array = erb_power_grid_array
+				array = ERB.power_grid_array
 				entry_container = erb_power_grid_screen_scripted_gui_entry
 				change_scope = yes
 			}
