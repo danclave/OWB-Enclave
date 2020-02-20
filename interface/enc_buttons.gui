@@ -14,7 +14,6 @@ guiTypes = {
 	containerWindowType = 	{ # connect_to_power
 		name = connected_to_power_container
 		position = {x=90 y=58}
-
 		buttonType = {
 			name = connected_to_power
 			spriteType = GFX_icons_powered
@@ -62,7 +61,6 @@ guiTypes = {
 	containerWindowType = { # arm_patriots
 		name = arm_patriots_container
 		position = {x=90 y=58}
-
 		buttonType = {
 			name = arm_patriots
 			spriteType = GFX_resistance_icon
@@ -103,7 +101,8 @@ guiTypes = {
 			pdx_tooltip_delayed = "legitimacy_TOOLTIP_DELAYED"
 		}
 	}
-	containerWindowType = { # power grid non-functional
+	# powergrid
+	containerWindowType = {
 		name = "erb_screen_power_grid_scripted_gui"
 		position = { x = 480 y = 250 }
 		fade_time = 300
@@ -121,7 +120,7 @@ guiTypes = {
 		name = "power_grid_screen_container"
 		position = { x = 600 y = 400 }
 		size = { width = 800 height = 210 }
-
+		moveable = yes
 		containerWindowType = {
 			name = "entry_window"
 			position = { x = 10 y = 10 }
@@ -168,7 +167,6 @@ guiTypes = {
 		name = "erb_power_grid_screen_scripted_gui_entry"
 		position = { x = 0 y = 5 }
 		size = { width = 100 height = 30 }
-
 		buttonType = {
 			name = "entry_bg_button1"
 			spriteType = "GFX_tiled_header_1"
