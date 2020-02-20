@@ -204,6 +204,8 @@ scripted_gui = {
 											has_resources_amount = { resource = composites		amount > 0 }
 											has_resources_amount = { resource = circuitry		amount > 0 }
 											has_resources_amount = { resource = advanced		amount > 0 }
+											check_variable = { arms_factory_level > 1 }
+											check_variable = { industrial_complex_level > 1 }
 										}
 									}
 									ERB = {
