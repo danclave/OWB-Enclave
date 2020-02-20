@@ -144,7 +144,7 @@ ENC_render_unto_caesar = {
 ENC_debug = {
 	priority = 100
 	visible = {
-		# has_country_flag = enc_debug_enabled
+		has_country_flag = enc_debug_enabled
 	}
 }
 
@@ -283,7 +283,7 @@ NCR_hayes_plots = {
 }
 
 ENC_exploiting_wasteland = {
-	priority = 0
+	priority = 100
 	icon = category_usa_flag
 	allowed = { original_tag = ERB }
 }

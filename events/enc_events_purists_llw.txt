@@ -1,0 +1,14 @@
+﻿add_namespace = enc_pur_llw
+
+country_event = {#
+    id = enc_pur_llw.1
+    title = enc_pur_llw.1.t
+    desc = enc_pur_llw.1.d
+    picture = GFX_event_ENC_secret
+
+    is_triggered_only = yes
+
+    option = { #We'll figure it out
+        name = enc_pur_llw.1.a
+    }
+}

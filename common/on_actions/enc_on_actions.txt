@@ -197,6 +197,9 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					ROOT = { 
+						original_tag = ERB
+					}
 					original_tag = ERB
 				}
 				calculate_hiding_cost = yes
@@ -209,17 +212,24 @@ on_actions = {
 						LLW = {
 							if = {
 								limit = {
-									has_war = no
-								}								
+									num_of_controlled_states = 0
+								}
+								# country_event = { id = enc_pur_llw.1 }
 								add_to_war = { 
 									targeted_alliance = ERB 
 									enemy = FROM								
 								}
 							}
-						}
-						LLW = {
-							# set_state_controller = FROM.FROM
-							transfer_state = FROM.FROM
+							if = {
+								limit = {
+									FROM.FROM = {
+										not = {
+											has_state_flag = LLW_outpost_active
+										}
+									}
+								}
+								transfer_state = FROM.FROM
+							}
 						}
 					}
 				}
