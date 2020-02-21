@@ -14,7 +14,6 @@ guiTypes = {
 	containerWindowType = 	{ # connect_to_power
 		name = connected_to_power_container
 		position = {x=90 y=58}
-
 		buttonType = {
 			name = connected_to_power
 			spriteType = GFX_icons_powered
@@ -62,7 +61,6 @@ guiTypes = {
 	containerWindowType = { # arm_patriots
 		name = arm_patriots_container
 		position = {x=90 y=58}
-
 		buttonType = {
 			name = arm_patriots
 			spriteType = GFX_resistance_icon
@@ -103,7 +101,8 @@ guiTypes = {
 			pdx_tooltip_delayed = "legitimacy_TOOLTIP_DELAYED"
 		}
 	}
-	containerWindowType = { # power grid non-functional
+	# powergrid
+	containerWindowType = {
 		name = "erb_screen_power_grid_scripted_gui"
 		position = { x = 480 y = 250 }
 		fade_time = 300
@@ -121,7 +120,7 @@ guiTypes = {
 		name = "power_grid_screen_container"
 		position = { x = 600 y = 400 }
 		size = { width = 800 height = 210 }
-
+		moveable = yes
 		containerWindowType = {
 			name = "entry_window"
 			position = { x = 10 y = 10 }
@@ -168,7 +167,6 @@ guiTypes = {
 		name = "erb_power_grid_screen_scripted_gui_entry"
 		position = { x = 0 y = 5 }
 		size = { width = 100 height = 30 }
-
 		buttonType = {
 			name = "entry_bg_button1"
 			spriteType = "GFX_tiled_header_1"
@@ -266,4 +264,72 @@ guiTypes = {
 			scale = 1.2
 		}
 	}
+	containerWindowType = { # add_slaves
+		name = add_slaves_container
+		position = { x = 300  y = 495 } 
+		buttonType = { 
+			name = add_slaves
+			spriteType = GFX_add_10
+			pdx_tooltip = add_slaves_tt
+			pdx_tooltip_delayed = add_slaves_tt_delayed
+			scale = 1.2
+		}
+
+		instantTextBoxType = {
+			name ="test_text"
+			position = { x = 35 y = 6 }
+			font = "hoi_18mbs"
+			text = "hello!"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+
+			pdx_tooltip = "test"
+			pdx_tooltip_delayed = "test_delayed"
+		}
+	}
+	containerWindowType = { # LLW_state_container
+		name = "LLW_state_container"
+		position = { x = -115 y = -218 }
+		scale = 0.91
+		
+		containerWindowType = { # background
+			name = "entry_window"
+			position = { x = -10 y = -170 }
+
+			background = {
+				name = "background"
+				spriteType = "GFX_pol_goal_popup_bg"
+				scale = 1
+			}
+		}
+		containerWindowType = { # title
+			name = "header_entry_LLW_state_container"
+			size = { width = 200 height = 30 }
+			clipping = no
+			instantTextboxType = { # title
+				name = "title"
+				position = { x = 95 y = -148  }
+				font = "hoi_36header" 
+				text = "Resource Outpost" 
+				maxWidth = 600
+				maxHeight = 200
+				fixedsize = yes
+			}
+		}
+		containerWindowType = { # title
+			name = "manpower_window"
+			size = { width = 200 height = 30 } 
+			clipping = no
+			instantTextboxType = { # title
+				name = "manpower"
+				position = { x = 0 y = 0 }
+				font = "hoi_36header" 
+				text = "Manpower used:" 
+				maxWidth = 600
+				maxHeight = 200
+				fixedsize = yes
+			}
+		}
 }

@@ -1320,6 +1320,14 @@ ENC_debug = {
 		complete_effect = {
 			set_country_flag = enc_debug_disabled
 			clr_country_flag = enc_debug_enabled
+    }
+
+	ENC_gimmie_New_Reno = {
+		complete_effect = {
+			annex_country = {
+				target = NEW
+				transfer_troops = no
+			}
 		}
 	}
 }

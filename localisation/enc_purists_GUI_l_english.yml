@@ -23,3 +23,6 @@ abandon_outpost_tt: "Abandon Outpost (§G[?harvest_resources_manpower_used_temp]
 abandon_outpost_tt_delayed: "Abandon the Enclave Outpost in this state, recovering the manpower there.\n\nEffects:\n[!abandon_outpost_click]\n\nRequires:\n[!abandon_outpost_click_enabled]"
 
 free_building_slots_for_amount_arms_factory_removed: "Can build §Y[?amount_arms_factory_removed]§! more Arms Workshops"
+
+add_slaves_tt: "Change slaves ([?slaves_in_state])"
+add_slaves_tt_delayed: "Add slaves to the state, recovering some of the manpower there.\n\nEffects:\n[!add_slaves_click]\n\nRequires:\n[!add_slaves_click_enabled]"
