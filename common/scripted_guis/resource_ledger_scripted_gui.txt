@@ -14,11 +14,33 @@ scripted_gui = {
 				clear_variable = show_resource_ledger
 			}
 			entry_flag_click = {
-				capital_scope = {
-					ROOT = {
-						goto_state = PREV
-					}
+				ROOT = {
+					goto_state = PREV
 				}
+			}
+
+			harvest_resources_click = {
+				harvest_resources_effects = yes
+			}
+
+			harvest_resources_recall_click = {
+				harvest_resources_recall_effects = yes
+			}
+
+			steal_military_industry_click = {
+				steal_military_industry_effect = yes
+			}
+
+			steal_civilian_industry_click = {
+				steal_civilian_industry_effect = yes
+			}
+
+			establish_outpost_click = {
+				establish_outpost_effect = yes
+			}
+
+			abandon_outpost_click = {
+				abandon_outpost_effect = yes
 			}
 		}
 
@@ -82,13 +104,10 @@ scripted_gui = {
 			}
 		}
 		
-		#properties = {
-		#	entry_flag = {
-		#		image = "[This.GetFlag]"
-		#	}
-		#	conscription_law_icon = {
-		#		image = "[This.GetConscriptionLawIcon]"
-		#	}
-		#}
+		properties = {
+			entry_flag = {
+				image = "[This.Controller.GetFlag.GetFlag]"
+			}
+		}
 	}
 }

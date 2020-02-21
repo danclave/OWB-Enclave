@@ -64,24 +64,23 @@ guiTypes = {
 			spriteType = "GFX_resource_ledger_entry_bg"
 		}
 
-		#buttonType = {
-		#	name = "entry_flag"
-		#	quadTextureSprite = "GFX_flag_small2"
-		#	position = { x = 10 y = 4 }
-		#	pdx_tooltip = "RESOURCE_LEDGER_ENTRY_FLAG_TT"
-		#}
-#
-		#iconType = {
-		#	name = "entry_flag_border"
-		#	quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
-		#	position = { x = 7 y = 0 }
-		#	alwaystransparent = yes
-		#}
+		buttonType = {
+			name = "entry_flag"
+			quadTextureSprite = "GFX_flag_small2"
+			position = { x = 10 y = 4 }
+			pdx_tooltip = "RESOURCE_LEDGER_ENTRY_FLAG_TT"
+		}
+
+		iconType = {
+			name = "entry_flag_border"
+			quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
+			position = { x = 7 y = 0 }
+			alwaystransparent = yes
+		}
 
 		instantTextBoxType = {
 			name = "entry_name"
-			#position = { x = 70 y = 8 }
-			position = { x = 10 y = 8 }
+			position = { x = 70 y = 8 }
 			text = "[This.GetName]"
 			font = "hoi_18mbs"
 			format = left
@@ -92,7 +91,7 @@ guiTypes = {
 		buttonType = {
 			name = harvest_resources
 			spriteType = GFX_topbar_trade_button
-			position = { x = 150 y = 4 }
+			position = { x = 220 y = 4 }
 			pdx_tooltip = harvest_resources_tt
 			pdx_tooltip_delayed = harvest_resources_tt_delayed
 			scale = 0.9
@@ -101,7 +100,7 @@ guiTypes = {
 		buttonType = {
 			name = harvest_resources_recall
 			spriteType = GFX_cancel_import_button
-			position = { x = 200 y = 4 }
+			position = { x = 270 y = 4 }
 			pdx_tooltip = harvest_resources_recall_tt
 			pdx_tooltip_delayed = harvest_resources_recall_tt_delayed
 			scale = 1.2
@@ -110,7 +109,7 @@ guiTypes = {
 		buttonType = {
 			name = steal_military_industry
 			spriteType = GFX_military_factory_icon
-			position = { x = 250 y = 4 }
+			position = { x = 320 y = 4 }
 			pdx_tooltip = steal_military_industry_tt
 			pdx_tooltip_delayed = steal_military_industry_tt_delayed
 			scale = 1.2
@@ -119,7 +118,7 @@ guiTypes = {
 		buttonType = {
 			name = steal_civilian_industry
 			spriteType = GFX_non_available_factory_icon
-			position = { x = 300 y = 4 }
+			position = { x = 370 y = 4 }
 			pdx_tooltip = steal_civilian_industry_tt
 			pdx_tooltip_delayed = steal_civilian_industry_tt_delayed
 			scale = 1.2
@@ -128,7 +127,7 @@ guiTypes = {
 		buttonType = {
 			name = establish_outpost
 			spriteType = GFX_endgame_score_button
-			position = { x = 350 y = 4 }
+			position = { x = 420 y = 4 }
 			pdx_tooltip = establish_outpost_tt
 			pdx_tooltip_delayed = establish_outpost_tt_delayed
 			scale = 0.75
@@ -137,7 +136,7 @@ guiTypes = {
 		buttonType = {
 			name = abandon_outpost
 			spriteType = GFX_closebutton
-			position = { x = 400 y = 4 }
+			position = { x = 470 y = 4 }
 			pdx_tooltip = abandon_outpost_tt
 			pdx_tooltip_delayed = abandon_outpost_tt_delayed
 			scale = 1

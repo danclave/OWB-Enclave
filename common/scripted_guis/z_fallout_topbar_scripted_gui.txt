@@ -210,6 +210,19 @@ scripted_gui = {
 									}
 								}
 							}
+							for_each_scope_loop = {
+								array = ERB.controlled_states
+								if = {
+									limit = {
+										NOT = {
+											is_core_of = ERB
+										}
+									}
+									ERB = {
+										add_to_array = { state_list = PREV }
+									}
+								}
+							}
 
 						}
 						set_variable = { show_resource_ledger = 1 }
