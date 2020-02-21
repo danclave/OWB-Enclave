@@ -84,34 +84,6 @@ on_actions = {
 	
 	# ROOT is capitulated country, FROM is winner
 	on_capitulation  = {
-		#for_each_loop = {
-		#	array = ROOT.owned_states
-		#	LLW = {
-		#		#set_state_owner = v
-		#		transfer_state = v
-		#	}
-		#}
-		#if = {
-		#	limit = {
-		#		OR = {
-		#			FROM = {
-		#				AND = {
-		#					original_tag = ERB
-		#					has_completed_focus = enc_purity
-		#				}
-		#			}
-		#			FROM = {
-		#				original_tag = LLW
-		#			}
-		#		}
-		#	}
-		#	LLW = {
-		#		annex_country = {
-		#			target = ROOT
-    	#			transfer_troops = no	
-		#		}
-		#	}
-		#}
 	}
 
 	# ROOT is previously capitulated country
