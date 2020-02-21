@@ -499,7 +499,7 @@ scripted_gui = {
         window_name = harvest_resources_container
         parent_window_token = selected_state_view
         visible = {
-			harvest_resources_visible = yes
+			harvest_resources_visible_trigger = yes
         }
         effects = { 
             harvest_resources_click = {
@@ -518,7 +518,7 @@ scripted_gui = {
         window_name = harvest_resources_recall_container
         parent_window_token = selected_state_view
         visible = {
-			harvest_resources_recall_visible = yes
+			harvest_resources_recall_visible_trigger = yes
         }
         effects = {
             harvest_resources_recall_click = { 
@@ -575,7 +575,7 @@ scripted_gui = {
         window_name = establish_outpost_container
         parent_window_token = selected_state_view
         visible = { 
-			establish_outpost_visible = yes
+			establish_outpost_visible_trigger = yes
         }
         effects = {
             establish_outpost_click = {
@@ -594,7 +594,7 @@ scripted_gui = {
         window_name = abandon_outpost_container
         parent_window_token = selected_state_view
         visible = { 
-			abandon_outpost_visible = yes
+			abandon_outpost_visible_trigger = yes
         }
         effects = { 
             abandon_outpost_click = {

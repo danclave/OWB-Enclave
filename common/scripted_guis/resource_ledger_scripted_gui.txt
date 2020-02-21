@@ -23,29 +23,53 @@ scripted_gui = {
 		}
 
 		triggers = {
-			manpower_visible = {
-				ROOT = {
-					is_ai = no
-				}
-				set_temp_variable = { used_manpower = max_available_manpower_k }
-				subtract_from_temp_variable = { used_manpower = manpower_k }
-				set_temp_variable = { manpower_in_training = amount_manpower_in_deployment_queue }
-				divide_temp_variable = { manpower_in_training = 1000 }
-				subtract_from_temp_variable = { used_manpower = manpower_in_training }
-				set_temp_variable = { conscription_factor_temp = modifier@conscription_factor }
-				add_to_temp_variable = { conscription_factor_temp = 1 }
+			harvest_resources_visible = {
+				harvest_resources_visible_trigger = yes
 			}
-			industrial_capacity_visible = {
-				ROOT = {
-					is_ai = no
-				}
-				set_temp_variable = { civilian_factories_in_use = num_of_civilian_factories }
-				subtract_from_temp_variable = { civilian_factories_in_use = num_of_available_civilian_factories }
-				set_temp_variable = { naval_factories_in_use = num_of_naval_factories }
-				subtract_from_temp_variable = { naval_factories_in_use = num_of_available_naval_factories }
-				set_temp_variable = { military_factories_in_use = num_of_military_factories }
-				subtract_from_temp_variable = { military_factories_in_use = num_of_available_military_factories }
+
+			harvest_resources_click_enabled = {
+				harvest_resources_click_enabled_trigger = yes
 			}
+
+			harvest_resources_recall_visible = {
+				harvest_resources_recall_visible_trigger = yes
+			}
+
+			harvest_resources_recall_click_enabled = {
+				
+			}
+
+			steal_military_industry_visible = {
+				steal_industry_visible = yes
+			}
+
+            steal_military_industry_click_enabled = {
+				steal_military_industry_click_enabled_trigger = yes
+            }
+
+			steal_civilian_industry_visible = {
+				steal_industry_visible = yes
+			}
+
+			steal_civilian_industry_click_enabled = {
+				steal_civilian_industry_click_enabled_trigger = yes
+            }
+
+			establish_outpost_visible = {
+				establish_outpost_visible_trigger = yes
+			}
+
+			establish_outpost_click_enabled = {
+				establish_outpost_click_enabled_trigger = yes
+            }
+
+			abandon_outpost_visible = {
+				abandon_outpost_visible_trigger = yes
+			}
+
+           	abandon_outpost_click_enabled = {
+			
+        	}
 		}
 
 

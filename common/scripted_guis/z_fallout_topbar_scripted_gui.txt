@@ -198,14 +198,11 @@ scripted_gui = {
 								if = {
 									limit = {
 										OR = {
-											has_resources_amount = { resource = water			amount > 0 }
-											has_resources_amount = { resource = energy			amount > 0 }
-											has_resources_amount = { resource = metal			amount > 0 }
-											has_resources_amount = { resource = composites		amount > 0 }
-											has_resources_amount = { resource = circuitry		amount > 0 }
-											has_resources_amount = { resource = advanced		amount > 0 }
-											check_variable = { arms_factory_level > 1 }
-											check_variable = { industrial_complex_level > 1 }
+											harvest_resources_visible_trigger = yes
+											harvest_resources_recall_visible_trigger = yes
+											steal_industry_visible = yes
+											establish_outpost_visible_trigger = yes
+											abandon_outpost_visible_trigger = yes
 										}
 									}
 									ERB = {

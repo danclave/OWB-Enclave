@@ -93,7 +93,8 @@ guiTypes = {
 			name = harvest_resources
 			spriteType = GFX_topbar_trade_button
 			position = { x = 150 y = 4 }
-			pdx_tooltip = harvest_resources_tt_delayed
+			pdx_tooltip = harvest_resources_tt
+			pdx_tooltip_delayed = harvest_resources_tt_delayed
 			scale = 0.9
 		}
 
@@ -101,14 +102,46 @@ guiTypes = {
 			name = harvest_resources_recall
 			spriteType = GFX_cancel_import_button
 			position = { x = 200 y = 4 }
-			pdx_tooltip = harvest_resources_recall_tt_delayed
+			pdx_tooltip = harvest_resources_recall_tt
+			pdx_tooltip_delayed = harvest_resources_recall_tt_delayed
 			scale = 1.2
 		}
 
+		buttonType = {
+			name = steal_military_industry
+			spriteType = GFX_military_factory_icon
+			position = { x = 250 y = 4 }
+			pdx_tooltip = steal_military_industry_tt
+			pdx_tooltip_delayed = steal_military_industry_tt_delayed
+			scale = 1.2
+		}
 
+		buttonType = {
+			name = steal_civilian_industry
+			spriteType = GFX_non_available_factory_icon
+			position = { x = 300 y = 4 }
+			pdx_tooltip = steal_civilian_industry_tt
+			pdx_tooltip_delayed = steal_civilian_industry_tt_delayed
+			scale = 1.2
+		}
 
+		buttonType = {
+			name = establish_outpost
+			spriteType = GFX_endgame_score_button
+			position = { x = 350 y = 4 }
+			pdx_tooltip = establish_outpost_tt
+			pdx_tooltip_delayed = establish_outpost_tt_delayed
+			scale = 0.75
+		}
 
-
+		buttonType = {
+			name = abandon_outpost
+			spriteType = GFX_closebutton
+			position = { x = 400 y = 4 }
+			pdx_tooltip = abandon_outpost_tt
+			pdx_tooltip_delayed = abandon_outpost_tt_delayed
+			scale = 1
+		}
 		#containerWindowType = {
 		#	name = "information"
 		#	position = { x = -4 y = 36 }
