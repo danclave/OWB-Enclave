@@ -1,0 +1,9 @@
+establish_outpost_effect = {
+    set_temp_variable = { harvest_resources_cost = harvest_resources_manpower_used }
+	multiply_temp_variable = { harvest_resources_cost = -1 }
+	set_state_flag = LLW_outpost_active	
+	ROOT = {
+		add_manpower = harvest_resources_cost?25						
+		transfer_state = PREV
+	}
+}

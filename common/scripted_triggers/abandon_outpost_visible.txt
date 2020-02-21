@@ -1,0 +1,3 @@
+abandon_outpost_visible = {
+    has_state_flag = LLW_outpost_active
+}

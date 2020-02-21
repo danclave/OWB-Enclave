@@ -1,0 +1,7 @@
+harvest_resources_recall_effects = {
+    clr_state_flag = LLW_harvest_resources_active
+	ERB = { 
+		remove_resource_rights = PREV 
+		add_manpower = PREV.harvest_resources_manpower_used?75
+	}
+}
