@@ -115,6 +115,7 @@ country_event = { #4 - Dealing with Wrights
 		set_country_flag = enc_wrights_tolerated_flag
 		custom_effect_tooltip = unlocks_as_advisor
 		show_ideas_tooltip = erb_wright
+		# todo LAR add compliance
 	}
 	option = { #No place for him
 		name = enc_reformers.4.b
@@ -126,6 +127,7 @@ country_event = { #4 - Dealing with Wrights
 				level = 3
 				instant_build = yes
 			}
+			# todo LAR reduce unrest
 		}
 	}
 }
@@ -181,7 +183,8 @@ country_event = { #6 - Dealing with Salvatores
 			value = -0.05
 		}
 		change_legitimacy = yes
-		set_country_flag = enc_salvatores_tolerated_flag
+		set_country_flag = enc_salvatores_tolerated_flag		
+		# todo LAR add compliance
 	}
 	option = { # house arrest
 		name = enc_reformers.6.b
@@ -208,7 +211,8 @@ country_event = { #7 - Dealing with Mordinos
 			var = legitimacy_change_var
 			value = 0.05
 		}
-		change_legitimacy = yes
+		change_legitimacy = yes		
+		# todo LAR add compliance
 	}
 	option = { # executed
 		name = enc_reformers.7.b

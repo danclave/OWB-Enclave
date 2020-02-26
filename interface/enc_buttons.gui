@@ -223,13 +223,6 @@ guiTypes = {
 	containerWindowType = { # establish_outpost
 		name = establish_outpost_container
 		position = { x = 90 y = 225 } 
-		buttonType = { 
-			name = establish_outpost
-			spriteType = GFX_endgame_score_button
-			pdx_tooltip = establish_outpost_tt
-			pdx_tooltip_delayed = establish_outpost_tt_delayed
-			scale = 0.75
-		} 
 	}
 	containerWindowType = { # abandon_outpost
 		name = abandon_outpost_container
@@ -290,7 +283,7 @@ guiTypes = {
 		}
 	}
 	containerWindowType = { # LLW_state_container
-		name = "LLW_state_container"
+		name = LLW_state_container
 		position = { x = -115 y = -218 }
 		scale = 0.91
 		
@@ -310,7 +303,7 @@ guiTypes = {
 			clipping = no
 			instantTextboxType = { # title
 				name = "title"
-				position = { x = 95 y = -148  }
+				position = { x = 95 y = -148  } 
 				font = "hoi_36header" 
 				text = "Resource Outpost" 
 				maxWidth = 600
@@ -320,16 +313,24 @@ guiTypes = {
 		}
 		containerWindowType = { # title
 			name = "manpower_window"
-			size = { width = 200 height = 30 } 
+			size = { width = 200 height   §= 30 } 
 			clipping = no
+			scale = 0.80
 			instantTextboxType = { # title
 				name = "manpower"
-				position = { x = 0 y = 0 }
+				position = { x = -310 y = -115 }
 				font = "hoi_36header" 
-				text = "Manpower used:" 
+				text = LLW_state_container_info
 				maxWidth = 600
 				maxHeight = 200
-				fixedsize = yes
 			}
+		}		
+		buttonType = { 
+			name = establish_outpost
+			spriteType = GFX_eqipment_sprite_bg 
+			pdx_tooltip = establish_outpost_tt
+			pdx_tooltip_delayed = establish_outpost_tt_delayed
+			position = { x = 80 y =  120 }
 		}
+	}
 }

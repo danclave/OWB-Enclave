@@ -26,3 +26,5 @@ free_building_slots_for_amount_arms_factory_removed: "Can build §Y[?amount_arms
 
 add_slaves_tt: "Change slaves ([?slaves_in_state])"
 add_slaves_tt_delayed: "Add slaves to the state, recovering some of the manpower there.\n\nEffects:\n[!add_slaves_click]\n\nRequires:\n[!add_slaves_click_enabled]"
+
+LLW_state_container_info: "Manpower used:              [?THIS.harvest_resources_manpower_used|0]\nSlaves used:                [?THIS.0|0]\nRobots used:                [?THIS.0|0]"

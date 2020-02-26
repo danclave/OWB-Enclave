@@ -687,8 +687,8 @@ scripted_gui = {
 	
 	establish_outpost = { 
         context_type = selected_state_context
-        window_name = establish_outpost_container
-        parent_window_token = selected_state_view
+        window_name = LLW_state_container
+        parent_window_token = establish_outpost
         visible = { 
 			has_state_flag = LLW_harvest_resources_active
 			not = { has_state_flag = LLW_outpost_active}
