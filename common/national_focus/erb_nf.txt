@@ -1363,38 +1363,36 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 
 		relative_position_id = enc_vlt_power
-		available = {
-			ZAX = {
-				exists = yes
-			}
-		}
+
 		cost = 1.45
 		completion_reward = {
-			if = {
-				limit = {
-					ZAX = {exists = yes }
-				}
-				ZAX = {
-					add_research_slot = 1
-				}
-			}
+			add_ideas = enc_steel_legions
+		}
+	}
+	focus = {#SIERRA - 3 - Mexican Robots
+		id = enc_depot_mexican_robots
+		icon = GFX_goal_enc_eyebot_mex_purity
+		prerequisite = {focus = enc_ZAX_upgrades }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_ZAX_upgrades
+		x = -1
+		y = 1
+		cost = 8.6
+		completion_reward = {
+			add_ideas = tla_efficiency_code2
+			add_ideas = robotic_army_purist
 		}
 	}
 	focus = {#Purists - Give More States
 		id = enc_ZAX_factories
 		icon = GFX_goal_ARM_robco_factory_rearmament
-		x = 0
+		x = 1
 		y = 1
 		ai_will_do = { factor = 1 }
 		prerequisite = {
 			focus = enc_ZAX_upgrades
 		}
 		relative_position_id = enc_ZAX_upgrades
-		available = {
-			ZAX = {
-				exists = yes
-			}
-		}
 		cost = 1.45
 		completion_reward = {
 			custom_effect_tooltip = enc_ZAX_factories_tt
@@ -1403,18 +1401,16 @@ focus_tree = {
 	focus = {#Purists - Go for the SHI
 		id = enc_shi_conquest
 		icon = GFX_goal_shi_focus_golden_dragon
-		x = -2
+		x = -1
 		y = 1
 		ai_will_do = { factor = 1 }
 		prerequisite = {
 			focus = enc_ZAX_factories
 		}
-		relative_position_id = enc_ZAX_factories
-		available = {
-			ZAX = {
-				exists = yes
-			}
+		prerequisite = {
+			focus = enc_depot_mexican_robots
 		}
+		relative_position_id = enc_depot_mexican_robots
 		cost = 1.45
 		completion_reward = {
 			SHI = {
@@ -1426,45 +1422,42 @@ focus_tree = {
 		}
 	}
 	focus = {#Purists - Go for Area 51
-	id = enc_sky_conquests
-	icon = GFX_goal_area_51
-	x = 0
-	y = 1
-	ai_will_do = { factor = 1 }
-	prerequisite = {
-		focus = enc_ZAX_factories
-	}
-	relative_position_id = enc_ZAX_factories
-	available = {
-		ZAX = {
-			exists = yes
+		id = enc_sky_conquests
+		icon = GFX_goal_area_51
+		x = -1
+		y = 1
+		ai_will_do = { factor = 1 }
+		prerequisite = {
+			focus = enc_ZAX_factories
 		}
-	}
-	cost = 1.45
-	completion_reward = {
-		SKY = {
-			ROOT = {
-				grant_wargoals_on_core_states_of_prev = yes
+		prerequisite = {
+			focus = enc_depot_mexican_robots
+		}
+		relative_position_id = enc_ZAX_factories
+
+		cost = 1.45
+		completion_reward = {
+			SKY = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
 			}
+			custom_effect_tooltip = enc_sky_conquest_tt
 		}
-		custom_effect_tooltip = enc_sky_conquest_tt
 	}
-}
 focus = {#Purists - Go to Vegas
 	id = enc_vegas_conquest
 	icon = GFX_goal_VEG_The_Platinum_Chip
-	x = 2
+	x = 1
 	y = 1
 	ai_will_do = { factor = 1 }
 	prerequisite = {
 		focus = enc_ZAX_factories
 	}
-	relative_position_id = enc_ZAX_factories
-	available = {
-		ZAX = {
-			exists = yes
-		}
+	prerequisite = {
+		focus = enc_depot_mexican_robots
 	}
+	relative_position_id = enc_ZAX_factories
 	cost = 1.45
 	completion_reward = {
 		if = {
@@ -6714,20 +6707,7 @@ focus = {#NEVADA - second city
 			add_research_slot = 1
 		}
 	}
-	focus = {#SIERRA - 3 - Mexican Robots
-		id = enc_depot_mexican_robots
-		icon = GFX_goal_enc_eyebot_mex_purity
-		prerequisite = {focus = enc_depot_end}
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_depot_lab
-		x = 0
-		y = 1
-		cost = 8.6
-		completion_reward = {
-			add_ideas = tla_efficiency_code2
-			add_ideas = robotic_army_purist
-		}
-	}
+
 
 	focus = {#SIERRA - 2- weapons
 		id = enc_depot_plasma

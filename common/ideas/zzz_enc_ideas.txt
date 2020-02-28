@@ -2793,6 +2793,28 @@ ideas = {
 				decryption_factor = 0.4
 			}
 		}
+
+		enc_steel_legions = {
+			picture = generic_armor
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.15
+				max_planning = 0.15
+				heat_attrition_factor = -0.15
+			}
+			equipment_bonus = {
+				support_robot_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				combat_robot_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
 	}
 
 	vehicle_restoration_advisor = {
