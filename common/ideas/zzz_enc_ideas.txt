@@ -2374,6 +2374,8 @@ ideas = {
 				industrial_capacity_factory = 0.20
 				industrial_capacity_dockyard = 0.20
 				conscription_factor = -0.05
+				compliance_gain = 0.50
+				required_garrison_factor = -0.20
 			}
 		}
 		ENC_slave_labour_mutants = {
@@ -2393,6 +2395,8 @@ ideas = {
 				industrial_capacity_dockyard = 0.20
 				conscription_factor = -0.05
 				production_speed_buildings_factor = 0.2
+				compliance_gain = 0.50
+				required_garrison_factor = -0.10
 			}
 		}
 		ENC_plague = {

@@ -61,8 +61,11 @@ set_country_flag = default_officer_laws
 
 set_country_flag = do_not_spread_followers
 
-set_variable = { enc_good_allignment = 0 }
-set_variable = { enc_evil_allignment = 0 }
+set_country_flag = has_compliance_core_unique_tiers
+set_country_flag = has_compliance_state_unique_tiers
+set_country_flag = has_resistance_state_unique_tiers
+set_country_flag = has_resistance_core_unique_tiers
+
 
 ###############################
 # POLITICS

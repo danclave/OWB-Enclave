@@ -36,6 +36,7 @@ category =
 		ERB_police
 		ERB_stripes_and_stars
 		ERB_communism
+		ERB_whip
 	}
  compressor = 
  {
@@ -228,6 +229,19 @@ soundeffect =
 
 soundeffect = 
 {
+    name = "ERB_whip"
+    sounds = {
+        sound = ERB_whip
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 0.3    
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+soundeffect = 
+{
     name = "ERB_battle_hymn"
     sounds = {
         sound = ERB_battle_hymn1
@@ -324,6 +338,11 @@ sound =
 {
 	name = "ERB_communism"
 	file = "erb/ERB_communism.wav"
+}
+sound = 
+{
+	name = "ERB_whip"
+	file = "erb/ERB_whip.wav"
 }
 sound = 
 {

@@ -144,7 +144,7 @@ ENC_render_unto_caesar = {
 ENC_debug = {
 	priority = 100
 	visible = {
-		has_country_flag = enc_debug_enabled
+		is_debug = yes
 	}
 }
 
@@ -281,6 +281,19 @@ NCR_hayes_plots = {
 		has_country_flag = enc_hayes_plots
 	}
 }
+
+ENC_exploiting_wasteland = {
+	priority = 1000
+	icon = category_generic_industry
+	allowed = {
+		original_tag = ERB
+	}
+	visible = {
+		# has_completed_focus = enc_purity
+	}
+}
+
+
 # ##############################
 # ICONS
 # ##############################

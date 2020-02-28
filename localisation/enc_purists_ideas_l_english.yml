@@ -140,3 +140,21 @@ enc_mutant_law_both_desc: "While we have already declared ghouls American citize
 officer_law_loyal_enclave_officers: "Loyal Officers"
 robotic_army_purist: "The Steel Backbone"
 robotic_army_purist_desc: "Eyebots, Assaultrons, and more back the Enclave's army. Better a robot than the mutant scum."
+
+
+####################################################
+##### Occupation Localization
+####################################################
+enc_no_garrison_occupation: "No Garrison"
+enc_no_exploit_resources: "Exploit Resources"
+enc_enslave_locals: "Enslave Locals"
+enc_wastelander_pacification: "Wastelander Pacification"
+enc_dismantle_industry: "Dismantle Industry"
+enc_dismantle_industry_tt: "Use the §YSalvage Industry§! decisions to move industry from a province with this policy to your capital."
+occupation_law_enc_dismantle_industry: "Has occupation policy §YDismantle Industry§!"
+
+# Purist compliance
+enc_compliance_purist_25: "Slavery"
+enc_compliance_purist_50: "Significant Slavery"
+enc_compliance_purist_75: "Mass Slavery"
+enc_compliance_purist_100: "Slave State"

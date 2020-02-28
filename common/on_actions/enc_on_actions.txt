@@ -111,6 +111,7 @@ on_actions = {
 	
 	on_release_as_puppet = {
 		effect = {
+			add_manpower = 999999
 			if = {
 				limit = {
 					original_tag = ERB

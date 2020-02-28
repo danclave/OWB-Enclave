@@ -1022,13 +1022,16 @@ scavenge_resources = {
 		
 	}
 }
+
 # DEBUG
 ###############################
 
 ENC_debug = {
 	ENC_misc = {
 		complete_effect = {
-			boris_t_becomes_democratic = yes
+			every_controlled_state = {
+				set_resistance = 0
+			}
 		}
     }
 
@@ -1038,6 +1041,32 @@ ENC_debug = {
 				target = NEW
 				transfer_troops = no
 			}
+		}
+	}	
+	enc_state_target_debug_example = { 
+		icon = onmap_recruit_operative
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ERB
+				has_occupation_modifier = enc_dismantle_industry
+			}
+		}
+		available = {
+			always = yes			
+		}
+		visible = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		days_re_enable = 180
+		# on_map_mode = map_only
+		complete_effect = {
+			
+		}
+		ai_will_do = {
+			base = 0
 		}
 	}
 }

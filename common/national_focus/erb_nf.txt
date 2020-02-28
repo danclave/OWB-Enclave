@@ -6531,8 +6531,13 @@ focus = {#NEVADA - second city
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_ideas = ENC_PA_production
-			add_to_variable = { special_forces_cap_variable = 0.05 }
+			add_ideas = ENC_PA_production				
+			add_tech_bonus = {
+				ahead_reduction = 10
+				uses = 1
+				category = power_armor_tech_category
+			}			
+			add_to_variable = { special_forces_cap_variable = 0.05 }			
 			force_update_dynamic_modifier = yes
 			custom_effect_tooltip = enc_boost_special_forces_tt
 		}

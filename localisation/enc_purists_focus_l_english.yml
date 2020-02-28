@@ -198,10 +198,10 @@ enc_rangers_defense: "Hold The Line"
 enc_rangers_defense_desc: "We should focus on pushing through the NCR and dealing with the Rangers afterwards. Let us prepare accordingly."
 
 enc_rangers_defense_forts: "The Richardson Line"
-enc_rangers_defense_forts_desc: "Named after our late president Dick Richardson, we shall erect a long and hard line of fortifications to deter any penetration by the Rangers."
+enc_rangers_defense_forts_desc: "Named after our late president Dick Richardson, we shall erect a long and hard line of fortifications to deter any penetration into our exposed rear by the Rangers."
 
 enc_rangers_defense_sabotage: "Sabotage Supply Lines"
-enc_rangers_defense_sabotage_desc: "Supplying an army through the desert is a logistical nightmare. While the rangers are used to this task, their supply system is still dependant on a few vulnerable supply routes and caches. The right preparations will allow us to severely damage their supply lines in one fell swoop."
+enc_rangers_defense_sabotage_desc: "Supplying an army through the desert is a logistical nightmare. While the rangers are used to this task, their supply system is still dependent on a few vulnerable supply routes and caches. The right preparations will allow us to severely damage their supply lines in one fell swoop."
 
 enc_rangers_defense_lessons: "Lessons from Construction"
 enc_rangers_defense_lessons_desc: "Our engineers have gained plenty of practical experience building fortifications in the last few months. We can cement their knowledge by requesting that they document their findings properly."
