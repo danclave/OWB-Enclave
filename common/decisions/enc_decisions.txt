@@ -428,7 +428,7 @@ ENC_NCR_hiding = {
 		#--------------------------
 		days_remove = ENC_hide_days
 		visible = {
-			always = false
+			always = no
 		}
 		complete_effect = {
 			# tooltips
@@ -987,21 +987,22 @@ ENC_render_unto_caesar = {
 		timeout_effect = { country_event = { id = enc_reformers.101 }}
 		complete_effect = { }
 	}
+
 	ENC_rise_slaves = {
-	priority = 300
+		priority = 300
 		fire_only_once = yes
 		available = {
 			518 = {
 				has_state_flag = enc_slaves_armed
 			}
 		}
-	visible = {
+		visible = {
 			tag = ERB
 			has_completed_focus = enc_ss_ceasar_bottom_uprising
-			}
+		}
 		complete_effect = {
 			country_event = { id = enc_reformers.65 }
-			}
+		}
 	}
 }
 
@@ -1009,7 +1010,7 @@ scavenge_resources = {
 	enc_reject_scavenging = {
 		cost = 50
 		fire_only_once = yes
-		
+
 		allowed = {
 			original_tag = ERB
 		}

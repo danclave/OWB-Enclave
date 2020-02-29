@@ -995,7 +995,7 @@ ENC_infiltrating_NCR = {
 				is_controlled_by = ROOT
 				has_resources_amount = {
 					resource = water
-					amount = 10
+					amount > 9
 				}
 			}
 		}
@@ -1019,7 +1019,7 @@ ENC_infiltrating_NCR = {
 					is_controlled_by = ROOT
 					has_resources_amount = {
 						resource = water
-						amount = 10
+						amount > 9
 					}
 				}
 				custom_effect_tooltip = state_lose_10_water
@@ -2597,8 +2597,6 @@ ENC_rockies_reconstruction = {
 				id = enc_reformers.157
 			}
 			set_temp_variable = { caps_diff = COST }
-			get_caps_difference = yes
-			check_variable = { caps_display_temp > 99 }
 		}
 	}
 	ENC_mormons = {
@@ -3327,7 +3325,7 @@ ENC_securing_borders = {
 		activation = {
 			TRL = {
 				has_war = no
-				has_cosmetic_flag =
+				has_cosmetic_flag = NEW_mariposa
 			}
 			NOT = {
 				country_exists = NCR
