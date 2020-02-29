@@ -1034,7 +1034,7 @@ country_event = { #30 - Spies in NCR - relocated successfully
 	option = { # told you they were overreacting
 		name = enc_reformers.30.a
 		custom_effect_tooltip = enc_ncr_spies_set
-		add_country_flag = enc_ncr_spies
+		set_country_flag = enc_ncr_spies
 	}
 }
 
