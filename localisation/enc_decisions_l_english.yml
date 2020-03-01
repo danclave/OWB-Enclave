@@ -370,7 +370,11 @@ ENC_political_actions: "Political Actions"
 ENC_remove_emergency_draft: "Remove Emergency Draft"
 enc_emergency_draft_reform: "Institute an Emergency Draft"
 CES_crisis: "The Wrath of Caesar"
+CES_push_refugees: "Expel Mutants"
+CES_push_refugees_desc: "We can push some of the mutants east into the Legion's lands. He may struggle to handle them, buying us time, but it will further boost his power."
 ENC_render_unto_caesar: "Grabbing the Bull by the Horns"
+CES_border_raiders: "Raid the Legion"
+CES_border_raiders_desc: "We can attack the Legion's outposts and supply lines to buy us time... but this will cost us."
 ENC_rise_slaves: "Issue the Second Emancipation Proclamation"
 ENC_rise_slaves_desc: "We can trigger the Second American Revolution by promising freedom to the Legion's slaves.  However, the Legion may treat our decision to give plasma guns to slaves in their territory as an act of war."
 ENC_nuke_arm: "Arming ICBM..."
@@ -380,6 +384,9 @@ flagstaff_is_nuked: "§RFlagstaf is nuked in 1 day§!\n"
 ENC_nuke_desc: "When ready, we will nuke Flagstaff and decapitate Caesar.  Although you have to wonder of America will destroy itself by winning the war this way."
 ENC_pacific_commonwealth1: "Rebuilding the Pacific Commonwealth"
 ENC_pacific_commonwealth1_desc: "The good people of Klamath will be the nucleus for a revived Pacific Commonwealth.  Because hey, compared to the Washington Brotherhood, even we look good."
+
+################## Thoug
+##
 
 ###################################
 # American Broadcast Department
