@@ -156,14 +156,14 @@ ENC_reno = {
 		priority = 30
 		activation = {
             NOT = { has_country_flag = enc_graffs_completed }
-            has_full_control_of_state = 285 #NEW RENO			
+            has_full_control_of_state = 285 #NEW RENO
 		}
 		available = {
 			has_country_flag = enc_graffs_completed
 		}
 		cancel_trigger = {
-			not = {				
-				has_full_control_of_state = 285 #NEW RENO		
+			not = {
+				has_full_control_of_state = 285 #NEW RENO
 			}
 		}
 		is_good = no
@@ -597,7 +597,7 @@ ENC_NCR_hiding = {
 			custom_effect_tooltip = ENC_reveal_to_ncr.tt
 		}
 	}
-	ENC_bribe_NCR_officials = {	
+	ENC_bribe_NCR_officials = {
 		icon = generic_political_discourse
 		cost = 0
 		allowed = {
@@ -622,7 +622,7 @@ ENC_NCR_hiding = {
 			set_temp_variable = { caps_to_add = @BRIBE_COST }
 			multiply_temp_variable = { caps_to_add = -1 }
 			add_caps = yes
-		} 
+		}
 		days_re_enable = 160
 	}
 }
@@ -865,7 +865,7 @@ ENC_political_infighting = {
 			set_temp_variable = { popularity_change = 0.05 }
 			add_popularity_to_ruling_party = yes
 		}
-		days_re_enable = 100		
+		days_re_enable = 100
 	}
 }
 
@@ -900,7 +900,7 @@ ENC_render_unto_caesar = {
 			}
 		}
 		is_good = no
-		days_mission_timeout = 1068
+		days_mission_timeout = 720
 		timeout_effect = {
 			CES = {
 				country_event = { id = enc.41 }
@@ -911,6 +911,75 @@ ENC_render_unto_caesar = {
 			ERB = { country_event = {id = enc_reformers.101 } }
 		}
 	}
+	CES_push_refugees = {
+		icon = generic_break_treaty
+		priority = 30
+		fire_only_once = YES
+
+		available = {
+			has_country_flag = ENC_CES_hostile
+		}
+		is_good = no
+		days_remove = 37
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = CES_crisis
+				days = 100
+			}
+			CES = {
+				random_owned_state = {
+					add_manpower = 10000
+				}
+				random_owned_state = {
+					add_manpower = 10000
+				}
+			}
+		}
+	}
+	CES_push_refugees = {
+		icon = generic_break_treaty
+		priority = 30
+		fire_only_once = YES
+
+		available = {
+			has_country_flag = ENC_CES_hostile
+		}
+		is_good = no
+		days_remove = 37
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = CES_crisis
+				days = 100
+			}
+			CES = {
+				random_owned_state = {
+					add_manpower = 10000
+				}
+				random_owned_state = {
+					add_manpower = 10000
+				}
+			}
+		}
+	}
+	CES_border_raiders = {
+		icon = generic_break_treaty
+		priority = 30
+		fire_only_once = YES
+
+		available = {
+			has_country_flag = ENC_CES_hostile
+		}
+		is_good = no
+		days_remove = 60
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = CES_crisis
+				days = 100
+			}
+			add_manpower = -1000
+		}
+	}
+
 	MEX_crisis = {
 		icon = generic_break_treaty
 		priority = 30
@@ -1009,7 +1078,7 @@ scavenge_resources = {
 	enc_reject_scavenging = {
 		cost = 50
 		fire_only_once = yes
-		
+
 		allowed = {
 			original_tag = ERB
 		}
@@ -1019,7 +1088,7 @@ scavenge_resources = {
 		complete_effect = {
 			clr_country_flag = enabled_scavenging
 		}
-		
+
 	}
 }
 
@@ -1042,8 +1111,8 @@ ENC_debug = {
 				transfer_troops = no
 			}
 		}
-	}	
-	enc_state_target_debug_example = { 
+	}
+	enc_state_target_debug_example = {
 		icon = onmap_recruit_operative
 		state_target = yes
 		target_trigger = {
@@ -1053,7 +1122,7 @@ ENC_debug = {
 			}
 		}
 		available = {
-			always = yes			
+			always = yes
 		}
 		visible = {
 			always = yes
@@ -1063,7 +1132,7 @@ ENC_debug = {
 		days_re_enable = 180
 		# on_map_mode = map_only
 		complete_effect = {
-			
+
 		}
 		ai_will_do = {
 			base = 0
