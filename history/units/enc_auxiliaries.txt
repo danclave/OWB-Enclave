@@ -1,5 +1,6 @@
 ﻿division_template = {
 	name = "Enclave Auxiliaries"
+	template_counter= 73
 	
 	regiments = {
 		infantry = { x = 0 y = 0 }

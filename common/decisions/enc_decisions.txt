@@ -862,8 +862,10 @@ ENC_political_infighting = {
 			}
 		}
 		remove_effect = {
+			army_experience = 25
 			set_temp_variable = { popularity_change = 0.05 }
 			add_popularity_to_ruling_party = yes
+			add_manpower = -10
 		}
 		days_re_enable = 100		
 	}
@@ -1029,9 +1031,9 @@ scavenge_resources = {
 ENC_debug = {
 	ENC_misc = {
 		complete_effect = {
-			every_controlled_state = {
-				set_resistance = 0
-			}
+			set_variable = { targeted_sabotage_infrastructure = -0.75 }
+			set_variable = { targeted_sabotage_resources = -0.75 }
+			set_variable = { targeted_sabotage_industry = -0.75 }
 		}
     }
 

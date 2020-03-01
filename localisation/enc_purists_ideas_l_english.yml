@@ -145,7 +145,7 @@ robotic_army_purist_desc: "Eyebots, Assaultrons, and more back the Enclave's arm
 ####################################################
 ##### Occupation Localization
 ####################################################
-enc_no_garrison_occupation: "No Garrison"
+enc_no_garrison_occupation: "No Occupation"
 enc_no_exploit_resources: "Exploit Resources"
 enc_enslave_locals: "Enslave Locals"
 enc_wastelander_pacification: "Wastelander Pacification"

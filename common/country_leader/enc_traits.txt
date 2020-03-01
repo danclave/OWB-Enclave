@@ -35,9 +35,8 @@ leader_traits = {
 	}
 	purist_2 = {
 		random = no
-		elites_drift = 0.30
-		stability_weekly = -0.0025
-		war_support_factor = 0.15
+		elites_drift = 0.20
+		war_support_factor = 0.10
 	}
 	reformer = {
 		random = no
@@ -57,8 +56,8 @@ leader_traits = {
 	}
 	suppressor = {
 		random = no
-		enemy_partisan_effect = -0.50
-		conscription_factor = -0.05
+		resistance_target = -0.20
+		resistance_growth = -0.25
 	}
 	enc_paratroopers_commander= {
 		random = no

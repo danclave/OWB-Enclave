@@ -110,7 +110,7 @@ ideas = {
 				NOT = { has_country_flag = reformers_purged }
 			}
 			traits = {
-				EPA_director
+				EPA_director 
 			}
 			ai_will_do = {
 				factor = 1

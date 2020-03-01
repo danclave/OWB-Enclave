@@ -8,7 +8,41 @@ oob = "ERB_2265"
 
 add_research_slot = 2
 set_technology = {
-	enclave_pa_unlock_tech = 1
+	infantry_tech_level_tribal = 1
+	infantry_tech_level_settler = 1
+	infantry_tech_level_scientific = 1
+	support_tech_level_tribal = 1
+	support_tech_level_settler = 1
+	support_tech_level_scientific = 1
+	special_forces_tech_level_tribal = 1
+	special_forces_tech_level_settler = 1
+	#special_forces_tech_level_scientific = 1
+	power_armour_tech_level_settler = 1
+	power_armour_tech_level_scientific = 1
+	vehicles_tech_level_tribal = 1
+	vehicles_tech_level_settler = 1
+	#vehicles_tech_level_scientific = 1
+	robotics_tech_level_tribal = 1
+	robotics_tech_level_settler = 1
+	#robotics_tech_level_scientific = 1
+	air_tech_level_tribal = 1
+	air_tech_level_settler = 1
+	#air_tech_level_scientific = 1
+	naval_tech_level_tribal = 1
+	naval_tech_level_settler = 1
+	#naval_tech_level_scientific = 1
+	tools_tech_level_tribal = 1
+	tools_tech_level_settler = 1
+	#tools_tech_level_scientific = 1
+	habitation_tech_level_tribal = 1
+	habitation_tech_level_settler = 1
+	#habitation_tech_level_scientific = 1
+	exploitation_tech_level_tribal = 1
+	exploitation_tech_level_settler = 1
+	#exploitation_tech_level_scientific = 1
+	electronics_tech_level_tribal = 1
+	electronics_tech_level_settler = 1
+	#electronics_tech_level_scientific = 1
 	elite_army = 1
 	standard_weaponry_tech = 1
 	melee_weaponry_tech_1 = 1
@@ -25,20 +59,8 @@ set_technology = {
 	simple_servo_tech = 1
 	stripped_pa_tech = 1
 	scav_pa_tech = 1
-	light_navy_hull_tech_1 = 1
-	waterproof_sealing_tech = 1
-	medium_navy_hull_tech_1 = 1
-	multi_deck_construction_tech = 1
-	heavy_navy_hull_tech_1 = 1
-	naval_module_tech = 1
-	naval_weapons_module_tech = 1
-	naval_support_module_tech = 1
-	naval_armour_tech_1 = 1
-	naval_communications_module_tech_1 = 1
-	robot_makeshift_automatons_tech  = 1
+	underground_industry_tech = 1
 	power_armour_enclave_1 = 1
-	vertibird_tech = 1
-	vertibird_cas_tech =1
 }
 
 set_country_flag = not_allowed_to_core_flag
@@ -65,6 +87,12 @@ set_country_flag = has_compliance_core_unique_tiers
 set_country_flag = has_compliance_state_unique_tiers
 set_country_flag = has_resistance_state_unique_tiers
 set_country_flag = has_resistance_core_unique_tiers
+
+# makes resource sabotage less likely
+set_variable = { targeted_sabotage_infrastructure = -0.75 }
+set_variable = { targeted_sabotage_resources = -0.75 }
+set_variable = { targeted_sabotage_industry = -0.75 }
+
 
 
 ###############################

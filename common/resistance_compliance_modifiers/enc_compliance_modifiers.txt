@@ -1,0 +1,74 @@
+#check resistance_modifiers.txt for example
+
+
+enc_compliance_purist_25 = {
+	type = core_compliance_modifier
+	icon = "GFX_occupation_compliance_modifier_strip:4"
+	small_icon = "GFX_occupation_compliance_modifier_small_strip:4"
+	threshold = 25
+	margin = 5
+	visible = {
+		original_tag = ERB
+	}
+	enabled = {
+		has_completed_focus = enc_slave_labour
+	}
+	state_modifier = {
+		required_garrison_factor = -0.1
+		local_resources = 0.10
+	}
+}
+
+enc_compliance_purist_50 = {
+	type = core_compliance_modifier
+	icon = "GFX_occupation_compliance_modifier_strip:4"
+	small_icon = "GFX_occupation_compliance_modifier_small_strip:4"
+	threshold = 50
+	margin = 5
+	visible = {
+		original_tag = ERB
+	}
+	enabled = {
+		has_completed_focus = enc_slave_labour
+	}
+	state_modifier = {
+		required_garrison_factor = -0.1
+		local_resources = 0.10
+	}
+}
+
+enc_compliance_purist_75 = {
+	type = core_compliance_modifier
+	icon = "GFX_occupation_compliance_modifier_strip:4"
+	small_icon = "GFX_occupation_compliance_modifier_small_strip:4"
+	threshold = 75
+	margin = 5
+	visible = {
+		original_tag = ERB
+	}
+	enabled = {
+		has_completed_focus = enc_slave_labour
+	}
+	state_modifier = {
+		required_garrison_factor = -0.1
+		local_resources = 0.10
+	}
+}
+
+enc_compliance_purist_100 = {
+	type = core_compliance_modifier
+	icon = "GFX_occupation_compliance_modifier_strip:4"
+	small_icon = "GFX_occupation_compliance_modifier_small_strip:4"
+	threshold = 100
+	margin = 5
+	visible = {
+		original_tag = ERB
+	}
+	enabled = {
+		has_completed_focus = enc_slave_labour
+	}
+	state_modifier = {
+		required_garrison_factor = -0.1
+		local_resources = 0.10
+	}
+}

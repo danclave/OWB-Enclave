@@ -1,5 +1,6 @@
 ﻿division_template = {
 	name = "Enclave PA Infantry"
+	template_counter= 90
 	
 	regiments = {
 		power_armour = { x = 0 y = 0 }

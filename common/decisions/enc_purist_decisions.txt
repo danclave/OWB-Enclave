@@ -698,7 +698,7 @@ ENC_exploiting_wasteland = {
 				add_command_power = -25
 			}
 		}
-		days_remove = 100
+		days_remove = 50
 		remove_effect = {
 			random_controlled_state = {
 				limit = {
@@ -748,7 +748,7 @@ ENC_exploiting_wasteland = {
 				add_command_power = -25
 			}
 		}		
-		days_remove = 100
+		days_remove = 50
 		remove_effect = {
 			random_controlled_state = {
 				limit = {
