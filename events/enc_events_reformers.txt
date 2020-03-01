@@ -2060,8 +2060,8 @@ country_event = { #57 - Purist commander
 					}
 				}
 			}
-			custom_effect_tooltip = leader_charismatic_tt
 		}
+		custom_effect_tooltip = leader_charismatic_tt
 	}
 }
 
