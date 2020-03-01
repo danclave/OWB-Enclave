@@ -335,3 +335,7 @@ enc_big_jim_chief_of_army_desc:0 "Big Jim knows how to succeed at war, and succe
 
 enc_drummund_chief_of_army:0 "General Alexander Drummund"
 enc_drummund_chief_of_army_desc:0 "Drummund has years of experience with which to back up his appointment, and it shows in his capacity for planning, both in speed and brilliance. However, he is unpopular among the people, and his appointment will weaken the republic's standing."
+
+
+##### Compliance/Resistance
+no_garrison_occupation_reformers: "Unredeemed Territory"

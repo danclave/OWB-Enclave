@@ -136,7 +136,7 @@ ideas = {
 			}
 		}
 	}
-	economic_advisors = {
+	economic_advisor = {
 		joseph_dodge1 = {
 			picture = generic_political_advisor_europe_3
 			allowed = {

@@ -146,10 +146,10 @@ country_event = { #5 - Dealing with Bishops
 				level = 3
 				instant_build = yes
 			}
-		}		
+		}
 		set_temp_variable = { caps_to_add = 200 }
 		add_caps = yes
-		
+
 		hidden_effect = {
 			country_event = {
 				id = enc_reformers.20
@@ -1034,7 +1034,7 @@ country_event = { #30 - Spies in NCR - relocated successfully
 	option = { # told you they were overreacting
 		name = enc_reformers.30.a
 		custom_effect_tooltip = enc_ncr_spies_set
-		add_country_flag = enc_ncr_spies
+		set_country_flag = enc_ncr_spies
 	}
 }
 

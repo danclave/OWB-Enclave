@@ -33,11 +33,11 @@ ideas = {
 			modifier = {
 				max_fuel_factor = 0.2
 				fuel_gain_factor = 0.1
-				equipment_bonus = {
-					power_armor_equipment = {
-						instant = yes
-						fuel_consumption_factor = -0.05
-					}
+			}
+			equipment_bonus = {
+				power_armor_equipment = {
+					instant = yes
+					fuel_consumption_factor = -0.05
 				}
 			}
 		}
@@ -807,7 +807,7 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				conscription_factor = -0.10
-				enemy_partisan_effect = -0.1
+				resistance_activity = -0.05
 				stability_factor = 0.05
 			}
 		}
@@ -823,7 +823,7 @@ ideas = {
 			modifier = {
 				conscription_factor = -0.05
 				political_power_gain = 0.13
-				enemy_partisan_effect = -0.1
+				resistance_decay = 0.05
 				stability_factor = 0.08
 			}
 		}
@@ -838,7 +838,7 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				conscription_factor = -0.05
-				enemy_partisan_effect = -0.1
+				resistance_activity = -0.1
 				political_power_gain = 0.10
 			}
 		}
@@ -854,7 +854,7 @@ ideas = {
 			modifier = {
 				conscription_factor = -0.05
 				political_power_gain = 0.10
-				enemy_partisan_effect = -0.15
+				resistance_activity = -0.10
 				}
 		}
 		ENC_constitution = {
@@ -1690,7 +1690,7 @@ ideas = {
 				elites_drift = 0.10
 			}
 		}
-		
+
 		enc_segregationist_growth_2 = {
 			picture = enc_smugging
 			allowed = {
@@ -1702,9 +1702,9 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				elites_drift = 0.20
-			}			
+			}
 		}
-		
+
 		enc_democracy_growth = {
 			picture = enc_smugging
 			allowed = {
@@ -1716,9 +1716,9 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				people_drift = 0.10
-			}		
+			}
 		}
-		
+
 		enc_democracy_growth_2 = {
 			picture = enc_smugging
 			allowed = {
@@ -1730,7 +1730,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				people_drift = 0.20
-			}		
+			}
 		}
 ####################################################
 # REFORM - REBUILDING A NATION
@@ -1764,7 +1764,7 @@ ideas = {
             removal_cost = -1
 			modifier = {
 				conscription_factor = -0.10
-				enemy_partisan_effect = -0.1
+				resistance_activity = -0.05
 				stability_factor = 0.05
 			}
 		}
