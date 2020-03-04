@@ -795,3 +795,85 @@ establish_EAZ = {
 		}
 	}
 }
+
+calculate_distance_to_nearest_enclave_state = {
+	# fire this in state scope
+	ERB = {
+		for_every_owned_state = {
+			if = {
+				limit = {
+					or = {
+						not = { has_temp_variable = distance_to_nearest_enclave_state }
+						check_temp_variable = { distance_to_nearest_enclave_state > THIS.distance_to@ROOT }
+					}
+				}
+				set_temp_variable = { distance_to_nearest_enclave_state = THIS.distance_to@ROOT }
+			}
+		}
+	}
+}
+
+calculate_establish_outpost_cost = {	
+	set_variable = { harvest_resources_manpower_used = state_population_k }
+	multiply_variable = { harvest_resources_manpower_used = 10 }	
+	set_temp_variable = { harvest_resources_cost = harvest_resources_manpower_used }
+	multiply_temp_variable = { harvest_resources_cost = -1 }	
+}
+
+change_slaves_in_state = {	
+	# ERB.max_slave_ratio = 0.25
+	# slavery_change = 1
+	# current_slave_ratio = 0.10
+	
+	# lets say we press the add max button on a state with:
+	# 	- 1000 manpower tied up
+	# 	- the slavery ratio is at 10%
+	# 	- the max slavery ratio is 25%
+	
+	set_variable = { current_slave_ratio = current_slave_ratio?0 } # current ratio is 10%
+	
+	custom_effect_tooltip = "test"
+	
+	set_temp_variable = { actual_slavery_change = current_slave_ratio } actual change is 100 right now%	
+	
+	clamp_variable = { current_slave_ratio = ERB.max_slave_ratio } # current ratio cannot go above 25%
+	add_to_variable = { current_slave_ratio = slavery_change } # 10% + 100% = 25% (due to clamp)
+	
+	subtract_from_variable = { actual_slavery_change = current_slave_ratio } # 10% - 25% = -15%
+	multiply_temp_variable = { actual_slavery_change = -1 } # -15% * -1 = 15%
+	
+	# out of 1000 manpower invested in this state, 15% is recovered
+	set_temp_variable = { recoverable_manpower = harvest_resources_manpower_used } # recoverable_manpower = 1000
+	multiply_temp_variable = { recoverable_manpower = actual_slavery_change } #	recoverable_manpower = 1000 * 0.15
+	add_manpower = recoverable_manpower	# add 150 manpower
+	
+	# Slave cost 
+	set_temp_variable = { slave_cost = recoverable_manpower } # slave cost = 150
+	multiply_temp_variable = { slave_cost = 10 } # slave cost = 1500
+	ERB = { subtract_from_variable = { slave_number_display = slave_cost } }	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

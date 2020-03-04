@@ -1111,6 +1111,10 @@ spriteTypes = {
             name = "GFX_idea_enc_idea_infighting"
  		    texturefile = "gfx/interface/ideas/enc_idea_infighting.dds"
  	    } 
+        SpriteType = {#enc_idea_lawless_wasteland
+            name = "GFX_idea_enc_idea_lawless_wasteland"
+ 		    texturefile = "gfx/interface/ideas/enc_idea_lawless_wasteland.dds"
+ 	    } 
         SpriteType = {#enc_idea_manpower_1
             name = "GFX_idea_enc_idea_manpower_1"
  		    texturefile = "gfx/interface/ideas/enc_idea_manpower_1.dds"

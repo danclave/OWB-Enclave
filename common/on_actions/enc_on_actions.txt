@@ -59,7 +59,19 @@ on_actions = {
 	#FROM is war target
 	on_declare_war = {
 		effect = {
-			
+			if = {
+				limit = {
+					original_tag = ERB		
+				}
+				hidden_effect = {
+					LLW = {
+						add_to_war = { 
+							targeted_alliance = ERB 
+							enemy = FROM 
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -139,6 +151,21 @@ on_actions = {
 	
 	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
 	on_annex = {
+		# if = {
+			# limit = {
+				# original_tag = ERB
+			# }
+			# every_owned_state = {
+				# limit = {
+					# not = { 
+						# is_core_of = ERB
+					# }
+				# }
+				# LLW = {
+					# transfer_state = PREV
+				# }	
+			# }		
+		# }
 	}
 	
 	# ROOT is the winner, FROM is the loser.
@@ -170,7 +197,10 @@ on_actions = {
 	on_state_control_changed = {	
 		effect = {
 			if = {
-				limit = {	
+				limit = {
+					ROOT = { 
+						original_tag = ERB
+					}
 					original_tag = ERB
 				}
 				calculate_hiding_cost = yes
@@ -179,14 +209,19 @@ on_actions = {
 						has_completed_focus = enc_reform
 					}
 					advanced_update_legitimacy = yes
-				}
-				else_if  = {
-					limit = {
-						has_completed_focus = enc_purity
-						always = no
-					}
-					LLW = {
-						set_state_controller = FROM.FROM
+					else = {
+						LLW = {
+							if = {
+								limit = {
+									num_of_controlled_states = 0
+								}
+								# country_event = { id = enc_pur_llw.1 }
+								add_to_war = { 
+									targeted_alliance = ERB 
+									enemy = FROM								
+								}
+							}
+						}
 					}
 				}
 			}

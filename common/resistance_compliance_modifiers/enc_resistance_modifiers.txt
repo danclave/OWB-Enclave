@@ -25,6 +25,7 @@
 #	margin = 2
 #
 #	#if visible is false, the modifier will not show up anywhere
+#   # ROOT is occupied, FROM is occupier
 #	visible = {
 #
 #	}
@@ -50,120 +51,23 @@
 #	}
 #}
 
-
-resistance_20 = {
-	type = state_resistance_modifier
-	icon = "GFX_occupation_resistance_modifier_strip:1"
-	small_icon = "GFX_occupation_resistance_modifier_small_strip:1"
-	threshold = 20
-	margin = 2
-	visible = {
-		hidden_trigger = {
-			use_generic_state_resistance_tiers = yes
-		}
-	}
-	enabled = {
-		hidden_trigger = {
-			use_generic_state_resistance_tiers = yes
-		}
-	}
-	state_modifier = {
-		local_supplies_for_controller = -0.25
-	}
-}
-resistance_40 = {
-	type = state_resistance_modifier
-	icon = "GFX_occupation_resistance_modifier_strip:3"
-	small_icon = "GFX_occupation_resistance_modifier_small_strip:3"
-	threshold = 40
-	margin = 2
-	visible = {
-		hidden_trigger = {
-			use_generic_state_resistance_tiers = yes
-		}
-	}
-	enabled = {
-		hidden_trigger = {
-			use_generic_state_resistance_tiers = yes
-		}
-	}
-	state_modifier = {
-		resistance_damage_to_garrison = 0.5
-		resistance_garrison_penetration_chance = 0.3
-	}
-}
-
-resistance_60 = {
-	type = state_resistance_modifier
-	icon = "GFX_occupation_resistance_modifier_strip:3"
-	small_icon = "GFX_occupation_resistance_modifier_small_strip:3"
-	threshold = 60
-	margin = 2
-	visible = {
-		hidden_trigger = {
-			use_generic_state_resistance_tiers = yes
-		}
-	}
-	enabled = {
-		hidden_trigger = {
-			use_generic_state_resistance_tiers = yes
-		}
-	}
-	state_modifier = {
-		army_speed_factor_for_controller = -0.25
-		local_supplies_for_controller = -0.25
-		attrition_for_controller = 0.3
-	}
-}
-
-resistance_80 = {
-	type = state_resistance_modifier
-	icon = "GFX_occupation_resistance_modifier_strip:4"
-	small_icon = "GFX_occupation_resistance_modifier_small_strip:4"
-	threshold = 80
-	margin = 2
-	visible = {
-		hidden_trigger = {
-			use_generic_state_resistance_tiers = yes
-		}
-	}
-	enabled = {
-		hidden_trigger = {
-			use_generic_state_resistance_tiers = yes
-		}
-	}
-
-	alert_level = high
-	alert_margin = 10
-
-	state_modifier = {
-		resistance_damage_to_garrison = 1
-		resistance_garrison_penetration_chance = 0.3
-		disable_strategic_redeployment_for_controller = 1
-	}
-}
-
-resistance_90 = {
+enc_resistance_90_LLW = {
 	type = state_resistance_modifier
 	icon = "GFX_occupation_resistance_modifier_strip:4"
 	small_icon = "GFX_occupation_resistance_modifier_small_strip:4"
 	threshold = 90
 	margin = 0
-	visible = {
-		hidden_trigger = {
-			use_generic_state_resistance_tiers = yes
-		}
-	}
-	enabled = {
-		hidden_trigger = {
-			use_generic_state_resistance_tiers = yes
-		}
-	}
-
 	alert_level = high
 	alert_margin = 5
-
-	state_modifier = {
-		attrition_for_controller = 1
+	visible = {
+		FROM = {		
+			original_tag = ERB
+		}
+	}
+	on_enable = {
+		custom_effect_tooltip = transfer_to_LLW
+		hidden_effect = {
+			LLW = {	transfer_state = PREV }
+		}
 	}
 }

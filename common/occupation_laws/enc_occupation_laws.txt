@@ -1,5 +1,7 @@
 enc_no_garrison_occupation = {
-	
+	main_fallback_law = yes
+	default_law = yes
+	starting_law = yes
 	visible = {
 		original_tag = ERB
 	}
@@ -8,10 +10,12 @@ enc_no_garrison_occupation = {
 
 	state_modifier = {
 		required_garrison_factor = -1 
-		resistance_target = -0.50
+		resistance_target = 1
 		no_compliance_gain = 1
 		local_resources = -1
 		local_factories = -1 
+		resistance_growth = 25
+		resistance_garrison_penetration_chance = -1
 	}
 	#suppressed_state_modifier = {
 	#	#no_compliance_gain = 1
@@ -31,6 +35,8 @@ enc_wastelander_pacification = {
 		required_garrison_factor = 0.20
 		local_resources = -0.50
 		no_compliance_gain = 1
+		resistance_garrison_penetration_chance = -0.25
+		resistance_decay = 1 
 	}
 }
 
@@ -41,10 +47,6 @@ enc_dismantle_industry = {
 	} 
 	icon = 9 
 	sound_effect = "Martial_Law_Interface_No_Garrison"
-		
-	on_add = {
-		ERB = { add_manpower = 1000000 }
-	} 
 	
 	available = {
 		
@@ -90,7 +92,9 @@ enc_no_exploit_resources = {
 		resistance_growth = 0
 		no_compliance_gain = 1
 		local_resources = 0.20
+		resistance_garrison_penetration_chance = -0.50
 	}
+	
 }
 
 
