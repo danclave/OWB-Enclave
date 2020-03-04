@@ -1,0 +1,677 @@
+ideas = {
+
+	officer_training_laws = {
+		law = yes
+
+		ENC_officers_traitors = {
+			picture = enc_officers_traitors
+			allowed = {
+				always = no
+            }
+
+            allowed_civil_war = {
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				elites_drift = 0.10
+				max_planning = 0.05
+				army_leader_start_level = 1
+				army_leader_start_attack_level = 1
+				army_leader_start_planning_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 1
+				military_leader_cost_factor = 1.5
+				equipment_capture_factor = -1
+			}
+		}
+		ENC_officers_traitors_2 = {
+			allowed = {
+				always = no
+            }
+			picture = enc_officers_traitors
+			allowed = {
+				always = no
+            }
+
+            allowed_civil_war = {
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				elites_drift = 0.05
+				max_planning = 0.03
+				army_leader_start_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 1
+				military_leader_cost_factor = 1
+				equipment_capture_factor = -0.5
+			}
+		}
+		ENC_officers_central = {
+			allowed = {
+				always = no
+            }
+			picture = enc_officers
+            removal_cost = -1
+			modifier = {
+				elites_drift = 0.1
+				army_leader_start_level = 3
+				# new
+				army_org_factor = 0.2
+				max_planning = 0.3
+				max_command_power = 15
+				army_leader_start_level = 2
+				army_leader_start_attack_level = 2
+				army_leader_start_planning_level = 3
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 2
+				military_leader_cost_factor = 1
+			}
+		}
+		ENC_officers_central_2 = {
+			allowed = {
+				always = no
+            }
+			picture = enc_officers
+            removal_cost = -1
+			modifier = {
+				elites_drift = 0.1
+				army_leader_start_level = 3
+				# new
+				army_org_factor = 0.30
+				max_planning = 0.40
+				supply_consumption_factor = -0.15
+				max_command_power = 30
+
+				army_leader_start_level = 2
+				army_leader_start_attack_level = 3
+				army_leader_start_planning_level = 3
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 2
+
+				military_leader_cost_factor = 1
+			}
+		}
+		ENC_officers_local = {
+			allowed = {
+				always = no
+            }
+			picture = enc_officers
+            removal_cost = -1
+			modifier = {
+				elites_drift = 0.1
+				max_planning = 0.1
+				army_leader_start_level = 3
+				# new
+				planning_speed = 0.25
+				army_speed_factor = 0.15
+
+				army_leader_start_level = 2
+				army_leader_start_attack_level = 2
+				army_leader_start_planning_level = 2
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 3
+				military_leader_cost_factor = 0.50
+
+			}
+		}
+		ENC_officers_local_2 = {
+			allowed = {
+				always = no
+            }
+			picture = enc_officers
+            removal_cost = -1
+			modifier = {
+				elites_drift = 0.1
+				army_leader_start_level = 3
+				# new
+				planning_speed = 0.50
+				army_speed_factor = 0.15
+
+				army_leader_start_level = 2
+				army_leader_start_attack_level = 2
+				army_leader_start_planning_level = 2
+				army_leader_start_defense_level = 2
+				army_leader_start_logistics_level = 3
+				military_leader_cost_factor = 0.50
+			}
+		}
+		ENC_officers = {
+			picture = enc_officers
+			allowed = {
+				always = no
+            }
+
+            allowed_civil_war = {
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				elites_drift = 0.05
+				max_planning = 0.2
+				army_leader_start_level = 2
+				army_leader_start_attack_level = 2
+				army_leader_start_planning_level = 2
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 2
+				military_leader_cost_factor = 1
+				equipment_capture_factor = -1
+			}
+		}
+		officer_law_enclave_officers = {
+			allowed = {
+				original_tag = ERB
+				always = no
+			}
+			cost = 100
+			removal_cost = -1
+			level = 1
+			modifier = {
+				special_forces_cap = 0.08
+				max_command_power = 25
+				political_power_cost = 0.10
+				army_leader_start_level = 2
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_planning_level = 1
+				army_leader_start_logistics_level = 1
+				army_org_Factor = 0.02
+			}
+			cancel_if_invalid = no
+		}
+
+		####################################################
+		# REFORM
+		####################################################
+
+		ENC_officers_purged = {
+			picture = enc_officers
+			allowed = {
+				always = no
+            }
+
+            allowed_civil_war = {
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			   max_planning = 0.1
+			   army_leader_start_level = 1
+			}
+		}
+		enc_chiefs_of_staff = {
+			picture = enc_officers
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				# has_completed_focus = enc_reform
+			}
+			available = {
+				has_completed_focus = enc_reform_general_staff
+			}
+			removal_cost = -1
+			modifier = {
+				max_planning = 0.1
+				army_leader_start_level = 1
+				army_leader_start_attack_level = 1
+				army_leader_start_planning_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 1
+				military_leader_cost_factor = 0.50
+			}
+		}
+		enc_pentagon_reborn = {
+			picture = enc_pentagon
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				# has_completed_focus = enc_reform
+			}
+			available = {
+				has_completed_focus = enc_new_officer_corps
+			}
+			removal_cost = -1
+			modifier = {
+				army_leader_start_level = 2
+				max_planning = 0.15
+				max_command_power = 25
+				army_leader_start_level = 2
+				army_leader_start_attack_level = 2
+				army_leader_start_planning_level = 2
+				army_leader_start_defense_level = 2
+				army_leader_start_logistics_level = 2
+				military_leader_cost_factor = 1
+			}
+		}
+		officer_law_loyal_enclave_officers = {
+			allowed = {
+				original_tag = ERB
+			}
+			available = {
+				has_completed_focus = enc_purge_officers
+			}
+			cost = 100
+			removal_cost = -1
+			level = 1
+			modifier = {
+				special_forces_cap = 0.05
+				political_power_cost = 0.15
+				army_leader_start_level = 1
+				intellectuals_drift = 0.15
+			}
+			cancel_if_invalid = no
+		}
+	}
+	army_training_laws = {
+		law = yes
+		
+		enc_training_law_none = {
+			cost = 50
+			removal_cost = -1
+			level = 5
+			picture = training_law_none
+			available = {
+			}
+			modifier = {
+				training_time_factor = -0.1
+				war_support_factor = -0.10
+				experience_loss_factor = 0.10
+				minimum_training_level -0.05
+				army_org_Factor = -0.05
+			}
+			default = yes
+
+			cancel_if_invalid = no
+		}
+		training_law_navarro_veterans = {
+			cost = 100
+			removal_cost = -1
+			level = 4
+			picture = training_law_veterans
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+			}
+
+			modifier = {
+				army_org_Factor = 0.05
+				justify_war_goal_time = -0.1
+				training_time_factor = 0.10
+				elites_drift = 0.20
+			}
+
+			cancel_if_invalid = no
+		}
+		training_law_enclave_academy = {
+
+			cost = 100
+			removal_cost = -1
+			level = 3
+			picture = training_law_military_academy
+
+			available = {
+				original_tag = ERB
+			}
+			visible = {
+				original_tag = ERB
+			}
+			modifier = {
+				army_org_Factor = 0.08
+				training_time_factor = 0.20
+				minimum_training_level = 0.5
+				# max_training = 0.5 # todo test
+			}
+
+			cancel_if_invalid = no
+		}
+		enc_training_law_reformer_indoctrination = {
+			picture = enc_idea_manpower_3
+			cost = 100
+			removal_cost = -1
+			level = 4
+			visible = {
+				not = { has_completed_focus = enc_purity }
+			}
+			available = {
+				has_completed_focus = enc_reform
+			}
+			modifier = {
+				training_time_factor = 0.25
+				experience_loss_factor = 0.10
+				army_org_Factor = -0.05
+				intellectuals_drift = 0.15
+				conscription_factor = -0.15
+			}
+			default = yes
+
+			cancel_if_invalid = no
+		}
+	}
+	press_laws = {
+		law = yes
+		enc_press_reformer_propaganda = {
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				not = { has_completed_focus = enc_purity }
+			}
+			available = {
+				has_completed_focus = enc_reform
+			}
+			cost = 100
+			removal_cost = -1
+			level = 2
+			modifier = {
+				political_power_cost = 0.10
+				intellectuals_drift = 0.20
+			}
+			cancel_if_invalid = no
+			default = no
+		}
+		enc_press_purist_propaganda = {
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				not = { has_completed_focus = enc_reform }
+			}
+			available = {
+				has_completed_focus = enc_purity
+			}
+			cost = 100
+			removal_cost = -1
+			level = 2
+			modifier = {
+				political_power_cost = 0.10
+				elites_drift = 0.20
+			}
+			cancel_if_invalid = no
+			default = yes
+		}
+		enc_press_seggregationist_propaganda = {
+			picture = enc_press_purist_propaganda
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_country_flag = enc_mid_game
+			}
+			available = {
+				has_completed_focus = enc_segregation
+			}
+			cost = 100
+			removal_cost = -1
+			level = 2
+			modifier = {
+				political_power_cost = 0.10
+				elites_drift = 0.10
+			}
+			cancel_if_invalid = no
+			default = yes
+		}
+		enc_press_entertainment = {
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				# has_completed_focus = enc_purity
+			}
+			cost = 100
+			removal_cost = -1
+			level = 2
+			modifier = {
+				stability_factor = 0.05
+				army_morale_factor = 0.10
+				consumer_goods_factor = 0.05
+			}
+			cancel_if_invalid = no
+			default = no
+		}
+		enc_press_none = {
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				# has_completed_focus = enc_purity
+			}
+			cost = 100
+			removal_cost = -1
+			level = 1
+			modifier = {
+			}
+			cancel_if_invalid = no
+			default = yes
+		}
+		
+		ENC_free_press = {
+			picture = enc_free_press
+			allowed = {
+				always = no
+            }
+            allowed_civil_war = {
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+			production_factory_max_efficiency_factor = 0.05
+				justify_war_goal_time = 0.20
+				encryption_factor = -0.05
+				offensive_war_stability_factor = -0.20
+				people_drift = 0.05
+			}
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		ENC_free_press_2 = {
+			picture = enc_free_press
+			allowed = {
+				always = no
+            }
+            allowed_civil_war = {
+				always = yes
+            }
+            removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				justify_war_goal_time = 0.25
+				encryption_factor = -0.10
+				offensive_war_stability_factor = -0.30
+			    people_drift = 0.10
+			}
+			allowed_to_remove = {
+				always = no
+			}
+		}
+	}
+	drug_laws = {
+		law = yes
+
+		enc_limited_stimulants = {
+			picture = chems_allowed
+			allowed = {
+				original_tag = ERB
+			}
+			available = {
+				not = {has_country_flag = bans_drugs }
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 2
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_speed_factor = 0.05
+				stability_factor = -0.05
+				army_org_factor = -0.05
+			}
+			cancel_if_invalid = no
+
+		}
+		enc_heavy_stimulants = {
+			picture = chems_allowed
+			allowed = {
+				original_tag = ERB
+			}
+			available = {
+				not = { has_country_flag = bans_drugs }
+				has_completed_focus =  enc_perfect_human
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 3
+
+			modifier = {
+				army_attack_factor = 0.15
+				army_speed_factor = 0.10
+				army_morale_factor = 0.15
+				army_speed_factor = 0.20
+				army_org_factor = -0.05
+
+				stability_factor = -0.15
+				stability_weekly = -0.05
+			}
+			cancel_if_invalid = no
+
+		}
+	}
+	currency_laws = {
+		law = yes
+
+		currency_none = {
+			picture = enc_nuka_cola
+			allowed = {
+				original_tag = ERB
+				always = no
+			}
+			cost = 150
+			removal_cost = -1
+			default = yes
+			available = {
+			}
+			modifier = {
+
+			}
+			cancel_if_invalid = no
+			default = yes
+
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+	mutant_recruitment_laws = {
+		law = yes
+		enc_mutant_law_none = {
+			allowed = {
+				original_tag = ERB
+				always = no
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 3
+			picture = tolerance_ghouls_banned
+			modifier = {
+				stability_factor = 0.03
+			}
+
+			ai_will_do = {
+				factor = 1
+
+			}
+			default = yes
+			cancel_if_invalid = yes
+
+		}
+
+		enc_mutant_law_ghoul = {
+			picture = tolerance_ghouls_allowed
+			allowed = {
+				original_tag = ERB
+			}
+			available = {
+				has_completed_focus = enc_accept_ghouls
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 2
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				conscription_factor = 0.04
+				supply_consumption_factor = -0.001
+				out_of_supply_factor = -0.002
+				attrition  = -0.005
+			}
+
+			ai_will_do = {
+				factor = 0
+
+			}
+			cancel_if_invalid = yes
+		}
+		enc_mutant_law_both = {
+			picture = tolerance_both_allowed
+			allowed = {
+				original_tag = ERB
+			}
+			available = {
+				has_completed_focus = enc_accept_super_mutants
+				NOT = { has_country_flag = enc_expel_supermutants }
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 1
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				conscription_factor = 0.05
+
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				production_speed_buildings_factor = 0.10
+			}
+
+			ai_will_do = {
+				factor = 0.1
+			}
+			cancel_if_invalid = yes
+		}
+		robotic_army_purist = {
+			available = {
+				has_completed_focus = enc_depot_mexican_robots
+			}
+			cost = 100
+			removal_cost = -1
+			level = 1
+			picture = robotic_army
+			equipment_bonus = {
+				support_robot_equipment = {
+					build_cost_ic = -0.20
+					instant = yes
+				}
+				combat_robot_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+
+			ai_will_do = {
+				factor = 0.1
+			}
+			cancel_if_invalid = yes
+		}
+
+}
