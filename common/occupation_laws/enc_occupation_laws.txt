@@ -26,7 +26,7 @@ enc_no_garrison_occupation = {
 enc_wastelander_pacification = {
 	visible = {
 		original_tag = ERB
-	} 
+	}
 	icon = 7
 	sound_effect = "Martial_Law_Interface_No_Garrison"
 
@@ -40,16 +40,15 @@ enc_wastelander_pacification = {
 	}
 }
 
-enc_dismantle_industry = {	
+enc_dismantle_industry = {
 	tooltip = enc_dismantle_industry_tt
 	visible = {
 		original_tag = ERB
-	} 
-	icon = 9 
+	}
+	icon = 9
 	sound_effect = "Martial_Law_Interface_No_Garrison"
-	
 	available = {
-		
+
 	}
 
 	state_modifier = {
@@ -59,32 +58,32 @@ enc_dismantle_industry = {
 		resistance_target = 0.30
 		local_resources = -0.50
 	}
-	
+
 }
 
 enc_enslave_locals = {
 	visible = {
 		original_tag = ERB
-	} 
-	icon = 10 
+	}
+	icon = 10
 	sound_effect = ERB_whip
-	
+
 	available = {
 		has_completed_focus = enc_slave_labour
 	}
-	
+
 	state_modifier = {
-		required_garrison_factor = 0.25 
+		required_garrison_factor = 0.25
 		resistance_growth = 0.25
 		local_resources = 0.20
 		compliance_gain = 0.20
 	}
-} 
+}
 
-enc_no_exploit_resources = {	
+enc_no_exploit_resources = {
 	visible = {
 		original_tag = ERB
-	} 
+	}
 	icon = 8
 	sound_effect = "Martial_Law_Interface_No_Garrison"
 
@@ -98,8 +97,56 @@ enc_no_exploit_resources = {
 }
 
 
+no_garrison_occupation_reformers = {
+	icon = 1
+	sound_effect = "Martial_Law_Interface_No_Garrison"
 
- 
+	visible = {
+		tag = ERB
+		has_completed_focus = enc_reform
+	}
+
+	available = {
+		hidden_trigger = {
+			tag = ERB
+			has_completed_focus = enc_reform
+		}
+	}
+
+	state_modifier = {
+		#resistance_target = 0
+		resistance_growth = 0.25
+		no_compliance_gain = 1
+		required_garrison_factor = -1
+		local_resources = -0.2
+	}
+
+	#suppressed_state_modifier = {
+	#	#no_compliance_gain = 1
+	#	required_garrison_factor = -1
+	#}
+
+	ai_will_do = {
+		base = 0
+		# if losing, get manpower & equipment back
+		modifier = {
+			FROM = {
+				surrender_progress > 0.15
+			}
+			add = 100
+		}
+		modifier = {
+			FROM = {
+				surrender_progress > 0.4
+			}
+			add = 500
+		}
+	}
+}
+
+
+
+
 #####################################################
 ### Documentation
 #####################################################

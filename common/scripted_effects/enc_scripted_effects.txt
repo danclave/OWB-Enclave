@@ -168,7 +168,7 @@ change_suspicion = {
 			}
 		}
 		custom_effect_tooltip =  lose_suspicion_tt
-		# warn player of wasted loss		
+		# warn player of wasted loss
 		set_temp_variable = { suspicion_change_var_absolute = suspicion_change_var }
 		multiply_temp_variable = { suspicion_change_var_absolute = -1 }
 		if = {
@@ -229,8 +229,8 @@ choose_segregation = {
 		clr_country_flag = enc_promised_no_integration
 	}
 }
-choose_integration = {		
-	add_popularity = { ideology = people popularity = 0.05 }	
+choose_integration = {
+	add_popularity = { ideology = people popularity = 0.05 }
 	set_temp_variable = { legitimacy_change_var =  0.05	}
 	change_legitimacy = yes
 	add_ideas =	ENC_begun_integration
@@ -447,7 +447,6 @@ people_start_revolt = {
 	start_civil_war = {
 		ideology = people
 		size = 0.40
-		only_own_territory = no
 		states_filter = {
 			is_core_of = NCR
 		}
@@ -455,13 +454,13 @@ people_start_revolt = {
 	random_enemy_country = {
 		limit = { civilwar_target = ROOT }
 		NCR = {
+			set_popularities = {
+				people = { popularity = 30 }
+				elites = { popularity = 0 }
+				intellectuals = { popularity = 70 }
+				ruler = { popularity = 0 }
+			}
 			set_politics = {
-			parties = {
-					people = { popularity = 30 }
-					elites = { popularity = 0 }
-					intellectuals = { popularity = 70 }
-					ruler = { popularity = 0 }
-				}
 				ruling_party = intellectuals
 				elections_allowed = no
 			}
@@ -748,14 +747,14 @@ establish_EAZ = {
 		picture = "gfx/leaders/portrait_sarge.dds"
 		expire = "3000.1.1"
 		ideology = militarist_technocracy
-	}	
+	}
 	create_country_leader  = {
 		name = "enclave_governer_name"
 		desc = "enclave_governer_desc"
 		picture = "gfx/leaders/portrait_sarge.dds"
 		expire = "3000.1.1"
 		ideology = technocracy
-	}	
+	}
 	create_country_leader = {
 		name = "enclave_governer_name"
 		desc = "enclave_governer_desc"
