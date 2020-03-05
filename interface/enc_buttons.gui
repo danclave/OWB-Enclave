@@ -138,7 +138,7 @@ guiTypes = {
 				size = { width = 100% height = 100%% }
 				slotsize = { width = 100 height = 40 }
 				add_horizontal = yes
-				max_slots_horizontal = 2
+				max_slots_horizontal = 1
 				format = "UPPER_LEFT"
 			}
 		}
@@ -190,7 +190,7 @@ guiTypes = {
 			frame = 1
 			buttonFont = "hoi_16mbs"
 			buttonText = "electric_grid_core_button"
-			position = { x = 150 y = 3 }
+			position = { x = 250 y = 3 }
 			size = { x = 75 y = 25 }
 			pdx_tooltip = "connect_to_power_tt"
 			pdx_tooltip_delayed = "connect_to_power_engineering_tt"
