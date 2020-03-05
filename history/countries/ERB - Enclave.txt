@@ -63,6 +63,8 @@ set_technology = {
 	power_armour_enclave_1 = 1
 }
 
+# set_country_flag = enclave_nation
+
 set_country_flag = not_allowed_to_core_flag
 set_country_flag = generic_decisions_disabled
 set_country_flag = no_generic_manufacturer
@@ -83,15 +85,20 @@ set_country_flag = default_officer_laws
 
 set_country_flag = do_not_spread_followers
 
+# resistance and compliance
 set_country_flag = has_compliance_core_unique_tiers
 set_country_flag = has_compliance_state_unique_tiers
 set_country_flag = has_resistance_state_unique_tiers
 set_country_flag = has_resistance_core_unique_tiers
+set_country_flag = has_unique_occupation_laws
+
+
+set_country_flag = ignore_puppet_events
 
 # makes resource sabotage less likely
-set_variable = { targeted_sabotage_infrastructure = -0.75 }
-set_variable = { targeted_sabotage_resources = -0.75 }
-set_variable = { targeted_sabotage_industry = -0.75 }
+set_variable = { targeted_sabotage_infrastructure = -1 }
+set_variable = { targeted_sabotage_resources = -1 }
+set_variable = { targeted_sabotage_industry = -1 }
 
 
 

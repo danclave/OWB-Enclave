@@ -1,6 +1,7 @@
 ﻿capital = 159
 set_war_support = 0
 set_stability = 0
+load_focus_tree = erb_eaz_nf # todo change
 
 set_country_flag = not_allowed_to_core_flag
 set_country_flag = generic_decisions_disabled
@@ -18,6 +19,12 @@ set_country_flag = default_drug_laws
 set_country_flag = gov_outsiders_hidden
 set_country_flag = default_officer_laws
 
+set_country_flag = has_compliance_core_unique_tiers
+set_country_flag = has_compliance_state_unique_tiers
+set_country_flag = has_resistance_state_unique_tiers
+set_country_flag = has_resistance_core_unique_tiers
+
+
 
 ###############################
 # POLITICS
@@ -31,6 +38,15 @@ set_politics = {
 	ruling_party = elites
 	elections_allowed = no
 }
+
+ERB = {
+	puppet = ROOT	
+	set_autonomy = {
+		target = LLW
+		autonomy_state = autonomy_enclave_influenced_region
+	}
+}
+
 
 set_popularities = {
 	people = 20
@@ -54,31 +70,30 @@ set_rule = { can_join_factions = no }
 # LEADERS
 ###############################
 create_country_leader  = {
-	name = "Raiders"
-	picture = "gfx/leaders/portrait_Anderson.dds"
+	name = "No leader"
+	picture = "gfx/leaders/portrait_no_one.dds"
 	expire = "3000.1.1"
 	ideology = militarist_technocracy
 	traits = {}
 }
 create_country_leader  = {
-	name = "Elders"
-	picture = "gfx/leaders/portrait_douglas_enclave.dds"
+	name = "No leader"
+	picture = "gfx/leaders/portrait_no_one.dds"
 	expire = "3000.1.1"
 	ideology = technocracy
 	traits = {}
 }
 create_country_leader = {
-	name = "Tyrants"
-	picture = "gfx/leaders/portrait_sarge.dds"
+	name = "No leader"
+	picture = "gfx/leaders/portrait_no_one.dds"
 	expire = "3000.1.1"
 	ideology = benevolent_dictatorship
 	traits = {
-		drill_sargeant
 	}
 }
 create_country_leader = {
-	name = "Survivors"
-	picture = "gfx/leaders/ENC/Portrait_Enclave_Generic.dds"
+	name = "No leader"
+	picture = "gfx/leaders/ENC/portrait_no_one.dds"
 	expire = "3000.1.1"
 	ideology = town_hall_democracy
 	traits = {}
@@ -86,3 +101,14 @@ create_country_leader = {
 
 # IDEAS
 add_ideas = enc_idea_lawless_wasteland
+add_ideas = chems_legalised
+
+remove_ideas = political_effort_censorship
+remove_ideas = chems_banned
+remove_ideas = outsider_law_volunteers
+remove_ideas = slavery_outlawed
+remove_ideas = training_law_none
+remove_ideas = limited_exports
+remove_ideas = mutant_law_none
+remove_ideas = officer_law_local_heroes
+remove_ideas = undesirables_law_none

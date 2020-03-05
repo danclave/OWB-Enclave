@@ -89,6 +89,10 @@ contactthehardliners_tt: "3 divisions of §YEnclave Veterans§! appear at the §
 enc_purist_special_forces_cap: "Enclave Efficiency"
 enc_purist_special_forces_cap_desc: "The foolish Reformers think America's future is in the hands of mutants. We think it's in the hand of our boys in black."
 enc_boost_special_forces_tt: "\nBoosts your power armor cap.\n"
+
+enc_idea_lawless_wasteland: "Lawless Wasteland"
+enc_idea_lawless_wasteland_desc: "This region has collapsed into lawless wasteland."
+
 ## Leader
 paladin_myers1:0 "Paladin Myers"
 

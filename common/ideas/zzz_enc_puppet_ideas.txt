@@ -45,8 +45,17 @@ ideas = {
 				surrender_limit = 1
 				political_power_factor = -10
 				local_resources_factor = -10
-			}
-			
+				autonomy_gain_global_factor = -1
+				resistance_target = -0.40
+				no_compliance_gain = 1
+				compliance_gain= -0.1
+				resistance_garrison_penetration_chance = -1
+				elites_acceptance = -100
+				ruler_acceptance = -100
+				people_acceptance = -100
+				intellectuals_acceptance = -100
+				units_deployed_to_overlord = yes
+			}			
 		}
 	}
 }

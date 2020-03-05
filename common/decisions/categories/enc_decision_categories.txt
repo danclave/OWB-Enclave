@@ -138,6 +138,7 @@ ENC_render_unto_caesar = {
 		tag = ERB
 	}
 	visible = {
+		has_country_flag = ENC_CES_hostile
 	}
 }
 
@@ -292,7 +293,6 @@ ENC_exploiting_wasteland = {
 		# has_completed_focus = enc_purity
 	}
 }
-
 
 # ##############################
 # ICONS

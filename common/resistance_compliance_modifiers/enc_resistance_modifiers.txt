@@ -25,6 +25,7 @@
 #	margin = 2
 #
 #	#if visible is false, the modifier will not show up anywhere
+#   # ROOT is occupied, FROM is occupier
 #	visible = {
 #
 #	}
@@ -50,20 +51,23 @@
 #	}
 #}
 
-resistance_60 = { # collapse into LLW
+enc_resistance_90_LLW = {
 	type = state_resistance_modifier
-	icon = "GFX_occupation_resistance_modifier_strip:3"
-	small_icon = "GFX_occupation_resistance_modifier_small_strip:3"
-	threshold = 60
+	icon = "GFX_occupation_resistance_modifier_strip:4"
+	small_icon = "GFX_occupation_resistance_modifier_small_strip:4"
+	threshold = 90
+	margin = 0
+	alert_level = high
+	alert_margin = 5
 	visible = {
-		original_tag = ERB
-	}
-	state_modifier = {
-		
+		FROM = {		
+			original_tag = ERB
+		}
 	}
 	on_enable = {
-		LLW = { 
-			transfer_state = PREV
+		custom_effect_tooltip = transfer_to_LLW
+		hidden_effect = {
+			LLW = {	transfer_state = PREV }
 		}
 	}
 }
