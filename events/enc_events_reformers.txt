@@ -111,10 +111,12 @@ country_event = { #4 - Dealing with Wrights
 	is_triggered_only = yes
 	option = { #Allow him to go legit
 		name = enc_reformers.4.a
-		add_stability = 0.05
 		set_country_flag = enc_wrights_tolerated_flag
 		custom_effect_tooltip = unlocks_as_advisor
 		show_ideas_tooltip = erb_wright
+		285 = {
+			add_compliance = 0.10
+		}
 	}
 	option = { #No place for him
 		name = enc_reformers.4.b
@@ -160,6 +162,7 @@ country_event = { #5 - Dealing with Bishops
 	option = { # Capture Mr. Bishop
 		name = enc_reformers.5.b
 		add_political_power = 75
+		285 = {	add_resistance_target = 0.10 }
 	}
 }
 
@@ -182,10 +185,12 @@ country_event = { #6 - Dealing with Salvatores
 		}
 		change_legitimacy = yes
 		set_country_flag = enc_salvatores_tolerated_flag
+		285 = {	add_compliance = 0.10 }
 	}
 	option = { # house arrest
 		name = enc_reformers.6.b
 		add_stability = 0.05
+		285 = {	add_resistance_target = 0.10 }
 	}
 	option = { # we rule in new reno
 		name = enc_reformers.6.c
@@ -202,8 +207,10 @@ country_event = { #7 - Dealing with Mordinos
 	is_triggered_only = yes
 	option = { # Court of law
 		name = enc_reformers.7.a
-		custom_effect_tooltip = enc_reformers.7.a.tt
-		add_stability = 0.05
+		custom_effect_tooltip = enc_reformers.7.a.tt		
+		285 = {
+			add_compliance = 0.10
+		}
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = 0.05
@@ -213,7 +220,10 @@ country_event = { #7 - Dealing with Mordinos
 	option = { # executed
 		name = enc_reformers.7.b
 		custom_effect_tooltip = enc_reformers.7.b.tt
-		add_political_power = 100
+		add_political_power = 50		
+		285 = {
+			add_resistance_target = -0.10
+		}
 		set_temp_variable = { caps_to_add = 150 }
 		add_caps = yes
 	}
@@ -2591,7 +2601,7 @@ country_event = { #73 Forgotten Man
 	is_triggered_only = yes
 	option = { #	Remember
 		name = enc_reformers.73.a
-		add_political_power = 100
+		add_collaboration = { target = NCR value = 0.15 }
 	}
 }
 

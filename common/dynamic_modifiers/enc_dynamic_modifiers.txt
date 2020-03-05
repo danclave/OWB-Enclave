@@ -29,6 +29,7 @@ enc_legitimacy_dynamic_modifier = {
 	political_power_factor = enc_legitimacy_political_power_factor
 	non_core_manpower = enc_legitimacy_non_core_manpower
 	mobilization_speed = enc_legitimacy_mobilization_speed
+	compliance_gain = enc_legitimacy_compliance_gain
 }
 enc_purist_special_forces_cap = {
 	icon = GFX_idea_enc_pa_production

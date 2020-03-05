@@ -1,5 +1,6 @@
 enc_no_garrison_occupation = {
-	
+	default_law = yes
+	starting_law = yes	
 	visible = {
 		original_tag = ERB
 	}

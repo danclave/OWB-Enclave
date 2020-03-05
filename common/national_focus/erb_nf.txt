@@ -3543,13 +3543,15 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-		285 = {
+			285 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
 					level = 3
-					instant_build = yes } }
-		give_guarantee = VEG
+					instant_build = yes 
+				} 
+			}
+			give_guarantee = VEG
 		}
 	}
 

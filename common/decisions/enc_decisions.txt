@@ -132,25 +132,6 @@ ENC_shifts = {
 }
 
 ENC_reno = {
-	purify_city = {
-		icon = generic_scorched_earth
-		cost = 50
-		fire_only_once = YES
-		visible = {
-			has_completed_focus = enc_purity
-			has_full_control_of_state = 285 #NEW REno
-		}
-		available = {
-			has_war_support > 0.6
-			elites > 0.7
-		}
-		complete_effect = {
-			add_war_support = 0.10
-		   	285 = {
-				add_manpower = -10000
-			}
-		}
-	}
 	graffs_flee = {
 		icon = eng_blackshirt_march
 		priority = 30
