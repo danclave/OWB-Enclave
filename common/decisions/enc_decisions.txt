@@ -1351,4 +1351,13 @@ ENC_debug = {
 			base = 0
 		}
 	}
+	enc_remove_occupied_cores = {
+		complete_effect = {
+			every_occupied_country = {
+				every_owned_state = {
+					PREV = { remove_state_core = PREV }
+				}
+			}
+		}
+	}
 }

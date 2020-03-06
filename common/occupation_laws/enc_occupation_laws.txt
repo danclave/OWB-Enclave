@@ -1,8 +1,9 @@
 enc_no_garrison_occupation = {
-	main_fallback_law = yes
-	default_law = yes
-	starting_law = yes
+	# main_fallback_law = yes
+	# default_law = yes
+	# starting_law = yes
 	visible = {
+		always = no
 		original_tag = ERB
 	}
 	icon = 1

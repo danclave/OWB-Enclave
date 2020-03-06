@@ -5,6 +5,7 @@ scripted_diplomatic_actions = {
 	enc_diplomatic_test = {
 		allowed = {
 			original_tag = ERB
+			always = no
 		}
 		visible = {
 			always = yes

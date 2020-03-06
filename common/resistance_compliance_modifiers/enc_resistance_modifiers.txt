@@ -53,9 +53,9 @@
 
 enc_resistance_90_LLW = {
 	type = state_resistance_modifier
-	icon = "GFX_occupation_resistance_modifier_strip:4"
-	small_icon = "GFX_occupation_resistance_modifier_small_strip:4"
-	threshold = 90
+	icon = "GFX_occupation_resistance_modifier_strip:3"
+	small_icon = "GFX_occupation_resistance_modifier_small_strip:3"
+	threshold = 25
 	margin = 0
 	alert_level = high
 	alert_margin = 5
@@ -71,3 +71,80 @@ enc_resistance_90_LLW = {
 		}
 	}
 }
+
+enc_resistance_0 = {
+	type = state_resistance_modifier
+	icon = "GFX_occupation_resistance_modifier_strip:4"
+	small_icon = "GFX_occupation_resistance_modifier_small_strip:4"
+	threshold = 0
+	margin = 0
+	alert_level = low
+	alert_margin = 5
+	visible = {
+		FROM = {		
+			original_tag = ERB
+		}
+	}
+	state_modifier = {
+		local_resources = -0.25
+		local_factories = -0.50
+		local_manpower = -1
+	}
+}
+
+#####################################
+# List of state modifiers
+#####################################
+# army_speed_factor_for_controller
+# compliance_gain
+# compliance_growth
+# compliance_growth_on_our_occupied_states
+# disable_strategic_redeployment
+# disable_strategic_redeployment_for_controller
+# enemy_intel_network_gain_factor_over_occupied_tag
+# enemy_spy_negative_status_factor
+# intel_network_gain
+# intel_network_gain_factor
+# local_building_slots
+# local_building_slots_factor
+# local_factories
+# local_factory_sabotage
+# local_intel_to_enemies
+# local_manpower
+# local_non_core_manpower
+# local_resources
+# local_resources_factor
+# local_supplies
+# local_supplies_for_controller
+# mobilization_speed
+# no_compliance_gain
+# non_core_manpower
+# recruitable_population
+# recruitable_population_factor
+# required_garrison_factor
+# resistance_activity
+# resistance_damage_to_garrison
+# resistance_damage_to_garrison_on_our_occupied_states
+# resistance_decay
+# resistance_decay_on_our_occupied_states
+# resistance_garrison_penetration_chance
+# resistance_growth
+# resistance_growth_on_our_occupied_states
+# resistance_target
+# resistance_target_on_our_occupied_states
+# starting_compliance
+# state_production_speed_buildings_factor
+
+# state_resource_aluminium
+# state_resource_chromium
+# state_resource_oil
+# state_resource_rubber
+# state_resource_steel
+# state_resource_tungsten
+# state_resources_factor
+# temporary_state_resource_aluminium
+# temporary_state_resource_chromium
+# temporary_state_resource_oil
+# temporary_state_resource_rubber
+# temporary_state_resource_steel
+# temporary_state_resource_tungsten

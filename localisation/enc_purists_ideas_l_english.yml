@@ -162,3 +162,5 @@ enc_compliance_purist_25: "Slavery"
 enc_compliance_purist_50: "Significant Slavery"
 enc_compliance_purist_75: "Mass Slavery"
 enc_compliance_purist_100: "Slave State"
+
+enc_resistance_0: "Mutant Presence"
