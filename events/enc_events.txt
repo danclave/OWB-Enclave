@@ -22,6 +22,7 @@ country_event = {#1 - OUR ESCAPE
     option = { #Deserted before the fighting got bad
         name = enc.1.c
         add_manpower = 3000
+		add_war_support = -0.07
     }
 }
 country_event = {#2 - Operational Security Compromised! 
