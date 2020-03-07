@@ -51,7 +51,7 @@
 #	}
 #}
 
-enc_resistance_90_LLW = {
+enc_resistance_LLW = {
 	type = state_resistance_modifier
 	icon = "GFX_occupation_resistance_modifier_strip:3"
 	small_icon = "GFX_occupation_resistance_modifier_small_strip:3"
@@ -66,6 +66,7 @@ enc_resistance_90_LLW = {
 	}
 	on_enable = {
 		custom_effect_tooltip = transfer_to_LLW
+		clr_state_flag = LLW_outpost_active
 		hidden_effect = {
 			LLW = {	transfer_state = PREV }
 		}
@@ -83,6 +84,7 @@ enc_resistance_0 = {
 	visible = {
 		FROM = {		
 			original_tag = ERB
+			not = { has_completed_focus = enc_reform }
 		}
 	}
 	state_modifier = {

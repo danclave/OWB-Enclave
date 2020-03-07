@@ -30,6 +30,7 @@ scripted_gui = {
 		triggers = {
 			connect_to_power_click_enabled = {
 				civilian_power_grid > 0
+				compliance > 0.90
 				custom_trigger_tooltip = {
 					tooltip = more_than_2_electricity
 					ROOT = {
@@ -521,6 +522,104 @@ scripted_gui = {
 	############################
 	# Exploiting Wasteland
 	############################
+	
+	establish_outpost = {   
+        context_type = selected_state_context
+        parent_window_token = selected_state_view
+        window_name = establish_outpost_container
+        visible = { 
+			is_controlled_by = LLW
+			not = { has_state_flag = LLW_outpost_active } 
+        }
+        effects = {
+            establish_outpost_click = {
+				set_state_flag = LLW_outpost_active
+				set_resistance = 20
+				ROOT = {					
+					transfer_state = PREV
+					add_command_power = -10
+				}
+            }
+        }
+        triggers = {
+            establish_outpost_click_enabled = {
+				is_controlled_by = LLW
+				not = { has_state_flag = LLW_outpost_active }	
+				ROOT = { command_power > 10 }
+            }
+        } 
+	} 
+	abandon_outpost = {
+        context_type = selected_state_context
+        parent_window_token = selected_state_view
+        window_name = abandon_outpost_container
+        visible = { 
+			has_state_flag = LLW_outpost_active
+        }
+        effects = { 
+            abandon_outpost_click = {
+				clr_state_flag = LLW_outpost_active	
+				ROOT = {
+					add_manpower = harvest_resources_manpower_used_temp?25	
+				}
+				LLW = { 
+					transfer_state = PREV				
+				}
+            }
+        }
+        triggers = {
+            abandon_outpost_click_enabled = {
+			
+            }
+        } 
+	} 
+	
+	# unused
+	add_slaves = {
+		context_type = selected_state_context
+        window_name = add_slaves_container
+        parent_window_token = selected_state_view
+        visible = { 
+			always = no # shelved for now
+        }
+        effects = {  
+            add_slaves_click = {
+				set_temp_variable = { slavery_change = 0.10 }
+				add_to_variable = { slaves_in_state = 1 }
+            }
+			add_slaves_shift_click = {
+				set_temp_variable = { slavery_change = 1 }
+				add_to_variable = { slaves_in_state = 10 }
+            }
+			add_slaves_right_click = {
+				set_temp_variable = { slavery_change = 1 }
+				add_to_variable = { slaves_in_state = -1 }	
+			}
+			add_slaves_shift_right_click = {
+				set_temp_variable = { slavery_change = 1 }
+				add_to_variable = { slaves_in_state = -10 }	
+			}
+			
+        }
+        triggers = {
+            add_slaves_click_enabled = {
+				# check_variable = { slave_number_display > 0 }
+            }
+			add_slaves_shift_click_enabled = {
+				# check_variable = { slave_number_display > 0 }
+			}
+        }
+	}
+	LLW_state = {
+		context_type = selected_state_context
+        window_name = LLW_state_container
+        parent_window_token = selected_state_view
+		visible = {
+			always = no # shelved for now
+			has_state_flag = LLW_harvest_resources_active
+		}
+	}
+
 	harvest_resources = {
         context_type = selected_state_context
         window_name = harvest_resources_container
@@ -686,103 +785,7 @@ scripted_gui = {
             }
         } 
 	} 
-	
-	establish_outpost = { 
-        context_type = selected_state_context
-        parent_window_token = selected_state_view
-        window_name = establish_outpost_container
-        visible = { 
-			is_controlled_by = LLW
-			not = { has_state_flag = LLW_outpost_active }
-        } 
-        effects = {
-            establish_outpost_click = {
-				set_temp_variable = { harvest_resources_cost = harvest_resources_manpower_used }
-				multiply_temp_variable = { harvest_resources_cost = -1 }
-				set_state_flag = LLW_outpost_active	
-				ROOT = {
-					add_manpower = harvest_resources_cost?25						
-					transfer_state = PREV
-				}
-            }
-        }
-        triggers = {
-            establish_outpost_click_enabled = {
-				is_controlled_by = LLW
-				not = { has_state_flag = LLW_outpost_active }			
-            }
-        } 
-	} 
-	abandon_outpost = {
-        context_type = selected_state_context
-        parent_window_token = selected_state_view
-        window_name = abandon_outpost_container
-        visible = { 
-			has_state_flag = LLW_outpost_active
-        }
-        effects = { 
-            abandon_outpost_click = {
-				set_temp_variable = { harvest_resources_manpower_used_temp = harvest_resources_manpower_used }
-				clr_state_flag = LLW_outpost_active	
-				ROOT = {
-					add_manpower = harvest_resources_manpower_used_temp?25	
-				}
-				LLW = { 
-					transfer_state = PREV				
-				}
-            }
-        }
-        triggers = {
-            abandon_outpost_click_enabled = {
-			
-            }
-        } 
-	} 
 
-	add_slaves = {
-		context_type = selected_state_context
-        window_name = add_slaves_container
-        parent_window_token = selected_state_view
-        visible = { 
-			always = no # shelved for now
-        }
-        effects = {  
-            add_slaves_click = {
-				set_temp_variable = { slavery_change = 0.10 }
-				add_to_variable = { slaves_in_state = 1 }
-            }
-			add_slaves_shift_click = {
-				set_temp_variable = { slavery_change = 1 }
-				add_to_variable = { slaves_in_state = 10 }
-            }
-			add_slaves_right_click = {
-				set_temp_variable = { slavery_change = 1 }
-				add_to_variable = { slaves_in_state = -1 }	
-			}
-			add_slaves_shift_right_click = {
-				set_temp_variable = { slavery_change = 1 }
-				add_to_variable = { slaves_in_state = -10 }	
-			}
-			
-        }
-        triggers = {
-            add_slaves_click_enabled = {
-				# check_variable = { slave_number_display > 0 }
-            }
-			add_slaves_shift_click_enabled = {
-				# check_variable = { slave_number_display > 0 }
-			}
-        }
-	}
-	LLW_state = {
-		context_type = selected_state_context
-        window_name = LLW_state_container
-        parent_window_token = selected_state_view
-		visible = {
-			always = no # shelved for now
-			has_state_flag = LLW_harvest_resources_active
-		}
-	}
 }
 
 #	new_button = {

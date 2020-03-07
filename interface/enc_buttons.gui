@@ -222,17 +222,18 @@ guiTypes = {
 	}
 	containerWindowType = { # establish_outpost
 		name = establish_outpost_container
-		position = { x = 80 y = 80 } 		
+		position = { x = 90 y = 12 } 
+		scale = 1.2
 		buttonType = { 
 			name = establish_outpost
-			spriteType = GFX_decision_category_jap_intervene_in_china   
+			spriteType = GFX_div_templ_72_large
 			pdx_tooltip = establish_outpost_tt
 			pdx_tooltip_delayed = establish_outpost_tt_delayed
 		}
 	}
 	containerWindowType = { # abandon_outpost
 		name = abandon_outpost_container
-		position = { x = 95 y = 90 }
+		position = { x = 120   y = 25 } 
 		buttonType = {
 			name = abandon_outpost
 			spriteType = GFX_closebutton

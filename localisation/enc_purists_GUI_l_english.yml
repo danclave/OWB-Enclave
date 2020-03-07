@@ -16,11 +16,12 @@ steal_military_industry_tt_delayed: "\n[!steal_military_industry_click]\nRequire
 steal_civilian_industry_tt: "Salvage Civilian Industry (§Y25§! £command_power )"
 steal_civilian_industry_tt_delayed: "\n[!steal_civilian_industry_click]\nRequires all of the below:\n[!steal_civilian_industry_click_enabled]"
 
-establish_outpost_tt: "Establish Outpost (§Y[?harvest_resources_manpower_used_temp|0]§! £manpower_texticon )"
+establish_outpost_tt: "Establish Outpost (§Y10§! £command_power )"
 establish_outpost_tt_delayed: "Establish an Enclave Outpost in this state, bringing it under our direct control\n\nEffects:\n[!establish_outpost_click]\n\nRequires:\n[!establish_outpost_click_enabled]"
+LLW_outpost_active: "Active Enclave Outpost"
 
 abandon_outpost: "test"
-abandon_outpost_tt: "Abandon Outpost (§G[?harvest_resources_manpower_used_temp]§! £manpower_texticon )"
+abandon_outpost_tt: "Abandon Outpost"
 abandon_outpost_tt_delayed: "Abandon the Enclave Outpost in this state, recovering the manpower there.\n\nEffects:\n[!abandon_outpost_click]\n\nRequires:\n[!abandon_outpost_click_enabled]"
 
 free_building_slots_for_amount_arms_factory_removed: "Can build §Y[?amount_arms_factory_removed]§! more Arms Workshops"
@@ -30,5 +31,5 @@ add_slaves_tt_delayed: "Add slaves to the state, recovering some of the manpower
 
 LLW_state_container_info: "Manpower used:              [?THIS.harvest_resources_manpower_used|0]\nSlaves used:                [?THIS.0|0]\nRobots used:                [?THIS.0|0]"
 
-enc_resistance_90_LLW: "Collapse into Wasteland"
+enc_resistance_LLW: "Collapse into Wasteland"
 transfer_to_LLW: "§Y[THIS.GetName]§! collapses into lawless wasteland."

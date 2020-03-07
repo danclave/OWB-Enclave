@@ -27,6 +27,7 @@ enc_no_garrison_occupation = {
 enc_wastelander_pacification = {
 	visible = {
 		original_tag = ERB
+		not = { has_completed_focus = enc_reform }
 	}
 	icon = 7
 	sound_effect = "Martial_Law_Interface_No_Garrison"
@@ -45,6 +46,7 @@ enc_dismantle_industry = {
 	tooltip = enc_dismantle_industry_tt
 	visible = {
 		original_tag = ERB
+		not = { has_completed_focus = enc_reform }
 	}
 	icon = 9
 	sound_effect = "Martial_Law_Interface_No_Garrison"
@@ -65,6 +67,7 @@ enc_dismantle_industry = {
 enc_enslave_locals = {
 	visible = {
 		original_tag = ERB
+		not = { has_completed_focus = enc_reform }
 	}
 	icon = 10
 	sound_effect = ERB_whip
@@ -95,54 +98,6 @@ enc_no_exploit_resources = {
 		resistance_garrison_penetration_chance = -0.50
 	}
 	
-}
-
-
-no_garrison_occupation_reformers = {
-	icon = 1
-	sound_effect = "Martial_Law_Interface_No_Garrison"
-
-	visible = {
-		tag = ERB
-		has_completed_focus = enc_reform
-	}
-
-	available = {
-		hidden_trigger = {
-			tag = ERB
-			has_completed_focus = enc_reform
-		}
-	}
-
-	state_modifier = {
-		#resistance_target = 0
-		resistance_growth = 0.25
-		no_compliance_gain = 1
-		required_garrison_factor = -1
-		local_resources = -0.2
-	}
-
-	#suppressed_state_modifier = {
-	#	#no_compliance_gain = 1
-	#	required_garrison_factor = -1
-	#}
-
-	ai_will_do = {
-		base = 0
-		# if losing, get manpower & equipment back
-		modifier = {
-			FROM = {
-				surrender_progress > 0.15
-			}
-			add = 100
-		}
-		modifier = {
-			FROM = {
-				surrender_progress > 0.4
-			}
-			add = 500
-		}
-	}
 }
 
 
