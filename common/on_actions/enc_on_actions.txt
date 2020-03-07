@@ -59,17 +59,24 @@ on_actions = {
 	#FROM is war target
 	on_declare_war = {
 		effect = {
-			if = {
+			if = { # ERB declared war, LLW auto joins
 				limit = {
-					original_tag = ERB		
+					original_tag = ERB			
 				}
-				hidden_effect = {
-					LLW = {
-						add_to_war = { 
-							targeted_alliance = ERB 
-							enemy = FROM 
-						}
+				LLW = {
+					declare_war_on = {
+						target = FROM
+						type = annex_everything
 					}
+				}
+			}
+			if = { # ERB declared war ON, LLW auto joins
+				limit = {
+					FROM = { original_tag = ERB }
+				}
+				declare_war_on = {
+					target = LLW
+					type = annex_everything
 				}
 			}
 		}
