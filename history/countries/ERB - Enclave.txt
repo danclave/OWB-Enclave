@@ -61,6 +61,8 @@ set_technology = {
 	scav_pa_tech = 1
 	underground_industry_tech = 1
 	power_armour_enclave_1 = 1
+	vertibird_tech = 1
+	vertibird_cas_tech = 1
 }
 
 # set_country_flag = enclave_nation
