@@ -678,12 +678,12 @@ ENC_war_with_NCR = {
 ENC_exploiting_wasteland = {
 	ENC_exploiting_wasteland_arms_factories = {
 		icon = generic_construction
-		fire_only_once = no 
-		custom_cost_text = command_power_25  
+		fire_only_once = no
+		custom_cost_text = command_power_15
 		custom_cost_trigger = {
-			command_power > 24.9
+			command_power > 14.9
 		}
-		available = {			
+		available = {
 			any_controlled_state = {
 				arms_factory > 0
 				resistance < 50
@@ -698,10 +698,10 @@ ENC_exploiting_wasteland = {
 		}
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -25
+				add_command_power = -15
 			}
 		}
-		days_remove = 50
+		days_remove = 25
 		remove_effect = {
 			random_controlled_state = {
 				limit = {
@@ -721,17 +721,17 @@ ENC_exploiting_wasteland = {
 					type = arms_factory
 					level = ENC_exploiting_wasteland_amount_arms_factory_removed
 					instant_build = yes
-				}				
+				}
 			}
 				# add_offsite_building = { type = arms_factory level = ENC_exploiting_wasteland_amount_arms_factory_removed }
-		}	
+		}
 	}
 	ENC_exploiting_wasteland_industrial_complex = {
 		icon = generic_construction
 		fire_only_once = no
-		custom_cost_text = command_power_25
+		custom_cost_text = command_power_15
 		custom_cost_trigger = {
-			command_power > 24.9
+			command_power > 14.9
 		}
 		visible = {
 		# 	has_completed_focus = enc_purity
@@ -748,10 +748,10 @@ ENC_exploiting_wasteland = {
 		}
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -25
+				add_command_power = -15
 			}
-		}		
-		days_remove = 50
+		}
+		days_remove = 20
 		remove_effect = {
 			random_controlled_state = {
 				limit = {
@@ -771,11 +771,11 @@ ENC_exploiting_wasteland = {
 					type = industrial_complex
 					level = ENC_exploiting_wasteland_amount_industrial_complex_removed
 					instant_build = yes
-				}				
+				}
 			}
 			# alternative
 			# add_offsite_building = { type = industrial_complex level = ENC_exploiting_wasteland_amount_industrial_complex_removed }
-		}	
+		}
 	}
 }
 

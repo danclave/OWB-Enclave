@@ -518,24 +518,24 @@ scripted_gui = {
 			}
 		}
 	}
-	
+
 	############################
 	# Exploiting Wasteland
 	############################
-	
-	establish_outpost = {   
+
+	establish_outpost = {
         context_type = selected_state_context
         parent_window_token = selected_state_view
         window_name = establish_outpost_container
-        visible = { 
+        visible = {
 			is_controlled_by = LLW
-			not = { has_state_flag = LLW_outpost_active } 
+			not = { has_state_flag = LLW_outpost_active }
         }
         effects = {
             establish_outpost_click = {
 				set_state_flag = LLW_outpost_active
 				set_resistance = 20
-				ROOT = {					
+				ROOT = {
 					transfer_state = PREV
 					add_command_power = -10
 				}
@@ -544,45 +544,45 @@ scripted_gui = {
         triggers = {
             establish_outpost_click_enabled = {
 				is_controlled_by = LLW
-				not = { has_state_flag = LLW_outpost_active }	
+				not = { has_state_flag = LLW_outpost_active }
 				ROOT = { command_power > 10 }
             }
-        } 
-	} 
+        }
+	}
 	abandon_outpost = {
         context_type = selected_state_context
         parent_window_token = selected_state_view
         window_name = abandon_outpost_container
-        visible = { 
+        visible = {
 			has_state_flag = LLW_outpost_active
         }
-        effects = { 
+        effects = {
             abandon_outpost_click = {
-				clr_state_flag = LLW_outpost_active	
+				clr_state_flag = LLW_outpost_active
 				ROOT = {
-					add_manpower = harvest_resources_manpower_used_temp?25	
+					add_manpower = harvest_resources_manpower_used_temp?25
 				}
-				LLW = { 
-					transfer_state = PREV				
+				LLW = {
+					transfer_state = PREV
 				}
             }
         }
         triggers = {
             abandon_outpost_click_enabled = {
-			
+
             }
-        } 
-	} 
-	
+        }
+	}
+
 	# unused
 	add_slaves = {
 		context_type = selected_state_context
         window_name = add_slaves_container
         parent_window_token = selected_state_view
-        visible = { 
+        visible = {
 			always = no # shelved for now
         }
-        effects = {  
+        effects = {
             add_slaves_click = {
 				set_temp_variable = { slavery_change = 0.10 }
 				add_to_variable = { slaves_in_state = 1 }
@@ -593,13 +593,13 @@ scripted_gui = {
             }
 			add_slaves_right_click = {
 				set_temp_variable = { slavery_change = 1 }
-				add_to_variable = { slaves_in_state = -1 }	
+				add_to_variable = { slaves_in_state = -1 }
 			}
 			add_slaves_shift_right_click = {
 				set_temp_variable = { slavery_change = 1 }
-				add_to_variable = { slaves_in_state = -10 }	
+				add_to_variable = { slaves_in_state = -10 }
 			}
-			
+
         }
         triggers = {
             add_slaves_click_enabled = {
@@ -630,16 +630,16 @@ scripted_gui = {
 			NOT = {
                 has_state_flag = LLW_harvest_resources_active
             }
-			or = { 
+			or = {
 				has_resources_amount = { resource = water			amount > 0 }
 				has_resources_amount = { resource = energy			amount > 0 }
 				has_resources_amount = { resource = metal			amount > 0 }
 				has_resources_amount = { resource = composites		amount > 0 }
 				has_resources_amount = { resource = circuitry		amount > 0 }
-				has_resources_amount = { resource = advanced		amount > 0 }				
+				has_resources_amount = { resource = advanced		amount > 0 }
 			}
         }
-        effects = { 
+        effects = {
             harvest_resources_click = {
 				set_variable = { harvest_resources_manpower_used = state_population_k }
 				multiply_variable = { harvest_resources_manpower_used = 10 }
@@ -660,41 +660,41 @@ scripted_gui = {
 					has_manpower > harvest_resources_manpower_used_temp?25
 				}
             }
-        } 
-	} 
+        }
+	}
 	harvest_resources_recall = {
         context_type = selected_state_context
         window_name = harvest_resources_recall_container
         parent_window_token = selected_state_view
         visible = {
-			always = no # shelved for now
+			always = no # shelved
             is_owned_and_controlled_by = LLW
             has_state_flag = LLW_harvest_resources_active
         }
         effects = {
-            harvest_resources_recall_click = { 
+            harvest_resources_recall_click = {
 				clr_state_flag = LLW_harvest_resources_active
-				ERB = { 
-					remove_resource_rights = PREV 
+				ERB = {
+					remove_resource_rights = PREV
 					add_manpower = PREV.harvest_resources_manpower_used?75
 				}
             }
         }
 		triggers = {
 			harvest_resources_recall_click_enabled = {
-				
+
 			}
 		}
 	}
-	
+
 	steal_military_industry = {
         context_type = selected_state_context
         window_name = steal_military_industry_container
         parent_window_token = selected_state_view
         visible = {
-			always = no # shelved for now		
+			always = no # shelved for now
         }
-        effects = { 
+        effects = {
             steal_military_industry_click = {
 				set_temp_variable = { amount_arms_factory_removed = arms_factory_level }
 				remove_building = {
@@ -708,7 +708,7 @@ scripted_gui = {
 							free_building_slots = {
 								building = arms_factory
 								size > FROM.amount_arms_factory_removed
-								include_locked = yes 
+								include_locked = yes
 							}
 						}
 						prioritize = { 159 } # sierra army depot
@@ -717,7 +717,7 @@ scripted_gui = {
 							type = arms_factory
 							level = amount_arms_factory_removed
 							instant_build = yes
-						}				
+						}
 					}
 				}
             }
@@ -743,16 +743,16 @@ scripted_gui = {
 				}
 				arms_factory > 0
             }
-        } 
+        }
 	}
 	steal_civilian_industry = {
         context_type = selected_state_context
         window_name = steal_civilian_industry_container
         parent_window_token = selected_state_view
         visible = {
-			always = no # shelved for now			
+			always = no # shelved for now
         }
-        effects = { 
+        effects = {
             steal_civilian_industry_click = {
 				set_temp_variable = { industrial_complex_level_removed = industrial_complex_level }
 				remove_building = {
@@ -768,14 +768,14 @@ scripted_gui = {
 							type = industrial_complex
 							level = industrial_complex_level_removed
 							instant_build = yes
-						}				
+						}
 					}
 				}
             }
         }
         triggers = {
             steal_civilian_industry_click_enabled = {
-				ROOT = {				
+				ROOT = {
 					custom_trigger_tooltip  = {
 						tooltip = command_power_25
 						command_power > 24.9
@@ -783,8 +783,8 @@ scripted_gui = {
 				}
 				industrial_complex > 0
             }
-        } 
-	} 
+        }
+	}
 
 }
 
@@ -792,17 +792,17 @@ scripted_gui = {
 #		context_type = selected_state_context
 #        window_name = new_button_container
 #        parent_window_token = selected_state_view
-#        visible = { 
-#		
+#        visible = {
+#
 #        }
-#        effects = { 
+#        effects = {
 #            new_button_click = {
-#				
+#
 #            }
 #        }
 #        triggers = {
 #            new_button_click_enabled = {
-#			
+#
 #            }
 #        }
 #	}
