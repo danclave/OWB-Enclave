@@ -114,13 +114,9 @@ country_event = { #4 - Dealing with Wrights
 		set_country_flag = enc_wrights_tolerated_flag
 		custom_effect_tooltip = unlocks_as_advisor
 		show_ideas_tooltip = erb_wright
-<<<<<<< HEAD
 		285 = {
 			add_compliance = 0.10
 		}
-=======
-		# todo LAR add compliance
->>>>>>> 8cbf7e77128a36edda7cabb83379b731f9aa9c83
 	}
 	option = { #No place for him
 		name = enc_reformers.4.b
@@ -189,13 +185,8 @@ country_event = { #6 - Dealing with Salvatores
 			value = -0.05
 		}
 		change_legitimacy = yes
-<<<<<<< HEAD
 		set_country_flag = enc_salvatores_tolerated_flag
 		285 = {	add_compliance = 0.10 }
-=======
-		set_country_flag = enc_salvatores_tolerated_flag		
-		# todo LAR add compliance
->>>>>>> 8cbf7e77128a36edda7cabb83379b731f9aa9c83
 	}
 	option = { # house arrest
 		name = enc_reformers.6.b
