@@ -115,7 +115,7 @@ country_event = { #4 - Dealing with Wrights
 		custom_effect_tooltip = unlocks_as_advisor
 		show_ideas_tooltip = erb_wright
 		285 = {
-			add_compliance = 0.10
+			add_compliance = 10
 		}
 	}
 	option = { #No place for him
@@ -163,7 +163,7 @@ country_event = { #5 - Dealing with Bishops
 	option = { # Capture Mr. Bishop
 		name = enc_reformers.5.b
 		add_political_power = 75
-		285 = {	add_resistance_target = 0.10 }
+		285 = {	add_resistance_target = -10}
 	}
 }
 
@@ -186,12 +186,12 @@ country_event = { #6 - Dealing with Salvatores
 		}
 		change_legitimacy = yes
 		set_country_flag = enc_salvatores_tolerated_flag
-		285 = {	add_compliance = 0.10 }
+		285 = {	add_compliance = 10 }
 	}
 	option = { # house arrest
 		name = enc_reformers.6.b
 		add_stability = 0.05
-		285 = {	add_resistance_target = 0.10 }
+		285 = {	add_resistance_target = -10 }
 	}
 	option = { # we rule in new reno
 		name = enc_reformers.6.c
@@ -210,21 +210,20 @@ country_event = { #7 - Dealing with Mordinos
 		name = enc_reformers.7.a
 		custom_effect_tooltip = enc_reformers.7.a.tt
 		285 = {
-			add_compliance = 0.10
+			add_compliance = 10
 		}
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = 0.05
 		}
 		change_legitimacy = yes
-		# todo LAR add compliance
 	}
 	option = { # executed
 		name = enc_reformers.7.b
 		custom_effect_tooltip = enc_reformers.7.b.tt
 		add_political_power = 50
 		285 = {
-			add_resistance_target = -0.10
+			add_resistance_target = -10
 		}
 		set_temp_variable = { caps_to_add = 150 }
 		add_caps = yes
@@ -1929,7 +1928,15 @@ country_event = { #56 - Patrolling New Reno
 	option = { # open fire
 		name = enc_reformers.56.a
 		custom_effect_tooltip = enc_reformers.56.a.tt
-		add_war_support = 0.1
+		add_war_support = 0.10
+		285 = {
+			add_state_modifier = { 
+				modifier = { 
+					resistance_activity = -0.25 
+					resistance_target = -0.15
+				} 
+			}
+		}
 		# modify legitimacy
 		set_temp_variable = {
 			var = legitimacy_change_var
@@ -1941,6 +1948,15 @@ country_event = { #56 - Patrolling New Reno
 		name = enc_reformers.56.b
 		custom_effect_tooltip = enc_reformers.56.b.tt
 		# modify legitimacy
+		285 = {
+			add_state_modifier = { 
+				modifier = { 
+					resistance_activity = 0.10
+					resistance_target = 0.10
+					compliance_growth = 0.15
+				} 
+			}
+		}
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = 0.05

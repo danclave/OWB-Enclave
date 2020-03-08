@@ -87,6 +87,7 @@ enc_enslave_locals = {
 enc_no_exploit_resources = {
 	visible = {
 		original_tag = ERB
+		NOT = { has_completed_focus = enc_reform }		
 	}
 	icon = 8
 	sound_effect = "Martial_Law_Interface_No_Garrison"

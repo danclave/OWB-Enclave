@@ -62,6 +62,7 @@ enc_resistance_LLW = {
 	visible = {
 		FROM = {
 			original_tag = ERB
+			NOT = { has_completed_focus = enc_reform }
 		}
 	}
 	on_enable = {

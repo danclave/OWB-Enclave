@@ -163,4 +163,9 @@ enc_compliance_purist_50: "Significant Slavery"
 enc_compliance_purist_75: "Mass Slavery"
 enc_compliance_purist_100: "Slave State"
 
+enc_compliance_reform_20: "Whispers of Hope"
+enc_compliance_reform_35: "Local Militias"
+enc_compliance_reform_50: "Return to normalcy"
+enc_compliance_reform_65: "Patriotism"
+
 enc_resistance_0: "Mutant Presence"

@@ -177,9 +177,11 @@ focus_tree = {
 			country_event = { id = enc_reformers.15 }
 			hidden_effect = { set_rule = { can_puppet = yes } }
 			custom_effect_tooltip = enc_reformers.tt
-			# set up variables for rebuilding America
-			set_variable = { enc_good_allignment = 0 }
-			set_variable = { enc_evil_allignment = 0 }
+			# set up variables for rebuilding Americaset_country_flag = has_compliance_core_unique_tiers
+			clr_country_flag = has_compliance_state_unique_tiers
+			clr_country_flag = has_resistance_state_unique_tiers
+			clr_country_flag = has_resistance_core_unique_tiers
+			clr_country_flag = has_unique_occupation_laws
 		}
 	}
 
