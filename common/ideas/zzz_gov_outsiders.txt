@@ -32,10 +32,10 @@ ideas = {
 				original_tag = ERB
 			}
 			visible = {
-				not = { has_completed_focus = enc_purity }
+				NOT = { has_completed_focus = enc_purity }
 			}
 			available = { has_completed_focus = enc_reform }
-			
+
 			default = no
 			cost = 100
 			removal_cost = -1
@@ -52,7 +52,7 @@ ideas = {
 			on_add = {
 				if = {
 					limit = {
-						not = { has_completed_focus = enc_purge_opposition }
+						NOT = { has_completed_focus = enc_purge_opposition }
 					}
 					set_temp_variable = {
 						stability_loss_factor = 0.2
@@ -60,8 +60,8 @@ ideas = {
 					stability_loss_based_on_elites_popularity = yes
 				}
 			}
-		}		
-		
+		}
+
 		enc_outsider_law_purist_bos = {
 			picture = junior_knight_recruitment
 			cost = 100
@@ -69,7 +69,7 @@ ideas = {
 				original_tag = ERB
 			}
 			visible = {
-				not = { has_completed_focus = enc_reform }
+				NOT = { has_completed_focus = enc_reform }
 			}
 			available = {
 				has_completed_focus = enc_purity
@@ -94,7 +94,7 @@ ideas = {
 				original_tag = ERB
 			}
 			visible = {
-				not = { has_completed_focus = enc_reform }				
+				NOT = { has_completed_focus = enc_reform }
 			}
 			available = {
 				has_completed_focus = enc_vlt_core
@@ -112,7 +112,7 @@ ideas = {
 			}
 			cancel_if_invalid = yes
 		}
-		
+
 		enc_outsider_law_purist_vlt_and_bos = {
 			picture = junior_knight_recruitment
 			cost = 100
@@ -142,8 +142,8 @@ ideas = {
 			}
 			cancel_if_invalid = yes
 		}
-		
-		# overrides, remove when able		
+
+		# overrides, remove when able
 		outsider_law_none = {
 			picture = no_outsiders
 			available = {
@@ -264,6 +264,5 @@ ideas = {
 			}
 			cancel_if_invalid = no
 		}
-	
-
+	}
 }

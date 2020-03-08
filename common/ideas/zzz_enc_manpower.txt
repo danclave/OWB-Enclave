@@ -12,14 +12,14 @@ ideas = {
 			}
 			visible = {
 				original_tag = ERB
-				not = {
+				NOT = {
 					has_country_flag = enc_mid_game
 				}
 			}
 			available = {
 				if = {
 					limit = { has_country_flag = enc_mid_game }
-					not = {
+					NOT = {
 						has_country_flag = enc_mid_game
 					}
 				}
@@ -44,7 +44,7 @@ ideas = {
 
 			visible = {
 				original_tag = ERB
-				not = {
+				NOT = {
 					has_country_flag = enc_mid_game
 					has_completed_focus = enc_the_state_of_nevada
 				}
@@ -55,7 +55,7 @@ ideas = {
 
 			available = {
 				original_tag = ERB
-				or = {
+				OR = {
 					has_completed_focus = enc_segregation
 					NOT = { 285 = { is_core_of = ERB }}
 				}
@@ -91,7 +91,7 @@ ideas = {
 					is_major = no
 					surrender_progress > 0.1
 				}
-				not = { has_completed_focus = enc_reform }
+				NOT = { has_completed_focus = enc_reform }
 				}
 
 			cost = 150
@@ -171,7 +171,7 @@ ideas = {
 				original_tag = ERB
 				has_war = yes
 				enemies_strength_ratio > 0.75
-				not = { has_completed_focus = enc_reform }
+				NOT = { has_completed_focus = enc_reform }
 			}
 			cost = 150
 			removal_cost = -1
@@ -224,7 +224,7 @@ ideas = {
 						ratio > 1.25
 					}
 				}
-				not = { has_completed_focus = enc_reform }
+				NOT = { has_completed_focus = enc_reform }
 			}
 			ai_will_do = {
 				factor = 1
@@ -292,7 +292,7 @@ ideas = {
 			}
 			visible = {
 				has_completed_focus = enc_reform
-				not = {
+				NOT = {
 					has_country_flag = enc_mid_game
 					has_completed_focus = enc_the_state_of_nevada
 				}
@@ -340,7 +340,7 @@ ideas = {
 				original_tag = ERB
 			}
 			visible = {
-				or = {
+				OR = {
 					has_country_flag = enc_mid_game
 					has_completed_focus = enc_the_state_of_nevada
 				}
@@ -362,7 +362,7 @@ ideas = {
 				else = { # USA
 					has_stability > 0.20
 					has_completed_focus = enc_rebuilding_a_nation
-					# not = { has_manpower_for_recruit_change_to = { value = -0.0007 group = mobilization_laws } }
+					# NOT = { has_manpower_for_recruit_change_to = { value = -0.0007 group = mobilization_laws } }
 				}
 			}
 			ai_will_do = {
@@ -388,7 +388,7 @@ ideas = {
 
 			visible = {
 				original_tag = ERB
-				or = {
+				OR = {
 					has_country_flag = enc_mid_game
 					has_completed_focus = enc_the_state_of_nevada
 				}
@@ -421,7 +421,7 @@ ideas = {
 			}
 			visible = {
 				original_tag = ERB
-				or = {
+				OR = {
 					has_country_flag = enc_mid_game
 					has_completed_focus = enc_the_state_of_nevada
 				}
@@ -432,8 +432,8 @@ ideas = {
 					limit = {
 						has_completed_focus = enc_the_state_of_nevada
 					}
-					or = {
-						and = {
+					OR = {
+						AND = {
 							has_war = yes
 							enemies_strength_ratio > 0.5
 						}
@@ -473,7 +473,7 @@ ideas = {
 			}
 			visible = {
 				original_tag = ERB
-				or = {
+				OR = {
 					has_country_flag = enc_mid_game
 					has_completed_focus = enc_the_state_of_nevada
 				}
@@ -483,8 +483,8 @@ ideas = {
 					limit = {
 						has_completed_focus = enc_the_state_of_nevada
 					}
-					or = {
-						and = {
+					OR = {
+						AND = {
 							has_war = yes
 							enemies_strength_ratio > 0.5
 						}
@@ -493,8 +493,8 @@ ideas = {
 					}
 				}
 				else = {
-					or = {
-						and = {
+					OR = {
+						AND = {
 							has_war = yes
 							enemies_strength_ratio > 0.5
 						}
@@ -532,7 +532,7 @@ ideas = {
 			}
 			visible = {
 				original_tag = ERB
-				or = {
+				OR = {
 					has_country_flag = enc_mid_game
 					has_completed_focus = enc_the_state_of_nevada
 				}
@@ -542,8 +542,8 @@ ideas = {
 					limit = {
 						has_completed_focus = enc_the_state_of_nevada
 					}
-					or = {
-						and = {
+					OR = {
+						AND = {
 							has_war = yes
 							enemies_strength_ratio > 0.6
 						}
@@ -552,8 +552,8 @@ ideas = {
 					has_stability > 0.20
 				}
 				else = {
-					or = {
-						and = {
+					OR = {
+						AND = {
 							has_war = yes
 							enemies_strength_ratio > 0.6
 						}
@@ -598,7 +598,7 @@ ideas = {
 			}
 			visible = {
 				original_tag = ERB
-				or = {
+				OR = {
 					has_country_flag = enc_mid_game
 					has_completed_focus = enc_the_state_of_nevada
 				}
@@ -610,18 +610,18 @@ ideas = {
 					}
 					has_war = yes
 					enemies_strength_ratio > 0.75
-					or = {
+					OR = {
 						has_war_support > 0.75
 					}
 					has_stability > 0.20
 				}
 				else = {
-					or = {
-						and = {
+					OR = {
+						AND = {
 							has_war = yes
 							enemies_strength_ratio > 0.75
 						}
-						or = {
+						OR = {
 							has_war_support > 0.95
 							has_completed_focus = enc_martial_law
 						}
@@ -669,7 +669,7 @@ ideas = {
 
 			visible = {
 				original_tag = ERB
-				or = {
+				OR = {
 					has_country_flag = enc_mid_game
 					has_completed_focus = enc_the_state_of_nevada
 				}

@@ -6,7 +6,7 @@ ideas = {
 			visible = { has_country_flag = enc_accepted_ncr_leaders }
 			traits = { ruthless_capitalist }
 			available = {
-				not = {
+				NOT = {
 					has_idea = closed_economy
 					has_idea = enc_collapsed_economy
 					has_idea = hidden_economy

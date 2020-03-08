@@ -54,7 +54,6 @@ ideas = {
 				ruler_acceptance = -100
 				people_acceptance = -100
 				intellectuals_acceptance = -100
-				units_deployed_to_overlord = yes
 			}
 		}
 	}

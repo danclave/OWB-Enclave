@@ -90,7 +90,7 @@ ENC_cloning = {
 		available = {
 			any_owned_state = {
 				has_state_flag = has_cloning_facility_flag
-				not = {
+				NOT = {
 					has_state_flag = has_cloning_facility_occupied_flag
 				}
 			}
@@ -110,7 +110,7 @@ ENC_cloning = {
 		icon = decision_enc_cloning
 		cost = 50
 		visible = {
-			not = {
+			NOT = {
 				has_country_flag = enc_cloning_available_flag
 			}
 		}
@@ -125,7 +125,7 @@ ENC_cloning = {
 		available = {
 			any_owned_state = {
 				has_state_flag = has_cloning_facility_flag
-				not = {
+				NOT = {
 					has_state_flag = has_cloning_facility_occupied_flag
 				}
 			}
@@ -297,7 +297,7 @@ ENC_cloning = {
 					resource = energy
 					amount > 29
 				}
-				not = {
+				NOT = {
 					has_state_flag = has_cloning_facility_flag
 				}
 			}
@@ -439,7 +439,7 @@ ENC_war_with_NCR = {
 			}
 		}
 		available = {
-			not = {
+			NOT = {
 				country_exists = NCR
 			}
 		}
@@ -681,7 +681,7 @@ ENC_exploiting_wasteland = {
 			original_tag = ERB
 		}
 		icon = GFX_decision_generic_industry
-		fire_only_once = no 
+		fire_only_once = no
 		custom_cost_text = command_power_10
 		custom_cost_trigger = {
 			command_power > 9.9
@@ -700,10 +700,10 @@ ENC_exploiting_wasteland = {
 			FROM = {
 				resistance < 50
 				arms_factory > 0
-			}	
+			}
 		}
 		visible = {
-			not = { has_completed_focus = enc_reform }
+			NOT = { has_completed_focus = enc_reform }
 		}
 		complete_effect = {
 			hidden_effect = {
@@ -720,14 +720,14 @@ ENC_exploiting_wasteland = {
 				}
 			}
 			ERB = { add_offsite_building = { type = arms_factory level = amount_factory_removed }	}
-		}	
+		}
 	}
 	ENC_exploiting_wasteland_industrial_complex = {
 		icon = generic_construction
 		allowed = {
 			original_tag = ERB
 		}
-		fire_only_once = no 
+		fire_only_once = no
 		custom_cost_text = command_power_10
 		custom_cost_trigger = {
 			command_power > 9.9
@@ -750,7 +750,7 @@ ENC_exploiting_wasteland = {
 			}
 		}
 		visible = {
-			not = { has_completed_focus = enc_reform }
+			NOT = { has_completed_focus = enc_reform }
 		}
 		complete_effect = {
 			hidden_effect = {
@@ -770,4 +770,3 @@ ENC_exploiting_wasteland = {
 		}
 	}
 }
-

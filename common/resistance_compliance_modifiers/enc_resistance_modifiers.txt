@@ -60,7 +60,7 @@ enc_resistance_LLW = {
 	alert_level = high
 	alert_margin = 5
 	visible = {
-		FROM = {		
+		FROM = {
 			original_tag = ERB
 		}
 	}
@@ -82,9 +82,9 @@ enc_resistance_0 = {
 	alert_level = low
 	alert_margin = 5
 	visible = {
-		FROM = {		
+		FROM = {
 			original_tag = ERB
-			not = { has_completed_focus = enc_reform }
+			NOT = { has_completed_focus = enc_reform }
 		}
 	}
 	state_modifier = {

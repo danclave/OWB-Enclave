@@ -10,11 +10,11 @@ enc_no_garrison_occupation = {
 	sound_effect = "Martial_Law_Interface_No_Garrison"
 
 	state_modifier = {
-		required_garrison_factor = -1 
+		required_garrison_factor = -1
 		resistance_target = 1
 		no_compliance_gain = 1
 		local_resources = -1
-		local_factories = -1 
+		local_factories = -1
 		resistance_growth = 25
 		resistance_garrison_penetration_chance = -1
 	}
@@ -27,7 +27,7 @@ enc_no_garrison_occupation = {
 enc_wastelander_pacification = {
 	visible = {
 		original_tag = ERB
-		not = { has_completed_focus = enc_reform }
+		NOT = { has_completed_focus = enc_reform }
 	}
 	icon = 7
 	sound_effect = "Martial_Law_Interface_No_Garrison"
@@ -46,7 +46,7 @@ enc_dismantle_industry = {
 	tooltip = enc_dismantle_industry_tt
 	visible = {
 		original_tag = ERB
-		not = { has_completed_focus = enc_reform }
+		NOT = { has_completed_focus = enc_reform }
 	}
 	icon = 9
 	sound_effect = "Martial_Law_Interface_No_Garrison"
@@ -67,7 +67,7 @@ enc_dismantle_industry = {
 enc_enslave_locals = {
 	visible = {
 		original_tag = ERB
-		not = { has_completed_focus = enc_reform }
+		NOT = { has_completed_focus = enc_reform }
 	}
 	icon = 10
 	sound_effect = ERB_whip
@@ -97,7 +97,7 @@ enc_no_exploit_resources = {
 		local_resources = 0.20
 		resistance_garrison_penetration_chance = -0.50
 	}
-	
+
 }
 
 
