@@ -25,7 +25,7 @@ country_event = {#1 - OUR ESCAPE
 		add_war_support = -0.07
     }
 }
-country_event = {#2 - Operational Security Compromised! 
+country_event = {#2 - Operational Security Compromised!
 	id = enc.2
 	title = enc.2.t
 	desc = enc.2.d
@@ -40,7 +40,7 @@ country_event = {#2 - Operational Security Compromised!
 		}
 		clr_country_flag = ncr_suspicious
 	}
-	option = { # spend PP		
+	option = { # spend PP
 		trigger = {
 			has_political_power > ENC_hiding_cost_total
 		}
@@ -1106,6 +1106,48 @@ country_event = {#46 - Mexico Challenge
 				add_research_slot = 1
 			}
 		}
+	}
+}
+country_event = {#47 - Occupation Laws
+	id = enc.47
+	title = enc.47.t
+	desc = enc.47.d
+	picture = GFX_event_enc_occupation_laws
+
+	fire_only_once = yes
+    is_triggered_only = yes
+	option = {# good
+		name = enc.47.a
+		add_command_power = 25
+		country_event = { id = enc.48 }
+	}
+	option = {# good
+		name = enc.47.b
+		add_command_power = 25
+	}
+}
+country_event = {#48 - Dismantle Industry
+	id = enc.48
+	title = enc.48.t
+	desc = enc.48.d
+	picture = GFX_event_exploit_wastes
+	fire_only_once = yes
+    is_triggered_only = yes
+	option = {# good
+		name = enc.48.a
+		country_event = {id = enc.49 }
+	}
+}
+
+country_event = {#49 - Lawless Wasteland
+	id = enc.49
+	title = enc.49.t
+	desc = enc.48.d
+	picture = GFX_enc_event_lawless_wasteland
+	fire_only_once = yes
+    is_triggered_only = yes
+	option = {# good
+		name = enc.49.a
 	}
 }
 

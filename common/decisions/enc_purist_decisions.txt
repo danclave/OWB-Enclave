@@ -767,7 +767,7 @@ ENC_exploiting_wasteland = {
 				}
 			}
 			ERB = { add_offsite_building = { type = industrial_complex level = amount_factory_removed }	}
-		}	
+		}
 	}
 }
 

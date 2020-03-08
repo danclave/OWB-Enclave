@@ -238,3 +238,17 @@ enc.46.t: "A Day May Come When the Courage of Men Fails"
 enc.46.d: "The Bull is dead, its slaves under a new, far more efficient master. The NCR's resistance has been crushed and the mutant processing centers are beginning their great work. But there are some who still oppose the Enclave's dream to save the world. \n\nTo the south, the peoples of Mexico have united under three powerful mutants.  The lady of Rio, Valentina Rosado, turns American technology against us. The psychic freak of [ATE.GetName] plans to see her people through the storm. And the tribes of the Yucatan have rallied under Clara Guzman.  And they are not alone. From the ghoulish drug lords of the south to the tribals in wrestling gear to the west, a vast horde is marshaling to descend upon America.\n\nBut let them come! We will slit their bellies as they crawl to safety! For the Enclave!"
 enc.46.a: "God Bless the Enclave."
 enc.46.a_tt: "Get ready for the final show down."
+
+################################################################################################################ -<
+enc.47.t: "The Lawless Wasteland"
+enc.47.d: "After the disaster on the Rig the Wasteland remains populated by freaks and mutants who pervert all that humanity holds dear. Given the few remaining humans who hold to the Enclave's cause, it is difficulty to properly subjugate the monsters.  We can set several different occupation policies, including one to exploit resources, and another which let us dismantle their so-called 'factories' and relocate them to Sierra Army Depot via a decision."
+enc.47.a: "How do I relocate factories?"
+enc.47.b: "Oh I understand how to deal with them."
+################################################################################################################ -<
+enc.48.t: "Dismantle Factories"
+enc.48.d: "If our occupation policy is set to dismantle factories, we can transfer factories back to the Sierra Army Depot. Of course, we will run out of facilities eventually, so we may be forced to pursue other alternatives.  Note that as resistance increases, states will fall from our control and become part of the Lawless Wasteland, the natural state of the mutants."
+enc.48.a: "But how do we reclaim the Lawless Wasteland?"
+################################################################################################################ -<
+enc.49.t: "I'm Just a Lawless Wasteland, Baby"
+enc.49.d: "If resistance rises to 20% in a state controlled by the Enclave, it will revert to the Lawless Wasteland. While we can move through the Lawless Wasteland, we cannot exploit it yet.  This may change as we recover prewar robotic technology.  And if we deploy a garrison to the state, we can control it. But we will need to make sure we can hold onto it or it will revert to a Lawless Wasteland."
+enc.49.a: "God I hate mutants."

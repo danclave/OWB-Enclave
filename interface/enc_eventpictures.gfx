@@ -647,4 +647,17 @@ spriteTypes = {
 			name = "GFX_event_prewar_money"
 			texturefile = "gfx/event_pictures/prewar_money.tga"
 		}
+		SpriteType = {#purist laws
+			name = "GFX_event_enc_occupation_laws"
+			texturefile = "gfx/event_pictures/event_enc_occupation_laws.tga"
+		}
+		SpriteType = {#exploit wastes
+			name = "GFX_event_exploit_wastes"
+			texturefile = "gfx/event_pictures/event_exploit_wastes.tga"
+		}
+		SpriteType = {#Wasteland
+			name = "GFX_enc_event_lawless_wasteland"
+			texturefile = "gfx/event_pictures/enc_event_lawless_wasteland.tga"
+	}
+
 }
