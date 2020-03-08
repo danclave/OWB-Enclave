@@ -665,5 +665,5 @@ ideas = {
 			}
 			cancel_if_invalid = yes
 		}
-
+	}
 }
