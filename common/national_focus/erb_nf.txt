@@ -646,9 +646,40 @@ focus_tree = {
 			custom_effect_tooltip = enc_american_dream.tt
 		}
 	}
-
-
-
+	focus = {#SUSPICION - infiltrate NCR
+		id = enc_infiltrate_ncr
+		icon = GFX_goal_enc_infiltrate_ncr
+		cost = 4.3
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_american_dream
+		x = 9
+		y = 1
+		prerequisite = { focus = enc_reform }
+		completion_reward = {
+			set_temp_variable = { suspicion_change_var = -35 }
+			change_suspicion = yes
+		}
+	}
+	focus = {#RADIO - Enclave Radio
+		id = enc_radio
+		icon = GFX_goal_enc_radio_reform
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_infiltrate_ncr
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_infiltrate_ncr }
+		completion_reward = {
+			add_ideas = { ENC_radio }
+			159 = {
+				add_building_construction = {
+					type = radar_station
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		cost = 4.3
+	}
 	focus = {#SS operation babylon
 		id = enc_operation_babylon
 		icon = GFX_goal_enc_operation_babylon
@@ -794,40 +825,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = enc_dayglow_proclamation
 		}
-	}
-	focus = {#SUSPICION - infiltrate NCR
-		id = enc_infiltrate_ncr
-		icon = GFX_goal_enc_infiltrate_ncr
-		cost = 4.3
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_american_dream
-		x = 9
-		y = 1
-		prerequisite = { focus = enc_reform }
-		completion_reward = {
-			set_temp_variable = { suspicion_change_var = -35 }
-			change_suspicion = yes
-		}
-	}
-	focus = {#RADIO - Enclave Radio
-		id = enc_radio
-		icon = GFX_goal_enc_radio_reform
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_infiltrate_ncr
-		x = 0
-		y = 1
-		prerequisite = { focus = enc_infiltrate_ncr }
-		completion_reward = {
-			add_ideas = { ENC_radio }
-			159 = {
-				add_building_construction = {
-					type = radar_station
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		cost = 4.3
 	}
 	focus = {#SUSPICION - stage raider attacks
 		id = enc_stage_raider_attacks
@@ -1496,7 +1493,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_the_mutant_question
 		mutually_exclusive = { focus = enc_segregation }
-		mutually_exclusive = { focus = enc_subjugation }
+		#mutually_exclusive = { focus = enc_subjugation }
 		x = 3
 		y = 1
 		prerequisite = {
@@ -1721,9 +1718,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = enc_expand_human_definition
 		}
-		mutually_exclusive = {
-			focus = enc_subjugation
-		}
+		# mutually_exclusive = {
+		# 	focus = enc_subjugation
+		# }
 		prerequisite = {
 			focus = enc_the_mutant_question
 			focus = enc_the_mutant_question_purists
@@ -6544,6 +6541,19 @@ focus = {#NEVADA - second city
 			custom_effect_tooltip = enc_boost_special_forces_tt
 		}
 	}
+	focus = {#SIERRA - 2- The lab
+		id = enc_depot_lab
+		icon = GFX_goal_enc_scientists
+		prerequisite = {focus = enc_depot_end}
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_depot_end
+		x = 1
+		y = 1
+		cost = 8.6
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
 	focus = {#Purity - FEV experiments
 		id = enc_FEV_experiments
 		icon = GFX_goal_enc_experiments
@@ -6571,19 +6581,6 @@ focus = {#NEVADA - second city
 		completion_reward = {
 			add_research_slot = 1
 			swap_ideas = {remove_idea = ENC_scientists add_idea = ENC_scientists_buffed}
-		}
-	}
-	focus = {#SIERRA - 2- The lab
-		id = enc_depot_lab
-		icon = GFX_goal_enc_scientists
-		prerequisite = {focus = enc_depot_end}
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_depot_end
-		x = 1
-		y = 1
-		cost = 8.6
-		completion_reward = {
-			add_research_slot = 1
 		}
 	}
 	focus = {#SIERRA - 3 - Mexican Robots

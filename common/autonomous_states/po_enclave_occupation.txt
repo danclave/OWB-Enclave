@@ -1,6 +1,5 @@
 autonomy_state = {
 	id = autonomy_enclave_influenced_region
-	picture = GFX_autonomy_enclave_reservation_icon
 
 	default = yes
 	is_puppet = yes
@@ -31,7 +30,7 @@ autonomy_state = {
 	}
 	allowed = {
 		has_dlc = "Together for Victory"
-		
+
 		OVERLORD = {
 			original_tag = ERB
 		}

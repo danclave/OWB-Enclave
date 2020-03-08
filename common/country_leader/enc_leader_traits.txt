@@ -110,7 +110,7 @@ leader_traits = {
 		production_factory_efficiency_gain_factor = 0.05
 	}
 	rebellious = {
-		random = no	
+		random = no
 		political_power_cost = 0.10
 		stability_factor = -0.05
 	}
@@ -133,7 +133,7 @@ leader_traits = {
 		people_drift = 0.15
 		political_power_factor = 0.10
 	}
-	
+
 	interventionist = {
 		random = no
 		war_support_factor = 0.05
@@ -146,7 +146,7 @@ leader_traits = {
 		max_fuel_factor = 0.10
 		army_fuel_consumption_factor = -0.10
 		consumer_goods_factor = 0.05
-	}	
+	}
 	desert_fighter = {
 		random = no
 		heat_attrition_factor = -0.10
@@ -155,16 +155,17 @@ leader_traits = {
 	winter_fighter = {
 		random = no
 		winter_attrition_factor = -0.10
-		acclimatization_cold_climate_gain_factor = 0.20	
+		acclimatization_cold_climate_gain_factor = 0.20
 	}
 	enc_politically_connected = {
 		random = no
-		political_advisor_cost_factor = -0.20
+		economic_advisor_cost_factor = -0.20
+		cultural_advisor_cost_factor = -0.20
 		army_chief_cost_factor = -0.20
 		air_chief_cost_factor = -0.20
 		navy_chief_cost_factor = -0.20
 		high_command_cost_factor = -0.20
-		theorist_cost_factor = -0.20
+		research_advisor_cost_factor = -0.20
 		economy_cost_factor = -0.20
 		trade_laws_cost_factor = -0.20
 	}
@@ -183,7 +184,7 @@ leader_traits = {
 		random = no
 		people_drift = 0.03
 	}
-	
+
 
     ###############################
 	# manufacturers
@@ -244,7 +245,7 @@ leader_traits = {
 		experience_gain_air_factor = -0.25
 		research_bonus = {
 			cat_air_doctrine = -0.10
-		}	
+		}
 	}
 	enc_air_chief_cas = {
 		random = no
@@ -261,7 +262,7 @@ leader_traits = {
 	enc_incompetent_general = {
 		random = no
 		army_morale_factor = -0.03
-		army_attack_factor = -0.05	
+		army_attack_factor = -0.05
 	}
 	enc_navy_chief_loyalist = {
 		random = no
@@ -273,7 +274,7 @@ leader_traits = {
 		political_power_factor = -0.10
 	}
 	enc_incompetent_admiral = {
-		random = no		
+		random = no
 		naval_coordination = -0.05
 		naval_hit_chance = -0.05
 		experience_gain_navy_factor = -0.25

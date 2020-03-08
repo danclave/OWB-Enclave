@@ -31,7 +31,7 @@ ideas = {
 				mobilization_speed = 1000
 			}
 		}
-		
+
 		enc_idea_lawless_wasteland = {
 			allowed = { always = no }
 			removal_cost = -1
@@ -55,9 +55,7 @@ ideas = {
 				people_acceptance = -100
 				intellectuals_acceptance = -100
 				units_deployed_to_overlord = yes
-			}			
+			}
 		}
 	}
 }
-
-

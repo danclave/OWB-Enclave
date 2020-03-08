@@ -209,7 +209,7 @@ ENC_reno = {
 	}
 }
 
-ENC_radio_broadcasts = { 
+ENC_radio_broadcasts = {
 	ENC_raise_war_support = {
 		icon = decision_enc_propaganda
 		cost = 75
@@ -919,31 +919,6 @@ ENC_render_unto_caesar = {
 			}
 		}
 	}
-	CES_push_refugees = {
-		icon = generic_break_treaty
-		priority = 30
-		fire_only_once = YES
-
-		available = {
-			has_country_flag = ENC_CES_hostile
-		}
-		is_good = no
-		days_remove = 37
-		remove_effect = {
-			add_days_mission_timeout = {
-				mission = CES_crisis
-				days = 100
-			}
-			CES = {
-				random_owned_state = {
-					add_manpower = 10000
-				}
-				random_owned_state = {
-					add_manpower = 10000
-				}
-			}
-		}
-	}
 	CES_border_raiders = {
 		icon = generic_break_treaty
 		priority = 30
@@ -1058,7 +1033,7 @@ ENC_render_unto_caesar = {
 	}
 }
 
-scavenge_resources = {
+scavenging_decisions = {
 	enc_reject_scavenging = {
 		cost = 50
 		fire_only_once = yes
@@ -1072,7 +1047,6 @@ scavenge_resources = {
 		complete_effect = {
 			clr_country_flag = enabled_scavenging
 		}
-
 	}
 }
 
@@ -1255,7 +1229,7 @@ enc_executive_orders = {
 		allowed = {
 			original_tag = ERB
 		}
-		days_remove = 20 
+		days_remove = 20
 		days_re_enable = 30
 		custom_cost_text = command_power_max
 		custom_cost_trigger = {

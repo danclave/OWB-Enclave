@@ -25,7 +25,6 @@ set_technology = {
 	simple_servo_tech = 1
 	stripped_pa_tech = 1
 	scav_pa_tech = 1
-	underground_industry_tech = 1
 	power_armour_enclave_1 = 1
 	vertibird_tech = 1
 	vertibird_cas_tech = 1

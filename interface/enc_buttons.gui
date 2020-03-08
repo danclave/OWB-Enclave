@@ -331,7 +331,7 @@ guiTypes = {
 		}
 		containerWindowType = { # title
 			name = "manpower_window"
-			size = { width = 200 height   §= 30 }
+			size = { width = 200 height = 30 }
 			clipping = no
 			scale = 0.80
 			instantTextboxType = { # title
