@@ -488,6 +488,13 @@ ENC_vice_president_lynette_desc:0 "Remodel America to make every town as prosper
 add_popularity_to_ruling_party_tt: "Change in popularity of §GGetRulingParty§!: [?popularity_change|%2+].\n"
 add_popularity_to_reformers_good:  "Change in popularity of §GReformers§!: [?popularity_change|%2+].\n"
 
+###################################
+# Purist Secrets
+###################################
+ENC_secrets: "Project Safehouse"
+ENC_secrets_desc: "The Enclave has some of the greatest advances of prewar America at its fingrertips. We can use these, as we reestablish ourselves, to crush the mutants once and for all.  And perhaps find a refuge for the last of mankind. \n\nCurrently: [purist_hercules] \n[purist_space_projects]"
+hercules_1: "We have [?hercules] volleys ready to fire."
+space_project_1: "\nRemember, §gthe Vaults were never built to save anyone.§!"
 ################ special codes for special people ################################################################################################################
 
 # y§Yyellow§!
