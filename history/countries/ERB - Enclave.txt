@@ -25,7 +25,6 @@ set_technology = {
 	simple_servo_tech = 1
 	stripped_pa_tech = 1
 	scav_pa_tech = 1
-	underground_industry_tech = 1
 	power_armour_enclave_1 = 1
 	vertibird_tech = 1
 	vertibird_cas_tech = 1
@@ -52,6 +51,7 @@ set_country_flag = gov_outsiders_hidden
 set_country_flag = default_officer_laws
 
 set_country_flag = do_not_spread_followers
+set_country_flag = no_overlord_decisions 
 
 # resistance and compliance
 set_country_flag = has_compliance_core_unique_tiers
@@ -59,6 +59,7 @@ set_country_flag = has_compliance_state_unique_tiers
 set_country_flag = has_resistance_state_unique_tiers
 set_country_flag = has_resistance_core_unique_tiers
 set_country_flag = has_unique_occupation_laws
+set_global_flag = development_done_sierra_army_depot 
 
 
 set_country_flag = ignore_puppet_events

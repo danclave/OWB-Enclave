@@ -80,7 +80,7 @@ ERB_SHI_people_ADJ:0 "San Franciscan"
 
 ERB_VEG_ruler:0 "Vegas"
 ERB_VEG_ruler_DEF:0 "Vegas"
-ERB_VEG_ruler_ADJ:0 "Vegas
+ERB_VEG_ruler_ADJ:0 "Vegas"
 ERB_VEG_intellectuals:0 "Vegas"
 ERB_VEG_intellectuals_DEF:0 "Vegas"
 ERB_VEG_intellectuals_ADJ:0 ""Vegas"
@@ -185,7 +185,6 @@ EAZ_BAR_people_DEF:0 "Enclave Administration Zone"
 EAZ_BAR_people_ADJ:0 "Enclave Administration Zone"
 EAZ_BAR_ruler:0 "Enclave Administration Zone"
 EAZ_BAR_ruler_DEF:0 "Enclave Administration Zone"
-
 EAZ_BAR_ruler_ADJ:0 "Enclave Administration Zone"
 
 LLW_intellectuals:0 "Lawless Wasteland"
@@ -235,6 +234,3 @@ EAZ_VEG_ruler_ADJ:0 "Lost Vegas"
 autonomy_mainframe: "Mainframe"
 autonomy_network: "Networked Computers"
 enclave_administrative_zone_1: "Enclave Administrative Zone"
-=======
-EAZ_BAR_ruler_ADJ:0 "Enclave Administration Zone"
->>>>>>> master

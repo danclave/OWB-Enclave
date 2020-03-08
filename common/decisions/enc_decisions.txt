@@ -11,7 +11,7 @@ ENC_shifts = {
 		days_re_enable = 2
 		available = {
 			has_war_support > 0.4
-			not = { has_decision = reduce_production_shifts }
+			NOT = { has_decision = reduce_production_shifts }
 		}
 		modifier = {
 			war_support_weekly = -0.01125#total = 10%
@@ -26,7 +26,7 @@ ENC_shifts = {
 		days_re_enable = 2
 		available = {
 			has_war_support > 0.4
-			not = { has_decision = reduce_construction_shifts }
+			NOT = { has_decision = reduce_construction_shifts }
 		}
 		modifier = {
 			war_support_weekly = -0.01125 #1,125% per week
@@ -41,7 +41,7 @@ ENC_shifts = {
 		days_re_enable = 2
 		available = {
 			has_war_support > 0.4
-			not = { has_decision = reduce_research_shifts }
+			NOT = { has_decision = reduce_research_shifts }
 		}
 		modifier = {
 			war_support_weekly = -0.01125#total = 5%
@@ -55,7 +55,7 @@ ENC_shifts = {
 			has_stability > 0.05
 		}
 		available = {
-			not = { has_decision = reduce_administrative_shifts }
+			NOT = { has_decision = reduce_administrative_shifts }
 		}
 		days_remove = 56 # 8 weeks
 		days_re_enable = 30
@@ -74,7 +74,7 @@ ENC_shifts = {
 
 		available = {
 			num_of_military_factories > 10
-			not = { has_decision = extend_production_shifts }
+			NOT = { has_decision = extend_production_shifts }
 		}
 
 		days_re_enable = 30
@@ -91,7 +91,7 @@ ENC_shifts = {
 
 		available = {
 			num_of_civilian_factories > 5
-			not = { has_decision = extend_construction_shifts }
+			NOT = { has_decision = extend_construction_shifts }
 		}
 
 		modifier = {
@@ -108,7 +108,7 @@ ENC_shifts = {
 
 		available = {
 			amount_research_slots > 2
-			not = { has_decision = extend_research_shifts }
+			NOT = { has_decision = extend_research_shifts }
 		}
 
 		modifier = {
@@ -120,7 +120,7 @@ ENC_shifts = {
 		icon = decision_enc_admin_down
 		cost = 100
 		available = {
-			not = { has_decision = extend_administrative_shifts }
+			NOT = { has_decision = extend_administrative_shifts }
 		}
 		days_remove = 56 # 8 weeks
 		days_re_enable = 30
@@ -143,7 +143,7 @@ ENC_reno = {
 			has_country_flag = enc_graffs_completed
 		}
 		cancel_trigger = {
-			not = {
+			NOT = {
 				has_full_control_of_state = 285 #NEW RENO
 			}
 		}
@@ -175,7 +175,7 @@ ENC_reno = {
                 type = energy_equipment_2
                 amount = 500
                 producer = ERB
-				}
+			}
             add_manpower = -200
             285 = { add_manpower = -1000 }
             set_country_flag = enc_graffs_completed
@@ -185,7 +185,7 @@ ENC_reno = {
 		icon = hol_attract_foreign_investors
 		cost = 50
 		visible = {
-			not = {
+			NOT = {
 				has_country_flag = enc_graffs_completed
 			}
 			has_full_control_of_state = 285 #NEW REno
@@ -218,7 +218,7 @@ ENC_radio_broadcasts = {
 		}
 		available = {
 			has_completed_focus = enc_purity
-			not = { has_decision = ENC_raise_stability }
+			NOT = { has_decision = ENC_raise_stability }
 		}
 		modifier = {
 			war_support_weekly = 0.0350
@@ -232,7 +232,7 @@ ENC_radio_broadcasts = {
 		icon = decision_enc_propaganda
 		visible = {
 			has_stability < 0.5
-			not = { has_decision = ENC_raise_war_support }
+			NOT = { has_decision = ENC_raise_war_support }
 		}
 		available = {
 		}
@@ -323,7 +323,7 @@ ENC_NCR_hiding = {
 		activation  = {
 			is_neighbor_of = NCR
 			has_country_flag = ncr_suspicious	# when ncr is suspicious
-			not = {
+			NOT = {
 				has_war_with = NCR
 				has_country_flag = NCR_crisis_flag
 				# any of the crisis solutions are active
@@ -454,7 +454,7 @@ ENC_NCR_hiding = {
 		priority = 30
 		activation = {
 			has_country_flag = NCR_crisis_flag
-			not = {
+			NOT = {
 				NCR = {
 					OR = {
 						exists = no
@@ -466,8 +466,8 @@ ENC_NCR_hiding = {
 		}
 		available = {
 			OR = {
-				not = { has_country_flag = NCR_crisis_flag }
-				not = {	has_country_flag = ncr_suspicious }
+				NOT = { has_country_flag = NCR_crisis_flag }
+				NOT = {	has_country_flag = ncr_suspicious }
 				has_decision = NCR_crisis_construction
 				has_decision = NCR_crisis_laylow
 				has_decision = NCR_crisis_resources
@@ -554,7 +554,7 @@ ENC_NCR_hiding = {
 		visible = {
 			has_completed_focus = enc_reform
 			has_country_flag = ncr_suspicious
-			not = { has_completed_focus = enc_american_dream }
+			NOT = { has_completed_focus = enc_american_dream }
 		}
 		available = {
 			has_completed_focus = enc_home_is_nevada
@@ -860,7 +860,7 @@ ENC_render_unto_caesar = {
 		activation = {
 			has_country_flag = ENC_CES_hostile
 			has_completed_focus = enc_purity
-			not = {
+			NOT = {
 				CES = {
 					OR = {
 						exists = no
@@ -871,7 +871,7 @@ ENC_render_unto_caesar = {
 			}
 		}
 		available = {
-			not = { country_exists = CES }
+			NOT = { country_exists = CES }
 		}
 		cancel_trigger = {
 			CES = {
@@ -892,31 +892,6 @@ ENC_render_unto_caesar = {
 		}
 		complete_effect = {
 			ERB = { country_event = {id = enc_reformers.101 } }
-		}
-	}
-	CES_push_refugees = {
-		icon = generic_break_treaty
-		priority = 30
-		fire_only_once = YES
-
-		available = {
-			has_country_flag = ENC_CES_hostile
-		}
-		is_good = no
-		days_remove = 37
-		remove_effect = {
-			add_days_mission_timeout = {
-				mission = CES_crisis
-				days = 100
-			}
-			CES = {
-				random_owned_state = {
-					add_manpower = 10000
-				}
-				random_owned_state = {
-					add_manpower = 10000
-				}
-			}
 		}
 	}
 	CES_push_refugees = {
@@ -970,7 +945,7 @@ ENC_render_unto_caesar = {
 		activation = {
 			has_country_flag = purist_mexico_timer
 			has_completed_focus = enc_purity
-			not = {
+			NOT = {
 				RRG = {
 					OR = {
 						exists = no
@@ -981,7 +956,7 @@ ENC_render_unto_caesar = {
 			}
 		}
 		available = {
-			not = { country_exists = RRG }
+			NOT = { country_exists = RRG }
 		}
 		cancel_trigger = {
 			RRG = {
@@ -1011,7 +986,7 @@ ENC_render_unto_caesar = {
 		fire_only_once = YES
 		activation = {
 			has_country_flag = ENC_axis_evil
-			not = {
+			NOT = {
 				CES = {
 					OR = {
 						exists = no
@@ -1022,7 +997,7 @@ ENC_render_unto_caesar = {
 			}
 		}
 		available = {
-			not = { country_exists = CES }
+			NOT = { country_exists = CES }
 		}
 		cancel_trigger = {
 			CES = {
@@ -1058,7 +1033,7 @@ ENC_render_unto_caesar = {
 	}
 }
 
-scavenge_resources = {
+scavenging_decisions = {
 	enc_reject_scavenging = {
 		cost = 50
 		fire_only_once = yes
@@ -1072,7 +1047,6 @@ scavenge_resources = {
 		complete_effect = {
 			clr_country_flag = enabled_scavenging
 		}
-
 	}
 }
 
@@ -1107,7 +1081,7 @@ enc_executive_orders = {
 		activation = {
 			country_exists = CES
 			has_country_flag = enc_nuke_arming
-			not = {
+			NOT = {
 				has_country_flag = enc_flagstaff_nuked
 				has_country_flag = enc_nuke_armed
 			}
@@ -1321,28 +1295,22 @@ ENC_debug = {
 	ENC_misc = {
 		complete_effect = {
 			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
-				amount = 250
+                type = energy_equipment_2
+                amount = 500
+                producer = ERB
 			}
 		}
 	}
-	ENC_misc1 = {
-		complete_effect = {
-			add_equipment_to_stockpile = {
-				type = support_robot_equipment
-				amount = 250
-				producer = USA
-			}
-		}
-	}
-
 	enc_state_target_debug_example = {
 		icon = onmap_recruit_operative
+		allowed = {
+			always = no
+		}
 		state_target = yes
 		target_trigger = {
 			FROM = {
 				is_controlled_by = ERB
-				has_occupation_modifier = enc_dismantle_industry
+				occupation_law = enc_dismantle_industry
 			}
 		}
 		available = {
@@ -1354,7 +1322,6 @@ ENC_debug = {
 		fire_only_once = no
 		cost = 0
 		days_re_enable = 180
-		# on_map_mode = map_only
 		complete_effect = {
 
 		}
@@ -1364,11 +1331,19 @@ ENC_debug = {
 	}
 	enc_remove_occupied_cores = {
 		complete_effect = {
+			NEW = {
+				remove_state_core = 285
+			}
 			every_occupied_country = {
-				every_owned_state = {
+				every_state = {
 					PREV = { remove_state_core = PREV }
 				}
 			}
+		}
+	}
+	enc_state_modifier_test = {
+		complete_effect = {
+			285 = { add_state_modifier = { modifier = { required_garrison_factor = -0.25 } } }
 		}
 	}
 }

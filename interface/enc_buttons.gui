@@ -280,7 +280,6 @@ guiTypes = {
 		}
 	} 
 	
-
 	containerWindowType = { # establish_outpost
 		name = establish_outpost_container
 		position = { x = 90 y = 12 }
@@ -293,7 +292,6 @@ guiTypes = {
 		}
 	}
 	containerWindowType = { # abandon_outpost
-		name = abandon_outpost_container
 		position = { x = 120   y = 25 }
 		buttonType = {
 			name = abandon_outpost
