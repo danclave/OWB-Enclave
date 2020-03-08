@@ -625,8 +625,9 @@ scripted_gui = {
         window_name = harvest_resources_container
         parent_window_token = selected_state_view
         visible = {
-			always = no # shelved for now
-            is_owned_and_controlled_by = LLW
+			always = no
+			is_owned_and_controlled_by = LLW
+			ERB = { has_completed_focus = enc_robot_engineering }
 			NOT = {
                 has_state_flag = LLW_harvest_resources_active
             }
@@ -645,6 +646,8 @@ scripted_gui = {
 				multiply_variable = { harvest_resources_manpower_used = 10 }
 				set_temp_variable = { harvest_resources_cost = harvest_resources_manpower_used }
 				multiply_temp_variable = { harvest_resources_cost = -1 }
+				set_temp_variable = {automation_temp = automation }
+				multiply_temp_variable = { harvest_resources_cost = automation_temp }
 				ROOT = {
 					add_manpower = harvest_resources_cost?25
 				}
@@ -658,6 +661,47 @@ scripted_gui = {
 				multiply_temp_variable = { harvest_resources_manpower_used_temp = 10 }
                 ROOT = {
 					has_manpower > harvest_resources_manpower_used_temp?25
+				}
+            }
+        }
+	}
+	robotic_garrison = {
+        context_type = selected_state_context
+        window_name = robotic_garrison_container
+        parent_window_token = selected_state_view
+        visible = {
+			is_owned_and_controlled_by = ERB
+			ROOT = ERB
+			ERB = { has_completed_focus = enc_robot_engineering }
+        }
+        effects = {
+            robotic_garrison_click = {
+				add_state_modifier = {
+					modifier = {
+						required_garrison_factor = -0.25
+					}
+				}
+				ERB = {
+					add_equipment_to_stockpile = {
+					type = support_robot_equipment
+					amount = -25
+				}
+            }
+        }
+        triggers = {
+            robotic_garrison_click_enabled = {
+				ERB = {
+					has_equipment  = {
+						support_robot_equipment > 24
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = more_than_24_robots
+					ROOT = {
+						has_equipment  = {
+							support_robot_equipment > 24
+						}
+					}
 				}
             }
         }
