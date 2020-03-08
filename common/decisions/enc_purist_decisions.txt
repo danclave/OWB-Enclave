@@ -693,9 +693,6 @@ ENC_exploiting_wasteland = {
 				occupation_law = enc_dismantle_industry
 			}
 		}
-		allowed = {
-			original_tag = ERB
-		}
 		available = {
 			FROM = {
 				resistance < 50
@@ -739,9 +736,6 @@ ENC_exploiting_wasteland = {
 				occupation_law = enc_dismantle_industry
 			}
 		}
-		allowed = {
-			original_tag = ERB
-		}
 		available = {
 			FROM = {
 				resistance < 50
@@ -760,7 +754,7 @@ ENC_exploiting_wasteland = {
 		days_remove = 25
 		remove_effect = {
 			FROM = {
-				set_temp_variable = { amount_factory_removed = arms_factory_level }
+				set_temp_variable = { amount_factory_removed = industrial_complex_level }
 				remove_building = {
 					type = industrial_complex
 					level = amount_factory_removed
