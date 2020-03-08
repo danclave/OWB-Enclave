@@ -20,9 +20,9 @@ update_legitimacy = { # currently unused
 				}
 				# clear ideas
 				add_ideas = {
-					ENC_legitimacy_medium					
-				}	
-			}	
+					ENC_legitimacy_medium
+				}
+			}
 		}
 		else_if  = { # value is between 75 and 50, assign medium effect and remove the rest
 			limit = {
@@ -43,11 +43,11 @@ update_legitimacy = { # currently unused
 					NOT = {
 						has_idea = ENC_legitimacy_medium
 					}
-				}			
+				}
 				add_ideas = {
-					ENC_legitimacy_medium					
-				}	
-			}	
+					ENC_legitimacy_medium
+				}
+			}
 		}
 		else_if  = { # value is between 50 and 25, assign low effect and remove the rest
 			limit = {
@@ -68,9 +68,9 @@ update_legitimacy = { # currently unused
 					NOT = {
 						has_idea = ENC_legitimacy_low
 					}
-				}			
+				}
 				add_ideas = {
-					ENC_legitimacy_low					
+					ENC_legitimacy_low
 				}
 			}
 		}
@@ -89,25 +89,25 @@ update_legitimacy = { # currently unused
 					}
 				}
 				add_ideas = {
-					ENC_legitimacy_none					
-				}	
+					ENC_legitimacy_none
+				}
 			}
 		}
 	}
 }
 
 clear_legitimacy = {
-	
+
 }
-change_legitimacy = {	
+change_legitimacy = {
 	if = {
 		limit = {
-			not = {
+			NOT = {
 				has_country_flag = legitimacy_disabled
 			}
 		}
 		balance_legitimacy_gain = yes
-		
+
 		# add free stability if legitimacy past 100%
 		set_temp_variable = { legitimacy_overflow_buffer = enc_legitimacy }
 		add_to_temp_variable = { legitimacy_overflow_buffer = legitimacy_change_var }
@@ -118,7 +118,7 @@ change_legitimacy = {
 			}
 			subtract_from_temp_variable = { legitimacy_change_var = legitimacy_overflow_buffer}
 		}
-		
+
 		add_to_variable  = { enc_legitimacy = legitimacy_change_var	}
 		if = {
 			limit = {
@@ -150,7 +150,7 @@ change_legitimacy = {
 
 has_more_legitimacy = {
 	# custom_trigger_tooltip = {
-		# tooltip = has_legitimacy_tt		
+		# tooltip = has_legitimacy_tt
 		# check_variable = {
 			# var = enc_legitimacy
 			# value > legitimacy_check_var
@@ -166,7 +166,7 @@ balance_legitimacy_gain = {
 		multiply_temp_variable = { legitimacy_change_var = 1 }
 	}
 	else = { # if negative legitimacy gain
-		multiply_temp_variable = { legitimacy_change_var = 1 }		
+		multiply_temp_variable = { legitimacy_change_var = 1 }
 	}
 }
 
@@ -184,7 +184,7 @@ advanced_update_legitimacy = {
 
 	# impact of negative impact is decided by how much of your population is non-enclave ( 1 - (10k / total population))
 	set_variable = { enc_percentage_population_non_enclave = 1 } # start at 100%, then we subtract Enclave population
-	set_variable = { enclave_population = 159.state_population } # population of Siera Army Depot		
+	set_variable = { enclave_population = 159.state_population } # population of Siera Army Depot
 	# calculate total population
 	hidden_effect = {
 		set_variable = { enc_total_population = 0 }
@@ -192,25 +192,25 @@ advanced_update_legitimacy = {
 			# limit = { is_core_of = ROOT }
 			add_to_variable = { ROOT.enc_total_population = THIS.state_population }
 		}
-	}		
-	
+	}
+
 	# calculate percentage of population that is enclave by dividing enc pop by total pop
 	set_variable = { enc_percentage_population_enclave = enclave_population }
 	# enclave_population variable now represents the percentage of the population that is NON-enclave
-	divide_variable = { enc_percentage_population_enclave = enc_total_population } 	
+	divide_variable = { enc_percentage_population_enclave = enc_total_population }
 	# Now we multiply our legitimacy_modifier_var by the amount of non-enclave population. Since Enclave pops don't care about legitimacy.
 	subtract_from_variable = { enc_percentage_population_non_enclave = enc_percentage_population_enclave }
-	
+
 	# weigh Enclave population to be more important
 	set_temp_variable = { weighed_non_enclave_population = enc_percentage_population_enclave }
 	multiply_temp_variable = { weighed_non_enclave_population = 3 } # amount of weighing
-	set_temp_variable = { weighed_population_modifier = enc_percentage_population_non_enclave }	
+	set_temp_variable = { weighed_population_modifier = enc_percentage_population_non_enclave }
 	subtract_from_temp_variable  = { weighed_population_modifier = weighed_non_enclave_population }
 	clamp_temp_variable = {	var = weighed_population_modifier min = 0 max = 1	}
 
 	# apply this all to the legitimacy_modifier_var
 	multiply_variable = { legitimacy_modifier_var = weighed_population_modifier }
-	
+
 	# Finally, we multiple the result by the enc_legitimacy_relevance (defaulting to 1 for no effect)
 	# the function of this variable is to be modified elsewhere by national focuses that make negative legitimacy less relevant (the segregationist / authoritarian ones)
 	multiply_variable = { legitimacy_modifier_var = enc_legitimacy_relevance?1 }
@@ -220,15 +220,15 @@ advanced_update_legitimacy = {
 	# set political_power_factor bonus
 	set_variable = { enc_legitimacy_political_power_factor = 0.30 }
 	multiply_variable = { enc_legitimacy_political_power_factor = legitimacy_modifier_var }
-	
+
 	# set political_power_factor bonus
 	set_variable = { enc_legitimacy_non_core_manpower = 0.25 }
 	multiply_variable = { enc_legitimacy_non_core_manpower = legitimacy_modifier_var }
-	
+
 	# set political_power_factor bonus
 	set_variable = { enc_legitimacy_mobilization_speed = 0.30 }
 	multiply_variable = { enc_legitimacy_mobilization_speed = legitimacy_modifier_var }
-	
+
 	#custom_effect_tooltip = legitimacy_variable_details
 	#custom_effect_tooltip = legitimacy_variable_details2
 

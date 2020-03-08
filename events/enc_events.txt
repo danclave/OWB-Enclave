@@ -740,11 +740,11 @@ country_event = { #33 - Crimson Caravan Encounter
 	trigger = {
 		tag = ERB
 		has_country_flag = NCR_suspicious
-		not = { has_country_flag = enc_event_33_solved }
+		NOT = { has_country_flag = enc_event_33_solved }
 		NCR = {
 			exists = yes
 			has_civil_war = no
-			not = { has_war_with = ERB }
+			NOT = { has_war_with = ERB }
 		}
 	}
 	mean_time_to_happen = {

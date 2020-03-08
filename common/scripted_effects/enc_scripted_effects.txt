@@ -298,7 +298,7 @@ revert_law = { # from law to order
 	custom_effect_tooltip = newline
 	if = {
 		limit = {
-			not = { has_completed_focus = enc_military_police }
+			NOT = { has_completed_focus = enc_military_police }
 		}
 		add_ideas = enc_NCR_power_struggle2
 	}
@@ -310,13 +310,13 @@ revert_order = { # from order to law
 	custom_effect_tooltip = newline
 	if = {
 		limit = {
-			not = { has_completed_focus = enc_fbi }
+			NOT = { has_completed_focus = enc_fbi }
 		}
 		add_ideas = enc_NCR_power_struggle2
 	}
 	else_if = {
 		limit = {
-			not = { has_completed_focus = enc_judicial_branch }
+			NOT = { has_completed_focus = enc_judicial_branch }
 		}
 		add_ideas = enc_NCR_power_struggle
 	}
@@ -660,7 +660,7 @@ misc_effect_test = {
 comply_with_protests = {
 	if = { # not recognized as human, please do so
 		limit = {
-			not = {
+			NOT = {
 				has_completed_focus = enc_the_mutant_question
 			}
 		}
@@ -677,7 +677,7 @@ comply_with_protests = {
 	}
 	else_if = { # player has not chosen democracy, force change to democracy
 		limit = {
-			not = { has_completed_focus = enc_the_fate_of_our_democracy }
+			NOT = { has_completed_focus = enc_the_fate_of_our_democracy }
 		}
 		hidden_effect = {
 			unlock_national_focus = enc_the_fate_of_our_democracy
@@ -698,7 +698,7 @@ comply_with_protests = {
 	}
 	else_if = { # player has not chosen between law or order, force change to law
 		limit = {
-			not = {
+			NOT = {
 				has_completed_focus = enc_law_and_order
 			}
 		}

@@ -224,7 +224,7 @@ guiTypes = {
 		name = robotic_garrison_container
 		position = { x = 30 y = 570 }
 		buttonType = {
-			name = harvest_resources_recall
+			name = robotic_garrison
 			spriteType = GFX_cancel_import_button
 			pdx_tooltip = robotic_garrison_tt
 			pdx_tooltip_delayed = robotic_garrison_tt_delayed
@@ -244,7 +244,7 @@ guiTypes = {
 	}
 	containerWindowType = { # abandon_outpost
 		name = abandon_outpost_container
-		position = { x = 120 y = 25 } 
+		position = { x = 120 y = 25 }
 		buttonType = {
 			name = abandon_outpost
 			spriteType = GFX_closebutton

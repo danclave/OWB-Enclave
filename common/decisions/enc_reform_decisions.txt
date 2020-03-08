@@ -121,7 +121,7 @@ ENC_political_actions = {
 		icon = oppression
 		cost = 75
 		available = {
-			not = {
+			NOT = {
 				has_completed_focus = enc_free_press
 			}
 		}
@@ -194,7 +194,7 @@ ENC_political_actions = {
 		visible = {
 			people > 0.2
 			has_completed_focus = enc_reno_end
-			not = {
+			NOT = {
 				has_country_flag = enc_mid_game
 			}
 		}
@@ -250,7 +250,7 @@ ENC_infiltrating_NCR = {
 		activation = {
 			has_country_flag = enc_bishop_in_NCR
 			has_country_flag = ncr_suspicious
-			not = {
+			NOT = {
 				NCR = {
 					OR = {
 						exists = no
@@ -263,7 +263,7 @@ ENC_infiltrating_NCR = {
 			has_country_flag = enc_ncr_spies
 		}
 		cancel_trigger = {
-			not = {
+			NOT = {
 				has_country_flag = enc_bishop_in_NCR
 				has_country_flag = ncr_suspicious
 			}
@@ -425,10 +425,10 @@ ENC_infiltrating_NCR = {
 		}
 		visible = {
 			country_exists = NCR
-			not = {
+			NOT = {
 				has_country_flag = enc_ncr_spies
 			}
-			or = {
+			OR = {
 				has_completed_focus = enc_infiltrate_ncr
 				has_country_flag = enc_bishop_in_NCR
 			}
@@ -482,7 +482,7 @@ ENC_infiltrating_NCR = {
 		fire_only_once = yes
 		visible = {
 			has_war_with = NCR
-			not = {
+			NOT = {
 				has_country_flag = enc_mid_game
 			}
 		}
@@ -745,7 +745,7 @@ ENC_infiltrating_NCR = {
 		cost = 50
 		visible = {
 			has_war_with = NCR
-			not = {
+			NOT = {
 				has_country_flag = enc_mid_game
 			}
 		}
@@ -753,7 +753,7 @@ ENC_infiltrating_NCR = {
 			has_war_with = NCR
 			any_state = { #we occupy a non core state which has += 10 water
 				is_core_of = NCR
-				not = {
+				NOT = {
 					is_core_of = ROOT
 				}
 				is_controlled_by = ROOT
@@ -777,7 +777,7 @@ ENC_infiltrating_NCR = {
 			random_state = {
 				limit = {
 					is_core_of = NCR
-					not = {
+					NOT = {
 						is_core_of = ROOT
 					}
 					is_controlled_by = ROOT
@@ -853,7 +853,7 @@ ENC_infiltrating_NCR = {
 			NOT = {
 				country_exists = NCR
 			}
-			not = {
+			NOT = {
 				CES = {
 					OR = {
 						exists = no
@@ -1680,7 +1680,7 @@ ENC_nation_building = {
 		visible = {
 			any_owned_state = {
 				civilian_power_grid > 0
-				not = {
+				NOT = {
 					is_core_of = ERB
 				}
 				any_neighbor_state = {
@@ -1692,7 +1692,7 @@ ENC_nation_building = {
 			random_owned_state = {
 				limit = {
 					civilian_power_grid > 0
-					not = {
+					NOT = {
 						is_core_of = ERB
 					}
 					any_neighbor_state = {
@@ -1716,7 +1716,7 @@ ENC_nation_building = {
 		visible = {
 			any_owned_state = {
 				civilian_power_grid > 0
-				not = {
+				NOT = {
 					is_core_of = ERB
 				}
 				any_neighbor_state = {
@@ -1728,7 +1728,7 @@ ENC_nation_building = {
 			random_owned_state = {
 				limit = {
 					civilian_power_grid > 0
-					not = {
+					NOT = {
 						is_core_of = ERB
 					}
 					any_neighbor_state = {
@@ -2566,7 +2566,7 @@ ENC_nevada_broadcasts = {
 			has_stability > 0.3
 		}
 		visible = {
-			not = {
+			NOT = {
 				has_completed_focus = enc_entertainment_broadcasts
 			}
 		}
@@ -2680,7 +2680,7 @@ ENC_american_broadcasts = {
 			has_stability > 0.3
 		}
 		visible = {
-			not = {
+			NOT = {
 				has_completed_focus = enc_entertainment_broadcasts
 			}
 		}
@@ -2748,12 +2748,12 @@ ENC_american_broadcasts = {
 		cost = 100
 		icon = decision_enc_propaganda
 		visible = {
-			not = {
+			NOT = {
 				has_completed_focus = enc_entertainment_broadcasts
 			}
 		}
 		available = {
-			or = {
+			OR = {
 				has_war_support > 0.5
 				has_completed_focus = enc_propaganda_broadcasts
 			}
@@ -2779,7 +2779,7 @@ ENC_american_broadcasts = {
 			has_completed_focus = enc_propaganda_broadcasts
 		}
 		visible = {
-			not = {
+			NOT = {
 				has_completed_focus = enc_entertainment_broadcasts
 			}
 		}
@@ -2792,7 +2792,7 @@ ENC_american_broadcasts = {
 		cost = 50
 		icon = decision_enc_propaganda
 		available = {
-			or = {
+			OR = {
 				has_war_support > 0.5
 				has_completed_focus = enc_propaganda_broadcasts
 			}
@@ -2811,7 +2811,7 @@ ENC_american_broadcasts = {
 		cost = 100
 		fire_only_once = yes
 		visible = {
-			not = {
+			NOT = {
 				has_country_flag = enc_movie_industry
 			}
 		}
@@ -3147,7 +3147,7 @@ ENC_securing_borders = {
 				has_idea = enc_NCR_power_struggle
 				has_idea = enc_NCR_instability
 			}
-			not = {
+			NOT = {
 				has_country_flag = ERB_northern_raiders_cleared
 				has_active_mission = ENC_maintain_northern_control
 			}
@@ -3457,7 +3457,7 @@ ENC_gannon_doctrine = {
 					NOT = {
 						has_country_flag = erb_couriers
 					}
-					not = {
+					NOT = {
 						is_mexican = yes
 					}
 				}

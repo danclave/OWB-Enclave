@@ -58,7 +58,6 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				elites_drift = 0.1
-				army_leader_start_level = 3
 				# new
 				army_org_factor = 0.2
 				max_planning = 0.3
@@ -330,7 +329,7 @@ ideas = {
 			removal_cost = -1
 			level = 4
 			visible = {
-				not = { has_completed_focus = enc_purity }
+				NOT = { has_completed_focus = enc_purity }
 			}
 			available = {
 				has_completed_focus = enc_reform
@@ -354,7 +353,7 @@ ideas = {
 				original_tag = ERB
 			}
 			visible = {
-				not = { has_completed_focus = enc_purity }
+				NOT = { has_completed_focus = enc_purity }
 			}
 			available = {
 				has_completed_focus = enc_reform
@@ -374,7 +373,7 @@ ideas = {
 				original_tag = ERB
 			}
 			visible = {
-				not = { has_completed_focus = enc_reform }
+				NOT = { has_completed_focus = enc_reform }
 			}
 			available = {
 				has_completed_focus = enc_purity
@@ -494,7 +493,7 @@ ideas = {
 				original_tag = ERB
 			}
 			available = {
-				not = {has_country_flag = bans_drugs }
+				NOT = {has_country_flag = bans_drugs }
 			}
 
 			cost = 100
@@ -516,7 +515,7 @@ ideas = {
 				original_tag = ERB
 			}
 			available = {
-				not = { has_country_flag = bans_drugs }
+				NOT = { has_country_flag = bans_drugs }
 				has_completed_focus =  enc_perfect_human
 			}
 

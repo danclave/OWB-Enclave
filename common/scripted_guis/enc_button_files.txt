@@ -530,7 +530,7 @@ scripted_gui = {
 		window_name = establish_outpost_container
 		visible = {
 			is_controlled_by = LLW
-			not = { has_state_flag = LLW_outpost_active }
+			NOT = { has_state_flag = LLW_outpost_active }
 		}
 		effects = {
 			establish_outpost_click = {
@@ -545,7 +545,7 @@ scripted_gui = {
 		triggers = {
 			establish_outpost_click_enabled = {
 				is_controlled_by = LLW
-				not = { has_state_flag = LLW_outpost_active }
+				NOT = { has_state_flag = LLW_outpost_active }
 				ROOT = { command_power > 10 }
 			}
 		}
@@ -632,7 +632,7 @@ scripted_gui = {
 			NOT = {
 				has_state_flag = LLW_harvest_resources_active
 			}
-			or = {
+			OR = {
 				has_resources_amount = { resource = water			amount > 0 }
 				has_resources_amount = { resource = energy			amount > 0 }
 				has_resources_amount = { resource = metal			amount > 0 }
@@ -667,16 +667,18 @@ scripted_gui = {
 		}
 	}
 	robotic_garrison = {
-        context_type = selected_state_context
-        window_name = robotic_garrison_container
-        parent_window_token = selected_state_view
-        visible = {
+		context_type = selected_state_context
+		window_name = robotic_garrison_container
+		parent_window_token = selected_state_view
+		visible = {
 			is_owned_and_controlled_by = ERB
-			ROOT = ERB
+			ROOT = {
+				original_tag = ERB
+			}
 			ERB = { has_completed_focus = enc_robot_engineering }
-        }
-        effects = {
-            robotic_garrison_click = {
+		}
+		effects = {
+			robotic_garrison_click = {
 				add_state_modifier = {
 					modifier = {
 						required_garrison_factor = -0.25
@@ -684,13 +686,14 @@ scripted_gui = {
 				}
 				ERB = {
 					add_equipment_to_stockpile = {
-					type = support_robot_equipment
-					amount = -25
+						type = support_robot_equipment
+						amount = -25
+					}
 				}
-            }
-        }
-        triggers = {
-            robotic_garrison_click_enabled = {
+			}
+		}
+		triggers = {
+			robotic_garrison_click_enabled = {
 				ERB = {
 					has_equipment  = {
 						support_robot_equipment > 24
@@ -704,8 +707,8 @@ scripted_gui = {
 						}
 					}
 				}
-            }
-        }
+			}
+		}
 	}
 	harvest_resources_recall = {
 		context_type = selected_state_context

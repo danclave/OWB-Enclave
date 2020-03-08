@@ -270,7 +270,7 @@ focus_tree = {
 		available = {
 			# has_idea = ENC_scientists_traitors_2
 			if = {
-				limit = { not = { has_country_flag = purists_purged }}
+				limit = { NOT = { has_country_flag = purists_purged }}
 				has_country_flag = enc_demoted_scientists
 			}
 		}
@@ -303,7 +303,7 @@ focus_tree = {
 		available = {
 			# has_idea = ENC_officers_traitors_2
 			if = {
-				limit = { not = { has_country_flag = purists_purged }}
+				limit = { NOT = { has_country_flag = purists_purged }}
 				has_country_flag = enc_demoted_officers
 			}
 		}
@@ -330,7 +330,7 @@ focus_tree = {
 		prerequisite = { focus = enc_purge_officers }
 		available = {
 			elites < 0.15
-			not = { has_completed_focus = enc_purge_opposition }
+			NOT = { has_completed_focus = enc_purge_opposition }
 		}
 		relative_position_id = enc_consolidate_power
 		x = 0
@@ -1176,10 +1176,10 @@ focus_tree = {
 				AND = {
 					strength_ratio = { tag = VLT ratio > 2 }
 					VLT = {
-						or = {
+						OR = {
 							is_lynette_leader = yes
 							is_wallace_leader = yes
-							and = {
+							AND = {
 								ERB = { has_completed_focus = enc_accept_ghouls }
 								is_festus_leader = yes
 							}
@@ -2609,7 +2609,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_completed_focus = enc_law
-					not = { has_country_flag = enc_has_law }
+					NOT = { has_country_flag = enc_has_law }
 				}
 				has_country_flag = enc_has_law
 			}
@@ -2638,7 +2638,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_completed_focus = enc_law
-					not = { has_country_flag = enc_has_law }
+					NOT = { has_country_flag = enc_has_law }
 				}
 				has_country_flag = enc_has_law
 			}
@@ -2698,7 +2698,7 @@ focus_tree = {
 		available = {
 			if = { # only visible when now allowed
 				limit = { has_country_flag = enc_martial_law_blocked }
-				not = { has_country_flag = enc_martial_law_blocked }
+				NOT = { has_country_flag = enc_martial_law_blocked }
 			}
 		}
 		select_effect = {
@@ -3176,7 +3176,7 @@ focus_tree = {
 			focus = enc_fbi
 		}
 		available = {
-			or = {
+			OR = {
 				has_completed_focus = enc_model_communities
 				has_completed_focus = enc_martial_law
 				has_completed_focus = enc_suspend_elections
@@ -6654,7 +6654,7 @@ focus = {#NEVADA - second city
 		y = 1
 		prerequisite = { focus = enc_slave_labour_collars}
 		available = {
-			or = {
+			OR = {
 				has_country_flag = enc_supermutants_captured_flag
 				235 = { is_controlled_by = ERB} # The Warren
 			}
@@ -6929,7 +6929,7 @@ focus = {#NEVADA - second city
 		available = {
 			strength_ratio = { tag = VLT ratio > 2 }
 			VLT = {
-				or = {
+				OR = {
 					is_lynette_leader = yes
 					is_wallace_leader = yes
 				}
@@ -7083,7 +7083,7 @@ focus = {#NEVADA - second city
 		ai_will_do = { factor = 1 }
 		available = {
 			548 = { is_controlled_by = ERB } # NAVARRO
-			not = {has_completed_focus = enc_reform }
+			NOT = {has_completed_focus = enc_reform }
 		}
 		prerequisite = {
 			focus = enc_poison_bear

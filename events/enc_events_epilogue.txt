@@ -15,7 +15,7 @@ news_event = { #2 - Ghouls
 		}
 		else_if = { # player has not chosen democracy, force change to democracy
 			limit = {
-				not = {
+				NOT = {
 					has_completed_focus = enc_accept_ghouls
 				}
 			}
@@ -59,9 +59,9 @@ news_event = { #4 - Gannon
 			}
 			custom_effect_tooltip = enc_events_epilogue.4.d.gannon
 		}
-		else_if = { # no gannon 
+		else_if = { # no gannon
 			limit = {
-				not = {
+				NOT = {
 					has_country_flag = gannon_returns
 				}
 			}
@@ -93,9 +93,9 @@ news_event = { #5 - Press
 			}
 			custom_effect_tooltip = enc_events_epilogue.5.d.press
 		}
-		else_if = { # no gannon 
+		else_if = { # no gannon
 			limit = {
-				not = {
+				NOT = {
 					OR = {
 						has_idea = ENC_free_press
 						has_idea = ENC_free_press_2
