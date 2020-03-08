@@ -658,6 +658,15 @@ spriteTypes = {
 		SpriteType = {#Wasteland
 			name = "GFX_enc_event_lawless_wasteland"
 			texturefile = "gfx/event_pictures/enc_event_lawless_wasteland.tga"
-	}
+		}
+		SpriteType = {#Nukes
+			name = "GFX_enc_event_enc_nuke_from_orbit"
+			texturefile = "gfx/event_pictures/event_enc_nuke_from_orbit.tga"
+		}
+		SpriteType = {#Moon Base
+			name = "GFX_event_enc_moonbase"
+			texturefile = "gfx/event_pictures/event_enc_moonbase.tga"
+		}
+
 
 }

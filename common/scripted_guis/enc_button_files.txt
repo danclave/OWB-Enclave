@@ -721,6 +721,7 @@ scripted_gui = {
 					add_equipment_to_stockpile = {
 						type = support_robot_equipment
 						amount = 25
+
 					}
 				}
 				subtract_from_variable = { state_robots = 1 }

@@ -7611,15 +7611,15 @@ focus = {#NEVADA - second city
 	}
 ##### Purist Robots
 
-	focus = {#Purity - robot_laws
+	focus = { #Purity - robot_laws
 		id = enc_robot_engineering
 		icon = GFX_goal_enc_eyebot
 		ai_will_do = { factor = 1 }
-		relative_position_id = enc_vlt_power
-		x = 4
-		y = 2
-		available = {
-			#has_completed_focus = enc_vlt_power
+		relative_position_id = enc_depot_robot
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = enc_depot_robot
 		}
 		completion_reward = {
 			custom_effect_tooltip = enc_robot_tt
@@ -7627,22 +7627,7 @@ focus = {#NEVADA - second city
 		}
 		cost = 5.8
 	}
-	focus = {#Purity - robot_laws
-		id = enc_robot_engineering_2
-		icon = GFX_goal_enc_eyebot
-		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_robot_engineering }
-		relative_position_id = enc_robot_engineering
-		x = 1
-		y = 1
-		prerequisite = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = enc_robot_tt
-			set_variable = { automation = 0.5 }
-		}
-			cost = 5.8
-}
+
 
 }
 
