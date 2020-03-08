@@ -175,7 +175,7 @@ ENC_reno = {
                 type = energy_equipment_2
                 amount = 500
                 producer = ERB
-				}
+			}
             add_manpower = -200
             285 = { add_manpower = -1000 }
             set_country_flag = enc_graffs_completed
@@ -1320,22 +1320,27 @@ enc_executive_orders = {
 ENC_debug = {
 	ENC_misc = {
 		complete_effect = {
-			add_manpower =1
-			set_country_flag = has_unique_occupation_laws
+			add_equipment_to_stockpile = {
+                type = energy_equipment_2
+                amount = 500
+                producer = ERB
+			}
 		}
-	}
 	}
 	enc_state_target_debug_example = {
 		icon = onmap_recruit_operative
+		allowed = {
+			always = no
+		}
 		state_target = yes
 		target_trigger = {
 			FROM = {
 				is_controlled_by = ERB
-				has_occupation_modifier = enc_dismantle_industry
+				occupation_law = enc_dismantle_industry
 			}
 		}
 		available = {
-			always = yes
+			always = yes 
 		}
 		visible = {
 			always = yes
@@ -1343,7 +1348,6 @@ ENC_debug = {
 		fire_only_once = no
 		cost = 0
 		days_re_enable = 180
-		# on_map_mode = map_only
 		complete_effect = {
 
 		}
@@ -1358,6 +1362,11 @@ ENC_debug = {
 					PREV = { remove_state_core = PREV }
 				}
 			}
+		}
+	}
+	enc_state_modifier_test = {
+		complete_effect = {
+			285 = { add_state_modifier = { modifier = { required_garrison_factor = -0.25 } } }
 		}
 	}
 }

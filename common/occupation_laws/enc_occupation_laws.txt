@@ -33,12 +33,12 @@ enc_wastelander_pacification = {
 	sound_effect = "Martial_Law_Interface_No_Garrison"
 
 	state_modifier = {
-		resistance_target = -0.95
+		resistance_target = -2
 		required_garrison_factor = 0.20
 		local_resources = -0.50
 		no_compliance_gain = 1
 		resistance_garrison_penetration_chance = -0.25
-		resistance_decay = 1 
+		resistance_decay = 3
 	}
 }
 

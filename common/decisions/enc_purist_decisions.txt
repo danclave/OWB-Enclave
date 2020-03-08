@@ -677,104 +677,96 @@ ENC_war_with_NCR = {
 
 ENC_exploiting_wasteland = {
 	ENC_exploiting_wasteland_arms_factories = {
-		icon = generic_construction
-		fire_only_once = no 
-		custom_cost_text = command_power_25  
-		custom_cost_trigger = {
-			command_power > 24.9
+		allowed = {
+			original_tag = ERB
 		}
-		available = {			
-			any_controlled_state = {
-				arms_factory > 0
-				resistance < 50
-				custom_trigger_tooltip = {
-					tooltip = occupation_law_enc_dismantle_industry
-					occupation_law = enc_dismantle_industry
-				}
+		icon = GFX_decision_generic_industry
+		fire_only_once = no 
+		custom_cost_text = command_power_10
+		custom_cost_trigger = {
+			command_power > 9.9
+		}
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ERB
+				occupation_law = enc_dismantle_industry
 			}
 		}
+		allowed = {
+			original_tag = ERB
+		}
+		available = {
+			FROM = {
+				resistance < 50
+				arms_factory > 0
+			}	
+		}
 		visible = {
-		# 	has_completed_focus = enc_purity
+			not = { has_completed_focus = enc_reform }
 		}
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -25
+				add_command_power = -10
 			}
 		}
-		days_remove = 50
+		days_remove = 25
 		remove_effect = {
-			random_controlled_state = {
-				limit = {
-					arms_factory > 0
-					occupation_law = enc_dismantle_industry
-					resistance < 50
-				}
-				set_temp_variable = { ENC_exploiting_wasteland_amount_arms_factory_removed = arms_factory_level }
+			FROM = {
+				set_temp_variable = { amount_factory_removed = arms_factory_level }
 				remove_building = {
 					type = arms_factory
-					level = ENC_exploiting_wasteland_amount_arms_factory_removed
+					level = amount_factory_removed
 				}
 			}
-			random_owned_state = {
-				prioritize = { 159 } # sierra army depot
-				add_building_construction = {
-					type = arms_factory
-					level = ENC_exploiting_wasteland_amount_arms_factory_removed
-					instant_build = yes
-				}				
-			}
-				# add_offsite_building = { type = arms_factory level = ENC_exploiting_wasteland_amount_arms_factory_removed }
+			ERB = { add_offsite_building = { type = arms_factory level = amount_factory_removed }	}
 		}	
 	}
 	ENC_exploiting_wasteland_industrial_complex = {
 		icon = generic_construction
-		fire_only_once = no
-		custom_cost_text = command_power_25
-		custom_cost_trigger = {
-			command_power > 24.9
+		allowed = {
+			original_tag = ERB
 		}
-		visible = {
-		# 	has_completed_focus = enc_purity
+		fire_only_once = no 
+		custom_cost_text = command_power_10
+		custom_cost_trigger = {
+			command_power > 9.9
+		}
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_controlled_by = ERB
+				occupation_law = enc_dismantle_industry
+			}
+		}
+		allowed = {
+			original_tag = ERB
 		}
 		available = {
-			any_controlled_state = {
+			FROM = {
 				resistance < 50
 				industrial_complex > 0
-				custom_trigger_tooltip = {
-					tooltip = occupation_law_enc_dismantle_industry
-					occupation_law = enc_dismantle_industry
-				}
+				occupation_law = enc_dismantle_industry
 			}
+		}
+		visible = {
+			not = { has_completed_focus = enc_reform }
 		}
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -25
+				add_command_power = -10
 			}
-		}		
-		days_remove = 50
+		}
+		days_remove = 25
 		remove_effect = {
-			random_controlled_state = {
-				limit = {
-					resistance < 50
-					industrial_complex > 0
-					occupation_law = enc_dismantle_industry
-				}
-				set_temp_variable = { ENC_exploiting_wasteland_amount_industrial_complex_removed = industrial_complex_level }
+			FROM = {
+				set_temp_variable = { amount_factory_removed = arms_factory_level }
 				remove_building = {
 					type = industrial_complex
-					level = ENC_exploiting_wasteland_amount_industrial_complex_removed
+					level = amount_factory_removed
 				}
 			}
-			random_owned_state = {
-				prioritize = { 159 } # sierra army depot
-				add_building_construction = {
-					type = industrial_complex
-					level = ENC_exploiting_wasteland_amount_industrial_complex_removed
-					instant_build = yes
-				}				
-			}
-			# alternative
-			# add_offsite_building = { type = industrial_complex level = ENC_exploiting_wasteland_amount_industrial_complex_removed }
+			ERB = { add_offsite_building = { type = industrial_complex level = amount_factory_removed }	}
 		}	
 	}
 }
