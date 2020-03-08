@@ -1320,24 +1320,18 @@ enc_executive_orders = {
 ENC_debug = {
 	ENC_misc = {
 		complete_effect = {
-			add_manpower =1
-			set_country_flag = has_unique_occupation_laws
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 250
+			}
 		}
 	}
 	ENC_misc1 = {
 		complete_effect = {
-			261 = {
-				add_state_modifier = {
-					modifier = {
-						required_garrison_factor = 0.25
-					}
-				}
-			}
-			ERB = {
-				add_equipment_to_stockpile = {
-					type = support_robot_equipment
-					amount = 25
-				}
+			add_equipment_to_stockpile = {
+				type = support_robot_equipment
+				amount = 250
+				producer = USA
 			}
 		}
 	}
