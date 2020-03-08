@@ -671,7 +671,7 @@ scripted_gui = {
         parent_window_token = selected_state_view
         visible = {
 			is_owned_and_controlled_by = ERB
-			ROOT = ERB
+			ROOT = { tag = ERB }
 			ERB = { has_completed_focus = enc_robot_engineering }
         }
         effects = {
@@ -683,10 +683,12 @@ scripted_gui = {
 				}
 				ERB = {
 					add_equipment_to_stockpile = {
-					type = support_robot_equipment
-					amount = -25
+						type = support_robot_equipment
+						amount = -25
+					}
 				}
-            }
+				add_to_variable = { state_robots = 1 }
+			}
         }
         triggers = {
             robotic_garrison_click_enabled = {
@@ -695,16 +697,40 @@ scripted_gui = {
 						support_robot_equipment > 24
 					}
 				}
-				custom_trigger_tooltip = {
-					tooltip = more_than_24_robots
-					ROOT = {
-						has_equipment  = {
-							support_robot_equipment > 24
-						}
+				check_variable = { state_robots < 2 }
+			}
+		}
+	}
+	robotic_garrison_decrease = {
+        context_type = selected_state_context
+        window_name = robotic_garrison_decrease_container
+        parent_window_token = selected_state_view
+        visible = {
+			is_owned_and_controlled_by = ERB
+			ROOT = { tag = ERB }
+			ERB = { has_completed_focus = enc_robot_engineering }
+        }
+        effects = {
+            robotic_garrison_decrease_click = {
+				add_state_modifier = {
+					modifier = {
+						required_garrison_factor = 0.25
 					}
 				}
-            }
+				ERB = {
+					add_equipment_to_stockpile = {
+						type = support_robot_equipment
+						amount = 25
+					}
+				}
+				subtract_from_variable = { state_robots = 1 }
+			}
         }
+        triggers = {
+            robotic_garrison_decrease_click_enabled = {
+				check_variable = { state_robots > 0 }
+			}
+		}
 	}
 	harvest_resources_recall = {
         context_type = selected_state_context

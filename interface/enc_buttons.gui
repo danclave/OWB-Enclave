@@ -222,15 +222,26 @@ guiTypes = {
 	}
 	containerWindowType = { #robotic garrison
 		name = robotic_garrison_container
-		position = { x = 30 y = 570 }
+		position = { x = 100 y = 570 }
 		buttonType = {
-			name = harvest_resources_recall
-			spriteType = GFX_cancel_import_button
+			name = robotic_garrison
+			spriteType = GFX_add_one
 			pdx_tooltip = robotic_garrison_tt
 			pdx_tooltip_delayed = robotic_garrison_tt_delayed
 			scale = 1.2
 		}
 	}
+	containerWindowType = { #robotic garrison
+	name = robotic_garrison_decrease_container
+	position = { x = 60 y = 570 }
+	buttonType = {
+		name = robotic_garrison_decrease
+		spriteType = GFX_subtract_one
+		pdx_tooltip = robotic_garrison_decrease_tt
+		pdx_tooltip_delayed = robotic_garrison_decrease_tt_delayed
+		scale = 1.2
+	}
+}
 	containerWindowType = { # establish_outpost
 		name = establish_outpost_container
 		position = { x = 90 y = 12 }

@@ -209,7 +209,7 @@ ENC_reno = {
 	}
 }
 
-ENC_radio_broadcasts = { 
+ENC_radio_broadcasts = {
 	ENC_raise_war_support = {
 		icon = decision_enc_propaganda
 		cost = 75
@@ -1255,7 +1255,7 @@ enc_executive_orders = {
 		allowed = {
 			original_tag = ERB
 		}
-		days_remove = 20 
+		days_remove = 20
 		days_re_enable = 30
 		custom_cost_text = command_power_max
 		custom_cost_trigger = {
@@ -1324,7 +1324,24 @@ ENC_debug = {
 			set_country_flag = has_unique_occupation_laws
 		}
 	}
+	ENC_misc1 = {
+		complete_effect = {
+			261 = {
+				add_state_modifier = {
+					modifier = {
+						required_garrison_factor = 0.25
+					}
+				}
+			}
+			ERB = {
+				add_equipment_to_stockpile = {
+					type = support_robot_equipment
+					amount = 25
+				}
+			}
+		}
 	}
+
 	enc_state_target_debug_example = {
 		icon = onmap_recruit_operative
 		state_target = yes

@@ -33,6 +33,7 @@ LLW_state_container_info: "Manpower used:              [?THIS.harvest_resources_
 
 enc_resistance_LLW: "Collapse into Wasteland"
 transfer_to_LLW: "§Y[THIS.GetName]§! collapses into lawless wasteland."
-robotic_garrison_tt: "Deploy Robotic Auxiliaries"
-robotic_garrison_tt_delayed: "We can provide robotic equipment to support our brave boys in black![!robotic_garrison_click]"
-more_than_24_robots: "We have at least 25 support robots."
+robotic_garrison_tt: "Deploy Eyebots"
+robotic_garrison_tt_delayed: "§WWe can provide robotic equipment to support our brave boys in black!\n[!robotic_garrison_click] \n§YRequires§!: [!robotic_garrison_click_enabled].You can only deploy two sets of eyebots per state\n§RThe current eyebot deployments are: [?state_robots]§!"
+robotic_garrison_decrease_tt: "Recall Eyebots"
+robotic_garrison_decrease_tt_delayed: "§WWe must deploy our robotic support. It is needed elsewhere to cleanse the Wastes.§! You must have at least one set of eyebots to recall them.  \n§RThe current eyebot deployments are: [?state_robots]§!"
