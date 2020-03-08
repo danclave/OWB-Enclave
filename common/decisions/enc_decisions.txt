@@ -1331,8 +1331,11 @@ ENC_debug = {
 	}
 	enc_remove_occupied_cores = {
 		complete_effect = {
+			NEW = {
+				remove_state_core = 285
+			}
 			every_occupied_country = {
-				every_owned_state = {
+				every_state = {
 					PREV = { remove_state_core = PREV }
 				}
 			}
@@ -1341,6 +1344,83 @@ ENC_debug = {
 	enc_state_modifier_test = {
 		complete_effect = {
 			285 = { add_state_modifier = { modifier = { required_garrison_factor = -0.25 } } }
+		}
+	}
+}
+
+###
+ENC_secrets = {
+	enc_construct_launch_site = {
+		icon = decision_enc_production_up
+		cost = 25
+		days_remove = 28 # 8 weeks
+		available = {
+			num_of_civilian_factories > 10
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		remove_effect = {
+			set_country_flag = ERB_purity_space
+			country_event = { id = enc.61 }
+		}
+	}
+	enc_orbital_construction = {
+		icon = decision_enc_production_up
+		cost = 25
+		days_remove = 28 # 8 weeks
+		available = {
+			has_country_flag = ERB_purity_space
+			LLW = {
+				any_owned_state = {
+					industrial_complex > 1
+				}
+			}
+		}
+		complete_effect = {
+			LLW = {
+				random_owned_state  = {
+					limit = {
+						industrial_complex > 1
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 2
+					}
+				}
+			}
+		}
+		remove_effect = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+	enc_underground_arms_factories = {
+		icon = decision_enc_production_up
+		cost = 25
+		days_remove = 28 # 8 weeks
+		available = {
+			has_country_flag = ERB_purity_space
+			LLW = {
+				any_owned_state = {
+					arms_factory > 1
+				}
+			}
+		}
+		complete_effect = {
+			LLW = {
+				random_owned_state  = {
+					limit = {
+						arms_factory > 1
+					}
+					remove_building = {
+						type = arms_factory
+						level = 2
+					}
+				}
+			}
+		}
+		remove_effect = {
+			add_offsite_building = { type = arms_factory level = 1 }
 		}
 	}
 }

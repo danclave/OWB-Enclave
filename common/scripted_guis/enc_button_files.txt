@@ -622,12 +622,12 @@ scripted_gui = {
 	}
 
 	harvest_resources = {
-		context_type = selected_state_context
-		window_name = harvest_resources_container
-		parent_window_token = selected_state_view
-		visible = {
-			is_owned_and_controlled_by = LLW
+        context_type = selected_state_context
+        window_name = harvest_resources_container
+        parent_window_token = selected_state_view
+        visible = {
 			always = no
+			is_owned_and_controlled_by = LLW
 			ERB = { has_completed_focus = enc_robot_engineering }
 			NOT = {
 				has_state_flag = LLW_harvest_resources_active
@@ -734,105 +734,65 @@ scripted_gui = {
 			}
 		}
 	}
-
-	steal_military_industry = {
-		context_type = selected_state_context
-		window_name = steal_military_industry_container
-		parent_window_token = selected_state_view
-		visible = {
-			always = no # shelved for now
-		}
-		effects = {
-			steal_military_industry_click = {
-				set_temp_variable = { amount_arms_factory_removed = arms_factory_level }
-				remove_building = {
-					type = arms_factory
-					level = amount_arms_factory_removed
-				}
-				ROOT = {
-					random_owned_state = {
-						limit = {
-							free_building_slots = {
-								building = arms_factory
-								size > FROM.amount_arms_factory_removed
-								include_locked = yes
-							}
-						}
-						prioritize = { 159 } # sierra army depot
-						add_extra_state_shared_building_slots = amount_arms_factory_removed
-						add_building_construction = {
-							type = arms_factory
-							level = amount_arms_factory_removed
-							instant_build = yes
-						}
+	robotic_garrison_master = { 
+        context_type = selected_state_context
+        window_name = robotic_garrison_master_container
+        parent_window_token = selected_state_view
+        visible = {
+			is_owned_and_controlled_by = ERB
+			ROOT = { has_completed_focus = enc_robot_engineering }
+        }
+        effects = {
+            robotic_garrison_click = {
+				add_state_modifier = {
+					modifier = {
+						required_garrison_factor = -0.25
 					}
 				}
+				ERB = {
+					add_equipment_to_stockpile = { 
+						type = support_robot_equipment
+						amount = -25
+					} 
+				}
+				add_to_variable = { state_robots = 1 }
+				set_variable = { state_robots_amount = state_robots }
+				multiply_variable = { state_robots_amount =  0.25 }
 			}
-		}
-		triggers = {
-			steal_military_industry_click_enabled = {
-				set_temp_variable = { amount_arms_factory_removed = arms_factory_level }
-				ROOT = {
-					custom_trigger_tooltip  = {
-						tooltip = command_power_25
-						command_power > 24.9
-					}
-					any_owned_state = {
-						custom_trigger_tooltip = {
-							tooltip = free_building_slots_for_amount_arms_factory_removed
-							free_building_slots = {
-								building = arms_factory
-								size > FROM.amount_arms_factory_removed
-								include_locked = yes
-							}
-						}
+            robotic_garrison_decrease_click = {
+				add_state_modifier = {
+					modifier = {
+						required_garrison_factor = 0.25
 					}
 				}
-				arms_factory > 0
+				ERB = {
+					add_equipment_to_stockpile = {
+						type = support_robot_equipment
+						amount = 25
+						producer = ERB
+					}
+				}
+				subtract_from_variable = { state_robots = 1 }
+				set_variable = { state_robots_amount = state_robots }
+				multiply_variable = { state_robots_amount =  0.25 }
 			}
-		}
-	}
-	steal_civilian_industry = {
-		context_type = selected_state_context
-		window_name = steal_civilian_industry_container
-		parent_window_token = selected_state_view
-		visible = {
-			always = no # shelved for now
-		}
-		effects = {
-			steal_civilian_industry_click = {
-				set_temp_variable = { industrial_complex_level_removed = industrial_complex_level }
-				remove_building = {
-					type = industrial_complex
-					level = industrial_complex_level_removed
-				}
-				ROOT = {
-					random_owned_state = {
-						prioritize = { 159 } # sierra army depot
-						add_extra_state_shared_building_slots = industrial_complex_level_removed
-						add_building_construction = {
-							type = industrial_complex
-							level = industrial_complex_level_removed
-							instant_build = yes
-						}
+        }
+        triggers = {
+            robotic_garrison_click_enabled = {
+				ERB = {
+					has_equipment  = {   
+						support_robot_equipment > 24
 					}
 				}
+				check_variable = { state_robots < 2 }
 			}
-		}
-		triggers = {
-			steal_civilian_industry_click_enabled = {
-				ROOT = {
-					custom_trigger_tooltip  = {
-						tooltip = command_power_25
-						command_power > 24.9
-					}
-				}
-				industrial_complex > 0
+            robotic_garrison_decrease_click_enabled = {
+				check_variable = { state_robots > 0 }
 			}
 		}
 	}
+} 
 
-}
 
 #	new_button = {
 #		context_type = selected_state_context

@@ -479,19 +479,33 @@ ENC_vice_president: "Select Vice President"
 ENC_vice_president_desc: "We can select a vice president to curry favor with one of the nation's political parties."
 enc_select_vice_president: "Selecting Vice President"
 
-ENC_vice_president_tooltip: "You will be asked to confirm."
-ENC_vice_president_dornan:0 "Vice President Dornan"
-ENC_vice_president_dornan_desc:0 "Select the Enclave's greatest soldier to guide America!"
-ENC_vice_president_hayes:0 "Vice President Hayes"
-ENC_vice_president_hayes_desc:0 "Make concessions to the New World Party and make Hayes your vice president"
-ENC_vice_president_lynette:0 "Vice President Lynette"
-ENC_vice_president_lynette_desc:0 "Remodel America to make every town as prosperous as Vault City!"
-###################################
+# ENC_vice_president_tooltip: "You will be asked to confirm."
+# ENC_vice_president_dornan:0 "Vice President Dornan"
+# ENC_vice_president_dornan_desc:0 "Select the Enclave's greatest soldier to guide America!"
+# ENC_vice_president_hayes:0 "Vice President Hayes"
+# ENC_vice_president_hayes_desc:0 "Make concessions to the New World Party and make Hayes your vice president"
+# ENC_vice_president_lynette:0 "Vice President Lynette"
+# ENC_vice_president_lynette_desc:0 "Remodel America to make every town as prosperous as Vault City!"
+# ###################################
 # MISC
 ###################################
 add_popularity_to_ruling_party_tt: "Change in popularity of §GGetRulingParty§!: [?popularity_change|%2+].\n"
 add_popularity_to_reformers_good:  "Change in popularity of §GReformers§!: [?popularity_change|%2+].\n"
 
+###################################
+# Purist Secrets
+###################################
+ENC_secrets: "Project Safehouse"
+ENC_secrets_desc: "The Enclave has some of the greatest advances of prewar America at its fingrertips. We can use these, as we reestablish ourselves, to crush the mutants once and for all.  And perhaps find a refuge for the last of mankind. \n\nCurrently: [purist_hercules] \n[purist_space_projects]"
+hercules_1: "We have [?hercules] volleys ready to fire. Perhaps one day we will be able to deploy this..."
+space_project_1: "\n§gRemember, the Vaults were never built to save anyone.§!"
+enc_construct_launch_site: "Construct the Launch Site"
+enc_construct_launch_site_desc: "We can, with some care, construct a primitive launch facility to bring mankind back to space."
+ERB_purity_space: "Access to the Heavens"
+enc_orbital_construction: "Evacuate Industrial Facilities"
+enc_orbital_construction_desc: "With the expansion of our launch facilities, we expand our offworld production. Free from the mutant contamination, humanity can prosper!"
+enc_underground_arms_factories: "Expand the Sierra Army Depot Bunkers"
+enc_underground_arms_factories_desc: "Some of the engineering tools we revived to access space are useful on Earth as well. We can use what we have learned to expand the Sierra Army Depot's underground bunkers to create more arms factories."
 ################ special codes for special people ################################################################################################################
 
 # y§Yyellow§!

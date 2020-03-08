@@ -1,0 +1,26 @@
+defined_text = {
+	name = purist_hercules
+	text = {
+		trigger = {
+			ERB = {
+				has_completed_focus = enc_purity
+			}
+		}
+		localization_key = hercules_1
+	}
+}
+
+defined_text = {
+	name = purist_space_projects
+	text = {
+		trigger = {
+			ERB = {
+				has_completed_focus = enc_purity
+                not = {
+                    has_completed_focus = enc_safehouse
+                }
+			}
+		}
+		localization_key = space_project_1
+	}
+}

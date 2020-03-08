@@ -1,0 +1,64 @@
+    ability = {
+        archimedes_strike = {
+            name = ABILITY_ARCHIMEDES_STRIKE
+            desc = ABILITY_ARCHIMEDES_STRIKE_DESC
+
+            sound_effect = command_power_ability_offensive
+
+            type = army_leader
+
+            allowed = {
+                is_leading_army_group = no
+                is_border_war = no
+               	OWNER = {
+                       has_completed_focus = enc_purity
+                       check_variable = { hercules < 5 }
+                }
+                OWNER = {
+                    if = {
+                        limit = {
+                            has_dlc = "Waking the Tiger"
+                        }
+                    }
+                }
+            }
+
+             ai_will_do = {
+                factor = -1
+                modifier = {
+                    FROM = {
+                        has_war_support > 0.1
+                        command_power > 1.5
+                    }
+                    check_variable = { num_units_offensive_combats > 6 }
+
+                    set_temp_variable = { temp = avg_offensive_combat_status }
+                    check_variable = { temp > 0.45 }
+                    check_variable = { ai_random > temp }
+
+                    add = 2
+                }
+            }
+
+            cost = 0.22
+            duration = 168
+
+            one_time_effect = {
+                OWNER = {
+                    add_to_variable = {
+                        hercules = 1
+                    }
+                }
+                add_temporary_buff_to_units = {
+                    combat_offense = 0.2
+                    combat_defense = 0.2
+                    combat_breakthrough = 0.25
+                    str_damage_multiplier = -0.20
+
+
+                    days = 7
+                    tooltip = ABILITY_FORCE_ATTACK_TOOLTIP
+                }
+            }
+        }
+    }

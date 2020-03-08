@@ -148,6 +148,13 @@ ENC_debug = {
 		is_debug = yes
 	}
 }
+ENC_secrets = {
+	priority = 100
+	visible = {
+		has_completed_focus = enc_purity
+	}
+	visible_when_empty = yes
+}
 
 ENC_pacific_commonwealth1 = {
 	icon = category_seattle

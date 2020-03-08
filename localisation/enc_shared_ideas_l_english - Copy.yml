@@ -8,5 +8,5 @@ enc_pur_llw.1.a:0 "We'll figure it out."
 
 ################################## DECISION CATEGORY ##############################################
 ENC_exploiting_wasteland: "Exploiting the Wastes"
-ENC_exploiting_wasteland_arms_factories: "Salvage Arms Factories"
-ENC_exploiting_wasteland_industrial_complex: "Salvage Industry"
+ENC_exploiting_wasteland_arms_factories: "Salvage Arms Factories in [FROM.GetName]"
+ENC_exploiting_wasteland_industrial_complex: "Salvage Industry in [FROM.GetName]"

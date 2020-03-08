@@ -130,21 +130,15 @@ on_actions = {
 
 	on_release_as_puppet = {
 		effect = {
-			add_manpower = 999999
 			if = {
 				limit = {
-					original_tag = ERB
-					NOT = { has_completed_focus = enc_reform }
-				}
-				FROM = {
-					every_other_country = {
-						limit = {
-							is_subject_of = ERB
-						}
-						ERB = {
-							annex_country = { target = PREV }
-						}
+					FROM = {
+						original_tag = ERB
+						NOT = { has_completed_focus = enc_reform }
 					}
+				}
+				ERB = {
+					annex_country = { target = PREV }
 				}
 			}
 		}
