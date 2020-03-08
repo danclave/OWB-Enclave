@@ -1,29 +1,29 @@
 ﻿add_namespace = enc
 
 country_event = {#1 - OUR ESCAPE
-    id = enc.1
-    title = enc.1.t
-    desc = enc.1.d
-    picture = GFX_event_ENC_escape
+	id = enc.1
+	title = enc.1.t
+	desc = enc.1.d
+	picture = GFX_event_ENC_escape
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    option = { #Fought our way out with power armor
-        name = enc.1.a
-        add_manpower = -500
+	option = { #Fought our way out with power armor
+		name = enc.1.a
+		add_manpower = -500
 		hidden_effect = { load_oob = enc_hardliners } #ugly tooltip
 		custom_effect_tooltip = contactthehardliners_tt
-    }
-    option = { # Escaped using Vertibirds
-        name = enc.1.b
-        add_equipment_to_stockpile = { type = vb_transport_plane_equipment amount = 100 producer = ERB }
-        add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 100 producer = ERB }
-    }
-    option = { #Deserted before the fighting got bad
-        name = enc.1.c
-        add_manpower = 3000
+	}
+	option = { # Escaped using Vertibirds
+		name = enc.1.b
+		add_equipment_to_stockpile = { type = vb_transport_plane_equipment amount = 100 producer = ERB }
+		add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 100 producer = ERB }
+	}
+	option = { #Deserted before the fighting got bad
+		name = enc.1.c
+		add_manpower = 3000
 		add_war_support = -0.07
-    }
+	}
 }
 country_event = {#2 - Operational Security Compromised!
 	id = enc.2
@@ -31,7 +31,7 @@ country_event = {#2 - Operational Security Compromised!
 	desc = enc.2.d
 	picture = GFX_event_ENC_secret
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = { # the time has come
 		name = enc.2.a
@@ -85,21 +85,21 @@ country_event = {#3 - OUR CHOICE
 	desc = enc.3.d
 	picture = GFX_event_ENC_double_flag
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = { # purists
 		name = enc.3.a
 		custom_effect_tooltip = enc.3.a.tt
 		hidden_effect = { # Purists take over
 			set_politics = {
-				parties = {
-					people = { popularity = 20 } # Undecided
-					elites = { popularity = 40 } # Purists
-					intellectuals = { popularity = 35 } # Reformers
-					ruler = { popularity = 5 } # Sergeant Dornan
-				}
 				ruling_party = elites
 				elections_allowed = no
+			}
+			set_popularities = {
+				people = 20
+				elites = 40
+				intellectuals = 35
+				ruler = 5
 			}
 		}
 	}
@@ -111,14 +111,14 @@ country_event = {#3 - OUR CHOICE
 		custom_effect_tooltip = enc.3.b.tt
 		hidden_effect = { # reformers take over
 			set_politics = {
-				parties = {
-					people = { popularity = 20 } # Undecided
-					elites = { popularity = 36 } # Purists
-					intellectuals = { popularity = 42 } # Reformers
-					ruler = { popularity = 2 } # Sergeant Dornan
-				}
 				ruling_party = intellectuals
 				elections_allowed = no
+			}
+			set_popularities = {
+				people = 20
+				elites = 36
+				intellectuals = 42
+				ruler = 2
 			}
 		}
 	}
@@ -131,7 +131,7 @@ country_event = {#9   - FRANKLIN PAST - YOUTH
 	picture = GFX_event_ENC_secret
 
 	fire_only_once = yes
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {#Stared down FH
 		name = enc.9.a
@@ -161,7 +161,7 @@ country_event = {#901 -	FRANKLIN PAST - TORTURE (UNUSED)
 	picture = GFX_event_ENC_secret
 
 	fire_only_once = yes
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 
 	option = {#Wrong callsign
@@ -184,7 +184,7 @@ country_event = {#10  - FRANKLIN PAST - SOLD
 	picture = GFX_event_ENC_secret
 
 	fire_only_once = yes
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 
 	option = {#CHEMULT
@@ -225,7 +225,7 @@ country_event = {#11  - FRANKLIN PAST - ESCAPE
 	picture = GFX_event_ENC_secret
 
 	fire_only_once = yes
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 
 	option = {# Revolt
@@ -249,7 +249,7 @@ country_event = {#15 - DOUGLAS DESERTS
 	picture = GFX_event_ENC_vertibird
 
 	fire_only_once = yes
-    is_triggered_only = no
+	is_triggered_only = no
 	trigger = {
 		has_completed_focus = enc_purity
 		focus_progress = {
@@ -281,7 +281,7 @@ country_event = {#16 - In the Lair of the Bear
 	picture = GFX_event_ENC_dark
 
 	fire_only_once = yes
-    is_triggered_only = no
+	is_triggered_only = no
 	trigger = {
 		tag = ERB
 		country_exists = NCR
@@ -311,7 +311,7 @@ country_event = {#17 - NCR failsafe - unused
 	picture = GFX_event_ENC_secret
 
 	fire_only_once = no
-    is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {#Pay up, son
 		name = enc.17.a
@@ -330,7 +330,7 @@ country_event = {#18 - Reformer sympathies
 	picture = GFX_event_ENC_secret
 
 	fire_only_once = yes
-    is_triggered_only = no
+	is_triggered_only = no
 	trigger = {	has_completed_focus = enc_purity}
 	mean_time_to_happen = {	days = 40 }
 
@@ -1028,7 +1028,7 @@ country_event = {#42 - On the border of the bull
 	picture = GFX_event_CES_caesar
 
 	fire_only_once = yes
-    is_triggered_only = no
+	is_triggered_only = no
 	trigger = {
 		tag = ERB
 		has_completed_focus = enc_purity
@@ -1058,7 +1058,7 @@ country_event = {#43 - Pravus gaming reference
 	picture = GFX_event_FAV_plague
 
 	fire_only_once = yes
-    is_triggered_only = no
+	is_triggered_only = no
 	mean_time_to_happen = {	days = 600 }
 
 
@@ -1080,7 +1080,7 @@ country_event = {#46 - Mexico Challenge
 	picture = GFX_event_enc_courage_of_men
 
 	fire_only_once = yes
-    is_triggered_only = no
+	is_triggered_only = no
 	trigger = {
 		always = no
 		date < 2280.01.01
@@ -1115,7 +1115,7 @@ country_event = {#47 - Occupation Laws
 	picture = GFX_event_enc_occupation_laws
 
 	fire_only_once = yes
-    is_triggered_only = yes
+	is_triggered_only = yes
 	option = {# good
 		name = enc.47.a
 		add_command_power = 25
@@ -1132,7 +1132,7 @@ country_event = {#48 - Dismantle Industry
 	desc = enc.48.d
 	picture = GFX_event_exploit_wastes
 	fire_only_once = yes
-    is_triggered_only = yes
+	is_triggered_only = yes
 	option = {# good
 		name = enc.48.a
 		country_event = {id = enc.49 }
@@ -1145,7 +1145,7 @@ country_event = {#49 - Lawless Wasteland
 	desc = enc.48.d
 	picture = GFX_enc_event_lawless_wasteland
 	fire_only_once = yes
-    is_triggered_only = yes
+	is_triggered_only = yes
 	option = {# good
 		name = enc.49.a
 	}

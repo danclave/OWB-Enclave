@@ -3089,7 +3089,7 @@ ENC_securing_borders = {
 		activation = {
 			TRL = {
 				has_war = no
-				has_cosmetic_flag = NEW_mariposa
+				has_cosmetic_tag = NEW_mariposa
 			}
 			NOT = {
 				country_exists = NCR
@@ -3137,7 +3137,7 @@ ENC_securing_borders = {
 			}
 		}
 	}
-	ENC_pacificy_northern_border = { # secure northern borders ( DISABLED ) 
+	ENC_pacificy_northern_border = { # secure northern borders ( DISABLED )
 		icon = infiltrate_state
 		priority = 9
 		activation = {
@@ -4046,7 +4046,7 @@ ENC_down_mexico_way = {
 				limit = {
 					has_resources_amount = {
 						resource = water
-						amount = 10
+						amount > 9
 					}
 				}
 				custom_effect_tooltip = state_lose_10_water

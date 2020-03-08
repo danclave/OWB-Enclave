@@ -537,7 +537,7 @@ focus_tree = {
 		relative_position_id = enc_reno_end
 		x = -2
 		y = 1
-		cost = 4.3		
+		cost = 4.3
 		completion_reward = {
 			285 = {
 				add_extra_state_shared_building_slots = 4
@@ -560,8 +560,8 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = enc_disorganized_economy
 					add_idea = enc_civilian_economy
-				} 
-			}	
+				}
+			}
 		}
 	}
 	focus = {#RENO - Military factories
@@ -646,9 +646,40 @@ focus_tree = {
 			custom_effect_tooltip = enc_american_dream.tt
 		}
 	}
-
-
-
+	focus = {#SUSPICION - infiltrate NCR
+		id = enc_infiltrate_ncr
+		icon = GFX_goal_enc_infiltrate_ncr
+		cost = 4.3
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_american_dream
+		x = 9
+		y = 1
+		prerequisite = { focus = enc_reform }
+		completion_reward = {
+			set_temp_variable = { suspicion_change_var = -35 }
+			change_suspicion = yes
+		}
+	}
+	focus = {#RADIO - Enclave Radio
+		id = enc_radio
+		icon = GFX_goal_enc_radio_reform
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_infiltrate_ncr
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_infiltrate_ncr }
+		completion_reward = {
+			add_ideas = { ENC_radio }
+			159 = {
+				add_building_construction = {
+					type = radar_station
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		cost = 4.3
+	}
 	focus = {#SS operation babylon
 		id = enc_operation_babylon
 		icon = GFX_goal_enc_operation_babylon
@@ -794,40 +825,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = enc_dayglow_proclamation
 		}
-	}
-	focus = {#SUSPICION - infiltrate NCR
-		id = enc_infiltrate_ncr
-		icon = GFX_goal_enc_infiltrate_ncr
-		cost = 4.3
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_american_dream
-		x = 9
-		y = 1
-		prerequisite = { focus = enc_reform }
-		completion_reward = {
-			set_temp_variable = { suspicion_change_var = -35 }
-			change_suspicion = yes
-		}
-	}
-	focus = {#RADIO - Enclave Radio
-		id = enc_radio
-		icon = GFX_goal_enc_radio_reform
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_infiltrate_ncr
-		x = 0
-		y = 1
-		prerequisite = { focus = enc_infiltrate_ncr }
-		completion_reward = {
-			add_ideas = { ENC_radio }
-			159 = {
-				add_building_construction = {
-					type = radar_station
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		cost = 4.3
 	}
 	focus = {#SUSPICION - stage raider attacks
 		id = enc_stage_raider_attacks
@@ -1496,7 +1493,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_the_mutant_question
 		mutually_exclusive = { focus = enc_segregation }
-		mutually_exclusive = { focus = enc_subjugation }
+		#mutually_exclusive = { focus = enc_subjugation }
 		x = 3
 		y = 1
 		prerequisite = {
@@ -1721,9 +1718,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = enc_expand_human_definition
 		}
-		mutually_exclusive = {
-			focus = enc_subjugation
-		}
+		# mutually_exclusive = {
+		# 	focus = enc_subjugation
+		# }
 		prerequisite = {
 			focus = enc_the_mutant_question
 			focus = enc_the_mutant_question_purists
@@ -3548,8 +3545,8 @@ focus_tree = {
 				add_building_construction = {
 					type = arms_factory
 					level = 3
-					instant_build = yes 
-				} 
+					instant_build = yes
+				}
 			}
 			give_guarantee = VEG
 		}
@@ -4283,7 +4280,7 @@ focus = {#Legion Border
 				add_state_core = 210
 				add_state_core = 573
 			}
-			
+
 			custom_effect_tooltip = break_line
 			if = {
 				limit = {
@@ -4292,7 +4289,7 @@ focus = {#Legion Border
 				swap_ideas = {
 					remove_idea = enc_disorganized_economy
 					add_idea = enc_civilian_economy
-				} 
+				}
 			}
 		}
 	}
@@ -4342,8 +4339,8 @@ focus = {#Legion Border
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_electoral_victory
 		available = {
-			NCR = { 
-				has_civil_war = no 
+			NCR = {
+				has_civil_war = no
 				has_government = intellectuals
 			}
 		}
@@ -4836,8 +4833,8 @@ focus = {#NEVADA - second city
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
-					instant_build = yes 
-				} 
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -6533,15 +6530,28 @@ focus = {#NEVADA - second city
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_ideas = ENC_PA_production				
+			add_ideas = ENC_PA_production
 			add_tech_bonus = {
 				ahead_reduction = 10
 				uses = 1
 				category = power_armor_tech_category
-			}			
-			add_to_variable = { special_forces_cap_variable = 0.05 }			
+			}
+			add_to_variable = { special_forces_cap_variable = 0.05 }
 			force_update_dynamic_modifier = yes
 			custom_effect_tooltip = enc_boost_special_forces_tt
+		}
+	}
+	focus = {#SIERRA - 2- The lab
+		id = enc_depot_lab
+		icon = GFX_goal_enc_scientists
+		prerequisite = {focus = enc_depot_end}
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_depot_end
+		x = 1
+		y = 1
+		cost = 8.6
+		completion_reward = {
+			add_research_slot = 1
 		}
 	}
 	focus = {#Purity - FEV experiments
@@ -6571,19 +6581,6 @@ focus = {#NEVADA - second city
 		completion_reward = {
 			add_research_slot = 1
 			swap_ideas = {remove_idea = ENC_scientists add_idea = ENC_scientists_buffed}
-		}
-	}
-	focus = {#SIERRA - 2- The lab
-		id = enc_depot_lab
-		icon = GFX_goal_enc_scientists
-		prerequisite = {focus = enc_depot_end}
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_depot_end
-		x = 1
-		y = 1
-		cost = 8.6
-		completion_reward = {
-			add_research_slot = 1
 		}
 	}
 	focus = {#SIERRA - 3 - Mexican Robots
@@ -7609,6 +7606,40 @@ focus = {#NEVADA - second city
 			set_technology = { high_fighter_tech  = 1}
 		}
 	}
+##### Purist Robots
+
+	focus = {#Purity - robot_laws
+		id = enc_robot_engineering
+		icon = GFX_goal_enc_eyebot
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_vlt_power
+		x = 4
+		y = 2
+		available = {
+			#has_completed_focus = enc_vlt_power
+		}
+		completion_reward = {
+			custom_effect_tooltip = enc_robot_tt
+			set_variable = { automation = 1 }
+		}
+		cost = 5.8
+	}
+	focus = {#Purity - robot_laws
+		id = enc_robot_engineering_2
+		icon = GFX_goal_enc_eyebot
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_robot_engineering }
+		relative_position_id = enc_robot_engineering
+		x = 1
+		y = 1
+		prerequisite = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = enc_robot_tt
+			set_variable = { automation = 0.5 }
+		}
+			cost = 5.8
+}
 
 }
 

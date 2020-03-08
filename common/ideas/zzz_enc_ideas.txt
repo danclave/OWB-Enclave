@@ -2780,7 +2780,8 @@ ideas = {
 			modifier = {
 				mobilization_laws_cost_factor = -0.30
 				economy_cost_factor = -0.30
-				political_advisor_cost_factor = -0.15
+				economic_advisor_cost_factor = -0.15
+				cultural_advisor_cost_factor = -0.15
 			}
 		}
 	}

@@ -33,3 +33,6 @@ LLW_state_container_info: "Manpower used:              [?THIS.harvest_resources_
 
 enc_resistance_LLW: "Collapse into Wasteland"
 transfer_to_LLW: "§Y[THIS.GetName]§! collapses into lawless wasteland."
+robotic_garrison_tt: "Deploy Robotic Auxiliaries"
+robotic_garrison_tt_delayed: "We can provide robotic equipment to support our brave boys in black![!robotic_garrison_click]"
+more_than_24_robots: "We have at least 25 support robots."

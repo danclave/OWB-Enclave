@@ -208,7 +208,7 @@ country_event = { #7 - Dealing with Mordinos
 	is_triggered_only = yes
 	option = { # Court of law
 		name = enc_reformers.7.a
-		custom_effect_tooltip = enc_reformers.7.a.tt		
+		custom_effect_tooltip = enc_reformers.7.a.tt
 		285 = {
 			add_compliance = 0.10
 		}
@@ -216,13 +216,13 @@ country_event = { #7 - Dealing with Mordinos
 			var = legitimacy_change_var
 			value = 0.05
 		}
-		change_legitimacy = yes		
+		change_legitimacy = yes
 		# todo LAR add compliance
 	}
 	option = { # executed
 		name = enc_reformers.7.b
 		custom_effect_tooltip = enc_reformers.7.b.tt
-		add_political_power = 50		
+		add_political_power = 50
 		285 = {
 			add_resistance_target = -0.10
 		}
@@ -10941,15 +10941,19 @@ country_event = { #352 - Mexican Protests
 	}
 	option = { # MMM
 		name = enc_reformers.352.e
-		limit = {
-			any_owned_state = {
-				is_core_of = ARM
+		if = {
+			limit = {
+				any_owned_state = {
+					is_core_of = ARM
+				}
 			}
 			add_core_of = RRG
 		}
-		limit = {
-			any_owned_state = {
-				is_core_of = TLA
+		if = {
+			limit = {
+				any_owned_state = {
+					is_core_of = TLA
+				}
 			}
 			add_core_of = RRG
 		}
