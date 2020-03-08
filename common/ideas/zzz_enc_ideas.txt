@@ -7,8 +7,8 @@ ideas = {
 			picture = enc_pa_production
 			allowed = { always = no }
 
-            allowed_civil_war = { always = yes }
-            removal_cost = -1
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
 			equipment_bonus = {
 				power_armor_equipment = { #enclave_power_armour_equipment_1
 					build_cost_ic = -0.30
@@ -42,34 +42,34 @@ ideas = {
 			}
 		}
 		ENC_efficient_energy2 = {
-            picture = tla_memory_failure
-            allowed = {}
-            removal_cost = 1
-            modifier = {
-                max_fuel_factor = 0.3
-                fuel_gain_factor = 0.1
-            }
-            equipment_bonus = {
-                power_armor_equipment = {
-                    instant = yes
-                    fuel_consumption = -0.07
-                }
-                cargo_plane_equipment = {
-                    instant = yes
-                    fuel_consumption = -0.10
-                }
-                cas_equipment = {
-                    instant = yes
-                    fuel_consumption = -0.10
-                }
-            }
-        }
+			picture = tla_memory_failure
+			allowed = {}
+			removal_cost = 1
+			modifier = {
+				max_fuel_factor = 0.3
+				fuel_gain_factor = 0.1
+			}
+			equipment_bonus = {
+				power_armor_equipment = {
+					instant = yes
+					fuel_consumption = -0.07
+				}
+				cargo_plane_equipment = {
+					instant = yes
+					fuel_consumption = -0.10
+				}
+				cas_equipment = {
+					instant = yes
+					fuel_consumption = -0.10
+				}
+			}
+		}
 		ENC_PA_production2= {
 			picture = enc_pa_production
 			allowed = { always = no }
 
-            allowed_civil_war = { always = yes }
-            removal_cost = -1
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
 			equipment_bonus = {
 				power_armor_equipment = { #enclave_power_armour_equipment_1
 					build_cost_ic = -0.10
@@ -82,12 +82,12 @@ ideas = {
 			picture = GFX_idea_enc_ew_production
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			equipment_bonus = {
 				infantry_equipment = {
 					build_cost_ic = -0.30
@@ -214,12 +214,12 @@ ideas = {
 			picture = enc_scientists #check
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   research_speed_factor = 0.10
 			   elites_drift = 0.05
@@ -238,12 +238,12 @@ ideas = {
 			picture = enc_scientists
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   research_speed_factor = 0.03
 			 	}
@@ -252,12 +252,12 @@ ideas = {
 			picture = enc_scientists
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   research_speed_factor = 0.03
 
@@ -398,12 +398,12 @@ ideas = {
 			picture = enc_reform
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   army_morale_factor = -0.2
 			   army_org_factor = -0.2
@@ -413,12 +413,12 @@ ideas = {
 			picture = enc_scientists #check
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   research_speed_factor = 0.05
 			}
@@ -427,12 +427,12 @@ ideas = {
 			picture = SOV_scientist_defect
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				stability_factor = 0.05
 				conscription = 0.01
@@ -446,12 +446,12 @@ ideas = {
 			picture = SOV_scientist_defect
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				MONTHLY_POPULATION = 0.05
 				attrition = -0.03
@@ -461,12 +461,12 @@ ideas = {
 			picture = SOV_scientist_defect
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = 0.02
 
@@ -476,12 +476,12 @@ ideas = {
 			picture = SOV_scientist_defect
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = -0.05
 
@@ -491,12 +491,12 @@ ideas = {
 			picture = enc_nuka_cola
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = -0.01
 			}
@@ -506,12 +506,12 @@ ideas = {
 			picture = VEG_Follower_Knowledge
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				MONTHLY_POPULATION = 0.03
 			}
@@ -520,12 +520,12 @@ ideas = {
 			picture = enc_education
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.05
 				consumer_goods_factor = 0.05
@@ -535,12 +535,12 @@ ideas = {
 			picture = enc_education
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.08
 				consumer_goods_factor = 0.05
@@ -551,12 +551,12 @@ ideas = {
 			picture = enc_education
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.03
 				political_power_gain = 0.05
@@ -568,12 +568,12 @@ ideas = {
 			picture = enc_education
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.05
 				political_power_gain = -0.02
@@ -584,12 +584,12 @@ ideas = {
 			picture = enc_radio
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   political_power_gain = 0.10
 			   decryption_factor = 0.2
@@ -599,12 +599,12 @@ ideas = {
 			picture = enc_radio
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   political_power_gain = 0.15
 			   decryption_factor = 0.10
@@ -615,12 +615,12 @@ ideas = {
 			picture = enc_radio
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   political_power_gain = 0.20
 			   decryption_factor = 0.10
@@ -631,12 +631,12 @@ ideas = {
 			picture = enc_radio
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   political_power_gain = 0.20
 			   decryption_factor = 0.10
@@ -648,12 +648,12 @@ ideas = {
 			picture = enc_radio
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   intellectuals_drift = -0.33
 			   }
@@ -662,12 +662,12 @@ ideas = {
 			picture = enc_radio
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   political_power_gain = 0.25
 			   decryption_factor = 0.10
@@ -678,12 +678,12 @@ ideas = {
 			picture = enc_radio
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   political_power_gain = 0.15
 			   decryption_factor = 0.2
@@ -695,12 +695,12 @@ ideas = {
 			picture = enc_radio
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   decryption_factor = 0.2
 			   encryption_factor = 0.10
@@ -710,12 +710,12 @@ ideas = {
 			picture = enc_radio
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   political_power_gain = 0.15
 			   decryption_factor = 0.2
@@ -726,12 +726,12 @@ ideas = {
 			picture = generic_reserve_divisions
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   non_core_manpower = 0.1
 			   stability_factor = -0.2
@@ -748,12 +748,12 @@ ideas = {
 			picture = generic_reserve_divisions
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   non_core_manpower = 0.1
 			   stability_factor = -0.1
@@ -769,12 +769,12 @@ ideas = {
 			picture = victors_of_the_great_war #FIX
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				army_org_factor = 0.1
 				army_morale_factor = 0.1
@@ -784,12 +784,12 @@ ideas = {
 			picture = Victors_of_the_Great_War #FIX
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				army_org_factor = 0.1
 				army_morale_factor = 0.1
@@ -800,11 +800,11 @@ ideas = {
 			picture = enc_police
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				conscription_factor = -0.10
 				resistance_activity = -0.05
@@ -815,11 +815,11 @@ ideas = {
 			picture = enc_police
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				conscription_factor = -0.05
 				political_power_gain = 0.13
@@ -831,11 +831,11 @@ ideas = {
 			picture = enc_police
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				conscription_factor = -0.05
 				resistance_activity = -0.1
@@ -846,11 +846,11 @@ ideas = {
 			picture = ast_classify_aliens
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				conscription_factor = -0.05
 				political_power_gain = 0.10
@@ -861,11 +861,11 @@ ideas = {
 			picture = generic_constitutional_guarantee
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				political_power_gain = -0.10
 				stability_factor = 0.10
@@ -879,11 +879,11 @@ ideas = {
 			picture = generic_constitutional_guarantee
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
@@ -893,11 +893,11 @@ ideas = {
 			picture = generic_constitutional_guarantee
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
@@ -908,12 +908,12 @@ ideas = {
 			picture = idea_generic_constitutional_guarantee
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				# TODO
 			}
@@ -922,12 +922,12 @@ ideas = {
 			picture = generic_secret_police
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				encryption_factor = 0.2
 				decryption_factor = 0.2
@@ -939,12 +939,12 @@ ideas = {
 			picture = enc_officers
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				army_org_factor = -0.20
 				army_attack_factor = -0.20
@@ -955,12 +955,12 @@ ideas = {
 			picture = enc_scientists
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				research_speed_factor = -0.08
 				political_power_gain = -0.20
@@ -970,12 +970,12 @@ ideas = {
 			picture = generic_secret_police
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				political_power_gain = -0.30
 				consumer_goods_factor = 0.03
@@ -986,11 +986,11 @@ ideas = {
 			picture = enc_scientists_traitors #check
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				stability_factor = -0.05
 				research_speed_factor = 0.05
@@ -1001,11 +1001,11 @@ ideas = {
 			picture = enc_scientists_traitors #check
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				stability_factor = -0.05
 				research_speed_factor = 0.03
@@ -1018,12 +1018,12 @@ ideas = {
 			picture = enc_radio
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = no
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				stability_factor = -0.05
 				intellectuals_drift = 0.10
@@ -1034,12 +1034,12 @@ ideas = {
 			picture = enc_reform
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.05
 				non_core_manpower = -0.02
@@ -1049,11 +1049,11 @@ ideas = {
 			picture = enc_legitimacy_low
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				non_core_manpower = 0.02
 				political_power_factor = 0.05
@@ -1063,12 +1063,12 @@ ideas = {
 			picture = enc_legitimacy_medium
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				non_core_manpower = 0.05
 				MONTHLY_POPULATION = 0.10
@@ -1079,12 +1079,12 @@ ideas = {
 			picture = enc_legitimacy_high
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				non_core_manpower = 0.10
 				MONTHLY_POPULATION = 0.25
@@ -1097,12 +1097,12 @@ ideas = {
 			picture = enc_legitimacy_high
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				conscription_factor = 0.03
 				MONTHLY_POPULATION = -0.01
@@ -1110,35 +1110,16 @@ ideas = {
 
 			}
 		}
-		enc_mutant_law_both = {
-			picture = generic_research_bonus
-			allowed = {
-				always = no
-            }
-            allowed_civil_war = {
-				always = yes
-            }
-            removal_cost = -1
-			modifier = {
-				stability_factor = -0.10
-				war_support_factor = -0.10
-				conscription_factor = 0.05
-
-				industrial_capacity_factory = 0.10
-				industrial_capacity_dockyard = 0.10
-				production_speed_buildings_factor = 0.10
-			}
-		}
 
 		ENC_begun_integration = {
 			picture = generic_flexible_foreign_policy
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.10
 
@@ -1154,11 +1135,11 @@ ideas = {
 			picture = enc_completed_integration
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
 				}
-            removal_cost = -1
+			removal_cost = -1
 			modifier = {
 				conscription_factor = 0.10
 				non_core_manpower = 0.10
@@ -1172,11 +1153,11 @@ ideas = {
 			} # barons broke free
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = 0.05
 			}
@@ -1185,24 +1166,24 @@ ideas = {
 			picture = enc_smugging
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
-			   elites_drift = 0.2
+				elites_drift = 0.2
 			}
 		}
 		ENC_NCR_demoralization_campaign = {
 			picture = legacy_of_navarro
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				war_support_factor = -0.10
 				stability_factor = -0.10
@@ -1215,11 +1196,11 @@ ideas = {
 			picture = legacy_of_navarro
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				army_attack_factor = -0.05
 				surrender_limit = -0.10
@@ -1229,16 +1210,16 @@ ideas = {
 			picture = MOJ_idea_settlements_raided_ncr
 			allowed = {
 				always = no
-            }
+			}
 			cancel = {
 				NOT = {
 					country_exists = NCR
 				}
 			}
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				army_attack_factor = 0.20
 				army_defence_factor = 0.10
@@ -1253,16 +1234,16 @@ ideas = {
 			picture = MOJ_idea_settlements_raided_ncr
 			allowed = {
 				always = no
-            }
+			}
 			cancel = {
 				NOT = {
 					country_exists = NCR
 				}
 			}
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			targeted_modifier = {
 				tag = NCR
 				attack_bonus_against = 0.15
@@ -1274,16 +1255,16 @@ ideas = {
 			picture = MOJ_idea_settlements_raided_ncr
 			allowed = {
 				always = no
-            }
+			}
 			cancel = {
 				NOT = {
 					country_exists = WBH
 				}
 			}
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			targeted_modifier = {
 				tag = WBH
 				attack_bonus_against = 0.30
@@ -1312,10 +1293,10 @@ ideas = {
 			allowed = {
 				always = no
 				}
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
 				}
-            removal_cost = -1
+			removal_cost = -1
 			modifier = {
 				war_support_factor = 0.05
 				conscription_factor = 0.05
@@ -1595,11 +1576,11 @@ ideas = {
 			picture = ROM_king_carol_ii_hedonist
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				research_speed_factor = 0.03
 			}
@@ -1608,12 +1589,12 @@ ideas = {
 			picture = generic_BOS_idea_paladins
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   research_speed_factor = 0.03
 			}
@@ -1757,11 +1738,11 @@ ideas = {
 			picture = ast_classify_aliens
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				conscription_factor = -0.10
 				resistance_activity = -0.05
@@ -1788,11 +1769,11 @@ ideas = {
 			picture = enc_broadcasting
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   political_power_gain = 0.10
 			   encryption_factor = -0.05
@@ -1802,11 +1783,11 @@ ideas = {
 			picture = enc_broadcasting
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 		  		political_power_gain = 0.15
 				war_support_factor = 0.10
@@ -1818,11 +1799,11 @@ ideas = {
 			picture = enc_broadcasting
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.15
 				encryption_factor = -0.05
@@ -1833,11 +1814,11 @@ ideas = {
 			picture = enc_idea_manpower_1
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				conscription = 0.10
 				offensive_war_stability_factor = 0.50
@@ -1853,12 +1834,12 @@ ideas = {
 			picture = generic_secret_police
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				justify_war_goal_time = -0.25
 				generate_wargoal_tension = -0.25
@@ -1869,12 +1850,12 @@ ideas = {
 			picture = generic_secret_police
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				justify_war_goal_time = +0.10
 				trade_opinion_factor = 0.25
@@ -1884,12 +1865,12 @@ ideas = {
 			picture = generic_wall_line
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				recon_factor = 0.15
 					}
@@ -1901,8 +1882,8 @@ ideas = {
 		ENC_home_defense = {
 			picture = generic_wall_line
 			allowed = { always = no }
-            allowed_civil_war = { always = yes }
-            removal_cost = -1
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
 			modifier = { army_core_defence_factor = 0.05 }
 		}
 		# MILITIAS
@@ -1910,12 +1891,12 @@ ideas = {
 			picture = generic_manpower_bonus
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				army_core_defence_factor = 0.05
 				recon_factor = 0.05
@@ -1926,12 +1907,12 @@ ideas = {
 			picture = generic_manpower_bonus
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				mobilization_speed = 0.10
 				army_core_defence_factor = 0.10
@@ -1943,12 +1924,12 @@ ideas = {
 			picture = generic_manpower_bonus
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				conscription_factor = 0.05
 				mobilization_speed = 0.30
@@ -1961,8 +1942,8 @@ ideas = {
 			picture = generic_manpower_bonus
 			allowed = { always = no  }
 
-            allowed_civil_war = { always = yes }
-            removal_cost = -1
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
 			modifier = {
 				conscription_factor = 0.05
 				mobilization_speed = 0.30
@@ -1976,8 +1957,8 @@ ideas = {
 			picture = generic_manpower_bonus
 			allowed = { always = no }
 
-            allowed_civil_war = { always = yes }
-            removal_cost = -1
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
 			modifier = {
 				conscription_factor = 0.05
 				mobilization_speed = 0.30
@@ -1988,8 +1969,8 @@ ideas = {
 			picture = generic_manpower_bonus
 			allowed = { always = no }
 
-            allowed_civil_war = { always = yes }
-            removal_cost = -1
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
 			modifier = {
 				conscription_factor = 0.10
 				mobilization_speed = 0.30
@@ -2000,8 +1981,8 @@ ideas = {
 			picture = generic_manpower_bonus
 			allowed = { always = no }
 
-            allowed_civil_war = { always = yes }
-            removal_cost = -1
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
 			modifier = {
 				conscription_factor = 0.15
 				mobilization_speed = 0.30
@@ -2104,7 +2085,7 @@ ideas = {
 		ENC_Influence = {
 			picture = enc_radio
 			allowed = { always = no }
-		    allowed_civil_war = { always = yes }
+			allowed_civil_war = { always = yes }
 		   removal_cost = -1
 			modifier = { intellectuals_drift = 0.10 }
 		}
@@ -2112,8 +2093,8 @@ ideas = {
 		ENC_CES_slave_rebellions = {
 			picture = generic_research_bonus
 			allowed = { always = no }
-		        allowed_civil_war = { always = yes }
-            		removal_cost = -1
+				allowed_civil_war = { always = yes }
+					removal_cost = -1
 			modifier = {
 				war_support_factor = -0.10
 				stability_factor = -0.10
@@ -2157,8 +2138,8 @@ ideas = {
 		ENC_WBH_cause_partisans = {
 			picture = generic_research_bonus
 			allowed = { always = no }
-		        allowed_civil_war = { always = yes }
-            		removal_cost = -1
+				allowed_civil_war = { always = yes }
+					removal_cost = -1
 			modifier = {
 				war_support_factor = -0.10
 				stability_factor = -0.10
@@ -2169,8 +2150,8 @@ ideas = {
 		ENC_House = {
 			picture = VEG_Loyal_Subordinates
 			allowed = { always = no }
-		    allowed_civil_war = { always = yes }
-            removal_cost = -1
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = -0.04
 						}
@@ -2179,8 +2160,8 @@ ideas = {
 		ENC_Dept_Energy = {
 			picture = enc_pa_production
 			allowed = { always = no }
-            allowed_civil_war = { always = yes }
-            removal_cost = -1
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
 			modifier = {
 				max_fuel_factor = 0.30
 			}
@@ -2188,8 +2169,8 @@ ideas = {
 		ENC_electrification = {
 			picture = enc_pa_production
 			allowed = { always = no }
-            allowed_civil_war = { always = yes }
-            removal_cost = -1
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
 			modifier = {
 				production_speed_electricity_generator_factor = 0.2
 				stability_factor = 0.10
@@ -2199,12 +2180,12 @@ ideas = {
 			picture = enc_radio
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   political_power_gain = 0.10
 			   decryption_factor = 0.2
@@ -2240,11 +2221,11 @@ ideas = {
 			picture = enc_purity_1
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   non_core_manpower = -0.02
 			   stability_factor = -0.1
@@ -2256,12 +2237,12 @@ ideas = {
 			picture = enc_purity_2
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   conscription = 0.1
 			   mobilization_speed = 0.20
@@ -2274,12 +2255,12 @@ ideas = {
 			picture = enc_purity_3
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   conscription = 0.20
 			   mobilization_speed = 0.30
@@ -2294,11 +2275,11 @@ ideas = {
 			picture = FRA_scw_intervention_nationalists_focus
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				war_support_factor = 0.10
 				army_morale_factor = 0.10
@@ -2313,11 +2294,11 @@ ideas = {
 			picture = FRA_scw_intervention_nationalists_focus
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				army_morale_factor = 0.10
 				army_org_factor = 0.10
@@ -2329,11 +2310,11 @@ ideas = {
 			picture = FRA_scw_intervention_nationalists_focus
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				war_support_factor = 0.10
 				army_morale_factor = 0.10
@@ -2348,12 +2329,12 @@ ideas = {
 			picture = enc_slave_labour
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				industrial_capacity_factory = 0.15
 				industrial_capacity_dockyard = 0.15
@@ -2364,12 +2345,12 @@ ideas = {
 			picture = enc_slave_labour
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				industrial_capacity_factory = 0.20
 				industrial_capacity_dockyard = 0.20
@@ -2382,12 +2363,12 @@ ideas = {
 			picture = enc_slave_labour
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				stability_factor = -0.05
 				war_support_factor = -0.10
@@ -2403,14 +2384,14 @@ ideas = {
 			picture = enc_plague
 			allowed = {
 				always = no
-            }
+			}
 			cancel = {
 				NOT = { country_exists = ERB }
 			}
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				stability_factor = -0.3
 				MONTHLY_POPULATION = -0.90
@@ -2424,14 +2405,14 @@ ideas = {
 			picture = ENG_the_war_to_end_all_wars
 			allowed = {
 				always = no
-            }
+			}
 			cancel = {
 				NOT = { country_exists = ERB }
 			}
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				stability_factor = -0.3
 				MONTHLY_POPULATION = -5
@@ -2445,14 +2426,14 @@ ideas = {
 			picture = ENG_the_war_to_end_all_wars
 			allowed = {
 				always = no
-            }
+			}
 			cancel = {
 				NOT = { country_exists = ERB }
 			}
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				stability_factor = -0.3
 				MONTHLY_POPULATION = -0.90
@@ -2466,14 +2447,14 @@ ideas = {
 			picture = enc_plague
 			allowed = {
 				always = no
-            }
+			}
 			cancel = {
 				NOT = { country_exists = ERB }
 			}
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				stability_factor = -0.2
 				MONTHLY_POPULATION = -0.80
@@ -2487,14 +2468,14 @@ ideas = {
 			picture = enc_plague
 			allowed = {
 				always = no
-            }
+			}
 			cancel = {
 				NOT = { country_exists = ERB }
 			}
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				stability_factor = -0.1
 				MONTHLY_POPULATION = -0.90
@@ -2507,12 +2488,12 @@ ideas = {
 			picture = enc_radio
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				political_power_factor = 0.20
 				political_power_gain = 0.20
@@ -2523,12 +2504,12 @@ ideas = {
 			picture = enc_radio
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.20
 				decryption_factor = 0.20
@@ -2541,12 +2522,12 @@ ideas = {
 			picture = enc_super_soldiers
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 					army_attack_factor = 0.10
 					army_defence_factor = 0.10
@@ -2557,12 +2538,12 @@ ideas = {
 			picture = enc_scientists #check
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 			   research_speed_factor = 0.2
 			   conscription = -0.005
@@ -2573,11 +2554,11 @@ ideas = {
 			picture = enc_plague
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				supply_consumption_factor = 1
 			}
@@ -2608,11 +2589,11 @@ ideas = {
 			picture = generic_research_bonus
 			allowed = {
 				always = no
-            }
-            allowed_civil_war = {
+			}
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				supply_consumption_factor = -0.05
 				recon_factor = 0.05
@@ -2622,12 +2603,12 @@ ideas = {
 			picture = SOV_scientist_defect
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = -0.05
 				industrial_capacity_factory = 0.05
@@ -2656,12 +2637,12 @@ ideas = {
 			picture = SOV_scientist_defect
 			allowed = {
 				always = no
-            }
+			}
 
-            allowed_civil_war = {
+			allowed_civil_war = {
 				always = yes
-            }
-            removal_cost = -1
+			}
+			removal_cost = -1
 			modifier = {
 				stability_factor = -0.05
 				consumer_goods_factor = -0.05
@@ -2730,7 +2711,7 @@ ideas = {
 
 		ENC_drop_training = {
 			picture = generic_air_bonus
-            removal_cost = -1
+			removal_cost = -1
 			modifier = {
 				air_paradrop_attack_factor = 0.50
 				air_paradrop_defence_factor = 0.30
@@ -2741,7 +2722,7 @@ ideas = {
 		}
 		ENC_verti_production = {
 			picture = generic_air_research
-            removal_cost = -1
+			removal_cost = -1
 			equipment_bonus = {
 				cas_equipment = {
 					build_cost_ic = -0.20
@@ -2755,7 +2736,7 @@ ideas = {
 		}
 		ENC_strike_teams = {
 			picture = generic_air_research
-            removal_cost = -1
+			removal_cost = -1
 			modifier = {
 				air_paradrop_attack_factor = 0.25
 				air_paradrop_defence_factor = 0.10

@@ -686,8 +686,9 @@ scripted_gui = {
 				}
 				ERB = {
 					add_equipment_to_stockpile = {
-					type = support_robot_equipment
-					amount = -25
+						type = support_robot_equipment
+						amount = -25
+					}
 				}
 			}
 		}
