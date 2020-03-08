@@ -344,4 +344,15 @@ guiTypes = {
 			}
 		}
 	}
+	containerWindowType = { # block_release
+		name = block_release_container
+		position = {x=90 y=58}
+		buttonType = {
+			name = block_release
+			spriteType = GFX_resistance_icon
+			pdx_tooltip = block_release_tt
+			pdx_tooltip_delayed = block_release_tt_delayed
+			scale = 1.2
+		}
+	}
 }

@@ -832,6 +832,23 @@ scripted_gui = {
 		}
 	}
 
+block_release = {
+		context_type ="occupied_territory_country_entry"
+		window_name = block_release_container
+		parent_window_token = "occupied_territory_country_entry"
+		visible = {
+		
+		}
+		effects = {
+			block_release_click = {
+			}
+		}
+		triggers = {
+			block_release_click_enabled = {
+			
+			}
+		}
+	}
 }
 
 #	new_button = {

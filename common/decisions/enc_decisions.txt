@@ -1293,6 +1293,9 @@ enc_executive_orders = {
 
 ENC_debug = {
 	ENC_misc = {
+		available = {
+			285 = { garrison_manpower_need > 0 }
+		}
 		complete_effect = {
 			add_equipment_to_stockpile = {
                 type = energy_equipment_2
@@ -1331,8 +1334,11 @@ ENC_debug = {
 	}
 	enc_remove_occupied_cores = {
 		complete_effect = {
+			NEW = {
+				remove_state_core = 285
+			}
 			every_occupied_country = {
-				every_owned_state = {
+				every_state = {
 					PREV = { remove_state_core = PREV }
 				}
 			}
