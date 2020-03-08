@@ -6347,7 +6347,6 @@ focus = {#NEVADA - second city
 		icon = GFX_goal_enc_beacon
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_mobilize_economy }
-		mutually_exclusive = { focus = enc_radio_eyebots }
 		relative_position_id = enc_mobilize_economy
 		x = -1
 		y = 1
@@ -6363,19 +6362,23 @@ focus = {#NEVADA - second city
 			swap_ideas = {remove_idea = ENC_radio add_idea = ENC_radio_purity}
 		}
 	}
-	focus = {#Purity - Eyeboys
-		id = enc_radio_eyebots
+	
+	focus = { #Purity - robot_laws
+		id = enc_robot_engineering
 		icon = GFX_goal_enc_eyebot
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_mobilize_economy }
-		mutually_exclusive = { focus = enc_radio_purity_2 }
 		relative_position_id = enc_mobilize_economy
 		x = 1
 		y = 1
-		cost = 5.8
-		completion_reward = {
-			swap_ideas = {remove_idea = ENC_radio add_idea = ENC_radio_eyebots}
+		available = {
+			has_tech = robot_makeshift_automatons_tech
 		}
+		completion_reward = {
+			custom_effect_tooltip = enc_robot_tt
+			set_variable = { automation = 1 }
+		}
+		cost = 5.8
 	}
 	focus = {#SIERRA ------------------------ THE SIERA ARMY DEPOT ------------------------------
 		id = enc_depot_start
@@ -6435,8 +6438,8 @@ focus = {#NEVADA - second city
 
 			add_tech_bonus = {
 				name = robotics_armour_bonus
-				bonus = 0.5
-				uses = 1
+				bonus = 0.75
+				uses = 2
 				category = robotics_tech_category
 			}
 			hidden_effect = {
@@ -7609,40 +7612,9 @@ focus = {#NEVADA - second city
 			set_technology = { high_fighter_tech  = 1}
 		}
 	}
-##### Purist Robots
+	##### Purist Robots
 
-	focus = {#Purity - robot_laws
-		id = enc_robot_engineering
-		icon = GFX_goal_enc_eyebot
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_vlt_power
-		x = 4
-		y = 2
-		available = {
-			#has_completed_focus = enc_vlt_power
-		}
-		completion_reward = {
-			custom_effect_tooltip = enc_robot_tt
-			set_variable = { automation = 1 }
-		}
-		cost = 5.8
-	}
-	focus = {#Purity - robot_laws
-		id = enc_robot_engineering_2
-		icon = GFX_goal_enc_eyebot
-		ai_will_do = { factor = 1 }
-		prerequisite = { focus = enc_robot_engineering }
-		relative_position_id = enc_robot_engineering
-		x = 1
-		y = 1
-		prerequisite = {
-		}
-		completion_reward = {
-			custom_effect_tooltip = enc_robot_tt
-			set_variable = { automation = 0.5 }
-		}
-			cost = 5.8
-}
+
 
 }
 

@@ -252,3 +252,19 @@ enc.48.a: "But how do we reclaim the Lawless Wasteland?"
 enc.49.t: "I'm Just a Lawless Wasteland, Baby"
 enc.49.d: "If resistance rises to 20% in a state controlled by the Enclave, it will revert to the Lawless Wasteland. While we can move through the Lawless Wasteland, we cannot exploit it yet.  This may change as we recover prewar robotic technology.  And if we deploy a garrison to the state, we can control it. But we will need to make sure we can hold onto it or it will revert to a Lawless Wasteland."
 enc.49.a: "God I hate mutants."
+
+################################################################################################################ -<
+enc.60.t: "Project Safehouse"
+enc.60.d: "The true purpose of the vaults was never to just save mankind.  Our broken, battered world simply cannot sustain humanity in light of the background radiation. No, we must find somewhere safer; the moon, Mars, or, perhaps, beyond. The Enclave is merely fulfilling its original directive by taking the steps needed to escape from this dying world and its mutant squalor. \n\nThere are several facilities across the Wastes that will encourage the offworld exodus. There is a space shuttle in San Francisco we can liberate; a rocket facility outside Las Vegas we can repair; and, of course, the Bloomfield Space Center. Control of these facilities will accelerate the Great Work. \n\nFor now, we may construct a temporary launch site and begin transferring equipment to orbit.  We can also reactivate a prewar space station that survived the Great War."
+enc.60.a: "To the Stars and Safety."
+################################################################################################################ -<
+enc.61.t: "Liftoff"
+enc.61.d: "The mutants abandoned all hope of space flight, but they didn't understand humanity's indominatble spirit and drive to progress. The only losses from our crash project were among the mutants, and the rocket was able to dock with the USSA Construction Facility. Our heroic astromen were also able to activate the Highwater-Trousers Defense Platform. It appears to have 7 volleys we can fire at targets below."
+enc.61.a: "Rods from God? I like it."
+enc.61.a_tt: "\n§RHighwater-Trousers§! is a unique trait that you can deploy in combat using your officers. Ammunition may be tracked in the decision tab."
+
+################################################################################################################ -<
+enc.62.t: "The Home Among the Stars"
+enc.62.d: "Earth was the cradle of man, but man cannot stay in the cradle forever. Our bruised and battered world must rest, and the riches of the stars lie before us like gems. The liquid hydrocarbons of Titan. The metals of the the asteroid belt. And the limitless, clean energy of the sun. No, our radioactive world is left to our robot servants. We will seek adventure among the stars, search out new life, and ensure it cannot threaten America. And let us begin with Moon Base Theta."
+enc.62.a: "Thank god we have experience living underground."
+enc.62.a_tt: "\n§gWe will unlock the ability to construct the Moon Base. When complete, we can abandon this wasted, sad world.§!"

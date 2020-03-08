@@ -236,10 +236,13 @@ guiTypes = {
 			name = robotic_garrison_icon
 			position = { x = -17 y = 0 }	
 			spriteType = GFX_decision_enc_eyebot
+			pdx_tooltip = robotic_garrison_icon_tt
+			pdx_tooltip_delayed = robotic_garrison_icon_tt_delayed
+			
 			scale = 1
 		}
 		buttonType = {
-			position = { x = 40 y = 10 }	
+			position = { x = 35 y = 10 }	
 			name = robotic_garrison_decrease
 			spriteType = GFX_subtract_one
 			pdx_tooltip = robotic_garrison_decrease_tt
@@ -247,14 +250,35 @@ guiTypes = {
 			scale = 1
 		}
 		buttonType = {
-			position = { x = 70 y = 10 }	 
+			position = { x = 75 y = 10 }	 
 			name = robotic_garrison
 			spriteType = GFX_add_one
 			pdx_tooltip = robotic_garrison_tt
 			pdx_tooltip_delayed = robotic_garrison_tt_delayed
 			scale = 1 
 		}	
-	}
+		instantTextBoxType = {
+			name = robotic_garrison_text_box
+			position = { x = 45 y = 12 }
+			font = "hoi_18mbs"
+			text = "[?state_robots]"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = robotic_garrison_text_box2   
+			position = { x = -18 y = 13  }
+			font = "vic_18"
+			text = "[?state_robots_amount|%0]"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+	} 
 	
 
 	containerWindowType = { # establish_outpost
