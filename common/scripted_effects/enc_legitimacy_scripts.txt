@@ -99,6 +99,7 @@ update_legitimacy = { # currently unused
 clear_legitimacy = {
 
 }
+
 change_legitimacy = {
 	if = {
 		limit = {
@@ -222,8 +223,8 @@ advanced_update_legitimacy = {
 	multiply_variable = { enc_legitimacy_political_power_factor = legitimacy_modifier_var }
 
 	# set political_power_factor bonus
-	set_variable = { enc_legitimacy_non_core_manpower = 0.25 }
-	multiply_variable = { enc_legitimacy_non_core_manpower = legitimacy_modifier_var }
+	set_variable = { enc_legitimacy_compliance_growth = 0.25 }
+	multiply_variable = { enc_legitimacy_compliance_growth = legitimacy_modifier_var }
 
 	# set political_power_factor bonus
 	set_variable = { enc_legitimacy_mobilization_speed = 0.30 }
