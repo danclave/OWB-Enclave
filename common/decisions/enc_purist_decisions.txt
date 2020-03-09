@@ -697,6 +697,7 @@ ENC_exploiting_wasteland = {
 			FROM = {
 				resistance < 50
 				arms_factory > 0
+				occupation_law = enc_dismantle_industry
 			}
 		}
 		visible = {

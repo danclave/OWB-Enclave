@@ -89,7 +89,7 @@ enc_resistance_0 = {
 		}
 	}
 	state_modifier = {
-		local_resources = -0.25
+		local_resources = -0.50
 		local_factories = -0.50
 		local_manpower = -1		
 		resistance_activity = -0.95

@@ -292,12 +292,12 @@ NCR_hayes_plots = {
 
 ENC_exploiting_wasteland = {
 	priority = 1000
-	icon = category_generic_industry
+	icon = generic_industry
 	allowed = {
 		original_tag = ERB
 	}
 	visible = {
-		# has_completed_focus = enc_purity
+		has_completed_focus = enc_purity
 	}
 }
 

@@ -79,7 +79,7 @@ enc_enslave_locals = {
 	state_modifier = {
 		required_garrison_factor = 0.25
 		local_resources = 0.20
-		compliance_gain = 0.20
+		compliance_gain = 0.50
 		resistance_target = -1
 	}
 }
