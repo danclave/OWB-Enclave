@@ -1,0 +1,6 @@
+scripted_gui = {
+	enc_moon_base_category = {
+		context_type = decision_category
+		window_name = "enc_moon_base_category_scripted_gui"
+	}
+}
