@@ -39,6 +39,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			custom_effect_tooltip = enc_ourchoice.tt
+			country_lock_all_division_template = no
 			hidden_effect = {
 				country_event = { id = enc.3 }
 			}

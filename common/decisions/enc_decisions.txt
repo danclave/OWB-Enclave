@@ -1294,14 +1294,15 @@ enc_executive_orders = {
 ENC_debug = {
 	ENC_misc = {
 		complete_effect = {
-set_country_flag = has_unique_manpower_law
-set_country_flag = has_unique_officer_laws
-set_country_flag = has_unique_outsider_laws
-set_country_flag = has_unique_economic_laws
-set_country_flag = has_unique_trade_laws
-set_country_flag = has_unique_press_laws
-set_country_flag = has_unique_slave_laws
-set_country_flag = has_unique_drug_laws
+			set_country_flag = has_unique_manpower_law
+			set_country_flag = has_unique_officer_laws
+			set_country_flag = has_unique_outsider_laws
+			set_country_flag = has_unique_economic_laws
+			set_country_flag = has_unique_trade_laws
+			set_country_flag = has_unique_press_laws
+			set_country_flag = has_unique_slave_laws
+			set_country_flag = has_unique_drug_laws
+			add_ideas = enc_complete_chaos
 
 		}
 	}

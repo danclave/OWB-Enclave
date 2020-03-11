@@ -39,6 +39,7 @@ set_country_flag = coring_button_hidden
 set_country_flag = slavery_allowed
 set_country_flag = enclave_nation
 set_country_flag = no_mutants_allowed
+country_lock_all_division_template = yes
 
 # law flags
 set_country_flag = gov_unique_manpower_law
@@ -50,6 +51,15 @@ set_country_flag = default_slave_laws_banned
 set_country_flag = default_drug_laws
 set_country_flag = has_unique_outsider_laws
 set_country_flag = has_unique_officer_laws
+
+set_country_flag = has_unique_manpower_law
+set_country_flag = has_unique_officer_laws
+set_country_flag = has_unique_outsider_laws
+set_country_flag = has_unique_economic_laws
+set_country_flag = has_unique_trade_laws
+set_country_flag = has_unique_press_laws
+set_country_flag = has_unique_slave_laws
+set_country_flag = has_unique_drug_laws
 
 set_country_flag = do_not_spread_followers
 set_country_flag = no_overlord_decisions 
@@ -253,6 +263,8 @@ add_ideas = ENC_infighting
 add_ideas = enc_scientists
 add_ideas = ENC_officers
 add_ideas = ENC_special_forces
+
+add_ideas = enc_complete_chaos
 
 add_ideas = the_remnants
 add_ideas = enc_outsider_law_none
