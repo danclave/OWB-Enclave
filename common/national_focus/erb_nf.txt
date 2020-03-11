@@ -6932,6 +6932,7 @@ focus = {#NEVADA - second city
 		prerequisite = { focus = enc_expansion }
 		cancel_if_invalid = no
 		available = {
+			country_exists = VLT
 			strength_ratio = { tag = VLT ratio > 2 }
 			VLT = {
 				OR = {
@@ -6939,6 +6940,12 @@ focus = {#NEVADA - second city
 					is_wallace_leader = yes
 				}
 			}
+		}
+		cancel = {
+			NOT = {country_exists = VLT}
+		}
+		bypass = {
+			NOT = {country_exists = VLT}
 		}
 		completion_reward = {
 			annex_country = { target = VLT }
