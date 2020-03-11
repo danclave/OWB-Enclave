@@ -691,6 +691,7 @@ ENC_exploiting_wasteland = {
 			FROM = {
 				is_controlled_by = ERB
 				occupation_law = enc_dismantle_industry
+				arms_factory > 0
 			}
 		}
 		available = {
@@ -702,6 +703,10 @@ ENC_exploiting_wasteland = {
 		}
 		visible = {
 			NOT = { has_completed_focus = enc_reform }
+			FROM = {
+				arms_factory > 0
+				occupation_law = enc_dismantle_industry
+			}
 		}
 		complete_effect = {
 			hidden_effect = {
@@ -735,6 +740,7 @@ ENC_exploiting_wasteland = {
 			FROM = {
 				is_controlled_by = ERB
 				occupation_law = enc_dismantle_industry
+				industrial_complex > 0
 			}
 		}
 		available = {
@@ -746,13 +752,17 @@ ENC_exploiting_wasteland = {
 		}
 		visible = {
 			NOT = { has_completed_focus = enc_reform }
+			FROM = {
+				industrial_complex > 0
+				occupation_law = enc_dismantle_industry
+			}
 		}
 		complete_effect = {
 			hidden_effect = {
 				add_command_power = -10
 			}
 		}
-		days_remove = 25
+		days_remove = 5
 		remove_effect = {
 			FROM = {
 				set_temp_variable = { amount_factory_removed = industrial_complex_level }
