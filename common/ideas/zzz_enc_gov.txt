@@ -328,6 +328,9 @@ ideas = {
 			cost = 100
 			removal_cost = -1
 			level = 4
+			allowed = {
+				original_tag = ERB
+			}
 			visible = {
 				NOT = { has_completed_focus = enc_purity }
 			}

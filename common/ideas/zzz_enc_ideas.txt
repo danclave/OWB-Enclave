@@ -246,7 +246,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			   research_speed_factor = 0.03
-			 	}
+			}
 		}
 		Enc_Think_Tank = {
 			picture = enc_scientists
@@ -269,7 +269,24 @@ ideas = {
                 custom_modifier_tooltip = SPR_military_disloyalty_tt
 			}
 		}
-
+		enc_protected_by_bunker = {
+			picture = generic_wall_line
+			allowed = {
+				always = no
+			}			
+			cancel = {
+				159 = { # sierra army depot
+					is_capital = no
+				}
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+			   surrender_limit = 1
+			}
+		}
 ####################################################
 # REFORM
 ####################################################

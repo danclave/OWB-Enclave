@@ -47,6 +47,11 @@ ENC_reveal_to_ncr.tt: "\nRequires more than §Y30% legitimacy§!"
 ENC_bribe_NCR_officials: "Bribe NCR officials"
 ENC_bribe_NCR_officials: "Our operatives can grease a few palms in order to ensure reports of suspicious activity in the Nevada desert don't reach the upper levels of NCR government."
 
+enc_last_stand: "The Last Stand"
+enc_reclaim_bunker: "Reclaim [159.GetName]"
+enc_protected_by_bunker: "Protected By Sierra Army Depot"
+enc_protected_by_bunker_desc: ""
+
 # CRISIS
 erb_plague_victim: "[FROM.GetName] falls to the plague!"
 erb_plague_victim_desc: "The day may come when the courage of men shall fail, and for [FROM.GetName], that day came when it was hit with the Mormon Plague. They could only endure so much, but before they accepted Caesar's offer of peace in return for a cure."

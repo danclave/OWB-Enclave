@@ -265,6 +265,7 @@ add_ideas = ENC_officers
 add_ideas = ENC_special_forces
 
 add_ideas = enc_complete_chaos
+add_ideas = enc_protected_by_bunker
 
 add_ideas = the_remnants
 add_ideas = enc_outsider_law_none

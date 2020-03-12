@@ -291,7 +291,7 @@ NCR_hayes_plots = {
 }
 
 ENC_exploiting_wasteland = {
-	priority = 1000
+	priority = 10
 	icon = generic_industry
 	allowed = {
 		original_tag = ERB
@@ -301,6 +301,13 @@ ENC_exploiting_wasteland = {
 	}
 }
 
+enc_last_stand = {
+	priority = 1000
+	icon = generic_crisis
+	allowed = {
+		original_tag = ERB
+	}
+}
 # ##############################
 # ICONS
 # ##############################

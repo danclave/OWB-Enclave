@@ -583,17 +583,18 @@ ENC_NCR_hiding = {
 		cost = 0
 		allowed = {
 			original_tag = ERB
-		}
-		visible = {
-			has_country_flag = ncr_suspicious
-		}
-		available = {
+		}		
+		custom_cost_text = costs_200_caps
+		custom_cost_trigger = {
 			set_temp_variable = { caps_diff = @BRIBE_COST }
 			multiply_temp_variable = {
 				caps_diff = -1
 			}
 			get_caps_difference = yes
 			check_variable = { caps_display_temp > 0 }
+		}
+		visible = {
+			has_country_flag = ncr_suspicious
 		}
 		complete_effect = {
 			set_temp_variable = {
@@ -1050,7 +1051,6 @@ scavenging_decisions = {
 	}
 }
 
-
 enc_executive_orders = {
 	ENC_steal_declaration_independence = {
 		icon = GFX_decision_enc_verti
@@ -1288,6 +1288,36 @@ enc_executive_orders = {
 	}
 }
 
+enc_last_stand = {
+	enc_reclaim_bunker = {
+		icon = infiltrate_state #infiltration
+		is_good = no
+		priority = 1000
+		#--------------------------
+		activation  = {
+			159 = {
+				is_capital = yes
+				not = { is_controlled_by = ROOT }
+			}
+		}
+		available = {
+			controls_state = 159
+		}
+		#--------------------------
+		selectable_mission = no
+		fire_only_once = no
+		#--------------------------
+		days_mission_timeout = 60
+		timeout_effect = {
+			remove_ideas = enc_protected_by_bunker
+		}
+		#--------------------------
+		ai_will_do = {
+			factor = 200 #do or die
+		}
+	}
+
+}
 # DEBUG
 ###############################
 
