@@ -10,11 +10,11 @@ enc_no_garrison_occupation = {
 	sound_effect = "Martial_Law_Interface_No_Garrison"
 
 	state_modifier = {
-		required_garrison_factor = -1 
+		required_garrison_factor = -1
 		resistance_target = 1
 		no_compliance_gain = 1
 		local_resources = -1
-		local_factories = -1 
+		local_factories = -1
 		resistance_growth = 25
 		resistance_garrison_penetration_chance = -1
 	}
@@ -27,18 +27,18 @@ enc_no_garrison_occupation = {
 enc_wastelander_pacification = {
 	visible = {
 		original_tag = ERB
-		not = { has_completed_focus = enc_reform }
+		NOT = { has_completed_focus = enc_reform }
 	}
 	icon = 7
 	sound_effect = "Martial_Law_Interface_No_Garrison"
 
 	state_modifier = {
-		resistance_target = -0.95
+		resistance_target = -2
 		required_garrison_factor = 0.20
 		local_resources = -0.50
 		no_compliance_gain = 1
 		resistance_garrison_penetration_chance = -0.25
-		resistance_decay = 1 
+		resistance_decay = 3
 	}
 }
 
@@ -46,7 +46,7 @@ enc_dismantle_industry = {
 	tooltip = enc_dismantle_industry_tt
 	visible = {
 		original_tag = ERB
-		not = { has_completed_focus = enc_reform }
+		NOT = { has_completed_focus = enc_reform }
 	}
 	icon = 9
 	sound_effect = "Martial_Law_Interface_No_Garrison"
@@ -58,7 +58,7 @@ enc_dismantle_industry = {
 		resistance_growth = 0
 		no_compliance_gain = 1
 		required_garrison_factor = 0.50
-		resistance_target = 0.30
+		resistance_target = -1.5
 		local_resources = -0.50
 	}
 
@@ -67,7 +67,7 @@ enc_dismantle_industry = {
 enc_enslave_locals = {
 	visible = {
 		original_tag = ERB
-		not = { has_completed_focus = enc_reform }
+		NOT = { has_completed_focus = enc_reform }
 	}
 	icon = 10
 	sound_effect = ERB_whip
@@ -78,15 +78,16 @@ enc_enslave_locals = {
 
 	state_modifier = {
 		required_garrison_factor = 0.25
-		resistance_growth = 0.25
 		local_resources = 0.20
-		compliance_gain = 0.20
+		compliance_gain = 0.50
+		resistance_target = -1
 	}
 }
 
 enc_no_exploit_resources = {
 	visible = {
 		original_tag = ERB
+		NOT = { has_completed_focus = enc_reform }		
 	}
 	icon = 8
 	sound_effect = "Martial_Law_Interface_No_Garrison"
@@ -94,10 +95,11 @@ enc_no_exploit_resources = {
 	state_modifier = {
 		resistance_growth = 0
 		no_compliance_gain = 1
-		local_resources = 0.20
+		resistance_target = -1.5
+		local_resources = 0.50
 		resistance_garrison_penetration_chance = -0.50
 	}
-	
+
 }
 
 

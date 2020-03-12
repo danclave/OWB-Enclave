@@ -49,12 +49,12 @@ ideas = {
 				factor = 1
 			}
 			visible = {
-				NOT = { 
-					has_country_flag = reformers_purged 
+				NOT = {
+					has_country_flag = reformers_purged
 					has_country_flag = enc_boris_t_democratic_flag
 					has_completed_focus = enc_purge_opposition
 				}
-			
+
 			}
 		}
 		boris_t_democratic = {
@@ -110,7 +110,7 @@ ideas = {
 				NOT = { has_country_flag = reformers_purged }
 			}
 			traits = {
-				EPA_director 
+				EPA_director
 			}
 			ai_will_do = {
 				factor = 1
@@ -172,7 +172,7 @@ ideas = {
 			traits = { enc_politically_connected }
 			ai_will_do = {
 				factor = 1
-			}		
+			}
 		}
 	}
 
@@ -213,9 +213,9 @@ ideas = {
 				original_tag = ERB
 			}
 			visible = {
-				not = { has_completed_focus = enc_purge_opposition }
+				NOT = { has_completed_focus = enc_purge_opposition }
 			}
-			traits = { 
+			traits = {
 				enc_army_chief_loyalist
 				enc_incompetent_general
 			}
@@ -224,7 +224,7 @@ ideas = {
 				factor = 1
 			}
 		}
-		
+
 		enc_indy_neidell = {
 			cost = 100
 			picture = enc_indy_neidell
@@ -235,8 +235,8 @@ ideas = {
 
 			ai_will_do = {
 				factor = 1
-			}		
-		}	
+			}
+		}
 
 	}
 
@@ -262,9 +262,9 @@ ideas = {
 				original_tag = ERB
 			}
 			visible = {
-				not = { has_completed_focus = enc_purge_opposition }
+				NOT = { has_completed_focus = enc_purge_opposition }
 			}
-			traits = { 
+			traits = {
 				enc_air_chief_loyalist
 				enc_incompetent_airman
 			}
@@ -299,9 +299,9 @@ ideas = {
 				original_tag = ERB
 			}
 			visible = {
-				not = { has_completed_focus = enc_purge_opposition }
+				NOT = { has_completed_focus = enc_purge_opposition }
 			}
-			traits = { 
+			traits = {
 				enc_navy_chief_loyalist
 				enc_incompetent_admiral
 			}
@@ -413,7 +413,7 @@ ideas = {
 			traits = {
 				interventionist
 			}
-			
+
 		}
 	}
 
@@ -511,7 +511,7 @@ ideas = {
 			picture = generic_political_advisor_south_america_3
 			allowed = { original_tag = ERB }
 			visible = {
-				not = {
+				NOT = {
 					has_country_flag = reformers_purged
 				}
 			}
@@ -523,7 +523,7 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-			}		
+			}
 		}
 	}
 }

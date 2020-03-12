@@ -1,6 +1,6 @@
-#check resistance_modifiers.txt for example
-
-
+#####################################
+# PURISTS
+#####################################
 enc_compliance_purist_25 = {
 	type = core_compliance_modifier
 	icon = "GFX_occupation_compliance_modifier_strip:4"
@@ -8,7 +8,7 @@ enc_compliance_purist_25 = {
 	threshold = 25
 	margin = 5
 	visible = {
-		original_tag = ERB
+		has_completed_focus = enc_purity
 	}
 	enabled = {
 		has_completed_focus = enc_slave_labour
@@ -26,7 +26,7 @@ enc_compliance_purist_50 = {
 	threshold = 50
 	margin = 5
 	visible = {
-		original_tag = ERB
+		has_completed_focus = enc_purity
 	}
 	enabled = {
 		has_completed_focus = enc_slave_labour
@@ -44,7 +44,7 @@ enc_compliance_purist_75 = {
 	threshold = 75
 	margin = 5
 	visible = {
-		original_tag = ERB
+		has_completed_focus = enc_purity
 	}
 	enabled = {
 		has_completed_focus = enc_slave_labour
@@ -62,7 +62,7 @@ enc_compliance_purist_100 = {
 	threshold = 100
 	margin = 5
 	visible = {
-		original_tag = ERB
+		has_completed_focus = enc_purity
 	}
 	enabled = {
 		has_completed_focus = enc_slave_labour
@@ -72,3 +72,119 @@ enc_compliance_purist_100 = {
 		local_resources = 0.10
 	}
 }
+
+#####################################
+# REFORMERS
+#####################################
+enc_compliance_reform_20 = {
+	type = core_compliance_modifier
+	icon = "GFX_occupation_compliance_modifier_strip:1"
+	small_icon = "GFX_occupation_compliance_modifier_small_strip:1"
+	threshold = 20
+	margin = 2
+	visible = {
+		has_completed_focus = enc_reform
+	}
+	state_modifier = {
+		resistance_target = -0.20
+	}
+}
+enc_compliance_reform_35 = {
+	type = core_compliance_modifier
+	icon = "GFX_occupation_compliance_modifier_strip:2"
+	small_icon = "GFX_occupation_compliance_modifier_small_strip:2"
+	threshold = 35
+	margin = 2
+	visible = {
+		has_completed_focus = enc_reform
+	}
+	state_modifier = {
+		required_garrison_factor = -0.25
+		recruitable_population = 0.20
+	}
+}
+enc_compliance_reform_50 = {
+	type = core_compliance_modifier
+	icon = "GFX_occupation_compliance_modifier_strip:2"
+	small_icon = "GFX_occupation_compliance_modifier_small_strip:3"
+	threshold = 50
+	margin = 2
+	visible = {
+		has_completed_focus = enc_reform
+	}
+	state_modifier = {
+		local_resources_factor = 0.25
+		local_factories = 0.25
+	}
+}
+enc_compliance_reform_65 = {
+	type = core_compliance_modifier
+	icon = "GFX_occupation_compliance_modifier_strip:4"
+	small_icon = "GFX_occupation_compliance_modifier_small_strip:4"
+	threshold = 65
+	margin = 2
+	visible = {
+		has_completed_focus = enc_reform
+	}
+	state_modifier = {
+		recruitable_population_factor = 0.20
+	}
+}
+
+
+#####################################
+# List of state modifiers
+#####################################
+# army_speed_factor_for_controller
+# compliance_gain
+# compliance_growth
+# compliance_growth_on_our_occupied_states
+# disable_strategic_redeployment
+# disable_strategic_redeployment_for_controller
+# enemy_intel_network_gain_factor_over_occupied_tag
+# enemy_spy_negative_status_factor
+# intel_network_gain
+# intel_network_gain_factor
+# local_building_slots
+# local_building_slots_factor
+# local_factories
+# local_factory_sabotage
+# local_intel_to_enemies
+# local_manpower
+# local_non_core_manpower
+# local_resources
+# local_resources_factor
+# local_supplies
+# local_supplies_for_controller
+# mobilization_speed
+# no_compliance_gain
+# non_core_manpower
+# recruitable_population
+# recruitable_population_factor
+# required_garrison_factor
+# resistance_activity
+# resistance_damage_to_garrison
+# resistance_damage_to_garrison_on_our_occupied_states
+# resistance_decay
+# resistance_decay_on_our_occupied_states
+# resistance_garrison_penetration_chance
+# resistance_growth
+# resistance_growth_on_our_occupied_states
+# resistance_target
+# resistance_target_on_our_occupied_states
+# starting_compliance
+# state_production_speed_buildings_factor
+
+# state_resource_aluminium
+# state_resource_chromium
+# state_resource_oil
+# state_resource_rubber
+# state_resource_steel
+# state_resource_tungsten
+# state_resources_factor
+# temporary_state_resource_aluminium
+# temporary_state_resource_chromium
+# temporary_state_resource_oil
+# temporary_state_resource_rubber
+# temporary_state_resource_steel
+# temporary_state_resource_tungsten

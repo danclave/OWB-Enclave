@@ -177,9 +177,11 @@ focus_tree = {
 			country_event = { id = enc_reformers.15 }
 			hidden_effect = { set_rule = { can_puppet = yes } }
 			custom_effect_tooltip = enc_reformers.tt
-			# set up variables for rebuilding America
-			set_variable = { enc_good_allignment = 0 }
-			set_variable = { enc_evil_allignment = 0 }
+			# set up variables for rebuilding Americaset_country_flag = has_compliance_core_unique_tiers
+			clr_country_flag = has_compliance_state_unique_tiers
+			clr_country_flag = has_resistance_state_unique_tiers
+			clr_country_flag = has_resistance_core_unique_tiers
+			clr_country_flag = has_unique_occupation_laws
 		}
 	}
 
@@ -270,7 +272,7 @@ focus_tree = {
 		available = {
 			# has_idea = ENC_scientists_traitors_2
 			if = {
-				limit = { not = { has_country_flag = purists_purged }}
+				limit = { NOT = { has_country_flag = purists_purged }}
 				has_country_flag = enc_demoted_scientists
 			}
 		}
@@ -303,7 +305,7 @@ focus_tree = {
 		available = {
 			# has_idea = ENC_officers_traitors_2
 			if = {
-				limit = { not = { has_country_flag = purists_purged }}
+				limit = { NOT = { has_country_flag = purists_purged }}
 				has_country_flag = enc_demoted_officers
 			}
 		}
@@ -330,7 +332,7 @@ focus_tree = {
 		prerequisite = { focus = enc_purge_officers }
 		available = {
 			elites < 0.15
-			not = { has_completed_focus = enc_purge_opposition }
+			NOT = { has_completed_focus = enc_purge_opposition }
 		}
 		relative_position_id = enc_consolidate_power
 		x = 0
@@ -646,9 +648,40 @@ focus_tree = {
 			custom_effect_tooltip = enc_american_dream.tt
 		}
 	}
-
-
-
+	focus = {#SUSPICION - infiltrate NCR
+		id = enc_infiltrate_ncr
+		icon = GFX_goal_enc_infiltrate_ncr
+		cost = 4.3
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_american_dream
+		x = 9
+		y = 1
+		prerequisite = { focus = enc_reform }
+		completion_reward = {
+			set_temp_variable = { suspicion_change_var = -35 }
+			change_suspicion = yes
+		}
+	}
+	focus = {#RADIO - Enclave Radio
+		id = enc_radio
+		icon = GFX_goal_enc_radio_reform
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_infiltrate_ncr
+		x = 0
+		y = 1
+		prerequisite = { focus = enc_infiltrate_ncr }
+		completion_reward = {
+			add_ideas = { ENC_radio }
+			159 = {
+				add_building_construction = {
+					type = radar_station
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		cost = 4.3
+	}
 	focus = {#SS operation babylon
 		id = enc_operation_babylon
 		icon = GFX_goal_enc_operation_babylon
@@ -794,40 +827,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = enc_dayglow_proclamation
 		}
-	}
-	focus = {#SUSPICION - infiltrate NCR
-		id = enc_infiltrate_ncr
-		icon = GFX_goal_enc_infiltrate_ncr
-		cost = 4.3
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_american_dream
-		x = 9
-		y = 1
-		prerequisite = { focus = enc_reform }
-		completion_reward = {
-			set_temp_variable = { suspicion_change_var = -35 }
-			change_suspicion = yes
-		}
-	}
-	focus = {#RADIO - Enclave Radio
-		id = enc_radio
-		icon = GFX_goal_enc_radio_reform
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_infiltrate_ncr
-		x = 0
-		y = 1
-		prerequisite = { focus = enc_infiltrate_ncr }
-		completion_reward = {
-			add_ideas = { ENC_radio }
-			159 = {
-				add_building_construction = {
-					type = radar_station
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		cost = 4.3
 	}
 	focus = {#SUSPICION - stage raider attacks
 		id = enc_stage_raider_attacks
@@ -1179,10 +1178,10 @@ focus_tree = {
 				AND = {
 					strength_ratio = { tag = VLT ratio > 2 }
 					VLT = {
-						or = {
+						OR = {
 							is_lynette_leader = yes
 							is_wallace_leader = yes
-							and = {
+							AND = {
 								ERB = { has_completed_focus = enc_accept_ghouls }
 								is_festus_leader = yes
 							}
@@ -1496,7 +1495,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_the_mutant_question
 		mutually_exclusive = { focus = enc_segregation }
-		mutually_exclusive = { focus = enc_subjugation }
+		#mutually_exclusive = { focus = enc_subjugation }
 		x = 3
 		y = 1
 		prerequisite = {
@@ -1721,9 +1720,9 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = enc_expand_human_definition
 		}
-		mutually_exclusive = {
-			focus = enc_subjugation
-		}
+		# mutually_exclusive = {
+		# 	focus = enc_subjugation
+		# }
 		prerequisite = {
 			focus = enc_the_mutant_question
 			focus = enc_the_mutant_question_purists
@@ -2612,7 +2611,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_completed_focus = enc_law
-					not = { has_country_flag = enc_has_law }
+					NOT = { has_country_flag = enc_has_law }
 				}
 				has_country_flag = enc_has_law
 			}
@@ -2641,7 +2640,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_completed_focus = enc_law
-					not = { has_country_flag = enc_has_law }
+					NOT = { has_country_flag = enc_has_law }
 				}
 				has_country_flag = enc_has_law
 			}
@@ -2701,7 +2700,7 @@ focus_tree = {
 		available = {
 			if = { # only visible when now allowed
 				limit = { has_country_flag = enc_martial_law_blocked }
-				not = { has_country_flag = enc_martial_law_blocked }
+				NOT = { has_country_flag = enc_martial_law_blocked }
 			}
 		}
 		select_effect = {
@@ -3179,7 +3178,7 @@ focus_tree = {
 			focus = enc_fbi
 		}
 		available = {
-			or = {
+			OR = {
 				has_completed_focus = enc_model_communities
 				has_completed_focus = enc_martial_law
 				has_completed_focus = enc_suspend_elections
@@ -6347,7 +6346,6 @@ focus = {#NEVADA - second city
 		icon = GFX_goal_enc_beacon
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_mobilize_economy }
-		mutually_exclusive = { focus = enc_radio_eyebots }
 		relative_position_id = enc_mobilize_economy
 		x = -1
 		y = 1
@@ -6363,19 +6361,23 @@ focus = {#NEVADA - second city
 			swap_ideas = {remove_idea = ENC_radio add_idea = ENC_radio_purity}
 		}
 	}
-	focus = {#Purity - Eyeboys
-		id = enc_radio_eyebots
+	
+	focus = { #Purity - robot_laws
+		id = enc_robot_engineering
 		icon = GFX_goal_enc_eyebot
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_mobilize_economy }
-		mutually_exclusive = { focus = enc_radio_purity_2 }
 		relative_position_id = enc_mobilize_economy
 		x = 1
 		y = 1
-		cost = 5.8
-		completion_reward = {
-			swap_ideas = {remove_idea = ENC_radio add_idea = ENC_radio_eyebots}
+		available = {
+			has_tech = robot_makeshift_automatons_tech
 		}
+		completion_reward = {
+			custom_effect_tooltip = enc_robot_tt
+			set_variable = { automation = 1 }
+		}
+		cost = 5.8
 	}
 	focus = {#SIERRA ------------------------ THE SIERA ARMY DEPOT ------------------------------
 		id = enc_depot_start
@@ -6435,8 +6437,8 @@ focus = {#NEVADA - second city
 
 			add_tech_bonus = {
 				name = robotics_armour_bonus
-				bonus = 0.5
-				uses = 1
+				bonus = 0.75
+				uses = 2
 				category = robotics_tech_category
 			}
 			hidden_effect = {
@@ -6544,6 +6546,19 @@ focus = {#NEVADA - second city
 			custom_effect_tooltip = enc_boost_special_forces_tt
 		}
 	}
+	focus = {#SIERRA - 2- The lab
+		id = enc_depot_lab
+		icon = GFX_goal_enc_scientists
+		prerequisite = {focus = enc_depot_end}
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_depot_end
+		x = 1
+		y = 1
+		cost = 8.6
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
 	focus = {#Purity - FEV experiments
 		id = enc_FEV_experiments
 		icon = GFX_goal_enc_experiments
@@ -6571,19 +6586,6 @@ focus = {#NEVADA - second city
 		completion_reward = {
 			add_research_slot = 1
 			swap_ideas = {remove_idea = ENC_scientists add_idea = ENC_scientists_buffed}
-		}
-	}
-	focus = {#SIERRA - 2- The lab
-		id = enc_depot_lab
-		icon = GFX_goal_enc_scientists
-		prerequisite = {focus = enc_depot_end}
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_depot_end
-		x = 1
-		y = 1
-		cost = 8.6
-		completion_reward = {
-			add_research_slot = 1
 		}
 	}
 	focus = {#SIERRA - 3 - Mexican Robots
@@ -6657,7 +6659,7 @@ focus = {#NEVADA - second city
 		y = 1
 		prerequisite = { focus = enc_slave_labour_collars}
 		available = {
-			or = {
+			OR = {
 				has_country_flag = enc_supermutants_captured_flag
 				235 = { is_controlled_by = ERB} # The Warren
 			}
@@ -6930,13 +6932,20 @@ focus = {#NEVADA - second city
 		prerequisite = { focus = enc_expansion }
 		cancel_if_invalid = no
 		available = {
+			country_exists = VLT
 			strength_ratio = { tag = VLT ratio > 2 }
 			VLT = {
-				or = {
+				OR = {
 					is_lynette_leader = yes
 					is_wallace_leader = yes
 				}
 			}
+		}
+		cancel = {
+			NOT = {country_exists = VLT}
+		}
+		bypass = {
+			NOT = {country_exists = VLT}
 		}
 		completion_reward = {
 			annex_country = { target = VLT }
@@ -7086,7 +7095,7 @@ focus = {#NEVADA - second city
 		ai_will_do = { factor = 1 }
 		available = {
 			548 = { is_controlled_by = ERB } # NAVARRO
-			not = {has_completed_focus = enc_reform }
+			NOT = {has_completed_focus = enc_reform }
 		}
 		prerequisite = {
 			focus = enc_poison_bear
@@ -7609,26 +7618,6 @@ focus = {#NEVADA - second city
 			set_technology = { high_fighter_tech  = 1}
 		}
 	}
-##### Purist Robots
-
-	focus = { #Purity - robot_laws
-		id = enc_robot_engineering
-		icon = GFX_goal_enc_eyebot
-		ai_will_do = { factor = 1 }
-		relative_position_id = enc_depot_robot
-		x = -1
-		y = 1
-		prerequisite = {
-			focus = enc_depot_robot
-		}
-		completion_reward = {
-			custom_effect_tooltip = enc_robot_tt
-			set_variable = { automation = 1 }
-		}
-		cost = 5.8
-	}
-
-
 }
 
 # GFX_goal_desktop.ini

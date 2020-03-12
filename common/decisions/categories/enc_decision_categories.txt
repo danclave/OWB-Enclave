@@ -26,8 +26,8 @@ ENC_shifts = {
 	}
 
 	visible = {
-		not = {
-			and = {
+		NOT = {
+			AND = {
 				has_completed_focus = enc_reform
 				num_of_controlled_states > 30
 			}
@@ -90,7 +90,7 @@ ENC_NCR_hiding = {
 	}
 	visible = {
 		has_country_flag = ncr_suspicious
-		not = {
+		NOT = {
 			OR = {
 				has_war_with = NCR
 				NCR = { exists = no }
@@ -293,12 +293,12 @@ NCR_hayes_plots = {
 
 ENC_exploiting_wasteland = {
 	priority = 1000
-	icon = category_generic_industry
+	icon = generic_industry
 	allowed = {
 		original_tag = ERB
 	}
 	visible = {
-		# has_completed_focus = enc_purity
+		has_completed_focus = enc_purity
 	}
 }
 

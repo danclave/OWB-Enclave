@@ -92,6 +92,10 @@ spriteTypes = {
 			texturefile = "gfx/interface/icons/decision_enc_helmet.dds"
 		}
 		spriteType = {
+			name = "GFX_decision_enc_eyebot"
+			texturefile = "gfx/interface/icons/decision_enc_eyebot.dds"
+		}
+		spriteType = {
 			name = "GFX_decision_enc_helmet_color"
 			texturefile = "gfx/interface/icons/decision_enc_helmet_color.dds"
 		}

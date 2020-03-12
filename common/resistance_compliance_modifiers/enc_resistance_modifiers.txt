@@ -60,8 +60,9 @@ enc_resistance_LLW = {
 	alert_level = high
 	alert_margin = 5
 	visible = {
-		FROM = {		
+		FROM = {
 			original_tag = ERB
+			NOT = { has_completed_focus = enc_reform }
 		}
 	}
 	on_enable = {
@@ -82,15 +83,16 @@ enc_resistance_0 = {
 	alert_level = low
 	alert_margin = 5
 	visible = {
-		FROM = {		
+		FROM = {
 			original_tag = ERB
-			not = { has_completed_focus = enc_reform }
+			NOT = { has_completed_focus = enc_reform }
 		}
 	}
 	state_modifier = {
-		local_resources = -0.25
+		local_resources = -0.50
 		local_factories = -0.50
-		local_manpower = -1
+		local_manpower = -1		
+		resistance_activity = -0.95
 	}
 }
 

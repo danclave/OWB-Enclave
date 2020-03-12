@@ -115,7 +115,7 @@ country_event = { #4 - Dealing with Wrights
 		custom_effect_tooltip = unlocks_as_advisor
 		show_ideas_tooltip = erb_wright
 		285 = {
-			add_compliance = 0.10
+			add_compliance = 10
 		}
 	}
 	option = { #No place for him
@@ -163,7 +163,7 @@ country_event = { #5 - Dealing with Bishops
 	option = { # Capture Mr. Bishop
 		name = enc_reformers.5.b
 		add_political_power = 75
-		285 = {	add_resistance_target = 0.10 }
+		285 = {	add_resistance_target = -10}
 	}
 }
 
@@ -186,12 +186,12 @@ country_event = { #6 - Dealing with Salvatores
 		}
 		change_legitimacy = yes
 		set_country_flag = enc_salvatores_tolerated_flag
-		285 = {	add_compliance = 0.10 }
+		285 = {	add_compliance = 10 }
 	}
 	option = { # house arrest
 		name = enc_reformers.6.b
 		add_stability = 0.05
-		285 = {	add_resistance_target = 0.10 }
+		285 = {	add_resistance_target = -10 }
 	}
 	option = { # we rule in new reno
 		name = enc_reformers.6.c
@@ -208,23 +208,22 @@ country_event = { #7 - Dealing with Mordinos
 	is_triggered_only = yes
 	option = { # Court of law
 		name = enc_reformers.7.a
-		custom_effect_tooltip = enc_reformers.7.a.tt		
+		custom_effect_tooltip = enc_reformers.7.a.tt
 		285 = {
-			add_compliance = 0.10
+			add_compliance = 10
 		}
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = 0.05
 		}
-		change_legitimacy = yes		
-		# todo LAR add compliance
+		change_legitimacy = yes
 	}
 	option = { # executed
 		name = enc_reformers.7.b
 		custom_effect_tooltip = enc_reformers.7.b.tt
-		add_political_power = 50		
+		add_political_power = 50
 		285 = {
-			add_resistance_target = -0.10
+			add_resistance_target = -10
 		}
 		set_temp_variable = { caps_to_add = 150 }
 		add_caps = yes
@@ -326,7 +325,7 @@ country_event = { #11 - Traitors officers
 	trigger = {
 		has_completed_focus = enc_reform
 		has_idea = ENC_officers
-		not = {
+		NOT = {
 			has_completed_focus = enc_purge_officers
 		}
 	}
@@ -352,7 +351,7 @@ country_event = { #12 - Traitors scientists
 	trigger = {
 		has_completed_focus = enc_reform
 		has_idea = ENC_scientists
-		not = {
+		NOT = {
 			has_completed_focus = enc_purge_scientists
 		}
 	}
@@ -456,14 +455,14 @@ country_event = { #14 - Anderson Speech
 		has_completed_focus = enc_reform
 		has_idea = ENC_infighting
 		intellectuals > 0.6
-		not = {
+		NOT = {
 			has_completed_focus = enc_purge_opposition
 			has_completed_focus = enc_assassinate_F
 		}
 	}
 	option = { # do nothing
 		trigger = {
-			not = {
+			NOT = {
 				has_completed_focus = enc_purge_scientists
 				has_completed_focus = enc_purge_officers
 			}
@@ -485,7 +484,7 @@ country_event = { #14 - Anderson Speech
 	option = { # No friends in the officers...
 		trigger = {
 			has_completed_focus = enc_purge_officers
-			not = {
+			NOT = {
 				has_completed_focus = enc_purge_scientists
 			}
 		}
@@ -500,7 +499,7 @@ country_event = { #14 - Anderson Speech
 	option = { # No friends in the scientists...
 		trigger = {
 			has_completed_focus = enc_purge_scientists
-			not = {
+			NOT = {
 				has_completed_focus = enc_purge_officers
 			}
 		}
@@ -677,7 +676,7 @@ country_event = { #19 - fight between enclave members
 	fire_only_once = yes
 	trigger = {
 		has_completed_focus = enc_reform
-		not = {
+		NOT = {
 			has_completed_focus = enc_purge_opposition
 		}
 	}
@@ -889,7 +888,7 @@ country_event = { #25 - NCR - CES War
 	picture = GFX_event_NCR_battle_for_hoover_dam
 	trigger = {
 		has_completed_focus = enc_reform
-		not = {
+		NOT = {
 			has_country_flag = enc_intervention_flag
 		}
 		date < 2280.01.01
@@ -1143,7 +1142,7 @@ country_event = { #35 - The baron's petition succeeds
 		NCR = { # remove cores of unsupported states temporarily
 			every_owned_state = {
 				limit = {
-					not = {
+					NOT = {
 						has_state_flag = enc_rebels_armed
 					}
 					is_core_of = BAR
@@ -1220,7 +1219,7 @@ country_event = { #36 - The baron's petition fails
 		NCR = { # remove cores of unsupported states temporarily
 			every_owned_state = {
 				limit = {
-					not = {
+					NOT = {
 						has_state_flag = enc_rebels_armed
 					}
 					is_core_of = BAR
@@ -1644,7 +1643,7 @@ news_event = { #47 - NCR falls
 		every_enemy_country = {
 			limit = {
 				has_capitulated = no
-				not = {
+				NOT = {
 					is_neighbor_of = ERB
 				}
 			}
@@ -1929,7 +1928,15 @@ country_event = { #56 - Patrolling New Reno
 	option = { # open fire
 		name = enc_reformers.56.a
 		custom_effect_tooltip = enc_reformers.56.a.tt
-		add_war_support = 0.1
+		add_war_support = 0.10
+		285 = {
+			add_state_modifier = { 
+				modifier = { 
+					resistance_activity = -0.25 
+					resistance_target = -0.15
+				} 
+			}
+		}
 		# modify legitimacy
 		set_temp_variable = {
 			var = legitimacy_change_var
@@ -1941,6 +1948,15 @@ country_event = { #56 - Patrolling New Reno
 		name = enc_reformers.56.b
 		custom_effect_tooltip = enc_reformers.56.b.tt
 		# modify legitimacy
+		285 = {
+			add_state_modifier = { 
+				modifier = { 
+					resistance_activity = 0.10
+					resistance_target = 0.10
+					compliance_growth = 0.15
+				} 
+			}
+		}
 		set_temp_variable = {
 			var = legitimacy_change_var
 			value = 0.05
@@ -1963,7 +1979,7 @@ country_event = { #57 - Purist commander
 				limit = {
 					has_trait = enc_purist
 					is_assigned = yes
-					not = {
+					NOT = {
 						has_unit_leader_flag = warned_purist
 					}
 				}
@@ -3289,7 +3305,7 @@ country_event = { #100 Christmas
 	}
 	trigger = {
 		has_completed_focus = enc_reform
-		not = {
+		NOT = {
 			has_war = yes
 		}
 		date > 2281.11.30
@@ -3748,7 +3764,7 @@ country_event = { #110 - BOS Legionaries
 		CES = {
 			surrender_progress > 0.2
 		}
-		not = {
+		NOT = {
 			country_exists = ARM
 		}
 	}
@@ -4158,7 +4174,7 @@ country_event = { #115 Axis of Evil
 	desc = { # neutral stance
 		text = enc_reformers.115.d.seg.nowbs
 		trigger = {
-			not = {
+			NOT = {
 				has_completed_focus = enc_expand_human_definition
 				country_exists = WBH
 			}
@@ -4167,7 +4183,7 @@ country_event = { #115 Axis of Evil
 	desc = { # neutral stance
 		text = enc_reformers.115.d.seg
 		trigger = {
-			not = {
+			NOT = {
 				has_completed_focus = enc_expand_human_definition
 			}
 		}
@@ -5748,7 +5764,7 @@ country_event = { #163 - The Lonesome Road
 	option = { #	E Pluribus Uranium
 		name = enc_reformers.163.a
 		trigger = {
-			not = {
+			NOT = {
 				has_country_flag = enc_empowered_congress
 			}
 		}
@@ -5766,7 +5782,7 @@ country_event = { #163 - The Lonesome Road
 		name = enc_reformers.163.c
 		if = {
 			limit = {
-				not = {
+				NOT = {
 					congress_accepts_nuke = yes
 				}
 			}
@@ -6750,7 +6766,7 @@ country_event = { #192 - War Crimes
 		name = enc_reformers.192.b
 		custom_effect_tooltip = enc_reformers.192.b.tt
 		trigger = {
-			not = {
+			NOT = {
 				has_idea = ENC_free_press_2
 			}
 		}
@@ -7078,7 +7094,7 @@ news_event = { #202 - Overextended Legion
 		}
 		tag = ERB
 		has_completed_focus = enc_reform
-		not = {
+		NOT = {
 			has_completed_focus = enc_rebuilding_a_nation
 		}
 	}
@@ -8211,7 +8227,7 @@ news_event = { #233 - Legion Conquest of New Canaan
 	is_triggered_only = no
 	trigger = {
 		has_completed_focus = enc_reform
-		or = {
+		OR = {
 			551 = {
 				is_owned_and_controlled_by = CES
 			}
@@ -8778,14 +8794,14 @@ country_event = { #300 - state protests!
 			state_population > 30000
 		}
 		# todo mandatory patriotism stops protests
-		not = {
+		NOT = {
 			has_country_flag = enc_protests_over
 		}
 		OR = {
 			has_country_flag = enc_requisitioned_resources
 			has_idea = ENC_emergency_labour_draft
-			not = {
-				or = {
+			NOT = {
+				OR = {
 					has_completed_focus = enc_the_fate_of_our_democracy
 					has_completed_focus = enc_law_and_order
 					has_completed_focus = enc_the_mutant_question
@@ -8798,7 +8814,7 @@ country_event = { #300 - state protests!
 		custom_effect_tooltip = enc_reformers.300.d.opening
 		if = { # not recognized as human, please do so
 			limit = {
-				not = {
+				NOT = {
 					has_completed_focus = enc_the_mutant_question					# todo check
 				}
 			}
@@ -8812,7 +8828,7 @@ country_event = { #300 - state protests!
 		}
 		else_if = { # player has not chosen democracy, force change to democracy
 			limit = {
-				not = {
+				NOT = {
 					has_completed_focus = enc_the_fate_of_our_democracy					# todo check
 				}
 			}
@@ -8832,7 +8848,7 @@ country_event = { #300 - state protests!
 		}
 		else_if = { # player has not chosen between law or order, force change to law
 			limit = {
-				not = {
+				NOT = {
 					has_completed_focus = enc_law_and_order					# todo check
 				}
 			}
@@ -8867,7 +8883,7 @@ country_event = { #300 - state protests!
 		name = enc_reformers.300.b
 		custom_effect_tooltip = enc_reformers.300.b.tt
 		trigger = {
-			not = {
+			NOT = {
 				has_country_flag = leader_charismatic
 			}			# todo check
 		}
@@ -9154,7 +9170,7 @@ country_event = { #305 - Whispers of hope
 			enc_legitimacy > 0.6
 		}
 		has_country_flag = enc_mid_game
-		not = {
+		NOT = {
 			has_completed_focus = enc_segregation
 		}
 	}
@@ -9479,7 +9495,7 @@ country_event = { #312 - Nuke Armed & ready
 		name = enc_reformers.312.b
 		custom_effect_tooltip = flagstaff_is_nuked
 		trigger = {
-			not = { has_country_flag = leader_ruthless }
+			NOT = { has_country_flag = leader_ruthless }
 		}
 		launch_nuke = {
 			province = 8951
@@ -9542,22 +9558,6 @@ country_event = { #314 - Communism paranoia turns into crisis
 		}
 	}
 	option = { # We will stop the communist threat!
-		name = enc_reformers.314.a
-		activate_mission = ENC_red_menace_crisis
-	}
-}
-
-news_event = { # NuKE DROPPED
-	id = nuke_dropped.1
-	title = enc_nuke_dropped.1.t
-	desc = enc_nuke_dropped.1.d
-	picture = GFX_event_ENC_president_only
-	fire_only_once = yes
-	is_triggered_only = no
-	trigger = {
-		always = no
-	}
-	option = {
 		name = enc_reformers.314.a
 		activate_mission = ENC_red_menace_crisis
 	}
@@ -9760,7 +9760,7 @@ country_event = { #322 - Mad General
 		every_country = {
 			limit = {
 				is_mexican = yes
-				not = {
+				NOT = {
 					tag = ARM
 				}
 			}
@@ -10082,21 +10082,19 @@ news_event = { #329 - Dornan in Mexico
 country_event = { #330 - Baron's Brew
 	id = enc_reformers.330
 	title = enc_reformers.330.t
-	immediate = {
-		if = { # ghouls exist
-			limit = {
+	desc = {
+		trigger = {
+			has_completed_focus = enc_accept_ghouls
+		}
+		text = enc_reformers.330.d.integrate
+	}
+	desc = {
+		trigger = {
+			NOT = {
 				has_completed_focus = enc_accept_ghouls
 			}
-			custom_effect_tooltip = enc_reformers.330.d.integrate
 		}
-		else_if = { # ghouls don't
-			limit = {
-				not = {
-					has_completed_focus = enc_accept_ghouls
-				}
-			}
-			custom_effect_tooltip = enc_reformers.330.d.segregate
-		}
+		text = enc_reformers.330.d.segregate
 	}
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -10136,66 +10134,6 @@ country_event = { #330 - Baron's Brew
 		name = enc_reformers.330.c
 		custom_effect_tooltip = enc_reformers.330.c_tt
 		country_event = enc_reformers.331
-	}
-}
-
-country_event = { #330 - Baron's Brew
-	id = enc_reformers.330
-	title = enc_reformers.330.t
-	immediate = {
-		if = { # ghouls exist
-			limit = {
-				has_completed_focus = enc_accept_ghouls
-			}
-			custom_effect_tooltip = enc_reformers.330.d.integrate
-		}
-		else_if = { # ghouls don't
-			limit = {
-				not = {
-					has_completed_focus = enc_accept_ghouls
-				}
-			}
-			custom_effect_tooltip = enc_reformers.330.d.segregate
-		}
-	}
-	is_triggered_only = yes
-	fire_only_once = yes
-	picture = GFX_event_coffee_can
-	option = { #RIP
-		name = enc_reformers.330.a
-		add_to_variable = {
-			mexico_legitimacy_value = 5
-		}
-		custom_effect_tooltip = enc_reformers.330.a_tt
-		hidden_effect = {
-			country_event = enc_reformers.331
-		}
-	}
-	option = { #RIP
-		trigger = {
-			has_country_flag = enc_drugs
-		}
-		name = enc_reformers.330.b
-		custom_effect_tooltip = enc_reformers.330.b_tt
-		subtract_from_variable = {
-			mexico_legitimacy_value = 5
-		}
-		set_temp_variable = {
-			var = legitimacy_change_var
-			value = -0.05
-		}
-		change_legitimacy = yes
-		set_country_flag = enc_mexican_coffee_trade
-		country_event = nf_erb.331
-	}
-	option = { #RIP
-		trigger = {
-			has_country_flag = leader_charismatic
-			has_completed_focus = enc_accept_ghouls
-		}
-		name = enc_reformers.330.c
-		custom_effect_tooltip = enc_reformers.330.c_tt
-		country_event = nf_erb.331
 	}
 }
 
@@ -10941,17 +10879,31 @@ country_event = { #352 - Mexican Protests
 	}
 	option = { # MMM
 		name = enc_reformers.352.e
-		limit = {
-			any_owned_state = {
-				is_core_of = ARM
+		if = {
+			limit = {
+				any_owned_state = {
+					is_core_of = ARM
+				}
 			}
-			add_core_of = RRG
+			every_owned_state = {
+				limit = {
+					is_core_of = ARM
+				}
+				add_core_of = RRG
+			}
 		}
-		limit = {
-			any_owned_state = {
-				is_core_of = TLA
+		if = {
+			limit = {
+				any_owned_state = {
+					is_core_of = TLA
+				}
 			}
-			add_core_of = RRG
+			every_owned_state = {
+				limit = {
+					is_core_of = TLA
+				}
+				add_core_of = RRG
+			}
 		}
 		if = {
 			limit = {
@@ -11452,7 +11404,7 @@ news_event = { #357 - The Dollar is Back
 		every_country = {
 			limit = {
 				is_mexican = no
-				not = {
+				NOT = {
 					tag = CES
 
 				}
@@ -11533,7 +11485,7 @@ country_event = { #359 - Green menace
 		name = enc_reformers.359.b
 		trigger = {
 			has_completed_focus = enc_accept_super_mutants
-			not = { has_completed_focus = enc_judicial_branch }
+			NOT = { has_completed_focus = enc_judicial_branch }
 		}
 		add_stability = -0.07
 		add_popularity = {
