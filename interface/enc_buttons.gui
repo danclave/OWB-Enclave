@@ -92,22 +92,19 @@ guiTypes = {
 	}
 	containerWindowType = { # legitimacy
 		name = "legitimacy_container"
-		position = { x = 1180 y = 4 }
-
+		position = { x = 1072 y = 4 }
 		buttonType ={
 			name ="legitimacy_bg"
 			spriteType = "GFX_generic_box_smallest"
 			position = { x=0 y=0 }
 			shortcut = "ctrl+k"
 		}
-
 		iconType = {
 			name ="legitimacy_icon"
 			spriteType = "enc_legitimacy_icon"
 			position = { x = 4 y = -1 }
 			scale = 0.8
 		}
-
 		instantTextBoxType = {
 			name ="legitimacy_text"
 			position = { x = 22 y = 4 }
@@ -120,6 +117,35 @@ guiTypes = {
 
 			pdx_tooltip = "legitimacy_TOOLTIP"
 			pdx_tooltip_delayed = "legitimacy_TOOLTIP_DELAYED"
+		}
+	}
+	containerWindowType = { # legitimacy_2
+		name = "legitimacy_2_container"
+		position = { x = 1180 y = 4 }
+		buttonType ={
+			name ="legitimacy_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=0 y=0 }
+			shortcut = "ctrl+k"
+		}
+		iconType = {
+			name ="legitimacy_2_icon"
+			spriteType = "enc_legitimacy_icon"
+			position = { x = 4 y = -1 }
+			scale = 0.8
+		}
+		instantTextBoxType = {
+			name ="legitimacy_2_text"
+			position = { x = 22 y = 4 }
+			font = "hoi_18mbs"
+			text = "[?enc_legitimacy_2|%0]"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+
+			pdx_tooltip = "legitimacy_2_TOOLTIP"
+			pdx_tooltip_delayed = "legitimacy_2_TOOLTIP_DELAYED"
 		}
 	}
 	

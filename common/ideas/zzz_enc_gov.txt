@@ -652,6 +652,9 @@ ideas = {
 			cancel_if_invalid = yes
 		}
 		robotic_army_purist = {
+			allowed = {
+				original_tag = ERB
+			}
 			available = {
 				has_completed_focus = enc_depot_mexican_robots
 			}

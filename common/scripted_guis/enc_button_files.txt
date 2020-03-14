@@ -143,12 +143,28 @@ scripted_gui = {
 	}
 	enc_legitimacy = {
 		context_type = player_context
-
 		window_name = "legitimacy_container"
-
 		visible = {
 			original_tag = ERB
 			has_completed_focus = enc_reform
+			has_idea = slavery_outlawed
+		}
+
+		effects = {
+			legitimacy_bg_click = {
+				# nothing
+			}
+		}
+	}
+	enc_legitimacy_2 = { # for when there is slavery
+		context_type = player_context
+		window_name = "legitimacy_2_container"
+		visible = {
+			original_tag = ERB
+			has_completed_focus = enc_reform			
+            NOT = {
+				has_idea = slavery_outlawed
+			}
 		}
 
 		effects = {
