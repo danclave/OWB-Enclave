@@ -740,9 +740,9 @@ enc_reformers.133.d: "Mr. President, several hours ago our astronaut's space shi
 enc_reformers.133.a: "Wait what did he find on up there?"
 ###############################################################################################################
 enc_reformers.134.t: "The City of Angels"
-enc_reformers.134.d: "The Boneyard seems like a graveyard that stretches for miles under the hot sun.  But Americans find a way, and the Boneyard has prospered as part of the NCR. Hayes intends to set up set up a Department of Public Art and Entertainment in the City to serve as a nucleus of the America's entertainment industry. But as part of that development, we need to decide whether to change the city's name."
-enc_reformers.134.a: "Welcome to Los Angeles"
-enc_reformers.134.b: "It's been called the Boneyard for over 200 years"
+enc_reformers.134.d: "The Boneyard seems like a graveyard that stretches for miles under the hot sun.  But Americans find a way, and the survivors of the Boneyard built one of New California's largest cities. Now part of the Reunited States, Governor Hayes wants it to become the hub of the young nation's entertainment industry. To honor its ancient roots, some liberals have proposed a name change. What shall it be?"
+enc_reformers.134.a: "Welcome to Los Angeles!"
+enc_reformers.134.b: "We were born the Boneyard and we'll die the Boneyard."
 enc_reformers.134.c: "The City of Angels"
 enc_reformers.134.c.tt: "§gFor those who didn't make it and those who keep trying to.§!\n\n"
 ###############################################################################################################

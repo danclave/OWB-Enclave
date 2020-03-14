@@ -327,13 +327,13 @@ enc_eyebots_everywhere_desc: "Eyebots aren't just good for jaunty marching tunes
 enc_solution_to_mutant_question: "A Better World"
 enc_solution_to_mutant_question_desc: "Part of the president's job is to make the tough decisions. A lot of near-humans will sacrifice their lives for the return of humanity. Humans will prevail!"
 enc_robot_engineering: "Robotic Manufacturing"
-<<<<<<< HEAD
+
 enc_robot_engineering_desc: "Unfortunately, we lack enough humanpower to run the Wastelands. But we can use our robots to exploit the resources of the Wasteland."
 enc_robot_tt: "Unlocks the ability to deploy eyebots to augment our garrisons in thr §RLawless Wasteland.§!"
-=======
+
 enc_robot_engineering_desc: "Unfortunately, we lack enough humanpower to run the Wastelands. But we can use our robots to exploi the resources of the Wasteland."
 enc_robot_tt: "Unlocks the ability in a state to transfer resources to the Enclave from the §RLawless Wasteland.§!"
->>>>>>> master
+
 enc_robot_engineering_2: "Robotic Autonomy"
 enc_robot_engineering_2_desc: "We can provide our robotic fellows with increased autonomy.  This will only help them salvage the wreckage of the wastes."
 enc_robot_engineering_2_tt: "Lowers the §Ymanpower cost§! of transferring resources to the Enclave from the §RLawless Wasteland.§!"
@@ -372,8 +372,20 @@ enc_VLT_assert:0 "Assert Old Loyalties"
 
 
 
-
-
+#### Robot Parade##
+enc_robots_start: "Man's Best Friend"
+enc_robots_start_desc: "There simply are not enough humans left to control the Wasteland andc cleanse the mutants. We need to turn to the robots who have served us so well. We need to take a step farther. Inspired by MODUS, I give you... Honest Abe 2.0."
+enc_robotic_centralization: "Upload Leadership Protocols"
+enc_robotic_centralization_desc: "ZAX will function more efficiently if he knows the lessons of Hamilton and Jefferson, Swift and Eisenhower."
+enc_robotic_centralization_tt: "Provide 2£holotape_texticon to expand ZAX's reach."
+enc_shi_conquest: "American Emperor"
+enc_shi_conquest_desc: "[163.GetName] suffers doubly under the yoke of mutants who ape the Chinese of old. They have managed to construct an advanced society that in some ways approaches our own, which is clearly impossible absent outside help. Perhaps there is something the Shi have that we can use..."
+enc_shi_conquest_tt: "Conquering the §Y[SHI.GetNamewithFlag]§! will unlock a way to advance §Y[ZAX.getName]§! and turn the state over to his control. I mean it's."
+enc_sky_conquests: "The Secrets of Area 51"
+enc_sky_conquests_desc: "[389.Owner.GetNameWithFlag] are squatting on the ruins of greatness. Area 51 was one of the Enclave's greatest facilities before the war, and has . . . fresh perspectives that [ZAX.GetName] could benefit from."
+enc_sky_conquest_tt: "Conquering the §Y[SKY.GetNamewithFlag]§! will unlock a way to advance §Y[ZAX.getName]§! and turn the state over to his control."
+enc_vegas_conquest: "The Lights are Going Out in Vegas"
+enc_vegas_conquest_desc: "Vegas is one of the greatest mutant hives, a cesspool of vice, drugs, and disease. But security, such as it is, is kept by an army of securitrons and the city is led by Mr. House, one of the last pure humans of the Wastes."
 
 
 
@@ -483,6 +495,9 @@ ENC_radio_eyebots: "Eyebot Radio"
 ENC_emergency_draft: "Emergency Draft"
 enc_depot_mexican_robots: "Tlaloc's Designs"
 enc_depot_mexican_robots_desc: "Although sadly the man who proposed to hack Tlaloc was a reformer who suffered a plasma grenade-related accident, we can still emulate Tlaloc's robots designs. In a way, he's more human than many of the mutants who infest America."
+
+ZAX_desc: "ZAX is looking out for the American way. At least, that's what his programming makes him think he's doing."
+ABE_desc: "Honest ABE, American Biocompatible Experiment, is modeled upon America's greatest presidents. It turns out this is a problem for the Enclave."
 ################ DECISIONS!!! ################################################################################################################################
 
 ENC_calling_the_remnants:0 "Call the Remnants"

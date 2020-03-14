@@ -20,15 +20,11 @@ option = {# .
 		add_core_of = ZAX
 		add_resource = {
 			type = water
-			amount = 3
+			amount = 7
 		}
 		add_resource = {
 			type = metal
 			amount = 19
-		}
-		add_resource = {
-			type = water
-			amount = 4
 		}
 		add_resource = {
 			type = energy
@@ -50,6 +46,16 @@ option = {# .
 				is_core_of = NEW
 			}
 			set_state_flag = do_not_decimate
+		}
+
+		ZAX = {
+			set_popularities = {
+				people = 10
+				elites = 80
+				intellectuals = 10
+				ruler = 0
+			}
+			set_politics = { ruling_party = elites elections_allowed = no }
 		}
 		ERB = {
 			ZAX = { copy_tech_from_prev = yes }
@@ -208,7 +214,6 @@ country_event = {# Shi fall to the ROBOT
 			ZAX = { transfer_state = 163 }
 		}
 		ZAX = {
-			add_autonomy_score = { value = 700 }
 			add_ideas = shi_emperor
 		}
 
@@ -220,6 +225,48 @@ country_event = {# Shi fall to the ROBOT
 				instant_build = yes
 			}
 		}
+
+	}
+}
+
+
+country_event = {# The Constitution
+	id = enc_pur_robots.8
+	title = enc_pur_robots.8.t
+	desc = enc_pur_robots.8.d
+	picture = GFX_event_Shrine_to_Lincoln
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = enc_pur_robots.8.a
+		add_to_variable = { ZAXCORES = 1 }
+		custom_effect_tooltip = enc_pur_robots.8.a_tt
+
+	}
+}
+
+country_event = {# HONEST ABE
+	id = enc_pur_robots.9
+	title = enc_pur_robots.9.t
+	desc = enc_pur_robots.9.d
+	picture = GFX_event_Shrine_to_Lincoln
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = enc_pur_robots.8.a
+		add_to_variable = { ZAXCORES = 1 }
+		custom_effect_tooltip = enc_pur_robots.8.a_tt
+		create_country_leader  = {
+			name = "HONEST ABE"
+			desc = "ABE_desc"
+			picture = "gfx/leaders/portrait_douglas_enclave.dds"
+			expire = "3000.1.1"
+			ideology = technocracy
+			traits = {}
+		}
+		tran
 
 	}
 }

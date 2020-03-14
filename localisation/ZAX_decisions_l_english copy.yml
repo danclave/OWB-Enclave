@@ -5,9 +5,9 @@ ZAX_decision_category: "Transfer the Lawless Wasteland to ZAX"
 ZAX_DECISION_CATEGORY_SCRIPTED_GUI_ENTRY_BUTTON_TT: "[This.GetZAXUsabilityTooltip]"
 transfer_state_to_ZAX: "Transfer More Land to [ZAX.GetLeader]."
 ZAX_INVENTORY_TEXT: "ZAX currently has processing power for [?ZAXCORES] states."
-ZAX_cost_text: "One node."
- ZAX_cost_text_blocked: "Insufficient Nodes"
-
+ZAX_cost_text: "1£holotape_texticon"
+ZAX_cost_text_blocked: "Insufficient Nodes"
+ENC_ZAX_on_map:  "Transfer [FROM.GetName] to [ZAX.GetLeader]."
 ZAX_IN_USE_TOOLTIP: "You cannot select a new state until the current ZAX assimilation has completed."
 ZAX_USABLE_TOOLTIP: "§GClick§! to select/deselect §Y[This.GetName]§! as the state for a ZAX Control."
 
@@ -16,6 +16,9 @@ ZAX_USABLE_TOOLTIP: "§GClick§! to select/deselect §Y[This.GetName]§! as the 
   GECK_UNUSABLE_NAME: "§g[This.GetName]§!"
   GECK_SELECTED_NAME: "£trigger_yes  [This.GetName]"
   GECK_SELECTED_DISABLED_NAME: "£trigger_yes  §g[This.GetName]§!"
+
+  ### Puppets
+
 
 ################ special codes for special people ################################################################################################################
 

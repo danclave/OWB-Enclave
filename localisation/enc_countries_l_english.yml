@@ -201,7 +201,7 @@ LLW_elites__DEF:0 "Wasteland"
 LLW_elites__ADJ:0 "Wastelander"
 
 autonomy_enclave_influenced_region: "Enclave Influenced Region"
-
+ZAX_ruler:0 "ZAX Mainframe"
 ZAX_ruler_DEF:0 "The Robotic Auxiliaries"
 ZAX_ruler_ADJ:0 "Enclave Robots"
 ZAX_intellectuals:0 "ZAX Mainframe"
@@ -231,6 +231,6 @@ EAZ_VEG_ruler_DEF:0 "Lost Vegas"
 EAZ_VEG_ruler_ADJ:0 "Lost Vegas"
 
 ### Puppet Levels
-autonomy_mainframe: "Mainframe"
+autonomy_mainframe: "An Autonomous Mainframe"
 autonomy_network: "Networked Computers"
 enclave_administrative_zone_1: "Enclave Administrative Zone"

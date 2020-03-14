@@ -5942,7 +5942,7 @@ focus = {#NEVADA - second city
 			}
 		}
 	}
-	focus = {#Robot Parade
+	focus = {#Americas heartland, Mexico
 		id = enc_robot_reform
 		icon = GFX_goal_enc_robot_mex
 		ai_will_do = { factor = 1 }
@@ -5952,7 +5952,13 @@ focus = {#NEVADA - second city
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			add_ideas = { tla_efficiency_code2 }
+			add_ideas = tla_efficiency_code2
+			if = {
+				limit = {
+					ZAX = { exists = yes }
+				}
+				ZAX = { add_ideas = tla_efficiency_code2 }
+			}
 		}
 	}
 	####################################
@@ -6361,7 +6367,7 @@ focus = {#NEVADA - second city
 			swap_ideas = {remove_idea = ENC_radio add_idea = ENC_radio_purity}
 		}
 	}
-	
+
 	focus = { #Purity - robot_laws
 		id = enc_robot_engineering
 		icon = GFX_goal_enc_eyebot
@@ -7618,7 +7624,124 @@ focus = {#NEVADA - second city
 			set_technology = { high_fighter_tech  = 1}
 		}
 	}
+	### Robot Parade
+
+
+	focus = {
+		id = enc_robots_start
+		icon = GFX_goal_enc_eyebot
+		cost = 5.8
+		ai_will_do = { factor = 1 }
+		available = {
+			OR = {
+				owns_state = 295
+				LLW = { owns_state = 295 }
+			}
+
+		}
+
+		relative_position_id = enc_vlt_power
+		x = -18
+		y = 2
+
+		completion_reward = {
+			country_event = { id = enc_pur_robots.1 }
+		}
+	}
+	focus = {
+		id = enc_robotic_centralization
+		icon = GFX_goal_generic_data_focus
+		cost = 5.8
+		ai_will_do = { factor = 1 }
+		prerequisite = { focus = enc_robots_start }
+
+		relative_position_id = enc_robots_start
+		x = 0
+		y = 1
+		completion_reward = {
+			add_to_variable = {  ZAXCORES = 2 }
+			custom_effect_tooltip = enc_robotic_centralization_tt
+		}
+	}
+	focus = {#Purists - Go for the SHI
+		id = enc_shi_conquest
+		icon = GFX_goal_shi_focus_golden_dragon
+		x = -2
+		y = 1
+		ai_will_do = { factor = 1 }
+		prerequisite = {
+			focus = enc_robotic_centralization
+		}
+		relative_position_id = enc_robotic_centralization
+		cost = 1.45
+		completion_reward = {
+			SHI = {
+			ROOT = {
+				grant_wargoals_on_core_states_of_prev = yes
+			}
+		}
+			custom_effect_tooltip = enc_shi_conquest_tt
+		}
+	}
+	focus = {#Purists - Go for Area 51
+		id = enc_sky_conquests
+		icon = GFX_goal_area_51
+		x = 0
+		y = 1
+		ai_will_do = { factor = 1 }
+		prerequisite = {
+			focus = enc_ZAX_factories
+		}
+		prerequisite = {
+			focus = enc_robotic_centralization
+		}
+		relative_position_id = enc_robotic_centralization
+			cost = 1.45
+		completion_reward = {
+			SKY = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+			custom_effect_tooltip = enc_sky_conquest_tt
+		}
+	}
+	focus = {#Purists - Go to Vegas
+		id = enc_vegas_conquest
+		icon = GFX_goal_VEG_The_Platinum_Chip
+		x = 2
+		y = 1
+		ai_will_do = { factor = 1 }
+		prerequisite = {
+			focus = enc_robotic_centralization
+		}
+		relative_position_id = enc_robotic_centralization
+		cost = 1.45
+		completion_reward = {
+			if = {
+				limit = {
+					VEG = {
+						AND = {
+							exists = yes
+							has_country_leader = {id = 10021 }
+						}
+					}
+				}
+				country_event = enc_pur_robots.3
+			}
+			else = {
+				VEG = {
+					ROOT = {
+						grant_wargoals_on_core_states_of_prev = yes
+					}
+				}
+			}
+		}
 }
+
+
+
+
 
 # GFX_goal_desktop.ini
 # GFX_goal_enc_accept_ghouls

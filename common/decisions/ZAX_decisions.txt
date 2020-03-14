@@ -35,6 +35,40 @@ ZAX_decision_category = {
 			}
 		}
 	}
+	ENC_ZAX_on_map = {
+		allowed = {
+			original_tag = ERB
+		}
+		on_map_mode = map_only
+		fire_only_once = no
+		custom_cost_text = ZAX_cost_text
+		custom_cost_trigger = {
+			check_variable = { ZAXCORES > 0 }
+		}
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_controlled_by = LLW
+			}
+		}
+		available = {
+
+		}
+		visible = {
+			NOT = { has_completed_focus = enc_reform }
+			ZAX = { exists = yes }
+		}
+		complete_effect = {
+			subtract_from_variable	= { ZAXCORES = 1 }
+		}
+		days_remove = 25
+		remove_effect = {
+			set_variable = { zax_transferring = 0 }
+			ZAX = {
+				transfer_state = PREV.ZAX_target_state
+			}
+		}
+	}
 }
 
 # vim: set ft=pdx ts=2 sw=2 tw=79 :

@@ -59,5 +59,52 @@ ideas = {
 				units_deployed_to_overlord = yes
 			}
 		}
+		ZAX_is_good = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+
+				production_speed_buildings_factor = 10
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = -1
+				forced_surrender_limit = 1
+				local_resources_factor = 0.05
+				autonomy_gain_global_factor = -1
+				resistance_target = -0.40
+				compliance_gain= 0.6
+				resistance_garrison_penetration_chance = -1
+			}
+			equipment_bonus = {
+				combat_robot_equipment = {
+					instant = yes
+					fuel_consumption = -0.20
+					build_cost_ic = -0.10
+				}
+				support_robot_equipment = {
+					instant = yes
+					fuel_consumption = -0.20
+					build_cost_ic = -0.10
+				}
+			}
+			rule = {
+				units_deployed_to_overlord = yes
+			}
+		}
+		shi_emperor = {
+
+			picture = generic_production_bonus
+
+			allowed = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				decryption_factor = 0.4
+				resistance_target = -0.30
+				compliance_gain= 0.5
+			}
+		}
 	}
 }

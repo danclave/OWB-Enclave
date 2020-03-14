@@ -58,3 +58,11 @@ EAZ_BAR = {
 	color = rgb { 0 45 50 }
 	color_ui = rgb { 0 45 50 }
 }
+
+ZAX = {
+	color = rgb { 123 94 156 }
+	color_ui = rgb { 0 45 106 
+}
+
+
+

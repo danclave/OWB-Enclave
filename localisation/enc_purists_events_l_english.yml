@@ -306,3 +306,8 @@ enc_pur_robots.7.t: "The Death of an Emperor"
 enc_pur_robots.7.d: "The Enclave's banner now flies from the gates of San Francisco, X01 armour crushing cherry blossoms before their feet. As engineers melt the mutants' Buddhas down for scrap metal, Enclave scientists have discovered the secret to the mutants' success! It appears that the Shi 'emperor' was a Chinese computer from before the Great War. \n\nWe have decided to link the 'emperor's' processes to our ZAX, which will greatly aid it on the battlefield. And so its eyebots look upon dispassionately as we tear down this infestation upon America's golden shores."
 enc_pur_robots.7.a: "Beep. Beep. Beep."
 
+################################################################################################################ -<
+enc_pur_robots.8.t: "ZAX Improved Its Efficiency!"
+enc_pur_robots.8.d: "We aren't quite sure why, but ZAX has performed a self-assessment based upon historical documents. This has somehow improved its software routines, giving it sufficient capacity to rule another state."
+enc_pur_robots.8.a: "Beep. Beep. Beep."
+enc_pur_robots.8.a_tt: "Gain 1£holotape_texticon"

@@ -3,11 +3,16 @@ spriteTypes = {
 		name = "GFX_water_texticon"
 		texturefile = "gfx/texticons/water_texticon.dds"
 		legacy_lazy_load = no
-	}	
+	}
 	spriteType = {
 		name = "GFX_legitimacy_texticon"
-		texturefile = "gfx/texticons/water_texticon.dds"
+		texturefile = "gfx/texticons/legitimacy_texticon.dds"
 		legacy_lazy_load = no
-	}		
+	}
+	spriteType = {
+		name = "GFX_holotape_texticon"
+		texturefile = "gfx/texticons/holotape_texticon.dds"
+		legacy_lazy_load = no
+	}
 }
 
