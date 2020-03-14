@@ -1,0 +1,225 @@
+﻿add_namespace = enc_pur_robots
+
+country_event = {#Robot Start
+id = enc_pur_robots.1
+title = enc_pur_robots.1.t
+desc = enc_pur_robots.1.d
+picture = GFX_event_ENC_secret
+
+fire_only_once = yes
+is_triggered_only = yes
+option = {# .
+	name = enc_pur_robots.1.a
+	295 = {
+		add_extra_state_shared_building_slots = 8
+		add_building_construction = {
+			type = arms_factory
+			level = 8
+			instant_build = yes
+		}
+		add_core_of = ZAX
+		add_resource = {
+			type = water
+			amount = 3
+		}
+		add_resource = {
+			type = metal
+			amount = 19
+		}
+		add_resource = {
+			type = water
+			amount = 4
+		}
+		add_resource = {
+			type = energy
+			amount = 4
+		}
+		add_resource = {
+			type = circuitry
+			amount = 16
+		}
+		add_resource = {
+			type = advanced
+			amount = 16
+		}
+	}
+
+	hidden_effect = {
+		every_state = {
+			limit = {
+				is_core_of = NEW
+			}
+			set_state_flag = do_not_decimate
+		}
+		ERB = {
+			ZAX = { copy_tech_from_prev = yes }
+		}
+	}
+	release_autonomy = {
+		target = ZAX
+		autonomy_state = autonomy_mainframe
+		freedom_level = 0.1
+	}
+	ZAX = { transfer_state = 295 }
+	country_event = enc_pur_robots.2
+	}
+}
+
+country_event = {#Robot Detail
+	id = enc_pur_robots.2
+	title = enc_pur_robots.2.t
+	desc = enc_pur_robots.2.d
+	picture = GFX_event_ENC_president_only
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = enc_pur_robots.2.a
+	}
+}
+country_event = {#Vegas
+	id = enc_pur_robots.3
+	title = enc_pur_robots.3.t
+	desc = enc_pur_robots.3.d
+	picture = GFX_event_radio_new_vegas
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = enc_pur_robots.3.a
+		VEG = {
+			ROOT = {
+				grant_wargoals_on_core_states_of_prev = yes
+			}
+		}
+	}
+	option = {
+		name = enc_pur_robots.3.b
+		add_stability = -0.05
+		add_war_support = -0.05
+		VEG = {
+			country_event = enc_pur_robots.4
+		}
+	}
+}
+country_event = {#House responds
+	id = enc_pur_robots.4
+	title = enc_pur_robots.4.t
+	desc = enc_pur_robots.4.d
+	picture = GFX_event_radio_new_vegas
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = enc_pur_robots.4.a
+		ai_chance = {
+			# This is not the default response.
+			base = 1
+
+			modifier = {
+				# Apparently this is also strength ratio actually does according to
+				# shultays.
+				set_temp_variable = { strength_comp = ERB.num_battalions }
+				divide_temp_variable = { strength_comp = num_battalions }
+				factor = strength_comp
+				always = yes
+			}
+		}
+		ERB = { news_event = enc_pur_robots.5 }
+	}
+	option = {
+		ai_chance = {
+			# Telling ERB to fuck off is the default option.
+			base = 30
+			modifier = {
+				# Apparently this is also strength ratio actually does according to
+				# shultays.
+				set_temp_variable = { strength_comp = num_battalions }
+				divide_temp_variable = { strength_comp = ERB.num_battalions }
+				factor = strength_comp
+				always = yes
+			}
+		}
+		name = enc_pur_robots.4.b
+
+		ERB = { news_event = enc_pur_robots.6 }
+	}
+}
+
+country_event = {#Vegas Said No
+	id = enc_pur_robots.5
+	title = enc_pur_robots.5.t
+	desc = enc_pur_robots.5.d
+	picture = GFX_event_radio_new_vegas
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = enc_pur_robots.5.a
+		VEG = {
+			ROOT = {
+				grant_wargoals_on_core_states_of_prev = yes
+			}
+		}
+	}
+}
+
+country_event = {#Vegas Said YES
+	id = enc_pur_robots.6
+	title = enc_pur_robots.6.t
+	desc = enc_pur_robots.6.d
+	picture = event_VEG_securitronvault
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = enc_pur_robots.6.a
+
+		set_autonomy = {
+			target = VEG
+			autonomy_state = enclave_administrative_zone_1
+		}
+		VEG = {
+			set_cosmetic_tag = EAZ_VEG
+			211 = {
+				add_manpower = -40000
+			}
+		}
+	}
+}
+
+
+country_event = {# Shi fall to the ROBOT
+	id = enc_pur_robots.7
+	title = enc_pur_robots.7.t
+	desc = enc_pur_robots.7.d
+	picture = GFX_event_enc_shi
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = enc_pur_robots.7.a
+		if = {
+			limit = {
+				OR  = {
+					ERB = { owns_state = 163 }
+					LLW = { owns_state = 163 }
+				}
+			}
+			ZAX = { transfer_state = 163 }
+		}
+		ZAX = {
+			add_autonomy_score = { value = 700 }
+			add_ideas = shi_emperor
+		}
+
+		163 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+
+	}
+}

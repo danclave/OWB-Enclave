@@ -1,0 +1,40 @@
+ZAX_decision_category = {
+	transfer_state_to_ZAX = {
+		icon = generic_construction
+		available = {
+			has_equipment = {
+				support_robot_equipment > 24
+			}
+		}
+		visible = {
+			LLW = { exists = yes }
+		}
+		custom_cost_text = ZAX_cost_text
+		custom_cost_trigger = {
+			check_variable = { ZAXCORES > 0 }
+		}
+		days_remove = 90
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			set_variable = { zax_transferring = 1 }
+			add_equipment_to_stockpile = {
+				type = support_robot_equipment
+				amount = -25
+			}
+
+		}
+		highlight_states = {
+			state = ZAX_target_state
+		}
+		remove_effect = {
+			set_variable = { zax_transferring = 0 }
+			ZAX = {
+				transfer_state = PREV.ZAX_target_state
+			}
+		}
+	}
+}
+
+# vim: set ft=pdx ts=2 sw=2 tw=79 :

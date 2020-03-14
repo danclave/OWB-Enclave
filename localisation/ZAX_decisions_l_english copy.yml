@@ -1,0 +1,136 @@
+﻿l_english:
+
+# CATEGORIES
+ZAX_decision_category: "Transfer the Lawless Wasteland to ZAX"
+ZAX_DECISION_CATEGORY_SCRIPTED_GUI_ENTRY_BUTTON_TT: "[This.GetZAXUsabilityTooltip]"
+transfer_state_to_ZAX: "Transfer More Land to [ZAX.GetLeader]."
+ZAX_INVENTORY_TEXT: "ZAX currently has processing power for [?ZAXCORES] states."
+ZAX_cost_text: "One node."
+ ZAX_cost_text_blocked: "Insufficient Nodes"
+
+ZAX_IN_USE_TOOLTIP: "You cannot select a new state until the current ZAX assimilation has completed."
+ZAX_USABLE_TOOLTIP: "§GClick§! to select/deselect §Y[This.GetName]§! as the state for a ZAX Control."
+
+
+  ZAX_USABLE_NAME: "[This.GetName]"
+  GECK_UNUSABLE_NAME: "§g[This.GetName]§!"
+  GECK_SELECTED_NAME: "£trigger_yes  [This.GetName]"
+  GECK_SELECTED_DISABLED_NAME: "£trigger_yes  §g[This.GetName]§!"
+
+################ special codes for special people ################################################################################################################
+
+# y§Yyellow§!
+# £air_experience_20x20
+# £army_experience_20x20
+# £autonomy_texticon
+# £civ_factory
+# £civ_factory_output
+# £command_power_20x20
+# £convoy_texticon
+# £daynight_text
+# £decision_icon_small
+# £decrease_reversed_texticon
+# £decrease_texticon
+# £divisions
+# £efficiency_cap_texticon
+# £efficiency_texticon
+# £increase_reversed_texticon
+# £increase_texticon
+# £infinity_icon
+# £infrastructure_texticon
+# £location_pointer
+# £locked
+# £manpower_texticon
+# £mapicon_port_strike_result_text
+# £mission_efficiency_strip
+# £national_unity_texticon
+# £nato_unit_anti_air_icon_small
+# £nato_unit_anti_tank_icon_small
+# £nato_unit_artillery_icon_small
+# £nato_unit_cavalry_icon_small
+# £nato_unit_engineer_icon_small
+# £nato_unit_heavy_armor_icon_small
+# £nato_unit_infantry_icon_small
+# £nato_unit_light_armor_icon_small
+# £nato_unit_marine_icon_small
+# £nato_unit_mechanized_icon_small
+# £nato_unit_medium_armor_icon_small
+# £nato_unit_modern_armor_icon_small
+# £nato_unit_motorized_artillery_icon_small
+# £nato_unit_motorized_icon_small
+# £nato_unit_mountaineers_icon_small
+# £nato_unit_paratrooper_icon_small
+# £nato_unit_recon_icon_small
+# £nato_unit_rocket_artillery_icon_small
+# £nato_unit_super_heavy_armor_icon_small
+# £navy_experience_20x20
+# £organization_texticon
+# £pol_idea_texticon
+# £pol_power_20x20
+# £production_cost
+# £production_naval_cost
+# £right_arrow_texticon
+# £ship_battlecruiser_icon_small
+# £ship_battleship_icon_small
+# £ship_carrier_icon_small
+# £ship_destroyer_icon_small
+# £ship_heavy_cruiser_icon_small
+# £ship_light_cruiser_icon_small
+# £ship_sh_battleship_icon_small
+# £ship_submarine_icon_small
+# £ship_transport_icon_small
+# £stability_texticon
+# £strenght_texticon
+# £supply_texticon
+# £support_AA_small
+# £support_art_small
+# £support_AT_small
+# £support_engineer_small
+# £support_field_hospital_small
+# £support_logistics_small
+# £support_maintenance_small
+# £support_Army_police_small
+# £support_rocket_art_small
+# £support_signal_small
+# £technology_texticon
+# £temperature_text
+# £trigger_no
+# £trigger_yes
+# £unit_anti_air_icon_small
+# £unit_anti_tank_icon_small
+# £unit_artillery_icon_small
+# £unit_bicycle_infantry_icon_small
+# £unit_cavalry_icon_small
+# £unit_engineer_icon_small
+# £unit_heavy_armor_icon_AA_small
+# £unit_heavy_armor_icon_art_small
+# £unit_heavy_armor_icon_AT_small
+# £unit_heavy_armor_icon_small
+# £unit_infantry_icon_small
+# £unit_light_armor_icon_art_AA_small
+# £unit_light_armor_icon_art_AT_small
+# £unit_light_armor_icon_art_small
+# £unit_light_armor_icon_small
+# £unit_marine_icon_small
+# £unit_mechanized_icon_small
+# £unit_medium_armor_icon_AA_small
+# £unit_medium_armor_icon_art_small
+# £unit_medium_armor_icon_AT_small
+# £unit_medium_armor_icon_small
+# £unit_modern_armor_icon_AA_small
+# £unit_modern_armor_icon_art_small
+# £unit_modern_armor_icon_AT_small
+# £unit_modern_armor_icon_small
+# £unit_motorized_artillery_icon_small
+# £unit_motorized_icon_small
+# £unit_mountaineers_icon_small
+# £unit_paratrooper_icon_small
+# £unit_recon_icon_small
+# £unit_rocket_artillery_icon_small
+# £unit_super_heavy_armor_icon_AA_small
+# £unit_super_heavy_armor_icon_art_small
+# £unit_super_heavy_armor_icon_AT_small
+# £unit_super_heavy_armor_icon_small
+# £victory_point_texticon
+# £weather_text
+# £wing_rebase_status_texticon

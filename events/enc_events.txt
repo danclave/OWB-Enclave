@@ -1196,7 +1196,20 @@ country_event = {#62 - Liftoff
 	}
 }
 
-
+country_event = {#60 - Safehouse
+	id = enc.63
+	title = enc.63.t
+	desc = enc.63.d
+	picture = GFX_event_enc_ZAX
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {# good
+		name = enc.63.a
+		hidden_effect = {
+			sound_effect = ERB_ZAX_song
+		}
+	}
+}
 
 
 #################

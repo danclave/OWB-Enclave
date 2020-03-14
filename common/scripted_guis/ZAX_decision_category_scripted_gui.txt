@@ -1,0 +1,45 @@
+scripted_gui = {
+	ZAX_decision_category_scripted_gui = {
+		context_type = decision_category
+
+		window_name = "ZAX_decision_category_scripted_gui"
+
+		effects = {
+			entry_button_click = {
+				ROOT = {
+					if = {
+						limit = {
+							check_variable = { ZAX_target_state = PREV }
+						}
+						clear_variable = ZAX_target_state
+					}
+					else = {
+						set_variable = { ZAX_target_state = PREV }
+					}
+				}
+			}
+			entry_button_right_click = {
+				ROOT = {
+					goto_state = PREV
+				}
+			}
+		}
+
+		triggers = {
+			entry_button_click_enabled = {
+				ROOT = {
+					check_variable = { zax_transferring = 0 }
+				}
+			}
+		}
+
+		dynamic_lists = {
+			ZAX_decision_category_scripted_gui_gridbox = {
+				array = LLW.owned_states
+				entry_container = ZAX_decision_category_scripted_gui_entry
+				change_scope = yes
+			}
+		}
+	}
+}
+# vim: set ft=pdx ts=2 sw=2 tw=79 :

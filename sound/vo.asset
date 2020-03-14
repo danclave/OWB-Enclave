@@ -1,5 +1,5 @@
 
-category = 
+category =
 {
  name = "Voices"
  soundeffects = {
@@ -8,9 +8,9 @@ category =
 	ERB_infantry_positive_combat
 	ERB_infantry_retreat
 	ERB_infantry_move_out
-	
+
  }
-  compressor = 
+  compressor =
  {
 	enabled = yes
 	pregain = 3.0 #0
@@ -21,9 +21,9 @@ category =
 	releasetime = 0.2 #1,2
  }
  }
- 
+
  category = {
-	name = "music" 
+	name = "music"
 	soundeffects = {
 		ERB_Christmas
 		ERB_us_anthem
@@ -38,7 +38,7 @@ category =
 		ERB_communism
 		ERB_whip
 	}
- compressor = 
+ compressor =
  {
 	enabled = yes
 	pregain = 3.0 #0
@@ -47,12 +47,12 @@ category =
 	threshold = -10.0
 	attacktime = 0.030
 	releasetime = 0.2 #1,2
- }	
+ }
 }
 
-########## 
+##########
 
-soundeffect = 
+soundeffect =
 {
     name = "ERB_infantry_idle"
     sounds = {
@@ -73,7 +73,7 @@ soundeffect =
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
-soundeffect = 
+soundeffect =
 {
     name = "ERB_infantry_neutral_combat"
     sounds = {
@@ -90,7 +90,7 @@ soundeffect =
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
-soundeffect = 
+soundeffect =
 {
     name = "ERB_infantry_positive_combat"
     sounds = {
@@ -106,7 +106,7 @@ soundeffect =
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
-soundeffect = 
+soundeffect =
 {
     name = "ERB_infantry_retreat"
     sounds = {
@@ -122,7 +122,7 @@ soundeffect =
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
-soundeffect = 
+soundeffect =
 {
     name = "ERB_infantry_move_out"
     sounds = {
@@ -141,7 +141,7 @@ soundeffect =
 	playbackrate_random_offset = { 0.0 -0.15}
 }
 
-soundeffect = 
+soundeffect =
 {
     name = "ERB_Christmas"
     sounds = {
@@ -153,7 +153,7 @@ soundeffect =
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
-soundeffect = 
+soundeffect =
 {
     name = "ERB_us_anthem"
     sounds = {
@@ -166,7 +166,7 @@ soundeffect =
 	playbackrate_random_offset = { 0.0 -0.15}
 }
 
-soundeffect = 
+soundeffect =
 {
     name = "ERB_us_anthem_simple"
     sounds = {
@@ -178,7 +178,7 @@ soundeffect =
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
-soundeffect = 
+soundeffect =
 {
     name = "ERB_us_anthem_sad1"
     sounds = {
@@ -190,7 +190,7 @@ soundeffect =
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
-soundeffect = 
+soundeffect =
 {
     name = "ERB_us_anthem_sad2"
     sounds = {
@@ -202,7 +202,7 @@ soundeffect =
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
-soundeffect = 
+soundeffect =
 {
     name = "ERB_us_anthem_creepy"
     sounds = {
@@ -214,7 +214,7 @@ soundeffect =
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
-soundeffect = 
+soundeffect =
 {
     name = "ERB_communism"
     sounds = {
@@ -227,7 +227,7 @@ soundeffect =
 	playbackrate_random_offset = { 0.0 -0.15}
 }
 
-soundeffect = 
+soundeffect =
 {
     name = "ERB_whip"
     sounds = {
@@ -235,12 +235,12 @@ soundeffect =
     }
 	max_audible = 1
 	max_audible_behaviour = fail
-	volume = 0.3    
+	volume = 0.3
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
 
-soundeffect = 
+soundeffect =
 {
     name = "ERB_battle_hymn"
     sounds = {
@@ -252,7 +252,7 @@ soundeffect =
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
-soundeffect = 
+soundeffect =
 {
     name = "ERB_electric"
     sounds = {
@@ -264,7 +264,7 @@ soundeffect =
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
-soundeffect = 
+soundeffect =
 {
     name = "ERB_typewriter"
     sounds = {
@@ -300,201 +300,213 @@ soundeffect = {
 	playbackrate_random_offset = { 0.0 -0.15}
 	fade_out = 0.01
 }
+soundeffect = {
+    name = "ERB_ZAX_song"
+    sounds = {
+        sound = ERB_ZAX_song
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15}
+	fade_out = 0.01
+}
 ############## AUDIO ASSETS
 
 
 ########### ERB
-sound = 
+sound =
 {
 	name = "ERB_Idle_01"
 	file = "erb/ERB_Idle_01.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Idle_02"
 	file = "erb/ERB_Idle_02.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Idle_03"
 	file = "erb/ERB_Idle_03.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Idle_04"
 	file = "erb/ERB_Idle_04.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Idle_05"
 	file = "erb/ERB_Idle_05.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Idle_06"
 	file = "erb/ERB_Idle_06.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_communism"
 	file = "erb/ERB_communism.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_whip"
 	file = "erb/ERB_whip.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Winning_01"
 	file = "erb/ERB_Winning_01.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Winning_02"
 	file = "erb/ERB_Winning_02.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Winning_03"
 	file = "erb/ERB_Winning_03.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Winning_04"
 	file = "erb/ERB_Winning_04.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Winning_05"
 	file = "erb/ERB_Winning_05.wav"
 }
 
-sound = 
+sound =
 {
 	name = "ERB_Retreat_01"
 	file = "erb/ERB_Retreat_01.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Retreat_02"
 	file = "erb/ERB_Retreat_02.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Retreat_03"
 	file = "erb/ERB_Retreat_03.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Retreat_04"
 	file = "erb/ERB_Retreat_04.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Retreat_05"
 	file = "erb/ERB_Retreat_05.wav"
 }
 
-sound = 
+sound =
 {
 	name = "ERB_Combat_01"
 	file = "erb/ERB_Combat_01.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Combat_02"
 	file = "erb/ERB_Combat_02.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Combat_03"
 	file = "erb/ERB_Combat_03.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Combat_04"
 	file = "erb/ERB_Combat_04.wav"
 }
 
-sound = 
+sound =
 {
 	name = "ERB_Move_01"
 	file = "erb/ERB_Move_01.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Move_02"
 	file = "erb/ERB_Move_02.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Move_03"
 	file = "erb/ERB_Move_03.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Move_04"
 	file = "erb/ERB_Move_04.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Move_05"
 	file = "erb/ERB_Move_05.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Move_06"
 	file = "erb/ERB_Move_06.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_Move_07"
 	file = "erb/ERB_Move_07.wav"
 }
 
-sound = 
+sound =
 {
 	name = "ERB_Christmas1"
 	file = "erb/ERB_Christmas.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_us_anthem1"
 	file = "erb/ERB_us_anthem.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_us_anthem_simple1"
 	file = "erb/ERB_us_anthem_simple.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_us_anthem_sad1"
 	file = "erb/ERB_us_anthem_sad.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_us_anthem_sad2"
 	file = "erb/ERB_us_anthem_sad2.wav"
 }
 
-sound = 
+sound =
 {
 	name = "ERB_us_anthem_creepy1"
 	file = "erb/ERB_us_anthem_creepy.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_battle_hymn1"
 	file = "erb/ERB_battle_hymn.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_typewriter1"
 	file = "erb/ERB_typewriter.wav"
 }
-sound = 
+sound =
 {
 	name = "ERB_electric1"
 	file = "erb/ERB_electric.wav"
@@ -506,4 +518,9 @@ sound = {
 sound = {
 	name = "ERB_stripes_and_stars1"
 	file = "erb/ERB_stripes_and_stars.wav"
+}
+
+sound = {
+	name = "ERB_ZAX_song"
+	file = "erb/ERB_ZAX_song.wav"
 }
