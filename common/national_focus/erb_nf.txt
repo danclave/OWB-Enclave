@@ -132,9 +132,9 @@ focus_tree = {
 				custom_effect_tooltip = purists_purged_tt
 				if = {
 					limit = {
-						has_idea = enc_boris_t
+						has_idea = boris_t
 					}
-					custom_effect_tooltip = enc_boris_t_retires
+					custom_effect_tooltip = enc_boris_t
 				}
 			}
 			if = {
@@ -6361,7 +6361,7 @@ focus = {#NEVADA - second city
 			swap_ideas = {remove_idea = ENC_radio add_idea = ENC_radio_purity}
 		}
 	}
-	
+
 	focus = { #Purity - robot_laws
 		id = enc_robot_engineering
 		icon = GFX_goal_enc_eyebot
