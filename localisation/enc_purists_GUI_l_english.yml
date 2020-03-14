@@ -33,7 +33,6 @@ LLW_state_container_info: "Manpower used:              [?THIS.harvest_resources_
 
 enc_resistance_LLW: "Collapse into Wasteland"
 transfer_to_LLW: "§Y[THIS.GetName]§! collapses into lawless wasteland."
-<<<<<<< HEAD
 robotic_garrison_tt: "Deploy Eyebots"
 robotic_garrison_tt_delayed: "§gWe can provide robotic equipment to support our brave boys in black!§! \n[!robotic_garrison_click]\n\n§YRequires§!: [!robotic_garrison_click_enabled]You can only deploy two sets of eyebots per state\n§YThe current eyebot deployments are: [?state_robots]§!"
 robotic_garrison_decrease_tt: "Recall Eyebots"
@@ -43,11 +42,5 @@ robotic_garrison_text: "[?state_robots_amount|%0]"
 robotic_garrison_icon_tt: "Robotic Garrison"
 robotic_garrison_icon_delayed_tt: "Delayed"
 
-
 ABILITY_ARCHIMEDES_STRIKE: "Deploy §RHighwater-Trousers§!"
 ABILITY_ARCHIMEDES_STRIKE_DESC: "Highwater-Trousers (Registration ID USDOD-21TXH) was both a prewar fashion trend and an orbital weapons platform from before the Great War. With our uplink at Sierra Army Depot reestablished, we can use this to strike out the mutants of the Wastes!  Highwater-Trousers has [?hercules] volleys remaining."
-=======
-robotic_garrison_tt: "Deploy Robotic Auxiliaries"
-robotic_garrison_tt_delayed: "We can provide robotic equipment to support our brave boys in black![!robotic_garrison_click]"
-more_than_24_robots: "We have at least 25 support robots."
->>>>>>> master
