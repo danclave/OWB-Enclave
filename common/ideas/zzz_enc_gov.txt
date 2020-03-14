@@ -269,6 +269,13 @@ ideas = {
 			level = 5
 			picture = training_law_none
 			available = {
+				original_tag = ERB
+			}
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				original_tag = ERB
 			}
 			modifier = {
 				training_time_factor = -0.1
@@ -290,8 +297,8 @@ ideas = {
 				original_tag = ERB
 			}
 			visible = {
+				original_tag = ERB
 			}
-
 			modifier = {
 				army_org_Factor = 0.05
 				justify_war_goal_time = -0.1
@@ -333,8 +340,10 @@ ideas = {
 			}
 			visible = {
 				NOT = { has_completed_focus = enc_purity }
+				original_tag = ERB
 			}
 			available = {
+				original_tag = ERB
 				has_completed_focus = enc_reform
 			}
 			modifier = {
@@ -344,7 +353,7 @@ ideas = {
 				intellectuals_drift = 0.15
 				conscription_factor = -0.15
 			}
-			default = yes
+			#default = yes
 
 			cancel_if_invalid = no
 		}

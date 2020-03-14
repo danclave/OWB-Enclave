@@ -484,13 +484,13 @@ ENC_vice_president: "Select Vice President"
 ENC_vice_president_desc: "We can select a vice president to curry favor with one of the nation's political parties."
 enc_select_vice_president: "Selecting Vice President"
 
-# ENC_vice_president_tooltip: "You will be asked to confirm."
-# ENC_vice_president_dornan:0 "Vice President Dornan"
-# ENC_vice_president_dornan_desc:0 "Select the Enclave's greatest soldier to guide America!"
-# ENC_vice_president_hayes:0 "Vice President Hayes"
-# ENC_vice_president_hayes_desc:0 "Make concessions to the New World Party and make Hayes your vice president"
-# ENC_vice_president_lynette:0 "Vice President Lynette"
-# ENC_vice_president_lynette_desc:0 "Remodel America to make every town as prosperous as Vault City!"
+ENC_vice_president_tooltip: "You will be asked to confirm."
+ENC_vice_president_dornan:0 "Vice President Dornan"
+ENC_vice_president_dornan_desc:0 "Select the Enclave's greatest soldier to guide America!"
+ENC_vice_president_hayes:0 "Vice President Hayes"
+ENC_vice_president_hayes_desc:0 "Make concessions to the New World Party and make Hayes your vice president"
+ENC_vice_president_lynette:0 "Vice President Lynette"
+ENC_vice_president_lynette_desc:0 "Remodel America to make every town as prosperous as Vault City!"
 # ###################################
 # MISC
 ###################################

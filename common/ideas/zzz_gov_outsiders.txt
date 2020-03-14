@@ -1,7 +1,6 @@
 ideas = {
 	outsider_recruitment_laws = {
 		law = yes
-
 		enc_outsider_law_none = {
 			picture = no_outsiders
 			available = {
@@ -25,7 +24,6 @@ ideas = {
 			cancel_if_invalid = no
 			default = yes
 		}
-
 		enc_outsider_law_volunteers = {
 			picture = outsider_battalions
 			allowed = {
@@ -61,7 +59,6 @@ ideas = {
 				}
 			}
 		}
-
 		enc_outsider_law_purist_bos = {
 			picture = junior_knight_recruitment
 			cost = 100
@@ -112,7 +109,6 @@ ideas = {
 			}
 			cancel_if_invalid = yes
 		}
-
 		enc_outsider_law_purist_vlt_and_bos = {
 			picture = junior_knight_recruitment
 			cost = 100
@@ -142,6 +138,5 @@ ideas = {
 			}
 			cancel_if_invalid = yes
 		}
-
-		}
+	}
 }
