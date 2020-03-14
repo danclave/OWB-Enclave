@@ -533,11 +533,13 @@ country_event = { #15 - Legitimacy turorial
 	fire_only_once = yes
 	is_triggered_only = yes
 	immediate = {
-		set_variable = {
-			enc_legitimacy_relevance = 1
-		}
-		add_dynamic_modifier = {
-			modifier = enc_legitimacy_dynamic_modifier
+		hidden_effect = {
+			set_variable = {
+				enc_legitimacy_relevance = 1
+			}
+			add_dynamic_modifier = {
+				modifier = enc_legitimacy_dynamic_modifier
+			}
 		}
 	}
 	option = { # Interesting
@@ -1930,11 +1932,11 @@ country_event = { #56 - Patrolling New Reno
 		custom_effect_tooltip = enc_reformers.56.a.tt
 		add_war_support = 0.10
 		285 = {
-			add_state_modifier = { 
-				modifier = { 
-					resistance_activity = -0.25 
+			add_state_modifier = {
+				modifier = {
+					resistance_activity = -0.25
 					resistance_target = -0.15
-				} 
+				}
 			}
 		}
 		# modify legitimacy
@@ -1949,12 +1951,12 @@ country_event = { #56 - Patrolling New Reno
 		custom_effect_tooltip = enc_reformers.56.b.tt
 		# modify legitimacy
 		285 = {
-			add_state_modifier = { 
-				modifier = { 
+			add_state_modifier = {
+				modifier = {
 					resistance_activity = 0.10
 					resistance_target = 0.10
 					compliance_growth = 0.15
-				} 
+				}
 			}
 		}
 		set_temp_variable = {
