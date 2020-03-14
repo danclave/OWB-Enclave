@@ -347,6 +347,14 @@ spriteTypes = {
 			looping = yes
 			play_on_show = yes
 		}
+		spriteType = {
+			name = "GFX_enclave_button"
+			texturefile = "gfx/interface/icons/enclave_button.dds"
+		}
+		spriteType = {
+			name = "GFX_arm_patriots_ready"
+			texturefile = "gfx/interface/icons/arm_patriots_ready.dds"
+		}
 
 		################################
 		# IDEOLOGY

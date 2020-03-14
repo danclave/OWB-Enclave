@@ -1,0 +1,166 @@
+ideas = {
+
+	undesirables_recruitment_laws = {
+		law = yes
+
+		undesirables_law_none = {
+
+			available = {
+				is_not_raider_nation = yes
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 5
+			picture = no_undesirables
+			modifier = {
+				stability_factor = 0.04
+			}
+
+			ai_will_do = {
+				factor = 0
+
+			}
+			cancel_if_invalid = no
+			default = yes
+		}
+
+		undesirables_law_petty = {
+			allowed = {
+				not = { original_tag = ERB }
+			}
+
+			available = {
+				is_not_raider_nation = yes
+				if = {
+					limit = {
+						original_tag = NCN
+					}
+					NOT = { has_government = people }
+				}
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 4
+			picture = petty_criminals_undesirables
+			modifier = {
+				conscription_factor  = 0.01
+				stability_factor = 0.02
+			}
+
+			ai_will_do = {
+				factor = 0
+
+			}
+			cancel_if_invalid = no
+		}
+
+		undesirables_law_homicidal = {
+			allowed = {
+				not = { original_tag = ERB }
+			}
+
+			available = {
+				is_not_raider_nation = yes
+				if = {
+					limit = {
+						original_tag = NCN
+					}
+					NOT = { has_government = people }
+				}
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 3
+			picture = homicidal_undesirables
+			modifier = {
+				conscription_factor  = 0.02
+				stability_factor = -0.02
+				war_support_factor = 0.02
+				army_org_factor = -0.03
+			}
+
+			ai_will_do = {
+				factor = 0
+
+			}
+			cancel_if_invalid = no
+		}
+
+		undesirables_law_raider = {
+			allowed = {
+				not = { original_tag = ERB }
+			}
+
+			available = {
+				if = {
+					limit = {
+						original_tag = NCN
+					}
+					NOT = { has_government = people }
+				}
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 2
+			picture = raiders_undesirables
+			modifier = {
+				conscription_factor  = 0.04
+				stability_factor = -0.04
+				war_support_factor = 0.06
+				army_org_factor = -0.06
+			}
+
+			ai_will_do = {
+				factor = 0
+
+			}
+			cancel_if_invalid = no
+		}
+
+		undesirables_law_slaver = {
+			allowed = {
+				not = { original_tag = ERB }
+			}
+
+			available = {
+				NOT = {
+					OR = {
+						has_idea = slavery_outlawed
+						has_idea = indentured_servitude
+					}
+				}
+				if = {
+					limit = {
+						original_tag = NCN
+					}
+					NOT = { has_government = people }
+				}
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 1
+			picture = slavers_undesirables
+			modifier = {
+				conscription_factor  = 0.07
+				stability_factor = -0.06
+				war_support_factor = 0.08
+				army_org_factor = -0.08
+			}
+
+			ai_will_do = {
+				factor = 0
+
+			}
+			cancel_if_invalid = no
+		}
+
+	}
+
+
+}
+# vim: set ft=pdx ts=2 sw=2 tw=79 :

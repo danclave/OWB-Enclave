@@ -50,7 +50,7 @@ ENC_bribe_NCR_officials: "Our operatives can grease a few palms in order to ensu
 enc_last_stand: "The Last Stand"
 enc_reclaim_bunker: "Reclaim [159.GetName]"
 enc_protected_by_bunker: "Protected By Sierra Army Depot"
-enc_protected_by_bunker_desc: ""
+enc_protected_by_bunker_desc: "Our headquarters is located in the bunkers underneath the Sierra Army Depot. Even if we lose the surface area to enemies, it will take them time to break down the vault doors.\n\n §WIf §Y[159.GetName]§! falls, you will have some time to reclaim it before the game is over.§!"
 
 # CRISIS
 erb_plague_victim: "[FROM.GetName] falls to the plague!"

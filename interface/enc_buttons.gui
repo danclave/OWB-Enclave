@@ -48,24 +48,45 @@ guiTypes = {
 	}
 	containerWindowType = { # arm_slaves
 		name = arm_slaves_container
-		position = {x=90 y=58}
-
+		position = {x = 100 y = 88}
 		buttonType = {
 			name = arm_slaves
-			spriteType = GFX_resistance_icon
+			spriteType = GFX_state_resistance 
 			pdx_tooltip = arm_slaves_tt
 			pdx_tooltip_delayed = arm_slaves_tt_delayed
 			scale = 1.2
 		}
 	}
+	containerWindowType = { # arm_slaves_ready
+		name = arm_slaves_ready_container
+		position = {x = 100 y = 88}
+		iconType = {
+			name = arm_slaves
+			spriteType = GFX_arm_patriots_ready
+			pdx_tooltip = arm_slaves_ready_tt
+			pdx_tooltip_delayed = arm_slaves_ready_tt_delayed
+			scale = 1.2
+		}
+	}
 	containerWindowType = { # arm_patriots
 		name = arm_patriots_container
-		position = {x=90 y=58}
+		position = {x = 100 y = 88}
 		buttonType = {
 			name = arm_patriots
-			spriteType = GFX_resistance_icon
+			spriteType = GFX_state_resistance 
 			pdx_tooltip = arm_patriots_tt
 			pdx_tooltip_delayed = arm_patriots_tt_delayed
+			scale = 1.2
+		}
+	}
+	containerWindowType = { # arm_patriots_ready
+		name = arm_patriots_ready_container
+		position = {x = 100 y = 88}
+		iconType = {
+			name = arm_patriots_ready
+			spriteType = GFX_arm_patriots_ready
+			pdx_tooltip = arm_patriots_ready_tt
+			pdx_tooltip_delayed = arm_patriots_ready_tt_delayed
 			scale = 1.2
 		}
 	}
@@ -282,11 +303,10 @@ guiTypes = {
 	
 	containerWindowType = { # establish_outpost
 		name = establish_outpost_container
-		position = { x = 90 y = 12 }
-		scale = 1.2
+		position = { x = 110 y = 90  }
 		buttonType = {
 			name = establish_outpost
-			spriteType = GFX_div_templ_72_large
+			spriteType = GFX_enclave_button
 			pdx_tooltip = establish_outpost_tt
 			pdx_tooltip_delayed = establish_outpost_tt_delayed
 		}

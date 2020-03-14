@@ -536,8 +536,10 @@ country_event = { #15 - Legitimacy turorial
 		set_variable = {
 			enc_legitimacy_relevance = 1
 		}
-		add_dynamic_modifier = {
-			modifier = enc_legitimacy_dynamic_modifier
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = enc_legitimacy_dynamic_modifier
+			}
 		}
 	}
 	option = { # Interesting
@@ -6314,7 +6316,7 @@ country_event = { #181 - Courts Enjoin Requisitions
 	option = { # Cancel
 		name = enc_reformers.181.a
 		add_stability = -0.1
-		cancel_requisition_civilian_resources = yes
+		stop_requisition_resources = yes
 	}
 	option = { # STOP
 		name = enc_reformers.181.b
@@ -6393,37 +6395,7 @@ country_event = { #183 - Press Covers Requisitions
 	option = { # STOP
 		name = enc_reformers.183.a
 		add_stability = -0.15
-		clr_country_flag = enc_requisitioned_resources
-		if = {
-			limit = {
-				has_full_control_of_state = 253				# shady sands
-			}
-			add_resource = {
-				type = metal
-				amount = -20
-				state = 135
-			}
-			add_resource = {
-				type = advanced
-				amount = -15
-				state = 253
-			}
-		}
-		if = {
-			limit = {
-				has_full_control_of_state = 135				# sac city
-			}
-			add_resource = {
-				type = circuitry
-				amount = -20
-				state = 135
-			}
-			add_resource = {
-				type = energy
-				amount = -25
-				state = 253
-			}
-		}
+		stop_requisition_resources = yes
 	}
 	option = { # STOP
 		name = enc_reformers.183.b
@@ -6455,7 +6427,7 @@ country_event = { #183 - Press Covers Requisitions
 			ideology = intellectuals
 			popularity = 0.05
 		}
-		clr_country_flag = enc_requisitioned_resources
+		stop_requisition_resources = yes
 	}
 }
 

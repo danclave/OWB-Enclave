@@ -164,8 +164,8 @@ enc_ANT_annex:0 "Clearing out the Natives"
 enc_ANT_annex_tt:0 "Gain §YAnnex§! wargoal against whomever controls §YModoc County§!."
 enc_ANT_annex_desc:0 "To the North are several tribes of devolved Abhuman mutants who squat upon resources, and more importantly American soil. It is time we eradicate this blight."
 
-enc_yakuza_sack:0 "Sack Carson City"
-enc_yakuza_sack_desc:0 "The less we are forced to interact with the degenerate squatters of Carson city, the better. We can simply salvage what we need from the city and bring that to our headquarters at the Sierra Army Depot."
+enc_excavate_carson_city:0 "Sack Carson City"
+enc_excavate_carson_city_desc:0 "The less we are forced to interact with the degenerate squatters of Carson city, the better. We can simply salvage what we need from the city and bring that to our headquarters at the Sierra Army Depot."
 
 enc_yakuza_keep:0 "Use Carson City"
 enc_yakuza_keep_desc:0 "We can use the existing factories in Carson city for our purposes. Though regular interaction with the mutants of the city will not be great for morale."
@@ -329,13 +329,10 @@ enc_eyebots_everywhere_desc: "Eyebots aren't just good for jaunty marching tunes
 enc_solution_to_mutant_question: "A Better World"
 enc_solution_to_mutant_question_desc: "Part of the president's job is to make the tough decisions. A lot of near-humans will sacrifice their lives for the return of humanity. Humans will prevail!"
 enc_robot_engineering: "Robotic Manufacturing"
-<<<<<<< HEAD
 enc_robot_engineering_desc: "Unfortunately, we lack enough humanpower to run the Wastelands. But we can use our robots to exploit the resources of the Wasteland."
 enc_robot_tt: "Unlocks the ability to deploy eyebots to augment our garrisons in thr §RLawless Wasteland.§!"
-=======
 enc_robot_engineering_desc: "Unfortunately, we lack enough humanpower to run the Wastelands. But we can use our robots to exploi the resources of the Wasteland."
 enc_robot_tt: "Unlocks the ability in a state to transfer resources to the Enclave from the §RLawless Wasteland.§!"
->>>>>>> master
 enc_robot_engineering_2: "Robotic Autonomy"
 enc_robot_engineering_2_desc: "We can provide our robotic fellows with increased autonomy.  This will only help them salvage the wreckage of the wastes."
 enc_robot_engineering_2_tt: "Lowers the §Ymanpower cost§! of transferring resources to the Enclave from the §RLawless Wasteland.§!"
@@ -437,7 +434,7 @@ respectedByScientists: "Respected by Scientists"
 resourceful: "Resourceful"
 inspiring: "Inspiring"
 corrupt_sycophant: "Corrupt Sycophant"
-enc_man_of_the_people: "Man of the People"
+enc_man_of_the_people: "Man of the People"²
 
 
 suppressor: "Genocidal Officer"

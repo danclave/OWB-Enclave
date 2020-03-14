@@ -569,9 +569,7 @@ ideas = {
 		enc_mutant_law_none = {
 			allowed = {
 				original_tag = ERB
-				always = no
 			}
-
 			cost = 100
 			removal_cost = -1
 			level = 3

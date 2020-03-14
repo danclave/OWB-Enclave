@@ -94,11 +94,16 @@ arm_patriots_tt_cost: "More political power than §Y[?Root.enc_patriots_we_have_
 arm_patriots_click: "§YArm patriots in the state!§!\nIf push comes to shove, these people will stand to defend their rights."
 enc_patriots_armed: "This state has patriots ready to rise up for America."
 
+arm_patriots_ready_tt:"Patriots Ready"
+arm_patriots_ready_tt_delayed: "This state has patriots ready to rise up once we start the uprising via the §YOld World Uprising§! decision."
+
 unlock_arm_rebels: "Unlocks the ability to §Yarm rebels§! in any §YNCR§! state where §YBarron Republic§! has a core.\n\n"
 unlock_arm_patriots: "Unlocks the ability to §Yarm patriots§! in any core §Y[NCR.GetName]§! state.\n\n"
 unlock_arm_patriots: "Unlocks the ability to §Yarm slaves§! in any Legion state where it has a core.  Bastards.\n\n"
 ENC_rise_slaves:  "Issue the Second Emancipation Proclamation"
 ENC_rise_slaves_des: "It's time to remind Caesar that Americans will always fight for freedom."
+arm_slaves_ready_tt: "Slaves Armed"
+arm_slaves_ready_tt_delayed: "The slaves in this state are ready to rise up at our signal."
 
 ###################################
 # FLAGS

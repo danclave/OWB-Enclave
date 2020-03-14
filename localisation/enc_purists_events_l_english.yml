@@ -27,6 +27,10 @@ enc.3.a.tt:0 "§YFranklin Anderson§! of the §YPurist Faction§! becomes the ne
 enc.3.b:0 "Sergeant Dornan supports Douglas Granite."
 enc.3.b.tt:0 "Dornan decides Dr. Anderson is a §R'MO-RON'§! \n §YDouglas Granite§! of the §YReformer Faction§! becomes the new Enclave president."
 ########################################################################################
+enc.5.t:0 "Enclave Reborn: Update 2.1.1"
+enc.5.d:0 "Thanks for playing our mod! You are receiving this event because trade laws are broken on this save. It is now fixed for new games, and this event will fix it on this save as well."
+enc.5.a:0 "Neat."
+########################################################################################
 enc.7.t:0 "Dealing with Mordinos"
 enc.7.d:0 "The Mordinos long represented the status quo of New Reno. That is to say, criminality, exploitation, drugs and misery. They had many allies but no friends and few are now willing to lay their lives down in defense of the drug lords. We may strike quickly and expect only limited resistance, but some have suggested that we should use the Mordinos to demonstrate we are serious about our Old World values."
 enc.7.a:0 "They will be tried in a court of law."

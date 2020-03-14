@@ -135,12 +135,29 @@ country_event = {#4 - Sierra Army Depot Captured!
 
 	option = {#Stared down FH
 		name = enc.4.a
-		add_country_leader_trait = unbreakable_will
-		hidden_effect = {country_event = { id = enc.10 }}
-		custom_effect_tooltip = enc.4.a.tt
 	}
 }
+country_event = {#5 - update
+	id = enc.5
+	title = enc.5.t
+	desc = enc.5.d
+	picture = GFX_event_ENC_secret
 
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		or = {			
+			has_completed_focus = enc_department_of_commerce
+			has_completed_focus = enc_the_state_of_nevada
+		}
+		has_country_flag = has_unique_trade_laws
+	}
+
+	option = {#Stared down FH
+		name = enc.5.a
+		clr_country_flag = has_unique_trade_laws
+	}
+}
 country_event = {#9   - FRANKLIN PAST - YOUTH
 	id = enc.9
 	title = enc.9.t

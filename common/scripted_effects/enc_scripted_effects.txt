@@ -351,41 +351,6 @@ ban_free_press = {
 ### MISC ####
 ##################################################
 
-cancel_requisition_civilian_resources = {
-
-	clr_country_flag = enc_requisitioned_resources
-	if = {
-		limit = {
-			has_full_control_of_state = 253 # shady sands
-		}
-		add_resource = {
-			type = metal
-			amount = -20
-			state = 135
-		}
-		add_resource = {
-			type = advanced
-			amount = -15
-			state = 25
-		}
-	}
-	if = {
-		limit = {
-			has_full_control_of_state = 135 # sac city
-		}
-		add_resource = {
-			type = circuitry
-			amount = -20
-			state = 153
-		}
-		add_resource = {
-			type = energy
-			amount = -25
-			state = 135
-		}
-	}
-}
-
 elites_become_citizens_league = {
 	set_party_name = {
 		ideology = elites
@@ -439,6 +404,91 @@ decrease_red_menace = {
 	}
 }
 
+start_requisition_resources = {
+	set_country_flag = enc_requisitioned_resources
+	if = {
+		limit = {
+			has_full_control_of_state = 253 # shady sands
+		}
+		add_resource = {
+			type = metal
+			amount = 20
+			state = 135
+		}
+		add_resource = {
+			type = advanced
+			amount = 15
+			state = 135
+		}
+	}
+	else = {
+
+	}
+	if = {
+		limit = {
+			has_full_control_of_state = 135 # sac city
+		}
+		add_resource = {
+			type = circuitry
+			amount = 20
+			state = 253
+		}
+		add_resource = {
+			type = energy
+			amount = 25
+			state = 135
+		}
+	}		
+	every_controlled_state = {
+		limit = {
+			not = { is_core_of = ERB }
+		}
+		add_state_modifier = { modifier = { id = state_modifier_test_id local_resources_factor = 0.2 compliance_gain = -10} }
+		set_state_flag = state_has_enc_requisition_of_resources
+	}
+}
+
+stop_requisition_resources = {
+	clr_country_flag = enc_requisitioned_resources
+	if = {
+		limit = {
+			has_full_control_of_state = 253				# shady sands
+		}
+		add_resource = {
+			type = metal
+			amount = -20
+			state = 135
+		}
+		add_resource = {
+			type = advanced
+			amount = -15
+			state = 253
+		}
+	}
+	if = {
+		limit = {
+			has_full_control_of_state = 135				# sac city
+		}
+		add_resource = {
+			type = circuitry
+			amount = -20
+			state = 135
+		}
+		add_resource = {
+			type = energy
+			amount = -25
+			state = 253
+		}
+	}		
+	every_controlled_state = {
+		limit = {
+			not = { is_core_of = ERB }
+		}
+		add_state_modifier = { modifier = { id = state_modifier_test_id local_resources_factor = -0.2 compliance_gain = 10} }
+		clr_state_flag = state_has_enc_requisition_of_resources
+	}
+
+}
 ##################################################
 ### PEOPLE UPRISING ####
 ##################################################
@@ -694,7 +744,7 @@ comply_with_protests = {
 		limit = {
 			has_country_flag = enc_requisitioned_resources
 		}
-		cancel_requisition_civilian_resources = yes
+		stop_requisition_resources = yes
 	}
 	else_if = { # player has not chosen between law or order, force change to law
 		limit = {

@@ -226,6 +226,14 @@ scripted_gui = {
 			}
 		}
 	}
+	arm_slaves_ready = {
+		context_type = selected_state_context
+		window_name = arm_slaves_ready_container
+		parent_window_token = selected_state_view
+		visible = {			
+			has_state_flag = enc_slaves_armed
+		}
+	}
 	arm_slaves = {
 		context_type = selected_state_context
 		window_name = arm_slaves_container
@@ -235,6 +243,7 @@ scripted_gui = {
 			is_owned_and_controlled_by = CES
 			NOT = {
 				has_state_flag = no_rebels_you_fucks
+				has_state_flag = enc_slaves_armed
 			}
 			ROOT =  {
 				has_completed_focus = enc_ss_ceasar_bottom_weapons
@@ -309,6 +318,7 @@ scripted_gui = {
 				has_completed_focus = enc_organise_the_sympathizers
 			}
 			NOT = {
+				has_state_flag = enc_patriots_armed
 				has_state_flag = no_rebels_you_fucks
 			}
 		}
@@ -367,6 +377,15 @@ scripted_gui = {
 			}
 		}
 	}
+	arm_patriots_ready = {
+		context_type = selected_state_context
+		window_name = arm_patriots_ready_container
+		parent_window_token = selected_state_view
+		visible = {
+			has_state_flag = enc_patriots_armed
+		}
+	}
+
 	erb_light_up_america = {
 		context_type = player_context
 		parent_window_token = politics_tab
