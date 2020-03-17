@@ -258,7 +258,7 @@ enc.48.d: "If our occupation policy is set to dismantle factories, we can transf
 enc.48.a: "But how do we reclaim the Lawless Wasteland?"
 ################################################################################################################ -<
 enc.49.t: "I'm Just a Lawless Wasteland, Baby"
-enc.49.d: "If resistance rises to 20% in a state controlled by the Enclave, it will revert to the Lawless Wasteland. While we can move through the Lawless Wasteland, we cannot exploit it yet.  This may change as we recover prewar robotic technology.  And if we deploy a garrison to the state, we can control it. But we will need to make sure we can hold onto it or it will revert to a Lawless Wasteland."
+enc.49.d: "If resistance rises to 25% in a state controlled by the Enclave, it will revert to the Lawless Wasteland. While we can move through the Lawless Wasteland, we cannot exploit it yet.  This may change as we recover prewar robotic technology.  And if we deploy a garrison to the state, we can control it. But we will need to make sure we can hold onto it or it will revert to a Lawless Wasteland."
 enc.49.a: "God I hate mutants."
 
 ################################################################################################################ -<
