@@ -138,14 +138,14 @@ guiTypes = {
 			name ="legitimacy_2_text"
 			position = { x = 22 y = 4 }
 			font = "hoi_18mbs"
-			text = "[?enc_legitimacy_2|%0]"
+			text = "[?enc_legitimacy|%0]"
 			format = center
 			maxWidth = 46
 			maxHeight = 24
 			fixedsize = yes
 
-			pdx_tooltip = "legitimacy_2_TOOLTIP"
-			pdx_tooltip_delayed = "legitimacy_2_TOOLTIP_DELAYED"
+			pdx_tooltip = "legitimacy_TOOLTIP"
+			pdx_tooltip_delayed = "legitimacy_TOOLTIP_DELAYED"
 		}
 	}
 	

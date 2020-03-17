@@ -189,7 +189,15 @@ on_actions = {
 	#Not run on a specific country.
 	on_startup = {
 		effect = {
-
+			every_country = {
+				limit = {
+					is_ai = no
+					not = {
+						original_tag = ERB
+					}
+				}
+				country_event = { id = enc.6 }
+			}
 		}
 	}
 

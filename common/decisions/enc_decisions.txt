@@ -1372,6 +1372,14 @@ ENC_debug = {
 			285 = { add_state_modifier = { modifier = { required_garrison_factor = -0.25 } } }
 		}
 	}
+	enc_create_aez = {
+		complete_effect = {
+			create_dynamic_country = { copy_tag = EAZ }
+			EAZ = {
+				transfer_state = 168
+			}
+		}
+	}
 }
 
 ###

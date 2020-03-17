@@ -158,6 +158,18 @@ country_event = {#5 - update
 		clr_country_flag = has_unique_trade_laws
 	}
 }
+country_event = {#6 - warning
+	id = enc.6
+	title = enc.6.t
+	desc = enc.6.d
+	picture = GFX_event_ENC_secret
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = enc.6.a
+	}
+}
 country_event = {#9   - FRANKLIN PAST - YOUTH
 	id = enc.9
 	title = enc.9.t
