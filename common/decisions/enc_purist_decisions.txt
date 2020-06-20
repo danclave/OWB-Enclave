@@ -393,12 +393,19 @@ ENC_oppose_legion = {
 				}
 			}
 		}
-		visible = {
+		target_array = CES.neighbors
+		target_root_trigger = {
 			has_completed_focus = enc_reform
+		}
+		visible = {
 			FROM = {
 				exists = yes
 				NOT = {
 					has_idea = enc_enclave_advisors
+				}
+				AND = {
+					is_neighbor_of = CES
+					has_idea = settler_nation
 				}
 			}
 		}
@@ -694,12 +701,16 @@ ENC_exploiting_wasteland = {
 				arms_factory > 0
 			}
 		}
+		target_array = controlled_states
 		available = {
 			FROM = {
 				resistance < 50
 				arms_factory > 0
 				occupation_law = enc_dismantle_industry
 			}
+		}
+		target_root_trigger = {
+			NOT = { has_completed_focus = enc_reform }
 		}
 		visible = {
 			NOT = { has_completed_focus = enc_reform }
@@ -736,6 +747,7 @@ ENC_exploiting_wasteland = {
 			command_power > 9.9
 		}
 		state_target = yes
+		target_array = controlled_states
 		target_trigger = {
 			FROM = {
 				is_controlled_by = ERB
@@ -749,6 +761,9 @@ ENC_exploiting_wasteland = {
 				industrial_complex > 0
 				occupation_law = enc_dismantle_industry
 			}
+		}
+		target_root_trigger = {
+			NOT = { has_completed_focus = enc_reform }
 		}
 		visible = {
 			NOT = { has_completed_focus = enc_reform }

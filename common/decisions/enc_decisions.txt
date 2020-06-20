@@ -1339,6 +1339,7 @@ ENC_debug = {
 				occupation_law = enc_dismantle_industry
 			}
 		}
+		target_array = controlled_states
 		available = {
 			always = yes
 		}

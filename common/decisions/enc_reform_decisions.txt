@@ -671,6 +671,14 @@ ENC_infiltrating_NCR = {
 		}
 		visible = {
 			has_completed_focus = enc_the_lucia_incident
+			country_exists = BOS
+			country_exists = NCR
+		}
+		available = {
+			BOS = {
+				can_declare_war_on = NCR
+				NOT = { has_war_with = NCR }
+			}
 		}
 		complete_effect = {
 		}
@@ -694,6 +702,14 @@ ENC_infiltrating_NCR = {
 		}
 		visible = {
 			has_completed_focus = enc_the_bishop_incident
+			country_exists = DES
+			country_exists = NCR
+		}
+		available = {
+			DES = {
+				can_declare_war_on = NCR
+				NOT = { has_war_with = NCR }
+			}
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -703,7 +719,7 @@ ENC_infiltrating_NCR = {
 			DES = {
 				if = {
 					limit = {
-						is_in_faction = yes
+						is_in_faction_with = NCR
 					}
 					leave_faction = yes
 				}
@@ -724,8 +740,10 @@ ENC_infiltrating_NCR = {
 		}
 		fire_only_once = yes
 		available = {
-			any_state = {
-				has_state_flag = enc_patriots_armed
+			NCR = {
+				any_owned_state = {
+					has_state_flag = enc_patriots_armed
+				}
 			}
 		}
 		visible = {
@@ -751,12 +769,11 @@ ENC_infiltrating_NCR = {
 		}
 		available = {
 			has_war_with = NCR
-			any_state = { #we occupy a non core state which has += 10 water
+			any_controlled_state = { #we occupy a non core state which has += 10 water
 				is_core_of = NCR
 				NOT = {
 					is_core_of = ROOT
 				}
-				is_controlled_by = ROOT
 				has_resources_amount = {
 					resource = water
 					amount > 9
@@ -806,7 +823,7 @@ ENC_infiltrating_NCR = {
 		}
 		available = {
 			has_war_with = NCR
-			any_state = { #we occupy a non core state which has 1+ mil factories
+			any_controlled_state = { #we occupy a non core state which has 1+ mil factories
 				is_core_of = NCR
 				is_fully_controlled_by = ROOT
 				arms_factory > 0
@@ -1548,7 +1565,7 @@ ENC_nation_building = {
 		fire_only_once = no
 		days_re_enable = 30
 		available = {
-			any_state = {
+			any_owned_state = {
 				NOT = {
 					has_state_flag = infrastructure_building_slot_flag
 				}
@@ -1561,7 +1578,7 @@ ENC_nation_building = {
 			}
 		}
 		visible = {
-			any_state = {
+			any_owned_state = {
 				NOT = {
 					has_state_flag = infrastructure_building_slot_flag
 				}
@@ -1617,7 +1634,7 @@ ENC_nation_building = {
 		cost = 50
 		fire_only_once = no
 		available = {
-			any_state = {
+			any_owned_state = {
 				NOT = {
 					has_state_flag = war_building_slot_flag
 				}
@@ -1627,7 +1644,7 @@ ENC_nation_building = {
 			has_war = yes
 		}
 		visible = {
-			any_state = {
+			any_owned_state = {
 				NOT = {
 					has_state_flag = war_building_slot_flag
 				}
@@ -1719,22 +1736,22 @@ ENC_nation_building = {
 				NOT = {
 					is_core_of = ERB
 				}
-				any_neighbor_state = {
+					any_neighbor_state = {
 					is_core_of = ERB
+					}
 				}
 			}
-		}
 		complete_effect = {
 			random_owned_state = {
-				limit = {
-					civilian_power_grid > 0
-					NOT = {
+					limit = {
+							civilian_power_grid > 0
+							NOT = {
 						is_core_of = ERB
-					}
-					any_neighbor_state = {
+							}
+								any_neighbor_state = {
 						is_core_of = ERB
+						}
 					}
-				}
 				ROOT = {
 					goto_state = PREV
 				}
@@ -2945,6 +2962,7 @@ ENC_securing_borders = {
 				exists = yes
 			}
 		}
+		target_array = CES.neighbors
 		available = {
 			FROM = {
 				is_puppet_of = CES
@@ -3449,17 +3467,18 @@ ENC_gannon_doctrine = {
 				is_in_faction = no
 			}
 		}
+		target_array = neighbors
+		target_root_trigger = {
+			has_completed_focus = enc_reform
+		}
 		visible = {
-			if = {
-				has_completed_focus = enc_reform
-				FROM = {
-					exists = yes
-					NOT = {
-						has_country_flag = erb_couriers
-					}
-					NOT = {
-						is_mexican = yes
-					}
+			FROM = {
+				exists = yes
+				NOT = {
+					has_country_flag = erb_couriers
+				}
+				NOT = {
+					is_mexican = yes
 				}
 			}
 		}
@@ -3480,6 +3499,7 @@ ENC_gannon_doctrine = {
 			FROM = {
 				set_country_flag = erb_couriers
 			}
+			add_to_array = { erb_couriers_array = FROM }
 			custom_effect_tooltip = ENC_couriers_tt
 		}
 	}
@@ -3517,12 +3537,14 @@ ENC_gannon_doctrine = {
 				is_in_faction = no
 			}
 		}
+		target_root_trigger = {
+			has_completed_focus = enc_reform
+		}
+		target_array = erb_couriers_array
 		visible = {
-			if = {
-				has_completed_focus = enc_reform
-			}
 			FROM = {
 				exists = yes
+				is_in_faction = no
 			}
 			NOT = {
 				FROM = {
@@ -3552,17 +3574,18 @@ ENC_gannon_doctrine = {
 		target_trigger = {
 			FROM = {
 				has_country_flag = erb_couriers
-			}
-			FROM = {
 				is_puppet_of = ERB
 			}
 		}
+		target_array = subjects
+		target_root_trigger = {
+			has_completed_focus = enc_reform
+		}
 		visible = {
-			if = {
-				has_completed_focus = enc_reform
-			}
 			FROM = {
 				exists = yes
+				has_country_flag = erb_couriers
+				is_puppet_of = ERB
 			}
 		}
 		available = {
@@ -3599,10 +3622,11 @@ ENC_gannon_doctrine = {
 				}
 			}
 		}
+		target_array = neighbors
+		target_root_trigger = {
+			has_completed_focus = enc_reform
+		}
 		visible = {
-			if = {
-				has_completed_focus = enc_reform
-			}
 			FROM = {
 				exists = yes
 				NOT = {
@@ -3631,6 +3655,7 @@ ENC_gannon_doctrine = {
 			FROM = {
 				set_country_flag = erb_teachers
 			}
+			add_to_array = { erb_teachers_array = FROM }
 		}
 	}
 	erb_good_reservations = {
@@ -3642,10 +3667,10 @@ ENC_gannon_doctrine = {
 				}
 			}
 		}
+		target_root_trigger = {
+			has_completed_focus = enc_reform
+		}
 		visible = {
-			if = {
-				has_completed_focus = enc_reform
-			}
 			FROM = {
 				exists = yes
 				NOT = {
@@ -3662,6 +3687,7 @@ ENC_gannon_doctrine = {
 				has_war_with = FROM
 			}
 		}
+		target_array = erb_teachers_array
 		days_remove = 100
 		cost = 100
 		ai_will_do = {
@@ -3684,10 +3710,10 @@ ENC_gannon_doctrine = {
 				has_country_flag = erb_civilizing
 			}
 		}
+		target_root_trigger = {
+			has_completed_focus = enc_reform
+		}
 		visible = {
-			if = {
-				has_completed_focus = enc_reform
-			}
 			FROM = {
 				exists = yes
 				NOT = {
@@ -3703,6 +3729,7 @@ ENC_gannon_doctrine = {
 				has_war_with = FROM
 			}
 		}
+		target_array = erb_teachers_array
 		days_remove = 80
 		cost = 100
 		ai_will_do = {
@@ -3734,8 +3761,11 @@ ENC_granite_doctrine = {
 				}
 			}
 		}
-		visible = {
+		target_array = neighbors
+		target_root_trigger = {
 			has_completed_focus = enc_reform
+		}
+		visible = {
 			FROM = {
 				exists = yes
 			}
@@ -3778,8 +3808,11 @@ ENC_granite_doctrine = {
 				}
 			}
 		}
-		visible = {
+		target_array = neighbors
+		target_root_trigger = {
 			has_completed_focus = enc_reform
+		}
+		visible = {
 			FROM = {
 				exists = yes
 			}
@@ -3967,6 +4000,7 @@ ENC_down_mexico_way = {
 				TAG = BJS
 			}
 		}
+		targets = { BJS }
 		complete_effect = {
 			random_owned_state = {
 				remove_building = {
@@ -4022,6 +4056,7 @@ ENC_down_mexico_way = {
 				TAG = BJS
 			}
 		}
+		targets = { BJS }
 		complete_effect = {
 			add_war_support = -0.05
 			random_owned_state = {
@@ -4084,6 +4119,7 @@ ENC_down_mexico_way = {
 				TAG = BJS
 			}
 		}
+		targets = { BJS }
 		days_remove = 180
 		cost = 50
 		modifier = {
@@ -4263,6 +4299,7 @@ ENC_down_mexico_way = {
 				is_mexican = yes
 			}
 		}
+		target_array = ARM.enemies
 		available = {
 			NOT = {
 				FROM = {
@@ -4272,6 +4309,10 @@ ENC_down_mexico_way = {
 			}
 		}
 		visible = {
+			FROM = {
+				has_war_with = ARM
+				is_mexican = yes
+			}
 		}
 		cost = 50
 		ai_will_do = {
@@ -4321,8 +4362,15 @@ ENC_down_mexico_way = {
 				exists = yes
 			}
 		}
-		visible = {
+		target_root_trigger = {
 			has_country_flag = mexican_allies
+		}
+		visible = {
+			FROM = {
+				is_in_faction = no
+				is_mexican = yes
+				exists = yes
+			}
 		}
 		available = {
 			NOT = {
