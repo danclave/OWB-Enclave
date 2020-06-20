@@ -123,7 +123,7 @@ news_event = { #6 - Elections
 	immediate = {
 		if = { # election
 			limit = {
-				has_completed_focus = enc_presidential_elections
+				has_completed_focus = enc_voting_rights_act
 			}
 			custom_effect_tooltip = enc_events_epilogue.6.d.freedom
 		}
