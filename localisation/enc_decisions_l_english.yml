@@ -472,6 +472,8 @@ ENC_rebuild_infrastructure_desc:0 "Our great nation's infrastructure is in consi
 ENC_rebuild_infrastructure_tt:0 "Gain §Y1%§! of legitimacy for every 2 levels of §Yinfrastructure§! built during the decision."
 ENC_find_power_grid: "§YFind Ready Power Grid§!"
 ENC_find_power_grid_desc: "There is a power grid ready to core a province, you just need to push the button!"
+ENC_power_all__power_grids: "§YPower All Ready Power Grids§!"
+ENC_power_all__power_grids_tt: "All ready power grids will be powered."
 ###################################
 # Securing our borders
 ###################################

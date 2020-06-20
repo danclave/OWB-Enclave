@@ -1727,33 +1727,78 @@ ENC_nation_building = {
 		icon = GFX_icons_power
 		allowed = {
 			original_tag = ERB
-			always = no			# wip
 		}
-		fire_only_once = no
 		visible = {
+			is_ai = no
 			any_owned_state = {
-				civilian_power_grid > 0
+				is_owned_and_controlled_by = ROOT
 				NOT = {
-					is_core_of = ERB
+					is_core_of = ROOT
 				}
+				civilian_power_grid > 0
+				OR = {
+					compliance > 0.90
+					has_resistance = no
+				}
+				OR = {
+					# any neighbour is cored
 					any_neighbor_state = {
-					is_core_of = ERB
+						is_core_of = ROOT
 					}
+					# or its an island
+					is_island_state = yes
 				}
 			}
+		}
+		fire_only_once = no
 		complete_effect = {
-			random_owned_state = {
+			custom_effect_tooltip = ENC_power_all__power_grids_tt
+			hidden_effect = {
+				while_loop_effect = {
 					limit = {
-							civilian_power_grid > 0
+						any_owned_state = {
+							is_owned_and_controlled_by = ROOT
 							NOT = {
-						is_core_of = ERB
+								is_core_of = ROOT
 							}
+							civilian_power_grid > 0
+							OR = {
+								compliance > 0.90
+								has_resistance = no
+							}
+							OR = {
+								# any neighbour is cored
 								any_neighbor_state = {
-						is_core_of = ERB
+									is_core_of = ROOT
+								}
+								# or its an island
+								is_island_state = yes
+							}
 						}
 					}
-				ROOT = {
-					goto_state = PREV
+					every_owned_state = {
+						limit = {
+							is_owned_and_controlled_by = ROOT
+							NOT = {
+								is_core_of = ROOT
+							}
+							civilian_power_grid > 0
+							OR = {
+								compliance > 0.90
+								has_resistance = no
+							}
+							OR = {
+								# any neighbour is cored
+								any_neighbor_state = {
+									is_core_of = ROOT
+								}
+								# or its an island
+								is_island_state = yes
+							}
+						}
+						set_state_flag = needs_civilian_power_grid
+						add_core_of = root
+					}
 				}
 			}
 		}
