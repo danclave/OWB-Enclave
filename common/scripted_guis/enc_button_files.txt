@@ -30,7 +30,10 @@ scripted_gui = {
 		triggers = {
 			connect_to_power_click_enabled = {
 				civilian_power_grid > 0
-				compliance > 0.90
+				OR = {
+					compliance > 0.90
+					has_resistance = no
+				}
 				custom_trigger_tooltip = {
 					tooltip = more_than_2_electricity
 					ROOT = {
