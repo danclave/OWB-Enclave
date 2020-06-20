@@ -6438,8 +6438,12 @@ country_event = { #184 - Slave Labor Press Scandal
 	picture = GFX_event_enc_slaves
 	fire_only_once = yes
 	trigger = {
-		has_completed_focus = enc_emergency_labour_draft
 		has_free_press = yes
+		OR = {
+			has_idea = ENC_emergency_labour_draft
+			has_idea = ENC_slave_labour
+			has_idea = ENC_servitude
+		}
 		NOT = {
 			has_completed_focus = enc_segregation
 		}
@@ -6450,6 +6454,7 @@ country_event = { #184 - Slave Labor Press Scandal
 	option = { # comply
 		name = enc_reformers.184.a
 		add_stability = -0.1
+		remove_ideas = ENC_emergency_labour_draft
 		remove_ideas = ENC_slave_labour
 		remove_ideas = ENC_servitude
 	}

@@ -3135,6 +3135,13 @@ focus_tree = {
 			hidden_effect = { drop_cosmetic_tag = yes }
 			set_cosmetic_tag = ERB_USA
 			country_event = { id = enc_reformers.50 }
+			if = {
+				limit = {
+					has_country_flag = enc_requisitioned_resources
+				}
+				stop_requisition_resources = yes
+			}
+			remove_ideas = ENC_emergency_labour_draft
 		}
 	}
 	focus = {#REBUILDING - A Nation Remade
@@ -3164,6 +3171,13 @@ focus_tree = {
 			hidden_effect = { drop_cosmetic_tag = yes }
 			set_cosmetic_tag = ERB_enclaveamerica
 			country_event = { id = enc_reformers.201 }
+			if = {
+				limit = {
+					has_country_flag = enc_requisitioned_resources
+				}
+				stop_requisition_resources = yes
+			}
+			remove_ideas = ENC_emergency_labour_draft
 		}
 	}
 	focus = {# Nuclear option

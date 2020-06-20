@@ -443,7 +443,7 @@ start_requisition_resources = {
 		limit = {
 			not = { is_core_of = ERB }
 		}
-		add_state_modifier = { modifier = { id = state_modifier_test_id local_resources_factor = 0.2 compliance_gain = -10} }
+		add_state_modifier = { modifier = { id = state_modifier_test_id local_resources_factor = 0.2 compliance_gain = -0.1} }
 		set_state_flag = state_has_enc_requisition_of_resources
 	}
 }
@@ -484,7 +484,7 @@ stop_requisition_resources = {
 		limit = {
 			not = { is_core_of = ERB }
 		}
-		add_state_modifier = { modifier = { id = state_modifier_test_id local_resources_factor = -0.2 compliance_gain = 10} }
+		add_state_modifier = { modifier = { id = state_modifier_test_id local_resources_factor = -0.2 compliance_gain = 0.1} }
 		clr_state_flag = state_has_enc_requisition_of_resources
 	}
 
@@ -898,4 +898,9 @@ change_slaves_in_state = {
 	set_temp_variable = { slave_cost = recoverable_manpower } # slave cost = 150
 	multiply_temp_variable = { slave_cost = 10 } # slave cost = 1500
 	ERB = { subtract_from_variable = { slave_number_display = slave_cost } }
+}
+
+
+z = {
+	puppet = VEG
 }
