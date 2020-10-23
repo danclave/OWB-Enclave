@@ -50,10 +50,11 @@ set_country_flag = has_unique_trade_laws
 set_country_flag = has_unique_press_laws
 set_country_flag = has_unique_slave_laws
 set_country_flag = has_unique_drug_laws
+set_country_flag = has_unique_undesirable_laws
+set_country_flag = has_unique_mutant_recruitment_laws
 
-set_country_flag = has_unique_outsider_laws
 set_country_flag = do_not_spread_followers
-set_country_flag = no_overlord_decisions 
+set_country_flag = no_overlord_decisions
 
 # resistance and compliance
 set_country_flag = has_compliance_core_unique_tiers
@@ -61,7 +62,7 @@ set_country_flag = has_compliance_state_unique_tiers
 set_country_flag = has_resistance_state_unique_tiers
 set_country_flag = has_resistance_core_unique_tiers
 set_country_flag = has_unique_occupation_laws
-set_global_flag = development_done_sierra_army_depot 
+set_global_flag = development_done_sierra_army_depot
 
 
 set_country_flag = ignore_puppet_events
