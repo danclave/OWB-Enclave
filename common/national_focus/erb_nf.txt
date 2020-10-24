@@ -1769,9 +1769,6 @@ focus_tree = {
 			set_technology = {
 				plasma_weaponry_1  = 1
 				plasma_unlock_tech = 1
-			}
-			add_ideas = ENC_energy_production
-			set_technology = {
 				special_forces_tech_level_scientific = 1
 				robotics_tech_level_scientific = 1
 				vehicles_tech_level_scientific = 1
@@ -1780,6 +1777,7 @@ focus_tree = {
 				exploitation_tech_level_scientific = 1
 				electronics_tech_level_scientific = 1
 			}
+			add_ideas = ENC_energy_production
 		}
 	}
 
@@ -1904,7 +1902,8 @@ focus_tree = {
 		completion_reward = {
 			set_technology = { 
 				high_fighter_tech  = 1
-				air_tech_level_scientific = 1}
+				air_tech_level_scientific = 1
+			}
 		}
 	}
 
@@ -4416,7 +4415,7 @@ focus = {#Legion Border
 		}
 		completion_reward = {
 			set_technology = { 
-				high_fighter_tech  = 1}
+				high_fighter_tech  = 1
 				air_tech_level_scientific = 1 
 			}
 		}
@@ -6494,10 +6493,7 @@ focus = {#NEVADA - second city
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			set_technology = {
-				gauss_weaponry_1 = 1
-				gauss_unlock_tech = 1
-			}
+
 			add_tech_bonus = {
 				ahead_reduction = 2
 				uses = 2
@@ -6508,7 +6504,9 @@ focus = {#NEVADA - second city
 				uses = 1
 				category = industry
 			}
-			set_technology = { 
+			set_technology = {
+				gauss_weaponry_1 = 1
+				gauss_unlock_tech = 1
 				special_forces_tech_level_scientific = 1 
 				vehicles_tech_level_scientific = 1 		
 				air_tech_level_scientific = 1 			
