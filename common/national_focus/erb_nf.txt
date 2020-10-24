@@ -1771,6 +1771,15 @@ focus_tree = {
 				plasma_unlock_tech = 1
 			}
 			add_ideas = ENC_energy_production
+			set_technology = {
+				special_forces_tech_level_scientific = 1
+				robotics_tech_level_scientific = 1
+				vehicles_tech_level_scientific = 1
+				naval_tech_level_scientific = 1
+				tools_tech_level_scientific = 1
+				exploitation_tech_level_scientific = 1
+				electronics_tech_level_scientific = 1
+			}
 		}
 	}
 
@@ -1876,7 +1885,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 5.8
-		completion_reward = { add_ideas = ENC_PA_production2 }
+		completion_reward = { 
+			add_ideas = ENC_PA_production2 
+			enclave_pa_unlock_tech = 1
+		}
 	}
 	focus = {#SEPERATION - fighter yets
 		id = enc_knights_sky
@@ -1890,7 +1902,9 @@ focus_tree = {
 		y = 1
 		cost = 5.8
 		completion_reward = {
-			set_technology = { high_fighter_tech  = 1}
+			set_technology = { 
+				high_fighter_tech  = 1
+				air_tech_level_scientific = 1}
 		}
 	}
 
@@ -1925,6 +1939,7 @@ focus_tree = {
 			}
 			random_owned_state = {	add_manpower = -500 }
 			reduce_legitimacy_relevance = yes
+			set_technology = { habitation_tech_level_scientific = 1 }
 		}
 	}
 
@@ -2839,6 +2854,10 @@ focus_tree = {
 		cost = 5.8
 		completion_reward = {
 			add_ideas = ENC_Department_Manufacturing
+			set_technology = { 
+				tools_tech_level_scientific = 1 
+				exploitation_tech_level_scientific = 1
+			}
 		}
 	}
 	focus = {#REBUILDING - Department of Energy
@@ -2852,6 +2871,7 @@ focus_tree = {
 	cost = 5.8
 	completion_reward = {
 		add_ideas = ENC_Dept_Energy
+		set_technology = { habitation_tech_level_scientific = 1 }
 	}
 }
 
@@ -2885,6 +2905,7 @@ focus_tree = {
 				amount = 5
 				state = 285
 			}
+			set_technology = { electronics_tech_level_scientific = 1 }
 		}
 	}
 	focus = { # REBorN - rebuilding america
@@ -3613,6 +3634,7 @@ focus_tree = {
 			annex_country = {
 				target = DES
 			}
+			set_technology = { special_forces_tech_level_scientific = 1 }
 		}
 	}
 	focus = {# discredit the rangers
@@ -4079,6 +4101,7 @@ focus = {#Legion Border
 			annex_country = {
 				target = DES
 			}
+			set_technology = {special_forces_tech_level_scientific = 1}
 		}
 	}
 	focus = {# discredit the rangers
@@ -4392,7 +4415,10 @@ focus = {#Legion Border
 			has_full_control_of_state = 389
 		}
 		completion_reward = {
-			set_technology = { high_fighter_tech  = 1}
+			set_technology = { 
+				high_fighter_tech  = 1}
+				air_tech_level_scientific = 1 
+			}
 		}
 	}
 	focus = {#NEVADA - mojave express
@@ -4490,6 +4516,7 @@ focus = {#Legion Border
 				}
 					}
 			add_ideas = Enc_Railways
+			set_technology = {vehicles_tech_level_scientific = 1}
 			}
 		}
 
@@ -4538,6 +4565,7 @@ focus = {#Legion Border
 				amount = 15
 				state = 284
 			}
+			set_technology = {exploitation_tech_level_scientific = 1}
 		}
 	}
 
@@ -4856,10 +4884,13 @@ focus = {#NEVADA - second city
 		available = { has_full_control_of_state = 211 }
 		prerequisite = { focus = Enc_Second_City }
 		completion_reward = {
-		set_technology = { robot_securitron_tech_2  = 1 }
-		add_ideas = securitron2
+			set_technology = { 
+				robot_securitron_tech_2  = 1
+				tools_tech_level_scientific = 1
 			}
+			add_ideas = securitron2
 		}
+	}
 
 	focus = {#NEVADA - Robco
 		id = Enc_Robco_Reborn
@@ -4871,13 +4902,16 @@ focus = {#NEVADA - second city
 		cost = 5.8
 		prerequisite = { focus = Enc_Platinum_Chip }
 		completion_reward = {
-				add_tech_bonus = {
+			add_tech_bonus = {
 				name = robotics_armour_bonus
 				bonus = 0.5
 				uses = 2
 				category = robotics_tech_category
 			}
-
+			set_technology = {
+				robotics_tech_level_scientific = 1
+				electronics_tech_level_scientific = 1
+			}
 		}
 	}
 	focus = {#NEVADA - Boom
@@ -5522,7 +5556,9 @@ focus = {#NEVADA - second city
 		}
 		select_effect  = { army_experience = -50 }
 		cost = 5.8
-		completion_reward = { add_ideas = enc_disciplined_soldiers }
+		completion_reward = { 
+			add_ideas = enc_disciplined_soldiers 
+		}
 	}
 	focus = {#Military - quantity - rank and file infantry
 		id = enc_rank_and_file_infantry
@@ -5893,6 +5929,7 @@ focus = {#NEVADA - second city
 		cost = 5.8
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.5 uses = 2 category = naval_tech_category}
+			set_technology = { naval_tech_level_scientific = 1 }
 		}
 	}
 
@@ -6471,6 +6508,17 @@ focus = {#NEVADA - second city
 				uses = 1
 				category = industry
 			}
+			set_technology = { 
+				special_forces_tech_level_scientific = 1 
+				vehicles_tech_level_scientific = 1 		
+				air_tech_level_scientific = 1 			
+				naval_tech_level_scientific = 1 			
+				tools_tech_level_scientific = 1 			
+				habitation_tech_level_scientific = 1 	
+				exploitation_tech_level_scientific = 1 	
+				electronics_tech_level_scientific = 1 	
+				enclave_pa_unlock_tech = 1
+			}
 		}
 	}
 
@@ -6584,6 +6632,7 @@ focus = {#NEVADA - second city
 		completion_reward = {
 			add_ideas = tla_efficiency_code2
 			add_ideas = robotic_army_purist
+			set_technology = {robotics_tech_level_scientific = 1}
 		}
 	}
 

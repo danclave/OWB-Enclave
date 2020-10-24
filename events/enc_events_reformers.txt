@@ -2990,6 +2990,7 @@ country_event = { #86 - Bomb Bay
 		name = enc_reformers.86.a
 		set_technology = {
 			high_fighter_tech = 1
+			air_tech_level_scientific = 1
 		}
 	}
 }
@@ -4738,6 +4739,7 @@ country_event = { #128 New Vegas
 	option = { #
 		name = enc_reformers.128.b
 		add_stability = 0.05
+		set_technology = {habitation_tech_level_scientific = 1}
 	}
 }
 
@@ -5443,6 +5445,7 @@ country_event = { #152 cars
 				instant_build = yes
 			}
 		}
+		set_technology = { vehicles_tech_level_scientific = 1 }
 	}
 }
 
@@ -9627,6 +9630,7 @@ country_event = { #320 - The Mexican Expedition
 			uses = 4
 			category = robotics_tech_category
 		}
+		set_technology = {robotics_tech_level_scientific = 1}
 		hidden_effect = {
 			scoped_sound_effect = deathscream
 			country_event = {
@@ -9642,6 +9646,7 @@ country_event = { #320 - The Mexican Expedition
 			uses = 4
 			category = robotics_tech_category
 		}
+		set_technology = {robotics_tech_level_scientific = 1}
 		hidden_effect = {
 			scoped_sound_effect = deathscream
 			country_event = {
