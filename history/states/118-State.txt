@@ -1,0 +1,24 @@
+state = {
+	id = 118
+	name = "STATE_CHESTER"
+	manpower = 2895
+	state_category = rural
+
+	resources = {
+		metal = 3
+		water = 2
+	}
+
+	history = {
+		owner = ERB
+		add_core_of = ERB
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+
+	provinces = {
+		4982 5070 4984 8806 8805 1197
+	}
+}
