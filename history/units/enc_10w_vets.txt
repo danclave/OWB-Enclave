@@ -1,13 +1,13 @@
 ﻿division_template = {
-	name = "Enclave Veterans (10w)"
+	name = "Veteran Division"
 	is_locked = NO
 	template_counter= 90
 	regiments = {
 		power_armour = { x = 0 y = 0 }
 		power_armour = { x = 0 y = 1 }
 		power_armour = { x = 0 y = 2 }
-		power_armour = { x = 0 y = 3 }
-		power_armour = { x = 0 y = 4 }
+		power_armour = { x = 1 y = 0 }
+		power_armour = { x = 1 y = 1 }
 	}
 	priority = 2
 }
@@ -16,7 +16,7 @@ units = {
 	division {
 		name = "Enclave Veterans"
 		location = 8479
-		division_template = "Enclave Veterans (10w)"
+		division_template = "Veteran Division"
 		start_experience_factor = 1.0
 		start_equipment_factor = 0.01
 	}

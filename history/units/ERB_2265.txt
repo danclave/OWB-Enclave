@@ -5,11 +5,11 @@
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
-		infantry = { x = 0 y = 3 }
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
-		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
 	}
 }
 division_template = {
@@ -19,8 +19,8 @@ division_template = {
 		power_armour = { x = 0 y = 0 }
 		power_armour = { x = 0 y = 1 }
 		power_armour = { x = 0 y = 2 }
-		power_armour = { x = 0 y = 3 }
-		power_armour = { x = 0 y = 4 }
+		power_armour = { x = 1 y = 0 }
+		power_armour = { x = 1 y = 1 }
 	}	
 }
 

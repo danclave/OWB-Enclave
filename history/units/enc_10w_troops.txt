@@ -1,11 +1,11 @@
 ﻿division_template = {
-	name = "10w PA Division"
+	name = "Remnant Division"
 	regiments = {
 		power_armour = { x = 0 y = 0 }
 		power_armour = { x = 0 y = 1 }
 		power_armour = { x = 0 y = 2 }
-		power_armour = { x = 0 y = 3 }
-		power_armour = { x = 0 y = 4 }
+		power_armour = { x = 1 y = 0 }
+		power_armour = { x = 1 y = 1 }
 	}
 }
 units = {
@@ -13,7 +13,7 @@ units = {
 	division {
 		name = "Enclave Remnants"
 		location = 8479
-		division_template = "10w PA Division"
+		division_template = "Remnants Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
@@ -21,29 +21,14 @@ units = {
 	division {
 		name = "Enclave Remnants"
 		location = 8479
-		division_template = "10w PA Division"
+		division_template = "Remnants Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
 	division {
 		name = "Enclave Remnants"
 		location = 8479
-		division_template = "10w PA Division"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1.0
-	}
-	
-	division {
-		name = "Enclave Remnants"
-		location = 8479
-		division_template = "10w PA Division"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1.0
-	}
-	division {
-		name = "Enclave Remnants"
-		location = 8479
-		division_template = "10w PA Division"
+		division_template = "Remnants Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
@@ -51,7 +36,22 @@ units = {
 	division {
 		name = "Enclave Remnants"
 		location = 8479
-		division_template = "10w PA Division"
+		division_template = "Remnants Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	division {
+		name = "Enclave Remnants"
+		location = 8479
+		division_template = "Remnants Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+	}
+	
+	division {
+		name = "Enclave Remnants"
+		location = 8479
+		division_template = "Remnants Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 1.0
 	}
