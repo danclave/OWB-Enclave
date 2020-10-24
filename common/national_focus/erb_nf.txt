@@ -1885,7 +1885,7 @@ focus_tree = {
 		cost = 5.8
 		completion_reward = { 
 			add_ideas = ENC_PA_production2 
-			enclave_pa_unlock_tech = 1
+			set_technology = {enclave_pa_unlock_tech = 1}
 		}
 	}
 	focus = {#SEPERATION - fighter yets
