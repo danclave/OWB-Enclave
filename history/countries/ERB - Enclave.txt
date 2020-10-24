@@ -56,6 +56,7 @@ set_technology = {
 	power_armour_enclave_1 = 1
 	vertibird_tech = 1
 	vertibird_cas_tech = 1
+	implant_tech_visibility_tech = 1
 
 	#special_forces_tech_level_scientific = 1
 	#robotics_tech_level_scientific = 1

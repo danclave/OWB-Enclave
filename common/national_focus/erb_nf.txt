@@ -1777,6 +1777,7 @@ focus_tree = {
 				tools_tech_level_scientific = 1
 				exploitation_tech_level_scientific = 1
 				electronics_tech_level_scientific = 1
+				implant_tech_access_tech = 1
 			}
 			add_ideas = ENC_energy_production
 		}
@@ -7023,6 +7024,7 @@ focus = {#NEVADA - second city
 			}
 			add_stability = 0.10
 			add_war_support = 0.10
+			set_technology = {implant_tech_access_tech = 1}
 		}
 		cost = 5.8
  }
@@ -7039,6 +7041,7 @@ focus = {#NEVADA - second city
 			add_state_core = 291 # VLT city
 			add_stability = -0.20
 			add_war_support = -0.20
+			set_technology = {implant_tech_access_tech = 1}
 		}
 		cost = 5.8
  }
