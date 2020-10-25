@@ -156,8 +156,8 @@ lose_suspicion_wasted_tt:0 "§RSome suspicion loss will be wasted!§!\n"
 gain_suspicion_tt:0 "§YNCR suspicion§! will go up by §+§![?suspicion_change_var|-0]§! £pol_power\n\n"
 
 gannon_returns: "Arcade Ganon has returned to the Enclave"
-costs_200_caps: "£GFX_currency_cap_texticon  §G200§!"
-costs_200_caps_blocked: "£GFX_currency_cap_texticon  §R200 Caps§!"
+costs_200_caps: "§G200.00§  [GetCapTxt]"
+costs_200_caps_blocked: "§R200.00§  [GetCapTxt]!"
 
 enc_salvatores_tolerated_flag: "Salvatores tolerated"
 enc_wrights_tolerated_flag: "Wrights tolerated"
