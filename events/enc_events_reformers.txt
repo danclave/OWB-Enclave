@@ -2841,12 +2841,10 @@ country_event = { #81 - Economic Policy
 		hidden_effect = {
 			news_event = { id = enc_reformers.357 days = 100 }
 		}
-		custom_effect_tooltip = enc_reformers.81.a_tt
 	}
 	option = { #	NCRD
 		name = enc_reformers.81.b
 		complete_national_focus = enc_NCR_dollar
-		custom_effect_tooltip = newline
 		add_stability = 0.05
 		set_country_flag = currencyncrdollar
 		swap_ideas = {
