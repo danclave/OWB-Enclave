@@ -3417,6 +3417,13 @@ country_event = { #101 Axis of Evil
 				value = 200
 			}
 		}
+		LAC = {
+			add_ai_strategy = {
+				type = alliance
+				id = "CES"
+				value = 200
+			}
+		}
 		CES = {
 			declare_war_on = {
 				target = ERB
