@@ -7985,7 +7985,7 @@ country_event = { #226 - TRL Buff
 	trigger = {
 		tag = ERB
 		has_completed_focus = enc_reform
-		has_full_control_of_state = 235 # the Warrens
+		has_full_control_of_state = 285 # New Reno
 	}
 	mean_time_to_happen = {
 		days = 30
