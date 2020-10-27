@@ -174,7 +174,8 @@ DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER  = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = west_legion_east_legion_cant_call
-				always = no
+				# if it's The Enclave/America, of course the entire legion will fight as one, otherwise, don't care
+				tag = ERB			
 			}
 		}
 		else_if = {

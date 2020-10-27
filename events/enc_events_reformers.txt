@@ -7878,6 +7878,7 @@ news_event = { #223 - The Legion Marches
 									is_guaranteed_by = CES
 									tag = ERB
 									tag = ARM
+									tag = PNT # ignore the Ciphers, there may not be an invasion route
 									CES = {
 										has_annex_war_goal = PREV
 									}
