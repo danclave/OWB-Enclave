@@ -3187,7 +3187,6 @@ ENC_securing_borders = {
 			NOT = {
 				country_exists = NCR
 			}
-			has_country_flag = enc_ces_threat
 		}
 		fire_only_once = no
 		is_good = no
