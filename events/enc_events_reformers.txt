@@ -3423,6 +3423,12 @@ country_event = { #101 Axis of Evil
 				type = annex_everything
 			}
 		}
+		LAC = {
+			add_to_war = {
+				targeted_alliance = CES
+				enemy = ERB
+			}
+		}
 	}
 }
 
@@ -7851,16 +7857,27 @@ news_event = { #223 - The Legion Marches
 		CES = {
 			random_neighbor_country = {
 				limit = {
-					is_in_faction = no
-					NOT = {
-						OR = {
-							is_in_faction_with = CES
-							has_non_aggression_pact_with = CES
-							is_guaranteed_by = CES
-							tag = ERB
-							tag = ARM
-							CES = {
-								has_annex_war_goal = PREV
+					OR = {
+
+						# target New Canaan
+						tag = NCN
+
+						# or anyone that's in League with New Canaan, Caesar really wants it gone
+						is_in_faction_with = NCN
+						
+						AND = {
+							is_in_faction = no
+							NOT = {
+								OR = {
+									is_in_faction_with = CES
+									has_non_aggression_pact_with = CES
+									is_guaranteed_by = CES
+									tag = ERB
+									tag = ARM
+									CES = {
+										has_annex_war_goal = PREV
+									}
+								}
 							}
 						}
 					}

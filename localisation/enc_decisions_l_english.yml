@@ -197,7 +197,7 @@ ENC_WBH_expansion_desc: "With the collapse of the Troll Warren and the lack of o
 ENC_TRLexpansion: "The Troll Warren Marches"
 ENC_TRLexpansion_desc: "More like Swoll Warren, Mr. President. More like Swoll Warren."
 ENC_CES_expansion: "The Legion Marches"
-ENC_CES_expansion_desc: "With the fall of New California and New Canaan, the greatest opponents of Legion lie in ashes. Who is going to stop Caesar in his bid to conquer the Wastes?"
+ENC_CES_expansion_desc: "With the fall of New California, the greatest opponent of Legion lie in ashes. Who is going to stop Caesar in his bid to conquer the Wastes?"
 ENC_oppose_legion: "Aid to the Foes of the Legion"
 ENC_oppose_legion_desc: "The Reunited States aren't the only ones who stand against Caesar.  With some proper training, we can bleed him before he reaches America."
 erb_aid_foe_legion: "Aid to [From.GetName]"
