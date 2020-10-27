@@ -8245,7 +8245,6 @@ news_event = { #233 - Legion Conquest of New Canaan
 	}	# quick
 	option = { # Now they're a threat
 		name = enc_reformers.233.a
-		set_country_flag = enc_ces_threat
 		CES = {
 			add_ideas = ENC_terror_of_wastes
 		}
