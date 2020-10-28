@@ -2835,8 +2835,12 @@ country_event = { #81 - Economic Policy
 		set_global_flag = us_dollar_available
 		set_country_flag = accept_usdollar
 		swap_ideas = {
-			remove_idea = currencygenericcap
+			remove_idea = currencycollapsedcurrency
 			add_idea = currencyusd
+		}
+		swap_ideas = {
+			remove_idea = worthless_wages
+			add_idea = standard_military
 		}
 		hidden_effect = {
 			news_event = { id = enc_reformers.357 days = 100 }
@@ -2848,8 +2852,12 @@ country_event = { #81 - Economic Policy
 		add_stability = 0.05
 		set_country_flag = currencyncrdollar
 		swap_ideas = {
-			remove_idea = currencygenericcap
+			remove_idea = currencycollapsedcurrency
 			add_idea = currencyncrdollar
+		}
+		swap_ideas = {
+			remove_idea = worthless_wages
+			add_idea = standard_military
 		}
 	}
 }
@@ -2864,7 +2872,6 @@ country_event = { #82 - End of Bottlecaps
 	option = { #	USD
 		name = enc_reformers.82.a
 		add_ideas = Enc_Fiat_Currency
-		subtract_from_variable = { caps_expense_modifier = 0.25 }
 	}
 }
 
@@ -6027,26 +6034,20 @@ news_event = { #170 - Dark Age
 		change_legitimacy = yes
 		add_ideas = {
 			enc_NCR_resistance
-		}
-		add_ideas = {
 			enc_NCR_instability
-		}
-		add_ideas = {
 			enc_NCR_power_struggle
-		}
-		add_ideas = {
 			enc_disorganized_army
-		}
-		add_ideas = {
 			enc_collapsed_economy
-		}
-		add_ideas = {
 			collapsed_trade
+			worthless_wages
 		}
 		delete_unit_template_and_units = {
 			division_template = "Rebel Militia"
 		}
-		add_to_variable = { caps_expense_modifier = 1 }
+		swap_ideas = {
+			remove_idea = currencygenericcap
+			add_idea = currencycollapsedcurrency
+		}
 		set_country_flag = enc_mid_game
 		custom_effect_tooltip = enc_reformers.170.a_tt
 		clr_country_flag = has_unique_trade_laws
@@ -11391,7 +11392,11 @@ news_event = { #356 - Taxes
 	is_triggered_only = yes
 	option = { #What now
 		name = enc_reformers.356.a
-		add_to_variable = { caps_expense_modifier = 1 }
+		swap_ideas = {
+			remove_idea = currencynocurrency
+			add_idea = currencygenericcap
+		}
+		
 		custom_effect_Tooltip = enc_reformers.356.a_tt
 	}
 }

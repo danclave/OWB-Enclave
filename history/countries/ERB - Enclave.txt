@@ -290,24 +290,28 @@ every_country = {
 }
 
 # IDEAS
-add_ideas = ENC_infighting
-add_ideas = enc_scientists
-add_ideas = ENC_officers
-add_ideas = ENC_special_forces
+add_ideas = {
+	ENC_infighting
+	enc_scientists
+	ENC_officers
+	ENC_special_forces
 
-add_ideas = enc_complete_chaos
-add_ideas = enc_protected_by_bunker
+	enc_complete_chaos
+	enc_protected_by_bunker
 
-add_ideas = the_remnants
-add_ideas = enc_outsider_law_none
-add_ideas = hidden_economy
-add_ideas = enc_disorganized_economy
-add_ideas = enc_press_none
-add_ideas = training_law_navarro_veterans
+	the_remnants
+	enc_outsider_law_none
+	hidden_economy
+	enc_disorganized_economy
+	enc_press_none
+	training_law_navarro_veterans
+
+	currencynocurrency
+}
 
 add_manpower = 500
 
-# 4rth of july
+# 4th of july
 country_event = { id = enc_reformers.23 days = 25 }
 
  set_variable = {
@@ -325,5 +329,3 @@ country_event = { id = enc_reformers.23 days = 25 }
         value = -8000
     }
 }
-
-set_variable = { caps_expense_modifier = 0.0 }

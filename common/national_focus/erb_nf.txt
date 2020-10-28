@@ -22,8 +22,6 @@ focus_tree = {
 		completion_reward = {
 			# Our Escape event with 3 choices
 			country_event = { id = enc.1 }
-			set_variable = { caps_expense_modifier = 0.0 }
-
 		}
 	}
 	focus = {#Our Choice
@@ -2734,7 +2732,6 @@ focus_tree = {
 			add_stability = 0.05
 			add_political_power = 100
 			country_event = { id = enc_reformers.81 }
-			set_variable = { caps_expense_modifier = 1 }
 			custom_effect_tooltip = enc_federal_reserve_tt
 		}
 	}
