@@ -1,0 +1,647 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+@CAPS_UNIT_DIVISOR = 80
+###Get cost of MP in training q
+defined_text = {
+	name = GetRecruitCosts
+	text = {
+		trigger = {
+			precalculate_military_expenses = yes
+			set_temp_variable = { caps_daily_diff_before = temp_expense_calc }
+			###Turn into battalions
+			set_temp_variable = { manpower_conversion = amount_manpower_in_deployment_queue }
+			divide_temp_variable = { manpower_conversion = 25 }
+			###Preform normal MP calcs
+			set_temp_variable = { manpower_temp = num_battalions  }
+			set_temp_variable = { battalions_spec_ops = num_battalions_with_type@spec_ops }
+			add_to_temp_variable = { battalions_spec_ops = num_battalions_with_type@power_armour }
+			add_to_temp_variable = { battalions_spec_ops = num_battalions_with_type@power_armour_fireteam_infantry }
+			add_to_temp_variable = { battalions_spec_ops = num_battalions_with_type@power_armour_demolitions_infantry }
+			set_temp_variable = { battalions_robots = num_battalions_with_type@combat_robot }
+			add_to_temp_variable = { battalions_robots = num_battalions_with_type@support_robot }
+			add_to_temp_variable = { battalions_robots = num_battalions_with_type@security_robot }
+			add_to_temp_variable = { battalions_robots = num_battalions_with_type@militia }
+			subtract_from_temp_variable = { manpower_temp = battalions_spec_ops }
+			subtract_from_temp_variable = { manpower_temp = battalions_robots }
+			###Same as above, but modified for increase costs, every special = 2 normal
+			multiply_temp_variable = { battalions_spec_ops = 2 }
+			###Same as above, but modified for increase costs, every robot = 4 normal
+			multiply_temp_variable = { battalions_robots = 0.25 }
+			###Add together new costs
+			add_to_temp_variable = { manpower_temp = battalions_spec_ops }
+			add_to_temp_variable = { manpower_temp = battalions_robots }
+			### Divisor
+			divide_temp_variable = { manpower_temp = @CAPS_UNIT_DIVISOR }
+			###Square
+			multiply_temp_variable = { manpower_temp = manpower_temp }
+			###Invert due to square
+			multiply_temp_variable = { manpower_temp = -1 }
+			###Subtract out current expenses for diff
+			set_temp_variable = { caps_daily_diff_after = manpower_temp }
+			get_caps_daily_difference = yes
+			###Modifiers
+			set_temp_variable = { expense_modifier_temp = 1 }
+			set_temp_variable = { temp_expense_calc = caps_daily_temp }
+			add_to_temp_variable = { expense_modifier_temp = modifier@caps_expense_modifier  }
+			clamp_temp_variable = {
+				var = expense_modifier_temp
+				min = 0
+			}
+			multiply_temp_variable = { temp_expense_calc = expense_modifier_temp }
+		}
+		localization_key = "recuit_pop_calc_tt"
+	}
+}
+###Cost trigger localization. Changes per need
+defined_text = {
+	name = GetCapCostTrigger
+	text = {
+		trigger = {
+			check_variable = { caps_display_temp < 0 }
+			set_temp_variable = { caps_trigger_calc = caps_display_temp }
+			multiply_temp_variable = {
+				caps_trigger_calc = -1
+			}
+		}
+		localization_key = "caps_trigger_negative"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { caps_transaction_temp = caps_diff }
+			multiply_temp_variable = { caps_transaction_temp = -1 }
+		}
+		localization_key = "caps_trigger_positive"
+	}
+}
+defined_text = {
+	name = GetAddCapTT
+	text = {
+		trigger = {
+			check_variable = { caps_to_add > 0 }
+		}
+		localization_key = "add_caps_positive_tt"
+	}
+	text = {
+		trigger = {
+
+		}
+		localization_key = "add_caps_negative_tt"
+	}
+}
+defined_text = {
+	name = GetTransactionCapTT
+	text = {
+		trigger = {
+			check_variable = { caps_to_add > 0 }
+		}
+		localization_key = "transaction_caps_positive_tt"
+	}
+	text = {
+		trigger = {
+
+		}
+		localization_key = "transaction_caps_negative_tt"
+	}
+}
+defined_text = {
+	name = GetStockActual
+	text = {
+		trigger = {
+			add_to_temp_variable = {
+				minimum_stock_temp = 1
+			}
+			always = yes
+		}
+		localization_key = market_trigger_scripted_tt
+	}
+}
+###Calculates expenses dynamically for tooltips
+defined_text = {
+	name = PrecalculateCapsIncome
+	text = {
+		trigger = {
+			set_temp_variable = { income_display_temp = caps_income }
+			set_temp_variable = {
+				temp_modifier_cost = modifier@caps_income_modifier
+			}
+			add_to_temp_variable = {
+				temp_modifier_cost = 1
+			}
+			multiply_temp_variable = { income_display_temp = temp_modifier_cost }
+			add_to_temp_variable = { income_display_temp = modifier@caps_flat_income_modifier }
+			always = yes
+		}
+		localization_key = caps_income_calc_tt
+	}
+}
+defined_text = {
+	name = PrecalculateCapsExpenes
+	text = {
+		trigger = {
+			always = yes
+			precalculate_military_expenses = yes
+			set_temp_variable = {
+				temp_modifier_cost = modifier@caps_expense_modifier
+			}
+			add_to_temp_variable = {
+				temp_modifier_cost = 1
+			}
+			multiply_temp_variable = { temp_expense_calc = temp_modifier_cost }
+		}
+		localization_key = caps_expense_calc_tt
+	}
+}
+###Calculates net dynamically for tooltips
+defined_text = {
+	name = PrecalculateCapsNet
+	text = {
+		trigger = {
+			always = yes
+			precalculate_military_expenses = yes
+			set_temp_variable = { caps_income_temp = caps_income }
+			set_temp_variable = { caps_expense_temp = temp_expense_calc }
+			set_temp_variable = { temp_modifier_income = modifier@caps_income_modifier }
+			set_temp_variable = { temp_modifier_expense = modifier@caps_expense_modifier }
+			add_to_temp_variable = {
+				temp_modifier_income = 1
+			}
+			add_to_temp_variable = {
+				temp_modifier_expense = 1
+			}
+			multiply_temp_variable = {
+				caps_expense_temp = temp_modifier_expense
+			}
+			multiply_temp_variable = {
+				caps_income_temp = temp_modifier_income
+			}
+			set_temp_variable = { caps_total_temp = caps_income_temp }
+			add_to_temp_variable = { caps_total_temp = caps_expense_temp }
+			add_to_temp_variable = { caps_total_temp = modifier@caps_flat_income_modifier }
+			set_temp_variable = {
+				temp_net_calc = caps_total_temp
+			}
+		}
+		localization_key = caps_net_calc_tt
+	}
+}
+###Passes correct gfx string to use for display
+defined_text = {
+	name = GetCapDisplay
+	text = {
+		trigger = {
+			ROOT = { has_idea = currencyncrdollar }
+		}
+		localization_key = "capdisplayncr"
+	}
+	text = {
+		trigger = {
+			ROOT = { has_idea = currencycesdenarius }
+		}
+		localization_key = "capdisplaylegion"
+	}
+	text = {
+		trigger = {
+			ROOT = { has_idea = currencycad }
+		}
+		localization_key = "capdisplaycad"
+	}
+	text = {
+		trigger = {
+			ROOT = { has_idea = currencyusd }
+		}
+		localization_key = "capdisplayusd"
+	}
+	text = {
+		trigger = {
+			ROOT = { has_idea = currencypeso }
+		}
+		localization_key = "capdisplaypeso"
+	}
+	text = {
+		trigger = {
+			ROOT = { has_idea = currencytexdollar }
+		}
+		localization_key = "capdisplaytexdollar"
+	}
+	text = {
+		localization_key = "capdisplaygeneric"
+	}
+
+}
+####Same as above
+defined_text = {
+	name = GetCapType
+	text = {
+		trigger = {
+			if = {
+				limit = {
+					exists = yes
+				}
+				has_idea = currencyncrdollar
+			}
+			else = {
+				CONTROLLER = {
+					has_idea = currencyncrdollar
+				}
+			}
+		}
+		localization_key = "ncrdollar"
+	}
+	text = {
+		trigger = {
+			OR = {
+				#has_idea = currencycesdenarius
+				if = {
+					limit = {
+						exists = yes
+					}
+					has_idea = currencycesdenarius
+				}
+				else = {
+					CONTROLLER = {
+						has_idea = currencycesdenarius
+					}
+				}
+			}
+		}
+		localization_key = "cesdenarius"
+	}
+	text = {
+		trigger = {
+			#has_idea = currencycad
+			if = {
+				limit = {
+					exists = yes
+				}
+				has_idea = currencycad
+			}
+			else = {
+				CONTROLLER = {
+					has_idea = currencycad
+				}
+			}
+		}
+		localization_key = "currencycad"
+	}
+	text = {
+		trigger = {
+			#has_idea = currencyusd
+			if = {
+				limit = {
+					exists = yes
+				}
+				has_idea = currencyusd
+			}
+			else = {
+				CONTROLLER = {
+					has_idea = currencyusd
+				}
+			}
+		}
+		localization_key = "currencyusd"
+	}
+	text = {
+		trigger = {
+			#has_idea = currencypeso
+			if = {
+				limit = {
+					exists = yes
+				}
+				has_idea = currencypeso
+			}
+			else = {
+				CONTROLLER = {
+					has_idea = currencypeso
+				}
+			}
+		}
+		localization_key = "currencypeso"
+	}
+	text = {
+		trigger = {
+			if = {
+				limit = {
+					exists = yes
+				}
+				has_idea = currencytexdollar
+			}
+			else = {
+				CONTROLLER = {
+					has_idea = currencytexdollar
+				}
+			}
+		}
+		localization_key = "currencytexdollar"
+	}
+	text = {
+		localization_key = "genericcap"
+	}
+
+}
+###Same as above
+defined_text = {
+	name = GetCapCurrencyType
+	text = {
+		trigger = {
+			CONTROLLER = { has_idea = currencyncrdollar }
+		}
+		localization_key = "currencyncrdollar"
+	}
+	text = {
+		trigger = {
+			CONTROLLER = { has_idea = currencycesdenarius }
+		}
+		localization_key = "currencycesdenarius"
+	}
+	text = {
+		trigger = {
+			CONTROLLER = { has_idea = currencycad }
+		}
+		localization_key = "currencycad"
+	}
+	text = {
+		trigger = {
+			CONTROLLER = { has_idea = currencyusd }
+		}
+		localization_key = "currencyusd"
+	}
+	text = {
+		trigger = {
+			CONTROLLER = { has_idea = currencypeso }
+		}
+		localization_key = "currencypeso"
+	}
+	text = {
+		trigger = {
+			CONTROLLER = { has_idea = currencytexdollar }
+		}
+		localization_key = "currencytexdollar"
+	}
+	text = {
+		localization_key = "currencygenericcap"
+	}
+
+
+}
+###Same as above
+defined_text = {
+	name = GetCapTxt
+	text = {
+		trigger = {
+			#ROOT = { has_idea = currencyncrdollar }
+			if = {
+				limit = {
+					exists = yes
+				}
+				has_idea = currencyncrdollar
+			}
+			else = {
+				CONTROLLER = {
+					has_idea = currencyncrdollar
+				}
+			}
+		}
+		localization_key = "capdisplayncrtxt"
+	}
+	text = {
+		trigger = {
+			#ROOT = { has_idea = currencycesdenarius }
+			if = {
+				limit = {
+					exists = yes
+				}
+				has_idea = currencycesdenarius
+			}
+			else = {
+				CONTROLLER = {
+					has_idea = currencycesdenarius
+				}
+			}
+		}
+		localization_key = "capdisplaylegiontxt"
+	}
+	text = {
+		trigger = {
+			#ROOT = { has_idea = currencycad }
+			if = {
+				limit = {
+					exists = yes
+				}
+				has_idea = currencycad
+			}
+			else = {
+				CONTROLLER = {
+					has_idea = currencycad
+				}
+			}
+		}
+		localization_key = "capdisplaycadtxt"
+	}
+	text = {
+		trigger = {
+			#ROOT = { has_idea = currencyusd }
+			if = {
+				limit = {
+					exists = yes
+				}
+				has_idea = currencyusd
+			}
+			else = {
+				CONTROLLER = {
+					has_idea = currencyusd
+				}
+			}
+		}
+		localization_key = "capdisplayusdtxt"
+	}
+	text = {
+		trigger = {
+			#ROOT = { has_idea = currencypeso }
+			if = {
+				limit = {
+					exists = yes
+				}
+				has_idea = currencypeso
+			}
+			else = {
+				CONTROLLER = {
+					has_idea = currencypeso
+				}
+			}
+		}
+		localization_key = "capdisplaypesotxt"
+	}
+	text = {
+		trigger = {
+			#ROOT = { has_idea = currencytexdollar }
+			if = {
+				limit = {
+					exists = yes
+				}
+				has_idea = currencytexdollar
+			}
+			else = {
+				CONTROLLER = {
+					has_idea = currencytexdollar
+				}
+			}
+		}
+		localization_key = "capdisplaytexdollartxt"
+	}
+	text = {
+		localization_key = "capdisplaygenerictxt"
+	}
+
+}
+###Same as above
+defined_text = {
+	name = GetCapCurrencyInfo
+	text = {
+		trigger = {
+			ROOT = { has_idea = currencyncrdollar }
+		}
+		localization_key = "currencyncrdollar_info"
+	}
+	text = {
+		trigger = {
+			ROOT = { has_idea = currencycesdenarius }
+		}
+		localization_key = "currencycesdenarius_info"
+	}
+	text = {
+		trigger = {
+			ROOT = { has_idea = currencycad }
+		}
+		localization_key = "currencycad_info"
+	}
+	text = {
+		trigger = {
+			ROOT = { has_idea = currencyusd }
+		}
+		localization_key = "currencyusd_info"
+	}
+	text = {
+		trigger = {
+			ROOT = { has_idea = currencypeso }
+		}
+		localization_key = "currencypeso_info"
+	}
+	text = {
+		trigger = {
+			ROOT = { has_idea = currencytexdollar }
+		}
+		localization_key = "currencytexdollar_info"
+	}
+	text = {
+		localization_key = "currencygenericcap_info"
+	}
+
+}
+###Same as above
+defined_text = {
+	name = GetLongCapTT
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = "CAPS_TOOLTIP_delayed_real"
+	}
+}
+###Changes tooltip based on bailed out status
+defined_text = {
+	name = GetBankruptEventTT
+	text = {
+		trigger = {
+			has_country_flag = bailed_out
+		}
+		localization_key = bankrupt_event_1_tt_1
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = bankrupt_event_1_tt_2
+	}
+}
+###Gets Chem Decision Data
+defined_text = {
+	name = GetChemDecisionWithdrawl
+	text = {
+		trigger = {
+			set_temp_variable = {
+				temp_withdrawl = chem_withdrawl_variable
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = chem_withdrawl_effect
+						}
+					}
+				}
+				set_temp_variable = {
+					temp_withdrawl = 0
+				}
+			}
+			add_to_temp_variable = {
+				temp_withdrawl = 2
+			}
+			set_temp_variable = {
+				temp_chance = 15
+			}
+			multiply_temp_variable = {
+				temp_chance = chem_withdrawl_variable
+			}
+			set_temp_variable = {
+				temp_chance_total = temp_chance
+			}
+			add_to_temp_variable = {
+				temp_chance_total = 100
+			}
+			divide_temp_variable = {
+				temp_chance = temp_chance_total
+			}
+		}
+		localization_key = "chem_decision_effect_tooltip"
+	}
+
+}
+defined_text = {
+	name = GetArmyWagesTutorialText
+	text = {
+		trigger = {
+			has_country_flag = wages_opt_out
+		}
+		localization_key = tutorial_caps_2_can
+	}
+	text = {
+		trigger = {
+
+		}
+		localization_key = tutorial_caps_2_cannot
+	}
+}
+
+defined_text = {
+	name = GetRaiderFocusIcon
+	text = {
+		trigger = {
+			has_country_flag = raider_focus_1
+		}
+		localization_key = "GFX_goal_NCR_The_Tip_of_the_Spear"
+	}
+	text = {
+		trigger = {
+
+		}
+		localization_key = "GFX_goal_NEW_new_world_old_ideas"
+	}
+}

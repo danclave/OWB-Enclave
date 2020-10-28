@@ -1,0 +1,577 @@
+###VARS
+###Maximum caps
+@CAPS_MAX_CLAMP = 25000
+###consumer factories per cap
+@CAPS_CONSUMER_DIVISOR = 2
+###mil factories per cap
+@CAPS_MIL_FACTORY_DIVISOR = -4
+### resources per cap
+@CAPS_RESOURCE_DIVISOR = 20
+###max from trade
+@CAPS_FROM_RESOURCE_MAX = 25
+###miltia battalions per cap
+@CAPS_MILITIA_DIVISOR = -40
+###other units per cap
+@CAPS_UNIT_DIVISOR = 40
+###caps siphoned to overlord
+@CAPS_OVERLORD_MULTIPLIER = 0.75
+###caps lost to corruption
+@CORRUPTION_MULTI = 0.33
+###stability per negative cap
+@BANKRUPT_MULTI = 0.005
+@BANKRUPT_CLAMP = -0.7
+@BANKRUPT_MULTI_SUR = 0.55
+### Change Caps Display
+make_war_go = {
+	start_civil_war = {
+		ideology = ROOT
+		size = 0.8
+	}
+}
+
+add_caps = {
+	###Sound Effect
+	set_temp_variable = { caps_sound_var = random }
+	multiply_temp_variable = { caps_sound_var = 100 }
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { caps_sound_var > 50 }}
+			scoped_sound_effect = "ui_items_bottlecaps_up_01"
+		}
+		else = { scoped_sound_effect = "ui_items_bottlecaps_up_02"}
+		###Precalculate new caps amount
+		set_temp_variable = { caps_display_temp = caps_number_display }
+		### caps_to_add is set outside effect
+		add_to_temp_variable = { caps_display_temp = caps_to_add }
+		###Add bankrupt if needed
+		check_bankrupt = yes
+	}
+	set_variable = { caps_number_display = caps_display_temp }
+	clamp_variable = {
+		var = caps_number_display
+		min = -1000
+		max = @CAPS_MAX_CLAMP
+	}
+	###Custom TT to show transaction
+	custom_effect_tooltip = add_caps_tt
+	if = {
+		limit = {
+			NOT = { has_country_flag = caps_10000_total_achievement }
+		}
+		add_to_variable = { caps_10000_achievement_tracker = caps_to_add }
+		if = {
+			limit = {
+				check_variable = { caps_10000_achievement_tracker > 10000 }
+			}
+			set_country_flag = caps_10000_total_achievement
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = caps_exempt
+		}
+		set_variable = { caps_number_display = 0 }
+	}
+}
+
+### Different Tooltip
+transaction_caps = {
+	#set_temp_variable = { caps_to_add = caps_to_gift }
+	hidden_effect = {
+		add_caps = yes
+	}
+	custom_effect_tooltip = transaction_caps_tt
+
+}
+### Different Tooltip - DEPRECATED USE ADD CAPS
+subtract_caps = {
+	set_temp_variable = { caps_to_add = caps_to_subtract }
+	multiply_temp_variable = { caps_to_add = -1 }
+	hidden_effect = {
+		add_caps = yes
+	}
+	custom_effect_tooltip = add_caps_negative_tt
+
+}
+###Check for bankrupt status
+check_bankrupt = {
+	if = {
+		limit = {
+			AND = {
+				###Triggers for bankrupt
+				check_variable = { caps_number_display < 0 }
+				check_variable = { caps_daily_modified < 0 }
+				is_ai = no
+			}
+		}
+		###Log Caps
+		if = {
+			limit = { has_global_flag = caps_debug_logs }
+			log = "Changing bankrupt caps"
+		}
+		###Calculate the modifiers for dynamic modifier
+		set_variable = { caps_bankrupcy_deficit_stab = caps_daily_modified }
+		multiply_variable = { caps_bankrupcy_deficit_stab = @BANKRUPT_MULTI }
+		clamp_variable = {
+			var = caps_bankrupcy_deficit_stab
+			min = @BANKRUPT_CLAMP
+			max = 0
+		}
+		set_variable = { caps_bankrupcy_deficit_sur = caps_bankrupcy_deficit_stab }
+		multiply_variable = { caps_bankrupcy_deficit_sur = @BANKRUPT_MULTI_SUR }
+		###Add modifier if not applied
+		if = {
+			limit = {
+				NOT = {
+					has_dynamic_modifier = { modifier = caps_bankruptcy_modifier }
+				}
+			}
+			add_dynamic_modifier = { modifier = caps_bankruptcy_modifier }
+			force_update_dynamic_modifier = yes
+			###Start bankrupt event chain -- only happens when intialized bankrupt
+			country_event = bankrupt_events.1
+		}
+	}
+}
+
+###Updates incomes
+update_caps_income = {
+	###This is incase needed in some TT
+	set_temp_variable = { caps_variable_temp = caps_income }
+	if = {
+		limit = {
+			### Calculate caps diff + dumb trigger
+			get_caps_daily_difference = yes
+			always = yes
+		}
+		###caps_daily_temp set from trigger
+		set_variable = { caps_income = caps_daily_temp }
+	}
+	###update caps net
+	update_caps = yes
+}
+### Updates Expenses, same as above
+update_caps_expense = {
+	set_temp_variable = { caps_variable_temp = caps_expense }
+	if = {
+		limit = {
+			### Calculate caps diff + dumb trigger
+			get_caps_daily_difference = yes
+			always = yes
+		}
+		set_variable = { caps_expense = caps_daily_temp }
+	}
+	update_caps = yes
+}
+
+update_caps = {
+	set_temp_variable = { caps_income_temp = caps_income }
+	set_temp_variable = { caps_expense_temp = caps_expense }
+	###Set up temp vars to preserve unmodified numbers
+	set_temp_variable = { caps_income_modifier = modifier@caps_income_modifier }
+	set_temp_variable = { caps_expense_modifier = modifier@caps_expense_modifier }
+	add_to_temp_variable = {
+		caps_income_modifier = 1
+	}
+	add_to_temp_variable = {
+		caps_expense_modifier = 1
+	}
+	clamp_temp_variable = {
+		var = caps_expense_modifier
+		min = 0.1
+	}
+	###Apply modifiers
+	multiply_temp_variable = { caps_income_temp = caps_income_modifier }
+	multiply_temp_variable = { caps_expense_temp = caps_expense_modifier }
+	###Calculate Net
+	set_temp_variable = { caps_total_temp = caps_income_temp }
+	add_to_temp_variable = { caps_total_temp = caps_expense_temp }
+	set_variable = { caps_daily_modified = caps_total_temp }
+	add_to_variable = { caps_daily_modified = modifier@caps_flat_income_modifier }
+	### Check bankrupt status
+	check_bankrupt = yes
+}
+###Update Node Income
+update_country_node_income = {
+	###Pass the right income to the diff function
+	CONTROLLER = {
+		set_temp_variable = { caps_variable_temp = caps_node_income }
+		if = {
+			limit = {
+				### Calculate caps diff + dumb trigger
+				get_caps_daily_difference = yes
+				always = yes
+			}
+			###caps_daily_temp set from trigger
+			###Set controller's new node income
+			set_variable = { caps_node_income = caps_daily_temp }
+		}
+	###Send passthrough to update controller's actual income.
+		set_temp_variable = {
+			caps_diff = caps_diff_passthrough
+		}
+		update_caps_income = yes
+	}
+}
+###Update military costs
+caps_update_military = {
+	###Set pre-calc
+	set_temp_variable = { caps_daily_diff_before = caps_military_upkeep }
+	if = {
+		limit = {
+			always = yes
+			###Get mil expenses trigger
+			get_military_expenses = yes
+		}
+		###Set output of mil expenses trigger to update current expenses
+		set_variable = { caps_military_upkeep = manpower_temp }
+		###Set post-calc
+		set_temp_variable = { caps_daily_diff_after = manpower_temp }
+		###Update expenses
+		update_caps_expense  = yes
+	}
+}
+###Calculate income from consumer goods -- Unused
+caps_update_industry = {
+	set_temp_variable = { caps_daily_diff_before = caps_civilian_income }
+	set_temp_variable = { caps_number_fac_temp = num_of_factories }
+	multiply_temp_variable = { caps_number_fac_temp = modifier@consumer_goods_factor }
+	multiply_temp_variable = { caps_number_fac_temp = 3 }
+	set_temp_variable = { caps_daily_diff_after = caps_number_fac_temp }
+	set_variable = { caps_civilian_income = caps_number_fac_temp }
+	update_caps_income = yes
+}
+chem_iterate_withdrawl = {
+	set_country_flag = {
+		flag = chem_withdrawl_flag
+		days = 40
+		value = 1
+	}
+	if = {
+		limit = {
+			has_dynamic_modifier = { modifier = chem_withdrawl_effect }
+		}
+		add_to_variable = { chem_withdrawl_variable = 2 }
+		clamp_variable = {
+			var = chem_withdrawl_variable
+			max = 10
+		}
+		set_variable = {
+			chem_withdrawl_variable_modifier = chem_withdrawl_variable
+		}
+		multiply_variable = {
+			chem_withdrawl_variable_modifier = -1
+		}
+	}
+	else = {
+		add_dynamic_modifier = {
+			modifier = chem_withdrawl_effect
+		}
+		set_variable = {
+			chem_withdrawl_variable = 2
+		}
+		set_variable = {
+			chem_withdrawl_variable_modifier = -2
+		}
+	}
+}
+
+caps_calculate_military_wages_modifier = {
+	set_temp_variable = {
+		caps_mil_value_temp = caps_military_wages
+	}
+	if = {
+		limit = {
+			check_variable = {
+				caps_military_wages < 50
+			}
+		}
+		multiply_temp_variable = {
+			caps_mil_value_temp = 1.8
+		}
+		subtract_from_temp_variable = {
+			caps_mil_value_temp = 90
+		}
+	}
+	else = {
+		multiply_temp_variable = {
+			caps_mil_value_temp = 0.35
+		}
+	}
+	multiply_temp_variable = {
+		caps_mil_value_temp = 0.01
+	}
+	set_variable = {
+		caps_military_expense_modifier = caps_mil_value_temp
+	}
+	set_variable = { caps_military_org_modifier  = caps_military_expense_modifier }
+	set_variable = { caps_military_recovery_modifier  = caps_military_expense_modifier }
+	multiply_variable = {
+		caps_military_org_modifier = 0.65
+	}
+	multiply_variable = {
+		caps_military_recovery_modifier = 0.45
+	}
+	if = {
+		limit = {
+			check_variable = {
+				caps_military_wages < 50
+			}
+		}
+		set_variable = { caps_military_soft_attack_modifier  = caps_military_expense_modifier }
+		multiply_variable = {
+			caps_military_soft_attack_modifier = 0.25
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				caps_military_wages = 50
+			}
+		}
+		set_variable = {
+			caps_military_expense_modifier = 0
+		}
+		set_variable = { caps_military_org_modifier  = 0 }
+		set_variable = { caps_military_soft_attack_modifier  = 0 }
+	}
+}
+caps_calculate_ai_wage_modifiers = {
+	### Declare temp vars
+	set_temp_variable = { caps_income_temp = caps_income }
+	set_temp_variable = { caps_expense_temp = caps_expense }
+	### Adjust everything based on country modifiers
+	set_temp_variable = { caps_income_modifier_temp = modifier@caps_income_modifier }
+	set_temp_variable = { caps_expense_modifier_temp = modifier@caps_expense_modifier }
+	add_to_temp_variable = { caps_income_modifier_temp = 1 }
+	add_to_temp_variable = { caps_expense_modifier_temp = 1 }
+	### Clamp out to 10%
+	clamp_temp_variable = {
+		var = caps_expense_modifier_temp
+		min = 0.1
+	}
+	multiply_temp_variable = { caps_income_temp = caps_income_modifier_temp }
+	multiply_temp_variable = { caps_expense_temp = caps_expense_modifier_temp }
+	### Add flat caps
+	add_to_temp_variable = { caps_income_temp = modifier@caps_flat_income_modifier }
+	divide_temp_variable = { caps_income_temp = caps_expense_temp }
+	### Invert due to negative expense
+	multiply_temp_variable = { caps_income_temp = -1 }
+
+	### Compare ratio of income - expense
+	if = {
+		limit = {
+			check_variable = { caps_income_temp > 1.4 }
+		}
+		add_to_variable = { caps_military_wages = 10 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { caps_income_temp < 0.85 }
+		}
+		add_to_variable = { caps_military_wages = -10 }
+	}
+	if = {
+		limit = {
+			has_war = no
+		}
+		add_to_variable = { caps_military_wages = -10 }
+	}
+	else = {
+		clamp_variable = {
+			var = caps_military_wages
+			min = 40
+			max = 100
+		}
+	}
+	clamp_variable = {
+		var = caps_military_wages
+		min = 0
+		max = 100
+	}
+	caps_calculate_military_wages_modifier = yes
+}
+###Initalize Caps Data
+caps_country_initialize = {
+	###Tutorial fire
+	if = {
+		limit = {
+			is_ai = no
+		}
+		country_event = {
+			id = tutorial_caps.1
+			days = 5
+		}
+		country_event = {
+			id = tutorial_caps.5
+			days = 1
+		}
+	}
+	else = {
+		country_event = {
+			id = tutorial_caps.5
+			days = 1
+			random_days = 30
+		}
+		country_event = {
+			id = tutorial_caps.51
+			days = 4
+			random = 5
+		}
+	}
+	add_ideas = currencygenericcap
+	if = {
+		limit = {
+			OR = {
+				tag = TTM
+				tag = WHT
+				tag = CES
+				tag = LAC
+				tag = TWO
+			}
+		}
+		swap_ideas = {
+			remove_idea = currencygenericcap
+			add_idea = currencycesdenarius
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				tag = BAR
+				tag = BON
+				tag = DAY
+				tag = MOT
+				tag = NCR
+			}
+		}
+		swap_ideas = {
+			remove_idea = currencygenericcap
+			add_idea = currencyncrdollar
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				tag = TEX
+			}
+		}
+		swap_ideas = {
+			remove_idea = currencygenericcap
+			add_idea = currencytexdollar
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				tag = ERB
+			}
+		}
+		swap_ideas = {
+			remove_idea = currencygenericcap
+			add_idea = currencynocurrency
+		}
+	}
+	#set_variable = { caps_military_wages = 50 }
+	if = {
+		limit = {
+			OR = {
+				is_super_mutant_nation = yes
+				is_brotherhood_nation = yes
+			}
+		}
+		set_country_flag = army_wages_disabled
+	}
+	set_variable = { caps_income = 0 }
+	set_variable = { caps_expense = 0 }
+	set_variable = { caps_daily_modified = 0 }
+	set_variable = { caps_military_upkeep = 0 }
+	set_variable = { caps_military_upkeep = 0 }
+	force_update_nodes = yes
+	hard_enable_all_nodes = yes
+	update_caps_income = yes
+	caps_update_military = yes
+	set_country_flag = caps_country_initalized_complete
+}
+d_caps_country_initialize = {
+	if = {
+		limit = {
+			THIS = {
+				exists = yes
+			}
+		}
+		THIS = {
+			caps_country_initialize = yes
+			log = "Caps initalize [THIS.GetName]"
+		}
+	}
+	else = {
+		FROM = {
+			caps_country_initialize = yes
+			log = "Caps initalize [THIS.GetName]"
+		}
+	}
+}
+
+caps_beta_logger_effect = {
+	add_to_array = {
+		array = logger_historical_income
+		value = caps_income
+	}
+	add_to_array = {
+		array = logger_historical_expense
+		value = caps_expense
+	}
+	add_to_array = {
+		array = logger_historical_upkeep
+		value = caps_military_upkeep
+	}
+	add_to_array = {
+		array = logger_historical_net
+		value = caps_daily_modified
+	}
+	if = {
+		limit = {
+			check_variable = {
+				logger_historical_net^num > 5
+			}
+		}
+		remove_from_array = {
+			array = logger_historical_net
+			index = 0
+		}
+		remove_from_array = {
+			array = logger_historical_upkeep
+			index = 0
+		}
+		remove_from_array = {
+			array = logger_historical_expense
+			index = 0
+		}
+		remove_from_array = {
+			array = logger_historical_income
+			index = 0
+		}
+	}
+}
+
+d_log_historical_caps = {
+	for_each_loop = {
+		array = logger_historical_net
+		log = "Net: [?logger_historical_net^i]"
+		log = "Income: [?logger_historical_income^i]"
+		log = "Expense: [?logger_historical_expense^i]"
+		log = "Upkeep: [?logger_historical_upkeep^i]"
+		log = " "
+	}
+	log = "Logged [?logger_historical_net^num] entries"
+	log = " "
+
+	for_each_loop = {
+		array = logger_historical_captured_nodes
+		log = "Node: [?logger_historical_captured_nodes^i.GetName]"
+		log = "Delta: [?logger_historical_capture_delta^i]"
+		log = " "
+	}
+	log = "Logged [?logger_historical_captured_nodes^num] capture event entries"
+}

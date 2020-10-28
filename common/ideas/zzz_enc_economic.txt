@@ -269,10 +269,8 @@ ideas = {
 			available = {
 			}
 			modifier = {
-				# caps_flat_income_modifier = 0
-				caps_flat_income_modifier = 15 # temporary fix for now
-				# caps_income_modifier = -1
-				caps_income_modifier = 0 # turn this back to normal, since expenses can't go to zero
+				caps_flat_income_modifier = 0
+				caps_income_modifier = -1
 				caps_expense_modifier = -1
 			}
 			cancel_if_invalid = no
