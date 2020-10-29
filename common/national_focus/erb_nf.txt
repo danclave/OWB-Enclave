@@ -379,6 +379,7 @@ focus_tree = {
 						create_wargoal = { type = annex_everything target = PREV }
 					}
 				}
+				clr_country_flag = caps_exempt
 			}
 		}
 	}

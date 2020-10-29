@@ -11404,7 +11404,6 @@ news_event = { #356 - Taxes
 	}
 	option = { #What now
 		name = enc_reformers.356.a
-		clr_country_flag = caps_exempt
 		swap_ideas = {
 			remove_idea = currencynocurrency
 			add_idea = currencygenericcap
