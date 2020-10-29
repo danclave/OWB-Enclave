@@ -2322,6 +2322,13 @@ country_event = { #65 - The Emancipation Proclamations
 				type = annex_everything
 			}
 		}
+		LAC = {
+			add_to_war = {
+				targeted_alliance = CES
+				enemy = ERB
+			}
+		}
+
 		ERB = {
 			division_template = {
 				name = "Rebel Militia"
