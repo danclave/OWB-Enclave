@@ -295,6 +295,8 @@ ideas = {
 			modifier = {
 				stability_factor = -0.05
 				caps_flat_income_modifier = 20 # Money Printer Go Brrr 
+				caps_income_modifier = 0.25
+				caps_expense_modifier = 0.20
 			}
 			cancel_if_invalid = no
 		}
