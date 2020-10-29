@@ -269,8 +269,8 @@ ideas = {
 			available = {
 			}
 			modifier = {
-				caps_flat_income_modifier = 0
-				caps_income_modifier = -1
+				caps_flat_income_modifier = 10
+				caps_income_modifier = 0
 				caps_expense_modifier = -1
 			}
 			cancel_if_invalid = no

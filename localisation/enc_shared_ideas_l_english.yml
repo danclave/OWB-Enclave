@@ -29,8 +29,6 @@ currencynocurrency: "No Currency"
 currencycollapsedcurrency: "Worthless Currency"
 worthless_wages: "Worthless Wages"
 no_wages: "Motivated by Vengeance"
-caps_decision_expense_tt: "Quarterly expenses are made of military upkeep. \nEvery battalion is more expensive than the last.\n   Modified by [?modifier@caps_expense_modifier|-%]"
-caps_decision_net_tt: "Net Quarterly [GetCapType] Profit\n\n   Income modified by [?modifier@caps_income_modifier|+%]\n   Expenses modified by [?modifier@caps_expense_modifier|-%]\n   Flat income: [?modifier@caps_flat_income_modifier|+=]"
 
 #youtubers
 # Francis Jesse Augustine I

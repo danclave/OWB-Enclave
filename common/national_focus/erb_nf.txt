@@ -22,6 +22,10 @@ focus_tree = {
 		completion_reward = {
 			# Our Escape event with 3 choices
 			country_event = { id = enc.1 }
+			swap_ideas = {
+				remove_idea = currencygenericcap
+				add_idea = currencynocurrency
+			}
 		}
 	}
 	focus = {#Our Choice
