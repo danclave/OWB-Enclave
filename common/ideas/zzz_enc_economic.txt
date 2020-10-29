@@ -322,5 +322,25 @@ ideas = {
 			}
 			cancel_if_invalid = no
 		}
+		no_wages = {
+			picture = motivated
+			allowed = {
+				always = no
+			}
+			level = 0
+			removal_cost = -1
+			cost = 20
+			modifier = {
+				consumer_goods_factor = 0.05
+				caps_expense_modifier = 0
+				max_training = 0.10
+				conscription_factor = 0.05
+				experience_gain_army_factor = 0.15
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			cancel_if_invalid = no
+		}
 	}
 }

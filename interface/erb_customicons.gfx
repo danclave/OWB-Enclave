@@ -1386,5 +1386,9 @@ spriteTypes = {
         SpriteType = {#verti_production
             name = "GFX_idea_verti_production"
  		    texturefile = "gfx/interface/ideas/verti_production.dds"
- 	    }    
+ 	    }
+        SpriteType = {
+            name = "GFX_idea_motivated"
+ 		    texturefile = "gfx/interface/ideas/enc_idea_motivated.dds"
+ 	    }   
 }

@@ -305,6 +305,8 @@ add_ideas = {
 	enc_disorganized_economy
 	enc_press_none
 	training_law_navarro_veterans
+
+	no_wages
 }
 
 add_manpower = 500

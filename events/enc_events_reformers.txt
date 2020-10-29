@@ -11396,6 +11396,10 @@ news_event = { #356 - Taxes
 			remove_idea = currencynocurrency
 			add_idea = currencygenericcap
 		}
+		swap_ideas = {
+			remove_idea = no_wages
+			add_idea = standard_military
+		}
 		
 		custom_effect_Tooltip = enc_reformers.356.a_tt
 	}
