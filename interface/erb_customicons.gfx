@@ -1389,6 +1389,6 @@ spriteTypes = {
  	    }
         SpriteType = {
             name = "GFX_idea_motivated"
- 		    texturefile = "gfx/interface/ideas/enc_idea_motivated.dds"
+ 		    texturefile = "gfx/interface/ideas/idea_enc_motivated.dds"
  	    }   
 }
