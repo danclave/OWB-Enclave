@@ -3914,7 +3914,7 @@ focus = {#Legion Border
 		y = 1
 		cost = 5.8
 		completion_reward = {
-		custom_effect_tooltip = enc_Second_Revolution
+			custom_effect_tooltip = enc_Second_Revolution
 		}
 	}
 
