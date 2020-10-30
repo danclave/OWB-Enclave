@@ -189,6 +189,8 @@ ENC_accepted_brahmin_barons: "Brahmin Barons"
 ENC_rejected_brahmin_barons: "Brahmin Barons Evicted"
 ffi_dornan_advice:0 "La Cucaracha"
 ffi_dornan_advice_desc:0 "Sergeant Dornan's training methods have become a little unorthodox, but, well, who are we to criticize?"
+
+currency_enc_usd: "U.S. Dollar"
 ###################################
 # MANPOWER
 ###################################
