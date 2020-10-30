@@ -7887,6 +7887,17 @@ news_event = { #223 - The Legion Marches
 									tag = ERB
 									tag = ARM
 									tag = PNT # ignore the Ciphers, there may not be an invasion route
+									tag = FOR # same reason
+									tag = SIN # ignore the Sinaloa Cartel, might be too difficult across river
+									tag = FFI # same reason
+									tag = BLO
+									tag = TVR
+									tag = ATE
+									tag = ITZ
+									tag = CAF
+									tag = TDT
+									tag = GRH
+									tag = VEG # ignore because, uh, reasons.  Fine, it's to give the player enough time for their focus tree.  Also, if Caesar wants New Vegas, he's going to have to take it by focus
 									CES = {
 										has_annex_war_goal = PREV
 									}
