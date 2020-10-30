@@ -8266,6 +8266,9 @@ news_event = { #233 - Legion Conquest of New Canaan
 		CES = {
 			add_ideas = ENC_terror_of_wastes
 		}
+		WHT = {
+			complete_national_focus = wht_coronation_of_the_brute
+		}
 	}
 }
 
