@@ -1993,6 +1993,121 @@ ENC_pacific_commonwealth1 = {
 			add_political_power = -25
 		}
 	}
+	ENC_DIS = {
+		priority = 300
+		fire_only_once = no
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_pacific_commonwealth
+			country_exists = DIS
+		}
+		complete_effect = {
+			DIS = {
+				every_owned_state = {
+					add_core_of = KLA
+				}
+			}
+			add_political_power = -75
+			ERB = {
+				create_wargoal = {
+					type = annex_everything
+					target = DIS
+				}
+			}
+		}
+	}
+	ENC_CCW = {
+		priority = 300
+		fire_only_once = no
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_pacific_commonwealth
+			country_exists = CCW
+		}
+		complete_effect = {
+			CCW = {
+				every_owned_state = {
+					add_core_of = KLA
+				}
+			}
+			add_political_power = -75
+			ERB = {
+				create_wargoal = {
+					type = annex_everything
+					target = CCW
+				}
+			}
+		}
+	}	
+	ENC_TCA = {
+		priority = 300
+		fire_only_once = no
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_pacific_commonwealth
+			country_exists = TCA
+		}
+		complete_effect = {
+			TCA = {
+				every_owned_state = {
+					add_core_of = KLA
+				}
+			}
+			add_political_power = -75
+			ERB = {
+				create_wargoal = {
+					type = annex_everything
+					target = TCA
+				}
+			}
+		}
+	}	
+	ENC_OLY = {
+		priority = 300
+		fire_only_once = no
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_pacific_commonwealth
+			country_exists = OLY
+		}
+		complete_effect = {
+			OLY = {
+				every_owned_state = {
+					add_core_of = KLA
+				}
+			}
+			add_political_power = -75
+			ERB = {
+				create_wargoal = {
+					type = annex_everything
+					target = OLY
+				}
+			}
+		}
+	}
+	ENC_YAK = {
+		priority = 300
+		fire_only_once = no
+		visible = {
+			tag = ERB
+			has_completed_focus = enc_pacific_commonwealth
+			country_exists = YAK
+		}
+		complete_effect = {
+			YAK = {
+				every_owned_state = {
+					add_core_of = KLA
+				}
+			}
+			add_political_power = -75
+			ERB = {
+				create_wargoal = {
+					type = annex_everything
+					target = YAK
+				}
+			}
+		}
+	}	
 	ENC_preconstruction = {
 		priority = 300
 		fire_only_once = no
