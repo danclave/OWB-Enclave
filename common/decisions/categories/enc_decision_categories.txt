@@ -135,10 +135,24 @@ ENC_render_unto_caesar = {
 	icon = generic_crisis
 	priority = { base = 15 }
 	allowed = {
-		tag = ERB
+		original_tag = ERB
 	}
 	visible = {
-		has_country_flag = ENC_CES_hostile
+		OR = {
+			has_country_flag = ENC_CES_hostile
+			AND = {
+				has_country_flag = ENC_axis_evil
+				NOT = {
+					CES = {
+						OR = {
+							exists = no
+							has_civil_war = YES
+							has_war_with = ERB #Enclave
+						}
+					}
+				}
+			}
+		}
 	}
 }
 

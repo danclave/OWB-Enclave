@@ -903,6 +903,9 @@ ENC_render_unto_caesar = {
 		available = {
 			has_country_flag = ENC_CES_hostile
 		}
+		visible = {
+			has_country_flag = ENC_CES_hostile
+		}
 		is_good = no
 		days_remove = 37
 		remove_effect = {
@@ -926,6 +929,9 @@ ENC_render_unto_caesar = {
 		fire_only_once = YES
 
 		available = {
+			has_country_flag = ENC_CES_hostile
+		}
+		visible = {
 			has_country_flag = ENC_CES_hostile
 		}
 		is_good = no
@@ -1025,7 +1031,7 @@ ENC_render_unto_caesar = {
 			}
 		}
 		visible = {
-			tag = ERB
+			original_tag = ERB
 			has_completed_focus = enc_ss_ceasar_bottom_uprising
 		}
 		complete_effect = {
