@@ -1391,4 +1391,21 @@ spriteTypes = {
             name = "GFX_idea_motivated"
  		    texturefile = "gfx/interface/ideas/idea_enc_motivated.dds"
  	    }   
+        spriteType = {
+            name = "GFX_idea_enc_free_trade"
+            texturefile = "gfx/interface/ideas/laws/idea_generic_free_trade.dds"
+        }
+        spriteType = {
+            name = "GFX_idea_enc_closed_economy"
+            texturefile = "gfx/interface/ideas/laws/idea_generic_closed_economy.dds"
+        }
+        spriteType = {
+            name = "GFX_idea_enc_export_focus"
+            texturefile = "gfx/interface/ideas/laws/idea_generic_export_focus.dds"
+        }
+        spriteType = {
+            name = "GFX_idea_enc_limited_exports"
+            texturefile = "gfx/interface/ideas/laws/idea_generic_limited_exports.dds"
+        }
+
 }

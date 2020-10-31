@@ -260,6 +260,184 @@ ideas = {
 
 			cancel_if_invalid = no
 		}
+
+		enc_free_trade = {
+			visible = {
+				has_completed_focus = enc_reform
+				OR = {
+					NOT = { has_country_flag = ncr_suspicious }
+					NOT = { country_exists = NCR }
+				}
+			}
+			available = {
+				always = yes
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0.5
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.1
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 40.0
+				army_intel_to_others = 20.0
+				caps_country_trade_modifier = 0.30
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_war = no
+					check_variable = {
+						resource@metal > 5
+					}
+					check_variable = {
+						resource@circuitry > 5
+					}
+					check_variable = {
+						resource@energy > 5
+					}
+					check_variable = {
+						resource@advanced > 5
+					}
+					add = 100
+				}
+			}
+		}
+		enc_export_focus = {
+			visible = {
+				has_completed_focus = enc_reform
+				OR = {
+					NOT = { has_country_flag = ncr_suspicious }
+					NOT = { country_exists = NCR }
+				}
+			}
+			available = {
+				always = yes
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0.35
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				civilian_intel_to_others = 20.0
+				navy_intel_to_others = 20.0
+				army_intel_to_others = 10.0
+				caps_country_trade_modifier = 0.20
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_war = no
+					check_variable = {
+						resource@metal > 1
+					}
+					check_variable = {
+						resource@circuitry > 1
+					}
+					add = 999
+				}
+			}
+		}
+		enc_limited_exports = {
+			visible = {
+				has_completed_focus = enc_reform
+				OR = {
+					NOT = { has_country_flag = ncr_suspicious }
+					NOT = { country_exists = NCR }
+				}			
+			}
+			available = {
+				OR = {
+					AND = {
+						has_war = yes
+						any_enemy_country = {
+							ic_ratio = {
+								tag = ROOT
+								ratio > 0.2
+							}
+						}
+					}
+				}
+				use_generic_trade_laws = yes
+			}
+			default = yes
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0.25
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.01
+				civilian_intel_to_others = 10.0
+				navy_intel_to_others = 10.0
+				army_intel_to_others = 5.0
+				caps_country_trade_modifier = 0.10
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					is_major = no
+					is_in_faction = yes
+					has_war = yes
+					add = 98
+				}
+			}
+		}
+		enc_closed_economy = {
+			visible = {
+				has_completed_focus = enc_reform
+				OR = {
+					NOT = { has_country_flag = ncr_suspicious }
+					NOT = { country_exists = NCR }
+				}	
+			}
+			available = {
+				has_war = yes
+				OR = {
+					has_idea = enc_war_economy
+					has_idea = enc_tot_economic_mobilisation
+				}
+				OR = {
+					NOT = {
+						tag = NCR
+					}
+				}
+			}
+			allowed_to_remove = {
+				if = {
+					limit = {
+						original_tag = TNK
+					}
+					always = no
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					factor = 0
+					is_major = no
+					is_in_faction = yes
+					has_war = yes
+				}
+			}
+		}
+
+
 	}
 	hidden_ideas = {
 		currencynocurrency = {

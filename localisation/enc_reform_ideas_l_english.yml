@@ -251,6 +251,11 @@ enc_partial_economic_mobilisation: "Partial Mobilization"
 enc_war_economy: "War Economy"
 enc_tot_economic_mobilisation: "Total Mobilization"
 
+enc_free_trade: "Free Trade"
+enc_export_focus: "Export Focus"
+enc_limited_exports: "Limited Exports"
+enc_closed_economy: "Closed Economy"
+
 ###################################
 # PEOPLE
 ###################################
