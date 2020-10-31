@@ -2851,11 +2851,6 @@ country_event = { #81 - Economic Policy
 		}
 		hidden_effect = {
 			add_ideas = currencyusd
-			set_country_flag = {
-				flag = caps_military_wage_lockout
-				value = 1
-				days = 140
-			}
 			news_event = { id = enc_reformers.357 days = 100 }
 		}
 	}
@@ -2871,13 +2866,6 @@ country_event = { #81 - Economic Policy
 		swap_ideas = {
 			remove_idea = worthless_wages
 			add_idea = standard_military
-		}
-		hidden_effect = {
-			set_country_flag = {
-				flag = caps_military_wage_lockout
-				value = 1
-				days = 140
-			}
 		}
 	}
 }
