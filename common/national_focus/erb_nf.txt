@@ -35,7 +35,6 @@ focus_tree = {
 		relative_position_id = enc_ourescape
 		x = 0
 		y = 1
-		mutually_exclusive = { }
 		prerequisite = { focus=enc_ourescape }
 		cost = 1
 		available_if_capitulated = yes
@@ -4313,6 +4312,7 @@ focus = {#Legion Border
 		relative_position_id = enc_support_old_world_party
 		x = -1
 		y = 1
+		mutually_exclusive = {focus = enc_electoral_victory}
 		prerequisite = { focus = enc_support_old_world_party }
 		available = {
 			NCR = {
@@ -4321,7 +4321,6 @@ focus = {#Legion Border
 		}
 		completion_reward = {
 			custom_effect_tooltip = enc_Civil_War.tt
-
 		}
 	}
 	focus = {#NEVADA - electoral victory
@@ -4332,6 +4331,7 @@ focus = {#Legion Border
 		relative_position_id = enc_support_old_world_party
 		x = 1
 		y = 1
+		mutually_exclusive = {focus = enc_support_armed_coup}
 		prerequisite = { focus = enc_support_old_world_party }
 		available = {
 			NCR = {
