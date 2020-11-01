@@ -2223,6 +2223,17 @@ ENC_treaty_hoover_dam = {
 			}
 		}
 	}
+	Enc_Mojave_Cession = {
+		priority = 300
+		fire_only_once = no
+		visible = {
+			tag = ERB
+			MOT = { exists = YES }
+		}
+		complete_effect = {
+			annex_country = { target = MOT transfer_troops = yes }
+		}
+	}
 	Enc_Hoover_Dam_Cession = {
 		priority = 300
 		fire_only_once = no

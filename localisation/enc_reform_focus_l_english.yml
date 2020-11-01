@@ -610,6 +610,8 @@ enc_Wash_BOS_desc: "With the outlying regions of the Oregon secured, we have a b
 ENC_treaty_hoover_dam: "The Treaty of Hoover Dam"
 Enc_Cession_of_Helios_one: "The Cession of the Mojave"
 Enc_Cession_of_Helios_one_desc: "California agreed to cede Helios One and the Brotherhood's Bunker.  In exchange, it received a share of Helios One's energy and advanced equipment from former Brotherhood facilities."
+Enc_Mojave_Cession: "The Cession of the Mojave"
+Enc_Mojave_Cession_desc: "California agreed to cede the Mojave Territories to Nevada."
 Enc_Hoover_Dam_Cession: "The Cession of Hoover Dam"
 Enc_Hoover_Dam_Cession_desc: "Although some in California grumbled at the transfer of Hoover Dam to Nevada, most thought the free energy more than worth their while."
 enc_Wash_BOS_desc: "Although their powered armor makes these guys a threat, whatever happens, we have got, vertibirds, and they have not."
