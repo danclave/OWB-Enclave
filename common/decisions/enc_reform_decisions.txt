@@ -3541,31 +3541,6 @@ ENC_nevada_tribals = {
 			}
 		}
 	}
-	erb_MRA = {
-		visible = {
-			has_completed_focus = enc_reform_the_tribes
-			country_exists = MRA
-		}
-		available = {
-			NOT = {
-				MRA = {
-					is_puppet_of = ERB
-				}
-				has_war_with = MRA
-			}
-		}
-		cost = 50
-		ai_will_do = {
-			factor = 100
-		}
-		days_remove = 25
-		remove_effect = {
-			create_wargoal = {
-				type = annex_everything
-				target = MRA
-			}
-		}
-	}
 	erb_MOJ = {
 		fire_only_once = yes
 		visible = {
@@ -3576,9 +3551,6 @@ ENC_nevada_tribals = {
 		}
 		available = {
 			NOT = {
-				MRA = {
-					is_puppet_of = ERB
-				}
 				has_war_with = MOJ
 			}
 		}
