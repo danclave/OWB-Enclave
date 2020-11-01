@@ -6048,13 +6048,15 @@ news_event = { #170 - Dark Age
 	option = { # Damn it
 		name = enc_reformers.170.a
 
-		# We shouldn't need this, but white peace any nation that's still at war with the Enclave
-		every_enemy_country = {
-			limit = {
-				has_capitulated = no
-			}
-			white_peace = {
-				tag = ERB
+		hidden_effect = {
+			# We shouldn't need this, but white peace any nation that's still at war with the Enclave
+			every_enemy_country = {
+				limit = {
+					has_capitulated = no
+				}
+				white_peace = {
+					tag = ERB
+				}
 			}
 		}
 
