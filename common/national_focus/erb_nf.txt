@@ -5240,43 +5240,95 @@ focus = {#NEVADA - second city
 		x = 0
 		y = 1
 		cost = 4
-		Available = { CES = { exists = NO } }
 		prerequisite = { focus = enc_the_true_enemy }
-		completion_reward = {
-		PHR = { if = { limit = { is_in_faction = yes }
-			leave_faction = yes }
+		available = {
+			CES = { exists = NO } 
+
+			OR = {
+				country_exists = PHR
+				has_full_control_of_state = 518
+
+				any_allied_country = {
+					has_full_control_of_state = 518
+				}
 			}
-		add_to_faction = PHR
-		hidden_effect = {
-			PHR = {
+		}
+		completion_reward = {
+			hidden_effect = {
+
+				every_owned_state = {
+					limit = {
+						is_core_of = CES
+					}
+					add_core_of = PHR
+				}
+
+				any_allied_country = {
+					every_owned_state = {
+						limit = {
+							is_core_of = CES
+						}
+						add_core_of = PHR
+					}
+				}
+
+				if = {
+					limit = {
+						has_full_control_of_state = 518
+					}
+					release = PHR
+				}
+
+				any_allied_country = {
+					limit = {
+						has_full_control_of_state = 518
+					}
+					release = PHR
+				}
+
+				# add Arizona to faction
+				PHR = {
+					if = { 
+						limit = { is_in_faction = yes }
+						leave_faction = yes 
+					}
+				}
+				add_to_faction = PHR
+
+				PHR = {
 					add_ai_strategy = {
 						type = alliance
 						id = "ERB"
 						value = 200
 					}
+					PHR = { set_cosmetic_tag = ERB_PHR } 
 				}
-			PHR = { set_cosmetic_tag = ERB_PHR } }
-		PHR = { add_to_tech_sharing_group = Benjamin_Franklin_Society
-		HUA = {
-			every_owned_state = {
-				add_core_of = PHR
-								}
+				PHR = { 
+					add_to_tech_sharing_group = Benjamin_Franklin_Society
 				}
-		FLA = {
-			every_owned_state = {
-				add_core_of = PHR
-								}
+
+				every_owned_state = {
+					limit = {
+						is_core_of = PHR
+					}
+					PHR = {
+						transfer_state = THIS
+					}
 				}
-		TWI = {
-			every_owned_state = {
-				add_core_of = PHR
-								}
+
+				any_allied_country = {
+					every_owned_state = {
+						limit = {
+							is_core_of = PHR
+						}
+						PHR = {
+							transfer_state = THIS
+						}
+					}
 				}
-		PHR = { annex_country = { target = TWI }
-				annex_country = { target = HUA }
-				annex_country = { target = FLA }
-		}}
-	}
+			}
+			custom_effect_tooltip = enc_Arizona_tt
+		}
 	}
 
 	focus = {#NEVADA- the true enemy
