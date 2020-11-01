@@ -8,6 +8,7 @@ ENC_production: "Production Policies"
 ENC_political_infighting: "Political Infighting"
 ENC_political_infighting_desc:0 "POPULARITY:                   Reformers: [?party_popularity@intellectuals|%G0]              |                   Purists: [?party_popularity@elites|%R0]"
 operations: "Operations"
+ENC_exploiting_wasteland: "Exploiting the Wasteland"
 # DECISIONS
 
 ENC_calling_the_remnants:0 "Call the Remnants"
@@ -493,7 +494,14 @@ ENC_vice_president_hayes:0 "Vice President Hayes"
 ENC_vice_president_hayes_desc:0 "Make concessions to the New World Party and make Hayes your vice president"
 ENC_vice_president_lynette:0 "Vice President Lynette"
 ENC_vice_president_lynette_desc:0 "Remodel America to make every town as prosperous as Vault City!"
-# ###################################
+
+###################################
+# Exploiting the Wasteland
+###################################
+ENC_exploiting_wasteland_arms_factories: "Exploit Arms Factory"
+ENC_exploiting_wasteland_industrial_complex: "Exploit Industrial Complex"
+
+###################################
 # MISC
 ###################################
 add_popularity_to_ruling_party_tt: "Change in popularity of §GGetRulingParty§!: [?popularity_change|%2+].\n"
