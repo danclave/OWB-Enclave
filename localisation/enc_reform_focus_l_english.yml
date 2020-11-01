@@ -404,7 +404,7 @@ enc_infiltrate_ncr_t_tt:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) i
 enc_infiltrate_ncr_desc:0 "We can make contact with those in the NCR who want to restore prewar America's glory."
 enc_infiltrate_ncr_tt:0 "§YNCR suspicion§! is reduced by £pol_power §G25§!"
 enc_assassinate_F_desc:0 "Assassinating Doctor Anderson will crush opposition towards our tolerant, inclusive Enclave."
-enc_assassinate_F_tt:0 "§YFranklin Andersen§! dies!"
+enc_assassinate_F_tt:0 "§YFranklin Anderson§! dies!"
 
 enc_stage_raider_attacks:0 "Stage Raider Attacks"
 enc_stage_raider_attacks_desc:0 "In order for the us to stay hidden, we must make sure that the [NCR.GetName] stays distracted with other enemies. By bribing nearby raiders into attacking [NCR.GetName] border towns, we can ensure our obscurity as long as it suits us."

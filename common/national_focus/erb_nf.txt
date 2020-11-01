@@ -3314,6 +3314,12 @@ focus_tree = {
 				has_war_with = BOS
 			}
 		}
+		bypass = {
+			OR = {
+				NOT = { country_exists = BOS }
+				has_war_with = BOS
+			}
+		}
 		completion_reward = {
 			BOS = {
 				custom_effect_tooltip = relations_increased_20
@@ -3418,8 +3424,9 @@ focus_tree = {
 		y = 1
 		available = { is_neighbor_of = BOS }
 		bypass = {
-			NOT = {
-					country_exists = BOS
+			OR = {
+				NOT = { country_exists = BOS }
+				has_war_with = BOS
 			}
 		}
 		cost = 5.8
@@ -3445,9 +3452,7 @@ focus_tree = {
 			has_war_with = BOS
 		}
 		bypass = {
-			NOT = {
-					country_exists = BOS
-			}
+			NOT = { country_exists = BOS }
 		}
 		cost = 2.9
 		completion_reward = {
@@ -3465,11 +3470,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		available = {
-			has_war_with = BOS
-		}
-		bypass = {
-			NOT = {
-					country_exists = BOS
+			OR = {
+				has_war_with = BOS
+				NOT = { country_exists = BOS }
 			}
 		}
 		cost = 2.9
