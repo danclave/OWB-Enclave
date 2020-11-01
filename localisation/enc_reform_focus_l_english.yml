@@ -516,6 +516,7 @@ enc_NCR_seak_allies_desc: "We aren't the only power opposed to the NCR.  To the 
 
 enc_the_american_alliance: "The Benjamin Franklin Society"
 enc_the_american_alliance_desc: "With trade flourishing between Nevada and California, it's time to take deepen our alliance.  California's best and brightest will learn from the Enclave. And maybe the Wastelanders have a few tricks we could use too."
+enc_the_american_alliance_tt: "This will create the Allied States of America faction and the Benjamin Franklin Society technology sharing group!"
 
 enc_the_state_of_utah: "The State of Utah"
 enc_the_state_of_utah_desc: "To the east, New Canaan is the nucleus for the Mormons of Utah.  With our backing they can stand against Caesar and bring freedom to the East."

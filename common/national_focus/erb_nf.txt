@@ -5114,8 +5114,8 @@ focus = {#NEVADA - second city
 					instant_build = yes
 				}
 			}
-			}
-			}
+		}
+	}
 	focus = {#Currency Talks
 		id = enc_Unified_Currency
 		icon = GFX_goal_enc_ncr_dollar
@@ -5136,11 +5136,11 @@ focus = {#NEVADA - second city
 				modifier = shared_currency
 			}
 			add_ideas = { ENC_Unified_Currency }
-			NCR = { add_ideas = { NCR_unified_Currency }
-
-		}
-		}
+			NCR = { 
+				add_ideas = { NCR_unified_Currency }
 			}
+		}
+	}
 	focus = {#NEVADA- american alliance
 	id = enc_the_american_alliance
 	icon = GFX_goal_enc_the_american_alliance
@@ -5149,26 +5149,55 @@ focus = {#NEVADA - second city
 	x = 1
 	y = 1
 		cost = 4
-		prerequisite = { focus = enc_Unified_Currency focus = enc_Nevada_dollar }
+		prerequisite = { 
+			focus = enc_Unified_Currency 
+			focus = enc_Nevada_dollar 
+		}
 		completion_reward = {
-		ERB = { if = { limit = { is_in_faction = yes }
-			leave_faction = yes }
-			}
-		create_faction = "Allied States of America"
-		NCR = { if = { limit = { is_in_faction = yes }
-			leave_faction = yes }
-			}
-		add_to_faction = NCR
-			NCR = {
+			hidden_effect = {
+				ERB = { 
+					if = { 
+						limit = { is_in_faction = yes }
+						leave_faction = yes 
+					}
+				}
+				create_faction = "Allied States of America"
+
+				every_other_country = {
+					limit = { 
+						is_in_faction_with = NCR 
+						NOT = {original_tag = NCR}
+					}
+					leave_faction = yes
+					ERB = {
+						add_to_faction = PREV
+					}
 					add_ai_strategy = {
 						type = alliance
 						id = "ERB"
 						value = 200
 					}
 				}
-		add_to_tech_sharing_group = Benjamin_Franklin_Society
-		NCR = { add_to_tech_sharing_group = Benjamin_Franklin_Society }
-						}
+
+				NCR = { 
+					if = { 
+						limit = { is_in_faction = yes }
+						leave_faction = yes 
+					}
+				}
+				add_to_faction = NCR
+				NCR = {
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+				}
+				add_to_tech_sharing_group = Benjamin_Franklin_Society
+				NCR = { add_to_tech_sharing_group = Benjamin_Franklin_Society }
+			}
+			custom_effect_tooltip = enc_the_american_alliance_tt
+		}
 	}
 
 
