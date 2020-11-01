@@ -8012,7 +8012,11 @@ country_event = { #226 - TRL Buff
 	option = { # Washington Menace
 		name = enc_reformers.226.a
 		TRL = {
-			add_ideas = WBH_debuff
+			add_ideas = {
+				WBH_debuff
+				MDT_debuff
+				RBT_debuff
+			}
 			add_research_slot = 1
 			set_technology = {
 				reno_mastersnewarmy = 1
