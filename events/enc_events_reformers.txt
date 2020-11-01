@@ -2648,6 +2648,13 @@ country_event = { #74 - Civil War
 					ruling_party = intellectuals
 				}
 				set_cosmetic_tag = NCR_ERB
+				create_country_leader = {
+					name = "Grant C. Hayes"
+					desc = "Hayes_DESC"
+					picture = "gfx/leaders/ENC/portrait_enc_hayes.dds"
+					expire = "3000.1.1"
+					ideology = ideocracy
+				}				
 			}
 			NCR = {
 				set_variable = {
@@ -4046,6 +4053,13 @@ country_event = { #113 - President Hayes
 				set_politics = {
 					ruling_party = intellectuals
 				}
+				create_country_leader = {
+					name = "Grant C. Hayes"
+					desc = "Hayes_DESC"
+					picture = "gfx/leaders/ENC/portrait_enc_hayes.dds"
+					expire = "3000.1.1"
+					ideology = ideocracy
+				}	
 			}
 		}
 		NCR = {
@@ -6106,8 +6120,8 @@ country_event = { #172- Hayewire
 			name = "The New World Party"
 		}
 		create_country_leader = {
-			name = "Mayor Grant C. Hayes"
-			desc = ""
+			name = "Grant C. Hayes"
+			desc = "Hayes_DESC"
 			picture = "gfx/leaders/Portrait_Hayes.dds"
 			expire = "2500.1.1"
 			ideology = town_hall_democracy
