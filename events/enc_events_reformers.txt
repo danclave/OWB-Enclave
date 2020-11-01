@@ -4651,7 +4651,6 @@ country_event = { #123
 	option = { # Nice
 		name = enc_reformers.123.b
 		complete_national_focus = enc_Unified_Currency
-		set_country_flag = integrated_economy
 	}
 }
 

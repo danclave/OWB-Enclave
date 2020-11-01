@@ -5412,12 +5412,14 @@ focus = {#NEVADA - second city
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_Baseball }
-		available = { has_completed_focus = Enc_Irrigation_Dam
-		has_completed_focus = enc_expand_human_definition
-		has_country_flag = integrated_economy
-		CES = { exists = NO } }
+		available = { 
+			has_completed_focus = Enc_Irrigation_Dam
+			has_completed_focus = enc_expand_human_definition
+			has_completed_focus = enc_Unified_Currency
+			CES = { exists = NO } 
+		}
 		completion_reward = {
-		country_event = { id = enc_reformers.124 }
+			country_event = { id = enc_reformers.124 }
 		}
 	}
 
