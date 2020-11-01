@@ -96,7 +96,7 @@ set_country_flag = has_unique_drug_laws
 set_country_flag = has_unique_undesirable_laws
 set_country_flag = has_unique_mutant_recruitment_laws
 
-set_country_flag = do_not_spread_followers
+set_country_flag = do_not_spread_followers_from_this_tag
 set_country_flag = no_overlord_decisions 
 
 # resistance and compliance

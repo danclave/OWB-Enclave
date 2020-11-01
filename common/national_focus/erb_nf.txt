@@ -470,6 +470,7 @@ focus_tree = {
 			custom_effect_tooltip = enc_reno_end.tt
 			# followers can now appear
 			clr_country_flag = do_not_spread_followers
+			clr_country_flag = no_generic_manufacturer
 		}
 	}
 
