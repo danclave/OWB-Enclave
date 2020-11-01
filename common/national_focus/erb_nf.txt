@@ -2840,7 +2840,6 @@ focus_tree = {
 		cost = 5.8
 		completion_reward = {
 			add_ideas = ENC_Chamber_Commerce
-			clr_country_flag = has_unique_trade_laws
 		}
 	}
 	focus = {#REBUILDING - Department of Manufacturing
@@ -4210,7 +4209,6 @@ focus = {#Legion Border
 			country_event = { id = enc_reformers.131}
 			set_cosmetic_tag = ERB_nevada
 			change_douglas_portrait_to_nevada = yes
-			clr_country_flag = has_unique_trade_laws
 			custom_effect_tooltip = new_reclaimnevada_tt
 			NCR = { custom_effect_tooltip = relations_increased_30 }
 			hidden_effect = {
@@ -4661,7 +4659,6 @@ focus = {#Legion Border
 					active = no
 				}
 			}
-			country_event = { id = enc_reformers.127 }
 			ERB = {
 				create_wargoal = { type = annex_everything target = VEG }
 			}

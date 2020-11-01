@@ -1,7 +1,6 @@
 ﻿capital = 159
 
 set_country_flag = caps_exempt
-set_country_flag = has_unique_trade_laws
 
 set_war_support = 0.20
 set_stability = 0.35

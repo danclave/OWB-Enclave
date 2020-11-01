@@ -150,12 +150,10 @@ country_event = {#5 - update
 			has_completed_focus = enc_department_of_commerce
 			has_completed_focus = enc_the_state_of_nevada
 		}
-		has_country_flag = has_unique_trade_laws
 	}
 
 	option = {#Stared down FH
 		name = enc.5.a
-		clr_country_flag = has_unique_trade_laws
 	}
 }
 country_event = {#6 - warning
