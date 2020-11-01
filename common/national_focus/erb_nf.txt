@@ -469,7 +469,7 @@ focus_tree = {
 			country_event = { id = enc_reformers.40 }
 			custom_effect_tooltip = enc_reno_end.tt
 			# followers can now appear
-			clr_country_flag = do_not_spread_followers
+			clr_country_flag = do_not_spread_followers_from_this_tag
 			clr_country_flag = no_generic_manufacturer
 		}
 	}
@@ -4586,14 +4586,23 @@ focus = {#Legion Border
 		}
 		completion_reward = {
 			every_other_country = {
+				limit = {
+					has_full_control_of_state = 106 # Bittersprings
+				}
+				ERB = {
+					create_wargoal = { type = annex_everything target = PREV }
+				}
+				if = {
 					limit = {
-						has_full_control_of_state = 106 # Bittersprings
+						is_in_faction = yes
 					}
-					ERB = {
-						create_wargoal = { type = annex_everything target = PREV }
-					}
+					leave_faction = yes
+				}
 			}
-		KHA = { set_rule = { can_join_factions = no } }
+		KHA = { 
+			set_rule = { can_join_factions = no }
+
+		}
 		}
 	}
 	focus = {#NEVADA - Tearing Down the HOuse
