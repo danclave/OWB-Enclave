@@ -2620,30 +2620,35 @@ ENC_starting_companies = {
 ENC_deseret = {
 	ENC_state_of_deseret = {
 		cost = 50
-		days_remove = 10
 		ai_will_do = {
 			factor = 10
 		}
 		visible = {
 			original_tag = ERB
 		}
-		available = {
-			NCN = {
-				has_full_control_of_state = 551
-			}
-		}
 		fire_only_once = yes
 		complete_effect = {
-			NCN = {
-				set_cosmetic_tag = NCN_deseret
-			}
-			custom_effect_tooltip = form_deseret_cores_tt
-			every_state = { # Adds a core on every state in the Utah region
-				limit = {
-					is_utah_state = yes
+			hidden_effect = {
+				NCN = {
+					set_cosmetic_tag = NCN_deseret
 				}
-				add_core_of = NCN
+				every_state = { # Adds a core on every state in the Utah region
+					limit = {
+						is_utah_state = yes
+					}
+					add_core_of = NCN
+				}
+
+				every_owned_state = {
+					limit = {
+						is_core_of = NCN
+					}
+					NCN = {
+						transfer_state = PREV
+					}
+				}
 			}
+			custom_effect_tooltip = ENC_state_of_deseret_tt
 		}
 	}
 	ENC_return_to_deseret = {
@@ -2654,23 +2659,32 @@ ENC_deseret = {
 		}
 		visible = {
 			original_tag = ERB
-		}
-		available = {
 			NCN = {
-				has_full_control_of_state = 551
+				has_cosmetic_tag = NCN_deseret
+			}
+			any_owned_state = {
+				is_core_of = NCN
 			}
 		}
-		fire_only_once = yes
 		complete_effect = {
-			every_state = {
-				limit = {
-					is_core_of = NCN
-					is_owned_by = ERB
+			hidden_effect = {
+				every_state = { # Adds a core on every state in the Utah region
+					limit = {
+						is_utah_state = yes
+					}
+					add_core_of = NCN
 				}
-				NCN = {
-					transfer_state = PREV
+
+				every_owned_state = {
+					limit = {
+						is_core_of = NCN
+					}
+					NCN = {
+						transfer_state = PREV
+					}
 				}
 			}
+			custom_effect_tooltip = ENC_return_to_deseret_tt
 		}
 	}
 	ENC_annex_puppets = {
@@ -2681,35 +2695,38 @@ ENC_deseret = {
 		}
 		visible = {
 			original_tag = ERB
-		}
-		available = {
 			NCN = {
+				has_cosmetic_tag = NCN_deseret
 				has_full_control_of_state = 551
 			}
-		}
-		fire_only_once = yes
-		complete_effect = {
-			every_country = { # If a puppet has some but not all of their states in the Utah region, we snag the Utah states
+			any_country = {
 				limit = {
-					is_puppet_of = NCN
-					any_owned_state = {
-						is_utah_state = yes
+					is_in_faction_with = ERB
+					is_core_of = NCN
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				every_country = { # If a puppet has some but not all of their states in the Utah region, we snag the Utah states
+					limit = {
+						is_in_faction_with = ERB
+						any_owned_state = {
+							is_core_of = NCN
+						}
 					}
-					NOT = {
-						all_owned_state = {
-							is_utah_state = yes
+
+					every_owned_state = {
+						limit = {
+							is_core_of = NCN
+						}
+						NCN = {
+							transfer_state = PREV
 						}
 					}
 				}
-				every_owned_state = {
-					limit = {
-						is_utah_state = yes
-					}
-					NCN = {
-						transfer_state = PREV
-					}
-				}
 			}
+			custom_effect_tooltip = ENC_annex_puppets_tt
 		}
 	}
 	ENC_liberty_title = {
@@ -2720,6 +2737,9 @@ ENC_deseret = {
 		}
 		visible = {
 			original_tag = ERB
+			NCN = {
+				has_cosmetic_tag = NCN_deseret
+			}
 		}
 		available = {
 			NCN = {
