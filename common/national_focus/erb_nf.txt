@@ -5212,21 +5212,29 @@ focus = {#NEVADA - second city
 		cost = 4
 		prerequisite = { focus = enc_the_american_alliance }
 		completion_reward = {
-			NCN = { 
-				if = { 
-					limit = { is_in_faction = yes }
-					leave_faction = yes
+			hidden_effect = {
+				NCN = { 
+					if = { 
+						limit = { is_in_faction = yes }
+						leave_faction = yes
+					}
+				}
+				add_to_faction = NCN
+
+				every_other_country = {
+					limit = { 
+						is_in_faction_with = ERB 
+						NOT = {original_tag = NCR}
+					}
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+					add_to_tech_sharing_group = Benjamin_Franklin_Society
 				}
 			}
-			add_to_faction = NCN
-			NCN = {
-				add_ai_strategy = {
-					type = alliance
-					id = "ERB"
-					value = 200
-				}
-			}
-			NCN = { add_to_tech_sharing_group = Benjamin_Franklin_Society }
+			custom_effect_tooltip = enc_the_state_of_utah_tt
 		}
 	}
 	focus = {#NEVADA- Mexico

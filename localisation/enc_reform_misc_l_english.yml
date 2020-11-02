@@ -123,6 +123,7 @@ enc_crackdown_justified_tt: "We gain justifications for a §Ycrackdown§!"
 vice_president_hayes_flag: "Hayes is Vice President"
 enc_nuke_arming: "Nuke is being armed"
 enc_nuke_arming_set: "The nuke in Ashton will be armed in §Y50§! days\n"
+enc_freedom: "Slavery is outlawed"
 
 ncr_suspicion_higher_than_5:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y5§! or higher"
 ncr_suspicion_higher_than_10:0 "§YNCR suspicion§! (§Y[?Root.ENC_hiding_cost]§!) is §Y10§! or higher"
