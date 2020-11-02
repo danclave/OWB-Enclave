@@ -2131,109 +2131,92 @@ ENC_pacific_commonwealth1 = {
 }
 
 ENC_treaty_hoover_dam = {
-	Enc_Cession_of_Helios_one = {
-		icon = GFX_decision_generic_research
-		priority = 300
-		fire_only_once = no
-		visible = {
-			tag = ERB
-			417 = {
-				is_owned_and_controlled_by = NCR
-			}
-		}
-		complete_effect = {
-			ERB = {
-				transfer_state = 417
-			}
-			ERB = {
-				transfer_state = 562
-			}
-			ERB = {
-				transfer_state = 552
-			}
-			ERB = {
-				transfer_state = 573
-			}
-			ERB = {
-				transfer_state = 613
-			}
-			ERB = {
-				transfer_state = 419
-			}
-			ERB = {
-				transfer_state = 181
-			}
-			ERB = {
-				transfer_state = 206
-			}
-			ERB = {
-				transfer_state = 47
-			}
-			ERB = {
-				transfer_state = 272
-			}
-			ERB = {
-				transfer_state = 533
-			}
-			ERB = {
-				transfer_state = 137
-			}
-			ERB = {
-				transfer_state = 617
-			}
-			ERB = {
-				transfer_state = 137
-			}
-			ERB = {
-				transfer_state = 46
-			}
-			253 = {
-				add_resource = {
-					type = energy
-					amount = 15
-				}
-				add_resource = {
-					type = circuitry
-					amount = 15
-				}
-				add_resource = {
-					type = advanced
-					amount = 20
-				}
-			}
-			417 = {
-				add_resource = {
-					type = energy
-					amount = -15
-				}
-				add_resource = {
-					type = circuitry
-					amount = -5
-				}
-				46 = {
-					add_resource = {
-						type = advanced
-						amount = -20
-					}
-					add_resource = {
-						type = circuitry
-						amount = -10
-					}
-				}
-			}
-		}
-	}
 	Enc_Mojave_Cession = {
 		priority = 300
-		fire_only_once = no
+		fire_only_once = yes
 		visible = {
 			tag = ERB
 			MOT = { exists = YES }
 		}
 		complete_effect = {
-			annex_country = { target = MOT transfer_troops = yes }
+			hidden_effect = {
+				# temp fix, won't need in the future, so safe to delete
+				620 = {
+					add_core_of = NCR
+					remove_core_of = ERB
+				}
+				173 = {
+					add_core_of = NCR
+					remove_core_of = ERB			
+				}
+				77 = {
+					add_core_of = NCR
+					remove_core_of = ERB			
+				}	
+			}
+
+			MOT = {
+				every_owned_state = {
+					limit = {
+						is_core_of = ERB
+					}
+					ERB = {
+						transfer_state = PREV
+					}
+				}
+			}
+			NCR = {
+				annex_country = { target = MOT transfer_troops = yes }
+			}
+			# custom_effect_tooltip = Enc_Mojave_Cession_tt
 		}
 	}
+
+	Enc_return_territories = {
+		priority = 300
+		fire_only_once = no
+		visible = {
+			tag = ERB
+			OR = {
+				ERB = {
+					any_owned_state = {
+						is_core_of = NCR
+					}
+				}
+				NCR = {
+					any_owned_state = {
+						is_core_of = ERB
+					}
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				# Huh, both have cores on this?
+				68 = {
+					add_core_of = ERB
+					remove_core_of = NCR			
+				}	
+			}
+
+			every_owned_state = {
+				limit = { is_core_of = NCR }
+				NCR = {
+					transfer_state = PREV
+				}
+			}
+
+			NCR = {
+				every_owned_state = {
+					limit = { is_core_of = ERB }
+					ERB = {
+						transfer_state = PREV
+					}
+				}
+			}			
+		}
+	}
+
 	Enc_Hoover_Dam_Cession = {
 		priority = 300
 		fire_only_once = no

@@ -4302,9 +4302,6 @@ focus = {#Legion Border
 				add_state_core = 419
 				add_state_core = 206
 				add_state_core = 47
-				add_state_core = 77
-				add_state_core = 620
-				add_state_core = 173
 				add_state_core = 210
 				add_state_core = 573
 			}
@@ -5371,7 +5368,7 @@ focus = {#NEVADA - second city
 
 	focus = {#NEVADA- the true enemy
 		id = Enc_Hoover_Dam_1
-		icon = GFX_goal_NCR_Power_to_the_People
+		icon = GFX_goal_NEW_generic_reno
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_the_american_alliance
 		x = -4
@@ -5379,7 +5376,7 @@ focus = {#NEVADA - second city
 		cost = 5.8
 		prerequisite = { focus = enc_the_american_alliance }
 		completion_reward = {
-		custom_effect_tooltip = enc_Hoovertreaty.tt
+			custom_effect_tooltip = enc_Hoovertreaty.tt
 		}
 	}
 
