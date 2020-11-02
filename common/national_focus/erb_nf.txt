@@ -5162,6 +5162,7 @@ focus = {#NEVADA - second city
 					}
 				}
 				create_faction = "Allied States of America"
+				add_to_tech_sharing_group = Benjamin_Franklin_Society
 
 				every_other_country = {
 					limit = { 
@@ -5177,6 +5178,7 @@ focus = {#NEVADA - second city
 						id = "ERB"
 						value = 200
 					}
+					add_to_tech_sharing_group = Benjamin_Franklin_Society
 				}
 
 				NCR = { 
@@ -5192,9 +5194,8 @@ focus = {#NEVADA - second city
 						id = "ERB"
 						value = 200
 					}
+					add_to_tech_sharing_group = Benjamin_Franklin_Society
 				}
-				add_to_tech_sharing_group = Benjamin_Franklin_Society
-				NCR = { add_to_tech_sharing_group = Benjamin_Franklin_Society }
 			}
 			custom_effect_tooltip = enc_the_american_alliance_tt
 		}
@@ -5240,12 +5241,12 @@ focus = {#NEVADA - second city
 		completion_reward = {
 		custom_effect_tooltip = enc_coffee_tt
 		hidden_effect = {
-		add_ideas = Enc_Trade_Coffee
-		every_other_country = {
+			add_ideas = Enc_Trade_Coffee
+				every_other_country = {
 					limit = { is_in_faction_with = ERB }
 					add_ideas = Enc_Trade_Coffee
 				}
-				}
+			}
 		}
 }
 	focus = {#NEVADA- the true enemy
