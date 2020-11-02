@@ -2165,6 +2165,7 @@ ENC_treaty_hoover_dam = {
 					}
 				}
 			}
+			
 			NCR = {
 				annex_country = { target = MOT transfer_troops = yes }
 			}

@@ -184,7 +184,7 @@ ENC_pacific_commonwealth1 = {
 }
 
 ENC_treaty_hoover_dam = {
-	icon = GFX_decision_cat_picture_mojave_campaign
+	icon = category_usa_flag
 	allowed = { tag = ERB }
 	priority = 4
 	visible = {
