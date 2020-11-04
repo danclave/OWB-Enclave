@@ -1022,6 +1022,58 @@ ENC_render_unto_caesar = {
 		complete_effect = { }
 	}
 
+	CES_eastern_Legion = {
+		icon = generic_break_treaty
+		priority = 30
+		fire_only_once = YES
+		activation = {
+			CES = {
+				has_war_with = ERB #Enclave
+			}
+			NOT = {
+				LAC = {
+					has_war_with = ERB #Enclave
+				}
+			}
+
+		}
+		available = {
+			OR = {
+				NOT = {
+					country_exists = CES
+				}
+				NOT = {
+					country_exists = LAC
+				}
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				NOT = {
+					country_exists = CES
+				}
+				NOT = {
+					country_exists = LAC
+				}
+				LAC = {
+					has_war_with = ERB #Enclave
+				}
+			}
+		}
+		is_good = no
+		days_mission_timeout = 3
+		visible = {original_tag = ERB }
+		timeout_effect = { 
+			LAC = {
+				add_to_war = {
+					targeted_alliance = CES
+					enemy = ERB
+				}
+			}
+		}
+		complete_effect = { }
+	}
+
 	ENC_rise_slaves = {
 		priority = 300
 		fire_only_once = yes
