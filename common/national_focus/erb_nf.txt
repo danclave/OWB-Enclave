@@ -5366,17 +5366,28 @@ focus = {#NEVADA - second city
 		}
 	}
 
-	focus = {#NEVADA- the true enemy
+	focus = {#NEVADA- The Treaty of Hoover Dam
 		id = Enc_Hoover_Dam_1
-		icon = GFX_goal_NEW_generic_reno
+		icon = GFX_goal_NCR_Power_to_the_People
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_the_american_alliance
 		x = -4
 		y = 1
 		cost = 5.8
 		prerequisite = { focus = enc_the_american_alliance }
+		available = {
+			any_allied_country = {
+				limit = {is_in_faction_with = ERB}
+				has_full_control_of_state = 252 # Hoover Dam
+			}
+		}
+		bypass = {
+			has_full_control_of_state = 252
+		}
 		completion_reward = {
-			custom_effect_tooltip = enc_Hoovertreaty.tt
+			ERB = {
+				transfer_state = 252
+			}
 		}
 	}
 
@@ -5388,16 +5399,16 @@ focus = {#NEVADA - second city
 		x = 0
 		y = 1
 		cost = 5.8
-		prerequisite = { focus = Enc_Hoover_Dam_1}
+		prerequisite = { focus = Enc_Hoover_Dam_1 }
 		completion_reward = {
 		custom_effect_tooltip = enc_Irrigation_tt
 		hidden_effect = {
 		add_ideas = Enc_Irrigation
 		every_other_country = {
-					limit = { is_in_faction_with = ENC }
+					limit = { is_in_faction_with = ERB }
 					add_ideas = Enc_Irrigation
 				}
-				}
+			}
 		}
 	}
 
@@ -5484,7 +5495,7 @@ focus = {#NEVADA - second city
 		add_war_support = 0.05
 		add_stability = 0.05
 		every_other_country = {
-					limit = { is_in_faction_with = ENC }
+					limit = { is_in_faction_with = ERB }
 					add_war_support = 0.05
 					add_stability = 0.05
 				}
