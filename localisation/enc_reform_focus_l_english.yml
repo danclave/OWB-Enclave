@@ -545,7 +545,7 @@ enc_ss_ceasar_bottom_uprising_desc:0 "The flag of rebellion has risen throughout
 enc_ss_ceasar_top_raiding:0 "Disturbing the Peace"
 enc_ss_ceasar_top_raiding_desc:0 "The legion's atrocities are often justified by the fact that they keep the traders in their territories safe from harm. A few well armed agents, disguised as raiders, will hit as many caravans as possible right under Caesar's nose. Destroying both the Legion's supply lines and image."
 enc_ss_ceasar_top_augustus:0 "Operation Augustus"
-enc_ss_ceasar_top_augustus_desc:0 "Thumbs down you son of a bitch.  Let's kill Caesar and profit from the aftermath."
+enc_ss_ceasar_top_augustus_desc:0 "Thumbs down you son of a bitch."
 
 enc_operation_babylon:0 "Operation Babylon"
 enc_operation_babylon_desc:0 "The NCR mocks prewar America, claiming to stand for liberty and progress even as its mired in corruption.  By attacking its weak points we can knock the whole thing over."

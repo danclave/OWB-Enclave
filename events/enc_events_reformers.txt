@@ -2209,77 +2209,12 @@ country_event = { #61 - Operation Augustus
 	is_triggered_only = yes
 	option = {
 		name = enc_reformers.61.a
-		country_event = {
-			id = enc_reformers.62
-			days = 60
-			random = 50
-		}
 		CES = {
-			kill_country_leader = yes
-			create_country_leader = {
-				name = "Lanius"
-				desc = "Lanius_DESC"
-				picture = "Portrait_Lanius.dds"
-				expire = "3000.1.1"
-				ideology = feudalism
-				id = 1007
-				traits = {
-					cruel_tyrant
-					warmonger
-				}
-			}
-			create_country_leader = {
-				name = "Vulpes Inculta"
-				desc = "Inculta_DESC"
-				picture = "Portrait_Inculta.dds"
-				expire = "3000.1.1"
-				ideology = oligarchy
-				id = 1005
-				traits = {
-					cruel_tyrant
-				}
-			}
-			start_civil_war = {
-				ideology = ruler
-				size = 0.25
-				capital = 522
-			}
-			hidden_effect = {
-				remove_unit_leader = 1001
-			}
-			random_country = {
-				limit = {
-					original_tag = CES
-					has_government = ruler
-				}
-				set_cosmetic_tag = VLP
-				set_country_flag = legion_had_civil_war
-			}
-			custom_effect_tooltip = lanius_chosen
-			if = {
-				limit = {
-					has_global_flag = debug_logs
-				}
-				log = "[GetDateText]: [Root.GetName] nf_legion.5 option a exited"
-			}
-		}
-	}
-}
-
-country_event = { #62 - Render Unto Caesar
-	id = enc_reformers.62
-	title = enc_reformers.62.t
-	desc = enc_reformers.62.d
-	picture = GFX_event_ENC_vertibird
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = enc_reformers.62.a
-		set_rule = {
-			can_send_volunteers = yes
-		}
-		CES = {
-			add_ideas = ENC_Influence
+			set_variable = { CES_lucius_glory = 0 }
+			set_variable = { CES_vulpes_glory = 0 }
+			set_variable = { CES_aurelius_glory = 0 }
+			set_variable = { CES_malp_glory = 0 }
+			news_event = nf_legion.70
 		}
 	}
 }

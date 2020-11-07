@@ -375,12 +375,12 @@ enc_reformers.59.a: "Madness and stupidity."
 # free numbers
 ################################################################################################################ -<
 enc_reformers.60.t: "The Ides of March"
-enc_reformers.60.d: "The Legion is a formidable foe, but not all within its ranks tolerate Caesar's rule.  Legate Lanius, the 'Monster of the East', thinks he could turn the Legion into a ruthless military machine. Perhaps he could be a useful ally to our bid to unite America...."
-enc_reformers.60.a: "He may be a son of a bitch but he'll be our son of a bitch."
+enc_reformers.60.d: "The Legion is a formidable foe, but Caesar lacks a stable line of succession.  If he were to die and his potential successors fought among themselves, this could destroy the Legion from within, eliminating our most pressing threat."
+enc_reformers.60.a: "A new Roman civil war. Truly, war never changes."
 ################################################################################################################ -<
 enc_reformers.61.t: "Vae Victis!"
-enc_reformers.61.d: "Our men have spread dissent against Caesar and distributed support for Lanius.  A cry has gone out across the Legion's lands! To the Victor! To Lanius!"
-enc_reformers.61.a: "'The result justifies the deed.'-Ovid"
+enc_reformers.61.d: "Our men have fully discredited all of Caesar's potential successors, and now none of them will be able unite the Legion after Caesar's death. The new Rome is doomed."
+enc_reformers.61.a: "'The result justifies the deed.'\n-Ovid"
 ################################################################################################################ -<
 enc_reformers.62.t: "Render Unto Caesar"
 enc_reformers.62.d: "We can send our men to help Lanius in exchange for an alliance if he wins. Vertibirds would surely be useful in his war against the rest of the Legion..."
