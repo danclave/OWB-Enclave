@@ -3893,7 +3893,50 @@ country_event = { #112 - Insurgency
 	# todo add option to do it later in cause player clicked it too early
 	option = { #	Declaration
 		name = enc_reformers.112.a
+
 		NCR = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_border_war_between = {
+							attacker = 141
+							defender = 118
+						}
+						finalize_border_war = {
+							defender_win = yes
+							attacker = 141
+							defender = 118
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_border_war_between = {
+							attacker = 141
+							defender = 57
+						}
+						finalize_border_war = {
+							defender_win = yes
+							attacker = 141
+							defender = 57
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_border_war_between = {
+							attacker = 182
+							defender = 467
+						}
+						finalize_border_war = {
+							defender_win = yes
+							attacker = 182
+							defender = 467
+						}
+					}
+				}
+			}
+
 			declare_war_on = {
 				target = ERB
 				type = annex_everything
