@@ -446,7 +446,7 @@ ideas = {
 			visible = {
 				# has_completed_focus = enc_purity
 			}
-			cost = 100
+			cost = 25
 			removal_cost = -1
 			level = 1
 			modifier = {
