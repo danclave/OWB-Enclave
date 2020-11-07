@@ -4305,6 +4305,7 @@ focus = {#Legion Border
 				add_state_core = 47
 				add_state_core = 210
 				add_state_core = 573
+				add_state_core = 273
 			}
 
 			custom_effect_tooltip = break_line
