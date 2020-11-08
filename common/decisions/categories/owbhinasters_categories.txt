@@ -1,3 +1,6 @@
 reforming_the_old_states = {
-	
+	allowed = {	original_tag = ERB }
+    visible = {
+		has_completed_focus = enc_home_is_nevada
+	}
 }
