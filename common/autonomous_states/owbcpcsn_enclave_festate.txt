@@ -1,0 +1,70 @@
+autonomy_state = {
+	id = autonomy_enclave_festate
+
+	default = yes
+	is_puppet = yes
+
+	min_freedom_level = 0.25
+
+	rule = {
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+	}
+
+	modifier = {
+		autonomy_manpower_share = 0.9
+		can_master_build_for_us = 1
+		extra_trade_to_overlord_factor = 1.0
+		overlord_trade_cost_factor = -0.9
+		cic_to_overlord_factor = 0.75
+		mic_to_overlord_factor = 0.25
+		autonomy_gain_global_factor = -0.3
+	}
+
+	ai_subject_wants_higher = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_lower = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		has_dlc = "Together for Victory"
+		OR = {
+			original_tag = HIA
+			original_tag = HIB
+			original_tag = HIC
+			original_tag = HID
+			original_tag = HIE
+			original_tag = HIF
+			original_tag = HIO
+			original_tag = HIG
+			original_tag = HIH
+			original_tag = HII
+			original_tag = HIJ
+			original_tag = HIK
+			original_tag = HIL
+			original_tag = HIM
+			original_tag = HIN
+		}
+		OVERLORD = {
+			OR = {
+				has_country_flag = enclave_nation
+				original_tag = ENC
+			}
+		}
+	}
+
+	can_take_level = {
+		#trigger here
+	}
+
+	can_lose_level = {
+		#trigger here
+	}
+}

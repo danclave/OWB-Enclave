@@ -1,0 +1,120 @@
+spriteTypes = {
+##Ideas
+	spriteType = {
+		name = "GFX_idea_on_fire_1"
+		texturefile = "gfx/interface/ideas/on_fire_1.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_on_fire_2"
+		texturefile = "gfx/interface/ideas/on_fire_2.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_on_fire_3"
+		texturefile = "gfx/interface/ideas/on_fire_3.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_on_fire_4"
+		texturefile = "gfx/interface/ideas/on_fire_4.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_hin_army"
+		texturefile = "gfx/interface/ideas/hin_army.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_hin_science"
+		texturefile = "gfx/interface/ideas/hin_science.dds"
+	}	
+
+##Focuses
+	spriteType = {
+		name = "GFX_goal_1_fire"
+		texturefile = "gfx/interface/goals/1_fire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_2a_firebrands"
+		texturefile = "gfx/interface/goals/2a_firebrands.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_2b_recrutment"
+		texturefile = "gfx/interface/goals/2b_recrutment.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_3_fed"
+		texturefile = "gfx/interface/goals/3_fed.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_4_help"
+		texturefile = "gfx/interface/goals/4_help.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_5a_help_invesments"
+		texturefile = "gfx/interface/goals/5a_help_invesments.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_5b_help_officers"
+		texturefile = "gfx/interface/goals/5b_help_officers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_5c_help_politicians"
+		texturefile = "gfx/interface/goals/5c_help_politicians.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_5d_help_specialists"
+		texturefile = "gfx/interface/goals/5d_help_specialists.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_6_stability"
+		texturefile = "gfx/interface/goals/6_stability.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_7_officers"
+		texturefile = "gfx/interface/goals/7_officers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_8_up_to_speed"
+		texturefile = "gfx/interface/goals/8_up to speed.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_9a_pa"
+		texturefile = "gfx/interface/goals/9a_pa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_9b_laser"
+		texturefile = "gfx/interface/goals/9b_laser.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_10_fed"
+		texturefile = "gfx/interface/goals/10_fed.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_11_capital"
+		texturefile = "gfx/interface/goals/11_capital.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_12_speech"
+		texturefile = "gfx/interface/goals/12_speech.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_13_state"
+		texturefile = "gfx/interface/goals/13_state.dds"
+	}
+
+}
+

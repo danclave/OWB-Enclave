@@ -1,0 +1,247 @@
+﻿l_english:
+#Countries: 
+      HIO:0"Oregon"
+      HIA:0"New Mexico"
+      HIB:0"California"
+      HIC:0"Washington"
+      HID:0"Columbia"
+      HIE:0"Colorado"
+      HIF:0"Arizona"
+      HIG:0"Idaho"
+      HIH:0"Baja"
+      HII:0"Utah"
+      HIJ:0"Texas"
+      HIK:0"Chihuahua" #West
+      HIL:0"Guanajuanto" #Central
+      HIM:0"Michoacan" #South
+      HIN:0"Yucatan" #East
+      HIP:0"Louisiana Outpost"
+      HIQ:0"Oklahoma"
+#Decision tooltips
+      oregon_reestablish_text: "Reestablish §!Oregon§! within its pre-War borders."
+      new_mexico_reestablish_text: "Reestablish §!New Mexico§! within its pre-War borders."
+      california_reestablish_text: "Reestablish §!California§! within its pre-War borders."
+      washington_reestablish_text: "Reestablish §!Washington§! within its pre-War borders."
+      columbia_reestablish_text: "Reestablish §!Columbia§! within its pre-War borders."
+      colorado_reestablish_text: "Reestablish §!Colorado§! within its pre-War borders."
+      arizona_reestablish_text: "Reestablish §!Arizona§! within its pre-War borders."
+      idaho_reestablish_text: "Reestablish §!Idaho§! within its pre-War borders."
+      baja_reestablish_text: "Reestablish §!Baja§! within its pre-War borders."
+      utah_reestablish_text: "Reestablish §!Utah§! within its pre-War borders."
+      texas_reestablish_text: "Reestablish §!Texas§! within its pre-War borders."
+      louisiana_reestablish_text: "Reestablish §!Louisiana§! within its pre-War borders."
+      oklahoma_reestablish_text: "Reestablish §!Oklahoma§! within its pre-War borders."
+
+      oregon_reform_text: "Reform §!Oregon§! from §!your territory§!."
+      new_mexico_reform_text: "Reform §!New Mexico§! from §!your territory§!."
+      california_reform_text: "Reform §!California§! from §!your territory§!."
+      washington_reform_text: "Reform §!Washington§! from §!your territory§!."
+      columbia_reform_text: "Reform §!Columbia§!from §!your territory§!."
+      colorado_reform_text: "Reform §!Colorado§!from §!your territory§!."
+      arizona_reform_text: "Reform §!Arizona§! from §!your territory§!."
+      idaho_reform_text: "Reform §!Idaho§! from §!your territory§!."
+      baja_reform_text: "Reform §!Baja§! from §!your territory§!."
+      utah_reform_text: "Reform §!Utah§! from §!your territory§!."
+      texas_reform_text: "Reform §!Texas§! from §!your territory§!."
+      louisiana_reform_text: "Reform §!Louisiana§! from §!your territory§!."
+      oklahoma_reform_text: "Reform §!Oklahoma§! from §!your territory§!."
+
+      oregon_reform_puppet_text: "Reform §!Oregon§! from §!puppet's territory§!."
+      new_mexico_reform_puppet_text: "Reform §!New Mexico§! from §!puppet's territory§!."
+      california_reform_puppet_text: "Reform §!California§! from §!puppet's territory§!."
+      washington_reform_puppet_text: "Reform §!Washington§! from §!puppet's territory§!."
+      columbia_reform_puppet_text: "Reform §!Columbia§!from §!puppet's territory§!."
+      colorado_reform_puppet_text: "Reform §!Colorado§!from §!puppet's territory§!."
+      arizona_reform_puppet_text: "Reform §!Arizona§! from §!puppet's territory§!."
+      idaho_reform_puppet_text: "Reform §!Idaho§! from §!puppet's territory§!."
+      baja_reform_puppet_text: "Reform §!Baja§! from §!puppet's territory§!."
+      utah_reform_puppet_text: "Reform §!Utah§! from §!puppet's territory§!."
+      texas_reform_puppet_text: "Reform §!Texas§! from §!puppet's territory§!."
+      louisiana_reform_puppet_text: "Reform §!Louisiana§! from §!puppet's territory§!."
+      oklahoma_reform_puppet_text: "Reform §!Oklahoma§! from §!puppet's territory§!."
+
+      west_reestablish_text: "Reestablish §!Chihuahua Territories§! from pacified §!Western Mexico§!."
+      central_reestablish_text: "Reestablish §!Guanajuanto Territories§! from pacified §!Central Mexico§!."
+      south_reestablish_text: "Reestablish §!Michoacan Territories§! from pacified §!South Mexico§!."
+      east_reestablish_text: "Reestablish §!Yucatan Territories§! from pacified §!Eastern Mexico§!."
+
+      west_reform_text: "Reform §!Chihuahua§! from §!your territory§!."
+      central_reform_text: "Reform §!Guanajuanto§! from §!your territory§!."
+      south_reform_text: "Reform §!Michoacan§! from §!your territory§!."
+      east_reform_text: "Reform §!Yucatan§! from §!your territory§!."
+
+      west_reform_puppet_text: "Reform §!Chihuahua§! from §!puppet's territory§!."
+      central_reform_puppet_text: "Reform §!Guanajuanto§! from §!puppet's territory§!."
+      south_reform_puppet_text: "Reform §!Michoacan§! from §!puppet's territory§!."
+      east_reform_puppet_text: "Reform §!Yucatan§! from §!puppet's territory§!."
+#Focus tooltips
+      erbhin_getting_your_stuff_together_war_support_tooltip:0 "Replace §YEverything's on Fire!§! with §YRestoring Order§!\nEffective change:\nStability: §G+10.00%§!"
+      erbhin_getting_your_stuff_together_stability_tooltip:0 "Replace §YEverything's on Fire!§! with §YRestoring Order§!\nEffective change:\nRecruitable Population: §G+1.00%§!\nRecruitable Population Factor: §G+15.00%§!\nWar Support: §G+10.00%§!\n "
+      erbhin_help_from_nevada_economic_tooltip:0 "Replace §YOn a Powder Keg§! with §YNevada's Help§!\nEffective change:\nStability: §G+5.00%§!\nMaster impact: §R-0.1%§!\n "
+      erbhin_help_from_nevada_officers_tooltip:0 "Replace §YOn a Powder Keg§! with §YNevada's Help§!\nEffective change:\nRecruitable Population: §G+2.00%§!\nWar Support: §G+15.00%§!\nMaster impact: §R-0.1%§!\n "
+      erbhin_help_from_nevada_politics_tooltip:0 "Replace §YOn a Powder Keg§! with §YNevada's Help§!\nEffective change:\nDaily Political Power Gain: §G+0.25%§!\nStability: §G+5.00%§!\nMaster impact: §R-0.1%§!\n "
+      erbhin_help_from_nevada_specialists_tooltip:0 "Replace §YOn a Powder Keg§! with §YNevada's Help§!\nEffective change:\nStability: §G+5.00%§!\nMaster impact: §R-0.1%§!\n "
+#Ideas
+      on_fire_1: "Everything's on Fire!"
+      on_fire_1a: "Restoring Order"
+      on_fire_1b: "Restoring Order"
+      on_fire_1ab: "Restoring Order"
+      on_fire_2_1: "On a Powder Keg"
+      on_fire_2_2: "On a Powder Keg"
+      on_fire_2a: "Nevada's Help"
+      on_fire_2b: "Nevada's Help"
+      on_fire_2c: "Nevada's Help"
+      on_fire_2d: "Nevada's Help"
+      on_fire_2ab: "Nevada's Help"
+      on_fire_2ac: "Nevada's Help"
+      on_fire_2cd: "Nevada's Help"
+      on_fire_2ad: "Nevada's Help"
+      on_fire_2bc: "Nevada's Help"
+      on_fire_2bd: "Nevada's Help"
+      on_fire_2cd: "Nevada's Help"
+      on_fire_2abc: "Nevada's Help"
+      on_fire_2abd: "Nevada's Help"
+      on_fire_2acd: "Nevada's Help"
+      on_fire_2bcd: "Nevada's Help"
+      on_fire_2abcd: "Nevada's Help"
+      on_fire_3_1: "Stabilized Government"
+      on_fire_3_2: "Stabilized Government"
+      on_fire_4_1: "Federal State"
+      on_fire_4_2: "Federal State"
+      on_fire_4_3: "Federal State"
+      on_fire_4_4: "State of [Root.GetName]"
+      hinasters_military_1: "Nevada's Officers"
+      hinasters_military_2: "AS Army Corps"
+      hinasters_military_3: "AS Army Corps"
+      hinasters_science_1: "Nevada's Specialists"
+      hinasters_science_2: "AS Research Agreement"
+#Opinion
+      fellow_state:0 "Fellow State"
+#Focuses
+      ##1
+      erbhin_everything_on_fire:0 "Shattered State"
+      erbhin_everything_on_fire_desc:0 "Our State is in a rather sad state, suffering from the horrors of the Long Night that descended on America after the Great War. In this land there was no place for order and civilization; instead, bandits and tyrants ruled here. We have lost the Old World, but it is time to take the first steps towards restoring America's true greatness!"
+      ##2a
+      erbhin_getting_your_stuff_together_war_support:0 "Suppress Dissidents"
+      erbhin_getting_your_stuff_together_war_support_desc:0 "Not everyone like the return of civilization to its rightful place. There are those who wish to see the fruits of our labors trampled and burned, and thus prevent us from giving a better life for our citizens. They are not just against the state, but against the inalienable rights of people, and therefore must be ruthlessly crushed."
+      ##2b
+      erbhin_getting_your_stuff_together_stability:0 "Old World Patriotism"
+      erbhin_getting_your_stuff_together_stability_desc:0 "America... How much is hidden in this simple word. And the great victories that raised our nation to the heights of superpower, and the unfortunate defeats from which we learned the lessons that saved us times again. We must remind people of this, so that they can be proud of the country and know that it is worth fighting for."
+      ##3
+      erbhin_everything_is_in_less_fire:0 "Allied States Membership"
+      erbhin_everything_is_in_less_fire_desc:0 "We are now ready to become a part of the Allied States of America. Although living standards are far from the pre-War level, at the same time, we have regained control over the territory of the state, managed to deal with the troublemakers, and now our people do not reject their citizenship, but gradually begin to be proud of it."
+      ##4
+      erbhin_asking_for_a_help:0 "Help from Nevada"
+      erbhin_asking_for_a_help_desc:0 "The relationship between the state and the ASA's center is, to some extent, similar to the relationship between the vassal and the overlord. The State has a duty to the center for its part, paying taxes and obeying the laws, but also the center must provide support to the states, and we intend to turn to Reno for help in restoring our land."
+      ##5a
+      erbhin_help_from_nevada_economic:0 "Nevada's Invesments"
+      erbhin_help_from_nevada_economic_desc:0 "As François Rabelais said: "Money is the muscle of war". Although we are not going to fight with anyone, at least not right now, we still need them to create a full-fledged defense that could protect our citizens from the dangers of the Wasteland. And that's not counting the needed support for our economy."
+      ##5b
+      erbhin_help_from_nevada_officers:0 "Nevada's Officers"
+      erbhin_help_from_nevada_officers_desc:0 "Money alone will not make an army efficient. The rich man can hire thugs to defend himself, but he cannot manage them properly. Therefore, in addition to the budget, our army also needs officers. It is our luck that Nevada is just restoring the power of the American army, and can provide us with the necessary officers."
+      ##5c
+      erbhin_help_from_nevada_politics:0 "Nevada's Politicians"
+      erbhin_help_from_nevada_politics_desc:0 "Someone will call politicians just parasites that live off their population, but in reality, they are leaders who must lead society through crises with a strong hand, while giving freedom as soon as the danger passes and not succumbing to the seduction of absolute power. We need those people, who work under President Granite."
+      ##5d
+      erbhin_help_from_nevada_specialists:0 "Nevada's Specialists"
+      erbhin_help_from_nevada_specialists_desc:0 "Science was what ultimately killed the Old World in the heat of nuclear fire. But before that, it did many equally unforgettable things: conquering diseases, saving lives and increasing the wealth of the human race. And America was the main center of science in the Old World. It's time to use Nevada to rebuild it."
+      ##6
+      erbhin_fire_is_almost_over:0 "Stabilizing Government"
+      erbhin_fire_is_almost_over_desc:0 "A stable government is the key to the well-being of any nation. Leaders should not be replaced every month in a series of bloody coups, the consequences of which will shock the entire nation. Only with the help of a permanent and unchanging government will we restore our well-being, and we are almost there."
+      ##7
+      erbhin_more_officers:0 "Rebuilding the Corps"
+      erbhin_more_officers_desc:0 "Without a doubt, the officers we got from Nevada did a lot for us, reforging a ragtag militia to what can be with pride called an army. But still, the moment will come when they'll be forced to return back to Nevada and to their old duties. But while they are here, they can train replacements for them from officers of our state, trained according to pre-War standards."
+      ##8
+      erbhin_getting_you_up_to_speed:0 "Research Agreement"
+      erbhin_getting_you_up_to_speed_desc:0 "For the reasons of national security, the most important and advanced of pre-War technologies were kept secret by the government of Nevada due to the danger of it falling in the hand of disloyal individuals. But now we have proven not only our loyalty, but also our competence, and therefore deserve access to the joint research and technological wonders of America."
+      ##9a
+      erbhin_tinmen:0 "Power Armor Manuals"
+      erbhin_tinmen_desc:0 "Power armor, let's be honest, was one of the greatest technical advances that American designs and engineers have managed to achieve. It is not only a powerful weapon, but also a symbol that inspires hope and courage in the hearts of people. And now, having the ability to restore and even manufacture power armor, we can outfit our army with it."
+      ##9b
+      erbhin_laser_lovers:0 "AER Schematics"
+      erbhin_laser_lovers_desc:0 "The time for firearms is over. Accurate and reliable laser weapons, even during the war with China, became a workhorse for the American army, managing to save many lives of American troops. And now it will do so again, as we starting the rearmament of our army with the simplest, but also massive laser rifles."
+      ##10
+      erbhin_fires_gone_its_getting_pretty_good:0 "Federalization"
+      erbhin_fires_gone_its_getting_pretty_good_desc:0 "We were able to prove that we are not only able to build a stable and viable government by the standards of the Wasteland, but more so, we managed to raise the standard of living and technology, while still long from the standards of the Old World, is on truly impressive levels. Isn't this proof that we deserve to be an equal with Nevada member of the Union?"
+      ##11
+      erbhin_the_reclaimation_of_the_capital:0 "Retaking the Capital"
+      erbhin_the_reclaimation_of_the_capital_desc:0 "For a long time, the capital of our State was where it is, dictated by forced circumstances and by no means the history of our nation. It's time to fix this, and return the capital to its deserving place, as well as return it to its old name, which our ancestors proudly gave."
+      hinasters_capital_get: "§![Root.GetName]§!'s capital retaken."
+      ##12
+      erbhino_the_presidental_speech:0 "The Presidental Speech"
+      erbhino_the_presidental_speech_desc:0 "The restoration of our State into a full-fledged member of the Union and the appropriation of its rightful name to our capital is an ample reason for the President to address the entire nation in general and to the people of our state in particular with good news and congratulations for the deeds done."
+      ##13
+      erbhin_the_state_of_insert_name_here:0 "The State of [Root.GetName]"
+      erbhin_the_state_of_insert_name_here_desc:0 "We can rightfully be proud of the long and difficult path we have traveled. We have returned our state to its pre-War greatness, or at least revived the memory of it. But this is by no means the end of our journey, but only a short respite before the dash into the new future of the American nation!"
+      hinasters_full_state: "§![Root.GetName]§! fully reformed."
+#decisions
+            reforming_the_old_states:0"Reforming the Old States"
+      #Oregon
+            reestablish_the_state_of_oregon:0"Reestablish the State of Oregon"
+            reform_the_state_of_oregon_puppet:0"Reform the State of Oregon"
+            reform_the_state_of_oregon:0"Reform the State of Oregon"
+      #New Mexico
+            reestablish_the_state_of_new_mexico:0"Reestablish the State of New Mexico"
+            reform_the_state_of_new_mexico_puppet:0"Reform the State of New Mexico"
+            reform_the_state_of_new_mexico:0"Reform the State of New Mexico"
+      #California
+            reestablish_the_state_of_california:0"Reestablish the State of California"
+            reform_the_state_of_california_puppet:0"Reform the State of California"
+            reform_the_state_of_california:0"Reform the State of California"
+      #Washington
+            reestablish_the_state_of_washington:0"Reestablish the State of Washington"
+            reform_the_state_of_washington_puppet:0"Reform the State of Washington"
+            reform_the_state_of_washington:0"Reform the State of Washington"
+      #Columbia
+            reestablish_the_state_of_columbia:0"Reestablish the State of Columbia"
+            reform_the_state_of_columbia_puppet:0"Reform the State of Columbia"
+            reform_the_state_of_columbia:0"Reform the State of Columbia"
+      #Colorado
+            reestablish_the_state_of_colorado:0"Reestablish the State of Colorado"
+            reform_the_state_of_colorado_puppet:0"Reform the State of Colorado"
+            reform_the_state_of_colorado:0"Reform the State of Colorado"
+      #Arizona
+            reestablish_the_state_of_arizona:0"Reestablish the State of Arizona"
+            reform_the_state_of_arizona_puppet:0"Reform the State of Arizona"
+            reform_the_state_of_arizona:0"Reform the State of Arizona"
+      #Idaho
+            reestablish_the_state_of_idaho:0"Reestablish the State of Idaho"
+            reform_the_state_of_idaho_puppet:0"Reform the State of Idaho"
+            reform_the_state_of_idaho:0"Reform the State of Idaho"
+      #Baja
+            reestablish_the_state_of_baja:0"Reestablish the State of Baja"
+            reform_the_state_of_baja_puppet:0"Reform the State of Baja"
+            reform_the_state_of_baja:0"Reform the State of Baja"
+      #Utah
+            reestablish_the_state_of_utah:0"Reestablish the State of Utah"
+            reform_the_state_of_utah_puppet:0"Reform the State of Utah"
+            reform_the_state_of_utah:0"Reform the State of Utah"
+      #Texas 
+            reestablish_the_state_of_texas:0"Reestablish the State of Texas"
+            reform_the_state_of_texas_puppet:0"Reform the State of Texas"
+            reform_the_state_of_texas:0"Reform the State of Texas"
+      #Louisiana 
+            reestablish_the_state_of_louisiana:0"Reestablish the State of Louisiana"
+            reform_the_state_of_louisiana_puppet:0"Reform the State of Louisiana"
+            reform_the_state_of_louisiana:0"Reform the State of Louisiana"
+      #Oklahoma 
+            reestablish_the_state_of_oklahoma:0"Reestablish the State of Oklahoma"
+            reform_the_state_of_oklahoma_puppet:0"Reform the State of Oklahoma"
+            reform_the_state_of_oklahoma:0"Reform the State of Oklahoma"
+
+      #Chihuahua
+            reestablish_the_west_mexico_territories:0"Reestablish the Chihuahua Territories"
+            reform_the_west_mexico_territories_puppet:0"Reform the Chihuahua Territories"
+            reform_the_west_mexico_territories:0"Reform the Chihuahua Territories"
+      #Guanajuanto
+            reestablish_the_central_mexico_territories:0"Reestablish the Guanajuanto Territories"
+            reform_the_central_mexico_territories_puppet:0"Reform the Guanajuanto Territories"
+            reform_the_central_mexico_territories:0"Reform the Guanajuanto Territories"
+      #Michoacan
+            reestablish_the_south_mexico_territories:0"Reestablish the Michoacan Territories"
+            reform_the_south_mexico_territories_puppet:0"Reform the Michoacan Territories"
+            reform_the_south_mexico_territories:0"Reform the Michoacan Territories"
+      #Yucatan
+            reestablish_the_east_mexico_territories:0"Reestablish the Yucatan Territories"
+            reform_the_east_mexico_territories_puppet:0"Reform the Yucatan Territories"
+            reform_the_east_mexico_territories:0"Reform the Yucatan Territories"

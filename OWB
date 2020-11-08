@@ -1,0 +1,792 @@
+OWB: Home is Nevada, America St. Enclave Reborn Submod
++ Put a cosmetic tag state on a puppet, give it control over all territory under its name. Exampes: Washinghton, California, etc
++ Create a nation instead
++ Fix no capital bug
++ Change focus to settlers
++ Make flags for other puppets
++ Make portraits for other puppets
++ Make localization for other puppets
++ Actually make other puppets
++ Set capitals for other puppets
++ Start working on Mexico puppets
++ Make ideas: Nevada Scientists, Nevada Officers 
++ Make focus tree
++ Make gfxs
++ Fix not taking land from states
++ Fix cosmetic tag error
++ Change california liberating ciies erb decisions
++ Fix california anarchy event
+
+code:
+if = { limit = { AND = { TAG = ARR OVERLORD = { has_country_flag = enclave_nation }}} set_cosmetic_tag = ARR_ENC set_country_flag = color_changed }
+
+owns_state = 39 -- Checks if the country owns the state with the given number as state id.
+
+has_cosmetic_tag = SOV_custom -- Checks if the current scope has the specified cosmetic tag active.
+
+add_core_of = SOV -- Adds a core for the specified country on the current scope.
+
+transfer_state = 345 -- Give control ower state
+
+set_capital = 345 -- Makes the specified state the current scope's capital state.
+
+211 = { set_state_name = "Nova Roma" } -- Rename city
+
+custom_trigger_tooltip = {
+    tooltip = sunrise_invasion_tt		
+    any_state = {
+        is_owned_by = JAP
+        is_on_continent = europe
+        is_coastal = yes
+    }
+}
+
+custom_effect_tooltip = 11_SOV_tt
+
+11_SOV_tt: "Spread communist support to all neighbouring countries.\n"
+
+https://hoi4.paradoxwikis.com/Commands#State
+https://www.youtube.com/watch?v=eielBuVpWSU -- Won't You Be My Neighbor?
+
+States-Puppets: 
+	USA:
+		HIA - New Mexico
+		HIB - California
+		HIC - Washington
+		HID - Columbia
+		HIE - Colorado
+		HIF - Arizona
+		HIO - Oregon
+		HIG - Idaho
+		HIH - Baja
+		HII - Utah
+		HIJ - Texas
+		HIK - West
+		HIL - Central
+		HIM - South
+		HIN - East
+	States:
+		New Mexico +
+			639
+			503
+			44
+			464
+			571
+			287
+			331
+			108
+			5
+			564
+			225
+			423
+			566
+			265
+			541
+			25
+			189
+			152
+			410
+			409
+			81
+			215
+			234
+			534
+			429
+			545
+			200
+			31
+			255
+			501
+			538
+			411
+			442
+			88
+			248
+			275
+			522
+			632
+			633
+		California +
+			141
+			369
+			182
+			239
+			353
+			39
+			340
+			216
+			548
+			474
+			511
+			441
+			56
+			57
+			59
+			467
+			96
+			337
+			32
+			162
+			543
+			421
+			168
+			584
+			156
+			342
+			153
+			529
+			605
+			190
+			603
+			60
+			543
+			135  ##
+			151
+			167
+			163
+			473
+			132
+			104
+			312
+			433
+			606
+			558
+			64
+			602
+			357
+			360
+			157
+			70
+			602
+			64
+			258
+			245
+			736
+			591
+			292
+			19
+			1
+			180
+			396
+			350
+			63
+			205
+			583
+			147
+			500
+			99
+			469
+			107
+			173
+			620
+			77
+			301
+			271
+			589
+			243
+			236
+			372
+			241
+			293
+			489
+			455
+			214
+			253
+			45
+			334
+			592
+			13
+			615
+			618
+			617
+			616
+		Washington +
+			609
+			424
+			556
+			737
+			42
+			599
+			351
+			230
+			540
+			509
+			105
+			468
+			61
+			84
+			575
+			300
+			249
+			179
+			249
+			300
+			418
+			314
+			69
+			332
+			346
+			199
+			397
+			466
+			305
+			276
+		Columbia +
+			420 ##
+			461
+			738
+			514
+			607
+			307
+			398
+			9
+			594
+			188
+			28
+			17
+			505
+			218
+			539
+			14
+			250
+			24
+			194
+			262
+			561
+			148
+			492
+			21
+			48
+			564
+			432
+			288
+			338
+			407
+			27
+			177
+			227
+			486
+			196
+			316
+			507
+			139
+			321
+			134
+			238
+			20
+			311
+			195
+			393
+			79
+			385
+			16
+			169
+			125
+			6
+			299
+			448
+			202
+			487
+			416
+			387
+			142
+			34
+			557
+			21
+			48
+			432
+			564
+			288
+			407
+			338
+		Colorado +
+			644
+			415
+			642
+			394
+			259
+			637
+			635
+			355
+			531
+			640
+			645
+			643
+			646
+			647
+			648
+			649
+			642
+			415
+			638
+			408
+			636
+			498
+			144
+			124
+			608
+			570
+			554
+			366
+			233
+			565
+			523
+			641
+			422
+			123
+			412
+			103
+			208
+			112
+			524
+			593
+			315
+			430
+			209
+			374
+			550
+			586
+			405
+			544
+			610
+			460
+			414
+			82
+			490
+			109
+			185
+			525
+			586
+			256
+			465
+			453
+			510
+			390
+			310
+			401
+			560
+			494
+			191
+			55
+			504
+			145
+			532
+			537
+			115
+			572
+			376
+			445
+			217
+			38
+			452
+			78
+			90
+			302
+			267
+			456
+			308
+			87
+			527
+			228
+			193
+			515
+			601
+			630
+		Arizona +
+			634
+			631
+			517
+			395
+			353
+			2
+			350
+			516
+			62
+			247
+			35
+			62
+			289
+			94
+			207
+			519
+			518
+			386
+			381
+			438
+			317
+			130
+			553
+			49
+			359
+			569
+			349
+			604
+			33
+			242
+			388
+			520
+			483
+			93
+			318
+			502
+			431
+			362
+			296
+			597
+			232
+			212
+			582
+			427
+			175
+			85
+			402
+			164
+			439
+			244
+			282
+			89
+			634
+			392
+			91
+			203
+			269
+			482
+		Oregon +
+			454
+			251
+			600
+			150
+			86
+			358
+			451
+			186
+			192
+			274
+			23
+			113
+			268
+			231
+			29
+			298
+			155
+			71
+			323
+			299
+			343
+			53
+			277
+			51
+			434
+			322
+			178
+			491
+			399
+			345
+			37
+			149
+			587
+			449
+			493
+			450
+			506
+			437
+			166
+			235
+		Idaho +
+			281
+			18
+			52
+			116
+			278
+			400
+			379
+			365
+			400
+			443
+			595
+			290
+			590
+			172
+			140
+			30
+			578
+			280
+			435
+			198
+		Baja +
+			4
+			80
+			866
+			650
+			651
+			41
+			174
+			158
+			481
+			136
+			176
+			325
+			97
+		Utah +
+			74
+			303
+			436
+			354
+			576
+			484
+			384
+			611
+			403
+			324
+			472
+			170
+			131
+			530
+			341
+			513
+			413
+			478
+			440
+			577
+			264
+			40
+			309
+			270
+			213
+			457
+			50
+			378
+			240
+			266
+			319
+			551
+			128
+			352
+			611
+			403
+			472
+			324
+			222
+			495
+			535
+			569
+			368
+			626
+			98
+			58
+			197
+			364
+			497
+			133
+			279
+			629
+			619
+			622
+			621
+			10
+			391
+			138
+			624
+			625
+			621
+			623
+			76
+			526
+			67
+			549
+			627
+			628
+			459
+			470
+			499
+			246
+			542
+			404
+			320
+			102
+			3
+			574
+			373
+			204
+			326
+			488
+			581
+			306
+			496
+			547
+			257
+			386 
+		Texas / not that much of it yet
+			797
+			796
+			793
+			794
+			795
+			792
+	Mexico:
+		West
+			Sonora
+			Chihuahua
+			Sinola
+			==
+			744
+			756
+			751
+			742
+			741
+			272
+			740
+			692
+			739
+			679
+			682
+			684
+			683
+			685
+			687
+			206
+			688
+			689
+			686
+			181
+			533
+			681
+			680
+			83
+			95
+			122
+			120
+			119
+			117
+			143
+			110
+			377
+			528
+			579
+			559
+			15
+			479
+			229
+			297
+			283
+			588
+			444
+			146
+			471
+			477
+			260
+			22
+			254
+			101
+		Center
+			Coahuila
+			Nuevo Leom
+			Tamaulipas
+			Zacatecas
+			San Luis Potosi
+			Nayarit
+			Guanajuanto
+			===
+			784
+			775
+			773
+			779
+			772
+			774
+			782
+			765
+			768
+			763
+			769
+			761
+			750
+			767
+			760
+			757
+			763
+			780
+			781
+			766
+			774
+			764
+			759
+			770
+			771
+			754
+			758
+			755
+			753
+			756
+			752
+			748
+			743
+			747
+			746
+			791
+			745
+		South
+			Jalisco 
+			Michoacan
+			Mexico City
+			Guerrero
+			Veracruz /half of it
+			===
+			783
+			786
+			800
+			785
+			804
+			787
+			801
+			806
+			802
+			807
+			810
+			863
+			803
+			808
+			809
+			811
+			812
+			813
+			814
+			817
+			818
+			816
+			815
+			777
+			776
+			778
+		East
+			Veracruz /other half of it
+			Oaxaca
+			Chiapas
+			Campeche
+			Yucatan
+			Rio Honduras
+			====
+			828
+			827
+			829
+			830
+			835
+			836
+			837
+			819
+			820
+			821
+			831
+			832
+			833
+			834
+			826
+			419
+			825
+			822
+			562
+			823
+			824
+			864
+			788
+			865
+			790

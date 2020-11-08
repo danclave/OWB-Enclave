@@ -1,0 +1,6 @@
+1. common\decisions\enc_reform_decisions.txt
+enc_NCR_seize_dayglow - visible
+enc_NCR_seize_shady_sands - visible
+enc_NCR_seize_saccity - visible
+2. events
+enc_reformers.170 - trigger

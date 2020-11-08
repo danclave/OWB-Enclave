@@ -6019,6 +6019,7 @@ news_event = { #170 - Dark Age
 			has_country_flag = enc_mid_game
 		}
 		has_completed_focus = enc_reform
+		has_completed_focus = enc_american_dream
 		owns_state = 253
 		owns_state = 135
 		owns_state = 63

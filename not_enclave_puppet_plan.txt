@@ -1,0 +1,42 @@
+Nevada puppet focus tree plan: ##Start 50St 30WS
+1. Shattered State / Everything is on fire! / On Fire! idea: -50St -40WS conscription_factor -0.65
++2a. Firebrands Suppression / Stability + 10 -> -40 St / conscription_factor +0.05
++2b. Old World Patriotism / War Support + 10 -> -30 WS / +1000MP volunteer_milita_conscription
+3. Allied States Membership / Everything is in less fire / Stability and War Support +5 -> -35ST/-25WS / Faction membership
++4. Help from Nevada / Master impact 0.1 / -150 PP
++5a. Nevada's Invesments / Factories / Small Master impact 0.1 / + 5 Stability -> -30St / partial_economic_mobilisation
++5b. Nevada's Officers / Small Master impact 0.1 / Training buffs / +15 War Support -> -10S / officer_law_military_academy
++5c. Nevada's Politicians / Small Master impact 0.1 / + 5 Stability -> -25St / + 0,5 PP
++5d. Nevada's Specialists / Small Master impact 0.1 / Research +5%  / Food -> conscription_factor +0.30 / +5 Stability -> -20St
+6. Stabilizing Government / Fire is almost over / + 10 Stability -> -10St
++7. Rebuilding the Corps / Military buffs / +10 War Support -> 0WS / training_law_military_academy / funded_militia_conscription 
++8. Research Agreement / Research speed +10% / scientific_civilization = 1
++9a. Laser Shematics / energy_weaponry_tech_1 / Energy weapon research buff
++9b. Engineer Corps / Scavanger Armor / Power armor research buffs
++10. Federalization / Fire's gone, it's getting pretty good / +10 Stability -> 0St
++11. Reclaimation of the Capital / +10 Stability -> 10St / +15 War Support -> 15WS / Need state's capital
++12. Presidential Speech / +10 Stability -> 20St / +5 War Support -> 20WS
+13. The State of [INSERT NAME HERE] / Has all state territory / +15 Stability -> 35St / +15 War Support -> 35WS
+
+'Fire' idea: 
+1. Flag is on fire.             (1)
+2. Flag is burned and smoking.  (3)
+3. Flag fixed up.               (6)
+4. Completly fine flag.         (10)
+
+'Officers' idea: military buffs
+'Science' idea: science buffs
+
+1. 1 2a 2b
+2. 3 4 5a 5b 5c 5d
+3. 6 7
+4. 10 12 13
+
+19/19
+
+##5a if B ab if C ac if D ad if BC abc if BD abd if CD acd if BCD abcd
+##5b if A ab if C bc if D bd if AC abc if AD abd if CD bcd if ACD abcd
+##5c if A ab if B bc if D cd if AB abc if AD acd if BD bcd if ABD abcd
+##5d if A ad if B bd if C cd if AB abd if AC acd if BC bcd if ABC abcd
+
+# a b c d ab ac ad bc bd cd abc abd acd bcd abcd

@@ -1,0 +1,3 @@
+opinion_modifiers = {
+	fellow_state = { value = 50 }
+}

@@ -1,0 +1,690 @@
+ideas = {
+	country = {
+		on_fire_1 = {
+			picture = on_fire_1
+
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.50
+            	war_support_factor = -0.40
+            	conscription_factor = -0.65
+            	conscription = -0.03
+			}
+		}
+		on_fire_1a = {
+			picture = on_fire_1
+
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.40
+            	war_support_factor = -0.40
+            	conscription_factor = -0.65
+            	conscription = -0.03
+			}
+		}
+		on_fire_1b = {
+			picture = on_fire_1
+
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.50
+            	war_support_factor = -0.30
+            	conscription_factor = -0.50
+            	conscription = -0.02
+
+			}
+		}
+		on_fire_1ab = {
+			picture = on_fire_1
+
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.40
+            	war_support_factor = -0.30
+            	conscription_factor = -0.50
+            	conscription = -0.02
+			}
+		}
+		on_fire_2_1 = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.35
+            	war_support_factor = -0.25
+            	conscription_factor = -0.50
+            	conscription = -0.02
+			}
+		}
+		on_fire_2_2 = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.30
+            	war_support_factor = -0.25
+            	subjects_autonomy_gain = -0.1
+            	conscription_factor = -0.50
+            	conscription = -0.02
+			}
+		}
+		on_fire_2a = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.25
+            	war_support_factor = -0.25
+            	subjects_autonomy_gain = -0.2
+            	conscription_factor = -0.50
+            	conscription = -0.02
+			}
+		}
+		on_fire_2b = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.30
+            	war_support_factor = -0.10
+            	subjects_autonomy_gain = -0.2
+            	conscription_factor = -0.30
+			}
+		}
+		on_fire_2c = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.25
+            	war_support_factor = -0.25
+            	subjects_autonomy_gain = -0.2
+            	conscription_factor = -0.50
+            	conscription = -0.02
+            	political_power_gain = 0.25
+			}
+		}
+		on_fire_2d = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.25
+            	war_support_factor = -0.25
+            	subjects_autonomy_gain = -0.2
+            	conscription_factor = -0.50
+            	conscription = -0.02
+			}
+		}
+		on_fire_2ab = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.25
+            	war_support_factor = -0.10
+            	subjects_autonomy_gain = -0.3
+            	conscription_factor = -0.30
+			}
+		}
+		on_fire_2ac = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.20
+            	war_support_factor = -0.25
+            	subjects_autonomy_gain = -0.3
+            	conscription_factor = -0.50
+            	conscription = -0.02
+            	political_power_gain = 0.25
+			}
+		}
+		on_fire_2cd = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.20
+            	war_support_factor = -0.25
+            	subjects_autonomy_gain = -0.3
+            	conscription_factor = -0.50
+            	conscription = -0.02
+            	political_power_gain = 0.25
+			}
+		}
+		on_fire_2ad = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.20
+            	war_support_factor = -0.25
+            	subjects_autonomy_gain = -0.3
+            	conscription_factor = -0.50
+            	conscription = -0.02
+			}
+		}
+		on_fire_2bc = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.25
+            	war_support_factor = -0.10
+            	subjects_autonomy_gain = -0.3
+            	conscription_factor = -0.30
+            	political_power_gain = 0.25
+			}
+		}
+		on_fire_2bd = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.25
+            	war_support_factor = -0.10
+            	subjects_autonomy_gain = -0.3
+            	conscription_factor = -0.30
+			}
+		}
+		on_fire_2cd = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.20
+            	war_support_factor = -0.25
+            	subjects_autonomy_gain = -0.3
+            	conscription_factor = -0.50
+            	conscription = -0.02
+            	political_power_gain = 0.25
+			}
+		}
+		on_fire_2abc = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.20
+            	war_support_factor = -0.10
+            	subjects_autonomy_gain = -0.4
+            	conscription_factor = -0.30
+            	political_power_gain = 0.25
+			}
+		}
+		on_fire_2abd = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.20
+            	war_support_factor = -0.10
+            	subjects_autonomy_gain = -0.4
+            	conscription_factor = -0.30
+			}
+		}
+		on_fire_2acd = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.15
+            	war_support_factor = -0.25
+            	subjects_autonomy_gain = -0.4
+            	conscription_factor = -0.50
+            	conscription = -0.02
+            	political_power_gain = 0.25
+			}
+		}
+		on_fire_2bcd = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.20
+            	war_support_factor = -0.10
+            	subjects_autonomy_gain = -0.4
+            	conscription_factor = -0.30
+            	political_power_gain = 0.25
+			}
+		}
+		on_fire_2abcd = {
+			picture = on_fire_2
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.15
+            	war_support_factor = -0.10
+            	subjects_autonomy_gain = -0.5
+            	conscription_factor = -0.30
+            	political_power_gain = 0.25
+			}
+		}
+		on_fire_3_1 = {
+			picture = on_fire_3
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.05
+            	war_support_factor = -0.10
+            	subjects_autonomy_gain = -0.5
+            	conscription_factor = -0.25
+            	political_power_gain = 0.25
+			}
+		}
+		on_fire_3_2 = {
+			picture = on_fire_3
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = -0.05
+            	#war_support_factor = 0
+            	subjects_autonomy_gain = -0.5
+            	political_power_gain = 0.25
+			}
+		}
+		on_fire_4_1 = {
+			picture = on_fire_4
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = 0.05
+            	#war_support_factor = 0
+            	subjects_autonomy_gain = -0.5
+            	political_power_gain = 0.25
+			}
+		}
+		on_fire_4_2 = {
+			picture = on_fire_4
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = 0.15
+            	war_support_factor = 0.15
+            	subjects_autonomy_gain = -0.5
+            	political_power_gain = 0.25
+			}
+		}
+		on_fire_4_3 = {
+			picture = on_fire_4
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = 0.25
+            	war_support_factor = 0.20
+            	subjects_autonomy_gain = -0.5
+            	political_power_gain = 0.25
+			}
+		}
+		on_fire_4_4 = {
+			picture = on_fire_4
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	stability_factor = 0.40
+            	war_support_factor = 0.35
+            	subjects_autonomy_gain = -0.5
+            	political_power_gain = 0.25
+			}
+		}
+		hinasters_military_1 = {
+			picture = hin_army
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	army_attack_factor = 0.05
+            	army_defence_factor = 0.05
+            	minimum_training_level = -0.10
+			}
+		}
+		hinasters_military_2 = {
+			picture = hin_army
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	army_attack_factor = 0.05
+            	army_defence_factor = 0.05
+            	minimum_training_level = -0.10
+            	max_planning = 0.10
+            	planning_speed = 0.15
+			}
+		}
+		hinasters_military_3 = {
+			picture = hin_army
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	army_attack_factor = 0.05
+            	army_defence_factor = 0.05
+            	minimum_training_level = -0.10
+            	max_planning = 0.10
+            	planning_speed = 0.15
+            	no_supply_grace = 12
+			}
+		}
+		hinasters_science_1 = {
+			picture = hin_science
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	research_speed_factor = 0.05
+			}
+		}
+		hinasters_science_2 = {
+			picture = hin_science
+			
+			allowed = { 
+				always = no
+			}
+
+            allowed_civil_war = { 
+            	always = no 
+            }
+
+            removal_cost = -1
+
+            modifier = {
+            	research_speed_factor = 0.15
+			}
+		}
+	}
+}
+
+##5a if B ab if C ac if D ad if BC abc if BD abd if CD acd if BCD abcd
+##5b if A ab if C bc if D bd if AC abc if AD abd if CD bcd if ACD abcd
+##5c if A ab if B bc if D cd if AB abc if AD acd if BD bcd if ABD abcd
+##5d if A ad if B bd if C cd if AB abd if AC acd if BC bcd if ABC abcd
+
+# a b c d ab ac ad bc bd cd abc abd acd abcd
+
+## +0.2 master impact
+

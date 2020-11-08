@@ -1,0 +1,7 @@
+﻿l_english:
+
+#Enclave
+  ##States
+      autonomy_enclave_comstate:0"Commonwealth"
+      autonomy_enclave_festate:0"Federal State"
+      autonomy_enclave_incstate:0"Incorporated State"

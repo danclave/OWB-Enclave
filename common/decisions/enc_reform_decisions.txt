@@ -920,7 +920,10 @@ ENC_infiltrating_NCR = {
 				exists = no
 			}
 			NOT = {
-				has_full_control_of_state = 63
+				OR = {
+					has_full_control_of_state = 63
+					HIB = { has_full_control_of_state = 63 }
+				}
 			}			# Dayglow
 		}
 		complete_effect = {
@@ -953,7 +956,10 @@ ENC_infiltrating_NCR = {
 				exists = no
 			}
 			NOT = {
-				has_full_control_of_state = 253
+				OR = {
+					has_full_control_of_state = 253
+					HIB = { has_full_control_of_state = 253 }
+				}
 			}			#shady sandsy
 		}
 		complete_effect = {
@@ -987,6 +993,7 @@ ENC_infiltrating_NCR = {
 			}
 			NOT = {
 				has_full_control_of_state = 135
+				HIB = { has_full_control_of_state = 135 }
 			}			#shady sandsy
 		}
 		complete_effect = {

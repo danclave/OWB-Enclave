@@ -1,0 +1,559 @@
+focus_tree = {
+	id = owbhinasters_nevada_puppet
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = hio
+		}
+	}
+
+	#Focus for 1. Shattered State
+	focus = {
+		id = erbhin_everything_on_fire
+		icon = GFX_goal_1_fire
+		x = 12
+		y = 0
+		cost = 0.8
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = on_fire_1
+		}
+	}
+
+	#Focus for 2a. Firebrands Suppression
+	focus = {
+		id = erbhin_getting_your_stuff_together_war_support
+		icon = GFX_goal_2a_firebrands
+		x = 10
+		y = 1
+		cost = 2.2
+		available_if_capitulated = yes
+		prerequisite = { focus = erbhin_everything_on_fire }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {limit = { NOT = { has_completed_focus = erbhin_everything_on_fire }} custom_effect_tooltip = erbhin_getting_your_stuff_together_war_support_tooltip }
+			if = {limit = { has_idea = on_fire_1b } swap_ideas = { remove_idea = on_fire_1b add_idea = on_fire_1ab }}
+			if = {limit = { AND = { NOT = { has_idea = on_fire_1b } has_idea = on_fire_1 }} swap_ideas = { remove_idea = on_fire_1 add_idea = on_fire_1a }}
+		}
+	}
+
+	#Focus for 2b. Old World Patriotism
+	focus = {
+		id = erbhin_getting_your_stuff_together_stability
+		icon = GFX_goal_2b_recrutment
+		x = 14
+		y = 1
+		cost = 2.2
+		available_if_capitulated = yes
+		prerequisite = { focus = erbhin_everything_on_fire }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {limit = { NOT = { has_completed_focus = erbhin_everything_on_fire }} custom_effect_tooltip = erbhin_getting_your_stuff_together_stability_tooltip }
+			if = {limit = { has_idea = on_fire_1a } swap_ideas = { remove_idea = on_fire_1a add_idea = on_fire_1ab }}
+			if = {limit = { AND = { NOT = { has_idea = on_fire_1a } has_idea = on_fire_1 }} swap_ideas = { remove_idea = on_fire_1 add_idea = on_fire_1b }}
+			add_ideas = volunteer_militia_conscription
+		}
+	}
+
+	#Focus for 3. Allied States Membership
+	focus = {
+		id = erbhin_everything_is_in_less_fire
+		icon = GFX_goal_3_fed
+		x = 12
+		y = 2
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = erbhin_getting_your_stuff_together_war_support
+		}
+
+		prerequisite = { 
+			focus = erbhin_getting_your_stuff_together_stability
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = { remove_idea = on_fire_1ab add_idea = on_fire_2_1 }
+			ERB = { puppet = ROOT }
+			if = {limit = { ERB = { is_in_faction = no }} ERB = { create_faction = "Allied States of America"}}
+			##if = {limit = { HIO = { NOT = { is_in_faction_with = ERB }}} ERB = { add_to_faction = HIO }}
+		}
+	}
+
+	#Focus for 4. Help from Nevada
+	focus = {
+		id = erbhin_asking_for_a_help
+		icon = GFX_goal_4_help
+		x = 12
+		y = 3
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = erbhin_everything_is_in_less_fire }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = { remove_idea = on_fire_2_1 add_idea = on_fire_2_2 }
+		}
+	}
+
+	#Focus for 5a. Nevada's Invesments
+	focus = {
+		id = erbhin_help_from_nevada_economic
+		icon = GFX_goal_5a_help_invesments
+		x = 7
+		y = 4
+		cost = 2.9
+		available_if_capitulated = yes
+		prerequisite = { focus = erbhin_asking_for_a_help }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {limit = { NOT = { has_completed_focus = erbhin_asking_for_a_help }} custom_effect_tooltip = erbhin_help_from_nevada_economic_tooltip }
+			if = {limit = { has_idea = on_fire_2b } swap_ideas = { remove_idea = on_fire_2b add_idea = on_fire_2ab }}
+			if = {limit = { has_idea = on_fire_2c } swap_ideas = { remove_idea = on_fire_2c add_idea = on_fire_2ac }}
+			if = {limit = { has_idea = on_fire_2d } swap_ideas = { remove_idea = on_fire_2d add_idea = on_fire_2ad }}
+			if = {limit = { has_idea = on_fire_2bc } swap_ideas = { remove_idea = on_fire_2bc add_idea = on_fire_2abc }}
+			if = {limit = { has_idea = on_fire_2bd } swap_ideas = { remove_idea = on_fire_2bd add_idea = on_fire_2abd }}
+			if = {limit = { has_idea = on_fire_2cd } swap_ideas = { remove_idea = on_fire_2cd add_idea = on_fire_2acd }}
+			if = {limit = { has_idea = on_fire_2bcd } swap_ideas = { remove_idea = on_fire_2bcd add_idea = on_fire_2abcd }}
+			if = {limit = { AND = { NOT = { OR = { has_idea = on_fire_2b has_idea = on_fire_2c has_idea = on_fire_2d has_idea = on_fire_2bc has_idea = on_fire_2bd has_idea = on_fire_2cd has_idea = on_fire_2bcd }} has_idea = on_fire_2_2 }} swap_ideas = { remove_idea = on_fire_2_2 add_idea = on_fire_2a }}
+			add_ideas = low_economic_mobilisation
+			add_ideas = funded_militia_conscription
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 9
+				add_building_construction = { type = arms_factory level = 3 instant_build = yes }
+				add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+				add_building_construction = { type = electricity_generator level = 1 instant_build = yes }
+				add_building_construction = { type = water_generator level = 1 instant_build = yes }
+				add_building_construction = { type = metal_generator level = 1 instant_build = yes }
+			}
+		}
+	}
+
+	#Focus for 5b. Nevada's Officers
+	focus = {
+		id = erbhin_help_from_nevada_officers
+		icon = GFX_goal_5b_help_officers
+		x = 10
+		y = 4
+		cost = 2.9
+		available_if_capitulated = yes
+		prerequisite = { focus = erbhin_asking_for_a_help }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {limit = { NOT = { has_completed_focus = erbhin_asking_for_a_help }} custom_effect_tooltip = erbhin_help_from_nevada_officers_tooltip }
+			if = {limit = { has_idea = on_fire_2a } swap_ideas = { remove_idea = on_fire_2a add_idea = on_fire_2ab }}
+			if = {limit = { has_idea = on_fire_2c } swap_ideas = { remove_idea = on_fire_2c add_idea = on_fire_2bc }}
+			if = {limit = { has_idea = on_fire_2d } swap_ideas = { remove_idea = on_fire_2d add_idea = on_fire_2bd }}
+			if = {limit = { has_idea = on_fire_2ac } swap_ideas = { remove_idea = on_fire_2ac add_idea = on_fire_2abc }}
+			if = {limit = { has_idea = on_fire_2ad } swap_ideas = { remove_idea = on_fire_2ad add_idea = on_fire_2abd }}
+			if = {limit = { has_idea = on_fire_2cd } swap_ideas = { remove_idea = on_fire_2cd add_idea = on_fire_2bcd }}
+			if = {limit = { has_idea = on_fire_2acd } swap_ideas = { remove_idea = on_fire_2acd add_idea = on_fire_2abcd }}
+			if = {limit = { AND = { NOT = { OR = { has_idea = on_fire_2a has_idea = on_fire_2c has_idea = on_fire_2d has_idea = on_fire_2ac has_idea = on_fire_2ad has_idea = on_fire_2cd has_idea = on_fire_2bcd }} has_idea = on_fire_2_2 }} swap_ideas = { remove_idea = on_fire_2_2 add_idea = on_fire_2b }}
+			add_ideas = hinasters_military_1
+			add_ideas = officer_law_military_academy
+
+		}
+	}
+
+	#Focus for 5c. Nevada's Politicians
+	focus = {
+		id = erbhin_help_from_nevada_politics
+		icon = GFX_goal_5c_help_politicians
+		x = 14
+		y = 4
+		cost = 2.9
+		available_if_capitulated = yes
+		prerequisite = { focus = erbhin_asking_for_a_help }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {limit = { NOT = { has_completed_focus = erbhin_asking_for_a_help }} custom_effect_tooltip = erbhin_help_from_nevada_politics_tooltip }
+			if = {limit = { has_idea = on_fire_2a } swap_ideas = { remove_idea = on_fire_2a add_idea = on_fire_2ac }}
+			if = {limit = { has_idea = on_fire_2b } swap_ideas = { remove_idea = on_fire_2b add_idea = on_fire_2bc }}
+			if = {limit = { has_idea = on_fire_2d } swap_ideas = { remove_idea = on_fire_2d add_idea = on_fire_2cd }}
+			if = {limit = { has_idea = on_fire_2ab } swap_ideas = { remove_idea = on_fire_2ab add_idea = on_fire_2abc }}
+			if = {limit = { has_idea = on_fire_2bd } swap_ideas = { remove_idea = on_fire_2bd add_idea = on_fire_2bcd }}
+			if = {limit = { has_idea = on_fire_2ad } swap_ideas = { remove_idea = on_fire_2ad add_idea = on_fire_2acd }}
+			if = {limit = { has_idea = on_fire_2abd } swap_ideas = { remove_idea = on_fire_2bcd add_idea = on_fire_2abcd }}
+			if = {limit = { AND = { NOT = { OR = { has_idea = on_fire_2a has_idea = on_fire_2b has_idea = on_fire_2d has_idea = on_fire_2ab has_idea = on_fire_2bd has_idea = on_fire_2ad has_idea = on_fire_2abd}} has_idea = on_fire_2_2 }} swap_ideas = { remove_idea = on_fire_2_2 add_idea = on_fire_2c }}
+		}
+	}
+
+	#Focus for 5d. Nevada's Specialists
+	focus = {
+		id = erbhin_help_from_nevada_specialists
+		icon = GFX_goal_5d_help_specialists
+		x = 17
+		y = 4
+		cost = 2.9
+		available_if_capitulated = yes
+		prerequisite = { focus = erbhin_asking_for_a_help }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {limit = { NOT = { has_completed_focus = erbhin_asking_for_a_help }} custom_effect_tooltip = erbhin_help_from_nevada_specialists_tooltip }
+			if = {limit = { has_idea = on_fire_2a } swap_ideas = { remove_idea = on_fire_2a add_idea = on_fire_2ad }}
+			if = {limit = { has_idea = on_fire_2b } swap_ideas = { remove_idea = on_fire_2b add_idea = on_fire_2bd }}
+			if = {limit = { has_idea = on_fire_2c } swap_ideas = { remove_idea = on_fire_2c add_idea = on_fire_2cd }}
+			if = {limit = { has_idea = on_fire_2ab } swap_ideas = { remove_idea = on_fire_2ab add_idea = on_fire_2abd }}
+			if = {limit = { has_idea = on_fire_2bc } swap_ideas = { remove_idea = on_fire_2bc add_idea = on_fire_2bcd }}
+			if = {limit = { has_idea = on_fire_2ac } swap_ideas = { remove_idea = on_fire_2ac add_idea = on_fire_2acd }}
+			if = {limit = { has_idea = on_fire_2abc } swap_ideas = { remove_idea = on_fire_2abc add_idea = on_fire_2abcd }}
+			if = {limit = { AND = { NOT = { OR = { has_idea = on_fire_2a has_idea = on_fire_2b has_idea = on_fire_2c has_idea = on_fire_2ab has_idea = on_fire_2bc has_idea = on_fire_2ac has_idea = on_fire_2abc }} has_idea = on_fire_2_2 }} swap_ideas = { remove_idea = on_fire_2_2 add_idea = on_fire_2d }}
+			add_ideas = hinasters_science_1
+		}
+	}
+
+	#Focus for 6. Stabilizing Government
+	focus = {
+		id = erbhin_fire_is_almost_over
+		icon = GFX_goal_6_stability
+		x = 12
+		y = 5
+		cost = 5.8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = erbhin_help_from_nevada_economic
+		}
+		prerequisite = { 
+			focus = erbhin_help_from_nevada_officers
+		}
+		prerequisite = { 
+			focus = erbhin_help_from_nevada_politics
+		}
+		prerequisite = { 
+			focus = erbhin_help_from_nevada_specialists
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = on_fire_2abcd
+				add_idea = on_fire_3_1
+			}
+		}
+	}
+
+	#Focus for 7. Rebuilding the Corps
+	focus = {
+		id = erbhin_more_officers
+		icon = GFX_goal_7_officers
+		x = 12
+		y = 6
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = erbhin_fire_is_almost_over }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = on_fire_3_1
+				add_idea = on_fire_3_2
+			}
+			swap_ideas = {
+				remove_idea = hinasters_military_1
+				add_idea = hinasters_military_2
+			}
+			add_ideas = training_law_military_academy
+		}
+	}
+
+	#Focus for 8. Research Agreement
+	focus = {
+		id = erbhin_getting_you_up_to_speed
+		icon = GFX_goal_8_up_to_speed
+		x = 12
+		y = 7
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = erbhin_more_officers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = hinasters_science_1
+				add_idea = hinasters_science_2
+			}
+			add_research_slot = 1
+			set_technology = { 
+				special_forces_tech_level_settler = 1
+				robotics_tech_level_settler = 1
+				air_tech_level_settler = 1
+				tools_tech_level_settler = 1
+				habitation_tech_level_settler = 1
+				exploitation_tech_level_settler = 1
+			}
+		}
+	}
+
+	#Focus for 9a. Power Armor Manuals
+	focus = {
+		id = erbhin_tinmen
+		icon = GFX_goal_9a_pa
+		x = 10
+		y = 8
+		cost = 2.2
+		available_if_capitulated = yes
+		prerequisite = { focus = erbhin_getting_you_up_to_speed }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_technology = { stripped_pa_tech = 1 simple_servo_tech = 1 hardening_armour_tech = 1 power_armour_tech_level_settler = 1 power_armour_tech_level_scientific = 1 }
+			add_tech_bonus = {
+				name = nevada_tech_support
+				bonus = 1.5
+				uses = 2
+				category = power_armor_tech_category
+			}
+			swap_ideas = {
+				remove_idea = hinasters_military_2
+				add_idea = hinasters_military_3
+			}
+		}
+	}
+
+	#Focus for 9b. AER Schematics
+	focus = {
+		id = erbhin_laser_lovers
+		icon = GFX_goal_9b_laser
+		x = 14
+		y = 8
+		cost = 2.2
+		available_if_capitulated = yes
+		prerequisite = { focus = erbhin_getting_you_up_to_speed }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_technology = { infantry_tech_level_scientific = 1 }
+			add_tech_bonus = {
+				name = nevada_tech_support
+				bonus = 1.5
+				uses = 2
+				category = energy_weaponry_tech_category
+			}
+		}
+	}
+
+	#Focus for 10. Federalization
+	focus = {
+		id = erbhin_fires_gone_its_getting_pretty_good
+		icon = GFX_goal_10_fed 
+		x = 12
+		y = 9
+		cost = 8.7
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = erbhin_tinmen
+		}
+		prerequisite = { 
+			focus = erbhin_laser_lovers
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = on_fire_3_2
+				add_idea = on_fire_4_1
+			}
+		}
+	}
+
+	#Focus for 11. Reclaimation of the Capital
+	focus = {
+		id = erbhin_the_reclaimation_of_the_capital
+		icon = GFX_goal_11_capital
+		x = 12
+		y = 10
+		cost = 4.4
+		available = {
+			custom_trigger_tooltip = {
+			    tooltip = hinasters_capital_get
+
+			    OR = {
+					has_full_control_of_state = 23
+					has_full_control_of_state = 44
+					has_full_control_of_state = 135
+					has_full_control_of_state = 556
+					has_full_control_of_state = 420
+					has_full_control_of_state = 525
+					has_full_control_of_state = 518
+					has_full_control_of_state = 116
+					has_full_control_of_state = 4
+					has_full_control_of_state = 266
+					has_full_control_of_state = 796
+					has_full_control_of_state = 687
+					has_full_control_of_state = 765
+					has_full_control_of_state = 863
+					has_full_control_of_state = 790
+					has_full_control_of_state = 868
+				}
+			}
+			hidden_trigger = {
+				AND = {
+					OR = {
+						has_full_control_of_state = 23
+						has_full_control_of_state = 44
+						has_full_control_of_state = 135
+						has_full_control_of_state = 556
+						has_full_control_of_state = 420
+						has_full_control_of_state = 525
+						has_full_control_of_state = 518
+						has_full_control_of_state = 116
+						has_full_control_of_state = 4
+						has_full_control_of_state = 266
+						has_full_control_of_state = 796
+						has_full_control_of_state = 687
+						has_full_control_of_state = 765
+						has_full_control_of_state = 863
+						has_full_control_of_state = 790
+						has_full_control_of_state = 868
+					}
+					NOT = { original_tag = HIP }
+				}
+			}
+		}
+		available_if_capitulated = yes
+		prerequisite = { focus = erbhin_fires_gone_its_getting_pretty_good }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = on_fire_4_1
+				add_idea = on_fire_4_2
+			}
+			if = { limit = { AND = { original_tag = HIO HIO = { has_full_control_of_state = 23 }}} 
+				23 = { set_state_name = "Portland" } 
+				set_province_name = { id = 1952 name = "Portland" } 
+				set_capital = 23 
+			}
+			if = { limit = { AND = { original_tag = HIA HIA = { has_full_control_of_state = 44 }}} 
+				44 = { set_state_name = "Santa Fe" } 
+				set_province_name = { id = 8981 name = "Santa Fe" } 
+				set_capital = 44 
+			}
+			if = { limit = { AND = { original_tag = HIB HIB = { has_full_control_of_state = 135 }}} 
+				135 = { set_state_name = "Sacramento" } 
+				set_province_name = { id = 2428 name = "Sacramento" } 
+				set_capital = 135 
+			}
+			if = { limit = { AND = { original_tag = HIC HIC = { has_full_control_of_state = 556 has_full_control_of_state = 61 has_full_control_of_state = 84 }}} 
+				556 = { set_state_name = "Olympia" } 
+				set_province_name = { id = 7116 name = "Olympia" } 
+				61 = { set_state_name = "Tacoma" } 
+				set_province_name = { id = 3650 name = "Tacoma" } 
+				84 = { set_state_name = "Seattle" } 
+				set_province_name = { id = 9234 name = "Seattle" } 
+				set_capital = 556 
+			}
+			if = { limit = { AND = { original_tag = HID HID = { has_full_control_of_state = 420 }}} 
+				420 = { set_state_name = "Victoria" } 
+				set_province_name = { id = 4447 name = "Victoria" } 
+				set_capital = 420 
+			}
+			if = { limit = { AND = { original_tag = HIE HIE = { has_full_control_of_state = 525 }}} 
+				525 = { set_state_name = "Denver" } 
+				set_province_name = { id = 9015 name = "Denver" } 
+				set_capital = 525 
+			}
+			if = { limit = { AND = { original_tag = HIF HIF = { has_full_control_of_state = 518 }}} 
+				set_capital = 518 
+			}
+			if = { limit = { AND = { original_tag = HIG HIG = { has_full_control_of_state = 116 }}} 
+				116 = { set_state_name = "Boise" } 
+				set_province_name = { id = 4065 name = "Boise" } 
+				set_capital = 116 
+			}
+			if = { limit = { AND = { original_tag = HIH HIH = { has_full_control_of_state = 4 }}} 
+				set_capital = 4 
+			}
+			if = { limit = { AND = { original_tag = HII HII = { has_full_control_of_state = 266 }}} 
+				266 = { set_state_name = "Salt Lake City" } 
+				set_province_name = { id = 6306 name = "Salt Lake City" } 
+				set_capital = 266 
+			}
+			if = { limit = { AND = { original_tag = HIJ HIJ = { has_full_control_of_state = 915 }}} 
+				set_capital = 915
+			}
+			if = { limit = { AND = { original_tag = HIK HIK = { has_full_control_of_state = 687 }}} 
+				set_capital = 687 
+			}
+			if = { limit = { AND = { original_tag = HIL HIL = { has_full_control_of_state = 765 }}} 
+				set_capital = 765 
+			}
+			if = { limit = { AND = { original_tag = HIM HIM = { has_full_control_of_state = 863 }}} 
+				set_capital = 863 
+			}
+			if = { limit = { AND = { original_tag = HIN HIN = { has_full_control_of_state = 790 }}} 
+				set_capital = 790 
+			}
+			if = { limit = { AND = { original_tag = HIQ HIQ = { has_full_control_of_state = 790 }}} 
+				set_capital = 868
+			}
+		}
+	}
+
+	#Focus for 12. The Presidental Speech
+	focus = {
+		id = erbhino_the_presidental_speech
+		icon = GFX_goal_12_speech
+		x = 12
+		y = 11
+		cost = 2.2
+		available_if_capitulated = yes
+		prerequisite = { focus = erbhin_the_reclaimation_of_the_capital }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = on_fire_4_2
+				add_idea = on_fire_4_3
+			}
+		}
+	}
+
+	#Focus for 13. The State of [INSERT NAME HERE]
+	focus = {
+		id = erbhin_the_state_of_insert_name_here
+		icon = GFX_goal_13_state
+		x = 12
+		y = 12
+		cost = 5.8
+		available_if_capitulated = yes
+				prerequisite = { focus = erbhino_the_presidental_speech }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = on_fire_4_3
+				add_idea = on_fire_4_4
+			}
+		}
+	}
+
+#End of focuses 
+}

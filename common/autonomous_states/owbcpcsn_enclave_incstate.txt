@@ -1,0 +1,72 @@
+autonomy_state = {
+	id = autonomy_enclave_incstate
+
+	is_puppet = yes
+
+	min_freedom_level = 0.0
+
+	manpower_influence = 1.0
+
+	rule = {
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+		units_deployed_to_overlord = yes
+	}
+
+	modifier = {
+		autonomy_manpower_share = 1.0
+		can_master_build_for_us = 1
+		extra_trade_to_overlord_factor = 1.0
+		overlord_trade_cost_factor = -0.9
+		cic_to_overlord_factor = 0.25
+		mic_to_overlord_factor = 0.75
+		research_sharing_per_country_bonus_factor = -0.5
+	}
+
+	ai_subject_wants_higher = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_lower = {
+		factor = 0.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = yes
+	}
+
+	allowed = {
+		has_dlc = "Together for Victory"
+		OR = {
+			original_tag = HIA
+			original_tag = HIB
+			original_tag = HIC
+			original_tag = HID
+			original_tag = HIE
+			original_tag = HIF
+			original_tag = HIO
+			original_tag = HIG
+			original_tag = HIH
+			original_tag = HII
+			original_tag = HIJ
+			original_tag = HIK
+			original_tag = HIL
+			original_tag = HIM
+			original_tag = HIN
+		}
+		OVERLORD = {
+			OR = {
+				has_country_flag = enclave_nation
+				original_tag = ENC
+			}
+		}
+	}
+
+	can_take_level = {
+		#trigger here
+	}
+
+	can_lose_level = {
+		#trigger here
+	}
+}
