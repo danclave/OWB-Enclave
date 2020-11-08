@@ -2705,6 +2705,17 @@ ENC_deseret = {
 						transfer_state = PREV
 					}
 				}
+
+				any_allied_country = {
+					every_owned_state = {
+						limit = {
+							is_core_of = NCN
+						}
+						NCN = {
+							transfer_state = THIS
+						}
+					}
+				}
 			}
 			custom_effect_tooltip = ENC_state_of_deseret_tt
 		}
@@ -2739,6 +2750,17 @@ ENC_deseret = {
 					}
 					NCN = {
 						transfer_state = PREV
+					}
+				}
+
+				any_allied_country = {
+					every_owned_state = {
+						limit = {
+							is_core_of = NCN
+						}
+						NCN = {
+							transfer_state = THIS
+						}
 					}
 				}
 			}
