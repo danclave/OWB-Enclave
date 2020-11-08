@@ -62,7 +62,7 @@ enc_red_menace_desc: "Far too many Americans have forgotten that the Red Menace 
 enc_radio_desc:0 "Our spies' radio beacons could be used to broadcast the Enclave's message to the Californians. Let sympathizers far and wide hear of the Enclaves vision. While we are at it, those same beacons can also be used as listening outposts."
 enc_Arizona: "The Southwest Commonwealth"
 enc_Arizona_desc: "The defeat of Caesar has left us overextended across the southwest.  It's time to create a new commonwealth under the leadership of the Allied States of America."
-enc_Arizona_tt: "Creates a new state for the union!"
+enc_Arizona_tt: "Unlocks decisions to create and add the States of Arizona and New Mexico!"
 enc_the_lucia_incident: "The Lucia Incident"
 enc_the_lucia_incident_desc: "We have enough T-51 Powered Armor around that we can fake a Brotherhood attack on NCR Outposts. At the same time, we will order an attack on the Brotherhood using cracked NCR high command codes. This should be enough to tip their fragile peace."
 enc_the_lucia_incident_tt: "Unlocks the §YThe Lucia Incident§! decision.\nThis allows you to use your spies to send a fake radio broadcast causing the §Y[BOS.GetName]§! to declare war on the §Y[NCR.GetName]§!."

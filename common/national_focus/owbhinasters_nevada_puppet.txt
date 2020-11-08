@@ -302,6 +302,7 @@ focus_tree = {
 				habitation_tech_level_settler = 1
 				exploitation_tech_level_settler = 1
 			}
+			add_to_tech_sharing_group = Benjamin_Franklin_Society
 		}
 	}
 
