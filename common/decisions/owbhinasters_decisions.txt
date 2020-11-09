@@ -3190,6 +3190,7 @@ reforming_the_old_states = {
 			}
 		}
 		visible = {
+			has_completed_focus = enc_pacific_commonwealth
 			OR = {
 				has_full_control_of_state = 7
 				has_full_control_of_state = 21
@@ -3364,6 +3365,7 @@ reforming_the_old_states = {
 			}
 		}
 		visible = {
+			has_completed_focus = enc_pacific_commonwealth
 			country_exists = HIC
 			NOT = {
 				HIC = {
