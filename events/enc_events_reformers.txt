@@ -8452,6 +8452,9 @@ country_event = { #240 -The Old Country
 	}
 	option = { # Wee!
 		name = enc_reformers.240.a
+		WBH = {
+			release = TOC
+		}
 		puppet = TOC
 	}
 }
