@@ -6018,7 +6018,10 @@ news_event = { #170 - Dark Age
 			country_exists = NCR
 			has_country_flag = enc_mid_game
 		}
-		has_completed_focus = enc_reform
+		has_completed_focus = enc_reformer
+		NOT = {
+			has_completed_focus = enc_home_is_nevada
+		}
 		owns_state = 253
 		owns_state = 135
 		owns_state = 63
@@ -8451,6 +8454,9 @@ country_event = { #240 -The Old Country
 	}
 	option = { # Wee!
 		name = enc_reformers.240.a
+		WBH = {
+			release = TOC
+		}
 		puppet = TOC
 	}
 }

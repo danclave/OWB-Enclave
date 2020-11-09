@@ -5212,11 +5212,32 @@ focus = {#NEVADA - second city
 		prerequisite = { focus = enc_the_american_alliance }
 		completion_reward = {
 			hidden_effect = {
+				every_other_country = {
+					limit = { 
+						is_in_faction_with = NCN 
+					}
+					leave_faction = yes
+					ERB = {
+						add_to_faction = PREV
+					}
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+					add_to_tech_sharing_group = Benjamin_Franklin_Society
+				}
 				NCN = { 
 					if = { 
 						limit = { is_in_faction = yes }
 						leave_faction = yes
 					}
+					add_ai_strategy = {
+						type = alliance
+						id = "ERB"
+						value = 200
+					}
+					add_to_tech_sharing_group = Benjamin_Franklin_Society
 				}
 				add_to_faction = NCN
 
