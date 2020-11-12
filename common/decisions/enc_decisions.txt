@@ -1007,14 +1007,16 @@ ENC_render_unto_caesar = {
 			NOT = { country_exists = CES }
 		}
 		cancel_trigger = {
-			CES = {
-				OR = {
-					exists = no
-					has_civil_war = YES
-					has_war_with = ERB #Enclave
+			OR = {
+				CES = {
+					OR = {
+						exists = no
+						has_civil_war = YES
+						has_war_with = ERB #Enclave
+					}
 				}
+				has_completed_focus = enc_ss_ceasar_top_augustus
 			}
-			has_completed_focus = enc_ss_ceasar_top_augustus
 		}
 		is_good = no
 		days_mission_timeout = 1268
