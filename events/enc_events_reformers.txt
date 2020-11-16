@@ -2911,18 +2911,20 @@ country_event = { #85 - Shi
 		name = enc_reformers.85.b
 		add_war_support = -0.05
 		add_stability = -0.05
+		puppet = SHI
 		SHI = {
 			set_politics = {
 				ruling_party = people
 				elections_allowed = no
 			}
-		}
-		puppet = SHI
-		SHI = {
 			transfer_state = 474
-		}
-		SHI = {
 			set_cosmetic_tag = ERB_SHI
+		}
+		hidden_effect = {
+			country_event = {
+				id = enc_reformers.86
+				days = 30
+			}
 		}
 	}
 }
@@ -2933,13 +2935,7 @@ country_event = { #86 - Bomb Bay
 	desc = enc_reformers.86.d
 	picture = GFX_event_enc_New_SanFran
 	fire_only_once = yes
-	is_triggered_only = no
-	trigger = {
-		has_country_flag = enc_China_Town
-	}
-	mean_time_to_happen = {
-		days = 30
-	}
+	is_triggered_only = yes
 	option = { #	Bomb Bay
 		name = enc_reformers.86.a
 		set_technology = {
