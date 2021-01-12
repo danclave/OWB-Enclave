@@ -1,8 +1,8 @@
 focus_tree = {
-	id = erb_nf1
+	id = erb_nf_1
 	country = {
-		factor= 0
-
+		factor= 1
+		tag = VLT
 	}
 	default = no
 ###############################################################

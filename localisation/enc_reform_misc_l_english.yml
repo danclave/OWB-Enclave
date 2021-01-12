@@ -194,6 +194,10 @@ ENC_elites_party_anti_integration_long: "The Anti Integration Party"
 ENC_people_party_wastelanders_long: "The Wastelanders"
 ENC_people_party_wastelanders: "The Wastelanders"
 ENC_people_party_wastelanders_leader:0 "no one"
+
+ENC_fools_and_dreamers_long: "Home is Nevada"
+ENC_fools_and_dreamers: "Home is Nevada"
+
 ###################################
 # TECHNOLOGY
 ###################################

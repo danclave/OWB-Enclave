@@ -2589,7 +2589,7 @@ country_event = { #74 - Civil War
 					picture = "gfx/leaders/ENC/portrait_enc_hayes.dds"
 					expire = "3000.1.1"
 					ideology = ideocracy
-				}				
+				}
 			}
 			NCR = {
 				set_variable = {
@@ -4033,7 +4033,7 @@ country_event = { #113 - President Hayes
 					picture = "gfx/leaders/ENC/portrait_enc_hayes.dds"
 					expire = "3000.1.1"
 					ideology = ideocracy
-				}	
+				}
 			}
 		}
 		NCR = {
@@ -7885,7 +7885,7 @@ news_event = { #223 - The Legion Marches
 
 						# or anyone that's in League with New Canaan, Caesar really wants it gone
 						is_in_faction_with = NCN
-						
+
 						AND = {
 							is_in_faction = no
 							NOT = {
@@ -11442,7 +11442,7 @@ news_event = { #356 - Taxes
 			remove_idea = no_wages
 			add_idea = standard_military
 		}
-		
+
 		custom_effect_Tooltip = enc_reformers.356.a_tt
 	}
 }
@@ -11602,6 +11602,43 @@ country_event = { #356 - Now I have to Eat The Bloody thing?
 		}
 	}
 }
+
+#####
+### 360 on, a nation is born
+news_event = { #360 Granite won!
+	id = enc_reformers.360
+	title = enc_reformers.360.t
+	desc = enc_reformers.360.d
+	picture = GFX_event_ENC_secret
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = enc_reformers.360.a
+		set_politics = {
+			ruling_party = elites
+		}
+		set_political_party = {
+			ideology = elites
+			popularity = 60
+		}
+		set_party_name = {
+			ideology = elites
+			long_name = ENC_fools_and_dreamers_long
+			name = ENC_people_party_wastelanders
+		}
+		create_country_leader = {
+			name = "Douglas Granite"
+			desc = "Granite_desc"
+			picture = "gfx/leaders/portrait_douglas_vault_city.dds"
+			expire = "3000.1.1"
+			ideology = militarist_technocracy
+			traits = {
+			}
+		}
+		load_focus_tree = erb_nf_1
+	}
+
+}
 # country_event = {#355 - War with Caesar Speech
 # id = enc_reformers.355
 # title = enc_reformers.355.t
@@ -11632,3 +11669,7 @@ country_event = { #356 - Now I have to Eat The Bloody thing?
 # GFX_event_ENC_door # GFX_event_ENC_double_flag # GFX_event_ENC_double_flag_long # GFX_event_ENC_mariposa1 # GFX_event_ENC_mariposa2 # GFX_event_ENC_mariposa3 # GFX_event_ENC_minigun
 # GFX_event_ENC_new_reno # GFX_event_ENC_picture # GFX_event_ENC_plasma_pistol # GFX_event_ENC_plasma_rifle # GFX_event_ENC_president_only # GFX_event_enc_reform_propaganda # GFX_event_ENC_ruined_city # GFX_event_ENC_secret
 # GFX_event_ENC_secret2 # GFX_event_ENC_secret3 # GFX_event_ENC_single_soldier
+
+
+
+
