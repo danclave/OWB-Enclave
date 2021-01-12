@@ -1,8 +1,11 @@
 focus_tree = {
-	id = erb_nf1
+	id = erb_nf
 	country = {
 		factor= 0
-
+		modifier = {
+			add = 100
+			tag = ERB
+		}
 	}
 	default = no
 ###############################################################

@@ -11636,8 +11636,8 @@ news_event = { #360 Granite won!
 			}
 		}
 		load_focus_tree = erb_nf_1
+		set_country_flag = ERB_vault
 	}
-
 }
 # country_event = {#355 - War with Caesar Speech
 # id = enc_reformers.355
