@@ -28,7 +28,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#america_forts
 		name = "GFX_goal_america_forts_shine"
 		texturefile = "gfx/interface/goals/america_forts.dds"
@@ -58,7 +58,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#america_goal_eagle
 		name = "GFX_goal_america_goal_eagle_shine"
 		texturefile = "gfx/interface/goals/america_goal_eagle.dds"
@@ -88,7 +88,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#america_goal_eagle_deal
 		name = "GFX_goal_america_goal_eagle_deal_shine"
 		texturefile = "gfx/interface/goals/america_goal_eagle_deal.dds"
@@ -118,7 +118,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#america_goal_golden_gate
 		name = "GFX_goal_america_goal_golden_gate_shine"
 		texturefile = "gfx/interface/goals/america_goal_golden_gate.dds"
@@ -148,7 +148,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#desktop.ini
 		name = "GFX_goal_desktop.ini_shine"
 		texturefile = "gfx/interface/goals/desktop.ini.dds"
@@ -178,7 +178,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_accept_ghouls
 		name = "GFX_goal_enc_accept_ghouls_shine"
 		texturefile = "gfx/interface/goals/enc_accept_ghouls.dds"
@@ -208,7 +208,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_accept_super_mutants
 		name = "GFX_goal_enc_accept_super_mutants_shine"
 		texturefile = "gfx/interface/goals/enc_accept_super_mutants.dds"
@@ -238,7 +238,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_accept_wastelanders
 		name = "GFX_goal_enc_accept_wastelanders_shine"
 		texturefile = "gfx/interface/goals/enc_accept_wastelanders.dds"
@@ -268,7 +268,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_advanced_fighter
 		name = "GFX_goal_enc_advanced_fighter_shine"
 		texturefile = "gfx/interface/goals/enc_advanced_fighter.dds"
@@ -298,7 +298,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_agreement
 		name = "GFX_goal_enc_agreement_shine"
 		texturefile = "gfx/interface/goals/enc_agreement.dds"
@@ -328,7 +328,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_air_production
 		name = "GFX_goal_enc_air_production_shine"
 		texturefile = "gfx/interface/goals/enc_air_production.dds"
@@ -358,7 +358,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_amnesty_for_service
 		name = "GFX_goal_enc_amnesty_for_service_shine"
 		texturefile = "gfx/interface/goals/enc_amnesty_for_service.dds"
@@ -388,7 +388,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_annex_ykz
 		name = "GFX_goal_enc_annex_ykz_shine"
 		texturefile = "gfx/interface/goals/enc_annex_ykz.dds"
@@ -418,7 +418,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_ant
 		name = "GFX_goal_enc_ant_shine"
 		texturefile = "gfx/interface/goals/enc_ant.dds"
@@ -448,7 +448,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_anti_bos
 		name = "GFX_goal_enc_anti_bos_shine"
 		texturefile = "gfx/interface/goals/enc_anti_bos.dds"
@@ -478,7 +478,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_anti_ncr
 		name = "GFX_goal_enc_anti_ncr_shine"
 		texturefile = "gfx/interface/goals/enc_anti_ncr.dds"
@@ -508,7 +508,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_ANT_establish_tributaries
 		name = "GFX_goal_enc_ANT_establish_tributaries_shine"
 		texturefile = "gfx/interface/goals/enc_ANT_establish_tributaries.dds"
@@ -538,7 +538,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_appointed_governors
 		name = "GFX_goal_enc_appointed_governors_shine"
 		texturefile = "gfx/interface/goals/enc_appointed_governors.dds"
@@ -568,7 +568,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_area_52
 		name = "GFX_goal_enc_area_52_shine"
 		texturefile = "gfx/interface/goals/enc_area_52.dds"
@@ -598,7 +598,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_arizona
 		name = "GFX_goal_enc_arizona_shine"
 		texturefile = "gfx/interface/goals/enc_arizona.dds"
@@ -628,7 +628,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_armed_militias
 		name = "GFX_goal_enc_armed_militias_shine"
 		texturefile = "gfx/interface/goals/enc_armed_militias.dds"
@@ -658,7 +658,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_army_doctrine
 		name = "GFX_goal_enc_army_doctrine_shine"
 		texturefile = "gfx/interface/goals/enc_army_doctrine.dds"
@@ -688,7 +688,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_army_reserves
 		name = "GFX_goal_enc_army_reserves_shine"
 		texturefile = "gfx/interface/goals/enc_army_reserves.dds"
@@ -718,7 +718,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_arrows2
 		name = "GFX_goal_enc_arrows2_shine"
 		texturefile = "gfx/interface/goals/enc_arrows2.dds"
@@ -748,7 +748,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#ENC_assasinate
 		name = "GFX_goal_ENC_assasinate_shine"
 		texturefile = "gfx/interface/goals/ENC_assasinate.dds"
@@ -778,7 +778,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_a_common_enemy
 		name = "GFX_goal_enc_a_common_enemy_shine"
 		texturefile = "gfx/interface/goals/enc_a_common_enemy.dds"
@@ -808,7 +808,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_a_nation_reborn
 		name = "GFX_goal_enc_a_nation_reborn_shine"
 		texturefile = "gfx/interface/goals/enc_a_nation_reborn.dds"
@@ -838,7 +838,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_a_nation_remade
 		name = "GFX_goal_enc_a_nation_remade_shine"
 		texturefile = "gfx/interface/goals/enc_a_nation_remade.dds"
@@ -868,7 +868,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_ban_congress
 		name = "GFX_goal_enc_ban_congress_shine"
 		texturefile = "gfx/interface/goals/enc_ban_congress.dds"
@@ -898,7 +898,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_beacon
 		name = "GFX_goal_enc_beacon_shine"
 		texturefile = "gfx/interface/goals/enc_beacon.dds"
@@ -928,7 +928,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_big_MT
 		name = "GFX_goal_enc_big_MT_shine"
 		texturefile = "gfx/interface/goals/enc_big_MT.dds"
@@ -958,7 +958,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_big_MT_restored_nevada
 		name = "GFX_goal_enc_big_MT_restored_nevada_shine"
 		texturefile = "gfx/interface/goals/enc_big_MT_restored_nevada.dds"
@@ -988,7 +988,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_bos_flag_reform
 		name = "GFX_goal_enc_bos_flag_reform_shine"
 		texturefile = "gfx/interface/goals/enc_bos_flag_reform.dds"
@@ -1018,7 +1018,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_bos_leadership
 		name = "GFX_goal_enc_bos_leadership_shine"
 		texturefile = "gfx/interface/goals/enc_bos_leadership.dds"
@@ -1048,7 +1048,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_bos_soldiers
 		name = "GFX_goal_enc_bos_soldiers_shine"
 		texturefile = "gfx/interface/goals/enc_bos_soldiers.dds"
@@ -1078,7 +1078,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_cause_focus
 		name = "GFX_goal_enc_cause_focus_shine"
 		texturefile = "gfx/interface/goals/enc_cause_focus.dds"
@@ -1108,7 +1108,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_citizenship_for_service
 		name = "GFX_goal_enc_citizenship_for_service_shine"
 		texturefile = "gfx/interface/goals/enc_citizenship_for_service.dds"
@@ -1138,7 +1138,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_cloning
 		name = "GFX_goal_enc_cloning_shine"
 		texturefile = "gfx/interface/goals/enc_cloning.dds"
@@ -1168,7 +1168,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_combined_arms
 		name = "GFX_goal_enc_combined_arms_shine"
 		texturefile = "gfx/interface/goals/enc_combined_arms.dds"
@@ -1198,7 +1198,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_complete_integration
 		name = "GFX_goal_enc_complete_integration_shine"
 		texturefile = "gfx/interface/goals/enc_complete_integration.dds"
@@ -1228,7 +1228,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_construction
 		name = "GFX_goal_enc_construction_shine"
 		texturefile = "gfx/interface/goals/enc_construction.dds"
@@ -1258,7 +1258,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_construction_nev
 		name = "GFX_goal_enc_construction_nev_shine"
 		texturefile = "gfx/interface/goals/enc_construction_nev.dds"
@@ -1288,7 +1288,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_construction_usa
 		name = "GFX_goal_enc_construction_usa_shine"
 		texturefile = "gfx/interface/goals/enc_construction_usa.dds"
@@ -1318,7 +1318,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_construct_mil_factory
 		name = "GFX_goal_enc_construct_mil_factory_shine"
 		texturefile = "gfx/interface/goals/enc_construct_mil_factory.dds"
@@ -1348,7 +1348,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_crack_the_code
 		name = "GFX_goal_enc_crack_the_code_shine"
 		texturefile = "gfx/interface/goals/enc_crack_the_code.dds"
@@ -1378,7 +1378,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_defenders
 		name = "GFX_goal_enc_defenders_shine"
 		texturefile = "gfx/interface/goals/enc_defenders.dds"
@@ -1408,7 +1408,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_demilitarize_government
 		name = "GFX_goal_enc_demilitarize_government_shine"
 		texturefile = "gfx/interface/goals/enc_demilitarize_government.dds"
@@ -1438,7 +1438,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_department_of_commerce
 		name = "GFX_goal_enc_department_of_commerce_shine"
 		texturefile = "gfx/interface/goals/enc_department_of_commerce.dds"
@@ -1468,7 +1468,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_department_of_defense
 		name = "GFX_goal_enc_department_of_defense_shine"
 		texturefile = "gfx/interface/goals/enc_department_of_defense.dds"
@@ -1498,7 +1498,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_department_of_defense_2
 		name = "GFX_goal_enc_department_of_defense_2_shine"
 		texturefile = "gfx/interface/goals/enc_department_of_defense_2.dds"
@@ -1528,7 +1528,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_department_of_homeland_security
 		name = "GFX_goal_enc_department_of_homeland_security_shine"
 		texturefile = "gfx/interface/goals/enc_department_of_homeland_security.dds"
@@ -1558,7 +1558,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_die
 		name = "GFX_goal_enc_die_shine"
 		texturefile = "gfx/interface/goals/enc_die.dds"
@@ -1588,7 +1588,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_die_dark
 		name = "GFX_goal_enc_die_dark_shine"
 		texturefile = "gfx/interface/goals/enc_die_dark.dds"
@@ -1618,7 +1618,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_draft_wastelanders
 		name = "GFX_goal_enc_draft_wastelanders_shine"
 		texturefile = "gfx/interface/goals/enc_draft_wastelanders.dds"
@@ -1648,7 +1648,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_Economic_Miracle
 		name = "GFX_goal_enc_Economic_Miracle_shine"
 		texturefile = "gfx/interface/goals/enc_Economic_Miracle.dds"
@@ -1678,7 +1678,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_education
 		name = "GFX_goal_enc_education_shine"
 		texturefile = "gfx/interface/goals/enc_education.dds"
@@ -1708,7 +1708,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_education_by_followers
 		name = "GFX_goal_enc_education_by_followers_shine"
 		texturefile = "gfx/interface/goals/enc_education_by_followers.dds"
@@ -1738,7 +1738,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_education_civilian
 		name = "GFX_goal_enc_education_civilian_shine"
 		texturefile = "gfx/interface/goals/enc_education_civilian.dds"
@@ -1768,7 +1768,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_education_military
 		name = "GFX_goal_enc_education_military_shine"
 		texturefile = "gfx/interface/goals/enc_education_military.dds"
@@ -1798,7 +1798,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_election
 		name = "GFX_goal_enc_election_shine"
 		texturefile = "gfx/interface/goals/enc_election.dds"
@@ -1828,7 +1828,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_elections_reform
 		name = "GFX_goal_enc_elections_reform_shine"
 		texturefile = "gfx/interface/goals/enc_elections_reform.dds"
@@ -1858,7 +1858,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_electoral_victory
 		name = "GFX_goal_enc_electoral_victory_shine"
 		texturefile = "gfx/interface/goals/enc_electoral_victory.dds"
@@ -1888,7 +1888,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_electricity
 		name = "GFX_goal_enc_electricity_shine"
 		texturefile = "gfx/interface/goals/enc_electricity.dds"
@@ -1918,7 +1918,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_emergency_labour_draft
 		name = "GFX_goal_enc_emergency_labour_draft_shine"
 		texturefile = "gfx/interface/goals/enc_emergency_labour_draft.dds"
@@ -1948,7 +1948,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_empower_congress
 		name = "GFX_goal_enc_empower_congress_shine"
 		texturefile = "gfx/interface/goals/enc_empower_congress.dds"
@@ -1978,7 +1978,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_encryption
 		name = "GFX_goal_enc_encryption_shine"
 		texturefile = "gfx/interface/goals/enc_encryption.dds"
@@ -2008,7 +2008,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_epa
 		name = "GFX_goal_enc_epa_shine"
 		texturefile = "gfx/interface/goals/enc_epa.dds"
@@ -2038,7 +2038,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_expand_human_definition
 		name = "GFX_goal_enc_expand_human_definition_shine"
 		texturefile = "gfx/interface/goals/enc_expand_human_definition.dds"
@@ -2068,7 +2068,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_expansion_reform
 		name = "GFX_goal_enc_expansion_reform_shine"
 		texturefile = "gfx/interface/goals/enc_expansion_reform.dds"
@@ -2098,7 +2098,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_experiments
 		name = "GFX_goal_enc_experiments_shine"
 		texturefile = "gfx/interface/goals/enc_experiments.dds"
@@ -2128,7 +2128,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_eyebot
 		name = "GFX_goal_enc_eyebot_shine"
 		texturefile = "gfx/interface/goals/enc_eyebot.dds"
@@ -2158,7 +2158,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_eyebot_mex_purity
 		name = "GFX_goal_enc_eyebot_mex_purity_shine"
 		texturefile = "gfx/interface/goals/enc_eyebot_mex_purity.dds"
@@ -2188,7 +2188,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_eyebot_reform
 		name = "GFX_goal_enc_eyebot_reform_shine"
 		texturefile = "gfx/interface/goals/enc_eyebot_reform.dds"
@@ -2218,7 +2218,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_FBI
 		name = "GFX_goal_enc_FBI_shine"
 		texturefile = "gfx/interface/goals/enc_FBI.dds"
@@ -2248,7 +2248,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_fear_uncertainty_and_doubt
 		name = "GFX_goal_enc_fear_uncertainty_and_doubt_shine"
 		texturefile = "gfx/interface/goals/enc_fear_uncertainty_and_doubt.dds"
@@ -2278,7 +2278,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_fed
 		name = "GFX_goal_enc_fed_shine"
 		texturefile = "gfx/interface/goals/enc_fed.dds"
@@ -2308,7 +2308,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_fighter
 		name = "GFX_goal_enc_fighter_shine"
 		texturefile = "gfx/interface/goals/enc_fighter.dds"
@@ -2338,7 +2338,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_first_citizens
 		name = "GFX_goal_enc_first_citizens_shine"
 		texturefile = "gfx/interface/goals/enc_first_citizens.dds"
@@ -2368,7 +2368,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_flags
 		name = "GFX_goal_enc_flags_shine"
 		texturefile = "gfx/interface/goals/enc_flags.dds"
@@ -2398,7 +2398,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_forced_conscription
 		name = "GFX_goal_enc_forced_conscription_shine"
 		texturefile = "gfx/interface/goals/enc_forced_conscription.dds"
@@ -2428,7 +2428,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_forced_deal
 		name = "GFX_goal_enc_forced_deal_shine"
 		texturefile = "gfx/interface/goals/enc_forced_deal.dds"
@@ -2458,7 +2458,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_fort
 		name = "GFX_goal_enc_fort_shine"
 		texturefile = "gfx/interface/goals/enc_fort.dds"
@@ -2488,7 +2488,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_fort_reformer
 		name = "GFX_goal_enc_fort_reformer_shine"
 		texturefile = "gfx/interface/goals/enc_fort_reformer.dds"
@@ -2518,7 +2518,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_free_press
 		name = "GFX_goal_enc_free_press_shine"
 		texturefile = "gfx/interface/goals/enc_free_press.dds"
@@ -2548,7 +2548,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_fruits_of_their_labors
 		name = "GFX_goal_enc_fruits_of_their_labors_shine"
 		texturefile = "gfx/interface/goals/enc_fruits_of_their_labors.dds"
@@ -2578,7 +2578,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_geck
 		name = "GFX_goal_enc_geck_shine"
 		texturefile = "gfx/interface/goals/enc_geck.dds"
@@ -2608,7 +2608,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_gecko_power_plant
 		name = "GFX_goal_enc_gecko_power_plant_shine"
 		texturefile = "gfx/interface/goals/enc_gecko_power_plant.dds"
@@ -2638,7 +2638,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#Enc_goal_flag_mexico
 		name = "GFX_goal_Enc_goal_flag_mexico_shine"
 		texturefile = "gfx/interface/goals/Enc_goal_flag_mexico.dds"
@@ -2668,7 +2668,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_guerrilla_warfare
 		name = "GFX_goal_enc_guerrilla_warfare_shine"
 		texturefile = "gfx/interface/goals/enc_guerrilla_warfare.dds"
@@ -2698,7 +2698,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_home_is_nevada
 		name = "GFX_goal_enc_home_is_nevada_shine"
 		texturefile = "gfx/interface/goals/enc_home_is_nevada.dds"
@@ -2728,7 +2728,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_improve_relations_reformer
 		name = "GFX_goal_enc_improve_relations_reformer_shine"
 		texturefile = "gfx/interface/goals/enc_improve_relations_reformer.dds"
@@ -2758,7 +2758,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_infiltrate_ncr
 		name = "GFX_goal_enc_infiltrate_ncr_shine"
 		texturefile = "gfx/interface/goals/enc_infiltrate_ncr.dds"
@@ -2788,7 +2788,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_infra
 		name = "GFX_goal_enc_infra_shine"
 		texturefile = "gfx/interface/goals/enc_infra.dds"
@@ -2818,7 +2818,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_institutionalize_separation
 		name = "GFX_goal_enc_institutionalize_separation_shine"
 		texturefile = "gfx/interface/goals/enc_institutionalize_separation.dds"
@@ -2848,7 +2848,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_integrate_officers
 		name = "GFX_goal_enc_integrate_officers_shine"
 		texturefile = "gfx/interface/goals/enc_integrate_officers.dds"
@@ -2878,7 +2878,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_integrate_politicians
 		name = "GFX_goal_enc_integrate_politicians_shine"
 		texturefile = "gfx/interface/goals/enc_integrate_politicians.dds"
@@ -2908,7 +2908,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_integrate_scientists
 		name = "GFX_goal_enc_integrate_scientists_shine"
 		texturefile = "gfx/interface/goals/enc_integrate_scientists.dds"
@@ -2938,7 +2938,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_integration
 		name = "GFX_goal_enc_integration_shine"
 		texturefile = "gfx/interface/goals/enc_integration.dds"
@@ -2968,7 +2968,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_jaz
 		name = "GFX_goal_enc_jaz_shine"
 		texturefile = "gfx/interface/goals/enc_jaz.dds"
@@ -2998,7 +2998,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_judicial_branch
 		name = "GFX_goal_enc_judicial_branch_shine"
 		texturefile = "gfx/interface/goals/enc_judicial_branch.dds"
@@ -3028,7 +3028,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_judicial_branch_2
 		name = "GFX_goal_enc_judicial_branch_2_shine"
 		texturefile = "gfx/interface/goals/enc_judicial_branch_2.dds"
@@ -3058,7 +3058,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_judiciary_nevada
 		name = "GFX_goal_enc_judiciary_nevada_shine"
 		texturefile = "gfx/interface/goals/enc_judiciary_nevada.dds"
@@ -3088,7 +3088,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_justice
 		name = "GFX_goal_enc_justice_shine"
 		texturefile = "gfx/interface/goals/enc_justice.dds"
@@ -3118,7 +3118,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_laser_weapons
 		name = "GFX_goal_enc_laser_weapons_shine"
 		texturefile = "gfx/interface/goals/enc_laser_weapons.dds"
@@ -3148,7 +3148,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_laser_weapons_reform
 		name = "GFX_goal_enc_laser_weapons_reform_shine"
 		texturefile = "gfx/interface/goals/enc_laser_weapons_reform.dds"
@@ -3178,7 +3178,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_law
 		name = "GFX_goal_enc_law_shine"
 		texturefile = "gfx/interface/goals/enc_law.dds"
@@ -3208,7 +3208,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_limited_army_reform
 		name = "GFX_goal_enc_limited_army_reform_shine"
 		texturefile = "gfx/interface/goals/enc_limited_army_reform.dds"
@@ -3238,7 +3238,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_major_war
 		name = "GFX_goal_enc_major_war_shine"
 		texturefile = "gfx/interface/goals/enc_major_war.dds"
@@ -3268,7 +3268,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_management
 		name = "GFX_goal_enc_management_shine"
 		texturefile = "gfx/interface/goals/enc_management.dds"
@@ -3298,7 +3298,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_map_us
 		name = "GFX_goal_enc_map_us_shine"
 		texturefile = "gfx/interface/goals/enc_map_us.dds"
@@ -3328,7 +3328,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_mass_mobilization
 		name = "GFX_goal_enc_mass_mobilization_shine"
 		texturefile = "gfx/interface/goals/enc_mass_mobilization.dds"
@@ -3358,7 +3358,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_military_police
 		name = "GFX_goal_enc_military_police_shine"
 		texturefile = "gfx/interface/goals/enc_military_police.dds"
@@ -3388,7 +3388,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_military_sphere
 		name = "GFX_goal_enc_military_sphere_shine"
 		texturefile = "gfx/interface/goals/enc_military_sphere.dds"
@@ -3418,7 +3418,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_military_sphere_reform
 		name = "GFX_goal_enc_military_sphere_reform_shine"
 		texturefile = "gfx/interface/goals/enc_military_sphere_reform.dds"
@@ -3448,7 +3448,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_model_communities
 		name = "GFX_goal_enc_model_communities_shine"
 		texturefile = "gfx/interface/goals/enc_model_communities.dds"
@@ -3478,7 +3478,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_mutant_extinction
 		name = "GFX_goal_enc_mutant_extinction_shine"
 		texturefile = "gfx/interface/goals/enc_mutant_extinction.dds"
@@ -3508,7 +3508,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_ncr_dollar
 		name = "GFX_goal_enc_ncr_dollar_shine"
 		texturefile = "gfx/interface/goals/enc_ncr_dollar.dds"
@@ -3538,7 +3538,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_NCR_seak_allies
 		name = "GFX_goal_enc_NCR_seak_allies_shine"
 		texturefile = "gfx/interface/goals/enc_NCR_seak_allies.dds"
@@ -3568,7 +3568,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_nevada_assembly
 		name = "GFX_goal_enc_nevada_assembly_shine"
 		texturefile = "gfx/interface/goals/enc_nevada_assembly.dds"
@@ -3598,7 +3598,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_nevada_constitution
 		name = "GFX_goal_enc_nevada_constitution_shine"
 		texturefile = "gfx/interface/goals/enc_nevada_constitution.dds"
@@ -3628,7 +3628,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_nevada_reborn
 		name = "GFX_goal_enc_nevada_reborn_shine"
 		texturefile = "gfx/interface/goals/enc_nevada_reborn.dds"
@@ -3658,7 +3658,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_new_capital
 		name = "GFX_goal_enc_new_capital_shine"
 		texturefile = "gfx/interface/goals/enc_new_capital.dds"
@@ -3688,7 +3688,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_new_generation_officers
 		name = "GFX_goal_enc_new_generation_officers_shine"
 		texturefile = "gfx/interface/goals/enc_new_generation_officers.dds"
@@ -3718,7 +3718,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_normalization
 		name = "GFX_goal_enc_normalization_shine"
 		texturefile = "gfx/interface/goals/enc_normalization.dds"
@@ -3748,7 +3748,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_officers_by_loyalty_and_devotion
 		name = "GFX_goal_enc_officers_by_loyalty_and_devotion_shine"
 		texturefile = "gfx/interface/goals/enc_officers_by_loyalty_and_devotion.dds"
@@ -3778,7 +3778,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_officers_by_merit_and_skill
 		name = "GFX_goal_enc_officers_by_merit_and_skill_shine"
 		texturefile = "gfx/interface/goals/enc_officers_by_merit_and_skill.dds"
@@ -3808,7 +3808,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_old_remnant_officers
 		name = "GFX_goal_enc_old_remnant_officers_shine"
 		texturefile = "gfx/interface/goals/enc_old_remnant_officers.dds"
@@ -3838,7 +3838,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_operation_babylon
 		name = "GFX_goal_enc_operation_babylon_shine"
 		texturefile = "gfx/interface/goals/enc_operation_babylon.dds"
@@ -3868,7 +3868,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_out_with_the_old
 		name = "GFX_goal_enc_out_with_the_old_shine"
 		texturefile = "gfx/interface/goals/enc_out_with_the_old.dds"
@@ -3898,7 +3898,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_owb_propaganda
 		name = "GFX_goal_enc_owb_propaganda_shine"
 		texturefile = "gfx/interface/goals/enc_owb_propaganda.dds"
@@ -3928,7 +3928,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_pacific_commonwealth
 		name = "GFX_goal_enc_pacific_commonwealth_shine"
 		texturefile = "gfx/interface/goals/enc_pacific_commonwealth.dds"
@@ -3958,7 +3958,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_para
 		name = "GFX_goal_enc_para_shine"
 		texturefile = "gfx/interface/goals/enc_para.dds"
@@ -3988,7 +3988,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_para_2
 		name = "GFX_goal_enc_para_2_shine"
 		texturefile = "gfx/interface/goals/enc_para_2.dds"
@@ -4018,7 +4018,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_peaceful_usa
 		name = "GFX_goal_enc_peaceful_usa_shine"
 		texturefile = "gfx/interface/goals/enc_peaceful_usa.dds"
@@ -4048,7 +4048,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_planning
 		name = "GFX_goal_enc_planning_shine"
 		texturefile = "gfx/interface/goals/enc_planning.dds"
@@ -4078,7 +4078,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_poison_bear
 		name = "GFX_goal_enc_poison_bear_shine"
 		texturefile = "gfx/interface/goals/enc_poison_bear.dds"
@@ -4108,7 +4108,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_poison_bull
 		name = "GFX_goal_enc_poison_bull_shine"
 		texturefile = "gfx/interface/goals/enc_poison_bull.dds"
@@ -4138,7 +4138,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_poison_bull_reformer
 		name = "GFX_goal_enc_poison_bull_reformer_shine"
 		texturefile = "gfx/interface/goals/enc_poison_bull_reformer.dds"
@@ -4168,7 +4168,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_police
 		name = "GFX_goal_enc_police_shine"
 		texturefile = "gfx/interface/goals/enc_police.dds"
@@ -4198,7 +4198,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_police_officer
 		name = "GFX_goal_enc_police_officer_shine"
 		texturefile = "gfx/interface/goals/enc_police_officer.dds"
@@ -4228,7 +4228,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_position_armies
 		name = "GFX_goal_enc_position_armies_shine"
 		texturefile = "gfx/interface/goals/enc_position_armies.dds"
@@ -4258,7 +4258,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_power_armor_focus
 		name = "GFX_goal_enc_power_armor_focus_shine"
 		texturefile = "gfx/interface/goals/enc_power_armor_focus.dds"
@@ -4288,7 +4288,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_power_armor_focus2
 		name = "GFX_goal_enc_power_armor_focus2_shine"
 		texturefile = "gfx/interface/goals/enc_power_armor_focus2.dds"
@@ -4318,7 +4318,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_power_armor_integration
 		name = "GFX_goal_enc_power_armor_integration_shine"
 		texturefile = "gfx/interface/goals/enc_power_armor_integration.dds"
@@ -4348,7 +4348,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_president
 		name = "GFX_goal_enc_president_shine"
 		texturefile = "gfx/interface/goals/enc_president.dds"
@@ -4378,7 +4378,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_presidential_elections
 		name = "GFX_goal_enc_presidential_elections_shine"
 		texturefile = "gfx/interface/goals/enc_presidential_elections.dds"
@@ -4408,7 +4408,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_president_p
 		name = "GFX_goal_enc_president_p_shine"
 		texturefile = "gfx/interface/goals/enc_president_p.dds"
@@ -4438,7 +4438,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_president_purity
 		name = "GFX_goal_enc_president_purity_shine"
 		texturefile = "gfx/interface/goals/enc_president_purity.dds"
@@ -4468,7 +4468,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_president_reform
 		name = "GFX_goal_enc_president_reform_shine"
 		texturefile = "gfx/interface/goals/enc_president_reform.dds"
@@ -4498,7 +4498,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_purge
 		name = "GFX_goal_enc_purge_shine"
 		texturefile = "gfx/interface/goals/enc_purge.dds"
@@ -4528,7 +4528,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_purge_officers
 		name = "GFX_goal_enc_purge_officers_shine"
 		texturefile = "gfx/interface/goals/enc_purge_officers.dds"
@@ -4558,7 +4558,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_purge_scientists
 		name = "GFX_goal_enc_purge_scientists_shine"
 		texturefile = "gfx/interface/goals/enc_purge_scientists.dds"
@@ -4588,7 +4588,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_purify
 		name = "GFX_goal_enc_purify_shine"
 		texturefile = "gfx/interface/goals/enc_purify.dds"
@@ -4618,7 +4618,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_purity
 		name = "GFX_goal_enc_purity_shine"
 		texturefile = "gfx/interface/goals/enc_purity.dds"
@@ -4648,7 +4648,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_radio
 		name = "GFX_goal_enc_radio_shine"
 		texturefile = "gfx/interface/goals/enc_radio.dds"
@@ -4678,7 +4678,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_radio_2
 		name = "GFX_goal_enc_radio_2_shine"
 		texturefile = "gfx/interface/goals/enc_radio_2.dds"
@@ -4708,7 +4708,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_radio_civilian
 		name = "GFX_goal_enc_radio_civilian_shine"
 		texturefile = "gfx/interface/goals/enc_radio_civilian.dds"
@@ -4738,7 +4738,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_radio_military
 		name = "GFX_goal_enc_radio_military_shine"
 		texturefile = "gfx/interface/goals/enc_radio_military.dds"
@@ -4768,7 +4768,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_radio_reform
 		name = "GFX_goal_enc_radio_reform_shine"
 		texturefile = "gfx/interface/goals/enc_radio_reform.dds"
@@ -4798,7 +4798,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_rangers
 		name = "GFX_goal_enc_rangers_shine"
 		texturefile = "gfx/interface/goals/enc_rangers.dds"
@@ -4828,7 +4828,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_rangers_agreement
 		name = "GFX_goal_enc_rangers_agreement_shine"
 		texturefile = "gfx/interface/goals/enc_rangers_agreement.dds"
@@ -4858,7 +4858,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_rangers_planning
 		name = "GFX_goal_enc_rangers_planning_shine"
 		texturefile = "gfx/interface/goals/enc_rangers_planning.dds"
@@ -4888,7 +4888,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_rangers_start
 		name = "GFX_goal_enc_rangers_start_shine"
 		texturefile = "gfx/interface/goals/enc_rangers_start.dds"
@@ -4918,7 +4918,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_rebuild_the_power_grid
 		name = "GFX_goal_enc_rebuild_the_power_grid_shine"
 		texturefile = "gfx/interface/goals/enc_rebuild_the_power_grid.dds"
@@ -4948,7 +4948,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reform
 		name = "GFX_goal_enc_reform_shine"
 		texturefile = "gfx/interface/goals/enc_reform.dds"
@@ -4978,7 +4978,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reform3
 		name = "GFX_goal_enc_reform3_shine"
 		texturefile = "gfx/interface/goals/enc_reform3.dds"
@@ -5008,7 +5008,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reform_annex_ykz
 		name = "GFX_goal_enc_reform_annex_ykz_shine"
 		texturefile = "gfx/interface/goals/enc_reform_annex_ykz.dds"
@@ -5038,7 +5038,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reform_ant
 		name = "GFX_goal_enc_reform_ant_shine"
 		texturefile = "gfx/interface/goals/enc_reform_ant.dds"
@@ -5068,7 +5068,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reform_anti_bos_propaganda
 		name = "GFX_goal_enc_reform_anti_bos_propaganda_shine"
 		texturefile = "gfx/interface/goals/enc_reform_anti_bos_propaganda.dds"
@@ -5098,7 +5098,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reform_douglas
 		name = "GFX_goal_enc_reform_douglas_shine"
 		texturefile = "gfx/interface/goals/enc_reform_douglas.dds"
@@ -5128,7 +5128,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reform_forced_deal
 		name = "GFX_goal_enc_reform_forced_deal_shine"
 		texturefile = "gfx/interface/goals/enc_reform_forced_deal.dds"
@@ -5158,7 +5158,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reform_forced_deal_dark
 		name = "GFX_goal_enc_reform_forced_deal_dark_shine"
 		texturefile = "gfx/interface/goals/enc_reform_forced_deal_dark.dds"
@@ -5188,7 +5188,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reform_general_staff
 		name = "GFX_goal_enc_reform_general_staff_shine"
 		texturefile = "gfx/interface/goals/enc_reform_general_staff.dds"
@@ -5218,7 +5218,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reform_hayes
 		name = "GFX_goal_enc_reform_hayes_shine"
 		texturefile = "gfx/interface/goals/enc_reform_hayes.dds"
@@ -5248,7 +5248,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reform_industry_1
 		name = "GFX_goal_enc_reform_industry_1_shine"
 		texturefile = "gfx/interface/goals/enc_reform_industry_1.dds"
@@ -5278,7 +5278,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reform_industry_2
 		name = "GFX_goal_enc_reform_industry_2_shine"
 		texturefile = "gfx/interface/goals/enc_reform_industry_2.dds"
@@ -5308,7 +5308,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reform_industry_3
 		name = "GFX_goal_enc_reform_industry_3_shine"
 		texturefile = "gfx/interface/goals/enc_reform_industry_3.dds"
@@ -5338,7 +5338,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reform_the_tribes
 		name = "GFX_goal_enc_reform_the_tribes_shine"
 		texturefile = "gfx/interface/goals/enc_reform_the_tribes.dds"
@@ -5368,7 +5368,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reject_ghouls
 		name = "GFX_goal_enc_reject_ghouls_shine"
 		texturefile = "gfx/interface/goals/enc_reject_ghouls.dds"
@@ -5398,7 +5398,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_reject_super_mutants
 		name = "GFX_goal_enc_reject_super_mutants_shine"
 		texturefile = "gfx/interface/goals/enc_reject_super_mutants.dds"
@@ -5428,7 +5428,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_remember
 		name = "GFX_goal_enc_remember_shine"
 		texturefile = "gfx/interface/goals/enc_remember.dds"
@@ -5458,7 +5458,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_remember_rig
 		name = "GFX_goal_enc_remember_rig_shine"
 		texturefile = "gfx/interface/goals/enc_remember_rig.dds"
@@ -5488,7 +5488,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_requisition_of_resources
 		name = "GFX_goal_enc_requisition_of_resources_shine"
 		texturefile = "gfx/interface/goals/enc_requisition_of_resources.dds"
@@ -5518,7 +5518,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_research
 		name = "GFX_goal_enc_research_shine"
 		texturefile = "gfx/interface/goals/enc_research.dds"
@@ -5548,7 +5548,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_robco_reborn
 		name = "GFX_goal_enc_robco_reborn_shine"
 		texturefile = "gfx/interface/goals/enc_robco_reborn.dds"
@@ -5578,7 +5578,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_robot_mex
 		name = "GFX_goal_enc_robot_mex_shine"
 		texturefile = "gfx/interface/goals/enc_robot_mex.dds"
@@ -5608,7 +5608,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_rock
 		name = "GFX_goal_enc_rock_shine"
 		texturefile = "gfx/interface/goals/enc_rock.dds"
@@ -5638,7 +5638,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_rocket_nevada
 		name = "GFX_goal_enc_rocket_nevada_shine"
 		texturefile = "gfx/interface/goals/enc_rocket_nevada.dds"
@@ -5668,7 +5668,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_rocket_reform
 		name = "GFX_goal_enc_rocket_reform_shine"
 		texturefile = "gfx/interface/goals/enc_rocket_reform.dds"
@@ -5698,7 +5698,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_sabotage
 		name = "GFX_goal_enc_sabotage_shine"
 		texturefile = "gfx/interface/goals/enc_sabotage.dds"
@@ -5728,7 +5728,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_salute_america
 		name = "GFX_goal_enc_salute_america_shine"
 		texturefile = "gfx/interface/goals/enc_salute_america.dds"
@@ -5758,7 +5758,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_science_reform
 		name = "GFX_goal_enc_science_reform_shine"
 		texturefile = "gfx/interface/goals/enc_science_reform.dds"
@@ -5788,7 +5788,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_scientists
 		name = "GFX_goal_enc_scientists_shine"
 		texturefile = "gfx/interface/goals/enc_scientists.dds"
@@ -5818,7 +5818,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_screening
 		name = "GFX_goal_enc_screening_shine"
 		texturefile = "gfx/interface/goals/enc_screening.dds"
@@ -5848,7 +5848,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_segregation
 		name = "GFX_goal_enc_segregation_shine"
 		texturefile = "gfx/interface/goals/enc_segregation.dds"
@@ -5878,7 +5878,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_self_management
 		name = "GFX_goal_enc_self_management_shine"
 		texturefile = "gfx/interface/goals/enc_self_management.dds"
@@ -5908,7 +5908,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_sign
 		name = "GFX_goal_enc_sign_shine"
 		texturefile = "gfx/interface/goals/enc_sign.dds"
@@ -5938,7 +5938,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_silence_congress_reform
 		name = "GFX_goal_enc_silence_congress_reform_shine"
 		texturefile = "gfx/interface/goals/enc_silence_congress_reform.dds"
@@ -5968,7 +5968,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_slave_labour
 		name = "GFX_goal_enc_slave_labour_shine"
 		texturefile = "gfx/interface/goals/enc_slave_labour.dds"
@@ -5998,7 +5998,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_slave_labour_collars
 		name = "GFX_goal_enc_slave_labour_collars_shine"
 		texturefile = "gfx/interface/goals/enc_slave_labour_collars.dds"
@@ -6028,7 +6028,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_slave_labour_mutants
 		name = "GFX_goal_enc_slave_labour_mutants_shine"
 		texturefile = "gfx/interface/goals/enc_slave_labour_mutants.dds"
@@ -6058,7 +6058,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_small_arms
 		name = "GFX_goal_enc_small_arms_shine"
 		texturefile = "gfx/interface/goals/enc_small_arms.dds"
@@ -6088,7 +6088,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_smash
 		name = "GFX_goal_enc_smash_shine"
 		texturefile = "gfx/interface/goals/enc_smash.dds"
@@ -6118,7 +6118,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_special_forces
 		name = "GFX_goal_enc_special_forces_shine"
 		texturefile = "gfx/interface/goals/enc_special_forces.dds"
@@ -6148,7 +6148,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_stability_first
 		name = "GFX_goal_enc_stability_first_shine"
 		texturefile = "gfx/interface/goals/enc_stability_first.dds"
@@ -6178,7 +6178,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_subsidized_lives
 		name = "GFX_goal_enc_subsidized_lives_shine"
 		texturefile = "gfx/interface/goals/enc_subsidized_lives.dds"
@@ -6208,7 +6208,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_superhuman
 		name = "GFX_goal_enc_superhuman_shine"
 		texturefile = "gfx/interface/goals/enc_superhuman.dds"
@@ -6238,7 +6238,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_super_soldier
 		name = "GFX_goal_enc_super_soldier_shine"
 		texturefile = "gfx/interface/goals/enc_super_soldier.dds"
@@ -6268,7 +6268,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_support_armed_coup
 		name = "GFX_goal_enc_support_armed_coup_shine"
 		texturefile = "gfx/interface/goals/enc_support_armed_coup.dds"
@@ -6298,7 +6298,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_suspend_elections
 		name = "GFX_goal_enc_suspend_elections_shine"
 		texturefile = "gfx/interface/goals/enc_suspend_elections.dds"
@@ -6328,7 +6328,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_sword_cross
 		name = "GFX_goal_enc_sword_cross_shine"
 		texturefile = "gfx/interface/goals/enc_sword_cross.dds"
@@ -6358,7 +6358,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_take_reno
 		name = "GFX_goal_enc_take_reno_shine"
 		texturefile = "gfx/interface/goals/enc_take_reno.dds"
@@ -6388,7 +6388,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_the_american_alliance-3
 		name = "GFX_goal_enc_the_american_alliance-3_shine"
 		texturefile = "gfx/interface/goals/enc_the_american_alliance-3.dds"
@@ -6418,7 +6418,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_the_american_alliance
 		name = "GFX_goal_enc_the_american_alliance_shine"
 		texturefile = "gfx/interface/goals/enc_the_american_alliance.dds"
@@ -6448,7 +6448,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_the_common_man
 		name = "GFX_goal_enc_the_common_man_shine"
 		texturefile = "gfx/interface/goals/enc_the_common_man.dds"
@@ -6478,7 +6478,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_the_lucia_incident
 		name = "GFX_goal_enc_the_lucia_incident_shine"
 		texturefile = "gfx/interface/goals/enc_the_lucia_incident.dds"
@@ -6508,7 +6508,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_the_Lucky_38
 		name = "GFX_goal_enc_the_Lucky_38_shine"
 		texturefile = "gfx/interface/goals/enc_the_Lucky_38.dds"
@@ -6538,7 +6538,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_the_mutant_question
 		name = "GFX_goal_enc_the_mutant_question_shine"
 		texturefile = "gfx/interface/goals/enc_the_mutant_question.dds"
@@ -6568,7 +6568,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_the_state_of_nevada
 		name = "GFX_goal_enc_the_state_of_nevada_shine"
 		texturefile = "gfx/interface/goals/enc_the_state_of_nevada.dds"
@@ -6598,7 +6598,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_threat_of_communism
 		name = "GFX_goal_enc_threat_of_communism_shine"
 		texturefile = "gfx/interface/goals/enc_threat_of_communism.dds"
@@ -6628,7 +6628,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_tools
 		name = "GFX_goal_enc_tools_shine"
 		texturefile = "gfx/interface/goals/enc_tools.dds"
@@ -6658,7 +6658,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_tools_reform
 		name = "GFX_goal_enc_tools_reform_shine"
 		texturefile = "gfx/interface/goals/enc_tools_reform.dds"
@@ -6688,7 +6688,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_troop
 		name = "GFX_goal_enc_troop_shine"
 		texturefile = "gfx/interface/goals/enc_troop.dds"
@@ -6718,7 +6718,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_troop_call
 		name = "GFX_goal_enc_troop_call_shine"
 		texturefile = "gfx/interface/goals/enc_troop_call.dds"
@@ -6748,7 +6748,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_uncle_sam
 		name = "GFX_goal_enc_uncle_sam_shine"
 		texturefile = "gfx/interface/goals/enc_uncle_sam.dds"
@@ -6778,7 +6778,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_us_dollar
 		name = "GFX_goal_enc_us_dollar_shine"
 		texturefile = "gfx/interface/goals/enc_us_dollar.dds"
@@ -6808,7 +6808,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_us_flags
 		name = "GFX_goal_enc_us_flags_shine"
 		texturefile = "gfx/interface/goals/enc_us_flags.dds"
@@ -6838,7 +6838,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_us_handshake
 		name = "GFX_goal_enc_us_handshake_shine"
 		texturefile = "gfx/interface/goals/enc_us_handshake.dds"
@@ -6868,7 +6868,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_us_reborn
 		name = "GFX_goal_enc_us_reborn_shine"
 		texturefile = "gfx/interface/goals/enc_us_reborn.dds"
@@ -6898,7 +6898,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_vac
 		name = "GFX_goal_enc_vac_shine"
 		texturefile = "gfx/interface/goals/enc_vac.dds"
@@ -6928,7 +6928,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_vault_city_citizenship_protocols
 		name = "GFX_goal_enc_vault_city_citizenship_protocols_shine"
 		texturefile = "gfx/interface/goals/enc_vault_city_citizenship_protocols.dds"
@@ -6958,7 +6958,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_vault_open
 		name = "GFX_goal_enc_vault_open_shine"
 		texturefile = "gfx/interface/goals/enc_vault_open.dds"
@@ -6988,7 +6988,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_vault_tec
 		name = "GFX_goal_enc_vault_tec_shine"
 		texturefile = "gfx/interface/goals/enc_vault_tec.dds"
@@ -7018,7 +7018,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_verti
 		name = "GFX_goal_enc_verti_shine"
 		texturefile = "gfx/interface/goals/enc_verti.dds"
@@ -7048,7 +7048,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_verti_nevada
 		name = "GFX_goal_enc_verti_nevada_shine"
 		texturefile = "gfx/interface/goals/enc_verti_nevada.dds"
@@ -7078,7 +7078,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_verti_o
 		name = "GFX_goal_enc_verti_o_shine"
 		texturefile = "gfx/interface/goals/enc_verti_o.dds"
@@ -7108,7 +7108,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_verti_reform
 		name = "GFX_goal_enc_verti_reform_shine"
 		texturefile = "gfx/interface/goals/enc_verti_reform.dds"
@@ -7138,7 +7138,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_veterans_call
 		name = "GFX_goal_enc_veterans_call_shine"
 		texturefile = "gfx/interface/goals/enc_veterans_call.dds"
@@ -7168,7 +7168,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_vlt_power
 		name = "GFX_goal_enc_vlt_power_shine"
 		texturefile = "gfx/interface/goals/enc_vlt_power.dds"
@@ -7198,7 +7198,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_voting_rights_act
 		name = "GFX_goal_enc_voting_rights_act_shine"
 		texturefile = "gfx/interface/goals/enc_voting_rights_act.dds"
@@ -7228,7 +7228,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_warmonger_usa
 		name = "GFX_goal_enc_warmonger_usa_shine"
 		texturefile = "gfx/interface/goals/enc_warmonger_usa.dds"
@@ -7258,7 +7258,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_war_with_bos_reform
 		name = "GFX_goal_enc_war_with_bos_reform_shine"
 		texturefile = "gfx/interface/goals/enc_war_with_bos_reform.dds"
@@ -7288,7 +7288,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_weapon_factory
 		name = "GFX_goal_enc_weapon_factory_shine"
 		texturefile = "gfx/interface/goals/enc_weapon_factory.dds"
@@ -7318,7 +7318,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_welcome_vlt_citizens
 		name = "GFX_goal_enc_welcome_vlt_citizens_shine"
 		texturefile = "gfx/interface/goals/enc_welcome_vlt_citizens.dds"
@@ -7348,7 +7348,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#enc_wip
 		name = "GFX_goal_enc_wip_shine"
 		texturefile = "gfx/interface/goals/enc_wip.dds"
@@ -7378,7 +7378,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#flag_burn_BOS
 		name = "GFX_goal_flag_burn_BOS_shine"
 		texturefile = "gfx/interface/goals/flag_burn_BOS.dds"
@@ -7408,7 +7408,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#goal_card_tricks
 		name = "GFX_goal_goal_card_tricks_shine"
 		texturefile = "gfx/interface/goals/goal_card_tricks.dds"
@@ -7438,7 +7438,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#PAP_legionary_spirit
 		name = "GFX_goal_PAP_legionary_spirit_shine"
 		texturefile = "gfx/interface/goals/PAP_legionary_spirit.dds"
@@ -7468,7 +7468,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#pa_production
 		name = "GFX_goal_pa_production_shine"
 		texturefile = "gfx/interface/goals/pa_production.dds"
@@ -7498,7 +7498,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#poison_bear_reformer
 		name = "GFX_goal_poison_bear_reformer_shine"
 		texturefile = "gfx/interface/goals/poison_bear_reformer.dds"
@@ -7528,7 +7528,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#shield_enc_wip
 		name = "GFX_goal_shield_enc_wip_shine"
 		texturefile = "gfx/interface/goals/shield_enc_wip.dds"
@@ -7558,7 +7558,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#texclave
 		name = "GFX_goal_texclave_shine"
 		texturefile = "gfx/interface/goals/texclave.dds"
@@ -7588,7 +7588,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#the_last_argument_of_presidents
 		name = "GFX_goal_the_last_argument_of_presidents_shine"
 		texturefile = "gfx/interface/goals/the_last_argument_of_presidents.dds"
@@ -7618,7 +7618,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#training_law_navarro_veterans
 		name = "GFX_goal_training_law_navarro_veterans_shine"
 		texturefile = "gfx/interface/goals/training_law_navarro_veterans.dds"
@@ -7648,7 +7648,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#US_dock
 		name = "GFX_goal_US_dock_shine"
 		texturefile = "gfx/interface/goals/US_dock.dds"
@@ -7678,7 +7678,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#US_navy
 		name = "GFX_goal_US_navy_shine"
 		texturefile = "gfx/interface/goals/US_navy.dds"
@@ -7708,7 +7708,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#us_plane
 		name = "GFX_goal_us_plane_shine"
 		texturefile = "gfx/interface/goals/us_plane.dds"
@@ -7738,7 +7738,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#us_plane_advanced
 		name = "GFX_goal_us_plane_advanced_shine"
 		texturefile = "gfx/interface/goals/us_plane_advanced.dds"
@@ -7768,7 +7768,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#vault_tec
 		name = "GFX_goal_vault_tec_shine"
 		texturefile = "gfx/interface/goals/vault_tec.dds"
@@ -7798,7 +7798,7 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	} 
+	}
     spriteType = {#vault_tec_reform
 		name = "GFX_goal_vault_tec_reform_shine"
 		texturefile = "gfx/interface/goals/vault_tec_reform.dds"
@@ -7828,5 +7828,35 @@ spriteTypes = {
 				animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	}    
+	}
+	spriteType = {#vault_tec_reform
+	name = "GFX_goal_vaultclave_shine"
+	texturefile = "gfx/interface/goals/vaultclave.dds"
+	effectFile = "gfx/FX/buttonstate.lua"
+	animation = {
+		animationmaskfile = "gfx/interface/goals/vaultclave.dds"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+		animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+		animationlooping = no			# yes or no ;)
+		animationtime = 0.75				# in seconds
+		animationdelay = 0			# in seconds
+		animationblendmode = "add"       #add, multiply, overlay
+		animationtype = "scrolling"      #scrolling, rotating, pulsing
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	}
+	animation = {
+		animationmaskfile = "gfx/interface/goals/vaultclave.dds"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+		animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+		animationlooping = no			# yes or no ;)
+		animationtime = 0.75				# in seconds
+		animationdelay = 0			# in seconds
+		animationblendmode = "add"       #add, multiply, overlay
+		animationtype = "scrolling"      #scrolling, rotating, pulsing
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+	}
+	legacy_lazy_load = no
+}
 }

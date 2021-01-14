@@ -356,3 +356,8 @@ tlaloc_underwater_robots:0 "Underwater Robots"
 # £victory_point_texticon
 # £weather_text
 # £wing_rebase_status_texticon
+
+###
+enc_victory_speech1: "The Flags of Our Fathers"
+enc_victory_speech1_desc: "Granite was one of the prominent immigrants to settle in Vault City, but he was no mere mercenary. He was one of the last soldiers of these United States."
+enc_victory_speech.tt: "\n§gThe first step in the long path towards an old dream.§!"

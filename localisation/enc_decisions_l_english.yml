@@ -505,6 +505,12 @@ ENC_exploiting_wasteland_industrial_complex: "Exploit Industrial Complex"
 add_popularity_to_ruling_party_tt: "Change in popularity of §GGetRulingParty§!: [?popularity_change|%2+].\n"
 add_popularity_to_reformers_good:  "Change in popularity of §GReformers§!: [?popularity_change|%2+].\n"
 
+## Vault City###
+## Vault City
+ENC_political_infighting_vault: "Political Infighting"
+ENC_political_infighting_vault_desc: "Not everyone in Vault City is willing to support Granite, the compromise Candidate.  The city is divided, and Granite will have to navigate between the populists, the intellectuals, and those who want the best of both worlds. \n\n Granite's Nevadans: [?party_popularity@elites|%G0] | Maier's Citizens' League: [?party_popularity@people|%R0] | Lynette's Intellectuals: [?party_popularity@intellectuals|%R0]"
+ENC_political_crisis_vault: "The Disloyal Opposition"
+ENC_political_crisis_vault_desc: "Unless Granite can persuade the city to fall behind him, Maier and Lynette may escalate things!"
 ###################################
 # Purist Secrets
 ###################################
@@ -636,3 +642,4 @@ enc_underground_arms_factories_desc: "Some of the engineering tools we revived t
 # £victory_point_texticon
 # £weather_text
 # £wing_rebase_status_texticon
+

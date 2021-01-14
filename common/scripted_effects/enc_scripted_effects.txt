@@ -438,7 +438,7 @@ start_requisition_resources = {
 			amount = 25
 			state = 135
 		}
-	}		
+	}
 	every_controlled_state = {
 		limit = {
 			not = { is_core_of = ERB }
@@ -479,7 +479,7 @@ stop_requisition_resources = {
 			amount = -25
 			state = 253
 		}
-	}		
+	}
 	every_controlled_state = {
 		limit = {
 			not = { is_core_of = ERB }

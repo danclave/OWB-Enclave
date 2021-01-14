@@ -1,6 +1,6 @@
 
 focus_tree = {
-    id = erb_nf1
+    id = erb_nf_1
 
     country = {
         factor = 0
@@ -17,7 +17,7 @@ focus_tree = {
 
 	focus = {#POLITICS - victory speech
 		id = enc_victory_speech1
-		icon = GFX_goal_enc_reform_douglas
+		icon = GFX_goal_vaultclave
 		ai_will_do = { factor = 1 }
 		relative_position_id = enc_reform
 		x = 20
@@ -25,10 +25,15 @@ focus_tree = {
 		prerequisite = { focus = enc_reform }
 
 		completion_reward = {
-			add_stability = 0.10
-			add_political_power = 100
+			country_event = enc_reformers.1
+			hidden_effect = { set_rule = { can_puppet = yes } }
+			custom_effect_tooltip = enc_victory_speech.tt
+			# set up variables for rebuilding Americaset_country_flag = has_compliance_core_unique_tiers
+			clr_country_flag = has_compliance_state_unique_tiers
+			clr_country_flag = has_resistance_state_unique_tiers
+			clr_country_flag = has_resistance_core_unique_tiers
+			clr_country_flag = has_unique_occupation_laws
 		}
-		cost = 2.9
 	}
 }
 

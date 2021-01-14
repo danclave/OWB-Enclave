@@ -323,6 +323,21 @@ enc_last_stand = {
 		original_tag = ERB
 	}
 }
+ENC_political_infighting_vault = {
+	icon = category_enc_political_infighting
+	priority = { base = 10 }
+	allowed = {
+		original_tag = VLT
+	}
+	visible = {
+		OR = {
+			has_idea = ENC_infighting
+			has_idea = ENC_infighting_2
+		}
+		has_country_flag = ERB_vault
+	}
+	visible_when_empty = yes
+}
 # ##############################
 # ICONS
 # ##############################

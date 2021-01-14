@@ -11619,7 +11619,15 @@ news_event = { #360 Granite won!
 		}
 		set_political_party = {
 			ideology = elites
-			popularity = 60
+			popularity = 30
+		}
+		set_political_party = {
+			ideology = people
+			popularity = 30
+		}
+		set_political_party = {
+			ideology = intellectuals
+			popularity = 40
 		}
 		set_party_name = {
 			ideology = elites
@@ -11637,7 +11645,7 @@ news_event = { #360 Granite won!
 		}
 		load_focus_tree = erb_nf_1
 		set_country_flag = ERB_vault
-	}
+		add_ideas = ENC_infighting
 }
 # country_event = {#355 - War with Caesar Speech
 # id = enc_reformers.355

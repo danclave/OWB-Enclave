@@ -583,7 +583,7 @@ ENC_NCR_hiding = {
 		cost = 0
 		allowed = {
 			original_tag = ERB
-		}		
+		}
 		custom_cost_text = costs_200_caps
 		custom_cost_trigger = {
 			set_temp_variable = { caps_diff = @BRIBE_COST }
@@ -1065,7 +1065,7 @@ ENC_render_unto_caesar = {
 		is_good = no
 		days_mission_timeout = 3
 		visible = {original_tag = ERB }
-		timeout_effect = { 
+		timeout_effect = {
 			LAC = {
 				add_to_war = {
 					targeted_alliance = CES
@@ -1383,7 +1383,7 @@ enc_last_stand = {
 
 ENC_debug = {
 	ENC_misc = {
-		complete_effect = {		
+		complete_effect = {
 
 		}
 	}
@@ -1442,6 +1442,246 @@ ENC_debug = {
 		}
 	}
 }
+#### Vault City Goals
+
+ENC_political_infighting_vault = {
+	# CRISIS
+		ENC_political_crisis_vault = {
+			icon = revolt
+			priority = 300
+			fire_only_once = no
+			activation = {
+				has_country_flag = ERB_vault
+				set_temp_variable = { granite_popularity = party_popularity@elites }
+				set_temp_variable = { granite_opposition = party_popularity@people }
+				add_to_temp_variable = { granite_opposition = party_popularity@intellectuals }
+				check_variable = { granite_popularity < granite_opposition }
+				NOT = {
+					has_completed_focus = enc_purge_opposition
+				}
+			}
+			available = {
+				set_temp_variable = { granite_popularity = party_popularity@elites }
+				set_temp_variable = { granite_opposition = party_popularity@people }
+				add_to_temp_variable = { granite_opposition = party_popularity@intellectuals }
+
+				check_variable = { granite_popularity > granite_opposition }
+			}
+			is_good = no
+			days_mission_timeout = 100
+			timeout_effect = {
+				if = {
+					limit = {
+						has_country_flag = assassination_attempt_flag
+					}
+					add_stability = -0.20
+				}
+				else = {
+					country_event = { id = enc_reformers.16 }
+				}
+			}
+			complete_effect = {
+				# good stuff?
+			}
+		}
+		ENC_setting_examples = { # crackdown
+			icon = GFX_decision_oppression
+			cost = 50
+			priority = 100
+			allowed = { tag = ERB }
+			visible = {
+				has_country_flag = ERB_vault
+			}
+			available = {
+				OR = {
+					has_country_flag = enc_crackdown_justified
+					has_idea = ENC_infighting_2
+				}
+				has_stability > 0.10
+			}
+			complete_effect = {
+				clr_country_flag = enc_crackdown_justified
+				if = {
+					limit = {
+						has_completed_focus = enc_reform
+					}
+					add_manpower = -50
+					add_stability = -0.05
+					add_popularity = { ideology = intellectuals popularity = -0.02 }
+					add_popularity = { ideology = people popularity = -0.03 }
+					add_popularity = { ideology = elites popularity = 0.05 }
+					add_manpower = -1
+					random_army_leader = {
+						limit = {
+							has_trait = enc_purist
+							is_field_marshal = no
+						}
+						retire = yes
+						custom_effect_tooltip = is_purged
+					}
+				}
+				else_if = { #purity version
+					limit = {
+						has_completed_focus = enc_purity
+					}
+					add_manpower = -100
+					add_stability = -0.10
+					add_popularity = { ideology = intellectuals popularity = -0.05 }
+					add_popularity = { ideology = elites popularity = 0.05 }
+					add_manpower = -1
+					random_army_leader = {
+						limit = {
+							has_trait = enc_reformer
+							is_field_marshal = no
+						}
+						custom_effect_tooltip = is_purged
+						retire = yes
+					}
+				}
+			}
+			days_re_enable = 30
+		}
+		ENC_reform_replace_officers= {
+			icon = decision_demote_officers_boot
+			cost = 75
+			priority = 75
+			allowed = { tag = ERB }
+			fire_only_once = YES
+			visible = {
+				has_completed_focus = enc_reform
+				has_idea = ENC_officers_traitors
+			}
+			available = {
+				elites > 0.50
+				has_stability > 0.50
+			}
+			modifier = {
+				army_org_Factor = -0.25
+				army_attack_factor = -0.10
+			}
+			days_remove = 200
+			complete_effect  = {
+				every_army_leader = {
+					limit = {
+						has_trait = enc_purist
+					}
+					demote_leader = yes
+					add_unit_leader_trait = enc_demoted
+				}
+				add_popularity = { ideology = elites popularity = -0.08 }
+				set_country_flag = enc_demoted_officers
+				swap_ideas = {
+					remove_idea = ENC_officers_traitors
+					add_idea = ENC_officers_traitors_2
+				}
+			}
+			days_re_enable = 100
+		}
+		ENC_reform_replace_scientists= {
+			icon = decision_demote_scientists
+			cost = 75
+			priority = 75
+			allowed = { tag = ERB }
+			fire_only_once = YES
+			visible = {
+				has_completed_focus = enc_reform
+				has_idea = ENC_scientists_traitors
+			}
+			available = {
+				elites > 0.50
+				has_stability > 0.50
+			}
+			modifier = {
+				research_speed_factor = -0.20
+			}
+			days_remove = 200
+			complete_effect  = {
+				add_popularity = { ideology = intellectuals popularity = -0.05 }
+				set_country_flag = enc_demoted_scientists
+				swap_ideas = {
+					remove_idea = ENC_scientists_traitors
+					add_idea = ENC_scientists_traitors_2
+				}
+			}
+		}
+		ENC_small_speech= {
+			icon = decision_enc_propaganda
+			cost = 50
+			priority = 50
+			allowed = { tag = ERB }
+			complete_effect = {
+				add_popularity = { ideology = elites popularity = 0.05 }
+			}
+			days_re_enable = 60
+		}
+		ENC_arrange_disappearance= {
+			icon = decision_enc_skull
+			cost = 50
+			priority = 50
+			allowed = { tag = ERB }
+			complete_effect = {
+				if = {
+					limit = {
+						has_completed_focus = enc_reform
+					}
+					add_popularity = { ideology = elites popularity = -0.03 }
+					add_manpower = -1
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = enc_purity
+					}
+					add_popularity = { ideology = intellectuals popularity = -0.03 }
+					add_manpower = -1
+				}
+			}
+			days_re_enable = 60
+		}
+		ENC_reform_wild_promises= {
+			icon = generic_political_discourse
+			priority = 25
+			cost = 25
+			allowed = { tag = ERB }
+			visible = {
+				elites > 0.2
+				has_completed_focus = enc_reform
+			}
+			available = {
+				# always
+			}
+			complete_effect = {
+				add_popularity = { ideology = intellectuals popularity = 0.10 }
+			}
+			modifier = {
+				intellectuals_drift = -0.1
+			}
+			remove_effect = {
+				add_popularity = { ideology = intellectuals popularity = -0.10 }
+			}
+			days_remove = 90
+			days_re_enable = 100
+		}
+		ENC_military_exercise = {
+			icon = generic_prepare_civil_war
+			priority = 0
+			custom_cost_text = command_power_max
+			custom_cost_trigger = {
+				command_power > 99.9
+			}
+			complete_effect = {
+				hidden_effect = {
+					add_command_power = -100
+				}
+			}
+			remove_effect = {
+				army_experience = 25
+				set_temp_variable = { popularity_change = 0.05 }
+				add_popularity_to_ruling_party = yes
+				add_manpower = -10
+			}
+			days_re_enable = 100
+		}
+	}
 
 ###
 # ENC_secrets = {
