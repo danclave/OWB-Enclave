@@ -4622,3 +4622,46 @@ ENC_down_mexico_way = {
 		}
 	}
 }
+
+ENC_vr_pod = {
+	enc_repair_vr_pod = {
+		cost = 10
+		days_remove = 7
+		fire_only_once = yes
+		allowed = {
+			original_tag = ERB
+		}
+		available = {
+			291 = {
+				is_owned_and_controlled_by = ERB
+			}
+		}
+		visible = {
+			has_country_flag = found_vr_pod
+		}
+		complete_effect = {
+			#TODO remove 1 high tech from Vault City
+		}
+		remove_effect = {
+			country_event = {
+				id = enc_reformers.501
+			}
+		}
+	}
+
+	enc_enter_vr_pod_first_time = {
+		fire_only_once = yes
+		allowed = {
+			original_tag = ERB
+		}
+		available = {
+			has_country_flag = vr_pod_repaired
+		}
+		visible = {
+			has_country_flag = ping_received
+		}
+		complete_effect = {
+			
+		}
+	}
+}

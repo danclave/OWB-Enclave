@@ -287,7 +287,6 @@ ENC_nevada_tribals = {
 	icon = category_usa_construction
 }
 
-
 ENC_vice_president = {
 	priority = 1000
 	allowed = { original_tag = ERB }
@@ -323,6 +322,17 @@ enc_last_stand = {
 		original_tag = ERB
 	}
 }
+
+ENC_vr_pod = {
+	allowed = {
+		original_tag = ERB
+	}
+	visible = {
+		has_country_flag = found_vr_pod
+	}
+}
+
+
 # ##############################
 # ICONS
 # ##############################

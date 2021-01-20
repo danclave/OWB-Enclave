@@ -11602,6 +11602,52 @@ country_event = { #356 - Now I have to Eat The Bloody thing?
 		}
 	}
 }
+
+country_event = { #500 - VR Pod found at Golden Globes
+	id = enc_reformers.500
+	title = enc_reformers.500.t
+	desc = enc_reformers.500.d
+	fire_only_once = yes
+	trigger = {
+		has_completed_focus = enc_reno_end
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	option = {
+		name = enc_reformers.500.a
+		set_country_flag = found_vr_pod
+	}
+}
+
+country_event = { #501 - VR Pod repair, disappointing results
+	id = enc_reformers.501
+	title = enc_reformers.501.t
+	desc = enc_reformers.501.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = enc_reformers.501.a
+		set_country_flag = vr_pod_repaired
+	}
+}
+
+country_event = { #502 - Ping from Diana
+	id = enc_reformers.502
+	title = enc_reformers.502.t
+	desc = enc_reformers.502.d
+	fire_only_once = yes
+	trigger = {
+		TTM = {
+			has_completed_focus = ttm_meeting_a_legend
+		}
+	}
+	option = {
+		name = enc_reformers.502.a
+		set_country_flag = ping_received
+	}
+}
+
 # country_event = {#355 - War with Caesar Speech
 # id = enc_reformers.355
 # title = enc_reformers.355.t
