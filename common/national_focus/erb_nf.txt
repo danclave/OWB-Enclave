@@ -18,7 +18,7 @@ focus_tree = {
 		ai_will_do = { factor = 1 }
 		x = 20
 		y = 0
-		cost = 10
+		cost = 7
 		completion_reward = {
 			# Our Escape event with 3 choices
 			country_event = { id = enc.1 }
@@ -36,7 +36,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		prerequisite = { focus=enc_ourescape }
-		cost = 10
+		cost = 7
 		available_if_capitulated = yes
 		completion_reward = {
 			custom_effect_tooltip = enc_ourchoice.tt
@@ -55,7 +55,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		prerequisite = { focus = enc_ourchoice}
-		cost = 10
+		cost = 7
 		available = {
 		OR = {
 				has_country_leader = {
@@ -7419,7 +7419,7 @@ focus = {#NEVADA - second city
 	focus = { # --------------- ENC RANGERS START -----------------------------
 		id = enc_rangers_start
 		icon = GFX_goal_enc_rangers_start
-		cost = 10
+		cost = 7
 		ai_will_do = { factor = 1 }
 		available = {
 			is_neighbor_of = DES
