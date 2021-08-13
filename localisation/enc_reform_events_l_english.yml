@@ -600,11 +600,6 @@ enc_reformers.109.t: "The Liberation of Hoover Dam"
 enc_reformers.109.d: "This is Enclave Radio, bringing you the latest news from the front.  Our boys in black have driven the Legion from Hoover Dam, aided by survivors from Navarro who hid in the Mojave, and our flamers are burning Praetorians out of their nests even as we speak. An American flag has been draped over the side of the dam, and soon its power will serve you, dear listeners.  And a special thanks to that Courier who rallied local partisans to our aid."
 enc_reformers.109.a:  "This is not how we saw New Vegas ending"
 ################################################################################################################
-enc_reformers.110.t: "The Midwestern Brotherhood Aids the Legion!"
-enc_reformers.110.d: "Dreadful news! Perhaps due to the threat posed by the powerful and fearsome Chicago Enclave, the Midwestern Brotherhood has dispatched aid to Caesar.  These Paladins will be willing to fight and die for the Legion to stop the Reunited States from linking up with our boys in Chicago, who we only assume are also Reformers."
-enc_reformers.110.a:  "We'll deal with those guys one day"
-enc_reformers.110.a.tt: "The  §YMidwestern Brotherhood§! has sent technology and men to aid the Legion against you. Jerks."
-################################################################################################################
 enc_reformers.111.t: "Enclave Radio Busted!"
 enc_reformers.111.d: "As tensions skyrocket in the NCR between progressives who support the Old Deal and the NCR's elite, the NCR's 'president' has cracked down our message.  The Senate has banned Enclave radio, and NCR rangers destroy our transmitters wherever they find them. We can continue to support our cause within the Republic, but it will require more overt measures."
 enc_reformers.111.a:  "Now we see the violence inherent in the system"
