@@ -10206,6 +10206,14 @@ news_event = { #335 - WBH Crushed
 		TRL = {
 			set_technology = {
 				settled_civilization = 1
+				habitation_tech_level_settler = 1
+				electronics_tech_level_settler = 1
+				tools_tech_level_settler = 1
+				infantry_tech_level_settler = 1
+				support_tech_level_settler = 1
+				special_forces_tech_level_settler = 1
+				air_tech_level_tribal = 1
+				air_tech_level_settler = 1
 			}
 		}
 	}
