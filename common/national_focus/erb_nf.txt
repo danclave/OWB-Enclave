@@ -4398,24 +4398,28 @@ focus = {#Legion Border
 		prerequisite = {
 			focus = enc_the_state_of_nevada
 		}
-		available = {
-			has_full_control_of_state = 389
+				bypass = {
+			SKY = { exists = NO }
 		}
 		completion_reward = {
-			389 = {
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
+			every_other_country = {
+				limit = {
+					has_full_control_of_state = 389 # Area 51
+				}
+				ERB = {
+					create_wargoal = { type = annex_everything target = PREV }
+				}
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+					leave_faction = yes
 				}
 			}
-			add_resource = {
-				type = circuitry amount = 15 state = 389
-			}
-			add_resource = {
-				type = advanced amount = 16 state = 389
-			}
+		SKY = { 
+			set_rule = { can_join_factions = no }
+
+		}
 		}
 	}
 	focus = {#NEVADA - area 52
@@ -4435,6 +4439,20 @@ focus = {#Legion Border
 			has_full_control_of_state = 389
 		}
 		completion_reward = {
+			389 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = circuitry amount = 15 state = 389
+			}
+			add_resource = {
+				type = advanced amount = 16 state = 389
+			}
 			set_technology = { 
 				high_fighter_tech  = 1
 				air_tech_level_scientific = 1 
