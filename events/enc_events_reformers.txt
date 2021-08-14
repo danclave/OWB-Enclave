@@ -7897,15 +7897,10 @@ country_event = { #226 - TRL Buff
 		TRL = {
 			add_ideas = {
 				WBH_debuff
-				MDT_debuff
-				RBT_debuff
 			}
 			add_research_slot = 1
 			set_technology = {
 				reno_mastersnewarmy = 1
-			}
-			set_technology = {
-				super_mutant_aux_infantry_tech = 1
 			}
 			set_technology = {
 				support_weaponry = 1
