@@ -366,7 +366,7 @@ ENC_infiltrating_NCR = {
 			has_country_flag = enc_ncr_spies
 		}
 		complete_effect = {
-			clr_country_flag = enc_ncr_spies
+			#clr_country_flag = enc_ncr_spies
 			NCR = {
 				add_popularity = {
 					ideology = intellectuals
@@ -615,14 +615,17 @@ ENC_infiltrating_NCR = {
 	}
 	enc_NCR_radio = {
 		priority = 300
-		fire_only_once = yes
 		icon = decision_ncr_flag
+		cost = 25
 		available = {
 		}
 		visible = {
 			tag = ERB
 			has_completed_focus = enc_owb_propaganda
 			country_exists = NCR
+			NCR = {
+            	intellectuals < 0.5
+        	}
 		}
 		complete_effect = {
 			NCR = {
@@ -636,6 +639,7 @@ ENC_infiltrating_NCR = {
 				popularity = 0.1
 			}
 		}
+		days_re_enable = 100
 	}
 	enc_NCR_propaganda_tour = {
 		icon = decision_enc_propaganda
