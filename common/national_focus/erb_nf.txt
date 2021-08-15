@@ -4398,8 +4398,17 @@ focus = {#Legion Border
 		prerequisite = {
 			focus = enc_the_state_of_nevada
 		}
-				bypass = {
-			SKY = { exists = NO }
+		available = {
+			
+			every_other_country = {
+				limit = {
+					has_full_control_of_state = 389 # Area 51
+				}
+				is_neighbor_of = ERB	
+			}
+		}
+		bypass = {
+			has_full_control_of_state = 389 # Area 51
 		}
 		completion_reward = {
 			every_other_country = {
@@ -4416,10 +4425,10 @@ focus = {#Legion Border
 					leave_faction = yes
 				}
 			}
-		SKY = { 
-			set_rule = { can_join_factions = no }
+			SKY = { 
+				set_rule = { can_join_factions = no }
 
-		}
+			}
 		}
 	}
 	focus = {#NEVADA - area 52
