@@ -2204,6 +2204,10 @@ ENC_treaty_hoover_dam = {
 					add_core_of = ERB
 					remove_core_of = NCR			
 				}	
+				526 = {
+					add_core_of = ERB
+					remove_core_of = NCR			
+				}	
 			}
 
 			every_owned_state = {
