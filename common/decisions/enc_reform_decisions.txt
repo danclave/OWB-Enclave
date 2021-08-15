@@ -3685,6 +3685,110 @@ ENC_nevada_tribals = {
 			}
 		}
 	}
+	erb_CYC = {
+		visible = {
+			has_completed_focus = enc_reform_the_tribes
+			country_exists = CYC
+		}
+		available = {
+			NOT = {
+				CYC = {
+					is_puppet_of = ERB
+				}
+				has_war_with = CYC
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 25
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = CYC
+			}
+		}
+	}
+	erb_PAL = {
+		visible = {
+			has_completed_focus = enc_reform_the_tribes
+			country_exists = PAL
+		}
+		available = {
+			NOT = {
+				PAL = {
+					is_puppet_of = ERB
+				}
+				has_war_with = PAL
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 25
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = PAL
+			}
+		}
+	}
+	erb_RIP = {
+		visible = {
+			has_completed_focus = enc_reform_the_tribes
+			country_exists = RIP
+		}
+		available = {
+			NOT = {
+				RIP = {
+					is_puppet_of = ERB
+				}
+				has_war_with = RIP
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 25
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = RIP
+			}
+		}
+	}
+	erb_GRA = {
+		visible = {
+			has_completed_focus = enc_reform_the_tribes
+			country_exists = GRA
+		}
+		available = {
+			NOT = {
+				GRA = {
+					is_puppet_of = ERB
+				}
+				has_war_with = GRA
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 25
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = GRA
+			}
+		}
+	}
 }
 
 ENC_gannon_doctrine = {
