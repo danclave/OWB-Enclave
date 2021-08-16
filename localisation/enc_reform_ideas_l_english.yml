@@ -347,11 +347,11 @@ enc_war_on_drugs: "The War on Drugs"
 
 # NCR - Chief of army
 ###################################
-enc_big_jim_chief_of_army:0 "James 'Big Jim' Marshal"
-enc_big_jim_chief_of_army_desc:0 "Big Jim knows how to succeed at war, and succeed quick; overwhelming displays of force! As such his appointment as chief of army will result in an increase in conscription and mobilization efficiency."
+enc_big_jim_chief_of_army: 0 "James 'Big Jim' Marshal"
+enc_big_jim_chief_of_army_desc: 0 "Big Jim knows how to succeed at war, and succeed quick; overwhelming displays of force! As such his appointment as chief of army will result in an increase in conscription and mobilization efficiency."
 
-enc_drummund_chief_of_army:0 "General Alexander Drummund"
-enc_drummund_chief_of_army_desc:0 "Drummund has years of experience with which to back up his appointment, and it shows in his capacity for planning, both in speed and brilliance. However, he is unpopular among the people, and his appointment will weaken the republic's standing."
+enc_drummond_chief_of_army: 0 "General Alexander Drummond"
+enc_drummond_chief_of_army_desc: 0 "Drummond has years of experience with which to back up his appointment, and it shows in his capacity for planning, both in speed and brilliance. However, he is unpopular among the people, and his appointment will weaken the republic's standing."
 
 
 ##### Compliance/Resistance

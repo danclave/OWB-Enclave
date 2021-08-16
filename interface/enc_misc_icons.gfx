@@ -339,6 +339,14 @@ spriteTypes = {
 			name = "GFX_decision_category_USM_decision"
 			texturefile = "gfx/interface/icons/USM_decision.dds"
 		}
+		spriteType = {
+			name = "GFX_idea_enc_big_jim_chief_of_army"
+			texturefile = "gfx/interface/ideas/bigjim_chief.dds"
+		}
+		spriteType = {
+			name = "GFX_idea_enc_drummond_chief_of_army"
+			texturefile = "gfx/interface/ideas/drummond_chief.dds"
+		}
 		frameAnimatedSpriteType = {
 			name = "GFX_logo_backboard_animated"
 			texturefile = "gfx/interface/logo_backboard_animated.dds"
