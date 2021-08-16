@@ -1751,6 +1751,44 @@ ideas = {
 				people_drift = 0.20
 			}
 		}
+
+		WBH_buff = {
+			picture = legacy_of_navarro
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+			   	political_power_gain = 0.05
+				training_time_army_factor = -0.10
+				army_morale_factor = 0.10
+			}
+			equipment_bonus = {
+				power_armor_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+		WBH_buff2 = {
+			picture = enc_scientists #check
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+			   research_speed_factor = 0.05
+			   elites_drift = 0.02
+			}
+		}
+
 ####################################################
 # REFORM - REBUILDING A NATION
 ####################################################

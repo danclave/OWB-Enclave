@@ -194,6 +194,13 @@ ffi_dornan_advice:0 "La Cucaracha"
 ffi_dornan_advice_desc:0 "Sergeant Dornan's training methods have become a little unorthodox, but, well, who are we to criticize?"
 
 currency_enc_usd: "U.S. Dollar"
+
+WBH_buff: "Whitehall Company Officers"
+WBH_buff_desc: "Lt. Whitehall and some her subordinates have made themself at home in the frozen ruins of Capitol Hill and are now helping providing Immortal with their skill and services in return for safe haven and an oportunity get back at those who slighted them."
+
+WBH_buff2: "Purist Research Team"
+WBH_buff2_desc: "Dr. Chalk and his team have seized the oportunity not to get shot by the fireing squad and acompanyed Lt. Whitehall on her journey north. Now they have a relatively safe haven where they can preform all their experiments without having to concern themselves with things like \"ethics\" or \"willing test subjects\"."
+
 ###################################
 # MANPOWER
 ###################################

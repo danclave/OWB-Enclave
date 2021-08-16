@@ -1714,3 +1714,7 @@ enc_reformers.359.e: "Make an example out of the most unruly."
 enc_reformers.456.t: "These American States"
 enc_reformers.456.d: "Although [NCR.GetName] may have fallen, its people intend to hold [ERB.GetLeader]  to hispromises. Since the Great War the people of New California have developed independent cultures which do not necessarily agree with one another and are reluctant to give all of their power over to [ERB.GetGapital.GetName].  It will take time and effort to woo New California to the Reunited States."
 enc_reformers.456.a: "We shall bind up the nation's wounds."
+############################################################################################################
+enc_reformers.501.t: "Into the Blizzard"
+enc_reformers.501.d: "While most of the remaining purists were either executed, had \"accidents\" or simply packed up and disapeared while they still had chance, one particulary numerous group apropriated few vertibirds and headed north far beyond our radar coverage. One can only guess why they would choose such a bizarre direction. "
+enc_reformers.501.a: "They will probably freeze to death anyway."
