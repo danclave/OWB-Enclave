@@ -1,0 +1,44 @@
+division_template = {
+	name = "Purist Remnants"
+    template_counter= 90
+	regiments = {
+		power_armour = { x = 0 y = 0 }
+		power_armour = { x = 0 y = 1 }
+		power_armour = { x = 2 y = 0 }
+		power_armour = { x = 1 y = 0 }
+		power_armour = { x = 1 y = 1 }
+	}
+    support = {
+        maintenance_company = { x = 0 y = 0 }
+		fireteam_support = { x = 1 y = 0 }
+		medical_chem_company = { x = 2 y = 0 }
+    }
+}
+
+units = {
+	division = {
+		name = "Navarro survivors"
+		location = 9239 
+        division_template = "Purist Remnants"
+        force_equipment_variants = { 
+            energy_weaponry_tech_2 = { owner = "USA" } 
+            power_armour_enclave_1 = { owner = "USA" }
+            energy_fireteam_equipment_3 = { owner = "USA" }
+        }
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Whitehall Company"
+		location = 9239 
+        division_template = "Purist Remnants"
+        force_equipment_variants = { 
+            energy_weaponry_tech_2 = { owner = "USA" } 
+            power_armour_enclave_1 = { owner = "USA" }
+            energy_fireteam_equipment_3 = { owner = "USA" }
+        }
+        force_equipment_variants = { infantry_equipment_0 = { owner = "ERB" } }
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0
+	}
+}

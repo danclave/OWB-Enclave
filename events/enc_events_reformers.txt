@@ -11480,6 +11480,63 @@ country_event = { #356 - Now I have to Eat The Bloody thing?
 		}
 	}
 }
+
+country_event = { # WBH buff for USA
+	id = enc_reformers.501
+	title = enc_reformers.501.t
+	desc = enc_reformers.501.d
+	picture = GFX_event_WBH_alaska_expedition
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = ERB
+		has_completed_focus = enc_reform
+		has_completed_focus = enc_purge_opposition
+		country_exists = WBH
+
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	option = { # Washington Menace
+		name = enc_reformers.501.a
+		hidden_effect = {
+			WBH = {
+				add_ideas = {
+					WBH_buff
+				}
+				add_ideas = {
+					WBH_buff2
+				}
+				set_technology = {
+					vertibird_tech = 1
+					vertibird_cas_tech = 1
+					power_armour_enclave_1 = 1
+					gauss_weaponry_1 = 1
+				}
+				load_oob = washingtonpurists
+				create_corps_commander = {
+					name = "Rebecca Whitehall"
+					portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_4.dds"
+					skill = 3
+					traits = {
+						enc_purist
+						intelligent_trait
+						strong_trait 
+						pain_train_trait
+					}
+					attack_skill = 4
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 2
+				}
+			}	
+		}
+		#set_country_flag = purits_in_seatle
+	}
+}
+
+
 # country_event = {#355 - War with Caesar Speech
 # id = enc_reformers.355
 # title = enc_reformers.355.t
