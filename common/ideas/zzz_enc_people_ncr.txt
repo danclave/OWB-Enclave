@@ -116,8 +116,8 @@ ideas = {
 			}
 		}
 
-		enc_drummund_chief_of_army = {
-			picture = drummund_chief
+		enc_drummond_chief_of_army = {
+			picture = drummond_chief
 			allowed = {	original_tag = ERB }
 			visible = { has_country_flag = enc_accepted_ncr_leaders }
 			traits = { unpopular_genius }
