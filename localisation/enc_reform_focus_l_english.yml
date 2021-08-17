@@ -721,6 +721,7 @@ enc_free_press_desc: "'If in other lands the press and books and literature of a
 enc_a_nation_remade: "The Enclave Reborn"
 enc_a_nation_remade_desc: "Without our firm guidance and protection, you're not alive.  You're simply existing, America. Postponing death for a day or two. Well I'm going to tell you, right here, right now, those days are at an end! The Enclave is back, America. So celebrate! Sing out! America is back! America IS beautiful! And we will not rest until the Wastelands are scoured of all threats to our way of life."
 enc_a_nation_remade.tt: "Form the §HNew American State§!"
+enc_nevada_kill_sat: "Enclave engineering corp manages to fully restore §YHELIOS ONE§! facility. \nFor the rest of the campaign enables the use of the powerful combat ability §Y"Fire ARCHIMEDES II"§!."
 ###################################
 # REFORM Reconstruction
 ###################################

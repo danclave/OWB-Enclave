@@ -198,6 +198,8 @@ ENC_people_party_wastelanders_leader:0 "no one"
 # TECHNOLOGY
 ###################################
 enc_civilian_power_grid_tech: "Civilian Power Grid"
+ABILITY_USE_KILL_SAT: "Fire the Archimedes II"
+ABILITY_USE_KILL_SAT_DESC: "Field command deployes the Archimedes II weapon platform to increase frontile combat potency."
 ##############
 #Baja
 #############
