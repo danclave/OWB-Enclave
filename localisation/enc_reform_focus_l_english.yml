@@ -518,9 +518,9 @@ enc_the_american_alliance: "The Benjamin Franklin Society"
 enc_the_american_alliance_desc: "With trade flourishing between Nevada and California, it's time to take deepen our alliance.  California's best and brightest will learn from the Enclave. And maybe the Wastelanders have a few tricks we could use too."
 enc_the_american_alliance_tt: "This will create the Allied States of America and the Benjamin Franklin Society!"
 
-enc_the_state_of_utah: "The State of Utah"
-enc_the_state_of_utah_desc: "To the east, New Canaan is the nucleus for the Mormons of Utah.  With our backing they can stand against Caesar and bring freedom to the East."
-enc_the_state_of_utah_tt: "This will add Canaan and their converts to the Allied States of America and the Benjamin Franklin Society!"
+enc_the_state_of_utah: "The Utah Reclamation Zone"
+enc_the_state_of_utah_desc: "With reunification of Nevada removal of the Eighties raiders we find ourselfs ocupying land of the former state of utah. A state which is right now embroiled in conflict between the savage White Legs and the New Cananites. We can create a provisional state in these territories as a base for the reunification of Utah and as a afe haven for mormon refugees and survivors of surrounding comunities that fell to the White Legs"
+enc_the_state_of_utah_tt: "This will create the Utah Reclamation Zone and add it into the Allied States of America faction and the Benjamin Franklin Society!"
 
 enc_crack_the_code: "Crack the Code"
 enc_crack_the_code_desc: "The [NCR.GetName]§! may believe their rudimentary encryption is enough to secure their communications, but our new radio system makes cracking their codes child's play. Now, we can impersonate even their highest level command structure, at least once."

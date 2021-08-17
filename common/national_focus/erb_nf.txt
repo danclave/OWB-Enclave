@@ -5246,51 +5246,94 @@ focus = {#NEVADA - second city
 		prerequisite = { focus = enc_the_american_alliance }
 		completion_reward = {
 			hidden_effect = {
-				every_other_country = {
-					limit = { 
-						is_in_faction_with = NCN 
+
+				all_state = {
+					limit = {
+						AND = {
+							OR = {
+								is_core_of = NOE
+								is_core_of = PSH 
+								is_core_of = WHY
+								is_core_of = CLK
+								is_core_of = TAR
+								is_core_of = CRZ
+								is_core_of = UIN
+								is_core_of = NCN
+								is_core_of = HAM
+								is_core_of = LON
+								is_core_of = DEA
+							}
+							NOT = {
+								is_core_of = ERB
+							}
+						}
 					}
-					leave_faction = yes
-					ERB = {
-						add_to_faction = PREV
-					}
-					add_ai_strategy = {
-						type = alliance
-						id = "ERB"
-						value = 200
-					}
-					add_to_tech_sharing_group = Benjamin_Franklin_Society
+					add_core_of = WED
 				}
-				NCN = { 
+				WED = {
+					remove_state_core = 72
+					remove_state_core = 361
+					}
+					
+				if = {
+					limit = {
+						has_full_control_of_state = 478
+					}
+					release = WED
+				}
+
+				any_allied_country = {
+					limit = {
+						has_full_control_of_state = 478
+					}
+					release = WED
+				}
+
+				# add Utah to faction
+				WED = {
 					if = { 
 						limit = { is_in_faction = yes }
-						leave_faction = yes
+						leave_faction = yes 
 					}
+				}
+				add_to_faction = WED
+
+				WED = {
 					add_ai_strategy = {
 						type = alliance
 						id = "ERB"
 						value = 200
 					}
+					WED = { set_cosmetic_tag = ERB_PHR } 
+				}
+				WED = { 
 					add_to_tech_sharing_group = Benjamin_Franklin_Society
 				}
-				add_to_faction = NCN
 
-				every_other_country = {
-					limit = { 
-						is_in_faction_with = ERB 
-						NOT = {original_tag = NCR}
+				every_owned_state = {
+					limit = {
+						is_core_of = WED
 					}
-					add_ai_strategy = {
-						type = alliance
-						id = "ERB"
-						value = 200
+					WED = {
+						transfer_state = THIS
 					}
-					add_to_tech_sharing_group = Benjamin_Franklin_Society
+				}
+
+				any_allied_country = {
+					every_owned_state = {
+						limit = {
+							is_core_of = WED
+						}
+						WED = {
+							transfer_state = THIS
+						}
+					}
 				}
 			}
 			custom_effect_tooltip = enc_the_state_of_utah_tt
 		}
 	}
+
 	focus = {#NEVADA- Mexico
 		id = Enc_Mexican_Trade
 		icon = GFX_goal_Enc_goal_flag_mexico

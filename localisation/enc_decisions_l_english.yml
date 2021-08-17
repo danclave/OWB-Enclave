@@ -241,6 +241,8 @@ erb_PAL: "Pacify the pale people"
 erb_PAL_desc: "A particular group of raiders has been conducting nightly raids around central nevada for some time now, it would be wise to put an end to their nightly visits once and for all."
 erb_MOJ: "Break the Mojave Brotherhood"
 erb_FIE: "Face the Fiends"
+erb_EHT: "Operation Just Cause"
+erb_EHT_desc: "While reclamation of the great state of Nevada has been going well so far and NCR has joined us in our endevour in restoring the United States there is still one thorn in our side. Nevada will never be complete if we do not reclaim Oasis and Ruby Valley from the savages who ocupy Wendover." 
 WBH_reformer_crisis: "The Dark Brotherhood Marches South"
 ##############################
 # PROPAGANDA
