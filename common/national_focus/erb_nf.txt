@@ -5047,16 +5047,17 @@ focus = {#NEVADA - second city
 		}
 		completion_reward = {
 			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] MOJ_a_forgotten_weapon entered"
+				limit = {
+					has_dlc = "Waking the Tiger"
+				}
+				custom_effect_tooltip = enc_nevada_kill_sat
+				set_country_flag = nevada_kill_sat
 			}
-			add_ideas = mojave_forgotten_weapon
-			if = {
-				limit = { has_global_flag = debug_logs }
-				log = "[GetDateText]: [Root.GetName] MOJ_a_forgotten_weapon exited"
-			}
+			else = {
+				add_ideas = mojave_forgotten_weapon
 			}
 		}
+	}
 
 	focus = {
 		id = Enc_Big_MT
@@ -5071,7 +5072,7 @@ focus = {#NEVADA - second city
 		completion_reward = {
 		country_event = { id = enc_reformers.121 }
 			}
-		}
+	}
 
 	focus = {#NEVADA - BIG MT RESTORED
 		id = ENC_Big_MT_Restored

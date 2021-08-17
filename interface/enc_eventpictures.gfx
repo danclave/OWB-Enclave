@@ -667,6 +667,9 @@ spriteTypes = {
 			name = "GFX_event_enc_moonbase"
 			texturefile = "gfx/event_pictures/event_enc_moonbase.tga"
 		}
-
+		spriteType = {
+			name = "GFX_ability_use_kill_sat"
+			texturefile = "gfx/interface/abilitylist/ability_use_archimedes_ii.dds"
+		}
 
 }

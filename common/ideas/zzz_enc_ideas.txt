@@ -1788,6 +1788,17 @@ ideas = {
 			   elites_drift = 0.02
 			}
 		}
+		erb_kill_sat_cooldown = {
+			picture = MOJ_idea_a_forgotten_weapon
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+				fuel_gain_factor = -0.15
+			}
+		}
 
 ####################################################
 # REFORM - REBUILDING A NATION

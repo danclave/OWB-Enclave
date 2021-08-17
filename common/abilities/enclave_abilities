@@ -61,4 +61,59 @@
                 }
             }
         }
+    	use_kill_sat = {
+		name = ABILITY_USE_KILL_SAT
+		desc = ABILITY_USE_KILL_SAT_DESC
+
+		sound_effect = use_psycho
+
+		type = army_leader
+		cost = 0.30
+		allowed = {
+			NOT = { has_trait = exhausted_order_trait}
+			is_leading_army_group = no
+			OWNER = {
+				has_country_flag = nevada_kill_sat
+				NOT = { has_idea = erb_kill_sat_cooldown }
+			}
+		}
+		duration = 168
+
+		one_time_effect = {
+			add_timed_unit_leader_trait = {
+				trait = exhausted_order_trait
+				days = 20
+			}
+			add_temporary_buff_to_units = {
+				combat_offense = 0.8
+				combat_breakthrough = 0.8
+				org_damage_multiplier = -1.0
+				str_damage_multiplier = -0.30
+				cannot_retreat_while_attacking = 1.0
+
+				days = 7
+				tooltip = ABILITY_FORCE_ATTACK_TOOLTIP
+			}
+			OWNER = {
+				add_timed_idea = {
+					idea = erb_kill_sat_cooldown
+					days = 60
+				}
+			}
+		}
+
+
+		ai_will_do = {
+			factor = -1
+			modifier = {
+				check_variable = { num_units_defensive_combats > 6 }
+
+				set_temp_variable = { temp = avg_defensive_combat_status }
+				check_variable = { temp < 0.40 }
+				check_variable = { ai_random > temp }
+
+				add = 2
+			}
+		}
+	}
     }
