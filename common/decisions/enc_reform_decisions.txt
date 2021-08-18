@@ -566,6 +566,74 @@ ENC_infiltrating_NCR = {
 			}
 		}
 	}
+		ENC_SHI_hate = {
+		icon = generic_political_discourse
+		priority = 10
+		cost = 80
+		fire_only_once = no
+		visible = {
+			SHI = {
+				is_in_faction_with = NCR
+				exists = yes
+			}
+		}
+		available = {
+			has_country_flag = enc_ncr_spies
+			SHI = {
+				is_in_faction_with = NCR
+				exists = yes
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = ENC_SHI_hate_tt
+			SHI = {
+				drop_cosmetic_tag = yes
+				add_opinion_modifier = {
+					target = NCR
+					modifier = sabotaged_relations
+				}
+				if = {
+					limit = {
+						is_in_faction = yes
+					}
+					leave_faction = yes
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = NCR
+					value = -300
+				}
+			}
+			SHI = {
+				add_ai_strategy = {
+					type = ignore
+					id = NCR
+					value = 300
+				}
+				set_rule = {
+					can_join_factions = no
+				}
+			}
+			NCR = {
+				add_ai_strategy = {
+					type = ignore
+					id = SHI
+					value = 300
+				}
+			}
+			NCR = {
+				add_opinion_modifier = {
+					target = SHI
+					modifier = sabotaged_relations
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = SHI
+					value = -300
+				}
+			}
+		}
+	}
 	ENC_deliver_petition = {
 		priority = 300
 		fire_only_once = yes
