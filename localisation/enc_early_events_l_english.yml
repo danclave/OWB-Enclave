@@ -1,0 +1,17 @@
+﻿l_english:
+
+###################################
+# Events
+###################################
+enc_early.1.t:0 "Kiss America Goodbye, Kids."
+enc_early.1.d:0 "Two hundred years ago, there was a mighty nation that sheltered the world beneath its wings. A nation of heroes and dreamers who would risk all for freedom.  Thirty years ago it died. \n\nWhile some fled east to pursue the 'last President,' Corporate Granite rallied those who could to flee Navarro. They settled at the old Sierra Army Depot, offering their services to all who would pay. Perversely, the way they escaped would play a role in their success. And for the last thirty years, the remnants of America gathered at the Sierra Army Depot, under the pay of New Reno, Vault City, and anyone else who would keep their last birds flying and armor walking."
+enc_early.1.a:0 "We fought our way out with power armour"
+enc_early.1.b:0 "We escaped using Vertibirds."
+enc_early.1.c:0 "We deserted before the fighting got bad."
+
+enc_early.2.t:0 "Private Contractors"
+enc_early.2.d:0 "Even as Navarro fell, Sergeant Granite found work for Enclave forces in Reno. In the decades that followed, the remnants of the Enclave would take jobs throughout West - in Heaven's Gate, in Koover, and even with Buchanan in Colorado. Granite Company came at a price few could afford, but as the Sergeant reminded his customers, the dead cannot quibble over the price. \n\nFor three decades the Granite Company fought and died, carefully maintaining failing power armour, as the radio carried words of a new president to the East. Some heroes, devoted to fighting the mutant threat, traveled on. Some of them stayed and died. After yeras of fighting, there was no one left devoted to the Enclave's dreams.  \n\nThe Granite Company had many customers, but a few rules stood out."
+enc_early.2.a:0 "Granite would fight for anyone, no questions asked."
+enc_early.2.b:0 "They fought to help the downtrodden."
+enc_early.2.b_tt: "\nThe Wasteland will remember your good deeds."
+enc_early.2.c:0 "They forged ties with Vault City."

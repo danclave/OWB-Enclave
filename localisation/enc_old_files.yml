@@ -6,11 +6,7 @@ enc.0.a:0 "All according to plan."
 enc.0.a.tt:0 "Play as §YThe Enclave§!"
 enc.0.b:0 "Not this again!"
  #######################################################################################
-enc.1.t:0 "Kiss America Goodbye, Kids."
-enc.1.d:0 "Two hundred years ago, there was a mighty nation that sheltered the world beneath its wings. A nation of heroes and dreamers who would risk all for freedom.  Thirty years ago it died. \n\nWhile some fled east to pursue the 'last President,' Corporate Granite rallied those who could to flee Navarro. They settled at the old Sierra Army Depot, offering their services to all who would pay. Perversely, the way they escaped would play a role in their success. And for the last thirty years, the remnants of America gathered at the Sierra Army Depot, under the pay of New Reno, Vault City, and anyone else who would keep their last birds flying and armor walking."
-enc.1.a:0 "We fought our way out with power armour"
-enc.1.b:0 "We escaped using Vertibirds."
-enc.1.c:0 "We deserted before the fighting got bad."
+
  #######################################################################################
 enc.2.t:0 "Operational Security Compromised!"
 enc.2.d:0 "Mr. President, we are hearing disturbing reports of NCR radio chatter in reference to our facilities. We have also received one report of an NCR spy stumbling into one of our conference rooms, completely unaware of where exactly he was. Needless to say, the NCR is sure to notice something is terribly wrong if we don’t act now. Continuing to operate as normal may have dire consequences."

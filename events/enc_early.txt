@@ -1,0 +1,157 @@
+﻿add_namespace = enc_early
+
+country_event = {#1 - OUR ESCAPE
+	id = enc_early.1
+	title = enc_early.1.t
+	desc = enc_early.1.d
+	picture = GFX_event_ENC_escape
+
+	is_triggered_only = yes
+
+	option = { #Fought our way out with power armor
+		name = enc_early.1.a
+		add_manpower = -500
+		hidden_effect = { load_oob = enc_hardliners } #ugly tooltip
+		custom_effect_tooltip = contactthehardliners_tt
+	}
+	option = { # Escaped using Vertibirds
+		name = enc_early.1.b
+		add_equipment_to_stockpile = { type = vb_transport_plane_equipment amount = 100 producer = USA }
+		add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 100 producer = USA }
+	}
+	option = { #Deserted before the fighting got bad
+		name = enc_early.1.c
+		add_manpower = 3000
+		add_war_support = -0.07
+	}
+}
+
+country_event = {#1 - OUR ESCAPE
+	id = enc_early.2
+	title = enc_early.2.t
+	desc = enc_early.2.d
+	picture = GFX_event_ENC_soldiers
+
+	is_triggered_only = yes
+
+	option = { #Worked for everyone available
+		name = enc_early.2.a
+		set_temp_variable = { caps_to_add = 100 }
+			add_caps = yes
+	}
+	option = { # Rough and Ready Code of Honour
+		name = enc_early.2.b
+		army_experience = 15
+		custom_effect_tooltip = enc_early.2.b_tt
+	}
+	option = { #Aided Vault City With a Priority
+		name = enc_early.2.c
+		159 = {
+			add_resource = {
+				type = composites
+				amount = 6
+			}
+		}
+		add_opinion_modifier = {
+			target = VLT
+			modifier = vault_city_ties
+		}
+		VLT = {
+			add_opinion_modifier = {
+				target = ERB
+				modifier = vault_city_ties
+			}
+		}
+		set_country_flag = vlt_city_friends
+	}
+}
+country_event = {#2 - Operational Security Compromised!
+	id = enc.2
+	title = enc.2.t
+	desc = enc.2.d
+	picture = GFX_event_ENC_secret
+
+	is_triggered_only = yes
+
+	option = { # the time has come
+		name = enc.2.a
+		NCR = {
+			country_event = { id = enc.41 }
+		}
+		clr_country_flag = ncr_suspicious
+	}
+	option = { # spend PP
+		trigger = {
+			has_political_power > ENC_hiding_cost_total
+		}
+		name = enc.2.b
+		set_temp_variable = { PP_cost = ENC_hiding_cost_total }
+		multiply_temp_variable = { PP_cost = -1 }
+		add_political_power = PP_cost
+		activate_decision = ENC_hide_activity_by_event
+		hidden_effect = {
+			activate_mission = ENC_hide_activity
+			remove_mission = ENC_hide_activity
+		}
+	}
+	option = { # No resources
+		trigger = {
+			has_country_flag = ERB_can_NCR_crisis_resources
+		}
+		name = enc.2.c
+		activate_decision = NCR_crisis_resources
+		clr_country_flag = ERB_can_NCR_crisis_resources
+	}
+	option = { # No attack
+		trigger = {
+			has_country_flag = ERB_can_NCR_crisis_laylow
+		}
+		name = enc.2.e
+		activate_decision = NCR_crisis_laylow
+		clr_country_flag = ERB_can_NCR_crisis_laylow
+	}
+	option = { # No construction
+		trigger = {
+			has_country_flag = ERB_can_NCR_crisis_construction
+		}
+		name = enc.2.f
+		activate_decision = NCR_crisis_construction
+		clr_country_flag = ERB_can_NCR_crisis_construction
+	}
+}}
+
+
+
+
+#################
+## IDEAS
+#################
+# Counterfeit US dollars
+# Deathclaw spotted
+# Ghoul incident
+# gunships blasting Fortunate Son
+
+#################
+## PICTURES
+#################
+# GFX_enc_ncr_rangers
+# GFX_event_ENC_3_troopers
+# GFX_event_ENC_assault_team
+# GFX_event_ENC_bloody_suit
+# GFX_event_ENC_cloning_failed
+# GFX_event_ENC_cloning_success
+# GFX_event_ENC_deathclaw
+# GFX_event_ENC_double_flag
+# GFX_event_ENC_double_flag_long
+# GFX_event_ENC_mariposa1
+# GFX_event_ENC_mariposa2
+# GFX_event_ENC_mariposa3
+# GFX_event_ENC_minigun
+# GFX_event_ENC_new_reno
+# GFX_event_ENC_picture
+# GFX_event_ENC_president_only
+# GFX_event_ENC_rebuilding
+# GFX_event_ENC_ruined_city
+# GFX_event_ENC_secret
+# GFX_event_ENC_secret2
+# GFX_event_ENC_secret3

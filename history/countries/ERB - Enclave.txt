@@ -61,9 +61,6 @@ set_technology = {
 	scav_pa_tech = 1
 	underground_industry_tech = 1
 	vault_industry_tech = 1
-	power_armour_enclave_1 = 1
-	vertibird_tech = 1
-	vertibird_cas_tech = 1
 	implant_tech_visibility_tech = 1
 
 	#special_forces_tech_level_scientific = 1
@@ -170,20 +167,11 @@ create_country_leader  = {
 	desc = "Granite_desc"
 	picture = "gfx/leaders/portrait_douglas_enclave.dds"
 	expire = "3000.1.1"
-	ideology = technocracy
+	ideology = benevolent_dictatorship
 	traits = {}
 }
 
-create_country_leader = {
-	name = "Sergeant Dornan"
-	desc = Dornan_DESC
-	picture = "gfx/leaders/portrait_sarge.dds"
-	expire = "3000.1.1"
-	ideology = benevolent_dictatorship
-	traits = {
-		drill_sargeant
-	}
-}
+
 create_country_leader = {
 	name = "Chief Engineer R. Bishop"
 	desc = "Dornan_DESC"
@@ -340,3 +328,9 @@ country_event = { id = enc_reformers.23 days = 25 }
 
 ### New stuff
 set_cosmetic_tag = ERB_granite
+
+add_equipment_to_stockpile = {
+	type = enclave_power_armour_equipment_1
+	amount = 300
+	producer = USA
+}
