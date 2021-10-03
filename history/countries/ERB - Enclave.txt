@@ -275,15 +275,7 @@ create_corps_commander = { # Jack 'Shadow' Churchill
 ###############################
 add_opinion_modifier = { target = NCR modifier = bitterEnemies }
 add_opinion_modifier = { target = BOS modifier = bitterEnemies }
-add_opinion_modifier = { target = ARR modifier = bitterEnemies }
-NCR = {add_opinion_modifier = { target = ERB modifier = bitterEnemies }}
-BOS = {add_opinion_modifier = { target = ERB modifier = bitterEnemies }}
-ARR = {add_opinion_modifier = { target = ERB modifier = bitterEnemies }}
 
-every_country = {
-	add_opinion_modifier = { target = ERB modifier = genocidal_maniacs }
-	ERB = { add_opinion_modifier = { target = PREV modifier = dirty_muties }}
-}
 
 # IDEAS
 add_ideas = {

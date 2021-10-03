@@ -651,6 +651,11 @@ spriteTypes = {
 			name = "GFX_event_enc_occupation_laws"
 			texturefile = "gfx/event_pictures/event_enc_occupation_laws.tga"
 		}
+		spriteType = {
+			name = "GFX_event_baby_enclave"
+			texturefile = "gfx/event_pictures/event_baby_enclave.dds"
+		}
+
 		SpriteType = {#exploit wastes
 			name = "GFX_event_exploit_wastes"
 			texturefile = "gfx/event_pictures/event_exploit_wastes.tga"
@@ -671,5 +676,6 @@ spriteTypes = {
 			name = "GFX_ability_use_kill_sat"
 			texturefile = "gfx/interface/abilitylist/ability_use_archimedes_ii.dds"
 		}
+		####New
 
 }

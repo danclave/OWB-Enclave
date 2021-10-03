@@ -11,4 +11,13 @@ enc_mercenary_lifestyle: "Granite Company"
 enc_mercenary_lifestyle_desc: "With the Enclave's destruction, the United States military faded away. Sergeant Granite held together the largest force on the West Coast, despite everythign that happened. But it came at a heavy price - after a fashion."
 enc_granite_son: "Cometh The Hour, Cometh the Man"
 enc_granite_son_desc: "Sergeant Granite raised a son on his campaigns, and when he died at the end of 2274, Granite was a natural fit to take over the company. But who was he? And what did he want?"
+enc_an_offer_cannot_refuse: "The Offer You Can't Refuse"
+enc_an_offer_cannot_refuse_desc: "Douglas took over the Company after his father's death, and gathered them at their old home, the Sierra Army Depot. For Granite had an intersting proposal from their old contractors, the Salvatores."
 
+## Sierra Army Depot Focuses
+enc_depot_start: "Our Old Home"
+enc_depot_start_desc: "The Enclave once ran the Sierra Army Depot, but much of it has fallen into disrepair over the last 20 years. It will require extensive work to bring it up to speed."
+enc_depot_airport: "Build an Air Strip"
+enc_depot_airport_desc: "We managed to find a couple of vertibirds in the old ahangers. Although they've been stripped for parts, we could refurbish them, with some work. And while we're at it, the Engineers could refurbish the place a bit."
+enc_depot_lower: "The Lower Depths"
+enc_depot_lower_desc: "There's still some material worth salvaging in the base's lower levels. It's not much, but we need every piece of equipmetn we can get our hands on."

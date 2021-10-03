@@ -117,6 +117,7 @@ leader_traits = {
 	salvatore_puppet = {
 		random = no
 		political_power_factor = -0.05
+		caps_income_modifier = -0.05
 	}
 	loyal_soldier = {
 		random = no

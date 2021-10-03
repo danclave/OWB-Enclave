@@ -156,6 +156,9 @@ ideas = {
 			allowed = {
 				original_tag = ERB
 			}
+			allowed_to_remove = {
+                always = no
+            }
 			visible = {
 				has_country_flag = enc_salvatores_tolerated_flag
 			}

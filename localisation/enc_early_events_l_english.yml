@@ -8,10 +8,45 @@ enc_early.1.d:0 "Two hundred years ago, there was a mighty nation that sheltered
 enc_early.1.a:0 "We fought our way out with power armour"
 enc_early.1.b:0 "We escaped using Vertibirds."
 enc_early.1.c:0 "We deserted before the fighting got bad."
-
+#########################################################################################
 enc_early.2.t:0 "Private Contractors"
 enc_early.2.d:0 "Even as Navarro fell, Sergeant Granite found work for Enclave forces in Reno. In the decades that followed, the remnants of the Enclave would take jobs throughout West - in Heaven's Gate, in Koover, and even with Buchanan in Colorado. Granite Company came at a price few could afford, but as the Sergeant reminded his customers, the dead cannot quibble over the price. \n\nFor three decades the Granite Company fought and died, carefully maintaining failing power armour, as the radio carried words of a new president to the East. Some heroes, devoted to fighting the mutant threat, traveled on. Some of them stayed and died. After yeras of fighting, there was no one left devoted to the Enclave's dreams.  \n\nThe Granite Company had many customers, but a few rules stood out."
 enc_early.2.a:0 "Granite would fight for anyone, no questions asked."
 enc_early.2.b:0 "They fought to help the downtrodden."
 enc_early.2.b_tt: "\nThe Wasteland will remember your good deeds."
 enc_early.2.c:0 "They forged ties with Vault City."
+#########################################################################################
+enc_early.3.t:0 "Fortunate Son"
+enc_early.3.d:0 "Granite's childhood is somewhat unclear. Transported from base to base as the Company took contracts, he never truly knew his mother. Some critics would later say she was simply a whore in New Reno, but the truth is more complicated."
+enc_early.3.a:0 "Leslie Anne Bishop could be quite the charmer..."
+enc_early.3.b:0 "I have an awkward story to tell you about Arroyo..."
+enc_early.3.c:0 "Dr. Granite was a loyal Enclave scientist."
+#########################################################################################
+enc_early.4.t: "Douglas' Youth"
+enc_early.4.d: "Douglas' education was as good as could be expected in the Wasteland. He grew up learning the arts of war and servo maintenence, and how to skin a naked mole rat. Granite also learned the proud history of the US of A, and the treacherous Communists, who destroyed the US through their devious plots. No greater sig of their evil could be found in their dictatorial, oppressive society - a stark contrast to the freedom loving Enclave, who merely suspended elections for the duration of the 200+ year national emergency.  Whenever the topic of Communism came up around the camp fires, Granite - "
+enc_early.4.a: "Learned all enemies of America must be Communist"
+enc_early.4.a.tt: "Granite's hatred of §RCommunism§! will play a role in future events and is necessary to unlock §M Anti-Communist Propaganda§!.\n\n"
+enc_early.4.b: "Played a game on his Pip Boy."
+#########################################################################################
+
+enc_early.5.t:0 "Just Another Day"
+enc_early.5.d:0 "Douglas first donned a suit of power armor when he was 17, and soon proved adept at combat. In time, Granite became a member of Alpha Team, sent to do the jobs no one could would risk their lives to doing so.  Under the command of Sergeant Dornan, Alpha Team, tasked to solve the problems no one else could solve. \n\nOn one fateful day, Alpha Team received an emergency distress signal. The message sounded desperate and came from..."
+enc_early.5.a:0 "An NCR battalion fighting raiders"
+enc_early.5.b:0 "Brotherhood knights containing a prewar threat"
+enc_early.5.c:0 "Caesar's scouts seeking new lands"
+#########################################################################################
+enc_early.6.t:0 "Douglas' Decision"
+enc_early.6.d:0 "When Douglas arrived with his team, the situation of the defenders had grown more dire. Their battered defenses crumbling quickly under a determined but almost equally bloodied raider gang. Looking over the sad state of both parties, Douglas decided to... "
+enc_early.6.a:0 "Help take down the raiders"
+enc_early.6.a.tt: "This will give us a connection with this faction."
+enc_early.6.b:0 "Wipe them out lest they reveal the Enclave's survival."
+enc_early.6.tt:0 "Douglas Granite is a practical man."
+#########################################################################################
+enc_early.7.t:0 "All In the Family"
+enc_early.7.d:0 "The Rig's destruction pushed the Salvatores out of power in New Reno, bringing their influence to the shadow of its former power. In their gap, the Van Graffs and the Bishops seized control of much of the city, the former selling energy weapons to whomever they wished, and the latter bringing the city under the NCR's influence. And it was that NCR influence which kept the Salvatores out of power - for any attempt to seize Reno risked a Ranger intervention. \n\nBut now the NCR was distracted, choking on the Mojave like a viper swallowing a Brahmin. Vault City, meanwhile, was agitating to expel the NCR's garrison. There was an opportunity for the Salvatores to take New Reno, with assistance. And it was a job that would reward their good friends in the Granite Company handsome, if only they went along with it."
+enc_early.7.a:0 "Go On...."
+#########################################################################################"
+enc_early.8.t:0 "Forget the Slot Machines, This Payoff's Much Better"
+enc_early.8.d:0 "The Salvatores' proposal was tempting, and Granite pointed out that the Salvatores would need a force to help hold their new city, at least at first. Why not, he asked, lease the company for a share of Reno's revenues? While obviously Don Salvatore would run the city, the Company would help provide security and deal with any outlying problems. The Super mutants, in particular, were expected to resist - but this wouldn't be the first time Granite Company dealt with that sort. \n\nGiven what later happened, some called Salvatore naive. But this was unfair. Before Reno, the Granite Company never tried to put down roots, always on the move lest the NCR pursue them. It was the NCR's mismanagement in the Mojave that gave Granite the opportunity - not anything Salvatore did. \n\nOn the other hand, surely you'd expect the Granite Company to bet it all on black?"
+enc_early.8.a:0 "Plus they weren't gonna walk to MacArthur Army Base"
+#########################################################################################"

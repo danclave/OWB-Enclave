@@ -26,7 +26,7 @@ country_event = {#1 - OUR ESCAPE
 	}
 }
 
-country_event = {#1 - OUR ESCAPE
+country_event = {#1 - Mercenary Conduct
 	id = enc_early.2
 	title = enc_early.2.t
 	desc = enc_early.2.d
@@ -65,61 +65,179 @@ country_event = {#1 - OUR ESCAPE
 		set_country_flag = vlt_city_friends
 	}
 }
-country_event = {#2 - Operational Security Compromised!
-	id = enc.2
-	title = enc.2.t
-	desc = enc.2.d
-	picture = GFX_event_ENC_secret
 
-	is_triggered_only = yes
+	country_event = { # Granite's mom
+		id = enc_early.3
+		title = enc_early.3.t
+		desc = enc_early.3.d
+		picture = GFX_event_baby_enclave
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = { # Bishops
+			name = enc_early.3.a
+			country_event = {
+				id = enc_early.4
+			}
+			set_country_flag = enc_bishops
+			set_country_flag = leader_mutant_sympathies
+			add_country_leader_trait = mutant_sympathies
+			country_event = enc_early.4
+		}
+		option = { #  Chosen One Mom
+			name = enc_early.3.b
+			country_event = {
+				id = enc_early.4
+			}
+			set_country_flag = enc_arroyo_mom
+			set_country_flag = enc_arroyo
+			add_country_leader_trait = mutant_sympathies
+			set_country_flag = leader_mutant_sympathies
+			add_stability = -0.05
+		}
+		option = { # Enclave mommy
+			name = enc_early.3.c
+			country_event = {
+				id = enc_early.4
+			}
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
 
-	option = { # the time has come
-		name = enc.2.a
-		NCR = {
-			country_event = { id = enc.41 }
+	country_event = { #4 Commie Stuff
+		id = enc_early.4
+		title = enc_early.4.t
+		desc = enc_early.4.d
+		picture = GFX_event_china_poster
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = { #Afraid of Commies
+			name = enc_early.4.a
+			add_country_leader_trait = red_scare
+			custom_effect_tooltip = enc_early.4.a.tt
+			set_variable = {
+				enc_red_menace_var = 2
+			}
+			country_event = enc_early.6
 		}
-		clr_country_flag = ncr_suspicious
+		option = { #  Silly
+			name = enc_early.4.b
+			add_stability = 0.05
+			country_event = enc_early.6
+		}
 	}
-	option = { # spend PP
-		trigger = {
-			has_political_power > ENC_hiding_cost_total
-		}
-		name = enc.2.b
-		set_temp_variable = { PP_cost = ENC_hiding_cost_total }
-		multiply_temp_variable = { PP_cost = -1 }
-		add_political_power = PP_cost
-		activate_decision = ENC_hide_activity_by_event
-		hidden_effect = {
-			activate_mission = ENC_hide_activity
-			remove_mission = ENC_hide_activity
-		}
-	}
-	option = { # No resources
-		trigger = {
-			has_country_flag = ERB_can_NCR_crisis_resources
-		}
-		name = enc.2.c
-		activate_decision = NCR_crisis_resources
-		clr_country_flag = ERB_can_NCR_crisis_resources
-	}
-	option = { # No attack
-		trigger = {
-			has_country_flag = ERB_can_NCR_crisis_laylow
-		}
-		name = enc.2.e
-		activate_decision = NCR_crisis_laylow
-		clr_country_flag = ERB_can_NCR_crisis_laylow
-	}
-	option = { # No construction
-		trigger = {
-			has_country_flag = ERB_can_NCR_crisis_construction
-		}
-		name = enc.2.f
-		activate_decision = NCR_crisis_construction
-		clr_country_flag = ERB_can_NCR_crisis_construction
-	}
-}}
 
+	country_event = { #5 Granite's Relations
+		id = enc_early.4
+		title = enc_early.4.t
+		desc = enc_early.4.d
+		picture = GFX_event_china_poster
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = { #Afraid of Commies
+			name = enc_early.4.a
+			add_country_leader_trait = red_scare
+			custom_effect_tooltip = enc_early.4.a.tt
+			set_variable = {
+				enc_red_menace_var = 2
+			}
+			country_event = enc_early.6
+		}
+		option = { #  Silly
+			name = enc_early.4.b
+			add_stability = 0.05
+			country_event = enc_early.6
+		}
+	}
+
+
+	country_event = { #5 - DOUGLAS PAST - MID
+		id = enc_early.5
+		title = enc_early.5.t
+		desc = enc_early.5.d
+		picture = GFX_event_ENC_minigun
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = { #NCR
+			name = enc_early.5.a
+			country_event = enc_early.6
+			set_country_flag = enc_ncr_connections_flag
+		}
+		option = { #BOS
+			name = enc_early.5.b
+			country_event = enc_early.6
+			set_country_flag = enc_bos_connections_flag
+		}
+		option = { #CES
+			name = enc_early.5.c
+			country_event = enc_early.6
+			set_country_flag = enc_ces_connections_flag
+		}
+	}
+	country_event = { #6 - DOUGLAS PAST - END
+		id = enc_early.6
+		title = enc_early.6.t
+		desc = enc_early.6.d
+		picture = GFX_event_enc_urban_patrol
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = { #Wait
+			name = enc_early.6.b
+			clr_country_flag = enc_ncr_connections_flag
+			clr_country_flag = enc_bos_connections_flag
+			clr_country_flag = enc_ces_connections_flag
+			add_country_leader_trait = ruthless
+			set_country_flag = leader_ruthless
+			add_manpower = 200
+		}
+		option = { #Help
+			name = enc_early.6.a
+			add_country_leader_trait = charismatic
+			set_country_flag = leader_charismatic
+			custom_effect_tooltip = enc_early.6.a.tt
+			if = { # helped bos -> get bos connection idea
+				limit = {
+					has_country_flag = enc_bos_connections_flag
+				}
+				add_ideas = ENC_BOS_Connections
+			}
+			else_if = { # helped CES -> get CES idea
+				limit = {
+					has_country_flag = enc_ces_connections_flag
+				}
+				add_ideas = ENC_CES_Wisdom
+			}
+		}
+	}
+	news_event = { #7 Reno Conquest
+		id = enc_early.7
+		title = enc_early.7.t
+		desc = enc_early.7.d
+		picture = GFX_event_new_reno_3
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = { #
+			name = enc_early.7.a
+			set_country_flag = enc_salvatores_tolerated_flag
+		}
+	}
+
+	news_event = { #8 Reno Conquest II
+		id = enc_early.8
+		title = enc_early.8.t
+		desc = enc_early.8.d
+		picture = GFX_event_new_reno_sign
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = { #
+			name = enc_early.8.a
+			NEW = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
 
 
 

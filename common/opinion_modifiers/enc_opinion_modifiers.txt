@@ -1,3 +1,4 @@
 opinion_modifiers = {
 	vault_city_ties = { value = 50 }
+	bitterEnemies = { value = 50 }
 }

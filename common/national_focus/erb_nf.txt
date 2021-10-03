@@ -53,3 +53,87 @@ focus = {#Granite
 		country_event = enc_early.3
 	}
 }
+focus = {#Granite
+	id = enc_granite_son
+	icon = GFX_goal_generic_pip_2000_vi_1
+	ai_will_do = { factor = 1 }
+	relative_position_id = enc_mercenary_lifestyle
+	x = 0
+	y = 1
+	prerequisite = { focus=enc_mercenary_lifestyle }
+	cost = 7
+	available_if_capitulated = yes
+	completion_reward = {
+		country_event = enc_early.3
+	}
+}
+focus = {#Reno
+	id = enc_an_offer_cannot_refuse
+	icon = GFX_goal_NEW_generic_reno
+	ai_will_do = { factor = 1 }
+	relative_position_id = enc_mercenary_lifestyle
+	x = 0
+	y = 1
+	prerequisite = { focus=enc_mercenary_lifestyle }
+	cost = 7
+	available_if_capitulated = yes
+	completion_reward = {
+		country_event = enc_early.7
+	}
+}
+	focus = {#SIERRA ------------------------ THE SIERA ARMY DEPOT ------------------------------
+		id = enc_depot_start
+		icon =GFX_goal_generic_walls_focus
+		prerequisite = { focus = enc_an_offer_cannot_refuse }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_an_offer_cannot_refuse
+		x = -5
+		y = 1
+		cost = 40
+		completion_reward = {
+			159 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {#SIERRA - Rebuild the airstrip
+		id = enc_depot_airport
+		icon = GFX_goal_enc_verti
+		ai_will_do = { factor = 1 }
+		prerequisite = {focus = enc_depot_start}
+		relative_position_id = enc_depot_start
+		x = -3
+		y = 1
+		cost = 40
+		completion_reward = {
+			159 = {
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = { type = vb_transport_plane_equipment amount = 5 producer = USA }
+			add_equipment_to_stockpile = { type = vb_gunship_equipment amount = 5 producer = USA }
+		}
+	}
+	focus = {#SIERRA - Excevate the lower departments
+		id = enc_depot_lower
+		icon = GFX_goal_generic_road_construction
+		prerequisite = {focus = enc_depot_start}
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_depot_start
+		x = 1
+		y = 1
+		cost = 40
+		completion_reward = {
+			add_equipment_to_stockpile = { type = energy_equipment_2 amount = 15 producer = USA }
+			add_equipment_to_stockpile = { type = power_armor_equipment_2 amount = 25 producer = USA }
+			add_resource = { type = advanced amount = 5 state = 159 }
+			add_resource = { type = circuitry amount = 4 state = 159 }
+		}
+	}
