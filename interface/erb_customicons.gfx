@@ -1191,6 +1191,10 @@ spriteTypes = {
             name = "GFX_idea_enc_manpower_remnants_disorganized"
  		    texturefile = "gfx/interface/ideas/enc_manpower_remnants_disorganized.dds"
  	    } 
+        SpriteType = {#enc_protected_by_bunker
+            name = "GFX_idea_enc_protected_by_bunker"
+            texturefile = "gfx/interface/ideas/enc_protected_by_bunker.dds"
+        } 
         SpriteType = {#enc_no_currency
             name = "GFX_idea_enc_no_currency"
  		    texturefile = "gfx/interface/ideas/enc_no_currency.dds"
@@ -1315,10 +1319,14 @@ spriteTypes = {
             name = "GFX_idea_enc__idea_fist"
  		    texturefile = "gfx/interface/ideas/enc__idea_fist.dds"
  	    } 
+        SpriteType = {#enc_thomas_kesselhut
+            name = "GFX_idea_enc_thomas_kesselhut"
+ 		    texturefile = "gfx/interface/ideas/enc_thomas_kesselhut.dds"
+ 	    } 
         SpriteType = {#erb_veronica
             name = "GFX_idea_erb_veronica"
- 		    texturefile = "gfx/interface/ideas/erb_veronica.dds"
- 	    } 
+            texturefile = "gfx/interface/ideas/erb_veronica.dds"
+        } 
         SpriteType = {#idea_enc_atomic_commision
             name = "GFX_idea_idea_enc_atomic_commision"
  		    texturefile = "gfx/interface/ideas/idea_enc_atomic_commision.dds"

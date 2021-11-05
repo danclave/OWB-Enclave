@@ -33,6 +33,7 @@ rebellious: "Rebellious"
 enc_fuel_expert: "Energy Cell Expert"
 enc_indy_neidell: "Indy Neidell"
 desert_fighter: "Desert Fighting Expert"
+enc_technocrat: "Technocrat"
 
 vice_president_dornan_trait:0 "Vice President Dornan"
 vice_president_hayes_trait:0 "Vice President Hayes"
@@ -88,17 +89,17 @@ arm_slaves_click: "§YArm slaves in the state!§!\nWhen the time is right, they 
 enc_slaves_armed: "This state has slaves ready to rise up for freedom."
 enc_slaves_armed2: "§GSlaves already armed!§!\nThis state has slaves ready to rise up for freedom."
 
-arm_patriots_tt: "Arm patriots (§Y[?Root.enc_patriots_we_have_armed|H0]§! £pol_power))"
-arm_patriots_tt_delayed: "§YArm patriots in the state!§!\nWe can arm those who oppose the bloated Californian plutocracy.\n\n[!arm_patriots_click_enabled]"
+arm_patriots_tt: "Organize patriots (§Y[?Root.enc_patriots_we_have_armed|H0]§! £pol_power))"
+arm_patriots_tt_delayed: "§YOrganize patriots in the state!§!\nWe can organize those who oppose the bloated Californian plutocracy.\n\n[!arm_patriots_click_enabled]"
 arm_patriots_tt_cost: "More political power than §Y[?Root.enc_patriots_we_have_armed|H0]§!"
-arm_patriots_click: "§YArm patriots in the state!§!\nIf push comes to shove, these people will stand to defend their rights."
+arm_patriots_click: "§YOrganize patriots in the state!§!\nIf push comes to shove, these people will stand to defend their rights."
 enc_patriots_armed: "This state has patriots ready to rise up for America."
 
 arm_patriots_ready_tt:"Patriots Ready"
 arm_patriots_ready_tt_delayed: "This state has patriots ready to rise up once we start the uprising via the §YOld World Uprising§! decision."
 
 unlock_arm_rebels: "Unlocks the ability to §Yarm rebels§! in any §YNCR§! state where §YBarron Republic§! has a core.\n\n"
-unlock_arm_patriots: "Unlocks the ability to §Yarm patriots§! in any core §Y[NCR.GetName]§! state.\n\n"
+unlock_arm_patriots: "Unlocks the ability to §YOrganize patriots§! in any core §Y[NCR.GetName]§! state.\n\n"
 unlock_arm_patriots: "Unlocks the ability to §Yarm slaves§! in any Legion state where it has a core.  Bastards.\n\n"
 ENC_rise_slaves:  "Issue the Second Emancipation Proclamation"
 ENC_rise_slaves_des: "It's time to remind Caesar that Americans will always fight for freedom."
@@ -166,9 +167,9 @@ vice_president_dornan_flag: "Vice President Dornan"
 
 ncr_suspicious_clr_tt: "\n§MRemoves the need to hide from the [NCR.GetName]§!"
 
-costs_100_army_experience: "Costs 100 £army_experience\n"
-costs_50_army_experience: "Costs 50 £army_experience\n"
-costs_25_army_experience: "Costs 25 £army_experience\n"
+costs_100_army_experience: "Costs 100 £army_experience\n\n"
+costs_50_army_experience: "Costs 50 £army_experience\n\n"
+costs_25_army_experience: "Costs 25 £army_experience\n\n"
 
 enc_martial_law_blocked: "Already attempted and failed."
 enc_suspend_elections_blocked: "Already attempted and failed."

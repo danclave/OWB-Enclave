@@ -432,6 +432,16 @@ ideas = {
 				rebellious
 			}
 		}
+		enc_thomas_kesselhut = {
+			picture = enc_thomas_kesselhut
+			allowed = { original_tag = ERB }
+			traits = {
+				enc_technocrat
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
 		benjamin_curling = {
 			picture = generic_political_advisor_europe_1
 

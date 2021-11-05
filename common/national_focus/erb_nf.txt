@@ -185,6 +185,7 @@ focus_tree = {
 			clr_country_flag = has_resistance_state_unique_tiers
 			clr_country_flag = has_resistance_core_unique_tiers
 			clr_country_flag = has_unique_occupation_laws
+			clr_country_flag = black_market_disabled_global_flag
 		}
 	}
 
@@ -467,10 +468,12 @@ focus_tree = {
 			add_stability = 0.05
 			country_event = { id = enc_reformers.68 }
 			country_event = { id = enc_reformers.40 }
+			remove_ideas = enc_protected_by_bunker
 			custom_effect_tooltip = enc_reno_end.tt
 			# followers can now appear
 			clr_country_flag = do_not_spread_followers_from_this_tag
 			clr_country_flag = no_generic_manufacturer
+			# No longer protected by sierra army depot
 		}
 	}
 

@@ -270,13 +270,17 @@ ideas = {
 			}
 		}
 		enc_protected_by_bunker = {
-			picture = generic_wall_line
+			picture = enc_protected_by_bunker
 			allowed = {
 				always = no
 			}			
 			cancel = {
-				159 = { # sierra army depot
-					is_capital = no
+				and = {
+					159 = { # sierra army depot
+						is_capital = no
+						is_controlled_by = ROOT
+					}
+					has_war = no
 				}
 			}
 			allowed_civil_war = {
