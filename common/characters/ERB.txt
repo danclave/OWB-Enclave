@@ -33,6 +33,9 @@ characters = {
             civilian = {
                 large = gfx/leaders/portrait_sarge.dds
             }
+            army = {
+                small = GFX_idea_sargeant_dornan
+            }
         }
         country_leader = {
             desc = Dornan_DESC
@@ -40,6 +43,28 @@ characters = {
             traits = { drill_sargeant }
             expire = "3000.1.1"
             id = -1
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = sargeant_dornan
+            cost = 200
+			allowed = {
+				original_tag = ERB
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						name = "Sergeant Dornan"
+					}
+				}
+			}
+			traits = {
+				drill_sargeant
+			}
+			ai_will_do = {
+				factor = 1
+			}
         }
     }
     ERB_Bishop = {
@@ -197,4 +222,770 @@ characters = {
             legacy_id = -1
         }
     }
+    paladin_myers1 = {
+        name = paladin_myers1
+        portraits = {
+            army = {
+                small = BOS_generic6
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = paladin_myers1
+            allowed = {
+                original_tag = ERB
+            }
+            visible = {
+                has_country_flag = integrate_brotherhood
+            }
+            traits = {
+                veteran_paladin
+            }
+
+            ai_will_do = {
+                factor = 10
+            }
+        }
+	}
+    boris_t = {
+        name = boris_t
+        portraits = {
+            army = {
+                small = GFX_idea_boris_t
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = boris_t
+            allowed = {
+                original_tag = ERB
+            }
+            traits = {
+                reformer
+            }
+            ai_will_do = {
+                factor = 1
+            }
+            visible = {
+                NOT = {
+                    has_country_flag = reformers_purged
+                    has_country_flag = enc_boris_t_democratic_flag
+                    has_completed_focus = enc_purge_opposition
+                }
+            }
+        }
+	}
+    boris_t_democratic = {
+        name = boris_t_democratic
+        portraits = {
+            army = {
+                small = GFX_idea_boris_t
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = boris_t_democratic
+            allowed = {
+                original_tag = ERB
+            }
+            traits = {
+                democratic_leanings
+            }
+            ai_will_do = {
+                factor = 1
+            }
+            visible = {
+                has_country_flag = enc_boris_t_democratic_flag
+                NOT = { has_country_flag = reformers_purged }
+            }
+        }
+	}
+    generic_reformer_2 = {
+        name = generic_reformer_2
+        portraits = {
+            army = {
+                small = generic_political_advisor_europe_2
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = generic_reformer_2
+            allowed = {
+                original_tag = ERB
+            }
+            traits = {
+                corrupt_sycophant
+            }
+            ai_will_do = {
+                factor = 1
+            }
+        }
+	}
+    felix_grayson = {
+        name = felix_grayson
+        portraits = {
+            army = {
+                small = generic_political_advisor_europe_3
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = felix_grayson
+            allowed = {
+                original_tag = ERB
+            }
+            traits = {
+                attorney_general
+            }
+            ai_will_do = {
+                factor = 1
+            }
+        }
+	}
+    lt_kolyis = {
+        name = lt_kolyis
+        portraits = {
+            army = {
+                small = generic_political_advisor_europe_3
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = lt_kolyis
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				NOT = { has_country_flag = reformers_purged }
+			}
+			traits = {
+				EPA_director
+			}
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    col_wilkins = {
+        name = col_wilkins
+        portraits = {
+            army = {
+                small = generic_political_advisor_europe_4
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = col_wilkins
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				NOT = { has_country_flag = purists_purged }
+			}
+			traits = {
+				suppressor
+				purist_2
+			}
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    dr_henry = {
+        name = dr_henry
+        portraits = {
+            army = {
+                small = d_henry
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = dr_henry
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_country_flag = dr_henry_returns
+			}
+			traits = {
+				compassionate_doctor
+			}
+        }
+	}
+    erb_salvatore = {
+        name = erb_salvatore
+        portraits = {
+            army = {
+                small = enc_salvatore
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = erb_salvatore
+			on_add = {
+				custom_effect_tooltip = erb_salvatore_effect
+			}
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_country_flag = enc_salvatores_tolerated_flag
+			}
+			traits = {
+				salvatore_puppet
+			}
+        }
+	}
+    enc_jerome_chipman = {
+        name = enc_jerome_chipman
+        portraits = {
+            army = {
+                small = generic_army_south_america_4
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = enc_jerome_chipman
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { enc_politically_connected }
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    enc_offensive = {
+        name = enc_offensive
+        portraits = {
+            army = {
+                small = generic_army_europe_1
+            }
+        }
+        advisor = {
+            slot = army_chief
+            idea_token = enc_offensive
+			cost = 250
+
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { army_chief_offensive_3 }
+
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    enc_paratroopers = {
+        name = enc_paratroopers
+        portraits = {
+            army = {
+                small = generic_army_europe_2
+            }
+        }
+        advisor = {
+            slot = army_chief
+            idea_token = enc_paratroopers
+			cost = 250
+
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { enc_paratroopers_commander }
+
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    army_chief_loyalist = {
+        name = army_chief_loyalist
+        portraits = {
+            army = {
+                small = generic_army_europe_6
+            }
+        }
+        advisor = {
+            slot = army_chief
+            idea_token = army_chief_loyalist
+			cost = 100
+            
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				NOT = { has_completed_focus = enc_purge_opposition }
+			}
+			traits = {
+				enc_army_chief_loyalist
+				enc_incompetent_general
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+    enc_indy_neidell = {
+        name = enc_indy_neidell
+        portraits = {
+            army = {
+                small = enc_indy_neidell
+            }
+        }
+        advisor = {
+            slot = army_chief
+            idea_token = enc_indy_neidell
+			cost = 100
+            
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { desert_fighter }
+
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    enc_air_combat = {
+        name = enc_air_combat
+        portraits = {
+            army = {
+                small = generic_army_europe_1
+            }
+        }
+        advisor = {
+            slot = air_chief
+            idea_token = enc_air_combat
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { air_air_combat_training_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    enc_people_air_loyalist = {
+        name = enc_people_air_loyalist
+        portraits = {
+            army = {
+                small = generic_air_europe_3
+            }
+        }
+        advisor = {
+            slot = air_chief
+            idea_token = enc_people_air_loyalist
+			cost = 100
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				NOT = { has_completed_focus = enc_purge_opposition }
+			}
+			traits = {
+				enc_air_chief_loyalist
+				enc_incompetent_airman
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    clayton_schultz = {
+        name = clayton_schultz
+        portraits = {
+            army = {
+                small = GFX_idea_clayton_schultz
+            }
+        }
+        advisor = {
+            slot = air_chief
+            idea_token = clayton_schultz
+			cost = 200
+
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_country_flag = exiles_arrived
+			}
+			traits = { air_close_air_support_3 }
+
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    navy_chief_loyalist = {
+        name = navy_chief_loyalist
+        portraits = {
+            army = {
+                small = generic_navy_arab_3
+            }
+        }
+        advisor = {
+            slot = navy_chief
+            idea_token = navy_chief_loyalist
+			cost = 100
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				NOT = { has_completed_focus = enc_purge_opposition }
+			}
+			traits = {
+				enc_navy_chief_loyalist
+				enc_incompetent_admiral
+			}
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    enc_bomber_guy = {
+        name = enc_bomber_guy
+        portraits = {
+            army = {
+                small = generic_army_europe_4
+            }
+        }
+        advisor = {
+            slot = research_advisor
+            idea_token = enc_bomber_guy
+			allowed = {
+				original_tag = ERB
+			}
+
+			research_bonus = {
+				cat_battlefield_support = 0.10
+			}
+
+			traits = { air_chief_ground_support_2 }
+        }
+	}    
+    enc_fighter_guy = {
+        name = enc_fighter_guy
+        portraits = {
+            army = {
+                small = generic_army_europe_5
+            }
+        }
+        advisor = {
+            slot = research_advisor
+            idea_token = enc_fighter_guy
+			allowed = {
+				original_tag = ERB
+			}
+
+
+
+			research_bonus = {
+				cat_air_doctrine = 0.07
+			}
+
+			traits = { air_warfare_theorist }
+        }
+	}
+    land_doctrine_guy = {
+        name = land_doctrine_guy
+        portraits = {
+            army = {
+                small = generic_army_europe_4
+            }
+        }
+        advisor = {
+            slot = research_advisor
+            idea_token = land_doctrine_guy
+			visible = {
+				original_tag = ERB
+			}
+
+			research_bonus = {
+				cat_land_doctrine = 0.10
+			}
+			traits = { military_theorist }
+        }
+	}
+    air_chief_ground_support_3_guy = {
+        name = air_chief_ground_support_3_guy
+        portraits = {
+            army = {
+                small = generic_army_europe_1
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = air_chief_ground_support_3_guy
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { air_chief_ground_support_3 }
+
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    army_chief_reform_3_guy = {
+        name = army_chief_reform_3_guy
+        portraits = {
+            army = {
+                small = generic_army_europe_2
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = army_chief_reform_3_guy
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { army_chief_reform_3 }
+
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    army_entrenchment_3_guy = {
+        name = army_entrenchment_3_guy
+        portraits = {
+            army = {
+                small = generic_army_europe_3
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = army_entrenchment_3_guy
+			allowed = {
+				original_tag = ERB
+			}
+			traits = { army_entrenchment_3 }
+
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    erb_orion_moreno = {
+        name = erb_orion_moreno
+        portraits = {
+            army = {
+                small = orion_moreno_erb
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = erb_orion_moreno
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_country_flag = moreno_returns
+			}
+			traits = {
+				loyal_soldier
+			}
+        }
+	}
+    enc_BrenRadNeo = {
+        name = enc_BrenRadNeo
+        portraits = {
+            army = {
+                small = generic_political_advisor_europe_6
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = enc_BrenRadNeo
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+					# has_completed_focus = enc_reform
+			}
+			traits = {
+				interventionist
+			}
+        }
+	}
+    erb_veronica = {
+        name = erb_veronica
+        portraits = {
+            army = {
+                small = erb_veronica
+            }
+        }
+        advisor = {
+            slot = economic_advisor
+            idea_token = erb_veronica
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_country_flag = veronica_returns
+			}
+			traits = {
+				engineering_prodigy
+				rebellious
+			}
+        }
+	}
+    benjamin_curling = {
+        name = benjamin_curling
+        portraits = {
+            army = {
+                small = generic_political_advisor_europe_1
+            }
+        }
+        advisor = {
+            slot = economic_advisor
+            idea_token = benjamin_curling
+			allowed = {
+				original_tag = ERB
+			}
+			traits = {
+				respectedByScientists
+				purist
+			}
+			visible = {
+				NOT = {
+					has_country_flag = purists_purged
+					has_completed_focus = enc_purge_scientists
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    norman_wood = {
+        name = norman_wood
+        portraits = {
+            army = {
+                small = generic_army_europe_1
+            }
+        }
+        advisor = {
+            slot = economic_advisor
+            idea_token = norman_wood
+			allowed = {
+				original_tag = ERB
+			}
+			traits = {
+				enc_disliked_pragmatist
+			}
+        }
+	}
+    erb_wright = {
+        name = erb_wright
+        portraits = {
+            army = {
+                small = enc_wright
+            }
+        }
+        advisor = {
+            slot = economic_advisor
+            idea_token = erb_wright
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_country_flag = enc_wrights_tolerated_flag
+			}
+			traits = {
+				captain_of_industry
+			}
+        }
+	}
+    erb_arcade_gannon = {
+        name = erb_arcade_gannon
+        portraits = {
+            army = {
+                small = arcade_gannon
+            }
+        }
+        advisor = {
+            slot = economic_advisor
+            idea_token = erb_arcade_gannon
+			allowed = {
+				original_tag = ERB
+			}
+			visible = {
+				has_country_flag = gannon_returns
+			}
+			traits = {
+				genius_idealist
+			}
+        }
+	}    
+    aaron_chapman = {
+        name = aaron_chapman
+        portraits = {
+            army = {
+                small = USA_walter_krueger
+            }
+        }
+        advisor = {
+            slot = economic_advisor
+            idea_token = aaron_chapman
+			allowed = { original_tag = ERB }
+			traits = {
+				armaments_organizer
+			}
+			ai_will_do = {
+				factor = 10
+			}
+        }
+	}
+    dShakey = {
+        name = dShakey
+        portraits = {
+            army = {
+                small = USA_joseph_mccarthy
+            }
+        }
+        advisor = {
+            slot = economic_advisor
+            idea_token = dShakey
+			allowed = { original_tag = ERB }
+			traits = {
+				enc_fuel_expert
+			}
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
+    enc_john_jaeger = {
+        name = enc_john_jaeger
+        portraits = {
+            army = {
+                small = generic_political_advisor_south_america_3
+            }
+        }
+        advisor = {
+            slot = economic_advisor
+            idea_token = enc_john_jaeger
+			allowed = { original_tag = ERB }
+			visible = {
+				NOT = {
+					has_country_flag = reformers_purged
+				}
+			}
+			available = {
+				has_completed_focus = enc_rebuilding_a_nation
+			}
+			traits = {
+				swords_to_ploughshares
+			}
+			ai_will_do = {
+				factor = 1
+			}
+        }
+	}
 }
