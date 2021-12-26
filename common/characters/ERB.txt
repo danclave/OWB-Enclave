@@ -1,0 +1,200 @@
+characters = {
+    ERB_Franklin_Anderson = {
+        name = ERB_FRANKLIN_NAME
+            portraits = {
+            civilian = {
+                large = gfx/leaders/portrait_Anderson.dds
+            }
+        }
+        country_leader = {
+            desc = Anderson_desc
+            ideology = militarist_technocracy
+            expire = "3000.1.1"
+            id = -1
+        }
+    }
+    ERB_Douglas_Granite = {
+        name = ERB_GRANITE_NAME
+        portraits = {
+            civilian = {
+                large = gfx/leaders/portrait_douglas_enclave.dds
+            }
+        }
+        country_leader = {
+            desc = Granite_desc
+            ideology = technocracy
+            expire = "3000.1.1"
+            id = -1
+        }
+    }
+    ERB_Sergeant_Doran = {
+        name = ERB_DORAN_NAME
+        portraits = {
+            civilian = {
+                large = gfx/leaders/portrait_sarge.dds
+            }
+        }
+        country_leader = {
+            desc = Dornan_DESC
+            ideology = benevolent_dictatorship
+            traits = { drill_sargeant }
+            expire = "3000.1.1"
+            id = -1
+        }
+    }
+    ERB_Bishop = {
+        name = ERB_BISHOP_NAME
+        portraits = {
+            civilian = {
+                large = gfx/leaders/ENC/Portrait_Enclave_Generic.dds
+            }
+        }
+        country_leader = {
+            desc = Dornan_DESC
+            ideology = town_hall_democracy
+            expire = "3000.1.1"
+            id = -1
+        }
+    }
+    ERB_Grimm = {
+        name = ERB_GRIMM
+        portraits = {
+            army = {
+                large = "gfx/leaders/ERB/Portrait_Enclave_Generic_6.dds"
+            }
+        }
+        field_marshal = {
+            skill = 5
+            attack_skill = 5
+            defense_skill = 2
+            planning_skill = 4
+            logistics_skill = 3
+            traits = {
+                enc_purist
+                agile_trait
+            }
+            legacy_id = -1
+        }
+    }
+    ERB_Dwemer = {
+        name = ERB_DWEMER
+        portraits = {
+            army = {
+                large = "gfx/leaders/ERB/Portrait_Enclave_Generic_11.dds"
+            }
+        }
+        corps_commander = {
+	        skill = 2
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 1
+            traits = {
+                enc_reformer
+                agile_trait
+            }
+            legacy_id = -1
+        }
+    }    
+    ERB_Mary = {
+        name = ERB_MARY
+        portraits = {
+            army = {
+                large = "gfx/leaders/ERB/Portrait_Enclave_Generic_3.dds"
+            }
+        }
+        corps_commander = {
+	        skill = 4
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 3
+            traits = {
+                enc_purist
+                strong_trait
+            }
+            legacy_id = -1
+        }
+    }    
+    ERB_David = {
+        name = ERB_DAVID
+        portraits = {
+            army = {
+                large = "gfx/leaders/ERB/Portrait_Enclave_Generic_8.dds"
+            }
+        }
+        corps_commander = {
+	        skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+            traits = {
+                enc_reformer
+                perceptive_trait
+            }
+            legacy_id = -1
+        }
+    }
+    ERB_Scott = {
+        name = ERB_SCOTT
+        portraits = {
+            army = {
+                large = "gfx/leaders/ERB/Portrait_Enclave_Generic_9.dds"
+            }
+        }
+        corps_commander = {
+	        skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+            traits = {
+                enc_reformer
+                charismatic_trait
+            }
+            legacy_id = -1
+        }
+    }
+    ERB_Hamilton = {
+        name = ERB_Hamilton
+        portraits = {
+            army = {
+                large = "gfx/leaders/ERB/Portrait_Enclave_Generic_2.dds"
+            }
+        }
+        corps_commander = {
+	        skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+            traits = {
+                intelligent_trait
+                robotics_expert_trait
+            }
+            legacy_id = -1
+        }
+    }
+    ERB_Shadow = {
+        name = ERB_Shadow
+        portraits = {
+            army = {
+                large = "gfx/leaders/ERB/Portrait_Enclave_Generic_10.dds"
+            }
+        }
+        corps_commander = {
+	        skill = 4
+            attack_skill = 4
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            traits = {
+                enc_purist
+                intelligent_trait
+                robotics_expert_trait
+            }
+            legacy_id = -1
+        }
+    }
+}
