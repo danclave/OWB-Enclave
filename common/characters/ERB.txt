@@ -988,4 +988,251 @@ characters = {
 			}
         }
 	}
+    enc_alice_mclafferty = {
+        name = enc_alice_mclafferty
+        portraits = {
+            army = {
+                small = alice_mclafferty
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = enc_alice_mclafferty
+			allowed = { original_tag = ERB }
+			visible = { has_country_flag = enc_accepted_ncr_leaders }
+			traits = { ruthless_capitalist }
+			available = {
+				NOT = {
+					has_idea = closed_economy
+					has_idea = enc_collapsed_economy
+					has_idea = hidden_economy
+				}
+			}
+			ai_will_do = {
+				factor = 10
+			}
+        }
+	}
+    enc_grant_c_hayes = {
+        name = enc_grant_c_hayes
+        portraits = {
+            army = {
+                small = grant_c_hayes
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = enc_grant_c_hayes
+			allowed = { original_tag = ERB }
+			visible = { has_country_flag = erb_hayes_unlocked_flag }
+			traits = { old_world_blues }
+			ai_will_do = {
+				factor = 10
+			}
+        }
+	}
+    enc_lynette = {
+        name = enc_lynette
+        portraits = {
+            army = {
+                small = lynette
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = enc_lynette
+			allowed = { original_tag = ERB }
+			visible = { has_country_flag = erb_lynette_unlocked_flag }
+			traits = { first_citizen }
+			ai_will_do = {
+				factor = 10
+			}
+        }
+	}
+    enc_zachariah_rigby = {
+        name = enc_zachariah_rigby
+        portraits = {
+            army = {
+                small = zachariah_rigby
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = enc_zachariah_rigby
+			allowed = { original_tag = ERB }
+			visible = { has_country_flag = enc_accepted_ncr_leaders }
+			traits = { gun_runner }
+			available = {
+				has_idea = ENC_gunrun
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+        }
+	}
+    enc_julie_farkas = {
+        name = enc_julie_farkas
+        portraits = {
+            army = {
+                small = julie_farkas
+            }
+        }
+        advisor = {
+            slot = cultural_advisor
+            idea_token = enc_julie_farkas
+			allowed = { original_tag = ERB }
+			visible = { has_country_flag = enc_accepted_ncr_leaders }
+			traits = { follower_of_the_apocalypse }
+			available = {
+				has_country_flag = Enc_followers
+			}
+			ai_will_do = {
+				factor = 10
+			}
+        }
+	}
+    enc_colonel_royez = {
+        name = enc_colonel_royez
+        portraits = {
+            army = {
+                small = colonel_royez
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = enc_colonel_royez
+			allowed = {	original_tag = ERB }
+			visible = { has_country_flag = enc_accepted_ncr_leaders }
+			traits = { all_american_badass }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = 75_legitimacy
+					check_variable = {
+						var = enc_legitimacy
+						value > 0.749
+					}
+				}
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+        }
+	}
+    enc_colonel_hsu = {
+        name = enc_colonel_hsu
+        portraits = {
+            army = {
+                small = colonel_hsu
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = enc_colonel_hsu
+			allowed = {	original_tag = ERB }
+			visible = { has_country_flag = enc_accepted_ncr_leaders }
+			traits = { calm_leader }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = half_legitimacy
+					check_variable = {
+						var = enc_legitimacy
+						value > 0.499
+					}
+				}
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+        }
+	}
+    enc_big_jim_chief_of_army = {
+        # for baron players
+        name = enc_big_jim_chief_of_army
+        portraits = {
+            army = {
+                small = bigjim_chief
+            }
+        }
+        advisor = {
+            slot = army_chief
+            idea_token = enc_big_jim_chief_of_army
+			allowed = {	original_tag = ERB }
+			visible = { has_country_flag = enc_accepted_ncr_leaders }
+			traits = { the_baron }
+
+			ai_will_do = {
+				factor = 10
+			}
+        }
+	}
+    enc_drummond_chief_of_army = {
+        # for baron players
+        name = enc_drummond_chief_of_army
+        portraits = {
+            army = {
+                small = drummond_chief
+            }
+        }
+        advisor = {
+            slot = army_chief
+            idea_token = enc_drummond_chief_of_army
+			allowed = {	original_tag = ERB }
+			visible = { has_country_flag = enc_accepted_ncr_leaders }
+			traits = { unpopular_genius }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = 75_legitimacy
+					check_variable = {
+						var = enc_legitimacy
+						value > 0.749
+					}
+				}
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+        }
+	}
+    joseph_dodge1 = {
+        name = joseph_dodge1
+        portraits = {
+            army = {
+                small = generic_political_advisor_europe_3
+            }
+        }
+        advisor = {
+            slot = economic_advisor
+            idea_token = joseph_dodge1
+			allowed = {
+				original_tag = ERB
+			}
+			visible = { has_country_flag = enc_accepted_ncr_leaders }
+			traits = { armaments_organizer }
+        }
+	}
+    enc_allgood_murphy = {
+        name = enc_allgood_murphy
+        portraits = {
+            army = {
+                small = allgood_murphy
+            }
+        }
+        advisor = {
+            slot = economic_advisor
+            idea_token = enc_allgood_murphy
+			allowed = { original_tag = ERB }
+			visible = { has_country_flag = enc_accepted_ncr_leaders }
+			available = {
+				has_full_control_of_state = 350
+			}
+			traits = { peaceful_foreman }
+			ai_will_do = {
+				factor = 10
+			}
+        }
+	}
 }

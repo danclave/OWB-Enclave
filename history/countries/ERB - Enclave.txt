@@ -200,6 +200,17 @@ recruit_character = erb_arcade_gannon
 recruit_character = aaron_chapman
 recruit_character = dShakey
 recruit_character = enc_john_jaeger
+recruit_character = enc_alice_mclafferty
+recruit_character = enc_grant_c_hayes
+recruit_character = enc_lynette
+recruit_character = enc_zachariah_rigby
+recruit_character = enc_julie_farkas
+recruit_character = enc_colonel_royez
+recruit_character = enc_colonel_hsu
+recruit_character = enc_big_jim_chief_of_army
+recruit_character = enc_drummond_chief_of_army
+recruit_character = joseph_dodge1
+recruit_character = enc_allgood_murphy
 
 ###############################
 # RELATIONS
