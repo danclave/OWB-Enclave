@@ -72,8 +72,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_country_leader = {
-						ruling_only = yes
-						name = "Franklin Anderson"
+						character = ERB_Franklin_Anderson
 					}
 				}
 				country_event = { id = enc.9 }
@@ -81,8 +80,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_country_leader = {
-						ruling_only = yes
-						name = "Douglas Granite"
+						character = ERB_Douglas_Granite
 					}
 				}
 				country_event = { id = enc_reformers.1 }
@@ -345,14 +343,7 @@ focus_tree = {
 			add_stability = -0.10
 			country_event = { id = enc_reformers.42 }
 			hidden_effect = {
-				create_country_leader  = {
-					name = "Henry Richardson"
-					desc = "Anderson_desc" #placeholder
-					picture = "gfx/leaders/portrait_Anderson.dds" #placeholder
-					expire = "3000.1.1"
-					ideology = militarist_technocracy
-					traits = {}
-				}
+				kill_ideology_leader = militarist_technocracy
 			}
 		}
 		cost = 30
@@ -1182,6 +1173,7 @@ focus_tree = {
 					strength_ratio = { tag = VLT ratio > 2 }
 					VLT = {
 						OR = {
+							has_country_leader
 							is_lynette_leader = yes
 							is_wallace_leader = yes
 							AND = {
@@ -2475,9 +2467,10 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.10
 			add_political_power = 100
-		swap_ideas = { remove_idea = enc_NCR_resistance
-						add_idea = enc_NCR_resistance2
-						}
+			swap_ideas = { 
+				remove_idea = enc_NCR_resistance
+				add_idea = enc_NCR_resistance2
+			}
 		}
 	}
 	focus = {#REBUILDING - The BOS leadership
@@ -2491,11 +2484,11 @@ focus_tree = {
 		cost = 40
 		available = {
 			NOT = { country_exists = BOS }
-			}
+		}
 		completion_reward = {
-		country_event = { id = enc_reformers.135 }
-				}
-			}
+			country_event = { id = enc_reformers.135 }
+		}
+	}
 	focus = {#REBUILDING - The BOS soldiers
 		id = enc_bos_soldiers
 		icon = GFX_goal_enc_bos_soldiers
@@ -2510,18 +2503,18 @@ focus_tree = {
 			if = {
 				limit = {
 					has_country_flag = integrate_brotherhood
-					}
+				}
 				hidden_effect = {load_oob = enc_bos_recruits }
-				custom_effect_tooltip = enc_yesterdays_enemies_tt}
+				custom_effect_tooltip = enc_yesterdays_enemies_tt
+			}
 			else_if = {
 				limit = {
 					NOT = { has_country_flag = integrate_brotherhood }
-					}
-				add_manpower = 1000
 				}
-
+				add_manpower = 1000
 			}
 		}
+	}
 
 	focus = {#REBUILDING - The NCR leadership
 		id = enc_ncr_leadership
@@ -2861,19 +2854,19 @@ focus_tree = {
 		}
 	}
 	focus = {#REBUILDING - Department of Energy
-	id = enc_department_of_energy
-	icon = GFX_goal_enc_electricity
-	prerequisite = { focus = enc_department_of_commerce }
-	ai_will_do = { factor = 1 }
-	relative_position_id = enc_department_of_commerce
-	x = 1
-	y = 1
-	cost = 40
-	completion_reward = {
-		add_ideas = ENC_Dept_Energy
-		set_technology = { habitation_tech_level_scientific = 1 }
+		id = enc_department_of_energy
+		icon = GFX_goal_enc_electricity
+		prerequisite = { focus = enc_department_of_commerce }
+		ai_will_do = { factor = 1 }
+		relative_position_id = enc_department_of_commerce
+		x = 1
+		y = 1
+		cost = 40
+		completion_reward = {
+			add_ideas = ENC_Dept_Energy
+			set_technology = { habitation_tech_level_scientific = 1 }
+		}
 	}
-}
 
 	focus = {#Reborn - Daytime
 		id = enc_helios_two
@@ -3297,7 +3290,8 @@ focus_tree = {
 		cost = 40
 		prerequisite = {
 			focus = enc_warmonger_usa
-			focus = enc_peaceful_usa }
+			focus = enc_peaceful_usa 
+		}
 		completion_reward = {
 			if = {
 				limit = {
@@ -3309,7 +3303,6 @@ focus_tree = {
 				}
 			}
 		}
-
 	}
 
 	focus = {#Diplomacy - BOS - start
@@ -3377,7 +3370,7 @@ focus_tree = {
 			add_equipment_to_stockpile = { type = power_armor_equipment_3 amount = 600 producer = ERB }
 			BOS = { set_technology = { vertibird_tech = 1 } }
 			country_event = { id = enc_reformers.194 }
-			}
+		}
 	}
 	focus = {#Diplomacy - BOS - peace
 		id = enc_BOS_peace
@@ -3861,7 +3854,7 @@ focus = {#Legion Border
 		x = 0
 		y = 1
 		cost = 40
-    completion_reward = { CES = { add_stability = -0.10 } }
+    	completion_reward = { CES = { add_stability = -0.10 } }
 	}
 	focus = {#SS-CER-TOP-AUGUSTUS ---------
 		id = enc_ss_ceasar_top_augustus
@@ -5989,18 +5982,7 @@ focus = {#NEVADA - second city
 		completion_reward = {
 			army_experience = 50
 			add_stability = 0.05
-			create_field_marshal = {
-				name = "General Judah Kreger"
-				portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_3.dds"
-				skill = 5
-				attack_skill = 5
-				defense_skill = 4
-				planning_skill = 3
-				logistics_skill = 4
-				traits = {
-					strong_trait rooted_trait savage_leader_trait
-				}
-			}
+			recruit_character = ENC_General_Judah_Kreger
 		}
 	}
 

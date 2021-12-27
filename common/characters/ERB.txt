@@ -1,7 +1,7 @@
 characters = {
     ERB_Franklin_Anderson = {
         name = ERB_FRANKLIN_NAME
-            portraits = {
+        portraits = {
             civilian = {
                 large = gfx/leaders/portrait_Anderson.dds
             }
@@ -1235,4 +1235,26 @@ characters = {
 			}
         }
 	}
+
+    ENC_General_Judah_Kreger = {
+        name = ENC_General_Judah_Kreger
+        portraits = {
+            army = {
+                large = gfx/leaders/ERB/Portrait_Enclave_Generic_3.dds
+            }
+        }
+        field_marshal = {
+            skill = 5
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+			traits = {
+				strong_trait 
+                rooted_trait 
+                savage_leader_trait
+			}
+            legacy_id = -1
+        }
+    }
 }
