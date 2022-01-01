@@ -1498,20 +1498,20 @@ country_event = { #42 - the assassination of Anderson
 		hidden_effect = {
 			retire_character = ERB_Franklin_Anderson
 			HAN = {
-				country_event = enc_next_arc.1
-			}
-		}
-	}
-	option = {
-		name = enc_reformers.42.b
-		hidden_effect = {
-			retire_character = ERB_Franklin_Anderson
-			HAN = {
 				set_country_flag = enc_trigger_next_arc
-				change_tag_from = ERB
 			}
 		}
 	}
+	#option = {
+	#	name = enc_reformers.42.b
+	#	hidden_effect = {
+	#		retire_character = ERB_Franklin_Anderson
+	#		HAN = {
+	#			set_country_flag = enc_trigger_next_arc
+	#			change_tag_from = ERB
+	#		}
+	#	}
+	#}
 }
 
 country_event = { #43 - Out with the old
