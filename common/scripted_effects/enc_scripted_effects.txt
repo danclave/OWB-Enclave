@@ -357,14 +357,7 @@ elites_become_citizens_league = {
 		long_name = "The League of Citizens"
 		name = "Citizens League"
 	}
-	create_country_leader = {
-		name = "First Citizen Lynette"
-		desc = "POLITICS_CITIZEN_DESC"
-		picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
-		expire = "2500.1.1"
-		ideology = militarist_technocracy
-		traits = {}
-	}
+	recruit_character = enc_lynette
 	custom_effect_tooltip = unlocks_as_advisor
 	custom_effect_tooltip = enc_lynette
 }
@@ -609,14 +602,7 @@ change_douglas_to_people = {
 	hidden_effect = {
 		retire_country_leader = yes
 		set_politics = { ruling_party = people }
-		create_country_leader  = {
-			name = "Douglas Granite"
-			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_douglas_usa.dds"
-			expire = "3000.1.1"
-			ideology = constitutional_republic
-			traits = {}
-		}
+		recruit_character = ERB_Douglas_Granite_people
 		transfer_leader_traits = yes
 	}
 }
@@ -625,56 +611,28 @@ change_douglas_to_elites = {
 	hidden_effect = {
 		retire_country_leader = yes
 		set_politics = { ruling_party = elites }
-		create_country_leader  = {
-			name = "Douglas Granite"
-			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_douglas_usa.dds"
-			expire = "3000.1.1"
-			ideology = militarist_technocracy
-			traits = {}
-		}
+		recruit_character = ERB_Douglas_Granite_elites
 		transfer_leader_traits = yes
 	}
 }
 
 change_douglas_portrait_to_enclave = {
 	hidden_effect = {
-		create_country_leader  = {
-			name = "Douglas Granite"
-			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_douglas_enclave.dds"
-			expire = "3000.1.1"
-			ideology = technocracy
-			traits = {}
-		}
+		recruit_character = ERB_Douglas_Granite_enclave
 		transfer_leader_traits = yes
 	}
 }
 
 change_douglas_portrait_to_half_usa = {
 	hidden_effect = {
-		create_country_leader  = {
-			name = "Douglas Granite"
-			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_douglas_usa.dds"
-			expire = "3000.1.1"
-			ideology = technocracy
-			traits = {}
-		}
+		recruit_character = ERB_Douglas_Granite_half_usa
 		transfer_leader_traits = yes
 	}
 }
 
 change_douglas_portrait_to_full_usa = {
 	hidden_effect = {
-		create_country_leader  = {
-			name = "Douglas Granite"
-			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_douglas_usa_2.dds"
-			expire = "3000.1.1"
-			ideology = constitutional_republic
-			traits = {}
-		}
+		recruit_character = ERB_Douglas_Granite_full_usa
 		transfer_leader_traits = yes
 	}
 	# custom_effects_tooltip = enc_time_for_a_new_flag
@@ -682,14 +640,7 @@ change_douglas_portrait_to_full_usa = {
 
 change_douglas_portrait_to_nevada = {
 	hidden_effect = {
-		create_country_leader  = {
-			name = "Douglas Granite"
-			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_douglas_nevada.dds"
-			expire = "3000.1.1"
-			ideology = technocracy
-			traits = {}
-		}
+		recruit_character = ERB_Douglas_Granite_nevada
 		transfer_leader_traits = yes
 	}
 	# custom_effects_tooltip = enc_time_for_a_new_flag
@@ -791,34 +742,11 @@ establish_EAZ = {
 	add_ideas = ENC_idea_eaz
 	load_focus_tree = erb_eaz_nf
 
-	create_country_leader  = {
-		name = "enclave_governer_name"
-		desc = "enclave_governer_desc"
-		picture = "gfx/leaders/portrait_sarge.dds"
-		expire = "3000.1.1"
-		ideology = militarist_technocracy
-	}
-	create_country_leader  = {
-		name = "enclave_governer_name"
-		desc = "enclave_governer_desc"
-		picture = "gfx/leaders/portrait_sarge.dds"
-		expire = "3000.1.1"
-		ideology = technocracy
-	}
-	create_country_leader = {
-		name = "enclave_governer_name"
-		desc = "enclave_governer_desc"
-		picture = "gfx/leaders/portrait_sarge.dds"
-		expire = "3000.1.1"
-		ideology = benevolent_dictatorship
-	}
-	create_country_leader = {
-		name = "enclave_governer_name"
-		desc = "enclave_governer_desc"
-		picture = "gfx/leaders/portrait_sarge.dds"
-		expire = "3000.1.1"
-		ideology = town_hall_democracy
-	}
+	recruit_character = Enclave_Governer_militarist_technocracy
+	recruit_character = Enclave_Governer_technocracy
+	recruit_character = Enclave_Governer_benevolent_dictatorship
+	recruit_character = Enclave_Governer_town_hall_democracy
+
 	division_template = {
 		name = "Slave Militia"
 		division_names_group = REBEL_INF_01

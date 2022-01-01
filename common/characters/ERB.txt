@@ -27,6 +27,104 @@ characters = {
             id = -1
         }
     }
+    ERB_Douglas_Granite_people = {
+        name = ERB_GRANITE_NAME
+        portraits = {
+            civilian = {
+                large = gfx/leaders/portrait_douglas_usa.dds
+            }
+        }
+        country_leader = {
+            desc = Granite_desc
+            ideology = constitutional_republic
+            expire = "3000.1.1"
+            id = -1
+        }
+    }
+    ERB_Douglas_Granite_elites = {
+        name = ERB_GRANITE_NAME
+        portraits = {
+            civilian = {
+                large = gfx/leaders/portrait_douglas_usa.dds
+            }
+        }
+        country_leader = {
+            desc = Granite_desc
+            ideology = militarist_technocracy
+            expire = "3000.1.1"
+            id = -1
+        }
+    }
+    ERB_Douglas_Granite_elites = {
+        name = ERB_GRANITE_NAME
+        portraits = {
+            civilian = {
+                large = gfx/leaders/portrait_douglas_usa.dds
+            }
+        }
+        country_leader = {
+            desc = Granite_desc
+            ideology = militarist_technocracy
+            expire = "3000.1.1"
+            id = -1
+        }
+    }
+    ERB_Douglas_Granite_enclave = {
+        name = ERB_GRANITE_NAME
+        portraits = {
+            civilian = {
+                large = gfx/leaders/portrait_douglas_enclave.dds
+            }
+        }
+        country_leader = {
+            desc = Granite_desc
+            ideology = benevolent_dictatorship
+            expire = "3000.1.1"
+            id = -1
+        }
+    }
+    ERB_Douglas_Granite_half_usa = {
+        name = ERB_GRANITE_NAME
+        portraits = {
+            civilian = {
+                large = gfx/leaders/portrait_douglas_usa.dds
+            }
+        }
+        country_leader = {
+            desc = Granite_desc
+            ideology = technocracy
+            expire = "3000.1.1"
+            id = -1
+        }
+    }
+    ERB_Douglas_Granite_full_usa = {
+        name = ERB_GRANITE_NAME
+        portraits = {
+            civilian = {
+                large = gfx/leaders/portrait_douglas_usa_2.dds
+            }
+        }
+        country_leader = {
+            desc = Granite_desc
+            ideology = constitutional_republic
+            expire = "3000.1.1"
+            id = -1
+        }
+    }
+    ERB_Douglas_Granite_nevada = {
+        name = ERB_GRANITE_NAME
+        portraits = {
+            civilian = {
+                large = gfx/leaders/portrait_douglas_nevada.dds
+            }
+        }
+        country_leader = {
+            desc = Granite_desc
+            ideology = technocracy
+            expire = "3000.1.1"
+            id = -1
+        }
+    }
     ERB_Sergeant_Doran = {
         name = ERB_DORAN_NAME
         portraits = {
@@ -1034,9 +1132,19 @@ characters = {
     enc_lynette = {
         name = enc_lynette
         portraits = {
+            civilian = {
+                large = "gfx/leaders/VLT/Portrait_first_citizen.dds"
+            }
             army = {
                 small = lynette
             }
+        }
+        country_leader = {
+            desc = POLITICS_CITIZEN_DESC
+            ideology = militarist_technocracy
+            traits = {}
+            expire = "3000.1.1"
+            id = -1
         }
         advisor = {
             slot = cultural_advisor
@@ -1255,6 +1363,63 @@ characters = {
                 savage_leader_trait
 			}
             legacy_id = -1
+        }
+    }
+
+    Enclave_Governer_militarist_technocracy = {
+        name = enclave_governer_name
+        protraits = {
+            civilian = {
+                large = gfx/leaders/portrait_sarge.dds
+            }
+            country_leader = {
+                desc = enclave_governer_desc
+                ideology = militarist_technocracy
+                expire = "3000.1.1"
+                id = -1
+            }
+        }
+    }
+    Enclave_Governer_technocracy = {
+        name = enclave_governer_name
+        protraits = {
+            civilian = {
+                large = gfx/leaders/portrait_sarge.dds
+            }
+            country_leader = {
+                desc = enclave_governer_desc
+                ideology = technocracy
+                expire = "3000.1.1"
+                id = -1
+            }
+        }
+    }
+    Enclave_Governer_benevolent_dictatorship = {
+        name = enclave_governer_name
+        protraits = {
+            civilian = {
+                large = gfx/leaders/portrait_sarge.dds
+            }
+            country_leader = {
+                desc = enclave_governer_desc
+                ideology = benevolent_dictatorship
+                expire = "3000.1.1"
+                id = -1
+            }
+        }
+    }
+    Enclave_Governer_town_hall_democracy = {
+        name = enclave_governer_name
+        protraits = {
+            civilian = {
+                large = gfx/leaders/portrait_sarge.dds
+            }
+            country_leader = {
+                desc = enclave_governer_desc
+                ideology = town_hall_democracy
+                expire = "3000.1.1"
+                id = -1
+            }
         }
     }
 }
