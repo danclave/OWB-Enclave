@@ -1,4 +1,6 @@
-﻿country_event = { # welcome Mr President
+﻿add_namespace = enc_next_arc
+
+country_event = { # welcome Mr President
     id = enc_next_arc.1
     title = enc_next_arc.1.t
     desc = enc_next_arc.1.desc

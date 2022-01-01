@@ -323,6 +323,17 @@ enc_last_stand = {
 		original_tag = ERB
 	}
 }
+	
+ENC_next_arc = {
+	priority = 1000
+	icon = generic_crisis
+	allowed = {
+		tag = HAN
+	}
+	visible = {
+		has_country_flag = enc_trigger_next_arc
+	}
+}
 # ##############################
 # ICONS
 # ##############################

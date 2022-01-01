@@ -1,0 +1,19 @@
+ENC_next_arc = {
+    enc_welcome_mr_president = {
+        allowed = { tag = HAN }
+        available = {
+            always = no
+        }
+        days_mission_timeout = 7
+		is_good = no
+        fire_only_once  = yes
+        selectable_mission = no
+        activation = {
+            has_country_flag = enc_trigger_next_arc
+        }
+        timeout_effect = {
+            clr_country_flag = enc_trigger_next_arc
+            country_event = enc_next_arc.1
+        }
+    }
+}

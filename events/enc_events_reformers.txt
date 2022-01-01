@@ -1507,8 +1507,8 @@ country_event = { #42 - the assassination of Anderson
 		hidden_effect = {
 			retire_character = ERB_Franklin_Anderson
 			HAN = {
+				set_country_flag = enc_trigger_next_arc
 				change_tag_from = ERB
-				country_event = enc_next_arc.1
 			}
 		}
 	}
@@ -11510,7 +11510,6 @@ country_event = { # WBH buff for USA
 		#set_country_flag = purits_in_seatle
 	}
 }
-
 
 # country_event = {#355 - War with Caesar Speech
 # id = enc_reformers.355
