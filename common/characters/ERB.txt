@@ -1366,6 +1366,85 @@ characters = {
         }
     }
 
+    ERB_Frederick = {
+        name = ERB_Frederick
+        portraits = {
+            army = {
+                large = gfx/leaders/ERB/Portrait_Enclave_Generic_2.dds
+            }
+        }
+        corps_commander = {
+            skill = 4
+            attack_skill = 4
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 4
+            traits = {
+                charismatic_trait
+                local_leader_trait
+            }
+            legacy_id = -1
+        }
+    }
+
+    ERB_Frederick = {
+        name = ERB_Frederick
+        portraits = {
+            army = {
+                large = gfx/leaders/ERB/Portrait_Enclave_Generic_2.dds
+            }
+        }
+        corps_commander = {
+            skill = 4
+            attack_skill = 4
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 4
+            traits = {
+                charismatic_trait
+                local_leader_trait
+            }
+            legacy_id = -1
+        }
+    }
+
+    ERB_Rimmy = {
+		name = ERB_Rimmy
+        portraits = {
+            army = {
+                large = gfx/leaders/ERB/Portrait_Enclave_Generic_9.dds
+            }
+        }
+        corps_commander = {
+            skill = 2
+            traits = {
+                enc_reformer
+                perceptive_trait 
+                enduring_trait
+            }
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 3
+            legacy_id = -1
+        }
+	}
+
+    ERB_wastelanders = {
+        name = ERB_No_One
+        portraits = {
+            civilian = {
+                large = gfx/leaders/Settler/Portrait_Settler_Generic_2.dds
+            }
+        }
+        country_leader = {
+            ideology = commune
+            expire = "3000.1.1"
+            traits = {}
+            id = -1
+        }
+    }
+
     Enclave_Governer_militarist_technocracy = {
         name = enclave_governer_name
         protraits = {
