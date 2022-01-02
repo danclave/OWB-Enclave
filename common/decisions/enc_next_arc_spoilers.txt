@@ -1,5 +1,5 @@
 ENC_next_arc = {
-    enc_welcome_mr_president = {
+    enc_uh_is_that_supposed_to_be_happening = {
         allowed = { tag = HAN }
         available = {
             always = no
@@ -13,6 +13,142 @@ ENC_next_arc = {
         }
         timeout_effect = {
             clr_country_flag = enc_trigger_next_arc
+		    hidden_effect = {
+                HAN = {
+                    every_owned_state = {
+                        set_state_flag = do_not_exodus
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            HAN = { has_country_flag = warden_revolt } #The `change_tag_from` effect can be laggy and sometimes leads to this effect duplicating. This is mainly to ensure the effect only fires once.
+                        }
+                    }
+                    HAN = {
+                        set_country_flag = warden_revolt
+                    }
+                    set_capital = { state = 460 }
+                    525 = {
+                        set_state_flag = do_not_exodus
+                        teleport_armies = {
+                            to_state = 460
+                        }
+                    }
+                    109 = {
+                        set_state_flag = do_not_exodus
+                        teleport_armies = {
+                            to_state = 460
+                        }
+                    }
+                    185 = {
+                        set_state_flag = do_not_exodus
+                        teleport_armies = {
+                            to_state = 460
+                        }
+                    }
+                    start_civil_war = {
+                        ideology = people
+                        size = 0
+                        states = { 109 525 185 }
+                        keep_unit_leaders_trigger = { always = yes }
+                    }
+                    add_offsite_building = {
+                        type = arms_factory
+                        level = 3
+                    }
+                    add_offsite_building = {
+                        type = industrial_complex
+                        level = 2
+                    }
+                    WDN = {
+                        create_new_owb_country = yes
+                        set_country_flag = is_robotic_nation
+                        #set_country_flag = is_settler_nation
+                        transfer_generic_economic_law_from_prev = yes
+                        transfer_generic_press_law_from_prev = yes
+                        transfer_generic_trading_law_from_prev = yes
+                        transfer_generic_slavery_law_from_prev = yes
+                        transfer_generic_manpower_law_from_prev = yes
+                        transfer_generic_outsider_law_from_prev = yes
+                        transfer_generic_undesirable_law_from_prev = yes
+                        transfer_generic_mutant_law_from_prev = yes
+                        transfer_generic_officer_law_from_prev = yes
+                        transfer_generic_training_law_from_prev = yes
+                        transfer_generic_vehicle_designer_law_from_prev = yes
+                        transfer_generic_navy_designer_law_from_prev = yes
+                        transfer_generic_aircraft_designer_law_from_prev = yes
+                        set_country_flag = no_generic_advisor
+                        set_country_flag = no_generic_chief
+                        set_country_flag = no_generic_political_advisors
+                        set_country_flag = no_generic_high_command
+                        set_country_flag = no_generic_theorists
+                        set_capital = { state = 525 }
+                        set_cosmetic_tag = HAN_warden
+                        set_country_flag = warden_revolter
+                        set_country_flag = robot_doctrine_ai #Ensures that the nation builds robots
+                        delete_unit_template_and_units = {
+                            division_template = "Hangdog Battlegroup"
+                        }
+                        add_offsite_building = {
+                            type = arms_factory
+                            level = 3
+                        }
+                        add_offsite_building = {
+                            type = industrial_complex
+                            level = 2
+                        }
+                        if = {
+                            limit = {
+                                NOT = { has_tech = robot_automation_tech }
+                            }
+                            set_technology = { robot_automation_tech = 1 }
+                        }
+                        if = {
+                            limit = {
+                                NOT = { has_tech = robot_makeshift_automatons_tech }
+                            }
+                            set_technology = { robot_makeshift_automatons_tech = 1 }
+                        }
+                        if = {
+                            limit = {
+                                NOT = { has_tech = robot_protectron_tech_1 }
+                            }
+                            set_technology = { robot_protectron_tech_1 = 1 }
+                        }
+                        if = {
+                            limit = {
+                                NOT = { has_tech = robot_assaultron_tech }
+                            }
+                            set_technology = { robot_assaultron_tech = 1 }
+                        }
+                        add_equipment_to_stockpile = {
+                            type = support_robot_protectron_equipment_1
+                            amount = 800
+                        }
+                        load_oob = "han_warden"
+                    }
+                }
+                WDN = {
+                    set_country_flag = preparing_for_president
+			        change_tag_from = ROOT
+		        }
+            }
+        }
+    }
+    enc_welcome_mr_president = {
+        available = {
+            always = no
+        }
+        days_mission_timeout = 7
+		is_good = no
+        fire_only_once  = yes
+        selectable_mission = no
+        activation = {
+            has_country_flag = preparing_for_president
+        }
+        timeout_effect = {
+            clr_country_flag = preparing_for_president
             country_event = enc_next_arc.1
         }
     }

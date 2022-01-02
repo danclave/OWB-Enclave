@@ -8,5 +8,9 @@ country_event = { # welcome Mr President
 	is_triggered_only = yes
     option = {
         name = enc_next_arc.1.a
+        WDN = {
+            unlock_national_focus = han_contact_the_president
+            add_ideas = han_presidential_manufacturing_routines
+        }
     }
 }

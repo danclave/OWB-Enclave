@@ -327,12 +327,12 @@ enc_last_stand = {
 ENC_next_arc = {
 	priority = 1000
 	icon = generic_crisis
-	allowed = {
-		tag = HAN
-	}
-	visible = {
-		has_country_flag = enc_trigger_next_arc
-	}
+	#visible = {
+	#	OR = {
+	#		has_country_flag = enc_trigger_next_arc
+	#		has_country_flag = preparing_for_president
+	#	}
+	#}
 }
 # ##############################
 # ICONS
