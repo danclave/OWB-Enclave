@@ -18,6 +18,7 @@ ENC_next_arc = {
                     every_owned_state = {
                         set_state_flag = do_not_exodus
                     }
+                    unlock_national_focus = han_open_the_box
                 }
                 if = {
                     limit = {
@@ -131,6 +132,7 @@ ENC_next_arc = {
                 }
                 WDN = {
                     set_country_flag = preparing_for_president
+                    unlock_national_focus = han_open_the_box
 			        change_tag_from = ROOT
 		        }
             }
