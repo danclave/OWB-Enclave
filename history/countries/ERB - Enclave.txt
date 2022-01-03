@@ -214,6 +214,10 @@ recruit_character = enc_allgood_murphy
 
 recruit_character = ERB_Ulysses
 
+recruit_character = ERB_Ranger_Skip
+recruit_character = ERB_Raul
+recruit_character = ERB_Whitehall
+
 ###############################
 # RELATIONS
 ###############################

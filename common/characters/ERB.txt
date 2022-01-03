@@ -1370,6 +1370,15 @@
         }
     }
 
+    ERB_Whitehall = {
+        name = ERB_Whitehall_name
+        protraits = {
+            army = {
+                large = "gfx/leaders/ERB/Portrait_Enclave_Generic_4.dds"
+            }
+        }
+    }
+
     Enclave_Governer_militarist_technocracy = {
         name = enclave_governer_name
         protraits = {

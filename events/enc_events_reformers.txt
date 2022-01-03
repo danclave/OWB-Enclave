@@ -7855,6 +7855,11 @@ country_event = { #226 - TRL Buff
 	}
 	option = { # Washington Menace
 		name = enc_reformers.226.a
+		NEW = {
+			NEW_thradd_the_immortal = {
+				set_nationality = TRL
+			}
+		}
 		TRL = {
 			add_ideas = {
 				WBH_debuff
@@ -7873,24 +7878,21 @@ country_event = { #226 - TRL Buff
 				maintenance_company_tech_1 = 1
 			}
 			load_oob = thraddlegion1
-		}
-		NEW = {
-			NEW_THRADD_NAME = {
-				set_nationality = TRL
-				add_corps_commander_role = {
-					traits = {
-						intelligent_trait
-						charismatic_trait
-					}
-					skill = 4
-					attack_skill = 5
-					defense_skill = 3
-					planning_skill = 3
-					logistics_skill = 2
-					legacy_id = -1
+			add_corps_commander_role = {
+				character = NEW_thradd_the_immortal
+				traits = {
+					intelligent_trait
+					charismatic_trait
 				}
+				skill = 4
+				attack_skill = 5
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+				legacy_id = -1
 			}
 		}
+
 		set_country_flag = super_troll_warren
 	}
 }
@@ -9803,6 +9805,9 @@ news_event = { #326 - Baja Blues
 		ROOT = {
 			puppet = BJS
 		}
+		ERB_Ranger_Skip = {
+			set_nationality = BJS
+		}
 		BJS = {
 			set_capital = 176
 			hidden_effect = {
@@ -10456,6 +10461,11 @@ news_event = { #346 - Raul
 	}	# quick
 	option = { # UMMM
 		name = enc_reformers.346.a
+		hidden_effect = {
+			ERB_Raul = {
+				set_nationality = BJS
+			}
+		}
 		BJS = {
 			add_corps_commander_role = {
 				character = ERB_Raul
@@ -10576,17 +10586,24 @@ country_event = { #350 New Leader
 	is_triggered_only = yes
 	option = { # UMMM
 		name = enc_reformers.350.a
+		RPG = {
+			RRG_veronica_guerra = {
+				set_nationality = BJS
+			}
+		}
 		BJS = {
 			set_politics = {
 				ruling_party = intellectuals
 			}
-			kill_country_leader = yes
-			create_country_leader = {
-				name = "Veronica Guerra"
-				desc = "VERONICA_DESC1"
-				picture = "gfx/leaders/RRG/portrait_veronica_guerra.dds"
-				expire = "3000.1.1"
+			retire_country_leader = yes
+			add_country_leader_role = {
+				character = RRG_veronica_guerra
+				promote_leader = yes
 				ideology = ideocracy
+				expire = "3000.1.1"
+			}
+			set_country_leader_description = {
+				desc = "VERONICA_DESC1"
 			}
 		}
 	}
@@ -10595,17 +10612,24 @@ country_event = { #350 New Leader
 		trigger = {
 			has_completed_focus = enc_accept_ghouls
 		}
+		hidden_effect = {
+			ERB_Raul = {
+				set_nationality = BJS
+			}
+		}
 		BJS = {
 			set_politics = {
 				ruling_party = intellectuals
 			}
-			kill_country_leader = yes
-			create_country_leader = {
-				name = "Raul Alfonso Tejada"
-				picture = "gfx/leaders/ghoul_mexico/portrait_ghoul_mexico_generic_3.dds"
-				desc = "RAUL_DESC1"
+			retire_country_leader = yes
+			add_country_leader_role = {
+				character = ERB_Raul
+				promote_leader = yes
 				expire = "3000.1.1"
 				ideology = ideocracy
+			}
+			set_country_leader_description = {
+				desc = "RAUL_DESC1"
 			}
 		}
 	}
@@ -10614,17 +10638,22 @@ country_event = { #350 New Leader
 		trigger = {
 			has_country_flag = kinkaid_spport
 		}
+		ATE_gail_kinkaid = {
+			set_nationality = BJS
+		}
 		BJS = {
 			set_politics = {
 				ruling_party = intellectuals
 			}
-			kill_country_leader = yes
-			create_country_leader = {
-				name = "Gail Kinkaid"
-				desc = "KINKAID_DESC"
-				picture = "gfx/leaders/ATE/portrait_gail_kinkaid.dds"
+			retire_country_leader = yes
+			add_country_leader_role = {
+				character = ATE_gail_kinkaid
+				promote_leader = yes
 				expire = "3000.1.1"
 				ideology = ideocracy
+			}
+			set_country_leader_description = {
+				desc = "KINKAID_DESC"
 			}
 		}
 	}
@@ -10633,17 +10662,24 @@ country_event = { #350 New Leader
 		trigger = {
 			has_country_flag = jaguar_support
 		}
+		ATE = {
+			ATE_armando_ocelotl = {
+				set_nationality = BJS
+			}
+		}
 		BJS = {
 			set_politics = {
 				ruling_party = intellectuals
 			}
-			kill_country_leader = yes
-			create_country_leader = {
-				name = "Armando Ocēlōtl"
-				desc = "ARMANDO_DESC"
-				picture = "gfx/leaders/ATE/portrait_armando_ocelotl.dds"
+			retire_country_leader = yes
+			add_country_leader_role = {
+				character = ATE_armando_ocelotl
+				promote_leader = yes
 				expire = "3000.1.1"
 				ideology = ideocracy
+			}
+			set_country_leader_description = {
+				desc = "ARMANDO_DESC"
 			}
 		}
 	}
@@ -11464,6 +11500,9 @@ country_event = { # WBH buff for USA
 	option = { # Washington Menace
 		name = enc_reformers.501.a
 		hidden_effect = {
+			ERB_Whitehall = {
+				set_nationality = WBH
+			}
 			WBH = {
 				add_ideas = {
 					WBH_buff
@@ -11478,9 +11517,8 @@ country_event = { # WBH buff for USA
 					gauss_weaponry_1 = 1
 				}
 				load_oob = washingtonpurists
-				create_corps_commander = {
-					name = "Rebecca Whitehall"
-					portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_4.dds"
+				add_corps_commander_role = {
+					character = ERB_Whitehall
 					skill = 3
 					traits = {
 						enc_purist
