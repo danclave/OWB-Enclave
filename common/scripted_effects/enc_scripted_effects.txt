@@ -357,7 +357,6 @@ elites_become_citizens_league = {
 		long_name = "The League of Citizens"
 		name = "Citizens League"
 	}
-	recruit_character = enc_lynette
 	custom_effect_tooltip = unlocks_as_advisor
 	custom_effect_tooltip = enc_lynette
 }
@@ -600,48 +599,55 @@ transfer_leader_traits = {
 
 change_douglas_to_people = {
 	hidden_effect = {
-		retire_country_leader = yes
 		set_politics = { ruling_party = people }
-		recruit_character = ERB_Douglas_Granite_people
-		transfer_leader_traits = yes
+		set_country_leader_ideology = constitutional_republic
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/portrait_douglas_usa.dds"
+		}
 	}
 }
 
 change_douglas_to_elites = {
 	hidden_effect = {
-		retire_country_leader = yes
 		set_politics = { ruling_party = elites }
-		recruit_character = ERB_Douglas_Granite_elites
-		transfer_leader_traits = yes
+		set_country_leader_ideology = militarist_technocracy
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/portrait_douglas_usa.dds"
+		}
 	}
 }
 
-change_douglas_portrait_to_enclave = {
-	hidden_effect = {
-		recruit_character = ERB_Douglas_Granite_enclave
-		transfer_leader_traits = yes
-	}
-}
+# Not used?
+#
+#change_douglas_portrait_to_enclave = {
+#	hidden_effect = {
+#		recruit_character = ERB_Douglas_Granite_enclave
+#		transfer_leader_traits = yes
+#	}
+#}
 
 change_douglas_portrait_to_half_usa = {
 	hidden_effect = {
-		recruit_character = ERB_Douglas_Granite_half_usa
-		transfer_leader_traits = yes
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/portrait_douglas_usa.dds"
+		}
 	}
 }
 
 change_douglas_portrait_to_full_usa = {
 	hidden_effect = {
-		recruit_character = ERB_Douglas_Granite_full_usa
-		transfer_leader_traits = yes
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/portrait_douglas_usa.dds"
+		}
 	}
 	# custom_effects_tooltip = enc_time_for_a_new_flag
 }
 
 change_douglas_portrait_to_nevada = {
 	hidden_effect = {
-		recruit_character = ERB_Douglas_Granite_nevada
-		transfer_leader_traits = yes
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/portrait_douglas_nevada.dds"
+		}
 	}
 	# custom_effects_tooltip = enc_time_for_a_new_flag
 }

@@ -286,14 +286,8 @@ country_event = {#15 - DOUGLAS DESERTS
 		name = enc.15.a
 		add_manpower = -50
 		add_popularity = { ideology = intellectuals popularity = -0.2 }
-		create_country_leader  = {
-			name = "Adam Tailor"
-			desc = "Granite_desc" #placeholder
-			picture = "gfx/leaders/portrait_douglas_enclave.dds"
-			expire = "3000.1.1"
-			ideology = technocracy
-			traits = {}
-		}
+
+		retire_character = ERB_Douglas_Granite
 	}
 }
 

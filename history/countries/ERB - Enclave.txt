@@ -212,6 +212,8 @@ recruit_character = enc_drummond_chief_of_army
 recruit_character = joseph_dodge1
 recruit_character = enc_allgood_murphy
 
+recruit_character = ERB_Ulysses
+
 ###############################
 # RELATIONS
 ###############################

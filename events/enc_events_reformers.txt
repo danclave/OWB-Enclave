@@ -1752,6 +1752,7 @@ country_event = { #50 - America Reborn
 	option = { # God bless the USA
 		name = enc_reformers.50.a
 		add_stability = 0.05
+		change_douglas_portrait_to_full_usa = yes
 	}
 }
 
@@ -2309,17 +2310,20 @@ country_event = { #66 - The Vice President
 			set_cosmetic_tag = ERB_VEG
 		}
 		hidden_effect = {
-			VEG = {
-				create_country_leader = {
-					name = "Mr House"
-					desc = "MR_HOUSE_DESC"
-					picture = "Portrait_House.dds"
-					expire = "3000.1.1"
+			VEG_mr_house = {
+				add_county_leader_role = {
+					promote_leader = yes
 					ideology = technocracy
 					traits = {
+						captain_of_industry
 						dislikes_legion
 					}
+					expire = "3000.1.1.1"
+					id = -1
 				}
+			}
+			VEG = {
+				set_politics { ruling_party = Intellectuals }
 			}
 		}
 	}
@@ -2480,8 +2484,10 @@ country_event = { #68 - Slavery
 				add_idea = slavery_outlawed
 			}
 		}
-		else_if = {
-			add_ideas = slavery_outlawed
+		else = {
+			hidden_effect = {
+				add_ideas = slavery_outlawed
+			}
 		}
 	}
 }
@@ -2558,13 +2564,7 @@ country_event = { #74 - Civil War
 					ruling_party = intellectuals
 				}
 				set_cosmetic_tag = NCR_ERB
-				create_country_leader = {
-					name = "Grant C. Hayes"
-					desc = "Hayes_DESC"
-					picture = "gfx/leaders/ENC/portrait_enc_hayes.dds"
-					expire = "3000.1.1"
-					ideology = ideocracy
-				}				
+				promote_character = NCR_GRANT_C_HAYES_NAME			
 			}
 			NCR = {
 				set_variable = {
@@ -2714,14 +2714,22 @@ country_event = { #79 - Ulysses
 	}
 	option = { #	Yayy!!!
 		name = enc_reformers.79.a
-		create_corps_commander = {
-			name = "Ulysses"
-			portrait_path = "gfx/leaders/Portrait_Enclave_Ulysses.dds"
+		hidden_effect = {
+			MOS_ulysses = {
+				retire = yes
+			}
+		}
+		add_corps_commander_role = {
+			character = ERB_Ulysses
+			traits = {
+				agile_trait
+			}
 			skill = 5
-			attack_skill = 4
-			defense_skill = 4
-			planning_skill = 4
-			logistics_skill = 4
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
 		}
 	}
 }
@@ -3877,13 +3885,10 @@ country_event = { #113 - President Hayes
 				set_politics = {
 					ruling_party = intellectuals
 				}
-				create_country_leader = {
-					name = "Grant C. Hayes"
-					desc = "Hayes_DESC"
-					picture = "gfx/leaders/ENC/portrait_enc_hayes.dds"
-					expire = "3000.1.1"
-					ideology = ideocracy
-				}	
+				promote_character = {
+					character = NCR_grant_c_hayes
+					ideocracy = ideocracy
+				}
 			}
 		}
 		NCR = {
@@ -3893,131 +3898,130 @@ country_event = { #113 - President Hayes
 	}
 }
 
-country_event = { #114 - Election!
-	id = enc_reformers.114
-	title = enc_reformers.114.t
-	desc = enc_reformers.114.d
-	picture = GFX_event_enc_election
-	trigger = {
-		has_completed_focus = enc_presidential_elections
-		date > 2284.10.04
-		date < 2284.12.30
-	}
-	is_triggered_only = no
-	fire_only_once = yes
-	option = { # King
-		name = enc_reformers.114.a
-		trigger = {
-			has_completed_focus = enc_americans_one_and_all
-		}
-		create_country_leader = {
-			name = "The King"
-			desc = "THE_KING_DESC"
-			picture = "gfx/leaders/VEG/Portrait_King.dds"
-			expire = "3000.1.1"
-			ideology = ideocracy
-			traits = {
-				popular_figurehead
-				smooth_talking_charmer
-			}
-		}
-	}
-	option = { # House
-		name = enc_reformers.114.b
-		trigger = {
-			has_completed_focus = enc_NEW_puppet
-		}
-		create_country_leader = {
-			name = "Mr House"
-			desc = "MR_HOUSE_DESC"
-			picture = "gfx/leaders/VEG/Portrait_House.dds"
-			expire = "3000.1.1"
-			ideology = ideocracy
-			traits = {
-				dislikes_legion
-			}
-		}
-	}
-	option = { # Hayes
-		name = enc_reformers.114.c
-		trigger = {
-			controls_state = 253
-		}
-		create_country_leader = {
-			name = "Grant C. Hayes"
-			desc = "Hayes_DESC"
-			picture = "gfx/leaders/Portrait_Hayes.dds"
-			expire = "3000.1.1"
-			ideology = ideocracy
-			traits = {
-			}
-		}
-	}
-	option = { # Lynette
-		name = enc_reformers.114.e
-		create_country_leader = {
-			name = "First Citizen Lynette"
-			id = 910
-			desc = "POLITICS_CITIZEN_DESC"
-			picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
-			expire = "3000.1.1"
-			ideology = ideocracy
-			traits = {
-			}
-		}
-	}
-	option = { # Gannon
-		name = enc_reformers.114.f
-		trigger = {
-			has_country_flag = enc_followers
-		}
-		create_country_leader = {
-			name = "Arcade Gannon"
-			desc = "THE_KING_DESC"
-			picture = "gfx/leaders/VEG/Portrait_Arcade.dds"
-			expire = "3000.1.1"
-			ideology = ideocracy
-			traits = {
-				popular_figurehead
-				smooth_talking_charmer
-			}
-		}
-	}
-	option = { # Courier
-		name = enc_reformers.114.g
-		trigger = {
-			controls_state = 252
-		}
-		create_country_leader = {
-			name = "The Courier"
-			desc = "THE_KING_DESC"
-			picture = "gfx/leaders/ERB/Portrait_CourierNew.dds"
-			expire = "3000.1.1"
-			ideology = ideocracy
-			traits = {
-				popular_figurehead
-				smooth_talking_charmer
-			}
-		}
-	}
-	option = { # Marcus
-		name = enc_reformers.114.h
-		trigger = {
-			has_country_flag = enc_redding
-		}
-		create_country_leader = {
-			name = "Marcus"
-			desc = "THE_KING_DESC"
-			picture = "gfx/leaders/Supermutant/Portrait_Supermutant_Generic_4.dds"
-			expire = "3000.1.1"
-			ideology = ideocracy
-			traits = {
-				popular_figurehead
-				smooth_talking_charmer
-			}
-		}
-	}
-}
+# focus enc_presidential_elections doesn't exist anymore, so this event cannot fire
+#
+#country_event = { #114 - Election!
+#	id = enc_reformers.114
+#	title = enc_reformers.114.t
+#	desc = enc_reformers.114.d
+#	picture = GFX_event_enc_election
+#	trigger = {
+#		has_completed_focus = enc_presidential_elections
+#		date > 2284.10.04
+#		date < 2284.12.30
+#	}
+#	is_triggered_only = no
+#	fire_only_once = yes
+#	option = { # King
+#		name = enc_reformers.114.a
+#		trigger = {
+#			has_completed_focus = enc_americans_one_and_all
+#		}
+#		set_politics = {
+#			ruling_party = people
+#		}
+#		VEG_the_king = {
+#			set_nationality = ERB
+#			promote_character = yes
+#		}
+#		set_country_leader_ideology = constitutional_republic
+#	}
+#	option = { # House
+#		name = enc_reformers.114.b
+#		trigger = {
+#			has_completed_focus = enc_NEW_puppet
+#		}
+#		create_country_leader = {
+#			name = "Mr House"
+#			desc = "MR_HOUSE_DESC"
+#			picture = "gfx/leaders/VEG/Portrait_House.dds"
+#			expire = "3000.1.1"
+#			ideology = ideocracy
+#			traits = {
+#				dislikes_legion
+#			}
+#		}
+#	}
+#	option = { # Hayes
+#		name = enc_reformers.114.c
+#		trigger = {
+#			controls_state = 253
+#		}
+#		create_country_leader = {
+#			name = "Grant C. Hayes"
+#			desc = "Hayes_DESC"
+#			picture = "gfx/leaders/Portrait_Hayes.dds"
+#			expire = "3000.1.1"
+#			ideology = ideocracy
+#			traits = {
+#			}
+#		}
+#	}
+#	option = { # Lynette
+#		name = enc_reformers.114.e
+#		create_country_leader = {
+#			name = "First Citizen Lynette"
+#			id = 910
+#			desc = "POLITICS_CITIZEN_DESC"
+#			picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
+#			expire = "3000.1.1"
+#			ideology = ideocracy
+#			traits = {
+#			}
+#		}
+#	}
+#	option = { # Gannon
+#		name = enc_reformers.114.f
+#		trigger = {
+#			has_country_flag = enc_followers
+#		}
+#		create_country_leader = {
+#			name = "Arcade Gannon"
+#			desc = "THE_KING_DESC"
+#			picture = "gfx/leaders/VEG/Portrait_Arcade.dds"
+#			expire = "3000.1.1"
+#			ideology = ideocracy
+#			traits = {
+#				popular_figurehead
+#				smooth_talking_charmer
+#			}
+#		}
+#	}
+#	option = { # Courier
+#		name = enc_reformers.114.g
+#		trigger = {
+#			controls_state = 252
+#		}
+#		create_country_leader = {
+#			name = "The Courier"
+#			desc = "THE_KING_DESC"
+#			picture = "gfx/leaders/ERB/Portrait_CourierNew.dds"
+#			expire = "3000.1.1"
+#			ideology = ideocracy
+#			traits = {
+#				popular_figurehead
+#				smooth_talking_charmer
+#			}
+#		}
+#	}
+#	option = { # Marcus
+#		name = enc_reformers.114.h
+#		trigger = {
+#			has_country_flag = enc_redding
+#		}
+#		create_country_leader = {
+#			name = "Marcus"
+#			desc = "THE_KING_DESC"
+#			picture = "gfx/leaders/Supermutant/Portrait_Supermutant_Generic_4.dds"
+#			expire = "3000.1.1"
+#			ideology = ideocracy
+#			traits = {
+#				popular_figurehead
+#				smooth_talking_charmer
+#			}
+#		}
+#	}
+#}
 
 country_event = { #115 Axis of Evil
 	id = enc_reformers.115
@@ -5515,20 +5519,7 @@ country_event = { #159 - Citizens League
 			ideology = elites
 			popularity = 0.05
 		}
-		set_party_name = {
-			ideology = elites
-			long_name = "The League of Citizens"
-			name = "Citizens League"
-		}
-		create_country_leader = {
-			name = "First Citizen Lynette"
-			desc = "POLITICS_CITIZEN_DESC"
-			picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
-			expire = "2500.1.1"
-			ideology = militarist_technocracy
-			traits = {
-			}
-		}
+		elites_become_citizens_league = yes
 		custom_effect_tooltip = leader_ruthless_tt
 	}
 }
@@ -7799,19 +7790,14 @@ country_event = { #224 - Graham Crackers
 			country_exists = NCN
 		}
 		has_completed_focus = enc_expand_human_definition
+		has_global_flag = prodigal_son_returns
 	}
 	option = { #	Hi!
 		name = enc_reformers.224.a
-		create_corps_commander = {
-			name = "Joshua Graham"
-			portrait_path = "gfx/leaders/NCN/Portrait_Burned_Man.dds"
-			skill = 6
-			traits = {
+		NCN = {
+			NCN_joshua_graham = {
+				set_nationality = ERB
 			}
-			attack_skill = 7
-			defense_skill = 3
-			planning_skill = 5
-			logistics_skill = 4
 		}
 		CES = {
 			add_war_support = -0.05
@@ -7887,16 +7873,22 @@ country_event = { #226 - TRL Buff
 				maintenance_company_tech_1 = 1
 			}
 			load_oob = thraddlegion1
-			create_corps_commander = {
-				name = "Thradd"
-				portrait_path = "gfx/leaders/NEW/portrait_thradd.dds"
-				skill = 4
-				traits = {
+		}
+		NEW = {
+			NEW_THRADD_NAME = {
+				set_nationality = TRL
+				add_corps_commander_role = {
+					traits = {
+						intelligent_trait
+						charismatic_trait
+					}
+					skill = 4
+					attack_skill = 5
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 2
+					legacy_id = -1
 				}
-				attack_skill = 5
-				defense_skill = 3
-				planning_skill = 3
-				logistics_skill = 2
 			}
 		}
 		set_country_flag = super_troll_warren
@@ -9193,14 +9185,20 @@ country_event = { #307 - The ruler president
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
-			create_country_leader = {
-				name = "Douglas Granite"
-				desc = "Granite_desc"
-				picture = "gfx/leaders/portrait_douglas_usa.dds"
-				expire = "3000.1.1"
+			add_country_leader_role = {
+				character = ERB_Douglas_Granite
+				promote_leader = yes
 				ideology = benevolent_dictatorship
-				traits = {
-				}
+				expire = "3000.1.1"
+				traits = {}
+			}
+			set_country_leader_description = {
+				ideology = ruler
+				desc = "Granite_desc"
+			}
+			set_country_leader_portrait = {
+				ideology = ruler
+				portrait = "gfx/leaders/portrait_douglas_usa.dds"
 			}
 		}
 	}
@@ -9811,10 +9809,8 @@ news_event = { #326 - Baja Blues
 				set_research_slots = 4
 			}
 			add_political_power = 70
-			create_country_leader = {
-				name = "Ranger Skip"
-				desc = "rs_ranger_skip_desc"
-				picture = "gfx/leaders/Portrait_skip.dds"
+			add_country_leader_role = {
+				character = ERB_Ranger_Skip_name
 				expire = "3000.1.1"
 				ideology = ideocracy
 				traits = {
@@ -9826,15 +9822,17 @@ news_event = { #326 - Baja Blues
 				ruling_party = intellectuals
 				elections_allowed = no
 			}
+			set_country_leader_description = {
+				desc = rs_ranger_skip_desc
+			}
 			set_popularities = {
 				people = 30
 				elites = 5
 				intellectuals = 60
 				ruler = 5
 			}
-			create_corps_commander = {
+			add_corps_commander_role = {
 				name = "Ranger Skip"
-				portrait_path = "gfx/leaders/Portrait_skip.dds"
 				skill = 3
 				traits = {
 					desert_fox
@@ -9922,18 +9920,10 @@ country_event = { #328 - Kinkaid is back baby!
 		}
 		custom_effect_tooltip = enc_reformers.328.a.tt
 		add_war_support = -0.05
-		create_navy_leader = {
-			name = "Gale Kinkaid"
-			desc = "KINKAID_DESC"
-			picture = "portrait_gail_kinkaid.dds"
-			traits = {
-				naval_lineage
+		ATE = {
+			ATE_gail_kinkaid = {
+				set_nationality = ERB
 			}
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			maneuvering_skill = 4
-			coordination_skill = 1
 		}
 	}
 	option = { #Ocelotl
@@ -10467,10 +10457,8 @@ news_event = { #346 - Raul
 	option = { # UMMM
 		name = enc_reformers.346.a
 		BJS = {
-			create_corps_commander = {
-				# Raul
-				name = "Raul Alfonso Tejada"
-				portrait_path = "gfx/leaders/ghoul_mexico/portrait_ghoul_mexico_generic_3.dds"
+			add_corps_commander_role = {
+				character = ERB_Raul
 				skill = 4
 				traits = {
 					charismatic_trait local_leader_trait

@@ -27,104 +27,6 @@
             id = -1
         }
     }
-    ERB_Douglas_Granite_people = {
-        name = ERB_GRANITE_NAME
-        portraits = {
-            civilian = {
-                large = gfx/leaders/portrait_douglas_usa.dds
-            }
-        }
-        country_leader = {
-            desc = Granite_desc
-            ideology = constitutional_republic
-            expire = "3000.1.1"
-            id = -1
-        }
-    }
-    ERB_Douglas_Granite_elites = {
-        name = ERB_GRANITE_NAME
-        portraits = {
-            civilian = {
-                large = gfx/leaders/portrait_douglas_usa.dds
-            }
-        }
-        country_leader = {
-            desc = Granite_desc
-            ideology = militarist_technocracy
-            expire = "3000.1.1"
-            id = -1
-        }
-    }
-    ERB_Douglas_Granite_elites = {
-        name = ERB_GRANITE_NAME
-        portraits = {
-            civilian = {
-                large = gfx/leaders/portrait_douglas_usa.dds
-            }
-        }
-        country_leader = {
-            desc = Granite_desc
-            ideology = militarist_technocracy
-            expire = "3000.1.1"
-            id = -1
-        }
-    }
-    ERB_Douglas_Granite_enclave = {
-        name = ERB_GRANITE_NAME
-        portraits = {
-            civilian = {
-                large = gfx/leaders/portrait_douglas_enclave.dds
-            }
-        }
-        country_leader = {
-            desc = Granite_desc
-            ideology = benevolent_dictatorship
-            expire = "3000.1.1"
-            id = -1
-        }
-    }
-    ERB_Douglas_Granite_half_usa = {
-        name = ERB_GRANITE_NAME
-        portraits = {
-            civilian = {
-                large = gfx/leaders/portrait_douglas_usa.dds
-            }
-        }
-        country_leader = {
-            desc = Granite_desc
-            ideology = technocracy
-            expire = "3000.1.1"
-            id = -1
-        }
-    }
-    ERB_Douglas_Granite_full_usa = {
-        name = ERB_GRANITE_NAME
-        portraits = {
-            civilian = {
-                large = gfx/leaders/portrait_douglas_usa_2.dds
-            }
-        }
-        country_leader = {
-            desc = Granite_desc
-            ideology = constitutional_republic
-            expire = "3000.1.1"
-            id = -1
-        }
-    }
-    ERB_Douglas_Granite_nevada = {
-        name = ERB_GRANITE_NAME
-        portraits = {
-            civilian = {
-                large = gfx/leaders/portrait_douglas_nevada.dds
-            }
-        }
-        country_leader = {
-            desc = Granite_desc
-            ideology = technocracy
-            expire = "3000.1.1"
-            id = -1
-        }
-    }
     ERB_Sergeant_Doran = {
         name = ERB_DORAN_NAME
         portraits = {
@@ -1139,13 +1041,6 @@
                 small = lynette
             }
         }
-        country_leader = {
-            desc = POLITICS_CITIZEN_DESC
-            ideology = militarist_technocracy
-            traits = {}
-            expire = "3000.1.1"
-            id = -1
-        }
         advisor = {
             slot = cultural_advisor
             idea_token = enc_lynette
@@ -1442,6 +1337,36 @@
             expire = "3000.1.1"
             traits = {}
             id = -1
+        }
+    }
+
+    ERB_Ulysses = {
+        name = ERB_Ulysses
+        portraits = {
+            army = {
+                large = "gfx/leaders/Portrait_Enclave_Ulysses.dds"
+            }
+        }
+    }
+
+    ERB_Ranger_Skip = {
+        name = ERB_Ranger_Skip_name
+        portraits = {
+            civilian = {
+                large = gfx/leaders/Portrait_skip.dds
+            }
+            army = {
+                large = "gfx/leaders/Portrait_skip.dds"
+            }
+        }
+    }
+
+    ERB_Raul = {
+        name = ERB_Raul_name
+        protraits = {
+            army = {
+                large = "gfx/leaders/ghoul_mexico/portrait_ghoul_mexico_generic_3.dds"
+            }
         }
     }
 

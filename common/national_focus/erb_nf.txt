@@ -342,9 +342,6 @@ focus_tree = {
 			add_popularity = { ideology = elites popularity = -0.2 }
 			add_stability = -0.10
 			country_event = { id = enc_reformers.42 }
-			hidden_effect = {
-				kill_ideology_leader = militarist_technocracy
-			}
 		}
 		cost = 30
 	}
@@ -3589,9 +3586,6 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = enc_reformers.66 }
 			puppet = VEG
-			hidden_effect = {
-				VEG = { set_politics = { ruling_party = elites } }
-			}
 	 	}
 	}
 	focus = {#Diplomacy - Minor Good Guys
