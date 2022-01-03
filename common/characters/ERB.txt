@@ -214,7 +214,7 @@
         name = paladin_myers1
         portraits = {
             army = {
-                small = BOS_generic6
+                small = GFX_idea_BOS_generic6
             }
         }
         advisor = {
@@ -383,7 +383,7 @@
         name = dr_henry
         portraits = {
             army = {
-                small = d_henry
+                small = GFX_idea_d_henry
             }
         }
         advisor = {
@@ -404,7 +404,7 @@
         name = erb_salvatore
         portraits = {
             army = {
-                small = enc_salvatore
+                small = GFX_idea_enc_salvatore
             }
         }
         advisor = {
@@ -519,7 +519,7 @@
         name = enc_indy_neidell
         portraits = {
             army = {
-                small = enc_indy_neidell
+                small = GFX_idea_enc_indy_neidell
             }
         }
         advisor = {
@@ -763,7 +763,7 @@
         name = erb_orion_moreno
         portraits = {
             army = {
-                small = orion_moreno_erb
+                small = GFX_idea_orion_moreno_erb
             }
         }
         advisor = {
@@ -805,7 +805,7 @@
         name = erb_veronica
         portraits = {
             army = {
-                small = erb_veronica
+                small = GFX_idea_erb_veronica
             }
         }
         advisor = {
@@ -873,7 +873,7 @@
         name = erb_wright
         portraits = {
             army = {
-                small = enc_wright
+                small = GFX_idea_enc_wright
             }
         }
         advisor = {
@@ -894,7 +894,7 @@
         name = erb_arcade_gannon
         portraits = {
             army = {
-                small = arcade_gannon
+                small = GFX_idea_arcade_gannon
             }
         }
         advisor = {
@@ -980,7 +980,7 @@
         name = enc_alice_mclafferty
         portraits = {
             army = {
-                small = alice_mclafferty
+                small = GFX_idea_alice_mclafferty
             }
         }
         advisor = {
@@ -1005,7 +1005,7 @@
         name = enc_grant_c_hayes
         portraits = {
             army = {
-                small = grant_c_hayes
+                small = GFX_idea_grant_c_hayes
             }
         }
         advisor = {
@@ -1026,7 +1026,7 @@
                 large = "gfx/leaders/VLT/Portrait_first_citizen.dds"
             }
             army = {
-                small = lynette
+                small = GFX_idea_lynette
             }
         }
         advisor = {
@@ -1044,7 +1044,7 @@
         name = enc_zachariah_rigby
         portraits = {
             army = {
-                small = zachariah_rigby
+                small = GFX_idea_zachariah_rigby
             }
         }
         advisor = {
@@ -1066,7 +1066,7 @@
         name = enc_julie_farkas
         portraits = {
             army = {
-                small = julie_farkas
+                small = GFX_idea_julie_farkas
             }
         }
         advisor = {
@@ -1087,7 +1087,7 @@
         name = enc_colonel_royez
         portraits = {
             army = {
-                small = colonel_royez
+                small = GFX_idea_colonel_royez
             }
         }
         advisor = {
@@ -1115,7 +1115,7 @@
         name = enc_colonel_hsu
         portraits = {
             army = {
-                small = colonel_hsu
+                small = GFX_idea_colonel_hsu
             }
         }
         advisor = {
@@ -1144,7 +1144,7 @@
         name = enc_big_jim_chief_of_army
         portraits = {
             army = {
-                small = bigjim_chief
+                small = GFX_idea_bigjim_chief
             }
         }
         advisor = {
@@ -1164,7 +1164,7 @@
         name = enc_drummond_chief_of_army
         portraits = {
             army = {
-                small = drummond_chief
+                small = GFX_idea_drummond_chief
             }
         }
         advisor = {
@@ -1192,7 +1192,7 @@
         name = joseph_dodge1
         portraits = {
             army = {
-                small = generic_political_advisor_europe_3
+                small = GFX_idea_generic_political_advisor_europe_3
             }
         }
         advisor = {
@@ -1209,7 +1209,7 @@
         name = enc_allgood_murphy
         portraits = {
             army = {
-                small = allgood_murphy
+                small = GFX_idea_allgood_murphy
             }
         }
         advisor = {
