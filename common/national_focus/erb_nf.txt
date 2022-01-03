@@ -5978,6 +5978,7 @@ focus = {#NEVADA - second city
 			add_stability = 0.05
 			add_field_marshal_role = {
 				character = ENC_General_Judah_Kreger
+				skill = 5
 				attack_skill = 5
 				defense_skill = 4
 				planning_skill = 3
