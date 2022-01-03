@@ -269,13 +269,35 @@ country_event = { #9 - Promotion
 	option = { #Best man for the job
 		name = enc_reformers.9.a
 		army_experience = 100
-		recruit_character = ERB_Frederick
+		add_corps_commander_role = {
+			character = ERB_Frederick
+			skill = 4
+            attack_skill = 4
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 4
+            traits = {
+                charismatic_trait
+                local_leader_trait
+            }
+		}
 	}
 	option = { #Most loyal man
 		name = enc_reformers.9.b
 		add_popularity_to_ruling_party = yes
 		army_experience = 75 # added this to make the choice more balanced
-		recruit_character = ERB_Hamilton
+		add_corps_commander_role = {
+			character = ERB_Hamilton
+			skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+            traits = {
+                intelligent_trait
+                robotics_expert_trait
+            }
+		}
 	}
 }
 
@@ -1419,7 +1441,13 @@ country_event = { #40 The Wastelanders (people political party)
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
-			recruit_character = ERB_wastelanders
+			add_country_leader_role = {
+				character = ERB_wastelanders
+				promote_leader = yes
+				ideology = commune
+				expire = "3000.1.1"
+				traits = {}
+			}
 		}
 	}
 	option = { # Let it happen

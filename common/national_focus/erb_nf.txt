@@ -5976,7 +5976,19 @@ focus = {#NEVADA - second city
 		completion_reward = {
 			army_experience = 50
 			add_stability = 0.05
-			recruit_character = ENC_General_Judah_Kreger
+			add_field_marshal_role = {
+				character = ENC_General_Judah_Kreger
+				attack_skill = 5
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 4
+				traits = {
+					strong_trait 
+					rooted_trait 
+					savage_leader_trait
+				}
+				legacy_id = -1
+			}
 		}
 	}
 

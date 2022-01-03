@@ -211,12 +211,20 @@ recruit_character = enc_big_jim_chief_of_army
 recruit_character = enc_drummond_chief_of_army
 recruit_character = joseph_dodge1
 recruit_character = enc_allgood_murphy
+recruit_character = ENC_General_Judah_Kreger
+recruit_character = ERB_Frederick
+recruit_character = ERB_Rimmy
 
 recruit_character = ERB_Ulysses
 
 recruit_character = ERB_Ranger_Skip
 recruit_character = ERB_Raul
 recruit_character = ERB_Whitehall
+
+# recruit_character = Enclave_Governer_militarist_technocracy
+# recruit_character = Enclave_Governer_technocracy
+# recruit_character = Enclave_Governer_benevolent_dictatorship
+# recruit_character = Enclave_Governer_town_hall_democracy
 
 ###############################
 # RELATIONS

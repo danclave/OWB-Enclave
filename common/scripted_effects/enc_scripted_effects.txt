@@ -740,44 +740,47 @@ boris_t_becomes_democratic = {
 ##################################################
 ###    Set up Enclave Administration Zone     ####
 ##################################################
-establish_EAZ = {
-	set_cosmetic_tag = EAZ_BAR
-	set_rule = {
-		units_deployed_to_overlord = yes
-	}
-	add_ideas = ENC_idea_eaz
-	load_focus_tree = erb_eaz_nf
-
-	recruit_character = Enclave_Governer_militarist_technocracy
-	recruit_character = Enclave_Governer_technocracy
-	recruit_character = Enclave_Governer_benevolent_dictatorship
-	recruit_character = Enclave_Governer_town_hall_democracy
-
-	division_template = {
-		name = "Slave Militia"
-		division_names_group = REBEL_INF_01
-		regiments = {
-			militia = {	x = 0 y = 0	}
-			militia = { x = 0 y = 1	}
-			militia = { x = 0 y = 2 }
-			militia = { x = 1 y = 0 }
-			militia = { x = 1 y = 1 }
-			militia = { x = 1 y = 2 }
-			militia = { x = 1 y = 3 }
-		}
-		support = {}
-	}
-	every_owned_state = {
-		create_unit = {
-			division = "name = \"Slave Militia\"  division_template = \"Slave Militia\"  start_experience_factor = 0.28"
-			owner = THIS
-		}
-		create_unit = {
-			division = "name = \"Slave Militia\"  division_template = \"Slave Militia\"  start_experience_factor = 0.28"
-			owner = THIS
-		}
-	}
-}
+#
+# currently not used
+#
+#establish_EAZ = {
+#	set_cosmetic_tag = EAZ_BAR
+#	set_rule = {
+#		units_deployed_to_overlord = yes
+#	}
+#	add_ideas = ENC_idea_eaz
+#	load_focus_tree = erb_eaz_nf
+#
+#	recruit_character = Enclave_Governer_militarist_technocracy
+#	recruit_character = Enclave_Governer_technocracy
+#	recruit_character = Enclave_Governer_benevolent_dictatorship
+#	recruit_character = Enclave_Governer_town_hall_democracy
+#
+#	division_template = {
+#		name = "Slave Militia"
+#		division_names_group = REBEL_INF_01
+#		regiments = {
+#			militia = {	x = 0 y = 0	}
+#			militia = { x = 0 y = 1	}
+#			militia = { x = 0 y = 2 }
+#			militia = { x = 1 y = 0 }
+#			militia = { x = 1 y = 1 }
+#			militia = { x = 1 y = 2 }
+#			militia = { x = 1 y = 3 }
+#		}
+#		support = {}
+#	}
+#	every_owned_state = {
+#		create_unit = {
+#			division = "name = \"Slave Militia\"  division_template = \"Slave Militia\"  start_experience_factor = 0.28"
+#			owner = THIS
+#		}
+#		create_unit = {
+#			division = "name = \"Slave Militia\"  division_template = \"Slave Militia\"  start_experience_factor = 0.28"
+#			owner = THIS
+#		}
+#	}
+#}
 
 calculate_distance_to_nearest_enclave_state = {
 	# fire this in state scope

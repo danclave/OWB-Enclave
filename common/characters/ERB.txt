@@ -188,18 +188,6 @@
                 large = "gfx/leaders/ERB/Portrait_Enclave_Generic_2.dds"
             }
         }
-        corps_commander = {
-	        skill = 2
-            attack_skill = 2
-            defense_skill = 2
-            planning_skill = 1
-            logistics_skill = 2
-            traits = {
-                intelligent_trait
-                robotics_expert_trait
-            }
-            legacy_id = -1
-        }
     }
     ERB_Shadow = {
         name = ERB_Shadow
@@ -1246,19 +1234,6 @@
                 large = gfx/leaders/ERB/Portrait_Enclave_Generic_3.dds
             }
         }
-        field_marshal = {
-            skill = 5
-			attack_skill = 5
-			defense_skill = 4
-			planning_skill = 3
-			logistics_skill = 4
-			traits = {
-				strong_trait 
-                rooted_trait 
-                savage_leader_trait
-			}
-            legacy_id = -1
-        }
     }
 
     ERB_Frederick = {
@@ -1267,39 +1242,6 @@
             army = {
                 large = gfx/leaders/ERB/Portrait_Enclave_Generic_2.dds
             }
-        }
-        corps_commander = {
-            skill = 4
-            attack_skill = 4
-            defense_skill = 3
-            planning_skill = 3
-            logistics_skill = 4
-            traits = {
-                charismatic_trait
-                local_leader_trait
-            }
-            legacy_id = -1
-        }
-    }
-
-    ERB_Frederick = {
-        name = ERB_Frederick
-        portraits = {
-            army = {
-                large = gfx/leaders/ERB/Portrait_Enclave_Generic_2.dds
-            }
-        }
-        corps_commander = {
-            skill = 4
-            attack_skill = 4
-            defense_skill = 3
-            planning_skill = 3
-            logistics_skill = 4
-            traits = {
-                charismatic_trait
-                local_leader_trait
-            }
-            legacy_id = -1
         }
     }
 
@@ -1331,12 +1273,6 @@
             civilian = {
                 large = gfx/leaders/Settler/Portrait_Settler_Generic_2.dds
             }
-        }
-        country_leader = {
-            ideology = commune
-            expire = "3000.1.1"
-            traits = {}
-            id = -1
         }
     }
 
@@ -1379,60 +1315,60 @@
         }
     }
 
-    Enclave_Governer_militarist_technocracy = {
-        name = enclave_governer_name
-        protraits = {
-            civilian = {
-                large = gfx/leaders/portrait_sarge.dds
-            }
-            country_leader = {
-                desc = enclave_governer_desc
-                ideology = militarist_technocracy
-                expire = "3000.1.1"
-                id = -1
-            }
-        }
-    }
-    Enclave_Governer_technocracy = {
-        name = enclave_governer_name
-        protraits = {
-            civilian = {
-                large = gfx/leaders/portrait_sarge.dds
-            }
-            country_leader = {
-                desc = enclave_governer_desc
-                ideology = technocracy
-                expire = "3000.1.1"
-                id = -1
-            }
-        }
-    }
-    Enclave_Governer_benevolent_dictatorship = {
-        name = enclave_governer_name
-        protraits = {
-            civilian = {
-                large = gfx/leaders/portrait_sarge.dds
-            }
-            country_leader = {
-                desc = enclave_governer_desc
-                ideology = benevolent_dictatorship
-                expire = "3000.1.1"
-                id = -1
-            }
-        }
-    }
-    Enclave_Governer_town_hall_democracy = {
-        name = enclave_governer_name
-        protraits = {
-            civilian = {
-                large = gfx/leaders/portrait_sarge.dds
-            }
-            country_leader = {
-                desc = enclave_governer_desc
-                ideology = town_hall_democracy
-                expire = "3000.1.1"
-                id = -1
-            }
-        }
-    }
+    #Enclave_Governer_militarist_technocracy = {
+    #    name = enclave_governer_name
+    #    protraits = {
+    #        civilian = {
+    #            large = gfx/leaders/portrait_sarge.dds
+    #        }
+    #        country_leader = {
+    #            desc = enclave_governer_desc
+    #            ideology = militarist_technocracy
+    #            expire = "3000.1.1"
+    #            id = -1
+    #        }
+    #    }
+    #}
+    #Enclave_Governer_technocracy = {
+    #    name = enclave_governer_name
+    #    protraits = {
+    #        civilian = {
+    #            large = gfx/leaders/portrait_sarge.dds
+    #        }
+    #        country_leader = {
+    #            desc = enclave_governer_desc
+    #            ideology = technocracy
+    #            expire = "3000.1.1"
+    #            id = -1
+    #        }
+    #    }
+    #}
+    #Enclave_Governer_benevolent_dictatorship = {
+    #    name = enclave_governer_name
+    #    protraits = {
+    #        civilian = {
+    #            large = gfx/leaders/portrait_sarge.dds
+    #        }
+    #        country_leader = {
+    #            desc = enclave_governer_desc
+    #            ideology = benevolent_dictatorship
+    #            expire = "3000.1.1"
+    #            id = -1
+    #        }
+    #    }
+    #}
+    #Enclave_Governer_town_hall_democracy = {
+    #    name = enclave_governer_name
+    #    protraits = {
+    #        civilian = {
+    #            large = gfx/leaders/portrait_sarge.dds
+    #        }
+    #        country_leader = {
+    #            desc = enclave_governer_desc
+    #            ideology = town_hall_democracy
+    #            expire = "3000.1.1"
+    #            id = -1
+    #        }
+    #    }
+    #}
 }
