@@ -672,7 +672,7 @@ country_event = { #29 - fire mutie hunt event
 	}
 }
 
-country_event = { #30 - Fall of Sack city
+country_event = { #30 - Fall of Sac city
 	id = enc.30
 	title = enc.30.t
 	desc = enc.30.d
@@ -804,7 +804,7 @@ country_event = { #33 - Crimson Caravan Encounter
 	}
 }
 
-country_event = { #34 - remnants of Sack city
+country_event = { #34 - remnants of Sac city
 	id = enc.34
 	title = enc.34.t
 	desc = enc.34.d
