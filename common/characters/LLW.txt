@@ -1,5 +1,5 @@
 ﻿characters = {
-        LLW_no_one_elites  = {
+    LLW_no_one_elites  = {
         name = LLW_no_one_name
         Portraits = {
             civilian = {
@@ -37,7 +37,7 @@
         country_leader = 
         {
             expire = "3000.1.1"
-            ideology = benevo
+            ideology = benevolent_dictatorship
             traits = {}
         }
 

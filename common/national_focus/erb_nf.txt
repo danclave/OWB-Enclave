@@ -1716,7 +1716,7 @@ focus_tree = {
 		# }
 		prerequisite = {
 			focus = enc_the_mutant_question
-			focus = enc_the_mutant_question_purists
+		#	focus = enc_the_mutant_question_purists
 		}
 		cost = 40
 		completion_reward = {
@@ -3650,6 +3650,7 @@ focus_tree = {
 		relative_position_id = enc_the_little_people
 		x = 1
 		y = 1
+		mutually_exclusive = { focus = enc_Nevada_Rangers }
 		cost = 40
 		prerequisite = { focus = enc_the_little_people }
 		available = { has_stability > 0.50
@@ -4028,6 +4029,7 @@ focus = {#Legion Border
 		relative_position_id = enc_american_dream
 		x = 18
 		y = 0
+		mutually_exclusive = { focus = enc_rebuilding_a_nation }
 		cost = 40
 		prerequisite = { focus = enc_reform }
 		available = {
@@ -4121,6 +4123,7 @@ focus = {#Legion Border
 		relative_position_id = enc_home_is_nevada
 		x = 1
 		y = 1
+		mutually_exclusive = {focus = enc_Nevada_Rangers2}
 		cost = 40
 		prerequisite = { focus = enc_home_is_nevada }
 		available = {
@@ -4391,9 +4394,7 @@ focus = {#Legion Border
 		}
 		available = {
 			any_neighbor_country = {
-				limit = {
-					has_full_control_of_state = 389 # Area 51
-				}
+				has_full_control_of_state = 389 # Area 51
 				is_neighbor_of = ERB	
 			}
 		}
@@ -5232,7 +5233,7 @@ focus = {#NEVADA - second city
 		completion_reward = {
 			hidden_effect = {
 
-				all_state = {
+				every_state = {
 					limit = {
 						AND = {
 							OR = {
@@ -5253,9 +5254,9 @@ focus = {#NEVADA - second city
 							}
 						}
 					}
-					add_core_of = WED
+					add_core_of = WEN
 				}
-				WED = {
+				WEN = {
 					remove_state_core = 72
 					remove_state_core = 361
 					}
@@ -5264,52 +5265,56 @@ focus = {#NEVADA - second city
 					limit = {
 						has_full_control_of_state = 478
 					}
-					release = WED
+					release = WEN
 				}
 
-				any_allied_country = {
+				every_country = {
 					limit = {
+						is_in_faction_with = ERB
 						has_full_control_of_state = 478
 					}
-					release = WED
+					release = WEN
 				}
 
 				# add Utah to faction
-				WED = {
+				WEN = {
 					if = { 
 						limit = { is_in_faction = yes }
 						leave_faction = yes 
 					}
 				}
-				add_to_faction = WED
+				add_to_faction = WEN
 
-				WED = {
+				WEN = {
 					add_ai_strategy = {
 						type = alliance
 						id = "ERB"
 						value = 200
 					}
-					WED = { set_cosmetic_tag = ERB_PHR } 
+					WEN = { set_cosmetic_tag = ERB_PHR } 
 				}
-				WED = { 
+				WEN = { 
 					add_to_tech_sharing_group = Benjamin_Franklin_Society
 				}
 
 				every_owned_state = {
 					limit = {
-						is_core_of = WED
+						is_core_of = WEN
 					}
-					WED = {
+					WEN = {
 						transfer_state = THIS
 					}
 				}
 
-				any_allied_country = {
+				every_country = {
+					limit = {
+						is_in_faction_with = ERB
+					}
 					every_owned_state = {
 						limit = {
-							is_core_of = WED
+							is_core_of = WEN
 						}
-						WED = {
+						WEN = {
 							transfer_state = THIS
 						}
 					}
@@ -5383,7 +5388,7 @@ focus = {#NEVADA - second city
 					add_core_of = PHR
 				}
 
-				any_allied_country = {
+				every_country = {
 					every_owned_state = {
 						limit = {
 							is_core_of = CES
@@ -5399,7 +5404,7 @@ focus = {#NEVADA - second city
 					release = PHR
 				}
 
-				any_allied_country = {
+				every_country = {
 					limit = {
 						has_full_control_of_state = 518
 					}
@@ -5436,7 +5441,10 @@ focus = {#NEVADA - second city
 					}
 				}
 
-				any_allied_country = {
+				every_country = {
+					limit = {
+						is_in_faction_with = ERB
+					}
 					every_owned_state = {
 						limit = {
 							is_core_of = PHR
@@ -5462,7 +5470,6 @@ focus = {#NEVADA - second city
 		prerequisite = { focus = enc_the_american_alliance }
 		available = {
 			any_allied_country = {
-				limit = {is_in_faction_with = ERB}
 				has_full_control_of_state = 252 # Hoover Dam
 			}
 		}

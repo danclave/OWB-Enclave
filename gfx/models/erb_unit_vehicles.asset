@@ -204,19 +204,19 @@ entity = {
 			event = { time = 0 node = "mg_left_muzzle" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { time = 0 node = "mg_right_muzzle" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		state = { name = "attack"			animation = "move" animation_blend_time = 0.0
 			event = { time = 0 node = "mg_left_muzzle" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { time = 0 node = "mg_right_muzzle" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		state = { name = "defend"			animation = "idle" animation_blend_time = 0.0
 			event = { time = 0 node = "mg_left_muzzle" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { time = 0 node = "mg_right_muzzle" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		scale = 1.0
 		attach = { name = "infantry_right" infantry_right = "ERB_mech_1_infantry" }
@@ -280,19 +280,19 @@ entity = {
 			event = { time = 0 node = "mg_left_muzzle" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { time = 0 node = "mg_right_muzzle" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		state = { name = "attack"			animation = "move" animation_blend_time = 0.0
 			event = { time = 0 node = "mg_left_muzzle" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { time = 0 node = "mg_right_muzzle" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		state = { name = "defend"			animation = "idle" animation_blend_time = 0.0
 			event = { time = 0 node = "mg_left_muzzle" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { time = 0 node = "mg_right_muzzle" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		scale = 1.0
 		attach = { name = "infantry_right" infantry_right = "infantry_mech_unit_entity" }
@@ -318,17 +318,17 @@ entity = {
 		state = { name = "support_attack"	animation = "idle" 	animation_blend_time = 0.3 animation_speed = 1.0
 			event = { time = 0 node = "barrel" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		state = { name = "attack"			animation = "move" animation_blend_time = 0.0
 			event = { time = 0 node = "barrel" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		state = { name = "defend"			animation = "idle" animation_blend_time = 0.0
 			event = { time = 0 node = "barrel" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		scale = 1.0
 }
@@ -357,7 +357,7 @@ entity = {
 			event = { time = 1.1 node = "mg_right_muzzle_2" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { time = 0.2 node = "mg_right_muzzle_3" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		state = { name = "attack"			animation = "move" animation_blend_time = 0.0
 			event = { time = 0.5 node = "mg_left_muzzle_1" particle = "mg_muzzle_particle"  keep_particle = yes }
@@ -366,7 +366,7 @@ entity = {
 			event = { time = 0.3 node = "mg_right_muzzle_1" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { time = 1.1 node = "mg_right_muzzle_2" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { time = 0.2 node = "mg_right_muzzle_3" particle = "mg_muzzle_particle"  keep_particle = yes }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		state = { name = "defend"			animation = "idle" animation_blend_time = 0.0
 			event = { time = 0.5 node = "mg_left_muzzle_1" particle = "mg_muzzle_particle"  keep_particle = yes }
@@ -376,7 +376,7 @@ entity = {
 			event = { time = 1.1 node = "mg_right_muzzle_2" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { time = 0.2 node = "mg_right_muzzle_3" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		scale = 1.0
 }
@@ -405,7 +405,7 @@ entity = {
 			event = { time = 1.1 node = "mg_right_muzzle_2" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { time = 0.2 node = "mg_right_muzzle_3" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		state = { name = "attack"			animation = "move" animation_blend_time = 0.0
 			event = { time = 0.5 node = "mg_left_muzzle_1" particle = "mg_muzzle_particle"  keep_particle = yes }
@@ -414,7 +414,7 @@ entity = {
 			event = { time = 0.3 node = "mg_right_muzzle_1" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { time = 1.1 node = "mg_right_muzzle_2" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { time = 0.2 node = "mg_right_muzzle_3" particle = "mg_muzzle_particle"  keep_particle = yes }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		state = { name = "defend"			animation = "idle" animation_blend_time = 0.0
 			event = { time = 0.5 node = "mg_left_muzzle_1" particle = "mg_muzzle_particle"  keep_particle = yes }
@@ -424,7 +424,7 @@ entity = {
 			event = { time = 1.1 node = "mg_right_muzzle_2" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { time = 0.2 node = "mg_right_muzzle_3" particle = "mg_muzzle_particle"  keep_particle = yes }
 			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
-			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "mechanized_units_mg_fire" } }
 		}
 		scale = 1.0
 }

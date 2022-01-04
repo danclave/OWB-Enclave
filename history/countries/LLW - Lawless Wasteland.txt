@@ -75,7 +75,7 @@ set_rule = { can_join_factions = no }
 recruit_character = LLW_no_one_elites
 recruit_character = LLW_no_one_intellectuals
 recruit_character = LLW_no_one_ruler
-recruit_character - LLW_no_one_people
+recruit_character = LLW_no_one_people
 
 # IDEAS
 add_ideas = enc_idea_lawless_wasteland

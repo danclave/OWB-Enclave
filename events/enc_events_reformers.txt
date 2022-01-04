@@ -1444,9 +1444,11 @@ country_event = { #40 The Wastelanders (people political party)
 			add_country_leader_role = {
 				character = ERB_wastelanders
 				promote_leader = yes
-				ideology = commune
-				expire = "3000.1.1"
-				traits = {}
+				country_leader = {
+					ideology = commune
+					expire = "3000.1.1"
+					traits = {}
+				}
 			}
 		}
 	}
@@ -2339,19 +2341,21 @@ country_event = { #66 - The Vice President
 		}
 		hidden_effect = {
 			VEG_mr_house = {
-				add_county_leader_role = {
+				add_country_leader_role = {
 					promote_leader = yes
-					ideology = technocracy
-					traits = {
-						captain_of_industry
-						dislikes_legion
+					country_leader = {
+						ideology = technocracy
+						traits = {
+							captain_of_industry
+							dislikes_legion
+						}
+						expire = "3000.1.1.1"
+						id = -1
 					}
-					expire = "3000.1.1.1"
-					id = -1
 				}
 			}
 			VEG = {
-				set_politics { ruling_party = Intellectuals }
+				set_politics = { ruling_party = Intellectuals }
 			}
 		}
 	}
@@ -3784,11 +3788,11 @@ country_event = { #112 - Insurgency
 							attacker = 141
 							defender = 118
 						}
-						finalize_border_war = {
-							defender_win = yes
-							attacker = 141
-							defender = 118
-						}
+					}
+					finalize_border_war = {
+						defender_win = yes
+						attacker = 141
+						defender = 118
 					}
 				}
 				if = {
@@ -3797,11 +3801,11 @@ country_event = { #112 - Insurgency
 							attacker = 141
 							defender = 57
 						}
-						finalize_border_war = {
-							defender_win = yes
-							attacker = 141
-							defender = 57
-						}
+					}
+					finalize_border_war = {
+						defender_win = yes
+						attacker = 141
+						defender = 57
 					}
 				}
 				if = {
@@ -3810,11 +3814,11 @@ country_event = { #112 - Insurgency
 							attacker = 182
 							defender = 467
 						}
-						finalize_border_war = {
-							defender_win = yes
-							attacker = 182
-							defender = 467
-						}
+					}
+					finalize_border_war = {
+						defender_win = yes
+						attacker = 182
+						defender = 467
 					}
 				}
 			}
@@ -3915,7 +3919,7 @@ country_event = { #113 - President Hayes
 				}
 				promote_character = {
 					character = NCR_grant_c_hayes
-					ideocracy = ideocracy
+					ideology = ideocracy
 				}
 			}
 		}
@@ -7506,11 +7510,11 @@ country_event = { #218 - Our New Capital
 	}
 	option = { # Yea
 		name = enc_reformers.218.a
-		set_capital = 253
+		set_capital = {state = 253}
 	}
 	option = { # Yea
 		name = enc_reformers.218.b
-		set_capital = 548
+		set_capital = {state = 548}
 	}
 	option = { # Only Correct Choice
 		name = enc_reformers.218.c
@@ -7748,7 +7752,6 @@ news_event = { #223 - The Legion Marches
 			random_neighbor_country = {
 				limit = {
 					OR = {
-
 						# target New Canaan
 						tag = NCN
 
@@ -7789,12 +7792,12 @@ news_event = { #223 - The Legion Marches
 						type = annex_everything
 						target = PREV
 					}
+					add_ai_strategy = {
+						type = declare_war
+						id = PREV
+						value = 200
+					}
 				}
-			}
-			add_ai_strategy = {
-				type = declare_war
-				id = PREV.PREV
-				value = 200
 			}
 		}
 	}
@@ -9218,13 +9221,12 @@ country_event = { #307 - The ruler president
 			add_country_leader_role = {
 				character = ERB_Douglas_Granite
 				promote_leader = yes
-				ideology = benevolent_dictatorship
-				expire = "3000.1.1"
-				traits = {}
-			}
-			set_country_leader_description = {
-				ideology = ruler
-				desc = "Granite_desc"
+				country_leader = {
+					desc = "Granite_desc"
+					ideology = benevolent_dictatorship
+					expire = "3000.1.1"
+					traits = {}					
+				}
 			}
 			set_country_leader_portrait = {
 				ideology = ruler
@@ -9837,26 +9839,26 @@ news_event = { #326 - Baja Blues
 			set_nationality = BJS
 		}
 		BJS = {
-			set_capital = 176
+			set_capital = {state = 176}
 			hidden_effect = {
 				set_research_slots = 4
 			}
 			add_political_power = 70
 			add_country_leader_role = {
 				character = ERB_Ranger_Skip_name
-				expire = "3000.1.1"
-				ideology = ideocracy
-				traits = {
-					rs_secret_loyalist
-					rs_musician
+				country_leader = {
+					desc = rs_ranger_skip_desc
+					ideology = ideocracy
+					traits = {
+						rs_secret_loyalist
+						rs_musician
+					}
+					expire = "3000.1.1"
 				}
 			}
 			set_politics = {
 				ruling_party = intellectuals
 				elections_allowed = no
-			}
-			set_country_leader_description = {
-				desc = rs_ranger_skip_desc
 			}
 			set_popularities = {
 				people = 30
@@ -10614,7 +10616,7 @@ country_event = { #350 New Leader
 	is_triggered_only = yes
 	option = { # UMMM
 		name = enc_reformers.350.a
-		RPG = {
+		RRG = {
 			RRG_veronica_guerra = {
 				set_nationality = BJS
 			}
@@ -10627,11 +10629,12 @@ country_event = { #350 New Leader
 			add_country_leader_role = {
 				character = RRG_veronica_guerra
 				promote_leader = yes
-				ideology = ideocracy
-				expire = "3000.1.1"
-			}
-			set_country_leader_description = {
-				desc = "VERONICA_DESC1"
+				country_leader = {
+					desc = "VERONICA_DESC1"
+					ideology = ideocracy
+					expire = "3000.1.1"
+				}
+
 			}
 		}
 	}
@@ -10653,11 +10656,11 @@ country_event = { #350 New Leader
 			add_country_leader_role = {
 				character = ERB_Raul
 				promote_leader = yes
-				expire = "3000.1.1"
-				ideology = ideocracy
-			}
-			set_country_leader_description = {
-				desc = "RAUL_DESC1"
+				country_leader = {
+					desc = "RAUL_DESC1"
+					expire = "3000.1.1"
+					ideology = ideocracy
+				}
 			}
 		}
 	}
@@ -10677,11 +10680,11 @@ country_event = { #350 New Leader
 			add_country_leader_role = {
 				character = ATE_gail_kinkaid
 				promote_leader = yes
-				expire = "3000.1.1"
-				ideology = ideocracy
-			}
-			set_country_leader_description = {
-				desc = "KINKAID_DESC"
+				country_leader = {
+					desc = "KINKAID_DESC"
+					expire = "3000.1.1"
+					ideology = ideocracy
+				}
 			}
 		}
 	}
@@ -10703,11 +10706,11 @@ country_event = { #350 New Leader
 			add_country_leader_role = {
 				character = ATE_armando_ocelotl
 				promote_leader = yes
-				expire = "3000.1.1"
-				ideology = ideocracy
-			}
-			set_country_leader_description = {
-				desc = "ARMANDO_DESC"
+				country_leader = {
+					desc = "ARMANDO_DESC"
+					expire = "3000.1.1"
+					ideology = ideocracy
+				}
 			}
 		}
 	}
