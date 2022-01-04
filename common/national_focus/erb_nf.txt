@@ -451,7 +451,7 @@ focus_tree = {
 			add_state_core = 184
 			add_state_core = 295
 			add_state_core = 614
-			set_capital = 285
+			set_capital = { state = 285 }
 			add_stability = 0.05
 			country_event = { id = enc_reformers.68 }
 			country_event = { id = enc_reformers.40 }
@@ -1170,7 +1170,6 @@ focus_tree = {
 					strength_ratio = { tag = VLT ratio > 2 }
 					VLT = {
 						OR = {
-							has_country_leader
 							is_lynette_leader = yes
 							is_wallace_leader = yes
 							AND = {

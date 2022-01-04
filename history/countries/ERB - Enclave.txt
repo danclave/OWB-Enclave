@@ -158,7 +158,7 @@ set_rule = { can_join_factions = no }
 recruit_character = ERB_Franklin_Anderson
 recruit_character = ERB_Douglas_Granite
 recruit_character = ERB_Sergeant_Doran
-recruit_character = ERB_Bishop
+#recruit_character = ERB_Bishop
 recruit_character = ERB_Grimm
 recruit_character = ERB_Dwemer
 recruit_character = ERB_Mary

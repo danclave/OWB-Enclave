@@ -1,4 +1,4 @@
-﻿###############################
+###############################
 # REFORMER
 ###############################
 NCR_hayes_plots = {
@@ -1325,11 +1325,11 @@ ENC_nation_building = {
 			has_completed_focus = enc_reform
 			295 = {
 				is_owned_and_controlled_by = ERB
-			}
-			has_resources_amount = {
-				resource = water
-				amount > 3
-				state = 295
+				has_resources_amount = {
+					resource = water
+					amount > 3
+					state = 295
+				}
 			}
 		}
 		complete_effect = {
