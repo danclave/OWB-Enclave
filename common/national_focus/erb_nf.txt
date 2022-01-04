@@ -5618,20 +5618,11 @@ focus = {#NEVADA - second city
 		ai_will_do = { factor = 1 }
 		prerequisite = { focus = enc_reform }
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_100_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_department_of_defense
-							progress < 0.0
-						}
-					}
-					has_army_experience > 99.99
-				}
+			OR = {
+				has_tech = elite_army
+				has_tech = grand_army
 			}
 		}
-		select_effect  = { army_experience = -100 }
 		relative_position_id = enc_home_is_nevada
 		x = 18
 		y = 0
@@ -5650,21 +5641,6 @@ focus = {#NEVADA - second city
 		relative_position_id = enc_department_of_defense
 		x = 1
 		y = 1
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_25_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_arms_development
-							progress < 0.0
-						}
-					}
-					has_army_experience > 24.99
-				}
-			}
-		}
-		select_effect  = { army_experience = -25 }
 		cost = 40
 		completion_reward = {
 			add_tech_bonus = {
@@ -5683,21 +5659,6 @@ focus = {#NEVADA - second city
 		relative_position_id = enc_arms_development
 		x = 0
 		y = 1
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_50_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_military_equipment
-							progress < 0.0
-						}
-					}
-					has_army_experience > 49.99
-				}
-			}
-		}
-		select_effect  = { army_experience = -50 }
 		cost = 40
 		completion_reward = { add_ideas = enc_military_equipment }
 	}
@@ -5706,21 +5667,6 @@ focus = {#NEVADA - second city
 		icon = GFX_goal_enc_radio_reform
 		ai_will_do = { factor = 1 }
 		prerequisite = {focus = enc_department_of_defense}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_50_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_military_propaganda
-							progress < 0.0
-						}
-					}
-					has_army_experience > 49.99
-				}
-			}
-		}
-		select_effect  = { army_experience = -50 }
 		relative_position_id = enc_department_of_defense
 		x = -1
 		y = 1
@@ -5735,21 +5681,6 @@ focus = {#NEVADA - second city
 		relative_position_id = enc_military_propaganda
 		x = 0
 		y = 1
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_50_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_wartime_draft
-							progress < 0.0
-						}
-					}
-					has_army_experience > 49.99
-				}
-			}
-		}
-		select_effect  = { army_experience = -50 }
 		cost = 40
 		completion_reward = {
 			custom_effect_tooltip = enc_wartime_draft.tt
@@ -5767,20 +5698,8 @@ focus = {#NEVADA - second city
 		x = 0
 		y = 1
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_50_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_disciplined_soldiers
-							progress < 0.0
-						}
-					}
-					has_army_experience > 49.99
-				}
-			}
+				has_tech = grand_battle_plan_owb
 		}
-		select_effect  = { army_experience = -50 }
 		cost = 40
 		completion_reward = { 
 			add_ideas = enc_disciplined_soldiers 
@@ -5795,21 +5714,6 @@ focus = {#NEVADA - second city
 		x = 0
 		y = 1
 		cost = 40
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_50_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_rank_and_file_infantry
-							progress < 0.0
-						}
-					}
-					has_army_experience > 49.99
-				}
-			}
-		}
-		select_effect  = { army_experience = -50 }
 		completion_reward = {
 			add_ideas = enc_rank_and_file_infantry
 		}
@@ -5825,20 +5729,8 @@ focus = {#NEVADA - second city
 		x = 0
 		y = 1
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_50_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_advanced_training
-							progress < 0.0
-						}
-					}
-					has_army_experience > 49.99
-				}
-			}
+			has_tech = concentration_of_force
 		}
-		select_effect  = { army_experience = -50 }
 		cost = 40
 		completion_reward = { add_ideas = enc_advanced_training }
 	}
@@ -5850,21 +5742,6 @@ focus = {#NEVADA - second city
 		relative_position_id = enc_advanced_training
 		x = 0
 		y = 1
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_50_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_power_armor_integration
-							progress < 0.0
-						}
-					}
-					has_army_experience > 49.99
-				}
-			}
-		}
-		select_effect  = { army_experience = -50 }
 		cost = 40
 		completion_reward = { add_ideas = enc_power_armor_integration }
 	}
@@ -5880,20 +5757,11 @@ focus = {#NEVADA - second city
 		x = -1
 		y = 1
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_100_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_new_american_army
-							progress < 0.0
-						}
-					}
-					has_army_experience > 99.99
-				}
+			OR = {
+				has_tech = speed_of_movement
+				has_tech = fortified_positions_doctrine
 			}
 		}
-		select_effect  = { army_experience = -100 }
 		cost = 40
 		completion_reward = { add_ideas = enc_the_new_american_army }
 	}
@@ -5910,20 +5778,11 @@ focus = {#NEVADA - second city
 		x = 7
 		y = 1
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_100_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_reform_general_staff
-							progress < 0.0
-						}
-					}
-					has_army_experience > 99.99
-				}
+			OR = {
+				has_tech = concentration_of_force
+				has_tech = grand_battle_plan_owb
 			}
 		}
-		select_effect  = { army_experience = -100 }
 		cost = 40
 		completion_reward = {
 			# todo description
@@ -5936,21 +5795,6 @@ focus = {#NEVADA - second city
 		prerequisite = { focus = enc_reform_general_staff }
 		relative_position_id = enc_reform_general_staff
 		mutually_exclusive = { focus = enc_old_remnant_officers }
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_50_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_new_generation_officers
-							progress < 0.0
-						}
-					}
-					has_army_experience > 49.99
-				}
-			}
-		}
-		select_effect  = { army_experience = -50 }
 		x = -1
 		y = 1
 		cost = 40
@@ -6005,21 +5849,6 @@ focus = {#NEVADA - second city
 		mutually_exclusive = { focus = enc_officers_by_loyalty_and_devotion }
 		x = 0
 		y = 1
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_25_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_officers_by_merit_and_skill
-							progress < 0.0
-						}
-					}
-					has_army_experience > 24.99
-				}
-			}
-		}
-		select_effect  = { army_experience = -25 }
 		cost = 40
 		completion_reward = {
 			army_experience = 50
@@ -6038,21 +5867,6 @@ focus = {#NEVADA - second city
 		mutually_exclusive = { focus = enc_officers_by_merit_and_skill }
 		x = 0
 		y = 1
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_50_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_officers_by_loyalty_and_devotion
-							progress < 0.0
-						}
-					}
-					has_army_experience > 49.99
-				}
-			}
-		}
-		select_effect  = { army_experience = -25 }
 		cost = 40
 		completion_reward = {
 			add_stability = 0.05
@@ -6069,20 +5883,11 @@ focus = {#NEVADA - second city
 		focus = enc_officers_by_merit_and_skill
 	}
 	available = {
-		custom_trigger_tooltip = {
-			tooltip = costs_25_army_experience
-			if = {
-				limit = {
-					focus_progress = {
-						focus = enc_new_officer_corps
-						progress < 0.0
-					}
-				}
-				has_army_experience > 24.99
-			}
+		OR = {
+			has_tech = speed_of_movement
+			has_tech = fortified_positions_doctrine
 		}
 	}
-	select_effect  = { army_experience = -25 }
 	relative_position_id = enc_officers_by_merit_and_skill
 	x = 1
 	y = 1
@@ -6216,21 +6021,6 @@ focus = {#NEVADA - second city
 		prerequisite = { focus = enc_department_of_defense }
 		x = -5
 		y = 1
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_25_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_home_defense
-							progress < 0.0
-						}
-					}
-					has_army_experience > 24.99
-				}
-			}
-		}
-		select_effect  = { army_experience = -25 }
 		cost = 40
 		completion_reward = {
 			add_stability = 0.05
@@ -6245,21 +6035,6 @@ focus = {#NEVADA - second city
 		relative_position_id = enc_home_defense
 		x = 0
 		y = 1
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_100_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_national_guard
-							progress < 0.0
-						}
-					}
-					has_army_experience > 99.99
-				}
-			}
-		}
-		select_effect  = { army_experience = -100 }
 		cost = 40
 		completion_reward = {
 			add_ideas = ENC_national_guard
@@ -6273,21 +6048,6 @@ focus = {#NEVADA - second city
 		relative_position_id = enc_national_guard
 		x = 0
 		y = 1
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_25_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_department_of_homeland_security
-							progress < 0.0
-						}
-					}
-					has_army_experience > 24.99
-				}
-			}
-		}
-		select_effect  = { army_experience = -25 }
 		cost = 40
 		completion_reward = {
 			add_stability = 0.05
@@ -6307,21 +6067,6 @@ focus = {#NEVADA - second city
 		relative_position_id = enc_department_of_homeland_security
 		x = 0
 		y = 1
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_100_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_emergency_draft_reform
-							progress < 0.0
-						}
-					}
-					has_army_experience > 99.99
-				}
-			}
-		}
-		select_effect  = { army_experience = -100 }
 		cost = 40
 		completion_reward = {
 			swap_ideas = {
@@ -6339,21 +6084,6 @@ focus = {#NEVADA - second city
 		x = 0
 		y = 1
 		cost = 40
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = costs_50_army_experience
-				if = {
-					limit = {
-						focus_progress = {
-							focus = enc_army_reserves
-							progress < 0.0
-						}
-					}
-					has_army_experience > 49.99
-				}
-			}
-		}
-		select_effect  = { army_experience = -100 }
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = ENC_selective_service
