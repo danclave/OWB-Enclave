@@ -9673,7 +9673,7 @@ country_event = { #322 - Mad General
 		}
 		every_country = {
 			limit = {
-				is_mexican = yes
+				is_mexican_nation = yes
 				NOT = {
 					tag = ARM
 				}
@@ -11309,7 +11309,7 @@ country_event = { #354 - The War of Independence
 		}
 		every_other_country = {
 			limit = {
-				is_mexican = yes
+				is_mexican_nation = yes
 			}
 			if = {
 				limit = {
@@ -11362,7 +11362,7 @@ news_event = { #357 - The Dollar is Back
 		name = enc_reformers.357.a
 		every_country = {
 			limit = {
-				is_mexican = no
+				is_mexican_nation = no
 				NOT = {
 					tag = CES
 

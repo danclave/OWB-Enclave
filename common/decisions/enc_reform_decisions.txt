@@ -2697,7 +2697,6 @@ ENC_deseret = {
 					}
 					add_core_of = NCN
 				}
-
 				every_owned_state = {
 					limit = {
 						is_core_of = NCN
@@ -2707,7 +2706,10 @@ ENC_deseret = {
 					}
 				}
 
-				any_allied_country = {
+				every_country = {
+					limit = {
+						is_in_faction_with = ERB
+					}
 					every_owned_state = {
 						limit = {
 							is_core_of = NCN
@@ -2754,7 +2756,10 @@ ENC_deseret = {
 					}
 				}
 
-				any_allied_country = {
+				every_country = {
+					limit = {
+						is_in_faction_with = ERB
+					}
 					every_owned_state = {
 						limit = {
 							is_core_of = NCN
@@ -2781,8 +2786,8 @@ ENC_deseret = {
 				has_full_control_of_state = 551
 			}
 			any_country = {
-				limit = {
-					is_in_faction_with = ERB
+				is_in_faction_with = ERB
+				any_owned_state = {
 					is_core_of = NCN
 				}
 			}
@@ -3861,7 +3866,7 @@ ENC_gannon_doctrine = {
 					has_country_flag = erb_couriers
 				}
 				NOT = {
-					is_mexican = yes
+					is_mexican_nation = yes
 				}
 			}
 		}
@@ -4679,7 +4684,7 @@ ENC_down_mexico_way = {
 					tag = ARM
 				}
 				has_war_with = ARM
-				is_mexican = yes
+				is_mexican_nation = yes
 			}
 		}
 		target_array = ARM.enemies
@@ -4694,7 +4699,7 @@ ENC_down_mexico_way = {
 		visible = {
 			FROM = {
 				has_war_with = ARM
-				is_mexican = yes
+				is_mexican_nation = yes
 			}
 		}
 		cost = 50
@@ -4741,7 +4746,7 @@ ENC_down_mexico_way = {
 					tag = ARM
 				}
 				is_in_faction = no
-				is_mexican = yes
+				is_mexican_nation = yes
 				exists = yes
 			}
 		}
@@ -4751,7 +4756,7 @@ ENC_down_mexico_way = {
 		visible = {
 			FROM = {
 				is_in_faction = no
-				is_mexican = yes
+				is_mexican_nation = yes
 				exists = yes
 			}
 		}

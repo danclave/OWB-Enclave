@@ -4390,8 +4390,7 @@ focus = {#Legion Border
 			focus = enc_the_state_of_nevada
 		}
 		available = {
-			
-			every_other_country = {
+			any_neighbor_country = {
 				limit = {
 					has_full_control_of_state = 389 # Area 51
 				}

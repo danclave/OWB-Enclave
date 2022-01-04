@@ -23,7 +23,7 @@
         country_leader = 
         {
             expire = "3000.1.1"
-            ideology = intellectuals
+            ideology = technocracy
             traits = {}
         }
     }
@@ -37,7 +37,7 @@
         country_leader = 
         {
             expire = "3000.1.1"
-            ideology = ruler
+            ideology = benevo
             traits = {}
         }
 
@@ -51,7 +51,7 @@
         }
         country_leader = {
             expire = "3000.1.1"
-            ideology = people
+            ideology = town_hall_democracy
             traits = {}
         }
     }
