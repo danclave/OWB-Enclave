@@ -1,0 +1,67 @@
+# ##############################
+# OWB override
+# ##############################
+
+caps_base_category = {
+	icon = GFX_deicsion_caps_category
+	scripted_gui = caps_decision_gui
+	priority = {
+		base = 350
+	}
+	visible = {
+		has_global_flag = caps_enabled_global_flag
+		NOT = { has_country_flag = caps_exempt }
+	}
+}
+caps_debug_category = {
+	icon = GFX_decision_chems
+	priority = 100000
+	allowed = {
+	}
+	visible = {
+		has_global_flag = caps_debug_enabled_global_flag
+		is_ai = no
+		NOT = { has_global_flag = debug_logger_running }
+	}
+}
+caps_node_category = {
+	icon = GFX_deicsion_caps_category
+	priority = {
+		base = 300
+	}
+	visibility_type = map_and_decisions_view
+	visible = {
+		has_global_flag = caps_enabled_global_flag
+		NOT = { has_country_flag = caps_exempt }
+	}
+}
+caps_raider_decision_category = {
+	icon = border_war
+	priority = {
+		base = 351
+	}
+	visible = {
+		has_global_flag = caps_enabled_global_flag
+		is_raider_nation = yes
+	}
+}
+caps_defense_decision_category = {
+	icon = border_war
+	priority = {
+		base = 349
+	}
+	visible = {
+		has_global_flag = caps_enabled_global_flag
+	}
+}
+
+
+black_market_category = {
+	icon = GFX_decision_chems
+	priority = {
+		base = 89
+	}
+	visible = {
+		not = { has_global_flag = black_market_disabled_global_flag }
+	}
+}

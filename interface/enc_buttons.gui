@@ -1,7 +1,7 @@
 guiTypes = {
 	containerWindowType = { # connect_to_power
 		name = connect_to_power_container
-		position = {x=90 y=58}
+		position = {x=90 y=85}
 
 		buttonType = {
 			name = connect_to_power
@@ -13,7 +13,7 @@ guiTypes = {
 	}
 	containerWindowType = 	{ # connect_to_power
 		name = connected_to_power_container
-		position = {x=90 y=58}
+		position = {x=90 y=85}
 		buttonType = {
 			name = connected_to_power
 			spriteType = GFX_icons_powered
@@ -24,7 +24,7 @@ guiTypes = {
 	}
 	containerWindowType = { # install_police_force
 		name = install_police_force_container
-		position = { x = 94 y = 58 }
+		position = { x = 94 y = 85 }
 
 		buttonType = {
 			name = install_police_force
@@ -48,7 +48,7 @@ guiTypes = {
 	}
 	containerWindowType = { # arm_slaves
 		name = arm_slaves_container
-		position = {x = 100 y = 88}
+		position = {x = 100 y = 85}
 		buttonType = {
 			name = arm_slaves
 			spriteType = GFX_state_resistance 

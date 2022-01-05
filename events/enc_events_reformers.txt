@@ -1762,7 +1762,7 @@ country_event = { #49 - The purists Rebrand
 	}
 }
 
-country_event = { #50 - America Reborn
+news_event = { #50 - America Reborn
 	id = enc_reformers.50
 	title = enc_reformers.50.t
 	desc = enc_reformers.50.d

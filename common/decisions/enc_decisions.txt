@@ -48,7 +48,7 @@ ENC_shifts = {
 			research_speed_factor = 0.2
 		}
 	}
-	extend_administrative_shifts = {      #reduced research for increased war support
+	extend_administrative_shifts = { #reduced research for increased war support
 		icon = decision_enc_admin_up
 		custom_cost_text = stability_5_or_more
 		custom_cost_trigger = {
@@ -116,7 +116,7 @@ ENC_shifts = {
 			research_speed_factor = -0.20
 		}
 	}
-	reduce_administrative_shifts = {      #reduced research for increased war support
+	reduce_administrative_shifts = {  #reduced research for increased war support
 		icon = decision_enc_admin_down
 		cost = 100
 		available = {
@@ -786,10 +786,14 @@ ENC_political_infighting = {
 	}
 	ENC_arrange_disappearance= {
 		icon = decision_enc_skull
-		cost = 50
+		custom_cost_trigger = {
+			has_stability > 0.03
+		}
+		custom_cost_text = stability_3_or_more
 		priority = 50
 		allowed = { tag = ERB }
 		complete_effect = {
+			add_stability = -0.03
 			if = {
 				limit = {
 					has_completed_focus = enc_reform
@@ -834,13 +838,13 @@ ENC_political_infighting = {
 	ENC_military_exercise = {
 		icon = generic_prepare_civil_war
 		priority = 0
-		custom_cost_text = command_power_max
+		custom_cost_text = command_power_75
 		custom_cost_trigger = {
-			command_power > 99.9
+			command_power > 74.9
 		}
 		complete_effect = {
 			hidden_effect = {
-				add_command_power = -100
+				add_command_power = -75
 			}
 		}
 		remove_effect = {
@@ -1355,8 +1359,8 @@ enc_last_stand = {
 		priority = 1000
 		#--------------------------
 		activation  = {
+			has_idea = enc_protected_by_bunker
 			159 = {
-				is_capital = yes
 				not = { is_controlled_by = ROOT }
 			}
 		}

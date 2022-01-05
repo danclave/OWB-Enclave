@@ -1489,7 +1489,7 @@ enc_reformers.316.a: "We have no guns to spare for raiders, but plenty of bullet
 enc_reformers.316.b: "Let's arm the raiders."
 #############################################################################################################
 enc_reformers.317.t: "Arming Patriots Tutorial"
-enc_reformers.317.d: "We have gained the ability to arm patriots. To do so, click on an NCR state and press the 'arm patriots' button from the state menu. States that have armed patriots will flip to our side and spawn militia units when we decide to start the Californian uprising. Arming patriots costs more political power each time it is used."
+enc_reformers.317.d: "We have gained the ability to organize patriots. To do so, click on an NCR state and press the 'Organize patriots' button from the state menu. States that have armed patriots will flip to our side and spawn militia units when we decide to start the Californian uprising. Arming patriots costs more political power each time it is used."
 enc_reformers.317.a: "Americans will always fight for freedom."
 #############################################################################################################
 enc_reformers.318.t: "Down Mexico Way"

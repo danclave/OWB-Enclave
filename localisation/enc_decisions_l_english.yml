@@ -49,6 +49,7 @@ ENC_bribe_NCR_officials: "Bribe NCR officials"
 ENC_bribe_NCR_officials: "Our operatives can grease a few palms in order to ensure reports of suspicious activity in the Nevada desert don't reach the upper levels of NCR government."
 
 enc_last_stand: "The Last Stand"
+enc_last_stand_desc: "Our enemies have captured the ground above the Sierra Army Depot, but our base of operation is safe behind several layers of steel and automated defenses. If we act fast, we can relieve our headquarters before it's too late."
 enc_reclaim_bunker: "Reclaim [159.GetName]"
 enc_protected_by_bunker: "Protected By Sierra Army Depot"
 enc_protected_by_bunker_desc: "Our headquarters is located in the bunkers underneath the Sierra Army Depot. Even if we lose the surface area to enemies, it will take them time to break down the vault doors.\n\n §WIf §Y[159.GetName]§! falls, you will have some time to reclaim it before the game is over.§!"
@@ -94,8 +95,8 @@ enc_rangers_defense_sabotage_tt: "Unlocks the §YSabotage Infrastructure§! deci
 ##############################
 # Executive Orders
 ##############################
-enc_epilogue: "Who Lives Who Dies Who Tells Your Story"
-enc_epilogue_desc: "Trigger the epilogue, detailing the fate of America.  Note that for best results, you should finish the election, press, and segregation trees."
+ENC_epilogue: "Who Lives Who Dies Who Tells Your Story"
+ENC_epilogue_desc: "Trigger the epilogue, detailing the fate of America.  Note that for best results, you should finish the election, press, and segregation trees."
 ENC_steal_declaration_independence: "Reclaim the Declaration of Independence!"
 ENC_steal_declaration_independence_desc: "Lost since the Great War, the Declaratoin of Independence was stored in a lead-sealed vault in Washingotn DC.  We could send an expedition to return it to the government's hands."
 ENC_opposition_to_segregation: "As it turns out, the Wastelanders are revolting.  Unless we can reduce their power or suppress their ability to voice dissent, they will rise up against us."
@@ -275,6 +276,8 @@ reduce_research_shifts: "Reduce Research Shifts"
 convert_command_power: "Hold Military Theory Committee"
 convert_command_power_desc: "In times of relative peace, it would be better to have our generals meet to discuss and document military theory than to let them collect dust."
 
+command_power_75: "£command_power §Y75§!"
+command_power_75_blocked: "£command_power §R75§!"
 command_power_25: "£command_power §Y25§!"
 command_power_25_blocked: "£command_power §R25§!"
 command_power_max: "£command_power §Y100§!"
@@ -290,6 +293,8 @@ extend_administrative_shifts: "Extend Administrative Shifts"
 reduce_administrative_shifts: "Reduce Administrative Shifts"
 stability_5_or_more: "£stability_texticon §Y5§!"
 stability_5_or_more_blocked: "£stability_texticon §R5§!"
+stability_3_or_more: "£stability_texticon §Y3§!"
+stability_3_or_more_blocked: "£stability_texticon §R3§!"
 
 ##############################
 # PRODUCTION
@@ -355,6 +360,9 @@ ENC_demoralization:0 "Our spies can cause further chaos and despair by hijacking
 ENC_desert_rangers_hate: "Sow Tension With the Desert Rangers"
 ENC_desert_rangers_hate_desc: "We can use our spies to sow tensions between the Desert Rangers and the NCR, making them break their alliance and ending any hope of support between them."
 ENC_desert_rangers_hate_tt: "Will give the §Y[DES.GetName]§! strategic reasons to leave or ignore an §YNCR§! alliance.\n\n"
+ENC_SHI_hate: "Cause diplomatic incident with Shi"
+ENC_SHI_hate_desc: "We can use our spies to cause a serious diplomatic incident between SHI and NCR, making them break their alliance and end any hope for any kind of support between the two."
+ENC_SHI_hate_tt: "Will give the §Y[SHI.GetName]§! strategic reasons to leave or ignore an §YNCR§! alliance.\n\n"
 ENC_extract_spies_desc: "The longer our spies are active, the higher the chance they will be compromised. To prevent this from happening, we can extract them safely."
 ENC_send_spies_tt: "§YEnclave§! gains spies in the §YNew California Republic§!"
 enc_ncr_spies: "§YEnclave§! has spies in the §YNew California Republic§!"
@@ -504,8 +512,8 @@ ENC_vice_president_lynette_desc:0 "Remodel America to make every town as prosper
 ###################################
 # Exploiting the Wasteland
 ###################################
-ENC_exploiting_wasteland_arms_factories: "Exploit Arms Factory"
-ENC_exploiting_wasteland_industrial_complex: "Exploit Industrial Complex"
+ENC_exploiting_wasteland_arms_factories: "Procure Arms Factory"
+ENC_exploiting_wasteland_industrial_complex: "Procure Industrial Complex"
 
 ###################################
 # MISC

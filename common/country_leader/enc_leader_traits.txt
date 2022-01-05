@@ -13,7 +13,6 @@ leader_traits = {
 		random = no
 		stability_factor = 0.1
 	}
-
 	respectedBySoldiers = {
 		random = no
 		army_morale_Factor = 0.1
@@ -183,6 +182,10 @@ leader_traits = {
 	democratic_leanings = {
 		random = no
 		people_drift = 0.03
+	}
+	enc_technocrat = {
+		random = no
+		research_speed_factor = 0.03
 	}
 
 

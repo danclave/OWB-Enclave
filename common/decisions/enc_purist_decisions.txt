@@ -724,7 +724,7 @@ ENC_exploiting_wasteland = {
 				add_command_power = -10
 			}
 		}
-		days_remove = 25
+		days_remove = 30
 		remove_effect = {
 			FROM = {
 				set_temp_variable = { amount_factory_removed = arms_factory_level }
@@ -777,7 +777,7 @@ ENC_exploiting_wasteland = {
 				add_command_power = -10
 			}
 		}
-		days_remove = 5
+		days_remove = 30
 		remove_effect = {
 			FROM = {
 				set_temp_variable = { amount_factory_removed = industrial_complex_level }

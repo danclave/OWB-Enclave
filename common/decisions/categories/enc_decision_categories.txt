@@ -14,7 +14,6 @@ ENC_political_actions = {
 	priority = 1
 }
 
-
 ENC_shifts = {
 	icon = category_enc_shift
 	allowed = {original_tag = ERB}
@@ -45,6 +44,9 @@ ENC_reno = {
 	icon = category_enc_new_reno
 	allowed = {
 		original_tag = ERB
+	}
+	visible = {
+		has_completed_focus = enc_purity
 	}
 }
 ENC_radio_broadcasts = {
@@ -176,8 +178,6 @@ ENC_pacific_commonwealth1 = {
 	priority = 3
 	allowed = {	tag = ERB }
 	icon = category_seattle
-
-	allowed = {	tag = ERB }
 	visible = {
 		has_completed_focus = enc_pacific_commonwealth
 	}
@@ -323,6 +323,24 @@ enc_last_stand = {
 		original_tag = ERB
 	}
 }
+
+# ##############################
+# Attempted overwrite
+# ##############################
+
+
+black_market_category = {
+	icon = GFX_decision_chems
+	priority = {
+		base = 89
+	}
+	visible = {
+		always = no
+	}
+}
+
+
+
 # ##############################
 # ICONS
 # ##############################

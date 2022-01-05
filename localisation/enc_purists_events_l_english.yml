@@ -276,3 +276,11 @@ enc.62.t: "The Home Among the Stars"
 enc.62.d: "Earth was the cradle of man, but man cannot stay in the cradle forever. Our bruised and battered world must rest, and the riches of the stars lie before us like gems. The liquid hydrocarbons of Titan. The metals of the the asteroid belt. And the limitless, clean energy of the sun. No, our radioactive world is left to our robot servants. We will seek adventure among the stars, search out new life, and ensure it cannot threaten America. And let us begin with Moon Base Theta."
 enc.62.a: "Thank god we have experience living underground."
 enc.62.a_tt: "\n§gWe will unlock the ability to construct the Moon Base. When complete, we can abandon this wasted, sad world.§!"
+################################################################################################################ -<
+enc.63.t: "Complaints about rations"
+enc.63.d: "The abundance of non-spoilable military rations scattered across what remains of the USA has always been of vital importance to the Enclave. The hydroponic facilities at our bases are not always able to keep up to demand and we hardly have the manpower to send out to tilt the fields.\n\nThis leave us at the mercy of the logistics officers of 200 years ago, however, and it appears some form of mislabeling has resulted in the Sierra Army depot being stocked with a century's supply of hard Russian cheeses.\n\nA recent power surge has damaged one of our hydroponic harvest and since then, the hard Russian cheese has been served with breakfast, lunch and dinner every single day. This has caused some disguntled personel, chief among them lead scientist Thomas Kesselhut, to accuse the cooks of a lack of skill and creativity and demand we ban the Russian cheese."
+enc.63.a: "Ban the Russian cheese."
+enc.63.a_tt: "\n§gTODO.§!"
+enc.63.b: "He will have to deal with it until the menu changes."
+enc.63.b_tt: "\n§gTODO.§!"
+
