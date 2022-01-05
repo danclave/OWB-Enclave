@@ -271,26 +271,59 @@ enc_closed_economy: "Closed Economy"
 ###################################
 
 norman_wood:0 "Norman Wood"
+norman_wood_name:0 "Norman Wood"
 norman_wood_desc:0 "Wood's stern attitude never won him many friends in the Enclave, nor without. But give the man a job and he will get it done. Any task, as long as you don't ask any questions."
+
 dr_henry:0 "Dr. Henry"
+dr_henry_name:0 "Dr. Henry"
+
 erb_hayes:0 "Grant C. Hayes"
+erb_hayes_name:0 "Grant C. Hayes"
+
 erb_wright:0 "Christopher Wright"
+erb_wright_name:0 "Christopher Wright"
 erb_wright_desc:0 "Wright was a major figure in New Reno for years. He seems to have no shortage of connections and organizational skills."
+
 erb_salvatore:0 "Mason Salvatore"
+erb_salvatore_name:0 "Mason Salvatore"
 erb_salvatore_desc:0 "Salvatore has finally achieved what he always wanted, to be in charge of New Reno. Sadly for him, he is only so in name, a puppet to throw the NCR off from the real rulers of New Reno."
 erb_salvatore_effect:0 "§WIncrease of NCR suspicion reduced by £pol_power §Y3§!.§!\n"
+
 erb_arcade_gannon:0 "Arcade Gannon"
+erb_arcade_gannon_name:0 "Arcade Gannon"
+
 erb_orion_moreno:0 "Orion Moreno"
+erb_orion_moreno_name:0 "Orion Moreno"
+
 army_chief_loyalist:0 "David M. Richardson"
+army_chief_loyalist_name:0 "David M. Richardson"
+
 enc_people_air_loyalist:0 "Simon Garnett"
+enc_people_air_loyalist_name:0 "Simon Garnett"
+
 navy_chief_loyalist: "Daniel Shepherd"
+navy_chief_loyalist_name: "Daniel Shepherd"
+
 aaron_chapman: "Aaron Chapman"
+aaron_chapman_name: "Aaron Chapman"
+
 joseph_dodge1: "Joseph Dodge"
+joseph_dodge1_name: "Joseph Dodge"
+
 erb_veronica: "Veronica Santangelo"
+erb_veronica_name: "Veronica Santangelo"
+
 dShakey: "Daniel Shakey"
+dShakey_name: "Daniel Shakey"
+
 enc_john_jaeger: "John Jaeger"
-swords_to_ploughshares: "Swords to Plowshares"
+enc_john_jaeger_name: "John Jaeger"
+
+
 enc_jerome_chipman: "Jerome Chipman"
+enc_jerome_chipman_name: "Jerome Chipman"
+
+swords_to_ploughshares: "Swords to Plowshares"
 enc_politically_connected: "Politically Connected"
 enc_incompetent_admiral: "Incompetent Admiral"
 enc_incompetent_general: "Incompetent General"
@@ -299,17 +332,28 @@ enc_incompetent_airman: "Incompetent Airman"
 enc_boris_t: "Boris T retires!"
 
 felix_grayson: "Felix Grayson"
+felix_grayson_name: "Felix Grayson"
 felix_grayson_desc: "While it's true that the Enclave has sometimes bend the limits of written law, it is still a vital tool in keeping a society standing. Grayson knows this."
+
 col_wilkins: "Col. T.M. Wilkins"
+col_wilkins_name: "Col. T.M. Wilkins"
+
 lt_kolyis: "Lt. Kolyis"
+lt_kolyis_name: "Lt. Kolyis"
 lt_kolyis_desc: "Head of the EPA, and also its only current member. Kolyis has retired from the front lines to advocate for an agency focused on protecting what little green America has left.\n\nWhile no doubt intelligent, Kolyis seems to have a soft spot for some species' that would eat his entrails without a second thought."
+
 boris_t: "Boris T."
+boris_t_name: "Boris T."
 boris_t_desc: "Nicknamed 'The Tsar', due to Noble Eastern European heritage, Boris nonetheless has been a vocal proponent of reform and democracy within the Enclave."
+
 boris_t_democratic: "Boris T."
+boris_t_democratic_name: "Boris T."
 boris_t_democratic_desc: "Nicknamed 'The Tsar', due to Noble Eastern European heritage, Boris nonetheless has been a vocal proponent of reform and democracy within the Enclave."
+
 democratic_leanings: "Democratic Leanings"
 
 generic_reformer_2: "Joshua Morgan"
+generic_reformer_2_name: "Joshua Morgan"
 generic_reformer_2_Desc: "He'll get you anything with a smile, just don't ask how he got it."
 
 ###################################
@@ -319,6 +363,7 @@ generic_reformer_2_Desc: "He'll get you anything with a smile, just don't ask ho
 # NCR - High Command
 ###################################
 enc_colonel_royez:0 "Colonel Royez"
+enc_colonel_royez_name:0 "Colonel Royez"
 enc_colonel_royez_desc:0 "Colonel Royez earned his rank during the acquisition of the Long-15, through his great feats of bravery and strength; he is the pinnacle of what an NCR soldier can become. However, he is just one man, and cannot be everywhere at once.\n\nHe has cautiously agreed to take up his old post for the [ERB.GetName], providing they make good on their promises."
 
 enc_colonel_hsu:0 "Colonel Hsu"
@@ -327,30 +372,38 @@ enc_colonel_hsu_desc:0 "Colonel Hsu is beloved by the men, and is a workhorse wi
 # NCR - Ministers
 ###################################
 enc_grant_c_hayes:0 "Grant C. Hayes"
+enc_grant_c_hayes_name:0 "Grant C. Hayes"
 enc_grant_c_hayes_desc:0 "Hayes is a disruptive politician obsessed with the old world, with his help we can better reacquire its secrets, but he will be pushing his own agenda the entire time, and it will be a costly endeavor."
 
 enc_alice_mclafferty:0 "Alice McLafferty"
+enc_alice_mclafferty_name:0 "Alice McLafferty"
 enc_alice_mclafferty_desc:0 "Alice knows how to do business and do it well; she can satisfy the popular demand for consumerism, so long as she is given lucrative government contracts."
 
 enc_allgood_murphy:0 "Allgood Murphy"
+enc_allgood_murphy_name:0 "Allgood Murphy"
 enc_allgood_murphy_desc:0 "Allgood wanted peace and prosperity, for the NCR at whole, but mostly the boneyard; with his help our manufacturing will benefit, but our jingoism and war enthusiasm will suffer."
 
 enc_zachariah_rigby:0 "Zachariah Rigby"
+enc_zachariah_rigby_name:0 "Zachariah Rigby"
 enc_zachariah_rigby_desc:0 "As head of the Gunrunners, Rigby can make our arms manufacturing far more efficient; but the Gunrunner's are mercenary, and Rigby demands high pay."
 
 enc_julie_farkas:0 "Julie Farkas"
+enc_julie_farkas_name:0 "Julie Farkas"
 enc_julie_farkas_desc:0 "Julie is a sweetheart, and her organization will happily improve our infrastructure and healthcare free of charge; but the more people that take the ideals of the Followers into their hearts, the less that are willing to die for the republic."
 
 enc_lynette: "First Citizen Lynette"
+enc_lynette_name: "First Citizen Lynette"
 first_citizen: "First Citizen"
 enc_war_on_drugs: "The War on Drugs"
 
 # NCR - Chief of army
 ###################################
 enc_big_jim_chief_of_army:0 "James 'Big Jim' Marshal"
+enc_big_jim_chief_of_army_name:0 "James 'Big Jim' Marshal"
 enc_big_jim_chief_of_army_desc:0 "Big Jim knows how to succeed at war, and succeed quick; overwhelming displays of force! As such his appointment as chief of army will result in an increase in conscription and mobilization efficiency."
 
 enc_drummond_chief_of_army:0 "General Alexander Drummond"
+enc_drummond_chief_of_army_name:0 "General Alexander Drummond"
 enc_drummond_chief_of_army_desc:0 "Drummond has years of experience with which to back up his appointment, and it shows in his capacity for planning, both in speed and brilliance. However, he is unpopular among the people, and his appointment will weaken the republic's standing."
 
 

@@ -2347,7 +2347,7 @@ country_event = { #66 - The Vice President
 						ideology = technocracy
 						traits = {
 							captain_of_industry
-							dislikes_legion
+							dislikes_caesars_legion
 						}
 						expire = "3000.1.1.1"
 						id = -1
@@ -3622,46 +3622,46 @@ country_event = { #108 Hoover Dam
 	mean_time_to_happen = {
 		days = 15
 	}
+	#option = { #	Damnit
+	#	trigger = {
+	#		NCR = {
+	#			has_completed_focus = ncr_powertopeople
+	#		}
+	#	}
+	#	name = enc_reformers.108.a
+	#	CES = {
+	#		transfer_state = 252
+	#	}
+	#	set_global_flag = enc_ces_dam
+	#	253 = {
+	#		add_resource = {
+	#			type = energy
+	#			amount = -30
+	#		}
+	#		add_resource = {
+	#			type = circuitry
+	#			amount = -5
+	#		}
+	#	}
+	#	520 = {
+	#		add_resource = {
+	#			type = energy
+	#			amount = 30
+	#		}
+	#		add_resource = {
+	#			type = circuitry
+	#			amount = 5
+	#		}
+	#	}
+	#}
 	option = { #	Damnit
-		trigger = {
-			NCR = {
-				has_completed_focus = ncr_powertopeople
-			}
-		}
-		name = enc_reformers.108.a
-		CES = {
-			transfer_state = 252
-		}
-		set_global_flag = enc_ces_dam
-		253 = {
-			add_resource = {
-				type = energy
-				amount = -30
-			}
-			add_resource = {
-				type = circuitry
-				amount = -5
-			}
-		}
-		520 = {
-			add_resource = {
-				type = energy
-				amount = 30
-			}
-			add_resource = {
-				type = circuitry
-				amount = 5
-			}
-		}
-	}
-	option = { #	Damnit
-		trigger = {
-			NCR = {
-				NOT = {
-					has_completed_focus = ncr_powertopeople
-				}
-			}
-		}
+		#trigger = {
+		#	NCR = {
+		#		NOT = {
+		#			has_completed_focus = ncr_powertopeople
+		#		}
+		#	}
+		#}
 		name = enc_reformers.108.a
 		CES = {
 			transfer_state = 252
@@ -7076,7 +7076,7 @@ country_event = { #206 - Court Enjoins Labor Draft
 			has_idea = ENC_servitude
 		}
 		NOT = {
-			has_completed_focus = emergency_labour_draft
+			has_completed_focus = enc_emergency_labour_draft
 		}
 	}
 	mean_time_to_happen = {

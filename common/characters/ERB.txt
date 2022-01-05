@@ -82,7 +82,7 @@
     #    }
     #}
     ERB_Grimm = {
-        name = ERB_GRIMM
+        name = ERB_GRIMM_NAME
         portraits = {
             army = {
                 large = "gfx/leaders/ERB/Portrait_Enclave_Generic_6.dds"
@@ -102,7 +102,7 @@
         }
     }
     ERB_Dwemer = {
-        name = ERB_DWEMER
+        name = ERB_DWEMER_name
         portraits = {
             army = {
                 large = "gfx/leaders/ERB/Portrait_Enclave_Generic_11.dds"
@@ -122,7 +122,7 @@
         }
     }    
     ERB_Mary = {
-        name = ERB_MARY
+        name = ERB_MARY_name
         portraits = {
             army = {
                 large = "gfx/leaders/ERB/Portrait_Enclave_Generic_3.dds"
@@ -142,7 +142,7 @@
         }
     }    
     ERB_David = {
-        name = ERB_DAVID
+        name = ERB_DAVID_name
         portraits = {
             army = {
                 large = "gfx/leaders/ERB/Portrait_Enclave_Generic_8.dds"
@@ -162,7 +162,7 @@
         }
     }
     ERB_Scott = {
-        name = ERB_SCOTT
+        name = ERB_SCOTT_name
         portraits = {
             army = {
                 large = "gfx/leaders/ERB/Portrait_Enclave_Generic_9.dds"
@@ -182,7 +182,7 @@
         }
     }
     ERB_Hamilton = {
-        name = ERB_Hamilton
+        name = ERB_Hamilton_name
         portraits = {
             army = {
                 large = "gfx/leaders/ERB/Portrait_Enclave_Generic_2.dds"
@@ -190,7 +190,7 @@
         }
     }
     ERB_Shadow = {
-        name = ERB_Shadow
+        name = ERB_Shadow_name
         portraits = {
             army = {
                 large = "gfx/leaders/ERB/Portrait_Enclave_Generic_10.dds"
@@ -211,7 +211,7 @@
         }
     }
     paladin_myers1 = {
-        name = paladin_myers1
+        name = paladin_myers1_name
         portraits = {
             army = {
                 small = GFX_idea_BOS_generic6
@@ -236,7 +236,7 @@
         }
 	}
     boris_t = {
-        name = boris_t
+        name = boris_t_name
         portraits = {
             army = {
                 small = GFX_idea_boris_t
@@ -257,14 +257,14 @@
             visible = {
                 NOT = {
                     has_country_flag = reformers_purged
-                    has_country_flag = enc_boris_t_democratic_flag
+                    #has_country_flag = enc_boris_t_democratic_flag
                     has_completed_focus = enc_purge_opposition
                 }
             }
         }
 	}
     boris_t_democratic = {
-        name = boris_t_democratic
+        name = boris_t_democratic_name
         portraits = {
             army = {
                 small = GFX_idea_boris_t
@@ -283,13 +283,14 @@
                 factor = 1
             }
             visible = {
-                has_country_flag = enc_boris_t_democratic_flag
+                #has_country_flag = enc_boris_t_democratic_flag
                 NOT = { has_country_flag = reformers_purged }
+                has_completed_focus = enc_purge_opposition
             }
         }
 	}
     generic_reformer_2 = {
-        name = generic_reformer_2
+        name = generic_reformer_2_name
         portraits = {
             army = {
                 small = GFX_idea_generic_political_advisor_europe_2
@@ -310,7 +311,7 @@
         }
 	}
     felix_grayson = {
-        name = felix_grayson
+        name = felix_grayson_name
         portraits = {
             army = {
                 small = GFX_idea_generic_political_advisor_europe_3
@@ -331,7 +332,7 @@
         }
 	}
     lt_kolyis = {
-        name = lt_kolyis
+        name = lt_kolyis_name
         portraits = {
             army = {
                 small = GFX_idea_generic_political_advisor_europe_3
@@ -355,7 +356,7 @@
         }
 	}
     col_wilkins = {
-        name = col_wilkins
+        name = col_wilkins_name
         portraits = {
             army = {
                 small = GFX_idea_generic_political_advisor_europe_4
@@ -380,7 +381,7 @@
         }
 	}
     dr_henry = {
-        name = dr_henry
+        name = dr_henry_name
         portraits = {
             army = {
                 small = GFX_idea_d_henry
@@ -401,7 +402,7 @@
         }
 	}
     erb_salvatore = {
-        name = erb_salvatore
+        name = erb_salvatore_name
         portraits = {
             army = {
                 small = GFX_idea_enc_salvatore
@@ -425,7 +426,7 @@
         }
 	}
     enc_jerome_chipman = {
-        name = enc_jerome_chipman
+        name = enc_jerome_chipman_name
         portraits = {
             army = {
                 small = GFX_idea_generic_army_south_america_4
@@ -444,7 +445,6 @@
         }
 	}
     enc_offensive = {
-        name = enc_offensive
         portraits = {
             army = {
                 small = GFX_idea_generic_army_europe_1
@@ -466,7 +466,6 @@
         }
 	}
     enc_paratroopers = {
-        name = enc_paratroopers
         portraits = {
             army = {
                 small = GFX_idea_generic_army_europe_2
@@ -488,7 +487,7 @@
         }
 	}
     army_chief_loyalist = {
-        name = army_chief_loyalist
+        name = army_chief_loyalist_name
         portraits = {
             army = {
                 small = GFX_idea_generic_army_europe_6
@@ -516,7 +515,7 @@
 		}
 	}
     enc_indy_neidell = {
-        name = enc_indy_neidell
+        name = enc_indy_neidell_name
         portraits = {
             army = {
                 small = GFX_idea_enc_indy_neidell
@@ -538,7 +537,6 @@
         }
 	}
     enc_air_combat = {
-        name = enc_air_combat
         portraits = {
             army = {
                 small = GFX_idea_generic_army_europe_1
@@ -558,7 +556,7 @@
         }
 	}
     enc_people_air_loyalist = {
-        name = enc_people_air_loyalist
+        name = enc_people_air_loyalist_name
         portraits = {
             army = {
                 small = GFX_idea_generic_air_europe_3
@@ -585,7 +583,7 @@
         }
 	}
     clayton_schultz = {
-        name = clayton_schultz
+        name = clayton_schultz_name
         portraits = {
             army = {
                 small = GFX_idea_clayton_schultz
@@ -610,7 +608,7 @@
         }
 	}
     navy_chief_loyalist = {
-        name = navy_chief_loyalist
+        name = navy_chief_loyalist_name
         portraits = {
             army = {
                 small = GFX_idea_generic_navy_arab_3
@@ -636,7 +634,6 @@
         }
 	}
     enc_bomber_guy = {
-        name = enc_bomber_guy
         portraits = {
             army = {
                 small = GFX_idea_generic_army_europe_4
@@ -657,7 +654,6 @@
         }
 	}    
     enc_fighter_guy = {
-        name = enc_fighter_guy
         portraits = {
             army = {
                 small = GFX_idea_generic_army_europe_5
@@ -677,7 +673,6 @@
         }
 	}
     land_doctrine_guy = {
-        name = land_doctrine_guy
         portraits = {
             army = {
                 small = GFX_idea_generic_army_europe_4
@@ -697,7 +692,6 @@
         }
 	}
     air_chief_ground_support_3_guy = {
-        name = air_chief_ground_support_3_guy
         portraits = {
             army = {
                 small = GFX_idea_generic_army_europe_1
@@ -717,7 +711,6 @@
         }
 	}
     army_chief_reform_3_guy = {
-        name = army_chief_reform_3_guy
         portraits = {
             army = {
                 small = GFX_idea_generic_army_europe_2
@@ -737,7 +730,6 @@
         }
 	}
     army_entrenchment_3_guy = {
-        name = army_entrenchment_3_guy
         portraits = {
             army = {
                 small = GFX_idea_generic_army_europe_3
@@ -757,7 +749,7 @@
         }
 	}
     erb_orion_moreno = {
-        name = erb_orion_moreno
+        name = erb_orion_moreno_name
         portraits = {
             army = {
                 small = GFX_idea_GFX_idea_orion_moreno_erb
@@ -778,7 +770,7 @@
         }
 	}
     enc_BrenRadNeo = {
-        name = enc_BrenRadNeo
+        name = enc_BrenRadNeo_name
         portraits = {
             army = {
                 small = GFX_idea_generic_political_advisor_europe_6
@@ -799,7 +791,7 @@
         }
 	}
     erb_veronica = {
-        name = erb_veronica
+        name = erb_veronica_name
         portraits = {
             army = {
                 small = GFX_idea_erb_veronica
@@ -821,7 +813,7 @@
         }
 	}
     benjamin_curling = {
-        name = benjamin_curling
+        name = benjamin_curling_name
         portraits = {
             army = {
                 small = GFX_idea_generic_political_advisor_europe_1
@@ -849,7 +841,7 @@
         }
 	}
     norman_wood = {
-        name = norman_wood
+        name = norman_wood_name
         portraits = {
             army = {
                 small = GFX_idea_generic_army_europe_1
@@ -867,7 +859,7 @@
         }
 	}
     erb_wright = {
-        name = erb_wright
+        name = erb_wright_name
         portraits = {
             army = {
                 small = GFX_idea_enc_wright
@@ -888,7 +880,7 @@
         }
 	}
     erb_arcade_gannon = {
-        name = erb_arcade_gannon
+        name = erb_arcade_gannon_name
         portraits = {
             army = {
                 small = GFX_idea_arcade_gannon
@@ -909,7 +901,7 @@
         }
 	}    
     aaron_chapman = {
-        name = aaron_chapman
+        name = aaron_chapman_name
         portraits = {
             army = {
                 small = GFX_idea_USA_walter_krueger
@@ -928,7 +920,7 @@
         }
 	}
     dShakey = {
-        name = dShakey
+        name = dShakey_name
         portraits = {
             army = {
                 small = GFX_idea_USA_joseph_mccarthy
@@ -947,7 +939,7 @@
         }
 	}
     enc_john_jaeger = {
-        name = enc_john_jaeger
+        name = enc_john_jaeger_name
         portraits = {
             army = {
                 small = GFX_idea_generic_political_advisor_south_america_3
@@ -961,9 +953,7 @@
 				NOT = {
 					has_country_flag = reformers_purged
 				}
-			}
-			available = {
-				has_completed_focus = enc_rebuilding_a_nation
+                has_completed_focus = enc_rebuilding_a_nation
 			}
 			traits = {
 				swords_to_ploughshares
@@ -974,7 +964,7 @@
         }
 	}
     enc_alice_mclafferty = {
-        name = enc_alice_mclafferty
+        name = enc_alice_mclafferty_name
         portraits = {
             army = {
                 small = GFX_idea_alice_mclafferty
@@ -999,7 +989,7 @@
         }
 	}
     enc_grant_c_hayes = {
-        name = enc_grant_c_hayes
+        name = enc_grant_c_hayes_name
         portraits = {
             army = {
                 small = GFX_idea_grant_c_hayes
@@ -1017,7 +1007,7 @@
         }
 	}
     enc_lynette = {
-        name = enc_lynette
+        name = enc_lynette_name
         portraits = {
             civilian = {
                 large = "gfx/leaders/VLT/Portrait_first_citizen.dds"
@@ -1038,7 +1028,7 @@
         }
 	}
     enc_zachariah_rigby = {
-        name = enc_zachariah_rigby
+        name = enc_zachariah_rigby_name
         portraits = {
             army = {
                 small = GFX_idea_zachariah_rigby
@@ -1060,7 +1050,7 @@
         }
 	}
     enc_julie_farkas = {
-        name = enc_julie_farkas
+        name = enc_julie_farkas_name
         portraits = {
             army = {
                 small = GFX_idea_julie_farkas
@@ -1081,7 +1071,7 @@
         }
 	}
     enc_colonel_royez = {
-        name = enc_colonel_royez
+        name = enc_colonel_royez_name
         portraits = {
             army = {
                 small = GFX_idea_colonel_royez
@@ -1109,7 +1099,7 @@
         }
 	}
     enc_colonel_hsu = {
-        name = enc_colonel_hsu
+        name = enc_colonel_hsu_name
         portraits = {
             army = {
                 small = GFX_idea_colonel_hsu
@@ -1138,7 +1128,7 @@
 	}
     enc_big_jim_chief_of_army = {
         # for baron players
-        name = enc_big_jim_chief_of_army
+        name = enc_big_jim_chief_of_army_name
         portraits = {
             army = {
                 small = GFX_idea_bigjim_chief
@@ -1158,7 +1148,7 @@
 	}
     enc_drummond_chief_of_army = {
         # for baron players
-        name = enc_drummond_chief_of_army
+        name = enc_drummond_chief_of_army_name
         portraits = {
             army = {
                 small = GFX_idea_drummond_chief
@@ -1186,7 +1176,7 @@
         }
 	}
     joseph_dodge1 = {
-        name = joseph_dodge1
+        name = joseph_dodge1_name
         portraits = {
             army = {
                 small = GFX_idea_generic_political_advisor_europe_3
@@ -1203,7 +1193,7 @@
         }
 	}
     enc_allgood_murphy = {
-        name = enc_allgood_murphy
+        name = enc_allgood_murphy_name
         portraits = {
             army = {
                 small = GFX_idea_allgood_murphy
@@ -1225,7 +1215,7 @@
 	}
 
     ENC_General_Judah_Kreger = {
-        name = ENC_General_Judah_Kreger
+        name = ENC_General_Judah_Kreger_name
         portraits = {
             army = {
                 large = gfx/leaders/ERB/Portrait_Enclave_Generic_3.dds
@@ -1234,7 +1224,7 @@
     }
 
     ERB_Frederick = {
-        name = ERB_Frederick
+        name = ERB_Frederick_name
         portraits = {
             army = {
                 large = gfx/leaders/ERB/Portrait_Enclave_Generic_2.dds
@@ -1243,7 +1233,7 @@
     }
 
     ERB_Rimmy = {
-		name = ERB_Rimmy
+		name = ERB_Rimmy_name
         portraits = {
             army = {
                 large = gfx/leaders/ERB/Portrait_Enclave_Generic_9.dds
@@ -1265,7 +1255,7 @@
 	}
 
     ERB_wastelanders = {
-        name = ERB_No_One
+        name = ERB_No_One_name
         portraits = {
             civilian = {
                 large = gfx/leaders/Settler/Portrait_Settler_Generic_2.dds
@@ -1274,7 +1264,7 @@
     }
 
     ERB_Ulysses = {
-        name = ERB_Ulysses
+        name = ERB_Ulysses_name
         portraits = {
             army = {
                 large = "gfx/leaders/Portrait_Enclave_Ulysses.dds"

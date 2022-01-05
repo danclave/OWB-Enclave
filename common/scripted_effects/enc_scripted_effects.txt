@@ -736,18 +736,18 @@ comply_with_protests = {
 ### Change Advisors  ####
 ##################################################
 
-boris_t_becomes_democratic = {
-	if = {
-		limit = {
-			has_idea = boris_t
-		}
-		swap_ideas = {
-			remove_idea = boris_t
-			add_idea = boris_t_democratic
-		}
-	}
-	set_country_flag = enc_boris_t_democratic_flag
-}
+#boris_t_becomes_democratic = {
+#	if = {
+#		limit = {
+#			has_idea = boris_t
+#		}
+#		swap_ideas = {
+#			remove_idea = boris_t
+#			add_idea = boris_t_democratic
+#		}
+#	}
+#	set_country_flag = enc_boris_t_democratic_flag
+#}
 
 ##################################################
 ###    Set up Enclave Administration Zone     ####
