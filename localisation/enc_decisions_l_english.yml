@@ -346,6 +346,8 @@ enc_NCR_seize_shady_sands.tt: " Teach §Y[253.Owner.GetName]§! that Shady Sands
 enc_NCR_seize_dayglow.tt: " Teach §Y[63.Owner.GetName]§! that Dayglow is an American town."
 enc_NCR_seize_dayglow: "Liberate Day Glow"
 enc_NCR_seize_dayglow_desc: "Provides an annexation wargoal against the owner of DayGlow"
+enc_NCR_defeat_remnants: "Hunt Down NCR Remnants"
+enc_NCR_defeat_remnants_desc: "With the major cities of the NCR ours, we merely have to defeat what remains of the NCR."
 ENC_infiltrating_NCR: "Back to California"
 ENC_infiltrating_NCR_desc: "California remains the heart of the West Coast, and the NCR is the largest postwar government.  How we handle them could determine the fate of America."
 ENC_support_OWP: "Support the Old World Party"

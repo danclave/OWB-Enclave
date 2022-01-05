@@ -1078,6 +1078,32 @@ ENC_infiltrating_NCR = {
 			}
 		}
 	}
+
+	enc_NCR_defeat_remnants = {
+		icon = decision_plasma
+		priority = 300
+		available = {
+			has_completed_focus = enc_american_dream
+		}
+		visible = {
+			tag = ERB
+			NCR = {
+				exists = yes
+			}
+			has_full_control_of_state = 135 # sac city
+			has_full_control_of_state = 63	# dayglow
+			has_full_control_of_state = 253	# Shady Sands
+			NOT = {
+				has_war_with = NCR
+			}
+		}
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = NCR
+			}
+		}
+	}
 }
 
 ENC_nation_building = {
