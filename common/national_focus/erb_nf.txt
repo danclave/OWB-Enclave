@@ -5627,7 +5627,7 @@ focus = {#NEVADA - second city
 		prerequisite = { focus = enc_reform }
 		available = {
 			OR = {
-				has_tech = elite_army
+				has_tech = concentration_of_force
 				has_tech = grand_army
 			}
 		}
@@ -5706,7 +5706,7 @@ focus = {#NEVADA - second city
 		x = 0
 		y = 1
 		available = {
-				has_tech = grand_battle_plan_owb
+			has_tech = grand_army
 		}
 		cost = 40
 		completion_reward = { 
@@ -5737,7 +5737,7 @@ focus = {#NEVADA - second city
 		x = 0
 		y = 1
 		available = {
-			has_tech = concentration_of_force
+			has_tech = speed_of_movement
 		}
 		cost = 40
 		completion_reward = { add_ideas = enc_advanced_training }
@@ -5766,8 +5766,9 @@ focus = {#NEVADA - second city
 		y = 1
 		available = {
 			OR = {
-				has_tech = speed_of_movement
-				has_tech = fortified_positions_doctrine
+				has_tech = integrated_support_doctrine
+				has_tech = walking_fire
+				has_tech = grand_battle_plan_owb
 			}
 		}
 		cost = 40
@@ -5787,8 +5788,8 @@ focus = {#NEVADA - second city
 		y = 1
 		available = {
 			OR = {
-				has_tech = concentration_of_force
-				has_tech = grand_battle_plan_owb
+				has_tech = speed_of_movement
+				has_tech = grand_army
 			}
 		}
 		cost = 40
@@ -5892,8 +5893,9 @@ focus = {#NEVADA - second city
 	}
 	available = {
 		OR = {
-			has_tech = speed_of_movement
-			has_tech = fortified_positions_doctrine
+				has_tech = integrated_support_doctrine
+				has_tech = walking_fire
+				has_tech = grand_battle_plan_owb
 		}
 	}
 	relative_position_id = enc_officers_by_merit_and_skill
