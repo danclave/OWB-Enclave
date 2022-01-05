@@ -1153,7 +1153,7 @@
         name = enc_big_jim_chief_of_army_name
         portraits = {
             army = {
-                small = GFX_idea_bigjim_chief
+                small = GFX_idea_big_jim_chief_of_army
             }
         }
         advisor = {
@@ -1173,7 +1173,7 @@
         name = enc_drummond_chief_of_army_name
         portraits = {
             army = {
-                small = GFX_idea_drummond_chief
+                small = GFX_idea_drummond_chief_of_army
             }
         }
         advisor = {
