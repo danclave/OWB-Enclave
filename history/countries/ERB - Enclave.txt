@@ -38,7 +38,6 @@ set_technology = {
 	exploitation_tech_level_settler = 1
 	electronics_tech_level_tribal = 1
 	electronics_tech_level_settler = 1
-	elite_army = 1
 	standard_weaponry_tech = 1
 	melee_weaponry_tech_1 = 1
 	ballistic_weaponry_tech_1 = 1
@@ -161,131 +160,76 @@ set_rule = { can_join_factions = no }
 ###############################
 # LEADERS
 ###############################
-create_country_leader  = {
-	name = "Franklin Anderson"
-	desc = "Anderson_desc"
-	picture = "gfx/leaders/portrait_Anderson.dds"
-	expire = "3000.1.1"
-	ideology = militarist_technocracy
-	traits = {}
-}
+recruit_character = ERB_Franklin_Anderson
+recruit_character = ERB_Douglas_Granite
+recruit_character = ERB_Sergeant_Doran
+#recruit_character = ERB_Bishop
+recruit_character = ERB_Grimm
+recruit_character = ERB_Dwemer
+recruit_character = ERB_Mary
+recruit_character = ERB_David
+recruit_character = ERB_Scott
+recruit_character = ERB_Hamilton
+recruit_character = ERB_Shadow
+recruit_character = paladin_myers1
+recruit_character = boris_t
+recruit_character = boris_t_democratic
+recruit_character = generic_reformer_2
+recruit_character = felix_grayson
+recruit_character = lt_kolyis
+recruit_character = col_wilkins
+recruit_character = dr_henry
+recruit_character = enc_jerome_chipman
+recruit_character = enc_offensive
+recruit_character = enc_paratroopers
+recruit_character = army_chief_loyalist
+recruit_character = enc_indy_neidell
+recruit_character = enc_air_combat
+recruit_character = enc_people_air_loyalist
+recruit_character = clayton_schultz
+recruit_character = navy_chief_loyalist
+recruit_character = enc_bomber_guy
+recruit_character = enc_fighter_guy
+recruit_character = land_doctrine_guy
+recruit_character = air_chief_ground_support_3_guy
+recruit_character = army_chief_reform_3_guy
+recruit_character = army_entrenchment_3_guy
+recruit_character = erb_orion_moreno
+recruit_character = enc_BrenRadNeo
+recruit_character = erb_veronica
+recruit_character = benjamin_curling
+recruit_character = norman_wood
+recruit_character = erb_wright
+recruit_character = erb_arcade_gannon
+recruit_character = aaron_chapman
+recruit_character = dShakey
+recruit_character = enc_john_jaeger
+recruit_character = enc_alice_mclafferty
+recruit_character = enc_grant_c_hayes
+recruit_character = enc_lynette
+recruit_character = enc_zachariah_rigby
+recruit_character = enc_julie_farkas
+recruit_character = enc_colonel_royez
+recruit_character = enc_colonel_hsu
+recruit_character = enc_big_jim_chief_of_army
+recruit_character = enc_drummond_chief_of_army
+recruit_character = joseph_dodge1
+recruit_character = enc_allgood_murphy
+recruit_character = ENC_General_Judah_Kreger
+recruit_character = ERB_Frederick
+recruit_character = ERB_Rimmy
+recruit_character = ERB_wastelanders
 
-create_country_leader  = {
-	name = "Douglas Granite"
-	desc = "Granite_desc"
-	picture = "gfx/leaders/portrait_douglas_enclave.dds"
-	expire = "3000.1.1"
-	ideology = technocracy
-	traits = {}
-}
+recruit_character = ERB_Ulysses
 
-create_country_leader = {
-	name = "Sergeant Dornan"
-	desc = Dornan_DESC
-	picture = "gfx/leaders/portrait_sarge.dds"
-	expire = "3000.1.1"
-	ideology = benevolent_dictatorship
-	traits = {
-		drill_sargeant
-	}
-}
-create_country_leader = {
-	name = "Chief Engineer R. Bishop"
-	desc = "Dornan_DESC"
-	picture = "gfx/leaders/ENC/Portrait_Enclave_Generic.dds"
-	expire = "3000.1.1"
-	ideology = town_hall_democracy
-	traits = {}
-}
+recruit_character = ERB_Ranger_Skip
+recruit_character = ERB_Raul
+recruit_character = ERB_Whitehall
 
-create_field_marshal = {
-	name = "Major General Grimm"
-	portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_6.dds"
-	skill = 5
-	traits = {
-		enc_purist agile_trait
-	}
-	attack_skill = 5
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = { # Jacob 'Dwemer' Freeman
-	name = "Jacob 'Dwemer' Freeman"
-	portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_11.dds"
-	skill = 2
-	traits = {
-		enc_reformer agile_trait
-	}
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 1
-}
-create_corps_commander = { # Lt. Mary Orwich
-	name = "Lt. Mary Orwich"
-	portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_3.dds"
-	skill = 4
-	traits = {
-		enc_purist
-		strong_trait
-	}
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-create_corps_commander = { # Colonel David Stevenson
-	name = "Colonel David Stevenson"
-	portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_8.dds"
-	skill = 2
-	traits = {
-		enc_reformer perceptive_trait
-	}
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = { # Lt. Scott Blair
-	name = "Lt. Scott Blair"
-	portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_9.dds"
-	skill = 2
-	traits = {
-		enc_reformer
-		charismatic_trait
-	}
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = { # Chris "Hamilton" Regular
-	name = "Chris 'Hamilton' Regular"
-	portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_2.dds"
-	skill = 2
-	traits = {
-		intelligent_trait robotics_expert_trait
-	}
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = { # Jack 'Shadow' Churchill
-	name = "Jack 'Shadow' Churchill"
-	portrait_path = "gfx/leaders/ERB/Portrait_Enclave_Generic_10.dds"
-	skill = 4
-	traits = {
-		enc_purist
-		intelligent_trait robotics_expert_trait
-	}
-	attack_skill = 4
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
+# recruit_character = Enclave_Governer_militarist_technocracy
+# recruit_character = Enclave_Governer_technocracy
+# recruit_character = Enclave_Governer_benevolent_dictatorship
+# recruit_character = Enclave_Governer_town_hall_democracy
 
 ###############################
 # RELATIONS

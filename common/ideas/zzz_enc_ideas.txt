@@ -1837,10 +1837,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
+				stability_factor = 0.05
 				conscription_factor = -0.10
 				resistance_activity = -0.05
-				stability_factor = 0.05
-				resistance_activity = -0.10
+				resistance_decay = -0.10
 			}
 		}
 		ENC_emergency_labour_draft = {

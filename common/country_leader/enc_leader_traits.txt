@@ -256,9 +256,9 @@ leader_traits = {
 		random = no
 		air_close_air_support_attack_factor = -0.10
 		experience_gain_air_factor = -0.25
-		research_bonus = {
-			cat_air_doctrine = -0.10
-		}
+		#research_bonus = {
+		#	cat_air_doctrine = -0.10
+		#}
 	}
 	enc_air_chief_cas = {
 		random = no
@@ -291,9 +291,9 @@ leader_traits = {
 		naval_coordination = -0.05
 		naval_hit_chance = -0.05
 		experience_gain_navy_factor = -0.25
-		research_bonus = {
-			cat_naval_doctrine = -0.15
-		}
+		#research_bonus = {
+		#	cat_naval_doctrine = -0.15
+		#}
 	}
 
 	enc_disliked_pragmatist = {

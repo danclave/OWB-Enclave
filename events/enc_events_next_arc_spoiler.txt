@@ -1,0 +1,16 @@
+﻿add_namespace = enc_next_arc
+
+country_event = { # welcome Mr President
+    id = enc_next_arc.1
+    title = enc_next_arc.1.t
+    desc = enc_next_arc.1.desc
+    fire_only_once = yes
+	is_triggered_only = yes
+    option = {
+        name = enc_next_arc.1.a
+        WDN = {
+            unlock_national_focus = han_contact_the_president
+            add_ideas = han_presidential_manufacturing_routines
+        }
+    }
+}

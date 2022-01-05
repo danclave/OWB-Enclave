@@ -104,9 +104,9 @@ ideas = {
 				war_support_factor = -0.05
 				stability_factor = -0.10
 			}
-			research_bonus = {
-				support_medical_tech_category = 0.1
-			}
+			#research_bonus = {
+			#	support_medical_tech_category = 0.1
+			#}
 			cancel_if_invalid = yes
 		}
 		enc_outsider_law_purist_vlt_and_bos = {
@@ -133,9 +133,9 @@ ideas = {
 				stability_factor = -0.20
 				weekly_manpower = 10
 			}
-			research_bonus = {
-				support_medical_tech_category = 0.1
-			}
+			#research_bonus = {
+			#	support_medical_tech_category = 0.1
+			#}
 			cancel_if_invalid = yes
 		}
 	}

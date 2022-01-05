@@ -1,0 +1,58 @@
+﻿characters = {
+    LLW_no_one_elites  = {
+        name = LLW_no_one_name
+        Portraits = {
+            civilian = {
+                large = "gfx/leaders/portrait_no_one.dds"
+            }
+        }
+        country_leader = {
+            expire = "3000.1.1"
+            ideology = militarist_technocracy
+            traits = {}
+        }
+
+    }
+    LLW_no_one_intellectuals  = {
+        name = LLW_no_one_name
+        Portraits = {
+            civilian = {
+                large = "gfx/leaders/portrait_no_one.dds"
+            }
+        }
+        country_leader = 
+        {
+            expire = "3000.1.1"
+            ideology = technocracy
+            traits = {}
+        }
+    }
+    LLW_no_one_ruler  = {
+        name = LLW_no_one_name
+        Portraits = {
+            civilian = {
+                large = "gfx/leaders/portrait_no_one.dds"
+            }
+        }
+        country_leader = 
+        {
+            expire = "3000.1.1"
+            ideology = benevolent_dictatorship
+            traits = {}
+        }
+
+    }
+    LLW_no_one_people  = {
+        name = LLW_no_one_name
+        Portraits = {
+            civilian = {
+                large = "gfx/leaders/portrait_no_one.dds"
+            }
+        }
+        country_leader = {
+            expire = "3000.1.1"
+            ideology = town_hall_democracy
+            traits = {}
+        }
+    }
+}

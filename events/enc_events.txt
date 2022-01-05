@@ -285,14 +285,8 @@ country_event = {#15 - DOUGLAS DESERTS
 		name = enc.15.a
 		add_manpower = -50
 		add_popularity = { ideology = intellectuals popularity = -0.2 }
-		create_country_leader  = {
-			name = "Adam Tailor"
-			desc = "Granite_desc" #placeholder
-			picture = "gfx/leaders/portrait_douglas_enclave.dds"
-			expire = "3000.1.1"
-			ideology = technocracy
-			traits = {}
-		}
+
+		retire_character = ERB_Douglas_Granite
 	}
 }
 
@@ -676,7 +670,7 @@ country_event = { #29 - fire mutie hunt event
 	}
 }
 
-country_event = { #30 - Fall of Sack city
+country_event = { #30 - Fall of Sac city
 	id = enc.30
 	title = enc.30.t
 	desc = enc.30.d
@@ -808,7 +802,7 @@ country_event = { #33 - Crimson Caravan Encounter
 	}
 }
 
-country_event = { #34 - remnants of Sack city
+country_event = { #34 - remnants of Sac city
 	id = enc.34
 	title = enc.34.t
 	desc = enc.34.d

@@ -28,7 +28,6 @@ bookmarks = {
 				brahminbarons
 			}
 			focuses = {
-				ncr_oldworldwall
 				ncr_baja
 				ncr_emergency
 			}
@@ -42,9 +41,6 @@ bookmarks = {
 				national_spirit_rejection_of_automation
 			}
 			focuses = {
-				ces_war_for_hoover_dam
-				ces_thesis
-				ces_the_white_leg_petition
 			}
 		}
 

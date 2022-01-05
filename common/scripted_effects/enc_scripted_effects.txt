@@ -357,14 +357,6 @@ elites_become_citizens_league = {
 		long_name = "The League of Citizens"
 		name = "Citizens League"
 	}
-	create_country_leader = {
-		name = "First Citizen Lynette"
-		desc = "POLITICS_CITIZEN_DESC"
-		picture = "gfx/leaders/VLT/Portrait_first_citizen.dds"
-		expire = "2500.1.1"
-		ideology = militarist_technocracy
-		traits = {}
-	}
 	custom_effect_tooltip = unlocks_as_advisor
 	custom_effect_tooltip = enc_lynette
 }
@@ -443,7 +435,13 @@ start_requisition_resources = {
 		limit = {
 			not = { is_core_of = ERB }
 		}
-		add_state_modifier = { modifier = { id = state_modifier_test_id local_resources_factor = 0.2 compliance_gain = -0.1} }
+		add_state_modifier = { 
+			modifier = { 
+				#id = state_modifier_test_id 
+				local_resources_factor = 0.2 
+				compliance_gain = -0.1
+			} 
+		}
 		set_state_flag = state_has_enc_requisition_of_resources
 	}
 }
@@ -484,7 +482,13 @@ stop_requisition_resources = {
 		limit = {
 			not = { is_core_of = ERB }
 		}
-		add_state_modifier = { modifier = { id = state_modifier_test_id local_resources_factor = -0.2 compliance_gain = 0.1} }
+		add_state_modifier = { 
+			modifier = { 
+				#id = state_modifier_test_id 
+				local_resources_factor = -0.2 
+				compliance_gain = 0.1
+			} 
+		}
 		clr_state_flag = state_has_enc_requisition_of_resources
 	}
 
@@ -607,90 +611,55 @@ transfer_leader_traits = {
 
 change_douglas_to_people = {
 	hidden_effect = {
-		retire_country_leader = yes
 		set_politics = { ruling_party = people }
-		create_country_leader  = {
-			name = "Douglas Granite"
-			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_douglas_usa.dds"
-			expire = "3000.1.1"
-			ideology = constitutional_republic
-			traits = {}
+		set_country_leader_ideology = constitutional_republic
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/portrait_douglas_usa.dds"
 		}
-		transfer_leader_traits = yes
 	}
 }
 
 change_douglas_to_elites = {
 	hidden_effect = {
-		retire_country_leader = yes
 		set_politics = { ruling_party = elites }
-		create_country_leader  = {
-			name = "Douglas Granite"
-			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_douglas_usa.dds"
-			expire = "3000.1.1"
-			ideology = militarist_technocracy
-			traits = {}
+		set_country_leader_ideology = militarist_technocracy
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/portrait_douglas_usa.dds"
 		}
-		transfer_leader_traits = yes
 	}
 }
 
-change_douglas_portrait_to_enclave = {
-	hidden_effect = {
-		create_country_leader  = {
-			name = "Douglas Granite"
-			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_douglas_enclave.dds"
-			expire = "3000.1.1"
-			ideology = technocracy
-			traits = {}
-		}
-		transfer_leader_traits = yes
-	}
-}
+# Not used?
+#
+#change_douglas_portrait_to_enclave = {
+#	hidden_effect = {
+#		recruit_character = ERB_Douglas_Granite_enclave
+#		transfer_leader_traits = yes
+#	}
+#}
 
 change_douglas_portrait_to_half_usa = {
 	hidden_effect = {
-		create_country_leader  = {
-			name = "Douglas Granite"
-			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_douglas_usa.dds"
-			expire = "3000.1.1"
-			ideology = technocracy
-			traits = {}
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/portrait_douglas_usa.dds"
 		}
-		transfer_leader_traits = yes
 	}
 }
 
 change_douglas_portrait_to_full_usa = {
 	hidden_effect = {
-		create_country_leader  = {
-			name = "Douglas Granite"
-			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_douglas_usa_2.dds"
-			expire = "3000.1.1"
-			ideology = constitutional_republic
-			traits = {}
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/portrait_douglas_usa.dds"
 		}
-		transfer_leader_traits = yes
 	}
 	# custom_effects_tooltip = enc_time_for_a_new_flag
 }
 
 change_douglas_portrait_to_nevada = {
 	hidden_effect = {
-		create_country_leader  = {
-			name = "Douglas Granite"
-			desc = "Granite_desc"
-			picture = "gfx/leaders/portrait_douglas_nevada.dds"
-			expire = "3000.1.1"
-			ideology = technocracy
-			traits = {}
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/portrait_douglas_nevada.dds"
 		}
-		transfer_leader_traits = yes
 	}
 	# custom_effects_tooltip = enc_time_for_a_new_flag
 }
@@ -767,83 +736,63 @@ comply_with_protests = {
 ### Change Advisors  ####
 ##################################################
 
-boris_t_becomes_democratic = {
-	if = {
-		limit = {
-			has_idea = boris_t
-		}
-		swap_ideas = {
-			remove_idea = boris_t
-			add_idea = boris_t_democratic
-		}
-	}
-	set_country_flag = enc_boris_t_democratic_flag
-}
+#boris_t_becomes_democratic = {
+#	if = {
+#		limit = {
+#			has_idea = boris_t
+#		}
+#		swap_ideas = {
+#			remove_idea = boris_t
+#			add_idea = boris_t_democratic
+#		}
+#	}
+#	set_country_flag = enc_boris_t_democratic_flag
+#}
 
 ##################################################
 ###    Set up Enclave Administration Zone     ####
 ##################################################
-establish_EAZ = {
-	set_cosmetic_tag = EAZ_BAR
-	set_rule = {
-		units_deployed_to_overlord = yes
-	}
-	add_ideas = ENC_idea_eaz
-	load_focus_tree = erb_eaz_nf
-
-	create_country_leader  = {
-		name = "enclave_governer_name"
-		desc = "enclave_governer_desc"
-		picture = "gfx/leaders/portrait_sarge.dds"
-		expire = "3000.1.1"
-		ideology = militarist_technocracy
-	}
-	create_country_leader  = {
-		name = "enclave_governer_name"
-		desc = "enclave_governer_desc"
-		picture = "gfx/leaders/portrait_sarge.dds"
-		expire = "3000.1.1"
-		ideology = technocracy
-	}
-	create_country_leader = {
-		name = "enclave_governer_name"
-		desc = "enclave_governer_desc"
-		picture = "gfx/leaders/portrait_sarge.dds"
-		expire = "3000.1.1"
-		ideology = benevolent_dictatorship
-	}
-	create_country_leader = {
-		name = "enclave_governer_name"
-		desc = "enclave_governer_desc"
-		picture = "gfx/leaders/portrait_sarge.dds"
-		expire = "3000.1.1"
-		ideology = town_hall_democracy
-	}
-	division_template = {
-		name = "Slave Militia"
-		division_names_group = REBEL_INF_01
-		regiments = {
-			militia = {	x = 0 y = 0	}
-			militia = { x = 0 y = 1	}
-			militia = { x = 0 y = 2 }
-			militia = { x = 1 y = 0 }
-			militia = { x = 1 y = 1 }
-			militia = { x = 1 y = 2 }
-			militia = { x = 1 y = 3 }
-		}
-		support = {}
-	}
-	every_owned_state = {
-		create_unit = {
-			division = "name = \"Slave Militia\"  division_template = \"Slave Militia\"  start_experience_factor = 0.28"
-			owner = THIS
-		}
-		create_unit = {
-			division = "name = \"Slave Militia\"  division_template = \"Slave Militia\"  start_experience_factor = 0.28"
-			owner = THIS
-		}
-	}
-}
+#
+# currently not used
+#
+#establish_EAZ = {
+#	set_cosmetic_tag = EAZ_BAR
+#	set_rule = {
+#		units_deployed_to_overlord = yes
+#	}
+#	add_ideas = ENC_idea_eaz
+#	load_focus_tree = erb_eaz_nf
+#
+#	recruit_character = Enclave_Governer_militarist_technocracy
+#	recruit_character = Enclave_Governer_technocracy
+#	recruit_character = Enclave_Governer_benevolent_dictatorship
+#	recruit_character = Enclave_Governer_town_hall_democracy
+#
+#	division_template = {
+#		name = "Slave Militia"
+#		division_names_group = REBEL_INF_01
+#		regiments = {
+#			militia = {	x = 0 y = 0	}
+#			militia = { x = 0 y = 1	}
+#			militia = { x = 0 y = 2 }
+#			militia = { x = 1 y = 0 }
+#			militia = { x = 1 y = 1 }
+#			militia = { x = 1 y = 2 }
+#			militia = { x = 1 y = 3 }
+#		}
+#		support = {}
+#	}
+#	every_owned_state = {
+#		create_unit = {
+#			division = "name = \"Slave Militia\"  division_template = \"Slave Militia\"  start_experience_factor = 0.28"
+#			owner = THIS
+#		}
+#		create_unit = {
+#			division = "name = \"Slave Militia\"  division_template = \"Slave Militia\"  start_experience_factor = 0.28"
+#			owner = THIS
+#		}
+#	}
+#}
 
 calculate_distance_to_nearest_enclave_state = {
 	# fire this in state scope

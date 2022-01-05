@@ -323,7 +323,17 @@ enc_last_stand = {
 		original_tag = ERB
 	}
 }
-
+	
+ENC_next_arc = {
+	priority = 1000
+	icon = generic_crisis
+	#visible = {
+	#	OR = {
+	#		has_country_flag = enc_trigger_next_arc
+	#		has_country_flag = preparing_for_president
+	#	}
+	#}
+}
 # ##############################
 # Attempted overwrite
 # ##############################
