@@ -369,6 +369,7 @@ enc_colonel_royez_name:0 "Colonel Royez"
 enc_colonel_royez_desc:0 "Colonel Royez earned his rank during the acquisition of the Long-15, through his great feats of bravery and strength; he is the pinnacle of what an NCR soldier can become. However, he is just one man, and cannot be everywhere at once.\n\nHe has cautiously agreed to take up his old post for the [ERB.GetName], providing they make good on their promises."
 
 enc_colonel_hsu:0 "Colonel Hsu"
+enc_colonel_hsu_name:0 "Colonel Hsu"
 enc_colonel_hsu_desc:0 "Colonel Hsu is beloved by the men, and is a workhorse without compare in the top brass. Hsu knows how to manage supply lines, root out spies, and make sure the men know they are understood, and cared for: a great boon to morale.\n\nHe has cautiously agreed to take up his old post for the [ERB.GetName], providing they make good on their promises."
 
 # NCR - Ministers
