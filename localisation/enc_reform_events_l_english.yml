@@ -358,7 +358,7 @@ enc_reformers.57.success.d: "Expecting some sort of reprisal for his recent comm
 enc_reformers.57.success.a: "It will have to do."
 ########################################
 enc_reformers.57.success2.t: "[purist_commander.GetName] converted!"
-enc_reformers.57.success2.d: "Expecting some sort of reprisal for his recent comments, [purist_commander.GetName] was surprised to be invited to the President's personal bunker suite for dinner instead. After a lengthy conversation over roasted Deathclaw and scotch, it appears that [purist_commander.GetName] has come to see things in a different light! After a discussion that lasted deep into the night, the commander left satisfied and with a new perspective on what it means to be an American. It appears the Reformers have gained a staunch supporter in a night!
+enc_reformers.57.success2.d: "Expecting some sort of reprisal for his recent comments, [purist_commander.GetName] was surprised to be invited to the President's personal bunker suite for dinner instead. After a lengthy conversation over roasted Deathclaw and scotch, it appears that [purist_commander.GetName] has come to see things in a different light! After a discussion that lasted deep into the night, the commander left satisfied and with a new perspective on what it means to be an American. It appears the Reformers have gained a staunch supporter in a night!"
 enc_reformers.57.success2.a: "Lincoln would be proud"
 #######################################
 enc_reformers.57.failure.t: "[purist_commander.GetName] unconvinced"
