@@ -2119,7 +2119,7 @@ unit_leader_event = { #257.success2 - leader convinced!
 	is_triggered_only = yes
 	option = { #
 		name = enc_reformers.57.success2.a
-		custom_effect_tooltip = enc_reformers.57.e.success
+		custom_effect_tooltip = enc_reformers.57.e.success2
 	}
 }
 
