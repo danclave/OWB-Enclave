@@ -3501,8 +3501,11 @@ ENC_securing_borders = {
 		icon = generic_scorched_earth
 		priority = 11
 		available = {
-			NOT = {
-				country_exists = CES
+			OR= {
+				has_war_with = CES
+				NOT = {
+					country_exists = CES
+				}
 			}
 		}
 		days_mission_timeout = 90
