@@ -3657,21 +3657,8 @@ country_event = { #108 Hoover Dam
 		#	}
 		#}
 		name = enc_reformers.108.a
-		every_state = {
-			limit = {
-				OR = {
-					state = 252
-					state = 613
-					state = 380
-					state = 573
-					state = 46
-					state = 417
-					state = 137
-					state = 67
-				}
-				is_owned_and_controlled_by = MOT
-			}
-			CES = { transfer_state = PREV }
+		CES = {
+			transfer_state = 252
 		}
 		MOT = {
 			every_character = {
