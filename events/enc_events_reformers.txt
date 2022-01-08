@@ -3580,9 +3580,9 @@ country_event = { #108 Hoover Dam
 	fire_only_once = yes
 	is_triggered_only = no
 	trigger = {
+		tag = ERB
 		OR = {
 			AND = {
-				tag = ERB
 				ERB = {
 					has_completed_focus = enc_support_armed_coup
 				}
@@ -3590,28 +3590,22 @@ country_event = { #108 Hoover Dam
 					has_civil_war = yes
 				}
 				252 = {
-					is_owned_by = NCR
+					OR = {
+						is_owned_by = NCR
+						is_owned_by = D01
+						is_owned_by = MOT
+					}
 				}
 			}
 			AND = {
-				tag = ERB
-				ERB = {
-					has_completed_focus = enc_support_armed_coup
-				}
-				NCR = {
-					has_civil_war = yes
-				}
-				252 = {
-					is_owned_by = D01
-				}
-			}
-			AND = {
-				tag = ERB
 				ERB = {
 					has_completed_focus = enc_the_divided_state
 				}
 				252 = {
-					is_owned_by = NCR
+					OR = {
+						is_owned_by = NCR
+						is_owned_by = MOT
+					}
 				}
 				ERB = {
 					has_war_with = NCR
@@ -3620,7 +3614,7 @@ country_event = { #108 Hoover Dam
 		}
 	}
 	mean_time_to_happen = {
-		days = 15
+		days = 1
 	}
 	#option = { #	Damnit
 	#	trigger = {
@@ -3663,9 +3657,49 @@ country_event = { #108 Hoover Dam
 		#	}
 		#}
 		name = enc_reformers.108.a
-		CES = {
-			transfer_state = 252
+		every_state = {
+			limit = {
+				OR = {
+					state = 252
+					state = 613
+					state = 380
+					state = 573
+					state = 46
+					state = 417
+					state = 137
+					state = 67
+				}
+				is_owned_and_controlled_by = MOT
+			}
+			CES = { transfer_state = PREV }
 		}
+		MOT = {
+			every_character = {
+				set_nationality = NCR
+			}
+			every_unit_leader = {
+				set_nationality = NCR
+			}
+			every_navy_leader = {
+				set_nationality = NCR
+			}
+			every_owned_state = {
+				set_state_flag = do_not_exodus
+			}
+		}
+		NCR = {
+			change_tag_from = MOT
+		}
+		NCR = {
+			annex_country = {
+				target = MOT
+				transfer_troops = yes
+			}
+			every_owned_state = {
+				clr_state_flag = do_not_exodus
+			}
+		}
+
 		set_global_flag = enc_ces_dam
 	}
 }
