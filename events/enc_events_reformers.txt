@@ -7855,7 +7855,7 @@ country_event = { #225 - Washington Brotherhood Attacks!
 				country_exists = BEL
 			}
 			NOT = {
-				country_exists = YAK
+				country_exists = TRL
 			}
 		}
 	}
