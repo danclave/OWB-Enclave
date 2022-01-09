@@ -261,6 +261,12 @@
                     has_completed_focus = enc_purge_opposition
                 }
             }
+            available = {
+                NOT = {
+                    has_country_flag = reformers_purged
+                    has_completed_focus = enc_purge_opposition
+                }
+            }
         }
 	}
     boris_t_democratic = {
@@ -504,6 +510,9 @@
 			visible = {
 				NOT = { has_completed_focus = enc_purge_opposition }
 			}
+            available{
+				NOT = { has_completed_focus = enc_purge_opposition }
+            }
 			traits = {
 				enc_army_chief_loyalist
 				enc_incompetent_general
@@ -572,6 +581,9 @@
 			visible = {
 				NOT = { has_completed_focus = enc_purge_opposition }
 			}
+            available = {
+                NOT = { has_completed_focus = enc_purge_opposition }
+            }
 			traits = {
 				enc_air_chief_loyalist
 				enc_incompetent_airman
@@ -624,6 +636,9 @@
 			visible = {
 				NOT = { has_completed_focus = enc_purge_opposition }
 			}
+            available = {
+                NOT = { has_completed_focus = enc_purge_opposition }
+            }
 			traits = {
 				enc_navy_chief_loyalist
 				enc_incompetent_admiral
