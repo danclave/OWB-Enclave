@@ -3594,20 +3594,20 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = enc_reformers.66 }
 			puppet = VEG
-	 	}
-		VEG = {
-			add_ai_strategy = {
-				type = alliance
-				id = "ERB"
-				value = 200
+			VEG = {
+				add_ai_strategy = {
+					type = alliance
+					id = "ERB"
+					value = 200
+				}
 			}
-		}
-		set_autonomy = {
-			target= VEG
-			autonomy_state = autonomy_enclave_state
-			end_wars = no
-			end_civil_wars = no
-		}
+			set_autonomy = {
+				target= VEG
+				autonomy_state = autonomy_enclave_state
+				end_wars = no
+				end_civil_wars = no
+			}
+	 	}
 	}
 	focus = {#Diplomacy - Minor Good Guys
 		id = enc_the_little_people
