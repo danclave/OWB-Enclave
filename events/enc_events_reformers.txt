@@ -2935,6 +2935,12 @@ country_event = { #85 - Shi
 			transfer_state = 474
 			set_cosmetic_tag = ERB_SHI
 		}
+		set_autonomy = {
+			target= SHI
+			autonomy_state = autonomy_enclave_influenced_region
+			end_wars = no
+			end_civil_wars = no
+		}
 		hidden_effect = {
 			country_event = {
 				id = enc_reformers.86
@@ -6873,85 +6879,92 @@ country_event = { #195 - Brotherhood Civil War
 	is_triggered_only = yes
 	option = { # Alliance
 		name = enc_reformers.195.a
-		BOS = {
-			add_popularity = {
-				ideology = people
-				popularity = 0.25
-			}
-		}
-		BOS = {
-			set_politics = {
-				ruling_party = people
-			}
-		}
-		BOS = {
-			add_opinion_modifier = {
-				target = ERB
-				modifier = enc_support_opinion
-			}
-		}
-		BOS = {
-			add_ai_strategy = {
-				type = alliance
-				id = "ERB"
-				value = 600
-			}
-		}
-		BOS = {
-			start_civil_war = {
-				ideology = ruler
-				size = 0.65
-			}
-		}
-		if = {
-			limit = {
-				is_in_faction = no
-			}
-			create_faction = "The Enclave"
-			BOS = {
-				if = {
-					limit = {
-						is_in_faction = yes
-					}
+					BOS = {
+				add_popularity = {
+					ideology = people
+					popularity = 0.25
 				}
-				leave_faction = yes
-			}
-			add_to_faction = BOS
-		}
-		else_if = {
-			limit = {
-				is_in_faction = yes
 			}
 			BOS = {
-				if = {
-					limit = {
-						is_in_faction = yes
-					}
+				set_politics = {
+					ruling_party = people
 				}
-				leave_faction = yes
 			}
-			add_to_faction = BOS
-		}
-		else_if = {
-			limit = {
-				is_in_faction = no
-				BOS = {
+			BOS = {
+				add_opinion_modifier = {
+					target = ERB
+					modifier = enc_support_opinion
+				}
+			}
+			BOS = {
+				add_ai_strategy = {
+					type = alliance
+					id = "ERB"
+					value = 600
+				}
+			}
+			BOS = {
+				start_civil_war = {
+					ideology = ruler
+					size = 0.65
+				}
+			}
+			if = {
+				limit = {
 					is_in_faction = no
 				}
+				create_faction = "The Enclave"
+				BOS = {
+					if = {
+						limit = {
+							is_in_faction = yes
+						}
+					}
+					leave_faction = yes
+				}
+				add_to_faction = BOS
 			}
-			create_faction = "The Enclave"
-			add_to_faction = BOS
-		}
-		add_to_war = {
-			targeted_alliance = BOS
-			enemy = D01
-			hostility_reason = asked_to_join
-		}
-		BOS = {
-			add_ai_strategy = {
-				type = alliance
-				id = "ERB"
-				value = 400
+			else_if = {
+				limit = {
+					is_in_faction = yes
+				}
+				BOS = {
+					if = {
+						limit = {
+							is_in_faction = yes
+						}
+					}
+					leave_faction = yes
+				}
+				add_to_faction = BOS
+			}
+			else_if = {
+				limit = {
+					is_in_faction = no
+					BOS = {
+						is_in_faction = no
+					}
+				}
+				create_faction = "The Enclave"
+				add_to_faction = BOS
+			}
+			BOS = {
+				add_ai_strategy = {
+					type = alliance
+					id = "ERB"
+					value = 400
+				}
+			}
+		every_other_country = {
+			limit = {
+				has_war_with = BOS
+			}
+			ERB = {
+				add_to_war = {
+					targeted_alliance = BOS
+					enemy = PREV
+					hostility_reason = asked_to_join
+				}	
 			}
 		}
 	}
