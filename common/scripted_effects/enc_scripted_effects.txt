@@ -612,19 +612,57 @@ transfer_leader_traits = {
 change_douglas_to_people = {
 	hidden_effect = {
 		set_politics = { ruling_party = people }
-		set_country_leader_ideology = constitutional_republic
+		add_country_leader_role = {
+  			character = ERB_Douglas_Granite
+  			promote_leader = yes
+  			country_leader = {
+				ideology = constitutional_republic
+    			expire = "3000.1.1"
+      		}
+		}
 		set_country_leader_portrait = {
 			portrait = "gfx/leaders/portrait_douglas_usa.dds"
 		}
-	}
+		hidden_effect = {
+			transfer_leader_traits = yes
+		}	}
 }
 
 change_douglas_to_elites = {
 	hidden_effect = {
 		set_politics = { ruling_party = elites }
-		set_country_leader_ideology = militarist_technocracy
+		add_country_leader_role = {
+  			character = ERB_Douglas_Granite
+  			promote_leader = yes
+  			country_leader = {
+				ideology = militarist_technocracy
+    			expire = "3000.1.1"
+      		}
+		}
 		set_country_leader_portrait = {
 			portrait = "gfx/leaders/portrait_douglas_usa.dds"
+		}
+		hidden_effect = {
+			transfer_leader_traits = yes
+		}	}
+}
+
+change_douglas_to_ruler = {
+	hidden_effect = {
+		set_politics = { ruling_party = ruler }
+		add_country_leader_role = {
+  			character = ERB_Douglas_Granite
+  			promote_leader = yes
+  			country_leader = {
+				ideology = benevolent_dictatorship
+    			expire = "3000.1.1"
+      		}
+		}
+		set_country_leader_portrait = {
+			portrait = "gfx/leaders/portrait_douglas_usa.dds"
+		}
+		hidden_effect = {
+			transfer_leader_traits = yes
 		}
 	}
 }

@@ -510,7 +510,7 @@
 			visible = {
 				NOT = { has_completed_focus = enc_purge_opposition }
 			}
-            available{
+            available = {
 				NOT = { has_completed_focus = enc_purge_opposition }
             }
 			traits = {

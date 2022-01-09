@@ -9307,12 +9307,7 @@ country_event = { #308 - Vice President Dornan
 	is_triggered_only = yes
 	option = { # No man rules alone
 		name = enc_reformers.308.a
-		set_politics = {
-			ruling_party = ruler
-		}
-		hidden_effect = {
-			transfer_leader_traits = yes
-		}
+		change_douglas_to_ruler = yes
 		add_country_leader_trait = vice_president_dornan_trait
 		add_popularity = {
 			ideology = ruler
