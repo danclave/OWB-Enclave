@@ -3416,6 +3416,12 @@ focus_tree = {
 				load_oob = "enc_bos_recruits_2"
 			}
 			custom_effect_tooltip = enc_BOS_vengeance.tt
+			set_autonomy = {
+				targets = BOS
+				autonomy_state = autonomy_enclave_state
+				end_wars = no
+				end_civil_wars = no
+			}
 		}
 	}
 	focus = {#Reform - war with BOS
@@ -3589,6 +3595,13 @@ focus_tree = {
 			country_event = { id = enc_reformers.66 }
 			puppet = VEG
 	 	}
+		VEG = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ERB"
+				value = 200
+			}
+		}
 	}
 	focus = {#Diplomacy - Minor Good Guys
 		id = enc_the_little_people
