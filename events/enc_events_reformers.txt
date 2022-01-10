@@ -3324,6 +3324,9 @@ country_event = { #101 Axis of Evil
 			if = {
 				limit = {
 					is_in_faction = yes
+					NOT = {
+						is_in_faction_with = ERB
+					}
 				}
 				leave_faction = yes
 			}
@@ -3344,55 +3347,73 @@ country_event = { #101 Axis of Evil
 			add_to_faction = EHT
 			add_to_faction = CHE
 			add_to_faction = PMR
-			add_to_faction = TOC
-		}
-		WBH = {
-			add_ai_strategy = {
-				type = alliance
-				id = "CES"
-				value = 200
+			if = {
+				limit = {
+					TOC = {
+						NOT = {
+							is_in_faction_with = ERB
+						}
+					}
+				}
+				add_to_faction = TOC
 			}
 		}
-		EHT = {
-			add_ai_strategy = {
-				type = alliance
-				id = "CES"
-				value = 200
+		hidden_effect = {
+			WBH = {
+				add_ai_strategy = {
+					type = alliance
+					id = "CES"
+					value = 200
+				}
 			}
-		}
-		CHE = {
-			add_ai_strategy = {
-				type = alliance
-				id = "CES"
-				value = 200
+			EHT = {
+				add_ai_strategy = {
+					type = alliance
+					id = "CES"
+					value = 200
+				}
 			}
-		}
-		PMR = {
-			add_ai_strategy = {
-				type = alliance
-				id = "CES"
-				value = 200
+			CHE = {
+				add_ai_strategy = {
+					type = alliance
+					id = "CES"
+					value = 200
+				}
 			}
-		}
-		TOC = {
-			add_ai_strategy = {
-				type = alliance
-				id = "CES"
-				value = 200
+			PMR = {
+				add_ai_strategy = {
+					type = alliance
+					id = "CES"
+					value = 200
+				}
 			}
-		}
-		TRL = {
-			add_ai_strategy = {
-				type = alliance
-				id = "CES"
-				value = 200
+			TOC = {
+				if = {
+					limit = {
+						NOT = {
+							is_in_faction_with = ERB
+						}
+					}
+				add_ai_strategy = {
+					type = alliance
+					id = "CES"
+					value = 200
+				}		
 			}
-		}
-		LAC = {
-			add_ai_strategy = {
-				type = alliance
-				id = "CES"
-				value = 200
+
+			TRL = {
+				add_ai_strategy = {
+					type = alliance
+					id = "CES"
+					value = 200
+				}
+			}
+			LAC = {
+				add_ai_strategy = {
+					type = alliance
+					id = "CES"
+					value = 200
+				}
 			}
 		}
 		CES = {
