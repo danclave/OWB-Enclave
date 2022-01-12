@@ -3400,7 +3400,6 @@ country_event = { #101 Axis of Evil
 					value = 200
 				}		
 			}
-
 			TRL = {
 				add_ai_strategy = {
 					type = alliance
@@ -3426,6 +3425,51 @@ country_event = { #101 Axis of Evil
 			add_to_war = {
 				targeted_alliance = CES
 				enemy = ERB
+			}
+		}
+		WBH = {
+			add_to_war = {
+				targeted_alliance = CES
+				enemy = ERB
+			}
+		}
+		EHT = {
+			add_to_war = {
+				targeted_alliance = CES
+				enemy = ERB
+			}
+		}
+		CHE = {
+			add_to_war = {
+				targeted_alliance = CES
+				enemy = ERB
+			}
+		}
+		PMR = {
+			add_to_war = {
+				targeted_alliance = CES
+				enemy = ERB
+			}
+		}
+		TRL = {
+			add_to_war = {
+				targeted_alliance = CES
+				enemy = ERB
+			}
+		}
+		if = {
+			limit = {
+				TOC = {
+					NOT = {
+						is_in_faction_with = ERB
+					}
+				}
+			}
+			TOC = {
+				add_to_war = {
+					targeted_alliance = CES
+					enemy = ERB
+				}
 			}
 		}
 	}
