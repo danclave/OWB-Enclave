@@ -3394,10 +3394,11 @@ country_event = { #101 Axis of Evil
 							is_in_faction_with = ERB
 						}
 					}
-				add_ai_strategy = {
-					type = alliance
-					id = "CES"
-					value = 200
+					add_ai_strategy = {
+						type = alliance
+						id = "CES"
+						value = 200
+					}
 				}		
 			}
 			TRL = {
