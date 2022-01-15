@@ -45,9 +45,6 @@ ENC_reno = {
 	allowed = {
 		original_tag = ERB
 	}
-	visible = {
-		has_completed_focus = enc_purity
-	}
 }
 ENC_radio_broadcasts = {
 	allowed = {

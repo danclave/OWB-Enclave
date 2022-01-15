@@ -161,8 +161,9 @@ ENC_reno = {
             NOT = { has_country_flag = enc_graffs_completed }
             has_full_control_of_state = 285 #NEW RENO
         }
-        available = {}
-
+        available = {
+			always = yes
+		}
         complete_effect = {
 			if = {
 				limit = {
@@ -191,6 +192,7 @@ ENC_reno = {
 			has_full_control_of_state = 285 #NEW REno
 		}
 		available = {
+			always = yes
 		}
 		complete_effect = {
 		   add_equipment_to_stockpile = { type = energy_equipment_2 amount = 300 producer = ERB }
