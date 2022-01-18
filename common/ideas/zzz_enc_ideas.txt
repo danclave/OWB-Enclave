@@ -265,7 +265,7 @@ ideas = {
 		}
 		enc_complete_chaos = {
 			picture = enc_manpower_remnants_disorganized
-			 modifier = {
+			modifier = {
                 custom_modifier_tooltip = SPR_military_disloyalty_tt
 			}
 		}
