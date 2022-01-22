@@ -287,7 +287,7 @@ erb_wright_desc:0 "Wright was a major figure in New Reno for years. He seems to 
 erb_salvatore:0 "Mason Salvatore"
 erb_salvatore_name:0 "Mason Salvatore"
 erb_salvatore_desc:0 "Salvatore has finally achieved what he always wanted, to be in charge of New Reno. Sadly for him, he is only so in name, a puppet to throw the NCR off from the real rulers of New Reno."
-erb_salvatore_effect:0 "§WIncrease of NCR suspicion reduced by £pol_power §Y3§!.§!\n"
+erb_salvatore_effect:0 "§WIncrease of NCR suspicion reduced by £pol_power §Y5§!.§!\n"
 
 erb_arcade_gannon:0 "Arcade Gannon"
 erb_arcade_gannon_name:0 "Arcade Gannon"
