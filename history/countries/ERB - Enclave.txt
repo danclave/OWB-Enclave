@@ -227,6 +227,8 @@ recruit_character = ERB_Ranger_Skip
 recruit_character = ERB_Raul
 recruit_character = ERB_Whitehall
 
+recruit_character = erb_salvatore
+
 # recruit_character = Enclave_Governer_militarist_technocracy
 # recruit_character = Enclave_Governer_technocracy
 # recruit_character = Enclave_Governer_benevolent_dictatorship

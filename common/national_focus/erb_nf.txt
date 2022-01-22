@@ -459,7 +459,7 @@ focus_tree = {
 			remove_ideas = enc_protected_by_bunker
 			custom_effect_tooltip = enc_reno_end.tt
 			# followers can now appear
-			clr_country_flag = do_not_spread_followers_from_this_tag
+			clr_country_flag = do_not_spread_followers_to_this_tag
 			clr_country_flag = no_generic_manufacturer
 			# No longer protected by sierra army depot
 		}
@@ -3417,7 +3417,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = enc_BOS_vengeance.tt
 			set_autonomy = {
-				targets = BOS
+				target = BOS
 				autonomy_state = autonomy_enclave_state
 				end_wars = no
 				end_civil_wars = no
