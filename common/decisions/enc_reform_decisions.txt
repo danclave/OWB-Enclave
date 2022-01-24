@@ -4992,7 +4992,7 @@ ENC_emergency_orders = {
 		}
 		available = {
 			NOT = {
-				has_idea = collapsed_trade
+				has_idea = currencycollapsedcurrency
 			}
 			NOT = {
 				has_completed_focus = enc_department_of_commerce
