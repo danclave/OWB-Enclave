@@ -168,6 +168,8 @@ enc_salvatores_tolerated_flag: "Salvatores tolerated"
 enc_wrights_tolerated_flag: "Wrights tolerated"
 vice_president_dornan_flag: "Vice President Dornan"
 
+vice_president_lynette_flag: "Lynette is Vice President"
+
 ncr_suspicious_clr_tt: "\n§MRemoves the need to hide from the [NCR.GetName]§!"
 
 costs_100_army_experience: "Costs 100 £army_experience\n\n"

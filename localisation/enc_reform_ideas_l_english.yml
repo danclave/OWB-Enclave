@@ -190,6 +190,19 @@ ENC_emergency_labour_draft: "Emergency Labour Draft"
 
 ENC_accepted_brahmin_barons: "Brahmin Barons"
 ENC_rejected_brahmin_barons: "Brahmin Barons Evicted"
+
+enc_baron_dollar: "The Brahmin Dollar"
+enc_baron_dollar_desc: "The current US Dollar is currently being minted and isssued by the Brahmin Barons, its value backed by their Brahmin. While this resolves the currency crisis, this also solidifies the Brahmin as the cornerstone of the economy, raising Brahmin Barons' wealth and power to new unimaginable heights."
+
+enc_baron_economy: "Trickle-Down Economics"
+enc_baron_economy_desc: "An Old World name for supply-side economic theory, granting stimulus loads to the Brahmin Barons did allow them to rebuild the economy (in their image)."
+
+enc_baron_trade: "The Cartel"
+enc_baron_trade_desc: "The Barons have seized all previously idle caravans and now conduct trade on their terms. Pray to the Mormon God they do not alter it again."
+
+ENC_Baron_Military: "The Barons' Military"
+ENC_Baron_Military_desc: "Through \"The NCR Buyout\", the Barons have embedded themselves throughout the entire military. Payment will be due over the next 20 years, with interest."
+
 ffi_dornan_advice:0 "La Cucaracha"
 ffi_dornan_advice_desc:0 "Sergeant Dornan's training methods have become a little unorthodox, but, well, who are we to criticize?"
 

@@ -331,6 +331,15 @@ ENC_next_arc = {
 	#	}
 	#}
 }
+
+ENC_emergency_orders = {
+	priority = 1001
+	icon = generic_crisis
+	allowed = { original_tag = ERB }
+	visible = {
+		has_war_with = CES
+	}
+}
 # ##############################
 # Attempted overwrite
 # ##############################

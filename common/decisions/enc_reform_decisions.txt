@@ -4875,3 +4875,205 @@ ENC_down_mexico_way = {
 		}
 	}
 }
+
+###############################
+# Emergency
+###############################
+ENC_emergency_orders = {
+	ENC_gannons_vax_program = {
+		visible = {
+			has_idea = CES_plague
+			NOT = {
+				has_completed_focus	= enc_vacinations
+			}
+		}
+		available = {
+			OR = {
+				has_idea = erb_arcade_gannon
+				has_idea = enc_lynette
+				has_country_flag = vice_president_lynette_flag
+			}
+        }
+		fire_only_once = yes
+		modifier = {
+			research_speed_factor = -1
+			industrial_capacity_factory = -1
+			consumer_goods_factor = 1
+		}
+		complete_effect = {
+			add_stability = -0.1
+			add_political_power = -300
+		}
+		remove_effect = {
+			complete_national_focus = enc_vacinations
+		}
+		days_remove = 30
+	}
+
+	ENC_emergency_amnesty = {
+		visible = {
+			has_idea = enc_NCR_resistance
+			NOT = {
+				has_completed_focus = enc_ncr_leadership
+			}
+		}
+		complete_effect = {
+			add_stability = -0.3
+			add_war_support = -0.3
+			add_political_power = -500
+			hidden_effect = {
+				if = {
+					limit = {
+						any_army_leader = {
+							has_trait = enc_reformer
+						}
+					}
+					country_event = {
+						id = enc_reformers.306
+					}
+				}
+			}
+		}
+		remove_effect = {
+			swap_ideas = { 
+				remove_idea = enc_NCR_resistance
+				add_idea = enc_NCR_resistance2
+			}
+			unlock_national_focus = enc_yesterdays_enemies
+			unlock_national_focus = enc_ncr_leadership
+			set_country_flag = erb_hayes_unlocked_flag
+			set_country_flag = enc_accepted_ncr_leaders
+		}
+		days_remove = 7
+	}
+
+	ENC_emergency_barons_currency = {
+		visible = {
+			has_idea = currencycollapsedcurrency
+		}
+		complete_effect = {
+			add_stability = -0.2
+			add_war_support = -0.2
+			add_political_power = -150
+		}
+		remove_effect = {
+			unlock_national_focus = enc_federal_reserve
+			unlock_national_focus = enc_US_dollar
+			set_global_flag = us_dollar_available
+			set_country_flag = accept_usdollar
+			swap_ideas = {
+				remove_idea = currencycollapsedcurrency
+				add_idea = currency_enc_usd
+			}
+			swap_ideas = {
+				remove_idea = worthless_wages
+				add_idea = standard_military
+			}
+			add_timed_idea = {
+				idea = enc_baron_dollar
+				days = 20000
+			}
+			hidden_effect = {
+				add_ideas = currencyusd
+			}
+		}
+		days_remove = 7
+	}
+
+	ENC_emergency_barons_trade = {
+		visible = {
+			has_idea = collapsed_trade
+			NOT = {
+				has_completed_focus = enc_department_of_commerce
+			}
+			NOT = {
+				has_idea = enc_broken_houses
+			}
+		}
+		available = {
+			NOT = {
+				has_idea = collapsed_trade
+			}
+			NOT = {
+				has_completed_focus = enc_department_of_commerce
+			}
+			NOT = {
+				has_idea = enc_broken_houses
+			}
+        }
+		complete_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_political_power = -200
+		}
+		remove_effect = {
+			unlock_national_focus = enc_department_of_commerce
+			swap_ideas = {
+				remove_idea = collapsed_trade
+				add_idea = enc_free_trade
+			}
+			add_ideas = enc_baron_trade
+		}
+		days_remove = 7
+	}
+
+	ENC_emergency_barons_economy = {
+		visible = {
+			has_idea = enc_collapsed_economy
+			NOT = {
+				has_idea = enc_broken_houses
+			}
+		}
+		available = {
+			NOT = {
+				has_idea = currencycollapsedcurrency
+			}
+			NOT = {
+				has_idea = enc_broken_houses
+			}
+        }
+		complete_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_political_power = -200
+		}
+		remove_effect = {
+			swap_ideas = {
+				remove_idea = enc_collapsed_economy
+				add_idea = enc_civilian_economy
+			}
+			add_ideas = enc_baron_economy
+		}
+		days_remove = 7
+	}
+
+	ENC_emergency_barons_mercs = {
+		visible = {
+			has_idea = enc_disorganized_army
+		}
+		available = {
+			NOT = {
+				has_idea = currencycollapsedcurrency
+			}
+        }
+		complete_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_political_power = -300
+		}
+		remove_effect = {
+			swap_ideas = { 
+				remove_idea = enc_disorganized_army
+				add_idea = enc_limited_conscription
+			}
+			add_timed_idea = {
+				idea = ENC_Baron_Military
+				days = 7305
+			}
+		}
+		days_remove = 7
+	}
+
+
+
+}

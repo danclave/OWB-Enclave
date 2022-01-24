@@ -1685,6 +1685,66 @@ ideas = {
 				political_power_gain = -0.03
 			}
 		}
+		enc_baron_dollar = {
+			picture = enc_smugging
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				political_power_gain = -0.1
+			}
+		}
+
+		enc_baron_economy = {
+			picture = enc_smugging
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				political_power_gain = -0.1
+			}
+		}
+
+		enc_baron_trade = {
+			picture = enc_smugging
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				political_power_gain = -0.1
+			}
+		}
+
+		ENC_Baron_Military = {
+			picture = enc_smugging
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.15
+				political_power_gain = -0.25
+			}
+		}
+
 		ENC_rejected_brahmin_barons = {
 			picture = enc_smugging
 			allowed = {

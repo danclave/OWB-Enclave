@@ -92,6 +92,8 @@ enc_call_veterans_tt: "Two divisions of §YEnclave Veterans§! hiding in §YNew 
 clear_state: "Liberate State"
 
 enc_rangers_defense_sabotage_tt: "Unlocks the §YSabotage Infrastructure§! decision.\nThis allows you to damage the §YInfrastructure§! in nearby states owned by the §YDesert Ranger§!."
+
+
 ##############################
 # Executive Orders
 ##############################
@@ -516,6 +518,30 @@ ENC_vice_president_lynette_desc:0 "Remodel America to make every town as prosper
 ###################################
 ENC_exploiting_wasteland_arms_factories: "Procure Arms Factory"
 ENC_exploiting_wasteland_industrial_complex: "Procure Industrial Complex"
+
+###################################
+# Emergency Orders
+###################################
+ENC_emergency_orders: "Emergency Orders"
+
+ENC_gannons_vax_program: "Emergency Vaccination Program"
+ENC_gannons_vax_program_desc: "We are caught unprepared for the Legion's FEV plague, and it's devastating our nation, military and civilian alike. This Emergency Order redirects all available resources into an Emergency Vaccination Program."
+
+ENC_emergency_amnesty: "Emergency Amnesty Order"
+ENC_emergency_amnesty_desc: "Our forces are severely hamstrung by Californian resistance to our rule. This Emergency Order grants full complete Amnesty for all former NCR leaders and citizens. Needless to say, this will be extremely unpopular."
+
+ENC_emergency_barons_currency: "The Brahmin Dollar"
+ENC_emergency_barons_currency_desc: "The Emergency Currency Order grants concessions to the Brahmin Barons by allowing them to mint and issue the new Dollar backed by their Brahmin, the \"Brahmin Dollar\". This will resolve the currency crisis and stablize the new US dollar."
+
+ENC_emergency_barons_trade: "The Barons' Caravans"
+ENC_emergency_barons_trade_desc: "With all internal and external trade collapsed, it is necessary to prioritize some caravans over others. The Emergency Caravan Prioritization Order grants the Brahmin Barons legal authority to seize idle caravans and force outstanding trade."
+
+ENC_emergency_barons_economy: "The Barons' Economy"
+ENC_emergency_barons_economy_desc: "Now that the currency crisis has been resolved, The Emergency Stimulus Order grants very large stimulus loans to the Brahmin Barons to allow them to restart the economy; applying the \"Trickle-Down\" Economic Theory."
+
+ENC_emergency_barons_mercs: "The NCR Buyout"
+ENC_emergency_barons_mercs_desc: "The Buyout Emergency Order, cynically referred to as \"The NCR Buyout\" by its critics, grants Barons' mercenaries legal immunity from prosecution and promises them compensation above market rate. In return, the NCR Buyout drafts the Barons' mercenaries and the Barons reorganize our military in their image.
+
 
 ###################################
 # MISC
