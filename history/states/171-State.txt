@@ -1,0 +1,31 @@
+state = {
+	id = 171
+	name = "STATE_171"
+	resources = {
+		metal = 10
+		water = 6
+		energy = 4
+	}
+
+	history={
+		owner = JAC
+		add_core_of = JAC
+		victory_points = {
+			1105 5
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 1
+
+		}
+
+	}
+
+	provinces={
+		1081 1098 1105 8760 8758 4765 9194 9181 4942
+	}
+	manpower=11000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

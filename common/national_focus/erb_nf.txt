@@ -1040,7 +1040,7 @@ focus_tree = {
 			hidden_effect = { # ugly tooltip
 				every_other_country = {
 					limit = {
-						has_full_control_of_state = 160 # Carson City
+						has_full_control_of_state = 160 # Nile Town
 					}
 					ERB = {
 						create_wargoal = { type = annex_everything target = PREV }
@@ -6843,7 +6843,7 @@ focus = {#NEVADA - second city
 			hidden_effect = { # ugly tooltip
 				every_other_country = {
 					limit = {
-						has_full_control_of_state = 160 # Carson City
+						has_full_control_of_state = 160 # Nile Town
 					}
 					ERB = {
 						create_wargoal = { type = annex_everything target = PREV }

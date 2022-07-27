@@ -1,0 +1,22 @@
+state = {
+	id = 735
+	name = "STATE_735"
+	resources={
+		metal = 1
+	}
+
+	history={
+		owner = JAC
+		add_core_of = JAC
+		buildings = {
+			infrastructure = 0
+		}
+	}
+	provinces={
+		8812
+	}
+	manpower=219
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	impassable = yes
+}

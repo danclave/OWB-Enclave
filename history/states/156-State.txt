@@ -1,0 +1,31 @@
+
+state={
+	id=156
+	name="STATE_156"
+	resources = {
+		circuitry = 6
+		water = 8
+		energy = 11
+	}
+
+	history={
+		owner = JAC
+		add_core_of = JAC
+		victory_points = {
+			4797 5
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+
+	}
+
+	provinces={
+		1566 1660 1861 2068 4764 4797 4799 4882 4883 4884 4885 4943 4944 4945 5018 5019 5058 8750 8754 8755 15406 15408 15409 15414 15415 15418 15601
+	}
+	manpower=11000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}
