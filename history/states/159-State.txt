@@ -14,12 +14,12 @@ state = {
 		owner = ERB
 		add_core_of = ERB
 		victory_points = {
-			8479 10
+			8481 10
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2
-			8479 = {
+			8481 = {
 				bunker = 2
 				bunker2 = 1
 			}
